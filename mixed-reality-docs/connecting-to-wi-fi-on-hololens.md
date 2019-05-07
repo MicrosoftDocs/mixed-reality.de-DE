@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 09/27/2018
 ms.topic: article
 keywords: HoloLens, Wifi, drahtlos, Internet, Ip, IP-Adresse
-ms.openlocfilehash: 0440c3dad48d73db51e7d730e79d6eb1e74a5694
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b064514124d861c0734ca51b3878d4a68b592fab
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596690"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670115"
 ---
 # <a name="connecting-to-wi-fi-on-hololens"></a>Herstellen einer Verbindung mit Wi-Fi für HoloLens
 
@@ -40,7 +40,7 @@ HoloLens enthält eine 802. 11ac-fähig ist, 2 x 2 Wi-Fi-Radio. Verbinden von Ho
 5. Wählen Sie den Wi-Fi-Schieberegler-Switch zum Verschieben in die Position "Off". Die RF-Komponenten des Optionsfelds Wi-Fi deaktivieren wird und deaktivieren Sie alle Wi-Fi-Funktionalität für HoloLens. 
 
     >[!WARNING]
-    >HoloLens werden nicht automatisch laden Ihre [Leerzeichen](environment-considerations-for-hololens.md#spaces) bei der Wi-Fi-Radio ist deaktiviert.
+    >HoloLens werden nicht automatisch laden Ihre [Leerzeichen](environment-considerations-for-hololens.md#WiFi fingerprint considerations) bei der Wi-Fi-Radio ist deaktiviert.
     
 6. Verschieben Sie den Schieberegler-Schalter an die Position "On", auf die Wi-Fi-Radio-und Wi-Fi-Wiederherstellungsfunktionen für Microsoft HoloLens. Dem ausgewählten Wi-Fi-Radio-Status ("On" von "Off") nach einem Neustart beibehalten wird.
 

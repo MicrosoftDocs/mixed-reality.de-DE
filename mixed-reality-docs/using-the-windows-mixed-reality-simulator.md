@@ -1,17 +1,17 @@
 ---
 title: Verwendung des Simulators Windows Mixed Reality
 description: Die Windows Mixed Reality-Simulator können Sie mixed Reality-apps auf Ihren PC ohne eine immersive Windows Mixed Reality-Kopfhörer testen.
-author: JonMLyons
-ms.author: jlyons
-ms.date: 03/21/2018
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows gemischte Realität-Simulator testen
-ms.openlocfilehash: 782cab85f163edd2afc4251210b7596c73dcc8b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596336"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64580703"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Verwendung des Simulators Windows Mixed Reality
 
@@ -28,7 +28,7 @@ Die Windows Mixed Reality-Simulator können Sie mixed Reality-apps auf Ihren PC 
    4. Klicken Sie auf **einrichten** zur Bestätigung Ihrer Auswahl
 4. Klicken Sie auf die **für Entwickler** Schaltfläche auf der linken Seite des Mixed Reality-Portals
 5. Aktivieren Sie die Simulation ein/aus-Option **auf**
-   * Dies erfordert Administratorberechtigungen, und akzeptieren Sie im das daraufhin angezeigten Dialogfeld der Benutzerkontensteuerung
+   * Aktivieren der Simulation installiert und den linken simulierten 6-FG Controller sind standardmäßig aktiviert.  Vor Windows sind 10 Mai 2019 Updates, installieren einen Controller simulierten 6-FG Administratorberechtigungen erforderlich.  Sie müssen das Dialogfeld "Benutzerkontensteuerung" akzeptieren, sobald eins verfügbar.
 
 Sie sollten jetzt mit Simulation ausführen!
 
@@ -50,14 +50,16 @@ Sie steuern den Simulator durch die Aktionen eines simulierten Benutzers steht, 
 ## <a name="tracked-controllers"></a>Überwachte Controller
 
 Der Simulator Mixed Reality kann bis zu zwei Handheld nachverfolgten Motion-Controller simulieren. Aktivieren Sie sie mit der ein/aus-Schalter im Mixed Reality-Portal. Jedes simulierte Controller hat:
-* Position im Raum
+* Position und Ausrichtung im Raum
 * Startschaltfläche
 * Menü-Taste
 * Schaltfläche "Ziehpunkt"
 * Touchpad
+* Ministick
+* Akkukapazität
 
 ## <a name="see-also"></a>Siehe auch
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)
 * [Erweiterte Mixed Reality-Simulator-Eingabe](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
-* [Räumliche Zuordnung in Unity](spatial-mapping-in-unity.md)
-* [Räumliche Zuordnung in DirectX](spatial-mapping-in-directx.md)
+* [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)
+* [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)

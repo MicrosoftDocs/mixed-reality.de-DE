@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Holotoolkit, Mixedrealitytoolkit, Mixedrealitytoolkit-Unity Academy, Tutorial, Blicke
-ms.openlocfilehash: 63c55e8a7a348f2a3e0cc29a9795d7fabcef5df0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593976"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993546"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -103,7 +103,7 @@ Zum Schluss aktualisieren wir unsere Qualität-Einstellungen, um eine hohe verar
 
 1. Wechseln Sie zu **Bearbeiten > Projekteinstellungen > Qualität**.
 2. Klicken Sie auf den nach unten zeigenden Pfeil in der **Standard** Zeile unter dem Windows Store-Symbol.
-3. Wählen Sie **schnellste** für **Windows Store-Apps**.
+3. Wählen Sie **sehr niedrigen** für **Windows Store-Apps**.
 
 ### <a name="import-project-assets"></a>Importieren von Projektressourcen
 

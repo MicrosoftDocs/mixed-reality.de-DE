@@ -3,15 +3,15 @@ title: Komfort
 description: Während der natürlichen anzeigen verwendet der menschliche visual System mehrere Quellen von Informationen oder "Hinweise," um 3D-Formen und die relative Position von Objekten zu interpretieren.
 author: erickjpaul
 ms.author: erpau
-ms.date: 02/13/2019
+ms.date: 04/5/2019
 ms.topic: article
-keywords: Mixed Reality, entwerfen, bequem
-ms.openlocfilehash: dbf7080f5b9a2ebafdbd06fca79fae717b3207ed
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Mixed Reality, Entwurf, comfort, HoloLens-2, HoloLens (1. Generation)
+ms.openlocfilehash: 3dac997923b3f2319cb97137c1bbd9a12c4126b1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604934"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993626"
 ---
 # <a name="comfort"></a>Komfort
 
@@ -34,7 +34,7 @@ HoloLens zeigt sind in einer optischen Abstand ungefähr 2.0 m von der Benutzer 
 ![Optimale Abstand zur Platzierung von Hologramme des Benutzers.](images/distanceguiderendering-950px.png)<br>
 *Optimale Abstand zur Platzierung von Hologramme des Benutzers*
 
-#### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Bewährte Methoden für HoloLens (1. Generation) und HoloLens 2
+### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Bewährte Methoden für HoloLens (1. Generation) und HoloLens 2
 
 Für optimalen Komfort **die optimale Zone für die Platzierung von – Hologramm 1,25 m bis 5m ist**. In jedem Fall-Designer sollten versuchen, Struktur Inhalt Szenen, die Benutzern die Interaktion fördern 1m oder weiter entfernt den Inhalt (z. B. anpassen [Inhaltsgröße und Standardparameter für die Platzierung](gaze-targeting.md)). 
 
@@ -42,10 +42,14 @@ Obwohl Inhalt gelegentlich möglicherweise näher als 1 Million Pakete angezeigt
 
 Objekte, die im Detail zu verschieben sind eher als feststehend Objekte zum Erzeugen von angefasst aufgrund des Konflikts Vergence-beeinflusst. Auf ähnliche Weise kann Benutzer schnell in der Nähe von- und weit-Fokus (z. B. aufgrund einer Popup – Hologramm erfordern direkte Interaktion) wechseln visual angefasst und Ermüdung dazu führen, dass. Aus diesem Grund **zusätzliche sollte geachtet werden, wie oft minimieren Benutzer: Anzeige von Inhalten, die in die Tiefe; verschoben werden, oder schnell den Fokus zwischen nah und Fern Hologramme**. 
 
-Beim Entwerfen von Inhalt für die direkte (Interaktion in HoloLens 2 nahezu) oder **in allen Anwendungen, in denen Inhalt werden als 1 Million platziert muss, zusätzliche sollte geachtet werden, sicher Benutzerkomfort**. Angefasst aufgrund des Konflikts Vergence-beeinflusst die Wahrscheinlichkeit erhöhen sich exponentiell mit die Entfernung verringert. **Es wird empfohlen, Erstellen von "Tiefe"Budget für apps, die basierend auf die Zeitspanne, die ein Benutzer muss zum Anzeigen von Inhalt, der in der Nähe (< 1 Mio.) ist, und verschieben ausführlich**. Ein Beispiel ist, platzieren den Benutzer in Situationen verwendet, mehr als 25 % der Zeit zu vermeiden. Wenn das Budget für die Tiefe überschritten wird, wird empfohlen, eine sorgfältige Benutzer zu testen, um sicherzustellen, dass es sich um eine angenehme benutzererfahrung bleibt.
+### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Weitere Überlegungen für HoloLens 2 und in der Nähe von Interaktion entfernungen
 
-> [!NOTE]
-> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md#news-and-notes).
+Beim Entwerfen von Inhalt für die direkte (Interaktion in HoloLens 2 nahezu) oder **in allen Anwendungen, in denen Inhalt werden als 1 Million platziert muss, zusätzliche sollte geachtet werden, sicher Benutzerkomfort**. Angefasst aufgrund des Konflikts Vergence-beeinflusst die Wahrscheinlichkeit erhöhen sich exponentiell mit die Entfernung verringert. Darüber hinaus können Benutzer erhöhte Bluriness auftreten, wenn Anzeige von Inhalten am in der Nähe von Interaktion Abstände, daher wir Testen von Inhalten empfehlen sowohl in der Zone der auch als näher optimale – Hologramm-Platzierung (kleiner als 1,0 m auf den Clipping-Ebene) gerendert Stellen Sie sicher, dass sie klare und zeigen Sie Ihren bevorzugten bleibt. 
+
+**Es wird empfohlen, Erstellen von "Tiefe"Budget für apps, die basierend auf die Zeitspanne, die ein Benutzer muss zum Anzeigen von Inhalt, der in der Nähe (kleiner als 1.0-m), und verschieben ausführlich**. Ein Beispiel ist, platzieren den Benutzer in Situationen verwendet, mehr als 25 % der Zeit zu vermeiden. Wenn das Budget für die Tiefe überschritten wird, wird empfohlen, eine sorgfältige Benutzer zu testen, um sicherzustellen, dass es sich um eine angenehme benutzererfahrung bleibt. 
+
+Im Allgemeinen empfehlen wir Ihnen ebenfalls sorgfältig testen, um alle Interaktionen-Anforderungen (z. B. Geschwindigkeit der datenverschiebung, Erreichbarkeit usw.) am in der Nähe von Interaktion entfernungen sicher für Benutzer vertraut bleiben. 
+
 
 ### <a name="guidance-for-immersive-devices"></a>Leitfaden für immersive-Geräte
 
@@ -65,8 +69,7 @@ Für HoloLens (der 1. Generation), IPD geschätzte ist, und legen Sie während d
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md#news-and-notes).
+Für HoloLens 2 IPD geschätzt und während der Eye oder das Gerät festgelegt [Kalibrierung](calibration.md). Neue Benutzer können eine bereits festgelegte Gerät, Kalibrierung ausgeführt werden muss, um sicherzustellen, dass IPD korrekt festgelegt ist. VO wird automatisch in HoloLens 2 berücksichtigt. 
 
 ### <a name="guidance-for-immersive-devices"></a>Leitfaden für immersive-Geräte
 
@@ -120,7 +123,7 @@ Im ersten Ego-Shooter-Videogames enthalten die Heads-Up zeigt (HUDs) dauerhaft I
 
 ## <a name="text-legibility"></a>Textlesbarkeit
 
-Der optimalen Textlesbarkeit können optimaler reduzieren, und Warten von Benutzerkomfort, insbesondere in Anwendungen oder Szenarien, die Benutzern während einer HMD lesen. Textlesbarkeit hängt von verschiedenen Faktoren wie z.B. verschiedene Anzeigeeigenschaften (z. B. Pixeldichte, Helligkeit, Kontrast) Lens-Eigenschaften (z. B. chromatische deuten) und Textschriftart/Eigenschaften (z. B. bestimmte Schriftart Eigenschaften wie die Stärke, Serifen usw., Farbe, Schriftart, Farbe des Hintergrunds).  
+Der optimalen Textlesbarkeit können optimaler reduzieren, und Warten von Benutzerkomfort, insbesondere in Anwendungen oder Szenarien, die Benutzern während einer HMD lesen. Textlesbarkeit hängt von verschiedenen Faktoren wie z.B. verschiedene Anzeigeeigenschaften (z. B. Pixeldichte, Helligkeit, Kontrast) Lens-Eigenschaften (z. B. chromatische deuten) und Textschriftart/Eigenschaften (z. B. bestimmte Schriftart Eigenschaften wie Weight "," Abstand "," Serifen "," usw., Farbe, Schriftart, Farbe des Hintergrunds).  
 
 Im Allgemeinen empfiehlt es sich um bestimmte Anwendungen für bessere Lesbarkeit testen, und machen Schriftgrade Ihren Bedürfnissen entsprechend zu groß für eine angenehme benutzererfahrung möglich ist. Im folgenden bieten wir Richtwert als Ausgangspunkt für die Entwicklung. Beachten Sie, dass alle Schriftgraden in Grad gemeldet werden [visual Winkel](https://en.wikipedia.org/wiki/Visual_angle) statt bestimmte physische Größen, die Hilfestellung bei der jede Entfernung in der Zone der optimalen – Hologramm Platzierung, da er sowohl die Größe der berücksichtigt die Text und die Entfernung wird es in der Ereignisanzeige angezeigt. 
 
@@ -130,18 +133,25 @@ Bei holographic-Geräten bietet Rendern von Text auf einem weißen Licht/Hinterg
 
 #### <a name="hololens-1st-gen"></a>HoloLens (1. Generation)
 
-Der minimalen Schriftgrad für lesbar vertikale ist ungefähr 0,35 ° aus, und ein vertraut vertikale Schriftgrad ist um ca. mindestens 0,5 ° für das Lesen von Inhalten in einem Abstand von 2m dem Benutzer angezeigt. 
+Der minimale lesbar Schriftgrad (Schriftart Baseline Ascender Messen) ist ungefähr 0,35 ° aus, und ein vertraut Schriftgrad ist um ca. mindestens 0,5 ° für das Lesen von Inhalten in einem Abstand von 2m dem Benutzer angezeigt. 
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md#news-and-notes).
+Der minimale lesbar Schriftgrad (Schriftart Baseline Ascender Messen) beträgt mindestens ungefähr: 
+   - 0,4 ° 0,5 ° auf 45cm (direkte Bearbeitung Abstand) 
+   - 0,35 ° 0,4 ° bei 2,0 m
+   
+Der bequem lesbar Schriftgrad, die (von Schriftart Baseline Ascender Messen) ist mindestens etwa: 
+   - 0,65 ° 0,8 ° auf 45cm (direkte Bearbeitung Abstand)
+   - 0,6 ° 0,75 ° bei 2,0 m
+
+Beachten Sie, dass die Schriftgrade Ihren Bedürfnissen entsprechend müssen aufgrund der oben beschriebenen Vergence-Unterbringung-Konflikt für Text an die direkte Bearbeitung entfernungen geringfügig größer sein (Benutzer Augen sind sodass in einem Abstand von 2,0 m in der Anzeige HoloLens, damit der Inhalt, z. B. gerendert 45 cm unter Umständen mehr verschwommen Benutzern angezeigt). 
 
 ### <a name="guidance-for-immersive-devices"></a>Leitfaden für immersive-Geräte
 
-Immersive Geräte in der Regel höher Kontrastverhältnis vollständige Einschluss der externen Umgebung, aber niedrigeren Dichte für effektives Pixel teilweise aufgrund von den Vergrößerungsfaktor für die Lenses vor zeigt die. 
+Immersive Geräte in der Regel höher Kontrastverhältnis vollständige Einschluss der externen Umgebung haben, aber möglicherweise niedrigeren Dichte für effektives Pixel teilweise aufgrund von den Vergrößerungsfaktor für die Funktionen vor dem zeigt. 
 
-Für immersive Windows Mixed Reality-HMDs, ist der minimalen Schriftgrad für lesbar vertikale ungefähr 0,7-0.9 ° und vertraut vertikale Schriftgrad ist ungefähr 1.0° für das Lesen von Inhalten in einem Abstand von 2m dem Benutzer angezeigt.
+Für immersive Windows Mixed Reality-HMDs, der minimale lesbar vertikale Schriftgrad (Schriftart Baseline Ascender Messen) ist ungefähr 0,7-0.9 ° und vertraut vertikale Schriftgrad ist ungefähr 1.0° für das Lesen von Inhalten angezeigt, die in einem Abstand von 2m, um die der Benutzer.
 
 ## <a name="gaze-direction"></a>Blicke Richtung
 
@@ -160,8 +170,8 @@ Der optimale (Verbleib) Blicke Winkel wird als zwischen 10 bis 20 Grad unter hor
 Nutze Ermüdung kann sammeln, wenn Benutzer zu einer Hand, die ausgelöst wird, während der Dauer einer Erfahrung erwartet werden. Sie können auch fatiguing sein, dass den Benutzer per Funk Gesten über lange Zeiträume tippen wiederholt vornehmen müssen. Aus diesem Grund wird empfohlen, Erfahrungen vermeiden, die Konstante, eine wiederholte Aktion Eingaben erfordern. Dieses Ziel kann erreicht werden, durch kurze Unterbrechungen integrieren oder eine Mischung von Gesten und Sprache, die Eingabe für die Interaktion mit der app bietet.
 
 ## <a name="see-also"></a>Siehe auch
-* [Blicke](gaze.md)
-* [– Hologramm Stabilität](hologram-stability.md)
-* [Grundlagen der Interaktion](interaction-fundamentals.md)
-* [Holographic Frame](holographic-frame.md)
+* [Anvisieren](gaze.md)
+* [Hologrammstabilität](hologram-stability.md)
+* [Interaktionsgrundlagen](interaction-fundamentals.md)
+* [Holografischer Rahmen](holographic-frame.md)
 * [Kalibrierung](calibration.md)

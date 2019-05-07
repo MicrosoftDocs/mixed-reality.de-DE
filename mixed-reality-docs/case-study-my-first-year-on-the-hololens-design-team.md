@@ -6,12 +6,12 @@ ms.author: haejinl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, Entwurf, redaktionelle, personal
-ms.openlocfilehash: e16be57d42bdc003fd601b94e054c7c25ebd290e
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 050645e6096559a4f37b033e5ddfdc5444039c08
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605034"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873955"
 ---
 # <a name="case-study---my-first-year-on-the-hololens-design-team"></a>Fallstudie: Meine erste Jahr in die HoloLens-Designteam
 
@@ -105,7 +105,7 @@ Wenn ich in 2D gearbeitet, skizziert ich größtenteils nur den Inhalt. Allerdin
 
 **"Unabhängig davon, wie genau sich die Szene in 3D ich skizziert, war der tatsächlichen Erfahrungen beim Kopfhörer fast nie die Skizze identisch. Daher es ist wichtig, testen die Szene in der Headsets. "– Hae Jin Lee**
 
-Für HoloLens prototyperstellung, ich habe Sie alle Tutorials auf versucht [Mixed Reality Academy](academy.md) zu starten. Und ich begann, mit Spielen [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) , dass Microsoft für Entwickler zur Beschleunigung der Entwicklung von holographic Anwendungen bereitstellt. Wenn ich etwas unterbrochen wurde, ich habe meine Frage [HoloLens Frage und Antwort-Forum](https://forums.hololens.com/categories/questions-and-answers/).
+Für HoloLens prototyperstellung, ich habe Sie alle Tutorials auf versucht [Mixed Reality-Tutorials](tutorials.md) zu starten. Und ich begann, mit Spielen [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) , dass Microsoft für Entwickler zur Beschleunigung der Entwicklung von holographic Anwendungen bereitstellt. Wenn ich etwas unterbrochen wurde, ich habe meine Frage [HoloLens Frage und Antwort-Forum](https://forums.hololens.com/categories/questions-and-answers/).
 
 Nach dem Erwerb von grundlegende Kenntnisse zum Erstellen von Prototypen HoloLens, wollte ich andere nicht-Programmierer Prototyp selbstständig zu ermöglichen. Daher habe ich ein video Lernprogramm, wie Sie eine einfache Projektil mit HoloLens entwickeln vorgenommen. Ich kurz die Grundbegriffe erläutern, selbst wenn Sie keine Erfahrung bei der Entwicklung für HoloLens haben, Sie folgen können.
 

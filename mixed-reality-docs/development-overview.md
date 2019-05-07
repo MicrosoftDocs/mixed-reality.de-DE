@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: Erste Schritte, Grundlagen HoloLens, HoloLens-2, immersive Kopfhörer, Unity und visual Studio
-ms.openlocfilehash: 1d23e458477cc23252ccd4c44f67c400aa356965
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 23bd173f89a468b4403d44236534bfe811a968dd
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605114"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873971"
 ---
 # <a name="development-overview"></a>Übersicht über die Entwicklung
 
@@ -47,9 +47,9 @@ Dies sind die wichtigsten Bausteine für die Entwicklung von mixed Reality:
 </tr><tr>
 <td> <a href="coordinate-systems.md">Globale Koordinaten</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-sound.md">Räumliche sound</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="spatial-sound.md">Raumklang</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-mapping.md">Räumliche Zuordnung</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
+<td> <a href="spatial-mapping.md">Räumliche Abbildung</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
 </tr>
 </table>
 
@@ -75,13 +75,13 @@ Unabhängig von der Art der app, die Sie erstellen, werden diese Tools app-Entwi
 * [Windows-Geräteportal](using-the-windows-device-portal.md)
 * [Emulator für HoloLens](using-the-hololens-emulator.md) (HoloLens-2-Emulator in Kürze verfügbar)
 * [Windows Mixed Reality-simulator](using-the-windows-mixed-reality-simulator.md)
-* [Qualitätskriterien für die App](app-quality-criteria.md)
+* [Kriterien für die App-Qualität](app-quality-criteria.md)
 
 ## <a name="see-also"></a>Siehe auch
-* [Installieren der tools](install-the-tools.md)
+* [Installieren der Tools](install-the-tools.md)
 * <a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">Mixed Reality-Dienste</a>
-* [Mixed Reality-Lernprogramme](academy.md)
+* [Mixed Reality-Lernprogramme](tutorials.md)
 * [Open Source-Projekte](open-source-projects.md)
-* [MR Basics 100: Erste Schritte mit Unity](holograms-100.md)
+* [MR-Grundlagen 100: Erste Schritte mit Unity](holograms-100.md)
 * [Windows Mixed Reality minimale PC Kompatibilität an die hardwareempfehlungen](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Übermitteln einer app an den Windows Store](submitting-an-app-to-the-microsoft-store.md)

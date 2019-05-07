@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
 keywords: Erste Schritte, Grundlagen, HoloLens, immersive Kopfhörer, Ar, Vr, Unity, visual Studio, Schnellstart, wie Sie
-ms.openlocfilehash: 92fbc6eee227da571ff36401f84cf81a093062d7
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594860"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873963"
 ---
 # <a name="get-started"></a>Beginnen
 
@@ -63,7 +63,7 @@ Nun, Ihren PC und Geräte eingerichtet werden, können Sie Ihr erstes mixed Real
 
 Nachdem Sie Ihr erste MR-Projekt erfolgreich erstellt haben, können Sie wahrscheinlich viel mehr! Hier sind einige Ressourcen, die dabei helfen soll:
 * [Mixed Reality-Entwicklerdokumentation](mixed-reality.md) – Sie sind bereits hier, aber es gibt noch viele weitere Auschecken, einschließlich technischer Dokumentation, Leitfaden zum Entwerfen, Beispielprojekte und Fallstudien.
-* [Mixed Reality Academy](academy.md) – nutzen Sie Lernprogramme, die alles von Projekten, für die Implementierung der wichtigsten Bausteine für MR einrichten, um die Integration von Azure-Clouddienste in Ihre app MR.
+* [Mixed Reality-Tutorials](tutorials.md) – nutzen Sie Lernprogramme, die alles von Projekten, für die Implementierung der wichtigsten Bausteine für MR einrichten, um die Integration von Azure-Clouddienste in Ihre app MR.
 * [Erfahren Sie, Unity](https://unity3d.com/learn) – der Unity-Website bietet Lernprogramme, Projekte und live-Schulungen für Entwickler in jeder Phase des Lernens.
 
 Sie können auch die Unterstützung von diesen große Community-Ressourcen erhalten:

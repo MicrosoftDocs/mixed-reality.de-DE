@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Holotoolkit, Mixedrealitytoolkit, Mixedrealitytoolkit-Unity, Academy, Tutorial, räumliche Zuordnung, Surface Wiederaufbau, Netz
-ms.openlocfilehash: 8d5715337ddd20e9868b18fdf0c63c704f584972
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594608"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993563"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -85,7 +85,7 @@ ms.locfileid: "59594608"
     * Mikrofon
     * SpatialPerception
 * Wechseln Sie zu **Bearbeiten > Projekteinstellungen > Qualität**
-* In der **Inspektor** Bereich unter dem Windows Store-Symbol, wählen den schwarzen Pfeil der Dropdownliste unter der Zeile mit "Default", und ändern Sie die Standardeinstellung **schnellste**.
+* In der **Inspektor** Bereich unter dem Windows Store-Symbol, wählen den schwarzen Pfeil der Dropdownliste unter der Zeile mit "Default", und ändern Sie die Standardeinstellung **sehr niedrig**.
 * Wechseln Sie zu **Assets > Paket importieren > benutzerdefiniertes Paket**.
 * Navigieren Sie zu der **...\HolographicAcademy-Holograms-230-SpatialMapping\Starting** Ordner.
 * Klicken Sie auf **Planetarium.unitypackage**.

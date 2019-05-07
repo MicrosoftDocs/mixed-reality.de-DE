@@ -6,12 +6,12 @@ ms.author: ericrehm
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, Magic-Fenster, Parallaxe
-ms.openlocfilehash: 0c0828a6ebbefdcff7f0a66f48469007c5c532df
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594525"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873930"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Fallstudie: Lücken in der Realität ansehen
 
@@ -93,7 +93,7 @@ Haben Sie eine HoloLens, und die Auswirkungen für sich selbst ausprobieren möc
 
 Dieses Modell in Ihrem Unity-Editor anzeigen, wird eine große Blackbox rund um die Flowerpot angezeigt. Für HoloLens wird das Feld ausgeblendet, bietet die Möglichkeit, einen Effekt Magic-Fenster.
 
-Wenn eine app erstellen, die diese Technik verwendet werden sollen, lesen Sie die [MR Grundlagen 101 Tutorial](holograms-101.md) in die [Mixed Reality Academy](academy.md). Kapitel 7 endet mit der Zahl in Ihre Floor, die einen ausgeblendeten Underworld (wie oben abgebildete) zeigen. Wer hat gesagt, dass Tutorials langweilig sein?
+Wenn eine app erstellen, die diese Technik verwendet werden sollen, lesen Sie die [MR Grundlagen 101 Tutorial](holograms-101.md) in der [Mixed Reality-Tutorials](tutorials.md). Kapitel 7 endet mit der Zahl in Ihre Floor, die einen ausgeblendeten Underworld (wie oben abgebildete) zeigen. Wer hat gesagt, dass Tutorials langweilig sein?
 
 Hier sind einige Ideen der, in dem Sie diese Idee weiter ausführen können:
 * Betrachten Sie Möglichkeiten, um den Inhalt in diesem virtuellen Loch interaktiv zu machen. Die Benutzer über ihre Wände Auswirkungen haben kann, die diesen Trick bereitstellen, können die Bedeutung von Wunder wirklich verbessern.
@@ -109,7 +109,7 @@ Hier sind einige Ideen der, in dem Sie diese Idee weiter ausführen können:
 </table>
 
 ## <a name="see-also"></a>Siehe auch
-* [MR Basics 101: Vollständige Projekt mit Gerät](holograms-101.md)
+* [MR-Grundlagen 101: Vollständiges Projekt mit Gerät](holograms-101.md)
 * [Koordinatensysteme](coordinate-systems.md)
-* [Räumliche Anker](spatial-anchors.md)
-* [Räumliche Zuordnung](spatial-mapping.md)
+* [Raumanker](spatial-anchors.md)
+* [Räumliche Abbildung](spatial-mapping.md)

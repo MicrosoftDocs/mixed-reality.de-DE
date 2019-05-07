@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity "," Einstellungen "," mixed reality
-ms.openlocfilehash: a67c3a65819855be6d43941c05f9a0027abf2f6d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594288"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993613"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -19,13 +19,24 @@ Unity bietet eine Reihe von Standardoptionen, die in der Regel im Durchschnittsf
 
 ## <a name="performant-environment-set-up"></a>Leistungsstarke Umgebung einrichten
 
-### <a name="low-quality-setting"></a>Niedrige Qualität-Einstellung
+### <a name="low-quality-settings"></a>Niedrige Qualität-Einstellungen
 
-Es ist wichtig, ändern Sie die **Unity Qualität Einstellungen** für Ihre Umgebung zu **"Schnellstes"**. Dadurch wird sichergestellt, dass Ihre Anwendung performant mit der entsprechenden Framerate ausgeführt wird. Dies ist äußerst wichtig für die Entwicklung für Hololens. Für die Entwicklung immersive Headsets, abhängig von der Spezifikationen des Desktops Verbessern der Leistung der VR-Oberfläche kann eine Framerate, ohne die niedrigste Qualitaetsparameter noch erreichen. 
+Es ist wichtig, ändern Sie die **Unity Qualität Einstellungen** für Ihre Umgebung zu **sehr niedrig**. Dadurch wird sichergestellt, dass Ihre Anwendung performant mit der entsprechenden Framerate ausgeführt wird. Dies ist äußerst wichtig für die Entwicklung für Hololens. Für die Entwicklung immersive Headsets, abhängig von der Spezifikationen des Desktops Verbessern der Leistung der VR-Oberfläche kann eine Framerate, ohne die niedrigste Qualitaetsparameter noch erreichen. 
 
 In Unity 2018 LTS und höher, kann Qualität des Projekts festgelegt werden:
 
-Klicken Sie unter **bearbeiten** > **Projekteinstellungen** > **Qualität** > Festlegen der **Standard** durch Klicken auf die nach unten weisenden Pfeil, um die **schnellste** Qualität
+Klicken Sie unter **bearbeiten** > **Projekteinstellungen** > **Qualität** > Festlegen der **Standard** durch Klicken auf die nach unten weisenden Pfeil, um die **sehr niedrig** Qualität
+
+### <a name="lighting-settings"></a>Einstellungen für die Beleuchtung
+
+Mit Quality Szene Einstellungen vergleichbar, ist es wichtig, optimale Beleuchtung-Einstellungen für Ihre Anwendung Mixed Reality festlegen. In Unity die Beleuchtung-Einstellung, die in der Regel den größten Auswirkungen auf die Leistung auf die Szene ist **Realtime globale Beleuchtung**. Dies kann dazu unter deaktiviert werden **Fenster** > **Rendern** > **Beleuchtung Einstellungen** > **in Echtzeit Globale Beleuchtung**. 
+
+Es gibt eine andere Einstellung für die Beleuchtung, **globale Beleuchtung Dank der Minutengenauen**. Diese Einstellung bieten leistungsfähige und visuell eindrucksvolle Ergebnisse für immersive Headsets aber gilt im Allgemeinen nicht für die Entwicklung für HoloLens. **Dank der minutengenauen globale Illumniation** nur für statische "gameobjects" die nicht in der Regel in Kulissen von HoloLens aufgrund der Natur von einer unbekannten und veränderbaren Umgebung gefunden werden berechnet.
+
+Lesen Sie [globale Beleuchtung aus Unity](https://docs.unity3d.com/Manual/GIIntro.html) für Weitere Informationen. 
+
+>[!NOTE]
+> **Globale Beleuchtung in Echtzeit** festgelegt **pro Szene** und Entwickler müssen daher diese Eigenschaft für alle Unity-Szene in ihrem Projekt speichern. 
 
 ### <a name="single-pass-instancing-rendering-path"></a>Durchlauf Instanziierung Rendering-Pfad
 
@@ -139,6 +150,6 @@ Die entsprechenden Funktionen für die Aktivierung der häufig verwendeten APIs 
 |  InternetClient  |  DictationRecognizer (und mit der Unity-Profiler) | 
 
 ## <a name="see-also"></a>Siehe auch
-* [Übersicht über die Unity-Entwicklung](unity-development-overview.md)
+* [Unity-Entwicklung – Übersicht](unity-development-overview.md)
 * [Understaing-Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
-* [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md)
+* [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)

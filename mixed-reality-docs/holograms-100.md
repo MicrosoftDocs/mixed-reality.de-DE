@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gemischte Realität, Windows Mixed Reality, HoloLens, immersive Vr, Mr, ersten Schritten erhalten – Hologramm, Academy, Tutorial
-ms.openlocfilehash: 1f4a5490383671fba694b386015ff6742d37241b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fd3bed955e80ec18b7be500adbdb0fcb7062d129
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593249"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993622"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -97,7 +97,7 @@ In diesem Kapitel wird festgelegt einige Einstellungen der Unity-Projekt, die un
 
 Da hohe Framerate für HoloLens Verwaltung so wichtig ist, möchten wir die Qualität-Einstellungen für schnellste Leistung optimiert. Ausführlichere Informationen zu Leistungsaspekten [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md).
 1. Wählen Sie **Bearbeiten > Projekteinstellungen > Qualität**
-2. Wählen Sie die **Dropdownliste** unter der **Windows Store** Logo, und wählen **sehr niedrig**. Sie wissen, dass die Einstellung ordnungsgemäß angewendet wird, wenn das Feld in der Windows Store-Spalten- und schnellsten grün ist.
+2. Wählen Sie die **Dropdownliste** unter der **Windows Store** Logo, und wählen **sehr niedrig**. Wissen Sie, dass die Einstellung ist ordnungsgemäß angewendet, wenn das Feld in der Windows Store-Spalte und **sehr niedrig** Zeile wird grün angezeigt.
 
 **Für mixed Reality-Anwendungen, die speziell für Programmentwickler konzipiert okkludierte zeigt**, lassen Sie die Einstellungen für die Qualität auf seine Standardwerte.
 
@@ -219,7 +219,7 @@ Stellen Sie sicher, dass Ihr Gerät über das USB-Kabel angeschlossen ist.
 Nun, dass Ihre app bereitgestellt wird, versuchen Sie für den Cube zu verschieben, und beachten Sie, dass es in der Welt vor Ihnen bleibt.
 
 ## <a name="see-also"></a>Siehe auch
-* [Übersicht über die Unity-Entwicklung](unity-development-overview.md)
-* [Bewährte Methoden für die Arbeit mit Unity und Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+* [Unity-Entwicklung – Übersicht](unity-development-overview.md)
+* [Bewährte Methoden für das Arbeiten mit Unity und Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
 * [MR Basics 101](holograms-101.md)
 * [MR Basics 101E](holograms-101e.md)

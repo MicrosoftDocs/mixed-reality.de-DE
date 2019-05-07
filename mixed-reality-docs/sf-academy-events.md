@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Ereignis, Kalender, Academy, Zeitplan, sf, San Francisco, Reaktor
-ms.openlocfilehash: ca58f1a4c8c058ca58def184298881807a32e613
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c896cf398bd10fc12e5afed6313cbd95e5370c31
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670130"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Microsoft, Mixed Reality-Ereignisse
 
@@ -24,45 +24,12 @@ San Francisco, CA 94107
 
 
 ---
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>**[Mixed Reality-Arbeitsgruppe, San Francisco Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)** 
-### <a name="april-8-2019"></a>8 April 2019
-Als einer Arbeitsgruppe möchten wir halber ziemlich casual, nur ca. 6:00 Uhr angezeigt, verbringen Sie Ihre Zeit und arbeiten seit einer Weile! Es ist eine gute Gelegenheit, Feedback von anderen Entwicklern erhalten, suchen Sie Hilfe und Ratschläge von einer Person, die vor der versucht oder kühlen seit einer Weile nach Arbeit und Code! Integrieren Sie einen Laptop, schalten Sie ein Projekt, und schalten Sie offen! Der Microsoft Reactor ist ein Ort, der nun aus, und wir speichern Anwesenheit beschränkt, sodass es nicht mehrere ausgelastet ist. Wir hoffen, Sie dort.
-
-**Melden Sie sich an den Meetup [hier](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)**
-
-
----
-## <a name="hololens-and-mixed-reality-meetup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961074327sdata082fhayyghofjc63hqaeb0bju4wv8jph2bscd2fgihkmog3dreserved0"></a>**[HoloLens und Mixed Reality-Meetup, San Francisco Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961074327&sdata=08%2FHAyYghOFJC63HQAeb0bJU4Wv8JPH%2BSCD%2FgIhkMog%3D&reserved=0)**
-### <a name="april-11-2019"></a>11 April 2019
-Wenden wir uns miteinander zu kommunizieren, und erfahren Sie mehr über die HoloLens und Mixed Reality. Es gibt eine große Chance für Entwickler Tausende von Unternehmen und Millionen von Kunden zu erreichen, erstellen Sie Umgebungen, damit andere Personen in ihrer alltäglichen Leben leichter!
-
-**Melden Sie sich an den Meetup [hier](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961074327&sdata=08%2FHAyYghOFJC63HQAeb0bJU4Wv8JPH%2BSCD%2FgIhkMog%3D&reserved=0)**
-
-
----
-## <a name="the-realities-show-livestream-from-san-francisco-reactorhttpakamstrs"></a>**[Die jeweils aktuellen Gegebenheiten anzeigen (Livestream aus San Francisco Reaktor)](http://aka.ms/trs)**
-### <a name="april-23-2019"></a>23 April 2019
-Die Realitäten Show ist eine 30 Minuten-video-Livestream zu HoloLens-2 "," Mixed Reality-Dienste "und" MR Technologien. Fragen in jeder Folge, die wir im Detail werden Features, Funktionen, die technische dahinter wie für die verschiedenen Geräte entwickeln, wird empfohlen, bewährte Methoden und natürlich Beantworten von unser Publikum.
-
-In dieser Episode geht es um Menschen verstehen. In der Nähe von Interaktionen, ganz Interaktionen, Eye-Tracking und Stimme.
-
-**[Sehen Sie sich hier die Live- und vergangenen folgen.](http://aka.ms/trs)**
-
-
----
 ## <a name="mixed-reality-dev-days-seattlehttpsdocsmicrosoftcomen-uswindowsmixed-realitymr-dev-days"></a>**[Mixed Reality Dev Tage, Seattle](https://docs.microsoft.com/en-us/windows/mixed-reality/mr-dev-days)**
 ### <a name="may-2-3-2019"></a>2 bis 3 Mai 2019
 Mixed Reality Dev Tage erstellen Sie die Fähigkeiten, Netzwerk- und Ideen, dass Sie Ihre mixed Reality-Anwendungen auf die nächste Stufe zu müssen.
 
 **[Weitere Informationen](https://docs.microsoft.com/en-us/windows/mixed-reality/mr-dev-days)**
 
-
----
-## <a name="the-realities-show-livestream-from-san-francisco-reactorhttpakamstrs"></a>**[Die jeweils aktuellen Gegebenheiten anzeigen (Livestream aus San Francisco Reaktor)](http://aka.ms/trs)**
-### <a name="may-6-2019"></a>6 Mai 2019
-Die Realitäten Show ist eine 30 Minuten-video-Livestream zu HoloLens-2 "," Mixed Reality-Dienste "und" MR Technologien. Fragen in jeder Folge, die wir im Detail werden Features, Funktionen, die technische dahinter wie für die verschiedenen Geräte entwickeln, wird empfohlen, bewährte Methoden und natürlich Beantworten von unser Publikum.
-
-**Weitere Informationen folgen in Kürze. [Sehen Sie sich diese folgen hier.](http://aka.ms/trs)**
 
 
 ---
@@ -79,14 +46,6 @@ Seien Sie in Seattle für Microsoft Veranstaltung für Entwickler. Besuchen Sie 
 Wenden wir uns miteinander zu kommunizieren, und erfahren Sie mehr über die HoloLens und Mixed Reality. Es gibt eine große Chance für Entwickler Tausende von Unternehmen und Millionen von Kunden zu erreichen, erstellen Sie Umgebungen, damit andere Personen in ihrer alltäglichen Leben leichter!
 
 **Melden Sie sich an den Meetup [hier](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961074327&sdata=08%2FHAyYghOFJC63HQAeb0bJU4Wv8JPH%2BSCD%2FgIhkMog%3D&reserved=0)**
-
-
----
-## <a name="the-realities-show-livestream-from-san-francisco-reactorhttpakamstrs"></a>**[Die jeweils aktuellen Gegebenheiten anzeigen (Livestream aus San Francisco Reaktor)](http://aka.ms/trs)**
-### <a name="may-28-2019"></a>28. Mai 2019
-Die Realitäten Show ist eine 30 Minuten-video-Livestream zu HoloLens-2 "," Mixed Reality-Dienste "und" MR Technologien. Fragen in jeder Folge, die wir im Detail werden Features, Funktionen, die technische dahinter wie für die verschiedenen Geräte entwickeln, wird empfohlen, bewährte Methoden und natürlich Beantworten von unser Publikum.
-
-**Weitere Informationen folgen in Kürze. [Sehen Sie sich diese folgen hier.](http://aka.ms/trs)**
 
 
 ---
@@ -111,14 +70,6 @@ Als einer Arbeitsgruppe möchten wir halber ziemlich casual, nur ca. 6:00 Uhr an
 Wenden wir uns miteinander zu kommunizieren, und erfahren Sie mehr über die HoloLens und Mixed Reality. Es gibt eine große Chance für Entwickler Tausende von Unternehmen und Millionen von Kunden zu erreichen, erstellen Sie Umgebungen, damit andere Personen in ihrer alltäglichen Leben leichter!
 
 **Melden Sie sich an den Meetup [hier](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961074327&sdata=08%2FHAyYghOFJC63HQAeb0bJU4Wv8JPH%2BSCD%2FgIhkMog%3D&reserved=0)**
-
-
----
-## <a name="the-realities-show-livestream-from-san-francisco-reactorhttpakamstrs"></a>**[Die jeweils aktuellen Gegebenheiten anzeigen (Livestream aus San Francisco Reaktor)](http://aka.ms/trs)**
-### <a name="june-14-2019"></a>14 Juni 2019
-Die Realitäten Show ist eine 30 Minuten-video-Livestream zu HoloLens-2 "," Mixed Reality-Dienste "und" MR Technologien. Fragen in jeder Folge, die wir im Detail werden Features, Funktionen, die technische dahinter wie für die verschiedenen Geräte entwickeln, wird empfohlen, bewährte Methoden und natürlich Beantworten von unser Publikum.
-
-**Weitere Informationen folgen in Kürze. [Sehen Sie sich diese folgen hier.](http://aka.ms/trs)**
 
 
 ---

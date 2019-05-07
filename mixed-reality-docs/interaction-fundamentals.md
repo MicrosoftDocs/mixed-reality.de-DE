@@ -1,138 +1,187 @@
 ---
-title: Grundlagen der Interaktion
-description: Wie wir Umgebungen für HoloLens erstellt haben (der 1. Generation), HoloLens 2 und immersive Headsets, haben wir begonnen, Schreiben Sie einige Dinge freigeben nützlich herausgestellt.
-author: rwinj
-ms.author: jennyk
-ms.date: 02/24/2019
+title: Übersicht über die Multimodale Interaktion
+description: Übersicht über die Multimodale Interaktion
+author: shengkait
+ms.author: shengkait
+ms.date: 04/11/2019
 ms.topic: article
-keywords: Gemischte Realität Interaktion, Entwerfen
-ms.openlocfilehash: d594126529b6314a4706f8b6b6af856058c3280a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Gemischte Realität Blicke, Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
+ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593245"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993603"
 ---
-# <a name="interaction-fundamentals"></a>Grundlagen der Interaktion
+# <a name="introducing-instinctual-interactions"></a>Einführung in instinctual Interaktionen
+Die Philosophie von einfachen, instinctual Interaktionen wird in der Microsoft Mixed Reality-Plattform Gewebe.  Wir haben drei Schritte aus, um sicherzustellen, dass die Anwendung-Designer und Entwickler einfache und intuitive Interaktionen für ihre Kunden bereitstellen können, erstellt. 
 
-Wie wir Umgebungen für HoloLens und immersive Headsets erstellt haben, haben wir begonnen, Schreiben Sie einige Dinge, die es nützlich, um die Freigabe gefunden. Stellen Sie sich diese als die grundlegenden Bausteine für den Entwurf für die Interaktion von mixed Reality.
+Erstens haben dafür gesorgt, dass unsere erstaunliche Sensoren und Eingabe-Technologie, einschließlich manuell nachverfolgen, Eye-tracking und natürlicher Sprache, in nahtlose Multimodale interaktionsmodellen kombinieren.  Basierend auf unseren Studien entwerfen und entwickeln multimodally – und nicht auf einzelner Eingaben basiert – ist der Schlüssel zum Erstellen von instinctual Funktionen.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+Als Nächstes das wissen wir viele Entwickler mehrere Zielgeräten, ob das HoloLens-2 und HoloLens bedeutet (1. Generation) oder HoloLens und VR.  Wir haben so gestaltet, dass unsere interaktionsmodellen, geräteübergreifendes arbeiten (auch wenn die Eingabe-Technologie auf den einzelnen Geräten variiert).  Z. B., weit Interaktion in eine Immersive Windows Kopfhörer mit einem Controller 6DOF und weit Interaktion auf einem HoloLens 2 beide verwenden, die identische visueller Hinweise und dem Muster für geräteübergreifenden Anwendungen zu vereinfachen. Ist nicht nur diesem praktische für Entwickler und Designer, aber natürlich erscheint für Endbenutzer bereitzustellen. 
 
-Hier ist eine Gliederung verfügbaren Interaktion Entwurf Artikeln und der Typ des Geräts oder Typen zu gelten.
+Schließlich, während wir erkennen, dass es Tausende von effektiven interessanter, magische Interaktionen in MR möglich, wir haben festgestellt, absichtlich mit einer einzelnen Interaktionsmodell End-to-End in eine Anwendung ist die beste Möglichkeit, um sicherzustellen, dass Benutzer erfolgreich und haben Sie eine großartige Erfahrung.  Zu diesem Zweck haben wir drei Dinge in dieser Anleitung für die Interaktion mit einbezogen:
+* Wir haben diese Anleitung für die drei interaktionsmodelle mit primären und den Komponenten und Muster, die jeweils erforderliche strukturiert.
+* Wir haben zusätzliche Anleitungen zu den anderen Vorteilen, die unsere Plattform bietet eingefügt.
+* Wir haben dabei helfen, wählen Sie die entsprechenden Interaktionsmodell für Ihr Szenario eingefügt.
+
+
+## <a name="three-multimodal-interaction-models"></a>Drei interaktionsmodelle für Multimodale
+Basierend auf unseren Untersuchungen von und Arbeiten mit Kunden, Datum, haben wir festgestellt, dass es sich bei drei primäre interaktionsmodelle die Mehrheit der Mixed Reality-Umgebungen anpassen.
+
+In vielerlei Hinsicht ist das Interaktionsmodell des Benutzers mentales Modell zum Ausführen ihrer Flows.  Jedes dieser interaktionsmodelle ist optimiert für einen Satz von Anforderungen des Kunden, und jede ist praktisch, leistungsfähigen und eigenständig verwendet werden. 
+
+Im folgenden Diagramm ist eine vereinfachte Übersicht über.  Ausführliche Informationen für die Verwendung der einzelnen Modelle für die Interaktion ist in den folgenden Seiten, Bilder und Codebeispiele verknüpft.  
+
 <br>
 
 <table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Modell</strong></td>
+        <td><strong>Beispielszenarien</strong></td>
+        <td><strong>Anpassen</strong></td>
+        <td><strong>Hardware</strong></td>
+    </tr>
+    <tr>
+        <td><a href="hands-and-tools.md">Praktische und tools</a></td>
+        <td>3D räumliche Funktionen<br>z. B. räumliche Layout und Entwurf, Bearbeiten von Inhalten oder simulation</td>
+        <td>Ideal für neue Benutzer<br>Niedrige Lernkurve<br>In einfachen visual visueller Hinweise an die Hand geben.<br>Konsistente Benutzererfahrung in manuell nachverfolgen und 6 FG-Controller<br>In Kombination mit der Stimme, Eye-Tracking oder Head Blicke hervorragende</td>
+        <td>HoloLens 2<br>Windows mit 6DOF Controller Immersive</td>
+    </tr>
+    <tr>
+        <td><a href="hands-free.md">Hands-free</a></td>
+        <td>Kontextbezogener Umgebungen eines Benutzers Hände, in dem z. B. für die Auftrag-learning, Wartung belegt sind</td>
+        <td>Einige erforderlichen lernen<br>Wenn die Hände nicht verfügbar sind.<br>Paare mit Sprach- und natürlicher Sprache</td>
+        <td>HoloLens 2<br>HoloLens (1. Generation)<br> Immersive Windows</td>
+    </tr>
+    <tr>
+        <td><a href="gaze-and-commit.md">Head-Blicke und commit</a></td>
+        <td>Per Klick hat z. B. 3D Präsentationen, demos</td>
+        <td>Schulung für HMDs jedoch nicht für Mobile erfordert<br>Am besten für Controller, zugegriffen werden kann<br>Am besten für HoloLens (1. Generation)</td>
+        <td>HoloLens 2<br>HoloLens (1. Generation)<br> Immersive Windows<br> Mobile AR</td>
+    </tr>
+</table>
+<br>
 
-<th>
-<tr>
+Die beste Möglichkeit, um sicherzustellen, dass keine Lücken oder Lücken bei der Interaktion für Ihre Umgebung ist, die Anleitung für ein einzelnes Modell von Anfang bis Ende zu befolgen. 
 
-<td style="width:150px;"><strong>Eingabe</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
-</tr>
-</th>
+Um den Entwurf und Entwicklung zu beschleunigen, haben wir ausführliche Informationen und Links zu Bildern und Codebeispiele in unsere Abdeckung jedes Modells eingefügt.
+
+Aber zuerst die Schritte zum auswählen und Implementieren eines dieser interaktionsmodelle in den folgenden Abschnitten erläutert.  
  
-<tr>
-<td> <a href="gestures.md">Umrissene Händen</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td></td>
+### <a name="by-the-end-of-this-page-you-will-understand-our-guidance-on"></a>Am Ende dieser Seite wissen Sie, unsere Leitfäden auf:
+ 
+* Auswählen einer Interaktionsmodell für Ihre Kunden
+* Mithilfe der Interaktion Modell Anleitungen
+* Übergang zwischen interaktionsmodelle
+* Entwurf der nächste Schritte
 
-</tr><tr>
-<td> <a href="gaze-targeting.md">Auge als Ziel</a></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td><td style="text-align: center;"></td>
-</tr><tr>
-<td> <a href="gaze-targeting.md">Blicke für</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="gestures.md">Gesten</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="voice-design.md">Voice-Entwurf</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> Gamepad</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr>
-<tr>
-<td> <a href="motion-controllers.md">Motion-Controller</a></td><td></td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td>
+## <a name="choosing-an-interaction-model-for-your-customer"></a>Auswählen einer Interaktionsmodell für Ihre Kunden
 
-</tr>
-<th>
-<tr>
-<td style="width:150px;"><strong>Vorstellung und räumliche Funktionen</strong></td>
-<td style="width:150px; text-align: center;"><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-<td style="width:150px; text-align: center;"><strong>HoloLens 2</strong></td>
-<td style="width:150px; text-align: center;"><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
-</tr>
-</th>
-<tr>
+In den meisten Fällen Entwickler und Ersteller verfügen bereits über einige Ideen Beachten Sie die Art der Interaktion geboten, die sie für ihre Benutzer möchten.
+Um einen Kunden bezogener Ansatz zum Entwerfen, zu fördern, empfehlen wir, gemäß der Anleitung unten das Interaktionsmodell auswählen, das für Ihre Kunden optimiert ist.
 
-<td> <a href="spatial-sound-design.md">Räumliche Entwurf</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping-design.md">Räumliche Zuordnung entwerfen</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr><tr>
-<td> <a href="hologram.md">Holograms</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
-</tr>
+### <a name="why-follow-this-guidance"></a>Befolgen diese Anweisungen, warum?
 
+* Die interaktionsmodelle sind für Ziel und subjektive Kriterien wie z. B. physische und kognitive Zeit-und Intuition und Learnability getestet. 
+* Da Interaktion abweicht, können zwischen den interaktionsmodellen auch SEH- und visueller Hinweise und Objektverhalten abweichen.  
+* Kombinieren Teile des interaktionsmodelle wird das Risiko von konkurrierenden visueller Hinweise, wie z. B. gleichzeitige Hand Strahlung und einen Cursor Blicke zu entlasten und die Benutzer erstellt.
+
+Hier sind einige Beispiele für wie visueller Hinweise und Verhaltensweisen für die einzelnen Interaktionsmodell optimiert sind.  Wir häufig finden Sie unter neuen Benutzer als ähnliche Fragen, wie z. B. "Wie erfahre ich, das System arbeitet, wie erfahre ich, was kann ich tun, und wie weiß ich, wenn es verstanden gerade getan?"
+
+<br>
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Modell</strong></td>
+        <td><strong>Wie erfahre ich, es funktioniert?</strong></td>
+        <td><strong>Wie erfahre ich, was kann ich tun?</strong></td>
+        <td><strong>Wie weiß ich, was gerade demonstriert hat?</strong></td>
+    </tr>
+    <tr>
+        <td><a href="hands-and-tools.md">Praktische und tools</a></td>
+        <td>Ich sehe, dass eine Hand mesh, ich sehe eine fingertippen Unterstützung oder manuell / Controller Strahlung.</td>
+        <td>Ich sehe grabbable Handles oder eines umgebenden Felds angezeigt werden, wenn meine Hand in der Nähe befindet.</td>
+        <td>Ich Töne hörbar hören und sehen Sie Animationen auf Ziehpunkte und Version.</td>
+    </tr>
+    <tr>
+        <td><a href="gaze-and-commit.md">Head-Blicke und commit</a></td>
+        <td>Ich sehe es sich um einen Cursor in der Mitte der meine Sichtfeld.</td>
+        <td>Der Cursor Blicke ändert, Status, wenn Sie über bestimmte Objekte.</td>
+        <td>Ich finden Sie unter bzw. visual und akustische Bestätigungen zu hören, wenn Aktionen ausgeführt werden.</td>
+    </tr>   
+    <tr>
+        <td><a href="hands-free.md">Physisch (Blicke und Dwell)</a></td>
+        <td>Ich sehe es sich um einen Cursor in der Mitte der meine Sichtfeld.</td>
+        <td>Ich sehe eine Statusanzeige eingeblendet, wenn ich auf ein Objekt es länger aufhalten.</td>
+        <td>Ich finden Sie unter bzw. visual und akustische Bestätigungen zu hören, wenn Aktionen ausgeführt werden.</td>
+    </tr>
+    <tr>
+        <td><a href="hands-free.md">Physisch (Voice-Befehle)</a></td>
+        <td>Ich sehe ein Indikator überwacht und Untertiteln für Hörgeschädigte, die zeigen, was das System gehört.</td>
+        <td>Erhalte ich Sprachansagen und Hinweise.  Wenn ich sage "Was ich sagen können?" Ich sehe Feedback.</td>
+        <td>Ich finden Sie unter bzw. visual und akustische Bestätigungen zu hören, wenn ich einen Befehl erhalten, oder rufen zur mehrdeutigkeitsvermeidung UX bei Bedarf.</a></td>
+    </tr>
 </table>
 
-## <a name="the-user-is-the-camera"></a>Der Benutzer ist der Kamera
+### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Im folgenden finden Sie Fragen, die wir Hilfe Teams wählen ein Interaktionsmodell gefunden haben:
+ 
+1.  Q:  Möchten meine Benutzer Hologramme touch und holographic Manipulationen mit einfacher Genauigkeit ausführen?
+A:  Wenn dies der Fall ist, checken Sie das Interaktionsmodell Hände und Tools für die Genauigkeit als Ziel und-Bearbeitung in die Hände oder während der Übertragung Controller aus.
+ 
+2.  Q:  Müssen meine Benutzer, wenn sich kostenlos, für wirklichkeitsgetreue Aufgaben zu halten?
+A:  Wenn dies der Fall ist, sehen Sie sich das Interaktionsmodell Hands-Free, das physisch rundum durch Interaktionen Blicke und sprachbasierten bereitstellt.
+ 
+3.  Q:  Haben meine Benutzer noch Zeit, um Interaktionen für meine mixed Reality-Anwendung zu erfahren, oder benötigen sie die Interaktionen mit der niedrigsten Lernkurve möglich?
+A:  Das Modell Hände und Tools für die niedrigste Lernkurve und die intuitivste Interaktionen, wird empfohlen, solange der Benutzer sich für die Interaktion verwenden können.
+ 
+4.  Q:  Werden meine Benutzer während der Übertragung Controller für verweist und-Bearbeitung verwendet?
+A:  Das praktische und Tools umfasst alle Anleitungen für die Erfahrung mit der Motion-Controller.
+ 
+5.  Q:  Verwenden meine Benutzer einen Zugriff auf Controller oder eine allgemeine Bluetooth-Controller, z. B. eine Clicker?
+A:  Es wird empfohlen, das Head-Blicke und Commit-Modell für alle Controller im nicht nachverfolgt.  Es wurde entwickelt, damit der Benutzer eine gesamte Erfahrung mit einer einfachen "" Target "und" Commit "Mechanikers durchlaufen kann. 
+ 
+6.  Q: Status meine Benutzer nur über eine Benutzeroberfläche von "bei der Betrachtung" (z. B. in einer 3d Diaschau-ähnliche Umgebung), im Gegensatz zu dichten Layouts von UI-Steuerelementen zu navigieren?
+A:  Wenn Benutzer nicht um einen Großteil der Benutzeroberfläche steuern müssen, bietet Head-Blicke und Commit eine learnable Option, in dem Benutzer keine Zielgruppenadressierung kümmern. 
+ 
+7.  Q:  Meine Benutzer verwenden Sie beide HoloLens (1. Generation) und HoloLens 2 / Immersive Windows (VR Headsets) A:  Da Head-Blicke und Commit ist das Interaktionsmodell für HoloLens (der 1. Generation), es wird empfohlen, die Entwickler, die HoloLens unterstützt (1. Generation) Head-Blicke verwenden und einen commit für alle Features oder Modi, die Benutzer auf eine HoloLens auftreten können (der 1. Generation) Kopfhörer.  Finden Sie im nächsten Abschnitt unten auf *Übergang interaktionsmodelle* ausführliche Informationen zum Erstellen einer überzeugenden Umgebung für mehrere Generationen von HoloLens.
+ 
+8.  Q: Wie sieht es für Benutzer, die in der Regel mobile (deckt einen großen Speicherplatz oder Verschieben zwischen Leerzeichen), sind im Vergleich zu Benutzer, die in der Regel in einem einzelnen Leerzeichen arbeiten?  
+A:  Keines der interaktionsmodelle funktioniert für diese Benutzer.  
 
-![Benutzer wird die Kamera](images/useriscamera-640px.jpg)
+> [!NOTE]
+> Weitere Anleitungen, die speziell für app-Design [bald](index.md#news-and-notes).
 
-Denken Sie immer zum Entwurf für die Sicht des Benutzers, wie sie über die reellen und virtuelle Welten verschieben.
 
-**Einige Fragen**
-* Wird der Benutzer befindet, reclining, ständigen oder Schritt für Schritt bei der Verwendung von Ihren Erfahrungen?
-* Wie anpassen Ihre Inhalte an andere Positionen?
-* Kann der Benutzer es werden angepasst?
-* Wird der Benutzer Ihre app mit der Anwendung vertraut sein?
+## <a name="transition-interaction-models"></a>Übergang von interaktionsmodellen
+Es gibt auch Fälle, in dem Ihre Anwendungsfälle, die Nutzung von mehr als ein Interaktionsmodell möglicherweise erfordern.  Z. B. Erstellung Ihrer app "Datenfluss" nutzt das Interaktionsmodell Hände und Tools, aber Sie einen Modus physisch für Außendiensttechniker verwenden möchten.  
 
-**Empfohlene Methoden**
-* Der Benutzer die Kamera und steuern sie die Bewegung. Sie steuern können.
-* Wenn Sie praktisch den Benutzer übertragen müssen, werden Sie Probleme vestibular angefasst.
-* Verwenden Sie kürzere Animationen
-* Animieren von nach unten/links/rechts, oder blenden Sie im, anstelle von Z
-* Verlangsamen der zeitlichen Steuerung
-* Zulassen, dass Benutzer die Welt im Hintergrund finden Sie unter
+Wenn Ihre Umgebung interaktionsmodelle erforderlich ist, haben wir festgestellt, dass es sich bei viele Endbenutzer um einen Übergang aus einem Modell in ein anderes – insbesondere Benutzer gedacht, die MR schwierigkeiten auftreten können.
 
-**Was Sie vermeiden sollten**
-* Bewegen die Kamera oder Sperren Sie es absichtlich 3DOF nicht (nur Ausrichtung, keine Übersetzung), unbequem können Benutzer vorzunehmen.
-* Keine abrupte Verschiebung. Wenn Sie Inhalte zum oder vom Benutzer bringen möchten, verschieben Sie sie langsam und reibungslos in diese Richtung für optimalen Komfort. Benutzer werden auf großen Menüs, die Ihnen bald zu reagieren.
-* Nicht beschleunigen oder des Benutzers Kamera zu aktivieren. Benutzer sind anfällig für Beschleunigung (angular und translatorische).
-
-## <a name="leverage-the-users-perspective"></a>Nutzen Sie die Sicht des Benutzers
-
-Benutzer sehen die Welt von mixed Reality über zeigt auf immersive und holographic-Geräten. Klicken Sie auf die HoloLens, diese Anzeige heißt die [holographic Frame](holographic-frame.md).
-
-Entwicklung von 2D können häufig verwendete Inhalte und Einstellungen in den Ecken des Bildschirms, um sie leicht zugänglich zu machen platziert werden. In holographic apps kann Inhalt in die Ecken aus Sicht der Benutzer jedoch unbequem für den Zugriff auf sein. In diesem Fall ist die Mitte des Frames, holographic die wichtigste Quelle für Inhalte.
-
-Der Benutzer müssen möglicherweise geführt werden, um das Auffinden von wichtigen Ereignissen oder Objekte außerhalb ihrer unmittelbaren anzeigen. Sie können die Pfeile, light-Trails, Zeichen Bewegungen, Sprechblasen, Zeiger, räumliche Sound und Sprachansagen um zu unterstützen, den Benutzer auf wichtige Inhalte in Ihrer app verwenden.
-
-Es wird keine Sperre Inhalt auf dem Bildschirm des Benutzers aus Annehmlichkeitsgründen empfohlen. Wenn Sie in einer Ansicht Inhalt beibehalten möchten, fügen Sie ihn in der ganzen Welt, und machen Sie den Inhalt "Tag-along", z. B. das Startmenü. Inhalte, die zusammen mit der Sicht des Benutzers basisteilkonfiguration werden in der Umgebung natürlichere fühlen.
-
-![Die Ansicht des Benutzers im Startmenü befolgt werden, wenn der Rand des Frames erreicht](images/tagalong-1000px.jpg)<br>
-*Die Ansicht des Benutzers im Startmenü befolgt werden, wenn der Rand des Frames erreicht*
-
-Für HoloLens können Hologramme real, wenn sie innerhalb des Rahmens holographic passen, da sie abgeschnitten abrufen nicht. Benutzer werden verschoben, um zu sehen, das die Begrenzungen des ggf. ein Hologramm innerhalb des Rahmens. Für HoloLens ist es wichtig, die Benutzeroberfläche in die Ansicht des Benutzers passen, und behalten Sie den Fokus auf die Hauptaktion vereinfachen. Für immersive Headsets ist es wichtig, den Eindruck einer persistenten virtuellen Welt innerhalb des Geräts Sichtfeld zu verwalten.
-
-## <a name="user-comfort"></a>Benutzerkomfort
-
-Um sicherzustellen, dass maximal [bequem](comfort.md) auf Head-eingebunden angezeigt, und es ist wichtig für Designer und Entwickler zum Erstellen und zeigen den Inhalt in einer Weise, die imitiert, wie Menschen 3D-Formen und die relative Position von Objekten in der natürlichen interpretieren World. Hinsichtlich der physischen ist es auch wichtig, Inhalte zu entwickeln, die keine fatiguing Bewegungen des trichterhalses oder Arms erforderlich ist.
-
-Ob für HoloLens oder immersive Headsets entwickeln zu können, ist es wichtig, um Darstellung für beide Augen zu rendern. Ein Heads-Up-Display in ein Auge rendern kann nur eine Schnittstelle schwer zu verstehen sind, sowie Uneasiness des Benutzers Augen und Brain-Problem verursacht, vornehmen.
-
-## <a name="share-your-experience"></a>Teilen Sie Ihre Erfahrungen
-
-Mithilfe von [mixed Reality-Erfassung](mixed-reality-capture.md), Benutzer können eines Fotos oder Videos des Benutzererlebnisses zu einem beliebigen Zeitpunkt erfassen. Erwägen Sie die Umgebungen in Ihrer app, in dem Sie Momentaufnahmen oder Videos empfehlen möchten.
-
-## <a name="leverage-basic-ui-elements-of-the-windows-mixed-reality-home"></a>Nutzen Sie die Windows Mixed Reality home basic UI-Elemente
-
-Genau wie die Windows-PC-Umgebung mit dem Desktop gestartet wird, startet Windows Mixed Reality, mit der Startseite. Die [Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md) nutzt unsere ausgeprägten besser zu verstehen, und navigieren 3D stellen. Mit HoloLens ist Ihre Startseite Ihrer physischen Raum. Mit immersive Headsets ist Ihre Startseite einen virtuellen Ort.
-
-Ihre Startseite ist auch, in dem Sie verwenden des Startmenüs zu öffnen, und platzieren Sie apps und Inhalt. Können Sie Ihre Startseite mit mixed Reality-Inhalt füllen und Multitasking mit mehreren apps zur gleichen Zeit. Die Dinge, die Sie in Ihrem Haus platzieren bleiben, selbst wenn Sie Ihr Gerät neu starten.
+> [!Note]
+> Damit können die Anleitung-Designern und Entwicklern über Optionen, die in MR schwierig sein können, arbeiten wir an weitere Anleitungen zur Verwendung von interaktionsmodelle.
+ 
 
 ## <a name="see-also"></a>Siehe auch
-* [Blicke für](gaze-targeting.md)
+* [Head-Blicke und commit](gaze-and-commit.md)
+* [Direkte Bearbeitung](direct-manipulation.md)
+* [Punkt- und commit](point-and-commit.md)
+* [Anvisieren](gaze-targeting.md)
 * [Gesten](gestures.md)
-* [Voice-Entwurf](voice-design.md)
+* [Sprachentwurf](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
-* [Räumliche Entwurf](spatial-sound-design.md)
-* [Räumliche Zuordnung entwerfen](spatial-mapping-design.md)
-* [Comfort](comfort.md)
-* [Navigieren Sie in der Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md)
+* [Raumklangentwurf](spatial-sound-design.md)
+* [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
+* [Komfort](comfort.md)

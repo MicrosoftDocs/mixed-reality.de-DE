@@ -6,13 +6,31 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
-ms.openlocfilehash: c3225e27331f8afcda65469eb84fe5470bf6ee8c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594497"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873925"
 ---
+# <a name="gaze-and-dwell"></a>Blicke und dwell
+Es gibt viele verschiedene Möglichkeiten, vergewissern Sie sich eine _Commit_ wie das Kombinieren von Blicke mit _Voice_ oder _Gesten übergeben_.
+Gibt es jedoch werden mehrere Szenarien, in dem Benutzer bereit ist entweder ausgelastet oder können nicht nachverfolgt werden (z. B. Factory Worker mit übergroße hohe designarbeiten Handschuhe). Spracheingabe kann auch aufgrund von benutzereinstellungen, soziale Netzwerke Kontext oder laut Umgebungen nicht verfügbar.
+Als alternative Lösung für eine andere option zum Ausführen einer _Commit_ besteht darin, die an ein Benutzeroberflächenelement starren beibehalten, die dies _länger aufhalten_.
+Ein _länger aufhalten_ kann mit entweder "Head" oder "Eye Blicke ausgeführt werden. Die Idee ist einfach und kann in den folgenden Phasen unterteilt werden: 
+1. Benutzer startet auf Knopfdruck holographic gazing
+
+2. Nach einer kurzen Einsatz Verzögerung (z. B. der 150 ms) wird eine Animation visuelles Feedback gestartet. Die Verzögerung der Einsatz wird verwendet, um zu vermeiden einer Überlastung des Benutzers sofort, etwa durch Feedback jederzeit.
+    - Für _Eye Blicke_, es wird empfohlen, die folgenden für den Entwurf des visuellen Elements länger aufhalten, Feedback:
+      - **Mische es**: Blend-reibungslos in das Feedback von an, um vollständig deckend kaum noch sichtbar. Dies macht dem Feedback, weniger Ablenkung und Overwhleming und gut richtet sich das vertrauen, das das System hat, dass der Benutzer möchte mit dieser Schaltfläche in Verbindung setzen.
+      - **Ziehen Sie sie**: Erstellen Sie ein visuelles Feedback als vergrößern und verschiebt in Richtung der Mitte des Ziels, in visual Aufmerksamkeit des Benutzers abrufen. 
+
+3. Nach einer vordefinierten Dwell-Dauer (z. B. 800 ms) die Dwell abgeschlossen ist, und ein zugeordnetes Ereignis wird ausgelöst.
+    - Geben Sie einige akustische abgeschlossen, oder visuelles Feedback, wirklich Startseite, die das Element anzuzeigen haben jetzt ausgewählt.
+
+![Länger aufhalten Zustände](images/eyes_dwellstate_recommendation.png)
+
+
 # <a name="gaze-targeting"></a>Blicke für
 
 Alle Interaktionen werden erstellt, auf die Fähigkeit eines Benutzers, das Element als Ziel, die, das Sie mit, unabhängig von der Eingabe Modalität interagieren möchten. In Windows Mixed Reality, erfolgt dies in der Regel mithilfe des Benutzers Blicke.
@@ -32,7 +50,7 @@ Damit Benutzer erfolgreich eine Möglichkeit zum arbeiten können, muss des Syst
 </table>
 
 > [!NOTE]
-> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md#news-and-notes).
+> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md).
 
 ## <a name="target-sizing-and-feedback"></a>Ziel-größenanpassung und feedback
 
@@ -81,5 +99,5 @@ Wenn Sie die in der Nähe interaktive Elemente Fokus erhalten bestimmen, geben S
 
 ## <a name="see-also"></a>Siehe auch
 * [Gesten](gestures.md)
-* [Voice-Entwurf](voice-design.md)
+* [Sprachentwurf](voice-design.md)
 * [Cursor](cursors.md)

@@ -1,21 +1,21 @@
 ---
 title: Vorbereiten Ihrer app für HoloLens 2
 description: Richtet sich an Entwickler, die eine vorhandene app für HoloLens haben (der 1. Generation) und/oder ältere MRTK wird, und an den Port MRTK Version 2 und HoloLens-2.
-author: author:grbury
+author: grbury
 ms.author: grbury
 ms.date: 04/12/19
 ms.topic: article
 keywords: Windows Mixed Reality, zu testen, MRTK, MRTK Version 2, 2 für HoloLens
-ms.openlocfilehash: a5a329f69f5f9cc64666483adc92786ae8910b2f
-ms.sourcegitcommit: 07773e094ace2e828e329bd55da759983be3b8c1
+ms.openlocfilehash: 369470326d815ee711e96264939dd2e0487879b6
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59605285"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873916"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>Vorbereiten der Sie vorhandene Apps für HoloLens 2
 
-Dieses Handbuch ist speziell angepasst, um Entwicklern dabei helfen, die eine vorhandene Unity-app für HoloLens 1 so portieren Sie ihre Anwendung für das neue HoloLens-2-Gerät haben. Es gibt vier wichtigsten Schritte zum Portieren einer HoloLens 1 Unity-app für HoloLens 2 ein. In den folgenden Abschnitten werden die Informationen für die einzelnen Phasen ausführlich beschrieben. 
+Dieses Handbuch ist speziell angepasst, um Entwicklern dabei helfen, die über eine vorhandene Unity-app für HoloLens verfügen (1. Generation) so portieren Sie ihre Anwendung für das neue HoloLens-2-Gerät. Es gibt vier wichtigsten Schritte zum Portieren einer HoloLens (1. Generation) Unity-app mit HoloLens 2. In den folgenden Abschnitten werden die Informationen für die einzelnen Phasen ausführlich beschrieben. 
 
 | Schritt 1 | Schritt 2 | Schritt 3 | Schritt 4 |
 |----------|-------------------|-------------------|-------------------|
@@ -31,11 +31,12 @@ Es ist **dringend empfohlen,** , vor dem portieren, Entwickler Datenquellen-Steu
 
 ## <a name="migrate-project-to-latest-version-of-unity"></a>Migrieren Sie Projekt, auf die neueste Version von Unity
 
-Der erste Schritt zum Portieren Ihre Unity-Anwendung werden sie in der neuesten Version von Unity geöffnet. Es gibt derzeit zwei Optionen zur Auswahl: Unity 2018.3.x oder Unity 2019.1.x Beta. Es gibt mehrere vor-und Nachteile dieser zwei Versionen, aber der wichtigste Unterschied von "significance" ist die Möglichkeit, die für ARM64 in Unity 2019 + kompilieren. 
+Wenn der MRTK v2 verwenden zu können, werden Unity 2018 LTS am besten geeignete langfristige unterstützungspfad ohne wichtige Änderungen in Unity oder MRTK.  Der empfohlene Unity-Build pro der oben genannten "Installieren der Tools" ist Unity 2018.3, die der LTS-Release für Unity 2018 werden soll.  Darüber hinaus der MRTK v2 Unterstützung für Unity 2018 LTS immer garantiert wird, aber nicht zwangsläufig Unterstützung für jede Iteration von Unity 2019.x. 
 
-Entwickler sollten abwägen, alle [-Plug-Ins Abhängigkeiten](https://docs.unity3d.com/Manual/Plugins.html) vorhanden, die derzeit in ihrem Projekt und davon, ob diese DLLs für ARM64 erstellt werden können. Wenn eine harte Abhängigkeit-Plug-In für ARM64 nicht erstellt werden kann, müssen eine Unity 2018 LTS nutzen. Portieren auf ARM64 ist in der Regel, nach Möglichkeit erwünscht, wie es viele leistungsverbesserungen, die auf Geräte im Vergleich zu ARM32 angezeigt gibt.
+Um zu verdeutlichen, dass weiterer Unterschiede zwischen Unity 2018.3.x oder Unity 2019.1.x, unten zeigt die vor-und Nachteile zwischen diesen zwei Versionen, mit der wichtigste Unterschied von "significance" wird die Möglichkeit, für ARM64 in Unity 2019 kompilieren. 
 
-Darüber hinaus wird der Mixed Reality-Toolkit V2-Unterstützung für Unity 2018 LTS immer garantiert aber nicht zwangsläufig Unterstützung für alle Iterationen der Unity-2019.x+. 
+Entwickler sollten abwägen, alle [-Plug-Ins Abhängigkeiten](https://docs.unity3d.com/Manual/Plugins.html) vorhanden, die derzeit in ihrem Projekt und davon, ob diese DLLs für ARM64 erstellt werden können. Wenn eine harte Abhängigkeit-Plug-In für ARM64 nicht erstellt werden kann, müssen eine Unity 2018 LTS nutzen.
+
 
 | Unity 2018.3.x | Unity 2019.1+ |
 |----------|-------------------|
@@ -130,7 +131,7 @@ Die Herausforderung kommt, wenn es sich bei der Unity-app native-Plug-Ins verwen
 ## <a name="see-also"></a>Siehe auch
 * [Erste Schritte mit MRTK Version 2](mrtk-getting-started.md)
 * [MRTK Version 2 des Clients](https://microsoft.github.io/MixedRealityToolkit-Unity/External/HowTo/README.html)
-* [Installieren der tools](install-the-tools.md)
+* [Installieren der Tools](install-the-tools.md)
 * [Empfohlene Einstellungen für Unity](recommended-settings-for-unity.md)
 * [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
 
