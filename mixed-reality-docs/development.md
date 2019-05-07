@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
 keywords: Mixed Reality, entwickeln, Entwicklung, HoloLens, Unity, Directx
-ms.openlocfilehash: e48a1cbfbe084de9382b9fa1104b2d5fc0f68fcc
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593225"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993591"
 ---
 # <a name="development-launchpad"></a>Entwicklung launchpad
 
@@ -38,7 +38,7 @@ ms.locfileid: "59593225"
                             <a href="install-the-tools.md">Installieren der tools</a>
                         </p>
                         <p>
-                            <a href="holograms-100.md">Anhand von Tutorials und Beispiel-apps</a>
+                            <a href="mrlearning-base-ch1.md">MR lernen: HoloLens 2 und MRTK v2</a>
                         </p>
                     </div>
                 </div>
@@ -132,10 +132,10 @@ Unreal - demnächst verfügbar!
                     <div class="cardText">
                         <h3>Portierungsleitfäden</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Aktualisieren auf die neueste gemischt<br>Realität Toolkit (MRTK)</a>
+                            <a href="mrtk-porting-guide.md">Aktualisieren von apps zu HoloLens 2<br>von HoloLens (1. Generation)</a>
                         </p>
                         <p>
-HoloLens (1. Generation) mit HoloLens 2<br>- Demnächst!
+                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Mixed Reality-Toolkit (MRTK)<br>Leitfaden zum Portieren der API</a>
                         </p>
                         <p>
                             <a href="porting-guides.md">Immersive Kopfhörer-apps</a>
@@ -208,9 +208,9 @@ Dies sind die wichtigsten Bausteine für die Entwicklung von mixed Reality:
 </tr><tr>
 <td> <a href="coordinate-systems.md">Globale Koordinaten</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-sound.md">Räumliche sound</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="spatial-sound.md">Raumklang</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="spatial-mapping.md">Räumliche Zuordnung</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
+<td> <a href="spatial-mapping.md">Räumliche Abbildung</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
 </tr>
 </table>
 
@@ -235,5 +235,5 @@ Unabhängig von der Art der app, die Sie erstellen, werden diese Tools app-Entwi
 * [Windows-Geräteportal](using-the-windows-device-portal.md)
 * [HoloLens-emulator](using-the-hololens-emulator.md)
 * [Windows Mixed Reality-simulator](using-the-windows-mixed-reality-simulator.md)
-* [Qualitätskriterien für die App](app-quality-criteria.md)
+* [Kriterien für die App-Qualität](app-quality-criteria.md)
 
