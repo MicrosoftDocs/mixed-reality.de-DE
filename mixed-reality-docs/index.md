@@ -7,12 +7,12 @@ ms.author: vanesa
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixed Reality, Entdecken, Verteilen, Index, Einstiegsseite, Entwurf, Entwicklung, Tutorials, Beispiel-Apps, Grundlagen, Fallstudien, Ressourcen, HoloLens-Vorgehensweise, Open-Source-Projekte
-ms.openlocfilehash: 60cd3bbaa5b5e6d76a78b9c858d3b08141995b94
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e36c903f93cc13d941a93331164cff6b4db4980e
+ms.sourcegitcommit: ff7eb8b92170eb8107935de4bd96b236087395ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59588999"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "65030574"
 ---
 # <a name="mixed-reality-documentation"></a>Mixed Reality-Dokumentation
 
@@ -146,34 +146,34 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
 
 [![HoloLens 2](images/hololens2.jpg)](https://www.microsoft.com/hololens/hardware)
 
-[HoloLens 2](https://www.microsoft.com/hololens/hardware) bietet die komfortabelste und immersivste verfügbare Mixed Reality-Umgebung mit branchenführenden Lösungen, die innerhalb von Minuten einen Mehrwert bringen – dies alles auf Basis der Zuverlässigkeit, Sicherheit und Skalierbarkeit der Cloud- und KI-Dienste von Microsoft.
+[HoloLens 2](https://www.microsoft.com/hololens/hardware) bietet die komfortabelste und immersivste verfügbare Mixed Reality-Umgebung mit branchenführenden Lösungen, die innerhalb von Minuten einen Mehrwert bringen – dies alles auf Basis der Zuverlässigkeit, Sicherheit und Skalierbarkeit der Cloud- und KI-Dienste von Microsoft. Die [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) kombiniert HoloLens 2 mit kostenlosen Testversionen der Unity-Software und Azure-Gutschriften für Clouddienste und dient damit als Starthilfe für Ihre Mixed Reality-Projekte.
 
 <h2>Neuigkeiten und Anmerkungen</h2>
 
-<h3>Februar 2019</h3>
+<h3>April 2019</h3>
 
-Im Laufe der nächsten Monate werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir freuen uns auf Ihr Feedback, und wir möchten Sie einladen, sich an [den Diskussionen zu beteiligen](https://holodevelopersslack.azurewebsites.net/), in denen es um Themen geht, die wir für Sie aufbereiten sollen, sowie Personen, von denen Sie etwas hören möchten, Tutorials und Beschreibungen von Vorgehensweisen, die Sie benötigen… Sie können uns auch über [Twitter](https://twitter.com/MxdRealityDev) erreichen und [unserem Entwicklerprogramm beitreten](https://aka.ms/iwantmr), um direkte Updates zu neuen Dokumenten, Tools, Veranstaltungen und weiteren Informationen zu erhalten. 
+Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir freuen uns auf Ihr Feedback, und wir möchten Sie einladen, sich an [den Diskussionen zu beteiligen](https://holodevelopersslack.azurewebsites.net/), in denen es um Themen geht, die wir für Sie aufbereiten sollen, sowie Personen, von denen Sie etwas hören möchten, Tutorials und Beschreibungen von Vorgehensweisen, die Sie benötigen… Sie können uns auch über [Twitter](https://twitter.com/MxdRealityDev) erreichen und [unserem Entwicklerprogramm beitreten](https://aka.ms/iwantmr), um direkte Updates zu neuen Dokumenten, Tools, Veranstaltungen und weiteren Informationen zu erhalten. Bleiben Sie dran, das ist noch nicht alles!
 
 <table>
 <tr>
-<th style="width: 400px; text-align:left;">Inhalt</th><th style="width: 125px; text-align:left;">Bereitstellung</th>
+<th style="width: 400px; text-align:left;">Inhalt</th><th style="width: 125px; text-align:left;">Bereitstellung</th><th style="width: 125px; text-align:left;">JETZT LIVE!</th>
 </tr> 
 <tr>
 <td><b>Portierungsleitfäden</b> <br>1. HoloToolKit (HTK)/Mixed Reality Toolkit (MRTK) zu MRTK Version 2
 <br>2. HoloLens (1. Generation) zu HoloLens 2 (X86 zu ARM, Interaktions- und Entwurfsempfehlungen)
-</td></td><td>März bis Mai 2019</td>
+</td></td><td>März bis Mai 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Vorbereiten einer vorhandenen App für HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit zu MRTK-APIs</a></td>
 </tr>
 <tr>
-<td>Monatlich Module von Open-Source-Entwicklern (Tutorials/Beispiel-Apps)</td><td>März bis Juni 2019</td>
+<td>Monatlich Module von Open-Source-Entwicklern (Tutorials/Beispiel-Apps)</td><td>März bis Juni 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1>MR-Basislernmodul</a></td>
 </tr>
 <tr>
-<td>Vorschau auf neue Funktionen in MRTK für HoloLens 2</td><td>April 2019</td>
+<td>Vorschau auf neue Funktionen in MRTK für HoloLens 2</td><td>April 2019</td><td> <ul><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html>MRTK-Dokumentation</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-getting-started>Erste Schritte mit MRTK v2</a></td>
 </tr>
 <tr>
-<td>Entwurfs- und Entwicklungsanleitungen für HoloLens 2</td><td>April 2019</td>
+<td>Entwurfs- und Entwicklungsanleitungen für HoloLens 2</td><td>April 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>Installieren der Tools</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>HoloLens 2-Emulator</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Entwurfsleitfaden für instinktive Interaktionen</a>
 </tr>
 <tr>
-<td>Weitere Informationen zu Unreal</td><td>Mai 2019</td>
+  <td>Weitere Informationen zu Unreal</td><td>Mai 2019</td><td></td>
 </tr>
 </table>
 
