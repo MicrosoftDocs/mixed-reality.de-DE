@@ -1,21 +1,21 @@
 ---
-title: Voice-Entwurf
+title: Blicke und Sprache
 description: Blicke, Gesten und Stimme (GGV) sind das primäre Mittel der Interaktion bei HoloLens. Dieser Artikel enthält eine gut durchdachte Anleitungen Voice-Entwurf.
-author: rwinj
-ms.author: randyw
-ms.date: 03/21/2018
+author: grbury
+ms.author: grbury
+ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, entwerfen, die Interaktion, die Stimme
-ms.openlocfilehash: 2df0e15c66891b08577fcf203d11f7c7008247f1
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596714"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469071"
 ---
-# <a name="voice-design"></a>Voice-Entwurf
+# <a name="gaze-and-voice"></a>Blicke und Sprache
 
-Blicke, Gesten und Stimme (GGV) sind das primäre Mittel der Interaktion bei HoloLens. [Bestaunen](gaze.md) mit verwendet eine [Cursor](cursors.md) ist der Mechanismus für einen Benutzer, den Inhalt ausgerichtet, sie bereit sind für die Interaktion mit. [Geste](gestures.md) oder [Voice](voice-input.md) sind die Absicht-Mechanismen. Blicke kann mit entweder Geste oder verwendet werden, um eine Aktivität abzuschließen.
+Blicke, Gesten und Stimme (GGV) werden das primäre Mittel der Interaktion bei HoloLens (1. Generation). [Bestaunen](gaze.md) mit verwendet eine [Cursor](cursors.md) ist der Mechanismus für einen Benutzer, den Inhalt ausgerichtet, sie bereit sind für die Interaktion mit. [Geste](gestures.md) oder [Voice](voice-input.md) sind die Absicht-Mechanismen. Blicke kann mit entweder Geste oder verwendet werden, um eine Aktivität abzuschließen.
 
 Für immersive Headsets, werden das primäre Mittel der Interaktion Blicke-und-Commit "und" Punkt-und-Commit (mit einem [Motion-Controller](motion-controllers.md)). Wenn der Benutzer einen Kopfhörer mit Voice-Funktionen verfügt, kann Voice in Kombination mit Blicke oder Punkt zum Ausführen einer Aktion verwendet werden.
 
@@ -27,7 +27,7 @@ Beim Entwerfen von apps, sollten Sie erwägen, wie Sie diese Interaktionen und z
 <tr>
 <th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
 </tr><tr>
-<td> Spracheingabe</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer angeschlossen)</td>
+<td>Blicke und Sprache</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer angeschlossen)</td>
 </tr>
 </table>
 
@@ -102,4 +102,4 @@ Wenn Voice ordnungsgemäß angewendet wird, wird der Benutzer versteht **was sie
 
 ## <a name="see-also"></a>Siehe auch
 * [Gesten](gestures.md)
-* [Blicke für](gaze-targeting.md)
+* [Anvisieren](gaze-targeting.md)

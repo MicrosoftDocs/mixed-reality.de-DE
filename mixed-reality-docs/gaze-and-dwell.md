@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 03/31/2019
 ms.topic: article
 keywords: Gemischte Realität Blicke, Dwell, Interaktion, Entwerfen
-ms.openlocfilehash: a50ae948a351f5152ebb98778da9be8c08090d72
-ms.sourcegitcommit: 222cba2d622b47f75949bf8af80d5c62de4dceab
+ms.openlocfilehash: d99180b6eb278eb6d7bf322c01a1c7cceb7fad1f
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914610"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469063"
 ---
 # <a name="gaze-and-dwell"></a>Blicke und dwell
 
@@ -116,7 +116,7 @@ Geben Sie einen Mechanismus für die vollständige freisprechgeräte Interaktion
 
   * Radiale Füllen von Blicke Start Cursorposition
   * Immer radiale Füllung aus der Mitte der Schaltfläche. Eine konsistente Antwort ist weniger verwirrend, als alle anderen Anweisungen für verschiedene Schaltflächen. 
-    * Mit dieser Regel kann jedoch für den direktionalen Interaktionen (z. B. Nav nach-oben/nach unten/links/rechts, usw.) unterbrochen werden. Z. B. rechts Anleitungen wird eine Ausnahme auf die nächste/BACK verlassene gefüllt.
+    * Mit dieser Regel kann jedoch für den direktionalen Interaktionen (z. B. Nav nach-oben/nach unten/links/rechts, usw.) unterbrochen werden. Z. B. rechts Anleitungen wird eine Ausnahme auf die nächste/Back verlassene gefüllt.
     * Betrachten Sie Invertieren von radialen Füllen von außerhalb (bei off umschalten) aus. Die inverse Eindruck, eine Schaltfläche ist ein praktisches visual Muster zu verwalten. 
 
 ### <a name="progressive-disclosure"></a>Schrittweise Anzeige von
@@ -127,8 +127,8 @@ Geben Sie einen Mechanismus für die vollständige freisprechgeräte Interaktion
  * Versuchen Sie es, um zu vermeiden, dass alle Dwell Ziele auf jederzeit aufgrund eines wiederholten Aussehen des gestapelten Kreise
  
  ## <a name="see-also"></a>Siehe auch
-* [Direkte Bearbeitung](direct-manipulation.md)
-* [Punkt- und commit](point-and-commit.md)
+* [Direkte Manipulation](direct-manipulation.md)
+* [Zeigen und Ausführen](point-and-commit.md)
 * [Interaktionsgrundlagen](interaction-fundamentals.md)
-* [Head-Blicke und commit](gaze-and-commit.md)
-* [Blicke und Sprache](voice-design.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
+* [Anvisieren und Spracheingabe](voice-design.md)

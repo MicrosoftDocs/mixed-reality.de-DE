@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Gemischte Realität Blicke, Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
-ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993603"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469105"
 ---
 # <a name="introducing-instinctual-interactions"></a>Einführung in instinctual Interaktionen
 Die Philosophie von einfachen, instinctual Interaktionen wird in der Microsoft Mixed Reality-Plattform Gewebe.  Wir haben drei Schritte aus, um sicherzustellen, dass die Anwendung-Designer und Entwickler einfache und intuitive Interaktionen für ihre Kunden bereitstellen können, erstellt. 
@@ -55,13 +55,13 @@ Im folgenden Diagramm ist eine vereinfachte Übersicht über.  Ausführliche Inf
         <td>HoloLens 2<br>Windows mit 6DOF Controller Immersive</td>
     </tr>
     <tr>
-        <td><a href="hands-free.md">Hands-free</a></td>
+        <td><a href="hands-free.md">Freihändig</a></td>
         <td>Kontextbezogener Umgebungen eines Benutzers Hände, in dem z. B. für die Auftrag-learning, Wartung belegt sind</td>
         <td>Einige erforderlichen lernen<br>Wenn die Hände nicht verfügbar sind.<br>Paare mit Sprach- und natürlicher Sprache</td>
         <td>HoloLens 2<br>HoloLens (1. Generation)<br> Immersive Windows</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Head-Blicke und commit</a></td>
+        <td><a href="gaze-and-commit.md">Anvisieren mit dem Kopf und Ausführen</a></td>
         <td>Per Klick hat z. B. 3D Präsentationen, demos</td>
         <td>Schulung für HMDs jedoch nicht für Mobile erfordert<br>Am besten für Controller, zugegriffen werden kann<br>Am besten für HoloLens (1. Generation)</td>
         <td>HoloLens 2<br>HoloLens (1. Generation)<br> Immersive Windows<br> Mobile AR</td>
@@ -107,7 +107,7 @@ Hier sind einige Beispiele für wie visueller Hinweise und Verhaltensweisen für
     <tr>
         <td><strong>Modell</strong></td>
         <td><strong>Wie erfahre ich, es funktioniert?</strong></td>
-        <td><strong>Wie erfahre ich, was kann ich tun?</strong></td>
+        <td><strong>Wie weiß ich, was kann ich tun?</strong></td>
         <td><strong>Wie weiß ich, was gerade demonstriert hat?</strong></td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@ Hier sind einige Beispiele für wie visueller Hinweise und Verhaltensweisen für
         <td>Ich Töne hörbar hören und sehen Sie Animationen auf Ziehpunkte und Version.</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Head-Blicke und commit</a></td>
+        <td><a href="gaze-and-commit.md">Anvisieren mit dem Kopf und Ausführen</a></td>
         <td>Ich sehe es sich um einen Cursor in der Mitte der meine Sichtfeld.</td>
         <td>Der Cursor Blicke ändert, Status, wenn Sie über bestimmte Objekte.</td>
         <td>Ich finden Sie unter bzw. visual und akustische Bestätigungen zu hören, wenn Aktionen ausgeführt werden.</td>
@@ -175,9 +175,9 @@ Wenn Ihre Umgebung interaktionsmodelle erforderlich ist, haben wir festgestellt,
  
 
 ## <a name="see-also"></a>Siehe auch
-* [Head-Blicke und commit](gaze-and-commit.md)
-* [Direkte Bearbeitung](direct-manipulation.md)
-* [Punkt- und commit](point-and-commit.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
+* [Direkte Manipulation](direct-manipulation.md)
+* [Zeigen und Ausführen](point-and-commit.md)
 * [Anvisieren](gaze-targeting.md)
 * [Gesten](gestures.md)
 * [Sprachentwurf](voice-design.md)
