@@ -7,12 +7,12 @@ ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Entwurf, Interaktion, Stil, Farbe, app-Muster, Steuerelemente, Mixed Reality-Toolkit, MRTK Beispiel-apps
-ms.openlocfilehash: 470dff4319abded630e084f46193dcc79531aa54
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 8d5618b6f01f379b70f95e6493bdc670a1338e4c
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596387"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469096"
 ---
 # <a name="design-for-mixed-reality"></a>Entwurf für mixed reality
 
@@ -64,21 +64,21 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Entwerfen für</h3>
-                        <p>
-                            <a href="interaction-fundamentals.md">Grundlagen der Interaktion</a>
-                        </p>
+                        <h3>Interaktionsgestaltung</h3>
                         <p>
                             <a href="comfort.md">Comfort</a>
                         </p>
-                        <p>
-                            <a href="gaze-targeting.md">Blicke für</a>
+            <p>
+                            <a href="interaction-fundamentals.md">Instinctual Interaktionen</a>
                         </p>
                         <p>
-                            <a href="gestures.md">Gesten</a>
+                            <a href="hands-and-tools.md">Praktische und Controllern</a>
+                        </p>
+                        <p>
+                            <a href="hands-free.md">Benutzereingriff</a>
                         </p>
                          <p>
-                            <a href="voice-design.md">Voice-Entwurf</a>
+                            <a href="gaze-and-commit.md">Head-Blicke und commit</a>
                         </p>
                     </div>
                 </div>
