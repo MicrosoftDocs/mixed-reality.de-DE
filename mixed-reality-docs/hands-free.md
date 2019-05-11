@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Mixed Reality, physisch, bestaunen, bestaunen Ziel ist, handelt es sich bei Interaktion, Entwurf
-ms.openlocfilehash: b64dec802d8ed2886021a54f302ba4a948c4f5b9
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581030"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524330"
 ---
 # <a name="optimizing-your-app-for-hands-free"></a>Optimieren Ihre app für freisprechgeräte
 
@@ -42,7 +42,7 @@ Verwenden Ihre Stimme zum Befehl und Steuerung, die eine Schnittstelle kann nich
 
 In einigen Situationen physisch ist mit der Stimme nicht ideal oder sogar möglich. Laut Factoryumgebungen, Datenschutz oder soziale Normen können alle Einschränkungen sein. Die Kopfzeile bestaunen + länger aufhalten Modell kann der Benutzer die app zu navigieren, indem Sie ihre Head Vektor um zu zeigen, während die veralteten, oder auf eine Schaltfläche Einstichs wird Aktivieren der nach einem bestimmten Zeitraum (in der Regel ca. 1 Sekunde oder so). 
 
-* [Blicke und dwell](gaze-and-dwell.md)
+* [Anvisieren und Verweilen](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>Übergang und physisch
 
@@ -97,6 +97,6 @@ Der Benutzer ist versteht...
 
 
 ## <a name="see-also"></a>Siehe auch
-* [Blicke und commit](gaze-and-commit.md)
-* [Direkte Bearbeitung](direct-manipulation.md)
-* [Punkt- und commit](point-and-commit.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
+* [Direkte Manipulation](direct-manipulation.md)
+* [Zeigen und Ausführen](point-and-commit.md)

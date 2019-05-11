@@ -6,19 +6,19 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Gemischte Realität Blicke, Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
-ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 8c578d9a67f6809df69fb132f4c46a381726596e
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469105"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524340"
 ---
 # <a name="introducing-instinctual-interactions"></a>Einführung in instinctual Interaktionen
 Die Philosophie von einfachen, instinctual Interaktionen wird in der Microsoft Mixed Reality-Plattform Gewebe.  Wir haben drei Schritte aus, um sicherzustellen, dass die Anwendung-Designer und Entwickler einfache und intuitive Interaktionen für ihre Kunden bereitstellen können, erstellt. 
 
 Erstens haben dafür gesorgt, dass unsere erstaunliche Sensoren und Eingabe-Technologie, einschließlich manuell nachverfolgen, Eye-tracking und natürlicher Sprache, in nahtlose Multimodale interaktionsmodellen kombinieren.  Basierend auf unseren Studien entwerfen und entwickeln multimodally – und nicht auf einzelner Eingaben basiert – ist der Schlüssel zum Erstellen von instinctual Funktionen.
 
-Als Nächstes das wissen wir viele Entwickler mehrere Zielgeräten, ob das HoloLens-2 und HoloLens bedeutet (1. Generation) oder HoloLens und VR.  Wir haben so gestaltet, dass unsere interaktionsmodellen, geräteübergreifendes arbeiten (auch wenn die Eingabe-Technologie auf den einzelnen Geräten variiert).  Z. B., weit Interaktion in eine Immersive Windows Kopfhörer mit einem Controller 6DOF und weit Interaktion auf einem HoloLens 2 beide verwenden, die identische visueller Hinweise und dem Muster für geräteübergreifenden Anwendungen zu vereinfachen. Ist nicht nur diesem praktische für Entwickler und Designer, aber natürlich erscheint für Endbenutzer bereitzustellen. 
+Als Nächstes das wissen wir viele Entwickler mehrere Zielgeräten, ob das HoloLens-2 und HoloLens bedeutet (1. Generation) oder HoloLens und VR.  Wir haben so gestaltet, dass unsere interaktionsmodellen, geräteübergreifendes arbeiten (auch wenn die Eingabe-Technologie auf den einzelnen Geräten variiert).  Z. B., weit Interaktion in eine Immersive Windows Kopfhörer mit einem Controller 6DoF und weit Interaktion auf einem HoloLens 2 beide verwenden, die identische visueller Hinweise und dem Muster für geräteübergreifenden Anwendungen zu vereinfachen. Ist nicht nur diesem praktische für Entwickler und Designer, aber natürlich erscheint für Endbenutzer bereitzustellen. 
 
 Schließlich, während wir erkennen, dass es Tausende von effektiven interessanter, magische Interaktionen in MR möglich, wir haben festgestellt, absichtlich mit einer einzelnen Interaktionsmodell End-to-End in eine Anwendung ist die beste Möglichkeit, um sicherzustellen, dass Benutzer erfolgreich und haben Sie eine großartige Erfahrung.  Zu diesem Zweck haben wir drei Dinge in dieser Anleitung für die Interaktion mit einbezogen:
 * Wir haben diese Anleitung für die drei interaktionsmodelle mit primären und den Komponenten und Muster, die jeweils erforderliche strukturiert.
@@ -51,8 +51,8 @@ Im folgenden Diagramm ist eine vereinfachte Übersicht über.  Ausführliche Inf
     <tr>
         <td><a href="hands-and-tools.md">Praktische und tools</a></td>
         <td>3D räumliche Funktionen<br>z. B. räumliche Layout und Entwurf, Bearbeiten von Inhalten oder simulation</td>
-        <td>Ideal für neue Benutzer<br>Niedrige Lernkurve<br>In einfachen visual visueller Hinweise an die Hand geben.<br>Konsistente Benutzererfahrung in manuell nachverfolgen und 6 FG-Controller<br>In Kombination mit der Stimme, Eye-Tracking oder Head Blicke hervorragende</td>
-        <td>HoloLens 2<br>Windows mit 6DOF Controller Immersive</td>
+        <td>Ideal für neue Benutzer<br>Niedrige Lernkurve<br>In einfachen visual visueller Hinweise an die Hand geben.<br>Konsistente Benutzererfahrung in manuell nachverfolgen und 6DoF-Controller<br>In Kombination mit der Stimme, Eye-Tracking oder Head Blicke hervorragende</td>
+        <td>HoloLens 2<br>Windows mit 6DoF Controller Immersive</td>
     </tr>
     <tr>
         <td><a href="hands-free.md">Freihändig</a></td>
