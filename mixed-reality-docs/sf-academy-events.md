@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Ereignis, Kalender, Academy, Zeitplan, sf, San Francisco, Reaktor
-ms.openlocfilehash: c896cf398bd10fc12e5afed6313cbd95e5370c31
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 15867ebd15406741d96ea5f61a66b5d80fcfde6a
+ms.sourcegitcommit: 37b628d6e24377ffc8fe9a09750fc0033107d151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670130"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536096"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Microsoft, Mixed Reality-Ereignisse
 
@@ -21,23 +21,6 @@ Schließen Sie Microsoft Mixed Reality-Team bei diesen bevorstehenden Veranstalt
 680 Folsom St.<br>
 San Francisco, CA 94107
 
-
-
----
-## <a name="mixed-reality-dev-days-seattlehttpsdocsmicrosoftcomen-uswindowsmixed-realitymr-dev-days"></a>**[Mixed Reality Dev Tage, Seattle](https://docs.microsoft.com/en-us/windows/mixed-reality/mr-dev-days)**
-### <a name="may-2-3-2019"></a>2 bis 3 Mai 2019
-Mixed Reality Dev Tage erstellen Sie die Fähigkeiten, Netzwerk- und Ideen, dass Sie Ihre mixed Reality-Anwendungen auf die nächste Stufe zu müssen.
-
-**[Weitere Informationen](https://docs.microsoft.com/en-us/windows/mixed-reality/mr-dev-days)**
-
-
-
----
-## <a name="microsoft-build-seattlehttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmicrosoftcom2fen-us2fbuilddata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961104348sdatahozczluhbppxuyjak5i802k6bej5flmn0gek7c12bihw3dreserved0"></a>**[Microsoft //Build, Seattle](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fbuild&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961104348&sdata=hozCZlUHbpPxuYJaK5i802K6beJ5flmN0gEK7C1%2BIHw%3D&reserved=0)**
-### <a name="may-6-10-2019"></a>6 bis 10 Mai 2019
-Seien Sie in Seattle für Microsoft Veranstaltung für Entwickler. Besuchen Sie aus, und erleben Sie die neuesten Entwicklertools und Technologien. Stellen Sie sich neue Möglichkeiten zum Erstellen von Software durch branchenweite Einblicke in die Zukunft der Entwicklung von Software abrufen. Verbinden Sie mit Ihrer Community, um die neue Entwicklung Trends und innovative Möglichkeiten, Code zu verstehen.
-
-**Registrieren Sie sich für Microsoft //Build 2019 [hier](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fbuild&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961104348&sdata=hozCZlUHbpPxuYJaK5i802K6beJ5flmN0gEK7C1%2BIHw%3D&reserved=0)**
 
 
 ---
