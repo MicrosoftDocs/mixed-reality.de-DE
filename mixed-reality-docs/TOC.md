@@ -48,11 +48,13 @@
 ### [Methode von AfterNow – Vorstellung, Prototyperstellung, Produkterstellung](case-study-afternows-process-envisioning,-prototyping,-building.md)
 ### [Erstellen mit HoloSketch, eine App für HoloLens für räumliches Layout und UX-Skizzierung](case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)
 ### [Erfassen und Erstellen von Inhalten für HoloTour](case-study-capturing-and-creating-content-for-holotour.md)
-### [Erstellen ein Galaxie in Mixed Reality](case-study-creating-a-galaxy-in-mixed-reality.md)
 ### [Erstellen einer immersiven Erfahrung in Fragmenten](case-study-creating-an-immersive-experience-in-fragments.md)
 ### [Erstellen von unmöglich Perspektiven für HoloTour](case-study-creating-impossible-perspectives-for-holotour.md)
 ### [Erweitern des Entwurfsprozesses für Mixed Reality](case-study-expanding-the-design-process-for-mixed-reality.md)
 ### [Erweitern der HoloLens-Möglichkeiten für räumliche Abbildung](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+### Galaxy Explorer
+#### [Erstellen einer Galaxie in Mixed Reality für Hololens (1. Generation)](case-study-creating-a-galaxy-in-mixed-reality.md)
+#### [Aktualisieren von Galaxy Explorer für HoloLens 2](galaxy-explorer-update.md)
 ### [Lernprozesse für die Gestaltung von HoloStudio-Benutzeroberfläche und -Interaktion](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 ### [Lehren aus der Lowe-Küche](case-study-lessons-from-the-lowes-kitchen.md)
 ### [Schauen durch Löcher in Ihrer Realität](case-study-looking-through-holes-in-your-reality.md)
@@ -190,7 +192,8 @@
 ### Unity
 #### MR-Lernmodule
 ##### HoloLens 2
-###### [Basismodul: Übersicht und Ziele](mrlearning-base.md)
+###### Basismodul
+####### [Basismodul: Übersicht und Ziele](mrlearning-base.md)
 ####### [Projektinitialisierung und erste Anwendung](mrlearning-base-ch1.md)
 ####### [Benutzeroberfläche, Hand-Tracking und Konfiguration des Mixed Reality-Toolkits](mrlearning-base-ch2.md)
 ####### [Dynamische Inhaltsplatzierung und Solver](mrlearning-base-ch3.md)
