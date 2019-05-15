@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Galaxy-Explorer, HoloLens, Windows Mixed Reality, Teilen Ihre Idee, Fallstudie
 ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59604834"
@@ -147,7 +147,7 @@ Vollbildmodus Clouds durchführen, und versuchen, diese blur hätten keine gute 
 
 ### <a name="a-bit-of-context-first"></a>Ein bit des Kontexts zunächst
 
-Bei Verwendung von Texturen in einem Spiel entspricht der Texturgröße selten Bereich in verwendet werden soll, jedoch können wir andere Art von texturfilterung zum Abrufen der Grafikkarte auf, um die Farbe zu interpolieren in Pixel der Textur erstellt werden sollten ([Texturfilterung<C3/>). Die Filterung, die uns interessiert ist [bilineare Filterung](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) die wird den Wert jedes Pixels mit dem 4 nächsten Nachbarn berechnet.
+Bei Verwendung von Texturen in einem Spiel entspricht der Texturgröße selten Bereich in verwendet werden soll, jedoch können wir andere Art von texturfilterung zum Abrufen der Grafikkarte auf, um die Farbe zu interpolieren in Pixel der Textur erstellt werden sollten ([Texturfilterung](https://msdn.microsoft.com/library/dn642451.aspx)). Die Filterung, die uns interessiert ist [bilineare Filterung](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) die wird den Wert jedes Pixels mit dem 4 nächsten Nachbarn berechnet.
 
 ![Ursprüngliche Filtervorgang](images/texture-1.png)
 
