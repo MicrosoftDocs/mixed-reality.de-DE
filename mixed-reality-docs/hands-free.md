@@ -1,19 +1,19 @@
 ---
-title: Optimieren Ihre app für freisprechgeräte
+title: Freisprechen
 description: Optimieren Ihre app für freisprechgeräte
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Mixed Reality, physisch, bestaunen, bestaunen Ziel ist, handelt es sich bei Interaktion, Entwurf
-ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524330"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629012"
 ---
-# <a name="optimizing-your-app-for-hands-free"></a>Optimieren Ihre app für freisprechgeräte
+# <a name="hands-free"></a>Freisprechen
 
 
 
@@ -31,18 +31,16 @@ Unter Umständen einige spezifischen Szenarien:
 
 ## <a name="hands-free-modalities"></a>Physisch Modalitäten
 
-### <a name="voice-commanding"></a>Voice-Befehle
+### <a name="voice-commandingvoice-designmd"></a>[Voice-Befehle](voice-design.md)
 
 Verwenden Ihre Stimme zum Befehl und Steuerung, die eine Schnittstelle kann nicht nur ermöglicht dem Benutzer, arbeiten Handsfree, aber auch mehrere Schritte überspringen. Die Verwendung dieser Modalität reichen von der Benutzer kann alle diese Schaltfläche einfach zu lesen laut aktivieren, wie finden Sie unter-It-Say-It, um die Konversation mit einem Agent, der Aufgaben für Sie ausführen kann.
 
-* [Sprachentwurf](voice-design.md)
 
 
-### <a name="head-gaze-and-dwell"></a>Head Blicke und dwell
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Head-Blicke und dwell](gaze-and-dwell.md)
 
 In einigen Situationen physisch ist mit der Stimme nicht ideal oder sogar möglich. Laut Factoryumgebungen, Datenschutz oder soziale Normen können alle Einschränkungen sein. Die Kopfzeile bestaunen + länger aufhalten Modell kann der Benutzer die app zu navigieren, indem Sie ihre Head Vektor um zu zeigen, während die veralteten, oder auf eine Schaltfläche Einstichs wird Aktivieren der nach einem bestimmten Zeitraum (in der Regel ca. 1 Sekunde oder so). 
 
-* [Anvisieren und Verweilen](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>Übergang und physisch
 
