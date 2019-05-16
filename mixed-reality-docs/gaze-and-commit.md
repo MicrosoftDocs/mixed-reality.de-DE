@@ -1,17 +1,18 @@
 ---
-title: Blicke und commit
-description: Übersicht über das Eingabemodell Blicke und commit
+title: Head-Blicke und commit
+description: Übersicht über das Eingabemodell Head-Blicke und commit
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Gemischte Realität Blicke, Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
-ms.openlocfilehash: 7bce18853e46d71d963574b35c393e5a5dbf2cd0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873970"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730820"
 ---
 # <a name="head-gaze-and-commit"></a>Head-Blicke und commit
 Head-Blicke und Commit ist ein Eingabemodell aus, die umfasst das Anpassen eines Objekts mit der Richtung der Kopf vorwärts verweist (Head-Richtung), und klicken Sie dann mit einer sekundären Datenbank darauf reagieren, geben Sie z. B. als die Luft, tippen Sie auf Hand-Geste oder den Befehl "Select". Es gilt eine "weit" Eingabemodell mit indirekte Manipulation, was bedeutet, dass es am besten verwendet wird, für die Interaktion mit Inhalt, der über Gelenkarme zu erreichen ist.
@@ -53,14 +54,14 @@ Nach der ein Objekt oder Element der Benutzeroberfläche, abzielen, kann der Ben
 - Drücken Sie die Schaltfläche "A" auf eine Xbox Gamepad
 - Drücken Sie die Schaltfläche "A" auf eine Adaptive Xbox-Controller
 
-### <a name="gaze-and-air-tap-gesture"></a>Blicke und Air tippen
+### <a name="head-gaze-and-air-tap-gesture"></a>Head-Blicke und Air tippen
 Tippbewegung ist eine Geste für ein Tippen mit der Hand aufrechte gespeichert. Um tippbewegung ausführen zu können, Ihren Finger Index, an der Position bereit, und klicken Sie dann mit dem Daumen zusammendrücken ausgelöst und der Zeigefinger sichern freigeben. HoloLens-1 ist die Tippen Sie auf die am häufigsten verwendeten sekundären Eingabe.
 
 ![Schätzungen der Position des bereit, und klicken Sie dann eine Bewegung tippen oder klicken Sie auf](images/readyandpress.jpg)<br>
 
 Tippbewegung steht auch auf HoloLens 2, und es wurde aus der ursprünglichen Version erhöht wurde. Nahezu alle Arten von Pinches werden jetzt unterstützt, solange das Handsymbol weiterhin aufrecht und gehalten wird. Dies erleichtert es für Benutzer, um zu erfahren, und führen Sie die Bewegung.  Diese neue tippbewegung ersetzt das alte Konto über die gleiche API, und vorhandene Anwendungen das neue Verhalten automatisch nach dem erneuten Kompilieren für HoloLens 2.
 
-### <a name="gaze-and-select-voice-command"></a>Blicke und Sprachbefehl "Auswählen"
+### <a name="head-gaze-and-select-voice-command"></a>Head-Blicke und "Select" voice-Befehl
 Voice-Befehle ist eine der Methoden primären Interaktion in Mixed Reality. Es bietet eine sehr leistungsfähige "Hands Free" Methode bereit, um zu steuern, das System. Es gibt andere Arten von Voice-interaktionsmodellen:
 
 - Der generische Befehl "Select" ermöglicht eine Betätigung der "Klick" oder einer sekundären Eingabe Commit ausführen.
@@ -72,7 +73,7 @@ Voice-Befehle ist eine der Methoden primären Interaktion in Mixed Reality. Es b
 Um weitere Details und eine Comprenhesive-Liste der verfügbaren Befehle und Verwendung finden, sehen Sie sich unsere [voice-Entwurf](voice-design.md) Anleitungen.
 
 
-### <a name="gaze-and-hololens-clicker"></a>Blicke und HoloLens Clicker
+### <a name="head-gaze-and-hololens-clicker"></a>Head-Blicke und HoloLens Clicker
 Die HoloLens Clicker ist der erste Peripheriegerät wurde speziell für HoloLens und mit der HoloLens 1 Development Edition enthalten ist. Die HoloLens Clicker ermöglicht einen Benutzer mit minimalen Hand Bewegung klicken, und committen als sekundären Eingabe. Die HoloLens Clicker stellt eine Verbindung her, die HoloLens-1 oder 2 mit Bluetooth Low Energy (BTLE).
 
 ![](images/hololens-clicker-500px.jpg)<br>
@@ -83,7 +84,7 @@ Weitere Informationen und Anweisungen, um das Gerät koppeln finden [hier](hardw
 
 
 
-### <a name="gaze-and-xbox-wireless-controller"></a>Blicke und Xbox-Wireless-Controller
+### <a name="head-gaze-and-xbox-wireless-controller"></a>Head-Blicke und Xbox-Wireless-Controller
 Die drahtlose Xbox-Controller ermöglicht eine Betätigung der "klicken Sie auf" als Eingabe mithilfe der Schaltfläche ein sekundäres Replikat ausführen. Das Gerät ist eine Reihe von Aktionen, mit deren Hilfe navigieren und gegebenenfalls das System zugeordnet. Wenn Sie den Controller anpassen möchten, verwenden Sie die Xbox Accesories-App, um dem Xbox-Wireless-Controller zu konfigurieren.
 
 ![](images/xboxcontroller.jpg)<br>
@@ -92,7 +93,7 @@ Xbox-Wireless-Controller
 [Kopplung mit Ihrem PC einen Xbox-controller](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="gaze-and-xbox-adaptive-controller"></a>Adaptive Blicke und Xbox-Controller
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>Adaptive Head-Blicke und Xbox-Controller
 Soll in erster Linie den Bedürfnissen der Spieler mit eingeschränkter Beweglichkeit, ist die Adaptive Xbox-Controller ein zentraler Hub für Geräte, der dabei hilft, Mixed Reality zugänglicher zu machen.
 
 Der Adaptive Xbox-Controller ermöglicht eine Betätigung der "klicken Sie auf" als Eingabe mithilfe der Schaltfläche ein sekundäres Replikat ausführen. Das Gerät ist eine Reihe von Aktionen, mit deren Hilfe navigieren und gegebenenfalls das System zugeordnet. Wenn Sie den Controller anpassen möchten, verwenden Sie die Xbox Accesories-App, um Ihre adaptiven Xbox-Controller zu konfigurieren.
@@ -110,16 +111,11 @@ Adaptive Xbox-Controller-ports
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Weitere Informationen, die auf der Xbox-Website verfügbar</a>
 
 
-# <a name="device-support"></a>Unterstützung von Geräten
-Head bestaunen und Commit auf allen mixed Reality-Headsets verfügbar ist. Ist das primäre Eingabemodell für HoloLens v1. Andere Headsets ist in der Regel einen Hand-basierten zeigen Mechanismus, wie z. B. während der Übertragung Controller enthalten oder gegliedert manuell nachverfolgen. Auf diesen Geräten sollten Anwendungen vielmehr [Punkt-und-Commit](point-and-commit.md) für weit Interaktionen, wenn möglich.
-
-Eye Blicke und Commit für HoloLens 2 verfügbar ist, aber es ist nicht das primäre Eingabemodell. Wechseln Sie im Abschnitt "Richtlinien zum Entwerfen von Eye-Blicke" eine Diskussion über, wenn dies für Ihre Anwendung sinnvoll sein kann.
-
-# <a name="head-gaze-design-guidelines"></a>Head bestaunen Entwurfsrichtlinien
+# <a name="head-gaze-design-guidelines"></a>Richtlinien für den Head-Blicke-Entwurf
 > [!NOTE]
 > Weitere Anleitungen, die speziell für den Entwurf bestaunen [bald](index.md).
 
-## <a name="gaze-targeting"></a>Blicke für
+## <a name="head-gaze-targeting"></a>Head-Blicke-Ziel
 Alle Interaktionen werden erstellt, auf die Fähigkeit eines Benutzers, das Element als Ziel, die, das Sie mit, unabhängig von der Eingabe Modalität interagieren möchten. In Windows Mixed Reality, erfolgt dies in der Regel mithilfe des Benutzers Blicke.
 Damit Benutzer erfolgreich eine Möglichkeit zum arbeiten können, muss des Systems berechnete Verständnis der Absicht des Benutzers und die Absicht des Benutzers tatsächliche, so weit wie möglich ausgerichtet sind. Um den Grad an, dass das System den beabsichtigten Benutzeraktionen interpretiert verbessert ordnungsgemäß Kundenzufriedenheit erhöht und die Leistung.
 
@@ -142,7 +138,7 @@ Benutzer können häufig nicht finden im jeweiligen Lesebereich, Benutzeroberfl�
 ## <a name="improving-targeting-behaviors"></a>Verbessern die Zielgruppenadressierung anhand bestimmter Verhaltensweisen
 Wenn Benutzerabsicht etwas Ziel kann werden festgelegt (oder eng angeglichen), kann es sehr hilfreich sein, zu akzeptieren, dass "Near Miss" bei der Interaktion versucht, als ob sie ordnungsgemäß zugewiesen wurden. Es gibt eine Reihe von erfolgreichen Methoden, die in mixed Reality-Benutzeroberfläche integriert werden können:
 
-### <a name="gaze-stabilization-gravity-wells"></a>Blicke Stabilisierung ("Schwerkraft Wells")
+### <a name="head-gaze-stabilization-gravity-wells"></a>Head-Blicke Stabilisierung ("Schwerkraft Wells")
 Dies sollte die meisten oder alle der Zeit aktiviert werden. Dieses Verfahren wird die natürliche Haupt-/trichterhalses JIT-Compiler, die Benutzer möglicherweise entfernt. Auch Verschiebung aufgrund von Verhaltensweisen suchen/sprechen.
 
 ### <a name="closest-link-algorithms"></a>Am nächsten Link-Algorithmen
@@ -208,11 +204,11 @@ Es gibt drei Dinge, die Sie berücksichtigen sollten:
 
 
 ## <a name="see-also"></a>Siehe auch
-* [Direkte Bearbeitung](direct-manipulation.md)
-* [Punkt- und commit](point-and-commit.md)
+* [Direkte Manipulation](direct-manipulation.md)
+* [Zeigen und Ausführen](point-and-commit.md)
 * [Interaktionsgrundlagen](interaction-fundamentals.md)
-* [Blicke und dwell](gaze-targeting.md)
-* [Blicke und Sprache](voice-design.md)
+* [Anvisieren und Verweilen](gaze-targeting.md)
+* [Anvisieren und Spracheingabe](voice-design.md)
 
 
 

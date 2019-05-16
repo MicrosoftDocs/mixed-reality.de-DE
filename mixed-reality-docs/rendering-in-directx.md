@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Hologramme, der Rendering, der 3D-Grafiken HolographicFrame, rendern, Schleife, "Update"-Schleife, exemplarische Vorgehensweise, Beispielcode
-ms.openlocfilehash: fd35f971af4c3c9dfd7f21ee396c92216b3246e9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605164"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629036"
 ---
 # <a name="rendering-in-directx"></a>Rendern in DirectX
 
@@ -89,7 +89,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Prozess Blicke und Gestenhandler, die Eingabe
 
-[Bestaunen](gaze.md) und [Geste](gestures.md) Eingabe sind nicht zeitbasierte und daher keine haben, aktualisieren Sie in der **StepTimer** Funktion. Jedoch [diese Eingabe](gaze,-gestures,-and-motion-controllers-in-directx.md) ist etwas, das die app bei jedem Bild aussehen muss.
+[Bestaunen](gaze-in-directx.md) und [Hand](hands-and-motion-controllers-in-directx.md) Eingabe sind nicht zeitbasierte und daher keine haben, aktualisieren Sie in der **StepTimer** Funktion. Diese Eingabe ist jedoch etwas, das die app bei jedem Bild aussehen muss.
 
 ### <a name="process-time-based-updates"></a>Verarbeiten eines zeitbasierten updates
 
@@ -742,5 +742,5 @@ if (FAILED(hr))
 ```
 
 ## <a name="see-also"></a>Siehe auch
-* [Koordinatensysteme im DirectX](coordinate-systems-in-directx.md)
+* [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)

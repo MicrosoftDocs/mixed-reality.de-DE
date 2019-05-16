@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixed Reality, räumliche Locator, räumliche Verweis-Frame, räumliche Koordinatensystem, räumliche Phase Beispiel für Code, Stabilisierung des Image, räumliche Anker, räumliche Anchor-Store, Verlust der Überwachung, exemplarische Vorgehensweise
-ms.openlocfilehash: c8cdb39cbf4634edb4ed0a595381fc70f1388ce4
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605154"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628971"
 ---
 # <a name="coordinate-systems-in-directx"></a>Koordinatensysteme im DirectX
 
@@ -622,7 +622,7 @@ Wir möchten unsere Beispiel – Hologramm des Benutzers befolgen [bestaunen](ga
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
 ```
 
-Diese SpatialPointerPose verfügt über die erforderlichen Informationen zum Positionieren der Hologramm gemäß der [aktuelle Überschrift des Benutzers](gaze,-gestures,-and-motion-controllers-in-directx.md).
+Diese SpatialPointerPose verfügt über die erforderlichen Informationen zum Positionieren der Hologramm gemäß der [aktuelle Überschrift des Benutzers](gaze-in-directx.md).
 
 Aus Gründen der Benutzerkomfort verwenden wir die linearen Interpolation ("Lerp") zum Glätten von der Änderung an der Position, dass sie über einen Zeitraum erfolgt. Dies ist für den Benutzer komfortabler als die Hologramm, die Blicke sperren. Lerping, die die Tag-along – Hologramm Position auch die Hologramm zu stabilisieren, durch die Verschiebung Dämpfung ermöglicht; Wenn noch nicht diese Dämpfung, würde dem Benutzer angezeigt, die – Hologramm jitter aufgrund betrachtet was normalerweise nicht wahrnehmbar Bewegungen von des Benutzers Head werden.
 
@@ -796,7 +796,8 @@ Die [räumliche Zuordnung](spatial-mapping-in-directx.md) APIs stellen mithilfe 
 
 ## <a name="see-also"></a>Siehe auch
 * [Koordinatensysteme](coordinate-systems.md)
-* [Räumliche Anker](spatial-anchors.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>
-* [Blicke, Gesten und während der Übertragung von Controllern in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [Räumliche Zuordnung in DirectX](spatial-mapping-in-directx.md)
+* [Raumanker](spatial-anchors.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* [Haupt- und Eye Blicke in DirectX](gaze-in-directx.md)
+* [Praktische und Motion-Controllern in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)

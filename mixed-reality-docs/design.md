@@ -6,13 +6,14 @@ author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality, Entwurf, Interaktion, Stil, Farbe, app-Muster, Steuerelemente, Mixed Reality-Toolkit, MRTK Beispiel-apps
-ms.openlocfilehash: aa7b1ba42823324bf247580781b46a4f4c885d99
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524354"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730833"
 ---
 # <a name="design-for-mixed-reality"></a>Entwurf für mixed reality
 
@@ -230,7 +231,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Galaxy-Explorer</h3>
+                            <h3>Galaxy Explorer</h3>
                             <p>Das Galaxy-Projekt-Explorer ist bereit. Sie Ihre Ideen mit der Community freigegeben, wählen Sie eine app überwacht ein Team erstellen und können nun den Quellcode erhalten.</p>
                         </div>
                     </div>

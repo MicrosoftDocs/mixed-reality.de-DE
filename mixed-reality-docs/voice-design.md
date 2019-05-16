@@ -1,25 +1,23 @@
 ---
-title: Blicke und Sprache
+title: Voice-Befehle
 description: Blicke, Gesten und Stimme (GGV) sind das primäre Mittel der Interaktion bei HoloLens. Dieser Artikel enthält eine gut durchdachte Anleitungen Voice-Entwurf.
-author: grbury
-ms.author: grbury
+author: shentan
+ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Windows Mixed Reality, entwerfen, die Interaktion, die Stimme
-ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469071"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730802"
 ---
-# <a name="gaze-and-voice"></a>Blicke und Sprache
+# <a name="voice-commanding"></a>Voice-Befehle
 
-Blicke, Gesten und Stimme (GGV) werden das primäre Mittel der Interaktion bei HoloLens (1. Generation). [Bestaunen](gaze.md) mit verwendet eine [Cursor](cursors.md) ist der Mechanismus für einen Benutzer, den Inhalt ausgerichtet, sie bereit sind für die Interaktion mit. [Geste](gestures.md) oder [Voice](voice-input.md) sind die Absicht-Mechanismen. Blicke kann mit entweder Geste oder verwendet werden, um eine Aktivität abzuschließen.
+Wenn Sie Sprachbefehle zu verwenden, Blicke ist in der Regel als die Zielgruppenadressierung anhand bestimmter Mechaninism, ob als Zeiger verwendet ("Select") oder leiten Sie den Befehl zu einer Anwendung ("angezeigt, das so sagen"). Einige Sprachbefehle erforderlich nicht natürlich ein Ziel, wie "Gehe um zu starten" oder"Hey Cortana.".
 
-Für immersive Headsets, werden das primäre Mittel der Interaktion Blicke-und-Commit "und" Punkt-und-Commit (mit einem [Motion-Controller](motion-controllers.md)). Wenn der Benutzer einen Kopfhörer mit Voice-Funktionen verfügt, kann Voice in Kombination mit Blicke oder Punkt zum Ausführen einer Aktion verwendet werden.
-
-Beim Entwerfen von apps, sollten Sie erwägen, wie Sie diese Interaktionen und zusammenarbeiten vornehmen können.
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
@@ -27,7 +25,7 @@ Beim Entwerfen von apps, sollten Sie erwägen, wie Sie diese Interaktionen und z
 <tr>
 <th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
 </tr><tr>
-<td>Blicke und Sprache</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer angeschlossen)</td>
+<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer angeschlossen)</td>
 </tr>
 </table>
 
@@ -51,13 +49,16 @@ Im folgenden sind einige Methoden, die smooth-Spracherkennung Remotesysteme werd
    * "Hey Cortana"
    * "Auswählen"
 
-### <a name="what-users-can-say"></a>Was Benutzer sagen können
+### <a name="select"></a>"Auswählen"
 
-Wie ein Benutzer eine beliebige Schaltfläche über Blicke oder zeigt ausgerichtet ist, können sie sagen, dass das Wort **"Select"** auf diese Schaltfläche zu aktivieren. "Select" ist eine von den niedrigen Energiestatus-Schlüsselwörter, die immer aufgeführt ist. Weiterführende Themen, kann Benutzer auch "Schaltfläche" Grammar"im System oder in apps verwenden. Bei der Suche auf eine app, kann ein Benutzer beispielsweise den Befehl "Remove" (die in der app-Leiste) So entfernen Sie die app aus der ganzen Welt.
+Sagen "select" zu einem beliebigen Zeitpunkt wird aktiviert, was die Blicke Cursor zeigt. 
+
+>Hinweis: HoloLens-2 Wählen"Sie in der Blicke Cursor muss zuerst aufgerufen werden, indem Sie das Wort". Angenommen, "select" erneut um zu aktivieren. Um den Cursor Blicke auszublenden, verwenden Sie die Hände – Airtap oder tippen Sie auf ein Objekt. 
 
 ### <a name="see-it-say-it"></a>Anzeigen, das so sagen
 
 Windows Mixed Reality verfügt über ein "angezeigt, das so sagen" Voice-Modell eingesetzt, in denen **Bezeichnungen auf Schaltflächen sind identisch mit den zugehörigen Sprachbefehle**. Da übergeordnete zwischen der Bezeichnung und der Sprachbefehl nicht, können Benutzer was an, dass das System So kontrollieren besser verstehen. Zu diesem vertiefen, während auf eine Schaltfläche, Einstichs eine **"Stimme länger aufhalten Tipp"** angezeigt, die für die Kommunikation, welche Schaltflächen werden Sprache aktiviert wird.
+
 
 ![Sehen Sie es noch einmal von Beispiel 1](images/voice-seeitsayit1-640px.jpg)
 

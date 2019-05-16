@@ -5,13 +5,14 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Nachverfolgen von Auge, Mixed Reality "," Input "," Eye Blicke
-ms.openlocfilehash: 75cbba9048b620e4b00492ad3f71315fabf86677
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581050"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730768"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Eye-tracking für HoloLens 2
 HoloLens 2 ermöglicht die für eine ganz neue Ebene von Kontext und menschliche Verständnis der Holographic nutzen möchten, um Entwicklern die unglaublichen Möglichkeit der Verwendung von Informationen, was Benutzer betrachten. Diese Seite bietet einen Überblick darüber, wie Entwickler von Eye-Überwachung für verschiedene Anwendungsfälle profitieren können und was Sie beachten müssen, wenn Eye-Blicke-basierten Benutzeroberflächen zu entwerfen. 

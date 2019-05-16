@@ -5,13 +5,14 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Koordinatensystem, räumliche Koordinatensystem, weltweit einsetzbaren, Welt, skalieren, Position, Ausrichtung, Anker, räumliche Anker, Welt gesperrte, Welt-sperren, Dauerhaftigkeit, freigeben
-ms.openlocfilehash: eb0fae7881f1b6517da57305ef2fa3cb1ed78648
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 16165194d040ad22f7885897eddcc65cf9dcaec3
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605105"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730861"
 ---
 # <a name="spatial-anchors"></a>Räumliche Anker
 
@@ -74,8 +75,8 @@ Für räumliche cloudanker kann Ihrem Speicher skalieren, wie Ihr Szenario erfor
 
 ## <a name="see-also"></a>Siehe auch
 * [Koordinatensysteme](coordinate-systems.md)
-* [Freigegebene Funktionen in mixed reality](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>
-* [Dauerhaftigkeit in Unity](persistence-in-unity.md)
+* [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* [Persistenz in Unity](persistence-in-unity.md)
 * [Räumliche Anker in DirectX](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [Fallstudie: Lücken in der Realität ansehen](case-study-looking-through-holes-in-your-reality.md)

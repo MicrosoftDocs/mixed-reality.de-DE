@@ -1,21 +1,19 @@
 ---
-title: Direkte Bearbeitung mit Hand
+title: Direkte Bearbeitung
 description: Übersicht über das Eingabemodell für die direkte Bearbeitung
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen Sie, praktische in Ihrer Nähe, HoloLens
-ms.openlocfilehash: e241e13a778de0889942a3643246e087a107db86
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 803157bb248a5541ed524ac4f828ccbba9d59ce1
+ms.sourcegitcommit: 82d4e5cf4ad46bfdc44d0606844e28c75b6e67ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730747"
+ms.locfileid: "65730506"
 ---
-# <a name="direct-manipulation-with-hands"></a>Direkte Bearbeitung mit Hand
-Direkte Bearbeitung wird ein Eingabe-Modell, bei dem berühren Hologramme direkt mit der Hand. Das Ziel mit einer direkten Bearbeitung ist, dass Objekte verhalten sich genau wie sie in der realen Welt. Einfach durch Drücken sie die Schaltflächen aktiviert werden können und 2D-Inhalt verhält sich wie ein virtuelles Touchscreen Objekte können am einfachsten, sie abgerufen werden.  Aus diesem Grund direkte Bearbeitung für die Benutzer sich einfach ist, und es macht Spaß zu.  Es gilt eine "in der Nähe" Eingabemodell, was bedeutet, dass es am besten verwendet wird, für die Interaktion mit Inhalt, der in den Waffen erreicht ist.
+# <a name="direct-manipulation"></a>Direkte Bearbeitung
 
 Die HoloLens 2 verfügt über eine direkte Bearbeitung Eingabemodell, mit dem Sie die touch-Hologramme Dircly mit der Hand. Das Ziel mit einer direkten Bearbeitung ist für Objekte verhalten sich genau wie sie in der realen Welt. Sie können Schaltflächen zu aktivieren, drücken sie einfach und sogar weitermachen, abrufen und Objekte verschieben. Verhält sich in diesen Szenarien 2D-Inhalt wie virtuelle Touchscreen.
 
@@ -25,13 +23,11 @@ Direkte Bearbeitung basiert auf Unterstützung, d. h. Benutzer geeignet. Es gibt
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
-
 | Eingabemodell | [HoloLens (1. Generation)](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details?branch=master) | HoloLens 2 |[Immersive Headsets](https://review.docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details?branch=master)|
 |:-------- | :-------| :--------| :------------|
 | Direkte Bearbeitung | ❌ Nicht unterstützt | ✔️ Empfohlen | ➕ Alternative [zeigen, und committen](https://review.docs.microsoft.com/en-us/windows/mixed-reality/point-and-commit?branch=master) wird empfohlen.
 
-Direkte Bearbeitung ist eine primäre Eingabemodell für HoloLens 2 und nutzt die neue articulated System zum Nachverfolgen von Hand. Das Eingabemodell finden Sie auch immersive Headsets durch die Verwendung von Motion-Controller, empfiehlt sich jedoch nicht als Hauptwerkzeug der Interaktion außerhalb der Bearbeitung des Objekts.  Direkte Manipluation ist nicht verfügbar für HoloLens (1. Generation).
-
+Direkte Bearbeitung ist eine primäre Eingabemodell für HoloLens 2 und nutzt die neue articulated System zum Nachverfolgen von Hand. Das Eingabemodell finden Sie auch immersive Headsets durch die Verwendung von Motion-Controller, empfiehlt sich jedoch nicht als Hauptwerkzeug der Interaktion außerhalb der Bearbeitung des Objekts.  Direkte Manipluation ist nicht verfügbar, für HoloLens v1.
 
 ## <a name="collidable-fingertip"></a>Collidable fingertippen
 
@@ -115,7 +111,7 @@ Spezifische bestimmte Bearbeitung ist erforderlich, Genauigkeit, es wird empfohl
 
 ## <a name="instinctual-gestures"></a>Instinctual Gesten
 
-Mit HoloLens (der 1. Generation), wir unterrichtet Benutzer einige vordefinierte Bewegungen wie z. B. Bloom und Air, tippen Sie auf. HoloLens-2 Fragen wir uns nicht die Benutzer symbolischen Gesten merken. Alle erforderlichen Benutzergesten, müssen Benutzer zur Interaktion mit Hologramme und Inhalte sind instinctual. Die Möglichkeit, instinctual Bewegung zu erreichen ist Benutzerhandbuch zum Ausführen von Aktionen durch den Entwurf der Benutzeroberfläche visueller Hinweise.
+Im Gegensatz zu HoloLens (der 1. Generation), wir unterrichtet Benutzer einige vordefinierte Bewegungen wie z. B. Bloom und Air, tippen Sie auf. HoloLens-2 Fragen wir uns nicht die Benutzer symbolischen Gesten merken. Alle erforderlichen Benutzergesten, müssen Benutzer zur Interaktion mit Hologramme und Inhalte sind instinctual. Die Möglichkeit, instinctual Bewegung zu erreichen ist Benutzerhandbuch zum Ausführen von Aktionen durch den Entwurf der Benutzeroberfläche visueller Hinweise.
 
 Z. B. Wenn Sie Ziehpunkte ein Objekt oder einem Kontrollpunkt, mit zwei Finger Pinch empfohlen, sollte das Objekt oder der Kontrollpunkt klein sein. Wenn wir fünf Finger Ziehpunkte ausführen möchten, sollte das Objekt oder der Kontrollpunkt relativ groß sein. Ähnlich wie bei Schaltflächen werden würde eine kleine Schaltfläche beschränken Sie Benutzer mit einem einzelnen Finger, während eine große Schaltfläche sollten Benutzer mit ihren Palm Drücken der Taste drücken.
 
@@ -133,7 +129,7 @@ Eye-tracking können möglicherweise besser ermitteln, was die Absicht des Benut
 * **Wenn**: Reduzieren Sie fälschlicherweise Auslösen einer Manipulation-Antwort. Eye-tracking kann für ein besseres Verständnis, was ein Benutzer mit gegenwärtig beteiligt ist.
 Beispiel: Angenommen Sie, dass Sie über eine holographic (Hinweistext) lesen, ist beim Erreichen mehr zum Erfassen von realen Arbeit-Tool.
 
-Auf diese Weise verschieben Sie Ihre Hand versehentlich auf einige interaktive holographic Schaltflächen, die Sie noch nicht einmal vor (z. B., die sie auch außerhalb des Benutzers Feld bemerkt-der-Ansicht (Blickfeld) ist).
+  Auf diese Weise verschieben Sie Ihre Hand versehentlich auf einige interaktive holographic Schaltflächen, die Sie noch nicht einmal vor (z. B., die sie auch außerhalb des Benutzers Feld bemerkt-der-Ansicht (Blickfeld) ist).
 
   Um die Geschichte kurz zu machen: Wenn der Benutzer noch nicht ggf. ein Hologramm seit einer Weile betrachtet, noch ein Touch oder verstehen Ereignis dafür erkannt wurde, ist es wahrscheinlich, dass der Benutzer tatsächlich für die Interaktion mit diesem – Hologramm beabsichtigt war nicht.
 
@@ -147,7 +143,6 @@ Auf diese Weise verschieben Sie Ihre Hand versehentlich auf einige interaktive h
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
+* [Blicke und commit](gaze-and-commit.md)
 * [Zeigen und Ausführen](point-and-commit.md)
-* [Instinktive Interaktionen](interaction-fundamentals.md)
-
+* [Interaktionsgrundlagen](interaction-fundamentals.md)

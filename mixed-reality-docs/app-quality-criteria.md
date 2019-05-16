@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: App-Qualitätskriterien, mixed Reality, mixed Reality-app
-ms.openlocfilehash: 8070a434be462a636b314527c59f299ca77fb6d4
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595481"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628994"
 ---
 # <a name="app-quality-criteria"></a>Qualitätskriterien für die App
 
@@ -61,7 +61,7 @@ Framerate ist die erste Säule des – Hologramm Stabilität Komfort für Benutz
 * [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
 * [– Hologramm Stabilität und der Bildrate](hologram-stability.md#frame-rate)
 * [Asset-Leistungsbudget](asset-creation-process.md)
-* [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md)
+* [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
 
@@ -119,8 +119,8 @@ Während das Gerät steht, geteert und die zur Anzeige von:
 * [– Hologramm Stabilität und der Bildrate](hologram-stability.md#frame-rate)
 * [Fallstudie, die mit der Stabilisierung-Ebene](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
 * [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
-* [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md)
-* [Räumliche Anker](spatial-anchors.md)
+* [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
+* [Raumanker](spatial-anchors.md)
 * [Behandeln von Fehlern der nachverfolgung](coordinate-systems.md#handling-tracking-errors)
 * [Feststehende Verweisrahmen](coordinate-systems.md#stationary-frame-of-reference)
 
@@ -168,12 +168,12 @@ Fehler im Alignment von Hologramme mit physischer Objekte (sofern aneinander pla
 * [Raum Scanvorgang](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
 * [Bewährte Methoden von räumlichen Anker](spatial-anchors.md#best-practices)
 * [Behandeln von Fehlern der nachverfolgung](coordinate-systems.md#handling-tracking-errors)
-* [Räumliche Zuordnung in Unity](spatial-mapping-in-unity.md)
+* [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)
 * [Übersicht über die Entwicklung von Vuforia](vuforia-development-overview.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
 
-* [MR Spatial 230: Räumliche Zuordnung](holograms-230.md)
+* [MR räumlich 230: Räumliche Abbildung](holograms-230.md)
 * [Räumliche Zuordnung Bibliotheken MR Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [MR Companion Kit Poster Kalibrierung-Beispiel](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [MR Companion Kit Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -300,15 +300,15 @@ In Windows Mixed Reality bietet das Audiomodul der sehen die mixed Reality-Erfah
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Räumliche sound](spatial-sound.md)
-* [Räumliche Entwurf](spatial-sound-design.md)
-* [Räumliche Sound in Unity](spatial-sound-in-unity.md)
+* [Raumklang](spatial-sound.md)
+* [Raumklangentwurf](spatial-sound-design.md)
+* [Raumklang in Unity](spatial-sound-in-unity.md)
 * [Fallstudie für HoloTour sound räumlich](case-study-spatial-sound-design-for-holotour.md)
 * [Verwenden von räumlichen Sound in RoboRaid Fallstudie](case-study-using-spatial-sound-in-roboraid.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
 
-* [MR Spatial 220: Räumliche sound](holograms-220.md)
+* [MR räumlich 220: Raumklang](holograms-220.md)
 * [MRToolkit, Spatial Audio](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Konzentrieren Sie sich an holographic Frame (Blickfeld) Grenzen
@@ -348,7 +348,7 @@ Gut gestaltete Benutzeroberflächen erstellen und Warten von nützlichen Kontext
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Holographic frame](holographic-frame.md)
+* [Holografischer Rahmen](holographic-frame.md)
 * [Fallstudie, HoloStudio UI und Interaktion entwerfen Erkenntnisse](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
 * [Skalieren von Objekten und Umgebungen](scale.md)
 * [Cursor, visuelle Hinweise](cursors.md#visual-cues)
@@ -402,13 +402,13 @@ Hologramme sollte auf die Benutzerposition auf ungefähr die gleiche Weise reagi
 
 * [Entwerfen für](hologram.md)
 * [Farbe, Material und Licht](color,-light-and-materials.md)
-* [Billboarding und tag-along](billboarding-and-tag-along.md)
-* [Grundlagen der Interaktion](interaction-fundamentals.md)
+* [Billboarding und Tag-along](billboarding-and-tag-along.md)
+* [Interaktionsgrundlagen](interaction-fundamentals.md)
 * [Self-motion und Benutzer Locomotion](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
 
-* [MR Eingabe 210: Blicke](holograms-210.md)
+* [MR-Eingabe 210: Anvisieren](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Eingabe Interaktion Klarheit
 
@@ -453,20 +453,21 @@ Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und 
 
 * [Grundlagen der Windows-MR Interaktion](interaction-fundamentals.md)
 * [Es Objekte](interactable-object.md)
-* [Blicke für](gaze-targeting.md)
+* [Anvisieren](gaze-targeting.md)
 * [Cursor](cursors.md)
 * [Komfort und Blicke](comfort.md#gaze-direction)
 * [Gesten](gestures.md)
 * [Spracheingabe](voice-input.md)
-* [Voice-Entwurf](voice-design.md)
+* [Sprachentwurf](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
-* [Eingabe Portieren von Unity-Handbuch](input-porting-guide-for-unity.md)
-* [Tastatureingaben in Unity](keyboard-input-in-unity.md)
-* [In Unity bestaunen](gaze-in-unity.md)
+* [Leitfaden für Eingabeportierung für Unity](input-porting-guide-for-unity.md)
+* [Tastatureingabe in Unity](keyboard-input-in-unity.md)
+* [Anvisieren in Unity](gaze-in-unity.md)
 * [Gesten und Motion-Controller in Unity](gestures-and-motion-controllers-in-unity.md)
 * [Spracheingabe in Unity](voice-input-in-unity.md)
-* [Tastatur-, Maus- und Controller-Eingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [Blicke, Gesten und Motion-Controller in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Tastatur-, Maus- und Controllereingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
+* [Haupt- und Eye Blicke in DirectX](gaze-in-directx.md)
+* [Praktische und Motion-Controllern in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
@@ -475,9 +476,9 @@ Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und 
 * [CAST-Studie: Entwerfen von HoloStudio UI und Interaktion Erkenntnisse](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
 * [Beispiel-app: Periodisch-Tabelle der Elemente](periodic-table-of-the-elements.md)
 * [Beispiel-app: Mondkalender-Modul](lunar-module.md)
-* [MR Eingabe 210: Blicke](holograms-210.md)
-* [MR Eingabe 211: Gesten](holograms-211.md)
-* [MR Eingabe 212: Voice](holograms-212.md)
+* [MR-Eingabe 210: Anvisieren](holograms-210.md)
+* [MR-Eingabe 211: Gesten](holograms-211.md)
+* [MR-Eingabe 212: Sprache](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Es Objekte
 
@@ -515,10 +516,10 @@ Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereigni
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Es-Objekt](interactable-object.md)
+* [Interaktionsfähiges Objekt](interactable-object.md)
 * [Text in Unity](text-in-unity.md)
-* [App-Leiste und das umgebende Feld](app-bar-and-bounding-box.md)
-* [Voice-Entwurf](voice-design.md)
+* [App-Leiste und Begrenzungsrahmen](app-bar-and-bounding-box.md)
+* [Sprachentwurf](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
 
@@ -560,7 +561,7 @@ Apps, die räumliche Zuordnungsdaten erfordern basieren auf dem Gerät, um diese
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Die Überprüfung Visualisierung Platz](room-scan-visualization.md)
+* [Raumabtastvisualisierung](room-scan-visualization.md)
 * [Fallstudie: Erweitern die räumlichen Funktionen für die Zuordnung von HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
 * [Fallstudie: Räumliche Entwurf für HoloTour](case-study-spatial-sound-design-for-holotour.md)
 * [Fallstudie: Erstellen ein Eintauchen in Fragmenten](case-study-creating-an-immersive-experience-in-fragments.md)
@@ -600,7 +601,7 @@ In einer mixed Reality-app Inhalt möglicherweise außerhalb der Sichtfeld oder 
 
 ### <a name="resources"></a>Ressourcen
 
-* [Holographic frame](holographic-frame.md)
+* [Holografischer Rahmen](holographic-frame.md)
 
 ## <a name="data-loading"></a>Laden von Daten
 
@@ -632,4 +633,4 @@ Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mi
 
 ### <a name="resources"></a>Ressourcen
 
-* [Anzeigen des Status](progress.md)
+* [Anzeigen des Fortschritts](progress.md)

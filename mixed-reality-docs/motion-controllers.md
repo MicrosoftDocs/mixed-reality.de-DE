@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6dof Controller Motion-Controller
-ms.openlocfilehash: b44964ab872bd080349ecf1b04b3f7082b521a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604964"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629114"
 ---
 # <a name="motion-controllers"></a>Motion-Controller
 
@@ -231,9 +231,9 @@ Finden Sie unter [motion Problembehandlung Domänencontroller](https://docs.micr
 
 ## <a name="see-also"></a>Siehe auch
 * [Gesten und Motion-Controller in Unity](gestures-and-motion-controllers-in-unity.md)
-* [Blicke, Gesten und während der Übertragung von Controllern in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Praktische und Motion-Controllern in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gesten](gestures.md)
-* [MR Eingabe 213: Motion-Controller](mixed-reality-213.md)
+* [MR-Eingabe 213: Motion-Controller](mixed-reality-213.md)
 * [Enthusiast-Handbuch: Ihr Windows Mixed Reality home](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
 * [Enthusiast-Handbuch: Verwenden Spiele und apps in Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
 * [Funktionsweise von innen nach außen nachverfolgen](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixed Reality, Blicke, Interaktion, Entwerfen
-ms.openlocfilehash: 9a12a5a3b3a583477fd98caeaa2f6890c67e2655
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 738ba9063a5d00f3bbedce989d93076d56ad1a44
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604974"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629106"
 ---
 # <a name="gaze"></a>Blickeingabe
 
@@ -61,6 +61,6 @@ In den meisten apps sollten verwendet eine [Cursor](cursors.md) (oder andere aku
 Sobald der Benutzer ein Hologramm oder reales Objekt über die Blicke angewendet wurde, ist ihre nächste Schritt für die Reaktion auf dieses Objekt. Die primäre Methode für einen Benutzer zu ergreifen, werden über [Gesten](gestures.md), [motion Controller](motion-controllers.md) und [Voice](voice-input.md).
 
 ## <a name="see-also"></a>Siehe auch
-* [MR Eingabe 210: Blicke](holograms-210.md)
-* [Blicke, Gesten und während der Übertragung von Controllern in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [In Unity bestaunen](gaze-in-unity.md)
+* [MR-Eingabe 210: Anvisieren](holograms-210.md)
+* [Haupt- und Eye Blicke in DirectX](gaze-in-directx.md)
+* [Anvisieren in Unity](gaze-in-unity.md)

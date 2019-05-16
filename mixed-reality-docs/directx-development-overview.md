@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Rendern von DirectX, holographic, systemeigene, systemeigene app WinRT, WinRT-app-Plattform-APIs, benutzerdefinierte Engine middleware
-ms.openlocfilehash: 047144cb8fcf158f74375e9ec69dca92a2a1cf01
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 60c4de7025099f38f0902e2ff24579e7088835a6
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593677"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65628991"
 ---
 # <a name="directx-development-overview"></a>Übersicht über die Entwicklung von DirectX
 
-Windows Mixed Reality-apps verwenden die [holographic Rendering](rendering.md), [bestaunen](gaze.md), [Geste](gestures.md), [Motion-Controller](motion-controllers.md), [Stimme ](voice-input.md) und [räumliche Zuordnung](spatial-mapping.md) APIs zum Erstellen [mixed Reality](mixed-reality.md) für HoloLens und immersive Headsets auftritt. Sie können mit 3D-Engine, wie mixed Reality-apps erstellen [Unity](unity-development-overview.md), oder Sie können Windows Mixed Reality-APIs mit DirectX 11. Beachten Sie, dass DirectX 12 derzeit nicht unterstützt wird. Wenn Sie die Plattform direkt nutzen, werden Sie im Grunde Ihre eigene Middleware oder ein Framework erstellen. Die Windows-APIs unterstützen sowohl geschriebene apps C++ und C#. Wenn Sie gerne verwenden würden C#, kann Ihre Anwendung nutzen, die ["sharpdx"](http://sharpdx.org/) open-Source-Softwarebibliothek.
+Windows Mixed Reality-apps verwenden die [holographic Rendering](rendering.md), [bestaunen](gaze.md), [Geste](gestures.md), [Motion-Controller](motion-controllers.md), [Stimme ](voice-input.md) und [räumliche Zuordnung](spatial-mapping.md) APIs zum Erstellen [mixed Reality](mixed-reality.md) für HoloLens und immersive Headsets auftritt. Sie können mit 3D-Engine, wie mixed Reality-apps erstellen [Unity](unity-development-overview.md), oder Sie können direkt auf den gemischten Windows-APIs Realität mit DirectX 11 oder DirectX 12. Wenn Sie die Plattform direkt nutzen, werden Sie im Grunde Ihre eigene Middleware oder ein Framework erstellen. Die Windows-APIs unterstützen sowohl geschriebene apps C++ und C#. Wenn Sie gerne verwenden würden C#, kann Ihre Anwendung nutzen, die ["sharpdx"](http://sharpdx.org/) open-Source-Softwarebibliothek.
 
 Unterstützt die Windows Mixed Reality [zwei Arten von apps](app-views.md):
 * **Mixed Reality-apps** (UWP und Win32) die Verwendung der [HolographicSpace-API](getting-a-holographicspace.md) zum Rendern einer [immersive Ansicht](app-views.md) für den Benutzer, die die Kopfhörer Anzeige ausfüllt.
@@ -25,7 +25,7 @@ Die Unterschiede zwischen der Entwicklung von DirectX für [2D- und immersive An
 
 Zum Einstieg in die Entwicklung von immersive apps unter:
 * Für **UWP-apps**, [Erstellen eines neuen UWP-Projekts mit den Vorlagen in Visual Studio](creating-a-holographic-directx-project.md). Abhängig von Ihrer Sprache, **Visual C++**  oder **Visual C#** , sehen Sie die UWP-Vorlagen unter **Windows Universal**  >   **Holographic**.
-* Für **Win32-apps**, [erstellen Sie eine neue Win32-Desktopprojekts](creating-a-holographic-directx-project.md#creating-a-win32-project) und folgen Sie dann auf die Win32-Anweisungen die [Abrufen einer HolographicSpace](getting-a-holographicspace.md) Seite, um eine HolographicSpace abzurufen.
+* Für **Win32-apps**, [Starten über die *BasicHologram* Win32-Beispiel](creating-a-holographic-directx-project.md#creating-a-win32-project).
 
 Dies ist eine hervorragende Möglichkeit, den Code zu erhalten, den Sie Unterstützung für Rendering von holographic zu einer vorhandenen app oder -Engine hinzufügen müssen. Code und Konzepte werden in der Vorlage in einer Weise angezeigt, die für alle Entwickler, der in Echtzeit interaktive Software vertraut ist.
 
@@ -40,15 +40,16 @@ Die folgenden Themen behandeln die grundlegenden Anforderungen von Middleware Di
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Hinzufügen von mixed Reality-Funktionen und Eingaben
 
 Um die bestmögliche Leistung für Benutzer Ihrer immersive Apps zu aktivieren, sollten Sie die folgenden wichtigsten Bausteine zu unterstützen:
-* [Blicke, Gesten und während der Übertragung von Controllern in DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Haupt- und Eye Blicke in DirectX](gaze-in-directx.md)
+* [Praktische und Motion-Controllern in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
-* [Räumliche Sound in DirectX](spatial-sound-in-directx.md)
-* [Räumliche Zuordnung in DirectX](spatial-mapping-in-directx.md)
+* [Raumklang in DirectX](spatial-sound-in-directx.md)
+* [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)
 
 Es gibt andere wichtige Features, die viele faszinierende apps zu verwenden möchten, die auch in DirectX-apps verfügbar gemacht werden:
-* [Räumliche Anker in DirectX freigegeben](shared-spatial-anchors-in-directx.md)
-* [Gebietsschemabezogene Kamera in DirectX](locatable-camera-in-directx.md)
-* [Tastatur-, Maus- und Controller-Eingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
+* [Gemeinsame Raumanker in DirectX](shared-spatial-anchors-in-directx.md)
+* [Ausrichtbare Kamera in DirectX](locatable-camera-in-directx.md)
+* [Tastatur-, Maus- und Controllereingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 
 ## <a name="see-also"></a>Siehe auch
 * [App-Modell](app-model.md)
