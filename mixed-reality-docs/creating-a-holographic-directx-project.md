@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holographic-app, neue app, UWP-app, Vorlagen-app, Hologramme, neues Projekt, exemplarische Vorgehensweise, Herunterladen von Beispielcode
-ms.openlocfilehash: 7d1ea0246cf823f74e68b4e67fbcfc275d081688
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: a7eac9d8056fe5f7bcc442d6441f71331fa96cf6
+ms.sourcegitcommit: 19c9bff21061d485821b61c9f3498daef8fa8235
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605095"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65828133"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Erstellen eines holographic DirectX-Projekts
 
@@ -33,18 +33,23 @@ Nun können Sie die DirectX 11 Windows Mixed Reality-app erstellt. Beachten Sie,
 
 ## <a name="creating-a-uwp-project"></a>Erstellen eines UWP-Projekts
 
-Nach der Installation der Tools können Sie ein holographic DirectX-UWP-Projekt erstellen. So erstellen Sie ein neues Projekt:
+Sobald die [-Tools sind installiert](install-the-tools.md) anschließend können Sie ein holographic DirectX-UWP-Projekt erstellen.
+
+So erstellen Sie ein neues Projekt:
 1. Starten Sie **Visual Studio**.
 2. Von der **Datei** Startmenü **neu** , und wählen Sie **Projekt** aus dem Kontextmenü. Die **neues Projekt** Dialogfeld wird geöffnet.
 3. Erweitern Sie **installiert** auf der linken Seite, und erweitern Sie die **Visual C++**  Sprachknoten.
 4. Navigieren Sie zu der **Windows Universal > Holographic** Knoten, und wählen **Holographic DirectX 11-App (Universelles Windows) (C++"/ WinRT")**.
+   ![Screenshot des Holographic DirectX 11 C++WinRT UWP-app-Projektvorlage in Visual Studio](images/holographic-directx-app-cpp-new-project.png)<br>
+   *Holographic DirectX 11 C++WinRT UWP-app-Projektvorlage in Visual Studio*
    >[!IMPORTANT]
    >Achten Sie darauf, dass die Projektvorlage enthält "(C++" / WinRT ")".  Wenn dies nicht der Fall ist, Sie haben eine ältere Version der installierten holographic Projektvorlagen.  Zum Abrufen der neuesten Projektvorlagen [installieren Sie den neuesten Emulator für HoloLens](using-the-hololens-emulator.md).
 5. Geben Sie die **Namen** und **Speicherort** Textfelder, und klicken oder tippen Sie **OK**. Das holographic app-Projekt wird erstellt.
-6. Für die Entwicklung als Ziel nur HoloLens 2, sicher, dass die **Zielversion** und **Mindestversion** festgelegt **Windows 10, Version 1903**.  Wenn Sie auch die HoloLens verwenden möchten (der 1. Generation) oder desktop Windows Mixed Reality-Headsets, Sie können festlegen, **mindestens erforderliche Version** zu **Windows 10, Version 1809** stattdessen, obwohl dies einige erfordert <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank"> adaptiven versionsprüfungen</a> in Ihrem Code bei Verwendung der neuen Features von HoloLens 2.
-
-![Screenshot der holographic app-Projektvorlage in Visual Studio](images/holographic-directx-app-cpp-new-project.png)<br>
-*Holographic app-Projektvorlage in Visual Studio*
+6. Für die Entwicklung als Ziel nur HoloLens 2, sicher, dass die **Zielversion** und **Mindestversion** festgelegt **Windows 10, Version 1903**.  Wenn Sie auch die HoloLens verwenden möchten (der 1. Generation) oder desktop Windows Mixed Reality-Headsets, Sie können festlegen, **mindestens erforderliche Version** zu **Windows 10, Version 1809** stattdessen, obwohl dies einige erfordert <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank"> adaptive versionsprüfungen</a> in Ihrem Code bei Verwendung der neuen Features von HoloLens 2.
+   ![Screenshot der Windows 10, Version 1903 sein, wie die Ziel- und mindestplattformversionen Versionen festlegen](images/new-uwp-project.png)<br>
+   *Festlegen von **Windows 10, Version 1903** wie die Ziel- und mindestplattformversionen-Versionen*
+   >[!IMPORTANT]
+   >Wenn Sie nicht sehen **Windows 10, Version 1903** als Option können Sie keine der neuesten Windows 10-SDK installiert.  Um diese Option aus, die angezeigt werden, erhalten <a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">installieren Sie Version 10.0.18362.0 oder höher von Windows 10 SDK</a>.
 
 Die Vorlage generiert ein Projekt mit <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++"/ WinRT"</a>, eine C ++ 17 sprachprojektion für die Windows-Runtime-APIs, die von einem beliebigen standardkonformen C ++ 17-Compiler unterstützt.  Das Projekt veranschaulicht, wie einen Welt gesperrt Cube zu erstellen, der zwei Werte aus der Benutzer platziert wurde. Der Benutzer kann [tippbewegung](gestures.md#air-tap) oder auf eine Schaltfläche klicken, auf dem Controller auf den Cube in einer anderen Position zu platzieren, das durch des Benutzers angegeben wird [bestaunen](gaze.md). Sie können dieses Projekt aus, um alle mixed Reality-app erstellen, ändern.
 
@@ -151,9 +156,9 @@ Ihrer mixed Reality-app-Updates in einer Spiele-Schleife, die standardmäßig in
 Die **Rendern** -Methode in der `AppMain.cpp` nimmt die <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> und rendert den aktuellen Frame jede holographic Kamera, entsprechend der aktuellen app und die räumliche Positionierung Zustand.
 
 ## <a name="see-also"></a>Siehe auch
-* [Abrufen einer HolographicSpace](getting-a-holographicspace.md)
+* [Abrufen eines HolographicSpace-Objekts](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [Rendern in DirectX](rendering-in-directx.md)
-* [Mithilfe von Visual Studio bereitstellen und Debuggen](using-visual-studio.md)
+* [Verwenden von Visual Studio zum Bereitstellen und Debuggen](using-visual-studio.md)
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)
-* [Verwenden von XAML mit holographic DirectX-apps](using-xaml-with-holographic-directx-apps.md)
+* [Verwenden von XAML mit holographischen DirectX-Apps](using-xaml-with-holographic-directx-apps.md)
