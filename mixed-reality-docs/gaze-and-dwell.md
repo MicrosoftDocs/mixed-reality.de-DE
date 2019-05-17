@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität Blicke, Dwell, Interaktion, Entwerfen
-ms.openlocfilehash: 9f9fa89d7730e21e89bd24ce3b483d129c8a16db
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730780"
+ms.locfileid: "65813994"
 ---
 # <a name="head-gaze-and-dwell"></a>Head-Blicke und Dwell
 
@@ -92,9 +92,9 @@ Verwenden Sie eine kurze Verzögerung vor dem Starten von visuellen Feedbacks, u
 ### <a name="high-frequency-buttons"></a>Hohe Auslastung Schaltflächen
 ![Microsoft Dynamics 365 Handbücher Schaltfläche "Weiter"](images/GuideNextButton.png "Microsoft Dynamics 365 Handbücher Schaltfläche \"Weiter\"") sehr häufig befinden sich Schaltflächen, die häufig in der gesamten Anwendung verwendet werden. Ein gutes Beispiel für diese sind die Schaltflächen weiteren und zurück in Microsoft Dynamics 365-Handbücher.
 
-* Hohe Auslastung Schaltflächen sollten...
-  * größere Schaltflächen, leichter mit Head-Blicke erreicht werden
-  * bleiben Sie in der Nähe der Höhe Eye ergonomische Service zu vermeiden.
+Hohe Auslastung Schaltflächen sollten...
+* größere Schaltflächen, leichter mit Head-Blicke erreicht werden
+* bleiben Sie in der Nähe der Höhe Eye ergonomische Service zu vermeiden.
 
 ### <a name="low-frequency-buttons"></a>Niedrige Auslastung von Schaltflächen
 Niedrige Auslastung befinden Schaltflächen, die nicht mit in der gesamten Anwendung als regelmäßig interagiert werden. Ein gutes Beispiel ist möglicherweise eine Schaltfläche auf das Menü "Einstellungen" oder eine Schaltfläche, um alle Aufgaben löschen.

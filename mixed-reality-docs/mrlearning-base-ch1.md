@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität, Unity, Tutorial, hololens
-ms.openlocfilehash: 4546e4c8d973cbd4ce4190a974a4de9c01197e56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: c5490e6a3b542a5ca677b309e5ed1171f8666fe7
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730940"
+ms.locfileid: "65814010"
 ---
 # <a name="mr-learning-base-module---project-initialization-and-first-application"></a>MR-Learning-Basis-Modul – Projektinitialisierung und der ersten Anwendung
 
@@ -83,7 +83,7 @@ In dieser ersten Lektion werden erfahren Sie, einige der Funktionen, die das Mix
 4. Erstellen Sie und benennen Sie einen neuen Ordner für Ihre Anwendung. In der Abbildung unten, einen Ordner mit dem Namen wurde "App" erstellt, um die Anwendung enthalten. Klicken Sie auf "Ordner auswählen", um das Gebäude, um den neu erstellten Ordner zu beginnen. Nachdem der Build abgeschlossen wurde, können Sie das Fenster "Buildeinstellungen" in Unity zu schließen. 
     ![Lektion 1 Chapter5 Schritt 4](images/Lesson1Chapter5Step4.JPG)
 
-  > HINWEIS: Wenn der Buildvorgang fehlschlägt, versuchen Sie es erneut erstellen oder Neustarten von Unity und erneut erstellen. Wenn Sie eine Fehlermeldung, wie z. B. angezeigt "Fehler: CS0246 = der Zeichenkette oder Namespace-Name "XX" wurde nicht gefunden (fehlt eine using-Direktive oder ein Assemblyverweis?) ", dann Sie möglicherweise installieren müssen [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
+  > HINWEIS: Wenn der Buildvorgang fehlschlägt, versuchen Sie es erneut erstellen oder Neustarten von Unity und erneut erstellen. Wenn Sie eine Fehlermeldung, wie z. B. angezeigt "Fehler: CS0246 = Name Typ- oder Namespacename "XX" wurde nicht gefunden (fehlt eine using-Direktive oder ein Assemblyverweis?) ", dann Sie möglicherweise installieren müssen [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)
   >
 
 5. Nachdem der Build abgeschlossen ist, öffnen Sie den neu erstellten Ordner, die Ihre neu erstellte Anwendungsdateien enthält. Klicken Sie mit der Doppelklicken auf die Projektmappe "MixedRealityBase.sln" (oder dem entsprechenden Namen ein, wenn Sie einen alternativen Namen für Ihr Projekt verwendet haben) auf die Projektmappendatei in Visual Studio zu öffnen.

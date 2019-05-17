@@ -7,17 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen Sie, praktische in Ihrer Nähe, HoloLens
-ms.openlocfilehash: e241e13a778de0889942a3643246e087a107db86
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730747"
+ms.locfileid: "65813999"
 ---
 # <a name="direct-manipulation-with-hands"></a>Direkte Bearbeitung mit Hand
 Direkte Bearbeitung wird ein Eingabe-Modell, bei dem berühren Hologramme direkt mit der Hand. Das Ziel mit einer direkten Bearbeitung ist, dass Objekte verhalten sich genau wie sie in der realen Welt. Einfach durch Drücken sie die Schaltflächen aktiviert werden können und 2D-Inhalt verhält sich wie ein virtuelles Touchscreen Objekte können am einfachsten, sie abgerufen werden.  Aus diesem Grund direkte Bearbeitung für die Benutzer sich einfach ist, und es macht Spaß zu.  Es gilt eine "in der Nähe" Eingabemodell, was bedeutet, dass es am besten verwendet wird, für die Interaktion mit Inhalt, der in den Waffen erreicht ist.
 
-Die HoloLens 2 verfügt über eine direkte Bearbeitung Eingabemodell, mit dem Sie die touch-Hologramme Dircly mit der Hand. Das Ziel mit einer direkten Bearbeitung ist für Objekte verhalten sich genau wie sie in der realen Welt. Sie können Schaltflächen zu aktivieren, drücken sie einfach und sogar weitermachen, abrufen und Objekte verschieben. Verhält sich in diesen Szenarien 2D-Inhalt wie virtuelle Touchscreen.
+Die HoloLens 2 verfügt über eine direkte Bearbeitung Eingabemodell, mit dem Sie die touch-Hologramme direkt mit der Hand. Das Ziel mit einer direkten Bearbeitung ist für Objekte verhalten sich genau wie sie in der realen Welt. Sie können Schaltflächen zu aktivieren, drücken sie einfach und sogar weitermachen, abrufen und Objekte verschieben. Verhält sich in diesen Szenarien 2D-Inhalt wie virtuelle Touchscreen.
 
 Direkte Bearbeitung ist leicht zu erfahren, und es hat Spaß zu machen. Es gilt eine "übergibt in der Nähe von" Eingabemodell, was bedeutet, dass es am besten verwendet wird, für die Interaktion mit Inhalt, der innerhalb von Arm-Reichweite befindet.
 

@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Mixed Reality, praktische, während der Übertragung Controlles, Interaktion, Entwerfen
-ms.openlocfilehash: 4f4231dd816dc71e42d16aca1b518ad03440116e
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629027"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65813983"
 ---
 # <a name="hands-and-motion-controllers"></a>Praktische und Motion-Controller
 ## <a name="scenarios"></a>Szenarien
@@ -25,10 +25,10 @@ Unter Umständen einige spezifischen Szenarien:
 * Speicherort basiert, Dienste und Spiele mit der realen Welt als Hintergrund
 
 ## <a name="hands-and-motion-controllers-modalities"></a>Praktische und während der Übertragung Controller Modalitäten
-### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[Direkte Bearbeitung mit Hand](direct-manipulation.md)
-Dies ist eine Modalität geschieht durch Nutzung der Hand, mit denen Benutzer berührt und die Hologramme direkt bearbeiten können. Durch Leaveraging tagtäglich hat und Bereitstellung richtigen visual visueller Hinweise, Benutzer können die gleiche Weise für die Bearbeitung von realen Ordnerbrowser zu verwenden, um mit virtuellen interagieren.   
+### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[Direkte Manipulation mit den Händen](direct-manipulation.md)
+Dies ist eine Modalität geschieht durch Nutzung der Hand, mit denen Benutzer berührt und die Hologramme direkt bearbeiten können. Durch Leaveraging tagtäglich hat und Bereitstellung richtigen visual visueller Hinweise, Benutzer können die gleiche Weise für die Bearbeitung von realen Objekten zu verwenden, um mit virtuellen interagieren.   
 
-### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[Punkt- und Commit mit Hand](point-and-commit.md)
+### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[Zeigen und Ausführen mit den Händen](point-and-commit.md)
 Dieser Modalität ermöglicht Benutzern die Interaktion mit Hologramme in einem Abstand. Sie können Benutzer die beste Umgebung zu nutzen. Benutzer Hologramme können an einer beliebigen Stelle platzieren, und können weiterhin greifen sie von jedem entfernungen. Die mentalen Modelle und Gesten für die Steuerung und Bearbeiten von 2D- und 3D-Spiele Hologramme hoch synchron sind mit denen der direkten Bearbeitung.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Motion-Controller](motion-controllers.md)
