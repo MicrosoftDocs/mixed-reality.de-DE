@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, Funktionen, Speicher, Hololens, immersive Vr
 ms.openlocfilehash: a828c7f0ac3016462f5c7e874545bf50a2db6771
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59593545"
@@ -469,7 +469,7 @@ Um das SDK in Ihr eigenes Projekt zu importieren, stellen Sie sicher, dass Sie h
 
 1.  Hinzufügen der **.unitypackage** Datei in Unity mithilfe der **Assets > Paket importieren > benutzerdefiniertes Paket** Option des Menüs.
 
-2.  In der **Unity-Paket importieren** Feld angezeigt, alles unter können Sie auswählen **-Plug-Ins* > * Storage **. Deaktivieren Sie alles andere, da sie für diesen Kurs nicht benötigt wird.
+2.  In der **Unity-Paket importieren** Feld angezeigt, alles unter können Sie auswählen **-Plug-Ins* > *Storage**. Deaktivieren Sie alles andere, da sie für diesen Kurs nicht benötigt wird.
 
     ![Paket importieren](images/AzureLabs-Lab5-45.png)
 
