@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, mixed Reality, Entwicklung, erste Schritte, neues Projekt
-ms.openlocfilehash: 4ee81eca25109da428d7b3addf59e102ddc5c5cf
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993541"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940745"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Konfigurieren Sie ein neues Unity-Projekt für Windows Mixed Reality 
 
@@ -36,6 +36,9 @@ Klicken Sie dann müssen wir wissen, dass die app aus, es versucht wird, exporti
 4. In der **XR-Einstellungen** aktivieren Sie im Abschnitt der **virtuelle Realität unterstützt** Kontrollkästchen zum Hinzufügen der **Virtual Reality-Geräte** Liste.
 5. In der **XR-Einstellungen** gruppieren, überprüfen Sie, ob **"Windows Mixed Reality"** wird als ein unterstütztes Gerät aufgeführt. (Dies kann als "Windows Holographic" in älteren Versionen von Unity angezeigt)
 
+![Einstellungen für die Qualität von Unity](images/getting-started-unity-quality-settings.jpg)<br>
+*Unity-Xr-Einstellungen*
+
 Ihre app kann nun grundlegende holographic Rendering und räumliche Eingabe erfolgen. Um weiter gehen und bestimmte Funktionen nutzen, muss Ihre app die entsprechenden Funktionen im Manifest deklariert werden. Die manifest-Deklarationen können in Unity vorgenommen werden, damit sie in jedem nachfolgenden Projektexport enthalten sind. Die Einstellung finden Sie im **Playereinstellungen > Einstellungen für die universelle Windows-Plattform > Veröffentlichungseinstellungen > Funktionen**. Die entsprechenden Funktionen für die Aktivierung von häufig verwendeten Unity-APIs für Mixed Reality sind:
 
 |  Funktion  |  APIs, die Funktion erfordern | 
@@ -48,7 +51,7 @@ Ihre app kann nun grundlegende holographic Rendering und räumliche Eingabe erfo
 
 **Einstellungen für die Qualität von Unity**
 
-![Einstellungen für die Qualität von Unity](images/unityqualitysettings-350px.png)<br>
+![Einstellungen für die Qualität von Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Einstellungen für die Qualität von Unity*
 
 HoloLens verfügt über eine GPU-Mobile-Klasse. Wenn Ihre app HoloLens ausgelegt ist, sollten Sie die Qualität-Einstellungen für schnellste Leistung optimiert, um sicherzustellen, dass wir die vollständige Framerate verwalten:
