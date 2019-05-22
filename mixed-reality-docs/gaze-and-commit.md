@@ -7,12 +7,12 @@ ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität Blicke, Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
-ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730820"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974878"
 ---
 # <a name="head-gaze-and-commit"></a>Head-Blicke und commit
 Head-Blicke und Commit ist ein Eingabemodell aus, die umfasst das Anpassen eines Objekts mit der Richtung der Kopf vorwärts verweist (Head-Richtung), und klicken Sie dann mit einer sekundären Datenbank darauf reagieren, geben Sie z. B. als die Luft, tippen Sie auf Hand-Geste oder den Befehl "Select". Es gilt eine "weit" Eingabemodell mit indirekte Manipulation, was bedeutet, dass es am besten verwendet wird, für die Interaktion mit Inhalt, der über Gelenkarme zu erreichen ist.
@@ -70,7 +70,7 @@ Voice-Befehle ist eine der Methoden primären Interaktion in Mixed Reality. Es b
 - Benutzeroberflächen für die Konversation oder Entitäten wie Cortana, die eine Funktion AI natürlicher Sprache enthalten.
 - Benutzerdefinierte Befehle
 
-Um weitere Details und eine Comprenhesive-Liste der verfügbaren Befehle und Verwendung finden, sehen Sie sich unsere [voice-Entwurf](voice-design.md) Anleitungen.
+Um weitere Details und eine Comprenhesive-Liste der verfügbaren Befehle und Verwendung finden, sehen Sie sich unsere [Voice Befehle](voice-design.md) Anleitungen.
 
 
 ### <a name="head-gaze-and-hololens-clicker"></a>Head-Blicke und HoloLens Clicker
@@ -204,11 +204,11 @@ Es gibt drei Dinge, die Sie berücksichtigen sollten:
 
 
 ## <a name="see-also"></a>Siehe auch
-* [Direkte Manipulation](direct-manipulation.md)
-* [Zeigen und Ausführen](point-and-commit.md)
-* [Interaktionsgrundlagen](interaction-fundamentals.md)
-* [Anvisieren und Verweilen](gaze-targeting.md)
-* [Anvisieren und Spracheingabe](voice-design.md)
+* [Direkte Manipulation mit den Händen](direct-manipulation.md)
+* [Zeigen und Ausführen mit den Händen](point-and-commit.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
+* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
+* [Sprachbefehle](voice-design.md)
 
 
 

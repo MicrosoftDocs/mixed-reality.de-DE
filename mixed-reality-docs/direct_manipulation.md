@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen Sie, praktische in Ihrer Nähe, HoloLens
-ms.openlocfilehash: 803157bb248a5541ed524ac4f828ccbba9d59ce1
-ms.sourcegitcommit: 82d4e5cf4ad46bfdc44d0606844e28c75b6e67ce
+ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730506"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974758"
 ---
 # <a name="direct-manipulation"></a>Direkte Bearbeitung
 
@@ -143,6 +143,6 @@ Beispiel: Angenommen Sie, dass Sie über eine holographic (Hinweistext) lesen, i
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Blicke und commit](gaze-and-commit.md)
-* [Zeigen und Ausführen](point-and-commit.md)
-* [Interaktionsgrundlagen](interaction-fundamentals.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
+* [Zeigen und Ausführen mit den Händen](point-and-commit.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)

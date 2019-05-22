@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Nachverfolgen von Auge, Mixed Reality "," Input "," Eye Blicke
-ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730768"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974767"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Eye-tracking für HoloLens 2
 HoloLens 2 ermöglicht die für eine ganz neue Ebene von Kontext und menschliche Verständnis der Holographic nutzen möchten, um Entwicklern die unglaublichen Möglichkeit der Verwendung von Informationen, was Benutzer betrachten. Diese Seite bietet einen Überblick darüber, wie Entwickler von Eye-Überwachung für verschiedene Anwendungsfälle profitieren können und was Sie beachten müssen, wenn Eye-Blicke-basierten Benutzeroberflächen zu entwerfen. 
@@ -127,7 +127,7 @@ Im Falle eines Cursors daher kann dies die "Flucht angenommen hat Cursor" Auswir
 5. **Konto für Ungenauigkeiten:** Wir können zwei Arten von Ungenauigkeiten sind für Benutzer bemerkbar: Offset und Jitter. Die einfachste Möglichkeit, die Offsets der Adresse ist zu groß genug Ziele für die Interaktion mit (> 2° in visual Winkel – als Referenz: die Miniaturansicht ist ungefähr 2° in visual Winkel aus, wenn Sie sich Ihre von Arm (1) ein stretching). Dies führt zu folgenden Leitfaden:
     - Erzwingen Sie keinen Benutzer kleine Ziele auswählen: Untersuchung ergab, dass Benutzer die Interaktion als mühelose und magische, wenn Ziele groß genug sind (und das System auch dient beschreiben). Wenn Ziele zu klein sind, wird Benutzern die Benutzeroberfläche als fatiguing und frustrierendes.
     
-# <a name="eye-gaze-design-guidelines-placeholder"></a>Entwurfsrichtlinien für Auge Blicke (Platzhalter)
+# <a name="eye-gaze-design-guidelines"></a>Richtlinien zum Entwerfen von Eye Blicke
 
 Mit HoloLens 2 haben wir die großartige Gelegenheit, die Blicke & Commit schneller und besser vertraut zu machen, indem Sie Head Blicke Eye Blicke anstelle. Allerdings Eye Blicke verhält sich sehr unterschiedlich Head Blicke auf bestimmte Weise und enthält daher eine Reihe von einzigartige Herausforderungen bereit. Im Auge bestaunen Entwurfsrichtlinien zusammengefasst wird allgemein Vorteile und Herausforderungen in Betracht ziehen, wenn Eye-Tracking als eine Eingabe Mittel in Ihrer app holographic verwenden. In diesem Abschnitt liegt der Schwerpunkt auf die spezifische Überlegungen zu lösungsentwürfen für Auge Blicke & Commit. Zunächst unser Auge unglaublich schnell zu verschieben und somit auch sehr schnell über die Ansicht als Ziel. Dadurch wird die Augen bestaunen ideal für schnelle Blicke & commit Aktionen vor allem zusammen mit schnellen Commits wie z. B. eine tippbewegung oder eine Schaltfläche drücken.
 
@@ -138,9 +138,8 @@ Streben Sie nach einer feine kombinierten Hover-Feedback: Scheinbar hervorragend
 Achten Sie für die Synchronisierung von Blicke und Commit-Signale: Die Synchronisierung von Eingabe signalisiert ist möglicherweise kein großes Problem für einfache Blicke & Commit-, also, keine Sorge! Es ist etwas zu beachten müssen, sollten Sie kompliziertere Commit-Aktionen verwenden, obwohl, lange Sprachbefehle oder komplizierte gestensteuerung beinhalten kann. Angenommen Sie, Sie sehen Sie sich Ziel und einen lange Sprachbefehl Ramsch. Berücksichtigt die Zeit, die Sie benötigen, zu sprechen und die Zeit, die das System erkennen, was Sie gesagt werden musste, wurde Ihre Augen Blicke lange in der Regel einige neue Ziel in der Szene verschoben auf. Daher müssen Sie entweder Ihre Benutzer Beachten Sie, dass sie möglicherweise müssen an ein Ziel Ausschau zu halten, bis der Befehl erkannt wurde oder verarbeiten die Eingabe in eine Methode zum Bestimmen der Einsatz des Befehls und was der Benutzer am damals gesucht habe.
 
 ## <a name="see-also"></a>Siehe auch
-* [Blicke und commit](gaze-and-commit.md)
-* [Head Blicke für](gaze-targeting.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Gesten](gestures.md)
-* [Sprachentwurf](voice-design.md)
+* [Sprachbefehle](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
 * [Komfort](comfort.md)

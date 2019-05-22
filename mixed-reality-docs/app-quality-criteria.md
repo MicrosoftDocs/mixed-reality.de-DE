@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: App-Qualitätskriterien, mixed Reality, mixed Reality-app
-ms.openlocfilehash: e9f6cd5a6017e11cd167c8141d29b82f89af08e4
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 756bc148f290aa3406c9ac8bb7003d463c62772c
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628994"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974748"
 ---
 # <a name="app-quality-criteria"></a>Qualitätskriterien für die App
 
@@ -403,7 +403,7 @@ Hologramme sollte auf die Benutzerposition auf ungefähr die gleiche Weise reagi
 * [Entwerfen für](hologram.md)
 * [Farbe, Material und Licht](color,-light-and-materials.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
-* [Interaktionsgrundlagen](interaction-fundamentals.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Self-motion und Benutzer Locomotion](comfort.md#self-motion-and-user-locomotion)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
@@ -451,14 +451,14 @@ Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und 
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Grundlagen der Windows-MR Interaktion](interaction-fundamentals.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Es Objekte](interactable-object.md)
-* [Anvisieren](gaze-targeting.md)
+* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 * [Cursor](cursors.md)
 * [Komfort und Blicke](comfort.md#gaze-direction)
 * [Gesten](gestures.md)
 * [Spracheingabe](voice-input.md)
-* [Sprachentwurf](voice-design.md)
+* [Sprachbefehle](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
 * [Leitfaden für Eingabeportierung für Unity](input-porting-guide-for-unity.md)
 * [Tastatureingabe in Unity](keyboard-input-in-unity.md)
@@ -466,8 +466,8 @@ Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und 
 * [Gesten und Motion-Controller in Unity](gestures-and-motion-controllers-in-unity.md)
 * [Spracheingabe in Unity](voice-input-in-unity.md)
 * [Tastatur-, Maus- und Controllereingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
-* [Haupt- und Eye Blicke in DirectX](gaze-in-directx.md)
-* [Praktische und Motion-Controllern in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Anvisieren mit dem Kopf und mit den Augen in DirectX](gaze-in-directx.md)
+* [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
@@ -519,7 +519,7 @@ Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereigni
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Text in Unity](text-in-unity.md)
 * [App-Leiste und Begrenzungsrahmen](app-bar-and-bounding-box.md)
-* [Sprachentwurf](voice-design.md)
+* [Sprachbefehle](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
 

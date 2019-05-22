@@ -6,12 +6,12 @@ ms.author: marcghal
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, HoloStudio, Windows Mixed Reality
-ms.openlocfilehash: 217c489fed3c0588dae1c2753db6ba15da3522c8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e01e2ea888398e9982b56fd95f90ef0731ec6bc2
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596015"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974830"
 ---
 # <a name="case-study---3-holostudio-ui-and-interaction-design-learnings"></a>Fallstudie: 3 HoloStudio Benutzeroberfläche sowie die Interaktion entwerfen Erkenntnisse
 
@@ -75,6 +75,6 @@ Benutzer müssen können problemlos Benutzeroberflächen-Steuerelemente zugreife
 </table>
 
 ## <a name="see-also"></a>Siehe auch
-* [Grundlagen der Interaktion](interaction-fundamentals.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
 
  

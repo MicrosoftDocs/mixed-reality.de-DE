@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, Media Services Videostreaming, 360, immersive vr
 ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59594020"
@@ -96,7 +96,7 @@ Verwenden der **Azure Storage-Dienst**, Sie benötigen zum Erstellen und Konfigu
 
     3.  Für **Kontoart**Option **Speicher (Allgemein v1)**.
 
-    4.  Für **Leistung**Option **Standard *.**
+    4.  Für **Leistung**Option **Standard*.**
 
     5.  Für **Replikation** wählen **lokal redundanter Speicher (LRS)**.
 
@@ -226,7 +226,7 @@ Um die Azure Media Services verwenden zu können, müssen Sie so konfigurieren S
 
     ![Das Azure-Portal](images/AzureLabs-Lab6-21.png)
 
-20. Sehen Sie Ihr Video zusammen mit einem anderen vom ** Ressourcentyp * Multi-Bitrate-MP4 ***.
+20. Sehen Sie Ihr Video zusammen mit einem anderen vom **Ressourcentyp *Multi-Bitrate-MP4***.
 
     ![Das Azure-Portal](images/AzureLabs-Lab6-22.png)
 
@@ -329,7 +329,7 @@ Im folgenden ist ein typischer Eigenschaftensatz für die Entwicklung mit dem Mi
 
 8.  Wenn Sie diese Änderungen vorgenommen haben, schließen Sie die **Buildeinstellungen** Fenster.
 
-9.  Speichern Sie das Projekt **Datei* * speichern Projekt **.
+9.  Speichern Sie das Projekt **Datei* *speichern Projekt**.
 
 
 
@@ -625,7 +625,7 @@ Zum Erstellen dieser Klasse:
 
 1.  Wechseln Sie zu der **Skripts** Ordner, die Sie zuvor erstellt haben.
 
-2.  Mit der rechten Maustaste den **Projekt** Bereich **erstellen* * C\# Script **. Nennen Sie das Skript **bestaunen**.
+2.  Mit der rechten Maustaste den **Projekt** Bereich **erstellen* *C\# Script**. Nennen Sie das Skript **bestaunen**.
 
 3.  Doppelklicken Sie auf dem neuen ***bestaunen*** Skript öffnen Sie ihn mit **Visual Studio 2017.**
 

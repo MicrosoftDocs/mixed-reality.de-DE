@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, entwerfen, Hololens, MMR, Multimodal
-ms.openlocfilehash: 771ebe44dc984c9d4550638bef405810d86b8d69
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730824"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974906"
 ---
 # <a name="introducing-instinctual-interactions"></a>Einführung in instinctual Interaktionen
 
@@ -141,12 +141,13 @@ Wenn Ihre Umgebung interaktionsmodelle erforderlich ist, haben wir festgestellt,
 
 ## <a name="see-also"></a>Siehe auch
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Direkte Manipulation](direct-manipulation.md)
-* [Zeigen und Ausführen](point-and-commit.md)
-* [Anvisieren](gaze-targeting.md)
+* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
+* [Direkte Manipulation mit den Händen](direct-manipulation.md)
+* [Zeigen und Ausführen mit den Händen](point-and-commit.md)
 * [Gesten](gestures.md)
-* [Sprachentwurf](voice-design.md)
+* [Sprachbefehle](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
 * [Raumklangentwurf](spatial-sound-design.md)
 * [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
 * [Komfort](comfort.md)
+

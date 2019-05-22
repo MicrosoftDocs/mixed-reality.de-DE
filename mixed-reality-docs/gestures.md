@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixed Reality, Bewegungen Interaktion, Entwurf
-ms.openlocfilehash: fabd47fef424186b826c410de725f805ff7005f5
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 52ba7070e2c9b5632d5978c70571fcf9cda3f499
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629068"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974888"
 ---
 # <a name="gestures"></a>Gesten
 
@@ -110,9 +110,9 @@ Es gibt drei Dinge, die Sie berücksichtigen sollten:
 * Auswirkungen die Bewegung Frame Grenzen zu beschädigen sollte minimiert werden. Im Allgemeinen bedeutet dies, dass das Ergebnis einer Geste an der Grenze beendet, aber nicht rückgängig gemacht werden soll. Beispielsweise wird ein Benutzer ein holographic Objekt in einem Raum verschoben, Bewegung beendet werden soll, wenn der Frame Geste überschritten wird, aber **nicht** zum Ausgangspunkt zurückgegeben werden. Der Benutzer kann auftreten, klicken Sie dann einige Frustration jedoch möglicherweise schneller verstehen Sie die Grenzen und nicht die vollständige beabsichtigten Aktionen jedes Mal neu gestartet haben.
 
 ## <a name="see-also"></a>Siehe auch
-* [Anvisieren](gaze-targeting.md)
+* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 * [Sprachentwurf](voice-design.md)
 * [MR-Eingabe 211: Geste](holograms-211.md)
 * [Gesten und Motion-Controller in Unity](gestures-and-motion-controllers-in-unity.md)
-* [Praktische und Motion-Controllern in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Motion-Controller](motion-controllers.md)

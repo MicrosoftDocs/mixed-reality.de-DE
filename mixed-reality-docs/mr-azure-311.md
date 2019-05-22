@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, Microsoft Graph, Hololens, immersive vr
 ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59593289"
@@ -266,12 +266,12 @@ Ist das erste Skript, das Sie erstellen müssen **MeetingsUI**, die zum Hosten u
 
 Diese Klasse zu erstellen:
 
-1.  Mit der rechten Maustaste auf die **Assets** Ordner in der *Projektfenster*, und klicken Sie **erstellen* > * Ordner **. Nennen Sie den Ordner **Skripts**.
+1.  Mit der rechten Maustaste auf die **Assets** Ordner in der *Projektfenster*, und klicken Sie **erstellen* > *Ordner**. Nennen Sie den Ordner **Skripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Öffnen der **Skripts** Ordner klicken Sie dann in diesem Ordner mit der rechten Maustaste, **erstellen* > * C\# Script **. Nennen Sie das Skript **MeetingsUI.**
+2.  Öffnen der **Skripts** Ordner klicken Sie dann in diesem Ordner mit der rechten Maustaste, **erstellen* > *C\# Script**. Nennen Sie das Skript **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -939,7 +939,7 @@ So erstellen Sie das Tag:
 
 Alles, was Sie für den Unity-Abschnitt, der dieses Projekt wurde jetzt abgeschlossen daher ist es Zeit für die Erstellung von Unity.
 
-1.  Navigieren Sie zu *Buildeinstellungen* (**Datei* > * Erstellen von Einstellungen **).
+1.  Navigieren Sie zu *Buildeinstellungen* (**Datei* > *Erstellen von Einstellungen**).
 
     ![](images/AzureLabs-Lab311-33.png)
 

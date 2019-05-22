@@ -6,12 +6,12 @@ ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Mixed Reality, holographic Frame Sichtfeld
-ms.openlocfilehash: 6773bc03dea471c97d0c6006d2ab7853a5ef3669
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c505eadbc16bb59143313aa62dd7c9d95384e0c8
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593741"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974914"
 ---
 # <a name="holographic-frame"></a>Holographic frame
 
@@ -127,8 +127,8 @@ Als ein Eintauchen wurden diese Benutzer ermutigt, suchen, verschieben in alle R
 Die realistische Darstellung aller bereitgestellt, einem leistungsstarken Blickpunkt, komplett mit feine Verfahren zum Drehen Neuigkeiten zu sich der Benutzer das Gefühl, als wäre er es, sprechen Sie. Wenn der Benutzer über die Benutzeroberfläche bewegt, verschiebt Neuigkeiten zu für Sie mit einem Schwellenwert vor der Rückgabe auf einen neutralen Status, wenn der Benutzer zu weit über seine Peripherie hinaus verschoben wird. Wenn der Benutzer über Neuigkeiten zu vollständig (z. B. etwas an anderer Stelle in der Szene ansehen) Aussehen wieder zurück zu den Neuigkeiten zu, die Microsoft-Sprachausgabe direktionale Position wird einmal erneut mit Schwerpunkt auf den Benutzer. Verfahren Sie wie folgt, geben Sie einen leistungsstarken Eindruck davon zu Entwicklungsthemen, und erstellen Sie einen zentraler Punkt innerhalb des holographic Frames Lesekopfes reduzieren und die Förderung [Benutzerkomfort](comfort.md).
 
 ## <a name="see-also"></a>Siehe auch
-* [Grundlagen der Interaktion](interaction-fundamentals.md)
-* [Comfort](comfort.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
+* [Komfort](comfort.md)
 * [Skalieren](scale.md)
-* [Blicke für](gaze-targeting.md)
-* [– Hologramm Stabilität](hologram-stability.md)
+* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
+* [Hologrammstabilität](hologram-stability.md)

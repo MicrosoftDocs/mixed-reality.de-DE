@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
-ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873925"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974926"
 ---
 # <a name="gaze-and-dwell"></a>Blicke und dwell
 Es gibt viele verschiedene Möglichkeiten, vergewissern Sie sich eine _Commit_ wie das Kombinieren von Blicke mit _Voice_ oder _Gesten übergeben_.
@@ -99,5 +99,5 @@ Wenn Sie die in der Nähe interaktive Elemente Fokus erhalten bestimmen, geben S
 
 ## <a name="see-also"></a>Siehe auch
 * [Gesten](gestures.md)
-* [Sprachentwurf](voice-design.md)
+* [Sprachbefehle](voice-design.md)
 * [Cursor](cursors.md)

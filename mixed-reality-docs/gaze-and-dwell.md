@@ -1,5 +1,5 @@
 ---
-title: Head-Blicke und Dwell
+title: Head-Blicke und dwell
 description: Übersicht über das Head-Blicke und Dwell Eingabemodell
 author: liamartinez
 ms.author: liamar
@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität Blicke, Dwell, Interaktion, Entwerfen
-ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: aa4713407f14e94c88e654ae6648c4949f98e580
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813994"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974866"
 ---
 # <a name="head-gaze-and-dwell"></a>Head-Blicke und Dwell
 
@@ -124,8 +124,8 @@ Tipps zum Entwerfen von Ansichten aufzulisten:
 * Verwenden Sie das gleiche Muster erneut so oft wie möglich zum Herstellen von UX-Kenntnisse
  
  ## <a name="see-also"></a>Siehe auch
-* [Direkte Manipulation](direct-manipulation.md)
-* [Zeigen und Ausführen](point-and-commit.md)
-* [Interaktionsgrundlagen](interaction-fundamentals.md)
+* [Direkte Manipulation mit den Händen](direct-manipulation.md)
+* [Zeigen und Ausführen mit den Händen](point-and-commit.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Anvisieren und Spracheingabe](voice-design.md)
+* [Sprachbefehle](voice-design.md)
