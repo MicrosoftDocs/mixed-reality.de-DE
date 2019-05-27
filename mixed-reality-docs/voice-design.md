@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, entwerfen, die Interaktion, die Stimme
-ms.openlocfilehash: 49fa199b2656db95b15583ccfbee39f33942f180
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730802"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039191"
 ---
 # <a name="voice-commanding"></a>Voice-Befehle
 
@@ -103,4 +103,4 @@ Wenn Voice ordnungsgemäß angewendet wird, wird der Benutzer versteht **was sie
 
 ## <a name="see-also"></a>Siehe auch
 * [Gesten](gestures.md)
-* [Anvisieren](gaze-targeting.md)
+* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)

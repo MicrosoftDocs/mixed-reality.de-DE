@@ -8,12 +8,12 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Entwurf, Interaktion, Stil, Farbe, app-Muster, Steuerelemente, Mixed Reality-Toolkit, MRTK Beispiel-apps
-ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730833"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039213"
 ---
 # <a name="design-for-mixed-reality"></a>Entwurf für mixed reality
 
@@ -73,7 +73,7 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
                             <a href="interaction-fundamentals.md">Instinctual Interaktionen</a>
                         </p>
                         <p>
-                            <a href="hands-and-tools.md">Praktische und Controllern</a>
+                            <a href="hands-and-tools.md">Praktische und Motion-Controller</a>
                         </p>
                         <p>
                             <a href="hands-free.md">Benutzereingriff</a>

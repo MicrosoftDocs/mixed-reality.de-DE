@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Mixed Reality, praktische, während der Übertragung Controlles, Interaktion, Entwerfen
-ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813983"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039167"
 ---
 # <a name="hands-and-motion-controllers"></a>Praktische und Motion-Controller
 ## <a name="scenarios"></a>Szenarien
@@ -38,7 +38,7 @@ Während der Übertragung Controller sind Tools, die physische Kapazität des Be
 
 ## <a name="see-also"></a>Siehe auch
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Direkte Bearbeitung (in der Nähe von Hand-Aktivität)](direct-manipulation.md)
-* [Punkt- und Commit (weit Hand Interaktion)](point-and-commit.md)
+* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
+* [Direkte Manipulation mit den Händen](direct-manipulation.md)
+* [Zeigen und Ausführen mit den Händen](point-and-commit.md)
 * [Freihändig](hands-free.md)
-* [Anvisieren und Verweilen](gaze-targeting.md)

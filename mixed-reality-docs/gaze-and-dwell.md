@@ -7,14 +7,14 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität Blicke, Dwell, Interaktion, Entwerfen
-ms.openlocfilehash: aa4713407f14e94c88e654ae6648c4949f98e580
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: ae4688da791fd3afb7be66069049bbe51102dd7e
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974866"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039200"
 ---
-# <a name="head-gaze-and-dwell"></a>Head-Blicke und Dwell
+# <a name="head-gaze-and-dwell"></a>Head-Blicke und dwell
 
 Wenn praktische Tools und Komponenten belegt sind, können die Gesten mühsam oder unmöglich sein. Voice-Befehle, wie Bewegungen können in bestimmten Kontexten, z. B. unter übermäßig laut Bedingungen unzuverlässig. Darüber hinaus Stimme, die Control-Computer ist nicht universell häufig, jedoch ist sicherlich Datenstrom gewinnen! Head-Blicke und Dwell bietet den meistverwendeten und einfachen Master-Mechanismus für die Arbeit heads-up und physisch auf HoloLens. Darüber hinaus Head-Blicke und Dwell ist 100-prozentige Zuverlässigkeit unabhängig von Rauschen Störungen noch Ruhe-Einschränkungen in der betriebsumgebung.
 
