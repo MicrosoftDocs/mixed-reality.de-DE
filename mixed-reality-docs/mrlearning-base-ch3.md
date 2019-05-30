@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität, Unity, Tutorial, hololens
-ms.openlocfilehash: 04ed2217c473c5649c1850fcc757d866e23b9b56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 6f05b2cecd388b1b2f13e7e5228bc90091eee3bd
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730896"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270403"
 ---
 # <a name="mr-learning-base-module---dynamic-content-placement-and-solvers"></a>MR-Learning-Basis-Modul – dynamischer Inhalt Platzierung und Hochleistungscomputings
 
@@ -48,7 +48,7 @@ Das Ziel dieses Kapitels ist die Auflistung von Schaltflächen zu verbessern, di
 
 3. Um die Auflistung der Schaltflächen, um den Benutzer folgen konfigurieren zu können, müssen wir die folgenden Anpassungen implementieren (auch finden Sie in der folgenden Abbildung):
 - Legen Sie im Skript Orbitalschüttler der Dropdown-Liste "Ausrichtung Type" auf "Nur Yaw". Dies macht es, sodass dieser nur eine Achse des Objekts dreht, wie es den Benutzer folgt.
-- Legen Sie den lokalen Offset auf 0 für alle Achsen. Legen Sie die Welt versetzt auf X = 0, y =-0.1 und Z = 0,6. Dadurch wird die Bewegung des Objekts, wenn der Benutzer Höhe ändert, das Objekt ein fester Wert in der physischen Umgebung, bleibt und dennoch damit der Benutzer befolgen, wenn der Benutzer über die Umgebung bewegt gesperrt. Diese Werte können angepasst werden, um einen Bereich Wade Verhalten zu erzielen.
+- Legen Sie den lokalen Offset auf 0 für alle Achsen. Legen Sie die Welt versetzt auf X = 0, y =-0.1 und Z = 0,6. Dadurch wird die Bewegung des Objekts, wenn der Benutzer Höhe ändert, das Objekt ein fester Wert in der physischen Umgebung, bleibt und dennoch damit der Benutzer befolgen, wenn der Benutzer über die Umgebung bewegt gesperrt. Diese Werte können angepasst werden, um eine Vielzahl von Verhalten zu erzielen.
 - Für ein folgen-Verhalten, bei dem die Schaltflächen nur führen Sie die Ansicht des Benutzers nach der Benutzer seine Head ausreichend weit aktiviert, Sie können das Kontrollkästchen "Verwendung Winkel ausführen in Einzelschritten für World Offset" (Beachten Sie: Dieser Titel möglicherweise in einigen Bildschirmen abgeschnitten, da es in der folgenden Abbildung ist.) Z. B. wenn das Objekt, das der Benutzer nur alle 90 Grad befolgen, legen Sie die Anzahl der Schritte gleich 4 (gekennzeichnet durch ein grüner Pfeil im Beispiel auf der linken Seite). 
 
 ![Lesson3 Chapter2 Step3im](images/Lesson3_chapter2_step3im.PNG)

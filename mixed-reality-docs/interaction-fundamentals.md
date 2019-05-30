@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, entwerfen, Hololens, MMR, Multimodal
-ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d018179e20d26ee8b7b24bc74d7c1711bc788282
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974906"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270384"
 ---
 # <a name="introducing-instinctual-interactions"></a>Einführung in instinctual Interaktionen
 
@@ -36,11 +36,11 @@ Stellen Sie sich diese interaktionsmodelle als des Benutzers mentales Modell zum
 
 Jedes dieser interaktionsmodelle ist praktisch, leistungsfähigen und eigenständig verwendet werden, und alle sind optimiert für einen Satz von Anforderungen des Kunden. Zeigen Sie das Diagramm unten, für Szenarien, Beispiele und Vorteile der einzelnen Interaktionsmodell.  
 
-**Modell** | **[Praktische und Tools](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-and-tools)** | **[Hands free](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-free)** | **[Blicke und Commit](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-and-commit?)**
+**Modell** | **[Praktische und Motion-Controller](hands-and-tools.md)** | **[Hands free](hands-free.md)** | **[Head-Blicke und commit](gaze-and-commit.md)**
 |--------- | --------------| ------------| ---------|
 **Beispielszenarien** | Inhalt von 3D räumliche Funktionen, z. B. räumliche Layout und Entwurf, Bearbeitung oder simulation | Kontextbezogener Umgebungen, in denen eines Benutzers Hände belegt sind, z. B. für die Auftrag-learning, Wartung| Per Klick Umgebungen, z. B. 3D Präsentationen, demos
-**Anpassen** | Ideal für neue Benutzer, die gekoppelte Wit-Sprachanrufe, eye-Tracking oder Head Blicke. Niedrige Lernkurve. Konsistente Benutzererfahrung in manuell nachverfolgen und 6 FG-Controller. | Einige learning erforderlich. Wenn Hände nicht verfügbar-Paare, gut mit Sprach- und natürlicher Sprache sind | Müssen Schulungen für HMDs jedoch nicht für Mobile. Am besten für zugänglich Controller am besten für HoloLens (1. Generation) |
-**Hardware** | HoloLens 2 Immersive headsets | HoloLens-2-HoloLens (1. Generation) Immersive Headsets | HoloLens 2 Immersive headsets | HoloLens-2-HoloLens (1. Generation) Immersive Headsets Mobile AR |
+**Anpassen** | Ideal für neue Benutzer, die gekoppelte Wit-Sprachanrufe, eye-Tracking oder Head Blicke. Niedrige Lernkurve. Konsistente Benutzererfahrung in manuell nachverfolgen und 6 FG-Controller. | Einige learning erforderlich. Wenn Hände nicht verfügbar-Paare, gut mit Sprach- und natürlicher Sprache sind | Müssen Schulungen für HMDs jedoch nicht für Mobile. Am besten geeignet für Controller, zugegriffen werden kann. Am besten für HoloLens (1. Generation). |
+**Hardware** | HoloLens 2 <br>Immersive Headsets | HoloLens 2 <br>HoloLens (1. Generation) <br>Immersive Headsets | HoloLens 2 <br>Immersive Headsets | HoloLens 2 <br>HoloLens (1. Generation) <br>Immersive Headsets <br>Mobile AR |
 
 Ausführliche Informationen für alle verfügbaren Eingaben nahtlos zusammen in jedem Interaktionsmodell mit ist auf den Seiten, die folgen, sowie einige Darstellungen und Links zu Beispielinhalt aus unserer MRTK Unity.
 
@@ -75,7 +75,7 @@ Hier sind einige Beispiele für wie visueller Hinweise und Verhaltensweisen für
         <td><strong>Wie weiß ich, was gerade demonstriert hat?</strong></td>
     </tr>
     <tr>
-        <td><a href="hands-and-tools.md">Praktische und tools</a></td>
+        <td><a href="hands-and-tools.md">Hände und Motion-Controller</a></td>
         <td>Ich sehe, dass eine Hand mesh, ich sehe eine fingertippen Unterstützung oder manuell / Controller Strahlung.</td>
         <td>Ich sehe grabbable Handles oder eines umgebenden Felds angezeigt werden, wenn meine Hand in der Nähe befindet.</td>
         <td>Ich Töne hörbar hören und sehen Sie Animationen auf Ziehpunkte und Version.</td>

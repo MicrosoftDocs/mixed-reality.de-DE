@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Remoting, Holographic Remoting
-ms.openlocfilehash: 16add6c72b594822cacbef6c92ce196ab9b13429
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605004"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270317"
 ---
 # <a name="holographic-remoting-player"></a>Holographic Remoting-Player
 
@@ -19,8 +19,7 @@ Der Holographic Remoting-Player ist eine Begleit-app, die eine Verbindung mit de
 
 Der Holographic Remoting-Player kann nur mit PC-apps verwendet werden, die speziell zur Unterstützung von Holographic Remoting.
 
-> [!NOTE]
-> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md#news-and-notes).
+Der Holographic Remoting-Player ist für HoloLens und HoloLens 2 verfügbar.  PC-apps, die Holographic Remoting mit HoloLens unterstützt zur Unterstützung von Holographic Remtoing mit HoloLens 2 aktualisiert werden müssen.  Wenden Sie sich an Ihren app-Anbieter, wenn Sie Fragen haben, die welche Versionen unterstützt werden.
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Herstellen einer Verbindung mit der Holographic Remoting-Player
 
@@ -48,10 +47,10 @@ Um die Qualität Ihrer Verbindung zu messen, z. B. **"Diagnose aktivieren"** zwa
 Sie können auf dem Hauptbildschirm, sagen **"Deaktivieren der Diagnose"** zum Deaktivieren der Diagnose zu aktivieren.
 
 ## <a name="pc-system-requirements"></a>PC-Systemanforderungen
-* Ihr PC **müssen** Windows 10 Anniversary Update ausgeführt werden.
+* Ihr PC **müssen** wird das Windows 10 Anniversary Update oder höher.
 * Es wird empfohlen, eine GeForce GTX 970 oder AMD Radeon R9 290 oder bessere Grafikkarte.
 * Es wird empfohlen, dass Sie eine solche mit Ihrem Netzwerk über Ethernet zum Reduzieren der Anzahl der Hops, die drahtlose Verbindung herstellen.
 
 ## <a name="see-also"></a>Siehe auch
-* [Holographic Remoting-Software-Lizenzbedingungen](microsoft-holographic-remoting-software-license-terms.md)
+* [Holographic Remoting-Software – Lizenzbedingungen](microsoft-holographic-remoting-software-license-terms.md)
 * [Datenschutzbestimmungen von Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

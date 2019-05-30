@@ -1,23 +1,25 @@
 ---
 title: Kommerziellen features
-description: Die kommerzielle Microsoft HoloLens-Suite umfasst Funktionen, die für Unternehmen, um die HoloLens-Geräte verwalten zu vereinfachen.
-author: xerxesb85
-ms.author: xerxesb
-ms.date: 03/21/2018
+description: Die kommerzielle Microsoft HoloLens-Suite umfasst Funktionen, die für Unternehmen, um die HoloLens-Geräte verwalten zu vereinfachen.  HoloLens 2 sind Equipt mit kommerziellen Features standardmäßig.
+author: scooley
+ms.author: scooley
+ms.date: 05/23/2019
 ms.topic: article
 keywords: HoloLens, kommerziellen, Features, Verwaltung mobiler Geräte, mobile geräteverwaltung, Kiosk-Modus
-ms.openlocfilehash: 5fd5c56983fb3e94376fac08c6e96510bccc0002
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4da540072fd32ac99692f0a13eb5852337c493bb
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604994"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270359"
 ---
 # <a name="commercial-features"></a>Kommerziellen features
 
-Die kommerzielle Microsoft HoloLens-Suite umfasst Funktionen, die für Unternehmen, um die HoloLens-Geräte verwalten zu vereinfachen. Kommerziellen Features in das Windows-Betriebssystem enthalten sind, aber sie werden durch eine Lizenz aktiviert. In fast allen Fällen ist die Lizenz von Microsoft-Geräteverwaltung aktiviert, wenn HoloLens in einer Organisation registriert. Wenden Sie sich an Ihren lokalen Microsoft Account Manager, um die Microsoft HoloLens Commercial Suite erwerben.
+Die kommerzielle Microsoft HoloLens-Suite umfasst Funktionen, die für Unternehmen, um die HoloLens-Geräte verwalten zu vereinfachen.
 
-&nbsp;
+HoloLens kam mit zwei Lizenzierungsoptionen, die Entwicklerlizenz und einer kommerziellen Lizenz.  Aktualisieren von der Developer-Liense auf einer kommerziellen Lizenz HoloLenss kommerziellen Capabilitis zu entsperren.  Wenden Sie sich an Ihren lokalen Microsoft Account Manager, um die Microsoft HoloLens Commercial Suite erwerben.
+
+**Neues in HoloLens 2** -HoloLens 2 alle verfügen über kommerziellen Features verfügbar, auf jedem Gerät.
 
 >[!VIDEO https://www.youtube.com/embed/tNd0e2CiAkE]
 
@@ -30,7 +32,7 @@ Die kommerzielle Microsoft HoloLens-Suite umfasst Funktionen, die für Unternehm
 * **Verwaltung mobiler Geräte (MDM) für HoloLens.** Ihre IT-Abteilung kann mehrere HoloLens-Geräte, die gleichzeitig mit Lösungen wie Microsoft Intune verwalten. Sie können Einstellungen verwalten, zu installierende Apps auswählen und Sicherheitskonfigurationen festlegen, die auf die Anforderungen Ihrer Organisation zugeschnitten sind.
 
   ![Mobilgeräteverwaltung für HoloLens stellt geräteverwaltung für Unternehmen auf Unternehmensniveau bereit, auf mehreren Geräten.](images/201608-enterprisemanagement-400px.png)
-  
+   
 * **Windows Update for Business.** Aktualisieren des Betriebssystems für Geräte und Unterstützung für long Term servicing Branch wird gesteuert.
 * **Sicherheit der Daten.** BitLocker die datenverschlüsselung ist für HoloLens aktiviert, das dieselbe Schutzebene wie jedes andere Windows-Gerät bereitstellen.
 * **Arbeiten Sie den Zugriff.** Jeder in Ihrer Organisation kann sich Remote mit dem Unternehmensnetzwerk über VPN auf einem HoloLens verbinden. HoloLens können auch Wi-Fi-Netzwerke zugreifen, die Anmeldeinformationen erfordern.
@@ -84,7 +86,7 @@ Die kommerzielle Microsoft HoloLens-Suite umfasst Funktionen, die für Unternehm
 
 ## <a name="enabling-commercial-features"></a>Aktivieren von kommerziellen features
 
-Kommerziellen Features wie Microsoft Store für Unternehmen, Kioskmodus und Unternehmens-WLAN-Zugriff sind Setup von einer Organisation IT-Administrator. Die [Windows-IT-Center für HoloLens](https://technet.microsoft.com/itpro/hololens/index) enthält Schritt-für-Schritt-Anweisungen für die geräteregistrierung und Installieren von apps über Microsoft Store für Unternehmen.
+Kommerziellen Features wie Microsoft Store für Unternehmen, Kioskmodus und Unternehmens-WLAN-Zugriff sind Setup von einer Organisation IT-Administrator. Die [Windows-IT-Center für HoloLens](https://docs.microsoft.com/hololens) enthält Schritt-für-Schritt-Anweisungen für die geräteregistrierung und Installieren von apps über Microsoft Store für Unternehmen.
 
 ## <a name="see-also"></a>Siehe auch
 * [IT Pro-Handbuch für HoloLens](https://technet.microsoft.com/itpro/hololens/index)

@@ -6,17 +6,21 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Hologramme, holographic Remoting, remote-Rendering, rendering, HoloLens, remote-Hologramme Netzwerk
-ms.openlocfilehash: 4726c6af43fe1b89fc8298e459a1af9dfa5fc667
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 1e9567976bad1e2b72e95feca292bf3475893230
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605125"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270356"
 ---
 # <a name="add-holographic-remoting"></a>Hinzufügen von holographic remoting
 
+## <a name="hololens-2"></a>HoloLens 2
+
 > [!NOTE]
 > Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md#news-and-notes).
+
+HoloLens-Entwickler, die mit Holographic Remoting müssen ihre apps, damit sie kompatibel mit HoloLens 2 zu aktualisieren.  Dies erfordert eine neue Version des Holographic Remoting-NuGet-Pakets, das nicht noch öffentlich verfügbar ist.  Wenn eine Anwendung mit HoloLens-NuGet-Paket für die Verbindung für den Spieler Holographic Remoting HoloLens 2 versucht, schlägt die Verbindung fehl.  Achten Sie auf dieser Seite für Updates, sobald die HoloLens-2-NuGet-Paket verfügbar ist.
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Hinzufügen von holographic Remoting auf dem Desktop oder dem UWP-app
 

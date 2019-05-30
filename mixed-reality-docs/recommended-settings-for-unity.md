@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity "," Einstellungen "," mixed reality
-ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993613"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270374"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -84,6 +84,9 @@ Unity ist die Unterstützung für die Skripterstellung Back-End- und somit sollt
 
 Lesen Sie [optimieren erstellen Zeiten für IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) für Weitere Informationen.
 
+> [!NOTE]
+> Darüber hinaus es kann vorteilhaft sein, Setup eine [Cacheserver](https://docs.unity3d.com/Manual/CacheServer.html), ändern Sie insbesondere für Unity-Projekte mit einer großen Menge von Ressourcen (mit Ausnahme von Skriptdateien) oder ständig im Hintergrund bzw. Objekte. Wenn Sie ein Projekt zu öffnen, speichert Unity qualifizierende Objekte zu einem internen Cache auf dem Entwicklercomputer. Elemente müssen daher neu verarbeitet werden, wenn geändert und erneut importiert werden. Dieser Prozess kann einmal durchgeführt und in einem Cache-Server gespeichert und daher für andere Entwickler, Zeit, anstelle von jeder Entwickler, die Verarbeitung der erneut importieren Änderungen lokal freigegeben.
+
 ## <a name="publishing-properties"></a>Veröffentlichungseigenschaften
 
 ### <a name="holographic-splash-screen"></a>Holographic Splash-Bildschirm
@@ -99,10 +102,10 @@ Um der holographic Splash-Bildschirm zu wechseln:
 
 |  Unity-Splash-Bildschirm anzeigen  |  Holographic Splash-Image  |  Verhalten |
 |----------|----------|----------|
-|  Ein  |  Keine  |  Zeigen Sie Standardbegrüßungsbildschirm für Unity 5 Sekunden lang oder bis die app geladen wird, welcher Zeitraum länger ist. | 
-|  Ein  |  Benutzerdefiniert  |  Zeigen Sie benutzerdefinierte Splash-Bildschirm, 5 Sekunden lang oder bis die app geladen wird, welcher Zeitraum länger ist. | 
-|  Deaktiviert  |  Keine  |  Zeigen Sie transparentes Schwarz fest ("nothing"), bis die app geladen wird. | 
-|  Deaktiviert  |  Benutzerdefiniert  |  Zeigen Sie benutzerdefinierte Splash-Bildschirm, 5 Sekunden lang oder bis die app geladen wird, welcher Zeitraum länger ist. | 
+|  On  |  Keine  |  Zeigen Sie Standardbegrüßungsbildschirm für Unity 5 Sekunden lang oder bis die app geladen wird, welcher Zeitraum länger ist. | 
+|  On  |  Benutzerdefiniert  |  Zeigen Sie benutzerdefinierte Splash-Bildschirm, 5 Sekunden lang oder bis die app geladen wird, welcher Zeitraum länger ist. | 
+|  Off  |  Keine  |  Zeigen Sie transparentes Schwarz fest ("nothing"), bis die app geladen wird. | 
+|  Off  |  Benutzerdefiniert  |  Zeigen Sie benutzerdefinierte Splash-Bildschirm, 5 Sekunden lang oder bis die app geladen wird, welcher Zeitraum länger ist. | 
 
 Lesen Sie [Unity Begrüßungsbildschirm Dokumentation](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) für Weitere Informationen.
 

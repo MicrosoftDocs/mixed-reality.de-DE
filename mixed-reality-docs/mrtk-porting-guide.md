@@ -7,12 +7,12 @@ ms.date: 04/12/19
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, zu testen, MRTK, MRTK Version 2, 2 für HoloLens
-ms.openlocfilehash: 98fde1a597bcc20b14037176748258d35ef99ab9
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 02dabd21b7a6add2ce53fe291a447e49057184d0
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730868"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270397"
 ---
 # <a name="getting-your-existing-app-ready-for-hololens-2"></a>Vorbereiten der Sie vorhandene Apps für HoloLens 2
 
@@ -48,12 +48,13 @@ Entwickler sollten abwägen, alle [-Plug-Ins Abhängigkeiten](https://docs.unity
 
 ## <a name="update-sceneproject-settings-in-unity"></a>Aktualisieren der Einstellungen der Szene oder eines Projekts in Unity
 
-Nach dem Update auf Unity 2018.3.x oder Unity 2019 +, es wird empfohlen, bestimmte Einstellungen in Unity für optimale Ergebnisse auf Gerät aktualisieren. Diese Einstellungen werden ausführlich unter  **[empfohlene Einstellungen für Unity](Recommended-settings-for-Unity.md)**.
+Nach dem Update auf Unity 2018.3.x oder Unity 2019 +, es wird empfohlen, bestimmte Einstellungen in Unity für optimale Ergebnisse auf Gerät aktualisieren. Diese Einstellungen werden ausführlich unter  **[empfohlene Einstellungen für Unity](Recommended-settings-for-Unity.md)** .
 
 Erneut durchlaufenen wird, die die [Scripting .NET Back-End](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) wird in Unity 2018 eingestellt und *entfernt* in Unity 2019 und daher Entwickler sollten unbedingt wechselt zu ihresProjekts[ IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html). 
 
 > [!NOTE]
 > Skripterstellung IL2CPP-Back-End kann dazu führen, dass längere Buildzeiten von Unity in Visual Studio, und Entwickler sollte daher ihren Entwicklungscomputer für setup [Optimieren von Buildzeiten IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html).
+> Darüber hinaus es kann vorteilhaft sein, Setup eine [Cacheserver](https://docs.unity3d.com/Manual/CacheServer.html), ändern Sie insbesondere für Unity-Projekte mit einer großen Menge von Ressourcen (mit Ausnahme von Skriptdateien) oder ständig im Hintergrund bzw. Objekte. Wenn Sie ein Projekt zu öffnen, speichert Unity qualifizierende Objekte zu einem internen Cache auf dem Entwicklercomputer. Elemente müssen daher neu verarbeitet werden, wenn geändert und erneut importiert werden. Dieser Prozess kann einmal durchgeführt und in einem Cache-Server gespeichert und daher für andere Entwickler, Zeit, anstelle von jeder Entwickler, die Verarbeitung der erneut importieren Änderungen lokal freigegeben.
 
 Beheben Sie alle Änderungen nach dem Wechsel zu der aktualisierten Version von Unity, Entwickler erstellen und Testen Sie ihre aktuellen apps für HoloLens sollten (1. Generation). Darüber hinaus ist dies ein guter Zeitpunkt, um erstellen und speichern Sie einen Commit für die quellcodeverwaltung. 
 
