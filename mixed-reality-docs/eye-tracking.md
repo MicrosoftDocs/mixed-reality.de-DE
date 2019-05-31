@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Nachverfolgen von Auge, Mixed Reality "," Input "," Eye Blicke
-ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d41b9973ede323e842d7187becb1220ba9980a5d
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974767"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402348"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Eye-tracking für HoloLens 2
 HoloLens 2 ermöglicht die für eine ganz neue Ebene von Kontext und menschliche Verständnis der Holographic nutzen möchten, um Entwicklern die unglaublichen Möglichkeit der Verwendung von Informationen, was Benutzer betrachten. Diese Seite bietet einen Überblick darüber, wie Entwickler von Eye-Überwachung für verschiedene Anwendungsfälle profitieren können und was Sie beachten müssen, wenn Eye-Blicke-basierten Benutzeroberflächen zu entwerfen. 
@@ -127,7 +127,7 @@ Im Falle eines Cursors daher kann dies die "Flucht angenommen hat Cursor" Auswir
 5. **Konto für Ungenauigkeiten:** Wir können zwei Arten von Ungenauigkeiten sind für Benutzer bemerkbar: Offset und Jitter. Die einfachste Möglichkeit, die Offsets der Adresse ist zu groß genug Ziele für die Interaktion mit (> 2° in visual Winkel – als Referenz: die Miniaturansicht ist ungefähr 2° in visual Winkel aus, wenn Sie sich Ihre von Arm (1) ein stretching). Dies führt zu folgenden Leitfaden:
     - Erzwingen Sie keinen Benutzer kleine Ziele auswählen: Untersuchung ergab, dass Benutzer die Interaktion als mühelose und magische, wenn Ziele groß genug sind (und das System auch dient beschreiben). Wenn Ziele zu klein sind, wird Benutzern die Benutzeroberfläche als fatiguing und frustrierendes.
     
-# <a name="eye-gaze-design-guidelines"></a>Richtlinien zum Entwerfen von Eye Blicke
+## <a name="eye-gaze-design-guidelines"></a>Richtlinien zum Entwerfen von Eye Blicke
 
 Mit HoloLens 2 haben wir die großartige Gelegenheit, die Blicke & Commit schneller und besser vertraut zu machen, indem Sie Head Blicke Eye Blicke anstelle. Allerdings Eye Blicke verhält sich sehr unterschiedlich Head Blicke auf bestimmte Weise und enthält daher eine Reihe von einzigartige Herausforderungen bereit. Im Auge bestaunen Entwurfsrichtlinien zusammengefasst wird allgemein Vorteile und Herausforderungen in Betracht ziehen, wenn Eye-Tracking als eine Eingabe Mittel in Ihrer app holographic verwenden. In diesem Abschnitt liegt der Schwerpunkt auf die spezifische Überlegungen zu lösungsentwürfen für Auge Blicke & Commit. Zunächst unser Auge unglaublich schnell zu verschieben und somit auch sehr schnell über die Ansicht als Ziel. Dadurch wird die Augen bestaunen ideal für schnelle Blicke & commit Aktionen vor allem zusammen mit schnellen Commits wie z. B. eine tippbewegung oder eine Schaltfläche drücken.
 

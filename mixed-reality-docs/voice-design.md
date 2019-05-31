@@ -7,25 +7,25 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, entwerfen, die Interaktion, die Stimme
-ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039191"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402371"
 ---
 # <a name="voice-commanding"></a>Voice-Befehle
 
 Wenn Sie Sprachbefehle zu verwenden, Blicke ist in der Regel als die Zielgruppenadressierung anhand bestimmter Mechaninism, ob als Zeiger verwendet ("Select") oder leiten Sie den Befehl zu einer Anwendung ("angezeigt, das so sagen"). Einige Sprachbefehle erforderlich nicht natürlich ein Ziel, wie "Gehe um zu starten" oder"Hey Cortana.".
 
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
 </tr><tr>
-<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer angeschlossen)</td>
+<td>Voice-Befehle</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer angeschlossen)</td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@ Wenn Voice ordnungsgemäß angewendet wird, wird der Benutzer versteht **was sie
 ![Voice-Feedback-Zustände für cursor](images/voicefeedbackstates.png)<br>
 *Voice-Feedback-Zustände für cursor*
 
-## <a name="top-things-users-should-know-about-speech-on-windows-mixed-reality"></a>Top-Aufgaben, die Benutzer sollten über "Speech" in Windows Mixed Reality wissen.
+## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Top-Aufgaben, die Benutzer sollten über "Speech" in mixed Reality wissen.
 * Sagen Sie **"Select"** beim Abzielen auf eine Schaltfläche (Hiermit können Sie überall auf eine Schaltfläche klicken).
 * Angenommen, Sie können die **Bezeichnungsnamen einer app-Leiste Schaltfläche** in einigen apps aus, um eine Aktion auszuführen. Bei der Suche auf eine app, kann ein Benutzer beispielsweise den Befehl "Entfernen" zum Entfernen der app auf der ganzen Welt (Dies spart Zeit erspart, um mit der Hand auf diese Schaltfläche klicken).
 * Können Sie Cortana Lauschen durch Spruch initiieren **"Hey Cortana".** Sie können ihre Fragen ("Hey Cortana, wie hoch ist von der Eiffel Tower"), sage zum Öffnen einer app ("Hey Cortana, open Netflix") oder sage, rufen Sie im Startmenü ("Hey Cortana, Take mich home") und vieles mehr.

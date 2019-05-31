@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Mixed Reality, physisch, bestaunen, bestaunen Ziel ist, handelt es sich bei Interaktion, Entwurf
-ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 23b1def15c4ad900265fab2a2c8757cf96706fbc
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629012"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402342"
 ---
 # <a name="hands-free"></a>Freisprechen
 
@@ -31,13 +31,13 @@ Unter Umständen einige spezifischen Szenarien:
 
 ## <a name="hands-free-modalities"></a>Physisch Modalitäten
 
-### <a name="voice-commandingvoice-designmd"></a>[Voice-Befehle](voice-design.md)
+### <a name="voice-commandingvoice-designmd"></a>[Sprachbefehle](voice-design.md)
 
 Verwenden Ihre Stimme zum Befehl und Steuerung, die eine Schnittstelle kann nicht nur ermöglicht dem Benutzer, arbeiten Handsfree, aber auch mehrere Schritte überspringen. Die Verwendung dieser Modalität reichen von der Benutzer kann alle diese Schaltfläche einfach zu lesen laut aktivieren, wie finden Sie unter-It-Say-It, um die Konversation mit einem Agent, der Aufgaben für Sie ausführen kann.
 
 
 
-### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Head-Blicke und dwell](gaze-and-dwell.md)
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 
 In einigen Situationen physisch ist mit der Stimme nicht ideal oder sogar möglich. Laut Factoryumgebungen, Datenschutz oder soziale Normen können alle Einschränkungen sein. Die Kopfzeile bestaunen + länger aufhalten Modell kann der Benutzer die app zu navigieren, indem Sie ihre Head Vektor um zu zeigen, während die veralteten, oder auf eine Schaltfläche Einstichs wird Aktivieren der nach einem bestimmten Zeitraum (in der Regel ca. 1 Sekunde oder so). 
 
@@ -96,5 +96,5 @@ Der Benutzer ist versteht...
 
 ## <a name="see-also"></a>Siehe auch
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Direkte Manipulation](direct-manipulation.md)
-* [Zeigen und Ausführen](point-and-commit.md)
+* [Direkte Manipulation mit den Händen](direct-manipulation.md)
+* [Zeigen und Ausführen mit den Händen](point-and-commit.md)

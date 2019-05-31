@@ -7,21 +7,21 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität Interaktion, Entwurf, Hololens, Hände gelangen, jetzt zeigen und commit
-ms.openlocfilehash: e69c8ff2091beff7d8fbbde4e6f24d909302290a
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 30f85d2bb455abab3a533e0a829b4fba8cea0a7a
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730806"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402384"
 ---
 # <a name="point-and-commit-with-hands"></a>Punkt- und Commit mit Hand
 Punkt- und Commit mit Hand ist ein Eingabemodell aus, in dem Benutzer als Ziel, auswählen und Bearbeiten von 2D Inhalt und 3D-Objekten, bei der Entfernung. Diese Technik "weit" Interaktion Realität zu mixed Reality eindeutig ist und keine Möglichkeit Menschen auf natürliche Weise Intereact mit der realen Welt. Z. B. in den Film Superheld *X-Männer*, das Zeichen [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) ist in der Lage, unseren Lesern und zum Bearbeiten von ein entfernte Objekt bei der Entfernung mit seinem Hand. Dies ist nicht für etwas, das Menschen in der Praxis tun können. In HoloLens (AR) und Mixed Reality (VR) statten wir Benutzern mit dieser magische, unterbrechen die physische Einschränkungen der realen Welt nicht nur um ein positives Erlebnis mit holographic Inhalt zu erhalten, sondern auch um die Interaktion effektiver und effizienter zu machen.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 Eingabemodell | [HoloLens (1. Generation)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Immersive headsets](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
 | ---------| -----| ----- | ---------|
-Punkt- und Commit (ganz Hand Interaktion) | ❌ Nicht unterstützt | ✔️ Empfohlen | ✔️ Empfohlen
+Punkt- und Commit mit Hand | ❌ Nicht unterstützt | ✔️ Empfohlen | ✔️ Empfohlen
 
 Point "und" Commit ", auch bekannt als praktische, ist eine der neuen Features, die das neue articulated Hand-Tracking-System verwendet. Dieses Modell für Benutzereingaben ist auch das primäre Eingabemodell für immersive Headsets durch die Verwendung von Motion-Controller.
 
@@ -92,6 +92,6 @@ Das Konzept der Punkt und der Commit für die Interaktion mit weit wurde anfäng
 
 ## <a name="see-also"></a>Siehe auch
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Direkte Bearbeitung mit Hand](direct-manipulation.md)
+* [Direkte Manipulation mit den Händen](direct-manipulation.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 

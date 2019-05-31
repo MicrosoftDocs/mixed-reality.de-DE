@@ -7,24 +7,24 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen Sie, praktische in Ihrer Nähe, HoloLens
-ms.openlocfilehash: 412d77a1d7446f82ddf43f051fdb149cb1fd559c
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 6e3512eab4070680c48ee8e95240a17e9925822f
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940768"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402390"
 ---
 # <a name="direct-manipulation-with-hands"></a>Direkte Bearbeitung mit Hand
 Direkte Bearbeitung wird ein Eingabe-Modell, bei dem berühren Hologramme direkt mit der Hand. Das Ziel mit einer direkten Bearbeitung ist, dass Objekte verhalten sich genau wie sie in der realen Welt. Einfach durch Drücken sie die Schaltflächen aktiviert werden können und 2D-Inhalt verhält sich wie ein virtuelles Touchscreen Objekte können am einfachsten, sie abgerufen werden.  Aus diesem Grund direkte Bearbeitung für die Benutzer sich einfach ist, und es macht Spaß zu.  Es gilt eine "in der Nähe" Eingabemodell, was bedeutet, dass es am besten verwendet wird, für die Interaktion mit Inhalt, der in den Waffen erreicht ist.
 
 Direkte Bearbeitung basiert auf Unterstützung, d. h. Benutzer geeignet. Es gibt keine symbolischen Gesten auf Benutzer zu vermitteln. Alle Interaktionen werden um ein visuelles Element erstellt, die Sie touch oder abrufen können.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 
-| Eingabemodell | [HoloLens (1. Generation)](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details?branch=master) | HoloLens 2 |[Immersive Headsets](https://review.docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details?branch=master)|
+| Eingabemodell | [HoloLens (1. Generation)](hololens-hardware-details.md) | HoloLens 2 |[Immersive headsets](immersive-headset-hardware-details.md)|
 |:-------- | :-------| :--------| :------------|
-| Direkte Bearbeitung | ❌ Nicht unterstützt | ✔️ Empfohlen | ➕ Alternative [zeigen, und committen](https://review.docs.microsoft.com/en-us/windows/mixed-reality/point-and-commit?branch=master) wird empfohlen.
+| Direkte Bearbeitung mit Hand | ❌ Nicht unterstützt | ✔️ Empfohlen | ➕ Eine Alternative [zeigen und commit mit Hand](point-and-commit.md) wird empfohlen.
 
 Direkte Bearbeitung ist eine primäre Eingabemodell für HoloLens 2 und nutzt die neue articulated System zum Nachverfolgen von Hand. Das Eingabemodell finden Sie auch immersive Headsets durch die Verwendung von Motion-Controller, empfiehlt sich jedoch nicht als Hauptwerkzeug der Interaktion außerhalb der Bearbeitung des Objekts.  Direkte Manipluation ist nicht verfügbar für HoloLens (1. Generation).
 

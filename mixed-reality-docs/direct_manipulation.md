@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen Sie, praktische in Ihrer Nähe, HoloLens
-ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: bb44244a3cb932a56703f84ba129def5ee5f9b67
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974758"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402359"
 ---
 # <a name="direct-manipulation"></a>Direkte Bearbeitung
 
@@ -21,11 +21,11 @@ Direkte Bearbeitung ist leicht zu erfahren, und es hat Spaß zu machen. Es gilt 
 
 Direkte Bearbeitung basiert auf Unterstützung, d. h. Benutzer geeignet. Es gibt keine symbolischen Gesten auf Benutzer zu vermitteln. Alle Interaktionen werden um ein visuelles Element erstellt, die Sie touch oder abrufen können.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 | Eingabemodell | [HoloLens (1. Generation)](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details?branch=master) | HoloLens 2 |[Immersive Headsets](https://review.docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details?branch=master)|
 |:-------- | :-------| :--------| :------------|
-| Direkte Bearbeitung | ❌ Nicht unterstützt | ✔️ Empfohlen | ➕ Alternative [zeigen, und committen](https://review.docs.microsoft.com/en-us/windows/mixed-reality/point-and-commit?branch=master) wird empfohlen.
+| Direkte Bearbeitung | ❌ Nicht unterstützt | ✔️ Empfohlen | ➕ Eine Alternative [zeigen und commit mit Hand](point-and-commit.md) wird empfohlen.
 
 Direkte Bearbeitung ist eine primäre Eingabemodell für HoloLens 2 und nutzt die neue articulated System zum Nachverfolgen von Hand. Das Eingabemodell finden Sie auch immersive Headsets durch die Verwendung von Motion-Controller, empfiehlt sich jedoch nicht als Hauptwerkzeug der Interaktion außerhalb der Bearbeitung des Objekts.  Direkte Manipluation ist nicht verfügbar, für HoloLens v1.
 
