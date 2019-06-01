@@ -7,15 +7,15 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Nachverfolgen von Auge, Mixed Reality "," Input "," Eye Blicke
-ms.openlocfilehash: d41b9973ede323e842d7187becb1220ba9980a5d
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
+ms.openlocfilehash: 7298a34a946f86aaf789cfe44ad971169fc8ece3
+ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402348"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453699"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Eye-tracking für HoloLens 2
-HoloLens 2 ermöglicht die für eine ganz neue Ebene von Kontext und menschliche Verständnis der Holographic nutzen möchten, um Entwicklern die unglaublichen Möglichkeit der Verwendung von Informationen, was Benutzer betrachten. Diese Seite bietet einen Überblick darüber, wie Entwickler von Eye-Überwachung für verschiedene Anwendungsfälle profitieren können und was Sie beachten müssen, wenn Eye-Blicke-basierten Benutzeroberflächen zu entwerfen. 
+HoloLens 2 ermöglicht die für eine ganz neue Ebene von Kontext und menschliche Verständnis holografischen Benutzeroberfläche durch, um Entwicklern die unglaublichen Möglichkeit der Verwendung von Informationen, was Benutzer betrachten. Diese Seite bietet einen Überblick darüber, wie Entwickler von Eye-Überwachung für verschiedene Anwendungsfälle profitieren können und was Sie beachten müssen, wenn Eye-Blicke-basierten Benutzeroberflächen zu entwerfen. 
 
 ## <a name="use-cases"></a>Anwendungsfälle
 Eye-tracking kann Anwendungen überwachen, in denen der Benutzer in Echtzeit sucht. Dieser Abschnitt beschreibt einige der möglichen Anwendungsfälle und neuartige Interaktionen, die mit Eye-tracking in mixed Reality möglich werden.
@@ -126,20 +126,13 @@ Im Falle eines Cursors daher kann dies die "Flucht angenommen hat Cursor" Auswir
 
 5. **Konto für Ungenauigkeiten:** Wir können zwei Arten von Ungenauigkeiten sind für Benutzer bemerkbar: Offset und Jitter. Die einfachste Möglichkeit, die Offsets der Adresse ist zu groß genug Ziele für die Interaktion mit (> 2° in visual Winkel – als Referenz: die Miniaturansicht ist ungefähr 2° in visual Winkel aus, wenn Sie sich Ihre von Arm (1) ein stretching). Dies führt zu folgenden Leitfaden:
     - Erzwingen Sie keinen Benutzer kleine Ziele auswählen: Untersuchung ergab, dass Benutzer die Interaktion als mühelose und magische, wenn Ziele groß genug sind (und das System auch dient beschreiben). Wenn Ziele zu klein sind, wird Benutzern die Benutzeroberfläche als fatiguing und frustrierendes.
-    
-## <a name="eye-gaze-design-guidelines"></a>Richtlinien zum Entwerfen von Eye Blicke
-
-Mit HoloLens 2 haben wir die großartige Gelegenheit, die Blicke & Commit schneller und besser vertraut zu machen, indem Sie Head Blicke Eye Blicke anstelle. Allerdings Eye Blicke verhält sich sehr unterschiedlich Head Blicke auf bestimmte Weise und enthält daher eine Reihe von einzigartige Herausforderungen bereit. Im Auge bestaunen Entwurfsrichtlinien zusammengefasst wird allgemein Vorteile und Herausforderungen in Betracht ziehen, wenn Eye-Tracking als eine Eingabe Mittel in Ihrer app holographic verwenden. In diesem Abschnitt liegt der Schwerpunkt auf die spezifische Überlegungen zu lösungsentwürfen für Auge Blicke & Commit. Zunächst unser Auge unglaublich schnell zu verschieben und somit auch sehr schnell über die Ansicht als Ziel. Dadurch wird die Augen bestaunen ideal für schnelle Blicke & commit Aktionen vor allem zusammen mit schnellen Commits wie z. B. eine tippbewegung oder eine Schaltfläche drücken.
-
-Einen Cursor werden nicht angezeigt werden: Es nahezu unmöglich, Sie interagieren zwar bestaunen ohne einen Cursor, wenn Head verwenden, der Cursor wird schnell zu allgemeiner Ablenkung und es ziemlich ärgerlich Verwendung Eye Blicke. Statt eines Cursors für den Benutzer zu informieren, ob Eye-tracking arbeitet und wurde ordnungsgemäß ermittelt derzeit suchenden am Ziel werden geringfügige Visual verwenden (Weitere Details folgen).
-
-Streben Sie nach einer feine kombinierten Hover-Feedback: Scheinbar hervorragende visuelles Feedback für Head Blicke kann dazu führen, dass terrible, überwältigend-Erfahrungen, die mit Eye Blicke. Denken Sie daran, dass Ihre Augen überaus schnell und schnell für Punkte in Ihre Feldansicht darting sind. Schnelle plötzliche Hervorhebung Änderungen (ein/aus) können bei der Suche um flickery Feedback führen. Also beim Zeigen Sie Feedback Wir empfiehlt sich, eine Markierung reibungslos gemischt-in (und kombiniert wird, wenn sofort suchen). Dies bedeutet, dass auf den ersten Sie kaum das Feedback bemerken würden bei Betrachtung von einem Ziel. Im Verlauf von 500-1000 ms würde die Hervorhebung an Intensität erhöhen. Während der Benutzer konnte Ausschau zu halten, an das Ziel aus, um sicherzustellen, dass das System das fokussierte Ziel ordnungsgemäß erkannt wurde, können erfahrene Benutzer schnell bestaunen & Commit ausgeführt, ohne zu warten, bis das Feedback ist für die höchste Intensität. Darüber hinaus empfehlen wir Ihnen ebenfalls ein Blend-Out verwenden, wenn sich das Feedback gezeigt wird eingeblendet. Research hat gezeigt, dass schnelle Bewegungen und Kontrast Änderungen äußerst bemerkenswerten in Ihre peripheren Vision (also den Bereich des Felds Visual, in denen Sie nicht angezeigt wird). Das Ausblenden der videoüberlagerung benötigt keine so langsam wie die Blend-in zu sein. Dies ist nur wichtig, wenn hoher Kontrast oder farbänderungen für die hervorhebungs-wurden. Wenn das Feedback gezeigt wird zunächst sehr komplex war, wird nicht Sie wahrscheinlich einen Unterschied bemerken.
-
-Achten Sie für die Synchronisierung von Blicke und Commit-Signale: Die Synchronisierung von Eingabe signalisiert ist möglicherweise kein großes Problem für einfache Blicke & Commit-, also, keine Sorge! Es ist etwas zu beachten müssen, sollten Sie kompliziertere Commit-Aktionen verwenden, obwohl, lange Sprachbefehle oder komplizierte gestensteuerung beinhalten kann. Angenommen Sie, Sie sehen Sie sich Ziel und einen lange Sprachbefehl Ramsch. Berücksichtigt die Zeit, die Sie benötigen, zu sprechen und die Zeit, die das System erkennen, was Sie gesagt werden musste, wurde Ihre Augen Blicke lange in der Regel einige neue Ziel in der Szene verschoben auf. Daher müssen Sie entweder Ihre Benutzer Beachten Sie, dass sie möglicherweise müssen an ein Ziel Ausschau zu halten, bis der Befehl erkannt wurde oder verarbeiten die Eingabe in eine Methode zum Bestimmen der Einsatz des Befehls und was der Benutzer am damals gesucht habe.
+   
 
 ## <a name="see-also"></a>Siehe auch
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Gesten](gestures.md)
-* [Sprachbefehle](voice-design.md)
+* [Anvisieren mit dem Kopf und mit den Augen in DirectX](gaze-in-directx.md)
+* [Eye Blicke in Unity (Mixed Reality-Toolkit)](https://aka.ms/mrtk-eyes)
+* [Gestensteuerung](gestures.md)
+* [Spracheingabe](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
 * [Komfort](comfort.md)
