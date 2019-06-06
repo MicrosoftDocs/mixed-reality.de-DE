@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, Modellierung, Modellieren von Anleitungen, Asset-Anforderungen, Erstellen von Richtlinien, Startprogramm, 3D Startprogramm, Textur, Materialien, Komplexität, Dreiecke, Netz, Polygone, Polycount, beschränkt.
-ms.openlocfilehash: 209a92a8e7070ca23bcb9402d8716f3f91747a96
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593776"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692285"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Erstellen von 3D-Modellen für die Verwendung zu Hause
 
@@ -29,11 +29,11 @@ Im weiteren Verlauf dieses Artikels enthält einen ausführlichen Überblick üb
 
 ## <a name="detailed-guidance"></a>Ausführliche Anweisungen
 
-## <a name="exporting-models"></a>Exportieren von Modellen
+### <a name="exporting-models"></a>Exportieren von Modellen
 
 Die Windows Mixed Reality home erwartet 3D-Objekten, verwenden das Dateiformat .glb mit eingebetteten Bildern und binären Daten übermittelt werden soll. GLB ist die binäre Version des Formats GlTF die ist eine lizenzgebührenfreie kostenlose offener Standard für 3D medienobjektübermittlung, die von der Gruppe "Khronos" verwaltet wird. Weiterentwicklung von GlTF als Branchenstandard für interoperable 3D-Inhalt werden Sie also Microsoft Unterstützung für das Format für Windows-apps und-Umgebungen. Wenn Sie ein Medienobjekt GlTF erstellt haben, bevor Sie finden eine [Liste der unterstützten metadatenexport- und Konverter](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) auf der Github-Seite von GlTF arbeiten Gruppe.  
 
-## <a name="modeling-guidelines"></a>Modellieren von Richtlinien
+### <a name="modeling-guidelines"></a>Modellieren von Richtlinien
 
 Windows erwartet, dass Ressourcen für die folgenden Richtlinien für die Modellierung zur Sicherstellung der Kompatibilität mit der Startseite Mixed Reality-Erfahrung mit generiert werden. Bedenken Sie beim Erstellen von Modellen in Ihrem Programm Ihrer Wahl die folgenden Empfehlungen und Einschränkungen:
 1. Die Achse auf sollte auf "Y" festgelegt werden.
@@ -57,7 +57,7 @@ Die Windows Mixed Reality home unterstützt keine Modelle mit mehr als 10.000 Dr
 |  LOD 1 |  5,000  |  10,000 | 
 |  LOD 2 |  2,500  |  10,000 | 
 
-### <a name="node-counts-and-submesh-limits"></a>Grenzwerte für die Anzahl von Knoten und Submesh
+### <a name="node-counts-and-submesh-limits"></a>Anzahl von Knoten und Submesh-Grenzwerte
 Die Windows Mixed Reality home unterstützt keine Modelle mit mehr als 64 Knoten oder 32 Submeshes pro LOD. Knoten sind ein Konzept in der [GlTF Spezifikation](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) , definieren die Objekte in der Szene. Submeshes werden definiert, in dem Array [primitive](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) auf das Netz im-Objekt. 
 
 |  Feature |  Beschreibung  |  Max. unterstützt | Dokumentation |
@@ -232,7 +232,7 @@ Die folgenden Trigger Semantik für Animation werden von der Windows Mixed Reali
 ### <a name="saving-and-exporting"></a>Speichern und exportieren
 Einmal vorgenommenen Änderungen an Ihrem GlTF-Modell können Sie es direkt als GlTF speichern, oder klicken Sie rechts auf den Namen der Datei im Editor, und wählen Sie "GlTF: Exportieren in GLB (Binärdatei) "eine .glb stattdessen zu exportieren. 
 
-### <a name="restrictions"></a>Einschränkungen
+### <a name="restrictions"></a>Restrictions
 Animationen darf nicht länger als 20 Minuten und können nicht mehr als 36.000 Keyframes (20 Minuten unter 30 BpS) enthalten. Außerdem bei Verwendung von Morph Ziel aufgrund Animationen nicht überschreiten 8192 Morph Ziel Vertices oder weniger. Überschreitung dieser Anzahl wird latenzkritischen das animierte Objekt in die Windows Mixed Reality-Homepage nicht unterstützt werden. 
 
 |Feature|Maximal|
@@ -279,6 +279,6 @@ Es wird nur ein einziges UV Vertex Attribut unterstützt.
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Implementieren von 3D app-startfeldern von (UWP-apps)](implementing-3d-app-launchers.md)
-* [Implementieren von 3D app-startfeldern von (Win32-apps)](implementing-3d-app-launchers-win32.md)
-* [Navigieren Sie in der Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md)
+* [Implementieren von 3D-App-Startprogrammen (UWP-Apps)](implementing-3d-app-launchers.md)
+* [Implementieren von 3D-App-Startprogrammen (Win32-Apps)](implementing-3d-app-launchers-win32.md)
+* [Navigieren auf der Startseite von Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
