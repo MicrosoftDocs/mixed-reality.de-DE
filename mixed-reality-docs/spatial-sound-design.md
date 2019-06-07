@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, räumliche Ton, Entwurf, Stil
-ms.openlocfilehash: c8f5268faf5eef779401c046947c3137d177cb89
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593269"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750307"
 ---
 # <a name="spatial-sound-design"></a>Räumliche Entwurf
 
@@ -26,12 +26,23 @@ Wenn Sie jemals gespielt haben [Marco Poloshirt](https://en.wikipedia.org/wiki/M
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td> Raumklang</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Räumliche Entwurf</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
+
 
 ## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Vier wichtige Faktoren, die räumlichen Sound für mixed Reality-Entwicklung ist.
 
@@ -96,5 +107,5 @@ Wenn Audiohinweise verwenden, um die Aufmerksamkeit des Benutzers über ihre akt
 In mixed Reality, für die optimale Ergebnisse zu erzielen sollten 3D, Audio über räumliche Sound statt über ältere 3D, audio Technologien erreicht werden. Im Allgemeinen ist die verbesserte Spatialization der kleine CPU-Aufwand über standard-3D-sound. Standard-3D-Audio kann verwendet werden, für die mit niedriger Priorität Sounds, Sounds, die spatialized, aber nicht unbedingt auf ein Objekt physisch oder virtuell gebunden und Objekte, die der Benutzer nie für die Interaktion mit der app suchen muss.
 
 ## <a name="see-also"></a>Siehe auch
-* [Räumliche sound](spatial-sound.md)
-* [Räumliche Zuordnung](spatial-mapping.md)
+* [Raumklang](spatial-sound.md)
+* [Räumliche Abbildung](spatial-mapping.md)

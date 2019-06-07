@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Entwurf, Format, Schriftart, Typografie, Benutzeroberfläche, ux
-ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6371aa9b12b61d12acdaaae5f7730ff2ae9757f0
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692367"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750334"
 ---
 # <a name="typography"></a>Typografie
 
@@ -67,9 +67,9 @@ Um dunkel Text verwenden, sollten Sie eine helle Platte verwenden, um lesbar zu 
 
 ## <a name="recommended-font-size"></a>Wir empfehlen den Schriftgrad
 
-Wie zu erwarten können, geben Sie die Größen, die wir auf einem PC oder Tablet-Gerät (in der Regel zwischen 12: 32pt) finden Sie in einem Abstand von 2 Metern relativ klein verwenden. Es hängt die Merkmale der einzelnen Schriftarten, aber der empfohlenen Mindestgröße anzeigen Winkel und die Schriftarthöhe zur besseren Lesbarkeit im Allgemeinen sind, um basierend auf unseren Untersuchungen Benutzerstudien 0.35°-0.4°/12.21-13.97mm. Es geht 35-40pt mit den oben vorgestellten Skalierungsfaktor. 
+Wie zu erwarten können, geben Sie die Größen, die wir auf einem PC oder Tablet-Gerät (in der Regel zwischen 12: 32pt) finden Sie in einem Abstand von 2 Metern relativ klein verwenden. Es hängt die Merkmale der einzelnen Schriftarten, aber der empfohlenen Mindestgröße anzeigen Winkel und die Schriftarthöhe zur besseren Lesbarkeit im Allgemeinen sind, um basierend auf unseren Untersuchungen Benutzerstudien 0.35°-0.4°/12.21-13.97mm. Es geht um 35-40pt mit den Skalierungsfaktor, eingeführt in [Text in Unity](text-in-unity.md) Seite. 
 
-Für die nahezu die Interaktion auf 0.45m(45cm), Betrachtungswinkel für die minimale lesbar Schriftart und die Höhe sind 0,4 °-0,5 ° / 3.14 – 3.9 mm. Es geht 9-12pt mit den oben vorgestellten Skalierungsfaktor.
+Für die nahezu die Interaktion auf 0.45m(45cm), Betrachtungswinkel für die minimale lesbar Schriftart und die Höhe sind 0,4 °-0,5 ° / 3.14 – 3.9 mm. Es geht um 9-12pt mit den Skalierungsfaktor in eingeführte [Text in Unity](text-in-unity.md).
 
 ![Naher und viel Interaktion Bereich](images/typography-distance-1000px.jpg)
 *am in der Nähe von Inhalt und weit Interaktion-Bereich*

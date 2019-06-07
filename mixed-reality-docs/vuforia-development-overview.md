@@ -1,17 +1,17 @@
 ---
 title: Verwenden Vuforia mit Unity
 description: Nutzen Sie Vuforia Windows Mixed Reality-Anwendungen in Unity erstellen.
-author: ChimeraScorn
-ms.author: cwhite
-ms.date: 03/21/2018
+author: ailyadis
+ms.author: ''
+ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, Marker, die Koordinaten, die als Referenz, Nachverfolgen
-ms.openlocfilehash: 43a74989b931fee898af0aeae9e240303b2eef01
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595988"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750350"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Verwenden Vuforia-Engine mit Unity
 
@@ -90,11 +90,11 @@ Der Entwickler kann dieser Prozess, damit die Steuerung auf Vuforia, durch das D
 
 
 ## <a name="see-also"></a>Siehe auch
-* [Installieren der tools](install-the-tools.md)
+* [Installieren der Tools](install-the-tools.md)
 * [Koordinatensysteme](coordinate-systems.md)
-* [Räumliche Zuordnung](spatial-mapping.md)
+* [Räumliche Abbildung](spatial-mapping.md)
 * [Kamera in Unity](camera-in-unity.md)
-* [Exportieren und Erstellen von Unity Visual Studio-Projektmappe](exporting-and-building-a-unity-visual-studio-solution.md)
+* [Exportieren und Erstellen einer Unity-Projektmappe für Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
 * [Vuforia Dokumentation: Entwickeln für Windows 10 in Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
 * [Vuforia Dokumentation: Vorgehensweise: installieren die Vuforia Unity-Erweiterung](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
 * [Vuforia Dokumentation: Arbeiten mit dem HoloLens-Beispiel in Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
