@@ -6,19 +6,19 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Steuerelemente, Entwurf
-ms.openlocfilehash: 88ab0359d5083d43d5d6312ef1185f67ca0caa7d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7c3bbd82ec909b5a2e3c81f122366be564934f4d
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605014"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813885"
 ---
 # <a name="object-collection"></a>Eine objektauflistung
 
-Eine objektauflistung ist ein Layout-Steuerelement, dem Sie ein Array von Objekten in eine vordefinierte dreidimensionale Form anordnen kann. Unterstützt vier verschiedene Oberfläche Formate - **Plane, Zylinder, Kugel** und **Punktdiagramm**. Sie können die RADIUS- und die Größe der Objekte und den Abstand zwischen ihnen anpassen. Eine objektauflistung unterstützt ein Objekt aus Unity – sowohl 2D- und 3D-Spiele. In der  **[Mixed Reality-Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ObjectCollection.md)**, wir haben die Unity-Skript erstellt und [Beispiel Szene](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Scenes/ObjectCollectionExample.unity) Dies hilft Ihnen, eine objektauflistung zu erstellen.
+Eine objektauflistung ist ein Layout-Steuerelement, dem Sie ein Array von Objekten in eine vordefinierte dreidimensionale Form anordnen kann. Es unterstützt verschiedene Formateigenschaften für Surface - **Plane, Zylinder, Kugel** und **radiale**. Sie können die RADIUS- und die Größe der Objekte und den Abstand zwischen ihnen anpassen. Eine objektauflistung unterstützt ein Objekt aus Unity – sowohl 2D- und 3D-Spiele. In der  **[Mixed Reality-Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , wir haben die Unity-Skript erstellt und Beispiele, mit denen Sie erstellen eine objektauflistung.
 
 ![Objektauflistung, die in der Tabelle periodisch Elemente-App verwendet](images/640px-objectcollection-hero-640px.jpg)<br>
-*Objektauflistung, die in der Tabelle periodisch Elemente-Beispiel-App verwendet*
+*Beispiele für die Verwendung der Objektsammlung*
 
 ## <a name="object-collection-examples"></a>Beispiele für die Objekt-Auflistung
 
@@ -41,8 +41,9 @@ Sie können auch mit objektauflistung 2D-Bilder verwenden. Die folgenden Beispie
 ![Ein Beispiel für 2D-Bilder mit objektauflistung](images/640px-layout-3dobjects-3.jpg)
 
 ![Ein Beispiel für 2D-Bilder mit objektauflistung](images/640px-layout-2dimages.jpg)<br>
-*Beispiele für 2D-Bilder mit objektauflistung*
+*Beispiele für die Verwendung der Objektsammlung mit 2D-Bildern*
 
 ## <a name="see-also"></a>Siehe auch
-* [Skripts und prefabs (Vorlagen) zum Sammeln von Objekten im Mixed Reality-Toolkit auf GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
-* [Es-Objekt](interactable-object.md)
+* [Skripts und prefabs (Vorlagen) zum Sammeln von Objekten im Mixed Reality-Toolkit auf GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+* [Interaktionsfähiges Objekt](interactable-object.md)
+* [Umgebendes Feld](app-bar-and-bounding-box.md)
