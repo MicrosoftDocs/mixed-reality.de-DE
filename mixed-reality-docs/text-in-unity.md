@@ -3,15 +3,15 @@ title: Text in Unity
 description: Zum Anzeigen von Text in Unity, es gibt zwei Arten von Textkomponenten, die Sie verwenden können – Benutzeroberflächentext und 3D Mesh-Text.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Entwurf, Steuerelemente, Schriftart, Typografie, Benutzeroberfläche, Ux
-ms.openlocfilehash: a601ab5ab5168f286a0935ca06eeec13022e1eee
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 7d40db2e0571e835e28e444c7921e1a086800936
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692328"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829973"
 ---
 # <a name="text-in-unity"></a>Text in Unity
 

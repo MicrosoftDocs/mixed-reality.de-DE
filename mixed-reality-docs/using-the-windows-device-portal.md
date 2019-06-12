@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows Device Portal, HoloLens
-ms.openlocfilehash: 8b9935d6b64abfd22e2e856e0142c953a6366008
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f4319e1efa94d90bfb8cc4e5815ffa87fc865a7f
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594632"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830003"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden die Windows Device Portal
 
@@ -36,7 +36,7 @@ Diese Dokumentation bezieht sich insbesondere über die Windows Device Portal f�
 5. Wählen Sie das Menüelement **Für Entwickler** aus.
 6. Aktivieren Sie den **Entwicklermodus**.
 7. [Scrollen Sie nach unten](gestures.md#composite-gestures) , und aktivieren Sie **Device Portal**.
-8. Wenn Sie Windows Device Portal einrichten, damit Sie für diese HoloLens über USB oder WLAN-apps bereitstellen können, klicken Sie auf **Paar** zu [ereignispaarbildung PIN generieren](using-visual-studio.md#pairing-your-device-hololens). Lassen Sie die Einstellungs-app das PIN-Popup, bis Sie die PIN in Visual Studio bei der ersten Bereitstellung eingeben.
+8. Wenn Sie Windows Device Portal einrichten, damit Sie für diese HoloLens über USB oder WLAN-apps bereitstellen können, klicken Sie auf **Paar** zu [ereignispaarbildung PIN generieren](using-visual-studio.md). Lassen Sie die Einstellungs-app das PIN-Popup, bis Sie die PIN in Visual Studio bei der ersten Bereitstellung eingeben.
 
    ![Aktivieren den Entwicklermodus im Einstellungen-app für Windows Holographic](images/deviceportalsettings.png)
 
@@ -56,7 +56,7 @@ Diese Dokumentation bezieht sich insbesondere über die Windows Device Portal f�
 
 ## <a name="connecting-to-an-emulator"></a>Herstellen einer Verbindung mit einem emulator
 
-Sie können das Geräteportal auch mit dem Emulator verwenden. Verwenden Sie zum Verbinden mit dem Device Portal die [Symbolleiste](using-the-hololens-emulator.md#anatomy-of-the-hololens-emulator). Klicken Sie auf dieses Symbol: ![Symbol "Device Portal öffnen"](images/emulator-deviceportal.png) **öffnen Device Portal**: Öffnen Sie die Windows Device Portal für das Betriebssystem HoloLens im Emulator.
+Sie können das Geräteportal auch mit dem Emulator verwenden. Verwenden Sie zum Verbinden mit dem Device Portal die [Symbolleiste](using-the-hololens-emulator.md). Klicken Sie auf dieses Symbol: ![Symbol "Device Portal öffnen"](images/emulator-deviceportal.png) **öffnen Device Portal**: Öffnen Sie die Windows Device Portal für das Betriebssystem HoloLens im Emulator.
 
 ## <a name="creating-a-username-and-password"></a>Erstellen einen Benutzernamen und Kennwort
 
@@ -71,7 +71,7 @@ Wenn Sie das erste Mal eine Verbindung der HoloLens mit dem Geräteportal herste
 5. Geben Sie ein Kennwort ein, und bestätigen Sie es. Das Kennwort muss mindestens sieben Zeichen lang sein. Es muss kein MSA- oder Domänenkennwort sein.
 6. Klicken Sie auf **Paar** zur Verbindung mit Windows Device Portal auf die HoloLens.
 
-Wenn Sie diese Benutzernamen oder das Kennwort zu einem beliebigen Zeitpunkt ändern möchten, können Sie diesen Prozess wiederholen, finden Sie auf der Seite der Gerät-Sicherheit durch Klicken auf die **Sicherheit** Link entlang des oberen, rechten und Navigation zu: https://<YOUR_HOLOLENS_IP_ Adresse > / devicesecurity.htm.
+Wenn Sie diese Benutzernamen oder das Kennwort zu einem beliebigen Zeitpunkt ändern möchten, können Sie diesen Prozess wiederholen, indem Sie Zugriff auf der Sicherheitsseite des Geräts empfängerrollenbildschirm des: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicepair.htm.
 
 ## <a name="security-certificate"></a>Sicherheitszertifikat
 
@@ -80,7 +80,7 @@ Wenn im Browser eine Meldung zu einem Zertifikatfehler angezeigt wird, können S
 Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL-Verbindung. Standardmäßig wird dieses Zertifikat vom Webbrowser des PC nicht als vertrauenswürdig angesehen, und Sie erhalten möglicherweise eine Meldung zu einem Zertifikatfehler. Sie können dieses Zertifikat von der HoloLens herunterladen (über USB oder ein vertrauenswürdiges WLAN-Netzwerk) und es auf dem PC als vertrauenswürdig einstufen, um eine sichere Verbindung mit dem Gerät herzustellen.
 1. **Stellen Sie sicher, dass Sie in einem sicheren Netzwerk (USB- oder einem Wi-Fi-Netzwerk, denen Sie vertrauen) sind.**
 2. Laden Sie auf der Seite "Sicherheit" im Device Portal des Geräts-Zertifikat herunter.
-   * Klicken Sie auf die **Sicherheit** in der oberen rechten Liste von Symbolen zu verknüpfen, oder navigieren Sie zu: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm
+   * Navigieren Sie zu: https://<YOUR_HOLOLENS_IP_ADDRESS>/devicepair.htm
 3. Installieren Sie das Zertifikat, das in der "Vertrauenswürdige Stammzertifizierungsstellen" auf Ihrem PC zu speichern.
    * Geben Sie im Windows-Menü: Verwalten von Zertifikaten für Computer, und starten Sie das Applet.
    * Erweitern Sie die **vertrauenswürdigen Stammzertifizierungsstelle** Ordner.
@@ -135,7 +135,7 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
   * **Anzeigen von Mesh**: Zeigt das Netz räumliche Zuordnung, das Ihrer Umgebung darstellt.
   * **Anzeigen räumlicher Anker**: Zeigt die räumliche Anker für die app aktiv. Sie müssen zum Abrufen und aktualisieren die Anker der Schaltfläche "Aktualisieren" klicken.
   * **Anzeigen von Details**: Zeigt übergeben Positionen, Head Drehung Quaternionen und der Gerät-Ursprung-Vektor, wie sie in Echtzeit zu ändern.
-  * **Schaltfläche "Vollbild"**: Zeigt die 3D-Ansicht im Vollbildmodus an. Drücken Sie die ESC-Taste, um die Vollbildansicht zu beenden.
+  * **Schaltfläche "Vollbild"** : Zeigt die 3D-Ansicht im Vollbildmodus an. Drücken Sie die ESC-Taste, um die Vollbildansicht zu beenden.
 * **Entwurfsoberfläche Rekonstruktion**: Klicken oder tippen Sie auf **Update** Mesh neueste räumliche Zuordnung vom Gerät angezeigt. Ein vollständiger Durchlauf kann bis zu einige Sekunden lang dauern. Mesh wird nicht automatisch aktualisiert, in der-3D-Sicht aus, und Sie müssen manuell auf **aktualisieren** zum neuesten Mesh vom Gerät abrufen. Klicken Sie auf **speichern** um das aktuelle räumliche Zuordnung Netz als eine Obj-Datei auf Ihrem PC zu speichern.
 * **Räumliche Anker**: Klicken Sie auf "Aktualisieren", um anzuzeigen, oder aktualisieren die räumliche Anker für die app aktiv.
 

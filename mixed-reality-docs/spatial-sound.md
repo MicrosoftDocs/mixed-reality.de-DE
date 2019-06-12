@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: räumliche Sound, Surroundsound, 3d, Audio, 3d sound, räumliche audio
-ms.openlocfilehash: ccb236a8b53e757ba632a1c7c6cb2d4f07735910
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594560"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829921"
 ---
 # <a name="spatial-sound"></a>Raumklang
 
@@ -26,13 +26,24 @@ Obwohl Hologramme nur visuell angezeigt werden können, in denen der Benutzer di
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-
-<td> Raumklang</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer)</td>
-
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Raumklang</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (mit Kopfhörer)</td>
+    </tr>
 </table>
 
 ## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>Simulieren die wahrgenommene Speicherort und die Entfernung von Sound
@@ -60,6 +71,6 @@ Windows räumliche sound-Engine unterstützt nur eine 48 KB Samplingrate für di
 
 ## <a name="see-also"></a>Siehe auch
 * [MR Spatial 220](holograms-220.md)
-* [Räumliche Sound in Unity](spatial-sound-in-unity.md)
-* [Räumliche Sound in DirectX](spatial-sound-in-directx.md)
-* [Räumliche Entwurf](spatial-sound-design.md)
+* [Raumklang in Unity](spatial-sound-in-unity.md)
+* [Raumklang in DirectX](spatial-sound-in-directx.md)
+* [Raumklangentwurf](spatial-sound-design.md)

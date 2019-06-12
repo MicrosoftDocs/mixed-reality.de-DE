@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, App-Muster, Design, HoloLens, Raum Scan, räumliche Zuordnung Wiederaufbau, surface mesh
-ms.openlocfilehash: 8ffde9d476e25016f986321377dce8125ee3a596
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604645"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829912"
 ---
 # <a name="room-scan-visualization"></a>Die Überprüfung Visualisierung Platz
 
@@ -27,11 +27,21 @@ Beachten Sie, dass in all diesen Fällen die tatsächlichen Daten, die während 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td> Die Überprüfung Visualisierung Platz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Die Überprüfung Visualisierung Platz</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 
@@ -62,7 +72,7 @@ Im Fall von zwischengespeicherten räumliche Zuordnung, wird die Anwendung in de
 * Ein einzelnes einmal, die Kosten für die räumlichen Daten für Physik, Grafiken und andere Zwecke verarbeitet Post.
 
 **Drawbacks**
-* Das Verschieben von realen Objekten oder Personen, die nicht durch die zwischengespeicherten Daten wiedergegeben. z. B. die Anwendung ggf. eine Tür geöffnet, wenn sie nun geschlossen wird.
+* Das Verschieben von realen Objekten oder Personen, die nicht durch die zwischengespeicherten Daten wiedergegeben. Beispiel: die Anwendung ggf. eine Tür geöffnet, wenn sie nun geschlossen wird.
 * Möglicherweise weitere Anwendungsspeicher auf die zwischengespeicherte Version der Daten zu verwalten.
 
 Ein überzeugendes Argument für diese Methode ist einer kontrollierten Umgebung oder eine Tabelle, die Top-Spiel.
@@ -83,6 +93,6 @@ Bestimmte Anwendungen basieren möglicherweise auf weiterhin Scans aus, um die r
 Ein überzeugendes Argument für diese Methode ist eine Hologramme werden, in denen erwartet, für die Interaktion mit dem Verschieben von Objekten, z. B. ein holographic Auto, die Laufwerke auf dem Boden ordnungsgemäß in eine Tür abhängig davon, ob sie offene oder geschlossene erhöhen möchten.
 
 ## <a name="see-also"></a>Siehe auch
-* [Räumliche Zuordnung entwerfen](spatial-mapping-design.md)
+* [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
 * [Koordinatensysteme](coordinate-systems.md)
-* [Räumliche Entwurf](spatial-sound-design.md)
+* [Raumklangentwurf](spatial-sound-design.md)

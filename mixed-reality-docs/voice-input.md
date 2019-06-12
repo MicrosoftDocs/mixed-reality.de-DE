@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Ggv "," Stimme "," Cortana "," Spracheingabe,
-ms.openlocfilehash: 7fb5618c13ff1ed446241f744b598cfe2484ea45
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e21310b940e4a4c3019f61edea695b452e74ab62
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604744"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829947"
 ---
 # <a name="voice-input"></a>Spracheingabe
 
@@ -26,11 +26,24 @@ Spracheingabe basiert auf der [dasselbe Modul](https://msdn.microsoft.com/librar
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td> Spracheingabe</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Mikrofon)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Spracheingabe</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (mit Mikrofon)</td>
+    </tr>
 </table>
 
 ## <a name="the-select-command"></a>Der Befehl "select"
@@ -114,4 +127,4 @@ Für die Windows Mixed Reality Developer Edition-Version 2017 wird die Verwaltun
 ## <a name="see-also"></a>Siehe auch
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
 * [Spracheingabe in Unity](voice-input-in-unity.md)
-* [MR Eingabe 212: Voice](holograms-212.md)
+* [MR-Eingabe 212: Sprache](holograms-212.md)

@@ -119,7 +119,7 @@
 ### [Interaktionsfähiges Objekt](interactable-object.md)
 ### [Objektsammlung](object-collection.md)
 ### [Anzeigen des Fortschritts](progress.md)
-### [App-Leiste und Begrenzungsrahmen](app-bar-and-bounding-box.md)
+### [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
 ## Entwerfen für die Mixed Reality-Startseite
 ### [Entwurfsanleitung für 3D-App-Startprogramm](3d-app-launcher-design-guidance.md)
 ### [Erstellen von 3D-Modellen zur Verwendung auf der Startseite](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)

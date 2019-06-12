@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D, Modell, an Startseite, Ort, weltweit, Modellierung, mixed Reality home, Web, app
-ms.openlocfilehash: 3a50353aae8e03c3ebb3ee9ec2f642f21836e925
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 954086b79e3614e1b75ceb7560f9fc87435530fa
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605024"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829733"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>Aktivieren Sie die Platzierung von 3D-Modellen in die gemischte Realität home
 
@@ -25,11 +25,21 @@ Z. B. Wenn Sie einer Anwendung, auf einen Katalog mit 3D Möbel für das Entwerf
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td>Modell-Protokoll hinzufügen</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Modell-Protokoll hinzufügen</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="overview"></a>Übersicht
@@ -78,10 +88,10 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 
 ## <a name="considerations-for-immersive-vr-headsets"></a>Überlegungen für immersive Headsets von (VR)
 
-* Für immersive Headsets (VR), Mixed Reality Portal muss nicht vor dem Aufrufen ausgeführt wird, werden die *Modell Protokoll hinzufügen,*. In diesem Fall die *Modell Protokoll hinzufügen,* startet das Mixed Reality-Portal und platzieren Sie das Objekt direkt, in denen die Kopfhörer sucht nach der Sie in der die gemischte Realität Startseite gelangen. 
+* Für immersive Headsets (VR), Mixed Reality Portal muss nicht vor dem Aufrufen ausgeführt wird, werden die *Modell Protokoll hinzufügen,* . In diesem Fall die *Modell Protokoll hinzufügen,* startet das Mixed Reality-Portal und platzieren Sie das Objekt direkt, in denen die Kopfhörer sucht nach der Sie in der die gemischte Realität Startseite gelangen. 
 * Beim Aufrufen der *Modell Protokoll hinzufügen,* auf dem Desktop mit dem Mixed Reality-Portal bereits ausgeführt wird, stellen Sie sicher, dass die Kopfhörer "aktiv" ist. Wenn dies nicht der Fall ist, wird die Platzierung nicht erfolgreich ausgeführt werden. 
 
 ## <a name="see-also"></a>Siehe auch
 
 * [Erstellen von 3D-Modellen für die Verwendung zu Hause Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [Navigieren Sie in der Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md)
+* [Navigieren auf der Startseite von Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)

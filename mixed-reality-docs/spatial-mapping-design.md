@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Surface Wiederaufbau, Netz Windows Mixed Reality, Entwurf, die räumliche Zuordnung
-ms.openlocfilehash: d2ddcbf9458769a60cd3ed2871c5f3405c75f10c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593380"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829958"
 ---
 # <a name="spatial-mapping-design"></a>Räumliche Zuordnung entwerfen
 
@@ -20,11 +20,21 @@ Effektive Verwendung von räumliche Zuordnung in HoloLens erfordert Überlegung 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td> Räumliche Zuordnung</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Räumliche Zuordnung entwerfen</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="why-is-spatial-mapping-important"></a>Warum ist die räumliche Zuordnung wichtig?
@@ -196,6 +206,6 @@ Hier sind einige Beispiele verschiedener Arten von Gitter zu verarbeiten, nützl
 * Es ist eine gute Idee, führen Sie Tests mit realen (und idealerweise nicht betreuten)-Benutzer, da sie nicht die HoloLens oder die Anwendung auf genau die gleiche Weise verwenden können, die Sie ausführen. In der Tat können vielleicht überrascht es Sie wie divergente geweckt Verhalten, wissen und Annahmen!
 
 ## <a name="see-also"></a>Siehe auch
-* [Die Überprüfung Visualisierung Platz](room-scan-visualization.md)
-* [Räumliche Entwurf](spatial-sound-design.md)
-* [Dauerhaftigkeit in Unity](persistence-in-unity.md)
+* [Raumabtastvisualisierung](room-scan-visualization.md)
+* [Raumklangentwurf](spatial-sound-design.md)
+* [Persistenz in Unity](persistence-in-unity.md)

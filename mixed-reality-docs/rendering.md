@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Rendering, – Hologramm
-ms.openlocfilehash: 9d87af1b445bc6f730dd02bd7bd7f3aefe7f53db
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 5271e94521b99e76998c2cbb43475a5f3f847917
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604824"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829900"
 ---
 # <a name="rendering"></a>Rendering
 
@@ -20,11 +20,24 @@ Holographic Rendering ermöglicht Ihrer app ggf. ein Hologramm in eine genaue Po
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"><a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td>Artikelname</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Rendering</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="holographic-rendering"></a>Holographic rendering
@@ -84,5 +97,5 @@ Beim Rendern von medizinischen MRI oder Volumes in 3D engineering [Volume Render
 
 
 ## <a name="see-also"></a>Siehe auch
-* [– Hologramm Stabilität](hologram-stability.md)
+* [Hologrammstabilität](hologram-stability.md)
 * [Rendern in DirectX](rendering-in-directx.md)

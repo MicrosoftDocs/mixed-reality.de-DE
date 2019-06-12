@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Koordinatensystem, räumliche Koordinatensystem, Ausrichtung, sitzen Skalierung, ständigen Maß Platz-skalieren, weltweit skalierbare, 360-Grad-sitzen, ständigen, Raum, Welt, skalieren, Position, Ausrichtung, nicht bewegt werden angefügte, Phase, Anker, räumliche Anker, World gesperrt, Welt sperrende, Text-gesperrt, Text-sperren, den angegebenen Begrenzungen, Dauerhaftigkeit, Freigabe, cloud Nachverfolgen von Verlust, räumliche Anker
-ms.openlocfilehash: fc76a30895a85ab5ca8396540a82965cc35c494e
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605145"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829858"
 ---
 # <a name="coordinate-systems"></a>Koordinatensysteme
 
@@ -24,19 +24,48 @@ In ihrem Kern mixed Reality-apps direkt [Hologramme](hologram.md) in Ihre Welt, 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stationary-frame-of-reference">Feststehende Verweisrahmen</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#attached-frame-of-reference">Angefügte Verweisrahmen</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stage-frame-of-reference">Referenz für Stufe</a></td><td style="text-align: center;"> Noch unterstützt nicht</td><td style="text-align: center;"> Noch unterstützt nicht</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#spatial-anchors">Räumliche Anker</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping.md">Räumliche Zuordnung</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="40%" />
+    <col width="20%" />
+    <col width="20%" />
+    <col width="20%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Feststehende Verweisrahmen</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#attached-frame-of-reference">Angefügte Verweisrahmen</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">Referenz für Stufe</a></td>
+        <td>Noch unterstützt nicht</td>
+        <td>Noch unterstützt nicht</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#spatial-anchors">Raumanker</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="spatial-mapping.md">Räumliche Abbildung</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Skalen für Mixed Reality-Erfahrung
@@ -195,8 +224,8 @@ In einigen Fällen möglicherweise ein Zuhause oder anderen Space zwei identisch
 ## <a name="see-also"></a>Siehe auch
 * [GDC-2017-Präsentation auf räumliche Koordinatensysteme und holographic rendering](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
-* [Koordinatensysteme im DirectX](coordinate-systems-in-directx.md)
-* [Räumliche Anker](spatial-anchors.md)
-* [Freigegebene Funktionen in mixed reality](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>
+* [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)
+* [Raumanker](spatial-anchors.md)
+* [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Fallstudie: Lücken in der Realität ansehen](case-study-looking-through-holes-in-your-reality.md)

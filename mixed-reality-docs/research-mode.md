@@ -6,12 +6,12 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: Research-Modus, cv, rs4, maschinelles sehen, Forschung, HoloLens
-ms.openlocfilehash: 5feda021bd6a1a90fd98c751b1cea768eed980af
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593229"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829931"
 ---
 # <a name="hololens-research-mode"></a>HoloLens Research-Modus
 
@@ -29,11 +29,21 @@ Research-Modus ist eine neue Funktion von HoloLens, die Anwendung den Zugriff au
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td> Research-Modus</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Research-Modus</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="before-using-research-mode"></a>Vor der Verwendung von Research-Modus
@@ -72,4 +82,4 @@ Finden Sie unter den [problemverfolgung](https://github.com/Microsoft/HololensFo
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [HoloLensForCV-GitHub-Repository](https://github.com/Microsoft/HoloLensForCV)
-* [Verwenden die Windows Device Portal](using-the-windows-device-portal.md)
+* [Verwenden des Windows-Geräteportals](using-the-windows-device-portal.md)
