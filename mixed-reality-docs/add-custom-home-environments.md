@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, virtuelle Realität, VR, MR, Home, benutzerdefinierte Umgebungen, Orte, Cliff Haus, Skyloft, Benutzer erstellen
-ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
-ms.translationtype: HT
+ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829639"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024531"
 ---
 # <a name="add-custom-home-environments"></a>Hinzufügen der benutzerdefinierte Startseite Umgebungen
 
@@ -150,6 +150,5 @@ Der Standardspeicherort für das Erstellen eines Prozesses befindet sich unter 0
 Bei der Erstellung Ihrer benutzerdefinierten Umgebung werden sie eine Simulation der Akustik Rendering verwenden, die nicht den physischen Speicherplatz übereinstimmen, die, den Sie erstellt haben. Sound die falschen Anweisungen stammen dürfen und mag dumpf. 
 
 ## <a name="see-also"></a>Siehe auch
-* [Navigieren in der Windows Mixed Reality-Startseite](#navigating-the-windows-mixed-reality-home.md)
 * [Windows Mixed Reality-Asset-Konverter (auf GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

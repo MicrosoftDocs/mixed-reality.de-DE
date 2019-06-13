@@ -1,17 +1,17 @@
 ---
 title: Gebietsschemabezogene Kamera
-description: Allgemeine Informationen zu den mit Internetzugriff HoloLens frontkamera.
+description: Allgemeine Informationen über die frontkamera HoloLens, wie es funktioniert und die Profile und Lösungen, die Entwicklern zur Verfügung.
 author: wguyman
 ms.author: wguyman
-ms.date: 02/24/2019
+ms.date: 06/12/2019
 ms.topic: article
-keywords: Kamera, Hololens, Farbe Kamera, Front-facing
-ms.openlocfilehash: ffcd6faf15dd8556db393237d468a3cdf60e4bdb
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Kamera, Hololens, Farbe Kamera, mit Internetzugriff, Hololens, 2, cv, Computer Vision, fiducial Front, Marker, QR-Code, qr, Foto, video
+ms.openlocfilehash: cadcd0762b8adf1001896c614451d2e1c9776c65
+ms.sourcegitcommit: 79398a6b5b7037babcb05d86a5bcc336fd089ea0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596324"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028615"
 ---
 # <a name="locatable-camera"></a>Gebietsschemabezogene Kamera
 
@@ -21,7 +21,7 @@ HoloLens enthält, eine Welt gerichteten Kamera, die auf der Vorderseite des Ger
 
 ### <a name="hololens-first-generation"></a>HoloLens (löschbaren)
 
-* Feste Fokus Foto / (PV) Videokamera, weiß automatischen Lastenausgleich, automatische Offenlegung und vollständigen Verarbeitung pipe
+* Feste Fokus Foto/Video (PV) Kamera mit weißen automatischen Lastenausgleich, automatische Offenlegung und vollständigen Image-Verarbeitungspipeline.
 * Whitepaper leuchtet Datenschutz mit Internetzugriff der ganzen Welt, wenn die Kamera aktiv ist.
 * Die Kamera unterstützt die folgenden Modi (alle Modi sind Seitenverhältnis 16:9) auf 30, 24, 20, 15 und 5 f/s:
 
@@ -35,20 +35,32 @@ HoloLens enthält, eine Welt gerichteten Kamera, die auf der Vorderseite des Ger
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* Autofokus Foto/Video (PV) Kamera mit weißen automatischen Lastenausgleich, automatische Offenlegung und vollständigen Verarbeitung pipe
+* Autofokus Foto/Video (PV) Kamera mit weißen automatischen Lastenausgleich, automatische Offenlegung und vollständigen Image-Verarbeitungspipeline.
 * Whitepaper leuchtet Datenschutz mit Internetzugriff der ganzen Welt, wenn die Kamera aktiv ist.
-* Die Kamera unterstützt die folgenden Modi (alle video Modi sind Seitenverhältnis 16:9):
+* HoloLens-2 unterstützt Profile für andere Kamera. Erfahren Sie, wie Sie [ermitteln, und wählen Sie die Kamera Funktionen](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
+* Die Kamera unterstützt die folgenden Profile und Lösungen, die (alle video Modi sind Seitenverhältnis 16:9):
+  
+  | Profil                                         | Video     | Vorschau   | Weiterhin     | Frameraten | Horizontale Sichtfeld (H-Blickfeld) | Empfohlene Verwendung                             |
+  |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
+  | Ältere, BalancedVideoAndPhoto 0, 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Videoaufzeichnung von hoher Qualität                |
+  | Ältere, BalancedVideoAndPhoto 0, 100             |           |           | 3904x2196 |             | 64.69                            | Hohe Qualität Fotoaufnahmen                  |
+  | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Langer Dauer Szenarien                     |
+  | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Langer Dauer Szenarien                     |
+  | VideoConferencing,100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 1128x635  |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 760x428   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 640x360   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 500x282   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 424x240   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
 
-  >[!NOTE]
-  >Diese Modi unterliegen noch Änderungen, die vor der allgemeinen Verfügbarkeit von HoloLens 2.
-
-  |  Video  |  Vorschau  |  Weiterhin  |  Frameraten  |  Horizontale Sichtfeld (H-Blickfeld) |  Empfohlene Verwendung | 
-  |----------|----------|----------|----------|----------|----------|
-  |  1920x1080 |  1920x1080 |  Nicht zutreffend |  30, 15 f/s  |  54deg  |  Mithilfe von videostabilisierung (Standardmodus) | 
-  |  Nicht zutreffend |  Nicht zutreffend |  3904X2196 |  Nicht zutreffend  |  64deg |  Standbild der höchsten Auflösung | 
-  |  2272x1278 |  2272x1278 |  Nicht zutreffend |  30, 15 f/s  |  64deg |  Overscan (Auffüllung)-Lösung vor der videostabilisierung | 
-  |  1952x1100 |  1952x1100 |  1952x1100  |  30, 15 f/s  |  64deg |  Hoher Qualität | 
-  |  1280x720 |  1280x720 |  Nicht zutreffend |  30, 15, 5 f/s  |  64deg |  Niedrige Power bzw. Beschlusses Modus für das streaming und Aufgaben der bildverarbeitung | 
+>[!NOTE]
+>Kunden profitieren [mixed Reality-Erfassung](mixed-reality-capture.md) zu Videos und Fotos Ihrer-App, z. Hologramme und videostabilisierung b.
+>
+>Als Entwickler werden beachtet, die Sie berücksichtigen sollten, wenn Ihre app zu erstellen, wenn gewünscht, so gut wie möglich zu suchen, wenn ein Kunde Inhalte erfasst. Sie können auch aktivieren (mixed Reality-Erfassung aus direkt in Ihrer app und anpassen). Weitere Informationen zu [mixed Reality-Erfassung für Entwickler](mixed-reality-capture-for-developers.md).
 
 ## <a name="locating-the-device-camera-in-the-world"></a>Suchen die Kamera des Geräts in der ganzen Welt
 
@@ -276,8 +288,8 @@ Beispiele:
 * Identifizierung und die Erkennung von Personen im Raum (z. B. direkte holographic Kontaktkarten in Gesichtern)
 
 ## <a name="see-also"></a>Siehe auch
-* [Gebietsschemabezogene Kamera in DirectX](locatable-camera-in-directx.md)
-* [Gebietsschemabezogene Kamera in Unity](locatable-camera-in-unity.md)
-* [Mixed Reality-Erfassung](mixed-reality-capture.md)
-* [Mixed Reality-Erfassung für Entwickler](mixed-reality-capture-for-developers.md)
+* [Ausrichtbare Kamera in DirectX](locatable-camera-in-directx.md)
+* [Ausrichtbare Kamera in Unity](locatable-camera-in-unity.md)
+* [Mixed Reality-Aufnahme](mixed-reality-capture.md)
+* [Mixed Reality-Aufnahme für Entwickler](mixed-reality-capture-for-developers.md)
 * [Medienaufzeichnung Einführung](https://msdn.microsoft.com/library/windows/apps/mt243896.aspx)

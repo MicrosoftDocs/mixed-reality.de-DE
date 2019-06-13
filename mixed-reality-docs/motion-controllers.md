@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6dof Controller Motion-Controller
-ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: fc6b0dcf7f338224af9ea9bc59e07187c33adda2
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629114"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024552"
 ---
 # <a name="motion-controllers"></a>Motion-Controller
 
@@ -23,10 +23,23 @@ Während der Übertragung Controller sind [Hardwarezubehör](hardware-accessorie
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
+<colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+</colgroup>
 <tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
-</tr><tr>
-<td> Motion-Controller</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"> ✔️</td>
+     <td><strong>Funktion</strong></td>
+     <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+     <td><strong>HoloLens 2</strong></td>
+     <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+</tr>
+<tr>
+     <td>Motion-Controller</td>
+     <td>❌</td>
+     <td>❌</td>
+     <td>✔️</td>
 </tr>
 </table>
 
@@ -185,7 +198,7 @@ Die Core-Interaktionen über praktische und Motion-Controllern sind **wählen**,
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Zusammengesetzte Gesten: Auf hoher Ebene räumliche Eingabe
 
-Beide [Gesten übergeben](gestures.md) Motion-Controller nachverfolgt werden können, im Laufe der Zeit, um einen gemeinsamen Satz von allgemeinen erkennen  **[zusammengesetzten Gesten](gestures.md#composite-gestures)**. Dadurch kann Ihre app auf hoher Ebene erkennen **Tippen Sie auf**, **enthalten**, **Manipulation** und **Navigation** anwendungsstiftbewegungen, die, ob der Benutzer am Ende mit praktische oder Controllern.
+Beide [Gesten übergeben](gestures.md) Motion-Controller nachverfolgt werden können, im Laufe der Zeit, um einen gemeinsamen Satz von allgemeinen erkennen  **[zusammengesetzten Gesten](gestures.md#composite-gestures)** . Dadurch kann Ihre app auf hoher Ebene erkennen **Tippen Sie auf**, **enthalten**, **Manipulation** und **Navigation** anwendungsstiftbewegungen, die, ob der Benutzer am Ende mit praktische oder Controllern.
 
 ## <a name="rendering-the-motion-controller-model"></a>Die Motion-Controllermodell Rendern
 
@@ -231,7 +244,7 @@ Finden Sie unter [motion Problembehandlung Domänencontroller](https://docs.micr
 
 ## <a name="see-also"></a>Siehe auch
 * [Gesten und Motion-Controller in Unity](gestures-and-motion-controllers-in-unity.md)
-* [Praktische und Motion-Controllern in DirectX](hands-and-motion-controllers-in-directx.md)
+* [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gesten](gestures.md)
 * [MR-Eingabe 213: Motion-Controller](mixed-reality-213.md)
 * [Enthusiast-Handbuch: Ihr Windows Mixed Reality home](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)

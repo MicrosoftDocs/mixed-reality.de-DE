@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Mixed Reality, Entwurf, comfort, HoloLens-2, HoloLens (1. Generation)
-ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974777"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024441"
 ---
 # <a name="comfort"></a>Komfort
 
@@ -126,6 +126,8 @@ Im ersten Ego-Shooter-Videogames enthalten die Heads-Up zeigt (HUDs) dauerhaft I
 Der optimalen Textlesbarkeit können optimaler reduzieren, und Warten von Benutzerkomfort, insbesondere in Anwendungen oder Szenarien, die Benutzern während einer HMD lesen. Textlesbarkeit hängt von verschiedenen Faktoren wie z.B. verschiedene Anzeigeeigenschaften (z. B. Pixeldichte, Helligkeit, Kontrast) Lens-Eigenschaften (z. B. chromatische deuten) und Textschriftart/Eigenschaften (z. B. bestimmte Schriftart Eigenschaften wie Weight "," Abstand "," Serifen "," usw., Farbe, Schriftart, Farbe des Hintergrunds).  
 
 Im Allgemeinen empfiehlt es sich um bestimmte Anwendungen für bessere Lesbarkeit testen, und machen Schriftgrade Ihren Bedürfnissen entsprechend zu groß für eine angenehme benutzererfahrung möglich ist. Im folgenden bieten wir Richtwert als Ausgangspunkt für die Entwicklung. Beachten Sie, dass alle Schriftgraden in Grad gemeldet werden [visual Winkel](https://en.wikipedia.org/wiki/Visual_angle) statt bestimmte physische Größen, die Hilfestellung bei der jede Entfernung in der Zone der optimalen – Hologramm Platzierung, da er sowohl die Größe der berücksichtigt die Text und die Entfernung wird es in der Ereignisanzeige angezeigt. 
+
+Finden Sie unter [Typografie](typography.md) und [Text in Unity](text-in-unity.md) Seiten detailliertere Richtlinien.
 
 ### <a name="guidance-for-holographic-devices"></a>Leitfaden für holographic-Geräten
 

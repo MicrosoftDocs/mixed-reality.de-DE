@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: App-Qualitätskriterien, mixed Reality, mixed Reality-app
-ms.openlocfilehash: dfa1390190fad8d84982171dfbcfa101b20501dc
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750317"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024497"
 ---
 # <a name="app-quality-criteria"></a>Qualitätskriterien für die App
 
@@ -618,7 +618,7 @@ Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereigni
 
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Text in Unity](text-in-unity.md)
-* [App-Leiste und Begrenzungsrahmen](app-bar-and-bounding-box.md)
+* [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
 * [Sprachbefehle](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und tutorials
