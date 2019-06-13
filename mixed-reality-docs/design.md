@@ -1,25 +1,25 @@
 ---
 layout: LandingPage
 title: Entwurf
-description: 'Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-Managern und Forscher, deren Arbeit holographic-Geräten (z. B. HoloLens) und immersive Geräte (z. B. die Acer und HP Windows Mixed Reality-Headsets) umfasst. Daher sollten Sie diese Arbeit als eine Reihe von Themen für die "Gewusst wie: Entwerfen für Windows-Head eingebundenen zeigt" ein.'
+description: 'Dieser Leitfaden wurde von Microsoft-Designern, -Entwicklern, -Programmmanagern und -Forschern verfasst, deren Arbeit holografische Geräte (wie HoloLens) und immersive Geräte (wie die Windows Mixed Reality-Headsets von Acer und HP) umfasst. Betrachten Sie diese Arbeit also als eine Reihe von Themen für „Gewusst wie: Entwerfen für Windows-Kopfanzeigen (Head Mounted Displays, HMD)“.'
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, Entwurf, Interaktion, Stil, Farbe, app-Muster, Steuerelemente, Mixed Reality-Toolkit, MRTK Beispiel-apps
+keywords: Windows Mixed Reality, Design, Entwurf, Interaktion, Stil, Farbe, App-Muster, Steuerelemente, Beispiel-Apps, Mixed Reality-Toolkit, MRTK
 ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66039213"
 ---
-# <a name="design-for-mixed-reality"></a>Entwurf für mixed reality
+# <a name="design-for-mixed-reality"></a>Entwerfen für Mixed Reality
 
-![Entwurf für mixed reality](images/Bicycle-Leschi10.gif)
+![Entwerfen für Mixed Reality](images/Bicycle-Leschi10.gif)
 
-Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-Managern und Forscher, deren Arbeit holographic-Geräten (z. B. HoloLens) und immersive Geräte (z. B. die Acer und HP Windows Mixed Reality-Headsets) umfasst. Daher sollten Sie diese Arbeit als eine Reihe von Themen für die "Gewusst wie: Entwerfen für Windows-Head eingebundenen zeigt" ein.
+Dieser Leitfaden wurde von Microsoft-Designern, -Entwicklern, -Programmmanagern und -Forschern verfasst, deren Arbeit holografische Geräte (wie HoloLens) und immersive Geräte (wie die Windows Mixed Reality-Headsets von Acer und HP) umfasst. Betrachten Sie diese Arbeit also als eine Reihe von Themen für „Gewusst wie: Entwerfen für Windows-Kopfanzeigen (Head Mounted Displays, HMD)“.
 
 ## <a name="article-categories"></a>Artikelkategorien
 
@@ -36,19 +36,19 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
                     <div class="cardText">
                         <h3>Erste Schritte mit Entwurf</h3>
                         <p>
-                            <a href="mixed-reality.md">Was ist die Realität gemischter?</a>
+                            <a href="mixed-reality.md">Was ist Mixed Reality?</a>
                         </p>
                         <p>
-                            <a href="about-this-design-guidance.md">Zu dieser Anleitung</a>
+                            <a href="about-this-design-guidance.md">Info zu diesem Leitfaden</a>
                         </p>
                         <p>
-                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Mein erstes Jahr auf das Designteam</a>
+                            <a href="case-study-my-first-year-on-the-hololens-design-team.md">Mein erstes Jahr im Entwurfsteam</a>
                         </p>
                         <p>
-                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Erweitern den Entwurfsprozess für mixed reality</a>
+                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Erweitern des Entwurfsprozesses für Mixed Reality</a>
                         </p>
                         <p>
-                            <a href="case-study-the-pursuit-of-more-personal-computing.md">Das Streben nach persönlichere Datenverarbeitung</a>
+                            <a href="case-study-the-pursuit-of-more-personal-computing.md">Das Streben nach angepassterer Nutzung</a>
                         </p>
                     </div>
                 </div>
@@ -67,19 +67,19 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
                     <div class="cardText">
                         <h3>MR-Designsystem und -tools</h3>
                         <p>
-                            <a href="comfort.md">Comfort</a>
+                            <a href="comfort.md">Komfort</a>
                         </p>
             <p>
-                            <a href="interaction-fundamentals.md">Instinctual Interaktionen</a>
+                            <a href="interaction-fundamentals.md">Instinktive Interaktionen</a>
                         </p>
                         <p>
-                            <a href="hands-and-tools.md">Praktische und Motion-Controller</a>
+                            <a href="hands-and-tools.md">Hände und Motion-Controller</a>
                         </p>
                         <p>
-                            <a href="hands-free.md">Benutzereingriff</a>
+                            <a href="hands-free.md">Freihändig</a>
                         </p>
                          <p>
-                            <a href="gaze-and-commit.md">Head-Blicke und commit</a>
+                            <a href="gaze-and-commit.md">Anvisieren mit dem Kopf und Ausführen</a>
                         </p>
                     </div>
                 </div>
@@ -98,16 +98,16 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
                     <div class="cardText">
                         <h3>Format</h3>
                         <p>
-                            <a href="color,-light-and-materials.md">Farbe, helle und Materialien</a>
+                            <a href="color,-light-and-materials.md">Farbe, Licht und Materialien</a>
                         </p>
                          <p>
-                            <a href="spatial-sound-design.md">Räumliche Entwurf</a>
+                            <a href="spatial-sound-design.md">Raumklangentwurf</a>
                         </p>
                         <p>
-                            <a href="typography.md">Typography</a>
+                            <a href="typography.md">Typografie</a>
                         </p>
                         <p>
-                            <a href="scale.md">Skalieren</a>
+                            <a href="scale.md">Skalierung</a>
                         </p>                      
                     </div>
                 </div>
@@ -126,16 +126,16 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
                     <div class="cardText">
                         <h3>App-Muster</h3>
                         <p>
-                            <a href="types-of-mixed-reality-apps.md">Mixed Reality-App-Typen</a>
+                            <a href="types-of-mixed-reality-apps.md">Typen von Mixed Reality-Apps</a>
                         </p>
                         <p>
-                            <a href="room-scan-visualization.md">Die Überprüfung Visualisierung Platz</a>
+                            <a href="room-scan-visualization.md">Raumabtastvisualisierung</a>
                         </p>
                         <p>
                             <a href="cursors.md">Cursor</a>
                         </p>
                         <p>
-                            <a href="billboarding-and-tag-along.md">Billboarding und tag-along</a>
+                            <a href="billboarding-and-tag-along.md">Billboarding und Tag-along</a>
                         </p>
                     </div>
                 </div>
@@ -157,16 +157,16 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
                             <a href="text-in-unity.md">Text in Unity</a>
                         </p>
                         <p>
-                            <a href="interactable-object.md">Es-Objekt</a>
+                            <a href="interactable-object.md">Interaktionsfähiges Objekt</a>
                         </p>
                         <p>
-                            <a href="object-collection.md">Eine objektauflistung</a>
+                            <a href="object-collection.md">Objektsammlung</a>
                         </p>
                         <p>
-                            <a href="progress.md">Anzeigen des Status</a>
+                            <a href="progress.md">Anzeigen des Fortschritts</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">App-Leiste und das umgebende Feld</a>
+                            <a href="app-bar-and-bounding-box.md">App-Leiste und Begrenzungsrahmen</a>
                         </p>
                     </div>
                 </div>
@@ -178,12 +178,12 @@ Dieser Leitfaden verfasst wurde es von Microsoft-Designer, Entwickler, Programm-
 
 ## <a name="sample-apps"></a>Beispiel-Apps
 
-Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, die von unserem Team.
+Erstellen Sie großartige Oberflächen anhand der von unserem Team entworfenen und erstellten Beispiele.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
-        <a href="periodic-table-of-the-elements.md" title="Periodisch-Tabelle der Elemente" data-linktype="absolute-path">
+        <a href="periodic-table-of-the-elements.md" title="Periodensystem der Elemente" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -193,8 +193,8 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Periodisch-Tabelle der Elemente</h3>
-                            <p>Erfahren Sie, wie ein Array von Objekten im 3D-Raum mit verschiedenen Surface-Typen, die mit einer objektauflistung anzuordnen.</p>
+                            <h3>Periodensystem der Elemente</h3>
+                            <p>Erfahren Sie, wie Sie mithilfe einer Objektsammlung ein Array von Objekten im 3D-Raum mit verschiedenen Oberflächentypen anordnen können.</p>
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
         </a>        
     </li>
     <li>
-        <a href="lunar-module.md" title="Mondkalender-Modul" data-linktype="absolute-path">
+        <a href="lunar-module.md" title="Lunar-Modul" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -212,8 +212,8 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
                             </div>
                         </div>
                         <div class="cardText">
-                            <h3>Mondkalender-Modul</h3>
-                            <p>Erfahren Sie, wie HoloLens grundlegende Gesten mit zweihändige nachverfolgen und Xbox-Controller-Eingabe zu erweitern.</p>
+                            <h3>Lunar-Modul</h3>
+                            <p>Erfahren Sie, wie Sie HoloLens-Basisgesten mit zweihändiger Verfolgung und Xbox-Controllereingabe erweitern können.</p>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
         </a>
     </li>
     <li>
-        <a href="galaxy-explorer.md" title="Galaxy-Explorer" data-linktype="absolute-path">
+        <a href="galaxy-explorer.md" title="Galaxy Explorer" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -232,7 +232,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
                         </div>
                         <div class="cardText">
                             <h3>Galaxy Explorer</h3>
-                            <p>Das Galaxy-Projekt-Explorer ist bereit. Sie Ihre Ideen mit der Community freigegeben, wählen Sie eine app überwacht ein Team erstellen und können nun den Quellcode erhalten.</p>
+                            <p>Das Galaxy Explorer-Projekt ist bereit. Sie haben Ihre Ideen mit der Community geteilt, eine App ausgewählt und beobachtet, wie ein Team sie erstellt hat. Und jetzt können Sie den Quellcode erhalten.</p>
                         </div>
                     </div>
                 </div>
@@ -326,11 +326,11 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
 </ul>
 
 
-## <a name="general-design-resources"></a>Allgemeine Ressourcen
+## <a name="general-design-resources"></a>Allgemeine Ressourcen für den Entwurf
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="http://fluent.microsoft.com" title="Fluent-Entwurfssystem" data-linktype="absolute-path">
+    <a href="http://fluent.microsoft.com" title="Fluent Design-System" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -349,7 +349,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
       </a>  
     </li>
     <li>
-    <a href="https://www.microsoft.com/design/inclusive" title="Inklusive Design bei Microsoft" data-linktype="absolute-path">
+    <a href="https://www.microsoft.com/design/inclusive" title="Inklusives Design bei Microsoft" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -359,7 +359,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Inklusive Design bei Microsoft</h3>
+                        <h3>Inklusives Design bei Microsoft</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -368,7 +368,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="App-Design für universelle Windows-Plattform (UWP)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Entwerfen von Apps für Universelle Windows-Plattform (UWP)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +378,7 @@ Erstellen von überzeugenden Anwendungen aus Beispielen entworfen und erstellt, 
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>App-Design für universelle Windows-Plattform (UWP)</h3>
+                        <h3>Entwerfen von Apps für Universelle Windows-Plattform (UWP)</h3>
                         <p> </p>
                     </div>
                 </div>
