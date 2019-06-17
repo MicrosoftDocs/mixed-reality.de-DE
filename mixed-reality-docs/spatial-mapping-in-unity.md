@@ -1,17 +1,17 @@
 ---
 title: Räumliche Zuordnung in Unity
 description: Rendern, und mit der realen Welt Geometrie um Sie in Unity Konflikt zu geraten.
-author: thetuvix
-ms.author: alexturn
+author: davidkline-ms
+ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, räumliche Zuordnung, Renderer, "collider", Netz, Überprüfung, Komponente
-ms.openlocfilehash: f938f5921cb2c06342a9ebcd376d690c10584df9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605155"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148647"
 ---
 # <a name="spatial-mapping-in-unity"></a>Räumliche Zuordnung in Unity
 
@@ -41,7 +41,7 @@ Räumliche Zuordnung erfordert außerdem eine "maxversiontested", der mindestens
 
 ## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Erste Schritte mit Komponenten der Unity-integrierte räumliche Zuordnung
 
-Unity bietet 2 Komponenten für die räumliche Zuordnung auf einfache Weise in Ihrer app hinzuzufügen **räumliche Zuordnung Renderer** und **räumliche Zuordnung "collider"**.
+Unity bietet 2 Komponenten für die räumliche Zuordnung auf einfache Weise in Ihrer app hinzuzufügen **räumliche Zuordnung Renderer** und **räumliche Zuordnung "collider"** .
 
 ### <a name="spatial-mapping-renderer"></a>Räumliche Zuordnung Renderer
 
@@ -61,7 +61,7 @@ Sie können beide Komponenten zu Ihrer app hinzufügen, wenn Sie sowohl visualis
 
 So verwenden Sie diese beiden Komponenten in Ihrer Unity-app
 1. Wählen Sie ein "gameobject" in der Mitte des Bereichs, in dem Sie räumliche Oberfläche Gitter erkennen möchten.
-2. Im Inspektor-Fenster **Add Component** > **XR** > **räumliche Zuordnung "collider"** oder **räumlich Zuordnung Renderer**.
+2. Im Inspektor-Fenster **Add Component** > **XR** > **räumliche Zuordnung "collider"**  oder **räumlich Zuordnung Renderer**.
 
 Finden Sie weitere Informationen zur Verwendung dieser Komponenten unter den <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">Unity-Dokumentationswebsite</a>.
 
@@ -455,7 +455,7 @@ Grundlegendes zur Dll speichert intern die Playspace als ein Raster aus 8cm Grö
 Weitere Informationen zur Verwendung von räumliche Zuordnung mit Mixed Reality-Toolkit v2 finden Sie unter den <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">räumliche Awareness Abschnitt</a> MRTK Dokumenten.
 
 ## <a name="see-also"></a>Siehe auch
-* [MR Spatial 230: Räumliche Zuordnung](holograms-230.md)
+* [MR räumlich 230: Räumliche Abbildung](holograms-230.md)
 * [Koordinatensysteme](coordinate-systems.md)
 * [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>

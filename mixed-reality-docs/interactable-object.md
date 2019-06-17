@@ -3,15 +3,15 @@ title: Es-Objekt
 description: Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereignisses in der Welt für 2D abstrakt. In der dreidimensionalen mixed Reality-Welt müssen wir auf dieser Welt mehr Abstraktionsebenen beschränkt werden.
 author: cre8ivepark
 ms.author: jennyk
-ms.date: 02/24/2019
+ms.date: 06/06/2019
 ms.topic: article
 keywords: Mixed Reality, Steuerelemente, Interaktion, Benutzeroberfläche, ux
-ms.openlocfilehash: eea7eff6c591a9319b920936ce2be511cecb7496
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148729"
 ---
 # <a name="interactable-object"></a>Es-Objekt
 
@@ -84,20 +84,51 @@ Für den klassentypobjekte es ist es wichtig, alternative Interaktion Optionen u
 
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="QuickInfo für den Voice-Befehl" width="350"><br/>*QuickInfo für den Voice-Befehl*
 
+## <a name="sizing"></a>Größenanpassung
+Um sicherzustellen, dass alle Objekte, die es ganz einfach sind, können empfohlen von Benutzern Sicherstellen der es erfüllt eine Mindestgröße (häufig liegt diese bei visual Winkel von Grad), die basierend auf den Abstand, die, den Sie vom Benutzer platziert wird. Visual Winkel von Grad basiert auf den Abstand zwischen dem Benutzer und dem Objekt und konstant bleibt, während die physische Größe des Ziels als Abstand von der benutzeränderungen ändern kann. Zum Bestimmen der erforderlichen physischen Größe eines Objekts basierend auf den Abstand zwischen einem sicherzustellen und den Grad visual Winkel versuchen Sie es mithilfe eines Rechners wie: http://elvers.us/perception/visualAngle/
+
+Im folgenden finden Sie die Empfehlungen für die minimale Größe des es Inhalt
+
+### <a name="target-size-for-direct-hand-interaction"></a>Zielgröße für die direkte Hand-Interaktion
+| Entfernung | Betrachtungswinkel | Größe |
+|---------|---------|---------|
+| 45cm  | nicht kleiner als 2° | 1.6 x 1.6 cm |
+
+![Zielgröße für die direkte Hand-Interaktion](images/TargetSizingNear.jpg)<br>
+*Zielgröße für die direkte Hand-Interaktion*
+
+Wenn Sie Schaltflächen für die direkte Interaktion zu erstellen, empfehlen wir, dass eine größere Mindestgröße von 3,2 x 3.2 cm, um sicherzustellen, dass es genügend Speicherplatz für ein Symbol enthalten und möglicherweise einige Text ** ist
+
+| Entfernung | Mindestgröße |
+|---------|---------|
+| 45cm  | 3.2 x 3.2 cm |
+
+![Zielgröße für die Schaltflächen](images/TargetSizingButtons.png)<br>
+*Zielgröße für die Schaltflächen*
+
+
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Zielgröße Hand Chow oder bestaunen Interaktion
+| Entfernung | Betrachtungswinkel | Größe |
+|---------|---------|---------|
+| 2 Min.  | nicht kleiner als 1° | 3.5 x 3.5 cm |
+
+![Zielgröße Hand Chow oder bestaunen Interaktion](images/TargetSizingFar.jpg)<br>
+*Zielgröße Hand Chow oder bestaunen Interaktion*
+
 ## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Erstellen es-Objekts mit Mixed Reality-Toolkit (MRTK)
 
 In der  **[Mixed Reality-Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , finden Sie die Reihe von Unity-Skripts und prefabs (Vorlagen), mit denen Sie es Objekte erstellen. Sie können diese verwenden, um Objekte auf verschiedene Arten von Eingabe Interaktion Zustände zu reagieren.
 
-* **[Es](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)**
-* **[Schaltfläche "](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)**
-* **[Hand Interaktion Beispiele für die Szene](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)**
+* [Es](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
+* [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) (Schaltfläche)
+* [Hand Interaktion Beispiele für die Szene](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 MixedRealityToolkit des Standard-Shader stellt verschiedene Optionen bereit, z. B. **NEAR Licht** , mit dem Sie die SEH- und Hinweise zu erstellen.
-* **[MRTK Standard-Shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)**
+* [MRTK Standard-Shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
 
 
 ## <a name="see-also"></a>Siehe auch
 
-* **[Umgebendes Feld](app-bar-and-bounding-box.md)**
-* **[Eine objektauflistung](object-collection.md)**
-* **[Billboarding und tag-along](billboarding-and-tag-along.md)**
+* [umgebendes Feld](app-bar-and-bounding-box.md)
+* [Objektsammlung](object-collection.md)
+* [Billboarding und Tag-along](billboarding-and-tag-along.md)

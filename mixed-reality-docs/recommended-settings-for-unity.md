@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity "," Einstellungen "," mixed reality
-ms.openlocfilehash: a26dbdb63c8bad9bb9659a6a3303c0b0ab418580
-ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
+ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148669"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -65,6 +65,12 @@ So aktivieren Sie dieses Feature in Ihrem Unity-Projekt
 
 Darüber hinaus wird empfohlen, wählen Sie **Tiefe von 16-Bit-** unter der **Tiefe Format** in diesem Bereich sind besonders für die Entwicklung für Hololens festlegen. Auswählen von 16-Bit-im Vergleich zu 24-Bit-werden die Anforderungen an die Netzwerkbandbreite erheblich reduzieren, da weniger Daten verschoben oder verarbeitet werden müssen.
 
+In der Reihenfolge für die Windows Mixed Reality-Plattform – Hologramm Stabilität zu optimieren verwendet der Tiefenpuffer zu genau entsprechen alle gerenderten Hologramme auf Bildschirm. Daher unbedingt mit Tiefenpuffer, Freigabe, beim Rendern von Farbe, Tiefe auch rendern. In Unity rendert die meisten undurchsichtig oder TransparentCutout Materialien Tiefe, standardmäßig aber transparent und Textobjekten werden in der Regel nicht rendern Tiefe zwar Shader abhängige usw. das ist. 
+
+Wenn die Mixed Reality-Toolkit-Standard-Shader verwenden, um die Tiefe für die transparenten Objekte zu rendern:
+1) Wählen Sie das transparenten Material, das den MRTK Standard-Shader verwendet, und öffnen Sie die Inspector-Editor-Fenster
+2) Legen Sie **Rendering Mode** zu **benutzerdefinierte** legen Sie dann **Modus** zu **Transparent** und legen Sie schließlich **Tiefe schreiben**zu **auf**
+
 >[!NOTE]
 > Entwickler sollten der Z-fighting beachten, wenn Sie diese Werte zusammen mit der Kamera in der Nähe/entfernte Ebene Einstellungen zu ändern. Z-Fighting tritt auf, wenn zwei "gameobjects" zum Rendern von demselben Pixel und aufgrund der Einschränkungen in der Genauigkeit der Tiefenpuffer (d.h.) Z-Detailtiefe), Unity kann nicht erkennen, welches Objekt vor dem anderen ist. Entwickler sehen ein Flimmern zwischen zwei Spielobjekte, sobald diese *bekämpfen* für den gleichen Wert für die Z-Tiefe. Dies kann gelöst werden, durch den Wechsel in 24-Bit-Depth-Format wie in eine größere Anzahl von Werten für jedes Objekt fallen, um auf die Z-Tiefe von der Kamera zu berechnen.
 >
@@ -85,7 +91,7 @@ Unity ist die Unterstützung für die Skripterstellung Back-End- und somit sollt
 Lesen Sie [optimieren erstellen Zeiten für IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) für Weitere Informationen.
 
 > [!NOTE]
-> Darüber hinaus es kann vorteilhaft sein, Setup eine [Cacheserver](https://docs.unity3d.com/Manual/CacheServer.html), ändern Sie insbesondere für Unity-Projekte mit einer großen Menge von Ressourcen (mit Ausnahme von Skriptdateien) oder ständig im Hintergrund bzw. Objekte. Wenn Sie ein Projekt zu öffnen, speichert Unity qualifizierende Objekte zu einem internen Cache auf dem Entwicklercomputer. Elemente müssen daher neu verarbeitet werden, wenn geändert und erneut importiert werden. Dieser Prozess kann einmal durchgeführt und in einem Cache-Server gespeichert und daher für andere Entwickler, Zeit, anstelle von jeder Entwickler, die Verarbeitung der erneut importieren Änderungen lokal freigegeben.
+> Darüber hinaus es kann vorteilhaft sein, besonders für Unity-Projekte mit sehr vielen Ressourcen (mit Ausnahme von Skriptdateien) oder ständig wechselnden Szenen/Ressourcen, einen [Cacheserver](https://docs.unity3d.com/Manual/CacheServer.html) einzurichten. Beim Öffnen eines Projekts speichert Unity die qualifizierenden Ressourcen in einem internen Cacheformat auf dem Entwicklercomputer. Bei Änderungen müssen die Elemente neu importiert und daher neu verarbeitet werden. Dieser Prozess kann einmal durchgeführt, in einem Cacheserver gespeichert und anschließend für andere Entwickler freigegeben werden, damit diese Zeit sparen und den erneuten Import der Änderungen nicht mehr einzeln und lokal verarbeiten müssen.
 
 ## <a name="publishing-properties"></a>Veröffentlichungseigenschaften
 
