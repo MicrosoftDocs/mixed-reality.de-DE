@@ -1,106 +1,106 @@
 ---
-title: Voice-Befehle
-description: Blicke, Gesten und Stimme (GGV) sind das primäre Mittel der Interaktion bei HoloLens. Dieser Artikel enthält eine gut durchdachte Anleitungen Voice-Entwurf.
+title: Sprachbefehle
+description: Anvisieren, Gesten und Sprache sind primäre Möglichkeiten zur Interaktion für die HoloLens. Dieser Artikel bietet eine durchdachte Anleitung zum Sprachentwurf.
 author: shentan
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, entwerfen, die Interaktion, die Stimme
+keywords: Windows Mixed Reality, Entwurf, Interaktion, Sprache
 ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66402371"
 ---
-# <a name="voice-commanding"></a>Voice-Befehle
+# <a name="voice-commanding"></a>Sprachbefehle
 
-Wenn Sie Sprachbefehle zu verwenden, Blicke ist in der Regel als die Zielgruppenadressierung anhand bestimmter Mechaninism, ob als Zeiger verwendet ("Select") oder leiten Sie den Befehl zu einer Anwendung ("angezeigt, das so sagen"). Einige Sprachbefehle erforderlich nicht natürlich ein Ziel, wie "Gehe um zu starten" oder"Hey Cortana.".
+Bei der Verwendung von Sprachbefehlen wird das Anvisieren typischerweise als Mechanismus zur Zielbestimmung verwendet, sei es als Zeiger („auswählen“) oder um Ihren Befehl an eine Anwendung zu richten („Sehen, sagen“). Natürlich benötigen einige Sprachbefehle kein Ziel, wie „Zum Startmenü“ oder „Hey Cortana“.
 
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
 <tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>Voice-Befehle</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit Kopfhörer angeschlossen)</td>
+<td>Sprachbefehle</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit angeschlossenem Headset)</td>
 </tr>
 </table>
 
 
 
-## <a name="how-to-use-voice"></a>Gewusst wie: Verwenden von Stimme
+## <a name="how-to-use-voice"></a>Verwendung der Spracheingabe
 
-Sollten Sie über Erfahrungen, die Sie erstellen Sprachbefehle hinzufügen. Voice ist eine leistungsfähige und bequeme Möglichkeit steuern, das System und Anwendungen. Da Benutzer mit einer Vielzahl von Dialekte und Akzente sprechen, stellt geeignete Wahl Schlüsselwörter der Sprache sicher, dass es sich bei Ihrer Benutzer Befehle eindeutig interpretiert werden.
+Erwägen Sie, Sprachbefehle zu jeder von Ihnen erstellten Umgebung hinzuzufügen. Die Spracheingabe ist eine leistungsstarke und komfortable Möglichkeit zur Steuerung von System und Apps. Da Benutzer mit einer Vielzahl von Dialekten und Akzenten sprechen, stellt die richtige Auswahl der Schlüsselwörter für die Spracherkennung sicher, dass die Befehle Ihrer Benutzer eindeutig interpretiert werden.
 
 ### <a name="best-practices"></a>Empfohlene Methoden
 
-Im folgenden sind einige Methoden, die smooth-Spracherkennung Remotesysteme werden.
-* **Verwenden Sie präzise Befehle** – Wenn möglich ist, wählen Sie die Schlüsselwörter von zwei oder mehr Silben. Einsilbiges Wörter dazu neigen, verschiedene Vokalen während von Personen, die von anderen Akzenten gesprochen zu verwenden. Beispiel: "Video abspielen" ist besser, als "das derzeit ausgewählte Video wiedergeben"
-* **Verwenden Sie einfache Vokabular** -Beispiel: "Hinweis anzeigen" ist besser als "Placard anzeigen"
-* **Stellen Sie sicher, dass die Befehle sind nicht** – sicherzustellen, dass alle Aktionen, die von einem Speech-Befehl ausgeführt werden kann, ist nicht zerstörerische und können einfach nicht rückgängig gemacht werden für den Fall, dass eine andere Person sprechen in der Nähe des Benutzers versehentlich einen Befehl auslöst.
-* **Vermeiden Sie ähnlich klingende Befehle** -Registrierung mehrerer gesprochene Befehle, die sehr ähnlich klingen zu vermeiden. Beispiel: "Mehr anzeigen" und "Anzeigen Store" können sehr ähnlich klingende sein.
-* **Heben Sie die Registrierung Ihrer app, wenn es nicht verwenden,** : Wenn Ihre app nicht in einem Zustand befindet, in dem ein Sprachbefehl bestimmte gültig ist, sollten Sie die Registrierung wird aufgehoben, damit andere Befehle nicht eine verwechselt werden.
-* **Test mit verschiedenen Akzenten** – Testen Ihrer app für Benutzer von anderen Akzenten.
-* **Voice-Befehl Konsistenz beizubehalten,** : Wenn "Zurück", die zur vorherigen Seite, werden dieses Verhalten in Ihren Anwendungen verwalten.
-* **Vermeiden Sie die Verwendung von Systembefehle** -sind die folgenden Sprachbefehle für das System reserviert. Diese sollten nicht von Anwendungen verwendet werden.
-   * "Hey Cortana"
-   * "Auswählen"
+Nachfolgend finden Sie einige Methoden aufgeführt, die eine reibungslose Spracherkennung ermöglichen.
+* **Präzise Befehle verwenden**: Wählen Sie nach Möglichkeit Schlüsselwörter mit zwei oder mehr Silben aus. Einsilbige Wörter neigen dazu, unterschiedliche Vokallaute zu verwenden, wenn sie von Personen mit unterschiedlichen Akzenten gesprochen werden. Beispiel: „Video wiedergeben“ ist besser als „Das aktuell ausgewählte Video wiedergeben“.
+* **Einfaches Vokabular verwenden** – Beispiel: „Hinweis anzeigen“ ist besser als „Plakat anzeigen“.
+* **Sicherstellen, dass Befehle nicht destruktiv sind**: Stellen Sie sicher, dass alle Aktionen, die von einem Spracherkennungsbefehl ausgeführt werden können, nicht destruktiv sind und leicht rückgängig gemacht werden können, falls eine andere Person, die in der Nähe des Benutzers spricht, versehentlich einen Befehl auslöst.
+* **Ähnlich klingende Befehle vermeiden**: Vermeiden Sie es, mehrere Spracherkennungsbefehle zu registrieren, die sehr ähnlich klingen. Beispiel: „Show more“ (Mehr anzeigen) und „Show store“ (Shop anzeigen) können z. B. sehr ähnlich klingen.
+* **Registrierung der App aufheben, wenn sie nicht verwendet wird**: Wenn sich Ihre Anwendung nicht in einem Zustand befindet, in dem ein bestimmter Sprachbefehl gültig ist, sollten Sie die Registrierung der App aufheben, damit andere Befehle nicht mit diesem verwechselt werden.
+* **Mit verschiedenen Akzenten testen**: Testen Sie Ihre App mit Benutzern, die unterschiedliche Akzente verwenden.
+* **Konsistenz von Sprachbefehlen beibehalten**: Wenn „Zurück“ zur vorherigen Seite wechselt, übernehmen Sie dieses Verhalten in Ihren Anwendungen.
+* **Verwendung von Systembefehlen vermeiden**: Die folgenden Sprachbefehle sind für das System reserviert. Diese sollten nicht von Anwendungen verwendet werden.
+   * „Hey Cortana“
+   * „Auswählen“
 
-### <a name="select"></a>"Auswählen"
+### <a name="select"></a>„Auswählen“
 
-Sagen "select" zu einem beliebigen Zeitpunkt wird aktiviert, was die Blicke Cursor zeigt. 
+Wenn Sie zu einem beliebigen Zeitpunkt „Auswählen“ sagen, wird das aktiviert, worauf der beim Anvisieren verwendete Cursor zeigt. 
 
->Hinweis: HoloLens-2 Wählen"Sie in der Blicke Cursor muss zuerst aufgerufen werden, indem Sie das Wort". Angenommen, "select" erneut um zu aktivieren. Um den Cursor Blicke auszublenden, verwenden Sie die Hände – Airtap oder tippen Sie auf ein Objekt. 
+>Hinweis: In HoloLens 2 muss der beim Anvisieren verwendete Cursor zunächst mit dem Wort „Auswählen“ aufgerufen werden. Sagen Sie zum Aktivieren erneut „Auswählen“. Um den beim Anvisieren verwendeten Cursor auszublenden, verwenden Sie Ihre Hände – Berühren Sie ein Objekt, oder tippen Sie in die Luft. 
 
-### <a name="see-it-say-it"></a>Anzeigen, das so sagen
+### <a name="see-it-say-it"></a>Sehen, sagen
 
-Windows Mixed Reality verfügt über ein "angezeigt, das so sagen" Voice-Modell eingesetzt, in denen **Bezeichnungen auf Schaltflächen sind identisch mit den zugehörigen Sprachbefehle**. Da übergeordnete zwischen der Bezeichnung und der Sprachbefehl nicht, können Benutzer was an, dass das System So kontrollieren besser verstehen. Zu diesem vertiefen, während auf eine Schaltfläche, Einstichs eine **"Stimme länger aufhalten Tipp"** angezeigt, die für die Kommunikation, welche Schaltflächen werden Sprache aktiviert wird.
+Windows Mixed Reality hat ein „Sehen, sagen“-Sprachmodell eingesetzt, bei dem **Beschriftungen auf Schaltflächen mit den zugehörigen Sprachbefehlen identisch sind**. Da es keine Missverständnisse zwischen Beschriftung und Sprachbefehl gibt, können Benutzer besser verstehen, was sie sagen müssen, um das System zu steuern. Um dies zu verstärken, wird beim Verweilen auf einer Schaltfläche ein **Tipp zum Verweilen** angezeigt, um mitzuteilen, welche Schaltflächen sprachaktiviert sind.
 
 
-![Sehen Sie es noch einmal von Beispiel 1](images/voice-seeitsayit1-640px.jpg)
+![Sehen, sagen – Beispiel 1](images/voice-seeitsayit1-640px.jpg)
 
-![Sehen Sie es noch einmal von Beispiel 2](images/voice-seeitsayit2-640px.jpg)<br>
-*Beispiele für "angezeigt, das so sagen"*
+![Sehen, sagen – Beispiel 2](images/voice-seeitsayit2-640px.jpg)<br>
+*Beispiele für „Sehen, sagen“*
 
-### <a name="voices-strengths"></a>Voice Vorteile
+### <a name="voices-strengths"></a>Vorteile der Spracheingabe
 
-Spracheingabe ist eine natürliche Möglichkeit, unser Absichten zu kommunizieren. Voice ist besonders gut für die Schnittstelle **traversierungen** denn sie können Benutzern senken, über mehrere Schritte einer Schnittstelle (ein Benutzer kann z. B. "zurück" bei der Suche auf der Webseite, anstatt zu einrichten, und drücken Sie die Schaltfläche "zurück", in der app). Diese kleine Zeitersparnis ist eine leistungsfähige **emotionaler Auswirkungen** für Benutzer der Wahrnehmung der Umgebung, und erhalten sie eine kleine Menge boosten. Voicemail ist auch eine praktische Methode für die Eingabe, wenn wir wir die vollständige Arme haben oder **Multitasking**. Auf Geräten, auf einer Standardtastatur eingeben schwierig ist, **voice-Diktat** kann eine effiziente Alternative zur Eingabe sein. Und schließlich in einigen Fällen bei der **Bereich der Genauigkeit** für Blicke und Gesten beschränkt sind, Sprache möglicherweise eines Benutzers ausschließlich vertrauenswürdige Methode, die Eingabe.
+Die Spracheingabe ist eine natürliche Art, unsere Absichten zu kommunizieren. Die Spracheingabe ist besonders gut bei den **Übergängen** von Schnittstellen geeignet, da sie den Benutzern helfen kann, mehrere Schritte einer Schnittstelle zu durchlaufen (ein Benutzer könnte „Zurück“ sagen, während er eine Webseite betrachtet, anstatt in der App zum Seitenanfang zu wechseln und die Schaltfläche „Zurück“ zu betätigen). Diese kleine Zeitersparnis hat einen starken **emotionalen Effekt** auf die Wahrnehmung der Umgebung für den Benutzer und verleiht ihm eine gewisse „Kraft“. Die Spracheingabe ist auch eine bequeme Eingabemethode, wenn unsere Arme nicht frei sind oder wir **mehrere Aufgaben gleichzeitig** erledigen. Auf Geräten, bei denen die Eingabe über eine Tastatur schwierig ist, kann das **Sprachdiktat** eine effiziente Eingabealternative sein. In einigen Fällen, wenn der **Genauigkeitsbereich** für Anvisieren und Gesten begrenzt ist, könnte die Spracheingabe schließlich die einzige vertrauenswürdige Eingabemethode eines Benutzers sein.
 
-**Wie den Benutzer per Spracheingabe profitieren können**
-* Verringert Zeit – es sollte das endgültige Ziel effizienter gestalten.
-* Wird der Aufwand - minimiert hergestellt werden soll Aufgaben flüssiger und sorgen.
-* Reduziert cognitive-Last – es ist, intuitiv und einfach Informationen und denken Sie daran.
-* Social akzeptabel ist – er sollte mit dem quantumcomputing Normen in Bezug auf Verhalten passen.
-* Es handelt sich um Routine - Voice kann leicht einen gewöhnlichen Verhalten werden.
+**Vorteile der Spracheingabe für den Benutzer**
+* Verkürzt den Zeitaufwand – das Endziel sollte effizienter erreicht werden.
+* Minimiert den Aufwand – Aufgaben sollten flüssiger und müheloser verlaufen.
+* Reduziert die kognitive Belastung – sie ist intuitiv, leicht zu erlernen und zu merken.
+* Sie ist sozialverträglich – sie sollte sich in Bezug auf das Verhalten in die gesellschaftlichen Normen einfügen.
+* Sie stellt eine Routine dar – die Spracheingabe kann leicht zu einem gewohnheitsmäßigen Verhalten werden.
 
-### <a name="voices-weaknesses"></a>Voice Schwächen
+### <a name="voices-weaknesses"></a>Nachteile der Spracheingabe
 
-Voice hat auch einige Schwächen. Eine präzisere Kontrolle gehört dazu. (z. B. ein Benutzer könnte "lauter", aber nicht sagen, wie viel. "Etwas" ist Quantifizierung schwierig. Verschieben oder Dinge mit Stimme Skalierung ist es schwieriger (Voice bietet nicht die Granularität des Steuerelements). Voice kann auch perfekt sein. Ein Voice-System wird manchmal fälschlicherweise hört einen Befehl, oder der ein Fehler auftritt, einen Befehl zu hören. Wiederherstellen von solche Fehler ist eine Herausforderung in einer beliebigen Schnittstelle. Abschließend Voice Social akzeptable an öffentlichen Orten möglicherweise nicht. Es gibt einige Dinge, die Benutzer haben und sollte nicht sagen können. Diese Felsen können für die Spracherkennung verwendet werden, für was am besten ist.
+Die Spracheingabe weist auch einige Schwächen auf. Eine davon ist die differenzierte Steuerung. (Ein Benutzer kann z. B. „lauter“ sagen, aber nicht angeben, wie viel lauter es sein soll.) „Etwas“ ist schwer zu quantifizieren. Das Bewegen oder Skalieren von Objekten per Spracheingabe ist ebenfalls schwierig (die Spracheingabe bietet nicht die Genauigkeit bei der Steuerung). Die Spracheingabe kann auch unvollkommen sein. Gelegentlich hört ein Spracheingabesystem einen Befehl falsch oder überhaupt nicht. Die Wiederherstellung nach solchen Fehlern stellt für jede Schnittstelle eine Herausforderung dar. Schließlich ist die Spracheingabe an öffentlichen Orten möglicherweise nicht gesellschaftsfähig. Es gibt einige Dinge, die Benutzer nicht sagen können oder sollten. Diese Hindernisse ermöglichen es, die Spracherkennung dafür zu nutzen, wofür sie am besten geeignet ist.
 
-### <a name="voice-feedback-states"></a>Voice-Feedback-Status
+### <a name="voice-feedback-states"></a>Statusangaben für Spracherkennungsfeedback
 
-Wenn Voice ordnungsgemäß angewendet wird, wird der Benutzer versteht **was sie sagen und erzielen können rückmeldungen** das System **haben sie richtig gehört**. Diese zwei Signale stellen den Benutzer, die bei der Verwendung von Sprach als eine primäre Eingabe darauf vertrauen können. Im folgenden finden, dass das Diagramm zeigt, was geschieht, den Cursor, wenn Spracheingabe erkannt wird und wie es, die für den Benutzer kommuniziert.
+Wenn die Spracherkennung richtig angewendet wird, versteht der Benutzer, **was er sagen kann und er erhält ein eindeutiges Feedback**, das das System **ihn richtig verstanden hat**. Diese beiden Signale geben dem Benutzer das Gefühl, dass er die Spracherkennung als primäre Eingabemethode verwenden kann. Nachfolgend ist in einem Diagramm dargestellt, was mit dem Cursor geschieht, wenn die Spracheingabe erkannt wird und wie dies dem Benutzer vermittelt wird.
 
-![Voice-Feedback-Zustände für cursor](images/voicefeedbackstates.png)<br>
-*Voice-Feedback-Zustände für cursor*
+![Statusangaben für Spracherkennungsfeedback für Cursor](images/voicefeedbackstates.png)<br>
+*Statusangaben für Spracherkennungsfeedback für Cursor*
 
-## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Top-Aufgaben, die Benutzer sollten über "Speech" in mixed Reality wissen.
-* Sagen Sie **"Select"** beim Abzielen auf eine Schaltfläche (Hiermit können Sie überall auf eine Schaltfläche klicken).
-* Angenommen, Sie können die **Bezeichnungsnamen einer app-Leiste Schaltfläche** in einigen apps aus, um eine Aktion auszuführen. Bei der Suche auf eine app, kann ein Benutzer beispielsweise den Befehl "Entfernen" zum Entfernen der app auf der ganzen Welt (Dies spart Zeit erspart, um mit der Hand auf diese Schaltfläche klicken).
-* Können Sie Cortana Lauschen durch Spruch initiieren **"Hey Cortana".** Sie können ihre Fragen ("Hey Cortana, wie hoch ist von der Eiffel Tower"), sage zum Öffnen einer app ("Hey Cortana, open Netflix") oder sage, rufen Sie im Startmenü ("Hey Cortana, Take mich home") und vieles mehr.
+## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Wichtige Informationen zur Spracherkennung in Mixed Reality
+* Sagen Sie **„Auswählen“** , während Sie eine Schaltfläche anvisieren (Sie können dies überall verwenden, um auf eine Schaltfläche zu klicken).
+* Sie können in einigen Apps den **Bezeichnungsnamen einer Schaltfläche auf der App-Leiste** sagen, um eine Aktion auszuführen. Beim Betrachten einer App kann ein Benutzer z. B. den Befehl „Entfernen“ sagen, um die App aus der Umgebung zu entfernen (das spart Zeit, da die App nicht mit der Hand angeklickt werden muss).
+* Sie können initiieren, dass Cortana zuhört, indem Sie **„Hey Cortana“** sagen. Sie können ihr Fragen stellen („Hey Cortana, wie hoch ist der Eiffelturm“), sie zum Öffnen einer App auffordern („Hey Cortana, öffne Netflix“) oder ihr sagen, sie soll das Startmenü aufrufen („Hey Cortana, öffne das Startmenü“) und vieles mehr.
 
-## <a name="common-questions-and-concerns-users-have-about-voice"></a>Allgemeine Fragen und Probleme Benutzer verfügen über Stimme
-* Was soll ich sagen?
-* Wie weiß ich, dass das System, die mich richtig gehört?
-   * Das System ständig Meine Sprachbefehle falsch.
-   * Es reagieren nicht, wenn ich einen Sprachbefehl erteilen.
-* Es reagiert die falsche Methode, wenn ich einen Sprachbefehl erteilen.
-* Wie werden meine Stimme an eine bestimmte app oder app-Befehl ausgerichtet?
-* Kann ich stimme, Befehl Sachen da draußen holographic Frames für HoloLens verwenden?
+## <a name="common-questions-and-concerns-users-have-about-voice"></a>Häufig gestellte Fragen und Bedenken von Benutzern zur Spracheingabe
+* Was kann ich sagen?
+* Woher weiß ich, ob das System mich richtig verstanden hat?
+   * Das System versteht meine Sprachbefehle immer wieder falsch.
+   * Es reagiert nicht, wenn ich einen Sprachbefehl erteile.
+* Es reagiert falsch, wenn ich einen Sprachbefehl erteile.
+* Wie richte ich meine Stimme auf eine bestimmte App oder einen bestimmten App-Befehl aus?
+* Kann ich Objekte per Sprachbefehl aus dem holografischen Rahmen der HoloLens bewegen?
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Gesten](gestures.md)
 * [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)

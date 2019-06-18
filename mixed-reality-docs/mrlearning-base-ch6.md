@@ -1,147 +1,147 @@
 ---
-title: MR-Learning-Basis-Modul – Mondkalender Modul Assembly-Beispiel-Erfahrung
-description: In dieser Lektion werden wir mehrere Konzepte, die von vorherigen Lektionen erstellen Sie eine eindeutige Beispiel Erfahrung gelernt kombinieren.
+title: MR-Basislernmodul – Beispielerfahrung für die Montage einer Mondlandefähre
+description: In dieser Lektion werden wir mehrere Konzepte, die wir in früheren Lektionen kennengelernt haben, kombinieren, um eine einzigartige Beispielerfahrung zu schaffen.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Gemischte Realität, Unity, Tutorial, hololens
+keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.openlocfilehash: 8a2f388e842d521f991203916177e3dac15769eb
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "65730850"
 ---
-# <a name="mr-learning-base-module---lunar-module-assembly-sample-experience"></a>MR-Learning-Basis-Modul – Mondkalender Modul Assembly-Beispiel-Erfahrung
+# <a name="mr-learning-base-module---lunar-module-assembly-sample-experience"></a>MR-Basislernmodul – Beispielerfahrung für die Montage einer Mondlandefähre
 
-In dieser Lektion werden wir mehrere Konzepte, die von vorherigen Lektionen erstellen Sie eine eindeutige Beispiel Erfahrung gelernt kombinieren. Wir erstellen eine Assembly Mondkalender modulanwendung bei dem ein Benutzer überwachte Hände Mondkalender Modul Teile übernimmt und versucht, ein Mondkalender-Modul zusammenstellen muss. Wir verwenden pressable Schaltflächen zum Umschalten der Platzierung-Hinweise, die zum Zurücksetzen von unserer Erfahrung und unser Mondkalender-Modul in den Speicherplatz zu starten! In Zukunft werden Tutorials, wir weiterhin bauen auf dieser Oberfläche, einschließlich leistungsstarke Mehrbenutzer-Anwendungsfälle, die räumliche Anker Azure für die räumlichen Ausrichtung nutzt.
+In dieser Lektion werden wir mehrere Konzepte, die wir in früheren Lektionen kennengelernt haben, kombinieren, um eine einzigartige Beispielerfahrung zu schaffen. Wir werden eine Anwendung zur Montage einer Mondlandefähre erstellen, bei der ein Benutzer mit nachverfolgten Händen Teile der Mondlandefähre aufnehmen und versuchen muss, die Mondlandefähre zu montieren. Wir werden drückbare Schaltflächen verwenden, um Platzierungshinweise umzuschalten, unsere Umgebung zurückzusetzen und unsere Mondlandefähre in den Weltraum zu befördern. In zukünftigen Tutorials werden wir weiterhin auf dieser Umgebung aufbauen, einschließlich leistungsfähiger Anwendungsfälle für mehrere Benutzer, die Azure Spatial Anchors für die räumliche Ausrichtung nutzen.
 
 ## <a name="objectives"></a>Ziele
 
-- Kombinieren Sie mehrere Konzepte aus vorherigen Lektionen erstellen Sie ein einmaliges Benutzererlebnis
-- Erfahren Sie, wie Objekte umschalten
-- Komplexe mit pressable Schaltflächen Auslösen von Ereignissen
-- Verwenden Sie "rigidbody" Physik und erzwingt, dass
-- Verwenden von QuickInfos
+- Kombinieren mehrerer Konzepte aus früheren Lektionen, um eine einzigartige Umgebung zu schaffen
+- Informationen zum Umschalten von Objekten
+- Auslösen komplexer Ereignisse über drückbare Schaltflächen
+- Verwenden der physischen Effekte und Kräfte von Starrkörpern
+- Erkunden der Verwendung von QuickInfos
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="configuring-the-lunar-module"></a>Konfigurieren des Moduls Mondkalender
+### <a name="configuring-the-lunar-module"></a>Konfigurieren der Mondlandefähre
 
-In diesem Kapitel werden wir an die verschiedenen Komponenten, die zum Erstellen von unserer Erfahrung Beispiel benötigt vorgestellt.
+In diesem Kapitel werden wir mit den verschiedenen Komponenten vertraut gemacht, die für die Erstellung unserer Beispielerfahrung erforderlich sind.
 
-1. Fügen Sie der Assembly-Prefab Mondkalender Module zu Ihrer Szene Base hinzu. Klicken Sie hierzu in der Registerkarte "Projekt" Suchen Sie "Rocket Launcher_Tutorial." Finden Sie auch den prefabs im Bestand > BaseModuleAssets > prefabs (Vorlagen). Sie feststellen, dass zwei Rocket Startprogramm prefabs (Vorlagen); eine mit dem Namen "Tutorial" und eine mit dem Namen "erledigt"setzen. Ziehen Sie das Prefab "Rocket Launcher_Tutorial" zu Ihrer Szene Basis ein. Die Platzierung der prefabs in Ihrer Szene platzieren können.
-   Hinweis: Die "Rocket Launcher_Complete"-Prefab ist das abgeschlossene Startprogramm, dienen als Referenz. 
+1. Fügen Sie das Prefab für die Montage der Mondlandefähre zu Ihrer Basisszene hinzu. Suchen Sie dazu auf der Projektregisterkarte nach „Rocket Launcher_Tutorial“. Sie finden das Prefab auch unter „Assets>BaseModuleAssets>Prefabs“. Möglicherweise werden zwei Prefabs für Raketenstartanlagen angezeigt: eine mit dem Namen „Tutorial“ und eine mit dem Namen „Complete“ (Vollständig). Ziehen Sie das Prefab „Rocket Launcher_Tutorial“ in Ihre Basisszene. Sie können das Prefab in Ihrer Szene nach Belieben platzieren.
+   Hinweis: Das Prefab "Rocket Launcher_Complete" ist die fertige Startanlage, die als Referenz dient. 
 
-![Lesson6 Chapter1 Step1im](images/Lesson6_Chapter1_step1im.PNG)
+![Lektion6 Kapitel1 Schritt1im](images/Lesson6_Chapter1_step1im.PNG)
 
-Wenn Sie das Spiele "Rocket Launcher_Tutorial"-Objekt in Ihrer Hierarchie erweitern und noch einmal das Objekt "Mondkalender Modul erweitern", sehen mehrere untergeordnete Objekte Sie, die ein Material, das Namen "röntgenansicht". Das "x-ray" Material ermöglicht eine etwas lichtdurchlässiger Farbe ab, die als Hinweise für Platzierung für den Benutzer verwendet wird. 
+Wenn Sie das Spielobjekt „Rocket Launcher_Tutorial“ in Ihrer Hierarchie erweitern und das Objekt „Lunar Module“ (Mondlandefähre) weiter erweitern, sehen Sie mehrere untergeordnete Objekte, die ein Material namens „x-ray“ (Röntgenstrahlen) enthalten. Das Material „x-ray“ (Röntgenstrahlen) ermöglicht eine leicht durchscheinende Farbe, die wir als Platzierungshinweise für den Benutzer verwenden werden. 
 
-![Lesson6 Chapter1 Noteaim](images/Lesson6_Chapter1_noteaim.PNG) es gibt fünf Teile an das Mondkalender-Modul an, die der Benutzer interagieren, wie in der folgenden Abbildung gezeigt:
+![Lektion6 Kapitel1 Noteaim](images/Lesson6_Chapter1_noteaim.PNG) Die Mondlandefähre besteht aus fünf Teilen, mit denen der Benutzer interagieren wird, wie in der folgenden Abbildung gezeigt:
 
-1.  Das Gehäuse Rover
-2.  Der Treibstofftank
-3.  Der Energieverbrauch-Zelle
-4.  Das Portal Andocken 
-5.  Der externe sensor
+1.  Rover-Gehäuse
+2.  Treibstofftank
+3.  Energiezelle
+4.  Andockportal 
+5.  Externer Sensor
 
-![Lesson6 Chapter1 Notebim](images/Lesson6_Chapter1_notebim.PNG)
+![Lektion6 Kapitel1 Notebim](images/Lesson6_Chapter1_notebim.PNG)
 
-> Hinweis: Die spielobjekt-Namen, die Sie in Ihrer szenenhierarchie Basis sehen entsprechen nicht den Namen der Objekte in der Szene.
+> Hinweis: Die Spielobjektnamen, die in Ihrer Basisszenenhierarchie angezeigt werden, entsprechen nicht den Namen der Objekte in der Szene.
 
-Schritt 2: Fügen Sie eine audio Source Mondkalender Modul hinzu. Stellen Sie sicher, dass das Mondkalender-Modul in Ihrer szenenhierarchie Basis ausgewählt ist, und klicken Sie auf "Komponente hinzufügen". Suchen Sie nach "Audio Source", und fügen Sie es auf das Objekt hinzu. Lassen Sie es leer unverändert. Wir verwenden diese starten später wiedergegeben.
- ![Lesson6 Chapter1 Step2im](images/Lesson6_Chapter1_step2im.PNG) Schritt 3: Fügen Sie das Skript "ein/aus der Platzierung-Hints". Klicken Sie auf "Komponente hinzufügen" und suchen Sie nach "Ein/aus der Platzierung-Hints". Dies ist ein benutzerdefiniertes Skript, das Sie zum Aktivieren und deaktivieren die lichtdurchlässiger Hinweise (mit dem x-Ray Material-Objekte), die zuvor erwähnten ermöglicht. 
-![Lesson6 Chapter1 Step3im](images/Lesson6_Chapter1_step3im.PNG) Schritt 4: Da wir 5 Objekte verfügen, geben Sie "5" für die Arraygröße spielobjekt. Klicken Sie dann sehen Sie 5 neue Elemente, die angezeigt werden. 
+Schritt 2: Fügen Sie der Mondlandefähre eine Audioquelle hinzu. Stellen Sie sicher, dass die Mondlandefähre in Ihrer Basisszenenhierarchie ausgewählt ist, und klicken Sie auf „Add Component“ (Komponente hinzufügen). Suchen Sie nach „Audio Source“ (Audioquelle), und fügen Sie diese dem Objekt hinzu. Lassen Sie es vorerst leer. Wir werden damit später den Startsound wiedergegeben.
+ ![Lektion6 Kapitel1 Schritt2im](images/Lesson6_Chapter1_step2im.PNG) Schritt 3: Fügen Sie das Skript „Toggle Placement Hints“ (Platzierungshinweise umschalten) hinzu. Klicken Sie auf „Add Component“ (Komponente hinzufügen), und suchen Sie nach „Toggle Placement Hints“ (Platzierungshinweise umschalten). Dies ist ein benutzerdefiniertes Skript, mit dem Sie die zuvor erwähnten lichtdurchlässigen Hinweise (Objekte mit dem Röntgenmaterial) ein- und ausschalten können. 
+![Lektion6 Kapitel1 Schritt3im](images/Lesson6_Chapter1_step3im.PNG) Schritt 4: Da wir über fünf Objekte verfügen, geben Sie „5“ für die Größe des Arrays der Spielobjekte ein. Dann sollten fünf neue Elemente angezeigt werden. 
 
-![Lesson6 Chapter1 Step4bim](images/Lesson6_Chapter1_step4bim.PNG)
+![Lektion6 Kapitel1 Schritt4bim](images/Lesson6_Chapter1_step4bim.PNG)
 
-Ziehen Sie jeden von lichtdurchlässigen Objekten in die Felder mit dem Text "None (Spielobjekt)". Ziehen Sie die folgenden Objekte aus dem Mondkalender-Modul in Ihrer Basis-Szene: 
+Ziehen Sie jedes der lichtdurchlässigen Objekte in die Felder mit der Aufschrift „None (Game Object)“ (Keine (Spielobjekt)). Ziehen Sie die folgenden Objekte von der Mondlandefähre in Ihre Basisszene: 
 
-• Rucksack
+•   Backpack (Rucksack)
 
-•   GasTank
+•   GasTank (Treibstofftank)
 
-• Topleftbody
+•   Topleftbody (Oberer linker Körper)
 
-• Nase
+•   Nose (Nase)
 
-• LeftTwirler
+•   LeftTwirler (Linker Drallkörper)
 
- ![Lesson6 Chapter1 Step4aim](images/Lesson6_Chapter1_step4aim.PNG)
+ ![Lektion6 Kapitel1 Schritt4aim](images/Lesson6_Chapter1_step4aim.PNG)
 
-Jetzt ist das Skript "Umschalten von Platzierung Hinweise" konfiguriert. Dies ermöglicht uns, aktivieren und deaktivieren Sie die Hinweise.
+Jetzt ist das Skript „Toggle Placement Hints“ (Platzierungshinweise umschalten) konfiguriert. Dadurch können wir die Hinweise ein- und ausschalten.
 
-Schritt 5: Fügen Sie das Skript "Start Mondkalender-Modul" hinzu. Klicken Sie auf die Schaltfläche "Komponente hinzufügen", "Launch Mondkalender Modul" Suchen Sie, und wählen Sie ihn aus. Dieses Skript wird zum Starten des Moduls Mondkalender verantwortlich. Wenn wir eine konfigurierte Schaltfläche drücken, des Moduls Mondkalender rigidbody-Komponente wird ein nach oben Force hinzugefügt, und führt dazu, dass das Modul, um nach oben zu starten. In geschlossenen Räumen möchten, kann das Modul Mondkalender für das Gitter Ceiling abstürzen. Aber im freien möchten, es wird nach innen, Speicherplatz auf unbestimmte Zeit. 
+Schritt 5: Fügen Sie das Skript „Launch Lunar Module“ (Mondlandefähre starten) hinzu. Klicken Sie auf die Schaltfläche „Add Component“ (Komponente hinzufügen), suchen Sie nach „Launch Lunar Module“ (Mondlandefähre starten) und wählen Sie dies aus. Dieses Skript ist für den Start der Mondlandefähre zuständig. Wenn wir eine konfigurierte Schaltfläche drücken, fügt sie der starren Gehäusekomponente der Mondlandefähre eine Auftriebskraft hinzu und bewirkt, dass das Modul nach oben startet. Wenn Sie sich in einem Gebäude befinden, kollidiert die Mondlandefähre möglicherweise mit Ihrem Deckengittermodell. Aber wenn Sie sich im Freien befinden, fliegt sie in die unendlichen Weiten des Weltraums. 
 
-![Lesson6 Chapter1 Step5im](images/Lesson6_Chapter1_step5im.PNG)
+![Lektion6 Kapitel1 Schritt5im](images/Lesson6_Chapter1_step5im.PNG)
 
-Schritt 6: Passen Sie die Schub so an, dass das Modul Mondkalender ordnungsgemäß up Above the wird. Versuchen Sie einen Wert von 0,01. Lassen Sie das Feld "Rb" leer. RB steht für die rigidbody und dieses Feld wird automatisch aufgefüllt werden, während der Laufzeit.
+Schritt 6: Passen Sie den Schub so an, dass die Mondlandefähre anmutig nach oben aufsteigt. Versuchen Sie einen Wert von 0,01. Lassen Sie das Feld „Rb“ leer. „Rb“ steht für „Rigid Body“ (Starrkörper), und dieses Feld wird zur Laufzeit automatisch ausgefüllt.
 
-![Lesson6 Chapter1 Step6im](images/Lesson6_Chapter1_step6im.PNG)
+![Lektion6 Kapitel1 Schritt6im](images/Lesson6_Chapter1_step6im.PNG)
 
-### <a name="lunar-module-parts-overview"></a>Übersicht über Abschnitte der Mondkalender-Modul
-Das Mondkalender Modul Teile übergeordnete Objekt ist die Auflistung der Objekte, denen der Benutzer interagieren wird. Die spielobjekt-Namen (mit der Szene Namen in Paretheses bezeichnet) werden in der Liste unten bereitgestellt:
+### <a name="lunar-module-parts-overview"></a>Übersicht über die Komponenten der Mondlandefähre
+Das übergeordnete Objekt der Teile der Mondlandefähre ist die Sammlung der Objekte, mit denen der Benutzer interagieren wird. Die Namen der Spielobjekte (mit Szenennamen in Klammern) sind in der folgenden Liste aufgeführt:
 
-- Rucksack (Treibstofftank)
-- GasTank (Energie Zelle)
-- TopLeftBody (Rover Gehäuse)
-- Nase (Andocken Portal)
-- LeftTwirler (externe Sensor)
+- Backpack (Fuel Tank) – Rucksack (Treibstofftank)
+- GasTank (Energy Cell) – Treibstofftank (Energiezelle)
+- TopLeftBody (Rover Enclosure) – Oberer linker Körper (Rover-Gehäuse)
+- Nose (Docking Portal) – Nase (Andockportal)
+- LeftTwirler (External Sensor) – Linker Drallkörper (Externer Sensor)
 
-Beachten Sie, dass jedes dieser Objekte den Handler für die Bearbeitung, wie in Lektion 4 beschrieben. Mit den Handler für die Bearbeitung können Benutzer das Objekt zu erfassen. Beachten Sie, dass die Einstellung "zwei übergeben Manipulation-Type", auf "verschieben und drehen festgelegt ist" Dies ermöglicht nur den Benutzer verschieben Sie das Objekt und seine Größe, die die gewünschte Funktionalität für eine Anwendung für die Assembly ist nicht zu ändern.
-Darüber hinaus ist weit Bearbeitung deaktiviert ist, können nur für direkte Interaktion von Teilen des Moduls.
+Beachten Sie, dass jedes dieser Objekte den Manipulationshandler aufweist, wie in Lektion 4 beschrieben. Mit dem Manipulationshandler können Benutzer das Objekt greifen und bearbeiten. Beachten Sie auch, dass die Einstellung „Two Handed Manipulation Type“ (Zweihändiger Manipulationstyp) auf „Move and Rotate“ (Bewegen und Drehen) festgelegt ist. Hierdurch kann der Benutzer das Objekt nur bewegen und nicht seine Größe ändern, was die gewünschte Funktionalität für eine Montageanwendung darstellt.
+Darüber hinaus ist die ferne Bearbeitung nicht aktiviert, sodass nur eine direkte Interaktion der Modulteile möglich ist.
 
-![Lesson6 Chapter2im](images/Lesson6_Chapter2im.PNG)
+![Lektion6 Kapitel2im](images/Lesson6_Chapter2im.PNG)
 
-Das Teil Assembly-Demo-Skript (siehe oben) ist das Skript, das die Objekte an das Modul Mondkalender platziert werden, durch den Benutzer verwaltet. 
+Das Demoskript für die Baugruppenmontage (siehe oben) ist das Skript, das die Objekte verwaltet, die vom Benutzer auf der Mondlandefähre platziert werden sollen. 
 
-Das Feld "Ort für Objekt" ist die Transformation, die ausgewählte (n die Groß-/Kleinschreibung der Abbildung oben, dem Rucksack/Tank) mit dem Objekt hergestellt werden kann. 
+Das Feld „Object To Place“ (Zu platzierendes Objekt) ist die Transformation, die mit dem Objekt ausgewählt (für die obige Abbildung ist dies der Rucksack/Treibstofftank) wird, mit der sie verbunden werden kann. 
 
-Die Einstellungen für "In der Nähe Distance" und "Weit" Distance "sind zuständig für das Ermitteln der Nähe, die Teile werden an Stelle ausgerichtet oder freigegeben werden. Beispielsweise müssen dem Rucksack/Tank 0,1 Einheiten außerhalb des Moduls Mondkalender platziert werden. Die "weit Distance" legt fest, den Speicherort, in dem das Objekt aus dem Modul Mondkalender getrennt werden muss. In diesem Fall muss des Benutzers dem Rucksack/Tank abrufen und per Pullvorgang 0,2 Einheiten von Moduls Mondkalender aus Einrasten wieder entfernen.
+Die Einstellungen „Near Distance“ (Kurze Distanz) und „Far Distance“ (Weite Distanz) sind dafür verantwortlich, die Nähe zu bestimmen, bei der Teile andocken oder freigegeben werden. Der Rucksack/Treibstofftank müsste z. B. einen Abstand von 0,1 Einheiten von der Mondlandefähre haben, um an seiner Position anzudocken. „Far Distance“ (Weite Distanz) legt die Position fest, ab der das Objekt von der Mondlandefähre gelöst werden soll. In diesem Fall muss die Hand des Benutzers den Rucksack/Treibstofftank greifen und ihn 0,2 Einheiten von der Mondlandefähre wegziehen, damit er nicht wieder an seiner Position andockt.
 
-Das Objekt"Tip-Tool" ist die Tool-QuickInfo-Bezeichnung in der Szene. Wenn die Objekte an Stelle ausgerichtet sind, wird die Bezeichnung deaktiviert. 
+Das „Tool Tip Object“ (QuickInfo-Objekt) stellt die Bezeichnung der QuickInfo in der Szene dar. Wenn die Objekte angedockt sind, wird die Bezeichnung deaktiviert. 
 
-Die Audio-Quelle wird automatisch verwendet werden. 
+Die Audioquelle wird automatisch erfasst. 
 
-### <a name="placement-hints-buttons"></a>Platzierung Hinweise Schaltflächen
-In [Lektion 2](mrlearning-base-ch2.md), haben Sie gelernt, platzieren, und konfigurieren die Schaltflächen bereit, führen z.B. Ändern der Farbe eines Elements oder wählen sie einen Sound wiederzugeben, wenn sie per Push übertragen wird. Wir werden weiterhin diese Prinzipien zu verwenden, wie wir unsere Schaltflächen zum Umschalten der Platzierung Hinweise konfigurieren. 
+### <a name="placement-hints-buttons"></a>Schaltflächen für Platzierungshinweise
+In [Lektion 2](mrlearning-base-ch2.md) haben Sie erfahren, wie Sie Schaltflächen platzieren und konfigurieren, um z. B. die Farbe eines Elements zu ändern oder es beim Drücken einen Sound wiedergeben zu lassen. Wir werden diese Prinzipien weiterhin verwenden, wenn wir unsere Schaltflächen zum Umschalten von Platzierungshinweisen konfigurieren. 
 
-Das Ziel ist unsere Schaltfläche so konfigurieren, dass jedes Mal, wenn der Benutzer die Platzierung Hinweis drückt, wird es Sichtbarkeit von lichtdurchlässiger Platzierung Hinweise umzuschalten. 
+Ziel ist es, unsere Schaltfläche so zu konfigurieren, dass sie jedes Mal, wenn der Benutzer die Schaltfläche für Platzierungshinweise drückt, die Sichtbarkeit der lichtdurchlässigen Platzierungshinweise umschaltet. 
 
-Schritt 1: Verschieben Sie das Modul Mondkalender auf den leeren "nur Runtime"-Slot im Bedienfeld "Inspector", während der Platzierung Hinweise-Objekt in Ihrer szenenhierarchie Basis ausgewählt ist. 
- ![Lesson6 Chapter3 Step1im](images/Lesson6_Chapter3_step1im.PNG) Schritt 2: Klicken Sie nun auf die Dropdownliste, in dem Name schon sagt, "keine Funktion." Wechseln Sie zu "TogglePlacementHints" und befindet sich in diesem Menü Wählen Sie "ToggleGameObjects ()". ToggleGameObjects() wird die Platzierung Hinweise ein-und ausschalten, damit sie ein- oder ausgeblendet sind, jedes Mal, wenn die Schaltfläche gedrückt wird.
- ![Lesson6 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
+Schritt 1: Verschieben Sie die Mondlandefähre an den leeren Platz „Runtime only“ (Nur Runtime) im Inspektorbereich, während das Objekt für Platzierungshinweise in Ihrer Basisszenarienhierarchie aktiviert ist. 
+ ![Lektion6 Kapitel3 Schritt1im](images/Lesson6_Chapter3_step1im.PNG) Schritt 2: Klicken Sie jetzt auf die Dropdownliste mit der Aufschrift „No Function“ (Keine Funktion). Wechseln Sie nach unten zu „TogglePlacementHints“, und wählen Sie unter diesem Menü „ToggleGameObjects ()“ aus. „ToggleGameObjects()“ schaltet die Platzierungshinweise ein und aus, sodass sie bei jedem Drücken der Schaltfläche ein- oder ausgeblendet werden.
+ ![Lektion6 Kapitel3 Schritt2im](images/Lesson6_Chapter3_step2im.PNG)
 
-### <a name="configuring-the-reset-button"></a>Konfigurieren die Schaltfläche "Zurücksetzen"
+### <a name="configuring-the-reset-button"></a>Konfigurieren der Schaltfläche zum Zurücksetzen
 
-Es kann Situationen geben, in denen der Benutzer ist, einen Fehler oder versehentlich auslöst, die das Objekt entfernt, oder auch einfach möchte die Erfahrung rest. Die Schaltfläche "Zurücksetzen" wird die Möglichkeit, starten Sie die Umgebung neu hinzugefügt. 
+Es wird Situationen geben, in denen der Benutzer einen Fehler macht, oder versehentlich das Objekt wegwirft oder einfach nur die Umgebung zurücksetzen will. Die Schaltfläche zum Zurücksetzen (Reset) fügt die Möglichkeit hinzu, die Umgebung neu zu starten. 
 
-Schritt 1: Wählen Sie die Schaltfläche "Zurücksetzen". In der Basis-Szene heißt es "ResetRoundButton." 
+Schritt 1: Wählen Sie die Schaltfläche „Reset“ (Zurücksetzen) aus. In der Basisszene trägt sie die Bezeichnung „ResetRoundButton“. 
 
-Schritt 2: Ziehen Sie das Mondkalender-Modul aus der szenenhierarchie der Basis der in das leere Einschubfach aus, klicken Sie unter "aktivierte Schaltfläche" im Bereich der Eigenschaftenanalyse.
- ![Lesson6 Kapitel4 Step2im](images/Lesson6_Chapter4_step2im.PNG)
+Schritt 2: Ziehen Sie die Mondlandefähre aus der Basisszenenhierarchie in den leeren Bereich unter „Button Pressed“ (Schaltfläche gedrückt) im Inspektorbereich.
+ ![Lektion6 Kapitel4 Schritt2im](images/Lesson6_Chapter4_step2im.PNG)
 
-Schritt 3: Wählen Sie im Dropdownmenü die Fehlermeldung "keine Funktion", und zeigen Sie auf "LaunchLunarModule." Wählen Sie jetzt "ResetModule ()".
+Schritt 3: Wählen Sie das Dropdownmenü mit der Bezeichnung „No Function“ (Keine Funktion) aus, und bewegen Sie den Mauszeiger über „LaunchLunarModule“. Wählen Sie jetzt „resetModule ()“ aus.
 
-![Lesson6 Kapitel4 Step3im](images/Lesson6_Chapter4_step3im.PNG)
+![Lektion6 Kapitel4 Schritt3im](images/Lesson6_Chapter4_step3im.PNG)
 
-> Hinweis: Sie werden feststellen, dass standardmäßig die "GameObject.BroadcastMessage" konfiguriert ist, um "ResetPlacement." Dadurch wird eine Meldung, die Namen "ResetPlacement" für alle untergeordneten Objekte RocketLauncher_Tutorial zu senden. Jedes Objekt, das eine Methode für "ResetPlacement()" hat reagiert auf diese Nachricht, wenn die jeweilige Position zurücksetzen. 
+> Hinweis: Sie werden feststellen, dass „GameObject.BroadcastMessage“ standardmäßig auf „ResetPlacement“ festgelegt ist. Dadurch wird für jedes untergeordnete Objekt von „RocketLauncher_Tutorial“ eine Nachricht mit dem Namen „ResetPlacement“ gesendet. Jedes Objekt, das über eine Methode für „ResetPlacement()“ verfügt, reagiert auf diese Nachricht mit dem Zurücksetzen seiner Position. 
 
-### <a name="launching-the-lunar-module"></a>Starten das Modul Mondkalender
-In diesem Kapitel, die wir die Schaltfläche "Start" konfigurieren. Dies ermöglicht den Benutzer, klicken auf die Schaltfläche, und starten das Modul Mondkalender in den Speicherplatz.
+### <a name="launching-the-lunar-module"></a>Starten der Mondlandefähre
+In diesem Kapitel werden wir die Starttaste konfigurieren. Dadurch kann der Benutzer die Taste drücken und die Mondlandefähre ins All starten.
 
-Schritt 1: Wählen Sie die Schaltfläche "Start" (in der Szene Basis sie heißt "LaunchRoundButton"). Ziehen Sie das Modul Mondkalender in das leere Einschubfach aus, klicken Sie unter "End Touch" im Bedienfeld "Inspector".
- ![Lesson6 Chapter5 Step1im](images/Lesson6_Chapter5_step1im.PNG) Schritt 2: Wählen Sie im Dropdownmenü die Fehlermeldung "keine Funktion." Zeigen Sie auf "LaunchLunarModule", und wählen Sie "StopThruster ()". Dies hat Vorrang, wie viel Schub möchte, dass der Benutzer auf das Modul Mondkalender zu gewähren. 
- ![Lesson6 Chapter5 Step2im](images/Lesson6_Chapter5_step2im.PNG) Schritt 3: Fügen Sie unter "ButtonPressed()" das Mondkalender-Modul (klicken Sie auf, halten und ziehen Sie), um das leere Einschubfach aus. 
+Schritt 1: Wählen Sie die Starttaste aus (in der Basisszene ist dies „LaunchRoundButton“). Ziehen Sie die Mondlandefähre in den leeren Bereich unter „Touch End“ (Ende der Toucheingabe) im Inspektorbereich.
+ ![Lektion6 Kapitel5 Schritt1im](images/Lesson6_Chapter5_step1im.PNG) Schritt 2: Wählen Sie das Dropdownmenü mit der Aufschrift „No Function“ (Keine Funktion) aus. Bewegen Sie den Mauszeiger über „LaunchLunarModule“, und wählen Sie „StopThruster ()“ aus. Dadurch wird gesteuert, wie viel Schub der Benutzer der Mondlandefähre gestatten möchte. 
+ ![Lektion6 Kapitel5 Schritt2im](images/Lesson6_Chapter5_step2im.PNG) Schritt 3: Fügen Sie unter „ButtonPressed()“ die Mondlandefähre (klicken, halten und ziehen) zum leeren Bereich hinzu. 
 
-Schritt 4: Klicken Sie auf das Dropdownmenü, aus der hervorgeht, "keine Funktion", zeigen Sie auf "LaunchLunarModule", und wählen Sie "StartThruster ()". 
- ![Lesson6 Chapter5 Step4im](images/Lesson6_Chapter5_step4im.PNG) Schritt 5: Fügen Sie Musik an das Modul Mondkalender, sodass bei der Rocket höhenflug, Musik spielen wird. Ziehen Sie zu diesem Zweck das Mondkalender-Modul, das nächste leere Einschubfach aus, klicken Sie unter "Schaltfläche Pressed()".
+Schritt 4: Klicken Sie auf das Dropdownmenü mit der Bezeichnung „No Function“ (Keine Funktion), und wählen Sie „StartThruster ()“ aus. 
+ ![Lektion6 Kapitel5 Schritt4im](images/Lesson6_Chapter5_step4im.PNG) Schritt 5: Fügen Sie der Mondlandefähre Musik hinzu, sodass beim Start der Rakete die Musik wiedergegeben wird. Ziehen Sie dazu die Mondlandefähre unter „Button Pressed()“ in den nächsten freien Bereich.
 
-Schritt 6: Wählen Sie im Dropdownmenü die Fehlermeldung "keine Funktion", zeigen Sie auf "AudioSource", und wählen Sie "PlayOneShot (AudioClip)". Untersuchen die Vielzahl von Sounds in der MRTK enthalten können. In diesem Beispiel werden wir bleiben Sie mit "MRTK_Gem."
- ![Lesson6 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
+Schritt 6: Wählen Sie das Dropdownmenü mit der Aufschrift „No Function“ (Keine Funktion) aus, bewegen Sie den Mauszeiger über die Option „AudioSource“ (Audioquelle), und wählen Sie „PlayOneShot (AudioClip)“ aus. Sie können jederzeit die Vielfalt der im MRTK enthaltenen Sounds erkunden. Für dieses Beispiel werden wir bei „MRTK_Gem“ bleiben.
+ ![Lektion6 Kapitel5 Schritt6im](images/Lesson6_Chapter5_step6im.PNG)
 
 
 ### <a name="congratulations"></a>Herzlichen Glückwunsch! 
-Sie haben diese Anwendung vollständig konfiguriert. Nun, wenn Sie auf "Play" klicken, können Sie vollständig Moduls Mondkalender zusammenstellen, Hinweise zu wechseln, starten Sie das Modul Mondkalender, und setzen sie ganz von vorn erneut tun.
+Sie haben diese Anwendung vollständig konfiguriert! Wenn Sie jetzt die Wiedergabetaste drücken, können Sie die Mondlandefähre vollständig montieren, Hinweise umschalten, die Mondlandefähre starten und die Umgebung zurücksetzen, um wieder von vorne zu beginnen.

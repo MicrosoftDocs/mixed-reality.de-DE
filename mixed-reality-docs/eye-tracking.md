@@ -1,138 +1,138 @@
 ---
-title: Eye-tracking
-description: Eye-tracking
+title: Eyetracking – Blickverfolgung
+description: Eyetracking – Blickverfolgung
 author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Nachverfolgen von Auge, Mixed Reality "," Input "," Eye Blicke
+keywords: Eyetracking, Blickverfolgung, Mixed Reality, Eingabe, Anvisieren mit den Augen
 ms.openlocfilehash: 7298a34a946f86aaf789cfe44ad971169fc8ece3
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66453699"
 ---
-# <a name="eye-tracking-on-hololens-2"></a>Eye-tracking für HoloLens 2
-HoloLens 2 ermöglicht die für eine ganz neue Ebene von Kontext und menschliche Verständnis holografischen Benutzeroberfläche durch, um Entwicklern die unglaublichen Möglichkeit der Verwendung von Informationen, was Benutzer betrachten. Diese Seite bietet einen Überblick darüber, wie Entwickler von Eye-Überwachung für verschiedene Anwendungsfälle profitieren können und was Sie beachten müssen, wenn Eye-Blicke-basierten Benutzeroberflächen zu entwerfen. 
+# <a name="eye-tracking-on-hololens-2"></a>Blickverfolgung auf HoloLens 2
+Mit HoloLens 2 erschließt sich in Bezug auf Kontext und menschliches Verständnis eine ganz neue Ebene der holografischen Erfahrung. Das Gerät bietet Entwicklern nämlich die unglaubliche Möglichkeit, Informationen zur Zielanvisierung mit den Augen und zur Blickbewegung des Benutzers zu verwenden. Diese Seite gibt einen Überblick darüber, wie Entwickler bei verschiedenen Anwendungsfällen von der Blickverfolgung profitieren können und was sie beim Entwerfen von Benutzeroberflächen beachten müssen, bei denen das Anvisieren mit den Augen die Grundlage bildet. 
 
 ## <a name="use-cases"></a>Anwendungsfälle
-Eye-tracking kann Anwendungen überwachen, in denen der Benutzer in Echtzeit sucht. Dieser Abschnitt beschreibt einige der möglichen Anwendungsfälle und neuartige Interaktionen, die mit Eye-tracking in mixed Reality möglich werden.
-Bevor Sie beginnen, in der folgenden wird erläutert die [Mixed Reality-Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) mehrere Male auf, da sie einige Beispiele für interessanter und leistungsfähiger bereitstellt, für die Verwendung von Eye nachverfolgen, wie z. B. schnelle und mühelose Eye-unterstützt-Ziel Auswahl und automatisch einen Bildlauf Text basierend auf, in dem der Benutzer am sucht. 
+Mit der Blickverfolgung können Anwendungen in Echtzeit verfolgen, wohin der Benutzer schaut. In diesem Abschnitt werden einige mögliche Anwendungsfälle und neuartige Interaktionen beschrieben, die in der Mixed Reality-Umgebung mit der Blickverfolgung möglich sind.
+Bevor Sie beginnen: Im Folgenden wird mehrmals der [Mixed Reality-Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) erwähnt, da mit ihm mehrere interessante und leistungsfähige Beispiele für die Blickverfolgung bereitgestellt werden, wie beispielsweise die schnelle und mühelose blickgestützte Zielauswahl und das automatische Scrollen durch Text anhand des Blickverlaufs des Benutzers. 
 
 ### <a name="user-intent"></a>Benutzerabsicht    
-Informationen zu, in denen ein Benutzer untersucht, bietet eine leistungsstarke **Kontext für die anderen Eingaben**, z. B. Sprach-, praktische und Controller.
+Die Informationen zu den Punkten, auf die der Benutzer schaut, bilden einen leistungsfähigen **Kontext für andere Eingaben** (z.B. Sprach- und Handeingaben und Eingaben über den Controller).
 Dies kann für verschiedene Aufgaben verwendet werden.
-Beispielsweise diese reichen von schnell und mühelos **für** in der Szene, indem Sie einfach ggf. ein Hologramm ansehen und sagen "select" (Siehe auch [Head-Blicke und Commit](gaze-and-commit.md)) oder indem Sie sagen, "put dies...", klicken Sie dann über möchten, sollen die Hologramm platzieren und klicke auf "... There". Beispiele hierfür finden Sie im [Mixed Reality-Toolkit – Zielauswahl Eye-Unterstützung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) und [gemischte Realität-Toolkit – Eye unterstützte Ziel Positionierung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+Das beginnt beispielsweise bei der schnellen und mühelosen **Zieladressierung** in der Szene, indem der Benutzer einfach ein Hologramm anvisiert und „Auswählen“ sagt (siehe auch [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)). Oder der Benutzer sagt „Auswählen, Verschieben“, visiert dann den Punkt an, an dem das Hologramm platziert werden soll, und sagt „...hierhin“. Beispiele hierfür finden Sie in den Artikeln [Mixed Reality Toolkit – Eye-supported Target Selection](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) (Mixed Reality-Toolkit – Blickgestützte Zielauswahl) und [Mixed Reality Toolkit – Eye-supported Target Positioning](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html) (Mixed Reality-Toolkit – Blickgestützte Zielpositionierung).
 
-Ein weiteres Beispiel für die Benutzerabsicht herausgeberkontos ausgewiesenen Form mithilfe von Informationen über Benutzer betrachten die Mitwirkung von beispielsweise virtuelle Agents und interaktive Hologramme zu verbessern. Klicken Sie z. B. virtuelle Agents können die verfügbare Optionen anpassen, und ihr Verhalten entsprechend der derzeit auf angezeigt Inhalt. 
+Ein weiteres Beispiel für die Benutzerabsicht ist beispielsweise die Nutzung der Informationen zu den Punkten, auf die ein Benutzer schaut, um den Einsatz der enthaltenen virtuellen Agents und interaktiven Hologramme zu verbessern. Virtuelle Agents können beispielsweise die verfügbaren Optionen und deren Verhalten anhand des aktuell anvisierten Inhalts anpassen. 
 
 ### <a name="implicit-actions"></a>Implizite Aktionen
-Die Kategorie der implizite Aktionen bezieht sich genau auf der Benutzerabsicht verwendet wird.
-Die Idee ist, dass Hologramme oder Elemente der Benutzeroberfläche auf etwas instinctual Weise, die nicht selbst vielleicht den Eindruck reagieren, wie Sie mit dem System alle, sondern vielmehr interagiert werden, dass das System und der Benutzer synchronisiert sind. Ein Beispiel für die äußerst erfolgreiche ist z. B. **Eye-Blicke basierende AutoBildlauf**. Die Idee ist einfach: Der Benutzer einen Text liest und kann nur weiterlesen. Der Text verschiebt allmählich nach oben zu Benutzern in ihrer Flow lesen. Ein wichtiger Aspekt ist, dass die Geschwindigkeit des Bildlaufs an die Geschwindigkeit beim Lesen des Benutzers anpasst.
-Ein weiteres Beispiel ist **Eye unterstützte Zoom- und schwenkoptionen** für die der Benutzer profitieren wie näher eingegangen wird genau auf was er am konzentriert. Das Auslösen für den Zoomfaktor und die Zoom-Geschwindigkeit steuern über Voice gesteuert werden können oder übergeben die Eingabe, die zum Bereitstellen im Gefühl der Kontrolle wichtig ist, und vermeiden einer Überlastung des Benutzers (wird diese Entwurfsrichtlinien im folgenden ausführlicher erläutert). Nachdem das Diagramm vergrößert ist, kann der Benutzer klicken Sie dann reibungslos, z. B. die eine Straße auf seinem Nachbarschaft zu entdecken, indem Sie ihren Augen Blicke einfach durchzuführen.
-Demo-Beispiele für diese Arten von Aktivitäten finden Sie in der [Mixed Reality-Toolkit - Navigation Eye-Unterstützung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) Beispiel.
+Die Kategorie der impliziten Aktionen steht in enger Beziehung zur Benutzerabsicht.
+Die Idee ist, dass Hologramme oder Elemente der Benutzeroberfläche auf eine mehr instinktive Art und Weise reagieren, wodurch vielleicht nicht einmal der Eindruck entsteht, dass der Benutzer mit dem System interagiert, sondern dass System und Benutzer synchron arbeiten. Ein besonders erfolgreiches Beispiel hierfür ist das **automatische Scrollen durch Anvisieren mit den Augen**. Die Idee ist einfach: Der Benutzer liest einen Test und kann einfach weiter lesen. Der Text verschiebt sich allmählich nach oben, um den Lesefluss des Benutzers zu unterstützen. Ein wichtiger Aspekt ist, dass sich die Scrollgeschwindigkeit an die Lesegeschwindigkeit des Benutzers anpasst.
+Ein weiteres Beispiel ist das **blickgestützte Zoomen und Schwenken**, bei dem der Benutzer das Gefühl hat, genau in das einzutauchen, worauf er sich konzentriert. Das Auslösen des Zoomvorgangs und das Steuern der Zoomgeschwindigkeit kann über Sprach- oder Handeingaben erfolgen, was wichtig ist, um dem Benutzer ein Gefühl der Kontrolle zu vermitteln und eine Überforderung zu vermeiden (diese Entwurfsrichtlinien werden im Detail weiter unten behandelt). Nach dem Vergrößern kann der Benutzer dann nahtlos durch Anvisieren mit den Augen zum Beispiel einem Straßenverlauf folgen und seine Umgebung erkunden.
+Demobeispiele für diese Arten von Interaktion finden Sie im Beispiel [Mixed Reality Toolkit – Eye-supported Navigation](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) (Mixed Reality-Toolkit – Blickgestützte Navigation).
 
-Weitere Anwendungsfälle für _implizite Aktionen_ herausgeberkontos ausgewiesenen Form:
-- **Intelligente Benachrichtigungen:** Je abrufen nicht mögen von Benachrichtigungen oben rechts, in dem Sie sich konzentrieren, wurden, entfernt wurde? Beachten Sie dabei, in denen ein Benutzer derzeit auf Kosten, können Sie es besser machen! Zeigen Sie Benachrichtigungen, die Abweichung von der, in denen der Benutzer derzeit suchen wird, um ablenkungen zu beschränken, und schließen sie automatisch einmal gelesen. 
-- **Basiert auf aufmerksamer Hologramme:** Hologramme, die leicht zu reagieren, wenn betrachtet wird. Dies kann eine langsam boomende Blume virtuelles Haustier Ausgangspunkt zurück betrachten Sie oder Ihre Augen Blicke vermeiden Sie nach einem längeren Vorgang verfolgen möchten zwischen etwas leuchtendes UI-Elemente liegen. Dies kann eine interessante sinnvoll sein, der Konnektivität und die Kundenzufriedenheit in Ihrer app bereitstellen.
+Weitere Anwendungsfälle für _implizite Aktionen_:
+- **Intelligente Benachrichtigungen**: Ärgern Sie sich auch jedes Mal, wenn Benachrichtigungen dort angezeigt werden, wohin Sie gerade schauen? Wenn Sie berücksichtigen, worauf die Aufmerksamkeit eines Benutzers gerichtet ist, können Sie es besser machen! Zeigen Sie Benachrichtigungen mit einem Offset von der Stelle an, auf die der Benutzer aktuell schaut, um Ablenkungen auf ein Minimum zu beschränken. Schließen Sie die Benachrichtigungen automatisch, nachdem der Benutzer sie zu Ende gelesen hat. 
+- **„Aufmerksame“ Hologramme:** Hologramme können fast unmerklich reagieren, wenn sie angeschaut werden. Dies können leicht erglühende Oberflächenelemente, eine langsam erblühende Blume oder ein virtuelles Haustier sein, das beginnt, Ihren Blick zu erwidern, oder das nach einer Weile des Anvisierens den Blick abwendet. Dies kann in Ihrer App zu einem interessanten Gefühl von Verbundenheit und Zufriedenheit führen.
 
-### <a name="attention-tracking"></a>Nachverfolgen von Aufmerksamkeit   
-Informationen zu, in denen Benutzer betrachten ist ein unglaublich leistungsfähiges Tool zur Bewertung der Nutzbarkeit von Designs und Probleme effizient Arbeitsschritte zu identifizieren. Mittlerweile sind Eye-tracking visualisierungs- und Analysefunktionen bereits üblicherweise in verschiedenen Anwendungsbereichen. Mit HoloLens-2 bieten wir eine neue Dimension ein, um dieses Verständnis, wie 3D Hologramme in realen Kontexten platziert und zusammen mit bewertet werden können. Die [Mixed Reality-Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) enthält grundlegende Beispiele, für die Protokollierung und Eye-tracking Daten geladen und für das sie visuell darzustellen.
+### <a name="attention-tracking"></a>Aufmerksamkeitsverfolgung   
+Informationen zu den Punkten, auf die der Benutzer schaut, stellen ein unglaublich leistungsfähiges Tool zur Bewertung der Benutzerfreundlichkeit von Designs und zum Identifizieren von Problemen in effizienten Arbeitsabläufen dar. Mittlerweile sind Visualisierung und Analyse mittels Blickverfolgung in verschiedenen Anwendungsbereichen bereits gängige Praxis. Mit HoloLens 2 stellen wir eine neue Dimension für diese Grundlagen bereit, da 3D-Hologramme in reale Kontexte platziert und parallel mit diesen bewertet werden können. Der [Mixed Reality-Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) enthält grundlegende Beispiele für das Protokollieren und Laden von Blickverfolgungsdaten sowie für das Visualisieren dieser Daten.
 
-Andere Anwendungen in diesem Bereich können Folgendes umfassen: 
--   **Remote Eye Blicke Visualisierung:** Visualisieren, was remote Projektmitarbeiter, z. B. betrachten, stellen Sie sicher, ob Anweisungen richtig verstanden und befolgt werden.
--   **Research Benutzerstudien:** Aufmerksamkeit nachverfolgen kann, sehen Sie sich die Anfänger und Experten Benutzer visuell zu analysieren, Inhalt oder ihre Hand-Augen-Koordinierung für komplexe Aufgaben (z. B. für die Analyse, medizinische Daten oder beim Betrieb von Maschinen) verwendet werden.
--   **Training Simulationen und Überwachung der Anwendungsleistung:** Üben Sie, und Optimieren Sie die Ausführung von Aufgaben, durch das Erkennen von Engpässen effektiver auf den Ausführungsablauf.
--   **Entwerfen Sie Bewertungen, Ankündigungen und marketing Research:** Eye-tracking ist ein gängiges Tool für marktforschungs-Website und Produktentwürfe ausgewertet.
+Zu diesem Bereich zählen möglicherweise auch die folgenden Anwendungen: 
+-   **Visualisieren des entfernten Anvisierens mit den Augen:** Visualisieren Sie, worauf entfernte Projektmitarbeiter schauen, um z.B. sicherzustellen, dass Anweisungen richtig verstanden und befolgt werden.
+-   **Forschungsstudien zum Benutzerverhalten:** Anhand der Aufmerksamkeitsverfolgung kann untersucht werden, wie unerfahrene Benutzer im Vergleich zu erfahrenen Benutzern Inhalte visuell analysieren oder bei komplexen Aufgaben (z.B. Analyse medizinischer Daten oder beim Betrieb von Maschinen) die Hand-/Augeninteraktion koordinieren.
+-   **Schulungssimulationen und Leistungsüberwachung:** Üben Sie die Ausführung von Aufgaben, und optimieren Sie diese, indem Sie Engpässe im Ausführungsablauf effektiver identifizieren.
+-   **Entwurfsbewertungen, Werbung und Marktforschung:** Die Blickverfolgung ist ein gängiges Tool für die Marktforschung, um Website -und Produktentwürfe zu bewerten.
 
-### <a name="additional-use-cases"></a>Zusätzliche Szenarien
-- **Spiele:** Wollten Sie jemals Finger geradezu übernatürliche Kräfte haben? Hier ist Ihre Gelegenheit! Levitate Hologramme durch diese Ertragen. Schießen Sie Laser Balken aus Ihren Augen ein. Verwandeln Sie Feinde in Stein gemeißelt oder einfrieren. Verwenden Sie Ihre Vision Röntgen Gebäude zu untersuchen. Ihre Vorstellungskraft liegt die Beschränkung!  
+### <a name="additional-use-cases"></a>Weitere Anwendungsfälle
+- **Spiele:** Wollten Sie jemals übernatürliche Kräfte haben? Hier kommt Ihre Chance! Lassen Sie Hologramme durch Anvisieren frei schweben. Schießen Sie Laserstrahlen aus Ihren Augen. Verwandeln Sie Feinde in Stein, oder frieren Sie sie ein. Verwenden Sie Ihren Röntgenblick, um Gebäude zu erkunden. Ihrer Phantasie sind keine Grenzen gesetzt!  
 
-- **Ausdrucksbasierte Avatare:** Eye-tracking ausdrucksvoller 3D Avatare unterstützt die Internetsuche mithilfe von live blickbewegungsregistrierung Datum zum Animieren des Avatars die Augen, um anzugeben, was der Benutzer derzeit ausgewertet wird. Darüber hinaus wird mehrere Ausdruckskraft hinzugefügt, durch Hinzufügen von Animoticons und blinkt. 
+- **Ausdrucksstarke Avatare:** Die Blickverfolgung ermöglicht ausdrucksvollere 3D-Avatare. Mithilfe der Blickverfolgungsdaten in Echtzeit lassen sich die Augen des Avatars so animieren, dass sie darauf hinweisen, worauf der Benutzer aktuell schaut. Durch zusätzliches Zwinkern und Blinzeln wird außerdem mehr Ausdruckskraft erzielt. 
 
-- **Texteingabe:** Eye-tracking kann als eine interessante Alternative für die Texteingabe mit geringer Leistung verwendet werden, insbesondere wenn schüren oder Hände Ereignislisten als unpraktisch werden. 
-
-
-## <a name="eye-tracking-api"></a>Eye-Tracking-API
-Vor dem Wechsel in die Details für den bestimmten Entwurfsrichtlinien für die Interaktion mit Eye-Blicke, wollen wir kurz auf die Funktionen verweisen, die die HoloLens-2-Augen-nachverfolgung bereitstellt. Die [Eye-Tracking-API](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) über zugegriffen werden kann: `Windows.Perception.People.EyesPose`. Es bietet eine einzelne Eye Blicke-Ray (Blicke Ursprung und Richtung) für Entwickler.
-Die nachverfolgung Eye enthält Daten über _30 FPS_.
-Die vorhergesagten Eye Blicke liegt innerhalb der Zertifizierungsstelle. 1.0 – 1,5 Grad, die am Ziel in visual Winkel um die tatsächlichen gesucht werden. Wie geringfügige Ungenauigkeiten erwartet werden, sollten Sie für einen gewissen Spielraum, um diesen Wert für die untere Grenze planen. Wir besprechen dies mehr unten. Für Eye-tracking korrekt funktioniert muss jeder Benutzer eine Eye-tracking Benutzer Kalibrierung durchlaufen. 
-
-![Optimale Zielgröße im Abstand von 2 Verbrauchseinheit](images/gazetargeting-size-1000px.jpg)<br>
-*Optimale Zielgröße im Abstand von 2 Verbrauchseinheit*
+- **Texteingabe:** Die Blickverfolgung kann als interessante Alternative für eine Texteingabe mit wenig Aufwand verwendet werden, besonders wenn die Benutzung von Sprache oder Händen unpraktisch ist. 
 
 
-## <a name="eye-gaze-design-guidelines"></a>Richtlinien zum Entwerfen von Eye Blicke
-Erstellen eine Aktivität, die schnell Anwendungen verschieben Eye für nutzt, kann eine Herausforderung darstellen. In diesem Abschnitt zusammengefasst wird, die wichtigsten Vorteile und Herausforderungen in Betracht ziehen, wenn Sie Ihre app zu entwerfen. 
+## <a name="eye-tracking-api"></a>Blickverfolgungs-API
+Bevor wir zu den Einzelheiten der speziellen Entwurfsrichtlinien für die Interaktion durch Anvisieren mit den Augen kommen, möchten wir kurz auf die Funktionen eingehen, über die der Eyetracker von HoloLens 2 verfügt. Auf die [Blickverfolgungs-API](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) kann über `Windows.Perception.People.EyesPose` zugegriffen werden. Sie stellt Entwicklern einen einzelnen Lichtstrahl zum Anvisieren mit den Augen (Anvisierursprung und -richtung) bereit.
+Der Blickverfolger (Eyetracker) stellt Daten mit einer Bildfrequenz von etwa _30 FPS_ bereit.
+Das prognostizierte Anvisieren mit den Augen liegt in einem Sehwinkel von ca. 1,0-1,5 Grad um das tatsächlich anvisierte Ziel. Da geringfügige Ungenauigkeiten zu erwarten sind, sollten Sie einen gewissen Spielraum um diesen unteren Wert einplanen. Dies wird im weiteren Verlauf noch behandelt. Damit die Blickverfolgung exakt funktioniert, muss jeder Benutzer eine Benutzerkalibrierung für seine Blickverfolgung durchlaufen. 
 
-### <a name="benefits-of-eye-gaze-input"></a>Vorteile der Eye blickverlaufseingabe
-- **Zeigen hohe Geschwindigkeiten.** Die Augen zu Nutze ist der am schnellsten reacting Muskel in unseren Text. 
-
-- **Niedriger Aufwand.** Kaum physische Bewegungen sind erforderlich. 
-
-- **Implicitness.** Häufig von Benutzern als "Beachten Sie beim Lesen" beschrieben, kann Informationen über Bewegungen, die Augen des Benutzers das System zu informieren, die als Ziel der benutzertarife, um mit in Verbindung setzen. 
-
-- **Alternative Eingabekanal.** Eye Blicke kann eine leistungsfähige Unterstützung Eingabe für die Hand und stimme Eingabe Erstellung bereitstellen auf langjähriger Erfahrung von Benutzern, die basierend auf ihre Hand-Augen-Koordinierung.
-
-- **Visual Aufmerksamkeit.** Ein anderer wichtiger Vorteil ist die Möglichkeit, abgeleitet, was eines Benutzers auf Kosten. Diese kann in verschiedenen Anwendungsbereichen, die im Bereich von mehr effektive Auswertung unterschiedlichen Entwürfe, die dadurch intelligenter Benutzeroberflächen und soziale Hinweise für die Remotekommunikation verbessert.
-
-Kurz gesagt, Eye Blicke verwenden, wie eine Eingabe möglicherweise schnell und mühelos kontextbezogene Signal - bietet dies ist besonders effektiv in Kombination mit anderen Eingaben wie z. B. *Voice* und *manuelle* Eingaben an Vergewissern Sie sich die Absicht des Benutzers.
+![Optimale Zielgröße im Abstand von 2 Metern](images/gazetargeting-size-1000px.jpg)<br>
+*Optimale Zielgröße im Abstand von 2 Metern*
 
 
-### <a name="challenges-of-eye-gaze-as-an-input"></a>Herausforderungen bei der Eye bestaunen als Eingabe
-Mit viel Strom Leistungspotenzial zuständig: Während Eye Blicke verwendet werden kann, um magische Benutzeroberflächen, wie eine Superheld zu erstellen, ist es auch wichtig zu wissen, was es nicht gut mit Konto für diese angemessen ist. Im folgenden wird erörtert einige *Herausforderungen* Konto und zu ihnen zu begegnen, bei der Arbeit mit Eye blickverlaufseingabe berücksichtigen: 
+## <a name="eye-gaze-design-guidelines"></a>Entwurfsrichtlinien für das Anvisieren mit den Augen
+Das Erstellen einer Interaktion, welche die schnelle und bewegliche Zieladressierung mit den Augen nutzt, kann eine Herausforderung darstellen. In diesem Abschnitt sind die wichtigsten Vorteile und Herausforderungen zusammengefasst, die Sie beim Entwerfen Ihrer App berücksichtigen sollten. 
 
-- **Ihre Augen Blicke ist "always on-** dem Moment, die Sie Ihrem Deckel Augen öffnen Ihren Augen langsam fixating in Ihrer Umgebung. Reagieren, die jeder Sie sehen, stellen und Aktionen möglicherweise versehentlich ausgegeben werden, da Sie betrachtet etwas für lange würde eine schlechte Erfahrung.
-Aus diesem Grund empfiehlt kombinieren Eye Blicke mit ist eine *voice-Befehl*, *Geste übergeben*, *Schaltflächenklick* oder erweiterte Dwell zum Auslösen der Auswahl eines Ziels.
-Diese Lösung ermöglicht es auch für einen Modus, in dem der Benutzer frei ohne die überwältigend Gefühl der auslösenden unfreiwillig etwas gesucht werden kann um. Dieses Problem sollte auch berücksichtigt werden, wenn visual und akustische Feedback zu entwerfen, wenn Sie lediglich ein Ziel untersuchen.
-Überlasten Sie den Benutzer mit der unmittelbaren Popout-Auswirkungen und zeigen Sie mit Sounds nicht. Besonderheit ist entscheidend. Einige bewährten Methoden werden für diese weiter unten besprochen beim Sprechen Empfehlungen für den Entwurf.
+### <a name="benefits-of-eye-gaze-input"></a>Vorteile der Eingabe durch Anvisieren mit den Augen
+- **Zeigen mit hoher Geschwindigkeit.** Der Augenmuskel ist der am schnellsten reagierende Muskel in unserem Körper. 
 
-- **Beobachtung und Steuerelement** Imagine genau ein Foto auf der Pinnwand ausgerichtet werden sollen. Überprüfen Sie zunächst die Rahmen und dessen Umgebung um festzustellen, ob sie gut entspricht. Angenommen Sie, wie Sie dies tun würden, wenn zur gleichen Zeit Sie Ihre Augen Blicke als Eingabe verwenden, um das Bild zu verschieben möchten. Nicht schwierig, WAHR? Hier wird die doppelte Rolle Eye Blicke beschrieben, bei Bedarf sowohl für Eingabe- und Steuerelement. 
+- **Wenig Aufwand.** Es sind kaum physische Bewegungen erforderlich. 
 
-- **Lassen Sie vor dem klicken:** Bei einer schnellen Ziel Auswahl Research ergab, dass eines Benutzers Eye Blicke verschieben kann, vor dem Abschluss einer manuellen klicken Sie auf (z. B. eine Airtap). Daher müssen besondere Aufmerksamkeit bis hin zur Synchronisierung des schnelle Eye Blicke Signals mit langsamer Steuerelementeingabe (z. B. Sprach-, praktische, Controller).
+- **Selbstverständlichkeit.** Informationen zu den Blickbewegungen des Benutzers geben dem System Informationen zu dem Ziel, mit dem der Benutzer in Kontakt treten möchte, was häufig von Benutzern als „Gedankenlesen“ bezeichnet wird. 
 
-- **Kleine Ziele:** Kennen Sie das Gefühl, wenn Sie versuchen, den Text zu lesen, die nur ein wenig zu klein ist, um bequem zu lesen ist? Diese überzustrapazieren Gefühl für die Augen, die dazu führen, Sie es vielleicht leid und Verschlissene fühlen dass, weil Sie versuchen, Ihren Augen zu konzentrieren, die eine bessere Anpassung?
-Hierbei handelt es sich um einen Eindruck, die, den Sie bei Auswählen der zu klein Ziele in Ihrer app, die Augen der Zielgruppenadressierung auf Ihre Benutzer aufrufen können.
-Für den Entwurf um eine angenehme und wissen, Erfahrung für Benutzer zu erstellen. empfehlen wir Ziele mindestens 2 Grad in visual Winkel, vorzugsweise größer werden soll.
+- **Alternativer Eingabekanal.** Das Anvisieren mit den Augen kann eine leistungsfähige Unterstützung für die Hand- und Spracheingabe darstellen und beruht auf jahrelanger Erfahrung mit der Hand-/Augen-Koordination bei Benutzern.
 
-- **Unregelmäßige Eye Blicke Bewegungen** im Auge führen Sie eine schnelle Bewegungen von Fixation, Fixation. Wenn Sie die Überprüfung von Pfaden von aufgezeichneten Eye-Bewegungen betrachten, sehen Sie sich, dass sie unregelmäßige aussehen. Verschieben Sie Ihren Augen schnell und spontane Sprünge im Vergleich zur *Head Blicke* oder *übergeben Bewegungen*.  
+- **Visuelle Aufmerksamkeit.** Ein weiterer wichtiger Vorteil ist die Möglichkeit, abzuleiten, auf was ein Benutzer seine Aufmerksamkeit richtet. Dies kann in verschiedenen Anwendungsbereichen nützlich sein, angefangen bei der effektiveren Auswertung unterschiedlicher Entwürfe über intelligentere Benutzeroberflächen bis hin zu erweiterten sozialen Hinweisen für die Remotekommunikation.
 
-- **Verfolgen Zuverlässigkeit:** Eye-tracking Genauigkeit beeinträchtigt ein bisschen Licht ändern, wenn im Auge zu den neuen Bedingungen anpassen.
-Während dies nicht unbedingt Ihr app-Design auswirken soll, sollte als die Genauigkeit der oben genannten Einschränkung von 2 Grad liegen. Dies kann bedeuten, dass der Benutzer hat eine andere Kalibrierung ausgeführt. 
+Kurz gesagt, die Eingabe durch das Anvisieren mit den Augen bietet potenziell ein schnelles und müheloses kontextbezogenes Signal, das besonders in Kombination mit anderen Eingaben wie *Sprach-* und *Hand*eingaben sehr leistungsstark ist, um die Benutzerabsicht zu bestätigen.
+
+
+### <a name="challenges-of-eye-gaze-as-an-input"></a>Herausforderung bei der Eingabe durch Anvisieren mit den Augen
+Mit viel Leistungspotenzial geht eine hohe Verantwortung einher: Auch wenn das Anvisieren mit den Augen zum Erstellen magischer Benutzererfahrungen (der Benutzer fühlt sich wie ein Superheld) verwendet werden kann, ist es wichtig zu wissen, wofür es nicht geeignet ist und dies entsprechend zu berücksichtigen. Im Folgenden werden einige *Herausforderungen*, die bei der Arbeit mit Eingaben durch Anvisieren mit den Augen auftreten und zu beachten sind, erörtert und Lösungsansätze aufgezeigt: 
+
+- **Das Anvisieren mit den Augen ist „immer aktiv“** In dem Moment, in dem Sie das Augenlid öffnen, beginnen Ihre Augen, Dinge in Ihrer Umgebung zu fixieren. Wenn auf jeden Ihrer Blicke eine Reaktion erfolgte und Sie möglicherweise versehentlich Aktionen auslösten, da Sie etwas zu lange betrachtet haben, wäre dies eine erschreckende Erfahrung!
+Aus diesem Grund empfehlen wir, das Anvisieren mit den Augen mit einem *Sprachbefehl*, einer *Handgeste*, dem *Anklicken einer Schaltfläche* oder einer verlängerten Verweilzeit zu kombinieren, um die Auswahl eines Ziels auszulösen.
+Diese Lösung ermöglicht auch einen Modus, in dem der Benutzer frei umherschauen kann, ohne das erdrückende Gefühl haben zu müssen, versehentlich etwas auszulösen. Dieses Problem sollte auch beim Entwerfen von visuellem und akustischem Feedback berücksichtigt werden, wenn der Benutzer lediglich ein Ziel anschaut.
+Überfordern Sie den Benutzer nicht mit sofortigen Popup-Effekten oder Sounds beim kurzen Verweilen auf einem Ziel. „Dezent“ ist das Mittel der Wahl! Weiter unten werden im Zusammenhang mit den Entwurfsempfehlungen einige bewährte Methoden hierfür erläutert.
+
+- **Betrachten und Steuern** Stellen Sie sich vor, Sie möchten ein Bild an der Wand genau ausrichten. Sie schauen zuerst auf den Rahmen und dann auf die Umgebung, um festzustellen, ob es richtig ausgerichtet ist. Stellen Sie sich jetzt vor, wie Sie vorgehen würden, wenn Sie das Anvisieren mit Ihren Augen gleichzeitig als Eingabe zum Verschieben des Bilds verwenden möchten. Schwierig, nicht wahr? Dies beschreibt die doppelte Rolle des Anvisierens mit den Augen, wenn es gleichzeitig für Eingabe und Steuerung verwendet wird. 
+
+- **Abwenden vor dem Klicken:** Untersuchungen haben gezeigt, dass sich bei der schnellen Zielauswahl der Blick des Benutzers möglicherweise bereits vor dem Ausführen eines manuellen Klicks (z.B. Tippen in die Luft) abgewendet hat. Daher ist bei der Synchronisierung des schnellen Blicksignals beim Anvisieren mit den Augen mit der langsameren Steuereingabe (z.B. Sprach- oder Handbefehl, Eingabe über Controller) besondere Aufmerksamkeit geboten.
+
+- **Kleine Ziele:** Kennen Sie das Gefühl, wenn Sie versuchen, einen Text zu lesen, der nur ein wenig zu klein ist, um ihn bequem lesen zu können? Dieses Gefühl überstrapazierter Augen, das dazu führt, dass Sie sich ermüdet und gestresst fühlen, weil Sie versuchen, Ihre Augen neu zu justieren, um besser fokussieren zu können?
+Dieses Gefühl rufen Sie möglicherweise bei Ihren Benutzern hervor, wenn Sie diese zwingen, bei der Zieladressierung mit den Augen zu kleine Ziele auszuwählen.
+Damit Sie für Ihre Benutzer eine angenehme und komfortable Erfahrung schaffen, sollte bei Zielen für Ihren Entwurf der Sehwinkel mindestens 2 Grad (vorzugsweise mehr) betragen.
+
+- **Flatterhafte Blickbewegungen** Unsere Augen vollführen von Fixierung zu Fixierung schnelle Bewegungen. Wenn Sie Scanwege aufgezeichneter Blickbewegungen betrachten, können Sie die Flatterhaftigkeit erkennen. Unsere Augen bewegen sich gegenüber dem *Anvisieren mit dem Kopf* oder *Handbewegungen* schnell und springen spontan hin und her.  
+
+- **Zuverlässigkeit der Verfolgung:** Die Genauigkeit der Blickverfolgung wird ein wenig bei sich ändernden Lichtverhältnissen beeinträchtigt, während sich das Auge an die neuen Bedingungen anpasst.
+Dies wirkt sich jedoch nicht unbedingt auf Ihr App-Design aus, da die Genauigkeit innerhalb der oben beschriebenen Grenze von 2 Grad liegen sollte. Dies kann bedeuten, dass der Benutzer hat eine weitere Kalibrierung ausführen muss. 
 
 
 ### <a name="design-recommendations"></a>Entwurfsempfehlungen
-Im folgenden zeigen wir Ihnen Empfehlungen für den bestimmten Entwurf basierend auf der beschriebenen Vorteile und Herausforderungen für Auge bestaunen Eingabe:
+Nachfolgend finden Sie auf Grundlage der beschriebenen Vorteile und Herausforderungen spezielle Entwurfsempfehlungen für die Eingabe durch Anvisieren mit den Augen:
 
-1. **Eye Blicke! = Head Blicke:**
-    - **Beachten Sie, ob schnelle und gleichzeitig unregelmäßige Eye Bewegungen die eingegebene Aufgabe anpassen:** Während unsere Bewegungen, die schnelle und unregelmäßige Eye hervorragend, Ziele schnell über unsere Sichtfeld auszuwählen sind, ist es weniger geeignet für Aufgaben, die smooth Eingabe herabstürzendes erfordern (z. B. zeichnen oder Umschließungsnetzen Anmerkungen). In diesem Fall sollte manuell oder durch Verweisen Head vorgezogen werden.
+1. **„Anvisieren mit den Augen“ unterscheidet sich vom „Anvisieren mit dem Kopf“:**
+    - **Überlegen Sie, ob schnelle, aber gleichzeitig flatterhafte Blickbewegungen zu der Eingabeaufgabe passen:** Während sich schnelle und flatterhafte Blickbewegungen hervorragend für die Auswahl von Zielen im Sichtfeld eignen, sind sie für Aufgaben, die gleichmäßige Eingabeverläufe verlangen (z.B. Zeichnen oder Einkreisen von Bemerkungen) weniger geeignet. In diesem Fall ist das Zeigen mit Hand oder Kopf zu bevorzugen.
   
-    - **Vermeiden Sie ein direktes Anfügen an des Benutzers Eye Blicke (z. B. einen Schieberegler oder Cursor).**
-Im Falle eines Cursors daher kann dies die "Flucht angenommen hat Cursor" Auswirkungen aufgrund geringfügige abweichungen im projizierten Eye Blicke Signal haben. Bei einem Schieberegler steht in Konflikt es mit der doppelten Rolle steuern den Schieberegler mit Ihren Augen beim möchten auch überprüfen, ob das Objekt am richtigen Speicherort ist. Kurz gesagt, Benutzer schnell überwältigt und abgelenkt, vor allem fühlen sich möglicherweise, wenn das Signal für diesen Benutzer unpräzise ist. 
+    - **Vermeiden Sie ein direktes Anfügen von Objekten (z. B. Schieberegler oder Cursor) an den Blickverlauf des Benutzers.**
+Bei einem Cursor kann durch den leichten Offset im projizierten Blicksignal der Effekt des „fliehenden Cursors“ entstehen. Bei einem Schieberegler ergeben sich Konflikte mit der Doppelrolle. Sie möchten einerseits den Schieberegler mit Ihren Augen steuern, gleichzeitig aber auch prüfen, ob sich das Objekt an der richtigen Stelle befindet. Kurz gesagt, der Benutzer kann sich schnell überfordert und abgelenkt fühlen, vor allem, wenn das Signal für diesen Benutzer ungenau ist. 
   
-2. **Kombinieren Sie Eye Blicke, mit anderen Eingaben:** Die Integration von Eye-Tracking mit anderen Eingaben, z. B. gestensteuerung, Sprachbefehlen oder betätigen, hat mehrere Vorteile:
-    - **Lassen Sie kostenlos Beobachtung:** Angesichts der Tatsache, dass die Hauptrolle des im Auge ist unsere Umgebung zu beobachten, unbedingt ermöglichen Benutzern, um anzuzeigen, ohne dass eine (visuellen, akustische,...) Feedback oder Aktionen. 
-    Durch die ET mit einem anderen Eingabesteuerelement kombinieren können, für den Übergang reibungslos zwischen ET Beobachtung und -Steuerelement.
+2. **Kombinieren Sie das Anvisieren mit den Augen mit anderen Eingaben:** Die Integration der Blickverfolgung mit anderen Eingaben (z.B. Gesten, Sprachbefehle oder Drücken von Schaltflächen) hat mehrere Vorteile:
+    - **Möglichkeit der freien Betrachtung:** Angesichts der Tatsache, dass die Hauptrolle der Augen die Betrachtung der Umgebung ist, ist es wichtig, dem Benutzer die Möglichkeit zu geben, sich umzuschauen, ohne ein Feedback (visuell, akustisch usw.) oder eine Aktion auszulösen. 
+    Durch die Kombination der Blickverfolgung mit einer anderen Eingabesteuerung ermöglichen Sie einen sanften Übergang zwischen den Blickverfolgungsmodi der freien Betrachtung und der Eingabesteuerung.
   
-    - **Leistungsstarke Kontextanbieter:** Verwenden Informationen zu, in denen der Benutzer wird beim leistungsstarke eines Sprachbefehl ansehen oder Kanäle mühelos die Eingabe in das Feld-der-Ansicht ermöglicht eine Geste für ein manuell ausführen. Dazu gehören: "Put, die es" zu schnell und nahtlos wählen, und positionieren Sie ggf. ein Hologramm in der Szene, indem Sie einfach nur am Ziel und Ziel zu suchen. 
+    - **Leistungsstarker Kontextanbieter:** Mit den Informationen zu den Punkten, auf die der Benutzer bei der Ausgabe eines Sprachbefehls oder der Ausführung einer Handgeste schaut, können Sie die Eingabe mühelos über das Sichtfeld übermitteln. Beispiele: Mit „Put that there“ (Auswählen, Verschieben, ...hierhin) können Sie schnell und flüssig ein Hologramm auswählen und über die Szene verschieben. Dazu brauchen Sie nur ein Ziel und den Bestimmungsort anzuschauen. 
 
-    - **Erforderlich für die Synchronisierung von Multimodale Eingaben ("lassen sich vor dem Klicken Sie auf"-Problem):** Kombinieren schnelle Bewegungen, die Augen komplexere weitere Eingaben verwenden (z. B. lange Sprachbefehle oder gestensteuerung), trägt das Risiko von vor dem Beenden des zusätzlichen Eingabe-Befehls mit Ihre Augen Blicke fortfahren. Wenn Sie Ihre eigenen Benutzereingabe-Steuerelemente (z. B. benutzerdefinierte gestensteuerung) erstellen, stellen Sie daher Sie sicher, dass sich der Einsatz dieser Eingabe- oder ungefähre Dauer zum Abgleichen mit was für ein Benutzer in der Vergangenheit fixated hatte.
+    - **Multimodale Eingaben müssen synchronisiert werden (Problem des vor dem Klicken abgewendeten Blicks):** Die Kombination schneller Blickbewegungen mit komplexeren weiteren Eingaben (z.B. lange Sprachbefehle oder Handgesten) birgt das Risiko, dass der Benutzer seinen Blick abwendet, bevor er den zusätzlichen Eingabebefehl abgeschlossen hat. Daher sollten Sie beim Erstellen eigener Eingabesteuerungen (z.B. benutzerdefinierte Handgesten) unbedingt das Einsetzen dieser Eingabe und die ungefähre Dauer protokollieren, um dies auf die Fixierdauer abzustimmen, die Benutzer in der Vergangenheit gezeigt haben.
     
-3. **Feine Feedback für Eye-tracking-Eingabe:** Es ist nützlich, um Feedback bereitzustellen, wenn ein Ziel, (um anzugeben, dass das System erwartungsgemäß arbeitet) betrachtet wird, aber feine beibehalten werden sollen. Sind langsam blending in/out-Highlights von visual oder andere geringfügige Ziel-Verhalten, z. B. langsame Bewegungen ausführen (z. B. etwas erhöht das Ziel) um anzugeben, dass ordnungsgemäß wurde festgestellt, dass der Benutzer auf ein Ziel, sieht jedoch ohne Unterbrechen unnötigerweise aktuellen Workflow des Benutzers ein. 
+3. **Dezentes Feedback für Eingaben über die Blickverfolgung:** Es ist zwar nützlich, ein Feedback bereitzustellen, wenn ein Ziel anvisiert wird (um anzugeben, dass das System erwartungsgemäß funktioniert), jedoch sollte es dezent gehalten werden. Dazu zählen möglicherweise das langsame Ein- und Ausblenden von visuellen Markierungen oder das fast unmerkliche Verhalten anderer Ziele wie in Zeitlupe (z.B. leichtes Vergrößern des Ziels), um anzugeben, dass das System korrekt das Anvisieren eines Ziels durch den Benutzer erkannt hat, jedoch ohne unnötigerweise den aktuellen Workflow des Benutzers zu unterbrechen. 
 
-4. **Vermeiden Sie die Erzwingung von unnatürlichen Eye Bewegungen, die als Eingabe:** Erzwingen Sie keinen Benutzer bestimmte Eye Bewegungen (Blicke Bewegungen) zum Auslösen von Aktionen in Ihrer app ausführen.
+4. **Vermeiden des Erzwingens unnatürlicher Augenbewegungen für die Eingabe:** Zwingen Sie Ihre Benutzer nicht, zum Auslösen von Aktionen in Ihrer App bestimmte Augenbewegungen (Fixierbewegungen) auszuführen.
 
-5. **Konto für Ungenauigkeiten:** Wir können zwei Arten von Ungenauigkeiten sind für Benutzer bemerkbar: Offset und Jitter. Die einfachste Möglichkeit, die Offsets der Adresse ist zu groß genug Ziele für die Interaktion mit (> 2° in visual Winkel – als Referenz: die Miniaturansicht ist ungefähr 2° in visual Winkel aus, wenn Sie sich Ihre von Arm (1) ein stretching). Dies führt zu folgenden Leitfaden:
-    - Erzwingen Sie keinen Benutzer kleine Ziele auswählen: Untersuchung ergab, dass Benutzer die Interaktion als mühelose und magische, wenn Ziele groß genug sind (und das System auch dient beschreiben). Wenn Ziele zu klein sind, wird Benutzern die Benutzeroberfläche als fatiguing und frustrierendes.
+5. **Berücksichtigen von Ungenauigkeiten:** Wir unterscheiden zwei Arten von Ungenauigkeiten, die für den Benutzer wahrnehmbar sind: Offset und Jitter. Die einfachste Möglichkeit zur Behandlung von Offsets ist die Bereitstellung ausreichend großer Ziele für die Interaktion (Sehwinkel >2 ° – Referenz: Ihr Daumennagel befindet sich in einem Sehwinkel von ca. 2 °, wenn Sie den Arm ausstrecken(1)). Dies führt zu folgender Richtlinie:
+    - Zwingen Sie Benutzer nicht, kleine Ziele auszuwählen: Untersuchung haben ergeben, dass Benutzer die Interaktion als mühelos und zauberhaft beschreiben, wenn Ziele groß genug sind (und auch das System gut entworfen ist). Wenn Ziele zu klein sind, empfinden Benutzer die Erfahrung als ermüdend und frustrierend.
    
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Anvisieren mit dem Kopf und mit den Augen in DirectX](gaze-in-directx.md)
-* [Eye Blicke in Unity (Mixed Reality-Toolkit)](https://aka.ms/mrtk-eyes)
-* [Gestensteuerung](gestures.md)
+* [Anvisieren mit den Augen in Unity (Mixed Reality-Toolkit)](https://aka.ms/mrtk-eyes)
+* [Handgesten](gestures.md)
 * [Spracheingabe](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
 * [Komfort](comfort.md)

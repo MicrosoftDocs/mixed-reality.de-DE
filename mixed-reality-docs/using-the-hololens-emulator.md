@@ -1,214 +1,214 @@
 ---
-title: Verwenden den Emulator für HoloLens
-description: Der Emulator für HoloLens können Sie zum Testen von mixed Reality-apps auf Ihren PC ohne ein physisches HoloLens.
+title: Verwendung des HoloLens-Emulators
+description: Mit dem HoloLens-Emulator können Sie Mixed Reality-Apps auf Ihrem PC ohne eine physische HoloLens testen.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 04/25/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: HoloLens, emulator
+keywords: HoloLens, Emulator
 ms.openlocfilehash: 0dfca73e6c8e1809e1bea3df6ca344b3de0698d5
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "65730921"
 ---
-# <a name="using-the-hololens-emulator"></a>Verwenden den Emulator für HoloLens
+# <a name="using-the-hololens-emulator"></a>Verwendung des HoloLens-Emulators
 
-Der Emulator für HoloLens können Sie holographic apps auf Ihren PC ohne ein physisches HoloLens testen und die HoloLens-Entwicklungs-Toolset enthält. Der Emulator verwendet eine Hyper-V-VM. Die menschlichen und environmental Eingaben, die in der Regel von den Sensoren für die HoloLens gelesen werden, werden stattdessen simuliert mithilfe Ihrer Tastatur, Maus oder Xbox-Controller. Apps müssen nicht geändert werden, führen Sie auf dem Emulator und weiß nicht, dass sie auf einem echten HoloLens ausgeführt werden nicht.
+Mit dem HoloLens-Emulator, der das HoloLens-Entwicklungstoolset umfasst, können Sie holografische Apps auf Ihrem PC ohne eine physische HoloLens testen. Der Emulator verwendet einen virtuellen Hyper-V-Computer. Die Eingaben der Benutzer und der Umgebung, die normalerweise von den Sensoren der HoloLens erfasst werden, werden stattdessen mit Ihrer Tastatur, Maus oder dem Xbox-Controller simuliert. Apps müssen nicht modifiziert werden, um auf dem Emulator zu funktionieren. Zudem erkennen sie nicht, dass sie nicht auf einer echten HoloLens ausgeführt werden.
 
-Wenn Sie zum Entwickeln von Windows Mixed Reality immersive apps unter (VR) Kopfhörer oder Spiele für desktop-PCs ansehen, sehen Sie sich die [Windows Mixed Reality-Simulator](using-the-windows-mixed-reality-simulator.md), sodass Sie stattdessen Remotedesktop Headsets zu simulieren.
+Wenn Sie Apps für immersive Windows Mixed Reality-Headsets (VR) oder Spiele für Desktop-PCs entwickeln möchten, testen Sie den [Windows Mixed Reality-Simulator](using-the-windows-mixed-reality-simulator.md), mit dem Sie stattdessen Desktop-Headsets simulieren können.
 
 
-## <a name="installing-the-hololens-emulator"></a>Installation des Emulators HoloLens
-Emulator für HoloLens und holographic Projektvorlagen herunterladen.
+## <a name="installing-the-hololens-emulator"></a>Installieren des HoloLens-Emulators
+Laden Sie den HoloLens-Emulator und holografische Projektvorlagen herunter.
 
-Versions: 
-* [2-Emulator für HoloLens und holographic Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2087187).
-* [HoloLens-Emulator (1. Generation) und holographic Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2065980).
+Versionen: 
+* [HoloLens 2-Emulator und holografische Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2087187)
+* [HoloLens-Emulator (1. Generation) und holografische Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2065980)
 
-Älteren Builds von der Emulator für HoloLens finden Sie auf die [HoloLens emulatorarchiv](hololens-emulator-archive.md) Seite.
+Ältere Builds des HoloLens-Emulators finden Sie auf der Seite [HoloLens-Emulator – Archiv](hololens-emulator-archive.md).
 
 ### <a name="hololens-emulator-system-requirements"></a>HoloLens-Emulator – Systemanforderungen
 
-Der Emulator für HoloLens verwendet Hyper-V mit RemoteFx (1. Generation Emulator) oder GPU-PV (2-Emulator für HoloLens) Hardware beschleunigt Grafiken. Um den Emulator verwenden zu können, sicher, dass Ihr PC diese hardwareanforderungen erfüllt:
-* 64-Bit-Windows 10 Pro, Enterprise und Education 
+Der HoloLens-Emulator verwendet Hyper-V mit RemoteFx (Emulator der 1. Generation) oder GPU-PV (HoloLens 2-Emulator) für Grafiken mit Hardwarebeschleunigung. Um den Emulator zu verwenden, stellen Sie sicher, dass Ihr PC die folgenden Hardwareanforderungen erfüllt:
+* Windows 10 Pro, Enterprise oder Education – 64-Bit 
     >[!NOTE]
-    >Windows 10 Home-Edition unterstützt Hyper-V oder den Emulator für HoloLens nicht.  
-    >Der 2-Emulator für HoloLens erfordert das Windows 10 Oktober 2018 update oder höher.
-* CPU mit 64 Bit
-* CPU mit 4 Kerne (oder mehrere CPUs mit insgesamt 4 Kerne)
-* 8 GB RAM oder mehr
-* Das BIOS muss die folgenden Features [unterstützt und aktiviert](http://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx):
+    >Windows 10 Home-Edition unterstützt Hyper-V oder den HoloLens-Emulator nicht.  
+    >Der HoloLens 2-Emulator benötigt das Windows 10 October 2018 Update oder neuer.
+* 64-Bit-CPU
+* CPU mit 4 Kernen (oder mehrere CPUs mit insgesamt 4 Kernen)
+* Mindestens 8 GB RAM
+* Im BIOS müssen die folgenden Features [unterstützt und aktiviert sein](http://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx):
    * Hardwareunterstützte Virtualisierung
    * Adressübersetzung der zweiten Ebene (Second Level Address Translation, SLAT)
    * Hardwarebasierte Datenausführungsverhinderung (Data Execution Prevention, DEP)
 * GPU-Anforderungen
    * DirectX 11.0 oder höher
-   * Grafik-Treiber für WDDM 1.2 oder höher (1. Generation)
-   * Treiber für WDDM 2.5-Grafik (2-Emulator für HoloLens)
-   * Der Emulator mit einer nicht unterstützten GPU funktionieren möglicherweise, jedoch deutlich langsamer
+   * Grafiktreiber für WDDM 1.2 oder höher (1. Generation)
+   * Grafiktreiber für WDDM 2.5 (HoloLens 2-Emulator)
+   * Der Emulator funktioniert möglicherweise mit einem nicht unterstützten Grafikprozessor, ist aber deutlich langsamer
 
-Wenn Ihr System die oben genannten Anforderungen erfüllt **stellen Sie sicher, dass die Funktion "Hyper-V" auf dem System aktiviert wurde** über die Systemsteuerung -> Programme -> Programme und Funktionen auf -> Windows-Features aktivieren oder deaktivieren -> Stellen Sie sicher "Hyper-V" für die Emulator-Installation erfolgreich ausgewählt ist.
+Wenn Ihr System die oben genannten Anforderungen erfüllt, **stellen Sie sicher, dass das Feature „Hyper-V“ auf Ihrem System** über „Systemsteuerung -> Programme -> Programme -> Programme und Features -> Windows-Features aktivieren oder deaktivieren“ aktiviert wurde. Stellen Sie sicher, dass „Hyper-V“ aktiviert ist, damit die Emulatorinstallation erfolgreich ist.
 
-## <a name="deploying-apps-to-the-hololens-emulator"></a>Bereitstellen von apps mit dem Emulator für HoloLens
+## <a name="deploying-apps-to-the-hololens-emulator"></a>Bereitstellen von Apps für den HoloLens-Emulator
 
-1. Laden Sie die app-Projektmappe in Visual Studio.
+1. Laden Sie Ihre App-Lösung in Visual Studio.
     >[!NOTE]
-    >Wenn Unity verwenden zu können, erstellen Sie das Projekt aus Unity, und klicken Sie dann laden Sie die erstellte Lösung wie gewohnt in Visual Studio.
-2. Für den Emulator für HoloLens (der 1. Generation), stellen Sie sicher, die Plattform nastaven NA hodnotu **X86**. Der 2-Emulator für HoloLens stellen Sie sicher die Plattform nastaven NA hodnotu **X86** oder **X64**.
-3. Wählen Sie den gewünschten **Emulator für HoloLens** Version als Zielgerät für das Debuggen.
-4. Wechseln Sie zu **Debuggen > Debuggen starten** , oder drücken Sie **F5** zum Starten des Emulators und Bereitstellen Ihrer app für das Debuggen.
+    >Wenn Sie Unity verwenden, erstellen Sie Ihr Projekt in Unity, und laden Sie dann die erstellte Lösung wie gewohnt in Visual Studio.
+2. Stellen Sie für den HoloLens-Emulator (1. Generation) sicher, dass die Plattform auf **x86** eingestellt ist. Stellen Sie für den HoloLens 2-Emulator sicher, dass die Plattform auf **x86** oder **x64** eingestellt ist.
+3. Wählen Sie die gewünschte Version für den **HoloLens-Emulator** als Zielgerät für das Debugging aus.
+4. Wechseln Sie zu **Debuggen > Debuggen starten** oder drücken Sie **F5**, um den Emulator zu starten und Ihre App für das Debuggen bereitzustellen.
 
-Der Emulator dauert eine Minute oder länger, beim ersten start zu starten. Es wird empfohlen, den Emulator zu open während der Debugsitzung, damit Sie schnell apps mit dem ausgeführten Emulator bereitstellen können.
+Der Emulator kann beim ersten Start eine Minute oder länger benötigen. Es wird empfohlen, den Emulator während der Debugsitzung geöffnet zu lassen, damit Sie Apps schnell auf dem aktiven Emulator bereitstellen können.
 
-## <a name="basic-emulator-input"></a>Grundlegende Emulator-Eingabe
+## <a name="basic-emulator-input"></a>Grundlegende Emulatoreingabe
 
-Steuern des Emulators ähnelt sehr viele allgemeine 3D-Videospiele. Eingabeoptionen stehen zur Verfügung, mit der Tastatur, Maus oder Xbox-Controller. Sie steuern des Emulators durch die Aktionen eines simulierten Benutzers steht, geteert eine HoloLens weiterleiten. Ihre Aktionen zu verschieben, dass die simulierten Benutzer in aller und apps im Emulator zu reagieren, wie sie auf einem echten Gerät.
+Die Steuerung des Emulators ist mit vielen gängigen 3D-Videospielen vergleichbar. Es stehen Eingabeoptionen über die Tastatur, Maus oder den Xbox-Controller zur Verfügung. Sie steuern den Emulator, indem Sie die Aktionen eines simulierten Benutzers mit einer HoloLens steuern. Ihre Aktionen führen den simulierten Benutzer herum und Apps, die im Emulator ausgeführt werden, reagieren wie auf einem echten Gerät.
 
-Der Cursor für HoloLens (1. Generation) folgt, Bewegungen und Drehung.  Im Emulator 2 HoloLens folgt der Cursor manuell verschieben und Ausrichtung.
+Der Cursor der HoloLens (1. Generation) folgt der Kopfbewegung und -drehung.  Im HoloLens 2-Emulator folgt der Cursor der Handbewegung und der Ausrichtung.
 
-* **Schritt für Schritt nach vorne, zurück, links und rechts** -verwenden Sie die W, D, S und ein Schlüssel auf der Tastatur oder der linken Stick auf eine Xbox-Controller.
-* **Suchen, nach unten, links und rechts** -Klick und Ziehen der Maus, verwenden Sie die Pfeiltasten auf der Tastatur oder der richtigen Stick auf eine Xbox-Controller.
-* **Tippbewegung Luft** – mit der rechten Maustaste des Mauszeigers, drücken Sie die EINGABETASTE auf der Tastatur, oder verwenden Sie die A-Taste auf ein Xbox-Controller.
-* **Bloom/systemstiftbewegung** – drücken Sie die Windows-Taste oder F2-Taste auf der Tastatur, oder drücken Sie die Schaltfläche "B" auf eine Xbox-Controller.
-* **Übergeben Sie die datenverschiebung für das Durchführen eines Bildlaufs** – gedrückter Alt-Taste, halten Sie die rechte Maustaste gedrückt, und ziehen Sie die Maus nach oben / unten, oder in ein Xbox-Controller halten der richtige Trigger und eine Schaltfläche und den richtigen Stick nach oben oder unten verschieben.
-* **Übergeben von Bewegung und die Ausrichtung** (nur HoloLens 2-Emulator) - halten Sie Alt gedrückt und ziehen Sie die Maus sich / nach unten / links / rechts, um das Handsymbol verschieben oder verwenden Sie die Pfeiltasten und Q / E zu drehen und Neigen von der Hand.  Halten Sie für ein Xbox-Controller die linke oder Rechte Stoßstange und linken Ministick um die Seite zu verschieben, nach links / rechts / vorwärts / zurück, die Ministick rechts drehen, und oben und unten auf das Steuerkreuz erhöhen oder verringern die Seite.
+* **Nach vorne, hinten, links und rechts gehen**: Verwenden Sie die Tasten W, A, S und D auf Ihrer Tastatur oder den linken Stick eines Xbox-Controllers.
+* **Nach oben, unten, links und rechts schauen**: Klicken und ziehen Sie mit der Maus, verwenden Sie die Pfeiltasten auf Ihrer Tastatur oder den rechten Stick eines Xbox-Controllers.
+* **Tippbewegung in die Luft**: Klicken Sie mit der rechten Maustaste, drücken Sie die Eingabetaste auf Ihrer Tastatur, oder verwenden Sie die Taste A eines Xbox-Controllers.
+* **Öffnen/Systemgeste**: Drücken Sie die Windows-Taste oder die F2-Taste auf Ihrer Tastatur, oder drücken Sie die B-Taste eines Xbox-Controllers.
+* **Handbewegung zum Scrollen**: Halten Sie die ALT-Taste gedrückt, halten Sie die rechte Maustaste gedrückt, und ziehen Sie die Maus nach oben/unten, oder halten Sie den rechten Auslöser und die Taste A eines Xbox-Controllers gedrückt, und bewegen Sie den rechten Stick auf und ab.
+* **Handbewegung und Ausrichtung**: (nur HoloLens 2-Emulator) Halten Sie die ALT-Taste gedrückt, und ziehen Sie die Maus nach oben/unten/links/rechts, um die Hand zu bewegen, oder verwenden Sie die Pfeiltasten und Q/E, um die Hand zu drehen und zu neigen.  Bei einem Xbox-Controller halten Sie den linken oder rechten Bumper gedrückt, und verwenden Sie den linken Stick, um die Hand nach links/rechts/vorne/hinten zu bewegen, den rechten Stick, um die Hand zu drehen, und bewegen Sie das Dpad nach oben/unten, um die Hand anzuheben oder zu senken.
 
-## <a name="anatomy-of-the-hololens-2-emulator"></a>Aufbau des Emulators HoloLens 2 
+## <a name="anatomy-of-the-hololens-2-emulator"></a>Aufbau des HoloLens 2-Emulators 
 
-### <a name="main-window"></a>Klicken Sie im Hauptfenster
+### <a name="main-window"></a>Hauptfenster
 
-![2-Emulator für HoloLens-Hauptfenster](images/emulator2-900px.png)
-
-### <a name="toolbar"></a>Symbolleiste
-
-Klicken Sie auf der rechten Seite des Hauptfensters finden Sie die Symbolleiste des Emulators. Die Symbolleiste enthält die folgenden Schaltflächen:
-* ![Symbol "Schließen"](images/emulator-close.png) **schließen**: Schließt den Emulator.
-* ![Symbol "Minimieren"](images/emulator-minimize.png) **Minimieren**: Minimiert das Emulatorfenster.
-* ![Simulation_icon](images/emulator-simulation-panel.png) **Simulation Systemsteuerung**: Anzeigen oder Ausblenden der [Simulation Systemsteuerung](#simulation-control-panel) zum Konfigurieren und Steuern von [Eingabe für den Emulator](#basic-emulator-input).
-* ![Passen auf das Symbol für bildschirmaufzeichnung](images/emulator-fit.png) **an Bildschirmgröße anpassen**: Passen den Emulator zum Bildschirm.
-* ![Zoom icon](images/emulator-zoom.png) **Zoom**: Stellen Sie den Emulator, größere und kleinere.
-* ![Symbol "Hilfe"](images/emulator-help.png) **Hilfe**: Öffnet die Emulator-Hilfe.
-* ![Symbol für Portals offenes Gerät](images/emulator-deviceportal.png) **öffnen Device Portal**: Öffnen Sie die Windows Device Portal für das Betriebssystem HoloLens im Emulator.
-* ![Tool-Symbol](images/emulator-tools.png) **Tools**: Öffnen der **zusätzliche Tools** Bereich.
-
-### <a name="simulation-control-panel"></a>Systemsteuerung für die Simulation
-
-Die Simulation-Systemsteuerung können Sie die aktuelle Position und Ausrichtung der simulierten menschliche und simulierte Eingabegeräte anzuzeigen.  Sie können auch so konfigurieren Sie die beiden simulierten Eingabe, wie das ein- und Ausblenden von einer oder beide praktische und Geräte, die zum Steuern des simulierten Eingaben wie z. B. Tastatur, Maus und Gamepad Ihres Computers verwendet werden.
-
-![Systemsteuerung für die Simulation](images/emulator-simulation-control-panel.png)
-
-* Um den Bereich der Simulation anzuzeigen oder auszublenden, klicken Sie auf die Symbolleisten-Schaltfläche, oder drücken Sie F7, auf der Tastatur.
-* Zeigen Sie auf den ein Steuerelement oder ein Feld, um eine QuickInfo anzuzeigen, die Tastatur, Maus und Gamepad-Steuerelemente für die es enthält.
-* Wechseln Sie zum Anzeigen oder Ausblenden einer Hand, unter der linken oder rechten Seite des jeweiligen Schalters.
-* Verwenden Sie entweder die linken oder Rechte Alt-Tasten auf der Tastatur, oder auf den Gamepad Stoßstange nach links oder rechts, um das Handsymbol zu steuern.
-* Damit alle Eingaben für einen oder beide Hände durchführt, klicken Sie auf die Schaltfläche "Pushpin" unter der ein/aus-Schalter.  Dies ist die Entsprechung der gedrückter Alt-Taste für die Hand.
-* Um die Augen Blicke Richtung steuern möchten, klicken Sie auf das Pinsymbol im Abschnitt "Augen".  Dies ist die Entsprechung des Sie "Y" auf der Tastatur gedrückt halten.
-* Klicken Sie auf die Schaltfläche "Laden" im Abschnitt "Aufzeichnen", um eine Aufzeichnung Raum zu laden.  Finden Sie unter [simulierte Räume](#simulated-rooms) für Weitere Informationen.
-* Um die Geschwindigkeit anpassen, die das simulierte menschlicher oder ein simuliertes Eingabegeräte verschieben oder drehen als Reaktion auf der Tastatur, Maus oder Gamepad Eingabe, klicken Sie auf das Zahnradsymbol neben "Einstellungen für Eingabe" und passen Sie die Schieberegler.
-* Standardmäßig steuert Tastatureingaben simulierte menschliche und simulierte Eingabe.  Um die Ihres Computers Tastatureingaben über an die HoloLens gesendet haben, deaktivieren Sie auf "Verwendung von Tastatur für die Simulation".  F4 ist die Tastenkombination für diese Einstellung.
-* Wenn der Bereich für die Simulation bereits angezeigt wird, wechselt drücken Sie F8 über den Tastaturfokus.
-* Klicken Sie zum Bereich "Simulation" aus dem Emulatorfenster zu lösen, klicken Sie auf die Schaltfläche am unteren Rand der Bereich, oder drücken Sie F9 auf der Tastatur.  Schließen des Fensters, oder drücken F9 erneut wird das Fenster für den Emulator zurück.
-* Die Simulation-Systemsteuerung gestartet werden kann, als separate Anwendung, sodass Sie zum Verbinden mit und zum Steuern der 2-Emulator für HoloLens, HoloLens-2-Gerät oder Windows Mixed Reality-Simulation mit PerceptionSimulationInput.exe aus % ProgramFiles(x86) \ Windows-Kits\10\Microsoft XDE\10.0.18362.0\.
-
-### <a name="account-tab"></a>Die Registerkarte „Konto“
-
-Die Registerkarte "Konto" können Sie den Emulator mit einem Microsoft Account anmelden zu konfigurieren. Dies ist hilfreich beim Testen der APIs, die der Benutzer mit einem Konto angemeldet sein muss.  Wechseln diese Option ist erforderlich, Sie vollständig schließen und neu starten den Emulator für HoloLens für die Einstellung wirksam wird.  Wenn diese Option aktiviert ist, fordert nachfolgenden Starts des Emulators Sie auf, dass die Anmeldung, genau wie ein Benutzer beim ersten verwenden würden die HoloLens gestartet wird.  Um schnell mit Ihrem PC Tastatur Ihre Anmeldeinformationen einzugeben, zuerst "Verwenden der Tastatur für die Simulation" in der Systemsteuerung für die Simulation deaktivieren Sie, oder drücken Sie F4, auf der Tastatur, um die Einstellung für die Tastatur aktivieren oder deaktivieren ein-/ausschalten.
-
-### <a name="optional-settings-tab"></a>Registerkarte "optionale Einstellungen"
-
-Die optionalen Einstellungen Registerkarte zeigt ein Steuerelement zum Aktivieren oder deaktivieren die Hardware beschleunigter Grafikfunktionen.  Hardware beschleunigte Grafikfunktionen werden standardmäßig unterstützt der Treiber für die Grafikkarte Ihres Computers verwendet werden.  Wenn Ihre Grafikkarte Treiber GPU-PV nicht unterstützt, wird diese Option nicht angezeigt.
-
-### <a name="diagnostics-tab"></a>Registerkarte "Diagnose"
-
-Die Registerkarte "Diagnose" zeigt die IP-Adresse des Emulators in Form eines Links zum Windows Device Portal zusammen mit dem Status der virtuellen GPU.
-
-
-## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>Aufbau der HoloLens (1. Generation) Emulator
-
-### <a name="main-window"></a>Klicken Sie im Hauptfenster
-
-Wenn der Emulator gestartet wird, sehen Sie ein Fenster der HoloLens Betriebssystem angezeigt.
-
-![Emulator für HoloLens-Hauptfenster](images/emulator-890px.png)
+![Hauptfenster des HoloLens 2-Emulators](images/emulator2-900px.png)
 
 ### <a name="toolbar"></a>Symbolleiste
 
-Klicken Sie auf der rechten Seite des Hauptfensters finden Sie die Symbolleiste des Emulators. Die Symbolleiste enthält die folgenden Schaltflächen:
-* ![Symbol "Schließen"](images/emulator-close.png) **schließen**: Schließt den Emulator.
-* ![Symbol "Minimieren"](images/emulator-minimize.png) **Minimieren**: Minimiert das Emulatorfenster.
-* ![Symbol für menschliche input](images/emulator-control.png) **menschliche Input**: Maus und Tastatur werden verwendet, um menschliche simulieren [Eingabe für den Emulator](#basic-emulator-input).
-* ![Tastatur und Maus Eingabe Symbol](images/emulator-input.png) **Tastatur- und Mauseingabe**: Tastatur- und Mauseingaben werden direkt an das Betriebssystem HoloLens als Tastatur-und Mausereignisse übergeben, als ob Sie eine Bluetooth-Tastatur und Maus verbunden.
-* ![Passen auf das Symbol für bildschirmaufzeichnung](images/emulator-fit.png) **an Bildschirmgröße anpassen**: Passen den Emulator zum Bildschirm.
-* ![Zoom icon](images/emulator-zoom.png) **Zoom**: Stellen Sie den Emulator, größere und kleinere.
-* ![Symbol "Hilfe"](images/emulator-help.png) **Hilfe**: Öffnet die Emulator-Hilfe.
-* ![Symbol für Portals offenes Gerät](images/emulator-deviceportal.png) **öffnen Device Portal**: Öffnen Sie die Windows Device Portal für das Betriebssystem HoloLens im Emulator.
-* ![Tool-Symbol](images/emulator-tools.png) **Tools**: Öffnen der **zusätzliche Tools** Bereich.
+Rechts neben dem Hauptfenster befindet sich die Symbolleiste des Emulators. Die Symbolleiste enthält die folgenden Schaltflächen:
+* ![Schließen-Symbol](images/emulator-close.png) **Schließen**: Schließt den Emulator.
+* ![Minimieren-Symbol](images/emulator-minimize.png) **Minimieren**: Minimiert das Emulatorfenster.
+* ![Simulation-Symbol](images/emulator-simulation-panel.png) **Systemsteuerung der Simulation**: Blenden Sie die [Systemsteuerung der Simulation](#simulation-control-panel) zum Konfigurieren und Steuern der [Eingabe für den Emulator](#basic-emulator-input) ein oder aus.
+* ![Bildschirmgröße anpassen-Symbol](images/emulator-fit.png) **Bildschirmgröße anpassen**: Passt den Emulator an den Bildschirm an.
+* ![Zoom-Symbol](images/emulator-zoom.png) **Zoomen**: Vergrößern und verkleinern Sie den Emulator.
+* ![Hilfe-Symbol](images/emulator-help.png) **Hilfe**: Öffnen Sie die Hilfe zum Emulator.
+* ![Symbol „Geräteportal öffnen“](images/emulator-deviceportal.png) **Geräteportal öffnen**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
+* ![Tools-Symbol](images/emulator-tools.png) **Tools**: Öffnen Sie den Bereich für **zusätzliche Tools**.
 
-### <a name="simulation-tab"></a>Registerkarte "Simulation"
+### <a name="simulation-control-panel"></a>Systemsteuerung der Simulation
 
-Die Standardregisterkarte innerhalb der **zusätzliche Tools** Bereich ist die **Simulation** Registerkarte.
+Mithilfe der Systemsteuerung der Simulation können Sie die aktuelle Position und Ausrichtung des simulierten Benutzers und der simulierten Eingabegeräte anzeigen.  Sie ermöglicht es Ihnen auch, sowohl simulierte Eingaben, wie das Ein- und Ausblenden einer oder beider Hände, als auch Geräte zur Steuerung simulierter Eingaben, wie Tastatur, Maus und Gamepad Ihres PCs, zu konfigurieren.
 
-![Im Bereich "Zusätzliche Tools" der Emulator für HoloLens](images/emulator-simulation-500px.png)
+![Systemsteuerung der Simulation](images/emulator-simulation-control-panel.png)
 
-Die Registerkarte "Simulation" zeigt den aktuellen Status der simulierten Sensoren verwendet, um die HoloLens-Betriebssystemlaufwerk innerhalb des Emulators. Mit dem Mauszeiger auf einen beliebigen Wert in der Registerkarte "Simulation" bietet eine QuickInfo, die beschreibt, wie dieses Werts zu steuern.
-
-### <a name="room-tab"></a>Registerkarte "Raum"
-
-Der Serveremulator simuliert die Eingabe der Welt in Form des Netzes räumliche Zuordnung von simulierten "Räume". Auf dieser Registerkarte können Sie auswählen, welche Platz um statt der standardraum zu laden.
-
-![HoloLens-Emulator "Räume"-Registerkarte](images/emulator-room-500px.png)
-
-Finden Sie unter [simulierte Räume](#simulated-rooms) für Weitere Informationen.
+* Um die Systemsteuerung der Simulation ein- oder auszublenden, klicken Sie auf die Symbolleistenschaltfläche, oder drücken Sie F7 auf der Tastatur.
+* Bewegen Sie den Mauszeiger über ein Steuerelement oder Feld, um eine QuickInfo anzuzeigen, die zugehörige Tastatur-, Maus- und Gamepad-Steuerelemente enthält.
+* Um eine Hand ein- oder auszublenden, schalten Sie den entsprechenden Schalter unter der linken oder rechten Hand um.
+* Verwenden Sie zum Steuern der Hand entweder die linke oder rechte ALT-Taste auf Ihrer Tastatur oder den linken oder rechten Bumper des Gamepads.
+* Um alle Eingaben an eine oder beide Hände weiterzuleiten, klicken Sie auf die Markierungstaste unter dem Umschalter.  Dies entspricht dem Halten der ALT-Taste für die Hand.
+* Klicken Sie zur Steuerung der Richtung für das Anvisieren mit den Augen auf die Markierung im Abschnitt „Eyes“ (Augen).  Dies entspricht dem Halten der Taste Y auf der Tastatur.
+* Klicken Sie zum Laden einer Raumaufzeichnung auf die Schaltfläche „Load“ (Laden) im Abschnitt „Recording“ (Aufzeichnung).  Weitere Informationen finden Sie unter [simulierte Räume](#simulated-rooms).
+* Um die Geschwindigkeit anzupassen, mit der sich der simulierte Benutzer oder die simulierten Eingabegeräte als Reaktion auf die Eingabe von Tastatur, Maus oder Gamepad bewegen oder drehen, klicken Sie auf das Zahnradsymbol neben „Input settings“ (Eingabeeinstellungen), und passen Sie die Schieberegler an.
+* Standardmäßig steuert die Tastatureingabe den simulierten Benutzer und die simulierte Eingabe.  Damit die Tastatureingabe Ihres PCs an die HoloLens weitergeleitet wird, deaktivieren Sie das Kontrollkästchen „Use Keyboard for Simulation“ (Tastatur für Simulation verwenden).  F4 ist die Tastenkombination für diese Einstellung.
+* Wenn der Simulationsbereich bereits angezeigt wird, drücken Sie F8, um den Tastaturfokus dorthin zu verschieben.
+* Klicken Sie auf die Schaltfläche am unteren Rand des Bereichs, oder drücken Sie F9 auf Ihrer Tastatur, um den Simulationsbereich beim Emulatorfenster auszudocken.  Wenn Sie das Fenster schließen oder erneut F9 drücken, kehrt das Fenster zum Emulator zurück.
+* Die Systemsteuerung der Simulation kann als separate Anwendung gestartet werden, sodass Sie sich mit dem HoloLens 2-Emulator, einem HoloLens 2-Gerät oder der Windows Mixed Reality-Simulation verbinden und dieses steuern können, indem Sie „PerceptionSimulationInput.exe“ unter „%ProgramFiles(x86)%\Windows Kits\10\Microsoft XDE\10.0.18362.0\“ ausführen.
 
 ### <a name="account-tab"></a>Die Registerkarte „Konto“
 
-Die Registerkarte "Konto" können Sie den Emulator mit einem Microsoft Account anmelden zu konfigurieren. Dies ist hilfreich beim Testen der API, die der Benutzer mit einem Konto angemeldet sein muss. Nachdem Sie das Kontrollkästchen auf dieser Seite, nachfolgenden Starts des Emulators fordert Sie zur Anmeldung aus, wie ein Benutzer erstmals die HoloLens gestartet wird.
+Auf der Registerkarte „Account“ (Konto) können Sie den Emulator für die Anmeldung mit einem Microsoft-Konto konfigurieren. Dies ist beim Testen von APIs hilfreich, bei denen der Benutzer mit einem Konto angemeldet sein muss.  Das Umschalten dieser Option erfordert, dass Sie den HoloLens-Emulator vollständig schließen und neu starten, damit die Einstellung wirksam wird.  Wenn diese Option aktiviert ist, werden Sie bei nachfolgenden Starts des Emulators zur Anmeldung aufgefordert, genau wie ein Benutzer beim ersten Start der HoloLens.  Um Ihre Anmeldeinformationen schnell über die Tastatur Ihres PCs einzugeben, deaktivieren Sie zunächst „Use Keyboard for Simulation“ (Tastatur für Simulation verwenden) in der Systemsteuerung für die Simulation, oder drücken Sie F4 auf Ihrer Tastatur, um die Tastatureinstellung zu aktivieren oder zu deaktivieren.
+
+### <a name="optional-settings-tab"></a>Registerkarte „Optional Settings“ (Optionale Einstellungen)
+
+Auf der Registerkarte „Optional Settings“ (Optionale Einstellungen) wird ein Steuerelement angezeigt, mit dem hardwarebeschleunigte Grafiken aktiviert oder deaktiviert werden können.  Hardwarebeschleunigte Grafiken werden standardmäßig verwendet, wenn sie vom Treiber für die Grafikkarte Ihres PCs unterstützt werden.  Wenn der Treiber Ihrer Grafikkarte „GPU-PV“ nicht unterstützt, wird diese Option nicht angezeigt.
+
+### <a name="diagnostics-tab"></a>Registerkarte „Diagnostics“ (Diagnose)
+
+Auf der Registerkarte „Diagnostics“ (Diagnose) wird die IP-Adresse des Emulators in Form eines Links zum Windows-Geräteportal sowie der Status der virtuellen GPU angezeigt.
+
+
+## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>Aufbau des HoloLens-Emulators (1. Generation)
+
+### <a name="main-window"></a>Hauptfenster
+
+Beim Starten des Emulators wird ein Fenster mit dem HoloLens-Betriebssystem angezeigt.
+
+![Hauptfenster des HoloLens-Emulators](images/emulator-890px.png)
+
+### <a name="toolbar"></a>Symbolleiste
+
+Rechts neben dem Hauptfenster befindet sich die Symbolleiste des Emulators. Die Symbolleiste enthält die folgenden Schaltflächen:
+* ![Schließen-Symbol](images/emulator-close.png) **Schließen**: Schließt den Emulator.
+* ![Minimieren-Symbol](images/emulator-minimize.png) **Minimieren**: Minimiert das Emulatorfenster.
+* ![Symbol „Benutzereingabe“](images/emulator-control.png) **Benutzereingabe**: Maus und Tastatur werden verwendet, um die [Benutzereingaben für den Emulator](#basic-emulator-input) zu simulieren.
+* ![Symbol „Tastatur- und Mauseingabe“](images/emulator-input.png) **Tastatur- und Mauseingabe**: Tastatur- und Mauseingaben werden als Tastatur- und Mausereignisse direkt an das HoloLens-Betriebssystem übergeben, als ob Sie eine Bluetooth-Tastatur und -Maus angeschlossen hätten.
+* ![Bildschirmgröße anpassen-Symbol](images/emulator-fit.png) **Bildschirmgröße anpassen**: Passt den Emulator an den Bildschirm an.
+* ![Zoom-Symbol](images/emulator-zoom.png) **Zoomen**: Vergrößern und verkleinern Sie den Emulator.
+* ![Hilfe-Symbol](images/emulator-help.png) **Hilfe**: Öffnen Sie die Hilfe zum Emulator.
+* ![Symbol „Geräteportal öffnen“](images/emulator-deviceportal.png) **Geräteportal öffnen**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
+* ![Tools-Symbol](images/emulator-tools.png) **Tools**: Öffnen Sie den Bereich für **zusätzliche Tools**.
+
+### <a name="simulation-tab"></a>Registerkarte „Simulation“
+
+Die Standardregisterkarte im Bereich **Additional Tools** (Zusätzliche Tools) ist die Registerkarte **Simulation**.
+
+![Bereich „Additional Tools“ (Zusätzliche Tools) des HoloLens-Emulators](images/emulator-simulation-500px.png)
+
+Die Registerkarte „Simulation“ zeigt den aktuellen Zustand der simulierten Sensoren an, mit denen das HoloLens-Betriebssystem im Emulator gesteuert wird. Wenn Sie den Mauszeiger über einen beliebigen Wert auf der Registerkarte „Simulation“ bewegen, wird eine QuickInfo angezeigt, die beschreibt, wie Sie diesen Wert steuern können.
+
+### <a name="room-tab"></a>Registerkarte „Room“ (Raum)
+
+Der Emulator simuliert die Eingaben für die Umgebung in Form des Gittermodells für die räumliche Abbildung aus simulierten „Räumen“. Auf dieser Registerkarte können Sie anstelle des Standardraums den zu ladenden Raum auswählen.
+
+![Registerkarte „Rooms“ (Räume) des HoloLens-Emulators](images/emulator-room-500px.png)
+
+Weitere Informationen finden Sie unter [simulierte Räume](#simulated-rooms).
+
+### <a name="account-tab"></a>Die Registerkarte „Konto“
+
+Auf der Registerkarte „Account“ (Konto) können Sie den Emulator für die Anmeldung mit einem Microsoft-Konto konfigurieren. Dies ist beim Testen von APIs hilfreich, bei denen der Benutzer mit einem Konto angemeldet sein muss. Nachdem Sie das Kontrollkästchen auf dieser Seite aktiviert haben, werden Sie bei nachfolgenden Starts des Emulators zur Anmeldung aufgefordert, genau wie ein Benutzer beim ersten Start der HoloLens.
 
 ## <a name="simulated-rooms"></a>Simulierte Räume
 
-Simulierte Räume sind hilfreich beim Testen Ihrer app in mehreren Umgebungen. Mehrere Räume werden geliefert, mit dem Emulator und nach der Installation der Emulations finden sie in % ProgramFiles% (x86) %\Windows Kits\10\Microsoft XDE\\(Version) \Plugins\Rooms. Alle diese Räume wurden in realen Umgebungen, die mithilfe einer HoloLens erfasst:
-* **DefaultRoom.xef** – eine kleine Wohnzimmer mit einem Fernsehgerät Kaffee-Tabelle und zwei Sofas. Standardmäßig geladen, wenn Sie den Emulator zu starten.
-* **Bedroom1.xef** – eine kleine Schlafzimmer mit einem Schreibtisch.
-* **Bedroom2.xef** -Schlafzimmer mit einer Dame Größe konzentrieren, Kommode, Nightstands und walk-in Wandschrank.
-* **GreatRoom.xef** – eine hervorragende großen leeren Bereich-Raum mit Wohnzimmer, Trinken Tabellen- und Küche.
-* **LivingRoom.xef** – ein Wohnzimmer mit einer Kamin, Sofa, Armchairs und einen Kaffee-Tabelle mit einer Vase.
+Simulierte Räume sind hilfreich, um Ihre App in mehreren Umgebungen zu testen. Mit dem Emulator werden mehrere Räume ausgeliefert, und sobald Sie die Emulation installiert haben, finden Sie diese unter „%ProgramFiles(x86)%\Windows Kits\10\Microsoft XDE\\(version)\Plugins\Rooms“. Alle diese Räume wurden in realen Umgebungen mit einer HoloLens erfasst:
+* **DefaultRoom.xef**: Ein kleines Wohnzimmer mit Fernseher, Couchtisch und zwei Sofas. Beim Starten des Emulators wird dieser Raum standardmäßig geladen.
+* **Bedroom1.xef**: Ein kleines Schlafzimmer mit einem Schreibtisch.
+* **Bedroom2.xef**: Ein Schlafzimmer mit einem Doppelbett, einer Kommode, Nachttischen und einem begehbaren Kleiderschrank.
+* **GreatRoom.xef**: Ein großer offener Raum mit großem Wohnzimmer, Esstisch und Küche.
+* **LivingRoom.xef**: Ein Wohnzimmer mit Kamin, Sofa, Sesseln und einem Couchtisch mit Vase.
 
-Sie können auch eigene Räume für die Verwendung im Serveremulator mithilfe der Simulation Seite Aufzeichnen der [Windows Device Portal](using-the-windows-device-portal.md) auf Ihre HoloLens (1. Generation).
+Sie können auch eigene Räume aufzeichnen, die Sie im Emulator verwenden können, indem Sie die Seite „Simulation“ des [Windows-Geräteportals](using-the-windows-device-portal.md) für Ihre HoloLens (1. Generation) verwenden.
 
-Im Emulator sehen Sie nur Hologramme, dass Sie rendern und simulierten Raum hinter der Hologramme wird nicht angezeigt. Dies ist im Gegensatz zu den tatsächlichen HoloLens, in denen Sie sowohl finden Sie unter, gemischt. Sie können die simulierten Platz im HoloLens Emulator finden Sie unter müssen Sie Ihre app zum Rendern der Gitter räumliche Zuordnung, in der Szene aktualisiert werden.
+Im Emulator werden nur Hologramme angezeigt, die Sie rendern, und Sie werden nicht den simulierten Raum hinter den Hologrammen sehen. Dies steht im Gegensatz zur echten HoloLens, bei der beides kombiniert zu sehen ist. Wenn Sie den simulierten Raum im HoloLens-Emulator anzeigen möchten, müssen Sie Ihre App aktualisieren, um das Gittermodell für die räumliche Abbildung in der Szene darzustellen.
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Bei der Installation des Emulators aus, die Sie benötigen möglicherweise einen Fehler angezeigt *"Visual Studio 2015 Update 1 und UWP-Tools Version 1.2"*. Es gibt drei mögliche Ursachen dieses Fehlers:
-* Sie haben nicht die letzte Version von Visual Studio (Visual Studio-2019, Visual Studio 2017 oder Visual Studio 2015 Update 1 oder höher). Dieses Problem beheben, installieren Sie die neueste Version von Visual Studio.
-* Sie haben die letzte Version von Visual Studio, aber Sie verfügen nicht über die universelle Windows-Plattform (UWP)-Tools installiert. Dies ist ein optionales Feature für Visual Studio.
+Möglicherweise wird bei der Installation des Emulators ein Fehler angezeigt, dass Sie *Visual Studio 2015 Update 1 und die UWP-Tools Version 1.2* benötigen. Es gibt drei mögliche Ursachen für diesen Fehler:
+* Sie verfügen nicht über eine ausreichend aktuelle Version von Visual Studio (Visual Studio 2019, Visual Studio 2017 oder Visual Studio 2015 Update 1 oder höher). Installieren Sie zur Behebung dieses Problems die neueste Version von Visual Studio.
+* Sie verfügen über eine neuere Version von Visual Studio, aber Sie haben nicht die UWP-Tools (universelle Windows-Plattform) installiert. Dies ist ein optionales Feature für Visual Studio.
 
-Auch ein Fehler, die Installation des Emulators auf eine nicht-Pro/Enterprise/Education-SKU von Windows angezeigt werden kann oder wenn Hyper-V-Funktion möglicherweise nicht aktiviert.
-* Lesen Sie die [Systemanforderungen](#hololens-emulator-system-requirements) Abschnitt einen vollständigen Satz von Anforderungen.
-* Außerdem stellen Sie sicher, dass die Hyper-V-Feature auf Ihrem System aktiviert wurde.
+Möglicherweise wird auch ein Fehler bei der Installation des Emulators auf einer Nicht-Pro/-Enterprise/-Education-SKU von Windows angezeigt, oder wenn Sie das Hyper-V-Feature nicht aktiviert haben.
+* Eine vollständige Liste der Anforderungen finden Sie oben im Abschnitt [Systemanforderungen](#hololens-emulator-system-requirements).
+* Stellen Sie außerdem sicher, dass das Hyper-V-Feature auf Ihrem System aktiviert ist.
 
-Wenn die Installation erfolgreich abgeschlossen, aber der Emulator für HoloLens nicht als Option für das Bereitstellen und Debuggen angezeigt, überprüfen Sie bitte Folgendes:
-* Die Visual Studio-Projektkonfiguration ist auf X86 (HoloLens 1. Generation) oder X86 oder X64 (2-Emulator für HoloLens) festgelegt.
-* Wenn Sie Visual Studio-2019 verwenden zu können, ist das Plattformtoolset in der Projektkonfiguration auf v142 festgelegt.
+Wenn Ihre Installation erfolgreich abgeschlossen wurde, der HoloLens-Emulator jedoch nicht als Option für die Bereitstellung und das Debuggen zur Verfügung steht, überprüfen Sie die folgenden Punkte:
+* Ihre Visual Studio-Projektkonfiguration ist auf x86 (HoloLens 1. Generation) bzw. x86 oder x64 (HoloLens 2-Emulator) eingestellt.
+* Wenn Sie Visual Studio 2019 verwenden, ist das Plattformtoolset in Ihrer Projektkonfiguration auf „v142“ festgelegt.
 
-Wenn die Installation erfolgreich abgeschlossen, aber Visual Studio zeigt Fehler beim Starten des Emulators HoloLens, versuchen Sie Folgendes:
-* Visual Studio als Administrator ausführen.
-* Wenn Sie nur Visual Studio-2019 installiert hatten, stellen Sie sicher, dass der Registrierungswert "KitsRoot10" unter HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Kits\Installed Stämme auf 32-Bit-Ordner "Programme" verweist (z. B. "C:\Program Files (x86) \Windows Kits \10 ").  Wenn dies nicht der Fall ist, deinstallieren Sie den Emulator für HoloLens, ändern Sie den Registrierungswert in 32-Bit-Ordner "Programme" und installieren Sie den Emulator für HoloLens.  Dieses Problem wird in Visual Studio 2019 16.0.3 behoben.
+Wenn Ihre Installation erfolgreich abgeschlossen wurde, Visual Studio jedoch beim Starten des HoloLens-Emulators einen Fehler anzeigt, versuchen Sie Folgendes:
+* Ausführen von Visual Studio als Administrator
+* Wenn Sie nur Visual Studio 2019 installiert haben, vergewissern Sie sich, dass der Registrierungswert „KitsRoot10“ unter „HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Kits\Installed Roots“ auf Ihren 32-Bit-Ordner für „Program Files“ zeigt (z. B. „C:\Program Files (x86)\Windows Kits\10“).  Wenn dies nicht der Fall ist, deinstallieren Sie den HoloLens-Emulator, ändern Sie den Registrierungswert in Ihren 32-Bit-Ordner für „Program Files“, und installieren Sie dann den HoloLens-Emulator erneut.  Dieses Problem wird in Visual Studio 2019 16.0.3 behandelt.
 
-Wenn ein Fehlerdialogfeld "Ungültiger Byte-Codierung" beim Start des Emulators angezeigt werden:
-* Löschen Sie alle Dateien im %localappdata%\Microsoft\XDE\HCS, und versuchen Sie es noch mal.
+Wenn der Emulator beim Start ein Fehlerdialogfeld „Ungültige Bytecodierung“ anzeigt:
+* Löschen Sie alle Dateien in „%localappdata%\Microsoft\XDE\HCS“ und versuchen Sie es erneut.
 
-Wenn die Debug-Zielliste in Visual Studio leer ist (z. B. "Start" ist die einzige Option), und Sie alle oben aufgeführten Problembehandlungsschritten befolgt haben:
-* Löschen Sie den Ordner "ConfigurationCache" in %localappdata%\Microsoft\VisualStudio\\<*Installations-Id*> \CoreCon und versuchen Sie es noch mal.
+Wenn Ihre Liste der Debugziele in Visual Studio leer ist (z. B. ist „Start“ die einzige Option) und Sie alle oben genannten Schritte zur Problembehandlung ausgeführt haben:
+* Löschen Sie den Ordner „ConfigurationCache“ in „%localappdata%\Microsoft\VisualStudio\\<*Installations-ID*>\CoreCon“ und versuchen Sie es erneut.
 
-Wenn Ihr System stürzt ab, wenn der Emulator gestartet wird, deaktivieren Sie die Hardwarebeschleunigung für Emulator-Grafiken.
-* Erstellen Sie einen Registrierungs-DWORD-Wert, der mit dem Namen "DisableGPU" am HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0, und legen Sie dessen Wert auf 1.
+Wenn Ihr System beim Starten des Emulators hängen bleibt, deaktivieren Sie die Hardwarebeschleunigung für Emulatorgrafiken.
+* Erstellen Sie in der Registrierung einen DWORD-Wert namens „DisableGPU“ unter „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0“, und legen Sie seinen Wert auf 1 fest.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Erweiterte Eingabe für HoloLens-Emulator und Mixed Reality-Simulator](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
-* [Emulator für HoloLens-Software-Verlauf](hololens-emulator-archive.md)
+* [HoloLens-Emulator – Softwareverlauf](hololens-emulator-archive.md)
 * [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)
 * [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)

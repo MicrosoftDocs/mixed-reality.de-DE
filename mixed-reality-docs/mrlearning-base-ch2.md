@@ -1,177 +1,177 @@
 ---
-title: Basis-Lernmodul - Benutzeroberfläche, MR übergeben, nachverfolgung und Mixed Reality-Toolkit-Konfiguration
-description: Führen Sie diesen Kurs erfahren, wie Sie Azure-Gesichtserkennung innerhalb einer mixed Reality-Anwendung zu implementieren.
+title: MR-Basislernmodul – Benutzeroberfläche, Handverfolgung und Konfiguration des Mixed Reality-Toolkits
+description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Gemischte Realität, Unity, Tutorial, hololens
+keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.openlocfilehash: 1800d36b7292b9cb53b09fdd4b9c4fb763d49e79
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "65730949"
 ---
-# <a name="mr-learning-base-module---user-interface-hand-tracking-and-mixed-reality-toolkit-configuration"></a>Basis-Lernmodul - Benutzeroberfläche, MR übergeben, nachverfolgung und Mixed Reality-Toolkit-Konfiguration
+# <a name="mr-learning-base-module---user-interface-hand-tracking-and-mixed-reality-toolkit-configuration"></a>MR-Basislernmodul – Benutzeroberfläche, Handverfolgung und Konfiguration des Mixed Reality-Toolkits
 
-In der vorherigen Lektion haben Sie einige der Funktionen, die die MRTK bieten, indem Sie Ihre erste Anwendung für die HoloLens 2 ab, aus. In der nächsten Lektion erfahren Sie, wie zum Erstellen und Organisieren von Schaltflächen, die zusammen mit UI-Text-Bereiche und Standardinteraktion (Touch) für die Interaktion mit jeder Schaltfläche verwenden. Sie werden auch das Hinzufügen von einfachen Aktionen und Effekte, z. B. das Ändern der Größe, sound und die Farbe der Objekte untersuchen. Dieses Modul bietet eine Einführung grundlegende Konzepten zum Ändern der MRTK Profilen, deaktivieren die Visualisierung des räumlichen Mesh ab. 
+In der vorherigen Lektion haben Sie einige der Funktionen kennengelernt, die das MRTK bietet, indem Sie Ihre erste Anwendung für die HoloLens 2 gestartet haben. In dieser nächsten Lektion erfahren Sie, wie Sie Schaltflächen zusammen mit den Textbereichen der Benutzeroberfläche erstellen und organisieren und mithilfe der Standardinteraktion (berühren) mit den einzelnen Schaltflächen interagieren. Sie werden auch das Hinzufügen einfacher Aktionen und Effekte untersuchen, z. B. das Ändern von Größe, Klang und Farbe von Objekten. In diesem Modul werden grundlegende Konzepte zur Änderung von MRTK-Profilen vorgestellt, beginnend mit dem Deaktivieren der Darstellung des räumlichen Gittermodells. 
 
 ## <a name="objectives"></a>Ziele
 
-* Anpassen und Konfigurieren von Mixed Reality-Toolkit-Profilen
-* Interaktion mit Hologramme mithilfe von UI-Elemente und Schaltflächen
-* Grundlegende manuell Nachverfolgen von Eingabeereignissen und Interaktionen
+* Anpassen und Konfigurieren von Mixed Reality-Toolkitprofilen
+* Interagieren mit Hologrammen über Elemente und Schaltflächen der Benutzeroberfläche
+* Grundlegende Eingaben und Interaktionen zum Handtracking
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Vorgehensweise: Konfigurieren Sie die Mixed Reality-Toolkit-Profile (Änderung räumliche Awareness Display-Option)
-In diesem Abschnitt Sie erfahren, wie anpassen und konfigurieren die Standardwert Mixed Reality-Toolkit-Profilen durch Anpassen von die Option zum Anzeigen der räumlichen Bewusstsein vernetzt werden. Sie können dieselben Prinzipien für die Anpassung von Einstellungen oder Werten in den Profilen MRTK folgen.
+### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Konfigurieren der Mixed Reality-Toolkitprofile (Option zum Ändern der räumlichen Wahrnehmung)
+In diesem Abschnitt erfahren Sie, wie Sie die standardmäßigen Mixed Reality-Toolkitprofile anpassen und konfigurieren können, indem Sie die Anzeigeoption für das Gittermodell der räumlichen Wahrnehmung anpassen. Sie können dieselben Prinzipien befolgen, um Einstellungen oder Werte in den MRTK-Profilen anzupassen.
 
-1. Wählen Sie aus der Hierarchie "BaseScene" Mixed Reality-Toolkit (MRTK). Klicken Sie im Bereich mit den Inspektor für das "Mixed Reality-Toolkit-Skript" Suchen Sie, und wählen Sie das "aktive Profil" aus, wie in der folgenden Abbildung dargestellt. Zum Öffnen doppelklicken.
+1. Wählen Sie „Mixed Reality-Toolkit“ (MRTK) aus der Hierarchie „BaseScene“ (Basisszene) aus. Suchen Sie im Inspektorbereich nach dem „Mixed Reality-Toolkitskript“, und wählen Sie das „aktive Profil“ aus, wie in der folgenden Abbildung gezeigt. Doppelklicken Sie darauf, um es zu öffnen.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step1im.PNG)
 
->Hinweis: Standardmäßig können die Profile MRTK nicht bearbeitet werden. Hierbei handelt es sich um Standard-Profilvorlagen aus denen Sie kopieren und anpassen können. Befinden sich mehrere Ebenen der Anpassung und -Profilen, daher ist es üblich, kopieren und passen mehrere Profile aus, wenn Sie eine oder mehrere Einstellungen zu konfigurieren.
+>Hinweis: Standardmäßig können die MRTK-Profile nicht bearbeitet werden. Dies sind Standardprofilvorlagen, die Sie zum Kopieren und Anpassen verwenden können. Es gibt mehrere Ebenen von Anpassungen und Profilen, sodass es üblich ist, mehrere Profile zu kopieren und anzupassen, wenn Sie eine oder mehrere Einstellungen konfigurieren.
 >
->Um weitere Informationen zu MRTK Profile und deren Architektur zu ermitteln, finden Sie auf die [MRTK Dokumentation](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/SpatialAwareness/SpatialAwarenessSystemArchitecture.html>).
+>Weitere Informationen zu MRTK-Profilen und deren Architektur finden Sie in der [MRTK-Dokumentation](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/SpatialAwareness/SpatialAwarenessSystemArchitecture.html>).
 
-2. Erstellen Sie eine Kopie des Standardprofils anpassen. Um ein Standardprofil zu kopieren, klicken Sie auf der "kopieren und Anpassen von" Schaltfläche (siehe Abbildung). Dadurch wird eine Kopie des Profils MRTK erstellt. Mit Ihr eigenes Exemplar des Profils MRTK können Sie nun alle Einstellungen in diesem Profil anzupassen. Sie müssen auch den Copy/anpassen Schritt für jede zusätzliche Profile geschachtelt unter dieses Profil ist, zu wiederholen, wie in den folgenden Schritten beschrieben.
+2. Erstellen Sie eine Kopie des Standardprofils, um es anzupassen. Klicken Sie zum Kopieren eines Standardprofils auf die Schaltfläche „Copy & Customize“ (Kopieren und Anpassen), wie in der nachfolgenden Abbildung gezeigt. Dadurch wird eine Kopie des MRTK-Profils erstellt. Mit einer eigenen Kopie des MRTK-Profils verfügen Sie jetzt über die Möglichkeit, alle Einstellungen in diesem Profil anzupassen. Sie müssen auch den Schritt „Kopieren/Anpassen“ für alle weiteren Profile wiederholen, die unter diesem Profil geschachtelt sind, wie in den folgenden Schritten beschrieben.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step2im.PNG)
 
-3. Deaktivieren Sie die Sichtbarkeit des räumlichen Awareness Mesh. Zu diesem Zweck find "Räumlichen Awareness System Settings" in der Abbildung dargestellt. Klicken Sie auf die klonenschaltfläche "" rechts von der das "räumlichen Awareness-Profil" als Standardprofil für die eine anpassbare Kopie ersetzt. Wenn ein Popupfenster angezeigt wird, drücken Sie die Schaltfläche "Klonen", wie in der zweiten Abbildung unten gezeigt.
+3. Deaktivieren Sie die Sichtbarkeit des Gittermodells zur räumlichen Wahrnehmung. Suchen Sie dazu nach „Spatial Awareness System Settings“ (Systemeinstellungen zur räumlichen Wahrnehmung), wie in der Abbildung gezeigt. Klicken Sie auf die Schaltfläche „Clone“ (Klonen) rechts neben „Spatial Awareness System Profile“ (Systemprofil für räumliche Wahrnehmung), um das Standardprofil durch eine anpassbare Kopie zu ersetzen. Wenn ein Popupfenster angezeigt wird, drücken Sie die Schaltfläche „Clone“ (Klonen), wie in der zweiten Abbildung unten gezeigt.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step3im.PNG)
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step3bim.jpg)
 
-4. Erstellen Sie eine benutzerdefinierte Kopie der Standard Mixed Reality räumliche Mesh Beobachter. Klicken Sie auf den Pfeil nach unten neben "Windows Mixed Reality räumliche Mesh Beobachter" finden weitere Möglichkeiten, ein. In den folgenden Optionen sehen Sie sich, dass der "Default gemischte Realität räumliche Mesh Beobachter" angezeigt wird (nicht bearbeitet) abgeblendet dargestellt. Sie müssen dieses Profil mit einer anpassbaren Kopie ersetzen, damit Sie sie bearbeiten können. Klicken Sie auf der rechten Seite (gekennzeichnet durch den grünen Pfeil) um eine Kopie zu klonen.
+4. Erstellen Sie eine benutzerdefinierte Kopie des standardmäßigen Mixed Reality-Betrachters für räumliche Gittermodelle. Klicken Sie neben „Windows Mixed Reality Spatial Mesh Observer“ (Windows Mixed Reality-Betrachter für räumliche Gittermodelle) auf den Pfeil nach unten, um weitere Optionen anzuzeigen. In diesen Optionen wird der „Default Mixed Reality Spatial Mesh Observer“ (standardmäßiger Mixed Reality-Betrachter für räumliche Gittermodelle) angezeigt, der grau (nicht bearbeitbar) angezeigt wird. Sie müssen dieses Standardprofil durch eine anpassbare Kopie ersetzen, damit Sie es bearbeiten können. Klicken Sie auf die rechte Schaltfläche (durch einen grünen Pfeil gekennzeichnet), um eine Kopie zu klonen.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step4im.PNG)
 
-5. Als Nächstes werden Sie die Einstellungen für die Anzeigeoption, sagen Sie "verdecken." anpassen. Dadurch wird das räumliche Netz unsichtbar, aber auch weiterhin ausgeblendet Spielobjekte hinter räumliche Mesh (Dies wird als verdecken bezeichnet.)
+5. Als Nächstes passen Sie die Einstellungen für die Anzeigeoption „Occlusion“ (Okklusion) an. Dadurch wird das räumliche Gittermodell unsichtbar, aber es werden dennoch Spielobjekte hinter dem räumlichen Gittermodell ausgeblendet (dies wird als „Okklusion“ bezeichnet).
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step5im.PNG)
 
->Hinweis: Während des Netzes räumliche Zuordnung nicht sichtbar ist, sie immer noch vorhanden ist, und Sie können mit ihm interagieren. Alle Hologramme hinter das Netz räumliche Zuordnung (z. B. ggf. ein Hologramm hinter Ihrer sichtbaren Wand landet) ist aufgrund der verdecken-Einstellung werden nicht angezeigt.
+>Hinweis: Obwohl das räumliche Zuordnungsgitter nicht angezeigt wird, ist es dennoch vorhanden und Sie können mit ihm interagieren. Alle Hologramme hinter dem räumlichen Zuordnungsgitter (z. B. ein Hologramm hinter der sichtbaren Wand) sind aufgrund der Okklusionseinstellung nicht sichtbar.
 
-Herzlichen Glückwunsch! Sie haben soeben gelernt, wie Sie eine Einstellung im Profil MRTK ändern. Wie Sie sehen können, müssen MRTK-Einstellungen ändern Sie Kopien der Standardprofile erstellen, damit Sie sie bearbeiten können. Sie haben immer die Standardprofile (die nicht bearbeitbar sind) zu zurückkehren, wenn Sie ein Profil erstellen, mit neuen Einstellungen oder Standardprofile zurückgreifen möchten. Es gibt zahlreiche Einstellungen, die Sie anpassen können. Vollständige Referenz zu MRTK profileinstellungen finden Sie in der Dokumentation des MRTK hier: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html
+Gratulation! Sie haben soeben erfahren, wie Sie eine Einstellung im MRTK-Profil ändern können. Wie Sie sehen können, müssen Sie, um die MRTK-Einstellungen zu ändern, Kopien der Standardprofile erstellen, damit Sie diese bearbeiten können. Sie werden immer über die Standardprofile (die nicht bearbeitbar sind) verfügen, zu denen Sie zurückkehren können, wenn Sie ein Profil mit neuen Einstellungen erstellen oder auf die Standardprofile zurückgreifen möchten. Es gibt zahlreiche Einstellungen, die Sie anpassen können. Die vollständige Referenz zu MRTK-Profileinstellungen finden Sie hier in der MRTK-Dokumentation: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html
 
-### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Nachverfolgen von Gestensteuerung und es Schaltflächen
-In diesem Abschnitt lernen Sie, wie Sie mit der Hand, die zu eine Schaltfläche "es" klicken.
+### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Gesten für Handtracking und interaktionsfähige Schaltflächen
+In diesem Abschnitt erfahren Sie, wie Sie mit dem Handtracking eine interaktionsfähige Schaltfläche drücken können.
 
-1. Wählen Sie "Ressourcen" im Ordner Projekte an.
+1. Wählen Sie im Projektordner „Assets“ (Ressourcen) aus.
 
-2. Geben Sie in der Suchleiste "Pressablebutton."
+2. Geben Sie in die Suchleiste „pressablebutton“ (drückbare Schaltfläche) ein.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step1im.PNG)
 
-3. Ziehen Sie das Prefab (dargestellt durch ein hellblaues Kästchen), die mit dem Namen "PressableButton" in der Hierarchie ein. 
+3. Ziehen Sie das Prefab (dargestellt durch ein blaues Feld) namens „PressableButton“ in Ihre Hierarchie. 
 
-   > Hinweis: Wenn Sie eine Meldung erhalten, Informationen zu "TMP Essentials importieren" Importieren Sie sie zu diesem Zeitpunkt. Wenn TMP Essentials nicht bereits Teil des Projekts war, müssen Sie möglicherweise wiederholen diesen Schritt nach dem Import TMP Essentials, die andernfalls möglicherweise Text der Schaltfläche nicht angezeigt.
+   > Hinweis: Wenn Sie eine Nachricht zum „Importieren von TMP Essentials“ erhalten, führen Sie den Importvorgang zu diesem Zeitpunkt aus. Wenn TMP Essentials nicht bereits Teil Ihres Projekts war, müssen Sie diesen Schritt möglicherweise nach dem Import von TMP Essentials wiederholen, da sonst möglicherweise kein Schaltflächentext angezeigt wird.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step3im.PNG)
 
-4. Doppelklicken klicken Sie auf das spielobjekt "PressableButton" (die jetzt in Ihrer Hierarchie BaseScene sein sollte) zum Anzeigen in der Szene, wie in der folgenden Abbildung dargestellt (Schaltflächengrafiken können sich von der folgenden Abbildung angezeigt werden). 
+4. Doppelklicken Sie auf das Spielobjekt „PressableButton“ (das sich jetzt in Ihrer BaseScene-Hierarchie befinden sollte), um es in Ihrer Szene anzuzeigen, wie in nachfolgender Abbildung gezeigt (Ihre Schaltflächengrafiken können von der nachfolgenden Abbildung abweichen). 
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step4im.PNG)
 
-5. Klicken Sie im Bereich mit den Inspektor auf "Ereignis hinzufügen", um der Schaltfläche "Geben Sie ein Ereignis zu reagieren, wenn mithilfe von Push übertragen. Wählen Sie in der Option, die angezeigt wird, klicken Sie im Dropdown-Menü aus. Wählen Sie "InteractableOnPressReciever." Dadurch wird die Schaltfläche, um Antworten auf ein gedrückten-Ereignis, wenn eine nachverfolgte Hand auf die Schaltfläche klickt.
+5. Klicken Sie im Inspektorbereich auf „Add Event“ (Ereignis hinzufügen), um der Schaltfläche ein Ereignis zuzuweisen, auf das sie reagieren soll, wenn sie gedrückt wird. Wählen Sie in der angezeigten Option das Dropdownmenü aus. Wählen Sie „InteractableOnPressReciever“ aus. Dadurch kann die Schaltfläche auf ein gedrücktes Ereignis reagieren, wenn die Schaltfläche von einer nachverfolgten Hand gedrückt wird.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step5im.PNG)
 
-6. Fügen Sie einen Cube, in die Szene. Klicken Sie mit der rechten Maustaste auf den Bereich für die Hierarchie, wählen Sie des 3D-Objekts aus, und klicken Sie dann auf "Cube". Ein Cube sollte jetzt in Ihrer Anzeige sein. Es sind sehr groß, also werden an den Koordinaten (während "Cube" noch im Bereich "Hierarchie" ausgewählt ist) um die Größe zu verringern. Legen Sie die Skalierungswerte auf X = 0,1, y = 0,1 und Z = 0,1. Werden Sie sicher, dass den Cube in der Szene, platzieren Sie es in der Nähe der Schaltfläche pressable positionieren, jedoch nicht überlappenden, mit der Schaltfläche. In der folgenden Abbildung ist des Cubes Position X = 0, y = 0,2 und Z = 1. 
+6. Fügen Sie der Szene einen Würfel hinzu. Klicken Sie mit der rechten Maustaste auf den Hierarchiebereich, wählen Sie „3D Object (3D-Objekt) aus, und klicken Sie dann auf „Cube“ (Würfel). Jetzt sollte sich ein Würfel in Ihrer Anzeige befinden. Er wird sehr groß dargestellt, also passen Sie die Koordinaten an (während im Hierarchiebereich weiterhin „Cube" (Würfel) ausgewählt ist), um die Größe zu verringern. Stellen Sie die Skalierungswerte auf „x = 0,1“, „y = 0,1“, „z = 0,1“ ein. Stellen Sie sicher, dass der Würfel in Ihrer Szene in der Nähe der drückbaren Schaltfläche, aber nicht mit der Schaltfläche überlappend positioniert wird. In der folgenden Abbildung ist die Position des Würfels „x = 0“, „y = 0,2“ und „z = 1“. 
 
-   > Hinweis: Im Allgemeinen entspricht 1 Einheit in Unity ungefähr 1 Meter Umkreis um in der realen Welt. Es gibt Ausnahmen, z. B. wenn untergeordnete Elemente, von skalierten Objekten stehen.
+   > Hinweis: Im Allgemeinen entspricht 1 Einheit in Unity ungefähr einem Meter in der physischen Umgebung. Es gibt Ausnahmen, z. B. wenn Objekte untergeordnete Objekte von skalierten Objekten sind.
    
    ![MR213_BuildSettings](images/mrlearning-base-ch2-1step6ima.PNG)
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step6imb.PNG)
 
-7. In diesem Schritt richten Sie den Cube ein Farbe zu ändern, wenn die Schaltfläche gedrückt wird. Wählen Sie die PressableButton im Menü "BaseScene". Klicken Sie im Bereich mit den Inspector unter dem Feld "Wählen Sie Event-Type" auf die Schaltfläche "+". Ziehen Sie die "Cube" im Menü "BaseScene" in das Feld "Common Language Runtime nur", wie in der folgenden Abbildung dargestellt.
+7. In diesem Schritt richten Sie den Würfel so ein, dass er die Farbe ändert, wenn Ihre Schaltfläche gedrückt wird. Wählen Sie die „PressableButton“ im Menü „BaseScene“ aus. Klicken Sie im Inspektorbereich unter dem Feld „Select Event Type“ (Ereignistyp auswählen“ auf die Schaltfläche „+“. Ziehen Sie den „Würfel“ aus dem Menü „BaseScene“ in das Feld „Runtime Only“ (Nur Runtime), wie in der folgenden Abbildung gezeigt.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step7ima.PNG)
 
-Klicken Sie auf der Dropdownliste die Fehlermeldung "Keine Funktion." Wählen Sie "MeshRenderer" dann "Material Material". Dadurch können Sie das Material zu ändern, wenn Sie die Schaltfläche gedrückt wird. 
+Klicken Sie auf die Dropdownliste mit der Aufschrift „No Function“ (Keine Funktion). Wählen Sie „MeshRenderer“ und dann „Material material“ aus. Dadurch können Sie das Material wechseln, wenn die Schaltfläche gedrückt wird. 
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step7imb.PNG)
 
-Wechseln Sie zu den Projektbereich, und suchen Sie für das Material, die, dem Sie ändern möchten. Sie sind dabei, das Material "MRTK_Standard_Cyan" in diesem Beispiel verwenden, die Sie durch Eingabe in "Cyan" in der Registerkarte Project-Suchleiste (die MRTK enthält viele Materialien und Farben.) Ziehen Sie das Material, in das Feld unter "MeshRenderer.material." Die Materialien MRTK finden Sie im Ressourcen > MixedRealityToolkit.SDK > StandardAssets > Materialien.
+Wechseln Sie in den Projektbereich, und suchen Sie nach dem Material, in das Sie es ändern möchten. Sie werden das Material „MRTK_Standard_Cyan“ für dieses Beispiel verwenden, das Sie durch Eingabe von „Cyan“ in der Suchleiste der Projektregisterkarte finden. (Das MRTK enthält viele Materialien und Farben zur Auswahl.) Ziehen Sie das Material auf das Feld unter „MeshRenderer.material“. Die MRTK-Materialien finden Sie unter „Assets>MixedRealityToolkit.SDK>StandardAssets>Materials“ (Ressourcen>MixedRealityToolkit.SDK>Standardressourcen>Materialien).
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step7imbb.PNG)
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step7imc.PNG)
 
-Das Ereignis ist jetzt festgelegt werden, so ändert, wenn die Schaltfläche gedrückt wird, der Cube Farbe basierend auf den Materialien, den Sie angegeben haben. In diesem Beispiel wird der Cube auf die Farbe Zyan ändern.
+Das Ereignis ist jetzt so eingestellt, dass beim Drücken der Schaltfläche der Würfel je nach dem von Ihnen angegebenen Material seine Farbe ändert. In diesem Beispiel wechselt der Würfel zur Farbe „Cyan“.
 
-8. Als Nächstes möchten Sie die releaseaktion so einrichten, dass bei der Freigabe, die Schaltfläche auf ihre Standardfarbe zurückgesetzt. Wiederholen Sie Schritt 7 (im vorigen Schritt) aber dieses Mal mit der "" OnRelease verwenden anstelle des Ereignisses "OnPress" aus, wie in der folgenden Abbildung dargestellt.
+8. Als Nächstes werden Sie die Freigabeaktion so einrichten, dass die Schaltfläche nach der Freigabe wieder zu ihrer Standardfarbe zurückkehrt. Wiederholen Sie Schritt 7 (den vorherigen Schritt), diesmal jedoch mit dem Ereignis „OnRelease“ anstelle des Ereignisses „OnPress“, wie in der Abbildung unten gezeigt.
 
-9.  Suchen Sie im Projektpanel nach Material für den Cube standardmäßig auf die Schaltfläche freigeben (in unserem Fall wir haben MRTK_Standard_LightGray.) Ziehen Sie das Material, in das Feld unterhalb des Felds "MeshRenderer.material".
+9.  Suchen Sie im Projektbereich nach einem Material, auf das der Würfel beim Loslassen der Schaltfläche standardmäßig eingestellt ist (in unserem Fall haben wir „MRTK_Standard_LightGray“ ausgewählt). Ziehen Sie das Material in das Feld unter dem Feld „MeshRenderer.material“.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step8im.PNG)
 
-Nun, wenn die Schaltfläche gedrückt wird, um eine neue Farbe ändern muss (z. B. Cyan) Wenn die Maustaste losgelassen wird sollte es ändern, um die Standardfarbe, die Sie angegeben haben (z. B. Hellgrau.) Drücken Sie die Schaltfläche "Wiedergabe" am oberen Bildschirmrand, probieren Sie es im Editor bereitstellen oder in Ihrem HoloLens 2 Testen! Weitere Informationen zum im Editor-Simulation, einschließlich Lesen von Hand Simulation der [MRTKs Simulation-Dokumentationsseite](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>). 
+Wenn Sie jetzt die Schaltfläche drücken, sollte sie zu einer neuen Farbe wechseln (z. B. Cyan), und wenn Sie die Schaltfläche loslassen, sollte sie wieder zu der von Ihnen festgelegten Standardfarbe zurückkehren (z. B. Hellgrau). Drücken Sie oben auf dem Bildschirm auf die Schaltfläche „Play“ (Wiedergabe), um sie im Editor auszuprobieren oder auf Ihrer HoloLens 2 zum Testen bereitzustellen. Weitere Informationen zur Simulation im Editor, einschließlich der Handsimulation, finden Sie auf der Seite zur [Simulation in der MRTK-Dokumentation](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>). 
 
-### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Erstellen einen Bereich von Schaltflächen, die mithilfe MRTKs Raster Objektauflistung
+### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Erstellen eines Schaltflächenbereichs mit der MRTK-Rasterobjektsammlung
 
-In diesem Abschnitt lernen Sie, wie Sie mehrere Schaltflächen automatisch in einer ordentlichen Benutzeroberfläche, die mit der MRTKs GridObjectCollection Tool ausrichten.
+In diesem Abschnitt erfahren Sie, wie Sie mit dem MRTK-Tool „GridObjectCollection“ automatisch mehrere Schaltflächen auf einer ordentlichen Benutzeroberfläche ausrichten.
 
-1. Duplizieren Sie die Schaltfläche aus dem vorherigen Abschnitt, bis Sie 5 Schaltflächen verfügen. Es gibt mehrere Möglichkeiten zur Verfügung:
-- Klicken Sie mit der rechten Maustaste auf die Schaltfläche und klicken Sie auf "Kopieren", und klicken Sie dann die Schaltfläche mit den nach unten zu unterschreiten und mit der rechten Maustaste erneut und klicken Sie auf "Einfügen". 
-- Klicken Sie mit der rechten Maustaste auf die Schaltfläche, und klicken Sie auf "doppelter". 
-- Verwenden Sie den Tastaturbefehl, durch Klicken auf den Cube und die drücken "von STRG D" auf der Tastatur.
+1. Duplizieren Sie die Schaltfläche aus dem vorherigen Abschnitt, bis Sie über fünf Tasten verfügen. Dazu gibt es verschiedene Möglichkeiten:
+- Klicken Sie mit der rechten Maustaste auf die Schaltfläche, und klicken Sie auf „Copy“ (Kopieren). Dann wechseln Sie nach unten unter die Schaltfläche, klicken Sie erneut mit der rechten Maustaste und klicken Sie auf „Paste“ (Einfügen). 
+- Klicken Sie mit der rechten Maustaste auf die Schaltfläche, und klicken Sie auf „Duplicate“ (Duplizieren). 
+- Verwenden Sie den Tastaturbefehl, indem Sie auf den Würfel klicken und „STRG+D“ auf Ihrer Tastatur drücken.
 
-Wiederholen Sie diesen Schritt, bis Sie 5 insgesamt Schaltflächen verfügen (siehe 5 rote Pfeile in der Abbildung unten).
+Wiederholen Sie diesen Vorgang, bis Sie insgesamt über fünf Schaltflächen verfügen (siehe die fünf roten Pfeile in der unteren Abbildung).
 
 ![Mrlearning Base Ch2 3Step1im](images/mrlearning-base-ch2-3step1im.PNG)
 
-2. Gruppieren Sie die Schaltflächen unter einem Spiel leere übergeordnete-Objekt. Damit die Schaltflächen in Raster Auflistung verfügbar sind, müssen Sie die Schaltflächen unter einem gemeinsamen übergeordneten Objekt zu gruppieren. Klicken Sie mit der rechten Maustaste in den Hiearachy, und klicken Sie auf "leer." Dies erstellt ein neues leeres game-Objekt können Sie alle Schaltflächen im einfügen. Es wird als "" gameobject"." angezeigt. Klicken Sie mit der rechten Maustaste auf, und benennen Sie sie in "ButtonCollection."
+2. Gruppieren Sie die Schaltflächen unter einem leeren übergeordneten Spielobjekt. Um die Schaltflächen in die Rastersammlung aufzunehmen, müssen Sie Ihre Schaltflächen unter einem gemeinsamen übergeordneten Objekt gruppieren. Klicken Sie mit der rechten Maustaste in die Hierarchie, und klicken Sie auf „Create empty“ (Leer erstellen). Dadurch wird ein neues leeres Spielobjekt erstellt, in das Sie alle Schaltflächen einfügen können. Es wird als „gameObject“ angezeigt. Klicken Sie mit der rechten Maustaste, und benennen Sie es in „ButtonCollection“ um.
 
 ![Mrlearning Base Ch2 3Step2im](images/mrlearning-base-ch2-3step2im.PNG)
 
-3. Verschieben Sie alle Schaltflächen in der neuen Sammlung an. Hierzu wählen alle fünf die Schaltfläche "-Objekte in Ihrem Heirarch, und ziehen Sie sie alle unter"ButtonCollection"-spielobjekt, wie in der folgenden Abbildung dargestellt. Tipp: Wählen Sie mehrere Elemente aus, indem Sie die STRG-Taste gedrückt halten, während Sie Elemente auswählen.
+3. Verschieben Sie alle Schaltflächen in die neue Sammlung. Wählen Sie dazu alle fünf Schaltflächenobjekte in Ihrer Hierarchie aus, und ziehen Sie sie alle unter das Spielobjekt „ButtonCollection“, wie in der Abbildung unten gezeigt. Tipp: Wählen Sie mehrere Elemente aus, indem Sie beim Auswählen der Elemente die STRG-Taste gedrückt halten.
 
 ![Mrlearning Base Ch2 3Step3imb](images/mrlearning-base-ch2-3step3imb.PNG)
 
-4. Der Schaltfläche-Sammlung MRTKs "Grid-Objekt-Collection" Komponente hinzufügen.  Zu diesem Zweck wählen Sie das übergeordnete Objekt von "ButtonCollection", und klicken Sie im Bereich mit den Inspektor auf die Schaltfläche "Komponente hinzufügen". Suchen Sie in der Suchleiste nach "Grid-Objekt-Collection", und wählen Sie ihn, wenn sie in der Liste angezeigt wird.
+4. Fügen Sie die MRTK-Komponente „Grid Object Collection“ (Rasterobjektsammlung) zur Schaltflächensammlung hinzu.  Wählen Sie dazu das übergeordnete Objekt „ButtonCollection“ aus, und klicken Sie im Inspektorbereich auf die Schaltfläche „Add Component“ (Komponente hinzufügen). Suchen Sie dann in der Suchleiste nach „Grid Object Collection“ (Rasterobjektsammlung), und wählen Sie diese aus, wenn sie in der Liste angezeigt wird.
 
 ![Mrlearning Base Ch2 3Step4im](images/mrlearning-base-ch2-3step4im.PNG)
 
-Die Objektsammlung Grid-Komponente können Sie Schaltflächen oder einen Satz von Objekten in eine praktische Zeilen-, Spalten- oder Raster. Dies ist einer der Bausteine, die von der MRTK, die eine schnelle und einfache Möglichkeit zum Erstellen ansprechender Benutzeroberflächen stellt bereitgestellt.
+Die Komponente „Grid Object Collection“ ermöglicht es Ihnen, Schaltflächen oder eine beliebige Objektgruppe in einer ordentlichen Zeile, Spalte oder einem Gitter zu organisieren. Dies ist einer der Bausteine des MRTK, der Ihnen eine schnelle und einfache Möglichkeit bietet, ansprechende Benutzeroberflächen zu erstellen.
 
-5. Konfigurieren Sie die Auflistung der Raster-Objekt. Damit werden alle dem Zifferblatt der Schaltflächen des Benutzers, wählen Sie "orientieren Typ" und dann "konfrontiert übergeordneten vorwärts" (wie in der Abbildung gezeigt.) Als Nächstes ändern Sie die Zellengröße um den Abstand zwischen Schaltflächen festzulegen. Starten Sie mit 0,12 Einheiten 0,12 Einheiten für die Zellenbreite und Höhe der Zelle, wie in der folgenden Abbildung dargestellt. Möglicherweise müssen Sie diese Werte, je nachdem Objektschaltfläche/Ressourcen ausgewählt anpassen. Stellen Sie sicher, dass "Zeilen" auf 1 festgelegt ist. Klicken Sie dann auf "Sammlung aktualisieren", und die Szene sollte der folgenden Abbildung aussehen. 
+5. Konfigurieren Sie die Rasterobjektsammlung. Um sicherzustellen, dass alle Schaltflächen dem Benutzer zugewandt sind, wählen Sie „Orient Type“ (Ausrichtungstyp) und dann „Face Parent Forward“ (Übergeordnetes Objekt nach vorne gerichtet) aus (wie in der Abbildung gezeigt). Ändern Sie anschließend die Zellengröße, um den Abstand zwischen den Schaltflächen festzulegen. Beginnen Sie mit 0,12 Einheiten x 0,12 Einheiten für die Zellenbreite und Zellenhöhe, wie in der Abbildung unten gezeigt. Möglicherweise müssen Sie diese Werte je nach gewählten Objekt-/Schaltflächenressourcen anpassen. Stellen Sie sicher, dass „Rows“ (Zeilen) auf 1 festgelegt ist. Klicken Sie dann auf „Update Collection“ (Sammlung aktualisieren) und die Szene sollte wie in der folgenden Abbildung aussehen. 
 
 
 ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3step5im.PNG)
 
->Hinweis: Je nach Ausrichtung der untergeordneten Objekte oder des übergeordneten Objekts müssen Sie wahrscheinlich die Ausrichtung festlegen, anders als in zukünftigen Projekten anzupassen. Die Breite der Zelle und die Höhe der Zelle Felder müssen möglicherweise auch unterschiedlich, je nach Größe der Objekte in der Auflistung definiert werden.
+>Hinweis: Abhängig von der Ausrichtung der untergeordneten Objekte oder des übergeordneten Objekts müssen Sie die Einstellung der Ausrichtung in zukünftigen Projekten wahrscheinlich anders anpassen. Die Felder für die Zellenbreite und Zellenhöhe müssen je nach Größe der Objekte in Ihrer Sammlung möglicherweise ebenfalls anders definiert werden.
 
-### <a name="adding-text-into-your-scene"></a>Hinzufügen von Text in die Szene
+### <a name="adding-text-into-your-scene"></a>Hinzufügen von Text zu Ihrer Szene
 
-In diesem Abschnitt erfahren Sie, wie zum Hinzufügen und Bearbeiten von Text, der Ihre Erfahrungen mixed Reality. Wenn Sie noch nicht geschehen, stellen Sie sicher TextMeshPro in Unity mithilfe der Anweisungen aktiviert haben [hier](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation).
+In diesem Abschnitt erfahren Sie, wie Sie Text zu Ihrer Mixed Reality-Umgebung hinzufügen und ihn bearbeiten können. Wenn dies noch nicht der Fall ist, stellen Sie sicher, dass Sie „TextMeshPro“ in Unity aktiviert haben, indem Sie die Anweisungen [hier](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation) befolgen.
 
-1. Wählen Sie das übergeordnete Objekt von "ButtonCollection", und klicken Sie mit der rechten Maustaste auf die Auflistung. Erweitern Sie im Dropdownmenü "3D Object", und wählen Sie dann "TextMeshPro – Text". Ein Objekt TextMeshPro unter der Schaltfläche-Auflistung, sollte angezeigt werden, wie in der folgenden Abbildung dargestellt.
+1. Wählen Sie das übergeordnete Objekt „ButtonCollection“ aus, und klicken Sie mit der rechten Maustaste auf die Sammlung. Erweitern Sie „3D Object“ (3D-Objekt) im Dropdownmenü, und wählen Sie dann „TextMeshPro – Text“ aus. Es sollte ein TextMeshPro-Objekt unter der Schaltflächensammlung angezeigt werden, wie in der Abbildung unten gezeigt.
 
-![Lektion 2: komplettes Kapitel4 Step1a](images/Lesson2_Chapter4_Step1a.JPG)
-![Lesson2 Kapitel4 Step1b](images/Lesson2_Chapter4_Step1b.JPG)
+![Lektion2 Kapitel4 Schritt1a](images/Lesson2_Chapter4_Step1a.JPG)
+![Lektion2 Kapitel4 Schritt1b](images/Lesson2_Chapter4_Step1b.JPG)
 
-2. Geben Sie in der Komponente TextMeshPro-Text-Feld (befindet sich im Bereich mit den Inspektor wie unten dargestellt) "Text der Schaltfläche Auflistung". Der Text wird in der Szene angezeigt, aber es wird hinter den Schaltflächen und/oder die falsche Größe.
+2. Geben Sie im Textfeld der TextMeshPro-Komponente (im Inspektorbereich, wie unten gezeigt) „Button Collection Text“ (Text der Schaltflächensammlung) ein. Der Text wird in der Szene angezeigt, aber hinter den Schaltflächen ausgeblendet und/oder in der falschen Größe angezeigt.
 
-![Lektion 2: komplettes Kapitel4 Schritt 2](images/Lesson2_Chapter4_Step2.JPG)
+![Lektion2 Kapitel4 Schritt2](images/Lesson2_Chapter4_Step2.JPG)
 
-3. Um die Textgröße und die Platzierung zur besseren Lesbarkeit zu verbessern, passen Sie das Feld "Font-Size" in der TextMeshPro-Komponente, um die Größe der Schriftart ändern. Sie müssen auch anpassen, "Rect transformieren" positionieren und skalieren Sie wie in der folgenden Abbildung dargestellt. Sehen Sie die Bilder unten für Werte, die für diese Textkonfiguration verwendet, und verwenden Sie diese Werte als Ausgangspunkt aus der die Größe und Platzierung des Textfelds weiter verbessern können.
+3. Passen Sie das Feld „Font Size“ (Schriftgröße) in der TextMeshPro-Komponente an, um die Größe der Schrift zu ändern und somit Textgröße und Platzierung zwecks Lesbarkeit zu verbessern. Sie müssen auch die Position und Skalierung für „Rect Transform“ (Rechtecktransformation) anpassen, wie in der Abbildung unten gezeigt. Die folgenden Abbildungen zeigen Werte, die für unsere Textkonfiguration verwendet werden, und Sie können diese Werte als Ausgangspunkt nehmen, um Größe und Platzierung Ihres Textfelds weiter zu verbessern.
 
-![Lektion 2: komplettes Kapitel4 Schritt 3](images/Lesson2_Chapter4_Step3.JPG)
-![Lesson2 Kapitel4 Schritt 4](images/Lesson2_Chapter4_Step4.JPG)
+![Lektion2 Kapitel4 Schritt3](images/Lesson2_Chapter4_Step3.JPG)
+![Lektion2 Kapitel4 Schritt4](images/Lesson2_Chapter4_Step4.JPG)
 
-5. Um die Textwerte, auf die Schaltfläche "-Objekte zu ändern, klicken Sie auf den Pfeil neben einer Schaltfläche zum Erweitern, und Navigieren auf das Objekt"SeeItSayItLabel", und navigieren Sie zu"TextMeshPro", in dem Sie den Text auf Schaltflächen in den obigen Schritten beschriebene bearbeiten können.
+5. Klicken Sie zum Ändern der Textwerte auf den Schaltflächenobjekten auf den Pfeil neben einer beliebigen Schaltfläche, um sie zu erweitern. Navigieren Sie dann zum Objekt „SeeItSayItLabel“ und anschließend zu „TextMeshPro“, wo Sie den Text für Ihre Schaltflächen bearbeiten können, wie in den obigen Schritten beschrieben.
 
-![Lektion 2: komplettes Kapitel4 Schritt 5](images/Lesson2_Chapter4_Step5.JPG)
+![Lektion2 Kapitel4 Schritt5](images/Lesson2_Chapter4_Step5.JPG)
 
 ### <a name="congratulations"></a>Herzlichen Glückwunsch!
-In dieser Lektion haben Sie gelernt, kopieren, anpassen und konfigurieren eine Einstellung des MRTK (z. B. räumliche Awareness Mesh Sichtbarkeit.) Sie haben zudem die Interaktion mit einer Schaltfläche zum Auslösen von Ereignissen mithilfe von überwachten Hände auf der HoloLens-2. Schließlich haben Sie erstellen eine einfache Benutzeroberfläche, die mithilfe von Unity Text Mesh Pro der MRTKs Grid-Objektauflistung Komponente.
+In dieser Lektion haben Sie erfahren, wie Sie eine MRTK-Profileinstellung (d. h. Sichtbarkeit des Gittermodells der räumlichen Wahrnehmung) kopieren, anpassen und konfigurieren. Sie haben auch erfahren, wie Sie mit einer Schaltfläche interagieren können, um Ereignisse mit nachverfolgten Händen für die HoloLens 2 auszulösen. Abschließend haben Sie erfahren, wie Sie mit „TextMeshPro“ von Unity und der MRTK-Komponente „Grid Object Collection“ (Rasterobjektsammlung) eine einfache Benutzeroberfläche erstellen.
 
-[Nächste Lektion: Platzierung von dynamischen Inhalt und Hochleistungscomputings](mrlearning-base-ch3.md)
+[Nächste Lektion: Dynamische Inhaltsplatzierung und Solver](mrlearning-base-ch3.md)
 

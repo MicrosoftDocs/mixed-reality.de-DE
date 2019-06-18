@@ -1,26 +1,26 @@
 ---
-title: Head-Blicke und dwell
-description: Übersicht über das Head-Blicke und Dwell Eingabemodell
+title: Anvisieren mit dem Kopf und Verweilen
+description: Übersicht über das Eingabemodell „Anvisieren mit dem Kopf und Verweilen“
 author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Gemischte Realität Blicke, Dwell, Interaktion, Entwerfen
-ms.openlocfilehash: ae4688da791fd3afb7be66069049bbe51102dd7e
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+keywords: Mixed Reality, Anvisieren, Verweilen, Interaktion, Entwurf
+ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039200"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516005"
 ---
-# <a name="head-gaze-and-dwell"></a>Head-Blicke und dwell
+# <a name="head-gaze-and-dwell"></a>Anvisieren mit dem Kopf und Verweilen
 
-Wenn praktische Tools und Komponenten belegt sind, können die Gesten mühsam oder unmöglich sein. Voice-Befehle, wie Bewegungen können in bestimmten Kontexten, z. B. unter übermäßig laut Bedingungen unzuverlässig. Darüber hinaus Stimme, die Control-Computer ist nicht universell häufig, jedoch ist sicherlich Datenstrom gewinnen! Head-Blicke und Dwell bietet den meistverwendeten und einfachen Master-Mechanismus für die Arbeit heads-up und physisch auf HoloLens. Darüber hinaus Head-Blicke und Dwell ist 100-prozentige Zuverlässigkeit unabhängig von Rauschen Störungen noch Ruhe-Einschränkungen in der betriebsumgebung.
+Wenn die Hände mit Werkzeugen und Gegenständen beschäftigt sind, können Gesten mühsam oder unmöglich sein. Sprachbefehle können wie Gesten in bestimmten Kontexten unzuverlässig sein, z. B. unter zu lauten Umgebungsbedingungen. Darüber hinaus ist der Einsatz der Stimme zur Steuerung von Computern nicht überall üblich, aber seine Bedeutung nimmt sicherlich zu. „Anvisieren mit dem Kopf und Verweilen“ bietet den bekanntesten und einfach zu bedienenden Mechanismus für das freihändige Heads-Up-Arbeiten mit der HoloLens. Darüber hinaus ist das Modell „Anvisieren mit dem Kopf und Verweilen“ unabhängig von Störgeräuschen und Ruheeinschränkungen in der Betriebssystemumgebung zu 100 % zuverlässig.
 
 ## <a name="scenarios"></a>Szenarien
 
-Head-Blicke und Dwell lassen sich besonders in Szenarien, in denen einer Person Hände sind mit anderen Aufgaben ausgelastet und stimme nicht bei 100 % zuverlässig oder aufgrund von environmental oder soziale Netzwerke verfügbar. Ein gutes Beispiel ist eine Person, die eine HoloLens um Referenzinformationen beim Reparieren einer Auto-Engine zu überlagern trägt. Der Hand, die mit Tools oder ihren Text unterstützt, wie sie in der Depot-Engine-erfahren Sie, ausgelastet sind. Die Garage-Speicherplatz ist laut, mit der Konstanten, die diesem und Summen von Tools bereit, sodass Sprachbefehle schwierig. Head-Blicke und Dwell ermöglicht dem Mitarbeiter in die HoloLens zuverlässig auf ihre Referenzmaterial ohne Sicherungsstatus navigieren Workflow. 
+„Anvisieren mit dem Kopf und Verweilen“ zeichnet sich durch Szenarien aus, in denen die Hände einer Person mit anderen Aufgaben beschäftigt sind und die Stimme aufgrund von Umgebungs- oder sozialen Einschränkungen nicht 100 % zuverlässig oder verfügbar ist. Ein gutes Beispiel ist eine Person, die eine HoloLens trägt, um Referenzinformationen bei der Reparatur eines Fahrzeugmotors zu überlagern. Die Hände sind mit Werkzeugen beschäftigt oder stützen den eigenen Körper, während sich die Person in den Motorraum lehnt. Der Garagenbereich ist laut, mit einem ständigen Klopfen und Knarren der Werkzeuge, wodurch sich die Verwendung von Sprachbefehlen schwierig gestaltet. „Anvisieren mit dem Kopf und Verweilen“ ermöglicht es der Person, in der HoloLens sicher durch das Referenzmaterial zu navigieren, ohne den Workflow zu unterbrechen. 
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
@@ -35,10 +35,10 @@ Head-Blicke und Dwell lassen sich besonders in Szenarien, in denen einer Person 
         <td><strong>Eingabemodell</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Head-Blicke und dwell</td>
+        <td>Anvisieren mit dem Kopf und Verweilen</td>
         <td>✔️ Empfohlen</td>
         <td>✔️ Empfohlen</td>
         <td>✔️ Empfohlen</td>
@@ -47,83 +47,83 @@ Head-Blicke und Dwell lassen sich besonders in Szenarien, in denen einer Person 
 
 ## <a name="goals"></a>Ziele
 
-Stellen Sie einen Mechanismus zum vollständig freisprechgeräte Interaktionen, ohne Verwendung von Stimme an.
+Stellen Sie einen Mechanismus für völlig freihändige Interaktionen zur Verfügung, ohne die Stimme zu verwenden.
 
 ## <a name="design-principles"></a>Designprinzipien
 
-1. Vermeiden Sie "Als Waffe bestaunen"
+1. Vermeiden Sie „Anvisieren als Waffe“
 
-    Head-Blicke und Dwell erfordert visuelles Feedback intuitiv sein, aber viel Feedback kann hegen auslösen. Das Feedback tragen, dass einen Benutzer wissen, was sie abzielen, jedoch keine automatische Auswahl sie für ihre Absichten. Lesen von Text, Symbole und Bezeichnungen erfordert zusätzliche Überlegung, um eine Person Platz um die Informationen vor der Auswahl der absorb zu schaffen.
+    „Anvisieren mit dem Kopf und Verweilen“ erfordert ein intuitives visuelles Feedback, aber zu viel Feedback kann beklemmend wirken. Das Feedback sollte einem Benutzer helfen sein Ziel zu erkennen, aber das Ziel nicht gegen seinen Willen automatisch auswählen. Das Lesen von Text, Symbolen und Beschriftungen erfordert eine zusätzliche Berücksichtigung, um einer Person den Raum zu geben, die Informationen vor der Auswahl zu erfassen.
     
-2. Seek-Goldlöckchen Geschwindigkeit
+2. Informationen zur Geschwindigkeit
     
-    Dwell Interaktionen können verschiedene Zeitgeber, die basierend auf Auswirkung der Navigation haben – häufig verwendete Funktionen profitieren davon, in der Regel schnellere ausfüllen, während mehr Fill-Mal mehr Folgeschäden Funktionen profitieren können. Wenn Sie einen Fülleffekt verwenden diese Timer angezeigt, können die Animation Kurven der Füllfarbe werde, positiv einen Eindruck, schnellere Füllung beeinflussen. Berücksichtigt sind, um die Entscheidung des Benutzers aus Fast/Mittel/langsame aktivieren Geschwindigkeit Außerkraftsetzungen zu füllen.
+    Verweilinteraktionen können je nach Auswirkung der Navigation unterschiedliche Timer aufweisen – häufiger verwendete Funktionen profitieren in der Regel von schnelleren Füllzeiten, während konsequentere Funktionen von längeren Füllzeiten profitieren können. Bei der Verwendung eines Fülleffekts zur Darstellung dieser Timer können Animationskurven der Füllfarbe das Gefühl schnellerer Füllzeiten positiv beeinflussen. Es sollte erwogen werden, dem Benutzer die Möglichkeit zu bieten, sich für eine schnelle, mittlere und langsame Füllgeschwindigkeit zu entscheiden.
     
-3. Sagen Sie forschungspseudocode zu Yo-yo Auswirkung
+3. Vermeiden von Jo-Jo-Effekten
 
-    Die Yo-yo Auswirkung ist eine bedauernswerte Muster Bewegungen, die entstehen kann, wenn die Platzierung von Steuerelementen von Inhalt und Head-Blicke und Dwell erzwingt, Personen dass, ständig nach oben und unten wiederholt zu suchen. Eine Liste Navigationsbereich mit der Head-Blicke und Dwell-Schaltfläche am unteren Rand werden z. B. eine Schleife von - Suchen nach unten um länger aufhalten, sehen Sie sich auf Ergebnisse zu erzielen, Suchen nach unten länger aufhalten, usw. ausgelöst. Dieses resultierende Muster unangenehm ist, und sollte vermieden werden, indem Sie die Navigationssteuerelemente an einem zentralen Ort, der kleiner hin und her erfordert platzieren. Platzierung von Dwell Schaltflächen relativ zu deren Auswirkungen wichtig für Komfort.
+    Der Jo-Jo-Effekt ist ein unangenehmes Muster der Kopfbewegung, das entstehen kann, wenn die Positionierung von Inhalten und die Steuerung durch „Anvisieren mit dem Kopf und Verweilen“ die Personen zwingt, ständig auf und ab zu schauen. Eine Listennavigation mit der Schaltfläche für „Anvisieren mit dem Kopf und Verweilen“ am unteren Rand bewirkt z. B. den folgenden Schleifenablauf: Zum Verweilen nach unten schauen, nach oben auf die Ergebnisse blicken, zum Verweilen nach unten schauen usw. Dieses resultierende Muster ist unangenehm und sollte vermieden werden, indem die Steuerelemente für die Navigation an einer zentralen Position platziert werden, die weniger Hin- und Herbewegung erfordert. Die Positionierung der Schaltflächen zum Verweilen in Bezug auf ihre Wirkung wird für den Tragekomfort wichtig.
 
-## <a name="ux-guidelines-and-best-practices"></a>UX-Richtlinien und bewährte Methoden
+## <a name="ux-guidelines-and-best-practices"></a>Richtlinien und bewährte Methoden für die Benutzerumgebung
 
 ### <a name="target-sizes"></a>Zielgrößen
-  Um leicht zugänglich zu sein, Head-Blicke und länger aufhalten Sie Ziele muss groß genug, um Comforatably Ziel, und halten Sie die Head stabily auf dem Ziel der vorgegebenen Zeit. Es wird empfohlen, eine Mindestversion der Zielplattform Größe von 2 Grad um die am besten vertraut Erfahrung zu erzielen. 
+  Um leicht zugänglich zu sein, müssen die Ziele für „Anvisieren mit dem Kopf und Verweilen“ zur komfortablen Zielbestimmung ausreichend groß sein und dabei den Kopf für die vorgeschriebene Zeit beständig auf dem Ziel halten. Es wird eine minimale Zielgröße von 2 Grad empfohlen, um ein möglichst komfortables Erlebnis zu erzielen. 
 
 ### <a name="visual-feedback"></a>Visuelles Feedback
 
-Wenn eine radiale Füllung zur Darstellung des Dwell Timers verwenden, starten Sie aus der Mitte der Schaltfläche. Eine konsistente Antwort ist weniger verwirrend, als alle anderen Anweisungen für verschiedene Schaltflächen. 
+Wenn Sie eine radiale Füllung zur Darstellung des Timers für das Verweilen verwenden, beginnen Sie in der Mitte der Schaltfläche. Eine konsistente Reaktion ist weniger irritierend als vollständig unterschiedliche Richtungen auf verschiedenen Schaltflächen. 
 
-  * Mit dieser Regel kann jedoch für den direktionalen Interaktionen (z. B. Nav nach-oben/nach unten/links/rechts, usw.) unterbrochen werden. Z. B. Microsoft Dynamics 365-Handbücher wird eine Ausnahme weiter/Back verlassene rechts gefüllt.
-  * Betrachten Sie invertieren radiale Füllen von außerhalb für Szenarien wie das Umschalten einer Schaltfläche deaktiviert. Die inverse Eindruck, eine Schaltfläche ist ein praktisches visual Muster zu verwalten. 
+  * Diese Regel kann jedoch für direktionale Interaktionen (z. B. Navigation nach oben/unten/links/rechts usw.) missachtet werden. Microsoft Dynamics 365-Handbücher machen z. B. eine Ausnahme, wenn WEITER/ZURÜCK von links nach rechts ausgefüllt werden.
+  * Erwägen Sie für Szenarien wie das Umschalten einer Schaltfläche, die radiale Füllung von außen zu invertieren. Das gegenläufige Gefühl beim Drücken einer Schaltfläche ist ein angenehmes visuelles Muster, das beibehalten werden sollte. 
 
-### <a name="progressive-disclosure"></a>Schrittweise Anzeige von
+### <a name="progressive-disclosure"></a>Schrittweise Offenlegung
 
-Schrittweise Anzeige von bedeutet, dass nur angezeigt, so viele Details wie in den einzelnen Phasen einer Interaktion relevant ist. Für Dwell bedeutet dies, dass es sich bei Ziel Dwell Hervorhebung (z. B. in einem Listensteuerelement) offengelegt wird.
+„Schrittweise Offenlegung“ bedeutet, dass nur so viele Details angezeigt werden, wie in den einzelnen Phasen einer Interaktion relevant sind. Für das Verweilen bedeutet dies, dass das Verweilziel beim Hervorheben (z. B. in einem Listensteuerelement) offengelegt wird.
 
- ### <a name="oversized-targets"></a>Übergroße Ziele
-Dwell Region kann größer als inaktiv Symbol zu vereinfachen, verwenden Sie, wie die zurück-Taste in Microsoft Dynamics 365-Handbüchern sein.
+ ### <a name="oversized-targets"></a>Überdimensionale Ziele
+Der Verweilbereich kann größer als das inaktive Symbol sein, um die Verwendung zu erleichtern, wie die Schaltfläche „Zurück“ in Microsoft Dynamics 365-Handbüchern.
 
-### <a name="prevent-flickering-with-delayed-feedback"></a>Bildflimmern bei verzögerten Feedback zu verhindern, dass
-Verwenden Sie eine kurze Verzögerung vor dem Starten von visuellen Feedbacks, um zu vermeiden, Flimmern verursachte, wenn ein Benutzer über ein Ziel Dwell bewegt.
-* Behalten Sie für Schaltflächen Inteacted mit häufig die sehr kurze Verzögerung ein, damit die Anwendung reaktive fühlt.
-* Für Schaltflächen, die mit Infrequenctly interagiert werden kann eine längere Verzögerung Approprate vermeiden Sie die Schnittstelle empfunden twitchy sein.
+### <a name="prevent-flickering-with-delayed-feedback"></a>Vermeiden von Flimmern durch verzögertes Feedback
+Verwenden Sie eine kurze Verzögerung, bevor Sie mit dem visuellen Feedback beginnen, um ein Flimmern zu vermeiden, wenn ein Benutzer ein Verweilziel überquert.
+* Bei Schaltflächen mit häufiger Interaktion sollte die Verzögerung sehr kurz gehalten werden, damit die Anwendung einen reaktiven Eindruck macht.
+* Bei Schaltflächen mit weniger häufiger Interaktion kann eine längere Verzögerung angemessen sein, um zu vermeiden, dass die Benutzeroberfläche unruhig wirkt.
 
-## <a name="ui-patterns"></a>UI-Muster
+## <a name="ui-patterns"></a>Muster der Benutzeroberfläche
 
-### <a name="high-frequency-buttons"></a>Hohe Auslastung Schaltflächen
-![Microsoft Dynamics 365 Handbücher Schaltfläche "Weiter"](images/GuideNextButton.png "Microsoft Dynamics 365 Handbücher Schaltfläche \"Weiter\"") sehr häufig befinden sich Schaltflächen, die häufig in der gesamten Anwendung verwendet werden. Ein gutes Beispiel für diese sind die Schaltflächen weiteren und zurück in Microsoft Dynamics 365-Handbücher.
+### <a name="high-frequency-buttons"></a>Schaltflächen mit häufiger Interaktion
+![Schaltfläche „Weiter“ der Microsoft Dynamics 365-Handbücher](images/GuideNextButton.png "Schaltfläche „Weiter“ der Microsoft Dynamics 365-Handbücher") Schaltflächen mit häufiger Interaktion sind Schaltflächen, die in einer Anwendung häufig verwendet werden. Ein gutes Beispiel hierfür sind die Schaltflächen „Weiter“ und „Zurück“ in Microsoft Dynamics 365-Handbüchern.
 
-Hohe Auslastung Schaltflächen sollten...
-* größere Schaltflächen, leichter mit Head-Blicke erreicht werden
-* bleiben Sie in der Nähe der Höhe Eye ergonomische Service zu vermeiden.
+Merkmale von Schaltflächen mit häufiger Interaktion:
+* Es sollte sich um größere Schaltflächen handeln, die beim Anvisieren mit dem Kopf leichter zu treffen sind.
+* Sie sollten auf Augenhöhe verbleiben, um ergonomische Belastungen zu vermeiden.
 
-### <a name="low-frequency-buttons"></a>Niedrige Auslastung von Schaltflächen
-Niedrige Auslastung befinden Schaltflächen, die nicht mit in der gesamten Anwendung als regelmäßig interagiert werden. Ein gutes Beispiel ist möglicherweise eine Schaltfläche auf das Menü "Einstellungen" oder eine Schaltfläche, um alle Aufgaben löschen.
+### <a name="low-frequency-buttons"></a>Schaltflächen mit seltener Interaktion
+Schaltflächen mit seltener Interaktion sind Schaltflächen, mit denen in der Anwendung nicht so häufig interagiert wird. Ein gutes Beispiel könnte eine Schaltfläche für den Zugriff auf das Einstellungsmenü oder eine Schaltfläche zum Löschen der gesamten Arbeit sein.
 
-* Versuchen Sie es, zu diese Schaltflächen Bildschirmen häufig Head-Blicke-Pfade, um die versehentliche Aktivierung zu vermeiden. 
+* Versuchen Sie, diese Schaltflächen von häufig genutzten Pfaden zum Anvisieren mit dem Kopf fernzuhalten, um eine versehentliche Aktivierung zu vermeiden. 
 
 ### <a name="confirmations"></a>Bestätigungen
 ![Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher](images/GuidesConfirmation.png "Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher")
 
-Wenn eine Aktion entscheidenden Einfluss, wie Gebühren Geld, löschen die Arbeit oder Starten eines Prozesses lange hat ist es hilfreich, um zu bestätigen, dass eine Person eine Schaltfläche auswählen. Sind für Head-Blicke und Dwell Benutzeroberflächen gibt es einige Muster und Überlegungen zu den Dialogfeldern zur Bestätigung:
+Wenn eine Aktion erhebliche Auswirkungen hat, wie das Aufladen von Geld, das Löschen von Arbeit oder das Starten eines zeitintensiven Prozesses, ist es sinnvoll, die Auswahl einer Schaltfläche durch eine Person bestätigen zu lassen. Für Benutzeroberflächenelemente zum Anvisieren mit dem Kopf und Verweilen gibt es einige Muster und Überlegungen für Bestätigungsdialogfelder:
 
-  * Enthält die Markierung der Hauptschaltfläche.
-  * Anzeigen länger Ziel gleichzeitig Markierung der aufhalten.
-  * Für die sekundären Schaltfläche offen legen Sie Dwell Zielstatus auf Head-Blicke.
+  * Auswahlhervorhebung auf Hauptschaltfläche anzeigen.
+  * Verweilziel gleichzeitig mit der Auswahlhervorhebung anzeigen.
+  * Verweilziel für die sekundäre Schaltfläche beim Anvisieren mit dem Kopf anzeigen.
         
-### <a name="toggle-buttons"></a>Umschaltflächen
-Umschaltflächen erfordern einige Nachteile Logik ordnungsgemäß funktioniert. Wenn eine Person auf eine Umschaltfläche und aktive aufdecken möchten, müssen sie die Schaltfläche zum Beenden und dann zurück, um die Logik Dwell neu zu starten. Es ist wichtig, das ein-/ausschaltbaren Schaltflächen eine klare aktiv im Vergleich zu den inaktiven Status aufweisen. 
+### <a name="toggle-buttons"></a>Umschalter
+Umschalter erfordern eine differenzierte Logik, um ordnungsgemäß zu funktionieren. Wenn eine Person auf einem Umschalter verweilt und ihn aktiviert, muss sie die Schaltfläche verlassen und dann zurückkehren, um die Verweillogik neu zu starten. Es ist wichtig, dass die umschaltbaren Schaltflächen einen eindeutigen aktiven und inaktiven Zustand aufweisen. 
 
 ### <a name="list-views"></a>Listenansichten
-![Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher](images/GuidesListView.png "Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher") Listenansichten stellen eine besondere Herausforderung für Head-Blicke und länger aufhalten Eingabe. Benutzer müssen in der Lage, überprüfen den Inhalt ohne empfunden, die rund um die Ziele Dwell tiptoe müssen. 
+![Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher](images/GuidesListView.png "Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher") Listenansichten stellen eine besondere Herausforderung für die Eingabe durch „Anvisieren mit dem Kopf und Verweilen“ dar. Benutzer müssen in der Lage sein, den Inhalt zu scannen, ohne das Gefühl zu haben, dass sie sich in der Nähe der Verweilziele besonders vorsichtig bewegen müssen. 
 
-Tipps zum Entwerfen von Ansichten aufzulisten:
-* haben Sie die gesamte Zeile markieren, wenn Head-gazed jedoch auf der Ziel-spezifische Dwell sei Head-Blicke Dwell beginnt nicht an.
-* Das Ziel Dwell nur angezeigt, wenn die Zeile hervorgehoben wird, um auf diese ganzen visuellen Störungen zu verkürzen.
-* Löschen und mit die Position des Dwell Ziele konsistent sein.
-* Zeigen Sie nicht mehr an, dass alle Ziele auf einmal zur Vermeidung von Benutzeroberfläche länger aufhalten
-* Verwenden Sie das gleiche Muster erneut so oft wie möglich zum Herstellen von UX-Kenntnisse
+Einige Tipps zum Entwerfen von Listenansichten:
+* Beim Anvisieren mit dem Kopf die gesamte Zeile hervorheben, aber erst mit dem Verweilen beginnen, wenn das Anvisieren mit dem Kopf ein bestimmtes Verweilziel erreicht hat.
+* Das Verweilziel nur anzeigen, wenn die Zeile hervorgehoben ist, um visuelle Störungen zu reduzieren.
+* Mit der Position der Verweilziele eindeutig und konsistent sein.
+* Nicht alle Verweilziele auf einmal anzeigen, um wiederholte Benutzeroberflächenelemente zu vermeiden.
+* Dasselbe Muster so oft wie möglich wiederverwenden, um die Vertrautheit mit der Benutzerumgebung herzustellen.
  
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 * [Direkte Manipulation mit den Händen](direct-manipulation.md)
 * [Zeigen und Ausführen mit den Händen](point-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
