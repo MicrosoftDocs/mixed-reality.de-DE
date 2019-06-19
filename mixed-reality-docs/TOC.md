@@ -145,6 +145,7 @@
 #### [Unity-Wiedergabemodus](unity-play-mode.md)
 #### [Exportieren und Erstellen einer Unity-Projektmappe für Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
 #### [Bewährte Methoden für das Arbeiten mit Unity und Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
+#### [Verwaltetes Debuggen mit Unity IL2CPP](managed-debugging-with-unity-il2cpp.md)
 ### Grundbausteine
 #### [Kamera in Unity](camera-in-unity.md)
 #### [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
