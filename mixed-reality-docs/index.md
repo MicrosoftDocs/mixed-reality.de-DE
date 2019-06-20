@@ -53,7 +53,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
                                           </div>
                                           <div class="cardText">
                                               <h3>Entwicklung</h3>
-                                              <p>Erhalten Sie Entwicklungsanleitungen, informieren Sie sich über die Technologie und verstehen Sie die Wissenschaft.</p>
+                                              <p>Holen Sie sich Entwurfsanleitungen, erstellen Sie eine Benutzeroberfläche, und lernen Sie Interaktion und Eingabe.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -104,7 +104,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
                                     </a>
                             </li>
                             <li>
-                              <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank" title="Spracherkennungdienste" data-linktype="absolute-path">
+                              <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank" title="Spracherkennungsdienste" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -115,7 +115,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
                                                 </div>
                                                 <div class="cardText">
                                                     <h3 class="x-hidden-focus">Spracherkennungdienste</h3>
-                                                  <p>Erforschen Sie Azure-basierte Sprachfunktionen wie Sprache-in-Text, Sprechererkennung und Sprachübersetzung, und integrieren Sie diese in Ihre Anwendung.</p>
+                                                  <p>Erforschen Sie Azure-basierte Sprachfunktionen wie Spracherkennung, Sprechererkennung und Sprachübersetzung, und integrieren Sie diese in Ihre Anwendung.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,7 +153,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
 
 <h3>April 2019</h3>
 
-Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir freuen uns auf Ihr Feedback, und wir möchten Sie einladen, sich an [den Diskussionen zu beteiligen](https://holodevelopersslack.azurewebsites.net/), in denen es um Themen geht, die wir für Sie aufbereiten sollen, sowie Personen, von denen Sie etwas hören möchten, Tutorials und Beschreibungen von Vorgehensweisen, die Sie benötigen… Sie können uns auch über [Twitter](https://twitter.com/MxdRealityDev) erreichen und [unserem Entwicklerprogramm beitreten](https://aka.ms/iwantmr), um direkte Updates zu neuen Dokumenten, Tools, Veranstaltungen und weiteren Informationen zu erhalten. Bleiben Sie dran, das ist noch nicht alles!
+Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir freuen uns auf Ihr Feedback, und wir möchten Sie einladen, sich an [den Diskussionen zu beteiligen](https://holodevelopersslack.azurewebsites.net/). Sagen Sie uns, welche Themen wir für Sie aufbereiten sollen, für welche Menschen Sie sich interessieren, welche Tutorials und Anleitungen Sie gut gebrauchen könnten usw. Sie können uns auch über [Twitter](https://twitter.com/MxdRealityDev) erreichen und [unserem Entwicklerprogramm beitreten](https://aka.ms/iwantmr), um direkte Updates zu neuen Dokumenten, Tools, Veranstaltungen und weiteren Informationen zu erhalten. Bleiben Sie dran, das ist noch nicht alles!
 
 <table>
 <tr>
@@ -183,4 +183,4 @@ Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir 
 
 
 >[!IMPORTANT]
->Alle Mixed Reality-Entwicklungsmaterialien werden auf dieser Website nur zu Ihrer Information zur Verfügung gestellt. Ihre App, deren Nutzung sowie deren Auswirkungen auf die Endbenutzer liegt in Ihrer alleinigen Verantwortung als App-Entwickler, einschließlich des Sicherstellens, dass Ihre App keine Unannehmlichkeiten, Verletzungen oder sonstigen Schäden für einen Endbenutzer verursacht, und einschließlich entsprechender Warnungen und Haftungsausschlüsse. Sie müssen jederzeit entsprechende geeignete Schritte bei der Entwicklung und Veröffentlichung Ihrer App unternehmen, um sicherzustellen, dass Ihre App sicher ist und Sie alle Verpflichtungen aus Ihrer mir Microsoft getroffenen [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) erfüllen. 
+>Alle Mixed Reality-Entwicklungsmaterialien werden auf dieser Website nur zu Ihrer Information zur Verfügung gestellt. Sie als App-Entwickler tragen die uneingeschränkte Verantwortung für Ihre App, deren Nutzung und ihre Auswirkungen auf Endbenutzer. Dies schließt die Anforderung ein, dass Ihre App bei Endbenutzern keinerlei Beschwerden, Verletzungen oder sonstige Schäden hervorruft. Ferner eingeschlossen sind jegliche einschlägige Warnungen und Haftungsausschlüsse. Sie müssen jederzeit entsprechende geeignete Schritte bei der Entwicklung und Veröffentlichung Ihrer App unternehmen, um sicherzustellen, dass Ihre App sicher ist und Sie alle Verpflichtungen aus Ihrer mir Microsoft getroffenen [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) erfüllen. 
