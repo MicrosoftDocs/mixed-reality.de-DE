@@ -266,7 +266,7 @@
 ### [Erweiterte Eingabe für HoloLens-Emulator und Mixed Reality-Simulator](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 ### [Archiv für HoloLens-Emulator](hololens-emulator-archive.md)
 ### [Perception Simulation (Wahrnehmungssimulation)](perception-simulation.md)
-## Abschließen Ihrer App
+## Vervollständigen Ihrer App
 ### [Implementieren von 3D-App-Startprogrammen (UWP-Apps)](implementing-3d-app-launchers.md)
 ### [Implementieren von 3D-App-Startprogrammen (Win32-Apps)](implementing-3d-app-launchers-win32.md)
 ### [Aktivieren des Platzierens von 3D-Modellen auf der Startseite](enable-placement-of-3d-models-in-the-home.md)
