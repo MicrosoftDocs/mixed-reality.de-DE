@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Komponenten, Sensoren, Technologie, Technologie, beenden, und Beendigung,
-ms.openlocfilehash: ddbce274a0573ab72e1ff7b523b6ac4b8fbb6ba2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 56b10fa9751c626578c697cd370347482a121b2a
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604634"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326202"
 ---
 # <a name="hololens-1st-gen-hardware-details"></a>HoloLens (1. Generation) Hardwaredetails
 
@@ -21,7 +21,7 @@ Microsoft HoloLens-ist der weltweit erste, holographic Computer vollständig una
 
 ## <a name="how-to-get-microsoft-hololens"></a>Gewusst wie: Abrufen von Microsoft HoloLens
 
-Microsoft HoloLens kann als ein sowohl ein Development Edition erworben und eine Commercial Suite-Konfiguration (einschließlich einer Garantie und Enterprise-Features für die zusätzliche Sicherheit und Gerät). Wenn Sie sich in Nordamerika befinden, können Sie auch HoloLens über einen Partner Mieten.
+Microsoft HoloLens kann als ein sowohl ein Development Edition erworben, und eine Commercial Suite-Konfiguration, die einen Enterprise sowie die Funktionen zum hinzugefügt, Sicherheit und Gerät. Wenn Sie sich in Nordamerika befinden, können Sie auch HoloLens über einen Partner Mieten.
 
 [Klicken Sie hier, um ausführliche Informationen zum Kauf oder Rackplatz Microsoft HoloLens](https://www.microsoft.com/hololens/buy).
 
@@ -62,7 +62,7 @@ Microsoft HoloLens kann als ein sowohl ein Development Edition erworben und eine
 * Akku-Status-LEDs
 * Wi-Fi 802.11ac
 * Micro USB 2.0
-* 4.1-Bluetooth LE
+* 4\.1-Bluetooth LE
 
 ### <a name="power"></a>Stromversorgung
 * Akkuverbrauch gering zu halten
@@ -74,15 +74,15 @@ Microsoft HoloLens kann als ein sowohl ein Development Edition erworben und eine
 ### <a name="processors"></a>Prozessoren
 
 ![Der Hauptplatine für Microsoft HoloLens](images/motherboard-400px.jpg)
-* Intel-32-Bit-Architektur mit TPM 2.0-Unterstützung
+* 32-Bit-Intel-Architektur mit TPM 2.0-Unterstützung
 * Benutzerdefinierte Microsoft Holographic-Verarbeitungseinheit (HPU 1.0)
 
-### <a name="weight"></a>Breite
-* 579g
+### <a name="weight"></a>Weight
+* 579 g
 
 ### <a name="memory"></a>Arbeitsspeicher
-* 64GB Flash
-* 2GB RAM
+* 64 GB Flash
+* 2 GB RAM
 
 ### <a name="whats-in-the-box"></a>Was ist in das Feld
 * HoloLens Development Edition
