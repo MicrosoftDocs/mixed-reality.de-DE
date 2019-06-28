@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: Mixed Reality, physisch, bestaunen, bestaunen Ziel ist, handelt es sich bei Interaktion, Entwurf
-ms.openlocfilehash: 4d21fa10eabb446565bddebccdbde5e2e7bcc72a
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326150"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414392"
 ---
 # <a name="hands-free"></a>Freisprechen
 
@@ -39,10 +39,10 @@ Verwenden Ihre Stimme zum Befehl und Steuerung, die eine Schnittstelle kann nich
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 
-In einigen Situationen physisch ist mit der Stimme nicht ideal oder sogar möglich. Laut Factoryumgebungen, Datenschutz oder soziale Normen können alle Einschränkungen sein. Die Kopfzeile bestaunen + länger aufhalten Modell kann der Benutzer die app zu navigieren, indem Sie ihre Head Vektor um zu zeigen, während die veralteten, oder auf eine Schaltfläche Einstichs aktiviert es nach einem bestimmten Zeitraum, in der Regel ca. 1 Sekunde oder dies der Fall ist. 
+In einigen Situationen physisch ist mit der Stimme nicht ideal oder sogar möglich. Laut Factoryumgebungen, Datenschutz oder soziale Normen können alle Einschränkungen sein. Die Kopfzeile bestaunen + länger aufhalten Modell kann der Benutzer die app zu navigieren, indem Sie ihre Head Vektor um zu zeigen, während die veralteten, oder auf eine Schaltfläche Einstichs wird Aktivieren der nach einem bestimmten Zeitraum, in der Regel ca. 1 Sekunde oder so. 
 
 
-## <a name="transitioning-in-and-out-of-hands-freey"></a>Übergang in die Hände-freey
+## <a name="transitioning-in-and-out-of-hands-free"></a>Übergang und physisch
 
 Für diese Szenarien können Sie sich von der Interaktion mit Hologramme für Befehle und Navigation freigeben reichen von wird eine zwingende Voraussetzung nicht erfüllt, die beim Betrieb von End-to-End der Anwendung auf benutzerfreundlichkeit, die der Benutzer in und aus der an jedem Übergang können Zeit. 
 
@@ -54,7 +54,7 @@ Wenn sich der Zielbenutzer von Hand zu physisch am nach eigenem Ermessen wechsel
 Z. B. wenn der Benutzer am Herstellerstandort ist, einen video Verweis auf ihr Hololens, überwachen und entscheidet, um ein Schraubenschlüsselsymbol zu übernehmen, um zu arbeiten, würden sie in den meisten Fällen arbeiten in Handsfree ohne das Schraubenschlüsselsymbol drücken eine Schaltfläche versetzt. Sie sollten eine Voice-Sitzung mit einem Voice-Befehl aufrufen, werden auf einer bereits sichtbare Benutzeroberfläche Dwell beginnen länger aufhalten Lage sein, oder z. B. das Wort "select".
 
 Der Benutzer muss die Möglichkeit, verfügen: 
-* Wechseln Sie zur Handsfree beim handsfree
+* Wechseln Sie zur zwar physisch freisprechgeräte
 * Wechseln Sie zur Hand, mit der Hand
 * Wechseln Sie zu dem Controller mithilfe eines Controllers 
 
@@ -96,5 +96,5 @@ Der Benutzer ist versteht...
 
 ## <a name="see-also"></a>Siehe auch
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Direkte Manipulation](direct-manipulation.md)
-* [Zeigen und Ausführen](point-and-commit.md)
+* [Direkte Manipulation mit den Händen](direct-manipulation.md)
+* [Zeigen und Ausführen mit den Händen](point-and-commit.md)

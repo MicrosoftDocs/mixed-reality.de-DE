@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Direct2D-app, UWP, Flatfile-app, HoloLens, immersive Kopfhörer, app-Modell back-Schaltfläche "," app-Leiste "," DPI-Wert "," Resolution "," Skalieren
-ms.openlocfilehash: 35a2e7774a79e35893821467f7e9ef8c004efa20
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595364"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414221"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Aktualisieren von 2D UWP-apps für mixed reality
 
@@ -147,7 +147,7 @@ Die [app-Modell](app-model.md) für mixed Reality dient dem Mixed Reality nach H
 
 **Titel:** zeigt die *"DisplayName"* der Kachel der app-Instanz zugeordnet
 
-**Schaltfläche "zurück":** löst die *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* Ereignis aus, wenn Sie gedrückt. Back-Schaltfläche-Sichtbarkeit wird gesteuert, indem  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)*.
+**Schaltfläche "zurück":** löst die *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* Ereignis aus, wenn Sie gedrückt. Back-Schaltfläche-Sichtbarkeit wird gesteuert, indem  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* .
 
 ![App Befehlsleisten-Benutzeroberfläche in Direct2D-app-Ansicht](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *App Befehlsleisten-Benutzeroberfläche in Direct2D-app-Ansicht*
@@ -177,9 +177,9 @@ Sobald Ihre app einsatzbereit ist, Packen Sie Ihre app [an den Microsoft Store �
 
 ## <a name="see-also"></a>Siehe auch
 * [App-Modell](app-model.md)
-* [Blicke](gaze.md)
+* [Anvisieren](gaze.md)
 * [Aktion](gestures.md)
 * [Motion-Controller](motion-controllers.md)
-* [Voice](voice-input.md)
-* [Übermitteln einer app an den Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
+* [Spracheingabe](voice-input.md)
+* [Senden einer App an den Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)

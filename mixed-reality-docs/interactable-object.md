@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Mixed Reality, Steuerelemente, Interaktion, Benutzeroberfläche, ux
-ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 57299cbb758a69603fc68ad5d43af8f2216e5104
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148729"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415332"
 ---
 # <a name="interactable-object"></a>Es-Objekt
 
@@ -85,9 +85,9 @@ Für den klassentypobjekte es ist es wichtig, alternative Interaktion Optionen u
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="QuickInfo für den Voice-Befehl" width="350"><br/>*QuickInfo für den Voice-Befehl*
 
 ## <a name="sizing"></a>Größenanpassung
-Um sicherzustellen, dass alle Objekte, die es ganz einfach sind, können empfohlen von Benutzern Sicherstellen der es erfüllt eine Mindestgröße (häufig liegt diese bei visual Winkel von Grad), die basierend auf den Abstand, die, den Sie vom Benutzer platziert wird. Visual Winkel von Grad basiert auf den Abstand zwischen dem Benutzer und dem Objekt und konstant bleibt, während die physische Größe des Ziels als Abstand von der benutzeränderungen ändern kann. Zum Bestimmen der erforderlichen physischen Größe eines Objekts basierend auf den Abstand zwischen einem sicherzustellen und den Grad visual Winkel versuchen Sie es mithilfe eines Rechners wie: http://elvers.us/perception/visualAngle/
+Um sicherzustellen, dass alle es Objekte können problemlos von Benutzern verwendet werden, sollten Sie sicherstellen, basieren die es erfüllt eine Mindestgröße (der visual Winkel in Grad visual einen Bogen konvertiert häufig liegt diese) für die Entfernung, die sie vom Benutzer platziert wird. Visual Winkel basiert auf den Abstand zwischen den Augen des Benutzers und das Objekt und konstant bleibt, während die physische Größe des Ziels als Abstand von der benutzeränderungen ändern kann. Um die erforderlichen physikalische Größe eines Objekts basiert auf der Entfernung des Benutzers zu ermitteln, versuchen Sie es mithilfe eines Rechners visual Winkel wie [dieser](http://elvers.us/perception/visualAngle/).
 
-Im folgenden finden Sie die Empfehlungen für die minimale Größe des es Inhalt
+Im folgenden sind die Empfehlungen für die minimale Größe des es Inhalt.
 
 ### <a name="target-size-for-direct-hand-interaction"></a>Zielgröße für die direkte Hand-Interaktion
 | Entfernung | Betrachtungswinkel | Größe |

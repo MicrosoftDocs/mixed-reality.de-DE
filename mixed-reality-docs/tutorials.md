@@ -7,18 +7,18 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
-ms.openlocfilehash: b94f1be256d3373deb5f177be0ee9bc0c8be3180
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874052"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415404"
 ---
 # <a name="tutorials-and-sample-apps"></a>Anhand von Tutorials und Beispiel-Apps
 
 Derzeit sind alle unsere Tutorials und Beispiel-apps Unity basiert.  Wie wir die Inhalte für andere Module und Plattformen entwickeln, finden Sie diese im entsprechenden Abschnitt in das Inhaltsverzeichnis.
 
-## <a name="mr-learning-modules"></a>MR-Learning-Module
+## <a name="mr-learning-modules"></a>MR-Lernmodule
 
 Die MR-Learning-Module sollen Entwickler sowohl Techniken und bewährte Methoden für die Entwicklung von mixed Reality-Anwendungen helfen.  Die erste Module sind für HoloLens 2 und implementieren die Mixed Reality Toolkit 2.0 (MRTK 2.0).
 * Das Basismodul soll Entwickler zeigen, wie Sie richten Sie ihr Projekt mit MRTK sowie das Implementieren der Benutzeroberfläche, die räumliche Zuordnung und grundlegenden und erweiterten Interaktionen

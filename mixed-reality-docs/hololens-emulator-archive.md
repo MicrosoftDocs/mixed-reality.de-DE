@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 4/25/2019
 ms.topic: article
 keywords: HoloLens, Emulator erstellt wurde, Versionen
-ms.openlocfilehash: 017193756b5c57c5bb45351db208533f980701a7
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: 34aee87310cbdfed4e209fbba955db9cf3ff722f
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024483"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414403"
 ---
 HoloLens-Emulator (1. Generation) und 2-Emulator für HoloLens-Builds installieren Seite-an-Seite. Im Allgemeinen empfiehlt sich des letzte Builds, aber es gibt möglicherweise Fälle, in denen Sie möchten oder müssen eine app mit einem alten Emulator zu testen. Diese Seite enthält Links zu veröffentlichten Versionen.
 
@@ -32,8 +32,8 @@ HoloLens-Emulator (1. Generation) und 2-Emulator für HoloLens-Builds installier
 |----------|----------|----------|
 |  [Emulator für HoloLens Build 10.0.17763.253](https://go.microsoft.com/fwlink/?linkid=2065980) | 19. November 2018 | Neueste HoloLens (1. Generation) erstellen. Update für Windows 10 Oktober 2018. |
 |  [Emulator für HoloLens Build 10.0.17134.80](https://go.microsoft.com/fwlink/?linkid=874531) | 21. Mai 2018 | 
-|  [Emulator für HoloLens Build 10.0.14393.1358](https://go.microsoft.com/fwlink/?linkid=852626) |  7. Juli 2017 |
-|  [Emulator für HoloLens Build 10.0.14393.0](http://go.microsoft.com/fwlink/?LinkID=823018) |  2. August 2016 |
+|  [Emulator für HoloLens Build 10.0.14393.1358](https://go.microsoft.com/fwlink/?linkid=852626) |  7\. Juli 2017 |
+|  [Emulator für HoloLens Build 10.0.14393.0](http://go.microsoft.com/fwlink/?LinkID=823018) |  2\. August 2016 |
 |  [Emulator für HoloLens Build 10.0.14342.1018](http://go.microsoft.com/fwlink/?LinkID=823018) |  Am 31. Mai 2016 |
 |  [Emulator für HoloLens Build 10.0.11082.1033](http://go.microsoft.com/fwlink/?LinkID=724053) |  30. März 2016 |
 

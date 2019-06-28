@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, entwerfen, Einführung, Anleitungen
-ms.openlocfilehash: 6173f7cd2bcc4280f86f8f5ecaae1e90e01b62a0
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326126"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414163"
 ---
 # <a name="about-this-design-guidance"></a>Informationen zu diesem Leitfaden zum design
 
@@ -33,7 +33,7 @@ Hier ist ein schnellen Überblick darüber, wie dieser Leitfaden zum Design orga
 * **[Erste Schritte mit Design](mixed-reality.md)**  – unsere Allgemeinen Gedanken lesen und verstehen Sie die Prinzipien, die wir befolgen.
 * **[Instinctual Interaktionen](interaction-fundamentals.md)**  -erfahren Sie mehr über die Eingabe, Befehle, Navigation und andere Interaktion-Grundlagen für die Entwicklung von apps.
 * **[Stil](typography.md)**  -machen Sie Ihre Anwendung ansprechenden, indem Sie mithilfe von Farbe, Typografie und während der Übertragung.
-* **[App-Muster](types-of-mixed-reality-apps.md)**  -erfahren Sie, wie app Ications können Szenarien über faszinierende und realistische Umgebungen erstrecken.
+* **[App-Muster](types-of-mixed-reality-apps.md)**  -erfahren Sie, wie Anwendungen Szenarien über faszinierende und realistische Umgebungen erstrecken können.
 * **[Steuerelemente](interactable-object.md)**  -Steuerelemente und Muster als Bausteine zum Erstellen Ihrer eigenen anwendungserfahrung verwenden.
 * **[Beispiel-apps](design.md#sample-apps)**  -hoch funktionale Umgebungen aus Beispielen entworfen und erstellt, die von unserem Team haben.
 * **[Entwerfen von Tools und Ressourcen](design.md#design-tools)**  -beschleunigen Sie Ihr Projekt mit Designvorlagen und Tools.

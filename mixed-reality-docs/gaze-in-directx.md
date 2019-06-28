@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: Blicke, Head Blicke, Head, die nachverfolgung, Eye-tracking, Directx, Eingabe, Hologramme
-ms.openlocfilehash: ac72c5305527ed2d68945aeb32051cf2246a736e
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+ms.openlocfilehash: edf20a621178d76bfc97477f9f9b2eca200f1318
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453743"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414412"
 ---
 # <a name="head-and-eye-gaze-input-in-directx"></a>Haupt- und Eye bestaunen Eingaben in DirectX
 
@@ -149,7 +149,7 @@ Für die Eingabe, die über die SpatialInteractionManager weiterleitet, ist jedo
 
 ## <a name="see-also"></a>Siehe auch
 * [Head-Eingabemodell Blicke und commit](gaze-and-commit.md)
-* [Eye-tracking für HoloLens 2](eye-tracking.md)
+* [Eye-Blicke für HoloLens 2](eye-tracking.md)
 * [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
 * [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixed Reality, Blicke, Interaktion, Entwerfen
-ms.openlocfilehash: e0c1a925f6faeb37ec35e511cef36f9c06672c8a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 7e65d26d3e9edabbd01d35a887ffc8622a3c6337
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829737"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414372"
 ---
 # <a name="gaze"></a>Blickeingabe
 
@@ -39,7 +39,7 @@ Für HoloLens (der 1. Generation), Interaktionen sollte im Allgemeinen abgeleite
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
         <td>Head Blicke</td>
@@ -84,5 +84,5 @@ Sobald der Benutzer ein Hologramm oder reales Objekt über die Blicke angewendet
 * [MR-Eingabe 210: Head Blicke](holograms-210.md)
 * [Anvisieren mit dem Kopf und mit den Augen in DirectX](gaze-in-directx.md)
 * [Head Blicke in Unity](gaze-in-unity.md)
-* [Eye-tracking für HoloLens 2](eye-tracking.md)
+* [Eye-Blicke für HoloLens 2](eye-tracking.md)
 * [Eye Blicke in Unity mithilfe von Mixed Reality-Toolkit](https://aka.ms/mrtk-eyes)

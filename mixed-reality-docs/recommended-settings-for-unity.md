@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity "," Einstellungen "," mixed reality
-ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148669"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415454"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -160,5 +160,5 @@ Die entsprechenden Funktionen für die Aktivierung der häufig verwendeten APIs 
 
 ## <a name="see-also"></a>Siehe auch
 * [Unity-Entwicklung – Übersicht](unity-development-overview.md)
-* [Understaing-Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
+* [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
 * [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
