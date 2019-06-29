@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 941bdc64ed614d5ce71f58f05585d0dfc86c3bb7
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 2a16d318c6d749bcbf6ed9db0d6cd2228a6ea06e
+ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415931"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67465204"
 ---
 # <a name="azure-spatial-anchors-and-shared-experiences"></a>Azure räumliche Anker sowie veröffentlichte Erfahrungen
 
-In dieser Lektion lernen wir, wie Sie Azure räumliche Anker (ASA) in unserem gemeinsamen Erfahrung zu integrieren. ASA kann mehrere zusammengestellten Geräte ein gemeinsames Verständnis ihrer physischen Umgebung aus, um die virtuellen Verankern durchgeführter so, dass alle Teilnehmer Objekte in der gleichen physischen Ort zu haben.
+In dieser Lektion erfahren wir, wie Azure räumliche Anker (ASA) in unserem gemeinsamen Erfahrung zu integrieren. ASA kann mehrere zusammengestellten Geräte eine Referenz zu häufigen haben, wenn es sich bei ihrer physischen Umgebung zu virtuellen Umgebungen Anker ist, sodass alle Teilnehmer die Objekte in der gleichen physischen Ort finden Sie unter.
 
-Bevor Sie mit dieser Lektion fortfahren müssen wir das ASA-Learning-Modul erfüllt werden, darunter die ASA-Grundlagen, Azure-Konto und das Erstellen von Ressourcen und andere grundlegende Gebäude-Blöcke, die erforderlich sind, bevor wir in unserem gemeinsamen Erfahrung ASA integrieren beschrieben wird.
+Bevor Sie mit dieser Lektion fortfahren müssen wir das ASA-Learning-Modul erfüllt werden, das darunter die ASA-Grundlagen, Azure-Konto und das Erstellen von Ressourcen und andere grundlegende Gebäude-Blöcke, die erforderlich sind, bevor wir in unserem gemeinsamen Erfahrung ASA integrieren beschrieben wird.
 
 Ziele:
 
@@ -28,22 +28,22 @@ Ziele:
 
 1. Speichern Sie das Projekt aus der vorherigen Lektion (STRG + S), und nennen Sie sie "HLSharedProjectMainPart5.unity", sodass es leichter zu finden, wenn Sie ihn wieder benötigen.
 
-2. Wählen Sie das Prefab TableAnchor unterhalb des übergeordneten Objekts, "MixedRealityPlayspace", und löschen Sie sie.
+2. Wählen Sie das Prefab TableAnchor unterhalb des übergeordneten Objekts, MixedRealityPlayspace, und löschen Sie sie.
 
 ![Module3Chapter5tep2im](images/module3chapter5step2im.PNG)
 
 
 
-3.  Wechseln Sie in der Projektansicht zum Bestand > Ressourcen > prefabs (Vorlagen), und ziehen Sie die TableAnchor prefab über das SharedPlayground-Objekt, das ein untergeordnetes Element zu erleichtern.
-4.  Erweitern Sie das übergeordnete Objekt von "MixedRealityPlayspace", und klicken Sie dann auf das Objekt "TableAnchor", und auch das "Schaltflächen"-Objekt. 
+3.  In der Projektansicht wechseln Sie zu den Ressourcen-Ressourcen > -> prefabs (Vorlagen) werden soll, und ziehen Sie das Prefab TableAnchor über das SharedPlayground-Objekt, das als untergeordnetes.
+4.  Erweitern Sie die MixedRealityPlayspace übergeordnete-Objekt, das TableAnchor-Objekt, und auch das Schaltflächen-Objekt. 
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Wählen Sie jetzt in der Hierarchie, die "ShareAzureAnchorButton" und verschieben Sie Ihre Aufmerksamkeit auf den Bereich der Eigenschaftenanalyse. Scrollen Sie im Dropdownmenü mit den in der Abbildung unten dargestellt, und wählen Sie "AnchorModuleScript", und klicken Sie auf "ShareAnchorNetework()."
+4. Wählen Sie jetzt in der Hierarchie ShareAzureAnchorButton, und verschieben Sie Ihre Aufmerksamkeit auf den Zugriffsbereich Inaspector. Scrollen Sie im Dropdown-Menü in der Abbildung unten dargestellt und wählen Sie AnchorModuleScript aus, und klicken Sie auf ShareAnchorNetework().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Ähnlich wie Schritt 4 Wählen Sie die "GetAzureAnchorButton", und verschieben Sie Ihre Aufmerksamkeit an den Bereich der Eigenschaftenanalyse. Scrollen Sie im Dropdownmenü mit den in der Abbildung unten dargestellt, und wählen Sie "AnchorModuleScript", und klicken Sie auf "GetSharedAnchorNetwork()." Klicken Sie dann zu speichern.
+5. Wählen Sie GetAzureAnchorButton (siehe Schritt 4), und verschieben Sie Ihre Aufmerksamkeit an den Bereich der Eigenschaftenanalyse. Scrollen Sie im Dropdown-Menü in der Abbildung unten dargestellt und wählen Sie AnchorModuleScript aus, und klicken Sie auf GetSharedAnchorNetwork(), und speichern.
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
