@@ -71,7 +71,8 @@
 
 
 ## Mixed Reality – Versionshinweise
-### [Aktuelle Versionshinweise](release-notes-october-2018.md)
+### [Aktuelle Versionshinweise](release-notes-may-2019.md)
+### [Versionshinweise – Oktober 2018](release-notes-october-2018.md)
 ### [Versionshinweise – April 2018](release-notes-april-2018.md)
 ### [Versionshinweise – Oktober 2017](release-notes-october-2017.md)
 ### [Versionshinweise – August 2016](release-notes-august-2016.md)
@@ -194,16 +195,29 @@
 ### [Verwenden von WebVR in Edge mit Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## [Tutorials und Beispiel-Apps](tutorials.md)
 ### Unity
-#### MR-Lernmodule
-##### HoloLens 2
-###### Basismodul
-####### [Basismodul: Übersicht und Ziele](mrlearning-base.md)
-####### [Projektinitialisierung und erste Anwendung](mrlearning-base-ch1.md)
-####### [Benutzeroberfläche, Hand-Tracking und Konfiguration des Mixed Reality-Toolkits](mrlearning-base-ch2.md)
-####### [Dynamische Inhaltsplatzierung und Solver](mrlearning-base-ch3.md)
-####### [3D-Objektinteraktion](mrlearning-base-ch4.md)
-####### [Erweiterte Eingabe](mrlearning-base-ch5.md)
-####### [Demo-App](mrlearning-base-ch6.md)
+#### HoloLens 2: Tutorials
+##### Tutorials zu den ersten Schritten
+###### [1. Übersicht und Ziele](mrlearning-base.md)
+###### [2. Initialisieren des Projekts und der ersten Anwendung](mrlearning-base-ch1.md)
+###### [3. Erstellen der Benutzeroberfläche und Konfigurieren des Mixed Reality-Toolkits](mrlearning-base-ch2.md)
+###### [4. Platzieren dynamischer Inhalte und Verwenden von Solvern](mrlearning-base-ch3.md)
+###### [5. Interagieren mit 3D-Objekten](mrlearning-base-ch4.md)
+###### [6. Untersuchen erweiterter Eingabeoptionen](mrlearning-base-ch5.md)
+###### [7. Erstellen einer Beispielanwendung für eine Mondlandefähre (Lunar Module)](mrlearning-base-ch6.md)
+##### Tutorials zu Azure Spatial Anchors
+###### [1. Erste Schritte mit Azure Spatial Anchors](mrlearning-asa-ch1.md)
+###### [2. Speichern, Abrufen und Freigeben von Azure Spatial Anchors](mrlearning-asa-ch2.md)
+##### Tutorials zu Azure Speech-Diensten
+###### [1. Integrieren und Verwenden von Spracherkennung und Transkription](mrlearning-speechSDK-ch1.md)
+###### [2. Hinzufügen eines Offlinemodus für die lokale Sprache-zu-Text-Übersetzung](mrlearning-speechSDK-ch2.md)
+###### [3. Hinzufügen der Sprachübersetzungskomponente von Azure Cognition Services](mrlearning-speechSDK-ch3.md)
+###### [4. Einrichten des Verständnisses von Absichten und natürlicher Sprache](mrlearning-speechSDK-ch4.md)
+##### Tutorials zu Mehrbenutzerfunktionen
+###### [1. Einrichten von Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
+###### [2. Vorbereiten von Unity für die Entwicklung](mrlearning-sharing(photon)-ch2.md)
+###### [3. Verbinden mehrerer Benutzer](mrlearning-sharing(photon)-ch3.md)
+###### [4. Freigeben von Objektbewegungen für mehrere Benutzer](mrlearning-sharing(photon)-ch4.md)
+###### [5. Integrieren von Azure Spatial Anchors in eine gemeinsam genutzte Umgebung](mrlearning-sharing(photon)-ch5.md)
 #### HoloLens (1. Generation): Open-Source-Beispiel-Apps
 ##### [Periodensystem der Elemente](periodic-table-of-the-elements.md)
 ##### [Lunar-Modul](lunar-module.md)
@@ -266,7 +280,7 @@
 ### [Erweiterte Eingabe für HoloLens-Emulator und Mixed Reality-Simulator](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 ### [Archiv für HoloLens-Emulator](hololens-emulator-archive.md)
 ### [Perception Simulation (Wahrnehmungssimulation)](perception-simulation.md)
-## Vervollständigen Ihrer App
+## Abschließen Ihrer App
 ### [Implementieren von 3D-App-Startprogrammen (UWP-Apps)](implementing-3d-app-launchers.md)
 ### [Implementieren von 3D-App-Startprogrammen (Win32-Apps)](implementing-3d-app-launchers-win32.md)
 ### [Aktivieren des Platzierens von 3D-Modellen auf der Startseite](enable-placement-of-3d-models-in-the-home.md)
