@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 4625acfcb3353e9537961a444012452139705359
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 44cc41b10ed79d3085ec601ec9cf21af47b0fea5
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465214"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523307"
 ---
-# <a name="connecting-multiple-users"></a>**Verbinden von mehreren Benutzern** 
+# <a name="connecting-multiple-users"></a>Verbinden von mehreren Benutzern
 
 In dieser Lektion erfahren wir, wie um mehrere Benutzer als Teil einer freigegebenen zu verbinden. Am Ende dieser Lektion werden Sie in der Lage, öffnen Sie die Anwendung auf mehreren Geräten, und finden Sie unter Avatar, dargestellt durch eine Kugel, Darstellungen von jeder Person, die verknüpft. 
 

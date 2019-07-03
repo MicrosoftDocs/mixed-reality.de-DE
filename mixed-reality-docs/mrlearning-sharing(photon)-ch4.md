@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b729de818dfa21df8fbce782a24a611a365ac795
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 2a4ea599fd4887f30589c2d839be305d3dc8d1bd
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465227"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523193"
 ---
-# <a name="synchronizing-shared-object-movements"></a>Synchronisieren von Bewegungen, die gemeinsam genutzte Objekt
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Objekt Bewegungen freigeben für mehrere Benutzer
 
-In dieser Lektion erfahren wir, wie die Bewegungen der Objekte freigeben, damit alle Teilnehmer einer Sitzung gemeinsam genutzten Zusammenarbeit und den anderen Aktivitäten anzeigen können. Diese Lektion baut auf das Startprogramm des Mondes, die als Teil des erstellt wurde die [Base Modul Tutorials](mrlearning-base.md).
+In diesem Tutorial erfahren wir, wie die Bewegungen der Objekte freigeben, damit alle Teilnehmer einer Sitzung gemeinsam genutzten Zusammenarbeit und den anderen Aktivitäten anzeigen können. Diese Lektion baut auf das Startprogramm des Mondes, die als Teil des erstellt wurde die [Base Modul Tutorials](mrlearning-base.md).
 
 Ziele:
 
@@ -26,7 +26,7 @@ Ziele:
 ### <a name="instructions"></a>Anweisungen
 
 
-1. Speichern Sie die Szene, aus der vorherigen Lektion (Control + S). Sie können es HLSharedProjectMainPart4.unity benennen, sodass er leichter ist zu finden, wenn Sie es benötigen.
+1. Speichern Sie die Szene, aus der vorherigen Lektion (Control + S). Sie können es HLSharedProjectMainPart4.unity, Namen, damit es ist leichter zu finden, wenn Sie es benötigen.
 
 2. Klicken Sie aus dem Projektfenster in den Assets -> Ordner "Scripts", einen Doppelklick auf GenericNetSync, öffnen Sie sie in Visual Studio oder die jemals code Editor an, die Sie verwenden.  ![](images/module3chapter4updatestep2.png)
 

@@ -6,20 +6,20 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: c120d22f955d366042bbcb9ac73eaa4f13dc20e9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fcca828fa228894e0e60986c6c7fd0053b210357
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415276"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523235"
 ---
-# <a name="getting-started-with-azure-spatial-anchors-on-hololens-2"></a>Erste Schritte mit Azure räumliche Anker für HoloLens 2
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Erste Schritte mit Azure räumliche Anker
 
-Willkommen Sie beim Lernprogramm 2 HoloLens für das zweite Modul. Bevor Sie beginnen, stellen sicher, dass alle von der [Voraussetzungen](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) abgeschlossen sind. Wenn Sie nicht die erste abgeschlossen haben [Basismodul](mrlearning-base.md) noch, wird empfohlen, dass Sie das Modul zuerst durchführen. Wenn Sie ein neues Unity-Projekt beginnen, befolgen Sie die neuen Schritte bei der projekterstellung in das [Basismodul](mrlearning-base.md). 
+Willkommen Sie auf das zweite Modul HoloLens-2-Tutorials. Bevor Sie beginnen, stellen sicher, dass alle von der [Voraussetzungen](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) abgeschlossen sind. Wenn Sie nicht die erste abgeschlossen haben [Basismodul](mrlearning-base.md) noch, wird empfohlen, dass Sie das Modul zuerst durchführen. Wenn Sie ein neues Unity-Projekt beginnen, befolgen Sie die neuen Schritte bei der projekterstellung in das [Basismodul](mrlearning-base.md). 
 
 ## <a name="objectives"></a>Ziele
 
-* Grundlagen der Entwicklung mit Azure räumliche Anker mit der HoloLens 2
+* Grundlagen der Entwicklung mit Azure räumliche Anker mit HoloLens 2
 
 * Erstellen, hochladen und Herunterladen von räumlichen Anker
 
@@ -40,7 +40,7 @@ Laden Sie bevor Sie beginnen, und importieren Sie die folgenden Ressourcen:
 
 > Hinweis: Spezifische Anweisungen zum Importieren von räumlichen Anker von Azure, Schritt 6 spezifische Anweisungen für das Modul MR Base Ressourcenpaket und Schritte 3 und 4, um spezifische Anweisungen für Mixed Reality Toolkit (MRKT) finden Sie unter Schritt 5.
 
-1. Erstellen Sie eine neue Szene in Ihrem Projekt ein. Klicken Sie mit der rechten Maustaste auf Ihre Szene-Ordner, klicken Sie auf "Erstellen", und klicken Sie dann auf Szene. Der Name der neuen Szene ASALearningmodule.
+1. Erstellen Sie eine neue Szene in Ihrem Projekt ein. Klicken Sie mit der rechten Maustaste auf Ihre Szene-Ordner, klicken Sie auf erstellen, und klicken Sie dann auf Szene. Der Name der neuen Szene ASALearningmodule.
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
@@ -49,7 +49,7 @@ Laden Sie bevor Sie beginnen, und importieren Sie die folgenden Ressourcen:
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> Hinweis: Daraufhin wird ein Popupfenster, die besagt, "Sie müssen Auswählen einer Datei für das Mixed Reality-Toolkit." Klicken Sie auf Ok klicken, gelangen Sie zu Schritt 4.
+> Hinweis: Ein Popupfenster, das angezeigt wird, müssen Sie eine Datei für das Mixed Reality-Toolkit auswählen, wird angezeigt. Klicken Sie auf Ok klicken, gelangen Sie zu Schritt 4.
 
 4. Bei der Auswahl einer Datei für die MRTK wählen Sie aus, DefaultMixedRealityToolkitConfigurationProfile.
 
@@ -153,7 +153,7 @@ Ihrer Szene ist jetzt konfiguriert, um die Grundlagen von Azure räumliche Anker
 
 7. Stellen Sie vor dem Erstellen der App auf Ihrem Gerät sicher, dass sich das Gerät im Entwicklermodus befindet. Wenn das Ihre erste Bereitstellung auf dem HoloLens 2-Gerät ist, werden Sie möglicherweise von Visual Studio aufgefordert, Ihr HoloLens 2-Gerät mit einer PIN zu koppeln. Führen Sie [diese Anweisungen](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) Wenn müssen Sie den Entwicklermodus aktivieren oder mit Visual Studio koppeln.
 
-8. Konfigurieren von Visual Studio zum Erstellen von auf Ihrer HoloLens 2 durch Auswählen der Releasekonfiguration und der Architektur "RM".
+8. Konfigurieren von Visual Studio zum Erstellen von auf Ihrer HoloLens 2 durch Auswählen der Release-Konfiguration als auch die RM-Architektur.
     ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
    
 9. Der letzte Schritt ist die Erstellung auf Ihrem Gerät durch Auswählen von Debuggen > Starten ohne Debugging. Auswählen von Starten ohne Debuggen, wird die Anwendung sofort auf Ihrem Gerät auf einen erfolgreichen Build Ithout Debugging-Informationen in Visual Studio angezeigt werden. Dies bedeutet auch, dass Sie das USB-Kabel entfernen können, während Ihre Anwendung auf Ihrem HoloLens 2-Gerät ausgeführt wird, ohne dass die Anwendung beendet wird. Sie können auch auswählen, erstellen > Projektmappe bereitstellen, um auf Ihrem Gerät bereitstellen, ohne die Anwendung automatisch gestartet.
@@ -176,9 +176,9 @@ Ihrer Szene ist jetzt konfiguriert, um die Grundlagen von Azure räumliche Anker
     
     7. Starten Sie Azure räumliche Anker-Sitzung.
     
-    8. Azure räumliche Aachors zu finden. 
+    8. Suchen Sie Azure räumliche Anker. 
     
-    e, die Sie an der ursprünglichen Stelle Sie zurückkehren sollte platzieren Sie es bei der Erstellung des Ankers).
+    e, die Sie an der ursprünglichen Stelle Sie zurückkehren sollte platzieren Sie es bei der Erstellung des Ankers.
     9. Löschen Sie die Azure räumliche Anker.
     
     10. Azure-Sitzung zu beenden.
@@ -198,7 +198,7 @@ In den vorherigen Abschnitten haben Sie die Grundlagen der Azure räumliche Anke
    > Hinweis: Es gibt eine Vielzahl von Erfahrung benutzerflows für Umgebungen, einschließlich der Verwendung einer Schaltfläche auf Sie ein-/Ausschalten eines umgebenden Felds an, das die Benutzeroberfläche umgibt, verwenden Sie eine Umstellung der Reihenfolge Objekttyp (z. B. den Cube in diesem Schritt verwendet), der Position und Drehung Gizmos Neupositionieren , und vieles mehr.
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
-In dieser Lektion haben Sie die Grundlagen der Azure räumliche Anker. Diese Esson angegeben, dass Sie mehrere Schaltflächen, mit denen Sie die verschiedenen erforderlichen Schritte zum Starten und Beenden einer Azure-Sitzungs, und erstellen, hochladen und Herunterladen von Azure Anker auf einem einzelnen Gerät untersuchen. In der nächsten Lektion erfahren wir, wie Sie Azure Anker-IDs in Ihrem HoloLens-2 für den Abruf, speichern, auch nachdem die Anwendung neu gestartet wird. Während der Reihe erfahren Sie, auch zur Übertragung der Anker-IDs zwischen mehreren Geräten räumlichen Ausrichtung zu erreichen, und erfahren Sie mehr über mehrere Benutzer freigegeben Sitzungen (in Kürze im Rahmen der gemeinsamen Modul.)
+In diesem Tutorial haben Sie die Grundlagen der Azure räumliche Anker. Diese Esson angegeben, dass Sie mehrere Schaltflächen, mit denen Sie die verschiedenen erforderlichen Schritte zum Starten und Beenden einer Azure-Sitzungs, und erstellen, hochladen und Herunterladen von Azure Anker auf einem einzelnen Gerät untersuchen. In der nächsten Lektion erfahren wir, wie Sie Azure Anker-IDs in Ihrem HoloLens-2 für den Abruf, speichern, auch nachdem die Anwendung neu gestartet wird. Während der Reihe Sie erfahren außerdem, wie zum Übertragen der Anker-IDs zwischen mehreren Geräten räumlichen Ausrichtung zu erreichen, und erfahren Sie mehr über mehrere Benutzer freigegeben Sitzungen in Kürze im Rahmen des Lernprogramms für die Freigabe.
 
 [Nächste Lektion: ASA Lektion 2](mrlearning-asa-ch2.md)
 

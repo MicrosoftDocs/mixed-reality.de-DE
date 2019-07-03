@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: d4220527a7de8e596f2825fd9d199d536510b972
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 389a23129d4dfc5819cdc45d071b678e3792089d
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148624"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523156"
 ---
-# <a name="mr-learning-base-module-overview--objectives"></a>Modulübersicht MR-Learning-Basis und Ziele
+# <a name="1-overview-and-objectives"></a>1. Übersicht und Ziele
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
@@ -28,7 +28,7 @@ ms.locfileid: "67148624"
         <td><strong>Kurs</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><a href="https://www.microsoft.com/en-us/hololens/hardware"><strong>HoloLens 2</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
         <td></td>
