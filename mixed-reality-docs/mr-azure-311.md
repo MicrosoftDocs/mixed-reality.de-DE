@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, Microsoft Graph, Hololens, immersive vr
-ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593289"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694527"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -37,7 +37,7 @@ In Ihrer Anwendung obliegt es Ihnen, wie Sie die Ergebnisse in Ihr Design integr
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
 <td> MR und Azure-311: Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
@@ -54,7 +54,7 @@ Es wird empfohlen, die folgende Hardware und Software für diesen Kurs:
 - [Windows 10 Fall Creators Update (oder höher) mit der Entwicklermodus aktiviert ist](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10-SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [Microsoft HoloLens](hololens-hardware-details.md) mit Entwicklermodus aktiviert ist
 - Zugriff auf das Internet für die Einrichtung von Azure und Microsoft Graph-Datenabruf
 - Ein gültiger **Microsoft Account** (persönliche oder Geschäfts-oder schulkonten)
@@ -123,15 +123,15 @@ Im folgenden ist ein typischer Eigenschaftensatz für die Entwicklung mit mixed 
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  Mit Unity geöffnet, es prüfen, ob der Standardwert ist **Skript-Editor** nastaven NA hodnotu **Visual Studio**. Wechseln Sie zu **Bearbeiten > Voreinstellungen** und navigieren Sie dann im neuen Fenster zu **externe Tools**. Änderung **externen Skript-Editors** zu **Visual Studio 2017**. Schließen der **Voreinstellungen** Fenster.
+3.  Mit Unity geöffnet, es prüfen, ob der Standardwert ist **Skript-Editor** nastaven NA hodnotu **Visual Studio**. Wechseln Sie zu **bearbeiten** > **Voreinstellungen** und navigieren Sie dann im neuen Fenster zu **externe Tools**. Änderung **externen Skript-Editors** zu **Visual Studio 2017**. Schließen der **Voreinstellungen** Fenster.
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  Wechseln Sie zu **Datei > Buildeinstellungen** , und wählen Sie **universelle Windows-Plattform**, klicken Sie dann auf die **Plattform wechseln** Schaltfläche, um Ihre Auswahl anzuwenden.
+4.  Wechseln Sie zu **Datei** > **Buildeinstellungen** , und wählen Sie **universelle Windows-Plattform**, klicken Sie dann auf die **Plattform wechseln** Schaltfläche, um Ihre Auswahl anzuwenden.
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  In der **Datei > Buildeinstellungen**, stellen Sie sicher, dass:
+5.  In der **Datei** > **Buildeinstellungen**, stellen Sie sicher, dass:
 
     1. **Geräte** nastaven NA hodnotu **HoloLens**
     2. **Buildtyp** nastaven NA hodnotu **D3D**
@@ -187,7 +187,7 @@ Im folgenden ist ein typischer Eigenschaftensatz für die Entwicklung mit mixed 
 
 9.  Schließen der *Buildeinstellungen* Fenster.
 
-10.  Speichern Sie Ihre Szene und das Projekt (**Datei > Speichern von SZENEN und Datei > Projekt speichern**).
+10.  Speichern Sie Ihre Szene und das Projekt (**Datei** > **SZENEN speichern / FILE** > **Projekt speichern**).
 
 ## <a name="chapter-3---import-libraries-in-unity"></a>Kapitel 3: Importieren von Bibliotheken in Unity
 
@@ -205,7 +205,7 @@ Wenn Sie weitere Informationen zum Hinzufügen von benutzerdefinierten DLLs zu I
 
 Zum Importieren des Pakets:
 
-1.  Hinzufügen des Unity-Pakets zu Unity mit der **Assets* > *Paket importieren* > *Custom Package** Option des Menüs. Wählen Sie das Paket, das Sie gerade heruntergeladen haben.
+1.  Hinzufügen des Unity-Pakets zu Unity mit der **Assets** > **Paket importieren** > **Custom Package** Menüoption. Wählen Sie das Paket, das Sie gerade heruntergeladen haben.
 
 2.  In der **Unity-Paket importieren** , ruft Sie Vergewissern Sie sich, alles, was unter (und einschließlich) **-Plug-Ins** ausgewählt ist.
 
@@ -266,12 +266,12 @@ Ist das erste Skript, das Sie erstellen müssen **MeetingsUI**, die zum Hosten u
 
 Diese Klasse zu erstellen:
 
-1.  Mit der rechten Maustaste auf die **Assets** Ordner in der *Projektfenster*, und klicken Sie **erstellen* > *Ordner**. Nennen Sie den Ordner **Skripts**.
+1.  Mit der rechten Maustaste auf die **Assets** Ordner in der *Projektfenster*, und wählen Sie dann **erstellen** > **Ordner**. Nennen Sie den Ordner **Skripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Öffnen der **Skripts** Ordner klicken Sie dann in diesem Ordner mit der rechten Maustaste, **erstellen* > *C\# Script**. Nennen Sie das Skript **MeetingsUI.**
+2.  Öffnen der **Skripts** Ordner klicken Sie dann in diesem Ordner mit der rechten Maustaste, **erstellen**  >   **C# Skript**. Nennen Sie das Skript **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -477,7 +477,7 @@ Diese Klasse zu erstellen:
     > [!NOTE]
     > Ändern der **AppId** Wert der **App-Id** , die Sie notiert haben, im  **[Kapitel 1](#chapter-1---create-your-app-in-the-application-registration-portal), Schritt 4**. Dieser Wert sollte identisch, die angezeigt wird, der **App-Registrierungsportal** in Ihre Seite für die anwendungsregistrierung.
 
-8.  In der **Graph** Klasse, fügen Sie die Methoden **SignInAsync()** und **AquireTokenAsync()**, aufgefordert, die den Benutzer, die Anmeldeinformationen einzufügen.
+8.  In der **Graph** Klasse, fügen Sie die Methoden **SignInAsync()** und **AquireTokenAsync()** , aufgefordert, die den Benutzer, die Anmeldeinformationen einzufügen.
 
     ```csharp
         /// <summary>
@@ -548,9 +548,9 @@ Diese Klasse zu erstellen:
 
 9.  Fügen Sie die folgenden zwei Methoden:
 
-    1.  **BuildTodayCalendarEndpoint()**, welche builds den URI angeben, den Tag und die Zeitspanne, in dem die geplanten Besprechungen werden abgerufen.
+    1.  **BuildTodayCalendarEndpoint()** , welche builds den URI angeben, den Tag und die Zeitspanne, in dem die geplanten Besprechungen werden abgerufen.
 
-    2.  **ListMeetingsAsync()**, die Anforderungen aus geplanten Besprechungen *Microsoft Graph*.
+    2.  **ListMeetingsAsync()** , die Anforderungen aus geplanten Besprechungen *Microsoft Graph*.
 
     ```csharp
         /// <summary>
@@ -628,7 +628,7 @@ So erstellen Sie das Skript:
 
 3.  Doppelklicken Sie auf das Skript aus, um ihn mit Visual Studio zu öffnen.
 
-4.  Ändern Sie den Code Namespaces entsprechend folgendermaßen, sowie das Hinzufügen der "**\[System.Serializable\]**" Tag, die oben genannten Ihre **GazeInput** Klasse, sodass sie serialisiert werden kann:
+4.  Ändern Sie den Code Namespaces entsprechend folgendermaßen, sowie das Hinzufügen der " **\[System.Serializable\]** " Tag, die oben genannten Ihre **GazeInput** Klasse, sodass sie serialisiert werden kann:
 
     ```csharp
     using UnityEngine;

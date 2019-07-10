@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows Device Portal, HoloLens
-ms.openlocfilehash: f4319e1efa94d90bfb8cc4e5815ffa87fc865a7f
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830003"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694582"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden die Windows Device Portal
 
 <table>
 <tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
 <td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -56,7 +56,7 @@ Diese Dokumentation bezieht sich insbesondere über die Windows Device Portal f�
 
 ## <a name="connecting-to-an-emulator"></a>Herstellen einer Verbindung mit einem emulator
 
-Sie können das Geräteportal auch mit dem Emulator verwenden. Verwenden Sie zum Verbinden mit dem Device Portal die [Symbolleiste](using-the-hololens-emulator.md). Klicken Sie auf dieses Symbol: ![Symbol "Device Portal öffnen"](images/emulator-deviceportal.png) **öffnen Device Portal**: Öffnen Sie die Windows Device Portal für das Betriebssystem HoloLens im Emulator.
+Sie können das Geräteportal auch mit dem Emulator verwenden. Verwenden Sie zum Verbinden mit dem Device Portal die [Symbolleiste](using-the-hololens-emulator.md). Klicken Sie auf dieses Symbol: ![Symbol "Device Portal öffnen"](images/emulator-deviceportal.png) **öffnen Device Portal**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
 
 ## <a name="creating-a-username-and-password"></a>Erstellen einen Benutzernamen und Kennwort
 
@@ -144,19 +144,29 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
 ![Gemischte Realität erfassen Seite in Windows Device Portal für Microsoft HoloLens](images/windows-device-portal-mixed-reality-capture-page-1000px.png)<br>
 *Gemischte Realität erfassen Seite in Windows Device Portal für Microsoft HoloLens*
 
-Verwenden der [Mixed Reality erfassen](mixed-reality-capture.md) Seite zum Speichern von Medienstreams aus der HoloLens.
+Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der HoloLens speichern.
 * **Einstellungen**: Steuern Sie die Media-Datenströme, die erfasst werden, indem Sie die folgenden Einstellungen zu überprüfen:
   * **Hologramme**: Erfasst den holographic Inhalt in den video Stream an. Hologramme werden in Mono und nicht in Stereo gerendert.
   * **PV Kamera**: Erfasst den Videostream zwischen der Kamera und Fotos/Video.
   * **Mic Audio**: Erfasst die Audiodaten aus dem Mikrofon-Array.
   * **App Audio**: Erfasst die Audiodaten aus dem die derzeit ausgeführte app.
+  * **Rendern von Kamera**: Richtet die Erfassung aus der Perspektive der Fotogalerie/Video-Kamera, werden Wenn [von der ausgeführten app unterstützten](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (gilt nur für HoloLens-2).
   * **Live-Vorschau-Qualität**: Wählen Sie die Bildschirmauflösung, Framerate und streaming-Rate für die Livevorschau an.
 * Klicken oder tippen Sie auf die **Livevorschau** Schaltfläche, um den Stream Capture anzeigen. **Beendet die Livevorschau** hält den Capture-Stream.
 * Klicken oder tippen Sie auf **Datensatz** um den Stream mixed Reality-Aufzeichnung von Aktivitäten, mithilfe der angegebenen Einstellungen zu starten. **Beenden Sie die Aufzeichnung** beendet die Aufzeichnung und speichert es.
 * Klicken oder tippen Sie auf **Take Foto** auszuführende ein Standbild aus dem Stream erfassen.
 * **Videos und Fotos**: Zeigt eine Liste von Videos und Fotos Erfassungen, die auf dem Gerät ausgeführt.
 
-Beachten Sie, dass HoloLens-Apps kein MRC-Foto oder -Video aufnehmen können, während Sie über das Geräteportal eine Live-Vorschau aufzeichnen oder streamen.
+> [!NOTE]
+> Es gibt [Einschränkungen bei der gleichzeitigen MRC](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):
+> * Wenn eine app versucht, die die Foto/Video-Kamera zugreifen, während Windows Device Portal ein Video aufzeichnet, wird die Videoaufnahme beendet.
+>   * HoloLens-2 wird die Aufnahme von Videos nicht beendet, wenn die app-Acesses das Foto/Videokamera SharedReadOnly-Modus.
+> * Wenn die Kamera Foto/Video mit eine app aktiv verwendet wird, ist Windows Device Portal ein Foto oder einen Datensatz eines Videos nutzen.
+> * Live-streaming:
+>   * HoloLens (1. Generation) verhindert, dass eine app den Zugriff auf die Kamera Foto/Video-und Livestreaming von Windows Device Portal.
+>   * HoloLens (1. Generation) kann nicht live-Streaming, wenn eine app die Foto/Videokamera aktiv verwendet wird.
+>   * HoloLens-2 wird automatisch beendet, live-streaming, wenn eine app versucht, Zugriff auf die Kamera Foto/Video im ExclusiveControl-Modus.
+>   * HoloLens 2 kann einen Livestream zu starten, während eine app die Kamera PV aktiv verwendet wird.
 
 ### <a name="performance-tracing"></a>Die Ablaufverfolgung der Leistung
 

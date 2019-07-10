@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, für maschinelles lernen, ml, Machine Learning Studio, Hololens, immersive, vr
-ms.openlocfilehash: 93263817df0fd809a09b32c1b34a636eab7026a1
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.openlocfilehash: 89d9758dedb6a2389644dda887bfadf5b28f6dd2
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516040"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694544"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -40,7 +40,7 @@ Dieser Kurs ist eine eigenständige Tutorials, das aller anderen Mixed Reality-L
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
 <td> MR und Azure-307: Machine Learning</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -60,7 +60,7 @@ Es wird empfohlen, die folgende Hardware und Software für diesen Kurs:
 - [Windows 10 Fall Creators Update (oder höher) mit der Entwicklermodus aktiviert ist](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10-SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [immersive Windows Mixed Reality (VR)-Kopfhörer](immersive-headset-hardware-details.md) oder [Microsoft HoloLens](hololens-hardware-details.md) mit Entwicklermodus aktiviert ist
 - Zugriff auf das Internet für die Einrichtung von Azure und ML-Datenabruf
 
@@ -220,7 +220,7 @@ So starten Sie ein Experiment zu erstellen:
 
 2.  Mit der ein leeres Experiment wird eine neue Seite angezeigt:
 
-3.  Erweitern Sie im Bereich auf der linken Seite **Saved Datasets* > *Meine Datasets** , und ziehen Sie die **ProductsTableCSV** auf der **Experimentbereich**.
+3.  Erweitern Sie im Bereich auf der linken Seite **Saved Datasets** > **Meine Datasets** , und ziehen Sie die **ProductsTableCSV** auf die **Experimentbereich**.
 
     ![Machine Learning Studio: Das Experiment](images/AzureLabs-Lab7-16.png)
 
@@ -236,7 +236,7 @@ So starten Sie ein Experiment zu erstellen:
 
     ![Machine Learning Studio: Das Experiment](images/AzureLabs-Lab7-19.png)
 
-7.  In der **Experimente** auf der linken Seite im Bereich, erweitern Sie **Machine Learning* > * Train **. Ziehen Sie die **Train Model** Element, in den experimentbereich. Zeichenbereich sollte identisch aussehen der folgenden.
+7.  In der **Experimente** auf der linken Seite im Bereich, erweitern Sie **Machine Learning** > **Train**. Ziehen Sie die **Train Model** Element, in den experimentbereich. Zeichenbereich sollte identisch aussehen der folgenden.
 
     ![Machine Learning Studio: Das Experiment](images/AzureLabs-Lab7-20.png)
 
@@ -252,21 +252,21 @@ So starten Sie ein Experiment zu erstellen:
 
 11. Sie sind dabei, zu trainieren einer **Mehrklassige logistische Regression** Algorithmus, um die Angaben zu Käufer vorherzusagen **Produkt** basierend auf der Stunde des Tages und dem Datum. Es ist nicht Gegenstand dieses Dokument wird erläutert, die Details der bereitgestellten Azure Machine Learning Studio, jedoch unterschiedlichen Algorithmen finden Sie mehr über die [Cheat Sheet für Machine Learning-Algorithmus](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. Erweitern Sie im Experiment Elemente im Bereich mit auf der linken Seite ***Machine Learning* > *Modell initialisieren* > * Klassifizierung ***, und ziehen Sie die **Mehrklassige logistische Regression**  Element, an dem experimentbereich befindet.
+12. Erweitern Sie im Experiment Elemente im Bereich mit auf der linken Seite **Machine Learning** > **Modell initialisieren** > **Klassifizierung**, und ziehen Sie die  **Mehrklassige logistische Regression** Element, an dem experimentbereich befindet.
 
 13. Verbinden Sie die Ausgabe, zwischen dem unteren Rand der **Mehrklassige logistische Regression**, mit der linken oberen Eingabe der **Train Model** Element.
 
     ![Machine Learning Studio: Das Experiment](images/AzureLabs-Lab7-23.png)
 
-14. Erweitern Sie in der Experiment-Elemente im Bereich auf der linken Seite **Machine Learning* > * Bewertung **, und ziehen Sie die **Score Model** Element an der Leinwand.
+14. Erweitern Sie in der Experiment-Elemente im Bereich auf der linken Seite **Machine Learning** > **Bewertung**, und ziehen Sie die **Score Model** Element an der Leinwand.
 
 15. Verbinden Sie die Ausgabe, zwischen dem unteren Rand der **Train Model**, mit der linken oberen Eingabe der **Score Model**.
 
-16. Verbinden Sie die Ausgabe unten rechts von **Split Data**, mit der rechten oberen Eingabe der  **Score Model* Element*.
+16. Verbinden Sie die Ausgabe unten rechts von **Split Data**, mit der rechten oberen Eingabe der **Score Model** Element.
 
     ![Machine Learning Studio: Das Experiment](images/AzureLabs-Lab7-24.png)
 
-17. In der Liste der **Experiment** Elemente im Bereich auf der linken Seite zu erweitern ***Machine Learning* > * auswerten ***, und ziehen Sie die **Evaluate Model** Element in den experimentbereich.
+17. In der Liste der **Experiment** Elemente im Bereich auf der linken Seite zu erweitern **Machine Learning** > **auswerten**, und ziehen Sie die **Evaluate Model** Element in den experimentbereich.
 
 18. Verbinden Sie die Ausgabe aus dem **Score Model** mit der linken oberen Eingabe der **Evaluate Model**.
 
@@ -334,9 +334,9 @@ Richten Sie ein und Testen Sie Ihrer Mixed Reality Kopfhörer Immersive.
 
 1.  Open **Unity** , und erstellen Sie ein neues Unity-Projekt namens **MR\_MachineLearning.** Stellen Sie sicher, dass der Projekttyp nastaven NA hodnotu **3D**.
 
-2.  Mit Unity geöffnet, es prüfen, ob der Standardwert ist **Skript-Editor** nastaven NA hodnotu **Visual Studio**. Wechseln Sie zu ***bearbeiten* > *Voreinstellungen*** und navigieren Sie dann im neuen Fenster zu **externe Tools**. Änderung **externen Skript-Editors** zu **Visual Studio 2017**. Schließen der **Voreinstellungen** Fenster.
+2.  Mit Unity geöffnet, es prüfen, ob der Standardwert ist **Skript-Editor** nastaven NA hodnotu **Visual Studio**. Wechseln Sie zu **bearbeiten** > **Voreinstellungen** und navigieren Sie dann im neuen Fenster zu **externe Tools**. Änderung **externen Skript-Editors** zu **Visual Studio 2017**. Schließen der **Voreinstellungen** Fenster.
 
-3.  Öffnen Sie als Nächstes ***Datei* > *Buildeinstellungen*** , und wechseln von der Plattform bereitgestellten **universelle Windows-Plattform**, durch Klicken auf die ***Plattform wechseln*** Schaltfläche.
+3.  Öffnen Sie als Nächstes **Datei** > **Buildeinstellungen** , und wechseln von der Plattform bereitgestellten **universelle Windows-Plattform**, durch Klicken auf die ***Plattform wechseln***  Schaltfläche.
 
 4.  Außerdem stellen Sie sicher, dass:
 
@@ -527,7 +527,7 @@ Diese Klasse zu erstellen:
 
 1.  Wechseln Sie zu der **Skripts** Ordner, in der **Projektfenster**.
 
-2.  Mit der rechten Maustaste in den Ordner **erstellen** > **C\# Skript**. Rufen Sie das Skript **ProductPrediction**.
+2.  Mit der rechten Maustaste in den Ordner **erstellen**  >   **C# Skript**. Rufen Sie das Skript **ProductPrediction**.
 
 3.  Doppelklicken Sie auf dem neuen **ProductPrediction** Skript öffnen Sie ihn mit **Visual Studio 2017**.
 
@@ -811,7 +811,7 @@ Diese Klasse zu erstellen:
 
 14. Ziehen Sie die **ProductPrediction** Klasse-Skript aus der **Skript** Ordner, auf die **Main Camera** Objekt.
 
-15. Speichern Sie Ihre Szene und das Projekt **Datei** >  ***Szene speichern* / *Datei***   >  **Projekt speichern**.
+15. Speichern Sie Ihre Szene und das Projekt **Datei** > **Szenendatei speichern** > **Projekt speichern**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Kapitel 10 – erstellen Sie die UWP-Projektmappe
 
@@ -819,11 +819,11 @@ Es ist nun Zeit, Ihr Projekt als UWP-Lösung zu erstellen, damit es als eigenst�
 
 So erstellen Sie:
 
-1.  Speichern Sie durch Klicken auf die aktuelle Szene **Datei** **speichern Szenen**.
+1.  Speichern Sie durch Klicken auf die aktuelle Szene **Datei** > **speichern Szenen**.
 
-2.  Wechseln Sie zu **Datei** **Buildeinstellungen**
+2.  Wechseln Sie zu **Datei** > **Buildeinstellungen**
 
-3.  Aktivieren Sie das Kontrollkästchen namens **Unity C\# Projekte** (Dies ist wichtig, da er kann Sie die Klassen zu bearbeiten, nachdem der Build abgeschlossen ist).
+3.  Aktivieren Sie das Kontrollkästchen namens **Unity C# Projekte** (Dies ist wichtig, da er kann Sie die Klassen zu bearbeiten, nachdem der Build abgeschlossen ist).
 
 4.  Klicken Sie auf **Hinzufügen von Open Szenen**,
 

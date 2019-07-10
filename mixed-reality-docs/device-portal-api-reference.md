@@ -6,12 +6,12 @@ ms.author: JLyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Device Portal-,-API
-ms.openlocfilehash: 507ab98734adea80d0aad41d99124e3d91846f28
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596066"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694435"
 ---
 # <a name="device-portal-api-reference"></a>Device Portal-API-Referenz
 
@@ -278,17 +278,6 @@ Die aktuelle Aufzeichnung zu beenden. Aufzeichnung wird als Datei zurückgegeben
 
 ## <a name="mixed-reality-capture"></a>Mixed Reality Capture
 
-**/API/holographic/MRC/File (löschen)**
-
-Löscht die gemischte Realität vom Gerät aufzeichnen.
-
-Parameter
-* Dateiname: Name, hex64 codiert, der zu löschenden Datei
-
-**/api/holographic/mrc/settings (GET)**
-
-Ruft gemischt den Standard tatsächlich Capture-Einstellungen
-
 **/api/holographic/mrc/file (GET)**
 
 Lädt eine mixed Reality-Datei auf dem Gerät herunter. Verwenden von Op = Stream-Abfrageparameter für das streaming.
@@ -297,6 +286,38 @@ Parameter
 * Dateiname: Name, hex64 codiert, der die Datei zum Abrufen
 * Op: Stream
 
+**/API/holographic/MRC/File (löschen)**
+
+Löscht die gemischte Realität vom Gerät aufzeichnen.
+
+Parameter
+* Dateiname: Name, hex64 codiert, der zu löschenden Datei
+
+**/api/holographic/mrc/files (GET)**
+
+Gibt die Liste der auf dem Gerät gespeicherten mixed Reality-Dateien
+
+**/api/holographic/mrc/photo (POST)**
+
+Nimmt ein Foto mixed Reality und erstellt eine Datei auf dem Gerät
+
+Parameter
+* Holo: Erfassen von Hologramme: "true" oder "false" (standardmäßig "false")
+* PV: Erfassung PV Kamera: "true" oder "false" (standardmäßig "false")
+* RenderFromCamera: (Gilt nur für HoloLens-2) Rendern aus Perspektive der Fotogalerie/Videokamera: "true" oder "false" (standardmäßig auf "true")
+
+**/api/holographic/mrc/settings (GET)**
+
+Ruft gemischt den Standard tatsächlich Capture-Einstellungen
+
+**/api/holographic/mrc/settings (POST)**
+
+Legt kombiniert den Standard tatsächlich Capture-Einstellungen.  Einige dieser Einstellungen werden auf MRC Foto und Erfassen des Systems angewendet.
+
+**/api/holographic/mrc/status (GET)**
+
+Ruft den Status der mixed Reality aufgezeichnet ("ausführen", "beendet")
+
 **/API/holographic/MRC/Thumbnail (GET)**
 
 Ruft die Miniaturansicht für die angegebene Datei.
@@ -304,81 +325,56 @@ Ruft die Miniaturansicht für die angegebene Datei.
 Parameter
 * Dateiname: Name, hex64 codiert, der die Datei, die für die die Miniaturansicht angefordert wird
 
-**/api/holographic/mrc/status (GET)**
-
-Ruft den Status der mixed Reality aufgezeichnet ("ausführen", "beendet")
-
-**/api/holographic/mrc/files (GET)**
-
-Gibt die Liste der auf dem Gerät gespeicherten mixed Reality-Dateien
-
-**/api/holographic/mrc/settings (POST)**
-
-Legt gemischt den Standard tatsächlich Capture-Einstellungen
-
 **/api/holographic/mrc/video/control/start (POST)**
 
 Startet eine Aufzeichnung mixed reality
 
 Parameter
-* Holo: Erfassen von Hologramme: "true" oder "false"
-* PV: Erfassung PV Kamera: "true" oder "false"
-* MIC: Erfassung Mikrofon: "true" oder "false"
-* Loopback: Erfassen von app-Audio: "true" oder "false"
+* Holo: Erfassen von Hologramme: "true" oder "false" (standardmäßig "false")
+* PV: Erfassung PV Kamera: "true" oder "false" (standardmäßig "false")
+* MIC: Erfassung Mikrofon: "true" oder "false" (standardmäßig "false")
+* Loopback: Erfassen von app-Audio: "true" oder "false" (standardmäßig "false")
+* RenderFromCamera: (Gilt nur für HoloLens-2) Rendern aus Perspektive der Fotogalerie/Videokamera: "true" oder "false" (standardmäßig auf "true")
+* Vstab: Enable-videostabilisierung (gilt nur für HoloLens-2): "true" oder "false" (standardmäßig auf "true")
+* vstabbuffer: (Gilt nur für HoloLens-2) videostabilisierung Puffer Latenz: 0 bis 30 Frames (standardmäßig 15 Frames)
 
 **/api/holographic/mrc/video/control/stop (POST)**
 
 Beendet kombiniert die aktuelle Realität Aufzeichnung
 
-**/api/holographic/mrc/photo (POST)**
+## <a name="mixed-reality-streaming"></a>Mixed Reality-Streaming
 
-Nimmt ein Foto mixed Reality und erstellt eine Datei auf dem Gerät
+HoloLens unterstützt die Livevorschau von mixed Reality über aufgeteilte Download von einem fragmentierte MP4-Dateien.
 
-Parameter
+Mixed Reality-Streams teilen den gleichen Satz von Parametern, die steuern, was erfasst werden:
 * Holo: Erfassen von Hologramme: "true" oder "false"
 * PV: Erfassung PV Kamera: "true" oder "false"
+* MIC: Erfassung Mikrofon: "true" oder "false"
+* Loopback: Erfassen von app-Audio: "true" oder "false"
 
-Mixed Reality-Streaming
+Wenn keine dieser Optionen angegeben werden:-Hologramme, Foto/Videokamera und app-Audio werden erfasst werden<br>
+Wenn angegeben werden: die Parameter nicht angegeben werden standardmäßig auf "false"
+
+Optionale Parameter (gilt nur für HoloLens-2)
+* RenderFromCamera: Rendern aus Perspektive der Fotogalerie/Videokamera: "true" oder "false" (standardmäßig auf "true")
+* Vstab: Aktivieren von videostabilisierung: "true" oder "false" (standardmäßig "false")
+* Vstabbuffer: videostabilisierung Puffer Latenz: 0 bis 30 Frames (standardmäßig 15 Frames)
 
 **/api/holographic/stream/live.mp4 (GET)**
 
-Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
-
-Parameter
-* Holo: Erfassen von Hologramme: "true" oder "false"
-* PV: Erfassung PV Kamera: "true" oder "false"
-* MIC: Erfassung Mikrofon: "true" oder "false"
-* Loopback: Erfassen von app-Audio: "true" oder "false"
+Ein 1280x720p 30 BpS 5Mbit-Datenstrom.
 
 **/api/holographic/stream/live_high.mp4 (GET)**
 
-Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
-
-Parameter
-* Holo: Erfassen von Hologramme: "true" oder "false"
-* PV: Erfassung PV Kamera: "true" oder "false"
-* MIC: Erfassung Mikrofon: "true" oder "false"
-* Loopback: Erfassen von app-Audio: "true" oder "false"
-
-**/api/holographic/stream/live_low.mp4 (GET)**
-
-Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
-
-Parameter
-* Holo: Erfassen von Hologramme: "true" oder "false"
-* PV: Erfassung PV Kamera: "true" oder "false"
-* MIC: Erfassung Mikrofon: "true" oder "false"
-* Loopback: Erfassen von app-Audio: "true" oder "false"
+Ein 1280x720p 30 BpS 5Mbit-Datenstrom.
 
 **/api/holographic/stream/live_med.mp4 (GET)**
 
-Starten des portionsweisen Downloads einer fragmentierten MP4-Datei
+Ein 854x480p 30 BpS 2.5Mbit-Datenstrom.
 
-Parameter
-* Holo: Erfassen von Hologramme: "true" oder "false"
-* PV: Erfassung PV Kamera: "true" oder "false"
-* MIC: Erfassung Mikrofon: "true" oder "false"
-* Loopback: Erfassen von app-Audio: "true" oder "false"
+**/api/holographic/stream/live_low.mp4 (GET)**
+
+Ein 428x240p 15fps 0.6Mbit-Datenstrom.
 
 ## <a name="networking"></a>Netzwerk
 
@@ -532,5 +528,5 @@ Zurückgeben von Daten
 * Beim Start wird der WPR-Sitzung-Status zurückgegeben.
 
 ## <a name="see-also"></a>Siehe auch
-* [Verwenden die Windows Device Portal](using-the-windows-device-portal.md)
+* [Verwenden des Windows-Geräteportals](using-the-windows-device-portal.md)
 * [Device Portal-Core-API-Referenz (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, Application Insights, Hololens, immersive vr
-ms.openlocfilehash: 838dbe38724d29f4c5987e2f6ac7a07231015c82
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e14a32f9a38e3e8f3054d19310782f7c2d4784a1
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604774"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694561"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -38,7 +38,7 @@ In diesem Kurs erfahren Sie, wie die Ergebnisse aus den Application Insights-Die
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
 <td> MR und Azure 309: Application insights</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -58,7 +58,7 @@ Es wird empfohlen, die folgende Hardware und Software für diesen Kurs:
 - [Windows 10 Fall Creators Update (oder höher) mit der Entwicklermodus aktiviert ist](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10-SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [immersive Windows Mixed Reality (VR)-Kopfhörer](immersive-headset-hardware-details.md) oder [Microsoft HoloLens](hololens-hardware-details.md) mit Entwicklermodus aktiviert ist
 - Eine Reihe von Kopfhörer mit ein eingebautes Mikrofon verfügen (wenn die Kopfhörer nicht über eine integrierte mic und die Lautsprecher verfügt)
 - Zugriff auf das Internet für die Einrichtung von Azure und Abrufen von Application Insights-Daten
@@ -207,7 +207,7 @@ Im folgenden ist ein typischer Eigenschaftensatz für die Entwicklung mit dem mi
 
     1.  In der **Weitere Einstellungen** Registerkarte:
 
-        1.  **Scripting** **Laufzeitversion** muss **experimentell (.NET 4.6 Äquivalent)**, löst der Editor neu starten müssen.
+        1.  **Scripting** **Laufzeitversion** muss **experimentell (.NET 4.6 Äquivalent)** , löst der Editor neu starten müssen.
 
         2.  **Back-End-Scripting** muss **.NET**
 
@@ -225,11 +225,11 @@ Im folgenden ist ein typischer Eigenschaftensatz für die Entwicklung mit dem mi
 
         ![Einrichten des Unity-Projekts](images/AzureLabs-Lab309-21.png)
 
-9.  Im **Buildeinstellungen**, **Unity C\# Projekte** nicht mehr abgeblendet ist, aktivieren Sie das Kontrollkästchen neben dieser.
+9.  Im **Buildeinstellungen**, **Unity C# Projekte** nicht mehr abgeblendet ist, aktivieren Sie das Kontrollkästchen neben dieser.
 
 10.  Schließen Sie das Fenster "erstellen".
 
-11.  Speichern Sie Ihre Szene und das Projekt (**Datei > Speichern SZENE / FILE > Speichern Projekt**).
+11.  Speichern Sie Ihre Szene und das Projekt (**Datei** > **speichern SZENE / FILE** > **speichern Projekt**).
 
 
 ## <a name="chapter-3---import-the-unity-package"></a>Kapitel 3: Importieren des Unity-Pakets
@@ -275,7 +275,7 @@ Um Application Insights in Ihrem eigenen Projekt zu importieren, stellen Sie sic
 
 In diesem Kapitel richten Sie die Kamera und die Steuerelemente, damit Benutzer anzeigen und in der Szene verschieben.
 
-1.  Mit der rechten Maustaste in einen leeren Bereich im Bereich Hierarchie, klicken Sie dann auf **erstellen > leere**.
+1.  Mit der rechten Maustaste in einen leeren Bereich im Bereich Hierarchie, klicken Sie dann auf **erstellen** > **leere**.
 
     ![Richten Sie die Kamera und die Benutzersteuerelemente](images/AzureLabs-Lab309-26.png)
 
@@ -377,11 +377,11 @@ Ist das erste Skript, das Sie erstellen müssen **ApplicationInsightsTracker**, 
 
 Diese Klasse zu erstellen:
 
-1.  Mit der rechten Maustaste den *Projekt Bereich*, klicken Sie dann **erstellen > Ordner**. Nennen Sie den Ordner **Skripts**.
+1.  Mit der rechten Maustaste den *Projekt Bereich*, klicken Sie dann **erstellen** > **Ordner**. Nennen Sie den Ordner **Skripts**.
 
     ![Erstellen Sie die ApplicationInsightsTracker-Klasse](images/AzureLabs-Lab309-46.png)  ![Erstellen Sie die ApplicationInsightsTracker-Klasse](images/AzureLabs-Lab309-47.png)
 
-2.  Mit der **Skripts** Ordner erstellt haben, doppelklicken Sie darauf, um zu öffnen. Klicken Sie dann in diesem Ordner mit der rechten Maustaste, **erstellen > C\# Skript**. Nennen Sie das Skript **ApplicationInsightsTracker**.
+2.  Mit der **Skripts** Ordner erstellt haben, doppelklicken Sie darauf, um zu öffnen. Klicken Sie dann in diesem Ordner mit der rechten Maustaste, **erstellen**  >   **C# Skript**. Nennen Sie das Skript **ApplicationInsightsTracker**.
 
 3.  Doppelklicken Sie auf die neue **ApplicationInsightsTracker** Skript öffnen Sie ihn mit **Visual Studio**.
 
@@ -505,7 +505,7 @@ Ist das nächste Skript zum Erstellen der **bestaunen** Skript. Dieses Skript is
 
 1.  Doppelklicken Sie auf die **Skripts** Ordner, um ihn zu öffnen.
 
-2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen** > **C\# Skript**. Nennen Sie das Skript **bestaunen**.
+2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen**  >   **C# Skript**. Nennen Sie das Skript **bestaunen**.
 
 3.  Doppelklicken Sie auf das Skript aus, um ihn mit Visual Studio zu öffnen.
 
@@ -699,7 +699,7 @@ So erstellen Sie das Skript:
 
 1.  Doppelklicken Sie auf die **Skripts** Ordner, um ihn zu öffnen.
 
-2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen** **C\# > Skript**. Nennen Sie das Skript **ObjectTrigger**.
+2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen**  >   **C# Skript**. Nennen Sie das Skript **ObjectTrigger**.
 
 3.  Doppelklicken Sie auf das Skript aus, um ihn mit Visual Studio zu öffnen. Ersetzen Sie den vorhandenen Code durch Folgendes:
 
@@ -771,7 +771,7 @@ So erstellen Sie das Skript:
 
 1.  Doppelklicken Sie auf die **Skripts** Ordner, um ihn zu öffnen.
 
-2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen** **C\# > Skript**. Nennen Sie das Skript **DataFromAnalytics**.
+2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen**  >   **C# Skript**. Nennen Sie das Skript **DataFromAnalytics**.
 
 3.  Doppelklicken Sie auf das Skript aus, um ihn mit Visual Studio zu öffnen.
 
@@ -825,7 +825,7 @@ So erstellen Sie das Skript:
         }
     ```
 
-6.  In der **DataFromAnalytics** Klasse, die nach der rechten Maustaste die **Start()** -Methode, fügen Sie die folgende Methode wird aufgerufen, **FetchAnalytics()**. Diese Methode ist verantwortlich für das Auffüllen der Liste der Schlüssel-/Wertpaaren, mit einem *"gameobject"* und eine Anzahl der Platzhalter-Ereignis. Klicken Sie dann initialisiert die **GetWebRequest()** Coroutine. Die Abfragestruktur des Aufrufs von *Application Insights* können innerhalb dieser Methode finden Sie auch, wie die *Abfrage-URL* Endpunkt.
+6.  In der **DataFromAnalytics** Klasse, die nach der rechten Maustaste die **Start()** -Methode, fügen Sie die folgende Methode wird aufgerufen, **FetchAnalytics()** . Diese Methode ist verantwortlich für das Auffüllen der Liste der Schlüssel-/Wertpaaren, mit einem *"gameobject"* und eine Anzahl der Platzhalter-Ereignis. Klicken Sie dann initialisiert die **GetWebRequest()** Coroutine. Die Abfragestruktur des Aufrufs von *Application Insights* können innerhalb dieser Methode finden Sie auch, wie die *Abfrage-URL* Endpunkt.
 
     ```csharp
         private void FetchAnalytics()
@@ -857,7 +857,7 @@ So erstellen Sie das Skript:
         }
     ```
 
-7.  Direkt unterhalb der **FetchAnalytics()** -Methode, fügen Sie eine Methode namens **GetWebRequest()**, gibt ein *IEnumerator*. Diese Methode ist verantwortlich für die Anforderung an, wie oft ein Ereignis, das mit einem bestimmten entspricht *"gameobject"*, aufgerufen wurde in *Application Insights*. Wenn alle gesendeten Abfragen zurückgegeben, die **DetermineWinner()** Methode wird aufgerufen.
+7.  Direkt unterhalb der **FetchAnalytics()** -Methode, fügen Sie eine Methode namens **GetWebRequest()** , gibt ein *IEnumerator*. Diese Methode ist verantwortlich für die Anforderung an, wie oft ein Ereignis, das mit einem bestimmten entspricht *"gameobject"* , aufgerufen wurde in *Application Insights*. Wenn alle gesendeten Abfragen zurückgegeben, die **DetermineWinner()** Methode wird aufgerufen.
 
     ```csharp
         /// <summary>
@@ -923,7 +923,7 @@ So erstellen Sie das Skript:
         }
     ```
 
-8.  Die nächste Methode ist **DetermineWinner()**, sortiert die Liste der *"gameobject"* und *Int* -Paare, anhand der höchsten Anzahl von Ereignissen. Er ändert dann die Material Farbe, *"gameobject"* zu *Grün* (als Feedback, damit es mit der höchsten Anzahl). Dadurch werden eine Meldung mit den Ergebnissen der Analyse angezeigt.
+8.  Die nächste Methode ist **DetermineWinner()** , sortiert die Liste der *"gameobject"* und *Int* -Paare, anhand der höchsten Anzahl von Ereignissen. Er ändert dann die Material Farbe, *"gameobject"* zu *Grün* (als Feedback, damit es mit der höchsten Anzahl). Dadurch werden eine Meldung mit den Ergebnissen der Analyse angezeigt.
 
     ```csharp
         /// <summary>
@@ -1000,7 +1000,7 @@ So erstellen Sie das Skript:
 
 1.  Doppelklicken Sie auf die **Skripts** Ordner, um ihn zu öffnen.
 
-2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen** > **C\# Skript**. Nennen Sie das Skript **Bewegung**.
+2.  Klicken Sie auf auf die **Skripts** Ordner, klicken Sie auf **erstellen**  >   **C# Skript**. Nennen Sie das Skript **Bewegung**.
 
 3.  Doppelklicken Sie auf das Skript mit öffnen *Visual Studio*.
 
@@ -1205,7 +1205,7 @@ In diesem Kapitel es erforderlich, die **Datenverschiebung** Skript auf die **Ka
 
 Alles, was Sie für den Unity-Abschnitt, der dieses Projekt wurde jetzt abgeschlossen daher ist es Zeit für die Erstellung von Unity.
 
-1.  Navigieren Sie zu **Buildeinstellungen**, **(Datei > Buildeinstellungen...)** .
+1.  Navigieren Sie zu **Buildeinstellungen**, (**Datei** > **Buildeinstellungen**).
 
 2.  Von der **Buildeinstellungen** Fenster, klicken Sie auf **erstellen**.
 

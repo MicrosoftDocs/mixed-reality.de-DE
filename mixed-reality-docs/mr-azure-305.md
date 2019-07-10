@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, Funktionen, Speicher, Hololens, immersive Vr
-ms.openlocfilehash: a828c7f0ac3016462f5c7e874545bf50a2db6771
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593545"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694558"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -42,7 +42,7 @@ In Ihrer Anwendung obliegt es Ihnen, wie Sie die Ergebnisse in Ihr Design integr
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
 <td>MR und Azure-305: Funktionen und Speicher</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -62,7 +62,7 @@ Es wird empfohlen, die folgende Hardware und Software für diesen Kurs:
 - [Windows 10 Fall Creators Update (oder höher) mit der Entwicklermodus aktiviert ist](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10-SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [immersive Windows Mixed Reality (VR)-Kopfhörer](immersive-headset-hardware-details.md) oder [Microsoft HoloLens](hololens-hardware-details.md) mit Entwicklermodus aktiviert ist
 - Ein Abonnement für ein Azure-Konto zum Erstellen von Azure-Ressourcen
 - Zugriff auf das Internet für den Abruf von Setup- und Azure
@@ -97,11 +97,11 @@ Verwenden der **Azure Storage-Dienst**, Sie benötigen zum Erstellen und Konfigu
 
     2.  Für *Bereitstellungsmodell*Option **RM**.
 
-    3.  Für *Kontoart*Option **Speicher (Allgemein v1)**.
+    3.  Für *Kontoart*Option **Speicher (Allgemein v1)** .
 
     4.  Bestimmen der *Speicherort* für Ihre Ressourcengruppe aus (Wenn Sie eine neue Ressourcengruppe erstellen). Der Speicherort würde idealerweise in der Region sein, in dem die Anwendung ausgeführt wird. Einige Azure-Ressourcen sind nur in bestimmten Regionen verfügbar.
 
-    5.  Für *Replikation* wählen **Read-Access-georedundanter Speicher (RA-GRS)**.
+    5.  Für *Replikation* wählen **Read-Access-georedundanter Speicher (RA-GRS)** .
 
     6.  Für *Leistung*Option **Standard**.
 
@@ -250,15 +250,15 @@ Richten Sie ein und Testen Sie Ihrer mixed Reality immersive Kopfhörer.
 
     ![Benennen Sie neue Unity-Projekt](images/AzureLabs-Lab5-18.png)
 
-3.  Mit Unity geöffnet, es prüfen, ob der Standardwert ist **Skript-Editor** nastaven NA hodnotu **Visual Studio**. Wechseln Sie zu **bearbeiten* > *Voreinstellungen** und navigieren Sie dann im neuen Fenster zu **externe Tools**. Änderung **externen Skript-Editors** zu **Visual Studio 2017**. Schließen der **Voreinstellungen** Fenster.
+3.  Mit Unity geöffnet, es prüfen, ob der Standardwert ist **Skript-Editor** nastaven NA hodnotu **Visual Studio**. Wechseln Sie zu **bearbeiten** > **Voreinstellungen** und navigieren Sie dann im neuen Fenster zu **externe Tools**. Änderung **externen Skript-Editors** zu **Visual Studio 2017**. Schließen der **Voreinstellungen** Fenster.
 
     ![Satz von visual Studio als Skript-editor](images/AzureLabs-Lab5-19.png)
 
-4.  Öffnen Sie als Nächstes **Datei > Buildeinstellungen** , und wechseln von der Plattform bereitgestellten **universelle Windows-Plattform**, durch Klicken auf die **Plattform wechseln** Schaltfläche.
+4.  Öffnen Sie als Nächstes **Datei** > **Buildeinstellungen** , und wechseln von der Plattform bereitgestellten **universelle Windows-Plattform**, durch Klicken auf die **Plattform wechseln**  Schaltfläche.
 
     ![Plattform für die Uwp wechseln](images/AzureLabs-Lab5-20.png)
 
-5.  Wechseln Sie zu **Datei > Buildeinstellungen** und stellen Sie sicher, dass:
+5.  Wechseln Sie zu **Datei** > **Buildeinstellungen** und stellen Sie sicher, dass:
 
     1. **Geräte** nastaven NA hodnotu **einem beliebigen Gerät**.
 
@@ -318,7 +318,7 @@ Richten Sie ein und Testen Sie Ihrer mixed Reality immersive Kopfhörer.
 
 10.  Schließen Sie das Fenster "erstellen".
 
-11. Speichern Sie Ihre Szene und das Projekt (**Datei > Speichern SZENE / FILE > Speichern Projekt**).
+11. Speichern Sie Ihre Szene und das Projekt (**Datei** > **speichern SZENE / FILE** > **speichern Projekt**).
 
 ## <a name="chapter-4---setup-main-camera"></a>Kapitel 4: Einrichtung Hauptkamera
 
@@ -327,7 +327,7 @@ Richten Sie ein und Testen Sie Ihrer mixed Reality immersive Kopfhörer.
 
 1.  In der *Hierarchie Bereich*, sehen Sie ein Objekt namens **Main Camera**, diesem Objekt dargestellten Ihr "Head" Sicht aus, wenn Sie "in" Ihrer Anwendung sind.
 
-2.  Wählen Sie im Unity-Dashboard vor Ihnen die **Main Camera "gameobject"**. Sie werden feststellen, dass die *Inspektor Bereich* (in der Regel nach rechts im Dashboard gefunden) zeigt die verschiedenen Komponenten, die *"gameobject"*, mit *transformieren* oben, gefolgt von *Kamera*, und einige andere Komponenten. Sie müssen die Transformation der Main-Kamera, zurücksetzen, damit sie richtig positioniert ist.
+2.  Wählen Sie im Unity-Dashboard vor Ihnen die **Main Camera "gameobject"** . Sie werden feststellen, dass die *Inspektor Bereich* (in der Regel nach rechts im Dashboard gefunden) zeigt die verschiedenen Komponenten, die *"gameobject"* , mit *transformieren* oben, gefolgt von *Kamera*, und einige andere Komponenten. Sie müssen die Transformation der Main-Kamera, zurücksetzen, damit sie richtig positioniert ist.
 
 3.  Wählen Sie zu diesem Zweck die **Zahnradsymbol** Symbol neben der Kamera *transformieren* Komponente, und wählen **zurücksetzen**.
 
@@ -421,7 +421,7 @@ Richten Sie ein und Testen Sie Ihrer mixed Reality immersive Kopfhörer.
 
 6.  Als Nächstes erstellen Sie eine **3D-Text** Objekt, das Feedback zu den Status des Azure-Diensts.
 
-    Klicken Sie mit der rechten Maustaste auf die **GazeButton** in der Hierarchie im Bereich erneut aus, und fügen eine **3D-Objekt > 3D-Text** als Objekt ein *untergeordneten*.
+    Klicken Sie mit der rechten Maustaste auf die **GazeButton** in der Hierarchie im Bereich erneut aus, und fügen eine **3D-Objekt** > **3D-Text** als Objekt ein *untergeordneten*.
 
     ![Erstellen Sie neue 3D-Text-Objekt](images/AzureLabs-Lab5-42.png)
 
@@ -448,7 +448,7 @@ Richten Sie ein und Testen Sie Ihrer mixed Reality immersive Kopfhörer.
     ![Set Text Mesh-Komponente](images/AzureLabs-Lab5-43.png)
 
     > [!TIP]
-    > Die ausgewählte Farbe hier ist Hexadezimalfarbe: **000000FF (Schwarz)**, jedoch können Sie Ihre eigenen auswählen, nur sicherzustellen, dass er gelesen.
+    > Die ausgewählte Farbe hier ist Hexadezimalfarbe: **000000FF (Schwarz)** , jedoch können Sie Ihre eigenen auswählen, nur sicherzustellen, dass er gelesen.
 
 10. Die Struktur der Hierarchie Bereich sollte jetzt wie folgt aussehen:
 
@@ -467,9 +467,9 @@ Es befindet sich derzeit ein bekanntes Problem in Unity-Plug-Ins neu konfigurier
 
 Um das SDK in Ihr eigenes Projekt zu importieren, stellen Sie sicher, dass Sie heruntergeladen haben, die neueste Version [".unitypackage" von GitHub](https://aka.ms/azstorage-unitysdk). Führen Sie anschließend folgende Schritte aus:
 
-1.  Hinzufügen der **.unitypackage** Datei in Unity mithilfe der **Assets > Paket importieren > benutzerdefiniertes Paket** Option des Menüs.
+1.  Hinzufügen der **.unitypackage** Datei in Unity mithilfe der **Assets** > **Paket importieren** > **Custom Package**Option des Menüs.
 
-2.  In der **Unity-Paket importieren** Feld angezeigt, alles unter können Sie auswählen **-Plug-Ins* > *Storage**. Deaktivieren Sie alles andere, da sie für diesen Kurs nicht benötigt wird.
+2.  In der **Unity-Paket importieren** Feld angezeigt, alles unter können Sie auswählen **-Plug-Ins** > **Storage**. Deaktivieren Sie alles andere, da sie für diesen Kurs nicht benötigt wird.
 
     ![Paket importieren](images/AzureLabs-Lab5-45.png)
 
@@ -519,7 +519,7 @@ Die *AzureServices* Klasse ist zuständig für:
 
 Zum Erstellen dieser Klasse:
 
-1.  Mit der rechten Maustaste den *Asset* Ordner befindet sich im Projektfenster **erstellen > Ordner**. Nennen Sie den Ordner **Skripts**.
+1.  Mit der rechten Maustaste den *Asset* Ordner befindet sich im Projektfenster **erstellen** > **Ordner**. Nennen Sie den Ordner **Skripts**.
 
     ![neuen Ordner erstellen](images/AzureLabs-Lab5-50.png)
 
@@ -527,7 +527,7 @@ Zum Erstellen dieser Klasse:
 
 2.  Doppelklicken Sie auf den Ordner, der gerade erstellt haben, um ihn zu öffnen.
 
-3.  Mit der rechten Maustaste in den Ordner **erstellen > C# Skript**. Rufen Sie das Skript *AzureServices*.
+3.  Mit der rechten Maustaste in den Ordner **erstellen**  >   **C# Skript**. Rufen Sie das Skript *AzureServices*.
 
 4.  Doppelklicken Sie auf dem neuen *AzureServices* Klasse, öffnen Sie ihn mit *Visual Studio*.
 
@@ -637,7 +637,7 @@ Zum Erstellen dieser Klasse:
     ```
 
     > [!IMPORTANT]
-    > Wir werden Geben Sie den Code für *CallAzureFunctionForNextShape()* in eine [zukünftige Kapitel](#chapter-10---completing-the-AzureServices-class).
+    > Wir werden Geben Sie den Code für *CallAzureFunctionForNextShape()* in eine [zukünftige Kapitel](#chapter-10---completing-the-azureservices-class).
 
 9.  Löschen der *Update()* Methode, da diese Klasse nicht verwendet wird.
 
@@ -657,7 +657,7 @@ Diese Klasse zu erstellen:
 
 1.  Wechseln Sie zu der **Skripts** Ordner, die Sie zuvor erstellt haben.
 
-2.  Mit der rechten Maustaste in den Ordner **erstellen > C# Skript**. Rufen Sie das Skript *ShapeFactory*.
+2.  Mit der rechten Maustaste in den Ordner **erstellen**  >   **C# Skript**. Rufen Sie das Skript *ShapeFactory*.
 
 3.  Doppelklicken Sie auf dem neuen *ShapeFactory* Skript öffnen Sie ihn mit *Visual Studio*.
 
@@ -767,7 +767,7 @@ Zum Erstellen dieser Klasse:
 
 1.  Wechseln Sie zu der **Skripts** Ordner, die Sie zuvor erstellt haben.
 
-2.  Mit der rechten Maustaste im Projektpanel, **erstellen > C# Skript**. Rufen Sie das Skript *bestaunen*.
+2.  Mit der rechten Maustaste im Projektpanel, **erstellen**  >   **C# Skript**. Rufen Sie das Skript *bestaunen*.
 
 3.  Doppelklicken Sie auf dem neuen *bestaunen* Skript öffnen Sie ihn mit *Visual Studio.*
 
@@ -1033,7 +1033,7 @@ Zum Erstellen dieser Klasse:
 
 Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *AzureServices* Klasse. Dies wird durch erreicht werden:
 
-1.  Hinzufügen einer neuen Methode mit dem Namen *CreateCloudIdentityAsync()*, um die Authentifizierung-Variablen, die erforderlich sind, für die Kommunikation mit Azure einzurichten.
+1.  Hinzufügen einer neuen Methode mit dem Namen *CreateCloudIdentityAsync()* , um die Authentifizierung-Variablen, die erforderlich sind, für die Kommunikation mit Azure einzurichten.
 
     > Diese Methode überprüft auch das Vorhandensein einer zuvor gespeicherte Datei mit der Form-Liste.
     >
@@ -1106,7 +1106,7 @@ Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *A
         }
     ```
 
-3.  Geben Sie den Code für die Methode *CallAzureFunctionForNextShape()*. Verwenden Sie das zuvor erstellte *Azure Function-App* einen Index der Form "anfordern. Sobald die neue Form empfangen wird, sendet diese Methode die Form, um die *ShapeFactory* Klasse, um die neue Form in der Szene zu erstellen. Verwenden Sie den folgenden Code zum Abschließen des Texts der *CallAzureFunctionForNextShape()*.
+3.  Geben Sie den Code für die Methode *CallAzureFunctionForNextShape()* . Verwenden Sie das zuvor erstellte *Azure Function-App* einen Index der Form "anfordern. Sobald die neue Form empfangen wird, sendet diese Methode die Form, um die *ShapeFactory* Klasse, um die neue Form in der Szene zu erstellen. Verwenden Sie den folgenden Code zum Abschließen des Texts der *CallAzureFunctionForNextShape()* .
 
     ```csharp
         /// <summary>
@@ -1197,7 +1197,7 @@ Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *A
 
 Um den Buildprozess zu starten:
 
-1.  Wechseln Sie zu **Datei > Buildeinstellungen**.
+1.  Wechseln Sie zu **Datei** > **Buildeinstellungen**.
 
     ![Erstellen Sie die app](images/AzureLabs-Lab5-54.png)
 
@@ -1218,8 +1218,8 @@ Um die Anwendung bereitzustellen:
 3.  In der **Projektmappenkonfiguration** wählen **Debuggen**.
 
     > Für die Microsoft HoloLens Umständen ist es einfacher, diese Einstellung auf *Remotecomputer*, sodass Sie nicht auf Ihren Computer angeschlossen sind. Allerdings müssen Sie auch die folgenden Schritte ausführen:
-    > - Kennen der **IP-Adresse** von Ihrem HoloLens, die sich in befinden die *Einstellungen > Netzwerk und Internet > Wi-Fi > Erweiterte Optionen*; IPv4 ist die Adresse, die Sie verwenden sollten. 
-    > - Stellen Sie sicher **Entwicklermodus** ist **auf**; gefunden in *Einstellungen > Update und Sicherheit > für Entwickler*.
+    > - Kennen der **IP-Adresse** von Ihrem HoloLens, die sich in befinden die **Einstellungen** > **Netzwerk und Internet**  >   **Wi-Fi** > **erweiterte Optionen**; IPv4 ist die Adresse, die Sie verwenden sollten. 
+    > - Stellen Sie sicher **Entwicklermodus** ist **auf**; gefunden in **Einstellungen** > **Update und Sicherheit**  >  **Für Entwickler**.
 
     ![Bereitstellen der Lösung](images/AzureLabs-Lab5-55.png)
 

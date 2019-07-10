@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: Kamera, Hololens, Farbe Kamera, mit Internetzugriff, Hololens, 2, cv, Computer Vision, fiducial Front, Marker, QR-Code, qr, Foto, video
-ms.openlocfilehash: 323c05ca01e000942a6f8ee6dc82de7546578324
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523312"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694537"
 ---
 # <a name="locatable-camera"></a>Gebietsschemabezogene Kamera
 
@@ -43,7 +43,7 @@ HoloLens enthält, eine Welt gerichteten Kamera, die auf der Vorderseite des Ger
   | Profil                                         | Video     | Vorschau   | Weiterhin     | Frameraten | Horizontale Sichtfeld (H-Blickfeld) | Empfohlene Verwendung                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Ältere, BalancedVideoAndPhoto 0, 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Videoaufzeichnung von hoher Qualität                |
-  | Ältere, BalancedVideoAndPhoto 0, 100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Videoaufzeichnung von hoher Qualität                |
+  | Ältere, BalancedVideoAndPhoto 0, 100             | 896x504   | 896x504   |           | 15,30       | 64.69                            | Vorschau des Datenstroms für hochwertige Fotoaufnahmen |
   | Ältere, BalancedVideoAndPhoto 0, 100             |           |           | 3904x2196 |             | 64.69                            | Hohe Qualität Fotoaufnahmen                  |
   | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Langer Dauer Szenarien                     |
   | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Langer Dauer Szenarien                     |
@@ -51,7 +51,7 @@ HoloLens enthält, eine Welt gerichteten Kamera, die auf der Vorderseite des Ger
   | Videokonferenzen, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Videokonferenzen, langen-Szenarien |
   | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
   | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
-  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 1128x635  |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
+  | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 1128x636  |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
   | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
   | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 760x428   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |
   | Videokonferenzen, 100 BalancedVideoAndPhoto, 120 | 640x360   |           |           | 15,30       | 64.69                            | Videokonferenzen, langen-Szenarien |

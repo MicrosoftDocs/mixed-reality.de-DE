@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, mixed Reality, Academy, Edge, Iot-Edge, Tutorial, api, Notification, Funktionen, Tabellen, immersive Hololens, Vr, Iot, VM, Ubuntu, Python
-ms.openlocfilehash: 1ab7c48ac3cff1cb2283cadb171098af9e148628
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593253"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694597"
 ---
 >[!NOTE]
 >In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
@@ -49,7 +49,7 @@ In diesem Kurs erfahren Sie, wie zum Einrichten und verwenden Sie den IoT Hub-Di
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
 <td> MR und Azure-313: IoT Hub-Dienst</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -89,9 +89,9 @@ Um Hilfe zur Kalibrierung, befolgen Sie diese [Link zum Artikel HoloLens Kalibri
 Um Hilfe zur Optimierung der Sensor, befolgen Sie diese [Link zum Optimieren von HoloLens Sensor](sensor-tuning.md).
 
 3. Richten Sie Ihre **virtuellen Ubuntu-Computer** mit **Hyper-V**. Die folgenden Ressourcen helfen Ihnen mit dem Prozess.
-    1.  Führen Sie zunächst diesen Link, um [Herunterladen der ISO-Datei für Ubuntu 16.04.4 LTS (Xenial Xerus)](http://au.releases.ubuntu.com/16.04/). Wählen Sie die **Desktopabbild für 64-Bit-PC (AMD64)**.
+    1.  Führen Sie zunächst diesen Link, um [Herunterladen der ISO-Datei für Ubuntu 16.04.4 LTS (Xenial Xerus)](http://au.releases.ubuntu.com/16.04/). Wählen Sie die **Desktopabbild für 64-Bit-PC (AMD64)** .
     2.  Stellen Sie sicher, dass **Hyper-V** auf Ihrem Windows 10-Computer aktiviert ist. Folgen Sie diesem Link, um Anleitungen auf [installieren und aktivieren Hyper-V unter Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-    3.  Starten Sie die Hyper-V, und Erstellen einer neuen Ubuntu-VM. Sie können diesem Link folgen einem [Schritt-für-Schritt-Anleitung zum Erstellen eines virtuellen Computers mit Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Bei angeforderten **"Betriebssystem von startfähiger Imagedatei installieren"**, wählen die **Ubuntu ISO** haben Sie zuvor herunterladen.
+    3.  Starten Sie die Hyper-V, und Erstellen einer neuen Ubuntu-VM. Sie können diesem Link folgen einem [Schritt-für-Schritt-Anleitung zum Erstellen eines virtuellen Computers mit Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Bei angeforderten **"Betriebssystem von startfähiger Imagedatei installieren"** , wählen die **Ubuntu ISO** haben Sie zuvor herunterladen.
 
     > [!NOTE]
     > Mithilfe von **Hyper-V-Schnellerfassung** wird nicht empfohlen.  
@@ -277,7 +277,7 @@ Nachdem Sie verschieben können, um die Einrichtung Ihres Geräts **mit Ubuntu-B
         sudo apt-get install python-pip
     ```
 
-2.  In diesem Kapitel werden Sie möglicherweise aufgefordert, durch *Terminal*, für die Berechtigung zum Verwenden des Gerätespeichers und für Sie zur Eingabe **j/n** (Ja oder Nein), Typ **'y'**, und drücken Sie dann die **EINGABETASTE** Schlüssel, um zu akzeptieren.
+2.  In diesem Kapitel werden Sie möglicherweise aufgefordert, durch *Terminal*, für die Berechtigung zum Verwenden des Gerätespeichers und für Sie zur Eingabe **j/n** (Ja oder Nein), Typ **'y'** , und drücken Sie dann die **EINGABETASTE** Schlüssel, um zu akzeptieren.
 
 3.  Wenn dieser Befehl abgeschlossen ist, verwenden Sie den folgenden Befehl zum Installieren **curl**:
 
@@ -320,7 +320,7 @@ Nachdem Sie verschieben können, um die Einrichtung Ihres Geräts **mit Ubuntu-B
 
     1.  Verwenden Sie die Pfeiltasten auf der Tastatur, um einen Bildlauf nach unten (Sie benötigen Sie einen Bildlauf eine kleine Methode), erreicht der Zeile mit ":
 
-        "**\<GERÄTEVERBINDUNGSZEICHENFOLGE HIER HINZUFÜGEN &GT;**".
+        " **\<GERÄTEVERBINDUNGSZEICHENFOLGE HIER HINZUFÜGEN >** ".
 
     2. Ersetzen der Zeile **einschließlich der Klammern**, mit der **Device Connection String** Sie zuvor notiert haben.
 
@@ -370,7 +370,7 @@ Nachdem Sie verschieben können, um die Einrichtung Ihres Geräts **mit Ubuntu-B
 
 4. Nachdem die Erweiterungen installiert sind, schließen Sie und erneut öffnen Sie Visual Studio Code.
 
-5. Klicken Sie mit Visual Studio Code einmal öffnen, navigieren Sie zu **anzeigen > integriertes Terminal**.
+5. Klicken Sie mit Visual Studio Code einmal öffnen, navigieren Sie zu **Ansicht** > **integriertes Terminal**.
 
 6. Installieren Sie jetzt **Cookiecutter**. Führen Sie im Terminal den folgenden Bash-Befehl aus:
 
@@ -390,7 +390,7 @@ Nachdem Sie verschieben können, um die Einrichtung Ihres Geräts **mit Ubuntu-B
 
 An diesem Punkt müssen Sie den Container zu erstellen, mit dem Modul in mithilfe von Push übertragen werden die *Containerregistrierung*. Nachdem Sie Ihren Container mithilfe von Push übertragen haben, verwenden Sie die *IoT Hub-Edge* Service sie auf Ihrem Gerät bereitstellen, die ausgeführt wird die *IoT Edge-Laufzeit*.
 
-1. Klicken Sie in Visual Studio Code auf **Ansicht > befehlspalette**.
+1. Klicken Sie in Visual Studio Code auf **Ansicht** > **befehlspalette**.
 
 2. Suchen Sie in der Palette, und führen Sie **Azure IoT Edge: Neues Iot Edge-Projektmappe**.
 
@@ -404,15 +404,15 @@ An diesem Punkt müssen Sie den Container zu erstellen, mit dem Modul in mithilf
 
 7. Sie sehen eine vorgefertigte *Docker-Image-Repository* Adresse wird auf der Palette angezeigt. Es sieht so aus wie:
 
-    **Localhost:5000/der Namen von IHREM Modul -**. 
+    **Localhost:5000/der Namen von IHREM Modul -** . 
 
 8. Löschen **Localhost:5000**, und in seiner Stelle einfügen der *Containerregistrierung* **Anmeldeserver** Adresse, die Sie notiert, beim Erstellen haben der **Container Registrierungsdienst** ([in Schritt 8, Kapitel 2](#chapter-2---the-container-registry-service)). Drücken Sie die **EINGABETASTE** Schlüssel, um die Adresse zu bestätigen.
 
-9. An diesem Punkt wird die Lösung, mit der Vorlage für Ihre Python-Modul erstellt und in die Struktur angezeigt der **Registerkarte "Durchsuchen"**, der VS Code auf der linken Seite des Bildschirms. Wenn die **Registerkarte "Durchsuchen"** ist nicht geöffnet ist, können Sie sie öffnen auf die oberste Schaltfläche klicken, in der Leiste auf der linken Seite.
+9. An diesem Punkt wird die Lösung, mit der Vorlage für Ihre Python-Modul erstellt und in die Struktur angezeigt der **Registerkarte "Durchsuchen"** , der VS Code auf der linken Seite des Bildschirms. Wenn die **Registerkarte "Durchsuchen"** ist nicht geöffnet ist, können Sie sie öffnen auf die oberste Schaltfläche klicken, in der Leiste auf der linken Seite.
 
     ![Erstellen Sie Ihres Containers](images/AzureLabs-Lab313-25.png)
 
-10. Der letzte Schritt zum diesem Kapitel wird, klicken Sie auf, und Öffnen der **env-Datei**, innerhalb der **Registerkarte "Durchsuchen"**, und fügen Ihre *Containerregistrierung* **Benutzername** und **Kennwort**. Diese Datei wird von Git ignoriert, aber zur Erstellung wird der Container, legen Sie die Anmeldeinformationen den Zugriff auf die **-Containerregistrierungsdienst**.
+10. Der letzte Schritt zum diesem Kapitel wird, klicken Sie auf, und Öffnen der **env-Datei**, innerhalb der **Registerkarte "Durchsuchen"** , und fügen Ihre *Containerregistrierung* **Benutzername** und **Kennwort**. Diese Datei wird von Git ignoriert, aber zur Erstellung wird der Container, legen Sie die Anmeldeinformationen den Zugriff auf die **-Containerregistrierungsdienst**.
 
     ![Erstellen Sie Ihres Containers](images/AzureLabs-Lab313-26.png)
 
@@ -662,7 +662,7 @@ Erstellen Sie dann die *Images* Ordner ein, das Python-Skript für die prüfen, 
         main(PROTOCOL)
     ```
 
-3.  Öffnen Sie die Datei mit dem Namen **"Requirements.txt"**, und Ersetzen Sie den Inhalt durch Folgendes:
+3.  Öffnen Sie die Datei mit dem Namen **"Requirements.txt"** , und Ersetzen Sie den Inhalt durch Folgendes:
 
     ```
     azure-iothub-device-client==1.4.0.0b3
@@ -744,7 +744,7 @@ Erstellen Sie dann die *Images* Ordner ein, das Python-Skript für die prüfen, 
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Kapitel 9 - Paket der Projektmappe als container
 
-1.  Sie können nun "packen" die Dateien als Container und per push an Ihre **Azure Container Registry**. In VS Code öffnen die *integriertes Terminal* (**anzeigen > integriertes Terminal / STRG + '**), und verwenden Sie die folgende Zeile für die Anmeldung bei **Docker** (ersetzen Sie die Werte von der Befehl mit den Anmeldeinformationen Ihrer **Azure Container Registry (ACR)**):
+1.  Sie können nun "packen" die Dateien als Container und per push an Ihre **Azure Container Registry**. Öffnen Sie in Visual Studio Code die *integriertes Terminal* (**Ansicht** > **integriertes Terminal** oder **STRG** + **\`** ), und verwenden Sie die folgende Zeile für die Anmeldung bei **Docker** (ersetzen Sie die Werte des Befehls mit den Anmeldeinformationen Ihrer **Azure Container Registry (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -805,7 +805,7 @@ Im folgenden finden Sie eine Liste von Befehlszeilen und Tipps, zum Überwachen 
         sudo iotedge list
     ```
 
-    Oder
+    oder
 
     ```bash
         sudo docker ps
@@ -856,11 +856,11 @@ Navigieren Sie zurück zu Ihrem Azure-Portal, in dem Sie eine Azure-Tabellen-Die
 
     2. Für **Bereitstellungsmodell**, klicken Sie auf **RM**.
 
-    3. Für **Kontoart**, klicken Sie im Dropdownmenü mit **Speicher (Allgemein v1)**.
+    3. Für **Kontoart**, klicken Sie im Dropdownmenü mit **Speicher (Allgemein v1)** .
 
     4. Klicken Sie auf einen geeigneten **Speicherort**.
     
-    5. Für die **Replikation** Dropdown-Menü, klicken Sie auf **Read-Access-georedundanter Speicher (RA-GRS)**.
+    5. Für die **Replikation** Dropdown-Menü, klicken Sie auf **Read-Access-georedundanter Speicher (RA-GRS)** .
 
     6. Für **Leistung**, klicken Sie auf **Standard**.
 
@@ -916,7 +916,7 @@ Nachdem Ihre **Tabellendienst** Storage-Konto eingerichtet haben, ist es Zeit zu
 
 1. Open **Visual Studio** (**nicht** Visual Studio-Code).
 
-2. Klicken Sie im Menü auf **Ansicht > Cloud-Explorer**.
+2. Klicken Sie im Menü auf **Ansicht** > **Cloud-Explorer**.
 
     ![Öffnen Sie den Cloud-explorer](images/AzureLabs-Lab313-45.png)
 
@@ -972,7 +972,7 @@ Zunächst müssen Sie eine Datei zu erstellen, mit dem Ihre Azure-Funktion, die 
 
     ![Öffnen Sie Editor](images/AzureLabs-Lab313-51.png)
 
-2.  Legen Sie mit dem Editor öffnen die folgende JSON-Struktur, in es. Sobald Sie dies getan haben, speichern Sie es auf Ihrem Desktop als **"Project.JSON"**. Diese Datei definiert die Bibliotheken, die Ihre Funktion verwenden werden. Wenn Sie NuGet verwendet haben, sieht er vertraut.
+2.  Legen Sie mit dem Editor öffnen die folgende JSON-Struktur, in es. Sobald Sie dies getan haben, speichern Sie es auf Ihrem Desktop als **"Project.JSON"** . Diese Datei definiert die Bibliotheken, die Ihre Funktion verwenden werden. Wenn Sie NuGet verwendet haben, sieht er vertraut.
     
     > [!WARNING]
     > Es ist wichtig, dass die Benennung korrekt ist. Stellen Sie sicher, es ist **keine txt** Dateierweiterung. Finden Sie weiter unten als Referenz:
@@ -1047,7 +1047,7 @@ Zunächst müssen Sie eine Datei zu erstellen, mit dem Ihre Azure-Funktion, die 
 
     ![benutzerdefinierte Funktion](images/AzureLabs-Lab313-59.png)
 
-13. Bildlauf nach unten in der nächsten Seite, bis Sie gefunden **IoT Hub (Event Hub)**, klicken Sie dann darauf.
+13. Bildlauf nach unten in der nächsten Seite, bis Sie gefunden **IoT Hub (Event Hub)** , klicken Sie dann darauf.
 
     ![benutzerdefinierte Funktion](images/AzureLabs-Lab313-60.png)
 
@@ -1136,8 +1136,8 @@ Zunächst müssen Sie eine Datei zu erstellen, mit dem Ihre Azure-Funktion, die 
 
     - **TableName**, durch den Namen Ihrer **Tabelle** befindet sich in Ihre **Speicherkonto**.
     - **TableURL**, durch die URL Ihrer **Tabelle** befindet sich in Ihre **Speicherkonto**.
-    - **"storageaccountname"**, mit dem Namen des durch den Namen des entsprechenden Werts Ihrer **Speicherkonto** Name.
-    - **"storageaccountkey"**, mit dem Schlüssel, die Sie erworben haben, in den Storage-Dienst, die Sie zuvor erstellt haben.
+    - **"storageaccountname"** , mit dem Namen des durch den Namen des entsprechenden Werts Ihrer **Speicherkonto** Name.
+    - **"storageaccountkey"** , mit dem Schlüssel, die Sie erworben haben, in den Storage-Dienst, die Sie zuvor erstellt haben.
 
     ![benutzerdefinierte Funktion](images/AzureLabs-Lab313-65.png)
 
