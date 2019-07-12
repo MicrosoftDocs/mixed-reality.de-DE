@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Grafiken, cpu, Gpu, rendering und Garbagecollection hololens
-ms.openlocfilehash: 37eac566a0315009330ac7fee96edd82348d6ba3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b0821f07184bff8630f6b6af0d0fc461f6fcd133
+ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604914"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843332"
 ---
 # <a name="performance-recommendations-for-unity"></a>Empfehlungen zur Leistung für Unity
 
@@ -72,8 +72,9 @@ public class ExampleClass : MonoBehaviour
 }
 ```
 
->[!NOTE] Vermeiden Sie GetComponent(string) <br/>
-> Bei Verwendung  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)*, es gibt eine Reihe verschiedener Überladungen. Es ist wichtig, immer die Implementierungen der Typ basiert, und nie die zeichenfolgenbasierte Suche Überladung zu verwenden. Suchen nach der Zeichenfolge in der Szene ist deutlich teurer als bei der Suche nach Typ. <br/>
+>[!NOTE] 
+> Vermeiden Sie GetComponent(string) <br/>
+> Bei Verwendung  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , es gibt eine Reihe verschiedener Überladungen. Es ist wichtig, immer die Implementierungen der Typ basiert, und nie die zeichenfolgenbasierte Suche Überladung zu verwenden. Suchen nach der Zeichenfolge in der Szene ist deutlich teurer als bei der Suche nach Typ. <br/>
 > (Gut) Komponente GetComponent (Typ Type) <br/>
 > (Gut) T GetComponent\<T >) <br/>
 > (Negativen) Komponente GetComponent(string) > <br/>
@@ -225,24 +226,22 @@ Darüber hinaus ist es in der Regel besser, als die Gitter in einem "gameobject"
 
 ## <a name="gpu-performance-recommendations"></a>Empfehlungen zur GPU-Leistung
 
-Erfahren Sie mehr über [Grafiken Renderingoptimierung in Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games)
+Erfahren Sie mehr über [Grafiken Renderingoptimierung in Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 
 
-#### <a name="reduce-poly-count"></a>Reduzieren Sie Poly-Anzahl
+### <a name="optimize-depth-buffer-sharing"></a>Optimieren Sie die Tiefe Puffer freigeben
+
+Es wird allgemein empfohlen, aktivieren **Tiefe Puffer freigeben** unter **XR Playereinstellungen** Optimierung [– Hologramm Stabilität](Hologram-stability.md). Wenn Tiefe basierende spät Phase Reprojection mit dieser Einstellung jedoch aktivieren, es wird empfohlen, wählen Sie **Tiefe von 16-Bit-Format** anstelle von **24-Bit-Tiefe Format**. Die Tiefe von 16-Bit-Puffer wird drastisch reduziert die Bandbreite (und somit power) Tiefe Puffer Datenverkehr zugeordnet. Dies kann ein großer Strom Gewinn, aber gilt nur für Umgebungen mit einem kleinen Tiefe Bereich als [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting) werden eher mit 16-Bit-als 24-Bit-auftreten. Um diese Artefakte zu vermeiden, ändern Sie die in der Nähe/hinteren Ebenen des der [Unity Kamera](https://docs.unity3d.com/Manual/class-Camera.html) der geringeren Genauigkeit berücksichtigen. Für HoloLens-basierte Anwendungen kann eine hinteren Clippingebene von 50 Millionen anstelle des standardmäßigen Unity 1000m in der Regel alle Z-fighting vermeiden.
+
+### <a name="reduce-poly-count"></a>Reduzieren Sie Poly-Anzahl
 
 Polygonzahl wird in der Regel entweder reduziert.
 1) Entfernen von Objekten aus einer Szene
 2) Asset-Decimation dadurch die Anzahl von Polygonen, die für einen bestimmten Netz
 3) Implementieren einer [Ebene von Details (LOD) System](https://docs.unity3d.com/Manual/LevelOfDetail.html) in Ihre Anwendung das weit entfernt Objekte mit niedrigerer-Polygon-Version der gleichen Geometrie gerendert wird
 
-#### <a name="limit-overdraw"></a>Limit-Elements zu überzeichnen
+### <a name="understanding-shaders-in-unity"></a>Grundlegendes zu Shader in Unity
 
-In Unity, kann eine anzeigen-Elements zu überzeichnen für ihre Szene durch Umschalten der [ **zeichnen Modus im Menü** ](https://docs.unity3d.com/Manual/ViewModes.html) in der oberen linken Ecke des der **Szenenansicht** , und wählen **Alphablendings** .
-
-Im Allgemeinen-Elements zu überzeichnen umgehen, indem die Auslese Objekte voraus, bevor sie an die GPU gesendet werden. Unity bietet Details zur Implementierung von [verschiedenen Culling](https://docs.unity3d.com/Manual/OcclusionCulling.html) für ihre-Engine.
-
-#### <a name="understanding-shaders-in-unity"></a>Grundlegendes zu Shader in Unity
-
-Eine einfache Annäherung, Shadern in Bezug auf Leistung verglichen werden soll. ist, identifizieren Sie die durchschnittliche Anzahl der einzelnen Vorgänge zur Laufzeit ausgeführt wird. Dies kann ziemlich problemlos in Unity erfolgen.
+Eine einfache Annäherung, Shadern in Bezug auf Leistung verglichen werden soll. ist, identifizieren Sie die durchschnittliche Anzahl der einzelnen Vorgänge zur Laufzeit ausgeführt wird. Dies kann problemlos in Unity erfolgen.
 
 1) Wählen Sie Ihr Medienobjekt Shader Material, und anschließend oben rechts im Inspektorfenster, wählen Sie das Zahnradsymbol und dann **"Shader auswählen"**
 
@@ -255,11 +254,29 @@ Eine einfache Annäherung, Shadern in Bezug auf Leistung verglichen werden soll.
 
     ![Unity-Standard-Shader-Vorgänge](images/unity-standard-shader-compilation.png)
 
-##### <a name="unity-standard-shader-alternatives"></a>Unity-Standard-Shader-alternativen
+#### <a name="optmize-pixel-shaders"></a>Optmize-Pixel-Shader
 
-Anstatt ein physisch basierend Rendering (PBR) oder andere Shader qualitativ hochwertige, sehen Sie sich ein leistungsfähiger nutzen und kostengünstiger Shader. [Mixed Reality-Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) bietet eine [standard-Shader](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/MixedRealityStandard.shader) , die für mixed Reality-Projekten optimiert wurde.
+Betrachten die kompilierten Statistik Ergebnisse mithilfe der oben genannten Methode die [fragment Shader](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) führt im Allgemeinen mehr Vorgänge als die [Vertex-Shader](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) durchschnittlich. Pro Pixel auf dem Bildschirm ausgegeben werden, während der Vertex-Shader nur ausgeführte pro-Vertex von allen Netzen, die gerade auf dem Bildschirm gezeichnet wird, wird die fragmentshader, auch bekannt als der Pixel-Shader, ausgeführt. 
+
+Daher nicht nur die Fragment-Shader verfügen mehrere Anweisungen als Vertex-Shader da alle beleuchtungsberechnungen, die Fragment-Shader auf ein größeres Dataset fast immer ausgeführt werden. Z. B. wenn auf dem Bildschirm eine 2 k 2 k-Image ist, klicken Sie dann die fragmentshader erhalten ausgeführt, 2, 000 * 2, 000 = 4,000,000 Zeiten. Wenn zwei Augen zu rendern, wird diese Zahl verdoppelt, da es sich um zwei Bildschirme. Verfügt eine mixed Reality-Anwendung, mehrere übergibt, Vollbild-Nachbearbeitung Effekte oder mehrere Gitter hinzuzufügen, um dasselbe Pixel zu rendern, wird diese Anzahl deutlich steigern. 
+
+Aus diesem Grund erhalten reduziert die Anzahl der Vorgänge im fragmentshader in der Regel sehr viel größere Leistungssteigerungen über Optimierungen in den Vertex-Shader.
+
+#### <a name="unity-standard-shader-alternatives"></a>Unity-Standard-Shader-alternativen
+
+Anstatt ein physisch basierend Rendering (PBR) oder andere Shader qualitativ hochwertige, sehen Sie sich ein leistungsfähiger nutzen und kostengünstiger Shader. Die [Mixed Reality-Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) bietet die [MRTK standard-Shader](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) , die für mixed Reality-Projekten optimiert wurde.
 
 Unity bietet auch eine Unbeleuchtete, Vertex leuchtet, diffusen und andere vereinfachten Shader-Optionen, die erheblich schneller verglichen werden, an dem Unity-Standard-Shader. Finden Sie unter [Nutzung und Leistung des integrierten Shader](https://docs.unity3d.com/Manual/shader-Performance.html) detailliertere Informationen.
+
+#### <a name="shader-preloading"></a>Vorabladen von Shader
+
+Verwendung *Shader Vorabladen* und andere Tricks zur Optimierung [Shader Ladezeit](http://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html). Das bedeutet insbesondere, Shader Vorabladen, dass Sie nicht sehen, dass Probleme aufgrund von Shader-Runtime-Kompilierung.
+
+### <a name="limit-overdraw"></a>Limit-Elements zu überzeichnen
+
+In Unity, kann eine anzeigen-Elements zu überzeichnen für ihre Szene durch Umschalten der [ **zeichnen Modus im Menü** ](https://docs.unity3d.com/Manual/ViewModes.html) in der oberen linken Ecke des der **Szenenansicht** , und wählen **Alphablendings** .
+
+Im Allgemeinen-Elements zu überzeichnen umgehen, indem die Auslese Objekte voraus, bevor sie an die GPU gesendet werden. Unity bietet Details zur Implementierung von [verschiedenen Culling](https://docs.unity3d.com/Manual/OcclusionCulling.html) für ihre-Engine.
 
 ## <a name="memory-recommendations"></a>Speicherempfehlungen
 
