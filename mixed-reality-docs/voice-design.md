@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Entwurf, Interaktion, Sprache
-ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: f3252e82942ee7557ede6acd08ad640369d887ac
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66402371"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829941"
 ---
 # <a name="voice-commanding"></a>Sprachbefehle
 
@@ -22,11 +22,24 @@ Bei der Verwendung von Sprachbefehlen wird das Anvisieren typischerweise als Mec
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
-</tr><tr>
-<td>Sprachbefehle</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (mit angeschlossenem Headset)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Sprachbefehle</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (mit angeschlossenem Headset)</td>
+    </tr>
 </table>
 
 
