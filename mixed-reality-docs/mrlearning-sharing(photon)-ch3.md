@@ -1,75 +1,76 @@
 ---
-title: Lernen die Freigabe-Modul für HoloLens 2 MR
-description: Führen Sie diesen Kurs erfahren, wie Sie mehrere Benutzer freigegebene Umgebungen innerhalb einer HoloLens-2-Anwendung zu implementieren.
+title: Mr Learning Sharing Module für hololens 2
+description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie freigegebene Umgebungen mit mehreren Benutzern in einer hololens 2-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 44cc41b10ed79d3085ec601ec9cf21af47b0fea5
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: 92bea1f3130f67645c10e36fe40cd4bc6f8b9151
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523307"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293668"
 ---
 # <a name="connecting-multiple-users"></a>Verbinden von mehreren Benutzern
 
-In dieser Lektion erfahren wir, wie um mehrere Benutzer als Teil einer freigegebenen zu verbinden. Am Ende dieser Lektion werden Sie in der Lage, öffnen Sie die Anwendung auf mehreren Geräten, und finden Sie unter Avatar, dargestellt durch eine Kugel, Darstellungen von jeder Person, die verknüpft. 
+In dieser Lektion erfahren Sie, wie Sie mehrere Benutzer im Rahmen einer Live-freigegebenen Benutzererfahrung verbinden. Am Ende dieser Lektion sind Sie in der Lage, die Anwendung auf mehreren Geräten zu öffnen und den von einer Kugel dargestellten Avatar durch Darstellungen der einzelnen Joins anzuzeigen. 
 
-Ziele:
+Ziele
 
-- Konfigurieren von WORTSPIEL innerhalb Ihrer Anwendung
-- Konfigurieren der Spieler
-- Erfahren Sie, wie die Verbindung mehrere Benutzer in einer gemeinsamen Erfahrung
+- Konfigurieren von Wortspiel innerhalb Ihrer Anwendung
+- Konfigurieren von Playern
+- Erfahren Sie, wie Sie mehrere Benutzer mit einer gemeinsamen Benutzer Verbindung verbinden.
 
 ### <a name="instructions"></a>Anweisungen
 
-1. In den Assets -> Ressourcen -> Ordner "Prefabs" im Projektfenster Drag & drop die NetworkLobby Prefab in der Hierarchie wie in der folgenden Abbildung dargestellt.
+1. Ziehen Sie im Projekt Panel im Ordner Assets-> Resources-> Prefabs den Ordner "networklobby" in die Hierarchie, wie in der folgenden Abbildung dargestellt.
 
+![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
 
-   ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+2. Wenn Sie networklobby erweitern, sehen Sie ein untergeordnetes Objekt mit dem Namen networkroom. Wenn Sie Network Room ausgewählt haben, wechseln Sie im Inspektor-Panel, und klicken Sie auf Komponente hinzufügen. Suchen Sie nach photonview, und fügen Sie die Komponente hinzu.
 
-2. Wenn Sie NetworkLobby erweitern, sehen Sie ein untergeordnetes Objekt NetworkRoom aufgerufen. Klicken Sie mit NetworkRoom ausgewählt haben wechseln Sie in den Bereich der Eigenschaftenanalyse, und klicken Sie auf die Komponente hinzufügen. PhotonView suchen Sie, und fügen Sie die Komponente.
+![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
 
-   ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+3. Erstellen Sie ein neues leeres Spielobjekt in der Hierarchie. Klicken Sie mit der rechten Maustaste in die Hierarchie, und wählen Sie im Kontextmenü leer aus. Stellen Sie sicher, dass die Positionierung auf x = 0, y = 0, z = 0 festgelegt ist, und benennen Sie das Objekt "photonuser".
 
-3. Erstellen Sie ein neues, leeres game-Objekt, in der Hierarchie. Klicken Sie mit der rechten Maustaste in der Hierarchie, und wählen Sie im Kontextmenü der leer. Stellen Sie sicher, die Positionierung festgelegt ist, auf X = 0, y = 0, Z = 0, und nennen Sie das PhotonUser-Objekt.
+![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
 
-   ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+4. Klicken Sie auf Komponente hinzufügen, und geben Sie Generic net Sync ein. Wählen Sie die generische net Sync-Klasse aus. Wenn die Klasse angezeigt wird, klicken Sie auf das Kontrollkästchen Benutzer, um Sie zu aktivieren. 
 
-4. Klicken Sie auf die Komponente hinzufügen, und geben Sie allgemeine Net-Synchronisierung. Wählen Sie die generische Net-Sync-Klasse. Die Klasse angezeigt wird, klicken Sie auf das Kontrollkästchen "Benutzer", um ihn zu aktivieren. 
+![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
 
-   ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+5. Klicken Sie erneut auf Komponente hinzufügen, und geben Sie "Photon View" ein Wählen Sie die in der Dropdown Liste angezeigte Klasse der Photon-Ansicht aus.
 
-5. Klicken Sie erneut auf die Komponente hinzufügen, und geben Sie Photon anzeigen. Wählen Sie die Photon-View-Klasse, die angezeigt wird, in der Dropdown-Liste.
+![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
 
-   ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+6. Klicken Sie auf das Dateisymbol für die generische net Sync-Klasse. Ziehen Sie es in das Feld beobachtete Komponenten der Photon-Ansicht. 
 
-6. Klicken Sie auf das Symbol für die generische Net-Sync-Klasse. Ziehen Sie aus, und legen Sie sie in der Ansicht Photon beobachtet Komponenten Feld. ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png) 
+![module3chapter3updateStep6im. png](images/module3chapter3updateStep6im.png) 
 
-7. Als Nächstes erstellen wir die Kugeln zur Darstellung von jeder Person, die in einer gemeinsamen Erfahrung eingebunden. Klicken Sie mit der rechten Maustaste auf das PhotonUser-Objekt, das Sie gerade erstellt haben, und Scrolldown auf "3D-Objekt, und klicken Sie auf Kugel. Dadurch wird eine Kugel spielobjekt als untergeordnetes Element des Objekts PhotonUser erstellt.
+7. Als Nächstes erstellen wir Bereiche, die jede Person darstellen, die mit einer gemeinsamen Benutzerfunktion verbunden ist. Klicken Sie mit der rechten Maustaste auf das soeben erstellte Objekt "photonuser", Scrollen Sie zu "3D-Objekt, und klicken Sie auf Kugel. Dadurch wird ein Kugel Spielobjekt als untergeordnetes Element des photonuser-Objekts erstellt.
 
-   ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
 
-8. Skalieren die Kugel auf X = 0,06, y = 0,06, Ad Z = 0,06.
+8. Skalieren Sie die Kugel auf x = 0,06, y = 0,06, AD z = 0,06.
 
-   ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
+![Module3hapter3step5im](images/module3chapter3step5im.PNG)
 
-9. Ziehen Sie das spielobjekt PhotonUser in den Ordner "Prefabs" im Projektfenster, und löschen Sie sie aus der Szene. Wir haben jetzt ein prefabs erstellt, das beim Erstellen oder das Instanziieren von neuen Spieler in einer freigegebenen Umgebung verwendet werden können.
+9. Ziehen Sie das "photonuser"-Spielobjekt in den Ordner "Prefabs" im Projekt Panel, und löschen Sie es aus der Szene. Wir haben nun ein präfab erstellt, das verwendet werden kann, um neue Player in einer gemeinsamen Darstellung zu erstellen oder zu instanziieren.
 
-   ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
+![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
 
-> Hinweis: Stellen Sie sicher, dass das spielobjekt in den Ordner "Prefabs" wurde erfolgreich kopiert hat, bevor Sie es in Ihrer Hierarchie zu löschen.
+> Hinweis: Stellen Sie sicher, dass das Spielobjekt erfolgreich in den Ordner "Prefabs" kopiert wurde, bevor es aus der Hierarchie gelöscht wird.
 
-10. Erstellen Sie ein neues Objekt in der Hierarchie mithilfe der Anweisungen in Schritt 3, und nennen Sie sie SharedPlayground. Klicken Sie dann auf Komponente hinzufügen, suchen Sie nach der generischen Netzwerk-Manager und klicken Sie auf, um die generische Netzwerk-Manager-Komponente hinzufügen. Ändern Sie die Position des Objekts auf X = 0, y = 0 und Z = 0.
+10. Erstellen Sie ein neues-Objekt in der Hierarchie, indem Sie die Anweisungen in Schritt 3 befolgen, und benennen Sie es sharedplayground. Klicken Sie dann auf Komponente hinzufügen, suchen Sie nach generischem Netzwerk-Manager, und klicken Sie darauf, um die generische Netzwerk-Manager-Komponente hinzuzufügen. Ändern Sie die Position des Objekts in x = 0, y = 0 und z = 0.
 
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
+![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
 
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-Nachdem alle oben genannten Schritte abgeschlossen sind und auch der Buildprozess abgeschlossen ist, drücken Sie die entsprechende Schaltfläche, und verbinden Sie Ihre HoloLens-2. Eine Kugel verschieben, während des Verschiebens Kopf sollte angezeigt werden. Dies wird für alle Benutzer angezeigt, die in Ihrem Unity-Projekt eingebunden.
+Nachdem alle oben aufgeführten Schritte ausgeführt wurden und der Buildprozess ebenfalls vollständig ist, klicken Sie auf die Schaltfläche Wiedergabe, und verbinden Sie die hololens 2. Wenn Sie Ihre Kopfzeile bewegen, sollte eine Kugel angezeigt werden. Dies wird für jeden Benutzer angezeigt, der Ihrem Unity-Projekt Beitritt.
 
-[Nächste Lektion: Sharing(Photon) Lektion 4](mrlearning-sharing(photon)-ch4.md)
+[Nächste Lektion: Freigabe (Photon), Lektion 4](mrlearning-sharing(photon)-ch4.md)
 
