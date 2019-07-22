@@ -939,7 +939,7 @@ So erstellen Sie das Tag:
 
 Alles, was Sie für den Unity-Abschnitt, der dieses Projekt wurde jetzt abgeschlossen daher ist es Zeit für die Erstellung von Unity.
 
-1.  Navigieren Sie zu *Buildeinstellungen* (**Datei* > *Erstellen von Einstellungen**).
+1.  Navigieren Sie zu *Buildeinstellungen* (**Datei* >* Erstellen von Einstellungen**).
 
     ![](images/AzureLabs-Lab311-33.png)
 
