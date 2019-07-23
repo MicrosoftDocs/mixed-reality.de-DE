@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Zuschauer Ansicht, iPhone, Ios, iPad, opencv, Kamera, Arkit, hololens, Mixed Reality, mixedrealitytoolkit, Demo, Datensatz
-ms.openlocfilehash: 02088d7b218a25c72f2eb98ae24c85a90e6e5b86
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293608"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387666"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Ansicht "Betrachter" für hololens und hololens 2
 
@@ -20,7 +20,7 @@ ms.locfileid: "68293608"
 ## <a name="overview"></a>Übersicht
 
 Beim Durcharbeiten von hololens vergessen wir oft nicht, dass eine Person, die nicht über diese verfügt, nicht die Wunder, die wir haben, nicht erleben kann. Mit der Ansicht "Betrachter" können andere Benutzer auf einem 2D-Bildschirm sehen, was ein hololens-Benutzer in der Welt sieht.
-Die Zuschauer Ansicht bietet einen schnellen und kostengünstigen Ansatz zum Aufzeichnen von holograms in HD mit mobilen Geräten. Außerdem bietet es eine qualitativ hochwertige Aufzeichnung von holograms mit DSLR-Kameras.
+Die Zuschauer Ansicht bietet einen schnellen und kostengünstigen Ansatz zum Aufzeichnen von holograms in HD mit mobilen Geräten. Außerdem bietet es eine qualitativ hochwertige Aufzeichnung von holograms mit Videokameras.
 
 ## <a name="key-resources"></a>Wichtige Ressourcen
 
@@ -28,7 +28,7 @@ Die Zuschauer Ansicht bietet einen schnellen und kostengünstigen Ansatz zum Auf
 * [**Architektur**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
 * [**Stich**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 * [**Anweisungen für die Mobile Installation**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**Anweisungen zum Einrichten von DSLR**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.DSLR.md)
+* [**Anweisungen zur Installation von Video Kameras**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
 
 ## <a name="use-cases"></a>Anwendungsfälle
 * Sie können eine gemischte Realität mit einem iPhone oder Android-Gerät aufzeichnen. Notieren Sie sich die vollständige Festplatte, und wenden Sie Antialiasing auf holograms und sogar Schatten an. Es ist eine kostengünstige und schnelle Möglichkeit, Videos von holograms zu erfassen.
@@ -48,15 +48,15 @@ Freigabe Blatt, damit Sie Videos speichern, per e-Mail senden oder mit anderen u
 
 In der folgenden Tabelle werden die verschiedenen Funktionen der Zuschauer Ansicht und ihre Funktionen gezeigt. Wählen Sie die Option aus, die Ihren Video Aufzeichnungs Anforderungen am besten entspricht:
 
-|                                      | Mobil                  |                    DSLR-Kamera              |
+|                                      | Mobil                  |                    Video Kamera              |
 |--------------------------------------|:-----------------------:|:-------------------------------------------:|
-| HD-Qualität                           |         Vollständige HD         |        Qualität der professionellen Qualität (wie von DSLR festgelegt)      |
+| HD-Qualität                           |         Vollständige HD         |        Qualität der professionellen Qualität (wie von der Videokamera festgelegt)      |
 | Einfache Kamerabewegung                 |            ✔            |                      ✔                      |
 | Ansicht für dritte Person                    |            ✔            |                      ✔                      |
 | Kann auf Bildschirme gestreamt werden           |            ✔            |                      ✔                      |
 | Tabel                             |            ✔            |                                             |
 | Drahtlos                             |            ✔            |                                             |
-| Zusätzliche erforderliche Hardware         |     Android Phone, iPhone    | Hololens + Rig + Stativ + DSLR + PC + Unity |
+| Zusätzliche erforderliche Hardware         |     Android Phone, iPhone    | Hololens + Rig + Stativ + Video Kamera + PC + Unity |
 | Hardware Investition                  |           Niedrig            |                     Hoch                    |
 | Plattformübergreifend                       |           Android, ios   |                                             |
 | Synchronisierter Inhalt                 |            ✔            |                      ✔                      |
