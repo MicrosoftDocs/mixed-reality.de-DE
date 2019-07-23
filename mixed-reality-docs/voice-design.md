@@ -5,14 +5,13 @@ author: shentan
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Windows Mixed Reality, Entwurf, Interaktion, Sprache
-ms.openlocfilehash: f3252e82942ee7557ede6acd08ad640369d887ac
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
-ms.translationtype: HT
+ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829941"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387643"
 ---
 # <a name="voice-commanding"></a>Sprachbefehle
 
