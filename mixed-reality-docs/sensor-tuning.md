@@ -1,37 +1,37 @@
 ---
-title: Optimieren von Sensor
-description: So verwenden Sie den Sensor Hilfsprogramm finden Sie in den Einstellungen für HoloLens optimieren.
+title: Sensor Optimierung
+description: Verwenden des in den hololens-Einstellungen gefundenen Sensor Optimierungs Hilfsprogramms.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Sensoren, kalibrieren, Kalibrierung "," Optimieren "," Einstellungen "," Exemplarische Vorgehensweise
+keywords: Sensoren, kalibrieren, kalibrieren, optimieren, Einstellungen, Vorgehensweise
 ms.openlocfilehash: 5d81cbd98809c6cbacdc48d9099168c5bc05a300
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595637"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63517147"
 ---
-# <a name="sensor-tuning"></a><span data-ttu-id="f5cfc-104">Optimieren von Sensor</span><span class="sxs-lookup"><span data-stu-id="f5cfc-104">Sensor tuning</span></span>
+# <a name="sensor-tuning"></a><span data-ttu-id="13b54-104">Sensor Optimierung</span><span class="sxs-lookup"><span data-stu-id="13b54-104">Sensor tuning</span></span>
 
 >[!WARNING]
-><span data-ttu-id="f5cfc-105">Diese app ist nicht mehr verfügbar ist, für HoloLens ab Windows 10 April 2018 aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="f5cfc-105">This app is no longer available on HoloLens as of the Windows 10 April 2018 Update.</span></span> <span data-ttu-id="f5cfc-106">Die Sensoren neu überdenken jetzt selbst automatisch.</span><span class="sxs-lookup"><span data-stu-id="f5cfc-106">The sensors now recalibrate themselves automatically.</span></span> 
+><span data-ttu-id="13b54-105">Diese APP ist ab dem Windows 10-Update vom April 2018 nicht mehr auf hololens verfügbar.</span><span class="sxs-lookup"><span data-stu-id="13b54-105">This app is no longer available on HoloLens as of the Windows 10 April 2018 Update.</span></span> <span data-ttu-id="13b54-106">Die Sensoren werden nun automatisch neu initialisiert.</span><span class="sxs-lookup"><span data-stu-id="13b54-106">The sensors now recalibrate themselves automatically.</span></span> 
 
-<span data-ttu-id="f5cfc-107">Der Sensor Optimierung Dienstprogramm ermöglicht es, HoloLens, um die Kalibrierung Sensorinformationen zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="f5cfc-107">The sensor tuning utility allows HoloLens to update its sensor calibration information.</span></span> <span data-ttu-id="f5cfc-108">Diese Anwendung ausführen kann – Hologramm Qualität verbessern.</span><span class="sxs-lookup"><span data-stu-id="f5cfc-108">Running this application can improve hologram quality.</span></span>
+<span data-ttu-id="13b54-107">Mit dem Sensor Optimierungs Hilfsprogramm können hololens seine sensorenkalibrierungs-Informationen aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="13b54-107">The sensor tuning utility allows HoloLens to update its sensor calibration information.</span></span> <span data-ttu-id="13b54-108">Das Ausführen dieser Anwendung kann die Qualität des Hologramms verbessern.</span><span class="sxs-lookup"><span data-stu-id="13b54-108">Running this application can improve hologram quality.</span></span>
 
-1. <span data-ttu-id="f5cfc-109">App "Einstellungen" Öffnen</span><span class="sxs-lookup"><span data-stu-id="f5cfc-109">Open Settings App</span></span>
+1. <span data-ttu-id="13b54-109">App "Einstellungen" öffnen</span><span class="sxs-lookup"><span data-stu-id="13b54-109">Open Settings App</span></span>
 
-   ![Einstellung "app" in HoloLens](images/settingssensortuning-500px.png)
+   ![Festlegen der app in hololens](images/settingssensortuning-500px.png)
   
-2. <span data-ttu-id="f5cfc-111">Wählen Sie die System</span><span class="sxs-lookup"><span data-stu-id="f5cfc-111">Select System</span></span>
+2. <span data-ttu-id="13b54-111">System auswählen</span><span class="sxs-lookup"><span data-stu-id="13b54-111">Select System</span></span>
 
-   ![Seite "System" in der app "Einstellungen"](images/systemsensortuning-500px.png)
+   ![System Seite in der App "Einstellungen"](images/systemsensortuning-500px.png)
   
-3. <span data-ttu-id="f5cfc-113">Wählen Sie Dienstprogramme</span><span class="sxs-lookup"><span data-stu-id="f5cfc-113">Select Utilities</span></span>
+3. <span data-ttu-id="13b54-113">Dienstprogramme auswählen</span><span class="sxs-lookup"><span data-stu-id="13b54-113">Select Utilities</span></span>
 
-   ![Seite "Dienstprogramme" in der app "Einstellungen"](images/utilitiessensortuning-500px.png)
+   ![Dienstprogramme](images/utilitiessensortuning-500px.png)
   
-4. <span data-ttu-id="f5cfc-115">Scrollen Sie zur Optimierung der Sensor</span><span class="sxs-lookup"><span data-stu-id="f5cfc-115">Scroll down to Sensor Tuning</span></span>
+4. <span data-ttu-id="13b54-115">Scrollen Sie nach unten zur Sensor Optimierung.</span><span class="sxs-lookup"><span data-stu-id="13b54-115">Scroll down to Sensor Tuning</span></span>
 
-   ![Sensor-Optimierung für die Seite "Dienstprogramme"](images/sensortuningsettingsapp-500px.png)
+   ![Seite "Sensor Optimierung auf Dienstprogrammen"](images/sensortuningsettingsapp-500px.png)
