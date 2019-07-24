@@ -1,108 +1,95 @@
 ---
 title: Kamera in Unity
-description: Wie Sie mit Unity Main Camera für Windows Mixed Reality-Entwicklung, holographic rendern möchten
+description: Verwenden der Unity-Hauptkamera für die Windows Mixed Reality-Entwicklung für Holographic Rendering
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Holotoolkit, Mixedrealitytoolkit, Mixedrealitytoolkit-Unity, holographic Rendering, holographic, immersive Fokuspunkt, Tiefenpuffer, Ausrichtung nur mit Feldern fester Breite, nicht transparenten, transparent, clip
-ms.openlocfilehash: 8ea5a1f53351faab1b2863a0afac74e958b4b1a0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Holographic-Rendering, Holographic, immersive, Fokuspunkt, tiefen Puffer, nur Ausrichtung, Positional, undurchsichtig, transparent, Clip
+ms.openlocfilehash: 3a9846242dd1709bcaf927d8ffae33862e96ecc8
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593337"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522374"
 ---
 # <a name="camera-in-unity"></a>Kamera in Unity
 
-Wenn Sie einen Kopfhörer mixed Reality wear, wird es der Mitte des Ihre holographic Welt. Unity [Kamera](http://docs.unity3d.com/Manual/class-Camera.html) Komponente stereoskopische Rendering automatisch behandelt, und folgen Ihre Bewegungen und Drehung, wenn das Projekt "Virtuelle Realität unterstützt" mit "Windows Mixed Reality" ausgewählt verfügt wie das Gerät (in Abschnitt Weitere Einstellungen der Windows Store-Player-Einstellungen). Dies kann als "Windows Holographic" in älteren Versionen von Unity aufgeführt sein.
+Wenn Sie ein Mixed Reality-Headset durch tragen, wird es zur Mitte ihrer Holographic World. Die Unity- [Kamera](http://docs.unity3d.com/Manual/class-Camera.html) Komponente verarbeitet das stereorenderingrendering automatisch und folgt dem Spitzen Bewegung und der Drehung, wenn das Projekt "Virtual Reality unterstützt" mit "Windows Mixed Reality" als Gerät ausgewählt hat (in den anderen Einstellungen in den Einstellungen des Windows Store-Players). Dies kann in älteren Versionen von Unity als "Windows Holographic" aufgeführt werden.
 
-Jedoch vollständig visuelle Qualität zu optimieren und [– Hologramm Stabilität](hologram-stability.md), sollten Sie die unten beschriebenen Kameraeinstellungen festlegen.
+Sie sollten jedoch die unten beschriebenen Kameraeinstellungen festlegen, um die visuelle Qualität und die [Stabilität des Hologramms](hologram-stability.md)vollständig zu optimieren.
 
 >[!NOTE]
->Diese Einstellungen müssen auf die Kamera in jeder Szene Ihrer App angewendet werden.
+>Diese Einstellungen müssen in jeder Szene der APP auf die Kamera angewendet werden.
 >
->Standardmäßig, wenn Sie eine neue Szene in Unity erstellen enthält sie ein Main Camera "gameobject" in der Hierarchie, die die Kamera-Komponente enthält, jedoch verfügt nicht über die folgenden ordnungsgemäß angewendeten Einstellungen.
+>Wenn Sie in Unity eine neue Szene erstellen, enthält diese standardmäßig ein Hauptkamera-gameobject in der Hierarchie, die die Kamera Komponente enthält, aber die unten aufgeführten Einstellungen sind nicht ordnungsgemäß angewendet.
 
-## <a name="holographic-vs-immersive-headsets"></a>Im Vergleich zu immersive Headsets holographic
+## <a name="automatic-scene-and-camera-setup-with-mixed-reality-toolkit-v2"></a>Automatisches Einrichten von Szenen und Kameras mit Mixed Reality Toolkit v2. 
 
-Die Standardeinstellungen für die Unity-Kamera-Komponente sind für herkömmliche 3D-Anwendungen die Skybox-ähnliche Hintergrund benötigen, wie sie eine reale Welt über keine verfügen.
-* Bei der Ausführung unter einem  **[immersive Kopfhörer](immersive-headset-hardware-details.md)** Sie den Rendervorgang alles, was dem Benutzer angezeigt wird und daher Sie werden wahrscheinlich die Skybox beibehalten möchten.
-* Allerdings bei der Ausführung unter einem **holographic Kopfhörer** wie [HoloLens](hololens-hardware-details.md), die reale Welt sollte angezeigt werden hinter alles, was die Kamera gerendert. Zu diesem Zweck legen Sie die Kamera-Hintergrund transparent (in HoloLens, Schwarz gerendert als transparent) anstelle einer Textur Skybox:
-    1. Wählen Sie die Main Camera im Bedienfeld "Hierarchie"
-    2. Im Bereich mit den Inspektor finden Sie die Kamera-Komponente und der deaktivieren-Flags-Dropdownliste von Skybox in Volltonfarbe
-    3. Wählen Sie die Hintergrund-Farbauswahl, und ändern Sie die RGBA-Werte (0, 0, 0, 0)
+Befolgen Sie die [Schritt-für-Schritt](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) -Anleitung zum Hinzufügen von Mixed Reality Toolkit v2 zu Ihrem Unity-Projekt, und das Projekt wird automatisch konfiguriert.
 
-Können Sie Skriptcode zur Laufzeit bestimmen, ob die Kopfhörer immersive oder holographic anhand [HolographicSettings.IsDisplayOpaque](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html).
+Sie können das Projekt auch ohne mrtk manuell konfigurieren, indem Sie das Handbuch im Abschnitt unten durchführen. 
+
+## <a name="holographic-vs-immersive-headsets"></a>Holographic im Vergleich zu immersiven Headsets
+
+Die Standardeinstellungen für die Unity-Kamera Komponente sind für herkömmliche 3D-Anwendungen vorgesehen, die einen Skybox-ähnlichen Hintergrund benötigen, da Sie nicht über eine reale Welt verfügen.
+* Bei der Ausführung auf einem **[immersiven Headset](immersive-headset-hardware-details.md)** Rendern Sie alles, was dem Benutzer angezeigt wird, und Sie möchten die Skybox wahrscheinlich behalten.
+* Wenn Sie jedoch auf einem **Holographic-Headset** wie [hololens](hololens-hardware-details.md)ausgeführt werden, sollte die reale Welt hinter der von der Kamera gerendert werden. Legen Sie zu diesem Zweck den Kamera Hintergrund auf "transparent" (in hololens, schwarz rendert als transparent) anstelle einer Skybox-Textur fest:
+    1. Wählen Sie die Hauptkamera im Hierarchie Panel aus.
+    2. Suchen Sie im Inspektor-Panel die Kamera Komponente, und ändern Sie die Dropdown Liste Flag Löschen von Skybox in voll Tonfarbe.
+    3. Wählen Sie die Hintergrund Farbauswahl aus, und ändern Sie die RGBA-Werte in (0,0).
+
+Sie können Skriptcode verwenden, um zur Laufzeit zu bestimmen, ob das Headset durch das Überprüfen von [holographicsettings. isdisplayopisch](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html)durch ein immersives oder Holographic ist.
 
 
-## <a name="positioning-the-camera"></a>Positionieren die Kamera
+## <a name="positioning-the-camera"></a>Positionieren der Kamera
 
-Es wird einfacher sein, das Layout von Ihrer app, wenn Sie sich, die Anfangsposition des Benutzers als (x vorstellen:) 0, Y: 0, Z: 0). Da die Main Camera Bewegung des Benutzers Head nachverfolgt, kann die Anfangsposition des Benutzers festgelegt werden, durch die Position der Kamera Main festlegen.
-1. Wählen Sie im Bereich Hierarchie Main Camera
-2. Klicken Sie im Bereich mit den Inspektor suchen Sie die Transformationskomponente, und ändern Sie die Position von (x:) 0, Y: 1, Z:-10), (x:) 0, Y: 0, Z: 0)
+Es ist einfacher, Ihre APP zu entwerfen, wenn Sie sich die Anfangsposition des Benutzers als (X: 0, Y: 0, Z: 0). Da die Hauptkamera die Bewegung des Benutzers nachverfolgt, kann die Startposition des Benutzers festgelegt werden, indem die Startposition der Hauptkamera festgelegt wird.
+1. Auswählen der Hauptkamera im Hierarchie Panel
+2. Suchen Sie im Inspektor-Panel die Transformations Komponente, und ändern Sie die Position von (X: 0, Y: 1, Z:-10) bis (X: 0, Y: 0, Z: 1,0
 
-   ![Kamera in den Bereich der Eigenschaftenanalyse in Unity](images/maincamera-350px.png)<br>
-   *Kamera in den Bereich der Eigenschaftenanalyse in Unity*
+   ![Kamera im Inspektor-Bereich in Unity](images/maincamera-350px.png)<br>
+   *Kamera im Inspektor-Bereich in Unity*
 
-## <a name="clip-planes"></a>Clip-Ebenen
+## <a name="clip-planes"></a>Clip Flächen
 
-Rendern von Inhalt zu schließen, um kann der Benutzer in mixed Reality unbequem sein. Sie können anpassen, die [in der Nähe und weit beschneiden Ebenen](hologram-stability.md#hologram-render-distances) auf die Kamera-Komponente.
-1. Wählen Sie die Main Camera im Bedienfeld "Hierarchie"
-2. Klicken Sie im Bereich mit den Inspektor finden Sie die Kamera Komponente Clipping Planes, und ändern Sie das nahe Textfeld aus 0.3 in.85. Inhalt gerendert, noch näher zu Benutzer angefasst führen kann und sollte vermieden werden, pro der [Rendern Abstand Richtlinien](hologram-stability.md#hologram-render-distances).
+Das Rendern von Inhalten zu nahe am Benutzer kann in gemischter Realität unbequem sein. Sie können die [Near-und Far-Clip-Plane](hologram-stability.md#hologram-render-distances) in der Kamera Komponente anpassen.
+1. Wählen Sie die Hauptkamera im Hierarchie Panel aus.
+2. Suchen Sie im Inspektor-Panel nach den Ausschneide Flächen der Kamera Komponente, und ändern Sie das Textfeld in der Nähe von 0,3 in. 85. Inhalte, die noch enger gerendert werden, können zu Benutzer Unannehmlichkeiten führen und sollten gemäß den [Richtlinien für die renderentfernungs](hologram-stability.md#hologram-render-distances)
 
 ## <a name="multiple-cameras"></a>Mehrere Kameras
 
-Wenn mehrere Komponenten der Kamera in der Szene vorhanden sind, Unity weiß, welche Kamera für stereoskopische Rendering verwendet und Head Überwachung durch Überprüfen der "gameobject" verfügt über das MainCamera-Tag.
+Wenn in der Szene mehrere Kamerakomponenten vorhanden sind, weiß Unity, welche Kamera für das stereorendern und die Head-Nachverfolgung verwendet werden soll, indem Sie überprüft, welches gameobject das maincamera-Tag hat.
 
-## <a name="recentering-a-seated-experience"></a>Eine sitzende Erfahrung recentering
+## <a name="recentering-a-seated-experience"></a>Wiedergeben eines sitzenden Erlebnisses
 
-Erstellen einer [sitzen Skalierung Erfahrung](coordinate-systems.md), können Sie verschoben Unity Welt Ursprung an aktuellen Head-Position des Benutzers durch Aufrufen der **[XR. InputTracking.Recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html)** Methode.
+Wenn Sie eine Umgebung mit [sitzender Skalierung](coordinate-systems.md)entwickeln, können Sie den Welt Ursprung von Unity an der aktuellen Hauptposition des Benutzers wiederholen, indem Sie den **[XR aufrufen. Inputtracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html)** -Methode.
 
-## <a name="reprojection-modes"></a>Reprojection-Modi
+## <a name="reprojection-modes"></a>Neuprojektions Modi
 
-Sowohl HoloLens auch immersive Headsets werden jeder Frame reproject Ihrer app rendert, für alle Misprediction der tatsächlichen Head-Position des Benutzers angepasst werden, wenn Photonen ausgegeben werden.
+Sowohl hololens als auch immersive Headsets werden jeden Frame, der von der APP gerendert wird, neu projektet, um die tatsächliche Kopfzeile des Benutzers bei der Ausgabe von Phots anzupassen.
 
 Standardmäßig:
 
-* **Immersive Headsets** führt Sie Positionsparameter Reprojection, Ihre Hologramme für Misprediction in Position und Ausrichtung anpassen, wenn die app einen Tiefenpuffer für einen bestimmten Frame bereitstellt.  Wenn ein Tiefenpuffer nicht angegeben wird, wird das System nur Mispredictions Ausrichtung behoben.
-* **Holographic Headsets** wie HoloLens mit Feldern fester Breite Reprojection ausgeführt wird, ob die app die Tiefenpuffer oder nicht bietet.  Mit Feldern fester Breite Reprojection ist ohne Tiefenpuffern für HoloLens möglich, da Rendering häufig mit einem stabilen Hintergrund, die von der realen Welt bereitgestellt geringe Dichte aufweist.
+* **Immersive Headsets** führen eine positionelle neuprojektion durch, wobei die Hologramme für die mitediction an Position und Ausrichtung angepasst werden, wenn die APP einen tiefen Puffer für einen bestimmten Frame bereitstellt.  Wenn kein tiefen Puffer bereitgestellt wird, korrigiert das System nur die Fehleinstellungen in der Ausrichtung.
+* **Holographic-Headsets** wie hololens führen eine positionelle neuprojektion durch, unabhängig davon, ob die APP ihren tiefen Puffer bereitstellt.  Eine positionelle neuprojektion ist ohne tiefen Puffer in hololens möglich, da das Rendering häufig geringer ist, wenn ein stabiler Hintergrund von der realen Welt bereitgestellt wird.
 
-Wenn Sie wissen, dass Sie erstellen eine [Ausrichtung ausschließlich Erfahrung](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) mit fest gesperrt Text-Inhalt (z. B. 360-Grad-Videoinhalte), können Sie explizit legen den Modus Reprojection Ausrichtung nur durch das Einrichten sein [ HolographicSettings.ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) zu [HolographicReprojectionMode.OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+Wenn Sie wissen, dass Sie eine nur für die [Orientierung](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) geschützte Umgebung [mit ordnungsgemäß gesperrtem Inhalt (z. b. Videoinhalt mit 360-Grad) entwickeln, können Sie den neuprojektions Modus explizit auf die Ausrichtung festlegen, indem Sie Holographicsettings. reprojectionmode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) zu [holographikreprojectionmode. orientationonly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
 
-## <a name="sharing-your-depth-buffers-with-windows"></a>Freigeben Ihrer Tiefenpuffern für Windows
+## <a name="sharing-your-depth-buffers-with-windows"></a>Freigeben von tiefen Puffern mit Windows
 
-Gemeinsame Nutzung Ihrer app Tiefenpuffer, Windows, die jeden Frame Ihrer app eine der beiden steigert – Hologramm Stabilität, basierend auf den Typ des Kopfhörer erhalten, sind Sie für Rendern:
-* **Immersive Headsets** können mit Feldern fester Breite Reprojection ausführen, wenn ein Tiefenpuffer Anpassen Ihrer Hologramme für Misprediction in Position und Ausrichtung angegeben wird,.
-* **Holographic Headsets** wie HoloLens automatisch auswählt, ein [konzentrieren Punkt](focus-point-in-unity.md) bei ein Tiefenpuffer angegeben ist, optimieren – Hologramm Stabilität entlang der Ebene, die den Inhalt überschneidet.
+Durch die Freigabe des tiefen Puffers Ihrer APP für die einzelnen Frames erhält Ihre APP einen von zwei Verb esse ungen in der – Hologramm-Stabilität, basierend auf der Art des von Ihnen Renderns:
+* **Immersive Headsets** können eine Positions neuprojektion durchführen, wenn ein tiefen Puffer bereitgestellt wird. Dadurch werden die Hologramme an der Position und der Ausrichtung für die mitediction angepasst.
+* **Holographic-Headsets** wie hololens wählen automatisch einen [Fokuspunkt](focus-point-in-unity.md) aus, wenn ein tiefen Puffer bereitgestellt wird. Dadurch wird die – Hologramm-Stabilität auf der Ebene optimiert, die den meisten Inhalt überschneidet.
 
-So legen Sie fest, ob es sich bei Ihrer Unity-app einen Tiefenpuffer zu Windows bereitstellt:
-1. Wechseln Sie zu **bearbeiten** > **Projekteinstellungen** > **Player** > **Registerkarte für die universelle Windows-Plattform**  >  **XR-Einstellungen**.
-2. Erweitern Sie die **Windows Mixed Reality SDK** Element.
-3. Aktivieren oder deaktivieren Sie die **Tiefe Puffer Freigabe aktivieren** Kontrollkästchen.  Dies wird standardmäßig in neuen Projekten, die erstellt werden, da diese Funktion, um Unity hinzugefügt wurde und deaktiviert werden standardmäßig für die älteren Projekten überprüft werden, die aktualisiert wurden.
+So legen Sie fest, ob Ihre Unity-APP einen tiefen Puffer für Windows bereitstellt:
+1. Wechseln Sie zu **Edit** > **Project Settings** > **Player** > **universelle Windows-Plattform**TabXR > **Settings**.
+2. Erweitern Sie das **Windows Mixed Reality SDK** -Element.
+3. Aktivieren oder deaktivieren Sie das Kontrollkästchen **Tiefe Puffer Freigabe aktivieren** .  Dies wird standardmäßig in neuen Projekten überprüft, die seit dem Hinzufügen dieses Features zu Unity erstellt wurden, und wird standardmäßig für ältere Projekte, die aktualisiert wurden, deaktiviert.
 
-Bereitstellen von einem Tiefenpuffer für Windows kann visuelle Qualität verbessern, solange Windows genau die normalisierte pro-Pixel-Depth-Werte in Ihre Tiefenpuffer an entfernungen in Verbrauchseinheiten gemessen zuordnen können, die Nahen und Fern Ebenen, die Sie in Unity, auf die Hauptkamera festgelegt haben mit.  Wenn Ihre Render Handle Tiefe übergibt die Werte in typischen Möglichkeiten, Sie in der Regel muss in Ordnung, hier jedoch lichtdurchlässiger rendern, Schreiben der Tiefenpuffer beim mit mit vorhandenen übergibt Farbpixel können zur Verwirrung beitragen die Reprojection.  Wenn Sie wissen, dass es sich bei Ihrer Rendering-Durchläufe vieler Ihrer letzten Tiefe Pixel mit ungenauen Warteschlangenlänge hinterlässt, sind Sie wahrscheinlich eine bessere visuellen Qualität durch Deaktivieren "Tiefe Puffer Freigabe aktivieren".
+Das Bereitstellen eines tiefen Puffers für Windows kann die visuelle Qualität verbessern, solange Windows die normalisierten pro-Pixel-tiefen Werte in ihrem tiefen Puffer mithilfe der Near-und Far-Ebenen, die Sie in Unity auf der Hauptkamera festgelegt haben, exakt wieder zu den Entfernungen in Metern zuordnen kann.  Wenn Ihr renderingwert auf typische Weise handle-Werte übergibt, sollten Sie in der Regel in Ordnung sein, obwohl die übergreifende Renderingvorgänge, die in den tiefen Puffer schreiben, während Sie bis zu vorhandenen Farbpixeln zeigen, die neuprojektion verwirren können.  Wenn Sie wissen, dass Ihre Renderingdurchläufen viele der abschließenden tiefen Pixel mit ungenauen tiefen Werten belassen, erhalten Sie wahrscheinlich eine bessere visuelle Qualität, indem Sie die Option "Tiefe Puffer Freigabe aktivieren" deaktivieren.
 
-## <a name="mixed-reality-toolkits-automatic-scenesetup"></a>Die automatische Szene Setup Mixed Reality-Toolkit
-Beim Importieren von [MRTK releasepakete Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases) oder Klonen Sie das Projekt aus der [GitHub-Repository](https://github.com/Microsoft/MixedRealityToolkit-Unity), Sie sind dabei, ein neues Menü "Mixed Reality-Toolkit" in Unity finden. Klicken Sie im Menü "Mixed Reality Szene-Einstellungen anwenden" wird unter "Konfigurieren" im Menü angezeigt. Wenn Sie darauf klicken, wird er entfernt die Standardkamera und fügt grundlegende Komponenten - [InputManager](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/InputManager.prefab), [MixedRealityCameraParent](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/MixedRealityCameraParent.prefab), und [DefaultCursor](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor/DefaultCursor.prefab).
-
-![MRTK-Menü für die Szene-setup](images/MRTK_Input_Menu.png)<br>
-*MRTK-Menü für die Szene-setup*
-
-![Automatische Szene Setup in MRTK](images/MRTK_HowTo_Input1.png)<br>
-*Automatische Szene Setup in MRTK*
-
-## <a name="mixedrealitycamera-prefab"></a>MixedRealityCamera prefabs
-Sie können diese aus dem Projektfenster auch manuell hinzufügen. Sie finden diese Komponenten als prefabs (Vorlagen). Bei der Suche **MixedRealityCamera**, Sie werden zwei verschiedene Kamera prefabs (Vorlagen) angezeigt. Der Unterschied besteht darin, **MixedRealityCamera** ist die Kamera nur prefab dagegen **MixedRealityCameraParent** enthält zusätzliche Komponenten für die immersive Headsets wie z. B. Teleportation, während der Übertragung Controller und Grenze.
-
-![Kamera-Prefabs im MRTK](images/MRTK_HowTo_Input2.png)<br>
-*Kamera-Prefabs im MRTK*
-
-**MixedRealtyCamera** HoloLens und immersive Kopfhörer unterstützt. Erkennt den Gerätetyp und die Eigenschaften wie z. B. deaktivieren Flags und Skybox optimiert. Im folgenden können Sie einige nützliche Eigenschaften suchen, die können Sie z. B. benutzerdefinierte Cursor, während der Übertragung Controller-Modellen, anpassen und Floor.
-
-![Eigenschaften für den Controller während der Übertragung, Cursor und Floor](images/MRTK_HowTo_Input3.png)<br>
-*Eigenschaften für den Controller während der Übertragung, Cursor und Floor*
 
 ## <a name="see-also"></a>Siehe auch
-* [– Hologramm Stabilität](hologram-stability.md)
-* [MixedRealityToolkit Main Camera.prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)
+* [Hologrammstabilität](hologram-stability.md)
+* [Mixedrealitytoolkit Hauptkamera. Prefab](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)

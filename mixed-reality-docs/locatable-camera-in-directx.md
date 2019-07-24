@@ -1,31 +1,31 @@
 ---
-title: Gebietsschemabezogene Kamera in DirectX
-description: Erläutert, wie die Kamera des Punkt-der-Ansicht (COOLIE) in einer app HoloLens.
+title: Einsetzbare Kamera in DirectX
+description: Erläutert die Verwendung der Point-of-View-Kamera (POV) in einer hololens-app.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, auffindbaren Kamera, der Sicht, COOLIE, Unporoject, Media Foundation, MF, benutzerdefinierte Senke, exemplarische Vorgehensweise mit Beispielcode
+keywords: Hololens, einsetzbare Kamera, Point of View, POV, unporoject, Media Foundation, MF, Custom Sink, Exemplarische Vorgehensweise, Beispielcode
 ms.openlocfilehash: 374b61e3d9bb0e97d5f0c5c8e17a5c882a4ebcd3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595304"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516865"
 ---
-# <a name="locatable-camera-in-directx"></a>Gebietsschemabezogene Kamera in DirectX
+# <a name="locatable-camera-in-directx"></a>Einsetzbare Kamera in DirectX
 
-In diesem Thema wird beschrieben, wie zum Einrichten einer [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197(v=vs.85).aspx) pipeline für den Zugriff auf die [Kamera](locatable-camera.md) in einer DirectX-app, einschließlich der Frame-Metadaten, die Sie suchen Sie die Images kann in der realen Welt erstellt.
+In diesem Thema wird beschrieben, wie Sie eine [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197(v=vs.85).aspx) Pipeline für den Zugriff auf die [Kamera](locatable-camera.md) in einer DirectX-App einrichten, einschließlich der Frame-Metadaten, mit denen Sie die in der realen Welt erzeugten Bilder suchen können.
 
-## <a name="windows-media-capture-and-media-foundation-development-imfattributes"></a>Windows Media-Erfassung und Media Foundation-Entwicklung: IMFAttributes
+## <a name="windows-media-capture-and-media-foundation-development-imfattributes"></a>Windows Media Capture und Media Foundation Entwicklung: Imfattributes
 
-Jedes Bild-Frame [enthält einem Koordinatensystem](locatable-camera.md#images-with-coordinate-systems) , sowie zwei wichtige Transformationen. Die "View" wandeln Sie Zuordnungen aus der angegebenen Koordinatensystem bis zur Kamera und der "Projection" wird von der Kamera Pixel im Bild. Das Koordinatensystem und 2 Transformationen werden als Metadaten in jedem Bild-Frame über Media Foundation eingebettet [IMFAttributes](https://msdn.microsoft.com/library/windows/desktop/ms704598(v=vs.85).aspx).
+Jeder Bild Rahmen [enthält ein Koordinatensystem](locatable-camera.md#images-with-coordinate-systems) sowie zwei wichtige Transformationen. Die Transformation "Ansicht" wird vom bereitgestellten Koordinatensystem zur Kamera zugeordnet, und die Projektion "Projektion" wird von der Kamera zu Pixel im Bild zugeordnet. Das Koordinatensystem und die 2 Transformationen werden als Metadaten in jedem Bild Rahmen über Media Foundation [imfattributes](https://msdn.microsoft.com/library/windows/desktop/ms704598(v=vs.85).aspx)eingebettet.
 
-### <a name="sample-usage-of-reading-attributes-with-mf-custom-sink-and-doing-projection"></a>Beispiel für die Verwendung der Attribute mit benutzerdefinierten MF-Senke lesen und Ausführen der Projektion
+### <a name="sample-usage-of-reading-attributes-with-mf-custom-sink-and-doing-projection"></a>Beispiel Verwendung für das Lesen von Attributen mit benutzerdefinierter MF-Senke und-Projektion
 
-In Ihren benutzerdefinierten MF Senke-Datenstrom ([IMFStreamSink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx)), erhalten Sie [IMFSample](https://msdn.microsoft.com/library/windows/desktop/ms702192(v=vs.85).aspx) mit Beispiel-Attributen:
+In Ihrem benutzerdefinierten MF-senkenstream ([IMF streamsink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx)) erhalten Sie [IMF Sample](https://msdn.microsoft.com/library/windows/desktop/ms702192(v=vs.85).aspx) mit Beispiel Attributen:
 
-Die folgenden MediaExtensions müssen für WinRT-basierten Code definiert werden:
+Die folgenden mediaextensions müssen für WinRT-basierten Code definiert werden:
 
 ```
 EXTERN_GUID(MFSampleExtension_Spatial_CameraViewTransform, 0x4e251fa4, 0x830f, 0x4770, 0x85, 0x9a, 0x4b, 0x8d, 0x99, 0xaa, 0x80, 0x9b);
@@ -33,7 +33,7 @@ EXTERN_GUID(MFSampleExtension_Spatial_CameraCoordinateSystem, 0x9d13c82f, 0x2199
 EXTERN_GUID(MFSampleExtension_Spatial_CameraProjectionTransform, 0x47f9fcb5, 0x2a02, 0x4f26, 0xa4, 0x77, 0x79, 0x2f, 0xdf, 0x95, 0x88, 0x6a);
 ```
 
-Sie können nicht auf diese Attribute von WinRT-APIs zugreifen, aber erfordert die Implementierung Medienerweiterung [IMFTransform](https://msdn.microsoft.com/library/windows/desktop/ms696260(v=vs.85).aspx) (für Auswirkung) oder [IMFMediaSink](https://msdn.microsoft.com/library/windows/desktop/ms694262(v=vs.85).aspx) und [IMFStreamSink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx) () für die benutzerdefinierte Senke). Wenn Sie das Beispiel in dieser Erweiterung entweder verarbeiten in [IMFTransform::ProcessInput()](https://msdn.microsoft.com/library/windows/desktop/ms703131(v=vs.85).aspx)/[IMFTransform::ProcessOutput()](https://msdn.microsoft.com/library/windows/desktop/ms704014(v=vs.85).aspx) oder [IMFStreamSink::ProcessSample() ](https://msdn.microsoft.com/library/windows/desktop/ms696208(v=vs.85).aspx), Sie können Attribute wie in diesem Beispiel Abfragen.
+Sie können nicht von WinRT-APIs aus auf diese Attribute zugreifen, erfordern jedoch die Implementierung der medienerweiterung von [imftransform](https://msdn.microsoft.com/library/windows/desktop/ms696260(v=vs.85).aspx) (für Effekt) oder [imfmediasink](https://msdn.microsoft.com/library/windows/desktop/ms694262(v=vs.85).aspx) und [imfstreamsink](https://msdn.microsoft.com/library/windows/desktop/ms705657(v=vs.85).aspx) (für benutzerdefinierte Senke). Wenn Sie das Beispiel in dieser Erweiterung entweder in [IMF Transform::P rocessinput ()](https://msdn.microsoft.com/library/windows/desktop/ms703131(v=vs.85).aspx)/[IMF Transform::P rocess Output ()](https://msdn.microsoft.com/library/windows/desktop/ms704014(v=vs.85).aspx) oder [IMF streamsink::P rocesssample ()](https://msdn.microsoft.com/library/windows/desktop/ms696208(v=vs.85).aspx)verarbeiten, können Sie Attribute wie dieses Beispielabfragen.
 
 ```
 ComPtr<IUnknown> spUnknown;
@@ -81,7 +81,7 @@ if (SUCCEEDED(hr))
 }
 ```
 
-Um die Textur mit der Kamera zuzugreifen, benötigen Sie die gleichen D3D-Gerät, das Kamera-Frame-Textur erstellt. Diese D3D-Gerät befindet sich im [IMFDXGIDeviceManager](https://msdn.microsoft.com/library/windows/desktop/hh447906(v=vs.85).aspx) in der Pipeline erfassen. Um die DXGI-Geräte-Manager aus Medienaufzeichnung zu erhalten, Sie können [IAdvancedMediaCapture](https://msdn.microsoft.com/library/windows/desktop/hh802709(v=vs.85).aspx) und [IAdvancedMediaCaptureSettings](https://msdn.microsoft.com/library/windows/desktop/hh802712(v=vs.85).aspx) Schnittstellen.
+Um auf die Textur von der Kamera zuzugreifen, benötigen Sie dasselbe D3D-Gerät, das eine Kamera Rahmen Textur erstellt. Dieses D3D-Gerät befindet sich in der Aufzeichnungs Pipeline in [IMF dxgidebug Manager](https://msdn.microsoft.com/library/windows/desktop/hh447906(v=vs.85).aspx) . Um den DXGI-Geräte-Manager von der Medien Erfassung zu erhalten, können Sie [iadvancedmediacapture](https://msdn.microsoft.com/library/windows/desktop/hh802709(v=vs.85).aspx) -und [iadvancedmediacapturesettings](https://msdn.microsoft.com/library/windows/desktop/hh802712(v=vs.85).aspx) -Schnittstellen verwenden.
 
 ```
 Microsoft::WRL::ComPtr<IAdvancedMediaCapture> spAdvancedMediaCapture;
@@ -97,4 +97,4 @@ if (SUCCEEDED(((IUnknown *)(mediaCapture))->QueryInterface(IID_PPV_ARGS(&spAdvan
 }
 ```
 
-Sie können auch die Maus- und Tastatureingaben als optionale Eingabe Methoden für die Windows Mixed Reality-app aktivieren. Dies kann auch sein, eine großartige Debugfunktion für Geräte wie HoloLens und möglicherweise wünschenswert, dass Benutzereingaben in mixed Reality-apps, die, die im immersive Headsets an PCs angeschlossen.
+Sie können die Maus-und Tastatureingabe auch als optionale Eingabemethoden für Ihre Windows Mixed Reality-App aktivieren. Dies kann auch eine hervorragend Debuggingfunktion für Geräte wie hololens sein und ist möglicherweise für Benutzereingaben in Mixed Reality-apps wünschenswert, die in immersiven, mit PCs verbundenen Headsets ausgeführt werden.

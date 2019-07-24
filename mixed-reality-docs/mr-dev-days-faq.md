@@ -1,67 +1,67 @@
 ---
 layout: LandingPage
-title: Mixed Reality Dev Tage – häufig gestellte Fragen
-description: FAQ-Seite für MR Dev Tage
+title: Häufig gestellte Fragen zur gemischten Realität dev Days
+description: FAQ-Seite für Mr dev Days
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/25/2019
 ms.topic: article
-keywords: Gemischte Realität-Konferenz, Summit, Entwickler, HoloLens, 2 für HoloLens, Kinect
+keywords: Gemischte Realität, Konferenz, Summit, Entwickler, hololens, hololens 2, kinect
 ms.openlocfilehash: 8d38d121ab76281497ab8d8ec11c096f9bc7cc71
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604805"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63526643"
 ---
-# <a name="mixed-reality-dev-days-faq"></a>Mixed Reality Dev Tage – häufig gestellte Fragen
+# <a name="mixed-reality-dev-days-faq"></a>Häufig gestellte Fragen zur gemischten Realität dev Days
 
-* **Die angewendet werden soll? Gibt es Kriterien?**
+* **Wer sollte angewendet werden? Gibt es Kriterien?**
     
-    Wir können Leidenschaft und begrüßt einer verschiedene Entwickler-Community auf Mixed Reality Dev Tage. Wir sind auch sicherstellen, dass dieses Ereignis zusammenführt Entwickler von unserer große Kunden und Partnern, große Studios, kleine Studios und einzelne Entwickler.
+    Wir sind leidenschaftlich daran interessiert, eine vielfältige Entwickler Community für Entwicklungstage von Mixed Reality zu begrüßen. Wir stellen außerdem sicher, dass dieses Ereignis Entwickler von unseren großen Kunden und Partnern, großen Studio, kleinen Studio und einzelnen Entwicklern vereint.
 
-    Wenn Sie möchten ein mixed Reality-Entwickler, die auf einer unserer Entwickler-Plattform, Tools, Dienste und Geräte Schulungen erhalten möchten, empfehlen wir Ihnen, um uns zu Mixed Reality Dev Tage verknüpfen.
+    Wenn Sie ein gemischter Reality-Entwickler sind, der sich mit unseren Entwickler Plattformen, Tools, Diensten und Geräten vertraut machen möchte, empfehlen wir Ihnen, uns in Mixed Reality dev Days beizutreten.
 
-    Unser Ziel ist, damit eine Vielzahl von mixed Reality-Entwicklern und Designern in Anwesenheit und alle Informationen, die Sie, in angeben können der [Anwendung](https://aka.ms/MRDevDayApplication) helfen uns, um sicherzustellen, dass dies geschieht.
+    Unser Ziel ist es, eine große Bandbreite an Entwicklern und Designern mit gemischter Realität zu haben, und alle Informationen, die Sie in der [Anwendung](https://aka.ms/MRDevDayApplication) bereitstellen können, helfen uns dabei, sicherzustellen, dass dies geschieht.
 
-* **Wann kann ich erkennen, wenn ich teilnehmen können?**
+* **Wann weiß ich, ob ich daran teilnehmen kann?**
 
-    [Anwendungen](https://aka.ms/MRDevDayApplication) bis Mittag PST 5 April 2019 geöffnet sind. Je nachdem wann Sie Ihre Anwendung abgeschlossen haben können Sie über den Status sobald 5 April 2019 benachrichtigt. Wir arbeiten intensiv daran, um sicherzustellen, dass alle bewerberinnen über ihren Status bis zum Ende des Tages 10 April 2019 benachrichtigt werden. Wenn wir nicht alle Punkte in diesem ersten Welle von bewerberinnen ausfüllen, können wir Anwendungen für eine zweite Welle öffnen.
+    [Anwendungen](https://aka.ms/MRDevDayApplication) sind bis zum 5. April am 5. April 2019 Uhr geöffnet. Je nachdem, wann Sie Ihre Anwendung Fertigstellen, werden Sie möglicherweise über Ihren Status benachrichtigt, sobald der 5. April 2019. Wir arbeiten hart daran, sicherzustellen, dass alle Antragsteller täglich am 10. April 2019 über Ihren Status benachrichtigt werden. Wenn wir nicht alle Punkte dieser ersten Reihe von Bewerbern ausfüllen, können wir Anwendungen für eine zweite Welle öffnen.
 
-* **Warum habe ich anwenden?**
+* **Warum muss ich mich anwenden?**
 
-    Wir erhalten von hohem Interesse in diesem Fall haben und eine maximale Kapazität für das Ereignis. Aus diesem Grund sind wir angefordert, dass alle Entwickler interessant Ausführen dieser Aufgaben erforderlich [Anwendung](https://aka.ms/MRDevDayApplication) , damit wir weitere Informationen zu was Sie gerade arbeiten und warum Sie sich interessieren.
+    Wir haben ein hohes Interesse an diesem Ereignis erhalten und eine maximale Kapazität für das Ereignis erhalten. Aus diesem Grund stellen wir fest, dass alle Entwickler daran interessiert sind, diese [Anwendung](https://aka.ms/MRDevDayApplication) abzuschließen, damit wir mehr darüber erfahren, woran Sie arbeiten und warum Sie interessiert sind.
 
-* **Mir wurde mitgeteilt, dass ich teilnehmen soll.  Wie wende ich an?**
+* **Ich sagte, ich sollte teilnehmen.  Gewusst wie anwenden?**
 
-    Führen Sie dies [Anwendung](https://aka.ms/MRDevDayApplication) von Uhr Pacific Time (PST), 5 April 2019.
+    Schließen Sie diese [Anwendung](https://aka.ms/MRDevDayApplication) um 12 Uhr mittags (PST), 5. April 2019, ab.
 
-* **Was ist der Unterschied zwischen Mixed Reality Dev Tage und Build?**
+* **Worin besteht der Unterschied zwischen Mixed Reality dev Days und Build?**
 
-    Wir entwickelt, Mixed Reality Dev-Tage-Experten in mixed Reality und die viele Aspekte der Cloud und KI-Technologie, die maschinelles sehen – Hologramm erstellen, stammen. Möchten ein mixed Reality-Entwickler, die auf einer unserer Entwickler-Plattform, Tools, Dienste und Geräte Schulungen erhalten möchten, ist Mixed Reality Dev Tage hervorragend. 
+    Wir entwickelten gemischte Realität dev Days für Sie – Experten in gemischter Realität und die zahlreichen Aspekte von Cloud-und Ki-Technologie, die in der IT enthalten sind, vom Maschinelles sehen bis zur – Hologramm-Erstellung. Wenn Sie ein gemischter Reality-Entwickler sind, der sich mit der Entwicklerplattform, den Tools, Diensten und Geräten vertraut machen möchte, sind dev-Tage mit gemischter Realität sehr gut geeignet. 
 
-    [Microsoft Build](https://www.microsoft.com/en-us/build) vereint Entwicklern und Experten von Produktteams im Unternehmen. Es werden eine Vielzahl von Technologien und Anwendungsmuster behandelt. Dieses Ereignis ist kein Ersatz für Build, und wenn dies Ihre Papierstau ist, empfehlen wir Ihnen in diesem Fall zu tun! 
+    Mit [Microsoft Build](https://www.microsoft.com/en-us/build) werden Entwickler und Experten von Produktteams im gesamten Unternehmen vereint. Es wird eine breite Palette von Technologien und Anwendungs Mustern behandelt. Dieses Ereignis ersetzt nicht den Build, und wenn dies der Fall ist, empfehlen wir Ihnen, dies zu tun! 
 
 * **Wie viel kostet das Ereignis?**
 
-    Dieses Ereignis ist bereit, die verwendet werden.
+    Dieses Ereignis kann kostenlos besucht werden.
 
-* **Was kostet, bin ich dafür?**
+* **Für welche Kosten sind die Kosten verantwortlich?**
 
-    Sie sind verantwortlich für Reisekosten (Flug, Hotel, Mahlzeiten, Transport, die in und aus).
+    Sie sind verantwortlich für die Reisekosten (Flug, Hotel, Mahlzeiten, Transporte zu und von).
 
-* **Was erwarten kann ich?**
+* **Was sollte ich erwarten?**
 
-    Mixed Reality Dev Tage fokussiert ein starker Developer (ca. 75 %) ergänzt durch Geschäftsentwicklung und strategische Insights (ca. 25 %).  Sie haben die Möglichkeit, code zusammen mit unseren Entwicklern, die neueste in unser Portfolio-demo, und erfahren Sie mehr über die Wissenschaft hinter unseren technischen, sowie best Practices und Erfahrungen, die im Laufe der Jahre haben wir gelernt.
+    Dev-Tage mit gemischter Realität haben einen schweren Entwickler Fokus (ca. 75%). ergänzt durch die Geschäftsentwicklung und strategische Einblicke (ca. 25%).  Sie haben die Möglichkeit, zusammen mit unseren Entwicklern zu programmieren, die neuesten Informationen in unserem Portfolio zu demonstrieren und sich über die Wissenschaft hinter unserer Technologie zu informieren. Außerdem erhalten Sie bewährte Methoden und Lektionen, die wir im Laufe der Jahre kennengelernt haben.
 
-* **Muss ich meine eigenen Entwicklercomputer zu bringen?**
+* **Muss ich meinen eigenen Entwickler Computer bringen?**
 
-    Ja, sollte jeder Teilnehmer eigene Entwickler angezeigt werden, die PCs installiert wird, mit der Software, Tools und IDEs, die Sie für Ihre Umgebung verwenden.
+    Ja, jeder Teilnehmer sollte seine eigenen Entwickler-PCs mit der Software, den Tools und IDES installieren, die Sie für Ihre Umgebung verwenden.
 
-* **Wo erfahre ich mehr?**
+* **Wo kann ich mehr erfahren?**
 
-    Finden Sie mehr über unsere [Mixed Reality-Dokumentationsseiten](mr-dev-days.md), und Sie können immer wenden Sie sich an unser Team Mixed Reality Developer Relations bei Fragen.
+    Weitere Informationen finden Sie in unseren [Dokumentationsseiten für Mixed Reality](mr-dev-days.md), und Sie können sich mit Fragen jederzeit an unser Mixed Reality-Entwickler Beziehungs Team wenden.
 
-* **An wen wenden ich, um weitere Informationen?**
+* **An wen sollte ich mich wenden, um mehr zu erfahren?**
 
-    Weitere Informationen per e-Mail senden DevEvent@microsoft.com
+    Weitere Informationen erhalten Sie per e-Mail.DevEvent@microsoft.com

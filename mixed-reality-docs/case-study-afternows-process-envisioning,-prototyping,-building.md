@@ -1,152 +1,152 @@
 ---
-title: Fallstudie - AfterNow des Process - Zielsetzung, zum Erstellen von Prototypen, erstellen
-description: AfterNow des Prozess - Zielsetzung, zum Erstellen von Prototypen, erstellen
+title: 'Fallstudie-afternow-Prozess: Projekt Erstellung, Prototyperstellung, Erstellung'
+description: Prozess der Nachfolgeversion, Erstellung von Prototypen, Erstellung
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, AfterNow, Zielsetzung, Erstellen von Prototypen, erstellen
+keywords: Windows Mixed Reality, afternow, Projekt Erstellung, Prototypen, Erstellung
 ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604684"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63523486"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Fallstudie - AfterNow des Process - Zielsetzung, zum Erstellen von Prototypen, erstellen
+# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Fallstudie-afternow-Prozess: Projekt Erstellung, Prototyperstellung, Erstellung
 
-Am [AfterNow](https://www.afternow.io/), arbeiten wir mit der Sie Ihre Ideen und unterstreichen in konkrete, voll funktionsfähige Produkte aktivieren und Funktionen bereit, für den Markt. Aber bevor wir eine einzige Zeile Code schreiben, erstellen wir eine Blaupause mithilfe des so genannten envisioning.
+Zu [diesem Zeitpunkt arbeiten](https://www.afternow.io/)wir mit Ihnen zusammen, um Ihre Ideen und Bestrebungen in konkrete, vollständig operative Produkte und Erfahrungen zu verwandeln, die für den Markt bereit sind. Bevor wir jedoch eine einzelne Codezeile schreiben, erstellen wir eine Blaupause durch einen Prozess namens "Projekt".
 
-![Was ist das Entwerfen einer?](images/whatisenvisioning-640px.png)
+![Was ist "invisioning"?](images/whatisenvisioning-640px.png)
 
-## <a name="what-is-envisioning"></a>Was ist Envisioning?
+## <a name="what-is-envisioning"></a>Was ist "invisioning"?
 
-Die projektbeschreibung ist ein ideenfindung-Prozess für den Produktentwurf verwendet. Wir optimieren ein großen Pools an Ideen in einer-- oder wenigen – berechneten und realistischer-Konzepte, die Sie ausführen.
+Die Projekt Erstellung ist ein ideationsprozess, der für den Produkt Entwurf verwendet wird. Wir optimieren einen großen Pool an Ideen in ein oder mehrere, berechnete, realistische Konzepte, die ausgeführt werden müssen.
 
-Dieser Prozess wird light viele Probleme und Hindernisse, die im Produkt würde sich stoße haben bringen. Fehler früh und schnell letztlich spart viel Zeit und Geld.
+Dieser Prozess führt zu einer Vielzahl von Problemen und blockatoren, die schließlich im Produkt auftreten würden. Der frühe und schnelle Ausfall spart letztendlich viel Zeit und Geld.
 
-Während dieses Prozesses stellen wir Sie mit Anmerkungen zu dieser Ideen und die Ergebnisse der Gruppennamens bereit. Wenn wir fertig sind, erhalten Sie ein Dokument mit einem Skript und ein Video im Schritt "act out" ist eine Simulation der vorgeschlagenen Produkts in Aktion. Hierbei handelt es sich um konkrete Blaupausen zu Ihrem Produkt – ein Framework, die Sie beibehalten können. Im Idealfall ist der nächste Schritt für die das Produkt zu erstellen, das ermöglicht es uns, testen und erkunden des Deals.
+Während dieses Vorgangs erhalten Sie Hinweise zu den Ideen und Ergebnissen der Gruppe. Wenn Sie fertig sind, erhalten Sie ein Dokument mit einem Skript und ein Video zum Schritt "Act it out", eine Simulation des vorgeschlagenen Produkts in Aktion. Dabei handelt es sich um konkrete Blaupausen für Ihr Produkt, ein Framework, das Sie behalten können. Der nächste Schritt besteht im Idealfall darin, das Produkt zu erstellen, mit dem wir das eigentliche Geschäft testen und testen können.
 
-Hier ist eine tägliche Play-by-play des Prozesses, wie lange dauert, jeden Schritt, und für wen müssen Sie in Ihrem Team.
+Im folgenden finden Sie eine tägliche Wiedergabe des Prozesses, die Dauer der einzelnen Schritte und die, die Sie in Ihrem Team benötigen.
 
-![Projektbeschreibung Teilnehmer](images/envisioning-participants-640px.png)
+![Projekt beteiligte](images/envisioning-participants-640px.png)
 
-## <a name="envisioning-participants"></a>Projektbeschreibung Teilnehmer
+## <a name="envisioning-participants"></a>Projekt beteiligte
 
-Es ist wichtig, dass die richtigen Teilnehmer für diesen Prozess auswählen. Die Anzahl kann variieren, aber es wird empfohlen, halten es unter sieben Personen aus Gründen der Effizienz.
+Es ist wichtig, die richtigen Teilnehmer für diesen Prozess auszuwählen. Die Anzahl kann variieren, aber wir empfehlen, Sie für die Effizienz unter sieben Personen beizubehalten.
 
-**(Kritisch) Decider**-die Decider ist einer wichtigen Person, die in der Gruppe haben. Er ist diejenige, die die endgültige Entscheidung oder Skala tipping, ist es ein Ergebnis ist Unentschlossenheit während des Prozesses (in der Regel der Geschäftsführer, Gründer, Produktmanager oder Anfang Entwurf) werden. Wenn sie nicht für den gesamten Prozess teilnehmen können, zu benennen, dass ein Benutzer am häufigsten anpassen, die Rolle übernehmen.
+**Decider (kritisch)** : der Decider ist eine wichtige Person, die in der Gruppe enthalten sein muss. Er ist der Benutzer, der die endgültige Entscheidung treffen oder die Skalierung durchführen möchte, wenn während des Prozesses eine Entscheidung besteht (in der Regel der CEO, Gründer, Product Manager oder Head of Design). Wenn Sie nicht für den gesamten Prozess teilnehmen können, benennen Sie die am meisten geeignete Person, um die Rolle zu übernehmen.
 
-**(Optional) Finance**-Person wird erläutert, wie das Projekt ins Leben gerufen wird.
+**Finanzabteilung (optional)** : eine Person, die erklären kann, wie das Projekt finanziert wird.
 
-**(Optional) Marketing**– eine Person, die Werte des Unternehmens Nachrichten.
+**Marketing (optional)** : eine Person, die die Nachrichten des Unternehmens erstelle.
 
-**Kunde (wichtigsten)**-Person spricht für Kunden häufig und kann ihre Advocate.
+**Kunde (wichtig)** : jemand, der häufig mit Kunden redet und seine Advocate ist.
 
-**Tech/Logistik (wichtigsten)**-jemand, der weiß, was das Unternehmen erstellen und bereitstellen kann.
+**Tech/Logistics (wichtig)** : eine Person, die versteht, was das Unternehmen erstellen und bereitstellt.
 
-**Entwurf (wichtigsten)**– eine Person, die das Produkt entwickelt Ihr Unternehmen macht.
+**Design (wichtig)** : eine Person, die das Produkt entwirft, das Ihr Unternehmen macht.
 
-## <a name="day-1---map"></a>Tag 1 - Zuordnung
+## <a name="day-1---map"></a>Tag 1-Map
 
-**Liste Ziele & Einschränkungen; Legen Sie ein langfristiges Ziel – 5 Min.**
+**Listet Ziele & Einschränkungen auf. Festlegen eines langfristigen Ziels-5 min.**
 
-Was ist Unser langfristiges Ziel, wenn wir vollständig optimistische wird wurden? Warum werden wir das Erstellen dieser Lösung in mixed Reality und welche Probleme sind wir lösen möchten?
+Was ist unser langfristiges Ziel, wenn wir vollständig optimistisch waren? Warum wird diese Lösung in gemischter Realität aufgebaut, und welche Probleme sollen gelöst werden?
 
-**Liste Sprint Fragen – 5 Min.**
+**Sprint Fragen auflisten-5 min.**
 
-Get etwas pragmatischen und auflisten befürchtungen betreffende formatiert werden. Wie können wir fehl? Erfüllen Sie langfristig soll, was zu "true" werden hat? Wenn das Projekt fehlgeschlagen ist, kann, die Ursache haben?
+Holen Sie sich eine etwas pragmatische, und Listen Sie die Ängste im frageformat auf. Wie könnten wir fehlschlagen? Was muss wahr sein, um das langfristige Ziel zu erreichen? Wenn das Projekt fehlgeschlagen ist, was hat das möglicherweise verursacht?
 
-**Stellen Sie einen Flow zugeordnet – bis zu 1 Stunde**
+**Erstellen einer Datenfluss Zuordnung (bis zu einer Stunde)**
 
-Dies ist eine grobe, funktionale-Zuordnung (nicht beschrieben). Alle vom Benutzer eingegebenen schreiben wir auf der linken und der Zeilenenden auf der rechten Seite. Anschließend verbinden wir sie in der Mitte mit Wörtern und Pfeile angezeigt, wie Benutzer mit dem Produkt zu interagieren. Dies erfolgt in Schritten von 5 bis 15.
+Dies ist eine grobe, funktionale Karte (nicht ausführlich). Wir schreiben alle Benutzer Typen auf der linken Seite und die Enden auf der rechten Seite. Dann verbinden wir Sie in der Mitte mit Wörtern und Pfeilen, die zeigen, wie Benutzer mit dem Produkt interagieren. Dies erfolgt in 5-15 Schritten.
 
-**Interviewen Sie Fachleute aus, und notieren Sie sich**
+**Interview Experten & Notizen**
 
-Das Ziel dieser Übung ist unsere kollektive Verständnis des Problems zu erweitern. Hier können wir einige Elemente hinzufügen, um die Zuordnung, und beheben Sie alle Fehler auf. Wenn Teil des Datenflusses im Detail erweitert werden kann, werden wir mit dem Experten kommunizieren.
+Das Ziel dieser Übung besteht darin, unser kollektives Verständnis des Problems zu verbessern. Hier können wir der Zuordnung Dinge hinzufügen und etwaige Fehler beheben. Wenn ein Teil des Flows ausführlicher erweitert werden kann, sprechen wir mit dem Experten.
 
-Unsere best Practice für diesen Prozess wird geschieht, wenn wir nehmen die einzelnen Notizen in wie können wir (HMW)-Format. HMW ist eine Technik, die von P & G in die 70s entwickelt wurde. Es ist eine Methode der Notizen in Form einer Frage, was letztendlich zu Anmerkungen zu dieser Version organisiert und nach Priorität geordnete führt. Es wird eine Idee pro Kurznotiz Notieren der beginnt mit der Formulierung "Wie können wir." Beispielsweise kann die Werte von [Ihrem Unternehmen] in mixed Reality Kommunikation?
+Unsere bewährte Vorgehensweise für diesen Prozess tritt auf, wenn wir im Format des HMW-Formats (HMW-Format) einzelne Notizen verwenden. HMW ist eine Technik, die von P & G in den 70er Jahren entwickelt wurde. Es ist eine Methode, die in Form einer Frage in Form einer Frage ist, die letztendlich zu organisierten und priorisierten Notizen führt. Wir schlagen eine Idee pro Kurznotiz ein, die mit dem Ausdruck "wie können wir beginnen" beginnt. Wie können wir z. b. die Werte von [Ihrem Unternehmen] in gemischter Realität übermitteln?
 
-![Organisieren und zu entscheiden](images/organize-and-decide-640px.png)<br>
-*Organisieren und zu entscheiden*
+![Organisieren und entscheiden](images/organize-and-decide-640px.png)<br>
+*Organisieren und entscheiden*
 
-**Organisieren Sie HMW Notizen**
+**Anordnen von HMW-Notizen**
 
-Wir nehmen alle "Wie können wir vorhanden" Notizen und bleiben sie auf einer Wand. Wir werden dann diese in merkliche Designs kategorisieren sobald diese Aufkommen.
+Wir nehmen uns alle Hinweise auf, und halten Sie an einer Wand. Diese werden dann in merkliche Designs kategorisiert, sobald sie auftreten.
 
-**Anmerkungen zu dieser Version HMW abstimmen**
+**Hinweise zu HMW-Notizen**
 
-Sobald alle Notizen in den entsprechenden Kategorien sind, werden wir unseren bevorzugten Fragen abstimmen. Jeder ruft zwei stimmen; die Decider ruft vier stimmen ab.
+Sobald sich alle Notizen in den entsprechenden Kategorien befinden, stimmen wir uns auf unsere bevorzugten Fragen ab. Jeder erhält zwei Stimmen. der Decider erhält vier Stimmen.
 
-**Wählen Sie ein Ziel**
+**Ziel auswählen**
 
-Kreis, der wichtigste Kunde und ein Ziel-Moment, in der Zuordnung, und suchen Sie über die anfängliche Fragen für den Sprint. Die Decider hat die Aufgabe, die den Aufruf.
+Umkreisen Sie den wichtigsten Kunden und einen Ziel Zeitpunkt auf der Karte, und überprüfen Sie die anfänglichen Fragen für den Sprint. Der Decider hat die Aufgabe, den-Befehl zu erstellen.
 
-## <a name="day-2---sketch"></a>Tag 2 - Sketches
+## <a name="day-2---sketch"></a>Tag 2: Skizze
 
 **Vorhandene Produktdemos**
 
-Jedes Mitglied der Gruppe Sprint werden vorhandene Produkten gewünschte nachschlagen, die ähnliche Probleme, die gelöst werden, die es geht. Klicken Sie dann außerdem die Erkenntnisse für den Rest der Gruppe Demos von. Dies ergibt einen guten Überblick über die Features, die wir interessant finden.
+Alle Benutzer in der sprintgruppe werden vorhandene Produkte untersuchen, die Ihnen ähneln, um ähnliche Probleme zu beheben, die wir behandeln. Wir werden dann die Ergebnisse für den Rest der Gruppe demonstrieren. Dadurch erhalten wir eine gute Vorstellung von den Features, die wir interessant finden.
 
-**Hinweise**
+**Notizen**
 
-Wir verbringen 20 Minuten im Hintergrund im Raum Notizen zu erfassen.
+Wir verbringen 20 Minuten für den Raum, um Notizen zu sammeln.
 
 **Ideen**
 
-Wir verbringen 20 Minuten, die privat Ideen groben Haftnotizen.
+Wir verbringen 20 Minuten privat, um einige grobe Ideen zu verbringen.
 
-**Verrückte 8 s**
+**Verrückte 8S**
 
-Wir verbringen acht Minuten, die acht Frames zu erstellen. Dies ist, in dem wir eine Variation von unseren besten Ideen in jedem Frame schnell skizzieren.
+Wir verbringen acht Minuten mit der Erstellung von acht Frames. An dieser Stelle wird schnell eine Variation unserer besten Ideen in jedem Frame skizziert.
 
 **Lösung**
 
-Wir verbringen 30 Minuten Skizzieren von Storyboards. Wir nehmen die beste Variationen von Ideen aus 8 verrückte s, und erstellen Sie ein Storyboard drei Bereichen für das Konzept.
+Wir verbringen 30 Minuten mit dem Entfernen von Storyboards. Wir nehmen die besten Variationen von Ideen aus verrückten 8S vor und erstellen ein Storyboard mit drei Panels.
 
-![Skizzieren von storyboards](images/sketching-storyboards-640px.png)<br>
-*Skizzieren von storyboards*
+![Entfernen von Storyboards](images/sketching-storyboards-640px.png)<br>
+*Entfernen von Storyboards*
 
-## <a name="day-3---decide"></a>Tag 3 - entscheiden.
+## <a name="day-3---decide"></a>Tag 3: Entscheidung
 
-Dieses Tag umfasst viele critiquing und abstimmen. Dies ist die Gliederung:
+Dieser Tag umfasst viele Kritiken und Abstimmungs Möglichkeiten. Hier ist die Aufschlüsselung:
 
-**Quiet critiquing**
+**Quiet critiqueing**
 
-Wir Band Lösungen auf der Wand und diese im Hintergrund betrachten Zeit in Anspruch nehmen. Nachdem alle Benutzer sich an den einen groben Entwurf Kryptografietechnologie entwickelt hat, erstellen wir eine heatmap zusammen. Jede Person, die wird die gewünschte Skizzen markiert. Dies kann der gesamte Flow – oder auf einen Bereich eines Flows sein.
+Wir Band Lösungen auf der Wand und nehmen Zeit, Sie zu sehen. Nachdem alle Benutzer Zeit für die Betrachtung aller Skizzen erhalten haben, erstellen wir kollektiv eine Wärmebild-Karte. Jede Person legt Markierungen in die Skizzen ein, die Ihnen gefällt. Dies kann der gesamte Workflow oder ein Bereich eines Flows sein.
 
-**Erläuterung und erläuterungen**
+**Erörterung & Erläuterungen**
 
-Wir werden nun ein wärmebild Ideen Leute interessante und Ausgaben von drei Minuten auf jede Sketch, die die meiste Aufmerksamkeit erhalten haben. Warum sie, wie bestimmte Skizzen und Interpreten können ordnungsgemäß ihre Ideen vermitteln bei einem Missverständnissen können offen besprechen. Dadurch kann neue Ideen gelegentlich auftreten.
+Wir werden uns mit einer Heat Map der Ideen beschäftigen, die Menschen interessant finden, und es werden drei Minuten für jede Skizze aufgewendet, die die größte Aufmerksamkeit erhalten hat. Personen können die Gründe für bestimmte Skizzen offen erläutern, und der Entwickler kann seine Ideen ordnungsgemäß vermitteln, wenn ein Missverständnis vorliegt. Dadurch können jederzeit neue Ideen angezeigt werden.
 
-In diesem Schritt möchten wir auch Personen bieten Möglichkeiten, Ideen zu erläutern, die nicht viel Aufmerksamkeit erhalten haben. In einigen Fällen finden Sie eine Gem in ein Mitarbeiter sich nicht wirklich zuvor Verstand.
+In diesem Schritt möchten wir den Benutzern auch Möglichkeiten bieten, Ideen zu erläutern, die nicht sehr berücksichtigt wurden. Manchmal finden Sie einen Stein in einer Vorstellung, den die Benutzer nicht wirklich verstanden haben.
 
-**Abrufen von strohhalm & supervote**
+**Stroh Abruf & supervote**
 
-Jede Person werden im Hintergrund, wählen Sie ihre bevorzugten Idee und, wenn Sie fertig sind, Personen werden Platzieren einer Markierung auf ihren bevorzugten auf einmal. Die Decider erhalten drei große Punkte für die Idee, dass er am meisten gefallen hat. Gekennzeichnet durch die Decider sind Ideen, die als Prototyp fungieren sollen.
+Jede Person wählt automatisch Ihre bevorzugte Idee aus, und wenn Sie fertig sind, werden die Benutzer auf einmal eine Markierung für Ihren Favoriten platzieren. Der Decider erhält dann drei große Punkte für die Idee, die er am meisten gefallen hat. Die von dem Decider markierten Ideen sind die Ideen, die prototyptypisiert werden.
 
-## <a name="day-4---prototype"></a>Tag 4 - Prototyp
+## <a name="day-4---prototype"></a>Tag 4: Prototyp
 
 **Vorbereitung**
 
-Als Vorbereitung für die Phase der Erstellung von Prototypen werden wir erfassen, eine Sammlung von physischen Tools – ähnlich wie ein Kinderspiel Kit – 3D-Objekte erstellen, die Hologramme darstellt. Haben wir auch physische Tools, die die Hardwaregeräte, die Benutzer darstellen auf diese Hologramme verwenden.
+Zur Vorbereitung der Prototypenphase werden wir eine Reihe von physischen Tools erfassen, ähnlich wie das Wiedergabe Kit eines untergeordneten Elements, um 3D-Objekte zu erstellen, die holograms darstellen. Wir verfügen auch über physische Tools, die die Hardware Geräte darstellen, die Benutzer für den Zugriff auf diese Hologramme verwenden.
 
-***Prototyp!***
+***Status!***
 
 **Vorbereiten eines Skripts**
 
-Skripterstellung für die gesamte User flow für diesen Prototyp Out und entscheiden Sie sich für die Akteure, die einen Teil werden in der Skit einnehmen.
+Schreiben Sie den gesamten benutzerflow für diesen Prototyp, und entscheiden Sie sich für die Akteure, die ein Teil der skit spielen werden.
 
-**Es durchspielen**
+**Out**
 
-Der benutzerflow, der betrifft alle Benutzer Parteien in der Reihenfolge an, dass sie es verwenden physisch ausgeführt. Dies ergibt einen guten Überblick darüber, wie geeignete dieses Produkt sein wird, wenn wir dies zu erstellen. Es wird auch als Licht bringen einige Schwachstellen, die wir möglicherweise übersehen haben Hauptversion. wenn bei dem Gedanken an.
+Handeln Sie den benutzerflow physisch aus, bei dem alle Benutzer Parteien in der Reihenfolge sind, in der Sie Sie verwenden werden. Dies gibt uns eine gute Vorstellung davon, wie gut das Produkt ist, wenn es erstellt wird. Außerdem werden einige wichtige Kini-Informationen angezeigt, die bei der Idee des Konzepts möglicherweise übersehen werden.
 
-## <a name="about-the-author"></a>Der Autor
+## <a name="about-the-author"></a>Informationen zum Autor
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border:0" width="60"><img alt="Rafai Eddy, AfterNow" width="60" height="60" src="images/kurohyo1-60px.png"></td>
-<td style="border:0"><b>Rafai Eddy</b><br>AfterNow</td>
+<td style="border:0"><b>Rafai-Eddy</b><br>Afternow</td>
 </tr>
 </table>
 

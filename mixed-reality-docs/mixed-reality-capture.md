@@ -1,11 +1,11 @@
 ---
 title: Mixed-Reality-Aufnahme
-description: Informationen zur Verwendung von mixed Reality erfassen.
+description: Informationen zur Verwendung der Mixed Reality-Erfassung.
 author: wguyman
 ms.author: wguyman
 ms.date: 10/02/2018
 ms.topic: article
-keywords: MRC, mixed Reality Capture, Fotos, Video, Kamera, Erfassung, Nutzung, Stream, Livestream, demo
+keywords: MRC, Mixed Reality Capture, Fotos, Video, Kamera, Erfassung, Verwendung, Stream, Livestream, Demo
 ms.openlocfilehash: 7af60682f78f624e6b41ded88c8a77e70d40194c
 ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
@@ -15,75 +15,75 @@ ms.locfileid: "67694485"
 ---
 # <a name="mixed-reality-capture"></a>Mixed-Reality-Aufnahme
 
-HoloLens gibt Benutzern die Möglichkeit der Mischung der realen Welt mit der digitalen Welt. Mixed Reality-Erfassung (MRC) können Sie diese Erfahrung als ein Foto oder ein Video zu erfassen. Dadurch können Sie die Benutzeroberfläche für andere Benutzer freigeben, indem Sie zulassen, um die Hologramme anzuzeigen, wie sie sehen. Diese Videos und Fotos sind aus Sicht der Zeitraffervideos. Verwenden Sie für eine Sicht von Zeitraffervideos [Spectator Ansicht](spectator-view.md).
+Hololens ermöglicht Benutzern das Mischen der realen Welt mit der digitalen Welt. Mit Mixed Reality Capture (MRC) können Sie diese Darstellung entweder als Foto oder Video erfassen. Auf diese Weise können Sie die Benutzeroberflächen für andere Benutzer freigeben, indem Sie Ihnen ermöglichen, die Hologramme anzuzeigen, wenn Sie Sie sehen. Videos und Fotos stammen aus der Sicht der ersten Personen. Verwenden Sie die [Ansicht "Betrachter](spectator-view.md)" für eine dritte Sicht.
 
-Freigeben von Videos für eine sozialen Umfeld ist Anwendungsfälle für die Erfassung von mixed Reality hinausgehen. Videos können verwendet werden, um andere anzuweisen, wie eine app verwenden. Entwickler können Videos oder Standbilder verwenden, verbessern die Schritte zur Reproduktion und Debuggen der app-Umgebungen.
+Anwendungsfälle für die gemischte Reality-Erfassung gehen über die gemeinsame Nutzung von Videos zwischen einem sozialen Kreis hinaus. Videos können verwendet werden, um andere Personen anzuweisen, wie eine APP verwendet werden soll. Entwickler können Videos oder Stills zum Verbessern von Reproduktions Schritten und zum Debuggen von App-Erfahrungen verwenden.
 
-## <a name="live-streaming-from-hololens"></a>Live-streaming von HoloLens
+## <a name="live-streaming-from-hololens"></a>Live Streaming von hololens
 
-Die [Windows 10 Oktober 2018 Update](release-notes-october-2018.md) HoloLens Miracast-Unterstützung hinzugefügt. Wählen Sie die **Connect** am unteren Rand des Startmenüs, um eine Auswahl für die Miracast-fähigen Geräten und -Adapter zu öffnen. Wählen Sie das Gerät, das Sie streaming beginnen möchten. Wählen Sie abschließend die **trennen** am unteren Rand des Startmenüs.  **Herstellen einer mit** und **trennen** sind auch auf das Menü für schnelle Aktionen verfügbar.
+Das [Windows 10-Update vom Oktober 2018](release-notes-october-2018.md) bietet miracast-Unterstützung zu hololens. Klicken Sie unten im Startmenü auf die Schaltfläche **verbinden** , um eine Auswahl für miracast-fähige Geräte und Adapter anzuzeigen. Wählen Sie das Gerät aus, mit dem das Streaming beginnen soll. Wenn Sie den Vorgang abgeschlossen haben, klicken Sie unten im Startmenü auf die Schaltfläche " **trennen** ".  **Connect** und **Disconnect** sind auch im Menü schnell Aktionen verfügbar.
 
-Die [Windows Device Portal](using-the-windows-device-portal.md) und [Begleit-app für Microsoft HoloLens](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) verfügbar machen, die Optionen für Geräte, die im Entwicklermodus Livestreaming.
+Das [Windows-Geräte Portal](using-the-windows-device-portal.md) und die [Microsoft hololens-Begleit-App](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) machen Live Streaming-Optionen für Geräte verfügbar, die sich im Entwicklermodus befinden.
 
-[Dynamics 365 Remote unterstützen](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) live streaming von HoloLens an Mitarbeiter an Remotestandorten unterstützt.
+[Dynamics 365-Remote Unterstützung](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) unterstützt Live Streaming von hololens an Mitarbeiter an Remote Standorten.
 
-## <a name="taking-mixed-reality-captures"></a>Nehmen mixed Reality erfasst
+## <a name="taking-mixed-reality-captures"></a>Erfassung gemischter Realität
 
-![Klicken Sie auf das Symbol "Kamera" am unteren Rand des Startmenüs](images/cameraiconinpins-300px.png)<br>
-*Klicken Sie auf das Symbol "Kamera" am unteren Rand des Startmenüs*
+![Klicken Sie unten im Startmenü auf das Kamerasymbol.](images/cameraiconinpins-300px.png)<br>
+*Klicken Sie unten im Startmenü auf das Kamerasymbol.*
 
-Es gibt mehrere Möglichkeiten, eine mixed Reality-Aufzeichnung starten:
-* Cortana kann auf alle Zeiten unabhängig von der ausgeführten app verwendet werden. Nur sagen, "Hey Cortana, ein Foto zu machen" oder "Hey Cortana, Aufzeichnung zu starten." Um ein Video zu beenden, z. B. "Hey Cortana, beenden Sie die Aufzeichnung."
-* Wählen Sie im Startmenü entweder **Kamera** oder **Video**. Verwendung [tippbewegung](gestures.md#air-tap) um die integrierte MRC-Kamera-Benutzeroberfläche zu öffnen.
-* Wählen Sie auf das Menü für schnelle Aktionen, entweder **Kamera** oder **Video** um die integrierte MRC-Kamera-Benutzeroberfläche zu öffnen.
-* Apps sind in der Lage, eigene Benutzeroberfläche für mixed Reality-Erfassung mit benutzerdefinierten oder, wie der verfügbar zu machen die [Windows 10 Oktober 2018 Update](release-notes-october-2018.md), [integrierte MRC-Kamera-Benutzeroberfläche](mixed-reality-capture-for-developers.md).
-* Nur für HoloLens: 
-    * [Windows Device Portal](using-the-windows-device-portal.md) verfügt über eine mixed Reality-Capture-Seite, die kann verwendet werden, werden die Fotos, Videos, live-Stream, und zeigen Sie erfasst.
-    * Drücken Sie sowohl die **lauter** und **zum Verringern der Lautstärke** Schaltflächen gleichzeitig aus, um ein Foto, unabhängig von der ausgeführten app zu machen.
-    * Halten Sie die **lauter** und **zum Verringern der Lautstärke** Schaltflächen für die drei Sekunden zum Starten der Aufzeichnung eines Videos. Um ein Video zu beenden, tippen Sie auf beiden **lauter** und **zum Verringern der Lautstärke** gleichzeitig Schaltflächen.
-* Nur für immersive Headsets: 
-    * Mit einem Controller während der Übertragung enthalten die **Windows** Schaltfläche, und tippen Sie dann auf die **Trigger** auf ein Foto zu machen. 
-    * Mit einem Controller während der Übertragung enthalten die **Windows** Schaltfläche, und tippen Sie dann auf die **Menü** Schaltfläche zum Starten der Aufnahme von Videos. Halten Sie die **Windows** Schaltfläche, und tippen Sie dann auf die **Trigger** zum Beenden der Aufzeichnung video.
+Es gibt mehrere Möglichkeiten, eine gemischte Reality-Erfassung zu initiieren:
+* Cortana kann jederzeit unabhängig von der aktuell verwendeten App verwendet werden. Sagen Sie einfach: "Hallo Cortana, nehmen Sie ein Bild" oder "Hey Cortana, Aufzeichnung starten". Zum Anhalten eines Videos sagen Sie "Hallo Cortana, Aufzeichnung anhalten".
+* Wählen Sie im Startmenü die Option **Kamera** oder **Video**aus. Verwenden Sie [Air-Tap](gestures.md#air-tap) , um die integrierte MRC-Kamera-Benutzeroberfläche zu öffnen.
+* Wählen Sie im Menü schnell Aktionen entweder **Kamera** oder **Video** aus, um die integrierte MRC-Kamera-Benutzeroberfläche zu öffnen.
+* Apps können Ihre eigene Benutzeroberfläche für die Transformation für gemischte Realität mit benutzerdefiniertem oder, ab dem [Windows 10-Update vom Oktober 2018](release-notes-october-2018.md), der [integrierten MRC-Kamera-Benutzeroberfläche](mixed-reality-capture-for-developers.md), verfügbar machen.
+* Eindeutig für hololens: 
+    * Das [Windows-Geräte Portal](using-the-windows-device-portal.md) verfügt über eine Mixed Reality-Erfassungs Seite, die verwendet werden kann, um Fotos, Videos, Livestreams und Erfassungen anzuzeigen.
+    * Drücken Sie die Schaltflächen " **Lautstärke** " und " **Lautstärke** " gleichzeitig, um einen Bildlauf durchführen zu können, unabhängig von der aktuell
+    * Halten Sie die Schaltflächen " **Lautstärke** " und " **Lautstärke** " drei Sekunden lang gedrückt, um ein Video aufzuzeichnen. Um ein Video anzuhalten, tippen Sie auf die Schaltflächen " **Volume Up** " und " **Volume** " gleichzeitig.
+* Einzigartig für immersive Headsets: 
+    * Halten Sie mithilfe eines Bewegungs Controllers die **Windows** -Schaltfläche gedrückt, und tippen Sie **dann auf den** -Vorgang, um ein Bild auszuwählen. 
+    * Halten Sie mithilfe eines Bewegungs Controllers die **Windows** -Taste gedrückt, und tippen Sie dann auf die **Menü** Schaltfläche, um das Video aufzuzeichnen. Halten **Sie die** **Windows** -Schaltfläche gedrückt
     
 >[!NOTE]
->Die [Windows 10 Oktober 2018 Update](release-notes-october-2018.md) ändert Verhalten Bloom und Windows-Schaltfläche. Vor dem Update würde der Bloom Geste oder der Windows-Schaltfläche Beenden Sie die Aufzeichnung. Nach dem Update öffnet die Bloom-Geste oder die Schaltfläche "Windows" im Startmenü (oder das Menü für schnelle Aktionen, wenn Sie sich auf eine app). Wählen Sie im Menü **beenden Video** Beenden der Aufzeichnung.
+>Das [Windows 10-Update vom Oktober 2018](release-notes-october-2018.md) ändert die Art und Weise, wie sich die Schaltfläche " Vor dem Update wird die Aufzeichnung durch die Schaltfläche "aufblühen" oder "Windows" beendet. Nach dem Update wird mit der Schaltfläche zum Durchsuchen oder der Windows-Taste das Startmenü (oder das Menü schnell Aktionen, wenn Sie sich in einer APP befinden) geöffnet. Wählen Sie im Menü **Video anhalten** aus, um die Aufzeichnung zu unterbinden.
 
-### <a name="limitations-of-mixed-reality-capture"></a>Einschränkungen von mixed Reality-Erfassung
+### <a name="limitations-of-mixed-reality-capture"></a>Einschränkungen der Erfassung gemischter Realität
 
-Für HoloLens wird das System die Render-Rate bis 30 Hz drosseln. Dies erstellt einige Spielraum für MRC ausgeführt werden, damit die Anwendung nicht zu einer Konstanten Budget Reserve muss und entspricht auch die MRC Videoaufnahme Framerate (bis zu) 30 fps.
+Bei hololens drosselt das System die Rendering-Rate auf 30Hz. Dadurch wird ein gewisser Spielraum für die MRC-Durchführung geschaffen, sodass die APP keine Konstante Budget Reserve behalten muss und die MRC-Videodaten Satz Framerate von (bis zu) 30fps entspricht.
 
 Videos haben eine maximale Länge von fünf Minuten.
 
-Die integrierten MRC-Kamera-Benutzeroberfläche unterstützt nur einen einzelnen MRC-Vorgang zu einem Zeitpunkt (aufnehmen eines Bilds sich gegenseitig ausschließende aus Aufzeichnen eines Videos ist).
+Die integrierte MRC-Kamera-Benutzeroberfläche unterstützt nur einen einzelnen MRC-Vorgang gleichzeitig (das Aufzeichnen eines Videos schließt sich gegenseitig aus).
 
 ### <a name="file-formats"></a>Dateiformate
 
-Mixed Reality aus Cortana Sprachbefehle erfasst und Menü "Start"-Tools Erstellen von Dateien in den folgenden Formaten:
+Erfassungen gemischter Realität von Cortana Voice-Befehlen und Start Menü Tools erstellen von Dateien in den folgenden Formaten:
 
 |  Typ  |  Format  |  Erweiterung  |  Auflösung  |  Audio | 
 |----------|----------|----------|----------|----------|
-|  Photo  |  [JPEG](https://en.wikipedia.org/wiki/JPEG)  |  .jpg  |  3904x2196px (HoloLens 2)<br> 1408x792px (HoloLens)<br> 1920 × 1080 Pixel (Immersive Headsets) |  Nicht zutreffend | 
-|  Video  |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)  |  .mp4  |  1920 × 1080 Pixel auf 30 BpS (HoloLens 2)<br> 1216x684px mit 24fps (HoloLens)<br> 1632x918px auf 30 BpS (Immersive Headsets) |  48kHz Stereo | 
+|  Photo  |  [SPEICHERN](https://en.wikipedia.org/wiki/JPEG)  |  .jpg  |  3904x2196px (hololens 2)<br> 1408x792px (hololens)<br> 1920 × 1080px (immersive Headsets) |  Nicht zutreffend | 
+|  Video  |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)  |  .mp4  |  1920 x 1080px bei 30 fps (hololens 2)<br> 1216x684px bei 24fps (hololens)<br> 1632x918px bei 30 fps (immersive Headsets) |  48kHz Stereo | 
 
 >[!NOTE]
->Die Auflösung des Fotos und Videos kann kleiner sein, wenn die Foto/Videokamera bereits von einer anderen Anwendung, bei der live-streaming wird oder nicht genügend Systemressourcen verfügbar sind.
+>Die Auflösung von Fotos und Videos kann kleiner sein, wenn die Foto-/Videokamera bereits von einer anderen Anwendung verwendet wird, während Live Streaming oder wenn die Systemressourcen niedrig sind.
 
-### <a name="video-stabilization"></a>Videostabilisierungs
+### <a name="video-stabilization"></a>Video Stabilisierung
 
 Standardmäßig:
-* Videostabilisierungs Latenzzeit wird beim Livestreaming über Miracast angewendet.
-* Videostabilisierungs langer Latenzzeit wird auf aufgezeichneten Videos mithilfe der integrierten MRC-Kamera-Benutzeroberfläche, Cortana Sprachbefehle und Windows Device Portal angewendet.
+* Die Videostabilisierung mit der Latenzzeit wird beim Live Streaming über miracast angewendet.
+* Die Videostabilisierung mit langer Wartezeit wird auf Videos angewendet, die mit der integrierten MRC-Kamera-Benutzeroberfläche, den Cortana-Sprachbefehlen und dem Windows-Geräte Portal aufgezeichnet wurden.
 
-## <a name="viewing-mixed-reality-captures"></a>Anzeigen von mixed Reality erfasst
+## <a name="viewing-mixed-reality-captures"></a>Anzeigen von Mixed Reality-Erfassungen
 
-Mixed Reality Capture Fotos und Videos werden des Geräts "Eigene Aufnahmen" Ordner gespeichert. Diese können auf das über die [Fotos-app](see-your-photos.md#photos-app) oder Datei-Explorer.
+Fotos und Videos mit gemischter Realität werden im Ordner "Kamera Roll" des Geräts gespeichert. Auf diese kann über die [Fotos-App](see-your-photos.md#photos-app) oder den Datei-Explorer zugegriffen werden.
 
-Auf einem PC mit HoloLens verbunden sind, können Sie auch [Windows Device Portal](using-the-windows-device-portal.md#mixed-reality-capture) oder Datei-Explorer Ihres Computers ([über MTP](release-notes-april-2018.md#new-features-for-hololens)).
+Auf einem PC, der mit hololens verbunden ist, können Sie auch das [Windows-Geräte Portal](using-the-windows-device-portal.md#mixed-reality-capture) oder den Datei-Explorer Ihres PCs ([über MTP](release-notes-april-2018.md#new-features-for-hololens)) verwenden.
 
-Bei der Installation der [OneDrive-app](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3), können Sie aktivieren **Kamera Upload** und Ihre MRC Fotos und Videos in OneDrive und Ihren anderen Geräten, die mithilfe von OneDrive synchronisiert werden.
+Wenn Sie die [onedrive-App](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3)installieren, können Sie den **Kamera Upload aktivieren,** und ihre MRC-Fotos und-Videos werden mithilfe von onedrive mit onedrive und ihren anderen Geräten synchronisiert.
 
 >[!NOTE]
->Ab Windows 10 April 2018 Update Fotos Hochladen der app wird nicht mehr Ihre Fotos und Videos in OneDrive.
+>Ab dem Windows 10-Update vom April 2018 werden Ihre Fotos und Videos von der Fotos-APP nicht mehr auf onedrive hochgeladen.
 
 ## <a name="see-also"></a>Siehe auch
 * [Spectator View](spectator-view.md)

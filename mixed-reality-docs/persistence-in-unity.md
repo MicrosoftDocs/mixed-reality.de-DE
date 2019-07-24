@@ -1,48 +1,48 @@
 ---
-title: Dauerhaftigkeit in Unity
-description: Persistenz ermöglicht Ihren Benutzern individuelle Hologramme oder in einem Arbeitsbereich anheften, wo sie möchten, und klicken Sie dann finden Sie, dass es später noch Mal, in dem sie über viele erwarten Ihrer App verwendet.
+title: Persistenz in Unity
+description: Mithilfe der Persistenz können Ihre Benutzer individuelle Hologramme oder einen Arbeitsbereich an jedem Ort anheften und später wiederfinden, wo Sie von vielen Verwendungsmöglichkeiten Ihrer APP ausgehen.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: HoloLens, Dauerhaftigkeit, Unity
+keywords: Hololens, Persistenz, Unity
 ms.openlocfilehash: b6a67e52b3a5ce724a90eb1a479c5eda74b0c4cb
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605075"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524785"
 ---
-# <a name="persistence-in-unity"></a>Dauerhaftigkeit in Unity
+# <a name="persistence-in-unity"></a>Persistenz in Unity
 
-**Namespace:** *UnityEngine.XR.WSA.Persistence*<br>
-**Klasse:** *WorldAnchorStore*
+**Namespace:** *Unityengine. XR. WSA. Persistenz*<br>
+**Klassi** *Worldanchorstore*
 
-Die WorldAnchorStore ist der Schlüssel zum Erstellen von holographic Erfahrungen Hologramme, in denen bestimmte realen Positionen behalten Sie für Instanzen der Anwendung. Mit diesem können Ihre Benutzer einzelne Hologramme oder in einem Arbeitsbereich anheften, wo sie möchten, und suchen Sie es später noch Mal, erwarten sie, dass über viele Verwendungen von Ihrer app.
+Worldanchorstore ist der Schlüssel für die Erstellung von Holographic-Erfahrungen, bei denen Hologramme in den einzelnen Anwendungs Instanzen in bestimmten realen Positionen bleiben. Dadurch können Ihre Benutzer individuelle Hologramme oder einen Arbeitsbereich an einem beliebigen Ort anheften und später wiederfinden, wo Sie von vielen Verwendungsmöglichkeiten Ihrer APP ausgehen.
 
-## <a name="how-to-persist-holograms-across-sessions"></a>Gewusst wie: Hologramme sitzungsübergreifend beibehalten.
+## <a name="how-to-persist-holograms-across-sessions"></a>Beibehalten von holograms über Sitzungen hinweg
 
-Die WorldAnchorStore können Sie den Speicherort des WorldAnchor über Sitzungen hinweg beibehalten werden. Damit tatsächlich Hologramme sitzungsübergreifend beibehalten können, müssen Sie separat Ihre "gameobjects" mitverfolgen, die einen bestimmtes Welt Anker verwenden. Es ist oft sinnvoll, erstellen Sie ein "gameobject"-Stamm mit einem Welt Anker und die untergeordneten Elemente aufweisen Hologramme verankert ist es mit einer lokalen Offsetposition.
+Mit worldanchorstore können Sie den Speicherort von worldanchor Sitzungs übergreifend beibehalten. Sie müssen ihre gameobjects, die einen bestimmten Welt Anker verwenden, separat nachverfolgen, um Hologramme in mehreren Sitzungen dauerhaft beizubehalten. Häufig ist es sinnvoll, einen gameobject-Stamm mit einem Welt Anker zu erstellen und untergeordnete Hologramme mit einem lokalen Positions Offset zu verankern.
 
-So laden Sie Hologramme aus früheren Sitzungen:
-1. Abrufen der WorldAnchorStore
-2. Laden Sie die app-Daten, die im Zusammenhang mit der Welt Anker dadurch die Welt Anker-id
-3. Laden Sie einen Anker der Welt aus der id
+So laden Sie holograms aus vorherigen Sitzungen:
+1. Verschaffen Sie sich den worldanchorstore
+2. Laden von App-Daten in Bezug auf den World-Anker, der die ID des Welt Ankers liefert
+3. Einen Welt Anker aus seiner ID laden
 
-Um Hologramme für zukünftige Sitzungen zu speichern:
-1. Abrufen der WorldAnchorStore
-2. Speichern Sie einen World Anker-Id angeben
-3. Speichern von app-Daten, die im Zusammenhang mit der ganzen Welt Anker zusammen mit einer id
+So speichern Sie Hologramme für zukünftige Sitzungen:
+1. Verschaffen Sie sich den worldanchorstore
+2. Speichern eines Welt Ankers, der eine ID angibt
+3. Speichern von App-Daten, die sich auf den Welt Anker beziehen, sowie eine ID
 
-### <a name="getting-the-worldanchorstore"></a>Abrufen der WorldAnchorStore
+### <a name="getting-the-worldanchorstore"></a>Der worldanchorstore wird erhalten.
 
-Wir möchten einen Verweis auf die WorldAnchorStore, um zu speichern, damit wir wissen, dass wir können soll, wenn wir einen Vorgang ausführen möchten. Da dies einem asynchronen Aufruf möglicherweise so bald wie Start, ist, das wir aufrufen möchten
+Wir möchten einen Verweis auf den worldanchorstore behalten, damit wir wissen, dass wir bereit sind, wenn wir einen Vorgang durchführen möchten. Da es sich hierbei um einen asynchronen-Befehl handelt, der möglicherweise unmittelbar nach dem Start von aufgerufen wird, möchten wir
 
 ```
 WorldAnchorStore.GetAsync(StoreLoaded);
 ```
 
-In diesem Fall ist die StoreLoaded unseren Handler für die bei der WorldAnchorStore Ladevorgang abgeschlossen ist:
+Storeloaded ist in diesem Fall der Handler für den Fall, dass der worldanchorstore das Laden abgeschlossen hat:
 
 ```
 private void StoreLoaded(WorldAnchorStore store)
@@ -51,11 +51,11 @@ private void StoreLoaded(WorldAnchorStore store)
 }
 ```
 
-Wir haben jetzt einen Verweis auf die WorldAnchorStore der zum Speichern und Laden von bestimmten Welt Anker verwendet wird.
+Wir haben nun einen Verweis auf den worldanchorstore, den wir verwenden werden, um bestimmte Welt Anker zu speichern und zu laden.
 
-### <a name="saving-a-worldanchor"></a>Speichern einer WorldAnchor
+### <a name="saving-a-worldanchor"></a>Speichern von worldanchor
 
-Um zu speichern, müssen wir einfach nennen, was wir speichern, und geben Sie ihn der WorldAnchor wir vor dem haben, wenn wir speichern möchten. Hinweis: zwei Anker auf die gleiche Zeichenfolge speichern möchten (Speicher. fehl Speichervorgang wird "false" zurückgegeben). Sie müssen die vorherige speichern vor dem Speichern der neuen löschen:
+Zum Speichern müssen wir einfach den Namen der Speicherung benennen und Sie an den worldanchor übergeben, den wir vor dem Speichern erhalten haben. Hinweis: Wenn Sie versuchen, zwei Anker in derselben Zeichenfolge zu speichern, tritt ein Fehler auf (speichern. Save gibt false zurück). Sie müssen das vorherige Speichern löschen, bevor Sie das neue speichern:
 
 ```
 private void SaveGame()
@@ -69,7 +69,7 @@ private void SaveGame()
 }
 ```
 
-### <a name="loading-a-worldanchor"></a>Laden eine WorldAnchor
+### <a name="loading-a-worldanchor"></a>Laden von worldanchor
 
 Und zum Laden:
 
@@ -85,11 +85,11 @@ private void LoadGame()
 }
 ```
 
-Wir können außerdem Store verwenden. Speicher und Delete() einen Anker zu entfernen, die zuvor gespeichert haben. Clear() So entfernen Sie alle zuvor gespeicherte Daten.
+Wir können außerdem "Store" verwenden. Delete () um einen Anker zu entfernen, den wir zuvor gespeichert und gespeichert haben. Löschen Sie (), um alle zuvor gespeicherten Daten zu entfernen.
 
 ### <a name="enumerating-existing-anchors"></a>Auflisten vorhandener Anker
 
-Rufen Sie zum Ermitteln von zuvor gespeicherten Anker GetAllIds.
+Um zuvor gespeicherte Anker zu ermitteln, müssen Sie getallids aufrufen.
 
 ```
 string[] ids = this.store.GetAllIds();
@@ -99,15 +99,15 @@ for (int index = 0; index < ids.Length; index++)
 }
 ```
 
-## <a name="persisting-holograms-for-multiple-devices"></a>Beibehalten von Hologramme für mehrere Geräte
+## <a name="persisting-holograms-for-multiple-devices"></a>Beibehalten von holograms für mehrere Geräte
 
-Können Sie <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure räumliche Anker</a> einen dauerhafte Anker aus einer lokalen WorldAnchor, zu erstellen, die Ihrer app klicken Sie dann über mehrere HoloLens, iOS und Android-Geräte suchen kann, selbst wenn diese Geräte nicht zur gleichen zusammen vorhanden sind Zeit.  Da cloudanker dauerhaft sind, können mehrere Geräte im Laufe der Zeit jeweils Inhalt gerendert wird, relativ zu diesem-Anker wird in demselben physischen Standort angezeigt.
+Sie können mithilfe von <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial</a> Anchor einen permanenten cloudenanchor von einem lokalen worldanchor erstellen, der von Ihrer APP über mehrere hololens-, IOS-und Android-Geräte hinweg gefunden werden kann, selbst wenn diese Geräte nicht gleichzeitig zusammen vorhanden sind.  Da cloudananker permanent sind, können mehrere Geräte im Lauf der Zeit jeweils Inhalte sehen, die relativ zu diesem Anker am gleichen physischen Standort gerendert werden.
 
-Informationen zum Einstieg gemeinsame Erfahrungen in Unity erstellen, Testen der 5-Minuten- <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Azure räumliche Anker Unity-Schnellstarts</a>.
+Um mit der Einführung von freigegebenen Erfahrungen in Unity zu beginnen, testen Sie die fünfminütigen <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Azure Spatial Anchor Unity-Schnellstarts</a>.
 
-Sobald Sie mit Azure räumliche Anker die betriebsbereit sind, können Sie dann <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">erstellen, und suchen Sie in Unity Anker</a>.
+Sobald Sie mit räumlichen Azure-Ankern arbeiten, können Sie <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">Anker in Unity erstellen und lokalisieren</a>.
 
 ## <a name="see-also"></a>Siehe auch
-* [Räumliche Anchor-Persistenz](coordinate-systems.md#spatial-anchor-persistence)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>
-* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Azure räumliche Anker SDK für Unity</a>
+* [Dauerhaftigkeit räumlicher Anker](coordinate-systems.md#spatial-anchor-persistence)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Azure Spatial Anchor SDK für Unity</a>

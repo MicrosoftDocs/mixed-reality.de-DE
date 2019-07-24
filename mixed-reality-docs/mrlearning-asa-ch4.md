@@ -1,5 +1,5 @@
 ---
-title: MR Learning ASA-Modul Azure räumliche Anker für HoloLens 2
+title: Mr Learning ASA-Modul Azure Spatial Anchor on hololens 2
 description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
@@ -13,28 +13,28 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/22/2019
 ms.locfileid: "67327841"
 ---
-# <a name="photon-correct-me-if-im-wrong"></a>Photon (korrigieren mich, wenn ich falsch bin)
+# <a name="photon-correct-me-if-im-wrong"></a>Photon (korrigieren, wenn ich falsch bin)
 
 In dieser Lektion 
 
-Ziele:
+Ziele
 
-* Erfahren Sie, wie Sie in den ___
+* Weitere Informationen finden Sie unter _____________________________________________
 
-* Erfahren Sie, wie Sie in den ___
+* Weitere Informationen finden Sie unter _________________________________________________
 
   
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="setting-up-photon"></a>Einrichten von Photon
+### <a name="setting-up-photon"></a>Einrichten von PHOTON
 
-1. Richten Sie eine [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) Konto. Auf diese Weise wird der imputing Ihre e-Mail-Adresse ein, und durchlaufen einige Überprüfungsschritte bestehen.
+1. Richten Sie ein [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) -Konto ein. Dies führt dazu, dass Ihre e-Mail beeinträchtigt wird und einige Überprüfungs Schritte durchgeführt werden.
    
 
 ![Module2Chapter4step1im](images/Module2chapter4step1im.png)
 
-2. Sobald Sie angemeldet sind, klicken Sie auf der SDKs. Sobald Sie auf dieser Seite sind, klicken Sie auf "Server", und stellen Sie sicher Name schon sagt, "selbst gehostet." Scrollen Sie nach unten, und klicken Sie auf "Server", wie in der zweiten Abbildung unten dargestellt.
+2. Nachdem Sie sich angemeldet haben, klicken Sie auf sdert. Wenn Sie sich auf dieser Seite befinden, klicken Sie auf "Server", und stellen Sie sicher, dass Sie "selbstgeh ostet" lautet. Scrollen Sie dann nach unten, und klicken Sie auf "Server", wie in der zweiten Abbildung unten gezeigt.
 
    
 
@@ -42,137 +42,137 @@ Ziele:
 
    ![Module2Chapter2step2bim](images/Module2chapter4step2bim.png)
    
-   3. Ein Textfeld mit der Bezeichnung, angezeigt werden. dadurch "read me." Fahren Sie fort, und Lesen Sie sie. Sobald Sie fertig sind, klicken Sie auf den Link neben "DownloadSDK", um sie herunterzuladen.
+   3. Dadurch wird ein Textfeld mit der Bezeichnung "Read Me" angezeigt. Lesen Sie den Vorgang. Wenn Sie fertig sind, klicken Sie auf den Link neben "Download SDK", um ihn herunterzuladen.
 
 
 ![Module2Chapter4step3im](images/Module2chapter4step3im.png)
 
-4. Doppelklicken Sie den Ordner aus, nachdem der Download abgeschlossen ist.  Wenn Ihre Datei-Explorer geöffnet wird, den SDK-Ordner offenzulegen, kopieren Sie den SDK-Ordner.
+4. Wenn der Download abgeschlossen ist, doppelklicken Sie auf den Ordner.  Wenn der Datei-Explorer geöffnet wird und der SDK-Ordner angezeigt wird, kopieren Sie den SDK-Ordner.
    
-   - Der nächste Schritt wäre in der Windows-Laufwerk "c:" wechseln, und erstellen einen neuen Ordner namens "Server".
+   - Der nächste Schritt besteht darin, auf das Laufwerk "Windows C:" zu wechseln und einen neuen Ordner namens "Server" zu erstellen.
    
    ![Module2Chapter4step4im](images/Module2chapter4step4aim.png)
    
-   - Jetzt öffnen Sie den Ordner, und fügen Sie den SDK-Ordner, die, den Sie zuvor kopiert haben.
+   - Öffnen Sie jetzt den Ordner, und fügen Sie den zuvor kopierten SDK-Ordner ein.
    
    ![Module2Chapter4step4im](images/Module2chapter4step4bim.png)
    
-5. Sobald dies abgeschlossen ist, öffnen Sie den SDK-Ordner, und wechseln Sie zu ", klicken Sie dann"bin_Win64,"Bereitstellen" doppelklicken und klicken Sie dann auf "Photon-Steuerelement".
+5. Öffnen Sie nach Abschluss des Vorgangs den SDK-Ordner, und navigieren Sie zu "Bereitstellen", dann "bin_Win64". Doppelklicken Sie dann auf "Photon-Steuerelement".
 
 
 ![Module2Chapter4step4im](images/Module2chapter4step5im.png)
 
-> Hinweis: Wenn Sie Fragen zur IP-Adresse oder andere ähnlichen Fragen haben, finden die meisten Informationen auf der Symbolleiste Sie (wie in der folgenden Abbildung gezeigt).
+> Hinweis: Wenn Sie Fragen zur IP-Adresse oder zu anderen ähnlichen Fragen haben, finden Sie die meisten Ihrer Informationen auf der Symbolleiste (wie in der Abbildung unten dargestellt).
 >
 > ![Module2Chapter4step4im](images/Module2chapter4noteim.png)
 
-6. Jetzt an, dass der Server eingerichtet und initiiert wird, wechseln Sie zurück zur Website Photon und klicken Sie auf das Symbol "Profil" (geschachtelt in der Abbildung unten) und wählen Sie "Ihrer Anwendungen."
+6. Nachdem der Server eingerichtet und initiiert wurde, wechseln Sie zurück zur Website von PHOTON, und klicken Sie auf das Profil Symbol (in der Abbildung unten dargestellt), und wählen Sie "Ihre Anwendungen".
    
 
 ![Module2Chapter3step5im](images/Module2chapter4step6im.png)
 
-7. Erstellen Sie eine Anwendungs-ID, indem Sie auf die Schaltfläche "erstellen eine neue app".
+7. Erstellen Sie eine Anwendungs-ID, indem Sie auf die Schaltfläche "neue APP erstellen" klicken.
 
    ![Module2Chapter3step8im](images/Module2chapter4step7aim.png)
 
-   - Wählen Sie "Photon ausführen" aus dem Dropdown-Menü unter "Photon geben." Klicken Sie dann benennen Sie es, (etwas, das Sie daran denken, würde). In diesem Beispiel mit dem Namen wir es "HoloLensPhotonProject." Sobald Sie fertig sind, klicken Sie auf "erstellen".
+   - Wählen Sie im Dropdown Menü unter "Photon Type" die Option "Photon Run" aus. Nennen Sie es dann (etwas, das Sie merken würden). In diesem Beispiel nennen wir es "hololersphutonproject". Wenn Sie fertig sind, klicken Sie auf "erstellen".
 
    ![Module2Chapter3step8im](images/Module2chapter4step7bim.png)
 
-8. Sobald das geschehen ist, kehren Sie zu Ihrer Seite "Anwendungen" zurück und sollte in etwa der folgenden Abbildung. Klicken Sie auf die app-ID, und kopieren Sie ihn. Fügen Sie ist etwas, das Sie auf einfache Weise zugreifen können.  
+8. Sobald dies erfolgt ist, kehren Sie zur Seite "Anwendungen" zurück, und es sollte etwas ähnlich der folgenden Abbildung angezeigt werden. Klicken Sie auf die APP-ID, und kopieren Sie Sie. Einfügen ist ein Ort, auf den Sie problemlos zugreifen können.  
    
 
 ![Module2Chapter4step9im](images/Module2chapter4step8im.png)
 
-9. Erstellen Sie ein neues Unity-Projekt. Öffnen Sie Unity-Hub, und klicken Sie auf "Neu". Nennen Sie es mit "HLSharingProject." Klicken Sie dann auf erstellen zu können. 
+9. Erstellen Sie ein neues Unity-Projekt. Öffnen Sie den Unity-Hub, und klicken Sie auf "neu". Nennen Sie es "hlsharingproject". Klicken Sie anschließend auf erstellen. 
 
-   > Hinweis: Dies kann zu laden, bis zu 2 Minuten dauern, basierend auf der Geschwindigkeit des Computers.
+   > Nebenbei Der Ladevorgang kann bis zu 2 Minuten dauern, je nach der Geschwindigkeit Ihres Computers.
 
 ![Module2Chapter4step9im](images/Module2chapter4step9im.png)
 
-> Hinweis: Wählen Sie einen Speicherort für Ihr Projekt auf Ihrem Computer zu speichern, indem Sie die Option "Location" ändern. Speichern Sie es an einem Ort, den Sie werden merken und einfachen Zugriff auf.
+> Hinweis: Wählen Sie einen Ort aus, an dem das Projekt auf Ihrem Computer gespeichert werden soll, indem Sie die Option "Standort" ändern. Speichern Sie Sie an einem Speicherort, den Sie merken werden und für den Sie einfachen Zugriff haben.
 
-10. Nachdem das Projekt geladen wurde, klicken Sie auf der "Assets"Speicher. Klicken Sie dann in das Suchfeld in der folgenden Abbildung gezeigt, geben Sie in "WORTSPIEL", und wählen Sie das Medienobjekt "Photon WORTSPIEL-2-frei". 
+10. Nachdem das Projekt geladen wurde, klicken Sie auf den "Assets Store". Geben Sie dann im Suchfeld, das in der folgenden Abbildung gezeigt wird, "pun" ein, und wählen Sie das Asset "Photon pun-2 Free" aus. 
 
     ![Module2Chapter4step10im](images/Module2chapter4step10im.PNG)
     
-    11. Herunterladen und importieren.
+    11. Herunterladen und importieren!
     
     ![Module2Chapter4step11im](images/Module2chapter4step11im.png)
 
 ### <a name="setting-up-the-unity-project"></a>**Einrichten des Unity-Projekts** 
 
-11. Laden Sie ein neues Medienobjekt erforderlich, um Photon in Unity einrichten, indem Sie auf [hier.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Examples-v2.0.0-RC1-Refresh.unitypackage)
+11. Laden Sie ein neues Asset herunter, das zum Einrichten von Photon in Unity erforderlich ist, indem Sie [hier klicken.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Examples-v2.0.0-RC1-Refresh.unitypackage)
 
-12. Klicken Sie in Unity auf das Menü "Assets" "Importieren Assets" Wählen Sie aus, und klicken Sie auf "benutzerdefinierte Ressourcen."
+12. Klicken Sie in Unity auf das Menü Assets, und wählen Sie "Objekte importieren" aus, und klicken Sie dann auf "benutzerdefinierte Objekte".
 
 ![Module2Chapter4step12im](images/Module2chapter4step12im.PNG)
 
-13. Wählen Sie das Unity-Paket, die, das Sie gerade heruntergeladen, über den Link in Schritt 1 bereitgestellt haben. Wenn die Schaltfläche "Importieren" in Unity angezeigt wird, klicken Sie darauf.
+13. Wählen Sie das Unity-Paket aus, das Sie soeben aus dem in Schritt 1 angegebenen Link heruntergeladen haben. Wenn die Schaltfläche Importieren in Unity angezeigt wird, klicken Sie darauf.
 
 ![Module2Chapter4step13im](images/Module2chapter4step13im.png)
 
-> Hinweis: ganz egal, wo Sie das Paket heruntergeladen werden, wo Sie ihn finden. In der Abbildung oben ist nicht darstellen, in dem Sie das Paket finden.
+> Hinweis: Wenn Sie das Paket heruntergeladen haben, finden Sie es dort, wo Sie es finden. In der Abbildung oben wird nicht dargestellt, wo Sie das Paket finden.
 
-14. Erstellen Sie eine neue Szene (Dies kann sein, mithilfe des Steuerelements / Befehl + N oder durch Klicken auf "file", und wählen "neue Szene."). Speichern Sie die Szene als "HLSharedProjectMain."
+14. Erstellen Sie eine neue Szene (Dies kann mithilfe von Control/Command + N oder durch Klicken auf "Datei" und "neue Szene" erfolgen.) Speichern Sie die Szene als "hlsharedprojectmain".
 
-> Hinweis: erhalten Sie möglicherweise ein Popupfenster, das in der folgenden Abbildung ähneln. Jetzt klicken Sie einfach auf "Nein" festgelegt wird.
+> Hinweis: Sie erhalten möglicherweise ein Popup, das ähnlich wie in der folgenden Abbildung aussieht. Klicken Sie vorerst einfach auf "Nein".
 >
 > ![Module2Chapter4note2im](images/Module2chapter4note2im.png)
 
-15. Klicken Sie unter "Mixed Reality-Toolkit" auf "Szene hinzufügen und konfigurieren."
+15. Klicken Sie unter "Mixed Reality Toolkit" auf "zu Szene hinzufügen und konfigurieren".
 
 ![Module2Chapter4step15im](images/Module2chapter4step15im.png)
 
-16. Sobald dies abgeschlossen ist, wird eine neue Konfigurationsdatei angezeigt, bietet Ihnen die Möglichkeit, die das Profil anzupassen. Klicken Sie auf "kopieren und anpassen."
+16. Sobald der Vorgang beendet ist, wird eine neue Konfigurationsdatei angezeigt, die Ihnen die Möglichkeit gibt, das Profil anzupassen. Klicken Sie auf "Kopieren und anpassen".
 
 ![Module2Chapter4step16im](images/Module2chapter4step16im.png)
 
-17. Scrollen Sie nach unten, und deaktivieren Sie die Option "Diagnostics-System aktivieren". Dies wird zum Einrichten dieses Projekts erleichtern.
+17. Scrollen Sie nach unten, und deaktivieren Sie die Option "Diagnosesystem aktivieren". Dadurch wird die Einrichtung dieses Projekts vereinfacht.
 
 ![Module2Chapter4step17im](images/Module2chapter4step17im.png)
 
-18. Öffnen Sie die Buildeinstellungen (STRG + UMSCHALTTASTE + B). Beachten Sie, dass das Programm derzeit unter der Plattform "PC, Mac und Linux-eigenständig" festgelegt ist. Legen Sie für dieses Projekt die Plattform "universelle Windows-Plattform" sein. Wählen Sie sie aus, und klicken Sie auf "switch Platform".
+18. Öffnen Sie die Buildeinstellungen (Control + Shift + B). Beachten Sie, dass das Programm derzeit auf der Plattform "PC, Mac und Linux Standalone" festgelegt ist. Legen Sie für dieses Projekt die Plattform auf "universelle Windows-Plattform" fest. Wählen Sie diese Option aus, und klicken Sie auf Plattform wechseln.
 
 ![Module2Chapter4step18im](images/Module2chapter4step18im.png)
 
-19. Sobald der Vorgang abgeschlossen ist, klicken Sie auf das Kontrollkästchen "open Szenen hinzufügen". Kehren Sie jetzt den Inspektor-Zugriffsbereich und sicherstellen, dass das Kontrollkästchen rechts neben "virtual Reality unterstützt" (wie in der folgenden Abbildung gezeigt) aktiviert ist. 
+19. Wenn Sie fertig sind, klicken Sie auf das Feld "offene Szenen hinzufügen". Wechseln Sie nun zum Bereich Inspector, und stellen Sie sicher, dass das Kontrollkästchen rechts neben "unterstützte virtuelle Realität" (wie in der folgenden Abbildung gezeigt) aktiviert ist. 
 
 ![Module2Chapter4step19im](images/Module2chapter4step19im.png)
 
-> Hinweis: Stellen Sie außerdem sicher, dass Sie das Kontrollkästchen neben "Szenen/HLSharedProjectMain" ebenfalls aktiviert ist.
+> Nebenbei Stellen Sie außerdem sicher, dass das Kontrollkästchen neben "Szenen/hlsharedprojectmain" ebenfalls aktiviert ist.
 
-20. Klicken Sie unter "veröffentlichungseinstellungen" im Bereich Inspektor scrollen "Funktionen", und stellen Sie sicher, es werden nur die folgenden Kontrollkästchen markiert:
+20. Scrollen Sie im Inspektor-Panel unter "Veröffentlichungs Einstellungen" nach unten zu "Funktionen", und stellen Sie sicher, dass nur die folgenden Kontrollkästchen markiert sind:
 
-- Internetclient
-- IIS-Client-server
-- VPN-Client-server
-- camera/webcam
+- Internet Client
+- Internet Client Server
+- privater Netzwerkclient Server
+- Kamera/Webcam
 - Mikrofon
 
-21. Schritt 12, wie wäre der nächste Schritt, importieren ein anderes benutzerdefiniertes Paket namens "Lektion 2: komplettes" das [Hier] heruntergeladen werden kann [lesson2.unitypackage Link hier einfügen] Importieren Sie das Paket an.
+21. Ebenso wie bei Schritt 12 wäre der nächste Schritt das Importieren eines weiteren benutzerdefinierten Pakets namens "Lesson2", das hier heruntergeladen werden kann. [Lesson2. unitypackage-Link hier einfügen] Importieren Sie das Paket.
 
 ![Module2Chapter4step21im](images/Module2chapter4step20im.png)
 
-22. Im Projektfenster, wechseln Sie nun zum Ordner "Prefabs", da in den nächsten Schritten Sie einige prefabs (Vorlagen) in der Szene implementieren werden. Klicken Sie im Ordner "Prefabs" klicken Sie, und ziehen Sie das Prefab, "DebugWindow" in der Hierarchie. Sobald Sie fertig sind, speichern Sie das Projekt (klicken Sie auf Datei, klicken Sie dann speichern, oder STRG + S)
+22. Wechseln Sie nun im Projekt Panel zum Ordner "Prefabs", denn in den nächsten Schritten werden Sie einige Prefabs in der Szene implementieren. Klicken Sie im Ordner "Prefabs" auf die Prefab-"debugWindow"-Komponente, und ziehen Sie Sie in die Hierarchie. Wenn Sie fertig sind, speichern Sie das Projekt (Klicken Sie auf Datei, dann auf Speichern oder auf + S).
 
 ![Module2Chapter4step22im](images/Module2chapter4step21im.PNG)
 
-> Hinweis: Sie werden feststellen, dass ein Popupfenster angezeigt, wenn Sie auf das Prefab klicken TMP Essentials gefragt. Klicken Sie auf "Import TMP Essentials", da sie benötigt werden.
+> Nebenbei Sie werden möglicherweise feststellen, dass ein Popup Fenster angezeigt wird, wenn Sie auf die vorfab klicken und Sie zu tmp Essentials auffordern. Klicken Sie auf "tmp Essentials importieren", wenn Sie benötigt werden.
 >
 > ![Module2Chapter4note3im](images/Module2chapter4note3im.PNG)
 
 ### <a name="connecting-multiple-users"></a>**Verbinden von mehreren Benutzern**
 
-23. Wie in Schritt 22, im Ordner "Prefabs" im Projektfenster, besteht der nächste Schritt, um Drag & drop die Prefab "NetworkLobby" in der Hierarchie. 
+23. Der nächste Schritt besteht im Ordner "Prefabs" im Projekt Panel darin, die vorfab "networklobby" per Drag & amp; Drop in die Hierarchie zu verschieben. 
 
 ![Module2Chapter4step22im](images/Module2chapter4step22im.png)
 
-24. Wenn Sie den übergeordneten-Prefab "NetworkLobby," öffnen, sehen Sie ein untergeordnetes Element prefab, "NetworkRoom." Klicken Sie mit der sie ausgewählt haben wechseln Sie in den Bereich der Eigenschaftenanalyse, und klicken Sie auf "Komponente hinzufügen" aus. Suchen Sie nach "PhotonView", und fügen Sie die Komponente.
+24. Wenn Sie die übergeordnete Prefab "networklobby" öffnen, sollte eine untergeordnete vorfab angezeigt werden, "Network Room". Wenn diese Option ausgewählt ist, wechseln Sie im Inspektor-Panel, und klicken Sie auf "Komponente hinzufügen". Suchen Sie nach "photonview", und fügen Sie die Komponente hinzu.
 
 ![Module2Chapter4step23im](images/Module2chapter4step23im.png)
 
-25. Erstellen Sie ein neues, leeres game-Objekt, in der Hierarchie (Rechtsklick in der Hierarchie, und wählen Sie "leere"). Stellen Sie sicher, die Positionierung festgelegt ist, auf X = 0, y = 0, Z = 0, und nennen Sie das Objekt "PhotonUser."
+25. Erstellen Sie ein neues leeres Spielobjekt in der Hierarchie (Klicken Sie mit der rechten Maustaste in die Hierarchie, und wählen Sie "Empty" Stellen Sie sicher, dass die Positionierung auf x = 0, y = 0, z = 0 festgelegt ist, und benennen Sie das Objekt "photonuser".
 
 ![Module2Chapter4step24im](images/Module2chapter4step24im.png)
 

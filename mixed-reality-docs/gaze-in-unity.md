@@ -1,11 +1,11 @@
 ---
-title: In Unity bestaunen
-description: Blicke ist ein primärer Weg für Benutzer der Hologramme als Ziel, die Ihre app in mixed Reality erstellt.
+title: Blick in Unity
+description: Der Blick ist eine primäre Möglichkeit für Benutzer, die Hologramme, die Ihre APP in gemischter Realität erstellt, als Ziel zu betrachten.
 author: thetuvix
 ms.author: yoyoz
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Blicke, Unity, Hologramm, mixed reality
+keywords: Blick, Unity, Hologram, gemischte Realität
 ms.openlocfilehash: b2cc86db156a1e97b013e4cd6debe3abe5ffb6dd
 ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
@@ -13,18 +13,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/31/2019
 ms.locfileid: "66453718"
 ---
-# <a name="head-gaze-in-unity"></a>Head Blicke in Unity
+# <a name="head-gaze-in-unity"></a>Kopf Blicke in Unity
 
-[Bestaunen](gaze.md) ist ein primärer Weg für Benutzer als Ziel der [Hologramme](hologram.md) Ihrer app erstellt in [Mixed Reality](mixed-reality.md).
+Der Blick ist eine primäre Möglichkeit für Benutzer, die [Hologramme](hologram.md) , die Ihre APP in [gemischter Realität](mixed-reality.md)erstellt, als Ziel zu [betrachten](gaze.md) .
 
 
-## <a name="implementing-head-gaze"></a>Implementierende Head Blicke
+## <a name="implementing-head-gaze"></a>Implementieren des Head-Blicks
 
-Im Prinzip [bestaunen](gaze.md) wird durch Projizieren ein Strahl aus, in denen die Kopfhörer ist, vorwärts sie konfrontiert sind, und bestimmen, des Benutzers-Head implementiert das Chow verursacht einen Konflikt mit. In Unity Head-Position des Benutzers und die Richtung sind verfügbar gemacht werden über der Unity-Hauptseite [Kamera](camera-in-unity.md), insbesondere [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ Transform.Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) und [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ "Transform.Position"](http://docs.unity3d.com/ScriptReference/Transform-position.html).
+Konzeptionell wird der [Blick](gaze.md) durch die Projektion eines Strahls aus dem Head des Benutzers, an dem sich das Headset befindet, in der Vorwärtsrichtung implementiert, und es wird festgelegt, mit welchem Strahl dieses Ray kollidiert. In Unity werden die Head-Position und die Richtung des Benutzers über die Unity-Haupt [Kamera](camera-in-unity.md), insbesondere [unityengine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html), verfügbar gemacht. [Transform. Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) und [unityengine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Position](http://docs.unity3d.com/ScriptReference/Transform-position.html).
 
-Aufrufen von [Physics.RayCast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) führt zu einem [RaycastHit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) Struktur enthält Informationen zu den Konflikt, einschließlich der 3D-Punkts, in dem Konflikt aufgetreten ist, und die anderen "gameobject" Blicke Strahl widersprachen.
+Der Aufruf von " [Physik. raycast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) " führt zu einer [raycasthit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) -Struktur, die Informationen über den Konflikt enthält, einschließlich des 3D-Punkts, bei dem der Konflikt aufgetreten ist, und des anderen gameobject, mit dem der Blick
 
-### <a name="example-implement-head-gaze"></a>Beispiel: Head Blicke implementieren
+### <a name="example-implement-head-gaze"></a>Beispiel: Implementieren des Haupt Blicks
 
 ```cs
 void Update()
@@ -46,17 +46,17 @@ void Update()
 
 ### <a name="best-practices"></a>Empfehlungen
 
-Während im obigen Beispiel wird veranschaulicht, wie Sie eine einzelne Raycast in einer Update-Schleife, um die Blicke-Ziel zu finden, wird empfohlen, führen Sie dies in ein einzelnes Objekt, das Verwalten von Blicke, anstatt dies in ein Objekt, das das Objekt wird an gazed möglicherweise interessiert ist. Dadurch wird Ihre app, die Verarbeitung zu speichern, indem Sie nur eine Blicke Raycast jeden Frame.
+Obwohl das obige Beispiel zeigt, wie ein einzelnes raycast in einer Update-Schleife ausgeführt wird, um das Suchziel zu finden, empfiehlt es sich, dies in einem einzelnen Objekt zu tun, das den Blick verwaltet, anstatt dies in einem Objekt zu tun, das potenziell an dem Objekt interessiert ist, bei dem es sich befindet. Dadurch kann Ihre APP die Verarbeitung speichern, indem Sie nur einen Blick auf jeden Frame durchläuft.
 
-## <a name="visualizing-gaze"></a>Visualisieren von Blicke
+## <a name="visualizing-gaze"></a>Visualisieren des Blicks
 
-Genau wie auf dem Desktop, in dem Sie mit dem Mauszeiger auf Ziel und interagieren mit Inhalt, die Sie implementieren sollten eine [Cursor](cursors.md) , des Benutzers Blicke darstellt. Dadurch wird das Vertrauen in Was sind zu interagieren.
+Ebenso wie auf dem Desktop, auf dem Sie mit einem Mauszeiger auf Inhalte abzielen und mit ihnen interagieren, sollten Sie einen [Cursor](cursors.md) implementieren, der den Blick des Benutzers darstellt. Dadurch erhält der Benutzer Vertrauen in das, was Sie im Begriff sind, mit zu interagieren.
 
-## <a name="gaze-in-mixed-reality-toolkit-v2"></a>In Mixed Reality bestaunen Toolkit v2
-Sie erreichen die Blicke, aus der [Eingabe Manager](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) in MRTK v2.
+## <a name="gaze-in-mixed-reality-toolkit-v2"></a>Blick in Mixed Reality Toolkit v2
+Sie können über den Eingabe- [Manager](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) in mrtk v2 auf den Blick zugreifen.
 
 ## <a name="see-also"></a>Siehe auch
 * [Kamera](camera-in-unity.md)
-* [Blickverlaufseingabe](gaze.md)
+* [Blick Eingabe](gaze.md)
 * [Cursor](cursors.md)
 * [Anvisieren](gaze-targeting.md)

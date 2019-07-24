@@ -1,36 +1,36 @@
 ---
-title: Standortbasierte Unterhaltung
-description: Matt Beschreibung zu erstellen.
+title: Location-based Entertainment
+description: Matt schreibt Description.
 author: yoyozilla
 ms.author: yoyoz
 ms.date: 10/02/2018
 ms.topic: article
-keywords: Matt füllt diese
+keywords: Matt wird diese in
 ms.openlocfilehash: 0b2e9bfaecf0d881a152ed120dd488da8d4ef096
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595094"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63515663"
 ---
-# <a name="location-based-entertainment"></a>Standortbasierte Unterhaltung
+# <a name="location-based-entertainment"></a>Location-based Entertainment
 
-Wird beschrieben Sie, was es ist und warum die Entwickler überprüfen sollten
+Beschreiben Sie, was es ist und warum sich die Entwickler interessieren sollten
 
-## <a name="section-one---maybe-an-outline"></a>Abschnitt eine – vielleicht eine Gliederung
+## <a name="section-one---maybe-an-outline"></a>Abschnitt 1: vielleicht eine Kontur
 
-Platzhaltertext
+Platzhalter Text
 
-## <a name="feature-section"></a>Featureabschnitt
+## <a name="feature-section"></a>Funktions Abschnitt
 
-### <a name="sub-section"></a>Unterbereich
+### <a name="sub-section"></a>Unter Abschnitt
 
-Platzhaltertext für Unterabschnitt
+Platzhalter Unterabschnitts Text
 
-### <a name="sub-section"></a>Unterbereich
+### <a name="sub-section"></a>Unter Abschnitt
 
-Platzhaltertext für Unterabschnitt
+Platzhalter Unterabschnitts Text
 
-## <a name="feature-section"></a>Featureabschnitt
+## <a name="feature-section"></a>Funktions Abschnitt
 
-Verwenden Sie diese Option, wenn Sie möchten, oder löschen.
+Verwenden Sie dies, wenn Sie möchten oder löschen.

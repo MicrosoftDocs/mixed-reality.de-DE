@@ -28,7 +28,7 @@ Bei der Verwendung von Sprachbefehlen wird das Anvisieren typischerweise als Mec
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Feature</strong></td>
+        <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
@@ -113,6 +113,6 @@ Wenn die Spracherkennung richtig angewendet wird, versteht der Benutzer, **was e
 * Wie richte ich meine Stimme auf eine bestimmte App oder einen bestimmten App-Befehl aus?
 * Kann ich Objekte per Sprachbefehl aus dem holografischen Rahmen der HoloLens bewegen?
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Gesten](gestures.md)
 * [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)

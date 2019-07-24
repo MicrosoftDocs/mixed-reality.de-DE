@@ -1,11 +1,11 @@
 ---
-title: Praktische und Motion-Controller
-description: Übersicht über die praktische und Interaktion der Motion-Controller
+title: Hand-und Bewegungs Controller
+description: Übersicht über die Interaktion von Händen und Bewegungs Controllern
 author: shengkait
 ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
-keywords: Mixed Reality, praktische, während der Übertragung Controlles, Interaktion, Entwerfen
+keywords: Gemischte Realität, Hände, Bewegungs controllen, Interaktion, Entwurf
 ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
 ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
@@ -13,26 +13,26 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2019
 ms.locfileid: "66039167"
 ---
-# <a name="hands-and-motion-controllers"></a>Praktische und Motion-Controller
+# <a name="hands-and-motion-controllers"></a>Hand-und Bewegungs Controller
 ## <a name="scenarios"></a>Szenarien
-Möchten Sie Sie nach dem Lesen dieses Interaktionsmodells zu übernehmen die [Entwurfsrichtlinien](interaction-fundamentals.md), dies bedeutet, dass Sie eine Anwendung, die benutzerregistrierung zwei Händen zu verwenden, für die Interaktion mit der holographic Welt entwickeln. Die Anwendung wird das Ziel des Entfernens der ist zwischen virtuellen und physischen zu erreichen.
+Wenn Sie sich entscheiden, dieses Interaktionsmodell nach dem Lesen der [Entwurfs Richtlinien](interaction-fundamentals.md)zu übernehmen, bedeutet dies, dass Sie eine Anwendung entwickeln, die es Benutzern ermöglicht, zwei Hände für die Interaktion mit der Holographic World zu verwenden. Ihre Anwendung wird das Ziel erreichen, den BOUNDRY zwischen virtuellen und physischen zu entfernen.
 
-Unter Umständen einige spezifischen Szenarien:
-* Bereitstellen von Informationen Worker 2D virtuellen Bildschirme und Benutzeroberflächen zum Anzeigen und Steuern von Inhalt
-* Bereitstellen von ersten Zeile-Worker-Lernprogramme und Anleitungen in den Zeilen der Factory-assembly
-* Entwickeln von professionellen Tools für die Unterstützung und Schulung von medizinischen-Experten  
-* Virtuelle 3D-Objekte verwenden, die reale Welt zu ergänzen oder erstellen eine zweite Welt 
-* Speicherort basiert, Dienste und Spiele mit der realen Welt als Hintergrund
+Einige spezifische Szenarien können wie folgt lauten:
+* Bereitstellen von Information Workers 2D-Bildschirme und Benutzeroberflächen zum Anzeigen und Steuern von Inhalten
+* Bereitstellen von Tutorials und Handbüchern zu First Line Workers in Werk Zeilen
+* Entwickeln von professionellen Tools für die Unterstützung und Ausbildung von medizinischen Fachleuten  
+* Verwenden von virtuellen 3D-Objekten, um die reale Welt zu ergänzen oder eine zweite Welt zu erstellen 
+* Erstellen von Location based Services und Games mit der realen Welt als Hintergrund
 
-## <a name="hands-and-motion-controllers-modalities"></a>Praktische und während der Übertragung Controller Modalitäten
+## <a name="hands-and-motion-controllers-modalities"></a>Methoden der Hands-und Motion-Controller
 ### <a name="direct-manipulation-with-handsdirect-manipulationmd"></a>[Direkte Manipulation mit den Händen](direct-manipulation.md)
-Dies ist eine Modalität geschieht durch Nutzung der Hand, mit denen Benutzer berührt und die Hologramme direkt bearbeiten können. Durch Leaveraging tagtäglich hat und Bereitstellung richtigen visual visueller Hinweise, Benutzer können die gleiche Weise für die Bearbeitung von realen Objekten zu verwenden, um mit virtuellen interagieren.   
+Dies ist eine Modalität, die die Leistungsfähigkeit nutzt, mit der Benutzer die Hologramme direkt berühren und bearbeiten können. Durch das verbreiten täglicher Lebenszyklus und das Bereitstellen geeigneter visueller Visualisierungen können Benutzer die gleiche Art und Weise verwenden, um reale Objekte so zu manipulieren, dass Sie mit virtuellen Anwendungen interagieren.   
 
 ### <a name="point-and-commit-with-handspoint-and-commitmd"></a>[Zeigen und Ausführen mit den Händen](point-and-commit.md)
-Dieser Modalität ermöglicht Benutzern die Interaktion mit Hologramme in einem Abstand. Sie können Benutzer die beste Umgebung zu nutzen. Benutzer Hologramme können an einer beliebigen Stelle platzieren, und können weiterhin greifen sie von jedem entfernungen. Die mentalen Modelle und Gesten für die Steuerung und Bearbeiten von 2D- und 3D-Spiele Hologramme hoch synchron sind mit denen der direkten Bearbeitung.
+Diese Modalität ermöglicht es Benutzern, mit holograms in einer Distanz zu interagieren. Sie ermöglicht es Benutzern, die Umgebung optimal zu nutzen. Benutzer können Hologramme an jedem beliebigen Ort platzieren und können weiterhin aus beliebigen Entfernungen auf Sie zugreifen. Die mentalen Modelle und Gesten zum Steuern und manipulieren von 2D-und 3D-holograms sind stark synchron mit denen der direkten Bearbeitung.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Motion-Controller](motion-controllers.md)
-Während der Übertragung Controller sind Tools, die physische Kapazität des Benutzers zu erweitern, indem Sie präzise Interaktionen über eine große Auswahl von entfernungen bereitstellen, bei der Verwendung von einem oder beiden Hände. Diese Hardwarezubehör bieten Verknüpfungen zu viele häufig verwendete Interaktionen und bietet surefooted, praktisch Feedback für eine Vielzahl von Aktionen. Motion-Controller sind derzeit nur für WMR Szenarien verfügbar. 
+Bewegungs Controller sind Tools, mit denen die physischen Funktionen der Benutzer erweitert werden, indem präzise Interaktionen über einen großen Bereich von Entfernungen bereitgestellt werden, wenn ein oder beide Hände verwendet werden. Diese Hardware Zubehör bietet Verknüpfungen zu vielen häufig verwendeten Interaktionen und bietet ein untergeordnetes, taktiles Feedback für eine Reihe von Aktionen. Derzeit sind Motion-Controller nur für WMR-Szenarien verfügbar. 
 
 ![](images/Hands-and-controllers-720px.jpg)<br>
 

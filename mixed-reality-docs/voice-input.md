@@ -1,11 +1,11 @@
 ---
 title: Spracheingabe
-description: Spracheingabe ist eine Core-Eingabe für HoloLens und Windows Mixed Reality immersive Headsets. Voice kann für Befehle, Cortana, Diktat und mehr verwendet werden.
+description: Die Spracheingabe ist eine Kern Eingabe für hololens und Windows Mixed Reality-immersive Headsets. Voice kann für Befehle, Diktat, Cortana usw. verwendet werden.
 author: Hak0n
 ms.author: hakons
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Ggv "," Stimme "," Cortana "," Spracheingabe,
+keywords: GGV, Voice, Cortana, Speech, Input
 ms.openlocfilehash: e21310b940e4a4c3019f61edea695b452e74ab62
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,9 +15,9 @@ ms.locfileid: "66829947"
 ---
 # <a name="voice-input"></a>Spracheingabe
 
-Voice ist einer der drei wichtigsten Formen der Eingabe für HoloLens. Damit können Sie direkt ggf. ein Hologramm Befehl ohne verwenden [Gesten](gestures.md). Sie einfach [bestaunen](gaze.md) am ggf. ein Hologramm und den Befehl. Spracheingabe kann es sich um eine natürliche Möglichkeit zum kommunizieren Ihre Absicht sein. Voice ist besonders gut für komplexe Schnittstellen durchlaufen, da Benutzer über verschachtelte Menüs mit einem Befehl zu senken können.
+Voice ist eine der drei wichtigen Formen der Eingabe in hololens. Damit können Sie ein – Hologramm direkt aufrufen, ohne [Gesten](gestures.md)verwenden zu müssen. Sie betrachten [einfach ein](gaze.md) – Hologramm und sprechen Ihren Befehl. Die Spracheingabe kann eine natürliche Möglichkeit sein, ihre Absicht zu kommunizieren. Die Spracheingabe eignet sich besonders gut für die Durchführung komplexer Schnittstellen, da Benutzer mit einem Befehl die Möglichkeit haben, die Verwendung von Netz Menüs zu
 
-Spracheingabe basiert auf der [dasselbe Modul](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) , die Spracherkennung in anderen universellen Windows-Apps unterstützt.
+Die Spracheingabe wird von [derselben Engine](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) unterstützt, die Sprache in allen anderen universellen Windows-Apps unterstützt.
 
 <br>
 
@@ -36,7 +36,7 @@ Spracheingabe basiert auf der [dasselbe Modul](https://msdn.microsoft.com/librar
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
         <td>Spracheingabe</td>
@@ -46,83 +46,83 @@ Spracheingabe basiert auf der [dasselbe Modul](https://msdn.microsoft.com/librar
     </tr>
 </table>
 
-## <a name="the-select-command"></a>Der Befehl "select"
+## <a name="the-select-command"></a>Der Befehl "Select"
 
-Auch ohne speziell Ihrer app Voice-Unterstützung hinzufügen, können Ihre Benutzer Hologramme aktivieren, einfach, indem Sie sagen, "select". Dadurch verhält sich wie ein [tippbewegung](gestures.md#air-tap) für HoloLens, drücken Sie die auswählen-Schaltfläche auf der [HoloLens Clicker](hardware-accessories.md#hololens-clicker), oder drücken auf den Trigger eine [Windows Mixed Reality-Motion-Controller](motion-controllers.md). Sie werden einen Sound hören und sehen eine QuickInfo mit "Select", die als Bestätigung angezeigt werden. "Select" von einem niedrigen Energiestatus-Schlüsselwort Erkennung-Algorithmus aktiviert ist, sodass sie immer noch mit der Hand auf Ihrer Seite zu einem beliebigen Zeitpunkt mit Auswirkungen auf die minimale Akku Leben, sagt verfügbar ist.
+Selbst wenn Sie Ihrer APP keine Sprachunterstützung hinzufügen, können Ihre Benutzer Hologramme einfach durch das sagen von "Select" aktivieren. Dies verhält sich wie eine [Luft](gestures.md#air-tap) Abzweigung in hololens, das Drücken der Schaltfläche "auswählen" auf dem [hololens-Clicker](hardware-accessories.md#hololens-clicker)oder das Drücken des Auslösers auf einem [Windows Mixed Reality Motion Controller](motion-controllers.md). Sie werden einen Sound hören und sehen, dass eine QuickInfo mit "Select" als Bestätigung angezeigt wird. "Select" wird durch einen Algorithmus für die Erkennung eines niedrigen Leistungs Worts aktiviert, sodass Sie jederzeit mit minimalen Auswirkungen auf die Akku Lebensdauer jederzeit angezeigt werden können. Dies gilt auch für Ihre Hände.
 
 > [!NOTE]
-> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md#news-and-notes).
+> Weitere Anleitungen sind für hololens 2 in [Kürze](index.md#news-and-notes)verfügbar.
 
-![Sagen Sie "select", um für die Auswahl den Voice-Befehl verwenden](images/kma-voice-select-00170-800px.png)<br>
-*Sagen Sie "select", um für die Auswahl den Voice-Befehl verwenden*
+!["Select" (auswählen), um den Sprachbefehl zur Auswahl zu verwenden](images/kma-voice-select-00170-800px.png)<br>
+*"Select" (auswählen), um den Sprachbefehl zur Auswahl zu verwenden*
 
-## <a name="hey-cortana"></a>Hey Cortana
+## <a name="hey-cortana"></a>Hallo, Cortana
 
-Sie können auch "Hey Cortana" zum Hochfahren von Cortana jederzeit sagen. Sie müssen nicht warten, bis sie zum Fortfahren, stellen sie Ihre Frage oder erteilen sie eine Anweisung – beispielsweise versuchen, mit dem Text angezeigt werden "Hey Cortana was das Wetter ist?" als einen einzelnen Satz. Weitere Informationen zu Cortana und was Sie tun können einfach bitten Sie ihn! Sagen Sie "Hey Cortana, was kann, ich sagen?" und sie eine Liste der Befehle funktionieren und vorgeschlagenen abgerufen werden. Wenn Sie bereits in der Cortana-app sind Sie können auch klicken die **?** Symbol in der Seitenleiste im gleichen Menü-kontoportals.
+Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müssen nicht warten, bis Sie angezeigt wird, um Ihre Frage zu stellen oder eine Anweisung zu geben, z. b. "Hey Cortana What es Weather?". als einzelner Satz. Weitere Informationen zu Cortana und den Möglichkeiten, die Sie tun können, finden Sie einfach! Sagen Sie "Hallo Cortana was kann ich sagen?" und Sie werden eine Liste der funktionierenden und vorgeschlagenen Befehle abrufen. Wenn Sie sich bereits in der Cortana-App befinden, können Sie auch auf die **?** Symbol auf der Rand Leiste, um das gleiche Menü zu ziehen.
 
-**HoloLens-Befehle**
+**Hololens-spezifische Befehle**
 * Was kann ich sagen?
-* "Go home" oder "Gehe zu Start" - anstelle von [Bloom](gestures.md#bloom) , um erhalten [Menü "Start"](navigating-the-windows-mixed-reality-home.md#start-menu)
+* "Go Home" oder "Gehe zu Start"-anstelle von " [Bloom](gestures.md#bloom) ", um zum [Startmenü](navigating-the-windows-mixed-reality-home.md#start-menu) zu gelangen
 * "Starten <app>"
-* "Verschieben <app> hier"
-* "Foto"
-* "Starten Sie Aufzeichnung"
-* "Aufzeichnung beenden"
-* "Erhöhen Sie die Helligkeit"
-* "Verringern Sie die Helligkeit"
-* "Erhöhen Sie die Lautstärke"
-* "Decrease des Volumes"
-* "Ton aus" oder "Stummschaltung aufheben"
-* "Herunterfahren Sie auf dem Gerät"
-* "Das Gerät neu gestartet"
-* "Wechseln Sie in den Ruhezustand versetzt."
-* "Wann ist es"?
-* "Wie lange der Akku übrig ich habe?"
-* "Rufen <contact>" (erfordert Skype für HoloLens)
+* "Hier <app> verschieben"
+* "Bild nehmen"
+* "Aufzeichnung starten"
+* "Aufzeichnung anhalten"
+* "Erhöhen der Helligkeit"
+* "Die Helligkeit verringern"
+* "Volume vergrößern"
+* "Volume verkleinern"
+* "Stumm schalten" oder "unstumm schalten"
+* "Gerät Herunterfahren"
+* "Gerät neu starten"
+* "Gehe zu Standbymodus"
+* "Welche Zeit ist es?"
+* "Wie viel Akku habe ich verbleiben?"
+* "Anrufen <contact>" (erfordert Skype für hololens)
 
-## <a name="see-it-say-it"></a>"Angezeigt, das so sagen."
+## <a name="see-it-say-it"></a>"Weitere Informationen"
 
-HoloLens verfügt über ein "angezeigt, das so sagen"-Modell für die Spracheingabe, wo Bezeichnungen auf Schaltflächen Benutzer welche Sprachbefehle auch sagen können. Beispielsweise kann in einer Direct2D-app ein Benutzer den Befehl "Anpassen" sagen, die sie in der App-Leiste anzeigen, um die Position in der Welt der app anzupassen.
+Hololens hat eine "See it"-Modell für die Spracheingabe, bei der Bezeichnungen auf Schaltflächen den Benutzern mitteilen, welche Sprachbefehle Sie auch sagen können. Wenn Sie z. b. eine 2D-App betrachten, kann ein Benutzer den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP auf der ganzen Welt anzupassen.
 
-![Beim Betrachten einer Direct2D-app oder ein Hologramm, kann ein Benutzer den Befehl "Anpassen" sagen die sie in der App-Leiste anzeigen, um die Position in der Welt der app anzupassen](images/microphone-600px.png)
+![Wenn Sie sich eine 2D-APP oder ein Hologram ansehen, kann ein Benutzer den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP auf der ganzen Welt anzupassen.](images/microphone-600px.png)
 
-Wenn apps mit dieser Regel befolgen, können Benutzer problemlos was an, dass das System So kontrollieren verstehen. Um dies noch beim gazing auf eine Schaltfläche zu unterstreichen, sehen Sie eine "Stimme Dwell" QuickInfo, die nach einer Sekunde tritt auf, wenn die Schaltfläche VCD- und der Befehl zeigt, um "Drücken der Taste" zu sprechen.
+Wenn apps diese Regel befolgen, können Benutzer leicht erkennen, was zum Steuern des Systems zu sagen ist. Um dies zu verstärken, sehen Sie die QuickInfo, die nach einer Sekunde angezeigt wird, wenn die Schaltfläche sprach fähig ist, und zeigt den Befehl an, um zu sprechen, um die Schaltfläche zu "drücken".
 
-![Anzeigen, das so sagen Befehle werden unter den Schaltflächen angezeigt.](images/voice-seeitsayit-600px.png)<br>
-*"Sehen es noch einmal"-Befehle unter den Schaltflächen angezeigt werden*
+![Sehen Sie, dass die Befehle unter den Schaltflächen angezeigt werden.](images/voice-seeitsayit-600px.png)<br>
+*"Sehen Sie, dass die Befehle unter den Schaltflächen angezeigt werden.*
 
-## <a name="voice-commands-for-fast-hologram-manipulation"></a>Sprachbefehle für schnelle Bearbeitung von – Hologramm
+## <a name="voice-commands-for-fast-hologram-manipulation"></a>Sprachbefehle für schnelle Hologram-Bearbeitung
 
-Es gibt auch eine Anzahl von Voice-Befehle können Sie beim am ggf. ein Hologramm Manipulation Aufgaben schnell gazing sagen. Diese Sprachbefehle arbeiten auf Direct2D-apps als auch für 3D-Objekte, die Sie in der Welt platziert haben.
+Es gibt auch eine Reihe von Sprachbefehlen, die Sie bei der Betrachtung eines holograms zum schnellen Ausführen von Bearbeitungsaufgaben sagen können. Diese Sprachbefehle funktionieren sowohl für 2D-Apps als auch für 3D-Objekte, die Sie in der Welt abgelegt haben.
 
-**Befehlen – Hologramm**
-* Stehen mir vor
-* Größere | Zu verbessern
-* Kleinere
+**Hologram-Bearbeitungsbefehle**
+* Gesicht
+* Größer | Verbessern
+* Geringeren
 
 ## <a name="dictation"></a>Diktieren
 
-Anstatt die Eingabe mit [Luft Taps](gestures.md#air-tap), Spracheingabe-kann effizienter sein, Text in eine app eingeben. Dies kann die Eingabe mit weniger Aufwand für den Benutzer erheblich beschleunigen.
+Anstatt eine Typisierung mit [Luft](gestures.md#air-tap)Eingaben durchführen zu können, kann es effizienter sein, Text in eine APP einzugeben. Dadurch kann die Eingabe erheblich beschleunigt werden, sodass der Benutzer weniger Aufwand hat.
 
-![Spracheingabe-beginnt, durch Auswählen der Mikrofonschaltfläche](images/micbuttonfordictation.png)<br>
-*Spracheingabe-beginnt, durch Auswählen der Mikrofonschaltfläche "auf der Tastatur*
+![Sprach Diktat beginnt mit der Schaltfläche Mikrofon](images/micbuttonfordictation.png)<br>
+*Sprach Diktat beginnt mit der Schaltfläche Mikrofon auf der Tastatur*
 
-Jedes Mal, wenn die Tastatur holographic aktiv ist, können Sie auf den Diktatmodus anstatt wechseln. Wählen Sie das Mikrofon im Zweifelsfall das Texteingabefeld für den Einstieg.
+Jedes Mal, wenn die holografische Tastatur aktiv ist, können Sie in den Diktat Modus wechseln, anstatt einzugeben. Wählen Sie das Mikrofon auf der Seite des Texteingabe Felds aus, um loszulegen.
 
 ## <a name="communication"></a>Kommunikation
 
-Für Anwendungen, die der Verarbeitungsoptionen, die von HoloLens bereitgestellte benutzerdefinierte Audioeingabe nutzen möchten, ist es wichtig zu verstehen, die verschiedenen [Audiodatenstrom Kategorien](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) Ihrer app nutzen kann. Windows 10 unterstützt verschiedene Kategorien von anderen Stream und HoloLens macht verwenden drei davon, um benutzerdefinierte Verarbeitung zum Optimieren der Qualität der Mikrofon audio speziell für die Sprache, Kommunikation und andere dem für Audio der ambient-Umgebung verwendet werden kann zu aktivieren erfassungsszenarios (d. h. "Camcorder").
-* AudioCategory_Communications Stream Kategorie wird für Aufruf Qualität und erzählfluss Szenarien angepasst und stellt dem Client mit einem Mono / audio Stream mit 16 24-Bit-kHz des Benutzers Stimme
-* Die Kategorie "AudioCategory_Speech Stream" ist für die spracherkennungs-Engine für HoloLens (Windows) angepasst und wird mit mono 16kHz 24-Bit-Stream des Benutzers Stimme. Diese Kategorie kann bei Bedarf durch 3rd Party Sprachmodule verwendet werden.
-* AudioCategory_Other Stream Kategorie wird für die audioaufzeichnung ambient-Umgebung angepasst und stellt dem Client mit einem Stereo audio 48kHz 24-Bit-Stream.
+Für Anwendungen, die die von hololens bereitgestellten angepassten audioeingabeverarbeitungs-Optionen nutzen möchten, ist es wichtig, die verschiedenen [audiostreamkategorien](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) zu verstehen, die Ihre APP nutzen kann. Windows 10 unterstützt mehrere verschiedene streamkategorien, und hololens nutzt drei dieser Möglichkeiten, um die benutzerdefinierte Verarbeitung zur Optimierung der Mikrofon Audioqualität zu optimieren, die auf Sprache, Kommunikation und andere zugeschnitten ist und für Umgebungs Umgebungs Audiodaten verwendet werden kann. Erfassungs Szenarien (d.h. "Camcorder").
+* Die Kategorie AudioCategory_Communications Stream ist für die Sprach-und Erzähl Szenarios angepasst und stellt dem Client einen 16-Bit-Mono-Mono-Audiostream der Stimme des Benutzers zur Verfügung.
+* Die Kategorie AudioCategory_Speech Stream ist für die Sprach-Engine hololens (Windows) angepasst und bietet einen 16-Bit-Mono-Mono-Datenstrom der Stimme des Benutzers. Diese Kategorie kann bei Bedarf von Sprachmodulen von Drittanbietern verwendet werden.
+* Die AudioCategory_Other Stream-Kategorie ist für die Audioaufzeichnung in Umgebungs Umgebungen angepasst und stellt dem Client einen Stereo-Audiostream mit 48 kHz 24 Bit bereit.
 
-Alle diese audio Verarbeitung ist, dass die Hardwarebeschleunigung, was bedeutet, dass die Funktionen zu leeren viel weniger Energie als wenn die gleiche Verarbeitung auf der CPU HoloLens erfolgte. Vermeiden Sie es anderen Audioeingabe, die Verarbeitung auf die CPU zum Maximieren der System Akkuverbrauch gering zu halten, und profitieren Sie von den integrierten, offloaded audio Eingabeverarbeitung.
+Die gesamte Audioverarbeitung ist Hardware beschleunigt. Dies bedeutet, dass die Features viel weniger Leistung als bei der Verarbeitung der hololens-CPU benötigen. Vermeiden Sie die Ausführung einer anderen audioeingabeverarbeitung auf der CPU, um die Akku Lebensdauer zu maximieren und die integrierte, offloaded audioeingabeverarbeitung zu nutzen.
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Wenn Sie alle Probleme, die mit "select" und "Hey Cortana" haben, versuchen Sie, um ruhigerer Leerzeichen und Aktivieren der Weg von der Quelle des Störungen oder sprechen lauter zu verschieben. Zu diesem Zeitpunkt ist die Spracherkennung für HoloLens optimiert und speziell für die native Lautsprecher des Englisch (USA) optimiert.
+Wenn Sie Probleme bei der Verwendung von "Select" und "Hey Cortana" haben, versuchen Sie, zu einem ruhigeren Bereich zu wechseln, die Ursache für Rauschen zu machen oder lauter zu sprechen. Zu diesem Zeitpunkt wird die Spracherkennung in hololens speziell für systemeigene Sprecher von USA Englisch optimiert und optimiert.
 
-Für die Windows Mixed Reality Developer Edition-Version 2017 wird die Verwaltungslogik audio-Endpunkt (d.h. für immer) einwandfrei nach dem Abmelden und wieder in Protokollierung auf dem PC-Desktop nach der ersten HMD-Verbindung. Vor dieser ersten Anmeldung out/in-Ereignis nach dem laufenden über WMR OOBE kann der Benutzer verschiedene audio-Funktionalität Probleme, die keine Audiodaten, abhängig davon, wie das System eingerichtet wurde vor dem Herstellen einer Verbindung die HMD zum ersten Mal Wechseln zwischen ohne Audio auftreten.
+Für Windows Mixed Reality Developer Edition, Version 2017, funktioniert die audioendpunkt-Verwaltungs Logik problemlos (immer), nachdem Sie sich nach der anfänglichen HMD-Verbindung beim PC-Desktop abgemeldet hat. Vor dem ersten Abmelden/in-Ereignis nach dem Durchlaufen von WMR OOBE könnte der Benutzer verschiedene Probleme mit der Audiofunktionalität aufweisen, von denen kein audiowechsel bis hin zu keinem audiowechsel stattfindet, je nachdem, wie das System vor dem ersten Herstellen einer Verbindung mit dem HMD eingerichtet wurde.
 
 ## <a name="see-also"></a>Siehe auch
 * [Spracheingabe in DirectX](voice-input-in-directx.md)

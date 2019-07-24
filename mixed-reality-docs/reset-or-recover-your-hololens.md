@@ -1,85 +1,85 @@
 ---
-title: Zurücksetzen Sie oder Wiederherstellen Sie Ihrer HoloLens
-description: Die grundlegenden und erweiterten Anweisungen für das neu zu starten, oder das Zurücksetzen Ihrer HoloLens.
+title: Zurücksetzen oder Wiederherstellen von hololens
+description: Sowohl grundlegende als auch erweiterte Anweisungen zum Neustarten oder Zurücksetzen der hololens.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Exemplarische Vorgehensweise, neu starten, zurücksetzen, wiederherstellen "," Kaltstart "," Warmstart "," Energiezyklus, HoloLens, Herunterfahren
+keywords: Vorgehensweise, Neustart, zurücksetzen, wiederherstellen, harte zurück setzung, vorläufiges zurücksetzen, Energie Zyklen, hololens, Herunterfahren
 ms.openlocfilehash: abf71a5f122b1c6f800bf970f51da11a34be956b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594177"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524028"
 ---
-# <a name="reset-or-recover-your-hololens"></a>Zurücksetzen Sie oder Wiederherstellen Sie Ihrer HoloLens
+# <a name="reset-or-recover-your-hololens"></a>Zurücksetzen oder Wiederherstellen von hololens
 
-Wenn Sie Probleme mit Ihrem HoloLens auftreten, möglicherweise einen Neustart möchten, zurückgesetzt oder flash auch erneut mit der Wiederherstellung des Geräts. Dieses Dokument führt Sie durch die empfohlenen Schritte nacheinander.
+Wenn Sie Probleme mit ihren hololens haben, können Sie versuchen, mit der Geräte Wiederherstellung einen Neustart, eine zurück setzung oder sogar einen erneuten Flash Vorgang auszuführen. Dieses Dokument führt Sie durch die empfohlenen Schritte nacheinander.
 
-## <a name="perform-a-device-reboot"></a>Führen Sie einen Neustart des Geräts
+## <a name="perform-a-device-reboot"></a>Ausführen eines Geräte Neustarts
 
-Wenn Ihre HoloLens Probleme oder nicht reagiert, versuchen Sie zunächst es über eine der Neustart der folgenden Methoden.
+Wenn in den hololens Probleme auftreten oder nicht reagiert wird, versuchen Sie es zunächst mit einer der folgenden Methoden neu zu starten.
 
-### <a name="perform-a-safe-reboot-via-cortana"></a>Führen Sie einen sicheren Neustart über Cortana
+### <a name="perform-a-safe-reboot-via-cortana"></a>Ausführen eines sicheren Neustarts über Cortana
 
-Die sicherste Möglichkeit, die HoloLens Neustart erfolgt über Cortana. Dies ist eine hervorragende ersten Schritt im Allgemeinen auf, wenn ein Problem mit HoloLens:
-1. Legen Sie auf Ihrem Gerät
-2. Stellen Sie sicher, dass er eingeschaltet ist, ein Benutzer angemeldet ist und ein Kennwort zum Entsperren des Geräts nicht wartet.
-3. Z. B. "Hey Cortana, neu starten" oder "Hey Cortana, neu starten."
-4. Wenn sie bestätigt fragt sie Sie zur Bestätigung. Warten Sie einen zweiten für einen Sound wiedergegeben wird, nachdem er abgeschlossen ist ihre Frage angezeigt, dass sie Ihnen überwacht wird, und nennen Sie dann auf "Ja".
-5. Das Gerät wird jetzt ein Neustart/Neustarten.
+Die sicherste Möglichkeit zum Neustarten der hololens ist über Cortana. Dies ist im Allgemeinen ein hervorragend erster Schritt, wenn ein Problem mit hololens auftritt:
+1. Auf Ihrem Gerät platzieren
+2. Stellen Sie sicher, dass Sie eingeschaltet ist, dass ein Benutzer angemeldet ist und das Gerät nicht darauf wartet, dass ein Kennwort zum Entsperren dieses Kennworts angezeigt wird.
+3. Sagen Sie "Hey Cortana, Reboot" oder "Hey Cortana, Restart".
+4. Wenn Sie bestätigt, dass Sie eine Bestätigung erhalten. Warten Sie einen Moment, bis ein Sound wiedergegeben wird, nachdem er die Frage gestellt hat, und geben Sie an, dass Sie Sie hört und dann "yes" (ja).
+5. Das Gerät wird jetzt neu gestartet/neu gestartet.
 
-### <a name="perform-a-safe-reboot-via-windows-device-portal"></a>Führen Sie einen sicheren Neustart über Windows Device Portal
+### <a name="perform-a-safe-reboot-via-windows-device-portal"></a>Ausführen eines sicheren Neustarts über das Windows-Geräte Portal
 
-Wenn es sich bei den oben genannten nicht funktioniert, können Sie versuchen, zum Neustarten des Geräts über [Windows Device Portal](using-the-windows-device-portal.md). In der oberen rechten Ecke besteht eine Option zum Neustarten/Herunterfahren des Geräts.
+Wenn die obige Funktion nicht funktioniert, können Sie versuchen, das Gerät über das [Windows-Geräte Portal](using-the-windows-device-portal.md)neu zu starten. In der oberen rechten Ecke gibt es eine Option, mit der das Gerät neu gestartet/heruntergefahren werden kann.
 
-### <a name="perform-a-safe-reboot-via-the-power-button"></a>Führen Sie einen sicheren Neustart über die Schaltfläche "Power"
+### <a name="perform-a-safe-reboot-via-the-power-button"></a>Ausführen eines sicheren Neustarts über den Netzschalter
 
-Wenn Sie weiterhin Ihr Gerät neu gestartet werden können, können Sie versuchen, einen Neustart über den Netzschalter ausgeben:
-1. Drücken Sie und halten Sie den Netzschalter betätigen, 5 Sekunden
-   1. Nach 1 Sekunde sehen Sie, alle 5 LEDs beleuchten, klicken Sie dann langsam von rechts nach links deaktivieren
-   2. Nach 5 Sekunden werden aller LEDs deaktivieren, angezeigt, dass der Befehl zum Herunterfahren erfolgreich ausgegeben wurde
-   3. Beachten Sie, dass es ist wichtig, beenden, drücken die Schaltfläche mit den unmittelbar auf Alles, was die LEDs deaktiviert haben
-2. Warten Sie eine Minute für das Herunterfahren ordnungsgemäß erfolgreich ausgeführt werden kann. Beachten Sie, dass das Herunterfahren noch im Gang sein kann, selbst wenn zeigt die deaktiviert sind.
-3. Schalten Sie das Gerät erneut durch Gedrückthalten des Netzschalters 1 Sekunde
+Wenn Sie das Gerät immer noch nicht neu starten können, können Sie versuchen, einen Neustart über den Netzschalter auszugeben:
+1. Drücken und halten Sie den Netzschalter 5 Sekunden lang gedrückt.
+   1. Nach 1 Sekunde werden alle fünf LEDs beleuchtet, und langsam von rechts nach links ausschalten.
+   2. Nach 5 Sekunden sind alle LEDs deaktiviert, was darauf hinweist, dass der Befehl zum Herunterfahren erfolgreich ausgegeben wurde.
+   3. Beachten Sie, dass es wichtig ist, die Schaltfläche sofort zu beenden, nachdem alle LEDs ausgeschaltet wurden.
+2. Warten Sie eine Minute, bis das Herunterfahren ordnungsgemäß ausgeführt wurde. Beachten Sie, dass das Herunterfahren möglicherweise noch in Bearbeitung ist, auch wenn die Anzeige deaktiviert ist.
+3. Schalten Sie das Gerät erneut ein, indem Sie den Netzschalter 1 Sekunde gedrückt halten.
 
-### <a name="perform-an-unsafe-forced-reboot"></a>Führen Sie einen unsichere erzwungen Neustart
+### <a name="perform-an-unsafe-forced-reboot"></a>Ausführen eines unsicheren erzwungenen Neustarts
 
-Wenn keine der oben genannten Methoden erfolgreich Ihre Geräte neu starten können, können Sie einen Neustart erzwingen. Beachten Sie, dass diese Methode entspricht dem Abrufen des Akkus aus dem HoloLens und daher einen gefährlichen Vorgang, der Ihr Gerät in einen fehlerhaften Status versetzen kann. 
+Wenn keine der oben genannten Methoden in der Lage ist, das Gerät neu zu starten, können Sie einen Neustart erzwingen. Beachten Sie, dass diese Methode dem Abrufen der Batterie aus den hololens entspricht und daher ein gefährlicher Vorgang ist, der das Gerät in einem beschädigten Zustand belassen kann. 
 
 >[!WARNING]
->Dies ist eine Methode, schädigende und sollte nur verwendet werden, falls keiner der oben genannten Methoden funktioniert.
+>Dies ist eine potenziell schädliche Methode und sollte nur verwendet werden, wenn keine der oben genannten Methoden funktioniert.
 
-1. Drücken Sie und halten Sie den Netzschalter auf mindestens 10 Sekunden
-   * Es ist in Ordnung, die länger als 10 Sekunden die Schaltfläche "-" enthalten soll.
-   * Es ist sicherer, ignorieren alle Aktivitäten der LED
-2. Lassen Sie die los, und warten Sie, 2 und 3 Sekunden
-3. Schalten Sie das Gerät erneut durch Gedrückthalten des Netzschalters 1 Sekunde
+1. Halten Sie den Netzschalter für mindestens 10 Sekunden gedrückt.
+   * Es ist in Ordnung, die Schaltfläche länger als 10 Sekunden aufzunehmen.
+   * Es ist sicher, jede LED-Aktivität zu ignorieren.
+2. Schaltfläche Freigeben und 2-3 Sekunden warten
+3. Schalten Sie das Gerät erneut ein, indem Sie den Netzschalter 1 Sekunde gedrückt halten.
 
-## <a name="reset-the-device-to-a-factory-clean-state"></a>Zurücksetzen des Geräts in einem Zustand bereinigen
+## <a name="reset-the-device-to-a-factory-clean-state"></a>Zurücksetzen des Geräts auf einen Werks sauberen Zustand
 
-Wenn Ihre HoloLens weiterhin Probleme auftreten wird nach dem Neustart, können Sie versuchen, in einem sauberen Zustand zurücksetzen. Wenn Sie Ihr Gerät zurücksetzen, werden alle Ihre persönlichen Daten, apps und Einstellungen gelöscht. Zurücksetzen, wird nur die neueste installierte Version von Windows Holographic installieren und müssen alle Initialisierungsschritte wiederholen (kalibrieren, eine Verbindung mit WiFi herstellen, ein Benutzerkonto erstellen, Herunterladen von apps usw....).
-1. Starten Sie den **Einstellungen** app -> **Update** -> **zurücksetzen**
-2. Wählen Sie die **zurückgesetzte Gerät** aus, und Lesen Sie das Dialogfeld "Bestätigung"
-3. Wenn Sie, zum Zurücksetzen Ihres Geräts zustimmen, wird das Gerät neu gestartet und ein Satz von rotierende Zahnrädern, für eine Statusanzeige angezeigt
-4. Warten Sie ungefähr 30 Minuten, bis dieser Prozess abgeschlossen
-5. Das Zurücksetzen abgeschlossen und das Gerät wird neu gestartet, in der Out-of der Box-experience
+Wenn nach dem Neustart weiterhin Probleme auftreten, können Sie versuchen, den Zustand auf einen Werk sauberen Zustand zurückzusetzen. Wenn Sie Ihr Gerät zurücksetzen, werden alle Ihre persönlichen Daten, Apps und Einstellungen gelöscht. Wenn Sie zurücksetzen, wird nur die neueste installierte Version von Windows Holographic installiert, und Sie müssen alle Initialisierungs Schritte wiederholen (z. b. kalibrieren, mit WiFi verbinden, ein Benutzerkonto erstellen, apps herunterladen usw.).
+1. Starten Sie die **Einstellungen** app-> **Update** -> **Reset**
+2. Wählen Sie die Option **Gerät zurücksetzen** und das Bestätigungs Dialogfeld aus.
+3. Wenn Sie Ihr Gerät zurücksetzen, wird das Gerät neu gestartet und zeigt eine Reihe von drehenden Gängen mit einer Statusanzeige an.
+4. Warten Sie ungefähr 30 Minuten, bis dieser Vorgang abgeschlossen ist.
+5. Die zurück setzung wird beendet, und das Gerät wird im Standardfenster neu gestartet.
 
-## <a name="perform-a-full-device-recovery"></a>Führen Sie eine Wiederherstellung des gesamten Geräts
+## <a name="perform-a-full-device-recovery"></a>Ausführen einer vollständigen Geräte Wiederherstellung
 
-Wenn Sie nach dem Ausführen der oben genannten Optionen an, Ihr Gerät ist **weiterhin** fixiert, nicht mehr reagiert, oder treten Probleme mit Update oder einen Softwareupdatepunkt können Sie mithilfe der Windows Device Recovery Tool wiederherstellen. Wiederherstellen Ihres Geräts ähnelt der zurücksetzen in dem Sinne, dass alle Benutzerinhalte auf dem Gerät, einschließlich apps, Spiele, Fotos, Benutzerkonten und gelöscht werden. Sichern Sie wenn möglich, alle Informationen, die Sie beibehalten möchten.
+Wenn Ihr Gerät nach dem Ausführen der oben genannten Optionen **weiterhin** eingefroren ist, nicht reagiert oder Updates oder Software Probleme auftritt, können Sie es mit dem Windows-Geräte Wiederherstellungs Tool wiederherstellen. Die Wiederherstellung Ihres Geräts ähnelt dem Zurücksetzen des Geräts in dem Sinne, dass es den gesamten Benutzer Inhalt auf dem Gerät löscht, einschließlich apps, Spiele, Fotos, Benutzerkonten usw. Sichern Sie nach Möglichkeit alle Informationen, die Sie beibehalten möchten.
 
-Ihre HoloLens vollständig wiederherstellen zu können:
-1. Trennen Sie alle Smartphones und Windows-Geräte von Ihrem PC
-2. Installieren und starten Sie den [Windows Device Recovery Tool](https://support.microsoft.com/help/12379/windows-10-mobile-device-recovery-tool-faq) (WDRT) auf Ihrem PC
-3. Verbinden Sie Ihre HoloLens auf Ihren PC mit dem Micro-USB-Kabel, die im Lieferumfang enthaltene
-   * Beachten Sie, dass nicht alle USB-Kabel gleich sind. Auch wenn Sie ein weiteres Kabel erfolgreich verwendet haben, wird dieser Flow neue Status verfügbar machen, in dem das Kabel nicht ebenfalls ausgeführt werden kann. Der Lieferumfang Ihrer HoloLens ist die beste und die meisten gut getestete-option
-4. Wenn das Tool automatisch Ihr Gerät erkennt wird eine HoloLens-Kachel angezeigt. Klicken Sie darauf, und befolgen Sie die Anweisungen, um den Vorgang abzuschließen
+So stellen Sie Ihre hololens vollständig wieder her:
+1. Trennen Sie alle Telefone und Windows-Geräte vom PC
+2. Installieren und starten Sie das [Windows-Geräte Wiederherstellungs Tool](https://support.microsoft.com/help/12379/windows-10-mobile-device-recovery-tool-faq) (wdrt) auf Ihrem PC.
+3. Verbinden Sie Ihre hololens mit Ihrem PC, indem Sie das Micro-USB-Kabel verwenden, mit dem Sie
+   * Beachten Sie, dass nicht alle USB-Kabel gleich erstellt werden. Auch wenn Sie ein anderes Kabel erfolgreich verwendet haben, macht dieser Flow neue Zustände verfügbar, in denen das Kabel möglicherweise nicht ausgeführt wird. Das, mit dem Ihre hololens geliefert wurden, ist die am besten geeignete Option.
+4. Wenn das Tool das Gerät automatisch erkennt, wird eine hololens-Kachel angezeigt. Klicken Sie darauf, und befolgen Sie die Anweisungen, um den Vorgang abzuschließen.
 
 >[!NOTE]
->WDRT kann Ihr Gerät auf eine ältere Version von Windows Holographic wiederherzustellen. Sie müssen möglicherweise Updates nach blinken installieren
+>Wdrt kann Ihr Gerät auf einer älteren Version von Windows Holographic wiederherstellen. Sie müssen möglicherweise Updates nach dem blinken installieren.
 
-Wenn das Tool, Ihr Gerät automatisch zu erkennen ist, versuchen Sie Folgendes ein:
-1. Starten Sie Ihren PC, und versuchen Sie es erneut (Dadurch werden die meisten Probleme behoben) neu.
-2. Klicken Sie auf die **mein Gerät wurde nicht erkannt. Schaltfläche**, wählen Sie **Microsoft HoloLens**, und befolgen Sie die restlichen Anweisungen auf dem Bildschirm
+Wenn das Tool das Gerät nicht automatisch erkennen kann, versuchen Sie Folgendes:
+1. Starten Sie den PC neu, und versuchen Sie es noch mal.
+2. Klicken Sie auf die **Schaltfläche mein Gerät wurde nicht erkannt**, wählen Sie **Microsoft hololens**aus, und befolgen Sie die restlichen Anweisungen auf dem Bildschirm.

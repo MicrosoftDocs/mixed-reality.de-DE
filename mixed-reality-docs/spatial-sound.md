@@ -1,11 +1,11 @@
 ---
 title: Raumklang
-description: Verwenden von räumlichen Sound in einer mixed Reality-Anwendung, können Sie Sounds in einem 3D-Raum convincingly zu platzieren.
+description: Durch die Verwendung von räumlichem Sound in einer Mixed Reality-Anwendung können Sie Klänge in einem 3D-Raum überzeugend platzieren.
 author: hak0n
 ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
-keywords: räumliche Sound, Surroundsound, 3d, Audio, 3d sound, räumliche audio
+keywords: räumlicher Sound, Umschließungs Sound, 3D--Audio, 3D--Ton, räumliche Audiodaten
 ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,9 +15,9 @@ ms.locfileid: "66829921"
 ---
 # <a name="spatial-sound"></a>Raumklang
 
-Wenn Objekte aus unsere uneingeschränkten Zugriff sind, ist eine der Möglichkeiten, die wir wahrnehmen kann, um uns herum Abläufe auf über Sound. In Windows Mixed Reality bietet das Audiomodul der sehen Anteil der mixed Reality-Erfahrung durch Simulieren von 3D Sound mithilfe von environmental Simulationen, Entfernung und Richtung. Verwenden von räumlichen Sound in einer Anwendung kann Entwickler convincingly Platzieren von Sounds in einem 3 dimensionalen Raum (Kugel) für den Benutzer. Diese Sounds werden dann erscheinen, als ob sie von echten physischen Objekten oder der mixed Reality-Hologramme in der benutzerumgebung gestellt würden. Angesichts der Tatsache, dass [Hologramme](hologram.md) Licht werden Objekte aus, und manchmal Systemsound, der sound Komponente können Sie Ground-Hologramme mehr glaubwürdig zu machen, und erstellen seine Erfahrung wird optimiert.
+Wenn sich Objekte nicht mehr in der Sicht befinden, ist eine der Methoden, mit denen wir uns beschäftigen können, was wir tun. In Windows Mixed Reality bietet die Audioengine die Audiowiedergabe-Komponente der gemischten Realität, indem 3D-Sound mithilfe von Richtungs-, Entfernungs-und Umgebungs Simulationen simuliert werden. Die Verwendung von räumlichem Sound in einer Anwendung ermöglicht Entwicklern das überzeugend Platzieren von Sounds in einem dreidimensionalen Raum (Kugel), der sich alle um den Benutzer dreht. Diese Sounds erscheinen dann so, als wären Sie von echten physischen Objekten oder den Mixed Reality holograms in der Benutzerumgebung. Da [holograms](hologram.md) Objekte sind, die aus hellen und manchmal klingen, unterstützt die Audiokomponente das Grundlagen von holograms, sodass Sie leichter zu glauben sind und eine immersive Darstellung schaffen.
 
-Obwohl Hologramme nur visuell angezeigt werden können, in denen der Benutzer die Blicke verweist, kann Ihrer app Sound stammen, aus allen Richtungen sind. oben unten, klicken Sie auf der Seite usw. Sie können dieses Feature verwenden, um ein Objekt hervorzuheben, die derzeit in der Ansicht des Benutzers möglicherweise nicht. Ein Benutzer erkennen Sounds aus, die aus einer Quelle in mixed Reality-Welt ausgehen sein. Wenn der Benutzer ruft ein Objekt an oder ruft das Objekt ab, in ihrer Nähe, erhöht z. B. das Volume auf. Auf ähnliche Weise wie die Objekte zu verschieben, um einen Benutzer (oder umgekehrt), geben die räumliche Sounds, den Eindruck, dass Sounds direkt aus dem Objekt stammen.
+Obwohl holograms nur visuell angezeigt werden können, wenn der Benutzer den Blick zeigt, kann der Sound Ihrer APP aus allen Richtungen stammen. oberhalb von, hinter, auf der Seite, usw. Mit dieser Funktion können Sie auf ein Objekt aufmerksam machen, das sich derzeit nicht in der Ansicht des Benutzers befindet. Ein Benutzer kann Sounds erkennen, die aus einer Quelle in der gemischten Realität stammen. Wenn der Benutzer z. b. näher an einem Objekt geht oder das Objekt näher an ihn gelangt, wächst das Volume. Ebenso, wenn Objekte sich um einen Benutzer bewegen oder umgekehrt, stellen räumliche Klänge die Illusion dar, dass Sounds direkt aus dem Objekt stammen.
 
 <br>
 
@@ -36,41 +36,41 @@ Obwohl Hologramme nur visuell angezeigt werden können, in denen der Benutzer di
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
         <td>Raumklang</td>
         <td>✔️</td>
         <td>✔️</td>
-        <td>✔️ (mit Kopfhörer)</td>
+        <td>✔️ (mit Kopfhörern)</td>
     </tr>
 </table>
 
-## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>Simulieren die wahrgenommene Speicherort und die Entfernung von Sound
+## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>Simulieren der wahrgenommenen Position und der Entfernung von Sounds
 
-Durch die Analyse wie sound erreicht bestimmt sowohl unser Ohren unseres Gehirns, den Abstand und die Richtung des Objekts den Sound ausgeben. Ein HRTF (oder Head-Related-Funktion) simuliert diese Interaktion, durch die Modellierung der Spektralansprechung, das bestimmt, wie eine Ear Sound von einem Punkt im Raum empfängt. Das räumliche Audiomodul verwendet personalisierte HRTFs, erweitern die mixed Reality-Erfahrung und simulieren von Sounds aus, die von verschiedenen Richtungen und entfernungen stammen.
+Durch die Analyse, wie Sound sowohl unsere Ohren erreicht, bestimmt unser Gehirn den Abstand und die Richtung des Objekts, das den Sound ausgibt. Ein HRTF (oder Head-Related Transfer Function) simuliert diese Interaktion, indem die spektrale Antwort modelliert wird, die bestimmt, wie ein Ohr den Sound von einem Punkt im Raum empfängt. Die räumliche Audioengine verwendet personalisierte HRTFs, um die gemischte Realität zu erweitern und Klänge zu simulieren, die aus verschiedenen Richtungen und Entfernungen stammen.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
 
-Nach links oder rechts Audio (Azimut) Hinweise stammen aus Unterschieden in der Zeit, Ton auf jede der Ear eingeht. Nach oben oder unten Hinweise stammen von spektrale Änderungen, die von der äußeren Ear-Form (Pinnae) erzeugt. Durch Festlegen, Audio, stammen kann das System die Erfahrung der Sound zu unterschiedlichen Zeiten eintreffen, um unsere Ohren simuliert werden. Beachten Sie, dass HoloLens, während Azimut Spatialization personalisiert wird, die Simulation der Erhöhung der Rechte auf einer durchschnittlichen Gruppe von Anthropometrics basiert. Daher kann die Erhöhung der Rechte Genauigkeit weniger genau als Azimut Genauigkeit sein.
+Die "Left"-oder "Right Audio"-Cues (Azimuth) stammen aus den Unterschieden in der Zeit, die bei jedem Ohr Die nach-oben-und nach-unten-Hinweise stammen aus den von der äußeren Ohrform (pinnae) erzeugten Spektral Änderungen. Durch die Festlegung, woher die Audiodaten stammen, kann das System die Darstellung der Klänge simulieren, die zu unterschiedlichen Zeiten an den Ohren ankommen. Beachten Sie, dass bei hololens, während die Azimuth-Spatialisierung personalisiert ist, die Simulation der Rechte Erweiterung auf einem durchschnittlichen Satz von Anthropometrie basiert. Daher ist die Genauigkeit der Rechte Erweiterung möglicherweise weniger genau als die Azimuth-Genauigkeit.
 
-Die Merkmale des Sounds ändern sich auch auf Grundlage der Umgebung, in der sie vorhanden sind. Beispielsweise bewirkt Shouting in einer Höhle Ihre Stimme zum abprallen, bis die Wände, Etagen und Obergrenzen, erstellen ein Echo. Einstellung des Raums räumliche Sound reproduziert diese Reflexionen um Sounds in einer bestimmten audio-Umgebung zu platzieren. Sie können diese Einstellung verwenden, entsprechend der tatsächlichen Speicherort für die Simulation von Sound im Raum des Benutzers zum Erstellen der audio seine Erfahrung.
+Die Merkmale von Sounds ändern sich auch basierend auf der Umgebung, in der Sie vorhanden sind. Beispielsweise bewirkt das Auslösen in einer-Höhle, dass Ihre Stimme von den Wänden, den Flächen und den Obergrenzen abspringt, was einen Echo Effekt erzeugt. Die Raummodell Einstellung räumlicher Sound erzeugt diese Reflektionen, um Klänge in einer bestimmten Audioumgebung zu platzieren. Sie können diese Einstellung verwenden, um den tatsächlichen Speicherort des Benutzers für die Simulation von Sounds in diesem Bereich abzugleichen, um eine immersive Audiodarstellung zu erzielen.
 
-## <a name="integrating-spatial-sound"></a>Die Integration von räumlichen sound
+## <a name="integrating-spatial-sound"></a>Integrieren von räumlichem Sound
 
-Da das allgemeine Prinzip von mixed Reality dazu dient, erden [Hologramme](hologram.md) in der realen Welt oder virtuellen Umgebung des Benutzers, die meisten Tönen Hologramme spatialized werden sollte. Für HoloLens stehen auf natürliche Weise CPU- und Arbeitsspeicherressourcen finanziellen Aspekten, jedoch können Sie bei der Verwendung von weniger als ca. 12 % der CPU (ca. 70 % einer der vier Kerne) 10.-12. räumliche sound stimmen vorhanden. Empfohlene Verwendung für räumliche sound stimmen gehören:
-* Bestaunen Mischen von (Objekte, insbesondere wenn nicht aus der Sicht hervorgehoben). Wenn ggf. ein Hologramm, die Aufmerksamkeit eines Benutzers erfordert, auf diese – Hologramm einen Sound wiedergeben (z. B. eine virtuelle Hund Rinde haben). Dadurch wird den Benutzer, die – Hologramm zu suchen, wenn es nicht in der Ansicht.
-* Audio Haptics (reaktiven Audio touchless Interaktionen). Beim des Benutzers manuell oder durch Bewegung Controller gibt und die Geste Frame beendet, wird z. B. wiedergeben Sie einen Sound. Oder einen Sound wiedergeben, wenn der Benutzer ggf. ein Hologramm auswählt.
-* Immersion (ambient Sounds, um den Benutzer).
+Da das allgemeine Prinzip der gemischten Realität darin besteht, [Hologramme](hologram.md) in der physischen Welt oder der virtuellen Umgebung des Benutzers zu finden, sollten die meisten Sounds von holograms räumlich verteilt werden. Bei hololens gibt es natürlich Überlegungen zur CPU-und Arbeitsspeicher Planung, aber Sie können hier 10-12 räumliche audiostimmen verwenden, wenn Sie weniger als ungefähr 12% der CPU verwenden (~ 70% der vier Kerne). Empfohlene Verwendung für räumliche Ton Stimmen:
+* Betrachtung von Blickwinkeln (Hervorhebung von Objekten, insbesondere, wenn Sie nicht angezeigt werden). Wenn ein – Hologramm ein Eingreifen des Benutzers erfordert, spielen Sie einen Sound für dieses – Hologramm (z. b. eine virtuelle hunderinde). Dadurch kann der Benutzer das – Hologramm finden, wenn es nicht in der Ansicht angezeigt wird.
+* Audiohaptik (reaktives Audiomaterial für touchlose Interaktionen). Geben Sie z. b. einen Sound wieder, wenn der Hand-oder Bewegungs Controller des Benutzers den Gesten Rahmen betritt und verlässt. Oder geben Sie einen Sound wieder, wenn der Benutzer ein Hologram auswählt.
+* Eintauchen (Ambient-Sounds für den Benutzer).
 
-Es ist auch wichtig zu beachten, dass die Kombination von standard-Stereo Sounds mit räumlichen Sound kann beim Erstellen von realistischer Umgebungen effektiver sein, die Sounds aus Stereo relativ stillen, um Platz für die feinen Aspekte des räumlichen Sounds, z.B. Reflexionen (sein soll Distance Hinweise), das kann schwierig sein, in einer lauten Umgebung zu erfahren.
+Es ist auch wichtig zu beachten, dass die Kombination von standardstereo-Sounds mit räumlichem Sound bei der Erstellung realistischer Umgebungen effektiv sein kann. die Stereo Klänge sollten jedoch relativ leise sein, um Platz für die feinen Aspekte räumlicher Töne zu schaffen, wie z. b. Reflexionen ( Entfernungs Hinweise), die in einer lärmenden Umgebung schwer zu hören sein können.
 
-Windows räumliche sound-Engine unterstützt nur eine 48 KB Samplingrate für die Wiedergabe. Die meisten Middleware, wie Unity, wird automatisch Audiodateien in das unterstützte Format konvertieren, aber bei der Windows-Audio-APIs direkt verwenden, stimmen Sie das Format des Inhalts in das Format, die von den Effekt unterstützt werden.
+Die räumliche Sound-Engine von Windows unterstützt nur eine 48.000-Stichprobenrate für die Wiedergabe. Die meisten Middleware (z. b. unity) konvertiert Audiodateien automatisch in das unterstützte Format. Wenn Sie jedoch direkt Windows-Audio-APIs verwenden, müssen Sie das Format des Inhalts mit dem vom Effekt unterstützten Format vergleichen.
 
 ## <a name="see-also"></a>Siehe auch
-* [MR Spatial 220](holograms-220.md)
+* [Räumliche Daten 220](holograms-220.md)
 * [Raumklang in Unity](spatial-sound-in-unity.md)
 * [Raumklang in DirectX](spatial-sound-in-directx.md)
 * [Raumklangentwurf](spatial-sound-design.md)

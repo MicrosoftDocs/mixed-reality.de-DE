@@ -1,11 +1,11 @@
 ---
-title: Verwenden Vuforia mit Unity
-description: Nutzen Sie Vuforia Windows Mixed Reality-Anwendungen in Unity erstellen.
+title: Verwenden von vuforia mit Unity
+description: Nutzen Sie vuforia zum Erstellen von Windows Mixed Reality-Anwendungen in Unity.
 author: ailyadis
 ms.author: ''
 ms.date: 01/28/2019
 ms.topic: article
-keywords: Vuforia, Marker, die Koordinaten, die als Referenz, Nachverfolgen
+keywords: Vuforia, Marker, Koordinaten, Referenzrahmen, Nachverfolgung
 ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
 ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
@@ -13,80 +13,80 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/06/2019
 ms.locfileid: "66750350"
 ---
-# <a name="using-vuforia-engine-with-unity"></a>Verwenden Vuforia-Engine mit Unity
+# <a name="using-vuforia-engine-with-unity"></a>Verwenden der vuforia-Engine mit Unity
 
-Vuforia-Engine bietet eine wichtige Funktion für HoloLens: die Möglichkeit, AR-Verbindung auftritt, bestimmte Bilder und Objekte in der Umgebung. Sie können diese Funktion verwenden, zum überlagern geführte Anleitung zusätzlich der Maschinen für die Industrie Enterprise oder zum Hinzufügen von digitalen Features und Funktionen physischen Produkt oder eine Spiel. 
+Die vuforia-Engine bringt hololens eine wichtige Funktion ein – die Strom Umgebung, um eine Verbindung zwischen aren Erfahrungen und bestimmten Bildern und Objekten in der Umgebung herzustellen. Sie können diese Funktion verwenden, um eine Schritt-für-Schritt-Anleitung für das Industrieunternehmen zu überlagern oder digitale Features und Erfahrungen zu einem physischen Produkt oder Spiel hinzuzufügen. 
 
-Für größere Flexibilität beim Entwickeln von AR auftritt, bietet Vuforia-Engine eine Vielzahl von Features und Zielen. Eine unserer neuesten Features, Vuforia-Modell ausgerichtet ist, ist ein entscheidendes Merkmal für kommerzielle und Industrie verwendet. Modellziele können Anwendungen erkennen physische Objekte wie Computer "," Automobile "oder" Toys, und verfolgen basierend auf der CAD- oder digitale 3D-Modells verwendet wird. Für die Industrie verwendet kann dieses Feature Assembly-Worker und Technikern mit AR arbeiten, Anweisungen und schrittweise Anleitungen, während Sie in der Factory oder out-im Feld. 
+Die vuforia-Engine bietet eine große Bandbreite an Features und Zielen, um bei der Entwicklung von aren Erfahrungen mehr Flexibilität zu erzielen. Eine unserer neuesten Features, vuforia-Modell Ziele, ist eine wichtige Funktion für gewerbliche und Industrieanwendungen. Mithilfe von Modell Zielen können Anwendungen physische Objekte wie Computer, Automobile oder Toys erkennen und basierend auf einem CAD-oder Digital 3D-Modell verfolgen. Bei Industrieanwendungen kann dieses Feature assemblyarbeitsthreads und Dienst Technikern eine ausführliche Arbeitsanleitung und Anleitungen für die Bereitstellung in der Factory und im Außendienst bereitstellen. 
 
-Vorhandene Vuforia-Engine-apps, die für Smartphones und Tablets erstellt wurden, können ganz einfach in Unity auf HoloLens ausgeführt konfiguriert werden. Sie können sogar Vuforia-Engine verwenden, zu der neuen HoloLens-app auf Windows 10-Tablets, z. B. 4 Surface Pro und Surface Book.
+Vorhandene vuforia-Engine-apps, die für Smartphones und Tablets erstellt wurden, können problemlos in Unity zur unter hololens-Konfiguration konfiguriert werden. Sie können die vuforia-Engine sogar verwenden, um Ihre neue hololens-App auf Windows 10-Tablets wie Surface pro 4 und Surface Book zu übernehmen.
 
 ## <a name="get-the-tools"></a>Laden Sie die Tools herunter
 
-[Installieren Sie die empfohlenen Versionen](install-the-tools.md) von Visual Studio und Unity und konfigurieren Sie Unity aus, um Visual Studio und die bevorzugte IDE und den Compiler zu verwenden. 
+[Installieren Sie die empfohlenen Versionen](install-the-tools.md) von Visual Studio und Unity, und konfigurieren Sie Unity so, dass Visual Studio und die bevorzugte IDE und der Compiler verwendet werden. 
 
-Bei der Installation von Unity, achten Sie darauf, dass Sie entweder "Windows Store .NET Scripting Back-End" oder "Windows Store IL2CPP Scripting Back-End" installieren. Darüber hinaus werden Sie sicher, dass "Vuforia Augmented Reality-Unterstützung" Vuforia-Modul in Unity aktiviert.
-
-
-## <a name="getting-started-with-vuforia-engine"></a>Erste Schritte mit Vuforia-Engine
-
-Da in Unity Vuforia-Engine integriert ist, müssen Entwickler nicht herunterladen oder installieren keine zusätzlichen Tools. Die empfohlene Version von Unity ist der LTS-Stream ist zurzeit 2017.3 und Vuforia Engine 7.0.57 enthält. Die am besten Anfangspunkt für etwas über die Verwendung von Vuforia-Engine mit HoloLens mit ist der [Vuforia-Engine HoloLens Beispiel](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) (verfügbar in der Unity Asset Store). Das Beispiel bietet ein vollständiges HoloLens-Projekt, einschließlich vorkonfiguriert, dass Szenen, die auf eine HoloLens bereitgestellt werden können.
-
-Im Hintergrund zeigen, wie Sie ein Bild zu erkennen und erweitern sie digitale Inhalte in einer Benutzeroberfläche HoloLens Vuforia Image Ziele mit. Entwickler, die mit aktuelleren Versionen von Unity und Vuforia haben Zugriff auf aktualisierte Beispiele, darunter eine Szene, der die Verwendung von Modellziele auf HoloLens anzeigt. Sie können ganz einfach Ihre eigenen Inhalte in den Kulissen experimentieren Sie mit der Erstellung von apps für HoloLens, mit denen Vuforia-Engine ersetzen.
+Achten Sie bei der Installation von Unity darauf, dass Sie entweder "Windows Store .net Scripting Backend" oder "Windows Store IL2CPP Scripting Backend" installieren. Achten Sie auch darauf, "vuforia Augmented Reality Support" auszuwählen, um die vuforia-Engine in Unity zu aktivieren.
 
 
-## <a name="configuring-a-vuforia-app-for-hololens"></a>Konfigurieren einer App Vuforia für HoloLens
+## <a name="getting-started-with-vuforia-engine"></a>Einstieg in die vuforia-Engine
 
-Entwickeln eine app Vuforia-Engine für HoloLens ist im Grunde identisch mit der Entwicklung von Vuforia-Engine-apps für andere Geräte. Sie können dann die Buildeinstellungen und Konfigurationen, die im Abschnitt unten beschrieben anwenden. Das ist alles, die was erforderlich ist, um Vuforia-Engine mit der HoloLens räumliche Zuordnung Geschäfts-, Schul- oder mit Feldern fester Breite tracking-Systeme zu aktivieren.
+Da die vuforia-Engine in Unity integriert ist, müssen Entwickler keine zusätzlichen Tools herunterladen oder installieren. Die empfohlene Version von Unity ist der LTS-Datenstrom, der derzeit 2017,3 ist und die vuforia-Engine 7.0.57 enthält. Der beste Ausgangspunkt für die Verwendung der vuforia-Engine mit hololens ist das [Beispiel der vuforia-Engine hololens](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) (verfügbar im Unity-Ressourcen Speicher). Das Beispiel enthält ein umfassendes hololens-Projekt, das vorkonfigurierte Szenen umfasst, die in einem hololens bereitgestellt werden können.
 
-## <a name="build-and-run-the-vuforia-engine-sample-for-hololens"></a>Erstellen Sie und führen Sie des Beispiels Vuforia-Engine für HoloLens aus
-1.  Herunterladen der [Vuforia-Engine-Beispiel für HoloLens](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) aus dem Unity Asset Store
-2.  Anwenden der [empfohlene Unity-Engine-Optionen für die Stromversorgung und Leistung](performance-recommendations-for-unity.md)
-3.  Fügen Sie die Beispiel-Szenen Szenen in Build hinzu.
-4.  Festlegen von Ihrer Zielplattform für den Build für "Universal Windows Platform" in Datei > Buildeinstellungen.
-5.  Wählen Sie die folgenden Konfigurationseinstellungen der Plattform erstellen: 
-   * Geräte = HoloLens
-   * Buildtyp D3D =
-   * SDK = aktuelle installiert
-   * Visual Studio-Version = aktuelle installiert
-   * Erstellen und Ausführen auf = lokalen Computer
-6.  Definieren Sie einen eindeutigen **Produktname**im **Playereinstellungen**, als der Name der app bei der Installation auf die HoloLens dienen.
-7.  Überprüfen Sie **Vuforia Augmented Reality** und **virtuelle Realität unterstützt** in **Playereinstellungen > XR-Einstellungen**
-8.  Außerdem **XR-Einstellungen**, stellen Sie sicher, dass "Windows Mixed Reality" hinzugefügt wird die **virtuelle Realität SDKs** Liste
-9.  Überprüfen Sie die folgenden Funktionen in den Player-Einstellungen > Veröffentlichungseinstellungen 
-   * InternetClient
-   * WebCam
-   * SpatialPerception – Wenn Sie beabsichtigen, die Oberfläche Observer-API verwenden
-10. Wählen Sie Build aus, generiert Visual Studio-Projekt
-11. Die ausführbare Datei aus Visual Studio erstellen und installieren Sie ihn auf Ihrem HoloLens
+In den Kulissen wird gezeigt, wie Sie mithilfe von vuforia-Bild Zielen ein Bild erkennen und mit digitalen Inhalten in einer hololens-Funktionalität erweitern können. Entwickler, die neuere Versionen von Unity und vuforia verwenden, haben Zugriff auf aktualisierte Beispiele, die eine Szene mit der Verwendung von Modell Zielen in hololens enthalten. Sie können Ihren eigenen Inhalt problemlos in den Kulissen austauschen, um mit der Erstellung von hololens-apps zu experimentieren, die die vuforia-Engine verwenden.
 
-Hinweis: Ab Version 7.2, HoloLens die Vuforia-Engine zum Beispiel umfasst eine Beispiel-Szene, einschließlich Beispiel für die Verwendung der Modell-Ziele
 
-## <a name="the-vuforia-developer-portal"></a>Das Vuforia-Entwicklerportal
+## <a name="configuring-a-vuforia-app-for-hololens"></a>Konfigurieren einer vuforia-App für hololens
 
-Entwickler, die zum Erstellen von eigenen AR mit Vuforia-Engine hat und HoloLens sollten registrieren Sie sich auf unsere Vuforia-Entwicklerportal unter [developer.vuforia.com](https://developer.vuforia.com/). Im Portal haben Entwickler Zugriff auf die [Vuforia-Engine-Foren](https://developer.vuforia.com/forum) , wo sie Communitydiskussionen, beitreten können eine [Bibliothek](https://library.vuforia.com/) ausführliche Dokumentation für alle Vuforia-Engine-Funktionen und die [ Ziel-Manager Vuforia](https://developer.vuforia.com/target-manager) in dem Benutzer eigene benutzerdefinierte Ziele erstellen können. Entwickler können außerdem registrieren Sie sich für eine kostenlose Entwicklerlizenz mit der [Vuforia License Manager](https://developer.vuforia.com/license-manager).
+Das Entwickeln einer vuforia-Engine-App für hololens ist im Grunde das gleiche wie das Entwickeln von vuforia-Engine-Apps für andere Geräte. Anschließend können Sie die im Abschnitt unten beschriebenen Buildeinstellungen und Konfigurationen anwenden. Das ist alles, was erforderlich ist, um die vuforia-Engine für die Zusammenarbeit mit der räumlichen Zuordnung von hololens und den Systemen mit Positionsüberwachung zu aktivieren.
 
-## <a name="extended-tracking-with-vuforia"></a>Erweiterte Überwachung mit Vuforia
+## <a name="build-and-run-the-vuforia-engine-sample-for-hololens"></a>Erstellen und Ausführen des Beispiels "vuforia Engine" für hololens
+1.  Laden Sie das [Beispiel für die vuforia-Engine für hololens](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) aus dem Unity-Asset Store herunter.
+2.  Anwenden der [empfohlenen Unity-Engine-Optionen auf Leistung und Leistung](performance-recommendations-for-unity.md)
+3.  Fügen Sie die Beispiel Szenen zu Szenen in Build hinzu.
+4.  Legen Sie das Ziel der Platt Form Erstellung für "universelle Windows-Plattform" in Datei > Buildeinstellungen fest.
+5.  Wählen Sie die folgenden Platform Build-Konfigurationseinstellungen aus: 
+   * Zielgerät = hololens
+   * Buildtyp = D3D
+   * SDK = neueste installiert
+   * Visual Studio Version = neueste installiert
+   * Erstellen und ausführen auf = lokalem Computer
+6.  Definieren Sie einen eindeutigen **Produktnamen**in **Player Einstellungen**, der als Name der APP fungiert, wenn Sie auf den hololens installiert werden.
+7.  Überprüfen von **vuforia Augmented Reality** und **Virtual Reality unterstützt** in den **Player Einstellungen > XR-Einstellungen**
+8.  Stellen Sie außerdem unter " **XR-Einstellungen**" sicher, dass "Windows Mixed Reality" der **Virtual Reality sdgt** -Liste hinzugefügt wird.
+9.  Überprüfen Sie die folgenden Funktionen in den Einstellungen für Player Einstellungen > veröffentlichen. 
+   * Internet Client deklarieren
+   * Webcam
+   * Spatialperception: Wenn Sie beabsichtigen, die Surface Observer-API zu verwenden
+10. Build auswählen, um ein Visual Studio-Projekt zu generieren
+11. Erstellen Sie die ausführbare Datei aus Visual Studio, und installieren Sie Sie auf Ihren hololens.
 
-[Die erweiterte nachverfolgung](https://library.vuforia.com/articles/Training/Extended-Tracking) erstellt eine Zuordnung der Umgebung zu verwalten, nachverfolgen, selbst wenn ein Ziel nicht mehr angezeigt wird. Es handelt es sich um Vuforia Engines Gegenstück, die räumliche Zuordnung von HoloLens ausgeführt. Wenn Sie die erweiterte Überwachung auf einem Ziel aktivieren, können Sie die Haltung, Ziel, das räumliche Zuordnung-System übergeben werden soll. Auf diese Weise können Ziele die Vuforia Modul- und HoloLens räumliche Koordinatensysteme, jedoch nicht gleichzeitig vorhanden sein.
+Hinweis: Ab Version 7,2 enthält das Beispiel für die vuforia-Engine für hololens eine Beispiel Szene einschließlich Beispiel Verwendung von Modell Zielen.
 
-![Unity-Fenster "Einstellungen"](images/vuforia-extendedtracking.png)<br>
-*Unity-Fenster "Einstellungen"*
+## <a name="the-vuforia-developer-portal"></a>Das vuforia-Entwickler Portal
 
-**Aktivieren der erweiterten Überwachung für ein Ziel**
+Entwickler, die ihre eigenen aren Erfahrungen mit der vuforia-Engine und hololens erstellen möchten, sollten sich bei unserem vuforia-Entwickler Portal unter [Developer.vuforia.com](https://developer.vuforia.com/)anmelden. Im Portal haben Entwickler Zugriff auf die [vuforia-Engine-Foren](https://developer.vuforia.com/forum) , in denen Sie Communitydiskussionen beitreten können, eine [Bibliothek](https://library.vuforia.com/) mit ausführlicher Dokumentation zu allen Features der vuforia-Engine und der [vuforia-Ziel-Manager](https://developer.vuforia.com/target-manager) , in dem Benutzer Erstellen Sie Ihre eigenen benutzerdefinierten Ziele. Entwickler können sich mit dem [vuforia-Lizenz-Manager](https://developer.vuforia.com/license-manager)auch für eine kostenlose Entwicklerlizenz registrieren.
 
-Vuforia-Engine wird automatisch der Haltung eines Ziels transformieren, die erweiterte Überwachung in der räumlichen HoloLens-Koordinatensystem verwendet. Dadurch wird die HoloLens Überwachungsprofil übernehmen und alle Inhalte, erweitern in die räumliche Zuordnung des Zielbereichs-Umgebung zu integrieren. Dieser Prozess erfolgt zwischen Vuforia-Engine "und" mixed Reality-APIs in Unity und erfordert keinen vom Entwickler programmieren – erfolgt automatisch.
+## <a name="extended-tracking-with-vuforia"></a>Erweiterte Nachverfolgung mit vuforia
 
-**Hier ist, was geschieht...**
-1. Die Vuforia Target Tracker erkennt das Ziel
-2. Ziel, die nachverfolgung wird anschließend initialisiert.
-3. Die Position und Drehung des Ziels werden analysiert, um eine stabile Haltung Schätzung für HoloLens verwenden
-4. Vuforia transformiert des Ziels Haltung in HoloLens räumliche Zuordnung Koordinatenbereich
-5. HoloLens übernimmt nachverfolgen und die Vuforia nachverfolgung ist deaktiviert.
+Bei der [erweiterten Nachverfolgung](https://library.vuforia.com/articles/Training/Extended-Tracking) wird eine Zuordnung der Umgebung erstellt, um die Nachverfolgung beizubehalten, auch wenn ein Ziel nicht mehr angezeigt wird. Es ist das Pendant von vuforia Engines zu der räumlichen Zuordnung, die von hololens durchgeführt wird. Wenn Sie die erweiterte Nachverfolgung für ein Ziel aktivieren, können Sie die Pose dieses Ziels an das räumliche Zuordnungssystem weitergeben. Auf diese Weise können Ziele sowohl in der vuforia-Engine als auch in den räumlichen Koordinatensystemen hololens vorhanden sein, jedoch nicht gleichzeitig.
 
-Der Entwickler kann dieser Prozess, damit die Steuerung auf Vuforia, durch das Deaktivieren der erweiterten Überwachung für die TargetBehaviour steuern.
+![Unity-Einstellungsfenster](images/vuforia-extendedtracking.png)<br>
+*Unity-Einstellungsfenster*
 
-**HINWEIS:** Seit Vuforia 7.2, ist erweiterte nachverfolgung nicht mehr auf einer pro-Ziel-Basis aktiviert. Stattdessen können Entwickler auf dem Gerät Überwachungsdatenbank-ähnliche Funktionalität für alle Ziele in der Szene zu aktivieren.
+**Aktivieren der erweiterten Nachverfolgung für ein Ziel**
+
+Die vuforia-Engine transformiert automatisch die Pose eines Ziels, das die erweiterte Nachverfolgung verwendet, in das räumliche-Koordinatensystem hololens. Dadurch können hololens die Überwachung übernehmen und Inhalte integrieren, die in die räumliche Karte der Zielumgebung erweitert werden. Dieser Prozess findet zwischen der vuforia-Engine und Mixed Reality-APIs in Unity statt und erfordert keine Programmierung durch den Entwickler. er wird automatisch verarbeitet.
+
+**Hier sehen Sie, was passiert...**
+1. Der Ziel-Tracker von vuforia erkennt das Ziel.
+2. Die Ziel Überwachung wird initialisiert.
+3. Die Position und die Drehung des Ziels werden analysiert, um eine robuste Positions Schätzung für die zu verwendenden hololens bereitzustellen.
+4. Vuforia wandelt die-Pose des Ziels in das hololens Spatial Mapping-Koordinaten Bereich um.
+5. Hololens übernimmt die Überwachung, und der vuforia-Tracker wird deaktiviert.
+
+Der Entwickler kann diesen Prozess steuern, um die Steuerung an vuforia zurückzugeben, indem er die erweiterte Nachverfolgung für das targetbehaviour-Verhalten deaktiviert.
+
+**HINWEIS:** Ab vuforia 7,2 ist die erweiterte Nachverfolgung nicht mehr pro Ziel aktiviert. Stattdessen können Entwickler die Geräteüberwachung aktivieren, um eine ähnliche Funktionalität für alle Ziele in der Szene zu aktivieren.
 
 
 ## <a name="see-also"></a>Siehe auch
@@ -95,7 +95,7 @@ Der Entwickler kann dieser Prozess, damit die Steuerung auf Vuforia, durch das D
 * [Räumliche Abbildung](spatial-mapping.md)
 * [Kamera in Unity](camera-in-unity.md)
 * [Exportieren und Erstellen einer Unity-Projektmappe für Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
-* [Vuforia Dokumentation: Entwickeln für Windows 10 in Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
-* [Vuforia Dokumentation: Vorgehensweise: installieren die Vuforia Unity-Erweiterung](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
-* [Vuforia Dokumentation: Arbeiten mit dem HoloLens-Beispiel in Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
-* [Vuforia Dokumentation: Erweiterte Überwachung in Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)
+* [Vuforia-Dokumentation: Entwickeln für Windows 10 in Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
+* [Vuforia-Dokumentation: Installieren der vuforia Unity-Erweiterung](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
+* [Vuforia-Dokumentation: Arbeiten mit dem hololens-Beispiel in Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
+* [Vuforia-Dokumentation: Erweiterte Nachverfolgung in vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)

@@ -1,11 +1,11 @@
 ---
-title: Die Überprüfung Visualisierung Platz
-description: Anwendungen, die räumliche Zuordnungsdaten erfordern basieren auf dem Gerät, um diese Daten im Laufe der Zeit automatisch zu erfassen und untersucht alle Sitzungen als Benutzer ihrer Umgebung mit dem Gerät aktiv.
+title: Raum Scan Visualisierung
+description: Anwendungen, die räumliche Daten für die Zuordnung benötigen, benötigen das Gerät, um diese Daten automatisch über einen Zeitraum und Sitzungs übergreifend zu erfassen, da der Benutzer seine Umgebung mit dem aktiven Gerät untersucht.
 author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, App-Muster, Design, HoloLens, Raum Scan, räumliche Zuordnung Wiederaufbau, surface mesh
+keywords: Gemischte Windows-Realität, App-Muster, Entwurf, hololens, Raum Überprüfung, räumliche Zuordnung, Oberflächenrekonstruktion, Mesh
 ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,16 +13,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829912"
 ---
-# <a name="room-scan-visualization"></a>Die Überprüfung Visualisierung Platz
+# <a name="room-scan-visualization"></a>Raum Scan Visualisierung
 
-Anwendungen, die räumliche Zuordnungsdaten erfordern basieren auf dem Gerät, um diese Daten im Laufe der Zeit automatisch zu erfassen und untersucht alle Sitzungen als Benutzer ihrer Umgebung mit dem Gerät aktiv. Der Vollständigkeit und die Qualität der Daten hängt von einer Reihe von Faktoren wie der Menge der, die der Benutzer ausgeführt hat, wie viel Zeit verstrichen ist, da die Auswertung und gibt an, ob die Objekte, z. B. Möbel und Türen verschoben haben, da das Gerät über den Bereich überprüft.
+Anwendungen, die räumliche Daten für die Zuordnung benötigen, benötigen das Gerät, um diese Daten automatisch über einen Zeitraum und Sitzungs übergreifend zu erfassen, da der Benutzer seine Umgebung mit dem aktiven Gerät untersucht. Die Vollständigkeit und Qualität dieser Daten hängt von einer Reihe von Faktoren ab, z. b. vom Umfang der durchgeführten Untersuchung, von der seit der Durchsuchung übergebenen Zeit und davon, ob Objekte wie z. b. Möbel und Türen verschoben wurden, seit das Gerät den Bereich überprüft hat.
 
-Um nützliche räumliche Zuordnungsdaten zu gewährleisten, haben Anwendungsentwickler für mehrere Optionen:
-* Abhängig, was bereits gesammelt wurden. Diese Daten können ursprünglich unvollständig sein.
-* Bitten Sie den Benutzer mit, dass die Bewegung Bloom lernen Sie die Windows Mixed Reality-home und sehen Sie sich dann den Bereich, die, den Sie für die Umgebung verwenden möchten. Sie können die tippbewegung verwenden, um sicherzustellen, dass alle erforderlichen Bereich, auf dem Gerät bekannt ist.
-* Erstellen Sie eine benutzerdefinierte Auswertung Erfahrung in seiner eigenen Anwendung.
+Anwendungsentwickler haben mehrere Möglichkeiten, um hilfreiche räumliche Daten zu gewährleisten:
+* Verlassen Sie sich darauf, was bereits gesammelt wurde. Diese Daten sind anfänglich möglicherweise unvollständig.
+* Bitten Sie den Benutzer, mit der aufblühenden Bewegung den Windows Mixed Reality-Start zu verwenden und dann den Bereich zu erkunden, den Sie für die Benutzeroberfläche verwenden möchten. Mithilfe von Air-Tap können Sie überprüfen, ob dem Gerät der gesamte erforderliche Bereich bekannt ist.
+* Erstellen Sie eine benutzerdefinierte Erkundung in ihrer eigenen Anwendung.
 
-Beachten Sie, dass in all diesen Fällen die tatsächlichen Daten, die während der Auswertung durch das System gespeichert ist und die Anwendung nicht dazu muss.
+Beachten Sie, dass in allen diesen Fällen die während der Durchsuchung gesammelten tatsächlichen Daten vom System gespeichert werden, und die Anwendung muss dies nicht tun.
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
@@ -35,10 +35,10 @@ Beachten Sie, dass in all diesen Fällen die tatsächlichen Daten, die während 
     <tr>
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Die Überprüfung Visualisierung Platz</td>
+        <td>Raum Scan Visualisierung</td>
         <td>✔️</td>
         <td>❌</td>
     </tr>
@@ -46,51 +46,51 @@ Beachten Sie, dass in all diesen Fällen die tatsächlichen Daten, die während 
 
 
 
-## <a name="building-a-custom-scanning-experience"></a>Erstellen eine benutzerdefinierte Überprüfung Erfahrung
+## <a name="building-a-custom-scanning-experience"></a>Entwickeln eines benutzerdefinierten Scanvorgangs
 
-Anwendungen können auf den analizar los datos räumliche Zuordnung zu Beginn der Umgebung zu beurteilen, ob sie möchten, dass die Benutzer auf die zusätzlichen Schritte ausführen, um die Vollständigkeit und Qualität zu verbessern. Wenn Analysen weisen darauf hin, dass die Qualität verbessert werden sollte, sollten Entwickler eine Visualisierung für die Überlagerung auf der ganzen Welt an bereitstellen:
-* Wie viel von der Gesamtgröße des Datenträgers in der Nähe der Benutzer muss in der Umgebung sein.
-* In denen der Benutzer zur Verbesserung der Daten gespeichert werden sollen
+Anwendungen können die räumlichen Zuordnungsdaten zu Beginn der Umgebung analysieren, um zu beurteilen, ob der Benutzer zusätzliche Schritte ausführen muss, um seine Vollständigkeit und Qualität zu verbessern. Wenn die Analyse anzeigt, dass die Qualität verbessert werden sollte, sollten Entwickler eine Visualisierung bereitstellen, um auf der ganzen Welt zu überlagern:
+* Der Anteil des Gesamtvolumens in der Benutzer Nähe muss Teil der Benutzerumgebung sein.
+* An welcher Stelle der Benutzerdaten verbessern sollte
 
-Benutzer ist nicht bekannt macht eine Überprüfung "good". Sie müssen angezeigt werden oder usw. mitgeteilt, wonach gesucht werden soll, wenn sie aufgefordert werden, einen Scan – Flachheit, Entfernung von der tatsächlichen Wände, ausgewertet. Der Entwickler muss eine Feedbackschleife implementieren, die enthält, die räumliche Zuordnung datenaktualisierung während der Phase Scannen oder durchsuchen.
+Benutzer wissen nicht, was einen "guten" Scan vornimmt. Sie müssen angezeigt werden, oder Sie müssen wissen, was Sie suchen müssen, wenn Sie aufgefordert werden, eine Überprüfung zu evaluieren – eine flache, eine Entfernung von tatsächlichen Wänden usw. Der Entwickler sollte eine Feedback Schleife implementieren, die das Aktualisieren der räumlichen Daten während der Scan-oder Auswertungs Phase umfasst.
 
-In vielen Fällen ist es möglicherweise am besten, die dem Benutzer mitzuteilen, was sie (z. B. die Obergrenze suchen hinter Möbel ansehen), um die Überprüfung der erforderlichen Qualität zu erhalten.
+In vielen Fällen kann es am besten sein, den Benutzern mitzuteilen, was Sie tun müssen (z. b. die Obergrenze, das Aussehen hinter den Möbeln), um die erforderliche Scanqualität zu erhalten.
 
-## <a name="cached-versus-continuous-spatial-mapping"></a>Zwischenspeicherung im Vergleich zu fortlaufenden räumliche Zuordnung
+## <a name="cached-versus-continuous-spatial-mapping"></a>Zwischengespeicherte und fortlaufende räumliche Zuordnung
 
-Die Daten für die räumliche Zuordnung ist die am häufigsten hohes Gewicht, Data Source-Anwendungen nutzen können. Um Leistungsprobleme zu vermeiden, z. B. abfallende Frames oder Stottern erfüllt, Verbrauch dieser Daten muss sorgfältig durchgeführt werden.
+Die räumlichen Daten sind die Daten, die von den Datenquellen Anwendungen mit hohem Gewicht beansprucht werden können. Um Leistungsprobleme zu vermeiden, wie z. b. gelöschte Frames oder stutor-Daten, sollte die Nutzung dieser Daten sorgfältig erfolgen.
 
-Aktive scannen, während eine Benutzeroberfläche kann sowohl nützlich oder gleichzeitiger Aufrufe nachteilig auswirken und die Entwickler müssen Sie festlegen, die zu verwendende Methode abhängig von der Umgebung.
+Die aktive Überprüfung während einer-Darstellung kann sowohl vorteilhaft als auch schädlich sein, und der Entwickler muss entscheiden, welche Methode basierend auf der-Methode verwendet werden soll.
 
 ### <a name="cached-spatial-mapping"></a>Zwischengespeicherte räumliche Zuordnung
 
-Im Fall von zwischengespeicherten räumliche Zuordnung, wird die Anwendung in der Regel eine Momentaufnahme der Daten räumliche Zuordnung, und diese Momentaufnahme für die Dauer der Benutzeroberfläche verwendet.
+Bei einer zwischengespeicherten räumlichen Zuordnung erstellt die Anwendung in der Regel eine Momentaufnahme der räumlichen Zuordnungsdaten und verwendet diese Momentaufnahme für die Dauer der Arbeit.
 
 **Vorteile**
-* Gemeinkosten auf dem System während die Oberfläche führende, auf eindrucksvolle Stromversorgung, temperaturüberwachung ausgeführt wird und cpu-Leistung erzielt.
-* Eine einfachere Implementierung der main-Umgebung, da er nicht von Änderungen in den räumlichen Daten unterbrochen wird.
-* Ein einzelnes einmal, die Kosten für die räumlichen Daten für Physik, Grafiken und andere Zwecke verarbeitet Post.
+* Der geringere mehr Aufwand für das System, während die Ausführung ausgeführt wird, führt zu einer enormen Leistungssteigerung, zu Leistungseinbußen und CPU
+* Eine einfachere Implementierung des Haupt Erlebnisses, da diese nicht durch Änderungen in den räumlichen Daten unterbrochen wird.
+* Ein einzelner Zeitaufwand für die Verarbeitung räumlicher Daten für Physik, Grafiken und andere Zwecke.
 
-**Drawbacks**
-* Das Verschieben von realen Objekten oder Personen, die nicht durch die zwischengespeicherten Daten wiedergegeben. Beispiel: die Anwendung ggf. eine Tür geöffnet, wenn sie nun geschlossen wird.
-* Möglicherweise weitere Anwendungsspeicher auf die zwischengespeicherte Version der Daten zu verwalten.
+**Nachteil**
+* Die Verschiebung von realen Objekten oder Personen wird von den zwischengespeicherten Daten nicht widergespiegelt. Beispiel: die Anwendung wird möglicherweise eine Tür geöffnet, wenn Sie jetzt tatsächlich geschlossen wird.
+* Potenziell mehr Anwendungs Speicher, um die zwischengespeicherte Version der Daten beizubehalten.
 
-Ein überzeugendes Argument für diese Methode ist einer kontrollierten Umgebung oder eine Tabelle, die Top-Spiel.
+Ein guter Fall für diese Methode ist eine kontrollierte Umgebung oder ein Top-Spiel der Tabelle.
 
 ### <a name="continuous-spatial-mapping"></a>Fortlaufende räumliche Zuordnung
 
-Bestimmte Anwendungen basieren möglicherweise auf weiterhin Scans aus, um die räumliche Zuordnungsdaten zu aktualisieren.
+Bestimmte Anwendungen verlassen sich möglicherweise auf das Fortsetzen des Scans, um räumliche Daten zu aktualisieren.
 
 **Vorteile**
-* Sie müssen nicht in einer separaten Scannen oder Durchsuchen Benutzeroberfläche schon im Vorfeld in Ihrer Anwendung zu erstellen.
-* Die Verschiebung der realen Welt Objekte kann durch das Spiel auch mit der eine Verzögerung wiedergegeben.
+* Sie müssen in Ihrer Anwendung nicht in einer separaten Überprüfung oder Durchsuchung arbeiten.
+* Die Bewegung von realen Objekten kann durch das Spiel reflektiert werden, obwohl es sich um eine Verzögerung handelt.
 
-**Drawbacks**
-* Höhere Komplexität in der Implementierung der main-Umgebung.
-* Potenzielle Aufwand für die zusätzliche Verarbeitung für Grafik oder Physik als Änderungen inkrementell von diesen Systemen erfasst werden müssen.
-* Höhere Leistung, thermischer und Auswirkung auf die CPU.
+**Nachteil**
+* Höhere Komplexität bei der Implementierung des Haupt Erlebnisses.
+* Potenzieller mehr Aufwand für die zusätzliche Verarbeitung von Grafiken oder Physik, da Änderungen von diesen Systemen inkrementell erfasst werden müssen.
+* Höhere Stromversorgung, thermische und CPU-Auswirkung.
 
-Ein überzeugendes Argument für diese Methode ist eine Hologramme werden, in denen erwartet, für die Interaktion mit dem Verschieben von Objekten, z. B. ein holographic Auto, die Laufwerke auf dem Boden ordnungsgemäß in eine Tür abhängig davon, ob sie offene oder geschlossene erhöhen möchten.
+Ein guter Fall für diese Methode ist eine Methode, bei der holograms mit verschiebenden Objekten interagieren soll, z. b. Wenn ein Holographic Car, das auf dem Boden ist, möglicherweise korrekt in eine Tür wechselt, je nachdem, ob es geöffnet oder geschlossen ist.
 
 ## <a name="see-also"></a>Siehe auch
 * [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)

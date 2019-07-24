@@ -1,11 +1,11 @@
 ---
-title: Räumliche Entwurf
-description: Räumliche Sound ist ein leistungsstarkes Tool zum Immersion, Barrierefreiheit und UX-Entwurf in mixed Reality-Anwendungen.
+title: Räumlicher Sound Entwurf
+description: Räumlicher Sound ist ein leistungsfähiges Tool für das Eintauchen, die Barrierefreiheit und den UX-Entwurf in gemischten Reality-Anwendungen.
 author: joekellyms
 ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, räumliche Ton, Entwurf, Stil
+keywords: Windows Mixed Reality, räumlicher Sound, Entwurf, Stil
 ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
 ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
@@ -13,11 +13,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/06/2019
 ms.locfileid: "66750307"
 ---
-# <a name="spatial-sound-design"></a>Räumliche Entwurf
+# <a name="spatial-sound-design"></a>Räumlicher Sound Entwurf
 
-Räumliche Sound ist ein leistungsstarkes Tool zum Immersion, Barrierefreiheit und UX-Entwurf in mixed Reality-Anwendungen.
+Räumlicher Sound ist ein leistungsfähiges Tool für das Eintauchen, die Barrierefreiheit und den UX-Entwurf in gemischten Reality-Anwendungen.
 
-Wenn Sie jemals gespielt haben [Marco Poloshirt](https://en.wikipedia.org/wiki/Marco_Polo_(game)), oder jemand Ihr Telefon, um Hilfe rufen Sie gefunden, die Sie kennen bereits die Bedeutung der räumlichen Sound. Sound Hinweise verwendet zum Suchen der Objekte, Aufsehen abrufen oder erhalten einen besseren Überblick über die Umgebung in unseren Alltag. Verhält sich desto genauer Ihrer app Sound, wie in der realen Welt, die weitere überzeugend und sich an, dass Ihre virtuellen Welt ist.
+Wenn Sie jemals [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(game))gespielt haben, oder wenn jemand Ihr Telefon anrufen wollte, um es zu finden, sind Sie bereits mit der Wichtigkeit räumlicher Sounds vertraut. Wir verwenden in unserer täglichen Umgebung Sound Hinweise, um nach Objekten zu suchen, die Aufmerksamkeit von Menschen zu erhalten oder ein besseres Verständnis für unsere Umgebung zu erhalten. Umso genauer verhält sich der Sound Ihrer APP, wie es in der realen Welt der Fall ist.
 
 <br>
 
@@ -34,77 +34,77 @@ Wenn Sie jemals gespielt haben [Marco Poloshirt](https://en.wikipedia.org/wiki/M
     <tr>
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Räumliche Entwurf</td>
+        <td>Räumlicher Sound Entwurf</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
 </table>
 
 
-## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Vier wichtige Faktoren, die räumlichen Sound für mixed Reality-Entwicklung ist.
+## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Vier wichtige Dinge, die räumliche Klänge für die Entwicklung gemischter Realität
 
-Standardmäßig werden Sounds in Stereo wiedergegeben. Dies bedeutet, dass keine räumlichen Position, der Sound wiedergegeben wird, damit der Benutzer nicht weiß, wo der Sound stammt. Räumliche Sound führt vier wichtige Aspekte für die Entwicklung von mixed Reality:
+Standardmäßig werden Sounds in Stereo wiedergegeben. Dies bedeutet, dass der Sound ohne räumliche Position wiedergegeben wird, sodass der Benutzer nicht weiß, woher der Sound stammt. Räumlicher Sound führt vier wichtige Punkte für die Entwicklung gemischter Realität aus:
 
-**Erden**
+**Begründet**
 
-Ohne Ton nicht mehr virtuelle Objekte effektiv vorhanden sein, wenn wir unseren Kopf Ihnen aktivieren. Sie möchten in der Lage, diese Objekte zu hören, selbst wenn Sie nicht sichtbar, und können sie eine beliebige Stelle auf Sie suchen möchten, wie echte Objekte. Genau wie virtuelle Objekte visuell an die Hand geben werden um mit der realen Welt in blend müssen, müssen sie auch akustisch an die Hand geben werden. Räumliche Sound wie nahtlos der realen Welt-audio-Umgebung mit der digital-audio-Umgebung.
+Ohne Sound sind virtuelle Objekte tatsächlich nicht mehr vorhanden, wenn wir unsere Kopfzeile ausschalten. Genau wie bei echten Objekten möchten Sie diese Objekte auch dann hören können, wenn Sie Sie nicht sehen können, und Sie möchten Sie in der Lage sein, Sie überall herum zu finden. Ebenso wie virtuelle Objekte visuell auf eine Kombination mit der realen Welt basieren müssen, müssen Sie auch in der Praxis verankert werden. Räumlicher Sound kombiniert ihre reale Audioumgebung nahtlos mit der digitalen Audioumgebung.
 
-**Benutzereingriff**
+**Benutzer Aufmerksamkeit**
 
-Sie können nicht in mixed Reality-Umgebungen davon aus, in denen der Benutzer sieht und erwarten, dass sie etwas sehen, die Sie in der ganzen Welt visuell zu platzieren. Aber Benutzer können einen Sound wiedergeben, auch wenn das Objekt, das Abspielen des Audios dahinter ist immer hören. Benutzer werden verwendet, mit dem ihre Aufmerksamkeit, die nach Ihrem Klang - gezeichnet instinctually gehen wir auf ein Objekt, das wir erfahren Sie, um uns herum. Wenn Sie die Blicke Ihres Benutzers zu einer bestimmten Stelle, anstatt einen Pfeil, zeigen Sie diese visuell Sound platzieren, in diesem Standort eine sehr natürlichen und schnelle Möglichkeit, beraten weiterleiten möchten.
+In gemischter Realität können Sie nicht davon ausgehen, wo der Benutzer sucht, und erwarten, dass er etwas von Ihnen in der Welt visuell platziert. Benutzer können jedoch immer eine Soundwiedergabe hören, auch wenn sich das Objekt, das den Sound abgespielt hat, dahinter befindet. Menschen werden daran gewöhnt, dass Sie von Sound gezeichnet werden. wir sehen uns instatyp an, dass wir uns auf ein Objekt konzentrieren, das wir uns von uns hören Wenn Sie den Blick Ihres Benutzers an eine bestimmte Stelle leiten möchten, anstatt einen Pfeil zum visuellen darstellen zu verwenden, ist das Platzieren eines Sounds an dieser Stelle eine sehr natürliche und schnelle Möglichkeit, Sie zu begleiten.
 
-**Immersion**
+**Intensiv**
 
-Wenn Objekte verschieben oder in Konflikt stehen, können wir in der Regel die Interaktionen zwischen Materialien hören. Wenn also Ihre Objekte denselben laut vornehmen, die in der Praxis würden, ist ein Maß an Immersion verloren gehen – z. B. einen problematische Film mit dem Volume ganz nach unten ansehen. Alle Sounds in der realen Welt stammen aus einer bestimmten Stelle im Adressraum: auf, wenn wir unsere Mal "Kopf" aktivieren, wir hören, dass die Änderung der, in denen diese Sounds relativ zu unserer Ohren stammen und wir können den Speicherort der Sound auf diese Weise nachverfolgen. Spatialized Sounds bilden zusammen die "Verhalten" einer vor Ort über die wir sehen können.
+Wenn Objekte verschoben oder miteinander in Konflikt stehen, werden diese Interaktionen zwischen Material normalerweise angezeigt. Wenn Ihre Objekte also nicht denselben Sound haben, den Sie in der realen Welt haben, gehen Sie wie folgt vor, wenn Sie sich einen beängstigenden Film mit dem Volume ansehen. Alle Sounds in der realen Welt stammen von einem bestimmten Punkt im Raum: Wenn wir unsere Köpfe drehen, hören wir die Änderung in Bezug auf unsere Klänge, und wir können den Speicherort jedes Sounds auf diese Weise nachverfolgen. Räumliche Sounds bilden das "Gefühl" eines Orts, der über das, was wir sehen können, hinausgeht.
 
-**Entwerfen für**
+**Interaktions Entwurf**
 
-In den meisten herkömmlichen interaktiven Benutzeroberflächen sind Interaktionen klingt wie Soundeffekte Benutzeroberfläche in standard Mono oder Stereo wiedergegeben. Aber da alles, was in mixed Reality im 3D-Raum – einschließlich der UI - vorhanden ist wird diese Objekte von spatialized Sounds profitieren. Wenn wir eine Schaltfläche in der realen Welt drücken, wird diese Schaltfläche der Klang, die, den wir hören, stammt. Durch spatializing Interaktion Sounds, bieten wir erneut eine natürlicheren und realistische Benutzeroberfläche.
+In den meisten herkömmlichen interaktiven Umgebungen werden Interaktions Sounds wie Benutzeroberflächen-Soundeffekte in der standardmäßigen Mono-oder Stereo-Datei wiedergegeben. Da alles in gemischter Realität im 3D-Raum vorhanden ist, einschließlich der Benutzeroberfläche, profitieren diese Objekte von räumlichen Sounds. Wenn wir auf eine Schaltfläche in der realen Welt klicken, kommt der Ton, den wir hören, von dieser Schaltfläche. Durch die Spatialisierung von Interaktions Sounds bieten wir wieder eine natürlichere und realistischere Benutzer Leistung.
 
-## <a name="best-practices-when-using-spatial-sound"></a>Bewährte Methoden bei Verwendung des räumlichen sound
+## <a name="best-practices-when-using-spatial-sound"></a>Bewährte Methoden bei der Verwendung von räumlichem Sound
 
-**Echte Sounds besser funktionieren als synthetischen oder unnatürlichen sounds**
+**Echte Sounds funktionieren besser als synthetische oder unnatürliche Sounds.**
 
-Je vertrauter ist für Ihre Benutzer mit einem Typ des Sounds, die weitere tatsächlichen, die sie beibehalten, und desto einfacher wird werden in ihrer Umgebung gefunden. Eine menschliche Stimme, z. B. wird ein Sound sehr häufig, und Ihre Benutzer werden Suchen Sie ihn nur so schnell wie eine Person im Raum kommuniziert werden.
+Umso vertrauter ist Ihr Benutzer mit einem Audiotyp, umso realer ist er, und das ist leichter in der Lage, ihn in der Umgebung zu finden. Eine menschliche Stimme ist z. b. ein sehr gängiger Audiotyp, und Ihre Benutzer finden Sie genau so schnell wie eine echte Person im Raum, die mit Ihnen kommuniziert.
 
-**Erwartung Vorrang vor simulation**
+**Simulation der Erwartung von Trumps**
 
-Wenn Sie auf einen Sound von einer bestimmten Richtung werden verwendet, werden Ihre Aufmerksamkeit in diese Richtung unabhängig von der räumlichen Hinweise geführt. Z. B. in den meisten Fällen, die wir hören, Vögel sind sie über uns. Abspielen des Audios von einem Bird in den meisten Fällen bewirkt den Benutzer zum Nachschlagen, auch, wenn Sie den Sound darunter platzieren. Dies ist in der Regel verwirrend, und es wird empfohlen, die Arbeit mit den Erwartungen, wie diese anstatt dagegen sinnvoller nutzen zu können.
+Wenn Sie einen Sound verwenden, der von einer bestimmten Richtung stammt, wird Ihre Aufmerksamkeit unabhängig von räumlichen Cues in diese Richtung geleitet. In den meisten Fällen, in denen wir Vögel hören, sind Sie z. b. über uns. Die Wiedergabe des Sounds eines Vogels führt wahrscheinlich dazu, dass der Benutzer auch dann nach oben sucht, wenn Sie den Sound unterhalb platzieren. Dies ist in der Regel verwirrend, und es wird empfohlen, dass Sie mit Erwartungen wie diesen arbeiten, anstatt sie gegen eine natürlichere Darstellung zu machen.
 
-**Die meisten Sounds sollten spatialized werden**
+**Die meisten Sounds sollten räumlich behandelt werden.**
 
-Wie bereits erwähnt, alles in Mixed Reality vorhanden ist, im 3D-Raum – Ihre Sounds sollte auch. Sogar Musik kann manchmal von Spatialization, profitieren, insbesondere dann, wenn es sich um ein Menü oder eine andere Benutzeroberfläche verknüpft ist.
+Wie bereits erwähnt, ist alles in gemischter Realität im 3D-Bereich vorhanden. Ihre Klänge sollten ebenfalls angezeigt werden. Selbst Musik kann manchmal von der Spatialisierung profitieren, insbesondere wenn Sie an ein Menü oder eine andere Benutzeroberfläche gebunden ist.
 
-**Vermeiden Sie unsichtbar korrekturemitter ab**
+**Vermeiden unsichtbarer Emitter**
 
-Da wir bedingte wurde haben Sounds ansehen, die wir, um uns herum hören, kann es sein, eine unnatürliche und sogar unnerving Erfahrung, um einen Sound zu suchen, der keine visual tätig ist. Sounds in der Praxis nicht leeren Bereich stammen, also nicht sicher sein, wenn ein audio Emitter innerhalb der Umgebung des Benutzers sofortige platziert wird, dass es auch zu sehen.
+Da wir so konzipiert sind, dass wir uns mit den Sounds beschäftigen, die wir uns im Blick haben, kann es sich um eine unnatürliche und sogar entstehende Erfahrung handeln, um einen Sound zu finden, der keine visuelle Präsenz hat. Klänge in der realen Welt stammen nicht aus einem leeren Bereich. Achten Sie daher darauf, dass ein audioemitter in der unmittelbaren Umgebung des Benutzers platziert wird, der auch angezeigt werden kann.
 
-**Vermeiden Sie räumliche Maskierung**
+**Vermeiden räumlicher Maskierung**
 
-Räumliche Sound basiert auf sehr subtil akustischen Hinweise, die durch andere Sounds überfordert sein können. Stellen Sie Stereo Musik oder ambient Sounds haben, sicher, dass sie niedrig genug ist, in der Mischung, Platz für die Details Ihrer spatialized Sounds, die den Benutzern ermöglicht, diese leicht gefunden, und bleiben klingt realistischer und natürliche sind.
+Räumlicher Sound stützt sich auf sehr feine akustische Hinweise, die von anderen Sounds unterstützt werden können. Wenn Sie Stereo Musik oder Ambient-Sounds haben, stellen Sie sicher, dass Sie in der Mischung niedrig genug sind, um Platz für die Details ihrer räumlichen Sounds zu schaffen, mit denen Ihre Benutzer Sie leicht finden können, und halten Sie Sie realistisch und natürlich.
 
-## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Allgemeine Konzepte zu bedenken, wenn räumliche Sound verwenden
+## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Allgemeine Konzepte, die bei der Verwendung von räumlichem Sound berücksichtigt werden sollten
 
-**Räumliche Sound ist eine simulation**
+**Räumlicher Sound ist eine Simulation**
 
-Räumliche Sound am häufigsten verwendet ist, das einen Sound scheint, als wären sie von einem physischen oder virtuellen Objekt in der ganzen Welt ausgehen ist. Daher anfertigen spatialized Sound am sinnvollsten, die diese Objekte stammen.
+Die häufigste Verwendung von räumlichem Sound ist, dass ein Sound so erscheint, als wäre er von einem realen oder virtuellen Objekt auf der Welt. Daher ist es möglich, dass räumliche Sounds aus solchen Objekten am sinnvollsten werden.
 
-Beachten Sie, dass die wahrgenommene Genauigkeit von räumlichen sound bedeutet, die ein Sound unbedingt aus der Mitte eines Objekts, der die Differenz ausgeben darf nicht bemerkbar, abhängig von der Größe des Objekts und Entfernung des Benutzers. Mit kleinen-Objekten wird der Mittelpunkt des Objekts in der Regel ausreichend. Bei größeren Objekten sollten Sie einen sound korrekturemitter oder mehrere korrekturemitter ab, an der bestimmten Stelle innerhalb des Objekts, die den Klang erstellt werden soll.
+Beachten Sie, dass die wahrgenommene Genauigkeit räumlicher Töne bedeutet, dass ein Sound nicht notwendigerweise aus dem Mittelpunkt eines Objekts ausgegeben werden sollte, da der Unterschied abhängig von der Größe des Objekts und der Entfernung zum Benutzer erkennbar ist. Bei kleinen Objekten ist der Mittelpunkt des Objekts in der Regel ausreichend. Bei größeren Objekten sollten Sie einen audioemitter oder mehrere Emitter an der spezifischen Position innerhalb des Objekts, das den Sound erzeugen soll, benötigen.
 
-**Normalisieren Sie alle sounds**
+**Alle Sounds normalisieren**
 
-Abstand Dämpfung erfolgt schnell in die erste Verbrauchseinheit des Benutzers, "", wie in der realen Welt. Alle Audiodateien um physisch genau Abstand Attenuation, und gewährleistet, dass ein Sound beteiligen normalisiert werden sollen. wenn mehrere-Zähler sofort (falls zutreffend). Das räumliche audio-Modul behandelt die Attenuation erforderlich, um einen Sound "fühlen", wie in einer bestimmten Entfernung (mit einer Kombination aus Attenuation und "Abstand Hinweise") ist, und alle Attenuation anwenden, Ihre Auswirkungen reduzieren können kann. Außerhalb von simuliert ein echtes Objekt, der ersten Verfall von distance *räumliche Sound* Sounds werden wahrscheinlich mehr als ausreichend für eine richtige Mischung aus Ihrem Audio.
+Die Entfernungs Dämpfung erfolgt schnell innerhalb der ersten Verbrauchseinheit des Benutzers, wie dies in der realen Welt der Fall ist. Alle Audiodateien sollten normalisiert werden, um eine physisch exakte Entfernungs Dämpfung sicherzustellen und sicherzustellen, dass ein Sound in einigen Metern entfernt werden kann (falls zutreffend). Das räumliche Audiomodul behandelt die für einen Sound erforderliche Dämpfung, wie es sich in einer bestimmten Entfernung befindet (mit einer Kombination aus Dämpfung und "Entfernungs hinweisen"), und das Anwenden einer beliebigen Dämpfung, die den Effekt verringern kann. Außerhalb der Simulation eines echten Objekts ist der anfängliche Entfernungs Abfall von *räumlichen Sound* Geräuschen wahrscheinlich mehr als ausreichend für eine ordnungsgemäße Mischung ihrer Audiodaten.
 
-**Ermittlung und Benutzer-Schnittstellen**
+**Objekt Ermittlung und Benutzeroberflächen**
 
-Wenn Audiohinweise verwenden, um die Aufmerksamkeit des Benutzers über ihre aktuelle Ansicht zu leiten, sollte der Sound akustische und in der Mischung, über keine Stereo-Audiodaten und anderen spatialized Sounds die aus der direktionalen audiohinweis abgelenkt werden möglicherweise deutlich. Sounds und Musik, die einem Element der Benutzeroberfläche (z. B. ein Menü) zugeordnet sind, sollte der sound Emitter dieses Objekt zugeordnet werden. Stereo und anderen nicht-Positionsargumenten audio wiedergeben können stellen spatialized Elemente für Benutzer schwierig zu finden (siehe oben: Vermeiden Sie räumliche Maskierung).
+Wenn Sie Audiohinweise verwenden, um die Aufmerksamkeit des Benutzers außerhalb der aktuellen Ansicht zu leiten, sollte der Sound in der Mischung, auch über alle Stereo Sounds und alle anderen räumlichen Sounds, die vom direktionalen audiohinweis abweichen können, hörbar und deutlich werden. Bei Sounds und Musik, die einem Element der Benutzeroberfläche (z. b. einem Menü) zugeordnet sind, sollte der audioemitter an dieses Objekt angefügt werden. Stereo und andere nicht positionelle Audiowiedergabe können das Auffinden von räumlichen Elementen erschweren (siehe oben). Vermeiden Sie räumliche Maskierung).
 
-**Verwenden von räumlichen Sound über standard 3D Sound so weit wie möglich**
+**Verwenden Sie den räumlichen Sound über den 3D-Standard Sound so weit wie möglich**
 
-In mixed Reality, für die optimale Ergebnisse zu erzielen sollten 3D, Audio über räumliche Sound statt über ältere 3D, audio Technologien erreicht werden. Im Allgemeinen ist die verbesserte Spatialization der kleine CPU-Aufwand über standard-3D-sound. Standard-3D-Audio kann verwendet werden, für die mit niedriger Priorität Sounds, Sounds, die spatialized, aber nicht unbedingt auf ein Objekt physisch oder virtuell gebunden und Objekte, die der Benutzer nie für die Interaktion mit der app suchen muss.
+In gemischter Realität sollte 3D-Audio mit räumlichem Sound anstelle von Legacy-3D-Audiotechnologien erzielt werden. Im Allgemeinen sind bei der verbesserten Spatialisierung die kleinen CPU-Kosten im Vergleich zum 3D-Standard Sound zu verbessern. Standard mäßige 3D-Audiodaten können für Sounds mit niedriger Priorität verwendet werden, für die ein räumliches, aber nicht notwendigerweise an ein physisches oder virtuelles Objekt gebunden ist, sowie für Objekte, die der Benutzer niemals zum interagieren mit der APP benötigt.
 
 ## <a name="see-also"></a>Siehe auch
 * [Raumklang](spatial-sound.md)

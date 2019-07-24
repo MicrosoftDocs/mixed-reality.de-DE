@@ -1,55 +1,55 @@
 ---
 title: Skalierung
-description: Eine Taste, um die Anzeige von Inhalten, die realistische holographic Format aussieht ist, um die visual Statistiken der realen Welt so weit wie möglich zu imitieren.
+description: Ein Schlüssel zum Anzeigen von Inhalten, die in der holografischen Form realistisch aussehen, besteht darin, die visuellen Statistiken der realen Welt so genau wie möglich zu imitieren.
 author: mavitazk
 ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Entwerfen von Windows Mixed Reality, Stil,
+keywords: Gemischte Windows-Realität, Stil, Entwurf
 ms.openlocfilehash: f13414bff7d84692e8e87aa2abdcded15627346f
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593792"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524111"
 ---
 # <a name="scale"></a>Skalierung
 
-Eine Taste, um die Anzeige von Inhalten, die realistische holographic Format aussieht ist, um die visual Statistiken der realen Welt so weit wie möglich zu imitieren. Dies bedeutet, integrieren so viele der visuellen Hinweise wie möglich, die uns dabei, (in der Praxis helfen), in denen Objekte sind, wie groß, und was sie zu bieten haben. Die Größe eines Objekts ist eine der wichtigsten von dieser visuelle Hinweise, die einem Viewer eine Vorstellung von der Größe eines Objekts sowie Hinweise auf den Speicherort (insbesondere bei Objekten, die eine bekannte Größe haben) gewähren. Darüber hinaus kann das Anzeigen von Objekten in tatsächlichen Umfang angezeigt werden, eines der wichtigsten Erfahrungen Unterscheidungsmerkmale für Realität in der Regel – etwa im gemischten, die nicht auf zuvor anzeigen bildschirmbasierte möglich wurde.
+Ein Schlüssel zum Anzeigen von Inhalten, die in der holografischen Form realistisch aussehen, besteht darin, die visuellen Statistiken der realen Welt so genau wie möglich zu imitieren. Dies bedeutet, dass so viele visuelle Hinweise integriert werden können, wie wir uns (in der realen Welt) dabei helfen können, die Objekte, ihre Größe und deren Bedeutung zu verstehen. Die Skalierung eines Objekts ist eine der wichtigsten dieser visuellen Hinweise und gibt einem Viewer einen Eindruck von der Größe eines Objekts sowie von Hinweisen zu seiner Position (insbesondere bei Objekten mit einer bekannten Größe). Außerdem wurde das Anzeigen von Objekten in einer realen Skala als eines der wichtigsten Unterschiede bei gemischter Realität im allgemeinen angesehen – etwas, das bei der bildschirmbasierten Anzeige zuvor nicht möglich war.
 
-## <a name="how-to-suggest-the-scale-of-objects-and-environments"></a>Wie Sie die Skalierung von Objekten und Umgebungen vorschlagen
+## <a name="how-to-suggest-the-scale-of-objects-and-environments"></a>Vorschlagen der Skalierung von Objekten und Umgebungen
 
-Es gibt viele Möglichkeiten zum Vorschlagen von der Skala eines Objekts, von die einige mögliche Auswirkungen auf andere Faktoren wahrnehmungen ausgeführt haben. Der Schlüssel ist einfach Objekte in einem "echten" Größe angezeigt und realistische Größe verwalten, wie der Benutzer verschieben. Dies bedeutet, dass eine unterschiedliche Menge an visual Winkel des Benutzers, eines Benutzers Hologramme einnehmen werden, wie sie näher oder weiter entfernt, die gleiche Weise, die echte Objekte.
+Es gibt viele Möglichkeiten, die Skalierung eines Objekts vorzuschlagen, von denen einige mögliche Auswirkungen auf andere perzeptive Faktoren haben. Der Schlüssel besteht darin, die Objekte einfach in der Größe "Real" anzuzeigen und diese realistische Größe beizubehalten, wenn Benutzer sich bewegen. Dies bedeutet, dass holograms eine andere Menge an Sicht des visuellen Elements eines Benutzers in die gleiche Weise erhalten, wie es bei echten Objekten der Fall ist.
 
-### <a name="utilize-the-distance-of-objects-as-they-are-presented-to-the-user"></a>Verwenden Sie den Abstand der Objekte, wie sie dem Benutzer angezeigt werden
+### <a name="utilize-the-distance-of-objects-as-they-are-presented-to-the-user"></a>Verwenden Sie den Abstand von Objekten, wie Sie dem Benutzer angezeigt werden.
 
-Eine gängige Methode ist den Abstand der Objekte zu verwenden, wie sie dem Benutzer angezeigt werden. Betrachten Sie beispielsweise die Visualisierung eines großen Familien Autos vor dem Benutzer. Wäre das Auto direkt vor ihnen innerhalb von Arm-Länge, wäre es zu groß für im Lesebereich des Benutzers. Dies müsste den Benutzer die Haupt- und des Texts zu verstehen, das Objekt während des gesamten Entwicklungsprozesses zu verschieben. Wenn das Fahrzeug weiter entfernt (durch das Zimmer) eingefügt wurden, kann der Benutzer einen Eindruck von der Größe einrichten, indem das Objekt im jeweiligen Lesebereich, während des gesamten Entwicklungsprozesses angezeigt verschieben näher ist selbst dann, um Bereiche im Detail zu untersuchen.
+Eine gängige Methode besteht darin, den Abstand von Objekten zu nutzen, wie Sie für den Benutzer angezeigt werden. Nehmen Sie beispielsweise an, dass Sie ein großes Familienfahrzeug vor dem Benutzer visualisieren. Wenn sich das Auto direkt davor befand, wäre es bei der Arm-Länge zu groß, damit es in das Feld des Benutzers passt. Dies würde dazu führen, dass der Benutzer seine Kopfzeile und den Hauptteil verschieben muss, um das gesamte Objekt zu verstehen. Wenn das Fahrzeug weiter entfernt wurde (im gesamten Raum), kann der Benutzer einen Eindruck von der Skalierung feststellen, indem er das gesamte Objekt in der Ansicht sehen kann, und sich dann näher an den Bereich bewegen, um Bereiche im Detail zu überprüfen.
 
-[Volvo](https://www.youtube.com/watch?v=DilzwF90vec) verwendet dieses Verfahren zum Erstellen einer Ausstellungsraum-Umgebung für ein neues Auto, nutzen die Skalierung des holographic Autos in einer Weise, die realistischer und intuitiver für den Benutzer halte. Die Umgebung beginnt mit ggf. ein Hologramm des Autos für eine physische Tabelle, damit der Benutzer die Größe und Form des Modells zu verstehen. Weiter unten in der Oberfläche Autos wird auf einem größeren Rahmen (über die Größe des Geräts in dessen Sichtfeld) erweitert, aber da der Benutzer einen Bezugsrahmen aus dem kleineren Modell bereits erworben haben, können sie angemessen Navigieren in die Features des Autos.
+Mit diesem Verfahren wurde von [Volvo](https://www.youtube.com/watch?v=DilzwF90vec) ein Showroom für ein neues Auto erstellt, das die Skalierung des Holographic Car auf eine Weise nutzte, die für den Benutzer realistisch und intuitiv war. Die Benutzeroberflächen beginnen mit einem Hologramm des Autos für eine physische Tabelle, sodass der Benutzer die Gesamtgröße und Form des Modells verstehen kann. Zu einem späteren Zeitpunkt wächst das Auto in eine größere Skalierung (über die Größe des Geräts hinaus), aber da der Benutzer bereits einen Verweis aus dem kleineren Modell abgerufen hat, kann er auf die Features des Autos angemessen navigieren.
 
-![Volvo Autos-Erfahrung für HoloLens](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
-*Volvo Autos-Erfahrung für HoloLens*
+![Volvo Cars-Darstellung für hololens](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
+*Volvo Cars-Darstellung für hololens*
 
-### <a name="use-holograms-to-modify-the-users-real-space"></a>Verwenden Sie Hologramme so ändern Sie den tatsächlichen Speicherplatz des Benutzers
+### <a name="use-holograms-to-modify-the-users-real-space"></a>Verwenden Sie holograms, um den tatsächlichen Bereich des Benutzers zu ändern.
 
-Eine andere Methode ist die Verwendung Hologramme um des Benutzers echte Speicherplatz, und Ersetzen der vorhandenen Wände oder Obergrenzen in Umgebungen oder Anfügen von "Lücken" oder "Windows", sodass übermäßig große Objekten, scheinbar "Break-der physische Speicherplatz durch" zu ändern. Z. B. ein großer Baum möglicherweise nicht im Wohnzimmer für die meisten Benutzer geeignet, aber von einem virtuellen Himmel auf ihren Höchstwert ablegen, der physische Speicherplatz wird erweitert, die virtuelle. Dadurch kann der Benutzer aufzusuchen, der Basis der virtuellen Struktur, und erfassen einen Eindruck von der Größe des wie es würde in der Praxis angezeigt werden, und suchen Sie es weit über den Raum des Raums hinausgehen, finden Sie unter.
+Eine andere Methode ist die Verwendung von holograms, um den tatsächlichen Bereich des Benutzers zu ändern, die vorhandenen Wände oder Obergrenzen durch Umgebungen zu ersetzen oder "Löcher" oder "Windows" anfügen, sodass mehrstufige Objekte den physischen Raum scheinbar "durchbrechen" können. Beispielsweise kann eine große Struktur nicht in die meisten Benutzer Räume passen, sondern durch das Platzieren eines virtuellen Himmels auf die virtuelle Oberfläche. Dadurch kann der Benutzer die Basis der virtuellen Struktur durchlaufen und einen Eindruck davon erfassen, wie er in der Praxis aussehen würde, und dann sehen, dass er sich weit über den physischen Raum des Raums hinaus erstreckt.
 
-[Minecraft](https://minecraft.net/) ein Konzept-Erlebnis, das über eine ähnliche Technik entwickelt. Ein virtuelles Fenster einer physischen Oberfläche in einem Raum hinzufügen, werden die vorhandenen Objekte im Raum im Kontext einer erheblich größere Umgebung, über die physischen skalierungseinschränkungen des Raums platziert.
+[Minecraft](https://minecraft.net/) entwickelte mithilfe einer ähnlichen Technik ein Konzept. Durch Hinzufügen eines virtuellen Fensters zu einer physischen Oberfläche in einem Raum werden die vorhandenen Objekte im Raum im Kontext einer erheblich größeren Umgebung platziert, die über die physischen Skalierungs Beschränkungen des Raums hinausgeht.
 
-![Minecraft-Concept-Umgebung für HoloLens](images/800px-minecraftwindow-640px.jpg)<br>
-*Minecraft-Concept-Umgebung für HoloLens*
+![Minecraft Concept-Darstellung für hololens](images/800px-minecraftwindow-640px.jpg)<br>
+*Minecraft Concept-Darstellung für hololens*
 
-## <a name="experimenting-with-scale"></a>Experimentieren mit der Skalierung
+## <a name="experimenting-with-scale"></a>Experimentieren mit der Skala
 
-In einigen Fällen erprobt Designer haben eine Änderung der Skalierung (durch Ändern der angezeigten "echten" Größe des Objekts) und gleichzeitig eine einzelne Position des Objekts, um ein Objekt, das erste näher oder weiter auf einen Viewer aus, ohne eine tatsächliche Bewegung zu ermitteln. Dies wurde in einigen Fällen als eine Möglichkeit zum Simulieren von Nahaufnahme der Anzeige von Elementen möglichen bequem Einschränkungen zum Anzeigen von virtuellen Inhalte näher als "Zone der Komfort" schlage weiterhin zu nutzen und gleichzeitig getestet.
+In manchen Fällen haben Designer mit der Änderung der Skala experimentieren (indem Sie die angezeigte "echte" Größe des Objekts geändert haben) und gleichzeitig eine einzelne Position des Objekts beibehalten. so kann ein Objekt ohne wirkliche Bewegung näher oder weiter in einen Viewer gelangen. Dies wurde in einigen Fällen getestet, um die Anzeige von Elementen zu beschleunigen, während gleichzeitig die möglichen Komfort Beschränkungen beim Anzeigen von virtuellen Inhalten, die näher sind als die "Zone der Bequemlichkeit", zu berücksichtigen sind.
 
-Dies kann jedoch einige mögliche Elemente in der Umgebung erstellen:
-* Virtuelle Objekte, die ein Objekt mit einer Größe "bekannte" in der Ereignisanzeige darstellen, eine Änderung der Skalierung ohne Ändern der Position zu in Konflikt stehende visuelle Hinweise führt – die Augen möglicherweise immer noch "finden Sie unter" das Objekt auf eine Ebene aufgrund Vergence Hinweise (finden Sie unter den [Komfort ](comfort.md) Artikel Weitere Informationen zu diesem), aber die Größe fungiert als monokularen Hinweis, der das Objekt möglicherweise näher ab. Diese in Konflikt stehende Hinweise dazu führen, dass verwechselt Sichtweise – Viewer häufig finden Sie unter dem Objekt als direktes (aufgrund der Konstante Tiefe Cue) bleiben jedoch wächst rasant.
-* In einigen Fällen wird die Änderung der Skalierung Stichwort "derzeit" angezeigt, stattdessen, in dem das Objekt kann, oder möglicherweise nicht so ändern Sie die Skalierung von einem Viewer angezeigt werden, aber ist anscheinend Umstellung direkt auf den Betrachter (die eine bedauernswerte Riesenerfolg sein kann).
-* Mit Vergleich Oberflächen in der Praxis sind manchmal Skalierung Änderungen wie das Ändern der Position, an mehrere Achsen sichtbar – Objekte niedriger nicht verschieben, näher löschen angezeigt werden können (ähnlich wie in einer Projektion 2D, 3D datenverschiebung in einigen Fällen).
-* Schließlich für Objekte ohne eine bekannte "real World"-Größe (z. B. willkürlichen Formen mit beliebiger Größe, die Elemente der Benutzeroberfläche usw.), Ändern der Skalierung funktional fungieren kann, als eine Möglichkeit, Änderungen in der Entfernung zu imitieren – die Viewer müssen nicht so viele bereits vorhandene Hinweise von oben nach unten, um Verstehen Sie wirkliche Größe oder Speicherort des Objekts, damit die Skalierung als ein wichtiger Hinweis verarbeitet werden kann.
+Dadurch können einige mögliche Artefakte in der-Darstellung erstellt werden:
+* Bei virtuellen Objekten, die ein Objekt mit der "bekannten" Größe des Viewers darstellen, führt das Ändern der Skala ohne Änderung der Position zu Konflikt verursachenden visuellen Hinweisen – die Augen können das Objekt in gewisser Weise aufgrund von verseh-hinweisen (siehe [Komfort](comfort.md) Weitere Informationen hierzu finden Sie in diesem Artikel, aber die Größe fungiert als monokulärer Hinweis darauf, dass das Objekt möglicherweise näher kommt. Diese Konflikt verursachenden Hinweise führen zu verwirrten Wahrnehmungen – Betrachter sehen das Objekt oft als vorhanden (aufgrund der Konstanten Tiefe), werden jedoch schnell vergrößert.
+* In einigen Fällen wird die Skalierungs Änderung stattdessen als "sich abzeichtender" Hinweis betrachtet, wobei das Objekt möglicherweise nicht angezeigt wird, um die Skalierung durch einen Viewer zu ändern, aber anscheinend direkt in den Augenblick des Viewers verschoben wird (was eine unangenehme Sensation sein kann).
+* Bei Vergleichs Oberflächen in der realen Welt werden solche Skalierungs Änderungen manchmal als veränderliche Position entlang mehrerer Achsen angezeigt – Objekte werden möglicherweise herabgestuft, anstatt sich näher zu bewegen (ähnlich in einer 2D-Projektion der 3D-Bewegung in einigen Fällen).
+* Schließlich kann das Ändern der Skalierung für Objekte ohne bekannte Größe (z. b. beliebige Formen mit beliebigen Größen, Benutzeroberflächen Elementen usw.) funktionell als eine Möglichkeit fungieren, Änderungen in der Entfernung zu imitieren – Betrachter haben nicht so viele vorvorhandene Top-Down-Hinweise, nach denen Sie verstehen Sie die tatsächliche Größe oder den Speicherort des Objekts, sodass die Skalierung als wichtiger Hinweis verarbeitet werden kann.
 
 ## <a name="see-also"></a>Siehe auch
-* [Farbe, helle und Materialien](color,-light-and-materials.md)
-* [Typography](typography.md)
-* [Räumliche Entwurf](spatial-sound-design.md)
+* [Farbe, Licht und Materialien](color,-light-and-materials.md)
+* [Typografie](typography.md)
+* [Raumklangentwurf](spatial-sound-design.md)

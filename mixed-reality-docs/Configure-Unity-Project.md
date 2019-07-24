@@ -1,11 +1,11 @@
 ---
-title: Konfigurieren Sie ein neues Unity-Projekt für Windows Mixed Reality
-description: Konfigurieren von Unity-Projekt ohne MRTK
+title: Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality
+description: Konfigurieren des Unity-Projekts ohne mrtk
 author: yoyoz
 ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
-keywords: Unity, mixed Reality, Entwicklung, erste Schritte, neues Projekt
+keywords: Unity, gemischte Realität, Entwicklung, Einstieg, neues Projekt
 ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
 ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
@@ -13,50 +13,50 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/22/2019
 ms.locfileid: "67326091"
 ---
-# <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Konfigurieren Sie ein neues Unity-Projekt für Windows Mixed Reality 
+# <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality 
 
-(überspringen Sie, wenn Sie bereits MRTK v2 in Ihrem Unity-Projekt importiert haben)
+(überspringen, wenn Sie mrtk v2 bereits in Ihr Unity-Projekt importiert haben)
 
-Wenn Sie ein neues Unity-Projekt erstellt, ohne Mixed Reality-Toolkit zu importieren möchten, stehen Ihnen eine kleine Gruppe von Unity-Einstellungen manuell ändern für Windows Mixed Reality, die in zwei Kategorien unterteilt müssen: pro Projekt und pro-Szene.
+Wenn Sie ein neues Unity-Projekt erstellen möchten, ohne Mixed Reality Toolkit zu importieren, gibt es eine kleine Reihe von Unity-Einstellungen, die Sie manuell für Windows Mixed Reality ändern müssen, die in zwei Kategorien unterteilt sind: pro Projekt und pro Szene.
 
 ## <a name="per-project-settings"></a>Einstellungen pro Projekt
 
-Um Windows Mixed Reality Ziel festzulegen, müssen Sie zuerst Ihr Unity-Projekt als universelle Windows-Plattform-app exportieren festlegen: 
-1. Wählen Sie **Datei > Buildeinstellungen...**
-2. Wählen Sie **universelle Windows-Plattform** in die Plattform aus, und klicken Sie auf **Plattform wechseln**
-3. Legen Sie **SDK** zu **universelle 10**
-4. Legen Sie **Zielgerät** zu **einem beliebigen Gerät** zur Unterstützung einer immersive Headsets aus, oder wechseln Sie zur **HoloLens**
-5. Legen Sie **Buildtyp** zu **D3D**
-6. Legen Sie **UWP SDK** zu **zuletzt installierte**
+Um Windows Mixed Reality als Ziel festzulegen, müssen Sie zuerst Ihr Unity-Projekt so festlegen, dass es als universelle Windows-Plattform-App exportiert wird: 
+1. **Datei > Buildeinstellungen auswählen...**
+2. Wählen Sie in der Liste Plattform **universelle Windows-Plattform** aus, und klicken Sie auf **Plattform wechseln**
+3. Festlegen des **SDK** auf **Universal 10**
+4. Festlegen des **Zielgeräts** für **ein beliebiges Gerät** zur Unterstützung von immersiven Headsets oder wechseln zu **hololens**
+5. Buildtyp auf **D3D** festlegen
+6. **UWP SDK** auf **Letztes installiert** festlegen
 
-Klicken Sie dann müssen wir wissen, dass die app aus, es versucht wird, exportieren, zu erstellen, sollten Unity können eine [immersive Ansicht](app-views.md) anstelle einer 2D-Ansicht. Zu diesem Zweck aktivieren "Virtuelle Realität unterstützt":
-1. Von der **Buildeinstellungen...**  geöffnete Fenster **Playereinstellungen...**
-2. Wählen Sie die **Einstellungen für die universelle Windows-Plattform** Registerkarte
-3. Erweitern Sie die **XR-Einstellungen** Gruppe
-4. In der **XR-Einstellungen** aktivieren Sie im Abschnitt der **virtuelle Realität unterstützt** Kontrollkästchen zum Hinzufügen der **Virtual Reality-Geräte** Liste.
-5. In der **XR-Einstellungen** gruppieren, überprüfen Sie, ob **"Windows Mixed Reality"** wird als ein unterstütztes Gerät aufgeführt. (Dies kann als "Windows Holographic" in älteren Versionen von Unity angezeigt)
+Wir müssen Unity dann mitteilen, dass die zu exportierende App eine [immersive Ansicht](app-views.md) anstelle einer 2D-Ansicht erstellen sollte. Dies geschieht durch Aktivieren von "Virtual Reality supported":
+1. Öffnen Sie  im Fenster "Buildeinstellungen" die **Player-Einstellungen...**
+2. Wählen Sie die **Einstellungen für universelle Windows-Plattform** Registerkarte aus.
+3. Erweitern der Gruppe " **XR-Einstellungen** "
+4. Aktivieren Sie im Abschnitt " **XR-Einstellungen** " das Kontrollkästchen " **Virtual Reality supported** ", um die Liste **Virtual Reality-Geräte** hinzuzufügen.
+5. Vergewissern Sie sich in der Gruppe " **XR-Einstellungen** ", dass **"Windows Mixed Reality"** als unterstütztes Gerät aufgeführt ist. (Dies wird in älteren Versionen von Unity möglicherweise als "Windows Holographic" angezeigt)
 
-![Einstellungen für die Qualität von Unity](images/getting-started-unity-quality-settings.jpg)<br>
-*Unity-Xr-Einstellungen*
+![Unity-Qualitätseinstellungen](images/getting-started-unity-quality-settings.jpg)<br>
+*Unity-XR-Einstellungen*
 
-Ihre app kann nun grundlegende holographic Rendering und räumliche Eingabe erfolgen. Um weiter gehen und bestimmte Funktionen nutzen, muss Ihre app die entsprechenden Funktionen im Manifest deklariert werden. Die manifest-Deklarationen können in Unity vorgenommen werden, damit sie in jedem nachfolgenden Projektexport enthalten sind. Die Einstellung finden Sie im **Playereinstellungen > Einstellungen für die universelle Windows-Plattform > Veröffentlichungseinstellungen > Funktionen**. Die entsprechenden Funktionen für die Aktivierung von häufig verwendeten Unity-APIs für Mixed Reality sind:
+Ihre APP kann jetzt grundlegendes Holographic-Rendering und räumliche Eingaben durchführen. Um weiter zu gehen und bestimmte Funktionen zu nutzen, muss Ihre APP die entsprechenden Funktionen in ihrem Manifest deklarieren. Die Manifest-Deklarationen können in Unity erstellt werden, sodass Sie in jedem nachfolgenden Projekt Export enthalten sind. Die Einstellung finden Sie unter **Player Settings > Settings for universelle Windows-Plattform > Publishing Settings >-Funktionen**. Die anwendbaren Funktionen zum Aktivieren häufig verwendeter Unity-APIs für gemischte Realität sind:
 
-|  Funktion  |  APIs, die Funktion erfordern | 
+|  Funktion  |  APIs, die Funktionen erfordern | 
 |----------|----------|
-|  SpatialPerception  |  SurfaceObserver (Zugriff auf [räumliche Zuordnung](spatial-mapping.md) Gitter für HoloLens)&mdash;*keine Funktion, die für allgemeine räumliche nachverfolgung von den Kopfhörer erforderlich sind* | 
-|  WebCam  |  PhotoCapture und VideoCapture | 
-|  PicturesLibrary / "videoslibrary"  |  PhotoCapture oder VideoCapture, bzw. (bei den aufgezeichneten Inhalt zu speichern) | 
-|  Mikrofon  |  VideoCapture (wenn Audio erfassen), DictationRecognizer, GrammarRecognizer und KeywordRecognizer | 
-|  InternetClient  |  DictationRecognizer (und mit der Unity-Profiler) | 
+|  Spatialperception  |  "Surfaceobserver" (Zugriff auf [räumliche](spatial-mapping.md) zuordnungsnetze in hololens)&mdash;ist*für die allgemeine räumliche Nachverfolgung des Headsets nicht erforderlich* . | 
+|  Webcam  |  Photocapture und Videocapture | 
+|  Pictureslibrary/videoslibrary  |  Photocapture oder Videocapture bzw. (beim Speichern des erfassten Inhalts) | 
+|  Mikrofon  |  Videocapture (bei der Erfassung von Audiodaten), "diktationerkenzer", "grammarerkenzer" und "keywordrecognizer" | 
+|  Internet Client deklarieren  |  "Diktationerkenzer" (und für die Verwendung des Unity-Profilers) | 
 
-**Einstellungen für die Qualität von Unity**
+**Unity-Qualitätseinstellungen**
 
-![Einstellungen für die Qualität von Unity](images/getting-started-unity-quality-settings.jpg)<br>
-*Einstellungen für die Qualität von Unity*
+![Unity-Qualitätseinstellungen](images/getting-started-unity-quality-settings.jpg)<br>
+*Unity-Qualitätseinstellungen*
 
-HoloLens verfügt über eine GPU-Mobile-Klasse. Wenn Ihre app HoloLens ausgelegt ist, sollten Sie die Qualität-Einstellungen für schnellste Leistung optimiert, um sicherzustellen, dass wir die vollständige Framerate verwalten:
-1. Wählen Sie **Bearbeiten > Projekteinstellungen > Qualität**
-2. Wählen Sie die **Dropdownliste** unter der **Windows Store** Logo, und wählen **sehr niedrig**. Wissen Sie, dass die Einstellung ist ordnungsgemäß angewendet, wenn das Feld in der Windows Store-Spalte und **sehr niedrig** Zeile wird grün angezeigt.
+Hololens verfügt über eine GPU mobiler Klasse. Wenn Ihre APP auf hololens ausgerichtet ist, sollten Sie die Qualitätseinstellungen für die schnellste Leistung optimieren, um sicherzustellen, dass die vollständige Framerate beibehalten wird:
+1. Wählen Sie **> Projekteinstellungen bearbeiten > Qualität** aus.
+2. Wählen Sie im **Windows Store** -Logo die **Dropdown** Liste aus, und wählen Sie **sehr niedrig**aus. Sie werden feststellen, dass die Einstellung ordnungsgemäß angewendet wird, wenn das Feld in der Windows Store-Spalte und die **sehr niedrige** Zeile grün ist.
 
 ## <a name="per-scene-settings"></a>Pro-Szene-Einstellungen
 
@@ -65,18 +65,18 @@ HoloLens verfügt über eine GPU-Mobile-Klasse. Wenn Ihre app HoloLens ausgelegt
 ![Unity-Kameraeinstellungen](images/Unitycamerasettings.png)<br>
 *Unity-Kameraeinstellungen*
 
-Nachdem Sie das Kontrollkästchen "Virtuelle Realität unterstützt" aktiviert die [Unity Kamera](camera-in-unity.md) führt [head-nachverfolgung und stereoskopische Rendering](rendering.md). Es ist nicht erforderlich, es mit einer benutzerdefinierten Kamera dazu ersetzen.
+Nachdem Sie das Kontrollkästchen "Virtual Reality supported" aktiviert haben, verarbeitet die [Unity-Kamera](camera-in-unity.md) Komponente die [Kopf-und stereorenderingfunktionen](rendering.md). Hierfür ist es nicht erforderlich, Sie durch eine benutzerdefinierte Kamera zu ersetzen.
 
-Wenn Ihre app speziell HoloLens ausgelegt ist, haben Sie einige Einstellungen, die geändert werden, um die für das Gerät die transparent angezeigt, und zu optimieren, damit Ihre app durch, die physische Welt angezeigt werden müssen:
-1. In der **Hierarchie**, wählen die **Main Camera**
-2. In der **Inspektor** legen Sie die Transformation **Position** zu **0, 0, 0** sodass gestartet wird, der Speicherort des Anfangswerts Benutzer auf den Ursprung der Unity-Welt.
-3. Änderung **Kennzeichnungen löschen** zu **Volltonfarbe**.
-4. Ändern der **Hintergrund** Farbe **RGBA 0,0,0,0**. Schwarz, die als Transparenz HoloLens gerendert werden.
-5. Änderung **Clipping Planes - nahezu** auf die [HoloLens empfohlen](camera-in-unity.md#clip-planes) 0,85 (Meter).
+Wenn Ihre APP speziell auf hololens ausgerichtet ist, gibt es einige Einstellungen, die geändert werden müssen, um die transparente Anzeige des Geräts zu optimieren, sodass Ihre APP in der physischen Welt angezeigt wird:
+1. Wählen Sie in der **Hierarchie**die **Hauptkamera** aus.
+2. Legen Sie im **Inspektor** -Panel die Transformations **Position** auf **0, 0, 0** fest, sodass der Speicherort des Benutzers mit dem Ursprung der Unity-Welt beginnt.
+3. Ändern Sie die **Clear-Flags** in eine voll Tonfarbe.
+4. Ändern Sie die **Hintergrund** Farbe in **RGBA 0, 0, 0**, 0. Schwarz wird in hololens als transparent gerendert.
+5. Ändern Sie die **Clippingebenen in der Nähe** der [empfohlenen hololens](camera-in-unity.md#clip-planes) 0,85 (Meter).
 
-Wenn Sie zu löschen und erstellen eine neue Kamera, stellen Sie sicher, dass Ihre Kamera **markierter** als **MainCamera**.
+Wenn Sie eine neue Kamera löschen und eine neue Kamera erstellen, stellen Sie sicher, dass Ihre Kamera als " **maincamera**" **gekennzeichnet** ist.
 
 
 ## <a name="see-also"></a>Siehe auch
 * [Mixed Reality Toolkit v2](mrtk-getting-started.md)
-* [Übersicht über die Unity-Entwicklung](unity-development-overview.md)
+* [Übersicht über Unity-Entwicklung](unity-development-overview.md)

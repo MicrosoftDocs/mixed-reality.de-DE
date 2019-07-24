@@ -1,11 +1,11 @@
 ---
-title: Holographic Remoting-Player
-description: Der Holographic Remoting-Player ist eine Begleit-app, die eine Verbindung mit der PC-apps und Spiele, die Holographic Remoting unterstützen. Holographic Remoting streamt holographic Inhalte von einem PC in Ihrer Microsoft HoloLens in Echtzeit über eine Wi-Fi-Verbindung.
+title: Holographic Remoting Player
+description: Der Holographic Remoting Player ist eine begleitende APP, die eine Verbindung mit PC-Apps und spielen herstellt, die Holographic Remoting unterstützen. Holographic Remoting streamt Holographic Content per Wi-Fi-Verbindung von einem PC zu Ihren Microsoft hololens in Echtzeit.
 author: JonMLyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, Remoting, Holographic Remoting
+keywords: Hololens, Remoting, Holographic Remoting
 ms.openlocfilehash: b8354295f9752e73cc9b34c1769254e49808b63f
 ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
@@ -13,43 +13,43 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/07/2019
 ms.locfileid: "66813718"
 ---
-# <a name="holographic-remoting-player"></a>Holographic Remoting-Player
+# <a name="holographic-remoting-player"></a>Holographic Remoting Player
 
-Der Holographic Remoting-Player ist eine Begleit-app, die eine Verbindung mit der PC-apps und Spiele, die Holographic Remoting unterstützen. Holographic Remoting streamt holographic Inhalte von einem PC in Ihrer Microsoft HoloLens in Echtzeit über eine Wi-Fi-Verbindung.
+Der Holographic Remoting Player ist eine begleitende APP, die eine Verbindung mit PC-Apps und spielen herstellt, die Holographic Remoting unterstützen. Holographic Remoting streamt Holographic Content per Wi-Fi-Verbindung von einem PC zu Ihren Microsoft hololens in Echtzeit.
 
-Der Holographic Remoting-Player kann nur mit PC-apps verwendet werden, die speziell zur Unterstützung von Holographic Remoting.
+Der Holographic Remoting Player kann nur mit PC-Apps verwendet werden, die speziell für die Unterstützung von Holographic Remoting entwickelt wurden.
 
-Der Holographic Remoting-Player ist für HoloLens und HoloLens 2 verfügbar.  PC-apps, die Holographic Remoting mit HoloLens unterstützt zur Unterstützung von Holographic Remtoing mit HoloLens 2 aktualisiert werden müssen.  Wenden Sie sich an Ihren app-Anbieter, wenn Sie Fragen haben, die welche Versionen unterstützt werden.
+Der Holographic Remoting Player ist für hololens und hololens 2 verfügbar.  PC-Apps, die Holographic-Remoting mit hololens unterstützen, müssen aktualisiert werden, um Holographic remtoting mit hololens 2 zu unterstützen.  Wenden Sie sich an Ihren app-Anbieter, wenn Sie Fragen dazu haben, welche Versionen unterstützt werden.
 
-## <a name="connecting-to-the-holographic-remoting-player"></a>Herstellen einer Verbindung mit der Holographic Remoting-Player
+## <a name="connecting-to-the-holographic-remoting-player"></a>Herstellen einer Verbindung mit dem Holographic Remoting Player
 
-Führen Sie die Ihrer app-Anleitungen zum Verbinden mit der Holographic Remoting-Player. Sie benötigen die IP-Adresse des Geräts HoloLens eingeben, die Sie wie folgt auf den Remoting-Player-Hauptbildschirm sehen können:
+Befolgen Sie die Anweisungen Ihrer APP, um eine Verbindung mit dem Holographic Remoting Player herzustellen. Sie müssen die IP-Adresse Ihres hololens-Geräts eingeben, das Sie auf dem Hauptbildschirm des Remoting-Players wie folgt sehen können:
 
-![Holographic Remoting-Player](images/holographicremotingplayer.png)
+![Holographic Remoting Player](images/holographicremotingplayer.png)
 
-Wenn Sie im Hauptbildschirm sehen, wissen Sie, dass Sie nicht über eine verbundene app verfügen.
+Wenn der Hauptbildschirm angezeigt wird, wissen Sie, dass Sie keine app verbunden haben.
 
-Beachten Sie, dass die holographic Remotingverbindung **nicht verschlüsselt**. Sie sollten immer Holographic Remoting über eine sichere Wi-Fi-Verbindung verwenden, die Sie vertrauen.
+Beachten Sie, dass die Holographic-remotingverbindung **nicht verschlüsselt**ist. Sie sollten Holographic Remoting immer über eine sichere WLAN-Verbindung verwenden, die Sie als vertrauenswürdig einstufen.
 
 ## <a name="quality-and-performance"></a>Qualität und Leistung
 
-Die Qualität und Leistung Ihrer Erfahrung variieren basierend auf drei Faktoren ab:
-* **Sie führen holografischen Benutzeroberfläche** -Apps, die mit hoher Auflösung oder äußerst detaillierte Inhalt Rendern erfordern einen schnelleren PC oder schneller drahtlose Verbindung.
-* **Ihre PC Hardware** -Ihr PC benötigt wird, in der Lage, ausführen und Ihre holografischen Benutzeroberfläche mit 60 Bildern pro Sekunde zu codieren. Für eine Grafikkarte empfehlen wir in der Regel eine GeForce GTX 970 oder AMD Radeon R9 290 oder höher. In diesem Fall möglicherweise Ihre bestimmte Umgebung eine höhere oder Low-End-Karte.
-* **Die Wi-Fi-Verbindung** -Ihre holografischen Benutzeroberfläche über Wi-Fi gestreamt wird. Verwenden Sie ein schnelles Netzwerk mit niedriger Überlastung, um die Qualität zu maximieren. Verwenden Sie einen PC, der über ein Ethernetkabel verbunden ist, kann anstelle von Wi-Fi, auch Qualität verbessern.
+Die Qualität und die Leistung Ihrer Benutzeroberflächen variieren je nach den drei Faktoren:
+* **Die holografische Darstellung, die Sie ausführen** : apps, die hochauflösende oder sehr ausführliche Inhalte Renderingfunktionen darstellen, benötigen möglicherweise einen schnelleren PC oder eine schnellere drahtlose Verbindung.
+* **Die Hardware Ihres PCs** : Ihr PC muss in der Lage sein, ihre holografische Darstellung bei 60 Frames pro Sekunde auszuführen und zu codieren. Für eine Grafikkarte empfehlen wir in der Regel eine GeForce GTX 970 oder AMD Radeon R9 290 oder höher. Auch hier ist für ihre jeweilige Obergrenze möglicherweise eine höhere oder niedrigere Karte erforderlich.
+* **Ihre Wi-Fi-Verbindung** : Ihre Holographic-Darstellung wird über Wi-Fi gestreamt. Verwenden Sie ein schnelles Netzwerk mit geringer Überlastung, um die Qualität zu maximieren. Wenn Sie einen PC verwenden, der über ein Ethernet-Kabel anstatt über Wi-Fi verbunden ist, kann die Qualität ebenfalls verbessern.
 
 ## <a name="diagnostics"></a>Diagnose
 
-Um die Qualität Ihrer Verbindung zu messen, z. B. **"Diagnose aktivieren"** zwar auf dem Hauptbildschirm des Holographic Remoting-Players. Wenn die Diagnose aktiviert wurde, wird die app Sie angezeigt:
-* **FPS** : die durchschnittliche Anzahl der Einzelbilder, die der Remoting-Player empfangen wird und Rendern pro Sekunde. Ideal sind 60 FPS.
-* **Latenz** : die durchschnittliche Länge der Zeit, die für einen Frame aus, um von Ihrem PC zu wechseln, um die HoloLens. Je niedriger, desto besser. Dies ist in hohem Maße abhängig von Ihrem Wi-Fi-Netzwerk.
+Zum Messen der Qualität der Verbindung **Geben Sie "Diagnose aktivieren"** auf dem Hauptbildschirm des Holographic Remoting Players ein. Wenn die Diagnose aktiviert ist, werden Sie von der App angezeigt:
+* **Fps** : die durchschnittliche Anzahl der gerenderten Frames, die der Remoting-Player empfängt und pro Sekunde rendert. Der ideale Wert ist 60 fps.
+* **Latenz** Zeit: die durchschnittliche Zeitspanne, die ein Frame benötigt, um von Ihrem PC auf die hololens zu gelangen. Je niedriger der bessere. Dies hängt größtenteils von Ihrem Wi-Fi-Netzwerk ab.
 
-Sie können auf dem Hauptbildschirm, sagen **"Deaktivieren der Diagnose"** zum Deaktivieren der Diagnose zu aktivieren.
+Auf dem Hauptbildschirm können Sie beispielsweise **"Diagnose deaktivieren"** , um die Diagnose zu deaktivieren.
 
-## <a name="pc-system-requirements"></a>PC-Systemanforderungen
-* Ihr PC **müssen** wird das Windows 10 Anniversary Update oder höher.
-* Es wird empfohlen, eine GeForce GTX 970 oder AMD Radeon R9 290 oder bessere Grafikkarte.
-* Es wird empfohlen, dass Sie eine solche mit Ihrem Netzwerk über Ethernet zum Reduzieren der Anzahl der Hops, die drahtlose Verbindung herstellen.
+## <a name="pc-system-requirements"></a>PC-System Anforderungen
+* Auf dem PC **muss** Windows 10 Anniversary Update oder höher ausgeführt werden.
+* Wir empfehlen eine GeForce GTX 970-oder AMD Radeon R9 290-oder bessere Grafikkarte.
+* Wir empfehlen Ihnen, Ihren PC über Ethernet mit Ihrem Netzwerk zu verbinden, um die Anzahl der drahtlosen Hops zu verringern.
 
 ## <a name="see-also"></a>Siehe auch
 * [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

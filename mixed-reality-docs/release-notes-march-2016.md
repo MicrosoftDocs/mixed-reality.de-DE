@@ -1,42 +1,42 @@
 ---
-title: Anmerkungen zu dieser Version – März 2016
-description: HoloLens-Versionshinweise für den Start von HoloLens und Windows Holographic.
+title: Anmerkungen zu dieser Version-2016
+description: Hololens-Anmerkungen zu dieser Version für den Start von hololens und Windows Holographic.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Anmerkungen zu dieser Version, HoloLens, Betriebssystem, Plattform, Funktionen, Build, starten
+keywords: Anmerkungen zu dieser Version, hololens, Betriebssystem, Plattform, Features, Build, Start
 ms.openlocfilehash: ef178f84256f21af873e43f663e4dd0b7ffd9ab8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594863"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524772"
 ---
-# <a name="release-notes---march-2016"></a>Anmerkungen zu dieser Version – März 2016
+# <a name="release-notes---march-2016"></a>Anmerkungen zu dieser Version-2016
 
-Willkommen Sie bei Windows Holographic, zum ersten Mal auf Microsoft HoloLens verfügbar. Wir möchten [Ihr Feedback](give-us-feedback.md). Verwenden Sie die Feedback-Hub, den [Entwicklerforen](https://forums.hololens.com) und [über Twitter @HoloLens ](https://twitter.com/hololens).
+Willkommen bei Windows Holographic, das zum ersten Mal für Microsoft hololens verfügbar ist. Wir möchten [Ihr Feedback hören](give-us-feedback.md). Verwenden Sie den Feedback-Hub, die [Entwickler Foren](https://forums.hololens.com) und [Twitter via @HoloLens ](https://twitter.com/hololens).
 
-**Releaseversion:** Windows Holographic März 2016-Version (**10.0.11082.1033**)
+**Releaseversion:** Windows Holographic-Release von März 2016 (**10.0.11082.1033**)
 
 >[!VIDEO https://www.youtube.com/embed/C98qaPAMVQU]
 
-## <a name="whats-in-windows-holographic"></a>Was ist in Windows Holographic
+## <a name="whats-in-windows-holographic"></a>Inhalt von Windows Holographic
 
-Wiederholen Sie den Posteingang-apps
-* **Microsoft Edge.** Moderne Web-Browser für Windows 10.
-* **Einstellungen.** Überprüfen von Systeminformationen, [Wi-Fi-Verbindung](connecting-to-wi-fi-on-hololens.md), und [mit Bluetooth-Geräte verbinden](hardware-accessories.md).
-* **Hologramme.** Versehen Sie Ihre Welt Hologramme aufzusuchen Sie, und klicken Sie dann finden Sie unter und hören sie von jedem Winkel.
-* **Kalibrierung.** Wiederholen Sie den [Kalibrierung](calibration.md) während der Out-of-Box-Experience. Führen Sie dies aus, wenn der Benutzer zu wechseln.
-* **Erfahren Sie mehr Aktionen.** Wiederholen Sie die Bewegung-Tutorial, das während der Out-of-Box-Experience aus.
-* **Fotos.** Finden Sie in mixed Reality Capture Fotos und Videos, die Sie mit dem Gerät, die und dann in der ganzen Welt zusammen mit Hologramme platzieren.
+Posteingangs-Apps testen
+* **Microsoft Edge.** Moderner Webbrowser für Windows 10.
+* **Einstellungen.** Überprüfen Sie die Systeminformationen, stellen Sie eine [Verbindung mit Wi-Fi](connecting-to-wi-fi-on-hololens.md)her, und stellen Sie eine [Verbindung mit](hardware-accessories.md)
+* **Holograms.** Platzieren Sie holograms in ihrer Welt, und führen Sie Sie aus.
+* **Energie.** Wiederholen Sie die im Rahmen der Out-of-Box-Funktion ausgeführte [Kalibrierung](calibration.md) . Dies geschieht, wenn Benutzer gewechselt werden.
+* **Erlernen Sie Gesten.** Wiederholen Sie das Lernprogramm zu Gesten, das Sie im Rahmen der Standardfunktion durchgeführt haben.
+* **Photos.** Sehen Sie sich die Fotos und Videos mit gemischter Realität an, die Sie mit dem Gerät aufnehmen, und platzieren Sie sie zusammen mit holograms.
 
-Öffnen Sie zum Entsperren des Geräts für die Entwicklung der *Einstellungen* wechseln Sie zur app *Update und Sicherheit*, wechseln Sie zu der *für Entwickler* Seite aus, und der Entwickler Umschalten auf on festgelegt. Dies ist die am selben Ort, in denen Sie können, die [Device Portal](using-the-windows-device-portal.md).
+Um das Gerät für die Entwicklung zu entsperren, öffnen Sie die app " *Einstellungen* ", navigieren Sie zu *Update & Sicherheit*, wechseln Sie zur Seite *für Entwickler* , und legen Sie die UMSCHALT Fläche für den Entwicklermodus auf ein fest. Dies ist der gleiche Ort, an dem Sie das [Geräte Portal](using-the-windows-device-portal.md)aktivieren können.
 
 ## <a name="see-also"></a>Siehe auch
 * [HoloLens – bekannte Probleme](hololens-known-issues.md)
-* [Installieren der tools](install-the-tools.md)
-* [Navigieren Sie in der Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md)
+* [Installieren der Tools](install-the-tools.md)
+* [Navigieren auf der Startseite von Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 * [Hardware-Zubehör](hardware-accessories.md)
-* [Mixed Reality-Erfassung](mixed-reality-capture.md)
+* [Mixed Reality-Aufnahme](mixed-reality-capture.md)
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)

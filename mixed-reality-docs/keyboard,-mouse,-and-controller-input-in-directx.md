@@ -1,34 +1,34 @@
 ---
-title: Tastatur-, Maus- und Controller-Eingaben in DirectX
-description: Erläutert, wie Sie eine app für Windows Mixed Reality zu erstellen, die Tastatur, Maus und Gamecontroller verwendet.
+title: Tastatur-, Maus-und Controller Eingaben in DirectX
+description: Erläutert das Erstellen einer APP für Windows Mixed Reality, in der Tastatur-, Maus-und Spielcontroller verwendet werden.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, Tastatur, Maus, Gamecontroller, Xbox-Controller, HoloLens, Desktop, exemplarische Vorgehensweise mit Beispielcode
+keywords: Windows Mixed Reality, Tastatur, Maus, Game Controller, Xbox Controller, hololens, Desktop, Exemplarische Vorgehensweise, Beispielcode
 ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605085"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63551002"
 ---
-# <a name="keyboard-mouse-and-controller-input-in-directx"></a>Tastatur-, Maus- und Controller-Eingaben in DirectX
+# <a name="keyboard-mouse-and-controller-input-in-directx"></a>Tastatur-, Maus-und Controller Eingaben in DirectX
 
-Tastaturen, Mäuse und Gamecontroller können alle nützliche Formulare der Eingabe für Windows Mixed Reality-Geräte sein. Bluetooth-Tastaturen und Mäusen werden sowohl für HoloLens, für die Verwendung mit dem Debuggen Ihrer app oder als eine alternative Form der Eingabe unterstützt. Windows Mixed Reality unterstützt auch immersive Headsets an PCs – wobei Tastaturen, Mäuse und Gamecontroller die Norm bisher angefügt.
+Tastaturen, Mäuse und Spielcontroller können als nützliche Formen der Eingabe für Windows Mixed Reality-Geräte dienen. Bluetooth-Tastaturen und-Mäuse werden sowohl in hololens unterstützt als auch beim Debuggen Ihrer APP oder als Alternative Form der Eingabe. Windows Mixed Reality unterstützt auch immersive Headsets, die an PCs angeschlossen sind, bei denen Mäuse, Tastaturen und Spielcontroller in der Vergangenheit die Norm waren.
 
-Tastatureingaben für HoloLens, Paar eine Bluetooth-Tastatur auf Ihrem Gerät oder verwenden Sie die virtuelle Eingabe über die Windows Device Portal. Um Tastatureingaben zu verwenden und eine immersive Windows Mixed Reality-Kopfhörer trägt, weisen Sie Eingabefokus Realität zu mixed Reality, indem Sie auf dem Gerät platzieren oder mithilfe der Windows-Taste + Y-Tastenkombination. Bedenken Sie, dass Anwendungen für HoloLens Funktionalität ohne diese angeschlossenen Geräte bereitstellen müssen.
+Um Tastatureingaben in hololens zu verwenden, koppeln Sie eine Bluetooth-Tastatur mit Ihrem Gerät, oder verwenden Sie die virtuelle Eingabe über das Windows-Geräte Portal. Wenn Sie Tastatureingaben beim Durchführen eines Windows Mixed Reality-immersiven Headsets verwenden möchten, weisen Sie der gemischten Realität den Eingabefokus zu, indem Sie das Gerät platzieren oder die Tastenkombination Windows-Taste + Y verwenden. Beachten Sie, dass apps, die für hololens vorgesehen sind, Funktionen ohne angehängte Geräte bereitstellen müssen.
 
 >[!NOTE]
->Die Codeausschnitte in diesem Artikel veranschaulichen derzeit die Verwendung von C++/CX anstatt C ++ 17-kompatible C++"/ WinRT", wie in der [ C++ holographic Projektvorlage](creating-a-holographic-directx-project.md).  Die Konzepte sind Entsprechung für einen C++"/ WinRT"-Projekt, aber Sie benötigen, um den Code zu übersetzen.
+>Die Code Ausschnitte in diesem Artikel veranschaulichen derzeit die Verwendung C++von/CX anstelle von C + +17- C++kompatibler/WinRT, wie Sie in der [ C++ Holographic-Projektvorlage](creating-a-holographic-directx-project.md)verwendet werden.  Die Konzepte sind äquivalent für ein C++/WinRT-Projekt, obwohl Sie den Code übersetzen müssen.
 
-## <a name="subscribe-for-corewindow-input-events"></a>Melden Sie sich für Eingabeereignisse "corewindow"
+## <a name="subscribe-for-corewindow-input-events"></a>Abonnieren von corewindow-Eingabe Ereignissen
 
 ### <a name="keyboard-input"></a>Tastatureingabe
 
-In die Windows Holographic app-Vorlage enthalten einen Ereignishandler für Tastatureingaben, genau wie alle anderen UWP-Apps. Ihrer app verarbeitet die Eingabedaten der Tastatur die gleiche Weise in Windows Mixed Reality.
+In der Windows Holographic-App-Vorlage fügen wir einen Ereignishandler für Tastatureingaben wie jede andere UWP-App ein. Ihre APP beansprucht Tastatureingabe Daten in Windows Mixed Reality auf dieselbe Weise.
 
-Von AppView.cpp:
+Aus appview. cpp:
 
 ```
 // Register for keypress notifications.
@@ -47,25 +47,25 @@ Von AppView.cpp:
    }
 ```
 
-### <a name="virtual-keyboard-input"></a>Virtuelle Tastatureingaben
-Für immersive Headsets desktop können Sie auch virtuelle Tastaturen, die von Windows gerendert wird, über die immersive Ansicht unterstützen. Um dies zu unterstützen, kann Ihre app implementieren **CoreTextEditContext**. Dadurch wird Windows, die den Zustand Ihrer eigenen app gerendert Textfelder, zu verstehen, damit die virtuelle Tastatur ordnungsgemäß auf den Text es beitragen kann.
+### <a name="virtual-keyboard-input"></a>Virtuelle Tastatureingabe
+Bei immersiven Desktop-Headsets können Sie auch virtuelle Tastaturen unterstützen, die von Windows gerendert werden. Um dies zu unterstützen, kann Ihre APP **coretexteditcontext**implementieren. Dadurch kann Windows den Zustand ihrer eigenen, von der APP gerenderten Textfelder verstehen, sodass die virtuelle Tastatur ordnungsgemäß zum Text beitragen kann.
 
-Weitere Informationen zum Implementieren der CoreTextEditContext-Unterstützung finden Sie unter den [CoreTextEditContext Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
+Weitere Informationen zum Implementieren der coretexteditcontext-Unterstützung finden Sie im [coretexteditcontext-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
 
 ### <a name="mouse-input"></a>Mauseingabe
 
-Sie können auch die Mauseingabe, erneut über die Eingabe UWP "corewindow"-Ereignishandler. Hier ist die Windows Holographic-app-Vorlage zur Unterstützung von Mausklicks in die gleiche Weise wie gedrückten Gesten ändern. Nach der Erstellung wird diese Änderung ist, klicken mit der Maus während ein Geräts immersive Kopfhörer steht, geteert neu positionieren, den Cube.
+Sie können auch über die Eingabe Ereignishandler von UWP corewindow auch Maus Eingaben verwenden. Im folgenden wird erläutert, wie Sie die Windows Holographic-App-Vorlage ändern, um Mausklicks auf die gleiche Weise wie gedrückte Gesten zu unterstützen. Nachdem Sie diese Änderung vorgenommen haben, wird der Cube durch einen Mausklick beim Ausführen eines immersiven Headset-Geräts neu positioniert.
 
-Beachten Sie, dass die UWP-apps auch XY-Rohdaten für die Maus mit abrufen können die [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) API.
+Beachten Sie, dass UWP-apps auch unformatierte XY-Daten für die Maus mithilfe der [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) -API erhalten können.
 
-Starten Sie, indem Sie einen neuen OnPointerPressed-Handler in AppView.h deklarieren:
+Beginnen Sie mit dem Deklarieren eines neuen onpointerpressed-Handlers in appview. h:
 
 ```
 protected:
        void OnPointerPressed(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::PointerEventArgs^ args);
 ```
 
-Fügen Sie auf "SetWindow" AppView.cpp diesen Code hinzu:
+Fügen Sie in appview. cpp den folgenden Code zu SetWindow hinzu:
 
 ```
 // Register for pointer pressed notifications.
@@ -73,7 +73,7 @@ Fügen Sie auf "SetWindow" AppView.cpp diesen Code hinzu:
        ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &AppView::OnPointerPressed);
 ```
 
-Fügen Sie diese Definition für OnPointerPressed klicken Sie dann am unteren Rand der Datei:
+Fügen Sie dann diese Definition für "onpointerpressed" am Ende der Datei ein:
 
 ```
 void AppView::OnPointerPressed(CoreWindow^ sender, PointerEventArgs^ args)
@@ -86,21 +86,21 @@ void AppView::OnPointerPressed(CoreWindow^ sender, PointerEventArgs^ args)
    }
 ```
 
-Die Ereignishandler soeben hinzugefügte ist ein Passthrough-Vorgang, um die Hauptklasse für die Vorlage. Ändern wir die Hauptklasse dieser Pass-Through-Unterstützung. Fügen Sie diese Deklaration für die öffentliche Methode in der Headerdatei hinzu:
+Der soeben hinzugefügte Ereignishandler ist eine Pass-Through-Funktion für die Hauptklasse der Vorlage. Ändern wir nun die Hauptklasse, um diese Pass-Through-Unterstützung zu unterstützen. Fügen Sie diese Deklaration der öffentlichen Methode der Header Datei hinzu:
 
 ```
 // Handle mouse input.
        void OnPointerPressed();
 ```
 
-Sie benötigen diese Private Membervariable, auch Folgendes:
+Sie benötigen auch diese private Member-Variable:
 
 ```
 // Keep track of mouse input.
        bool m_pointerPressed = false;
 ```
 
-Zum Schluss aktualisieren wir "main"-Klasse mit der neuen Logik zur Unterstützung von Mausklicks. Starten Sie durch diesen Ereignishandler hinzufügen. Ändern Sie den Namen der Klasse:
+Zum Schluss aktualisieren wir die Hauptklasse mit neuer Logik zur Unterstützung von Mausklicks. Beginnen Sie mit dem Hinzufügen dieses Ereignis Handlers. Stellen Sie sicher, dass Sie den Klassennamen aktualisieren:
 
 ```
 void MyHolographicAppMain::OnPointerPressed()
@@ -109,7 +109,7 @@ void MyHolographicAppMain::OnPointerPressed()
    }
 ```
 
-Ersetzen Sie nun in der Update-Methode, die vorhandene Logik zum Abrufen einer Haltung Zeiger mit diesem:
+Ersetzen Sie nun in der Update-Methode die vorhandene Logik, um eine Zeiger Pose mit folgenden Informationen zu erhalten:
 
 ```
 SpatialInteractionSourceState^ pointerState = m_spatialInputHandler->CheckForInput();
@@ -125,13 +125,13 @@ SpatialInteractionSourceState^ pointerState = m_spatialInputHandler->CheckForInp
    m_pointerPressed = false;
 ```
 
-Erneut kompilieren und bereitstellen. Sie sollten feststellen, dass der Maus auf den Cube in Ihrem immersive Kopfhörer- oder HoloLens jetzt mit Bluetooth-Maus angefügt Position wird.
+Neukompilieren und erneut bereitstellen. Beachten Sie, dass mit dem Maus Klick nun der Cube in Ihrem immersiven Headset oder hololens mit der Bluetooth-Maus angefügt wird.
 
-### <a name="game-controller-support"></a>Gamecontroller-Unterstützung
+### <a name="game-controller-support"></a>Spiele Controller Unterstützung
 
-Gamecontroller möglich, dass eine ansprechende und bequem gestattet es dem Benutzer eine immersive Windows Mixed Reality-Erfahrung zu steuern.
+Spiele Controller können eine angenehme und bequeme Möglichkeit bieten, dem Benutzer zu ermöglichen, eine immersive Windows Mixed Reality-Darstellung zu steuern.
 
-Der erste Schritt beim Hinzufügen von Unterstützung für Gamecontroller zu die Windows Holographic app-Vorlage ist so die Headerklasse für die main-Datei die folgenden privaten Member-Deklarationen hinzu:
+Der erste Schritt beim Hinzufügen von Unterstützung für Game Controller zur Windows Holographic-App-Vorlage besteht darin, die folgenden privaten Member-Deklarationen der Header Klasse für Ihre Hauptdatei hinzuzufügen:
 
 ```
 // Recognize gamepads that are plugged in after the app starts.
@@ -158,7 +158,7 @@ Windows::Foundation::EventRegistrationToken                     m_gamepadAddedEv
        std::vector<GamepadWithButtonState>                             m_gamepads;
 ```
 
-Gamepad-Ereignisse und alle Gamepads, die zurzeit zugeordnet sind, im Konstruktor für die main-Klasse zu initialisieren:
+Initialisieren Sie Gamepad-Ereignisse und alle derzeit angefügten Gamepads im Konstruktor für Ihre Hauptklasse:
 
 ```
 // If connected, a game controller can also be used for input.
@@ -182,7 +182,7 @@ for (auto const& gamepad : Gamepad::Gamepads)
    }
 ```
 
-Fügen Sie der main-Klasse diese Ereignishandler hinzu. Ändern Sie den Namen der Klasse:
+Fügen Sie diese Ereignishandler ihrer Hauptklasse hinzu. Stellen Sie sicher, dass Sie den Klassennamen aktualisieren:
 
 ```
 void MyHolographicAppMain::OnGamepadAdded(Object^, Gamepad^ args)
@@ -211,7 +211,7 @@ void MyHolographicAppMain::OnGamepadRemoved(Object^, Gamepad^ args)
    }
 ```
 
-Zum Schluss aktualisieren Sie die Eingabe Logik zur Erkennung von Änderungen in den Zustand des Domänencontrollers. Hier verwenden wir die gleichen M_pointerPressed-Variable, die im Abschnitt oben zum Hinzufügen von Mausereignissen erläutert. Kurz vor, in dem sie die SpatialPointerPose prüft, ob die Update-Methode Folgendes hinzu:
+Aktualisieren Sie schließlich die Eingabe Logik, um Änderungen im Controller Zustand zu erkennen. Hier verwenden wir die gleiche m_pointerPressed-Variable, die im obigen Abschnitt zum Hinzufügen von Mausereignissen erläutert wird. Fügen Sie diese der Update-Methode hinzu, kurz bevor Sie die Anwendung auf spatialpointerpose überprüft:
 
 ```
 // Check for new input state since the last frame.
@@ -241,7 +241,7 @@ Zum Schluss aktualisieren Sie die Eingabe Logik zur Erkennung von Änderungen in
    m_pointerPressed = false;
 ```
 
-Vergessen Sie nicht die Ereignisse beim Bereinigen von "main"-Klasse aufgehoben werden:
+Vergessen Sie nicht, die Registrierung der Ereignisse beim Bereinigen der Hauptklasse aufzuheben:
 
 ```
 if (m_gamepadAddedEventToken.Value != 0)
@@ -254,16 +254,16 @@ if (m_gamepadAddedEventToken.Value != 0)
    }
 ```
 
-Kompilieren und erneut bereitstellen. Sie können jetzt anzufügen, oder koppeln, einen game Controller und verwenden, um den sich drehenden Würfels neu positionieren.
+Neukompilieren und erneut bereitstellen. Sie können jetzt einen Spielcontroller anfügen oder koppeln und ihn verwenden, um den drehenden Cube neu zu positionieren.
 
-## <a name="important-guidelines-for-keyboard-and-mouse-input"></a>Wichtige Richtlinien für die Tastatur- und Mauseingaben
+## <a name="important-guidelines-for-keyboard-and-mouse-input"></a>Wichtige Richtlinien für Tastatur-und Maus Eingaben
 
-Es gibt einige wichtige Unterschiede in wie dieser Code für Microsoft HoloLens – kann, ein Gerät, die stützt sich hauptsächlich auf natürliche Benutzereingaben verwendet werden – im Vergleich zu, was auf einem PC Windows Mixed Reality-fähigen verfügbar ist.
-* Sie können nicht auf Tastatur- oder Mauseingaben vorhanden sein verlassen. Alle von den Funktionen Ihrer app müssen mit Blicke, Gesten und Spracheingabe zusammenarbeiten.
-* Wenn eine Bluetooth-Tastatur angefügt ist, kann es hilfreich sein, Tastatureingaben zu jedem Text zu aktivieren, die Ihre app anfordern kann. Dies kann eine hervorragende Ergänzung für Diktat, z. B. sein.
-* Wenn es darum geht, Sie entwerfen Sie Ihre app, verlassen Sie sich nicht auf (z. B.) WASD und Maus sehen die Steuerelemente für Ihr Spiel. HoloLens dient für den Benutzer im Raum zu durchlaufen. In diesem Fall steuert der Benutzer direkt die Kamera aus. Eine Schnittstelle zum Steuern von der Kamera im Raum verschieben/aussehen Steuerelemente wird nicht die gleiche Funktionalität bereitstellen.
-* Tastatureingabe möglich, dass eine hervorragende Möglichkeit, steuern die Debuggen Aspekte Ihrer app oder einer Spiele-Engine, besonders, da der Benutzer nicht zum Verwenden der Tastatur erforderlich ist. Einrichten von es ist identisch, wie Sie mit "corewindow" Ereignis-APIs gewöhnt sind. In diesem Szenario können Sie auswählen, um ein Verfahren zum Konfigurieren Ihrer app zum Weiterleiten von Ereignissen zum Modus "nur Eingabe debug" Tastatur während der Debugsitzungen zu implementieren.
-* Bluetooth-Controller funktionieren ebenfalls.
+Es gibt einige wichtige Unterschiede bei der Verwendung dieses Codes für Microsoft hololens – bei dem es sich um ein Gerät handelt, das hauptsächlich auf natürlichen Benutzereingaben basiert – im Vergleich zu den Funktionen, die auf einem Windows Mixed Reality-fähigen PC verfügbar sind.
+* Sie können sich nicht darauf verlassen, dass Tastatur-oder Maus Eingaben vorhanden sind. Alle Funktionen Ihrer APP müssen mit Blick, Gesten und Spracheingaben funktionieren.
+* Wenn eine Bluetooth-Tastatur angefügt wird, kann es hilfreich sein, Tastatureingaben für jeden Text zu aktivieren, der von Ihrer APP angefordert werden kann. Dies kann z. b. eine hervor artige Ergänzung zum Diktat darstellen.
+* Wenn Sie Ihre APP entwerfen möchten, verlassen Sie sich nicht auf (z. b.) WASD-und Mauszeiger-Steuerelemente für Ihr Spiel. Hololens ist dafür konzipiert, dass der Benutzer den Raum durchläuft. In diesem Fall steuert der Benutzer die Kamera direkt. Eine Schnittstelle zum Steuern der Kamera um den Raum mit Verschiebe-und Bild-Steuerelementen bietet nicht die gleiche Umgebung.
+* Tastatureingaben können eine hervorragende Möglichkeit zum Steuern der debuggingaspekte Ihrer APP oder Spiel-Engine sein, insbesondere, da der Benutzer die Tastatur nicht verwenden muss. Die Verknüpfung ist identisch mit der Verwendung von corewindow-Ereignis-APIs. In diesem Szenario können Sie eine Möglichkeit implementieren, um Ihre APP so zu konfigurieren, dass Tastatur Ereignisse während der Debugsitzungen an den Modus "nur debugeingabe" weitergeleitet werden.
+* Bluetooth-Controller sind ebenfalls funktionsfähig.
 
 ## <a name="see-also"></a>Siehe auch
 * [Hardware-Zubehör](hardware-accessories.md)

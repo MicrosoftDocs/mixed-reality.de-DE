@@ -1,11 +1,11 @@
 ---
 title: Koordinatensysteme
-description: Der räumliche Koordinatensysteme verwendet, um sitzen erstellen, gemischt ständigen, Raum skalierbare und weltweit einsetzbaren Realität Erfahrungen.
+description: Die räumlichen Koordinatensysteme, die zum Erstellen von sitzender, stehendem, Raum-und weltweiten Umgebungen mit gemischter Realität verwendet werden.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Koordinatensystem, räumliche Koordinatensystem, Ausrichtung, sitzen Skalierung, ständigen Maß Platz-skalieren, weltweit skalierbare, 360-Grad-sitzen, ständigen, Raum, Welt, skalieren, Position, Ausrichtung, nicht bewegt werden angefügte, Phase, Anker, räumliche Anker, World gesperrt, Welt sperrende, Text-gesperrt, Text-sperren, den angegebenen Begrenzungen, Dauerhaftigkeit, Freigabe, cloud Nachverfolgen von Verlust, räumliche Anker
+keywords: Koordinatensystem, geografischer Koordinatensystem, nur Ausrichtung, sitzender Skalierung, aneinandergreifende Skala, Raum Skala, Welt weite, 360 Grad, sitzend, stehend, Raum, Welt, Skala, Position, Ausrichtung, stationär, angefügt, Phase, Anker, räumlicher Anker, weltweit gesperrt, Welt sperren, Text gesperrt, Body-Lock, Begrenzungen, Persistenz, Freigabe, nach Verfolgungs Verlust, räumliche cloudanker
 ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -15,7 +15,7 @@ ms.locfileid: "66829858"
 ---
 # <a name="coordinate-systems"></a>Koordinatensysteme
 
-In ihrem Kern mixed Reality-apps direkt [Hologramme](hologram.md) in Ihre Welt, die Aussehen und hört auf echte Objekte. Dies umfasst genau positionieren und Ausrichten von diesen Hologramme an Stellen in der ganzen Welt, die für den Benutzer von Bedeutung sind, ob die Welt ihre physischen Raum oder ein virtueller Bereich, die Sie erstellt haben. Wenn z. B. über die Position und Ausrichtung von Ihrem Hologramme oder andere Geometrie Ansatzpunkt der [bestaunen](gaze.md) Chow oder [übergeben Positionen](gestures.md), Windows bietet verschiedene realen Koordinatensysteme in der der Geometry ausgedrückt werden kann, bekannt als **räumliche Koordinatensysteme**.
+Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, die wie echte Objekte Aussehen und klingen. Dies umfasst die genaue Positionierung und Orientierung dieser Hologramme an Orten in der Welt, die für den Benutzer von Bedeutung sind, unabhängig davon, ob es sich um den physischen Raum oder einen virtuellen Bereich handelt, den Sie erstellt haben. Wenn Sie sich über die Position und Ausrichtung ihrer Hologramme oder eine beliebige andere Geometrie, wie z. b. den [Blick](gaze.md) Strahl oder die [Handpositionen](gestures.md), in Bezug auf die Position und Ausrichtung der Argumente anwenden, bietet Windows verschiedene reale Koordinatensysteme an  **räumliche Koordinatensysteme**.
 
 <br>
 
@@ -34,24 +34,24 @@ In ihrem Kern mixed Reality-apps direkt [Hologramme](hologram.md) in Ihre Welt, 
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Feststehende Verweisrahmen</a></td>
+        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Stationärer Frame des Verweises</a></td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
     <tr>
-        <td><a href="coordinate-systems.md#attached-frame-of-reference">Angefügte Verweisrahmen</a></td>
+        <td><a href="coordinate-systems.md#attached-frame-of-reference">Angefügter Frame des Verweises</a></td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
     <tr>
-        <td><a href="coordinate-systems.md#stage-frame-of-reference">Referenz für Stufe</a></td>
-        <td>Noch unterstützt nicht</td>
-        <td>Noch unterstützt nicht</td>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">Stagingframe des Verweises</a></td>
+        <td>Noch nicht unterstützt</td>
+        <td>Noch nicht unterstützt</td>
         <td>✔️</td>
     </tr>
     <tr>
@@ -68,164 +68,164 @@ In ihrem Kern mixed Reality-apps direkt [Hologramme](hologram.md) in Ihre Welt, 
     </tr>
 </table>
 
-## <a name="mixed-reality-experience-scales"></a>Skalen für Mixed Reality-Erfahrung
+## <a name="mixed-reality-experience-scales"></a>Skalierbarkeit mit gemischter Realität
 
-Mixed Reality-apps können für eine Vielzahl von Benutzerfunktionen von 360-Grad-video-Viewern entwerfen, die nur den Kopfhörer des Ausrichtung, vollständige weltweit einsetzbaren apps und Spiele, die räumliche Zuordnung und räumliche Anker benötigen:
+Mixed Reality-Apps können eine Vielzahl von Benutzeroberflächen entwerfen, von 360-Fach-Video Viewern, die nur die Ausrichtung des Headsets benötigen, bis hin zu vollständig skalierbaren apps und spielen, für die räumliche und räumliche Anker erforderlich sind:
 <br>
 
-| Skalierung der Benutzeroberfläche | Anforderungen | Beispiel-Erfahrung | 
+| Erfahrungs Skala | Anforderungen | Beispiel Darstellung | 
 |----------|----------|----------|
-|  **Orientation-only** |  **Kopfhörer Ausrichtung** (Schwerkraft ausgerichtet) |  360°-video-viewer | 
-|  **Seated-scale** |  Oben, Plus **Kopfhörer Position** relativ zur Position null |  Rennspiels Spiel oder Leerzeichen simulator | 
-|  **Standing-scale** |  Oben, Plus **Floor Ursprung bereitstellen** |  Aktion-Spiel, in dem Sie Wildenten und direktes umgehen  | 
-|  **Room-scale** |  Oben, Plus **Phase Begrenzung Vieleck** |  Puzzle-Spiel, in dem das Rätsel aufzusuchen Sie | 
-|  **World-scale** |  **Räumliche Anker** (und in der Regel [räumliche Zuordnung](spatial-mapping.md)) |  Spiel mit Feinde, die Ihre echten Wände, z. B. stammen [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
+|  **Nur Ausrichtung** |  **Headset-Ausrichtung** (schwer bündig ausgerichtet) |  360 °-Video-Viewer | 
+|  **Sitzender Maßstab** |  Oberhalb von plus Punkt **Position** relativ zur Nullposition |  Renn Spiel-oder Leerzeichen Simulator | 
+|  **Ständige Skalierung** |  Oberhalb von Plus **Stufen Boden Ursprung** |  Aktions Spiel, bei dem Sie an Ort und Stelle ausweichen  | 
+|  **Raumskala** |  Oberhalb, plus **Phasen Begrenzungen Polygon** |  Rätselspiel, in dem Sie das Rätsel durchlaufen | 
+|  **Weltweit skalieren** |  **Räumliche Anker** (und in der Regel [räumliche Zuordnung](spatial-mapping.md)) |  Spielen Sie mit Feinden, die von den echten Wänden stammen, z. b. [roboraid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
 
-Diese kommen Skalen führen Sie ein Modell "schachteln Puppen". Die wichtiges Entwurfsprinzip für Windows Mixed Reality hier ist, dass eine bestimmte Kopfhörer apps, die für eine Zielmenge von Erfahrungen sowie alle weniger Skalen unterstützt:
+Diese Erfahrungs Skala folgt dem Modell "Schachteln von Puppen". Das wichtigste Entwurfs Prinzip für Windows Mixed Reality besteht darin, dass ein bestimmtes Headset Apps unterstützt, die für die Skalierung von Ziel erlebungen und für alle weniger Skalierungen entwickelt wurden:
 <br>
 
-| 6DOF-nachverfolgung | Floor definiert | 360° nachverfolgen | Grenzen | Räumliche Anker | Max-Erfahrung | 
+| 6DOF-Nachverfolgung | Floor definiert | 360 °-Nachverfolgung | Definierte Begrenzungen | Raumanker | Maximale Leistung | 
 |----------|----------|----------|----------|----------|----------|
-|  Nein |  - |  - |  - |  - |  **Orientation-only** | 
+|  Nein |  - |  - |  - |  - |  **Nur Ausrichtung** | 
 |  **Ja** |  Nein |  - |  - |  - |  **Sitzen** | 
-|  **Ja** |  **Ja** |  Nein |  - |  - |  **Ständigen: Vorwärts** | 
-|  **Ja** |  **Ja** |  **Ja** |  Nein |  - |  **Platzierung – in der 360°** | 
-|  **Ja** |  **Ja** |  **Ja** |  **Ja** |  Nein |  **Room** | 
+|  **Ja** |  **Ja** |  Nein |  - |  - |  **Fortschritt** | 
+|  **Ja** |  **Ja** |  **Ja** |  Nein |  - |  **Steht-360 °** | 
+|  **Ja** |  **Ja** |  **Ja** |  **Ja** |  Nein |  **Versand** | 
 |  **Ja** |  **Ja** |  **Ja** |  **Ja** |  **Ja** |  **World** | 
 
-Beachten Sie, dass der Phase Verweisrahmen für HoloLens noch nicht unterstützt wird. Derzeit muss eine Raum – Skalieren der app für HoloLens verwenden [räumliche Zuordnung](spatial-mapping.md) Boden und die Wände eines Benutzers zu finden.
+Beachten Sie, dass der stagingframe von Reference für hololens noch nicht unterstützt wird. Eine Raum basierte App auf hololens muss derzeit eine [räumliche Zuordnung](spatial-mapping.md) verwenden, um den Boden und die Wände des Benutzers zu ermitteln.
 
 ## <a name="spatial-coordinate-systems"></a>Räumliche Koordinatensysteme
 
-Alle 3D-Grafikanwendungen verwendet [kartesische Koordinatensysteme](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) Grund zu den Positionen und Ausrichtungen von Objekten in der virtuellen Welt sie ordnungsgemäß gerendert werden. Solche Koordinatensysteme herzustellen 3 Senkrechte Achsen, an denen sich die Objekte zu positionieren: eine X-, Y- und Z-Achse.
+Alle 3D-Grafikanwendungen verwenden [kartesische Koordinatensysteme](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) , um die Positionen und Ausrichtungen von Objekten in den von Ihnen renderischen virtuellen Bereichen zu verdeutlichen. Diese Koordinatensysteme richten drei senkrechte Achsen ein, um Objekte zu positionieren: eine X-, Y-und Z-Achse.
 
-In [mixed Reality](mixed-reality.md), Ihre apps werden virtuelle und physische Koordinatensysteme verständlich. Windows Ruft einem Koordinatensystem, die wirkliche Bedeutung in der realen Welt hat eine **räumliche Koordinatensystem**.
+In [gemischter Realität](mixed-reality.md)werden Ihre apps sowohl für virtuelle als auch für physische Koordinatensysteme in den Grund. Windows Ruft ein Koordinatensystem auf, das in der physischen Welt ein **räumliches Koordinatensystem**hat.
 
-Räumliche Koordinatensysteme express die Koordinatenwerte in Meter. Dies bedeutet, dass Objekte mit 2 Einheiten eingefügt auseinander liegen, in der X, Y oder Z-Achse wird neben anderen beim Rendern in mixed Reality-2 Zähler angezeigt. Dadurch können Sie die Objekte und Umgebungen in realen Umfang problemlos zu rendern.
+Räumliche Koordinatensysteme drücken ihre Koordinaten Werte in Meter. Dies bedeutet, dass Objekte, die zwei Einheiten in der X-, Y-oder Z-Achse ablegen, 2 Meter voneinander getrennt angezeigt werden, wenn Sie in gemischter Realität gerendert werden. Auf diese Weise können Sie problemlos Objekte und Umgebungen in der realen Skalierung darstellen.
 
-Im Allgemeinen kartesische Koordinatensysteme entweder rechtshändige oder Linkshänder möglich. Räumliche Koordinatensysteme für Windows sind immer rechtshändige, was bedeutet, dass der positiven X-Achse zeigt nach rechts, die positive Y-Achse zeigt nach oben (ausgerichtet auf Schwerkraft) und der positiven z-Achse verweist, zu Ihnen hin.
+Im Allgemeinen können kartesische Koordinatensysteme entweder von rechts oder Links übergeben werden. Räumliche Koordinatensysteme unter Windows sind immer rechts häng, was bedeutet, dass die positive X-Achse nach rechts zeigt, die positive Y-Achse nach oben (ausgerichtet an der Schwerkraft) und die positive Z-Achse auf Sie zeigt.
 
-In beiden Arten der Koordinatensysteme der positiven X-Achse verweist, rechts, und die positive Y-Achse zeigt nach oben. Der Unterschied besteht darin, ob die positive z-Achse auf oder von Ihnen weg verweist. Sie können der Richtung der positive z-Achse verweist, verweist die Finger davon bedenken, Ihre linken oder rechten in der Positive X-Richtung und wenden sie auf die positive Y-Richtung. Die Richtung, dem Daumen hin oder von Ihnen weg zeigt, ist die Richtung, die die positive z-Achse für dieses Koordinatensystem verweist.
+Bei beiden Koordinatensystemen zeigt die positive X-Achse nach rechts und die positive Y-Achse nach oben. Der Unterschied besteht darin, ob die positive Z-Achse auf Sie hin oder Weg zeigt. Sie können merken, welche Richtung die positive Z-Achse zeigt, indem Sie die Finger entweder in der linken oder rechten Ecke in der positiven X-Richtung zeigen und Sie in die positive Y-Richtung lenken. Die Richtung, auf die sich der Ziehpunkt von Ihnen befindet, ist die Richtung, auf die die positive Z-Achse für dieses Koordinatensystem zeigt.
 
-## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Erstellen eine reine Ausrichtung oder sitzen Skalierung-Erfahrung
+## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Aufbauen einer reinen Orientierung oder einer Skalierungs Funktion
 
-Der Schlüssel, holographic [Rendering](rendering.md) ändert der Ansicht Ihrer app von der Hologramme jeden Frame, wenn der Benutzer, bewegt wird, entsprechend ihren vorhergesagten Head während der Übertragung. Sie erstellen können **sitzen Skalierung Erfahrungen** Head-Position des Benutzers und der Head-Ausrichtung mit Hinsicht ändert, ein **feststehende Verweisrahmen**.
+Der Schlüssel für das holografische [Rendering](rendering.md) besteht darin, dass Sie die Ansicht der Hologramme Ihrer APP für jeden Frame ändern, wenn der Benutzer sich bewegt, um die vorhergesagte Kopfzeile abzugleichen. Sie können Benutzeroberflächen mit **sitzender Skalierung** erstellen, die Änderungen an der Anfangsposition des Benutzers und der Kopf Richtung mithilfe eines **stationären Frame Verweises**berücksichtigen.
 
-Einige Inhalte Head Position Updates an einer ausgewählten Überschrift behoben bleiben muss ignoriert werden und Entfernung des Benutzers zu jeder Zeit. Ein gutes Beispiel ist die 360-Grad-Video: Da das Video vom Standpunkt der einzelnen festen erfasst wird, würde es die Illusion für die Ansichtsposition relativ zu dem Inhalt, verschieben auflöst, obwohl die Ausrichtung der Ansicht geändert werden muss, wenn der Benutzer sich sieht. Sie können z. B. erstellen **Ausrichtung nur Erfahrungen** mit einer **Verweisrahmen angefügt**.
+Einige Inhalte müssen Aktualisierungen der Head-Position ignorieren und stets an einer ausgewählten Überschrift und der Entfernung vom Benutzer entfernt bleiben. Das primäre Beispiel ist 360-Grad-Video: da das Video aus einer einzelnen, festgelegten Perspektive aufgezeichnet wird, würde es die Illusion, dass die Ansichts Position relativ zum Inhalt verschoben werden soll, auch dann zerstören, wenn sich die Ansichts Ausrichtung ändern muss, wenn sich der Benutzer befindet. Mit einem **angefügten Verweis Rahmen**können Sie diese Benutzeroberfläche **nur auf Orientierung** aufbauen.
 
-### <a name="stationary-frame-of-reference"></a>Feststehende Verweisrahmen
+### <a name="stationary-frame-of-reference"></a>Stationärer Frame des Verweises
 
-Das Koordinatensystem, die durch eine feststehende Verweisrahmen funktioniert die Positionen der Objekte in der Nähe der Benutzer relativ zu der Welt als stabil wie möglich beibehalten werden kann, Änderungen in der Head-Position des Benutzers nutzen und gleichzeitig bereitgestellt wird.
+Das Koordinatensystem, das von einem stationären Verweis Rahmen bereitgestellt wird, sorgt dafür, dass die Positionen von Objekten in der Nähe des Benutzers so stabil wie möglich im Verhältnis zur Welt bleiben, während Änderungen an der Hauptposition des Benutzers berücksichtigt werden.
 
-Für sitzen Skalierung wie z. B. in einer Spiele-Engine-Funktionen [Unity](https://unity3d.com/), ist eine feststehende Verweisrahmen, definiert der Engine "World Ursprung." Objekte, die an eine bestimmte globale Koordinate platziert werden mithilfe der feststehende Verweisrahmen um ihre Position in der Praxis über die gleichen Koordinaten zu definieren. Inhalt, der verbleibt in der Welt zu platzieren, auch wenn der Benutzer, führt heißt **World-locked** Inhalt.
+Bei der Skalierung in einem Spiel Modul, wie z. b. [Unity](https://unity3d.com/), ist ein stationärer Frame des Verweises, der den "Welt Ursprung" der Engine definiert. Objekte, die sich in einer bestimmten Welt Koordinate befinden, verwenden den stationären Verweis Rahmen, um Ihre Position in der realen Welt mit denselben Koordinaten zu definieren. Inhalte, die in der Welt abgelegt werden, auch wenn der Benutzer Sie durchläuft, werden als **weltweit gesperrte** Inhalte bezeichnet.
 
-Eine app wird in der Regel erstellen eine feststehende Verweisrahmen beim Start und seine Koordinatensystem während der Lebensdauer der app verwenden. Als app-Entwickler in Unity können Sie nur starten, platzieren Inhalt relativ zum Ursprung, der an der Anfangsposition für die Haupt- und die Ausrichtung des Benutzers ist. Wenn der Benutzer an einen neuen Ort verschoben und ihre Erfahrungen sitzen Skalierung fortsetzen möchte, können Sie verschoben Welt Ursprung an diesem Speicherort.
+Eine App erstellt in der Regel einen stationären Verweis Rahmen beim Start und verwendet das Koordinatensystem während der gesamten Lebensdauer der app. Als App-Entwickler in Unity können Sie einfach mit dem Platzieren von Inhalten in Relation zum Ursprung beginnen, was an der Anfangsposition und Ausrichtung des Benutzers liegen wird. Wenn der Benutzer an einem neuen Speicherort wechselt und seine benutzerfreundliche Umgebung fortsetzen möchten, können Sie den Ursprung der Welt an diesem Speicherort wiederholen.
 
-Im Laufe der Zeit wie das System mehr über die Umgebung des Benutzers, lernt, können sie ermitteln, ob entfernungen zwischen verschiedenen Punkten in der Praxis kürzer oder länger als das System zuvor war der Meinung sind. Wenn Sie Hologramme in eine feststehende Verweisrahmen für eine app für HoloLens gerendert, in denen Benutzer über einen Bereich von etwa 5 Meter breit will, kann Ihre app Abweichung in den beobachteten Speicherort, der diese Hologramme beobachten. Wenn Ihre Umgebung den Benutzer, die Firma noch wandering über 5 Meter gibt, die Sie erstellen eine [weltweit einsetzbaren Erfahrung](#building-a-world-scale-experience), das weitere Techniken zur Hologramme stabil zu halten, wie unten beschrieben erforderlich ist.
+Wenn das System mehr über die Umgebung des Benutzers erfährt, kann es im Laufe der Zeit feststellen, dass die Abstände zwischen verschiedenen Punkten in der realen Welt kürzer oder länger sind als das System, das zuvor angenommen wurde. Wenn Sie holograms in einem stationären Referenz Verweis für eine APP auf hololens-Systemen darstellen, bei denen Benutzer über einen Bereich von ungefähr 5 Metern hinaus bewegen, kann Ihre APP Abweichungen am beobachteten Speicherort dieser Hologramme beobachten. Wenn Benutzer in Ihrer Umgebung über 5 Meter hinausgehen, werden Sie eine [Welt weite](#building-a-world-scale-experience)Umgebung entwickeln, die zusätzliche Techniken erfordert, um Hologramme stabil zu halten, wie unten beschrieben.
 
-### <a name="attached-frame-of-reference"></a>Angefügte Verweisrahmen
+### <a name="attached-frame-of-reference"></a>Angefügter Frame des Verweises
 
-Eine angefügte Verweisrahmen verschiebt mit dem Benutzer, wie sie mit einer festen Überschrift angezeigt, die definiert, wenn die app zunächst den Frame erstellt, durchlaufen. Dadurch kann der Benutzer, die Inhalte, die in dieser Referenz platziert bequem ansehen, um. Inhalte, die auf diese Weise für Benutzer relativ gerendert wird aufgerufen, **Text gesperrt** Inhalt.
+Ein angefügter Frame des Verweises wechselt mit dem Benutzer, während Sie sich bewegen, wobei eine festgelegte Überschrift definiert ist, wenn die APP erstmalig erstellt. Dadurch kann der Benutzer die Inhalte, die innerhalb dieses Referenzrahmens platziert werden, bequem überprüfen. Inhalt, der in dieser Benutzer relativen Weise gerendert wird, wird als **Text gesperrter** Inhalt bezeichnet.
 
-Bei den Kopfhörer, in der ganzen Welt also ermitteln kann, bietet eine Referenz für angefügte das nur Koordinatensystem, die zum Rendern von Hologramme verwendet werden kann. Dies vereinfacht sich ideal für die Anzeige von fallback-Benutzeroberfläche, um dem Benutzer mitzuteilen, den sie ihr Gerät in der ganzen Welt finden können. Apps, die sitzen Skalierung oder höher sind sollte eine Ausrichtung nur Fallback ausführen, um dem Benutzer, die Benutzeroberfläche ähnlich wie in diesem Fall Einstieg helfen enthalten die [Mixed Reality home](navigating-the-windows-mixed-reality-home.md).
+Wenn das Headset nicht ermitteln kann, wo es sich auf der Welt befindet, stellt ein angefügter Frame von Reference das einzige Koordinatensystem bereit, das zum Rendering von holograms verwendet werden kann. Dies ist ideal für die Anzeige der Fall Back Benutzeroberfläche, um dem Benutzer mitzuteilen, dass das Gerät die Benutzer nicht auf der ganzen Welt finden kann. Apps mit sitzender oder höherer Skalierung sollten einen nur für die Orientierung ausgerichteten Fall Back enthalten, um dem Benutzer die Möglichkeit zu geben, die Benutzeroberfläche zu wiederholen, ähnlich wie in der [Mixed Reality-Startseite](navigating-the-windows-mixed-reality-home.md).
 
-## <a name="building-a-standing-scale-or-room-scale-experience"></a>Erstellen eine Umgebung ständigen Skalierung oder Platz Skalierung
+## <a name="building-a-standing-scale-or-room-scale-experience"></a>Aufbauen einer Dauer-oder Raum Skalierung
 
-Sitzen Skalierung auf eine immersive Kopfhörer hinausgehen, und erstellen eine **ständigen Skalierung Erfahrung**, können Sie die **Phase Verweisrahmen**.
+Um die Skalierung über ein immersives Headset hinaus zu übersetzen und eine Funktion für eine permanente Skalierung zu erstellen, können Sie den **Stufen Rahmen der Referenz**verwenden.
 
-Bereitstellen einer **Platz Skalierung Erfahrung**, sodass Benutzer innerhalb der Begrenzung des 5-Meter sie vordefinierte aufzusuchen, sehen Sie sich für **Stufe Grenzen** auch.
+Um eine **Raum**Umgebung bereitzustellen, die es Benutzern ermöglicht, innerhalb der von Ihnen vordefinierten 5-Meter-Grenze zu navigieren, können Sie auch nach **Phasen Begrenzungen** suchen.
 
-### <a name="stage-frame-of-reference"></a>Referenz für Stufe
+### <a name="stage-frame-of-reference"></a>Stagingframe des Verweises
 
-Beim ersten Einrichten einer immersive Kopfhörer des Benutzers definiert eine **Phase**, steht für den Raum in dem sie treten gemischte Realität. Die Phase minimal definiert eine **Stufe Ursprung**, einem räumliche Koordinatensystem, die der Benutzer zentriert des ausgewählt, Floor Position und die forward-Ausrichtung, in dem sie das Gerät nutzen möchten. Durch Platzieren von Inhalten in dieser Phase Koordinatensystem an den Boden-Ebene Y = 0, können Sie sicherstellen, Ihre Hologramme werden bequem auf dem Boden angezeigt, wenn der Benutzer verfügbar ist, ermöglicht dem Benutzer eine **ständigen Skalierung Erfahrung**.
+Beim ersten Einrichten eines immersiven Headsets definiert der Benutzer eine **Stufe**, die den Raum darstellt, in dem Sie Gemischte Realität erleben werden. In der Stufe ist mindestens ein **Phasen Ursprung**definiert, ein räumliches Koordinatensystem, das sich auf die ausgewählte bodenposition des Benutzers konzentriert und die Ausrichtung des Geräts angibt. Durch das Platzieren von Inhalten in diesem Phasen Koordinatensystem auf der Ebene Y = 0 können Sie sicherstellen, dass Ihre holograms bequem auf dem Boden angezeigt werden, wenn der Benutzer steht, und den Benutzern eine Funktion zur Verfügung **steht**.
 
-### <a name="stage-bounds"></a>Phase Grenzen
+### <a name="stage-bounds"></a>Stufen Begrenzungen
 
-Der Benutzer kann optional auch definieren **Stufe Grenzen**, ein Bereich innerhalb des Raums, die sie der Möbel gelöscht haben, in dem er im bewegen möchten, mixed Reality. Wenn also die app erstellen, können eine **Platz Skalierung Erfahrung**, diese Grenzen verwenden, um sicherzustellen, dass Hologramme immer platziert werden, in denen Benutzer auf sie zugreifen können.
+Der Benutzer kann optional auch **Stufen Begrenzungen**definieren, einen Bereich innerhalb des Raums, in dem er die Möbel gelöscht hat, wo er sich in gemischter Realität bewegen möchte. Wenn dies der Fall ist, kann die APP eine **Raum Skalierung**erstellen, indem diese Begrenzungen verwendet werden, um sicherzustellen, dass Hologramme immer platziert werden, wo der Benutzer Sie erreichen kann.
 
-Da als Referenz für die Phase bereitstellt, dass eine einzelne Koordinatensystem innerhalb der Floor-Relative Inhalt platziert behoben werden, ist es die einfachste Möglichkeit für Portieren ständigen-Skalierung und Platz-Anwendungen für virtuelle Realität Headsets entwickelt wurden. Wie mit diesen Plattformen VR ein einziges Koordinatensystem nur Inhalt zu dessen Durchmesser 5 Meter (16 Fuß) zu stabilisieren können, führt allerdings vor der Hebel-Arm-Effekte Inhalt weit entfernt von der Mitte deutlich verschoben werden, wie das System angepasst wird. Um 5 Meter hinausgehen, werden räumliche Anker benötigt.
+Da der stagingframe von Reference ein einzelnes festes Koordinatensystem bereitstellt, in dem der Inhalt der Grundstruktur platziert werden soll, ist dies der einfachste Weg zum Portieren von Anwendungen für die permanente und Raum Skalierung, die für Virtual Reality-Headsets entwickelt wurden. Wie bei diesen VR-Plattformen kann ein einzelnes Koordinatensystem Inhalte jedoch nur in ungefähr einem 5-Meter-Durchmesser (16 Meter) stabilisieren, bevor die Auswirkung von Arm-Arm-Effekten den Anteil von Inhalten aus dem Mittelpunkt merklich ändert, wenn sich das System anpasst. Um über 5 Meter hinauszugehen, sind räumliche Anker erforderlich.
 
-## <a name="building-a-world-scale-experience"></a>Erstellen einer weltweit einsetzbaren-Erfahrung
+## <a name="building-a-world-scale-experience"></a>Entwickeln eines weltweiten Erlebnisses
 
-HoloLens für "true" ermöglicht **weltweit einsetzbaren Erfahrungen** , mit deren Hilfe Benutzer über 5 Meter hinaus will. Um eine Welt – Skalieren der app zu erstellen, benötigen Sie neue Techniken hinausgehen für Platz Skalierung Oberflächen verwendet.
+Hololens ermöglicht echte **Welt weite** Oberflächen, mit denen Benutzer mehr als 5 Meter bewegen können. Zum Erstellen einer weltweiten App benötigen Sie neue Techniken, die über diejenigen hinausgehen, die für Raum Skalierungen verwendet werden.
 
-### <a name="why-a-single-rigid-coordinate-system-cannot-be-used-beyond-5-meters"></a>Warum ein einziges starres Koordinatensystem über 5 Meter verwendet werden kann
+### <a name="why-a-single-rigid-coordinate-system-cannot-be-used-beyond-5-meters"></a>Gründe für die Verwendung eines einzelnen starren Koordinatensystems über 5 Meter hinaus
 
-Derzeit ist beim Schreiben von Spielen, Data-visualisierungs-apps oder apps für virtuelle Realität der typische Ansatz zu, um eine absolute Welt Koordinatensystem herzustellen, die alle anderen Koordinaten zuverlässig an zuordnen können. In dieser Umgebung finden Sie immer eine stabile Transformation, die eine Beziehung zwischen zwei Objekten in dieser Welt definiert. Wenn Sie diese Objekte nicht verschieben, würde deren relativen Transformationen immer unverändert bleiben. Diese Art von globalen Koordinatensystems funktioniert gut, wenn eine rein virtuelle Welt rendern, in dem Sie alle der Geometry-Instanz im Voraus kennen. Raum einsetzbaren VR-apps richten Sie noch heute in der Regel dieser Art von absoluten Platz Skalierung Koordinatensystem mit seinem Ursprung auf dem Boden.
+Beim Schreiben von spielen, Daten Visualisierungs-Apps oder Virtual Reality-apps besteht der typische Ansatz darin, ein absolutes Welt Koordinatensystem einzurichten, das alle anderen Koordinaten zuverlässig wieder zuordnen können. In dieser Umgebung können Sie immer eine stabile Transformation finden, die eine Beziehung zwischen zwei beliebigen Objekten in dieser Welt definiert. Wenn Sie diese Objekte nicht verschoben haben, bleiben ihre relativen Transformationen immer gleich. Diese Art des globalen Koordinatensystems funktioniert gut, wenn eine rein virtuelle Welt gerendert wird, in der Sie die gesamte Geometrie im Voraus kennen. Heute stellen VR-apps in der Regel eine solche Art von absoluter Raumkoordinaten System mit dem Ursprung im Boden dar.
 
-Im Gegensatz dazu weist eine unabhängig mixed Reality-Geräte wie HoloLens ein dynamisches Sensor gesteuerte Verständnis der Welt, sein Wissen im Laufe der Zeit der benutzerumgebung fortlaufend anpassen, wie sie viele Zähler über eine gesamte Stockwerk eines Gebäudes führen. Wenn Sie alle Ihre Hologramme in einem einzelnen starre Koordinatensystem platziert würde diese Hologramme in einer weltweit einsetzbaren-Oberfläche unbedingt im Laufe der Zeit relativ zu der ganzen Welt oder miteinander abweichen.
+Im Gegensatz dazu verfügt ein ungeplantes gemischtes Reality-Gerät wie hololens über ein dynamisches Sensor basiertes Verständnis der Welt, bei dem seine Wissensquelle im Laufe der Zeit der Benutzerumgebung kontinuierlich angepasst wird, während Sie viele Meter in einer ganzen Etage eines Gebäudes durchlaufen. In einer weltweiten Umgebung, wenn Sie alle Ihre Hologramme in einem einzigen starren Koordinatensystem abgelegt haben, würden diese Hologramme zwangsläufig mit der Zeit, entweder relativ zur Welt oder zueinander, Abdriften.
 
-Beispielsweise kann die Kopfhörer glauben derzeit zwei Positionen in der ganzen Welt 4 Meter auseinander liegen sollen, und klicken Sie dann später verfeinern, besser zu verstehen, lernen, dass die Standorte in der Tat 3.9 Meter auseinander sind. Wenn diese Hologramme anfänglich 4 Meter auseinander liegen in einem einzelnen starre Koordinatensystem platziert wurde, wird eine von ihnen dann immer 0,1 Zähler aus, aus der realen Welt angezeigt.
+Beispielsweise kann das Headset derzeit annehmen, dass zwei Orte der Welt vier Meter voneinander entfernt sind, und später dieses Verständnis verfeinern, indem er erfährt, dass die Standorte tatsächlich 3,9 Meter voneinander entfernt sind. Wenn diese Hologramme anfänglich vier Meter voneinander getrennt in einem einzigen starren Koordinatensystem platziert wurden, würde eine davon immer 0,1 Meter aus der realen Welt angezeigt werden.
 
-### <a name="spatial-anchors"></a>Räumliche Anker
+### <a name="spatial-anchors"></a>Raumanker
 
-Windows Mixed Reality kann das Problem mit dem im vorherigen Abschnitt beschrieben werden, und lassen Sie die erstellen [räumliche Anker](spatial-anchors.md) an wichtige Punkten in der ganzen Welt zu markieren, wo der Benutzer Hologramme platziert wurde. Ein räumlicher Anker stellt einen wichtigen Punkt in der ganzen Welt, die das System nachverfolgen im Laufe der Zeit sollten dar.
+Windows Mixed Reality löst das im vorherigen Abschnitt beschriebene Problem, indem es Ihnen ermöglicht, [räumliche Anker](spatial-anchors.md) zu erstellen, um wichtige Punkte in der Welt zu markieren, an denen der Benutzer holograms platziert hat. Ein Raumanker stellt einen wichtigen Punkt in der Umgebung dar, den das System im Laufe der Zeit nachverfolgen sollte.
 
-Wie das Gerät über die Welt lernt, können diese räumliche Anker ihre Position relativ zu anderen anpassen, je nach Bedarf, um sicherzustellen, dass jede Anker bleibt genau, wo sie relativ zu der realen Welt abgelegt wurde. Indem ein räumliche Anker platzieren, an dem Speicherort, in denen der Benutzer ggf. ein Hologramm platziert, und positionieren diese – Hologramm relativ zu seiner räumlichen Anker, können Sie sicherstellen, dass Hologramm optimalen Stabilität verwaltet auch, wenn der Benutzer über Dutzende Verbrauchseinheiten wechselt.
+Wenn das Gerät über die Welt erfährt, können diese räumlichen Anker ihre Position relativ zueinander anpassen, um sicherzustellen, dass jeder Anker genau dort platziert wird, wo er relativ zur realen Welt platziert wurde. Wenn Sie an der Stelle, an der der Benutzer ein – Hologramm platziert, einen räumlichen Anker platzieren und dann dieses Hologramm relativ zum räumlichen Anker positionieren, können Sie sicherstellen, dass das – Hologramm eine optimale Stabilität aufrecht erhält, auch wenn der Benutzer über Dutzende von Metern hinweg wechselt.
 
-Diese kontinuierliche Anpassung der räumlichen Anker zueinander ist der wesentliche Unterschied zwischen Coordinate systems aus räumlichen Anker und stationär Bezugsrahmen:
+Diese kontinuierliche Anpassung räumlicher Anker relativ zueinander ist der wesentliche Unterschied zwischen Koordinatensystemen von räumlichen Ankern und stationären Frame Frames:
 
-* Hologramme platziert, in der feststehende Verweisrahmen alle beibehalten eine feste Beziehung zueinander. Wie lange Strecken der Benutzer führt kann jedoch Koordinatensystem des Frames abweichen, relativ zu der ganzen Welt, um sicherzustellen, dass die stabile Hologramme neben dem Benutzer angezeigt werden.
+* Holograms, die im stationären Frame des Verweises abgelegt werden, behalten alle eine starre Beziehung untereinander bei. Wenn der Benutzer jedoch lange Entfernungen durchläuft, kann das Koordinatensystem dieses Frames relativ zur Welt abweichen, um sicherzustellen, dass holograms neben dem Benutzer stabil angezeigt werden.
 
-* In der Phase Verweisrahmen platziert Hologramme erhalten Sie auch eine feste Beziehung miteinander. Im Gegensatz zu den stationär Frame bleibt der Phase Frame immer festen relativ zu dessen definierten physischen Ursprung. Inhalt in die Phase des Koordinatensystem über die Begrenzung der 5-Meter gerendert wird jedoch nur stabile angezeigt, während der Benutzer innerhalb dieser Grenze verfügbar ist.
+* Holograms, die im stagingframe von Reference abgelegt werden, behalten auch eine starre Beziehung untereinander bei. Im Gegensatz zum stationären Frame bleibt der stagingframe immer relativ zum definierten physischen Ursprung festgelegt. Inhalte, die im Koordinatensystem der Stufe hinter der Grenze von fünf Metern gerendert werden, werden jedoch nur stabil angezeigt, wenn der Benutzer innerhalb dieser Grenze steht.
 
-* Hologramme eingefügt, die räumliche Anker relativ zum Hologramme abweichen kann platziert, dabei wird eine andere räumliche Anchortag. Dadurch wird Windows zur Verbesserung der seines Verständnisses der Position der einzelnen räumlichen Anker, auch wenn Sie z. B. ein Anker muss selbst Links anpassen und eine andere Anker rechts anpassen muss.
+* Holograms, die mithilfe eines räumlichen Ankers platziert werden, können relativ zu holograms mit einem anderen räumlichen Anker abweichen. Dadurch kann Windows das Verständnis der Position jedes räumlichen Ankers verbessern, auch wenn beispielsweise ein Anker sich nach Links anpassen muss und ein anderer Anker richtig angepasst werden muss.
 
-Im Gegensatz zu einem feststehende Verweisrahmen, die Stabilität in der Nähe der Benutzer immer optimiert ist, stellen Sie sicher die Referenz für Stufe und räumliche Anker Stabilität in der Nähe ihrer Ursprünge. Dadurch, dass diese Hologramme genau an die Stelle im Laufe der Zeit zu bleiben, aber es bedeutet auch, dass Hologramme gerendert zu weit entfernt von einem Koordinatensystem Ursprung zunehmend schwerwiegende Hebel-Arm-Auswirkungen auftreten. Dies ist, da kleine Anpassungen an der Position und Ausrichtung der Stufe oder Anker vergrößert werden werden auf die Entfernung vom, Anker proportional. 
+Im Gegensatz zu einem stationären Verweis Verweis, der immer die Stabilität in der Nähe des Benutzers optimiert, gewährleistet der Stufen Rahmen der Referenz und räumlichkeits Anker die Stabilität in der Nähe ihrer Ursprünge. Dadurch bleiben die Hologramme im Laufe der Zeit genau bestehen, aber es bedeutet auch, dass Hologramme, die zu weit vom Ursprung ihres Koordinatensystems gerendert werden, zunehmend schwerwiegende Auswirkungen auf die Hebel-Arm haben. Dies liegt daran, dass kleine Anpassungen an Position und Ausrichtung der Stufe oder des Ankers proportional zu der Entfernung von diesem Anker vergrößert werden. 
 
-Eine gute Faustregel ist, um sicherzustellen, dass alles, was Sie rendern basierend auf einer entfernten räumliche Anker Koordinatensystem innerhalb von ca. 3 Meter der Ursprungssite. Für einen nahe gelegenen Phase Ursprung entspricht entfernten Wiedergabe des Inhalts "OK", höhere mit Feldern fester Breite Fehler nur auf kleine Hologramme auswirkt, die nicht viel in die Ansicht des Benutzers verschoben wird.
+Eine gute Faustregel besteht darin, sicherzustellen, dass alles, was Sie basierend auf dem Koordinatensystem eines entfernten räumlichen Ankers Renderingsystem haben, innerhalb von ungefähr 3 Metern seines Ursprungs liegt. Für einen in der Umgebung befindlichen Ursprung ist das Rendering von entfernten Inhalten in Ordnung, da sich ein erhöhter Positionsfehler nur auf kleine Hologramme auswirkt, die in der Ansicht des Benutzers nicht stark verschoben werden.
 
-### <a name="spatial-anchor-persistence"></a>Räumliche Anchor-Persistenz
+### <a name="spatial-anchor-persistence"></a>Dauerhaftigkeit räumlicher Anker
 
-Räumliche Anker können auch Ihre app einen wichtigen Speicherort speichern, auch nach Ihrer app hält oder das Gerät wird heruntergefahren.
+Räumliche Anker können es Ihrer APP ermöglichen, sich auch dann an einen wichtigen Speicherort zu erinnern, wenn Ihre APP angehalten oder das Gerät heruntergefahren wird.
 
-Sie können die räumlichen Anker Ihre app erstellt auf dem Datenträger speichern, und Laden sie dann wieder es später noch Mal durch Persistentes Speichern mit Ihrer app **räumliche Premium-Shop**. Beim Speichern oder Laden einen Anker, geben Sie einen Zeichenfolgenschlüssel, der in Ihrer app sinnvoll ist, um den Anker später zu erkennen. Stellen Sie sich diesen Schlüssel als den Dateinamen für den Anker. Wenn Sie andere Daten, Anker zuordnen möchten, z. B. ein 3D-Modell, die der Benutzer an dieser Stelle platziert, speichern Sie, die in den lokalen Speicher Ihrer app, und ordnen sie den Schlüssel an, den Sie ausgewählt haben.
+Sie können die räumlichen Anker, die Ihre APP erstellt, auf dem Datenträger speichern und später wieder zurück laden, indem Sie Sie im **räumlichen Anker Speicher**Ihrer APP beibehalten. Beim Speichern oder Laden eines Ankers geben Sie einen Zeichen folgen Schlüssel an, der für Ihre APP sinnvoll ist, um den Anker zu einem späteren Zeitpunkt zu identifizieren. Stellen Sie sich diesen Schlüssel als den Dateinamen für Ihren Anker vor. Wenn Sie andere Daten mit diesem Anker verknüpfen möchten, z. b. ein 3D-Modell, das der Benutzer an diesem Speicherort platziert hat, speichern Sie diese im lokalen Speicher Ihrer APP, und ordnen Sie Sie dem von Ihnen gewählten Schlüssel zu.
 
-Durch Beibehalten von Textmarken in den Speicher können Ihre Benutzer einzelne Hologramme platzieren oder platzieren Sie einen Arbeitsbereich, die eine app platzieren Sie die verschiedenen Hologramme wird, und suchen Sie dann später die Hologramme, wo sie sie über viele Verwendungen von Ihrer app erwarten.
+Durch das Beibehalten von Ankern im Geschäft können Ihre Benutzer individuelle Hologramme platzieren oder einen Arbeitsbereich platzieren, in dem eine APP die verschiedenen holograms platzieren wird. Anschließend finden Sie diese Hologramme später, wo Sie erwartet werden, über viele Verwendungszwecke Ihrer APP.
 
-Können Sie auch <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure räumliche Anker</a> für asynchrone – Hologramm Persistenz für HoloLens, IOS- und Android-Geräte.  Freigeben einer permanenten räumliche cloudankers, können mehrere Geräte das gleiche persistente – Hologramm im Laufe der Zeit beobachten, auch wenn diese Geräte nicht zur gleichen Zeit zusammen vorhanden sind.
+Sie können <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> auch für die asynchrone Hologrammpersistenz auf HoloLens-, iOS- und Android-Geräten verwenden.  Durch die gemeinsame Nutzung eines dauerhaften Cloudraumankers können mehrere Geräte dasselbe persistierte Hologramm im Verlauf der Zeit beobachten, auch wenn diese Geräte nicht gleichzeitig vorhanden sind.
 
-### <a name="spatial-anchor-sharing"></a>Räumliche Anker freigeben
+### <a name="spatial-anchor-sharing"></a>Räumliche Anker Freigabe
 
-Ihre app kann auch einen räumlichen Anker in Echtzeit freigeben für andere Geräte, sodass in Echtzeit Erfahrungen freigegeben.
+Ihre APP kann auch einen räumlichen Anker in Echtzeit mit anderen Geräten gemeinsam nutzen, sodass Sie gemeinsam genutzte Echtzeitumgebungen nutzen können.
 
-Mithilfe von <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure räumliche Anker</a>, Ihrer app kann als räumliche Anker dargestellt über mehrere HoloLens, iOS und Android-Geräte freigeben. Dass jedes Gerät, das Rendern ggf. ein Hologramm, der mit dem gleichen Anker für räumliche, sehen alle Benutzer der – Hologramm an derselben Stelle in der realen Welt angezeigt werden.
+Durch die Verwendung von <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">räumlichen Azure</a>-Ankern kann Ihre APP einen räumlichen Anker für mehrere hololens-, IOS-und Android-Geräte freigeben. Indem jedes Gerät ein Hologramm mit demselben Raumanker rendert, wird das Hologramm in der realen Welt für alle Benutzer an der gleichen Stelle angezeigt.
 
-## <a name="avoid-head-locked-content"></a>Vermeiden Sie Inhalte Head-gesperrt
+## <a name="avoid-head-locked-content"></a>Vermeiden von Kopf gesperrten Inhalten
 
-Wir raten dringend ab, Rendern von Head-locked-Inhalt, der auf einen festen Punkt in der Anzeige (z. B. eine HUD) bleibt. Im Allgemeinen Head-locked Inhalte für Benutzer unangenehm ist und nicht können Sie sich als natürliches Element ihrer Welt.
+Wir raten dringend davon ab, den Inhalt des gesperrten Inhalts zu rendern, der an einer festen Stelle in der Anzeige bleibt (z. b. ein HUD) Im Allgemeinen ist der Inhalt von Kopf gesperrten Inhalten für Benutzer nicht zufrieden und ist nicht wie ein natürlicher Teil ihrer Welt.
 
-Head-locked Inhalt sollte in der Regel durch Hologramme ersetzt werden, die für das Anfügen an den Benutzer oder in der ganzen Welt selbst platziert. Z. B. [Cursor](cursors.md) sollten im Allgemeinen werden mithilfe von Push übertragen in der ganzen Welt auf natürliche Weise skalieren, um die Position und die Entfernung des Objekts im des Benutzers Blicke widerzuspiegeln.
+Der Inhalt des gesperrte Inhalts sollte in der Regel durch holograms ersetzt werden, die an den Benutzer angefügt oder in der Welt selbst platziert werden. Beispielsweise sollten [Cursor](cursors.md) in der Regel in die Welt übermittelt werden, wobei die Skalierung auf natürliche Weise die Position und die Entfernung des Objekts im Benutzer Blick widerspiegelt.
 
-## <a name="handling-tracking-errors"></a>Behandeln von Fehlern der nachverfolgung
+## <a name="handling-tracking-errors"></a>Behandeln von nach Verfolgungs Fehlern
 
-In einigen Umgebungen wie z. B. dunkel Fluren möglicherweise es nicht möglich, dass eine Kopfhörer mithilfe der nachverfolgung von innen nach außen selbst ordnungsgemäß in der ganzen Welt auffindbar. Dies kann führen, dass Hologramme, die entweder nicht angezeigt oder an falschen Positionen angezeigt werden, wenn falsch verarbeitet. Erörtert, die Bedingungen in denen dies passieren kann, die Auswirkungen auf die benutzerfreundlichkeit, jetzt und Tipps für eine optimale behandelt diese Situation.
+In einigen Umgebungen, wie z. b. dunklen Hallways, ist es möglicherweise nicht möglich, dass ein Headset, das die interne Nachverfolgung verwendet, sich auf der ganzen Welt korrekt findet. Dies kann dazu führen, dass holograms entweder nicht angezeigt werden oder an falschen Stellen angezeigt werden, wenn Sie falsch behandelt werden. Wir besprechen nun die Bedingungen, unter denen dies auftreten kann, die Auswirkungen auf die Benutzerumgebung und Tipps, wie Sie diese Situation am besten verarbeiten können.
 
-### <a name="headset-cannot-track-due-to-insufficient-sensor-data"></a>Kopfhörer kann aufgrund unzureichender Sensordaten nicht nachverfolgen.
+### <a name="headset-cannot-track-due-to-insufficient-sensor-data"></a>Das Headset kann aufgrund unzureichender Sensordaten nicht nachverfolgt werden.
 
-In einigen Fällen können sich den Kopfhörer des Sensoren nicht herausfinden, in denen die Kopfhörer ist. Dies kann vorkommen, wenn der Raum dunkel, ist die Sensoren von Haare oder Hände abgedeckt werden, oder wenn die Umgebung nicht über genügend Textur verfügen.
+Manchmal können die Sensoren des Headsets nicht ermitteln, wo sich das Headset befindet. Dies kann vorkommen, wenn der Raum dunkel ist, oder wenn die Sensoren durch Haare oder Hände abgedeckt werden, oder wenn die Umgebung nicht über genügend Textur verfügt.
 
-In diesem Fall wird die Kopfhörer nicht nachverfolgen seiner Position mit ausreichender Genauigkeit zum Rendern von Hologramme Welt gesperrt werden. Nicht möglich, herauszufinden, wo eine räumliche Anker, stationär Frame oder Phase Frame relativ zu dem Gerät ist, aber Sie können immer noch gesperrt, Text Inhalt der angefügten Verweisrahmen rendern.
+Wenn dies der Fall ist, kann das Headset seine Position nicht mit ausreichender Genauigkeit nachverfolgen, um die Welt gesperrten holograms zu erzeugen. Sie können nicht herausfinden, wo sich ein räumlicher Anker, ein stationärer Frame oder ein stagingframe relativ zum Gerät befindet, aber Sie können nach wie vor im angefügten Frame des Verweises Text mit gesperrtem Inhalt Rendering.
 
-Ihre app sollte dem Benutzer, wie Sie mit Feldern fester Breite nachverfolgen, Rendern von einige fallback gesperrt, Text Inhalt, der beschreibt einige Tipps, wie z. B. Mine die Sensoren und mehr Lichter einschalten erhalten haben.
+Ihre APP sollte dem Benutzer mitteilen, wie die Positions Nachverfolgung rückgängig zu machen ist. dabei wird ein Fall Back-gesperrter Inhalt gerendert, der einige Tipps beschreibt, z. b. die Abdeckung der Sensoren und das Einschalten von Beleuchtung.
 
-### <a name="headset-tracks-incorrectly-due-to-dynamic-changes-in-the-environment"></a>Kopfhörer wird fälschlicherweise aufgrund von dynamischen Änderungen in der Umgebung nachverfolgt.
+### <a name="headset-tracks-incorrectly-due-to-dynamic-changes-in-the-environment"></a>Das Headset ist aufgrund dynamischer Änderungen in der Umgebung falsch nachverfolgt.
 
-In einigen Fällen kann keine das Gerät ordnungsgemäß nachverfolgt, wenn es viele über dynamische Änderungen in der Umgebung, z. B. viele Personen, die rund um die im Raum durchlaufen. In diesem Fall scheint der Hologramme oder abweichungen, wie das Gerät versucht sich selbst in dieser dynamischen Umgebung nachverfolgen. Es wird empfohlen, das Gerät in einer weniger dynamischen Umgebung verwendet wird, wenn Sie dieses Szenario erreichen.
+Manchmal kann das Gerät nicht ordnungsgemäß nachverfolgt werden, wenn eine große Anzahl dynamischer Änderungen in der Umgebung vorhanden ist, z. b. viele Personen, die im Raum unterwegs sind. In diesem Fall scheinen die Hologramme zu springen oder zu wechseln, wenn das Gerät versucht, sich selbst in dieser dynamischen Umgebung zu verfolgen. Wenn Sie dieses Szenario erreichen, empfiehlt es sich, das Gerät in einer weniger dynamischen Umgebung zu verwenden.
 
-### <a name="headset-tracks-incorrectly-because-the-environment-has-changed-significantly-over-time"></a>Kopfhörer verfolgt falsch, da die Umgebung im Laufe der Zeit erheblich geändert hat
+### <a name="headset-tracks-incorrectly-because-the-environment-has-changed-significantly-over-time"></a>Das Headset wird falsch verfolgt, weil sich die Umgebung im Laufe der Zeit erheblich geändert
 
-In einigen Fällen, wenn Sie starten mit einem Kopfhörer eine Umgebung aus, die viele Änderungen vorgenommen wurden (z. B. erhebliche Bewegung Möbel, Wandarmaturen usw.), es ist möglich, dass einige Hologramme verschobenen von ihrem ursprünglichen Speicherort vorkommen. Die früheren Hologramme können auch rund um wechseln, wenn der Benutzer in diesem neuen Bereich bewegt wird, um. Dies ist daran, dass die Systemvariable Überblick über Ihr Speicherplatz nicht mehr enthält, und versucht wird, die Umgebung neu zuordnen, beim Versuch, die Funktionen des Raums abstimmen. In diesem Szenario sollten Benutzer neu platzieren Hologramme ermutigen, die sie in der ganzen Welt angeheftet, wenn sie nicht angezeigt werden, wobei erwartet.
+Wenn Sie in einer Umgebung, in der viele Änderungen durchgeführt wurden (z. b. bedeutende Bewegung von Möbeln, Wall-Hangings usw.), ein Headset verwenden, kann es vorkommen, dass einige holograms von ihren ursprünglichen Speicherorten verschoben werden. Die früheren Hologramme können auch umgangen werden, wenn der Benutzer in diesem neuen Bereich bewegt wird. Der Grund hierfür ist, dass das System den Speicherplatz nicht mehr enthält und versucht, die Umgebung neu zuzuordnen, während versucht wird, die Features des Raums abzustimmen. In diesem Szenario empfiehlt es sich, Benutzer dazu zu ermutigen, Hologramme, die Sie in der Welt abgelegt haben, erneut zu platzieren, wenn Sie nicht erwartungsgemäß angezeigt werden.
 
-### <a name="headset-tracks-incorrectly-due-to-identical-spaces-in-an-environment"></a>Kopfhörer wird fälschlicherweise aufgrund von identischen Leerzeichen in einer Umgebung nachverfolgt.
+### <a name="headset-tracks-incorrectly-due-to-identical-spaces-in-an-environment"></a>Das Headset ist aufgrund identischer Leerzeichen in einer Umgebung falsch nachverfolgt.
 
-In einigen Fällen möglicherweise ein Zuhause oder anderen Space zwei identische Bereiche. Zwei identische Konferenzräume, zwei identische Ecke z. B. Bereiche, zwei große identische Poster, die das Gerät die Sichtfeld abdecken. In solchen Szenarien kann das Gerät in einigen Fällen verwirrt werden, zwischen den Teilen identisch und kennzeichnet sie als in der internen Darstellung identisch. Dies verursacht möglicherweise den Hologramme aus einige Bereiche, die an anderer Stelle angezeigt. Das Gerät möglicherweise verloren gehen, häufig nachverfolgen, da die interne Darstellung der Umgebung beschädigt wurde gestartet. In diesem Fall sollten environmental Verständnis des Systems zurückgesetzt. Beachten Sie, dass das Zurücksetzen der Zuordnung zum Verlust aller räumlichen Anker Platzierungen führt. Dadurch wird die Kopfhörer zum Nachverfolgen von gut in die eindeutige Bereiche der Umgebung. Das Problem kann jedoch erneut auftreten, wenn das Gerät zwischen Bereichen identisch erneut verwechselt ruft.
+Manchmal kann ein Zuhause oder ein anderer Bereich zwei identische Bereiche haben. Beispielsweise zwei identische Konferenzräume, zwei identische Eckbereiche, zwei große identische Poster, die das Ansichts Feld des Geräts abdecken. In solchen Szenarien kann das Gerät manchmal zwischen identischen Teilen verwechselt und in der internen Darstellung als identisch markiert werden. Dies kann dazu führen, dass die holograms aus einigen Bereichen an anderen Speicherorten angezeigt werden. Das Gerät verliert möglicherweise die Nachverfolgung, da die interne Darstellung der Umgebung beschädigt ist. In diesem Fall wird empfohlen, das Umweltverständnis des Systems zurückzusetzen. Beachten Sie, dass das Zurücksetzen der Zuordnung zum Verlust aller räumlichen Anker Platzierungen führt. Dies führt dazu, dass das Headset in den eindeutigen Bereichen der Umgebung gut nachverfolgt wird. Das Problem kann jedoch erneut auftreten, wenn das Gerät erneut zwischen den identischen Bereichen verwechselt wird.
 
 ## <a name="see-also"></a>Siehe auch
-* [GDC-2017-Präsentation auf räumliche Koordinatensysteme und holographic rendering](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
+* [GDC 2017-Präsentation zu räumlichen Koordinatensystemen und Holographic-Rendering](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
 * [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)
 * [Raumanker](spatial-anchors.md)
 * [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
-* [Fallstudie: Lücken in der Realität ansehen](case-study-looking-through-holes-in-your-reality.md)
+* [Fallstudie – Schauen durch Löcher in Ihrer Realität](case-study-looking-through-holes-in-your-reality.md)

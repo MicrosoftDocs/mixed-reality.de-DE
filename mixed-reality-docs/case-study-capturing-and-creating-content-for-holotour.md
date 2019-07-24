@@ -1,157 +1,157 @@
 ---
-title: 'Fallstudie: erfassen und Inhalte für HoloTour erstellen'
-description: HoloTour für Microsoft HoloLens enthält faszinierende 3D persönliche Touren iconic Speicherorte auf der ganzen Welt.
+title: 'Fallstudie: erfassen und Erstellen von Inhalten für holotour'
+description: Holotour für Microsoft hololens bietet immersive persönliche 3D-Touren von berühmten Standorten auf der ganzen Welt.
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloTour, HoloLens, Windows Mixed Reality
+keywords: Holotour, hololens, Windows Mixed Reality
 ms.openlocfilehash: 6c9e5f44c439310883c8b0271187a7b2263b0854
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593280"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63518274"
 ---
-# <a name="case-study---capturing-and-creating-content-for-holotour"></a>Fallstudie: erfassen und Inhalte für HoloTour erstellen
+# <a name="case-study---capturing-and-creating-content-for-holotour"></a>Fallstudie: erfassen und Erstellen von Inhalten für holotour
 
-HoloTour für Microsoft HoloLens enthält faszinierende 3D persönliche Touren iconic Speicherorte auf der ganzen Welt. Als der Designer, Künstler, Producer, audio-Designer und Entwickler arbeiten an diesem Projekt finden Sie heraus dauert das Erstellen einer echten convincingly 3D-Rendering von einem bekannten Speicherort eine einzigartige Mischung creative und technologische geschickten Umgang aus.
+Holotour für Microsoft hololens bietet immersive persönliche 3D-Touren von berühmten Standorten auf der ganzen Welt. Wie Designer, Entwickler, Producer, audiodesigner und Entwickler, die an diesem Projekt arbeiten, haben Sie herausgefunden. das Erstellen eines überzeugender realen 3D-Renderings eines bekannten Standorts ist eine einzigartige Mischung aus Creative und Logical Wizardry.
 
-## <a name="the-tech"></a>Der Technologie
+## <a name="the-tech"></a>Die Technologie
 
-Mit HoloTour, wir wollten und es für Benutzer finden Sie einige der weltweit einzigartig Ziele auf, wie die [Ruinen von am Machu Picchu](https://en.wikipedia.org/wiki/Machu_Picchu) Peru oder den modernen [Piazza Navona](https://en.wikipedia.org/wiki/Piazza_Navona) in Italien – direkt aus eigene Wohnzimmer. Unser Team war es das Ziel der HoloTour "Stellen Sie, wie Sie tatsächlich vorhanden sind." Die Erfahrung, die mehr als nur Bilder oder Videos werden musste. Durch die Nutzung der eindeutigen Anzeigenamen, nachverfolgung und audio-Technologie von HoloLens davon ausgegangen, dass wir Sie praktisch an einem anderen Ort übertragen kann. Müssen wir erfassen, der sich, Sounds und dreidimensionalen Geometrie mit allen Stellen wir besucht und neu erstellen, die in unserer app.
+Mit holotour wollten wir es den Benutzern ermöglichen, einige der weltweit größten Ziele zu besuchen – wie etwa die [Ruinen von Machu Picchu](https://en.wikipedia.org/wiki/Machu_Picchu) in Peru oder den modernen Tag [Piazza Navona](https://en.wikipedia.org/wiki/Piazza_Navona) in Italien – direkt von ihren eigenen Wohnräumen. Unser Team hat das Ziel von holotour gemacht, um Ihnen die Meinung zu vermitteln, dass Sie wirklich da sind. Die mehr als nur Bilder oder Videos benötigte Leistung. Durch die Nutzung der eindeutigen Anzeige, Nachverfolgung und Audiotechnologie von hololens haben wir angenommen, dass wir Sie praktisch an einen anderen Ort transportieren können. Wir müssen die Sehenswürdigkeiten, Sounds und dreidimensionalen Geometrie aller besuchten Orte erfassen und diese dann in unserer APP neu erstellen.
 
-Zu diesem Zweck, die wir brauchten einer 360 ° Kamera mit direktionalen audioerfassung Lichtanlage. Es musste es mit äußerst hohen Auflösung erfassen, damit die Bearbeitung sieht bei der Wiedergabe auf einem HoloLens schärfer und die Kameras müssten sich nah beieinander positioniert werden soll, um die Verknüpfung Artefakte zu minimieren. Wir wollten es sich um vollständige sphärischen Coverage, nicht nur auf den Horizont, jedoch oberhalb und unterhalb Sie ebenfalls. Das Rig musste außerdem portabel sein, sodass wir sie auf der ganzen Welt nutzen können. Optionen für die Standardanwendungen ausgewertet, und wir erkannte, dass sie einfach nicht gut genug, um unsere Vision – entweder aufgrund der Kosten, Größe und Auflösung umzusetzen waren. Wenn wir eine Kamera Rig nicht, der unsere Anforderungen erfüllt finden konnte, müssten wir ein selbst erstellen.
+Um dies zu erreichen, benötigen wir ein 360 °-Kamera-Rig mit direktionaler Audioerfassung. Die Erfassung musste bei äußerst hoher Auflösung durchgeführt werden, sodass das Material bei der Wiedergabe auf einem hololens knackig aussehen würde und die Kameras nah beieinander positioniert werden müssen, um das Zusammenfügen von Artefakten zu minimieren. Wir wollten eine vollständige sphärischen Abdeckung, nicht nur am Horizont, sondern auch über und unter Ihnen. Das Rig musste auch portabel sein, damit wir es auf der ganzen Welt nutzen konnten. Wir haben die verfügbaren Optionen für "offshelf" ausgewertet und erkannt, dass Sie einfach nicht gut genug waren, um unsere Vision zu verwirklichen – entweder aufgrund von Auflösung, Kosten oder Größe. Wenn wir ein Kamera-Rig nicht gefunden haben, das unsere Anforderungen erfüllt, müssten wir eine selbst erstellen.
 
-### <a name="building-the-rig"></a>Erstellen das rig
+### <a name="building-the-rig"></a>Aufbauen des Riggs
 
-Die erste Version – getätigte cardboard vereinfacht, Velcro verwenden, Band und 14 GoPro Kameras Rohrleitung – war MacGyver stolz hätte. Nach der Überprüfung von Low-End-Lösungen, um benutzerdefinierte produzierten Rigs bis hin waren GoPro Kameras letztlich die beste Option für uns, da sie kleine, kostengünstige wurden und einfach zu bedienende Speicher haben. Die kleinen Formfaktor war besonders wichtig, da es uns Kameras relativ nah beieinander platziert zulässig – je kleiner die Entfernung zwischen Kameras je kleiner die Verknüpfung sein werden. Unsere eindeutige Kamera Anordnung ermöglichte vollständige Kugel Coverage zu erreichen *plus* genügend Überlappung auf intelligente Weise ausrichten Kameras und einige Elemente bei der Verknüpfung glätten.
+Die erste Version –, die aus dem Karton, Velcro, dem Kanalband und 14-GoPro-Kameras stammt – war etwas, das MacGyver als stolz war. Nach der Überprüfung sämtlicher Lösungen von Low-End-Lösungen bis hin zu benutzerdefinierten Anlagen waren GoPro-Kameras letztendlich die beste Option für uns, da Sie klein und kostengünstig waren und einen leicht zu verwendenden Speicherplatz hatten. Der kleine Formfaktor war besonders wichtig, da es uns ermöglichte, Kameras relativ nah zu platzieren – die geringere Entfernung zwischen den Kameras, desto kleiner die zusammen fügenden Artefakte. Dank unserer einzigartigen Kamera Anordnung konnten wir vollständige Kugel *Abdeckung und* genug Überlappungen erzielen, um Kameras Intelligent auszurichten und einige Artefakte während des zusammenfassende Vorgangs zu glätten.
 
-Nutzen der [räumliche Sound](spatial-sound.md) Funktionen für HoloLens ist von entscheidender Bedeutung für das Erstellen einer echten convincingly eintauchen. Verwendet eine vier-Mikrofon Array liegen unterhalb der Kameras auf dem Stativ, denen Sounds über den Speicherort der unsere Kamera in unterschiedliche Richtungen erfasst wird, gewähren uns genügend Informationen zum Erstellen der räumlichen Sounds in unserer Szenen.
+Die Verwendung der [räumlichen](spatial-sound.md) Audiofunktionen in hololens ist entscheidend für die Erstellung einer überzeugenden, immersiven Darstellung. Wir haben ein vier-Mikrofon-Array unter den Kameras auf dem Stativ verwendet, das in vier Richtungen Sound von der Kamera aufzeichnen würde, sodass wir ausreichend Informationen zur Erstellung räumlicher Sounds in unseren Kulissen erhalten.
 
-![Richten Sie unsere 360° Kamera Rig für außerhalb der Pantheon Filmen.](images/camera-pantheon-200px.png)
+![Unser 360 °-Kamera-Rig ist für das Drehen außerhalb des Pantheon eingerichtet.](images/camera-pantheon-200px.png)
 
-Richten Sie unsere 360° Kamera Rig für außerhalb der Pantheon Filmen. 
+Unser 360 °-Kamera-Rig ist für das Drehen außerhalb des Pantheon eingerichtet. 
 
 
-Wir testeten die unsere Möglichkeit Rig von dauert es bis zu Rattlesnake Ridge in der Nähe von Seattle und der Landschaften am oberen Rand der Wanderung erfassen. Das Ergebnis, gibt aber deutlich kleiner als die Speicherorte optimierte, die Sie heute in HoloTour sehen uns vertrauen, die unser Rig Entwurf gut genug war, um müssen Sie sich fühlen, als würden Sie tatsächlich vorhanden sind.
+Wir testen unser hausgemachtes Rig, indem wir es in den Rattlesnake-Grat in der Nähe von Seattle übernommen und die Kulissen am Anfang der Wanderung erfasst haben. Das Ergebnis, obwohl es deutlich weniger hoch ist als die Orte, die Sie heute in holotour sehen, gab uns Vertrauen, dass unser Rig-Design gut genug war, um Ihnen das Gefühl zu geben, dass Sie wirklich da sind.
 
-Wir unsere Rig Velcro und Cardboard auf eine Kamera 3D gedruckt wohnkosten aktualisiert und externen Akku Packs für die GoPro Kameras zur Vereinfachung der Verwaltung der Akku gekauft. Wir haben dann eine ausführlichere Prüfung, Reisen nach San Francisco, um eine Art Miniatur Überblick der Stadt Coast und die iconic Golden Gate-Brücke zu erstellen. Diese Kamera-Rig ist, was wir für die meisten unserer erfasst der Speicherorte verwendet wird, die Sie in HoloTour besuchen.
+Wir haben unser rig von Velcro und Pappe auf einen 3D-gedruckten Kamera-Gehäuse aktualisiert und externe Akku Pakete für die GoPro-Kameras gekauft, um die Akku Verwaltung zu vereinfachen. Wir haben dann einen umfassenderen Test durchgeführt, um zu San Francisco zu gehen und eine Miniatur Tour durch die Stadt und die legendäre Golden Gate Bridge zu erstellen. Dieses Kamera-Rig ist das, was wir für die meisten unserer Erfassungen der Standorte, die Sie in holotour besucht haben, verwendet haben.
 
-![Die 360°-Kamera-Rig in am Machu Picchu Filmen.](images/camera-machu-pichu-500px.png)
+![Die 360 °-Kamera-Rig-Verfilmung in Machu Picchu.](images/camera-machu-pichu-500px.png)
 
-Die 360°-Kamera-Rig in am Machu Picchu Filmen. 
+Die 360 °-Kamera-Rig-Verfilmung in Machu Picchu. 
 
 
 ## <a name="behind-the-scenes"></a>Im Hintergrund
 
-Vor dem Filmen mussten wir ermitteln, welche, die Standorte wir auf unserem virtuellen Tour einschließen möchten. "ROME" wurde die erste Position, die wir liefern soll, und wir beginnen sie, damit wir uns entschieden, eine Reise Scouting im Voraus zu tun möchten. Wir haben ein Team von sechs Personen gesendet – einschließlich Künstler, Designer und Producer – für eine vor-Ort-Besuch auf die Websites, die wir waren in Betracht ziehen. Die Reise dauerte ungefähr 9 Tage – 2.5 für Reisekosten, den Rest für Filmen. (Am Machu Picchu abonniert wir nicht dazu eine Fahrt Scout im Voraus untersucht, und ein paar Tage des Puffers für den Filmen Buchung.)
+Vor dem Filmen mussten wir herausfinden, welche Standorte wir in unsere virtuelle Tour einschließen wollten. Rom war der erste Ort, der ausgeliefert werden soll, und wir wollten ihn richtig machen, also haben wir uns entschlossen, eine pfadtour durchzuführen. Wir haben ein Team von sechs Personen – einschließlich Künstlern, Designern und Producer – an die Websites gesendet, die wir in Erwägung gezogen haben. Die Fahrt hat ungefähr 9 Tage gedauert – 2,5 für Reisen, den Rest für die-Verfilmung. (Bei Machu Picchu haben wir uns entschieden, einen Scout-Trip durchzuführen, im Voraus zu forschen und einige Tage Puffer für das Filmen zu reservieren.)
 
-In "ROME", das Team hat Fotos von jedem Bereich und notiert haben, interessante Fakten sowie praktische Überlegungen, wie z. B., wie schwierig es ist an jeder Stelle, und wie schwierig übertragen wäre es, Film aufgrund einer oder Einschränkungen. Das klingt wie Urlaub, aber es ist sehr viel Arbeit. Tage frühen morgen in die Schritte und fiel ununterbrochenen bis abends. Jede Nacht, hochgeladen wurde die Bearbeitung für das Team in Seattle, um zu überprüfen. 
+In Rom nahm das Team Fotos der einzelnen Bereiche auf und gab interessante Fakten sowie praktische Überlegungen aus, z. b. wie schwierig es ist, zu jedem Ort zu reisen und wie schwierig es ist, aufgrund von Menschen oder Einschränkungen zu filtern. Dies mag in einem Urlaub klingen, aber es ist viel Arbeit. Tage, die früh am Morgen gestartet werden und bis Abend nicht angehalten werden. Jede Nacht wurde das Buch für das Team in Seattle hochgeladen, um es zu überprüfen. 
 
-![Unsere Erfassung Besatzung im ROM.](images/holotour-filming-crew-rome-500px.jpg) 
+![Unsere Erfassungs Besatzung in Rom.](images/holotour-filming-crew-rome-500px.jpg) 
 
-Unsere Erfassung Besatzung im ROM. 
-
-
-Nachdem die Scout-Fahrt abgeschlossen wurde, wurde ein endgültigen Plan für die tatsächliche Filmen vorgenommen. Dies erforderlich, eine detaillierte Liste der, in denen auf Film, an welchem Tag und zu welchem Zeitpunkt wir würden. Jeden Tag im Ausland ist aufwändig, damit diese Roundtrips erforderlich sind, effizient sein. Gebuchte Anleitungen und Handler in "ROME", um uns zu unterstützen, und wir täglich von vor Sonnenaufgang, nach dem Sonnenuntergang vollständig verwendet. Wir benötigen am besten geeignete Filmmaterial möglich, um müssen Sie sich fühlen, als würden Sie tatsächlich vorhanden sind.
-
-### <a name="capturing-the-video"></a>Das Video aufzeichnen
-
-Einige einfache Dinge zu tun, während der Aufzeichnung kann nach der Verarbeitung deutlich vereinfachen. Z. B. Wenn Sie Bilder aus mehreren Kameras zusammenzufügen, erhalten Sie mit visuellen Artefakten, da jede Kamera eine etwas andere Sicht hat. Die genauere Objekte sind bis zur Kamera, je größer der Unterschied zwischen den Ansichten, und je größer die Verknüpfung sein werden. Hier ist eine einfache Möglichkeit, um das Problem zu visualisieren: vor dem Zifferblatt Ihrer Thumb-Steuerelement enthält und mit nur einem Auge betrachten. Wechseln Sie nun die Augen. Sie sehen, dass Ihre Thumb-Steuerelement angezeigt wird, relativ zum Hintergrund zu verschieben. Wenn Sie dem Daumen weiter weg von dem Zifferblatt Ihrer enthalten, und wiederholen Sie das Experiment, erscheint dem Daumen kleiner zu verschieben. Das offensichtlich, dass die Bewegung auf die Verknüpfung Problem ähnelt treffen wir: Ihre Augen, wie unsere Kameras, genaue das gleiche Abbild nicht angezeigt werden, da sie mit etwas Abstand voneinander getrennt sind.
-
-Da es viel einfacher ist, zu verhindern, dass die schlechteste Artefakte beim Filmen, statt sie nach der Verarbeitung zu korrigieren, haben wir zu Personen und Aufgaben weit entfernt von der Kamera in der Hoffnung, dass wir die Notwendigkeit, vergrößerte Objekte zusammenfügen beseitigen kann versucht werden. Warten eine große löschen, um unsere Kamera war wahrscheinlich eine der größten Herausforderungen, die wir während der Aufnahme und werden musste, um die dafür erforderlichen kreativ werden. War die Arbeit mit lokalen Anleitungen eine große Hilfe bei der Verwaltung einer, aber wir haben auch festgestellt, dass mit signiert, und in einigen Fällen kleine Kegel oder Bean kontextbehälter – Ihren filming Bereich markieren einigermaßen gültig war, besonders, da wir nur erforderlich, um die Bearbeitung eines kurzen Zeitraums an jedem Standort erhalten. Häufig war die beste Möglichkeit, eine gute Erfassung zu erhalten, um nur sehr frühen morgen in die, bevor Sie die meisten Benutzer wurde empfangen.
-
-Einige andere nützliche Capture-Techniken stammen direkt von der herkömmlichen Film-Methoden. Beispielsweise verwendet haben wir eine Korrektur Farbkarte auf alle unsere Kameras und erfasste Referenz-Fotos von Texturen und Objekten, die wir später benötigen könnten. 
-
-![Eine grobe Übertragung mit der Korrektur Farbkarte am Machu-Picchu.](images/rough-cut-machu-picchu-500px.png)
-
-Eine grobe Übertragung von Pantheon Filmmaterial vor dem zusammenfügen.
-
-### <a name="processing-the-video"></a>Verarbeiten von Videos
-
-Erfassen von 360°-Inhalt ist nur der erste Schritt, ein hohen Verarbeitungsaufwand ist erforderlich, um die unformatierten überwachungsvideos wir erfasst in der finale Objekte zu konvertieren, in HoloTour angezeigt werden. Sobald wieder konnten, Startseite, die wir für benötigt das Video von 14 verschiedene Kamera-feeds und schalten Sie ihn in ein einziges fortlaufende Video mit minimalen Artefakten. Unser Team Art verwendet eine Reihe von Tools zu kombinieren und die Aufnahme Polnisch aus, und wir entwickelt, eine Pipeline, um die Verarbeitung so weit wie möglich zu optimieren. Die Bearbeitung musste zusammengefügte zusammen Farbe korrigiert, und klicken Sie dann die zusammengesetzte störende Elemente und Elemente entfernen oder Hinzufügen von zusätzlichen Tasche Leben und während der Übertragung, alle mit dem Ziel, diese Eindruck, dass es zu verbessern.
-
-![Eine grobe Übertragung von Pantheon Filmmaterial vor dem zusammenfügen.](images/rough-cut-pantheon-500px.png)
-
-Eine grobe Übertragung von Pantheon Filmmaterial vor dem zusammenfügen. 
+Unsere Erfassungs Besatzung in Rom. 
 
 
-Um die Videos zu kombinieren, wir ein Tool Namens verwendet [PTGui](http://www.ptgui.com/) und unsere Pipeline zur anforderungsverarbeitung integriert. Im Rahmen der nach der Verarbeitung, wenn wir weiterhin Frames aus unsere Videos extrahierten und finden Sie eine Verknüpfung Muster, die gut für eine der diese Frames überprüft. Wir haben dieses Muster klicken Sie dann auf ein benutzerdefiniertes Plug-in, das wir geschrieben haben, die zulässige unser video Künstler, fein abstimmen und optimieren die Verknüpfung Muster bei der Zusammensetzung nach Auswirkungen direkt, angewendet. 
+Nachdem der Scout-Trip abgeschlossen wurde, wurde für das eigentliche drehen ein endgültiger Plan erstellt. Dies erforderte eine detaillierte Liste, in der wir an dem Tag und zu dem Zeitpunkt, an dem wir uns befanden, eine detaillierte Liste der Filme aufging Jeden Tag ist das Ausland teuer, sodass diese Fahrten effizient sein müssen. Wir haben Handbücher und Handler in Rom gebucht, um uns zu helfen und jeden Tag von vor dem Sonnenaufgang bis nach dem Sonnenuntergang vollständig zu nutzen. Wir müssen das beste Material erzielen, damit Sie das Gefühl haben, dass Sie wirklich da sind.
 
-![Screenshot der PTGui das zusammengefügte Pantheon Filmmaterial angezeigt.](images/stitching-tool-pantheon-500px.png)
+### <a name="capturing-the-video"></a>Erfassen des Videos
 
-Screenshot der PTGui das zusammengefügte Pantheon Filmmaterial angezeigt. 
+Das Ausführen einiger einfacher Dinge während der Erfassung kann die Nachbearbeitung erheblich vereinfachen. Wenn Sie z. b. Bilder von mehreren Kameras zusammenfügen, erhalten Sie visuelle Artefakte, da jede Kamera eine etwas andere Ansicht hat. Je näher die Objekte der Kamera sind, desto größer ist der Unterschied zwischen den Ansichten und desto größer die zusammen fügenden Artefakte. Hier ist eine einfache Möglichkeit, das Problem visuell darzustellen: halten Sie Ihren Ziehpunkt vor dem Gesicht, und betrachten Sie ihn nur mit einem Auge. Wechseln Sie jetzt zu Augen. Sie werden feststellen, dass der Ziehpunkt relativ zum Hintergrund bewegt wird. Wenn Sie Ihren Ziehpunkt nicht mehr von Ihrem Gesicht halten und das Experiment wiederholen, scheint Ihr Thumb-Steuer Vorgang weniger zu verschieben. Diese sichtbare Bewegung ähnelt dem Problem beim Zusammenfügen: Ihre Augen sehen, wie die Kameras, nicht genau dasselbe Bild, da Sie durch eine kleine Entfernung voneinander getrennt sind.
+
+Da es viel einfacher ist, die schlechtesten Artefakte während der Verfilmung zu vermeiden, als Sie bei der Nachbearbeitung zu korrigieren, haben wir versucht, Personen und Dinge weit weg von der Kamera zu halten. Eine große Herausforderung im Zusammenhang mit der Kamera war wahrscheinlich eine der größten Herausforderungen, die bei der Ausführung aufgetreten sind, und wir mussten kreativ werden, damit Sie funktionieren. Das Arbeiten mit lokalen Handbüchern war eine große Hilfe bei der Verwaltung von Menschen, aber wir stellten auch fest, dass die Verwendung von Vorzeichen – und manchmal kleine Kegel oder Bohnen Behälter – zum Markieren des drehraums Recht effektiv war, insbesondere, da wir nur eine kurze Menge von Material an jedem Ort erhalten mussten. Häufig ist die beste Möglichkeit, eine gute Erfassung zu erzielen, nur sehr früh am Morgen zu erreichen, bevor die meisten Benutzer angezeigt werden.
+
+Einige andere nützliche Erfassungs Techniken stammen direkt von herkömmlichen filmpraktiken. Wir haben z. b. eine Farbkorrektur Karte für alle unsere Kameras verwendet und Referenz Fotos von Texturen und Objekten aufgezeichnet, die wir möglicherweise später benötigen. 
+
+![Eine grobe Kürzung von Machu Picchu, die die Farbkorrektur Karte anzeigt.](images/rough-cut-machu-picchu-500px.png)
+
+Eine grobe Ausschneide von Pantheon-Footage vor dem zusammenfügen.
+
+### <a name="processing-the-video"></a>Verarbeiten des Videos
+
+Die Erfassung von 360 °-Inhalten ist nur der erste Schritt – eine Menge an Verarbeitung ist erforderlich, um die von uns erfassten Rohdaten der Kamera in die endgültigen Ressourcen zu konvertieren, die in holotour angezeigt werden. Nachdem wir wieder Home waren, mussten wir das Video aus 14 verschiedenen Kamera Feeds nehmen und in ein einzelnes kontinuierliches Video mit minimalen Artefakten umwandeln. Unser Kunst Team hat eine Reihe von Tools verwendet, um das erfasste Material zu kombinieren und zu polieren. Wir haben eine Pipeline entwickelt, um die Verarbeitung so weit wie möglich zu optimieren. Das Material muss zusammengefügt, farblich korrigiert und dann zusammengesetzt werden, um ablenkend Ende Elemente und Artefakte zu entfernen oder zusätzliche Taschen zu leben und Bewegung hinzuzufügen. das Ziel ist, dieses Gefühl zu verbessern, das tatsächlich vorhanden ist.
+
+![Eine grobe Ausschneide von Pantheon-Footage vor dem zusammenfügen.](images/rough-cut-pantheon-500px.png)
+
+Eine grobe Ausschneide von Pantheon-Footage vor dem zusammenfügen. 
+
+
+Um die Videos zusammenzufassen, haben wir ein Tool namens [PTGui](http://www.ptgui.com/) verwendet und in unsere Verarbeitungs Pipeline integriert. Im Rahmen der Nachbearbeitung haben wir weiterhin Frames aus unseren Videos extrahiert und ein Muster gefunden, das für einen dieser Frames gut aussieht. Anschließend haben wir dieses Muster auf ein benutzerdefiniertes Plug-in angewendet, das wir geschrieben haben, das es unseren Videokünstlern ermöglichte, das Kontext Muster direkt zu optimieren 
+
+![Screenshot der PTGui, die das angeheftete Pantheon-Material anzeigt.](images/stitching-tool-pantheon-500px.png)
+
+Screenshot der PTGui, die das angeheftete Pantheon-Material anzeigt. 
 
 
 ### <a name="video-playback"></a>Videowiedergabe
 
-Nach der Verarbeitung von dem die Bearbeitung abgeschlossen ist, haben wir eine nahtlose Video, aber es ist außerordentlich große – etwa 8 K-Auflösung. Decodieren von Video ist teuer, und es gibt nur sehr wenige Computer, auf denen ein 8-KB-Video verarbeiten können, sodass die nächste Aufgabe eine Möglichkeit zum Abspielen dieses Videos auf HoloLens suchen wurde. Wir entwickelt, eine Reihe von Strategien, um zu vermeiden der Kosten und weiterhin gleichzeitig das Verhalten der Benutzer, wie sie die gesamte angezeigt haben Videos zu decodieren.
+Nachdem die Verarbeitung des Materials abgeschlossen ist, haben wir ein nahtloses Video, aber es ist eine außerordentlich große –-Auflösung von 8 KB. Das Decodieren von Videos ist aufwendig, und es gibt nur wenige Computer, auf denen ein 8K-Video verarbeitet werden kann. die nächste Herausforderung war, das Video auf hololens wiederzugeben. Wir haben eine Reihe von Strategien entwickelt, um die Kosten für das Decodieren zu vermeiden, während der Benutzer die Meinung hat, dass er das gesamte Video anzeigen würde.
 
-Die einfachste Optimierung ist, um zu vermeiden, Decodierung von Teilen des Videos, die viele nicht geändert. Wir haben ein Tool, um Bereiche in jeder Szene zu identifizieren, die während der Übertragung nur wenig oder keine geschrieben. Für diese Bereiche erläutert, ein Video zu decodieren, anstatt ein statisches Bild jeder Frame. Um dies zu ermöglichen, wir das umfangreiche Video in viel kleinere Blöcke aufgeteilt.
+Die einfachste Optimierung besteht darin, die Decodierung von Teilen des Videos zu vermeiden, die sich nicht wesentlich ändern. Wir haben ein Tool geschrieben, mit dem Bereiche in jeder Szene identifiziert werden, die nur wenig oder gar keine Bewegung haben. Für diese Regionen wird ein statisches Bild angezeigt, anstatt ein Video für jeden Frame zu decodieren. Um dies zu ermöglichen, haben wir das riesige Video in wesentlich kleinere Blöcke aufgeteilt.
 
-Wir haben auch sichergestellt, dass es sich bei jedem Pixel, die wir decodiert besonders effektiv verwendet wurde. Wir haben bei Verwendung von Komprimierungstechniken senken Sie die Größe des Videos experimentiert; wir teilen die video-Regionen entsprechend die Polygone der Geometry-Instanz, die es auf projiziert werden würde. Wir UVs angepasst und die Videos, die basierend auf wie viele andere Details-Polygone enthalten gepackt. Das Ergebnis dieser Arbeit ist, das, was begann, als eine einzelne 8 KB video in viele Blöcke unterteilt, die fast unverständlich aussehen, bevor für diese ordnungsgemäß erneut in der Szene projizierten umgewandelt. Für Entwickler von Spielen nachvollziehbar texturzuordnungen und UV packen, wird dies wahrscheinlich bekannt vorkommen. 
+Wir haben außerdem sichergestellt, dass jedes Pixel, das wir decodiert haben, am effektivsten verwendet wurde. Wir haben mit Komprimierungs Techniken experimentieren, um die Größe des Videos zu verringern. die Video Bereiche werden entsprechend den Polygonen der Geometrie aufgeteilt, auf die Sie projiziert wird. Wir haben UVS angepasst und die Videos basierend auf der Detailgenauigkeit verschiedener Polygone neu verpackt. Das Ergebnis dieser Aufgabe ist, dass ein einzelnes KB-Video in viele Blöcke integriert wurde, die fast unverständlich aussehen, bis Sie ordnungsgemäß in die Szene projiziert werden. Für einen Spielentwickler, der die Textur Zuordnung und die UV-Verpackung versteht, wird dies wahrscheinlich auch bekannt sein. 
 
-![Eine vollständige Ansicht der Pantheon vor Optimierungen.](images/pantheon-before-optimization-500px.png) 
+![Eine vollständige Ansicht des Pantheon vor Optimierungen.](images/pantheon-before-optimization-500px.png) 
 
-Eine vollständige Ansicht der Pantheon vor Optimierungen. 
-
-
-![Die rechte Hälfte der Pantheon, für die Videowiedergabe verarbeitet.](images/pantheon-process-video-playback-500px.png) 
-
-Die rechte Hälfte der Pantheon, für die Videowiedergabe verarbeitet. 
+Eine vollständige Ansicht des Pantheon vor Optimierungen. 
 
 
-![Beispiel für eine einzelne video Region nach der Optimierung und Komprimierung.](images/single-video-region-after-optimization-500px.png) 
+![Die Rechte Hälfte des Pantheon, die für die Videowiedergabe verarbeitet wird.](images/pantheon-process-video-playback-500px.png) 
 
-Beispiel für eine einzelne video Region nach der Optimierung und Komprimierung. 
-
-
-Ein anderer Trick verwendeten bestand darin, zu vermeiden, Video, das Sie aktiv anzeigen, werden nicht decodieren. Klicken Sie im HoloTour, sehen Sie nur Teil der vollständigen Szene zu einem bestimmten Zeitpunkt. Wir decodieren nur Videos innerhalb oder außerhalb Ihrer Sichtfeld (Blickfeld) in Kürze. Beim Drehen Kopf beginnen wir mit Wiedergabe des Videos Bereiche, die sind nun in Ihrem Blickfeld und Beenden der Wiedergabe, die nicht mehr darin enthalten sind. Die meisten Benutzer wird nicht selbst Beachten Sie, dass dies der Fall ist, aber wenn Sie schnell zu aktivieren, sehen Sie das Video dauert ein paar Sekunden gestartet, in der Zwischenzeit sehen Sie ein statisches Bild, klicken Sie dann die wird ausgeblendet auf Video an, sobald er fertig ist.
-
-Um diese Strategie funktioniert machen wir eine umfangreiche Videowiedergabe-System entwickelt. Wir optimieren den niedrigen Ebene Wiedergabe-Code, um video wechseln sehr effizient zu machen. Darüber hinaus mussten wir unsere Videos auf besondere Weise zu ermöglichen, schnell zu einem beliebigen Video jederzeit zu codieren. Diese Pipeline Wiedergabe hat viel Entwicklungszeit, damit wir sie in den Phasen implementiert. Da fingen wir mit der ein einfacheres System mit, das weniger effizient war, aber zulässige Designer und Interpreten, an die Benutzeroberfläche und langsam so verbessert werden, es ein stabiler Wiedergabesystem, das wir für den Versand an das endgültige Qualitätsniveau zulässig. Diese letzte System musste benutzerdefinierte Tools, die wir in Unity zum Einrichten von Video in der Szene und der Monitor die Wiedergabe-Engine erstellt haben.
-
-### <a name="recreating-near-space-objects-in-3d"></a>Neu in der Nähe-Objekte in 3D
-
-Videos bilden die Mehrheit der Anzeige in HoloTour, aber es gibt eine Reihe von 3D-Objekten, die in Ihrer Nähe, z. B. das Zeichnen in Piazza Navona, der Jungbrunnen außerhalb der Pantheon oder die heiße Luft Sprechblase, die Sie für Luftbild Szenen stehen erscheinen. Diese 3D-Objekte sind wichtig, da menschliche Wahrnehmung der Tiefe nah sehr gut ist, aber nicht sehr gut weit entfernt. Wir erhalten Video bei der Entfernung, aber damit der Benutzer dann ihre Speicherplatz und können wirklich vorhanden sind, in der Nähe Objekte Tiefe benötigen. Diese Technik ist ähnlich wie bei der Sortierung des Objekts, die möglicherweise angezeigt, in einer natürlichen Verlauf Museum – eine, die physischen Begrünung, Pflanzen und Animal Exemplare im Vordergrund, aber in einem clever maskierte Matte Zeichnen im Hintergrund Ansicht schwindet Diorama Bild.
-
-Einige Objekte sind einfach 3D-Objekten, die wir erstellt und hinzugefügt werden, um der Szene, um die benutzerfreundlichkeit zu verbessern. Das Zeichnen und die heiße Luft Sprechblase fallen in diese Kategorie, da sie nicht vorhanden ist, wenn wir gedreht waren. Ähnlich wie bei spielressourcen können sie eines 3D Interpreten in unserem Team erstellt und wurden entsprechend mit Textur versehen habe. Platzieren wir in unserer Szenen in Ihrer Nähe, wo Sie stehen, und die game-Engine kann rendern, die zwei HoloLens angezeigt, damit sie als ein 3D-Objekt angezeigt werden.
-
-Andere Ressourcen, wie der Jungbrunnen außerhalb der Pantheon sind echte Objekte, die vorhanden sind, in die Speicherorte, in dem wir video fotografieren, allerdings, diese Objekte aus dem Video anzuzeigen in 3D, wir haben eine Reihe von Dingen zu tun.
-
-Zunächst benötigen wir zusätzliche Informationen zu den einzelnen Objekten. Während auf dem Standort für den Filmen, unser Team erfasst viele Verweis die Bearbeitung dieser Objekte, sodass wir müssten genügend detaillierte Images genau die Texturen neu erstellen. Das Team auch ausgeführt eine [Photogrammetry](https://en.wikipedia.org/wiki/Photogrammetry) zu scannen, die erstellt 3D-Modell unter Dutzenden von 2D-Bilder, bietet uns eine grobe Modell des Objekts perfekte Größenordnung.
-
-Wie wir unsere Filmmaterial verarbeiten, werden die Objekte, die später durch eine 3D-Darstellung ersetzt werden, aus dem Video entfernt. Das 3D-Druck-Dialogfeld wird auf Grundlage des Modells Photogrammetry aber bereinigt und durch unsere Künstler vereinfacht. Für einige Objekte, können wir Teilen des Videos verwenden – z. B. Wasser Textur auf der Jungbrunnen, aber die meisten der Jungbrunnen ist jetzt ein 3D-Objekt, dem Benutzer wahrnehmen Tiefe, und führen dazu in einem begrenzten Platz in der Umgebung. In der Nähe-Space-Objekte, wie diese erheblich Sinne wirklichkeitsgetreuen Bilder hinzugefügt und trägt dazu bei, erden Sie die Benutzer in der virtuellen Speicherort. 
-
-![Verwenden Sie die Bearbeitung von Pantheon, mit der Jungbrunnen entfernt. Es wird durch eine 3D-Druck-Dialogfeld ersetzt werden.](images/object-removal-pantheon-500px.png)
-
-Verwenden Sie die Bearbeitung von Pantheon, mit der Jungbrunnen entfernt. Es wird durch eine 3D-Druck-Dialogfeld ersetzt werden.
+Die Rechte Hälfte des Pantheon, die für die Videowiedergabe verarbeitet wird. 
 
 
-## <a name="final-thoughts"></a>Abschließende betrachtungen
+![Beispiel für einen einzelnen Videobereich nach Optimierung und Verpackung.](images/single-video-region-after-optimization-500px.png) 
 
-Natürlich gab es weitere für das Erstellen von diesen Inhalt als die hier erörtert. Es gibt einige Szenen, möchten wir sie "unmöglich Perspektiven" aufrufen, einschließlich heiße Luft Sprechblase herunterladen und die Gladiator zu bekämpfen, in der Colosseum, die einen besseren Ansatz hat. Wir behandeln diese in einer zukünftigen Fallstudie.
+Beispiel für einen einzelnen Videobereich nach Optimierung und Verpackung. 
 
-Wir hoffen, dass Teilen von Lösungen zu einigen der größeren Herausforderungen, die wir während der Produktion für andere Entwickler nützlich ist und Sie inspiriert, einige dieser Techniken verwenden, um Ihre eigenen faszinieren Benutzeroberflächen für HoloLens erstellen können. (Und wenn Sie Sie sicher, dass sie mit uns auf freigeben, stellen Sie tun, die [HoloLens App Development-Forum](https://forums.hololens.com/)!)
 
-## <a name="about-the-authors"></a>Über die Autoren
+Ein weiterer Trick wurde verwendet, um das Decodieren von Videos zu vermeiden, die Sie nicht aktiv anzeigen In holotour sehen Sie nur einen Teil der vollständigen Szene. Wir decodieren nur Videos innerhalb oder kurz außerhalb ihrer Ansicht (Field of View, FOV). Wenn Sie Ihre Kopfzeile drehen, beginnen wir mit der Wiedergabe der Bereiche des Videos, die sich nun in Ihrem FOV befinden, und spielen nicht mehr, wenn Sie sich nicht mehr in der Hand befinden. Die meisten Leute bemerken dies nicht, aber wenn Sie sich schnell umdrehen, sehen Sie, dass das Video ein zweites Mal beginnt – in der Zwischenzeit wird ein statisches Bild angezeigt, das dann wieder auf das Video zurückkehrt, sobald es bereit ist.
+
+Damit diese Strategie funktioniert, haben wir ein umfassendes Videowiedergabe System entwickelt. Wir haben den Wiedergabe Code auf niedriger Ebene optimiert, um den Video Wechsel extrem effizient zu gestalten. Außerdem mussten wir unsere Videos auf besondere Weise codieren, um die schnelle Umstellung auf jedes Video zu ermöglichen. Diese Wiedergabe Pipeline hat eine beträchtliche Menge an Entwicklungszeit benötigt, sodass wir Sie in Phasen implementiert haben. Wir haben mit einem einfacheren System begonnen, das weniger effizient war, aber Entwicklern und Künstlern ermöglichte, an der Arbeit zu arbeiten und Sie langsam in ein stabileres Wiedergabe System zu verbessern, das es uns ermöglichte, an der abschließenden Qualitäts Leiste zu liefern. Dieses endgültige System verfügte über benutzerdefinierte Tools, die wir in Unity erstellt haben, um das Video in der Szene einzurichten und die Wiedergabe-Engine zu überwachen.
+
+### <a name="recreating-near-space-objects-in-3d"></a>Neuerstellen von Near-Space-Objekten in 3D
+
+Videos bilden die Mehrzahl der Elemente, die in holotour angezeigt werden, aber es gibt eine Reihe von 3D-Objekten, die in Ihrer Nähe angezeigt werden, wie z. b. das Zeichnen in der Piazza Navona, den springenden Bereich außerhalb des Pantheon oder die heiße Luft Sprechblase, die Sie für Luft Szenen nutzen. Diese 3D-Objekte sind wichtig, da die Wahrnehmung der Menschen Tiefe sehr gut ist, aber noch nicht sehr gut ist. Wir können uns das Video in der Entfernung ansehen, aber um den Benutzern zu ermöglichen, ihren Platz zu durchlaufen und sich zu fühlen, benötigen nahe gelegene Objekte Tiefe. Diese Vorgehensweise ähnelt der Vorgehensweise, die Sie in einem Natural History-Museum sehen können – Bild eines Diorama, das physische Landschaft, Werke und tierische Proben im Vordergrund enthält, aber zu einem clever maskierten Matt-zeichnen im Hintergrund.
+
+Einige Objekte sind einfach 3D-Ressourcen, die wir erstellt und der Szene hinzugefügt haben, um die Leistung zu verbessern. Das Zeichnen und der Hot Air-Sprechblase fallen in diese Kategorie, da Sie nicht vorhanden waren, als wir gedreht haben. Ähnlich wie bei Game-Assets wurden Sie von einem 3D-Experten in unserem Team erstellt und entsprechend angepasst. Wir platzieren diese in den Kulissen, in denen Sie sich befinden, und die Spiel-Engine kann Sie in den beiden hololens-anzeigen, sodass Sie als 3D-Objekt angezeigt werden.
+
+Andere Assets, wie z. b. der Spring-Brunnen außerhalb des Pantheon, sind echte Objekte, die an den Standorten vorhanden sind, an denen wir Videoaufnahmen, aber um diese Objekte aus dem Video und 3D zu bringen, müssen wir eine Reihe von Dingen durchführen.
+
+Zuerst benötigen wir weitere Informationen zu jedem Objekt. Am Speicherort für die Film Erstellung hat unser Team viele Verweise auf diese Objekte aufgezeichnet, damit wir über ausreichend ausführliche Bilder verfügen, um die Texturen genau neu erstellen zu können. Das Team hat außerdem einen [Photogrammetrie](https://en.wikipedia.org/wiki/Photogrammetry) -Scan durchgeführt, bei dem ein 3D-Modell aus Dutzenden von 2D-Images erstellt wird, was uns ein grobes Modell des Objekts in perfekter Größe bietet.
+
+Wenn wir unser Material verarbeiten, werden Objekte, die später durch eine 3D-Darstellung ersetzt werden, aus dem Video entfernt. Das 3D-Asset basiert auf dem photogrammmetrikmodell, wurde aber bereinigt und von unseren Künstlern vereinfacht. Für einige Objekte können wir Teile des Videos verwenden – wie z. b. die Wasser Textur auf dem Springbrunnen – aber der größte Teil des Brunnens ist jetzt ein 3D-Objekt, das es Benutzern ermöglicht, Tiefe zu erkennen und Sie in einem begrenzten Bereich in der Umgebung zu durchlaufen. Das vorhanden sein von fast-Space-Objekten wie diesem erhöht den Sinn von Realismus und hilft dabei, die Benutzer am virtuellen Speicherort zu durchführen. 
+
+![Pantheon-Material mit dem entfernten Brunnen. Sie wird durch ein 3D-Medienobjekt ersetzt.](images/object-removal-pantheon-500px.png)
+
+Pantheon-Material mit dem entfernten Brunnen. Sie wird durch ein 3D-Medienobjekt ersetzt.
+
+
+## <a name="final-thoughts"></a>Abschließende Gedanken
+
+Natürlich gab es noch mehr zum Erstellen dieses Inhalts als das, was wir hier besprochen haben. Es gibt ein paar Szenen – wir möchten Sie als "unmögliche Perspektiven" bezeichnen – einschließlich der heiß Luft Sprechblase und des gladiatorkampfes im Kolosseum, der einen kreativeren Ansatz hat. Diese werden in einer zukünftigen Fallstudie behandelt.
+
+Wir hoffen, dass die gemeinsame Nutzung von Lösungen für einige der größeren Herausforderungen, die wir während der Produktion hatten, für andere Entwickler hilfreich ist und Sie darauf aufmerksam sind, dass Sie einige dieser Techniken verwenden, um Ihre eigenen immersiven Erfahrungen für hololens zu entwickeln. (Wenn Sie dies tun, stellen Sie sicher, dass Sie es für uns im [hololens-App-Entwicklungsforum](https://forums.hololens.com/)freigeben!)
+
+## <a name="about-the-authors"></a>Informationen zu den Autoren
 
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"> <img alt="David Haley" width="60" height="60" src="images/haley.png" /></td>
-<td style="border:0" width="408"> <b>David Haley</b> ist als leitender Entwickler Weitere Informationen zu Kamera Rigs und Wiedergabe von Videos, die Sie haben als er möglich von der Bearbeitung HoloTour betrachtet.</td>
+<td style="border:0" width="408"> <b>David Haley</b> ist leitender Entwickler, der mehr über Kamera-und Videowiedergabe erfahren hat, als er von der Arbeit an holotour war.</td>
 <td style="border:0" width="60px"> <img alt="Danny Askew" width="60" height="60" src="images/askew.png" /></td>
-<td style="border:0" width="408"> <b>Danny Askew</b> eines Video-Interpreten, die sicherstellen, dass Ihre Navigation durch "ROME" wurde so fehlerlos wie möglich ist.</td>
+<td style="border:0" width="408"> <b>Danny Askew</b> ist ein Video, das sichergestellt hat, dass Ihre Reise durch Rom so tadellos wie möglich war.</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"> <img alt="Jason Syltebo" width="60" height="60" src="images/syltebo.png" /></td>
-<td style="border:0" width="408"> <b>Jason Syltebo</b> ist ein Audio-Designer, die sicherstellen, dass die Soundscape von jedem Ziel, die Sie besuchen, selbst wenn Sie zeitlich zurückgehen auftreten können.</td>
+<td style="border:0" width="408"> <b>Jason syltebo</b> ist ein audiodesigner, der sicherstellt, dass Sie die Sound Landschaft jedes besuchten Ziels sehen können, auch wenn Sie zurückkehren.</td>
 <td style="border:0" width="60px"> <img alt="Travis Steiner" width="60" height="60" src="images/steiner.png" /></td>
-<td style="border:0" width="408"> <b>Travis Steiner</b> ist Direktor oder entschärft haben und scouted Speicherorte, erstellte Reise Pläne und geleitet von Filmen, die am Standort entwerfen.</td>
+<td style="border:0" width="408"> <b>Travis Steiner</b> ist ein Entwurfs Leiter, der Standorte erforscht und durchsucht, Reisepläne erstellt und eine Weiterleitung auf der Website durchgeführt hat.</td>
 </tr>
 </table>
 
 
 
 ## <a name="see-also"></a>Siehe auch
-* [Video: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+* [Video: Microsoft hololens: Holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

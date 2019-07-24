@@ -1,65 +1,65 @@
 ---
-title: Leitfaden zum Entwerfen von 3D app-Startfeld
-description: Ein-3D-app-Startfeld ist ein "physical"-Objekt in der Benutzer mixed Reality Haus, die sie auswählen können, um eine app zu starten.
+title: Leitfaden zum Entwerfen von 3D-apps
+description: Ein 3D-App-Startfeld ist ein "physisches" Objekt im gemischten Reality-Haus des Benutzers, das Sie auswählen können, um eine APP zu starten.
 author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, Entwurf, 3D app-Startfeld, immersive Kopfhörer, live-cube
+keywords: Windows Mixed Reality, Design, 3D-App-Startfeld, immersives Headset, Live Cube
 ms.openlocfilehash: 47db5bffa121c0cc11d246dc749c464e5f187270
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593645"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63517718"
 ---
-# <a name="3d-app-launcher-design-guidance"></a>Leitfaden zum Entwerfen von 3D app-Startfeld
+# <a name="3d-app-launcher-design-guidance"></a>Leitfaden zum Entwerfen von 3D-apps
 
-Wenn Sie auf einem Windows Mixed Reality immersive (VR) Kopfhörer einfügen, Sie geben Sie die Windows Mixed Reality home, als ein Haus auf ein enthaltender Alpen und Wasser Cliff visualisiert (obwohl Sie können [andere Umgebungen auswählen, und erstellen Sie eigene](add-custom-home-environments.md)). Innerhalb des Bereichs dieses ist ein Benutzer home, anordnen und Organisieren Sie die 3D-Objekte und apps, die sie beliebig interessieren gewünschten kostenlos. Ein **-3D-app-Startfeld** ist ein "physical"-Objekt in der Benutzer die Realität Haus, die sie auswählen können, um eine app zu starten gemischt.
+Wenn Sie ein Windows Mixed Reality immersive (VR)-Headset platzieren, können Sie die Windows Mixed Reality-Startseite eingeben und als Haus auf einer Klippe visualisieren, die von Bergen und Wasser umgeben ist (Sie können jedoch [auch andere Umgebungen auswählen und sogar eigene Umgebungen erstellen](add-custom-home-environments.md)). Innerhalb des Raums dieses Zuhause kann ein Benutzer die 3D-Objekte und-apps, die für Sie wichtig sind, anordnen und organisieren. Ein **3D-App-** Startfeld ist ein "physisches" Objekt im gemischten Reality-Haus des Benutzers, das Sie auswählen können, um eine APP zu starten.
 
-![Beispiel: Unverankerten Bird-3D-app-Startfeld](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
-*Unverankerten Bird 3D-Startprogramm-Beispiel-app (fiktive app)*
+![Anpassen von mit VSTU Floaty Bird 3D-App-Startfeld](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
+*Beispiel für floaty Bird 3D-App-Startfeld (fiktive APP)*
 
-## <a name="3d-app-launcher-creation-process"></a>3D app-Startprogramm-Erstellungsprozess
+## <a name="3d-app-launcher-creation-process"></a>Erstellung eines 3D-App-Start Programms
 
-Es gibt 3 Schritte zum Erstellen einer-3D-app-Startfeld:
-1. Entwerfen und Concepting (dieser Artikel)
+Zum Erstellen eines 3D-App-Start Programms sind drei Schritte erforderlich:
+1. Entwerfen und entwerfen (dieser Artikel)
 2. [Modellieren und exportieren](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-3. Die Integration in Ihre Anwendung:
+3. Integration in Ihre Anwendung:
     * [UWP-Apps](implementing-3d-app-launchers.md)
     * [Win32-apps](implementing-3d-app-launchers-win32.md)
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-### <a name="fantastic-yet-familiar"></a>Super, aber vertraut
+### <a name="fantastic-yet-familiar"></a>Fantastisch, aber schon vertraut
 
-Die Windows Mixed Reality-Umgebung, die Ihre app-Startfeld befindet sich in ist Teil vertraut, Teil fantastischen/SCSI-Fi an. Die beste Startprogramme folgen die Regeln der Welt. Stellen Sie sich wie ein Objekt vertraut, repräsentative aus Ihrer app nutzen können Biegen einige der Regeln der tatsächlichen Realität. Magic-Befehl führt.
+Die Windows Mixed Reality-Umgebung, in der sich Ihr App-Startfeld befindet, ist Teil vertraut, Teil fantastisch/Sci-Fi. Die besten Launcher befolgen die Regeln dieser Welt. Stellen Sie sich vor, wie Sie ein vertrautes, repräsentatives Objekt von Ihrer APP aus erstellen, aber einige der Regeln der tatsächlichen Realität übernehmen können. Magic führt dazu.
 
-### <a name="intuitive"></a>Intuitiv
+### <a name="intuitive"></a>Intuitiven
 
-Wenn Sie Ihre app-Startfeld betrachten, wird dessen Zweck - zum Starten der app - sollte klar sein, und sollte nicht zu Verwirrung führen. Beispielsweise werden Sie sicher, dass Ihre Startprogramm eine offensichtliche hinreichend repräsentativ für Ihre app, dass sie für einen Teil der Decor in das Cliff House verwechselt werden, wird nicht. Ihre app-Startfeld soll Personen Touch/es auswählen einladen.
+Wenn Sie sich Ihr App-Startfeld ansehen, sollte der Zweck zum Starten Ihrer APP offensichtlich sein und keine Verwirrung verursachen. Stellen Sie sich z. b. vor, dass Ihr Start Programm ein offensichtlich-genug repräsentativ für Ihre APP ist, dass Sie nicht mit einem Teil der Einrichtung im Klippe-Haus verwechselt wird. Ihr App-Start Programm sollte Personen einladen, Sie zu berühren bzw. auszuwählen.
 
-![Beispiel: Neue Notiz-3D-app-Startfeld](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
-*Neue Notiz 3D-Startprogramm-Beispiel-app (fiktive app)*
+![Anpassen von mit VSTU Neues Hinweis 3D-App-Startfeld](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
+*Neues Hinweis Beispiel für 3D-App-Start Programm (fiktive APP)*
 
-### <a name="home-scale"></a>Home-Skalierung
+### <a name="home-scale"></a>Start Skala
 
-3D app-startfeldern von befinden sich in der Cliff House und deren Standardgröße sollten Sinn für die anderen "physical" Objekte im Bereich. Wenn Sie Ihre Startprogramm neben, z. B. platzieren, sollte eine Anlage Haus oder einige Möbel, kommt es Ihnen zu Hause, size-wise. Ein guter Ausgangspunkt ist zu sehen, wie es unter 30 kubische Zentimeter aussieht, aber denken Sie daran, dass der Benutzer es nach oben oder unten skaliert werden können, wenn sie z. B.
+3D-App-Launcher Leben im Klippe-Haus, und ihre Standardgröße sollte mit den anderen "physischen" Objekten im Raum Sinn machen. Wenn Sie das Start Programm anordnen, beispielsweise eine Hausanlage oder einige Möbel, sollte es sich in der eigenen Größe fühlen. Ein guter Ausgangspunkt ist, zu sehen, wie es 30 Kubikzentimeter aussieht, aber denken Sie daran, dass Benutzer es bei Bedarf zentral hoch-oder Herunterskalieren können.
 
-### <a name="own-able"></a>Besitzer-fähig
+### <a name="own-able"></a>Eigen fähig
 
-Das app-Startfeld sollte wie ein Objekt sein, die eine Person sein, würde gerne in seinem Bereich verfügen. Sie werden praktisch umgebenden werden selbst mit diesen, sodass das Startprogramm wie etwas funktioniert der Gedanke Benutzer war wünschenswert genug ist, lesen, und behalten Sie in der Nähe.
+Das App-Start Programm sollte sich wie ein Objekt erweisen, das eine Person im Raum haben würde. Sie werden sich praktisch durch diese Dinge umgeben, sodass das Start Programm so aussehen sollte, wie etwas, was der Benutzer als wünschenswert erachtet hat
 
-![Beispiel: Astro Warp-3D-app-Startfeld](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
-*Beispiel für die Astro Warp 3D app-Startprogramm (fiktive app)*
+![Anpassen von mit VSTU Astrowarp 3D-App-Startfeld](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
+*Beispiel für ein Beispiel für die Astro Warp 3D-app (fiktive APP)*
 
-### <a name="recognizable"></a>Erkannt
+### <a name="recognizable"></a>Unerkannt
 
-Ihre 3D app-Startfeld sollte sofort "Ihrer app-Brand" Personen Ausdrücken anzeigen. Wenn Sie ein Stern Zeichen oder ein besonders identifizierbaren Objekt in Ihrer app haben, empfehlen wir, verwenden, wie ein großer Teil des Entwurfs. In einer Welt mixed Reality wird ein Objekt größerem Interesse von Benutzern als nur ein Logo, die allein gezeichnet. Erkennbare Objekten kommunizieren Marke, schnell und deutlich.
+Ihr 3D-App-Startfeld sollte den Benutzern, die Sie sehen, umgehend die "Marke Ihrer APP" ausdrücken. Wenn Sie ein Sternzeichen oder ein besonders identifizierbares Objekt in Ihrer APP haben, empfiehlt es sich, dieses als einen großen Teil des Entwurfs zu verwenden. In einer Mixed Reality-Welt zeichnet ein Objekt von Benutzern mehr Interesse als nur ein Logo allein. Erkennbare Objekte kommunizieren schnell und eindeutig.
 
 ### <a name="volumetric"></a>Volumetrische
 
-Ihre app sollte mehr als nur Ihr Logo in eine flache Ebene platzieren und Aufrufen von Feierabend. Ihre Startprogramm sollte wie ein aufregende, 3D, physische Objekt im Bereich für den Benutzer fühlen. Ein guter Ansatz ist vorstellbar, dass Ihre app würde eine Sprechblase in die Macys Thanksgiving-Tag Schlag zu erhalten. Fragen Sie sich, würde wie Personen wirklich wow, wie sie die Straße stammt? Was würde aus allen Winkeln der Anzeige hervorragend aussehen?
+Ihre APP verdient mehr als nur Ihr Logo auf eine flache Ebene zu bringen und Sie täglich Aufrufs. Das Start Programm sollte sich wie ein spannendes, 3D-Objekt im Bereich des Benutzers fühlen. Eine gute Vorgehensweise besteht darin, sich zu vorstellen, dass Ihre APP in der Tages Parade der Macy-Tage eine Sprechblase enthalten würde. Fragen Sie sich, was wirklich Menschen ist, die sich in der Straße befinden? Was ist für alle Anzeige Winkel großartig?
 
 
 :::row:::
@@ -89,33 +89,33 @@ Ihre app sollte mehr als nur Ihr Logo in eine flache Ebene platzieren und Aufruf
 ## <a name="tips-for-good-3d-models"></a>Tipps für gute 3D-Modelle
 
 ### <a name="best-practices"></a>Empfohlene Methoden
-* Bei der Planung von Dimensionen für Ihre app-Startfeld Schießen Sie für ungefähr einen 30-cm-Cube ein. Also eine 1: von 1:1-Größenverhältnis.
-* Modelle müssen weniger als 10.000 Polygone sein. [Weitere Informationen zum Dreieck Anzahlen und weitere Details (LODs)](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#triangle-counts-and-levels-of-detail-lods)
-* Testen Sie auf eine immersive Kopfhörer, sofern möglich.
-* Details in die Geometrie des Modells zu erstellen, wenn möglich – verlassen Sie sich nicht auf Texturen für Details.
-* Erstellen Sie "Kate enge" geschlossen Geometrie. Keine Lücken aufweisen, die nicht im modelliert werden.
-* Verwenden Sie natürliche Materialien in Ihr Objekt an. Stellen Sie sich vor, erstellen sie in der realen Welt.
-* Stellen Sie sicher, dass das Modell gut bei verschiedenen Abstände und Größen liest.
-* Wenn das Modell fertig ist, lesen die [Assets Richtlinien exportieren](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview).
+* Wenn Sie Dimensionen für das App-Start Programm planen, sollten Sie ungefähr einen 30cm-Cube durchsuchen. Also ein Größenverhältnis von 1:1:1.
+* Modelle müssen unter 10.000 Polygone liegen. [Weitere Informationen zu Dreiecks Zählungen und Ebenen der Details (LODs)](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#triangle-counts-and-levels-of-detail-lods)
+* Testen Sie nach Möglichkeit ein immersives Headset.
+* Builddetails in der Geometrie des Modells, soweit möglich – verlassen Sie sich nicht auf Texturen.
+* Erstellen einer "wasserdichten" geschlossenen Geometrie. Keine Lücken, die nicht in modelliert werden.
+* Verwenden Sie natürliche Materialien in Ihrem Objekt. Stellen Sie sich vor, Sie erstellen Sie in der Praxis.
+* Stellen Sie sicher, dass Ihr Modell in unterschiedlichen Entfernungen und Größen gut funktioniert.
+* Wenn Ihr Modell einsatzbereit ist, lesen Sie die [Richtlinien zum Exportieren von Assets](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview).
 
-![Modell mit den feinen Details in der Textur](images/20171013-143334-mixedreality-640px.jpg)<br>
-*Modell mit den feinen Details in der Textur*
+![Modell mit geringfügigen Details in der Textur](images/20171013-143334-mixedreality-640px.jpg)<br>
+*Modell mit geringfügigen Details in der Textur*
 
 ### <a name="what-to-avoid"></a>Was Sie vermeiden sollten
-* Verwenden Sie keine Details mit hohem Kontrast oder Muster für kleine, ausgelastet und Texturen.
-* Verwenden Sie keine thin Geometrie – nicht und funktioniert auch mit einer Entfernung alias ungültig wird.
-* Teilen des Modells erweitern lassen nicht zu viel über die 1: von 1:1-Größenverhältnis. Skalierungsproblemen wird erstellt.
+* Verwenden Sie keine kontrastreichen Details oder kleine, ausgelastete Muster und Texturen.
+* Verwenden Sie Thin Geometry nicht – es funktioniert nicht gut in einer Entfernung und ist falsch.
+* Lassen Sie Teile des Modells nicht zu viel über das Größenverhältnis von 1:1:1 hinaus erweitern. Es werden Skalierungsprobleme entstehen.
 
-![Vermeiden von hohem Kontrast, kleine ausgelastet Muster](images/20171013-143603-mixedreality-640px.jpg)<br>
-*Vermeiden von hohem Kontrast, kleine, gebucht Muster*
+![Vermeiden Sie Muster mit hohem Kontrast und geringer Auslastung](images/20171013-143603-mixedreality-640px.jpg)<br>
+*Vermeiden Sie große Kontraste, kleine, ausgelastete Muster*
 
-## <a name="how-to-handle-type"></a>Das Durchführen von Typ
+## <a name="how-to-handle-type"></a>Vorgehensweise beim Behandeln von Typen
 
 ### <a name="best-practices"></a>Empfohlene Methoden
-* Es wird empfohlen, dass Ihr Typ ca. 1/3-Ihrer-app-Startfeld (oder mehr) umfasst. Der Typ ist der wichtigste Aspekt besteht, die Benutzer eine Vorstellung, die Ihre Startprogramm tatsächlich ein Startprogramm erhalten ist, daher ist es gut ist dies ganz erhebliche.
-* Vermeiden, dass sehr breit Typ – versuchen, die sie innerhalb der Grenzen des app-startfeldern Core Dimensionen (mehr oder weniger) beizubehalten.
-* Flatfiles kann funktionieren, aber beachten Sie, dass es zum Anzeigen von bestimmten Winkel und in bestimmten Umgebungen schwierig sein kann. Sie sollten erwägen, platzieren es ein solid Objekt oder eine Backdrop dahinter helfen.
-* Hinzufügen von Dimension in den Typ fühlt gut in 3D. Schattierung die Seiten des Typs können eine andere, je dunkler Farbe für die Lesbarkeit.
+* Es wird empfohlen, dass Ihr Typ ungefähr 1/3 ihres App-Start Programms umfasst (oder mehr). Der Typ ist das wichtigste, das den Benutzern eine Vorstellung gibt, dass es sich bei Ihrem Start Programm tatsächlich um ein Start Programm handelt, sodass es sehr schön ist.
+* Vermeiden Sie einen Super weiten Typ – versuchen Sie, ihn innerhalb der Grenzen der Kerndimensionen der App-Launcher (mehr oder weniger) zu halten.
+* Der flattype kann funktionieren, aber beachten Sie, dass er in bestimmten Winkeln und in bestimmten Umgebungen schwer zu erkennen ist. Möglicherweise sollten Sie ein solides Objekt oder einen Hintergrund dahinter ablegen, um dies zu unterstützen.
+* Das Hinzufügen von Dimensionen zu Ihrem Typ ist in 3D gut. Das Schattieren der Seiten des Typs unterscheidet sich durch die Lesbarkeit.
 
 
 :::row:::
@@ -134,60 +134,60 @@ Ihre app sollte mehr als nur Ihr Logo in eine flache Ebene platzieren und Aufruf
 :::row-end:::
 
 
-**Typ-Farben, die funktionieren**
+**Typfarben, die funktionieren**
 * Weiß
 * Schwarz
-* Helle teilweise farbsättigung
+* Helle halb satte Farbe
 
-![Geben Sie Farben, die funktionieren.](images/20171016-112111-mixedreality-640px.jpg)<br>
-*Typ-Farben, die funktionieren*
+![Typfarben, die funktionieren.](images/20171016-112111-mixedreality-640px.jpg)<br>
+*Typfarben, die funktionieren*
 
 ### <a name="what-to-avoid"></a>Was Sie vermeiden sollten
 
-**Typ-Farben, die Probleme verursachen.**
-* Mid-Töne
+**Typfarben, die Probleme verursachen**
+* Mitteltöne
 * Grau
-* Übermäßige Sättigung Farben oder entsättigte Farben
+* Über satte Farben oder nicht satte Farben
 
-![Geben Sie Farben, die Probleme verursachen.](images/20171016-112246-mixedreality-640px.jpg)<br>
-*Typ-Farben, die Probleme verursachen.*
+![Typfarben, die Probleme verursachen.](images/20171016-112246-mixedreality-640px.jpg)<br>
+*Typfarben, die Probleme verursachen*
 
 ## <a name="lighting"></a>Beleuchtung
 
-Die Beleuchtung für Ihre app-Startfeld stammt aus der Cliff House-Umgebung. Achten Sie darauf, um Ihre Startprogramm an mehreren Stellen im gesamten Haus zu testen, damit es in Ordnung ist in Licht und Schatten. Die gute Nachricht ist, Ihre Startprogramm auf ziemlich guten Zustand für die meisten Beleuchtung in der Cliff House sein soll, wenn Sie die anderen Entwurfsrichtlinien, die Sie in diesem Dokument ausgeführt haben, an.
+Die Beleuchtung für das App-Start Programm stammt aus der Umgebung "Klippe House". Stellen Sie sicher, dass Sie das Start Programm an mehreren Stellen im ganzen Haus testen, damit es in Licht und Schatten gut aussieht. Die gute Nachricht ist, dass Sie, wenn Sie den anderen Entwurfs Leit Faden in diesem Dokument befolgt haben, das Start Programm in einer ziemlich guten Form für die meisten Beleuchtung im Klippe-Haus aufweisen sollten.
 
-Testen die Darstellung Ihrer Startprogramm in der verschiedenen Lichter in der Umgebung bieten gute Einstiegspunkte sind der Studio Media Raum außerhalb von überall und im Garten zurück (der konkreten Bereich mit den Rasen). Ein weiterer guter Test ist, fügen Sie ihn in die halbe Licht und halbe Schatten und wie es aussieht.
+Ein guter Ausgangspunkt, um zu testen, wie das Start Programm in den verschiedenen Lichtern in der Umgebung aussieht, sind Studio, der Medienraum, an einer beliebigen Stelle außerhalb und auf der Rückseite (der konkrete Bereich mit dem Rasen). Ein weiterer guter Test besteht darin, den halblicht-und Halbschatten zu platzieren und zu sehen, wie er aussieht.
 
-![Stellen Sie sicher, dass Ihre Startprogramm in Licht und Schatten in Ordnung ist.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
-*Stellen Sie sicher, dass Ihre Startprogramm in Licht und Schatten in Ordnung ist*
+![Stellen Sie sicher, dass das Start Programm sowohl in Beleuchtung als auch in Schatten angezeigt wird.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
+*Stellen Sie sicher, dass das Start Programm in Licht und Schatten gut aussieht*
 
-## <a name="texturing"></a>Texturen
+## <a name="texturing"></a>Texturierung
 
-### <a name="authoring-your-textures"></a>Erstellen Ihre Texturen
+### <a name="authoring-your-textures"></a>Erstellen von Texturen
 
-Das End-Format, der Ihre-3D-app-Startfeld werden eine .glb-Datei, die erfolgt über die Pipeline PBR (physisch basierten Rendern). Dies liegt möglicherweise eine komplizierte Prozess – jetzt ein guter Zeitpunkt, einen technischen Interpreten einsetzen, sofern Sie noch nicht geschehen ist. Eine mutig DIY-er haben sich die Zeit nehmen [untersuchen und lernen Sie die PBR Terminologie](http://wiki.polycount.com/wiki/PBR) und was im Hintergrund geschieht, bevor Sie beginnen, können Sie häufige Fehler zu vermeiden. 
+Das Endformat des 3D-App-Start Programms ist eine. GLB-Datei, die mithilfe der PBR-Pipeline (physisch basiertes Rendering) erstellt wird. Dies kann ein kniffliger Prozess sein. jetzt ist es ein guter Zeitpunkt, einen technischen Künstler zu verwenden, wenn Sie dies noch nicht getan haben. Wenn Sie ein mutiger DIY sind und sich die Zeit nehmen, sich mit der [PBR-Terminologie](http://wiki.polycount.com/wiki/PBR) vertraut zu machen und zu erfahren, was im Hintergrund passiert, bevor Sie beginnen, können Sie häufige Fehler vermeiden. 
 
-![Beispiel: Neue Notiz-app](images/pbr-freshnote1-640px-500px.png)<br>
-*Neue Notiz 3D-Startprogramm-Beispiel-app (fiktive app)*
+![Anpassen von mit VSTU Neue Notiz-App](images/pbr-freshnote1-640px-500px.png)<br>
+*Neues Hinweis Beispiel für 3D-App-Start Programm (fiktive APP)*
 
-**Empfohlene authoring tool**
+**Empfohlenes Authoring Tool**
 
-Es wird empfohlen, [Substanz übertragen](https://www.allegorithmic.com/products/substance-painter) von Allegorithmic Ihrer endgültige Datei zu erstellen. Wenn Sie nicht mit der Erstellung von PBR-Shader in Substanz übertragen, hier die vertraut sind eine [Tutorial](https://docs.allegorithmic.com/documentation/display/SPDOC/Tutorials).
+Es wird empfohlen, den [Substanz Maler](https://www.allegorithmic.com/products/substance-painter) von allethmic zu verwenden, um Ihre endgültige Datei zu verfassen. Wenn Sie nicht mit der Erstellung von PBR-Shadern in der Inhalts Malerin vertraut sind, finden Sie hier ein [Tutorial](https://docs.allegorithmic.com/documentation/display/SPDOC/Tutorials).
 
-(Alternativ [-3D-Coat](https://3dcoat.com/home/), [Quixel Suite 2](https://quixel.se/suite2/), oder [Marmoset Toolbag](https://www.marmoset.co/toolbag/) würde auch funktionieren, wenn Sie mehr mit einer dieser vertraut.)
+(Alternativ kann [3D-Coat](https://3dcoat.com/home/), [Quixel Suite 2](https://quixel.se/suite2/)oder [marthset](https://www.marmoset.co/toolbag/) auch verwendet werden, wenn Sie mit einer der beiden vertraut sind.)
 
 ### <a name="best-practices"></a>Empfohlene Methoden
 
-* Wenn Ihre app-Startprogramm-Objekt für PBR erstellt wurde, sollte es ziemlich einfach, für die Umgebung Cliff House konvertieren.
-* Unsere Shader-Metal-Computern/Rauigkeit Workflow erwartet – die Unreal PBR Shader ist schließen anzeigte verwenden.
-* Beim Exportieren Ihre Texturen behalten die [empfohlene Größen der Textur](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#material-guidelines) Bedenken.
-* Stellen Sie sicher, dass Sie Ihre Objekte in Echtzeit Beleuchtung erstellen – Dies bedeutet:
-    * Vermeiden Sie mitgelieferten Shadows – oder gezeichnete Schatten
-    * Vermeiden Sie die mitgelieferten Beleuchtung in die Texturen
-    * Verwenden Sie eine der das PBR-Material, das Erstellen von Paketen, um die richtigen Zuordnungen für unseren Shader generiert zu erhalten
+* Wenn das App-Start Programmobjekt für PBR erstellt wurde, sollte es recht einfach sein, es für die Umgebung "Klippe" zu konvertieren.
+* Unser Shader erwartet einen Metal/roughness-Workflow – der Unreal PBR-Shader ist ein schließende Fax.
+* Wenn Sie Ihre Texturen exportieren, sollten Sie die [empfohlenen Textur Größen](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#material-guidelines) berücksichtigen.
+* Stellen Sie sicher, dass Sie die Objekte für die Echtzeitbeleuchtung erstellen – Dies bedeutet Folgendes:
+    * Vermeiden gebackener Schatten – oder gezeichnete Schatten
+    * Vermeiden Sie eine gebackenes Beleuchtung in den Texturen
+    * Verwenden Sie eines der Pakete zur Erstellung von PBR-Materialien, um die richtigen Zuordnungen für den Shader zu erhalten.
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Erstellen von 3D-Modellen für die Verwendung in der mixed Reality home](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
-* [Implementieren von 3D app-startfeldern von (UWP-apps)](implementing-3d-app-launchers.md)
-* [Implementieren von 3D app-startfeldern von (Win32-apps)](implementing-3d-app-launchers-win32.md)
+* [Erstellen von 3D-Modellen für die Verwendung in der Mixed Reality-Startseite](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
+* [Implementieren von 3D-App-Startprogrammen (UWP-Apps)](implementing-3d-app-launchers.md)
+* [Implementieren von 3D-App-Startprogrammen (Win32-Apps)](implementing-3d-app-launchers-win32.md)

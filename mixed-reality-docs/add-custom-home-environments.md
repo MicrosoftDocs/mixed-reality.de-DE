@@ -1,11 +1,11 @@
 ---
-title: Hinzufügen der benutzerdefinierte Startseite Umgebungen
-description: Zusätzlich zu den home Windows Mixed Reality-Umgebungen, die wir bereitstellen, können Sie sich beim Erstellen und verwenden Ihren eigenen experimentieren.
+title: Hinzufügen von benutzerdefinierten Heim Umgebungen
+description: Zusätzlich zu den Windows Mixed Reality-Start Umgebungen, die wir bereitstellen, können Sie mit der Erstellung und Verwendung ihrer eigenen experimentieren.
 author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
-keywords: Windows Mixed Reality, Mixed Reality, virtuelle Realität, VR, MR, Home, benutzerdefinierte Umgebungen, Orte, Cliff Haus, Skyloft, Benutzer erstellen
+keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, Mr, Home, Custom Environment, Places, Klippe House, SkyLoft, User, CREATE
 ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
 ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
@@ -13,14 +13,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67024531"
 ---
-# <a name="add-custom-home-environments"></a>Hinzufügen der benutzerdefinierte Startseite Umgebungen
+# <a name="add-custom-home-environments"></a>Hinzufügen von benutzerdefinierten Heim Umgebungen
 
 >[!NOTE]
->Dies ist ein experimentelles Feature. Probieren sie es und Spaß dabei jedoch nicht überraschen, wenn alles, was Recht nicht wie erwartet funktioniert. Wir bewerten die Lebensfähigkeit von dieser Funktion und das Interesse an ihn verwenden, also Bitte teilen Sie uns über Ihre Erfahrung (und alle Fehler, die Sie gefunden haben) in der [Entwicklerforen](https://forums.hololens.com/categories/custom-home-environments).
+>Dies ist ein experimentelles Feature. Probieren Sie es aus, und machen Sie sich damit vertraut, aber es ist nicht verwunderlich, wenn alles wie erwartet funktioniert. Wir evaluieren die Fähigkeit dieses Features und arbeiten daran, Sie zu verwenden. Teilen Sie uns daher ihre Erfahrung (und alle gefundenen Fehler) in den [Entwickler Foren](https://forums.hololens.com/categories/custom-home-environments)mit.
 
-Beginnend mit der [Windows 10 April 2018 aktualisieren](#release-notes-april-2018.md), wir haben ein experimentelles Feature, mit dem Sie die Auswahl stellen (im Startmenü) für die Verwendung als eine angepasste Umgebung hinzufügen kann aktiviert die [Windows Mixed Reality home](#navigating-the-windows-mixed-reality-home.md). Windows Mixed Reality verfügt über zwei standardumgebungen, Cliff House "und" Skyloft, die Sie als Ihre Startseite auswählen können. Eine angepasste Umgebung erstellen, können Sie diese Liste mit Ihren eigenen Kreationen zu erweitern. Dies zur Verfügung in einem frühen Zustand zu relevanten schaffenden und Entwicklern ausgewertet werden, finden, welche Arten von Bereichen erstellen und zu verstehen, wie Sie mit anderen Erstellungstools arbeiten.
+Ab dem [Windows 10 April 2018-Update](#release-notes-april-2018.md)haben wir eine experimentelle Funktion aktiviert, mit der Sie der Stellen Auswahl (im Startmenü) benutzerdefinierte Umgebungen hinzufügen können, um Sie als [Windows Mixed Reality Home](#navigating-the-windows-mixed-reality-home.md)zu verwenden. Windows Mixed Reality verfügt über zwei Standard Umgebungen, die Sie als Startseite auswählen können. Durch das Erstellen von benutzerdefinierten Umgebungen können Sie diese Liste mit ihren eigenen Schöpfungen erweitern. Wir stellen dies in einem frühen Zustand zur Verfügung, um die Interessen von Creators und Entwicklern zu evaluieren, die Art der von Ihnen erstellten Umgebungen anzuzeigen und zu verstehen, wie Sie mit verschiedenen Authoring Tools arbeiten.
 
-Bei Verwendung eine benutzerdefinierte Umgebung sehen Sie diese Teleporting funktioniert die Interaktion mit apps, und platzieren Hologramme wie in der Cliff House und Skyloft. Sie können das Web in einer Landschaft Fantasy durchsuchen oder eine futuristischen Stadt mit Hologramme – die Möglichkeiten sind grenzenlos!
+Wenn Sie eine benutzerdefinierte Umgebung verwenden, werden Sie feststellen, dass die teleportierung, die Interaktion mit apps und das Platzieren von holograms so funktioniert, wie es im-und SkyLoft funktioniert. Sie können das Web in einer Fantasy-Landschaft durchsuchen oder einen futuristischen Ort mit holograms ausfüllen. die Möglichkeiten sind unendlich.
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
@@ -33,73 +33,73 @@ Bei Verwendung eine benutzerdefinierte Umgebung sehen Sie diese Teleporting funk
     <tr>
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Benutzerdefinierte Startseite Umgebungen</td>
+        <td>Benutzerdefinierte Heim Umgebungen</td>
         <td>❌</td>
         <td>✔️</td>
     </tr>
 </table>
 
-## <a name="trying-a-sample-environment"></a>Versuchen eine beispielumgebung
+## <a name="trying-a-sample-environment"></a>Ausprobieren einer Beispiel Umgebung
 
-Wir haben eine beispielumgebung erstellt, die einige der kreative Ansätze der benutzerdefinierten Startseite Umgebungen anzeigt. Um es auszuprobieren, gehen Sie wie folgt vor:
-1. [Unsere Fantasie Insel beispielumgebung herunterladen](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (Links zu einer selbstextrahierenden ausführbaren Datei).
+Wir haben eine Beispiel Umgebung erstellt, in der einige der kreativen Möglichkeiten von benutzerdefinierten Heim Umgebungen gezeigt werden. Führen Sie die folgenden Schritte aus, um es auszuprobieren:
+1. [Herunterladen der Beispiel-Fantasy-Inselumgebung](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (Link verweist auf selbst extrahierende ausführbare Dateien).
 
-    ![Beispielumgebung Fantasy-Insel](images/FantasyLand.jpg)<br>
-    *Beispielumgebung Fantasy-Insel*<br>
+    ![Beispiel Umgebung der Fantasy-Insel](images/FantasyLand.jpg)<br>
+    *Beispiel Umgebung der Fantasy-Insel*<br>
 
-2. Führen Sie die **Fantasy_Island.exe** Datei, die Sie gerade heruntergeladen haben.
+2. Führen Sie die soeben heruntergeladene Datei **Fantasy_Island. exe** aus.
 
     > [!NOTE]
-    > Wenn möchten, führen Sie eine .exe-Datei aus dem Web (wie dieses hier) heruntergeladen werden, können Sie ein Popup mit "Windows-Ihr PC geschützt" auftreten. Wählen Sie zum Ausführen von Fantasy_Island.exe in diesem Popupfenster **Informationen** und dann **trotzdem ausführen**. Diese sicherheitseinstellung dient zum Schutz von Herunterladen von Dateien, die möglicherweise Sie nicht vertrauen, also möchten wählen Sie diese Option nur, wenn Sie die Quelle der Datei vertrauenswürdig.
+    > Wenn Sie versuchen, eine aus dem Web heruntergeladene EXE-Datei auszuführen (z. b. diese), kann das Popup Fenster "Windows-geschützter PC" angezeigt werden. Um Fantasy_Island. exe in diesem Popup auszuführen, wählen Sie **Weitere Informationen** aus, und **führen**Sie dann trotzdem aus. Diese Sicherheitseinstellung soll Sie vor dem Herunterladen von Dateien schützen, denen Sie nicht vertrauen möchten. Wählen Sie daher diese Option nur aus, wenn Sie der Quelle der Datei vertrauen.
 
-3. Open **Datei-Explorer** und navigieren Sie zu dem Ordner "Umgebungen" durch Einfügen von in der Adressleiste die folgende: `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`.
-4. Kopieren Sie die beispielumgebung, die Sie heruntergeladen haben, in diesen Ordner.
-5. Starten Sie neu **Mixed Reality-Portal**. Dadurch wird die Liste der Umgebungen, in der Auswahl stellen aktualisiert.
-6. Stellen Sie auf Ihre Kopfhörer. Sobald Sie zu Hause haben, öffnen Sie die **Menü "Start"** mithilfe der Windows Ihres Controllers Schaltfläche.
-7. Wählen Sie die **stellen** Symbol oberhalb der Liste der angehefteten apps auf einer privaten Umgebung.
-8. Finden Sie die Umgebung Fantasy Insel, die Sie in der Liste der Orte heruntergeladen. Wählen Sie **Fantasy Insel** die neue Umgebung für das benutzerdefinierte Startseite eingeben.
+3. Öffnen Sie den **Datei-Explorer** , und navigieren Sie zum Ordner Umgebungen, indem Sie Folgendes in die `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`Adressleiste einfügen:.
+4. Kopieren Sie die Beispiel Umgebung, die Sie in diesen Ordner heruntergeladen haben.
+5. Starten Sie **Mixed Reality-Portal**neu. Dadurch wird die Liste der Umgebungen in der Auswahl Orte der Orte aktualisiert.
+6. Legen Sie auf Ihrem Headset ab. Wenn Sie sich in der Startseite befinden, öffnen Sie das **Startmenü** mithilfe der Windows-Schaltfläche für den Controller.
+7. Wählen Sie das Symbol " **Orte** " oberhalb der Liste der angehefteten Apps aus, um eine Heimumgebung auszuwählen.
+8. Sie finden die Fantasie Inselumgebung, die Sie heruntergeladen haben, in der Liste der Orte. Wählen Sie **Fantasie Insel** aus, um Ihre neue benutzerdefinierte Home-Umgebung einzugeben!
 
 ## <a name="creating-your-own-custom-environment"></a>Erstellen einer eigenen benutzerdefinierten Umgebung
 
-Zusätzlich zur Verwendung unserer beispielumgebungen, können Sie Ihre eigenen benutzerdefinierten Umgebungen, die mit Ihrer bevorzugten 3D Software bearbeiten exportieren. 
+Zusätzlich zur Verwendung unserer Beispiel Umgebungen können Sie Ihre eigenen benutzerdefinierten Umgebungen mit Ihrer bevorzugten 3D-Bearbeitungssoftware exportieren. 
 
-### <a name="modeling-guidelines"></a>Modellieren von Richtlinien
+### <a name="modeling-guidelines"></a>Modellierungs Richtlinien
 
-Beachten Sie beim Modellieren Ihrer Umgebung die folgenden Empfehlungen. Dadurch wird der Benutzer erzeugt in der richtigen Ausrichtung in einer Welt believably Größe sichergestellt:
+Beachten Sie beim Modellieren Ihrer Umgebung die folgenden Empfehlungen. Dadurch wird sichergestellt, dass der Benutzer in einer Welt mit der Glaubwürdigkeit in der richtigen Ausrichtung ist:
 
-1. Benutzer werden Ihr Standort gewünschten erzeugen, um den Ursprung 0,0,0). dies der Fall ist zentriert erzeugen.
-2. Arbeitseinheiten sollte mit Werten festgelegt werden, damit Ressourcen bedarfsorientiert Welt erstellt werden können.
-3. Die Achse auf sollte auf "Y" festgelegt werden.
-4. Das Medienobjekt sollte "forward" auf der positiven Z-Achse auftreten.
-5. Alle Gitter müssen nicht kombiniert werden, aber es wird empfohlen, wenn Sie Geräte mit ressourcenbeschränkung verwenden möchten.
+1. Benutzer werden bei 0, 0 und 0 erstellt, sodass Sie die gewünschte Ausgangsposition um den Ursprung zentrieren können.
+2. Arbeitseinheiten sollten auf Meter festgelegt werden, damit Assets weltweit skaliert werden können.
+3. Die up-Achse sollte auf "Y" festgelegt werden.
+4. Das Medienobjekt sollte für die positive Z-Achse "Vorwärts" stehen.
+5. Alle Netzen müssen nicht kombiniert werden, Sie werden jedoch empfohlen, wenn Sie auf Ressourcen beschränkte Geräte abzielen.
 
-### <a name="exporting-your-environment"></a>Exportieren Ihre Umgebung
+### <a name="exporting-your-environment"></a>Exportieren Ihrer Umgebung
 
-Windows Mixed Reality basiert auf binärer GlTF (.glb) als das Asset-übermittlungsformat für Umgebungen. GlTF ist eine lizenzgebührenfreie kostenlose offener Standard für 3D medienobjektübermittlung, die von der Gruppe "Khronos" verwaltet wird. GlTF als Branchenstandard für interoperable 3D-Inhalt weiterentwickelt, daher werden Microsoft Unterstützung für das Format für Windows-apps und Umgebungen.
+Windows Mixed Reality basiert auf binärem gltf (. GLB) als Übermittlungs Format für das Medienobjekt. gltf ist ein kostenloser offener Standard für die 3D-Asset-Bereitstellung, der von der Khronos-Gruppe verwaltet wird. Da sich gltf als Industriestandard für interoperablen 3D-Inhalt entwickelt, unterstützt Microsoft das Format in Windows-apps und-Umgebungen.
 
-Der erste Schritt beim Exportieren von Ressourcen als benutzerdefinierte Startseite Umgebungen verwendet werden soll, wird ein Modell GlTF 2.0 generiert. Die Arbeitsgruppe GlTF verwaltet eine [Liste der unterstützten metadatenexport- und Konverter](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) zum Erstellen eines Modells GlTF 2.0. Klicken Sie zum Einstieg verwenden Sie eines der Programme auf dieser Seite aufgeführten erstellen und exportieren ein Modell GlTF 2.0, oder konvertieren Sie ein vorhandenes Modell mit einer der unterstützten Konverter.
+Der erste Schritt beim Exportieren von Assets, die als benutzerdefinierte Heimumgebung verwendet werden sollen, ist das Erstellen eines gltf 2,0-Modells. Die Arbeitsgruppe "gltf" verwaltet eine [Liste der unterstützten Export-und Konverter](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) , um ein gltf 2,0-Modell zu erstellen. Verwenden Sie zum Einstieg eines der auf dieser Seite aufgeführten Programme, um ein gltf 2,0-Modell zu erstellen und zu exportieren, oder konvertieren Sie ein vorhandenes Modell mit einem der unterstützten Konverter.
 
-Darüber hinaus sehen Sie sich [in diesem Artikel hilfreiche](https://www.khronos.org/blog/art-pipeline-for-gltf) die bietet eine Übersicht über einen Workflow Kunst, zum Exportieren von GlTF Modelle von Blender und 3DS Max direkt. 
+Lesen Sie außerdem [diesen nützlichen Artikel](https://www.khronos.org/blog/art-pipeline-for-gltf) , der einen Überblick über einen Kunst Workflow zum direkten Exportieren von gltf-Modellen aus Blender und 3ds Max bietet. 
 
-### <a name="environment-limits"></a>Grenzwerte der Umgebung
+### <a name="environment-limits"></a>Umgebungs Limits
 
-Alle Umgebungen müssen < 256 MB sein. Umgebungen, die größer als 256 MB können nicht geladen werden und mit nur den Zusammenhang mit des Benutzers Skybox ein Fallback auf eine leere Welt. Bedenken dieser dateigrößenbeschränkung beim Ihre Modelle zu erstellen. Darüber hinaus, wenn Sie beabsichtigen, Ihrer Umgebung mithilfe der WindowsMRAssetConverter, wie im folgenden beschrieben optimieren, darüber im Klaren sein, dass die Texturgröße erhöht wird, wie der Abfrageoptimierer Texturen, die eine größere Dateigröße erstellt, jedoch schneller geladen. 
+Alle Umgebungen müssen < 256-MB betragen. Umgebungen, die größer als 256 MB sind, können nicht geladen werden und greifen auf eine leere Welt zurück, die nur die standardmäßige Skybox für den Benutzer enthält. Beachten Sie beim Erstellen der Modelle diese Dateigrößen Beschränkung. Wenn Sie eine Optimierung Ihrer Umgebung mithilfe von windowsmrassetconverter planen, wie unten beschrieben, sollten Sie außerdem erkennen, dass die Textur Größe zunimmt, wenn der Optimierer Texturen erstellt, die eine größere Dateigröße aufweisen, aber schneller geladen werden. 
 
 ### <a name="optimizing-your-environment"></a>Optimieren der Umgebung
 
-Windows Mixed Reality unterstützt eine Reihe von optionalen Optimierungen, die die Ladezeit von Ihren Umgebungen erheblich senken. Dies kann besonders für Umgebungen mit vielen Texturen, wichtig sein, wie manchmal tritt ein Timeout während des Ladens. Im Allgemeinen empfehlen wir diesen Schritt für alle Objekte, jedoch in kleineren Umgebungen mit wenigen oder mit geringer Auflösung Texturen nicht immer erforderlich es. 
+Windows Mixed Reality unterstützt eine Reihe optionaler Optimierungen, die die Ladezeit Ihrer Umgebungen erheblich verringern. Dies kann besonders für Umgebungen mit vielen Texturen von Bedeutung sein, da Sie beim Laden gelegentlich einen Timeout aufweisen werden. Im Allgemeinen empfiehlt es sich, diesen Schritt für alle Ressourcen zu empfehlen, aber kleinere Umgebungen mit wenigen oder mit geringer Auflösung benötigten Texturen sind nicht immer erforderlich. 
 
-Um diesen Prozess zu vereinfachen, haben wir die [Windows Mixed Reality Asset-Konverter (verfügbar auf GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases) Ihre Optimierungen ausführen. Dieses Tool verwendet eine Reihe von Dienstprogrammen, die im Microsoft GlTF Toolkit verfügbar sind, alle standard 2.0 GlTF oder .glb zu optimieren, indem eine zusätzliche Textur Packen von Metriken, die Komprimierung und Auflösung formatverkleinerung. 
+Um diesen Prozess zu vereinfachen, haben wir den [Windows Mixed Reality Asset Converter (verfügbar auf GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases) zum Durchführen ihrer Optimierungen erstellt. Dieses Tool verwendet eine Reihe von Hilfsprogrammen, die im Microsoft gltf Toolkit verfügbar sind, um jeden Standard 2,0 gltf oder. GLB durch die Durchführung einer zusätzlichen Textur Komprimierung, Komprimierung und Auflösung nach unten Skalieren zu optimieren. 
 
-Der Konverter unterstützt derzeit eine Anzahl von Flags, die das genaue Verhalten der Optimierungen zu optimieren. Es wird empfohlen, mit der folgenden Flags für optimale Ergebnisse:
+Der Konverter unterstützt derzeit eine Reihe von Flags, um das genaue Verhalten der Optimierungen zu optimieren. Wir empfehlen die Ausführung mit den folgenden Flags, um optimale Ergebnisse zu erzielen:
 
-Flag|Empfohlene Werte.|Beschreibung
+Flag|Empfohlene Werte|Beschreibung
 ---|---|---
-– max-Textur-Größe|1024 oder 2048| Optimieren diese Option, um die Verbesserung der Qualität der Texturen ändern, Standardwert ist 512 x 512. Beachten Sie, dass ein größerer Wert die Größe der Umgebung erheblich beeinträchtigen wird also Bedenken Sie den Grenzwert von 256 mb
-– min-version|1803|Eine angepasste Umgebung werden nur für Versionen von Windows unterstützt > = Version 1803. Dieses Flag Texturen für ältere Versionen entfernt und reduzieren Sie die Dateigröße des endgültigen Assets
+-Max-Textur Größe|1024 oder 2048| Optimieren Sie diese, um die Qualität der Texturen zu verbessern. der Standardwert ist 512 x 512. Beachten Sie, dass sich ein größerer Wert erheblich auf die Dateigröße der Umgebung auswirkt. behalten Sie also den Grenzwert von 256 MB bei.
+-Minimale Version|1803|Benutzerdefinierte Umgebungen werden nur für Versionen von Windows > = 1803 unterstützt. Mit diesem Flag werden Texturen für ältere Versionen entfernt und die Dateigröße des endgültigen Assets reduziert.
 
 Zum Beispiel:
 
@@ -107,48 +107,48 @@ Zum Beispiel:
 WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1803
 ```
 
-### <a name="testing-your-environment"></a>Testen Ihre Umgebung
+### <a name="testing-your-environment"></a>Testen Ihrer Umgebung
 
-Sobald Sie Ihre endgültige .glb Umgebung haben können Sie dies zu testen, in den Kopfhörer. Starten Sie in Schritt 2 der ["Versuchen eine beispielumgebung"](#trying-a-sample-environment) Abschnitt aus, um Ihrer benutzerdefinierten Umgebung als der gemischte Realität home verwenden. 
+Sobald Sie die endgültige. GLB-Umgebung haben, können Sie Sie im Headset testen. Beginnen Sie mit Schritt 2 im Abschnitt ["ausprobieren einer Beispiel Umgebung"](#trying-a-sample-environment) , um Ihre benutzerdefinierte Umgebung als gemischte Reality-Startseite zu verwenden. 
 
-## <a name="feedback"></a>Feedback senden
+## <a name="feedback"></a>Feedback
 
-Während wir dieses experimentelle Feature bewerten möchten, wir erfahren, wie Sie eine angepasste Umgebung, Fehlern, die auftreten können, verwenden, möchten, und wie Sie die Funktion. Geben Sie alle Feedback zum Erstellen und Verwenden von benutzerdefinierten private Umgebungen, in der [Entwicklerforen](https://forums.hololens.com/categories/custom-home-environments).
+Während wir diese experimentelle Funktion evaluieren, möchten wir uns mit der Verwendung von benutzerdefinierten Umgebungen, den Fehlern, die auftreten können, und der Art der Funktion vertraut machen. Bitte geben Sie ein beliebiges Feedback zum Erstellen und Verwenden von benutzerdefinierten Heim Umgebungen in den [Entwickler Foren](https://forums.hololens.com/categories/custom-home-environments)frei.
 
 ## <a name="troubleshooting-and-tips"></a>Problembehandlung und Tipps
 
-### <a name="how-do-i-change-the-name-of-the-environment"></a>Wie ändere ich den Namen der Umgebung?
+### <a name="how-do-i-change-the-name-of-the-environment"></a>Gewusst wie den Namen der Umgebung ändern?
 
-Der Dateiname im Ordner "Umgebungen" wird in der Auswahl Stellen verwendet werden. So ändern Sie den Namen Ihrer Umgebung einfach Umbenennen der Umgebung Dateinamen an, und wiederholen Sie die Mixed Reality-Portal.
+Der Dateiname im Ordner "Umgebungen" wird in der Auswahl "Orte" verwendet. Um den Namen Ihrer Umgebung zu ändern, benennen Sie einfach den Namen der umgebungsdatei um, und starten Sie dann das Mixed Reality-Portal neu.
 
-### <a name="how-do-i-remove-custom-environments-from-my-places-picker"></a>Wie entferne ich eine angepasste Umgebung aus meiner Auswahl stellen?
+### <a name="how-do-i-remove-custom-environments-from-my-places-picker"></a>Gewusst wie benutzerdefinierte Umgebungen aus meiner stellen Auswahl entfernen?
 
-Um eine benutzerdefinierte Umgebung zu entfernen, öffnen Sie den Ordner "Umgebungen" auf Ihrem PC (`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`) und löschen Sie die Umgebung. Nachdem Sie die Mixed Reality-Portal neu starten, wird diese Umgebung nicht mehr in der Auswahl Stellen angezeigt. 
+Um eine benutzerdefinierte Umgebung zu entfernen, öffnen Sie den Ordner Umgebungen auf`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`Ihrem PC (), und löschen Sie die Umgebung. Nachdem Sie das Mixed Reality-Portal neu gestartet haben, wird diese Umgebung nicht mehr in der Auswahl der Orte angezeigt. 
 
-### <a name="how-do-i-default-to-my-favorite-custom-environment"></a>Wie standardmäßig ich meine bevorzugte benutzerdefinierte Umgebung?
+### <a name="how-do-i-default-to-my-favorite-custom-environment"></a>Gewusst wie standardmäßig meine bevorzugte benutzerdefinierte Umgebung?
 
-Sie können derzeit nicht die Standard-Umgebung ändern. Jedes Mal, die Sie Mixed Reality-Portal neu starten, werden Sie in der Umgebung Cliff House zurückgegeben. 
+Die Standardumgebung kann derzeit nicht geändert werden. Jedes Mal, wenn Sie das Mixed Reality-Portal neu starten, werden Sie zur Umgebung "Klippe House" zurückkehren. 
 
-### <a name="i-spawn-into-a-blank-space"></a>Ich erzeugen, in eine leere Fläche
+### <a name="i-spawn-into-a-blank-space"></a>Ich erstelle einen leeren Bereich
 
-Windows Mixed Reality [unterstützt nicht die Umgebungen, in denen 256 mb nicht überschreiten](#environment-limits). Wenn Sie eine Umgebung diesen Grenzwert überschreitet, gelangen Sie in das Feld leer Sky mit kein Modell.
+Windows Mixed Reality [unterstützt keine Umgebungen, die mehr als 256 MB](#environment-limits)umfassen. Wenn eine Umgebung diese Beschränkung überschreitet, werden Sie in das leere Feld ohne Modell.
 
-### <a name="it-takes-a-long-time-to-load-my-environment"></a>Es nimmt viel Zeit in meiner Umgebung laden
+### <a name="it-takes-a-long-time-to-load-my-environment"></a>Das Laden meiner Umgebung dauert sehr lange.
 
-Sie können optionale Optimierungen für Ihre Umgebung zu vereinfachen schneller geladen, hinzufügen. Finden Sie unter ["Optimieren der Umgebung"](#optimizing-your-environment) Details.
+Sie können Ihrer Umgebung optionale Optimierungen hinzufügen, um den Ladevorgang zu beschleunigen. Weitere Informationen finden [Sie unter "Optimieren der Umgebung"](#optimizing-your-environment) .
 
-### <a name="the-scale-of-my-environment-is-incorrect"></a>Die Skalierung der Umgebung ist falsch
+### <a name="the-scale-of-my-environment-is-incorrect"></a>Die Skala meiner Umgebung ist falsch.
 
-Windows Mixed Reality übersetzt GlTF Einheiten 1 Meter Umkreis um beim Laden von Umgebungen. Wenn ein unerwarteter Skalierung der Umgebung geladen wird, überprüfen Sie Ihre Ausführer aus, um sicherzustellen, dass Sie auf einer Skala von 1 Meter Umkreis um modellieren. 
+Die gemischte Realität von Windows übersetzt die gltf-Einheiten beim Laden von Umgebungen in 1 Meter. Wenn in Ihrer Umgebung eine unerwartete Skalierung auftritt, überprüfen Sie das Exportprogramm, um sicherzustellen, dass Sie eine Modellierung bei einer Skala von 1 Meter durcharbeiten. 
 
-### <a name="the-spawn-location-in-my-environment-is-incorrect"></a>Das Erstellen eines Prozesses in meiner Umgebung wurde falsch angegeben.
+### <a name="the-spawn-location-in-my-environment-is-incorrect"></a>Der Speicherort in meiner Umgebung ist falsch.
 
-Der Standardspeicherort für das Erstellen eines Prozesses befindet sich unter 0,0,0 in der Umgebung. Die nicht derzeit möglich, diesem Speicherort anpassen, damit den Spawn Punkt, Sie ändern müssen durch den Export Ihrer Umgebung mit dem Ursprung positioniert, an dem Punkt der gewünschten erzeugen.
+Der standardmäßige Speicherort für die Suche befindet sich in der Umgebung bei 0, 0 und 0. Dieser Speicherort kann nicht angepasst werden. Daher müssen Sie den Ausgangspunkt ändern, indem Sie Ihre Umgebung mit dem Ursprung exportieren, der am gewünschten Ausgangspunkt positioniert ist.
 
-### <a name="the-audio-doesnt-sound-correct-in-the-environment"></a>Das Audio klingt nicht in der Umgebung richtig.
+### <a name="the-audio-doesnt-sound-correct-in-the-environment"></a>Die Audiodaten werden in der Umgebung nicht richtig klingen
 
-Bei der Erstellung Ihrer benutzerdefinierten Umgebung werden sie eine Simulation der Akustik Rendering verwenden, die nicht den physischen Speicherplatz übereinstimmen, die, den Sie erstellt haben. Sound die falschen Anweisungen stammen dürfen und mag dumpf. 
+Wenn Sie Ihre benutzerdefinierte Umgebung erstellen, wird eine Akustik-Rendering-Simulation verwendet, die nicht mit dem von Ihnen erstellten physischen Speicherplatz identisch ist. Sound kann aus den falschen Richtungen stammen und mit einem gedämpften Sound klingen. 
 
 ## <a name="see-also"></a>Siehe auch
-* [Windows Mixed Reality-Asset-Konverter (auf GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
+* [Windows Mixed Reality Asset Converter (auf GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

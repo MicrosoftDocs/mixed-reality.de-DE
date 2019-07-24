@@ -1,38 +1,38 @@
 ---
 title: Spracheingabe in DirectX
-description: Erläutert, wie zur Implementierung von Sprachbefehlen und kleine Ausdruck und satzbegrenzungszeichen verwendet in einer DirectX-app für Windows Mixed Reality.
+description: Erläutert das Implementieren von Sprachbefehlen und kleinen Ausdrücken und Satz Erkennung in einer DirectX-App für Windows Mixed Reality.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Exemplarische Vorgehensweise, Sprachbefehl, Ausdruck, Erkennung, Spracherkennung, Directx, Plattform, Cortana, Windows mixed reality
+keywords: Exemplarische Vorgehensweise, Sprachbefehl, Ausdruck, Erkennung, Sprache, DirectX, Plattform, Cortana, Windows Mixed Reality
 ms.openlocfilehash: 728457a495616e5f65ec3986dfb6ac60231f9e46
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605104"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548663"
 ---
 # <a name="voice-input-in-directx"></a>Spracheingabe in DirectX
 
-In diesem Thema wird erläutert, wie implementieren [Sprachbefehle](voice-input.md), und klein Ausdruck und Satz Anerkennung in einer DirectX-app für Windows Mixed Reality.
+In diesem Thema wird erläutert, wie [Sprachbefehle](voice-input.md)und kleine Ausdrücke und die Satz Erkennung in einer DirectX-App für Windows Mixed Reality implementiert werden.
 
 >[!NOTE]
->Die Codeausschnitte in diesem Artikel veranschaulichen derzeit die Verwendung von C++/CX anstatt C ++ 17-kompatible C++"/ WinRT", wie in der [ C++ holographic Projektvorlage](creating-a-holographic-directx-project.md).  Die Konzepte sind Entsprechung für einen C++"/ WinRT"-Projekt, aber Sie benötigen, um den Code zu übersetzen.
+>Die Code Ausschnitte in diesem Artikel veranschaulichen derzeit die Verwendung C++von/CX anstelle von C + +17- C++kompatibler/WinRT, wie Sie in der [ C++ Holographic-Projektvorlage](creating-a-holographic-directx-project.md)verwendet werden.  Die Konzepte sind äquivalent für ein C++/WinRT-Projekt, obwohl Sie den Code übersetzen müssen.
 
-## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>Verwenden Sie eine SpeechRecognizer für kontinuierliche Erkennung von Stimmbefehlen
+## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>Verwenden eines Sprech Erkennungs Moduls für die kontinuierliche Erkennung von Sprachbefehlen
 
-In diesem Abschnitt beschrieben, wie kontinuierliche Spracherkennung zu verwenden, um Sprachbefehle in Ihrer app zu aktivieren. In dieser exemplarischen Vorgehensweise verwendet den Code aus der [HolographicVoiceInput](http://go.microsoft.com/fwlink/p/?LinkId=844964) Beispiel. Wenn das Beispiel ausgeführt wird, sprechen Sie den Namen einer der Befehle zum Ändern der Farbe der sich drehenden Würfels registrierten Farbe.
+In diesem Abschnitt wird beschrieben, wie die fortlaufende Spracherkennung verwendet wird, um Sprachbefehle in Ihrer APP zu aktivieren. In dieser exemplarischen Vorgehensweise wird Code aus dem [holographicvoiceinput](http://go.microsoft.com/fwlink/p/?LinkId=844964) -Beispiel verwendet. Wenn das Beispiel ausgeführt wird, sprechen Sie mit dem Namen eines der registrierten Farb Befehle, um die Farbe des drehenden Cubes zu ändern.
 
-Erstellen Sie zunächst ein neues **Windows::Media::SpeechRecognition::SpeechRecognizer** Instanz.
+Erstellen Sie zunächst eine neue **Windows:: Media:: Redner Recognition:: sprecherkenzer** -Instanz.
 
-From *HolographicVoiceInputSampleMain::CreateSpeechConstraintsForCurrentState*:
+Aus *holographicvoiceinputsamplemain:: kreatespeecheinschräninzforcurrentstate*:
 
 ```
 m_speechRecognizer = ref new SpeechRecognizer();
 ```
 
-Sie müssen eine Liste mit Befehlen der Sprache für das Erkennungsmodul zum Lauschen auf zu erstellen. Hier erstellen wir eine Reihe von Befehlen zum Ändern der Farbe der ggf. ein Hologramm. Aus Gründen der Einfachheit halber erstellen wir auch die Daten, die wir für die Befehle später verwenden werden.
+Sie müssen eine Liste von Sprachbefehlen erstellen, auf die die Erkennung lauschen soll. Hier erstellen wir einen Satz von Befehlen, um die Farbe eines holograms zu ändern. Der Vorteil ist, dass wir auch die Daten erstellen, die wir später für die Befehle verwenden werden.
 
 ```
 m_speechCommandList = ref new Platform::Collections::Vector<String^>();
@@ -57,14 +57,14 @@ m_speechCommandList = ref new Platform::Collections::Vector<String^>();
    m_speechCommandData.push_back(float4(1.f, 0.f, 1.f, 1.f));
 ```
 
-Befehle können phonetische Wörter verwenden, die in einem Wörterbuch möglicherweise nicht angegeben werden:
+Befehle können mit phonetischen Wörtern angegeben werden, die möglicherweise nicht in einem Wörterbuch vorhanden sind:
 
 ```
 m_speechCommandList->Append(StringReference(L"SpeechRecognizer"));
    m_speechCommandData.push_back(float4(0.5f, 0.1f, 1.f, 1.f));
 ```
 
-Die Liste der Befehle wird in die Liste der Einschränkungen für die Spracherkennung geladen. Dies erfolgt mithilfe einer [SpeechRecognitionListConstraint](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionlistconstraint.aspx) Objekt.
+Die Liste der Befehle wird in die Liste der Einschränkungen für die Spracherkennung geladen. Dies erfolgt mithilfe eines [sprach Erkennungs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionlistconstraint.aspx) Objekts.
 
 ```
 SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListConstraint(m_speechCommandList);
@@ -83,7 +83,7 @@ SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListCon
    });
 ```
 
-Abonnieren Sie den [ResultGenerated](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated.aspx) Ereignis für der Spracherkennung [SpeechContinuousRecognitionSession](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.aspx). Dieses Ereignis wird Ihre app benachrichtigt, wenn einer der Befehle erkannt wurde.
+Abonnieren Sie das [resultgenerated](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated.aspx) -Ereignis für die Speech [continuouserkentionsession](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.aspx)der Spracherkennung. Dieses Ereignis benachrichtigt Ihre APP, wenn einer ihrer Befehle erkannt wurde.
 
 ```
 m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
@@ -92,9 +92,9 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
            );
 ```
 
-Ihre **OnResultGenerated** Ereignishandler empfängt Ereignisdaten in einer [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx) Instanz. Wenn das Vertrauen größer als der Schwellenwert, die Sie definiert haben ist, sollte Ihre app Beachten Sie, dass das Ereignis aufgetreten ist. Speichern Sie die Ereignisdaten, sodass Sie vornehmen können, es in einer Schleife nachfolgende Aktualisierung verwenden.
+Der **onresultgenerated** -Ereignishandler empfängt Ereignisdaten in einer Sprech Anwendung [continuouserkentionresultgeneratedeventargs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx) . Wenn die Zuverlässigkeit den von Ihnen definierten Schwellenwert überschreitet, sollte Ihre APP beachten, dass das Ereignis aufgetreten ist. Speichern Sie die Ereignisdaten, damit Sie Sie in einer nachfolgenden Update Schleife verwenden können.
 
-From *HolographicVoiceInputSampleMain.cpp*:
+Aus *holographicvoiceingeputsamplemain. cpp*:
 
 ```
 // Change the cube color, if we get a valid result.
@@ -107,9 +107,9 @@ From *HolographicVoiceInputSampleMain.cpp*:
    }
 ```
 
-Stellen Sie jedoch Ihr app-Szenario für Daten verwenden. In unserem Beispielcode ändern wir die Farbe des – Hologramm sich drehenden Würfels gemäß des Benutzers-Befehl.
+Verwenden Sie die Daten, die für Ihr App-Szenario gelten. In unserem Beispielcode ändern wir die Farbe des spinenden – Hologramm-Cubes entsprechend dem Befehl des Benutzers.
 
-From *HolographicVoiceInputSampleMain::Update*:
+Aus *holographicvoiceingeputsamplemain:: Update*:
 
 ```
 // Check for new speech input since the last frame.
@@ -132,17 +132,17 @@ From *HolographicVoiceInputSampleMain::Update*:
    }
 ```
 
-## <a name="use-dictation-for-one-shot-recognition-of-speech-phrases-and-sentences"></a>Verwenden Sie für die One-Shot-Erkennung von Sprache Ausdrücken und Sätzen Diktat
+## <a name="use-dictation-for-one-shot-recognition-of-speech-phrases-and-sentences"></a>Verwenden Sie die Diktat-und Einschuss Erkennung von sprach Ausdrücken und-Sätzen.
 
-Sie können eine Spracherkennung zum Lauschen auf Ausdrücke oder Sätze gesprochen, die vom Benutzer konfigurieren. In diesem Fall verwenden wir eine SpeechRecognitionTopicConstraint, der angibt, welche Art von Eingabe zu erwarten, dass der freigegebene Spracherkennung. Der app-Workflow ist wie folgt, und für diese Art von Anwendungsfall:
-1. Ihre app erstellt die SpeechRecognizer, Benutzeroberfläche-eingabeaufforderungen bietet und beginnt die Überwachung für einen Befehl aus, um sofort gesprochen werden.
-2. Der Benutzer spricht einen Ausdruck oder Satz.
-3. Erkennung des Benutzers Spracheingabe wird ausgeführt, und ein Ergebnis an die app zurückgegeben wird. An diesem Punkt sollten Ihre app bereitstellen, Benutzeroberflächen-Eingabeaufforderung, der angibt, dass die Erkennung aufgetreten ist.
-4. Abhängig von der Vertrauensgrad, die, dem Sie beantworten möchten, und der Vertrauensgrad, der das Erkennungsergebnis für die Sprache, kann Ihre app Verarbeiten des Ergebnisses und entsprechend reagieren.
+Sie können eine Spracherkennung so konfigurieren, dass Sie auf Ausdrücke oder Sätze lauscht, die vom Benutzer gesprochen werden. In diesem Fall wenden wir eine SpeechRecognitionTopicConstraint an, die der Spracherkennung mitteilt, welche Art von Eingabe erwartet wird. Der APP-Workflow ist für diese Art von Anwendungsfall wie folgt:
+1. Ihre APP erstellt die sprechererkennende, stellt Benutzeroberflächen Aufforderungen bereit und beginnt mit dem lauschen, dass ein Befehl sofort gesprochen wird.
+2. Der Benutzer spricht einen Ausdruck oder einen Satz.
+3. Die Erkennung der Sprache des Benutzers wird durchgeführt, und es wird ein Ergebnis an die APP zurückgegeben. An diesem Punkt sollte Ihre APP eine UI-Eingabeaufforderung bereitstellen, die anzeigt, dass eine Erkennung aufgetreten ist.
+4. Abhängig vom Vertrauensgrad, auf den Sie reagieren möchten, und dem Vertrauensgrad des sprach Erkennungs Ergebnisses kann Ihre APP das Ergebnis verarbeiten und entsprechend reagieren.
 
-Dieser Abschnitt beschreibt, wie Sie eine SpeechRecognizer erstellen, Kompilieren die Einschränkung und die Spracheingabe lauschen.
+In diesem Abschnitt wird beschrieben, wie eine Sprech Erkennung erstellt, die Einschränkung kompiliert und auf Spracheingaben gelauscht wird.
 
-Der folgende Code kompiliert die Thema-Einschränkung, die in diesem Fall für die Suche im Web optimiert ist.
+Der folgende Code kompiliert die Topic-Einschränkung, die in diesem Fall für die Websuche optimiert ist.
 
 ```
 auto constraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::WebSearch, L"webSearch");
@@ -153,7 +153,7 @@ auto constraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScen
    {
 ```
 
-Wenn die Kompilierung erfolgreich war, können Sie mit der Spracherkennung fortfahren.
+Wenn die Kompilierung erfolgreich ist, können wir die Spracherkennung fortsetzen.
 
 ```
 try
@@ -168,7 +168,7 @@ try
                {
 ```
 
-Das Ergebnis wird dann an die app zurückgegeben. Wenn wir sicher genug ist, im Ergebnis sind, können wir den Befehl verarbeiten. Dieses Codebeispiel werden Ergebnisse mindestens mittlere zuverlässig verarbeitet.
+Das Ergebnis wird dann an die APP zurückgegeben. Wenn wir sicher genug im Ergebnis sind, können wir den Befehl verarbeiten. In diesem Codebeispiel werden Ergebnisse mit mindestens mittlerem Vertrauen verarbeitet.
 
 ```
 try
@@ -209,7 +209,7 @@ try
                    }
 ```
 
-Wenn Sie die Spracherkennung verwenden, sollten Sie für Ausnahmen achten, die hinweisen, dass das Mikrofon in den Systemeinstellungen für den Datenschutz der Benutzer deaktiviert hat. Dies kann während der Initialisierung oder während der Erkennung vorkommen.
+Wenn Sie die Spracherkennung verwenden, sollten Sie auf Ausnahmen achten, die darauf hindeuten können, dass der Benutzer das Mikrofon in den Systemdaten Schutzeinstellungen ausgeschaltet hat. Dies kann während der Initialisierung oder während der Erkennung auftreten.
 
 ```
 catch (Exception^ exception)
@@ -252,39 +252,39 @@ catch (Exception^ exception)
    });
 ```
 
-**HINWEIS:** Es gibt einige vordefinierte [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) zur Optimierung der Spracherkennung verfügbar.
-* Wenn Sie die für Diktat optimieren möchten, verwenden Sie das Diktieren-Szenario:
+**HINWEIS:** Es gibt mehrere vordefinierte [sprechererkennungsszenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) zur Optimierung der Spracherkennung.
+* Wenn Sie die diktierung optimieren möchten, verwenden Sie das Diktat Szenario:
 
 ```
 // Compile the dictation topic constraint, which optimizes for speech dictation.
    auto dictationConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::Dictation, "dictation");
    m_speechRecognizer->Constraints->Append(dictationConstraint);
 ```
-* Verwendung von Spracherkennung Web gesucht werden soll, können Sie eine Web-spezifischen Szenario Einschränkung wie folgt:
+* Wenn Sie zum Ausführen einer Websuche Sprache verwenden, können Sie eine webspezifische szenarioeinschränkung wie folgt verwenden:
 
 ```
 // Add a web search topic constraint to the recognizer.
    auto webSearchConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::WebSearch, "webSearch");
    speechRecognizer->Constraints->Append(webSearchConstraint);
 ```
-* Verwenden Sie die Form-Einschränkung, um das Ausfüllen von Formularen. In diesem Fall empfiehlt es sich um Ihre eigenen Grammatik anzuwenden, die für das Formular ausfüllen optimiert ist.
+* Verwenden Sie die Formular Einschränkung zum Ausfüllen von Formularen. In diesem Fall ist es am besten, eine eigene Grammatik anzuwenden, die für das Ausfüllen des Formulars optimiert ist.
 
 ```
 // Add a form constraint to the recognizer.
    auto formConstraint = ref new SpeechRecognitionTopicConstraint(SpeechRecognitionScenario::FormFilling, "formFilling");
    speechRecognizer->Constraints->Append(formConstraint );
 ```
-* Sie können Ihre eigenen Grammatik, die mit dem SRGS-Format bereitstellen.
+* Sie können Ihre eigene Grammatik mit dem SRGS-Format bereitstellen.
 
-## <a name="use-continuous-freeform-speech-dictation"></a>Verwenden Sie fortlaufend, Freihandform-Spracherkennung Diktat
+## <a name="use-continuous-freeform-speech-dictation"></a>Verwenden von kontinuierlichen, frei Form sprach Diktat
 
-Finden Sie im Windows 10-UWP-Speech-Codebeispiel für das Szenario fortlaufendem diktieren [hier.](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cpp/Scenario_ContinuousDictation.xaml.cpp)
+Das Windows 10 UWP-Sprachcode Beispiel für das kontinuierliche Diktat Szenario finden Sie [hier.](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/SpeechRecognitionAndSynthesis/cpp/Scenario_ContinuousDictation.xaml.cpp)
 
-## <a name="handle-degradation-in-quality"></a>Behandeln Sie die Verringerung der Qualität
+## <a name="handle-degradation-in-quality"></a>Beeinträchtigung der Qualität
 
-Bedingungen in der Umgebung können manchmal Spracherkennung verhindern. Z. B. im Raum ist möglicherweise zu viel Rauschen verursacht, oder der Benutzer kann mit zu hohem ein Volumen sprechen. Passen Sie die spracherkennungs-API-stellt Informationen bereit, wenn möglich, über die Bedingungen, die eine Verschlechterung in Qualität verursacht haben.
+Bedingungen in der Umgebung können mitunter verhindern, dass die Spracherkennung funktioniert. Der Raum könnte z. b. zu grob sein, oder der Benutzer spricht zu einem zu hohen Volumen. Die Spracherkennungs-API stellt Informationen, soweit möglich, zu Bedingungen bereit, die zu einer Verschlechterung der Qualität geführt haben.
 
-Diese Informationen wird auf Ihre app mit einer WinRT-Ereignis abgelegt. Hier ist ein Beispiel für dieses Ereignis abonnieren.
+Diese Informationen werden mithilfe eines WinRT-Ereignisses per pushübertragung an Ihre APP übermittelt. Im folgenden finden Sie ein Beispiel für das Abonnieren dieses Ereignisses.
 
 ```
 m_speechRecognizer->RecognitionQualityDegrading +=
@@ -293,7 +293,7 @@ m_speechRecognizer->RecognitionQualityDegrading +=
            );
 ```
 
-In unserem Codebeispiel wählen wir die Bedingungen Informationen in der Debugkonsole zu schreiben. Eine app kann für dem Benutzer über die Benutzeroberfläche, die Sprachsynthese und So weiter Feedback geben möchten, oder ggf. Verhalten sich anders, wenn die Sprache von eine temporäre Verringerung der Qualität unterbrochen wird.
+In unserem Codebeispiel schreiben wir die Bedingungs Informationen in die Debugkonsole. Eine APP kann dem Benutzer über die Benutzeroberfläche, die Sprachsynthese usw. Feedback geben, oder es muss anders Verhalten sein, wenn die Sprache durch eine temporäre Qualitätsminderung unterbrochen wird.
 
 ```
 void HolographicSpeechPromptSampleMain::OnSpeechQualityDegraded(SpeechRecognizer^ recognizer, SpeechRecognitionQualityDegradingEventArgs^ args)
@@ -332,7 +332,7 @@ void HolographicSpeechPromptSampleMain::OnSpeechQualityDegraded(SpeechRecognizer
    }
 ```
 
-Wenn Sie zum Erstellen Ihrer DirectX-app nicht Verweisklassen verwenden, müssen Sie das Ereignisabonnement vor dem Freigeben oder zum Neuerstellen Ihrer Spracherkennung. Die HolographicSpeechPromptSample verfügt über eine Routine zum Beenden der Erkennung und abbestellen von Ereignisabonnements wie folgt:
+Wenn Sie keine Verweis Klassen zum Erstellen Ihrer DirectX-App verwenden, müssen Sie das Ereignis kündigen, bevor Sie die Spracherkennung freigeben oder neu erstellen. Das holographicsprechpromptsample-Objekt verfügt über eine Routine, um die Erkennung zu beenden und Ereignisse wie folgt abzubestellen:
 
 ```
 Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizerIfExists()
@@ -359,26 +359,26 @@ Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizer
    }
 ```
 
-## <a name="use-speech-synthesis-to-provide-audible-voice-prompts"></a>Verwenden von Sprachsynthese zu akustische Sprachansagen
+## <a name="use-speech-synthesis-to-provide-audible-voice-prompts"></a>Verwenden von Sprachsynthese zur Bereitstellung audiobarer sprach Aufforderungen
 
-Die holographic Speech-Beispiele verwenden die Sprachsynthese akustische Anweisungen für den Benutzer bereitstellen. Dieses Thema führt durch den Prozess zum Erstellen einer synthetisierten Stimme-Beispiel und Wiedergabe wieder mithilfe der HRTF-audio-APIs.
+Die Holographic-sprach Beispiele verwenden die Sprachsynthese, um dem Benutzer akustische Anweisungen bereitzustellen. In diesem Thema wird erläutert, wie Sie ein sprach Beispiel mit synthetischer Sprache erstellen und mit den HRTF-audioapis wiedergeben.
 
-Sie sollten Ihre eigenen Sprache aufgefordert, beim Anfordern des Ausdruck-Eingabe bereitstellen. Dies kann auch hilfreich, der angibt, sein, wenn Sprachbefehle können, für eine kontinuierliche Erkennung-Szenario gesprochen werden. Hier ist ein Beispiel dafür, wie dies mit einer Sprache-Synthesizer; Beachten Sie, dass Sie auch verwenden können, einen Clip aufgezeichnete Stimme, einer visuellen Benutzeroberfläche oder anderen Indikatoren der Vorgehensweise, z. B. in Szenarien sagen, wo die Eingabeaufforderung nicht dynamisch ist.
+Beim Anfordern der Eingabe von Eingaben sollten Sie Ihre eigenen Spracheingabe Aufforderungen angeben. Dies kann auch hilfreich sein, um anzugeben, wann Sprachbefehle für ein kontinuierliches Erkennungs Szenario gesprochen werden können. Im folgenden finden Sie ein Beispiel dafür, wie Sie mit einem Sprachsynthesizer Vorgehen. Beachten Sie, dass Sie auch einen vorab aufgezeichneten Sprach Clip, eine visuelle Benutzeroberfläche oder einen anderen Indikator für die Bedeutung verwenden können, z. b. in Szenarien, in denen die Eingabeaufforderung nicht dynamisch ist.
 
-Erstellen Sie zunächst das Objekt "speechsynthesizer":
+Erstellen Sie zuerst das Sprachsynthesizer-Objekt:
 
 ```
 auto speechSynthesizer = ref new Windows::Media::SpeechSynthesis::SpeechSynthesizer();
 ```
 
-Außerdem benötigen Sie eine Zeichenfolge mit der Text, der umgewandelt werden soll:
+Außerdem benötigen Sie eine Zeichenfolge mit dem Text, der synthetisiert werden soll:
 
 ```
 // Phrase recognition works best when requesting a phrase or sentence.
    StringReference voicePrompt = L"At the prompt: Say a phrase, asking me to change the cube to a specific color.";
 ```
 
-Sprache wird asynchron mit SynthesizeTextToStreamAsync synthetisiert. Beginnen wir hier eine asynchrone Aufgabe, die sprachsynthetisier ein.
+Die Sprache wird mithilfe von "synzetextto streamasync" asynchron synthetisiert. Hier starten wir eine Async-Aufgabe, um die Sprache zu synthetisieren.
 
 ```
 create_task(speechSynthesizer->SynthesizeTextToStreamAsync(voicePrompt), task_continuation_context::use_current())
@@ -388,7 +388,7 @@ create_task(speechSynthesizer->SynthesizeTextToStreamAsync(voicePrompt), task_co
        {
 ```
 
-Die Sprachsynthese wird als Bytedatenstrom gesendet. Wir können eine XAudio2 Stimme, Byte-Stream initialisieren; Unsere holographic Codebeispiele wiedergeben wir es als ein HRTF Audioeffekts.
+Die Sprachsynthese wird als Bytestream gesendet. Wir können eine XAudio2-Stimme mit diesem Bytestream initialisieren. für unsere Holographic-Codebeispiele wird es als HRTF-Audioeffekt wiedergegeben.
 
 ```
 Windows::Media::SpeechSynthesis::SpeechSynthesisStream^ stream = synthesisStreamTask.get();
@@ -410,7 +410,7 @@ Windows::Media::SpeechSynthesis::SpeechSynthesisStream^ stream = synthesisStream
        }
 ```
 
-Wie die Spracherkennung löst Sprachsynthese eine Ausnahme, wenn etwas schief geht.
+Wie bei der Spracherkennung löst die Sprachsynthese eine Ausnahme aus, wenn etwas schief geht.
 
 ```
 catch (Exception^ exception)
@@ -427,6 +427,6 @@ catch (Exception^ exception)
 ```
 
 ## <a name="see-also"></a>Siehe auch
-* [Sprache-app-design](https://msdn.microsoft.com/library/dn596121.aspx)
-* [Räumliche Sound in DirectX](spatial-sound-in-directx.md)
-* [SpeechRecognitionAndSynthesis-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
+* [Sprach-App-Entwurf](https://msdn.microsoft.com/library/dn596121.aspx)
+* [Raumklang in DirectX](spatial-sound-in-directx.md)
+* [Beispiel für die Spracherkennung](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

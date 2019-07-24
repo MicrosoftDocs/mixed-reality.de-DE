@@ -1,49 +1,49 @@
 ---
-title: 'Fallstudie: Lektionen aus der Lowes Küche'
-description: Die HoloLens-Team möchte freigeben, einige bewährte Methoden, die von der Lowes HoloLens-Projekt abgeleitet wurden.
+title: 'Fallstudie: Lektionen aus der-Küche von Lowe'
+description: Das hololens-Team möchte einige bewährte Methoden gemeinsam nutzen, die aus dem hololens-Projekt von Lowe abgeleitet wurden.
 author: BrandonBray
 ms.author: kevincol
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, Lowes, HoloLens, Küche, Fallstudie
+keywords: Windows Mixed Reality, Lowe es, hololens, Küche, Fallstudie
 ms.openlocfilehash: 24759f90b8b84ec19e644fb8dff44f64c3ab81d2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594164"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522343"
 ---
-# <a name="case-study---lessons-from-the-lowes-kitchen"></a>Fallstudie: Lektionen aus der Lowes Küche
+# <a name="case-study---lessons-from-the-lowes-kitchen"></a>Fallstudie: Lektionen aus der-Küche von Lowe
 
-Die HoloLens-Team möchte freigeben, einige bewährte Methoden, die von der Lowes HoloLens-Projekt abgeleitet wurden. Im folgenden wird ein Video zu den Lowes HoloLens projiziert an Satyas 2016 Ignite-Keynote veranschaulicht.
+Das hololens-Team möchte einige bewährte Methoden gemeinsam nutzen, die aus dem hololens-Projekt von Lowe abgeleitet wurden. Im folgenden finden Sie ein Video der in der 2016 Ignite-Keynote von satya projizierten hololens von Lowe.
 <br>
 >[!VIDEO https://www.youtube.com/embed/gC_4JxF0e_k]
 
-## <a name="lowes-hololens-best-practices"></a>Die Lowe HoloLens bewährte Methoden
+## <a name="lowes-hololens-best-practices"></a>Die bewährten Methoden von Lowe hololens
 
-Die beiden Videos werden bewährte Methoden, die von der Lowes HoloLens Pilotprojekt abgeleitet wurden, die in zwei Lowe speichern seit April 2016 wurden behandelt. Die wichtigsten Themen sind:
+In den beiden Videos werden bewährte Methoden behandelt, die aus dem hololens-Pilot Programm von Lowe abgeleitet wurden, das seit dem 2016. April in zwei Lowe-Filialen enthalten war. Wichtige Themen:
 * Maximieren der Leistung für ein mobiles Gerät
-* Erstellen von UX-Methoden mit einem vollständigen holographic Rahmen (2. Talk)
-* Genauigkeit Ausrichtung (2. Talk)
-* Freigegebene holographic Erfahrungen (2. Talk)
-* Interaktion mit Kunden (2. Talk)
+* Erstellen von UX-Methoden mit einem vollständigen Holographic-Frame (2. Gespräch)
+* Genauigkeits Ausrichtung (2. Gespräch)
+* Freigegebene holografische Oberflächen (2. Gespräch)
+* Interaktion mit Kunden (2. Gespräch)
 
 ## <a name="video-1"></a>Video 1
 
-**Maximieren der Leistung für ein mobiles Gerät** HoloLens ist ein unabhängig Gerät mit der Verarbeitung, die für die stattfinden, auf dem Gerät. Dies erfordert eine mobile Plattform und eine Haltung, die ähnlich wie beim Erstellen von mobiler Anwendungen. Microsoft empfiehlt, dass Ihre Anwendung HoloLens 60 FPS eine köstliche Erfahrung für Ihre Benutzer zu verwalten. Niedrige FPS kann instabil Hologramme dazu führen, dass.
+**Maximieren der Leistung für ein mobiles Gerät** Hololens ist ein unverbundenes Gerät, bei dem die gesamte Verarbeitung auf dem Gerät stattfindet. Hierfür ist eine mobile Plattform erforderlich, und es wird eine Denkweise benötigt, die der Erstellung mobiler Anwendungen ähnelt. Microsoft empfiehlt, dass Ihre hololens-Anwendung 60fps beibehält, um Ihren Benutzern eine köstliche Benutzerfunktion bereitzustellen. Ein niedriges fps kann zu instabilen holograms führen.
 
-Einige der wichtigsten Dinge betrachten, bei der Entwicklung für HoloLens Asset mit benutzerdefinierten Shadern Optimierung/Decimation ist (kostenlos in die [HoloLens Toolkit](https://github.com/Microsoft/HoloToolkit-Unity)). Ein weiterer wichtiger Aspekt ist die Einzelbildrate vom Anfang des Projekts zu messen. Je nach Projekt kann die Reihenfolge der Anzeige Ihrer Ressourcen auch große Mitwirkender sein
+Einige der wichtigsten Aspekte, die bei der Entwicklung von hololens zu beachten sind, sind die Asset-Optimierung/-Entschlüsselung mit benutzerdefinierten Shadern (kostenlos verfügbar im [hololens-Toolkit](https://github.com/Microsoft/HoloToolkit-Unity)). Ein weiterer wichtiger Aspekt ist die Messung der Framerate von dem Anfang des Projekts. Abhängig vom Projekt kann die Reihenfolge der Anzeige Ihrer Assets auch ein großer Mitwirkender sein.
 <br>
 >[!VIDEO https://www.youtube.com/embed/o0QIPwgiP9A]
 
 ## <a name="video-2"></a>Video 2
 
-**Erstellen von UX-Methoden mit einem vollständigen holographic Rahmen** es ist wichtig zu verstehen, die Platzierung von Hologramme in einer physischen Welt. Mit der Lowe sprechen wir über verschiedene UX-Methoden, die Benutzern helfen, schließen Sie Erfahrung Hologramme einrichten, während weiterhin angezeigt wird der größere Umgebung Hologramme, aus.
+**Erstellen von UX-Methoden mit einem vollständigen Holographic-Frame** Es ist wichtig, die Platzierung von holograms in einer physischen Welt zu verstehen. Mit Lowe sprechen wir über verschiedene UX-Methoden, die Benutzern dabei helfen, Hologramme zu schließen, während Sie immer noch die größere Umgebung von holograms sehen.
 
-**Genauigkeit Ausrichtung** für die Lowe Szenario war es entscheidend für die Erfahrung, um die Genauigkeit der Hologramme Ausrichtung auf der physischen Küche haben. Erläutert Techniken, die eine Erfahrung trägt so dazu, die Benutzer überredet, die ihrer physischen Umgebung geändert wurde.
+**Genauigkeits Ausrichtung** Für das Lowe-Szenario war es von entscheidender Bedeutung, die Genauigkeit der Hologramme an die physische Küche anzupassen. Es wird erläutert, wie Sie eine Benutzerumgebung sicherstellen, die Benutzer überzeugt, dass sich ihre physische Umgebung geändert hat.
 
-**Freigegebene holographic Erfahrungen** koppelt sind der einfachste Weg, dass die Lowes Benutzeroberfläche verwendet wird. Eine Person kann die Arbeitsplatte ändern, und der andere Benutzer sehen die Änderungen. Wir haben Sie angerufen dieser "freigegebene Umgebungen".
+Frei **gegebene holografische Erfahrungen** Paare sind die primäre Methode, mit der die Lowe-Darstellung genutzt wird. Eine Person kann den gegen oberen Rand ändern, und die andere Person wird die Änderungen sehen. Wir haben dies als "Shared Erlebnisse" bezeichnet.
 
-**Interaktion mit Kunden** Lowes Designer eine HoloLens nicht verwenden, aber sie benötigen, um festzustellen, was die Kunden angezeigt werden. Wir zeigen, wie zum Erfassen, was der Kunde auf eine UWP-Anwendung angezeigt wird.
+**Interaktion mit Kunden** Die Designer von Lowe verwenden keine hololens, aber Sie müssen sehen, was die Kunden sehen. Wir zeigen, wie der Kunde in einer UWP-Anwendung angezeigt wird.
 <br>
 >[!VIDEO https://www.youtube.com/embed/LceMdyKZ4PI]

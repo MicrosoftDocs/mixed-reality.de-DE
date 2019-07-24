@@ -1,11 +1,11 @@
 ---
-title: Blicke für
-description: Alle Interaktionen werden erstellt, auf die Fähigkeit eines Benutzers, das Element als Ziel, die, das Sie mit, unabhängig von der Eingabe Modalität interagieren möchten.
+title: Ziel Ausrichtung
+description: Alle Interaktionen basieren auf der Fähigkeit eines Benutzers, das Element, mit dem er interagieren möchte, unabhängig von der Eingabemethode auszuwählen.
 author: cre8ivepark
 ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Gemischte Realität, die Blicke, die Blicke Ziel ist, handelt es sich bei der Interaktion, Entwerfen
+keywords: Gemischte Realität, Blick, Ziel Ausrichtung, Interaktion, Entwurf
 ms.openlocfilehash: eddc832456b2ba0c6bc8955157d2c8e1a268e893
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,29 +13,29 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829838"
 ---
-# <a name="gaze-and-dwell"></a>Blicke und dwell
-Es gibt viele verschiedene Möglichkeiten, vergewissern Sie sich eine _Commit_ wie das Kombinieren von Blicke mit _Voice_ oder _Gesten übergeben_.
-Gibt es jedoch werden mehrere Szenarien, in dem Benutzer bereit ist entweder ausgelastet oder können nicht nachverfolgt werden (z. B. Factory Worker mit übergroße hohe designarbeiten Handschuhe). Spracheingabe kann auch aufgrund von benutzereinstellungen, soziale Netzwerke Kontext oder laut Umgebungen nicht verfügbar.
-Als alternative Lösung für eine andere option zum Ausführen einer _Commit_ besteht darin, die an ein Benutzeroberflächenelement starren beibehalten, die dies _länger aufhalten_.
-Ein _länger aufhalten_ kann mit entweder "Head" oder "Eye Blicke ausgeführt werden. Die Idee ist einfach und kann in den folgenden Phasen unterteilt werden: 
-1. Benutzer startet auf Knopfdruck holographic gazing
+# <a name="gaze-and-dwell"></a>Schauen und wohnen
+Es gibt viele verschiedene Möglichkeiten, einen _Commit_ zu bestätigen, wie z. b  . die Kombination von Blick und _Handgesten_.
+Es gibt jedoch mehrere Benutzer Szenarios, in denen Benutzer Hände entweder ausgelastet sind oder nicht nachverfolgt werden können (z. b. Factory-Worker mit überdimensionalen Handschuhen). Die Spracheingabe ist möglicherweise auch aufgrund von Benutzereinstellungen, sozialer Kontext oder lauter Umgebungen nicht verfügbar.
+Eine alternative Möglichkeit, einen _Commit_ auszuführen, besteht darin, einfach auf ein Benutzeroberflächen Element zu schauen, das wir als " _wohnen_" bezeichnen.
+Ein " _Dwell_ " kann entweder mit dem Kopf-oder Augenblick ausgeführt werden. Die Idee ist einfach und kann in den folgenden Phasen aufgeschlüsselt werden: 
+1. Benutzer beginnt mit der Eingabe auf einer Holographic-Schaltfläche
 
-2. Nach einer kurzen Einsatz Verzögerung (z. B. der 150 ms) wird eine Animation visuelles Feedback gestartet. Die Verzögerung der Einsatz wird verwendet, um zu vermeiden einer Überlastung des Benutzers sofort, etwa durch Feedback jederzeit.
-    - Für _Eye Blicke_, es wird empfohlen, die folgenden für den Entwurf des visuellen Elements länger aufhalten, Feedback:
-      - **Mische es**: Blend-reibungslos in das Feedback von an, um vollständig deckend kaum noch sichtbar. Dies macht dem Feedback, weniger Ablenkung und Overwhleming und gut richtet sich das vertrauen, das das System hat, dass der Benutzer möchte mit dieser Schaltfläche in Verbindung setzen.
-      - **Ziehen Sie sie**: Erstellen Sie ein visuelles Feedback als vergrößern und verschiebt in Richtung der Mitte des Ziels, in visual Aufmerksamkeit des Benutzers abrufen. 
+2. Nach einer kurzen Verzögerung (z. b. 150 ms) wird eine visuelle Feedback Animation gestartet. Die Verzögerung wird verwendet, um zu vermeiden, dass der Benutzer immer wieder über das Feedback kommt.
+    - Für den _Augenblick_empfiehlt es sich, Folgendes für den Entwurf des Feedbacks für visuelle Informationen zu erhalten:
+      - **Kombinieren Sie es**: Nahtlos in das Feedback von kaum sichtbarem zu vollständig undurchsichtigem Feedback. Dadurch wird das Feedback weniger ablenkend und überschrieben, und es wird sicher mit dem Vertrauen abgestimmt, das das System hat, dass der Benutzer diese Schaltfläche wirklich einbinden möchte.
+      - Per **Pull abrufen**: Erstellen Sie ein visuelles Feedback als Verkleinerung der Größe, und bewegen Sie sich zur Mitte des Ziels, um die visuelle Aufmerksamkeit des Benutzers zu erhalten. 
 
-3. Nach einer vordefinierten Dwell-Dauer (z. B. 800 ms) die Dwell abgeschlossen ist, und ein zugeordnetes Ereignis wird ausgelöst.
-    - Geben Sie einige akustische abgeschlossen, oder visuelles Feedback, wirklich Startseite, die das Element anzuzeigen haben jetzt ausgewählt.
+3. Nach einer vordefinierte verlaufdauer (z. b. 800 ms) wird das Ende abgeschlossen, und ein zugeordnetes Ereignis wird ausgelöst.
+    - Stellen Sie ein entsprechendes Akustik-oder visuelles Feedback bereit, um zu Hause zu kommen, dass das Element jetzt ausgewählt wurde.
 
-![Länger aufhalten Zustände](images/eyes_dwellstate_recommendation.png)
+![Verweil Zustände](images/eyes_dwellstate_recommendation.png)
 
 
-# <a name="gaze-targeting"></a>Blicke für
+# <a name="gaze-targeting"></a>Ziel Ausrichtung
 
-Alle Interaktionen werden erstellt, auf die Fähigkeit eines Benutzers, das Element als Ziel, die, das Sie mit, unabhängig von der Eingabe Modalität interagieren möchten. In Windows Mixed Reality, erfolgt dies in der Regel mithilfe des Benutzers Blicke.
+Alle Interaktionen basieren auf der Fähigkeit eines Benutzers, das Element, mit dem er interagieren möchte, unabhängig von der Eingabemethode auszuwählen. In Windows Mixed Reality erfolgt dies in der Regel durch das Anvisieren durch den Benutzer.
 
-Damit Benutzer erfolgreich eine Möglichkeit zum arbeiten können, muss des Systems berechnete Verständnis der Absicht des Benutzers und die Absicht des Benutzers tatsächliche, so weit wie möglich ausgerichtet sind. Um den Grad an, dass das System den beabsichtigten Benutzeraktionen interpretiert verbessert ordnungsgemäß Kundenzufriedenheit erhöht und die Leistung.
+Damit ein Benutzer erfolgreich mit einer Umgebung arbeiten kann, muss die vom System berechnete Absicht des Benutzers mit der tatsächlichen Absicht des Benutzers weitestgehend übereinstimmen. In dem Maße, in dem das System die beabsichtigten Aktionen des Benutzers richtig interpretiert, steigen Zufriedenheit und Leistung.
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
@@ -50,16 +50,16 @@ Damit Benutzer erfolgreich eine Möglichkeit zum arbeiten können, muss des Syst
         <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Blicke für</td>
+        <td>Ziel Ausrichtung</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
      <tr>
-        <td>Auge als Ziel</td>
+        <td>Ziel Ausrichtung</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -67,52 +67,52 @@ Damit Benutzer erfolgreich eine Möglichkeit zum arbeiten können, muss des Syst
 </table>
 
 > [!NOTE]
-> Weitere Anleitungen, die speziell für HoloLens 2 [bald](index.md).
+> Weitere Anleitungen sind für hololens 2 in [Kürze](index.md)verfügbar.
 
-## <a name="target-sizing-and-feedback"></a>Ziel-größenanpassung und feedback
+## <a name="target-sizing-and-feedback"></a>Skalieren von Zielen und Feedback
 
-Der Blicke Vektor hat wiederholt angezeigt wurden, für die Ziel-problemlos verwendet werden kann, aber häufig am besten für gross für die Zielgruppenadressierung (erwerben von etwas größer Ziele). Mindestversion der Zielplattform Größen von 1 bis 1.5 Grad sollte erfolgreich Benutzeraktionen in den meisten Szenarien ermöglichen, wenn Ziele von 3 Grad häufig schneller zu ermöglichen. Beachten Sie, dass die Größe, der Benutzerziele ist eine 2D-Bereich auch für 3D-Elemente – welche Projektion sie-Sie sollte Bereich als Ziel gesetzt sein. Bietet einige wichtige Hinweis, dass ein Element "aktiv" ist, (, dass der Benutzer es abzielt) äußerst hilfreich ist – dazu zählen Behandlungen, damit wie sichtbar "darauf zeigen" Effekte "," audio-Highlights "oder" klickt, oder deaktivieren Sie die Ausrichtung eines Cursors mit einem Element.
+Der Anvisierungsvektor hat wiederholt gezeigt, dass er zur Bestimmung präziser Ziele geeignet ist, aber oftmals funktioniert er bei der Bestimmung größerer Ziele am besten. Mindestzielgrößen von 1 bis 1,5 Grad sollten in den meisten Szenarien erfolgreiche Benutzeraktionen ermöglichen, obwohl Ziele von 3 Grad oft eine höhere Geschwindigkeit ermöglichen. Beachten Sie, dass die Größe, auf die der Benutzer ausgerichtet ist, auch für 3D-Elemente effektiv ein 2D-Bereich ist. Die ihm jeweils zugewandte Projektion sollte der Zielbereich sein. Es ist äußerst hilfreich, einen markanten Hinweis darauf zu geben, dass ein Element „aktiv“ ist (es wurde vom Benutzer anvisiert). Dies kann die Anwendung von sichtbaren „Hover“-Effekten, akustischen Hervorhebungen oder Klicks oder die eindeutige Ausrichtung eines Cursors mit einem Element umfassen.
 
-![Optimale Zielgröße im Abstand von 2 Verbrauchseinheit](images/gazetargeting-size-1000px.jpg)<br>
-*Optimale Zielgröße im Abstand von 2 Verbrauchseinheit*
+![Optimale Zielgröße im Abstand von 2 Metern](images/gazetargeting-size-1000px.jpg)<br>
+*Optimale Zielgröße im Abstand von 2 Metern*
 
-![Ein Beispiel für ein Zielobjekt Blicke hervorheben](images/gazetargeting-highlighting-640px.jpg)<br>
-*Ein Beispiel für ein Zielobjekt Blicke hervorheben*
+![Beispiel für die Hervorhebung eines anvisierten Objekts](images/gazetargeting-highlighting-640px.jpg)<br>
+*Beispiel für die Hervorhebung eines anvisierten Objekts*
 
-## <a name="target-placement"></a>Ziel-Platzierung
+## <a name="target-placement"></a>Zielpositionierung
 
-Benutzer können häufig nicht finden im jeweiligen Lesebereich, Benutzeroberflächenelemente, die sehr hoch oder sehr niedrige positioniert sind die meisten ihre Aufmerksamkeit auf Bereiche, um ihren Mittelpunkt (in der Regel ungefähr Eye-Ebene) konzentrieren. Die meisten Ziele in eine angemessene-Band-Bereich von Eye-Ebene platzieren können. Erhält die Tendenz eines für Benutzer kann für den Blick auf einer relativ kleinen visuellen Elements jederzeit (der attentional Lichtkegel des Vision ist ungefähr 10 Grad), der gruppieren Elemente der Benutzeroberfläche, die den Grad an, dass sie konzeptionell verwandt sind Aufmerksamkeit mit vorwärtsverkettung Verhaltensweisen nutzen Element zu Element als ein Benutzer durchläuft einen Bereich ihre Blicke. Beim Entwerfen der Benutzeroberfläche sollten Sie Bedenken der großen möglichen Variante im Lesebereich zwischen HoloLens und immersive Headsets.
+Benutzer können häufig keine Benutzeroberflächenelemente finden, die in ihrem Sichtfeld sehr hoch oder sehr niedrig positioniert sind, sodass sie sich hauptsächlich auf Bereiche um ihren Hauptfokus konzentrieren (in der Regel in etwa auf Augenhöhe). Die Positionierung der meisten Ziele in einem vernünftigen Bereich auf Augenhöhe kann helfen. Angesichts der Tendenz, dass sich der Benutzer jeweils auf einen relativ kleinen visuellen Bereich konzentrieren kann (der Blickwinkel beträgt etwa 10 Grad), kann die Gruppierung von Benutzeroberflächenelementen in dem Maße, in dem sie konzeptionell verwandt sind, das Verhalten zum Kombinieren der Aufmerksamkeit von Element zu Element nutzen, wenn der Blick eines Benutzers durch einen Bereich schweift. Beachten Sie beim Entwerfen der Benutzeroberfläche die potenziellen großen Unterschiede beim Sichtfeld zwischen HoloLens und immersiven Headsets.
 
-![Ein Beispiel für gruppierte Elemente der Benutzeroberfläche für einfacher Blicke Zielgruppenadressierung in Galaxy-Explorer](images/gazetargeting-grouping-1000px.jpg)<br>
-*Ein Beispiel für gruppierte Elemente der Benutzeroberfläche für einfacher Blicke Zielgruppenadressierung in Galaxy-Explorer*
+![Beispiel für gruppierte Benutzeroberflächenelemente zur einfacheren Zielbestimmung in Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg).<br>
+*Beispiel für gruppierte Benutzeroberflächenelemente zur einfacheren Zielbestimmung in Galaxy Explorer*.
 
-## <a name="improving-targeting-behaviors"></a>Verbessern die Zielgruppenadressierung anhand bestimmter Verhaltensweisen
+## <a name="improving-targeting-behaviors"></a>Verbessern des Verhaltens bei der Zielbestimmung
 
-Wenn Benutzerabsicht etwas Ziel kann werden festgelegt (oder eng angeglichen), kann es sehr hilfreich sein, zu akzeptieren, dass "Near Miss" bei der Interaktion versucht, als ob sie ordnungsgemäß zugewiesen wurden. Es gibt eine Reihe von erfolgreichen Methoden, die in mixed Reality-Benutzeroberfläche integriert werden können:
+Wenn die Absicht des Benutzers, etwas anzuvisieren, bestimmt (oder näherungsweise ermittelt) werden kann, ist es möglicherweise sehr hilfreich, „near miss“-Versuche (Beinahekollision) bei der Interaktion so zu akzeptieren, als ob die Zielbestimmung ordnungsgemäß erfolgt wäre. Es gibt eine Reihe erfolgreicher Methoden, die in Mixed Reality-Umgebungen integriert werden können:
 
-### <a name="gaze-stabilization-gravity-wells"></a>Blicke Stabilisierung ("Schwerkraft Wells")
+### <a name="gaze-stabilization-gravity-wells"></a>Blick Stabilisierung ("gravitationsbrunnen")
 
-Dies sollte die meisten oder alle der Zeit aktiviert werden. Dieses Verfahren wird die natürliche Haupt-/trichterhalses JIT-Compiler, die Benutzer möglicherweise entfernt. Auch Verschiebung aufgrund von Verhaltensweisen suchen/sprechen.
+Dies sollte meistens/immer aktiviert sein. Bei diesem Verfahren werden die natürlichen Kopf-/Nackenschwankungen entfernt, die Benutzer möglicherweise aufweisen. Ebenso Bewegungen aufgrund von Verhaltensweisen beim Sehen/Sprechen.
 
-### <a name="closest-link-algorithms"></a>Am nächsten Link-Algorithmen
+### <a name="closest-link-algorithms"></a>Algorithmen für die engste Verbindung
 
-Diese funktionieren am besten in Bereichen mit geringer Dichte interaktive Inhalte. Liegt eine hohe Wahrscheinlichkeit, dass auf Sie bestimmen können, was ein Benutzer versucht hat, für die Interaktion mit, können Sie die Zielgruppenadressierung anhand bestimmter Möglichkeiten ergänzen, indem Sie einfach vorausgesetzt gewisse Absicht.
+Diese funktionieren am besten in Bereichen mit wenig interaktiven Inhalten. Wenn es eine hohe Wahrscheinlichkeit gibt, dass Sie das Interaktionsziel eines Benutzers bestimmen können, haben Sie die Möglichkeit, ihre Fähigkeiten zur Zielbestimmung zu ergänzen, indem Sie einfach einen Absichtsgrad annehmen.
 
-### <a name="backdatingpostdating-actions"></a>Backdating/postdating Aktionen
+### <a name="backdatingpostdating-actions"></a>Rückdatierung/Nachdatierung von Aktionen
 
-Dieser Mechanismus eignet sich Aufgaben aus, die Geschwindigkeit zur Verfügung. Wenn ein Benutzer den durch eine Reihe von Ziel/Aktivierung Schachzüge Geschwindigkeit ist, es kann hilfreich sein, einige Absicht angenommen und ermöglichen *Schritte fehlen* zu Zielen reagieren, die der Benutzer den Fokus etwas vor oder nach der Tap (etwas 50 ms war gültig. vor/nach dem in einem frühen Stadium testen).
+Dieser Mechanismus ist hilfreich bei Aufgaben, die Geschwindigkeit erfordern. Wenn ein Benutzer mit der Geschwindigkeit eine Reihe von Ziel-/Aktivierungs Manövern durchläuft, kann es sinnvoll sein, eine Absicht anzunehmen und *versäumte Schritte* zuzulassen, um auf Ziele zu reagieren, auf die sich der Benutzer vor oder nach dem tippen etwas bewegt hat (50 ms vor/nachher). in frühen Tests wirksam).
 
 ### <a name="smoothing"></a>Glättung
 
-Dieser Mechanismus eignet sich für Pfade Bewegungen, reduzieren die leichte Jitter/bringen aufgrund von natürlichen Bewegungen Merkmale. Wenn Sie über die Pfade Bewegungen, die von der Größe/Entfernung von Bewegungen statt im Laufe der Zeit smooth-Glättung
+Dieser Mechanismus ist hilfreich bei Wegstreckenbewegungen und reduziert das leichte Zittern/Schwanken aufgrund der natürlichen Kopfbewegungseigenschaften. Bei der Glättung über Wegstreckenbewegungen, glätten Sie eher nach Größe/Abstand der Bewegungen als nach Zeit.
 
 ### <a name="magnetism"></a>Magnetismus
 
-Dieser Mechanismus kann als eine allgemeine Version des "Nächsten link" Algorithmen, zeichnen einen Cursor auf ein Ziel oder Vergrößerung Hitboxes (ob sichtbar oder nicht) betrachtet werden, wie Benutzer wahrscheinlich Ziele Ansatz, verwenden einige Kenntnisse über das interaktive Layout Benutzerabsicht für eine bessere Ansatz. Dies kann besonders für kleine Ziele effektiv sein.
+Dieser Mechanismus kann als eine allgemeinere Version der Algorithmen für die engste Verbindung betrachtet werden. Dabei wird ein Cursor in Richtung eines Ziels gezogen oder es werden einfach die Trefferfelder (sichtbar oder nicht) vergrößert, wenn sich Benutzer voraussichtlichen Zielen nähern. Dabei werden Kenntnisse des interaktiven Layouts verwendet, um sich der Absicht des Benutzers besser zu nähern. Dies kann insbesondere bei kleinen Zielen sehr wirkungsvoll sein.
 
-### <a name="focus-stickiness"></a>Fokus-Bindung
+### <a name="focus-stickiness"></a>Fokusbindung
 
-Wenn Sie die in der Nähe interaktive Elemente Fokus erhalten bestimmen, geben Sie eine Verschiebung auf das Element, das gerade fokussiert ist. Dadurch können die fehlerhaften Verhalten wechseln, in eine Mitte zwischen zwei Elemente mit dem natürlichen Geräusch unverankerten Fokus zu reduzieren.
+Wenn Sie bestimmen, welche interaktiven Elemente in der Nähe den Fokus erhalten sollen, stellen Sie eine Tendenz für das Element bereit, das gerade über den Fokus verfügt. Dies trägt dazu bei, unkontrolliertes Verhalten beim Fokuswechsel zu reduzieren, wenn Sie mittig zwischen zwei Elementen mit natürlicher Verzerrung schwanken.
 
 ## <a name="see-also"></a>Siehe auch
 * [Gesten](gestures.md)

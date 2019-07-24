@@ -1,11 +1,11 @@
 ---
-title: Anzeigen des Status
+title: Anzeigen des Fortschritts
 description: Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, Entwurf, Steuerelemente, Benutzeroberfläche, ux
+keywords: Windows Mixed Reality, Design, Steuerelemente, UI, UX
 ms.openlocfilehash: 84853a23a73bbece30c1f96b83e586642f3ab762
 ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
@@ -13,42 +13,42 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/02/2019
 ms.locfileid: "67523252"
 ---
-# <a name="displaying-progress"></a>Anzeigen des Status
+# <a name="displaying-progress"></a>Anzeigen des Fortschritts
 
 Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird. Dies kann bedeuten, dass der Benutzer bei Anzeigen der Statusanzeige nicht mit der App interagieren kann. Je nach verwendetem Indikator wird auch die Länge der Wartezeit angegeben.
 
-![Status-Ring-Beispiel in HoloLens](images/HoloLens2_Loader.gif)<br>
-*Status-Ring-Beispiel in HoloLens*
+![Beispiel für Fortschritts Ring in hololens](images/HoloLens2_Loader.gif)<br>
+*Beispiel für Fortschritts Ring in hololens*
 
 ## <a name="types-of-progress"></a>Typen von Statussteuerelementen
 
-Es ist wichtig, zu dem Benutzerinformationen zu was passiert. In mixed Reality können Benutzer problemlos von der physischen Umgebung oder Objekte abgelenkt werden, wenn Ihre app nicht die gute visuelles Feedback erhalten. Für Situationen, in denen einige Sekunden dauern, z. B. beim Laden von Daten oder einer Szene wird aktualisiert, es empfiehlt sich, einen visuellen Indikator anzeigen. Es gibt zwei Möglichkeiten, die dem Benutzer angezeigt, dass ein Vorgang ausgeführt – wird eine **Statusanzeige** oder **statuskreis**.
+Es ist wichtig, dass Sie die Benutzerinformationen zu den Vorgängen bereitstellen. In Mixed Reality können Benutzer problemlos von der physischen Umgebung oder von Objekten abgelenkt werden, wenn Ihre APP kein gutes visuelles Feedback bietet. Für Situationen, die einige Sekunden dauern, z. b. beim Laden von Daten oder beim Aktualisieren einer Szene, empfiehlt es sich, einen visuellen Indikator anzuzeigen. Es gibt zwei Möglichkeiten, den Benutzer anzuzeigen, dass ein Vorgang ausgeführt wird – eine **Status** Anzeige oder ein **Fortschritts Ring**.
 
-### <a name="progress-bar"></a>Statusleiste
+### <a name="progress-bar"></a>Statusanzeige
 
-![Beispiel für Fortschritt in HoloLens](images/640px-progressbar.jpg)
+![Beispiel für Statusanzeige in hololens](images/640px-progressbar.jpg)
 
-Eine Statusanzeige zeigt den Prozentsatz einer Aufgabe abgeschlossen. Er sollte verwendet werden, während eines Vorgangs, deren Dauer (bestimmte) bekannt ist, jedoch seinen Status sollte die Interaktion des Benutzers mit der app nicht blockieren.
+Eine Statusanzeige zeigt den Prozentsatz der abgeschlossenen Aufgabe an. Er sollte bei einem Vorgang verwendet werden, dessen Dauer bekannt ist (determinate), aber der Fortschritt sollte die Interaktion des Benutzers mit der APP nicht blockieren.
 
 ### <a name="progress-ring"></a>Statusring
 
-![Status-Ring-Beispiel in HoloLens](images/640px-progressring.jpg)
+![Beispiel für Fortschritts Ring in hololens](images/640px-progressring.jpg)
 
-Ein statuskreis nur einem unbestimmten Zustand befindet, und sollte verwendet werden, wenn weiteren Benutzereingriff blockiert wird, bis der Vorgang abgeschlossen ist.
+Ein Fortschritts Ring hat nur einen unbestimmten Status und sollte verwendet werden, wenn eine weitere Benutzerinteraktion blockiert wird, bis der Vorgang abgeschlossen ist.
 
-### <a name="progress-with-a-custom-object"></a>Mit der ein benutzerdefiniertes Objekt
+### <a name="progress-with-a-custom-object"></a>Fortschritt mit einem benutzerdefinierten Objekt
 
-![Mit benutzerdefinierten Mesh-Beispiel in HoloLens](images/640px-progresscustom.jpg)
+![Fortschritt mit einem benutzerdefinierten Mesh-Beispiel in hololens](images/640px-progresscustom.jpg)
 
-Sie können zu Ihrer Persönlichkeit und Markenidentität Ihrer app hinzufügen, durch das Anpassen des Statussteuerelements mit Ihren eigenen benutzerdefinierten 2D-/3D-Objekten.
+Sie können der Identität und Markenidentität Ihrer APP hinzufügen, indem Sie das Status Steuerelement mit ihren eigenen benutzerdefinierten 2D-/3D-Objekten anpassen.
 
 ## <a name="best-practices"></a>Empfohlene Methoden
-* Eng [billboarding oder Tag-along](billboarding-and-tag-along.md) der Anzeige des Status, da der Benutzer kann einfach ihrem Kopf in den leeren Bereich verschieben und Kontext verlieren. Ihre app möglicherweise sieht es abgestürzt ist, wenn der Benutzer können nicht alles angezeigt werden. Billboarding und Tag-along ist in den Status-Prefab integriert.
-* Es empfiehlt sich immer um Statusinformationen über den Ablauf für den Benutzer bereitzustellen. Die Status-Prefab bietet verschiedene visuelle Stile, einschließlich des Status des Windows-Ring-Standardtyp für die Bereitstellung von Status an. Wenn Sie den Stil der den Fortschritt zu Ihrer app Marke ausrichten möchten, können Sie auch eine benutzerdefinierte Mesh mit einer Animation verwenden.
+* Schließen Sie das [Abrechnungs-oder tagboarding](billboarding-and-tag-along.md) eng mit der Anzeige des Fortschritts ab, da der Benutzer problemlos seinen Kopf in einen leeren Bereich verschieben und Kontext verlieren kann. Ihre APP könnte so aussehen, als ob Sie abgestürzt ist, wenn der Benutzer nichts sehen kann. Das fakboardingboarding und das Tag-Along sind in den Fortschritt vorfab integriert.
+* Es ist immer gut, Statusinformationen zu den Ereignissen für den Benutzer bereitzustellen. Die Fortschritts präfab stellt verschiedene visuelle Stile bereit, einschließlich des Windows-standardmäßigen Rings-Typs zum Angeben des Status. Sie können auch ein benutzerdefiniertes Mesh mit einer Animation verwenden, wenn Sie möchten, dass der Stil Ihres Fortschritts an der Marke Ihrer APP ausgerichtet wird.
 
 ## <a name="see-also"></a>Siehe auch
-* [Status-Skripts und Prefabs in Mixed Reality-Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
-* [umgebendes Feld](app-bar-and-bounding-box.md)
+* [Fortschritts Skripts und Prefabs im Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
+* [Begrenzungs Fenster](app-bar-and-bounding-box.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Objektsammlung](object-collection.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)

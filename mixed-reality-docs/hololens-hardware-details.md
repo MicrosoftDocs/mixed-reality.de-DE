@@ -1,11 +1,11 @@
 ---
-title: HoloLens-Hardwaredetails
-description: Einen Überblick über die Komponenten, aus denen Microsoft HoloLens, die weltweit erste vollständig unabhängig holographic Computer unter Windows besteht.
+title: Hololens-Hardware Details
+description: Ein Überblick über die Komponenten, aus denen Microsoft hololens besteht, der weltweit erste vollständig unehelikte Holographic-Computer, auf dem Windows ausgeführt wird.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, Komponenten, Sensoren, Technologie, Technologie, beenden, und Beendigung,
+keywords: Hololens, Komponenten, Sensoren, Technologie, Tech, Löschung, Löschung,
 ms.openlocfilehash: 56b10fa9751c626578c697cd370347482a121b2a
 ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
@@ -13,69 +13,69 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/22/2019
 ms.locfileid: "67326202"
 ---
-# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (1. Generation) Hardwaredetails
+# <a name="hololens-1st-gen-hardware-details"></a>Hololens (1. Gen) Hardware Details
 
 ![Microsoft HoloLens](images/see-through-400px.jpg)
 
-Microsoft HoloLens-ist der weltweit erste, holographic Computer vollständig unabhängig. HoloLens definiert Videoprogramm über holographic Umgebungen, die Sie auf neue Weise arbeiten können. HoloLens mischt innovative akteurdetails und Sensoren 3D Hologramme bereitstellen, die an die reale Welt, um Sie angeheftet.
+Microsoft hololens ist der weltweit erste vollständig unehelikte Holographic-Computer. Hololens definiert das Personal Computing durch Holographic-Erlebnisse neu, um Ihnen neue Möglichkeiten zu bieten. Hololens kombiniert moderne Optiken und Sensoren, um 3D holograms in der realen Welt bereitzustellen.
 
-## <a name="how-to-get-microsoft-hololens"></a>Gewusst wie: Abrufen von Microsoft HoloLens
+## <a name="how-to-get-microsoft-hololens"></a>So erhalten Sie Microsoft hololens
 
-Microsoft HoloLens kann als ein sowohl ein Development Edition erworben, und eine Commercial Suite-Konfiguration, die einen Enterprise sowie die Funktionen zum hinzugefügt, Sicherheit und Gerät. Wenn Sie sich in Nordamerika befinden, können Sie auch HoloLens über einen Partner Mieten.
+Microsoft hololens kann sowohl als Entwicklungs-als auch als kommerzielle Suite-Konfiguration erworben werden, die eine Garantie und Unternehmens Features für die zusätzliche Sicherheit und Geräteverwaltung umfasst. Wenn Sie Nordamerika haben, können Sie auch hololens über einen Partner vermieten.
 
-[Klicken Sie hier, um ausführliche Informationen zum Kauf oder Rackplatz Microsoft HoloLens](https://www.microsoft.com/hololens/buy).
+[Klicken Sie hier, um weitere Informationen zum Erwerb oder zur Vermietung von Microsoft hololens](https://www.microsoft.com/hololens/buy)zu erhalten.
 
 ## <a name="device-specifications"></a>Gerätespezifikationen
 
-### <a name="optics"></a>Speicherverfahrens
+### <a name="optics"></a>Ker
 
-![HoloLens hat durchsichtigen holographic lenses](images/displays-400px.jpg)
-* Durchsichtigen holographic Lenses (Waveguides)
-* 2 HD 16:9-hell-engines
-* Automatische pupillary Abstand Kalibrierung
-* Holographic Lösung: 2.3 M hell Gesamtpunkte
-* Holographic Dichte: > 2,5 KB Radiants (hell Punkte pro Radiant)
+![Hololens hat Holographic-Linsen](images/displays-400px.jpg)
+* Informationen zu Holographic-Linsen (Wellenlinien)
+* 2 HD 16:9 Light-Engines
+* Automatische pupillary-Entfernungs Kalibrierung
+* Holographic-Auflösung: 2.3 Mio. Gesamtzahl der hellen Punkte
+* Holographic Density: > 2.5 k (helle Punkte pro Radian)
 
 ### <a name="sensors"></a>Sensoren
 
-![HoloLens hat Sensoren für die Umgebung verstehen und menschliche Verständnis](images/sensor-bar-400px.jpg)
+![Hololens verfügt über Sensoren für das Verständnis der Umgebung und das Verständnis von Menschen](images/sensor-bar-400px.jpg)
 * 1 IMU
-* 4 Umgebung verstehen Kameras
-* 1 Tiefe Kamera
-* 1 2 Megapixel Foto / HD-Videokamera
+* 4 Umgebungen, die Kameras verstehen
+* eine Tiefe Kamera
+* 1 2MP Foto/HD-Videokamera
 * Mixed-Reality-Aufnahme
-* 4 Mikrofonen
-* 1 ambient lichtsensor
+* 4-Mikrofone
+* 1 Ambient-Lichtsensor
 
-### <a name="human-understanding"></a>Menschliche verstehen
+### <a name="human-understanding"></a>Menschliches Verständnis
 * Raumklang
-* Bestaunen nachverfolgen
-* Aktion-Eingabe
-* Voice-Unterstützung
+* Blick Nachverfolgung
+* Gesten Eingabe
+* Sprachunterstützung
 
-### <a name="input--output--connectivity"></a>Input / Output / Verbindungen
+### <a name="input--output--connectivity"></a>Eingabe/Ausgabe/Konnektivität
 * Integrierte Referenten
-* Audio 3,5 mm jack
+* Audioversion 3.5 mm Jack
 * Volume nach oben/unten
-* Die Helligkeit nach oben/unten
+* Helligkeit nach oben/unten
 * Netzschalter
-* Akku-Status-LEDs
-* Wi-Fi 802.11ac
-* Micro USB 2.0
-* 4\.1-Bluetooth LE
+* Akku Status-LEDs
+* Wi-Fi 802.11 AC
+* Micro-USB 2,0
+* Bluetooth 4,1 Le
 
 ### <a name="power"></a>Stromversorgung
-* Akkuverbrauch gering zu halten
-* 2 bis 3 Stunden der aktiven Verwendung
-* Bis zu 2 Wochen Standbyzeit
-* Voll funktionsfähig, wenn Gebühren
-* Passiv Kühl (keine Lüfter)
+* Akku Lebensdauer
+* 2-3 Stunden aktiver Verwendung
+* Bis zu 2 Wochen Standby-Zeit
+* Voll funktionsfähig bei der Abrechnung
+* Passiv gekühlt (keine Lüfter)
 
 ### <a name="processors"></a>Prozessoren
 
-![Der Hauptplatine für Microsoft HoloLens](images/motherboard-400px.jpg)
-* 32-Bit-Intel-Architektur mit TPM 2.0-Unterstützung
-* Benutzerdefinierte Microsoft Holographic-Verarbeitungseinheit (HPU 1.0)
+![Die Hauptplatine für Microsoft hololens](images/motherboard-400px.jpg)
+* Intel 32-Bit-Architektur mit TPM 2,0-Unterstützung
+* Benutzerdefinierte Microsoft Holographic Processing Unit (HPU 1,0)
 
 ### <a name="weight"></a>Weight
 * 579 g
@@ -84,14 +84,14 @@ Microsoft HoloLens kann als ein sowohl ein Development Edition erworben, und ein
 * 64 GB Flash
 * 2 GB RAM
 
-### <a name="whats-in-the-box"></a>Was ist in das Feld
-* HoloLens Development Edition
+### <a name="whats-in-the-box"></a>Inhalt
+* Hololens Development Edition
 * Clicker
-* Tragetasche
-* Ladegerät und Kabel
-* Microfiber Faden
-* Nase pads
-* Aufwand einen standardcodebaustein zum Laden
+* Tragende Schreibweise
+* Lade-und Kabel
+* Mikro Fiber-Tuch
+* Nasen Pads
+* Aufwand für den Aufwand
 
 ### <a name="os-and-apps"></a>Betriebssystem und Apps
 * Windows 10
@@ -101,12 +101,12 @@ Microsoft HoloLens kann als ein sowohl ein Development Edition erworben, und ein
 * Fotos
 * Einstellungen
 * Windows-Feedback
-* Kalibrierung
-* Erfahren Sie, Gesten
+* Energie
+* Gesten erlernen
 
-### <a name="what-you-need-to-develop"></a>Voraussetzungen für das Entwickeln
-* [Windows 10-PCs können die neueste kompatiblen Versionen von Visual Studio und Unity ausführen](install-the-tools.md)
+### <a name="what-you-need-to-develop"></a>Was Sie für die Entwicklung benötigen
+* [Windows 10 PC kann die neuesten kompatiblen Versionen von Visual Studio und Unity ausführen](install-the-tools.md)
 
-### <a name="safety-eyewear"></a>Sicherheit Eyewear
+### <a name="safety-eyewear"></a>Safety-Eyewear
 
-HoloLens wurde getestet und die schutzanforderungen für grundlegende Auswirkungen von ANSI-Z87.1, CSA Z94.3 und EN 166 entsprechen, gefunden
+Hololens wurde getestet und mit den grundlegenden Auswirkung Protection-Anforderungen von ANSI z 87.1, CSA z 94.3 und EN 166 konform.

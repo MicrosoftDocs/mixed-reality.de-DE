@@ -1,40 +1,40 @@
 ---
-title: MR räumlich 220 - räumliche sound
-description: Führen Sie diese Codierung Exemplarische Vorgehensweise mit Unity, Visual Studio und HoloLens um die Details der räumlichen sound Konzepte zu erfahren.
+title: Räumlicher Ton-220-Ton
+description: Befolgen Sie diese Codierungs Exemplarische Vorgehensweise mit Unity, Visual Studio und hololens, um die Details der räumlichen audiokonzepte zu erlernen.
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Holotoolkit, Mixedrealitytoolkit, Mixedrealitytoolkit-Unity, Academy, Tutorial, räumliche sound
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, Tutorial, räumlicher Sound
 ms.openlocfilehash: 50d17fe8c9a6e3f18b1309a59c9c41af982a7505
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593832"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63526911"
 ---
 >[!NOTE]
->In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
 
 <br>
 
-# <a name="mr-spatial-220-spatial-sound"></a>MR Spatial 220: Raumklang
+# <a name="mr-spatial-220-spatial-sound"></a>Räumliche Daten 220: Raumklang
 
-[Räumliche Sound](spatial-sound.md) breathes Leben in Hologramme und sorgt dafür, dass in unserer Welt. Hologramme von Licht und Sound bestehen, und wenn Sie doch Ihre Hologramme aus den Augen zu verlieren, räumliche Sound können Sie zu finden. Es ist kein räumlicher Sound wie typische Sounds, die Sie auf die Radio hören würde, Klänge, mit denen im 3D-Raum positioniert ist. Räumliche Sound können Sie machen Hologramme sound scheinen hinter, neben oder sogar auf den Kopf zu sein! In diesem Kurs führen Sie folgende Aktionen ausführen:
+[Räumlicher Sound](spatial-sound.md) atmet Leben in holograms und bietet Ihnen die Präsenz in unserer Welt. Holograms bestehen aus Licht und Ton, und wenn Sie Ihre Hologramme nicht vergessen, kann räumlicher Sound Ihnen helfen, Sie zu finden. Der räumliche Sound ist nicht mit dem typischen Sound vergleichbar, den Sie im Radio hören würden, es handelt sich um Sound, der in 3D-Raum positioniert ist. Mit räumlichem Sound können Sie holograms so gestalten, wie Sie sich hinter ihnen befinden, oder auch auf Ihrem Kopf! In diesem Kurs werden Sie wie folgt vorgehen:
 
-* Konfigurieren Sie Ihre Entwicklungsumgebung für Microsoft Spatial Sound verwenden.
-* Verwenden Sie räumliche Sound, um Interaktionen zu verbessern.
-* Verwenden Sie räumliche Sound in Verbindung mit räumlichen zuordnen.
-* Erfahren Sie, Entwurf und die Verwendung von bewährten Methoden.
-* Verwendung von Tönen verbessern Spezialeffekte zu erzeugen, und schalten den Benutzer in die Welt der Mixed Reality.
+* Konfigurieren Sie Ihre Entwicklungsumgebung für die Verwendung von Microsoft Spatial Sound.
+* Verwenden Sie räumliche Töne, um Interaktionen zu verbessern.
+* Verwenden Sie räumliche Sounds in Verbindung mit räumlicher Zuordnung.
+* Informieren Sie sich über die bewährten Vorgehensweisen zum Entwerfen und mischen
+* Verwenden Sie Sound, um besondere Effekte zu verbessern und den Benutzer in die gemischte Realität zu bringen.
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>MR Spatial 220: Raumklang</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Räumliche Daten 220: Raumklang</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -42,478 +42,478 @@ ms.locfileid: "59593832"
 
 ### <a name="prerequisites"></a>Vorraussetzungen
 
-* Ein Windows 10-PCs mit dem richtigen konfiguriert [-Tools installiert](install-the-tools.md).
-* Einige grundlegende C# Programmierkenntnisse.
-* Sie sollten abgeschlossen haben [MR Grundlagen 101](holograms-101.md).
-* Ein Gerät HoloLens [für die Entwicklung konfiguriert](using-visual-studio.md#enabling-developer-mode).
+* Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md)konfiguriert ist.
+* Einige Grund C# Legende Programmiermöglichkeiten.
+* Sie sollten die [Grundlagen von 101](holograms-101.md)abgeschlossen haben.
+* Ein hololens-Gerät, das [für die Entwicklung konfiguriert](using-visual-studio.md#enabling-developer-mode)ist.
 
 ### <a name="project-files"></a>Projektdateien
 
-* Herunterladen der [Dateien](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-220-SpatialSound.zip) vom Projekt erforderlich sind. Ist Unity 2017.2 oder höher erforderlich.
-  * Wenn Sie weitere Unity 5.6-Unterstützung benötigen, verwenden Sie [dieser Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-220.zip). Diese Version kann nicht mehr auf dem neuesten Stand sein.
-  * Wenn Sie weitere Unity 5.5-Unterstützung benötigen, verwenden Sie [dieser Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-220.zip). Diese Version kann nicht mehr auf dem neuesten Stand sein.
-  * Wenn Sie weitere 5.4 von Unity-Unterstützung benötigen, verwenden Sie [dieser Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-220.zip). Diese Version kann nicht mehr auf dem neuesten Stand sein.
-* Un-Archive die Dateien auf dem Desktop oder andere einfach auf den Speicherort zugreifen.
+* Herunterladen der [Dateien](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-220-SpatialSound.zip) , die für das Projekt erforderlich sind. Erfordert Unity 2017,2 oder höher.
+  * Wenn Sie weiterhin Unity 5,6-Unterstützung benötigen, verwenden Sie [Diese Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-220.zip). Diese Version ist möglicherweise nicht mehr auf dem neuesten Stand.
+  * Wenn Sie weiterhin Unity 5,5-Unterstützung benötigen, verwenden Sie [Diese Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-220.zip). Diese Version ist möglicherweise nicht mehr auf dem neuesten Stand.
+  * Wenn Sie weiterhin Unity 5,4-Unterstützung benötigen, verwenden Sie [Diese Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-220.zip). Diese Version ist möglicherweise nicht mehr auf dem neuesten Stand.
+* Deinstallieren Sie die Dateien auf Ihrem Desktop oder an einem anderen leicht zugänglichen Speicherort.
 
 >[!NOTE]
->Wenn Sie vor dem Herunterladen, den Quellcode ansehen möchten es [auf GitHub verfügbar](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-220-SpatialSound).
+>Wenn Sie den Quellcode vor dem herunterladen durchsuchen möchten, ist er [auf GitHub verfügbar](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-220-SpatialSound).
 
-### <a name="errata-and-notes"></a>Fehler und Anmerkungen zu dieser Version
+### <a name="errata-and-notes"></a>Errata und Notizen
 
-* "Nur eigenen Code aktivieren" muss deaktiviert sein (*deaktiviert*) in Visual Studio unter Extras -> Optionen-Debuggen >, um die Haltepunkte in Ihrem Code.
+* "Enable nur eigenen Code" muss in Visual Studio unter "Extras-> Optionen" deaktiviert*werden (>* Debuggen, um Breakpoints im Code zu erreichen.
 
-## <a name="chapter-1---unity-setup"></a>Kapitel 1: Unity-Setup
+## <a name="chapter-1---unity-setup"></a>Kapitel 1: Einrichtung von Unity
 
 ### <a name="objectives"></a>Ziele
 
-* Ändern von Unity sound-Konfiguration zum Microsoft Spatial Sound verwenden.
-* Fügen Sie auf ein Objekt in Unity 3D Sound hinzu.
+* Ändern Sie die Sound Konfiguration von Unity, sodass Sie Microsoft Spatial Sound verwendet.
+* Hinzufügen eines 3D-Sounds zu einem Objekt in Unity.
 
 ### <a name="instructions"></a>Anweisungen
 
 * Starten Sie Unity.
-* Wählen Sie **öffnen**.
-* Navigieren Sie zu Ihrem Desktop und suchen Sie den Ordner Sie zuvor nicht archiviert.
-* Klicken Sie auf die **Starting\Decibel** Ordner, und drücken Sie dann die **Ordner auswählen** Schaltfläche.
-* Warten Sie auf das Projekt im Unity geladen.
-* In der **Projekt** Bereich öffnen **Scenes\Decibel.unity**.
-* In der **Hierarchie** erweitern **HologramCollection** , und wählen Sie **P0LY**.
-* Erweitern Sie in der Eigenschaftenanalyse **AudioSource** und beachten Sie, dass es keine **Spatialize** Kontrollkästchen.
+* Wählen Sie **Öffnen**aus.
+* Navigieren Sie zu Ihrem Desktop, und suchen Sie den Ordner, den Sie zuvor nicht archiviert haben.
+* Klicken Sie auf den Ordner **starting\decibel** , und klicken Sie dann auf die Schaltfläche **Ordner auswählen** .
+* Warten Sie, bis das Projekt in Unity geladen wurde.
+* Öffnen Sie im **Projekt** Panel **scenes\decibel.unity**.
+* Erweitern Sie im Bereich **Hierarchie** den Knoten **hologrammcollection** , und wählen Sie **P0LY**aus.
+* Erweitern Sie im Inspektor den Eintrag **audiosource** , und beachten Sie, dass kein **spatialize** -Kontrollkästchen vorhanden ist.
 
-Standardmäßig wird in Unity eine Spatializer-Plug-Ins nicht geladen. Die folgenden Schritte können räumlich Sound im Projekt.
+Standardmäßig lädt Unity kein spatializer-Plug-in. Mit den folgenden Schritten wird räumlicher Sound im Projekt aktiviert.
 
-* Navigieren Sie im oberen Menü Unity zu **Bearbeiten > Projekteinstellungen > Audio**.
-* Suchen der **Spatializer-Plug-Ins** Dropdown-Liste, und wählen Sie **MS HRTF Spatializer**.
-* In der **Hierarchie** wählen **HologramCollection > P0LY**.
-* In der **Inspektor** Bereich, suchen Sie nach der **Audio Source** Komponente.
-* Überprüfen Sie die **Spatialize** Kontrollkästchen.
-* Ziehen Sie die **räumliche Blend** Schieberegler ganz nach **3D**, oder geben Sie **1** in das Bearbeitungsfeld.
+* Wechseln Sie im oberen Menü von Unity zu **Edit > Project Settings > Audiodatei**.
+* Suchen Sie nach der Dropdown Liste **spatializer Plugin** , und wählen Sie **MS HRTF spatializer**aus.
+* Wählen Sie im Bereich **Hierarchie** die Option **hologramcollection > P0LY**aus.
+* Suchen Sie im **Inspektor** -Panel die Komponente **Audioquelle** .
+* Aktivieren Sie das Kontrollkästchen **spatialize** .
+* Ziehen Sie  den Schieberegler räumlichkeits Weise in **3D**, oder geben Sie 1 in das Bearbeitungsfeld **ein** .
 
-Jetzt erstellen Sie das Projekt in Unity und konfigurieren die Projektmappe in Visual Studio.
+Wir erstellen nun das Projekt in Unity und konfigurieren die Projekt Mappe in Visual Studio.
 
-1. Wählen Sie in Unity **Datei > Buildeinstellungen**.
-2. Klicken Sie auf **öffnen Szenen hinzufügen** die Szene hinzufügen.
-3. Wählen Sie **universelle Windows-Plattform** in die **Plattform** aus, und klicken Sie auf **Plattform wechseln**.
-4. Wenn Sie speziell für HoloLens entwickeln, legen Sie **Zielgerät** zu **HoloLens**. Andernfalls lassen Sie es auf **jedes Gerät**.
-5. Stellen Sie sicher **Build Type** nastaven NA hodnotu **D3D** und **SDK** nastaven NA hodnotu **zuletzt installierte** (die sollte SDK 16299 oder höher sein).
+1. Wählen Sie in Unity **Datei >** Buildeinstellungen aus.
+2. Klicken Sie auf **offene Szenen hinzufügen** , um die Szene hinzuzufügen.
+3. Wählen Sie in der Liste **Plattform** **universelle Windows-Plattform** aus, und klicken Sie auf **Plattform wechseln**.
+4. Wenn Sie speziell für hololens entwickeln, legen Sie **Zielgerät** auf **hololens**fest. Andernfalls sollten Sie es auf **jedem Gerät**belassen.
+5. Stellen  Sie sicher, dass der Buildtyp auf **D3D** und das **SDK** auf **Latest installiert** festgelegt ist (was SDK 16299 oder höher sein sollte).
 6. Klicken Sie auf **Erstellen**.
-7. Erstellen Sie eine **neuer Ordner** mit dem Namen "App".
-8. Mausklick die **App** Ordner.
-9. Drücken Sie **wählen Sie Ordner**.
+7. Erstellen Sie einen **neuen Ordner** mit dem Namen "App".
+8. Klicken Sie einfach auf den **App** -Ordner.
+9. Drücken **Sie Ordner auswählen**.
 
 Wenn Unity abgeschlossen ist, wird ein Datei-Explorer-Fenster angezeigt.
 
-1. Öffnen der **App** Ordner.
-2. Öffnen der **Dezibel Visual Studio-Projektmappe**.
+1. Öffnen Sie den **App** -Ordner.
+2. Öffnen Sie die Projekt Mappe **Decibel Visual Studio**.
 
-Wenn für HoloLens bereitstellen zu können:
+Bei der Bereitstellung in hololens:
 
-1. Verwenden obere auf der Symbolleiste in Visual Studio, ändern Sie das Ziel vom Debugmodus in den **Version** und ARM, **X86**.
-2. Klicken Sie auf den Dropdownpfeil neben der Schaltfläche mit den lokalen Computer, und wählen **Remotecomputer**.
-3. Geben Sie **die HoloLens-Geräte-IP-Adresse** und legen Sie den Authentifizierungsmodus auf **universell (unverschlüsseltes Protokoll)**. Klicken Sie auf **Auswählen**. Wenn Sie Ihre IP-Adresse des Geräts nicht kennen, suchen Sie im **Einstellungen > Netzwerk und Internet > Erweiterte Optionen**.
-4. Klicken Sie in der Menüleiste im oberen Bereich auf **Debuggen -> Starten ohne debugging** , oder drücken Sie **STRG + F5**. Ist dies beim ersten auf Ihrem Gerät bereitstellen, Sie müssen [verbinden Sie es mit Visual Studio](using-visual-studio.md#pairing-your-device---hololens-1st-gen).
+1. Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x86**.
+2. Klicken Sie auf den Dropdown Pfeil neben der Schaltfläche lokaler Computer, und wählen Sie **Remote Computer**aus.
+3. Geben Sie **die IP-Adresse des hololens-Geräts** ein, und legen Sie den Authentifizierungsmodus auf **Universal (unverschlüsseltes Protokoll)** Klicken Sie auf **Auswählen**. Wenn Sie die IP-Adresse Ihres Geräts nicht kennen, suchen Sie unter **Einstellungen > Netzwerk & Internet > Erweiterte Optionen**.
+4. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**. Wenn Sie die Bereitstellung auf Ihrem Gerät zum ersten Mal durchführt, müssen Sie [es mit Visual Studio](using-visual-studio.md#pairing-your-device---hololens-1st-gen)koppeln.
 
-Wenn eine immersive Kopfhörer bereitstellen:
+Bei der Bereitstellung auf einem immersiven Headset:
 
-1. Verwenden obere auf der Symbolleiste in Visual Studio, ändern Sie das Ziel vom Debugmodus in den **Version** und ARM, **X64**.
-2. Stellen Sie sicher, dass das Bereitstellungsziel nastaven NA hodnotu **lokalen Computer**.
-3. Klicken Sie in der Menüleiste im oberen Bereich auf **Debuggen -> Starten ohne debugging** , oder drücken Sie **STRG + F5**.
+1. Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x64**.
+2. Stellen Sie sicher, dass das Bereitstellungs Ziel auf **lokaler Computer**festgelegt ist.
+3. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
 
-## <a name="chapter-2---spatial-sound-and-interaction"></a>Kapitel 2: räumliche Sound- und Interaktion
+## <a name="chapter-2---spatial-sound-and-interaction"></a>Kapitel 2: räumlicher Sound und Interaktion
 
 ### <a name="objectives"></a>Ziele
 
-* Verbessern Sie – Hologramm wirklichkeitsgetreuen Bilder mithilfe von Sounds.
-* Weiterleiten des Benutzers Blicke Sound verwenden.
-* Geben Sie mithilfe von Sound Geste-Feedback.
+* Verbessern Sie das – Hologramm-Realismus mithilfe von Sound.
+* Leiten Sie den Benutzer Blick mithilfe von Sound weiter.
+* Stellen Sie Gesten Feedback mit Sound bereit.
 
-### <a name="part-1---enhancing-realism"></a>Teil 1 – Verbesserung realer zu gestalten.
-
-#### <a name="key-concepts"></a>Wichtige Konzepte
-
-* Spatialize – Hologramm Sounds.
-* Sound Quellen, die am einen geeigneten Speicherort auf dem Hologramm eingefügt werden soll.
-
-Die gewünschte Position für den Sound wird die Hologramm abhängig. Wenn einem Benutzer, der die – Hologramm ist, sollten z. B. Schallquelle Mund und nicht die Füße gespeichert sein.
-
-#### <a name="instructions"></a>Anweisungen
-
-Die folgenden Anweisungen werden ggf. ein Hologramm Sound spatialized zuordnen.
-
-* In der **Hierarchie** erweitern **HologramCollection** , und wählen Sie **P0LY**.
-* In der **Inspektor** im Bereich der **AudioSource**, klicken Sie auf den Kreis neben **AudioClip** , und wählen Sie **PolyHover** aus der Popupliste.
-* Klicken Sie auf den Kreis neben **Ausgabe** , und wählen Sie **SoundEffects** aus der Popupliste.
-
-Projekt Dezibel verwendet eine Unity **AudioMixer** -Komponente verwendet, damit Geräuschpegel für Gruppen von Sounds anpassen. Durch Gruppierung von Sounds auf diese Weise kann das gesamte Volume und gleichzeitig die relative Menge der einzelnen Sound angepasst werden.
-
-* In der **AudioSource**, erweitern Sie **3D Sound Einstellungen**.
-* Legen Sie **Doppler-Ebene** zu **0**.
-
-Festlegen von Doppler Ebene auf 0 (null) deaktiviert die Änderungen in der Stimmhöhe verursacht werden, die in Motion (entweder die Hologramm oder der Benutzer). Ein klassisches Beispiel Doppler ist eine schnelle, flexible Auto. Wenn sich das Fahrzeug stationären Listener nähert, steigt die Schriftbreite des Datenbankmoduls. Wenn den Listener übergibt, verringert sich die Schriftbreite mit Abstand.
-
-### <a name="part-2---directing-the-users-gaze"></a>Teil 2: Weiterleiten des Benutzers Blicke
+### <a name="part-1---enhancing-realism"></a>Teil 1: verbessern des Realismus
 
 #### <a name="key-concepts"></a>Wichtige Konzepte
 
-* Verwenden Sie die Aufmerksamkeit auf wichtige Hologramme Sound.
-* Die Ohren besser, in denen die Augen suchen soll.
-* Das Gehirn hat bestimmte Erwartungen Gelernten.
+* Räumalisieren Sie – Hologramm-Sounds.
+* Audioquellen sollten an einem geeigneten Speicherort auf dem Hologram abgelegt werden.
 
-Ein Beispiel für gelernten Erwartungen ist, dass Vögel in der Regel über den Köpfen der Menschen. Wenn ein Benutzer einen Sound Bird hört, ist ihre erste Reaktion nachschlagen. Platzieren einer Bird unterhalb der Benutzer kann Ihnen den Klang, aber nicht auf die – Hologramm basierend auf der Annahme zu suchen müssen, finden Sie die richtige Richtung zeigenden führen.
+Der richtige Speicherort für den Sound hängt von dem Hologram ab. Wenn das – Hologramm z. b. von einem Menschen ist, sollte sich die Audioquelle nahe dem Mund und nicht der Fußzeile befinden.
 
 #### <a name="instructions"></a>Anweisungen
 
-Die folgenden Anweisungen aktivieren P0LY hinter, ausblenden, sodass Sie Sound verwenden können, die – Hologramm gesucht werden soll.
+Die folgenden Anweisungen fügen einen räumlichen Sound an ein Hologramm an.
 
-* In der **Hierarchie** wählen **Managern**.
-* In der **Inspektor** Bereich, suchen Sie nach **Spracherkennung Eingabe Handler**.
-* In **Spracherkennung Eingabe Handler**, erweitern Sie **wechseln ausblenden**.
-* Änderung **keine Funktion** zu **PolyActions.GoHide**.
+* Erweitern Sie im Bereich **Hierarchie** den Knoten **hologrammcollection** , und wählen Sie **P0LY**aus.
+* Klicken Sie im Bereich **Inspector** in der **audiosource**auf den Kreis neben **Audioclip** , und wählen Sie im Popup Fenster **polyhover** aus.
+* Klicken Sie auf den Kreis neben **Ausgabe** , und wählen Sie im Popup Fenster **soundeffects** aus.
 
-![Keyword: Wechseln Sie ausblenden](images/gohide.png)
+Project Decibel verwendet eine Unity- **Audiomixer** -Komponente, um das Anpassen von Sound Ebenen für Gruppen von Sounds zu ermöglichen. Durch das Gruppieren von Sounds auf diese Weise kann das Gesamt Volume angepasst werden, während die relative Menge der einzelnen Sounds beibehalten wird.
 
-### <a name="part-3---gesture-feedback"></a>Teil 3 – Geste Feedback
+* Erweitern Sie in der **audiosource** **3D Sound Settings**.
+* Legen Sie die **Doppler-Ebene** auf **0**fest.
+
+Durch das Festlegen von Doppler-Level auf NULL werden die Änderungen in der durch Bewegung (entweder im – Hologramm oder im Benutzer) verursachten Tonhöhe deaktiviert. Ein klassisches Beispiel für Doppler ist ein schnell beweglicher Wagen. Wenn sich das Auto auf einen stationären Listener nähert, steigt die Tonhöhe der Engine. Wenn Sie den Listener übergibt, wird die-Tonhöhe mit Distance gesenkt.
+
+### <a name="part-2---directing-the-users-gaze"></a>Teil 2: leiten des Benutzer Blicks
 
 #### <a name="key-concepts"></a>Wichtige Konzepte
 
-* Bietet dem Benutzer mit positiven Geste Bestätigung mithilfe von sound
-* Des Benutzers, übermäßig laut Sounds Get auf die Weise nicht zu überlasten
-* Feine Sounds Arbeit best - nicht überlagern, die Benutzeroberfläche
+* Verwenden Sie Sound, um auf wichtige holograms aufzurufen.
+* Die Ohren helfen Ihnen, den Augenblick zu lenken.
+* Das Gehirn hat einige Erwartungen gelernt.
+
+Ein Beispiel für die gewonnenen Erwartungen ist, dass die Vögel in der Regel über den Köpfen der Menschen sind. Wenn ein Benutzer ein vogelton hört, besteht die anfängliche Reaktion darin, nach oben zu suchen. Das Platzieren eines Vogels unterhalb des Benutzers kann dazu führen, dass er mit der richtigen Richtung des Sounds zurechtkommt, aber das – Hologramm nicht finden kann, je nachdem, dass er gesucht werden muss.
 
 #### <a name="instructions"></a>Anweisungen
 
-* In der **Hierarchie** erweitern **HologramCollection**.
-* Erweitern Sie **EnergyHub** , und wählen Sie **Base**.
-* In der **Inspektor** auf **Add Component** und fügen **Sound Gestenhandler**.
-* In **Sound Gestenhandler**, klicken Sie auf den Kreis neben **Navigation Schritte Clip** und **Navigation aktualisiert Clip** , und wählen Sie **RotateClick**aus der Popupliste für beide.
-* Doppelklicken Sie auf "GestureSoundHandler" in Visual Studio geladen.
+Mithilfe der folgenden Anweisungen können Sie P0LY hinter Ihnen verbergen, damit Sie den Sound verwenden können, um das Hologram zu suchen.
 
-Geste Sound-Ereignishandler führt die folgenden Aufgaben durch:
+* Wählen Sie im Bereich **Hierarchie** die Option **Manager**aus.
+* Suchen Sie im **Inspektor** -Panel den **Spracheingabe Handler**.
+* Erweitern Sie im **Spracheingabe Handler**den Bereich **Gehe ausblenden**.
+* Ändern Sie **keine Funktion** in **polyactions. gohide**.
 
-* Erstellen und Konfigurieren einer **AudioSource**.
-* Ort der **AudioSource** am Speicherort des entsprechenden **"gameobject"**.
-* Spielt den **AudioClip** der Bewegung zugeordneten.
+![Schlüsselwort Ausblenden ausblenden](images/gohide.png)
+
+### <a name="part-3---gesture-feedback"></a>Teil 3: Gesten Feedback
+
+#### <a name="key-concepts"></a>Wichtige Konzepte
+
+* Bereitstellen von positiver Gesten Bestätigung mit Sound
+* Bewegen Sie die Benutzer übermäßig lauter Sounds nicht auf die gleiche Weise
+* Feine Sounds funktionieren am besten
+
+#### <a name="instructions"></a>Anweisungen
+
+* Erweitern Sie im Bereich **Hierarchie** den Knoten **hologrammcollection**.
+* Erweitern Sie **energyhub** , und wählen Sie **Basis**aus.
+* Klicken Sie im **Inspektor** -Panel auf **Komponente hinzufügen** , und fügen Sie **Gesten Sound Handler**hinzu.
+* Klicken Sie in **Gesten Sound Handler**auf den Kreis neben **Navigation Started Clip** und **Navigation aktualisierte Clip** , und wählen Sie im Popup Fenster für beide den Bereich **rotateclick** aus.
+* Doppelklicken Sie auf "gesturesound Handler", um in Visual Studio zu laden.
+
+Der Gesten Sound Handler führt die folgenden Aufgaben aus:
+
+* Erstellen und konfigurieren Sie eine **audiosource**.
+* Platzieren Sie die **audiosource** an der Position des entsprechenden **gameobject**.
+* Gibt den **Audioclip** wieder, der mit der Geste verknüpft ist.
 
 #### <a name="build-and-deploy"></a>Erstellen und bereitstellen
 
-1. Wählen Sie in Unity **Datei > Buildeinstellungen**.
+1. Wählen Sie in Unity **Datei >** Buildeinstellungen aus.
 2. Klicken Sie auf **Erstellen**.
-3. Mausklick die **App** Ordner.
-4. Drücken Sie **wählen Sie Ordner**.
+3. Klicken Sie einfach auf den **App** -Ordner.
+4. Drücken **Sie Ordner auswählen**.
 
-Überprüfen Sie, dass die Symbolleiste "Release", "x 86" oder "X64" und "Remotegerät" lautet. Wenn dies nicht der Fall ist, dies ist die Codierung Instanz von Visual Studio. Sie müssen möglicherweise die Lösung über den App-Ordner erneut zu öffnen.
+Überprüfen Sie, ob die Symbolleiste "Release", "x86", "x64" und "Remote Gerät" heißt. Wenn dies nicht der Fall ist, ist dies die Codierungs Instanz von Visual Studio. Möglicherweise müssen Sie die Projekt Mappe aus dem App-Ordner erneut öffnen.
 
-* Wenn Sie dazu aufgefordert werden, laden Sie die Projektdateien.
-* Wie zuvor in Visual Studio bereitstellen.
+* Wenn Sie dazu aufgefordert werden, laden Sie die Projektdateien erneut
+* Stellen Sie wie zuvor über Visual Studio bereit.
 
-Nachdem die Anwendung bereitgestellt wird:
+Nachdem die Anwendung bereitgestellt wurde:
 
-* Beachten Sie, wie der Sound ändert, während Sie sich auf P0LY bewegen.
-* Sagen Sie *"Wechseln Sie verbergen"* P0LY an eine Position hinter Ihnen verschieben vornehmen. Finden Sie es, indem Sie den Sound.
-* Bestaunen Sie an der Basis des Energie-Hubs. Tippen Sie auf, und ziehen Sie nach links oder rechts drehen den – Hologramm, und beachten, wie der Sound durch Klicken auf die Aktion bestätigt.
+* Beobachten Sie, wie sich der Sound bei der Umstellung auf P0LY ändert.
+* Sagen Sie *"go hide" (ausblenden* ), um P0LY zu einem Speicherort hinter Ihnen zu wechseln. Suchen Sie nach dem Sound.
+* Schauen Sie sich die Basis des Energy Hubs an. Tippen und ziehen Sie nach links oder rechts, um das – Hologramm zu drehen, und sehen Sie, wie der Klick Sound die Geste bestätigt.
 
-Hinweis: Es ist ein Text-Bereich, der Tag-along mit Ihnen wird ein. Diese werden die verfügbaren Stimmbefehle enthalten, die Sie in diesem Kurs verwenden können.
+Hinweis: Ein Text Panel wird zusammen mit Ihnen angezeigt. Diese werden die verfügbaren Sprachbefehle enthalten, die Sie in diesem Kurs verwenden können.
 
-## <a name="chapter-3---spatial-sound-and-spatial-mapping"></a>Kapitel 3: räumliche Sound und räumliche Zuordnung
+## <a name="chapter-3---spatial-sound-and-spatial-mapping"></a>Kapitel 3: räumliche und räumliche Zuordnung
 
 ### <a name="objectives"></a>Ziele
 
-* Interaktion zwischen Hologramme und die reale Welt, die mit der Sound zu bestätigen.
-* Verdeckt Sound mithilfe der realen Welt.
+* Bestätigen Sie die Interaktion zwischen holograms und der realen Welt mit Sound.
+* Verwenden Sie den Sound mit der physischen Welt.
 
-### <a name="part-1---physical-world-interaction"></a>Teil 1 – die Interaktion der realen Welt
-
-#### <a name="key-concepts"></a>Wichtige Konzepte
-
-* Physische Objekte in der Regel einen Sound vornehmen, wenn festgestellt wird eine Fläche oder einem anderen Objekt.
-* Sounds sollte innerhalb der Umgebung geeigneten Kontext.
-
-Festlegen einer Tasse in einer Tabelle sollten z. B. ruhigerer Sound als eine Boulder auf einen Teil-Metal-Computern löschen.
-
-#### <a name="instructions"></a>Anweisungen
-
-* In der **Hierarchie** erweitern **HologramCollection**.
-* Erweitern Sie **EnergyHub**Option **Base**.
-* In der **Inspektor** auf **Add Component** und fügen **tippen, direkt mit Sound- und Aktion**.
-* In **Tippen Sie auf, um anstelle von Sounds und Aktion**:
-  * Überprüfen Sie **Platzieren von übergeordneten auf Tap**.
-  * Legen Sie **Platzierung Sound** zu **Ort**.
-  * Legen Sie **Pickup Sound** zu **Pickup**.
-  * Drücken Sie die + in der unteren rechten in beiden Verzeichnissen **bei Pickup Aktion** und **bei Platzierung Aktion**. Ziehen Sie EnergyHub aus der Szene in der **None (Objekt)** Felder.
-    * Klicken Sie unter **bei Pickup Aktion**, klicken Sie auf **keine Funktion** -> **EnergyHubBase** -> **ResetAnimation**.
-    * Klicken Sie unter **bei Platzierung Aktion**, klicken Sie auf **keine Funktion** -> **EnergyHubBase** -> **OnSelect**.
-
-![Tippen Sie auf, um anstelle von Sounds und Aktion](images/holograms220-taptoplace.png)
-
-### <a name="part-2---sound-occlusion"></a>Teil 2 – Sound verdecken.
+### <a name="part-1---physical-world-interaction"></a>Teil 1-physische Welt Interaktion
 
 #### <a name="key-concepts"></a>Wichtige Konzepte
 
-* Sound, wie Licht, kann okkludierte sein.
+* Physische Objekte machen im Allgemeinen einen Sound, wenn Sie auf eine Oberfläche oder ein anderes Objekt stoßen.
+* Sounds sollte Kontext freundlich sein.
 
-Ein klassisches Beispiel ist eine Concert Hall. Wenn ein Listener verfügbar ist, außerhalb des Unternehmens und die Tür geschlossen ist, die dumpf Musik und Sound. Es ist auch in der Regel eine Reduzierung des Volumens. Wenn die Tür geöffnet wird, ist das gesamte Spektrum von den Sound am des tatsächlichen Umfangs hören. Hohe Auslastung Sounds sind in der Regel mehr als Frequenzen absorbiert.
+Beispielsweise sollte das Festlegen eines Cup für eine Tabelle einen ruhigeren Sound als das Löschen eines Boulders auf einem Metal-Gerät machen.
 
 #### <a name="instructions"></a>Anweisungen
 
-* In der **Hierarchie** erweitern **HologramCollection** , und wählen Sie **P0LY**.
-* In der **Inspektor** auf **Add Component** und fügen **Audio Korrekturemitter**.
+* Erweitern Sie im Bereich **Hierarchie** den Knoten **hologrammcollection**.
+* Erweitern Sie **energyhub**, und wählen Sie **Basis**aus.
+* Klicken Sie im **Inspektor** -Panel auf **Komponente hinzufügen** , und fügen Sie **mit Sound und Action Tap**hinzu.
+* **Tippen Sie auf, um mit Sound und Action zu platzieren**:
+  * Aktivieren Sie **übergeordnetes Element bei tippen**.
+  * Legen Sie **Platzierungs Sound** auf **platzieren**fest.
+  * Legen Sie **Pickup Sound** auf **Pickup**fest.
+  * Drücken Sie die Taste + unten rechts unter sowohl **bei der** Aufnahme-als auch bei der **Platzierungs Aktion**. Ziehen Sie energyhub aus der Szene in die Felder **None (Object)** .
+    * Klicken Sie unter **on Pickup Action**auf **No Function** -> **energyhubbase** -> **resettanimation.**
+    * Klicken Sie unter **Platzierungs Aktion**auf **keine Funktion** -> **energyhubbase** -> **onselect**.
 
-Die Korrekturemitter für Audio-Klasse bietet die folgenden Features:
+![Mit Sound und Action tippen](images/holograms220-taptoplace.png)
 
-* Stellt alle Änderungen auf das Volume von der **AudioSource**.
-* Führt eine **Physics.RaycastNonAlloc** aus Position in Richtung des Benutzers die **"gameobject"** , die **AudioEmitter** angefügt ist.
+### <a name="part-2---sound-occlusion"></a>Teil 2: Sound Okklusion
 
-Die RaycastNonAlloc-Methode wird zur leistungsoptimierung verwendet, um Zuordnungen sowie die Anzahl der zurückgegebenen Ergebnisse zu beschränken.
+#### <a name="key-concepts"></a>Wichtige Konzepte
 
-* Für jede **IAudioInfluencer** auftritt, ruft der **ApplyEffect** Methode.
-* Für jeden vorherigen **IAudioInfluencer** , nicht mehr festgestellt werden, Aufruf der **RemoveEffect** Methode.
+* Sound, wie z. b. Light, können ausgeblendet werden.
 
-Beachten Sie, dass AudioEmitter auf pro-Frame-Basis auf menschliche Zeitskalen, im Gegensatz zu updates. Dies geschieht, da die Menschen in der Regel nicht schnell genug für den Effekt, die häufiger als einmal pro Quartal oder eine halbe Sekunde aktualisiert werden müssen verschieben. Hologramme, Teleport schnell von einem Speicherort in einen anderen kann die Illusion unterbrochen werden.
+Ein klassisches Beispiel ist eine Concert Hall. Wenn ein Listener außerhalb der Halle steht und die Tür geschlossen ist, hört sich die Musik mit gedämpften Tönen an. Es gibt in der Regel auch eine Reduzierung des Volumes. Wenn die Tür geöffnet ist, wird das gesamte Spektrum des Sounds auf dem eigentlichen Volume gehört. Sounds mit hoher Frequenz werden im Allgemeinen mehr als niedrige Frequenzen erfasst.
 
-* In der **Hierarchie** erweitern **HologramCollection**.
-* Erweitern Sie **EnergyHub** , und wählen Sie **BlobOutside**.
-* In der **Inspektor** auf **Add Component** und fügen **Audio Occluder**.
-* In **Audio Occluder**legen **Grenzwert Häufigkeit** zu **1500**.
+#### <a name="instructions"></a>Anweisungen
 
-Diese Einstellung beschränkt die AudioSource Frequenzen für 1500 Hz und niedriger.
+* Erweitern Sie im Bereich **Hierarchie** den Knoten **hologrammcollection** , und wählen Sie **P0LY**aus.
+* Klicken Sie im **Inspektor** -Panel auf **Komponente hinzufügen** , und fügen Sie **audioemitter**hinzu.
 
-* Legen Sie **Pass-Through-Datenträger** zu **0.9**.
+Die audioemitter-Klasse bietet die folgenden Features:
 
-Diese Einstellung verringert die Menge an die AudioSource 90 % der aktuellen Ebene.
+* Stellt alle Änderungen am Volume der **audiosource**wieder her.
+* Führt eine " **Physik. raycastnonzuweisung** " aus der Position des Benutzers in der Richtung des **gameobject** aus, an das der **audioemitter** angefügt ist.
 
-Audio Occluder implementiert IAudioInfluencer auf:
+Die raycastnonalloc-Methode wird als Leistungsoptimierung verwendet, um Zuordnungen und die Anzahl der zurückgegebenen Ergebnisse einzuschränken.
 
-* Anwenden einer verdecken Effekt mithilfe einer **AudioLowPassFilter** dem zugeordnet, der **AudioSource** verwalteten kaufen der **AudioEmitter**.
-* Gilt die AudioSource Volume Attenuation hinzu.
-* Deaktiviert die Auswirkungen von einer neutralen Grenzfrequenz festlegen, und Deaktivieren des Filters.
+* Für jeden gefundenen **iaudioinflutercer** Ruft die **applyeffect** -Methode auf.
+* Für jeden vorherigen **iaudioinfludencer** , der nicht mehr gefunden wird, wird die **removeeffect** -Methode aufgerufen.
 
-Die Häufigkeit, die als neutrale ist 22 kHz (22000 Hz). Die Häufigkeit wurde gewählt, da über die nominale maximale Häufigkeit, die das menschliche Ohr, diese vornehmen keine wahrnehmbaren Auswirkungen auf den Sound hören kann.
+Beachten Sie, dass audioemitter bei menschlichen Zeitskalen aktualisiert wird, im Gegensatz zu pro Frame. Der Grund hierfür ist, dass Menschen im Allgemeinen nicht schnell genug verschieben, damit die Auswirkungen häufiger als jedes Quartal oder die Hälfte der Sekunde aktualisiert werden müssen. Hologramme, die schnell von einem Speicherort an einen anderen teleportieren, können die Illusion unterbrechen.
 
-* In der **Hierarchie** wählen **SpatialMapping**.
-* In der **Inspektor** auf **Add Component** und fügen **Audio Occluder**.
-* In **Audio Occluder**legen **Grenzwert Häufigkeit** zu **750**.
+* Erweitern Sie im Bereich **Hierarchie** den Knoten **hologrammcollection**.
+* Erweitern Sie **energyhub** , und wählen Sie **blobaußen**aus.
+* Klicken Sie im **Inspektor** -Panel auf **Komponente hinzufügen** , und fügen Sie **audiookokder**hinzu.
+* Legen Sie in **audiookder**den Umstellungs **Frequenz** -Wert auf **1500**fest.
 
-Wenn mehrere Occluders sind, auf dem Pfad zwischen Benutzer und dem **AudioEmitter**, die niedrigste Häufigkeit wird angewendet, um den Filter.
+Diese Einstellung schränkt die audiosource-Frequenzen auf 1500 Hz und niedriger ein.
 
-* Legen Sie **Pass-Through-Datenträger** zu **0,75**.
+* Legen Sie den **volumedurchlauf** auf **0,9**fest.
 
-Wenn mehrere Occluders sind, auf dem Pfad zwischen Benutzer und dem **AudioEmitter**, die Pass-through-Datenträger lichtdurchlässigen angewendet wird.
+Mit dieser Einstellung wird das Volume der audiosource auf die aktuelle Ebene von 90% reduziert.
 
-* In der **Hierarchie** wählen **Managern**.
-* In der **Inspektor** erweitern **Spracherkennung Eingabe Handler**.
-* In **Spracherkennung Eingabe Handler**, erweitern Sie **wechseln Gebühren**.
-* Änderung **keine Funktion** zu **PolyActions.GoCharge**.
+Der audiookton implementiert iaudioinflutencer für Folgendes:
 
-![Keyword: Wechseln Sie kostenlos](images/gocharge.png)
+* Anwenden eines Okklusions Effekts mithilfe eines **audiolowpassfilter** , der an die **audiosource** angefügt wird, die den **audioemitter**kauft.
+* Wendet die volumedämpfung auf die audiosource an.
+* Deaktiviert den Effekt durch Festlegen einer neutralen Umstellungs Frequenz und Deaktivieren des Filters.
 
-* Erweitern Sie **hierher**.
-* Änderung **keine Funktion** zu **PolyActions.ComeBack**.
+Die als neutral verwendete Häufigkeit ist 22 kHz (22000 Hz). Diese Häufigkeit wurde gewählt, weil Sie über der maximalen maximalen Frequenz liegt, die vom menschlichen Ohr gehört werden kann, sodass keine erkennbaren Auswirkungen auf den Sound entstehen.
 
-![Keyword: Komm her](images/comehere.png)
+* Wählen Sie im Bereich **Hierarchie** die Option **spatialmapping**aus.
+* Klicken Sie im **Inspektor** -Panel auf **Komponente hinzufügen** , und fügen Sie **audiookokder**hinzu.
+* Legen Sie in **audiookder**den Umstellungs **Frequenz** -Wert auf **750**fest.
+
+Wenn sich mehrere okader im Pfad zwischen dem Benutzer und dem **audioemitter**befinden, wird die niedrigste Frequenz auf den Filter angewendet.
+
+* Legen Sie den **volumedurchlauf** auf **0,75**fest.
+
+Wenn sich mehrere okader im Pfad zwischen dem Benutzer und dem **audioemitter**befinden, wird das Volume weitergeleitet.
+
+* Wählen Sie im Bereich **Hierarchie** die Option **Manager**aus.
+* Erweitern Sie im **Inspektor** -Panel den **Spracheingabe Handler**.
+* Erweitern Sie im **Spracheingabe Handler den Eintrag** **go-Belastung**.
+* Ändern Sie **keine Funktion** in **polyactions. goabgerechnet**.
+
+![Schlüsselwort Gehe zu](images/gocharge.png)
+
+* Erweitern Sie **hier**.
+* Ändern Sie **keine Funktion** in **polyactions. ComeBack**.
+
+![Schlüsselwort Komm her](images/comehere.png)
 
 #### <a name="build-and-deploy"></a>Erstellen und bereitstellen
 
-* Wie zuvor erstellen Sie das Projekt im Unity, und stellen Sie in Visual Studio bereit.
+* Erstellen Sie wie zuvor das Projekt in Unity, und stellen Sie es in Visual Studio bereit.
 
-Nachdem die Anwendung bereitgestellt wird:
+Nachdem die Anwendung bereitgestellt wurde:
 
-* Sagen Sie *"Wechseln Sie kostenlos"* P0LY Geben Sie den Hub Energie haben.
+* Sagen Sie *"Go-Kosten"* , damit P0LY den Energie-Hub eingeben.
 
-Beachten Sie die Änderung der Sound. Es sollte dumpfe und ein wenig leiser klingen. Wenn Sie sich mit einer Wand oder ein anderes Objekt zwischen Ihnen und dem Hub Energie positionieren können, sollten Sie feststellen, einen weiteren muffling des Sounds am Einschluss von der realen Welt.
+Beachten Sie die Änderung des Sounds. Dies sollte ein wenig leiser werden. Wenn Sie sich in der Lage sind, sich mit einer Wand oder einem anderen Objekt zwischen Ihnen und dem Energie-Hub zu positionieren, sollten Sie aufgrund der Okklusion der realen Welt eine weitere Belastung des Sounds feststellen.
 
-* Sagen Sie *"Kommen hier"* P0LY, lassen Sie den Hub Energie, und positionieren Sie sich selbst vor Ihnen haben.
+* Sagen *Sie* , dass P0LY den Energie-Hub verlassen und sich vor Ihnen positionieren muss.
 
-Beachten Sie, dass der sound verdecken entfernt wird, sobald P0LY Energie Hub beendet wird. Falls Sie immer noch hören verdecken, können von der realen Welt P0LY okkludierte sein. Versuchen Sie, um sicherzustellen, dass Sie eine klare uneingeschränkten Zugriff auf P0LY zu verschieben.
+Beachten Sie, dass die Sound Okklusion einmal entfernt wird P0LY beendet den Energie-Hub. Wenn Sie immer noch mit der Okklusion hören, wird P0LY möglicherweise von der realen Welt ausgeschlossen. Versuchen Sie, die Umstellung durchführen zu lassen.
 
-### <a name="part-3---room-models"></a>Teil 3 – Platz Modelle
+### <a name="part-3---room-models"></a>Teile von 3-Raum-Modellen
 
 #### <a name="key-concepts"></a>Wichtige Konzepte
 
-* Die Größe des Speicherplatzes bietet subliminalen Warteschlangen, die zur Lokalisierung der sound beitragen.
-* Raum Modelle werden pro festgelegt-**AudioSource**.
-* Die [MixedRealityToolkit für Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity) enthält Code zum Festlegen des Modells Platz.
-* Wählen Sie für Mixed Reality-Umgebungen das Platz-Modell, das den realen Welt Speicherplatz am besten geeignet ist.
+* Die Größe des Speicherplatzes bietet unter-Warteschlangen, die zur Sound Lokalisierung beitragen.
+* Raummodelle werden pro**audiosource**festgelegt.
+* Das [mixedrealitytoolkit für Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity) stellt Code zum Festlegen des raummodells bereit.
+* Wählen Sie für gemischte Realität das Raummodell aus, das am besten zu dem realen Raum passt.
 
-Wenn Sie ein Virtual Reality-Szenario erstellen, wählen Sie das Platz-Modell, das die virtuelle Umgebung am besten geeignet ist.
+Wenn Sie ein virtuelles Reality-Szenario erstellen, wählen Sie das Raummodell aus, das für die virtuelle Umgebung am besten geeignet ist.
 
-## <a name="chapter-4---sound-design"></a>Kapitel 4 – Entwurf
+## <a name="chapter-4---sound-design"></a>Kapitel 4: Sound Design
 
 ### <a name="objectives"></a>Ziele
 
-* Erfahren Sie, Überlegungen zum effektiven Entwurf.
-* Erfahren Sie, Mischen von Methoden und Richtlinien.
+* Verstehen Sie die Überlegungen für den effektiven Sound Entwurf.
+* Erlernen Sie die Vorgehensweisen für das Mischen von Techniken
 
-### <a name="part-1---sound-and-experience-design"></a>Teil 1 – Sound- und Entwurf der Benutzeroberfläche
+### <a name="part-1---sound-and-experience-design"></a>Teil 1: Sound und Erfahrungs Entwurf
 
-Dieser Abschnitt beschreibt die wichtigsten Sound und Überlegungen zum Entwurf der Benutzeroberfläche und Richtlinien.
+In diesem Abschnitt werden die wichtigsten Überlegungen und Richtlinien für Sound und Design erläutert.
 
-#### <a name="normalize-all-sounds"></a>Normalisieren Sie alle sounds
+#### <a name="normalize-all-sounds"></a>Alle Sounds normalisieren
 
-Dadurch muss die Groß-/Kleinschreibung spezialcode Lautstärkestufen pro Sound, Anpassen der zeitaufwändig sein kann, und beschränkt die Fähigkeit, um Audiodateien problemlos zu aktualisieren.
+Dadurch ist es nicht erforderlich, dass Sonderfallcode die volumeebenen pro Sound anpasst, was zeitaufwändig sein kann, und die Möglichkeit zum einfachen Aktualisieren von Sounddateien einschränkt.
 
-#### <a name="design-for-an-untethered-experience"></a>Entwurf für eine unabhängig
+#### <a name="design-for-an-untethered-experience"></a>Entwurf für eine unteschte Darstellung
 
-HoloLens handelt es sich um eine vollständig enthaltene, unabhängig holographic-Computer. Ihre Benutzer können und Ihre Erfahrungen beim Verschieben von verwenden. Achten Sie darauf, dass die audio Mischung zu testen, indem Sie zu durchlaufen.
+Hololens ist ein vollständig enthaltener holografischer Computer. Ihre Benutzer können Ihre Erfahrungen während des Verschiebens nutzen und verwenden. Testen Sie Ihre Audiomischung, indem Sie Sie durchlaufen.
 
-#### <a name="emit-sound-from-logical-locations-on-your-holograms"></a>Ausgeben von Sounds über logischen Laufwerke auf Ihrem Hologramme
+#### <a name="emit-sound-from-logical-locations-on-your-holograms"></a>Ausgabe von logischen Speicherorten auf Ihren holograms
 
-In der realen Welt Hundes nicht über die Tail Hundegebellsound, und einem Benutzer, der die Sprache nicht aus seiner Fuß stammt. Vermeiden Sie, die Ihre Sounds aus unerwarteten Teile Ihrer Hologramme ausgeben.
+In der Praxis kommt ein Hund nicht von seinem Ende her, und die Stimme eines Menschen wird nicht von seinen Füßen entfernt. Vermeiden Sie, dass Ihre Sounds aus unerwarteten teilen ihrer holograms ausgegeben werden.
 
-Kleine Hologramme ist es sinnvoll, die aus der Mitte der Geometrie ausgeben klingen.
+Bei kleinen holograms ist es sinnvoll, eine Soundausgabe aus der Mitte der Geometrie zu haben.
 
-#### <a name="familiar-sounds-are-most-localizable"></a>Vertraut klingt sind die meisten lokalisierbar
+#### <a name="familiar-sounds-are-most-localizable"></a>Vertraute Sounds sind die meisten lokalisierbaren Sounds
 
-Die menschliche Stimme und Musik sind sehr einfach zu lokalisieren. Wenn ein Benutzer den Namen Ihres aufgerufen wird, können Sie sehr genau bestimmen, in welche Richtung die Stimme stammen und wie weit entfernt. Sounds für kurzen, nicht vertraut sind schwerer zu lokalisieren.
+Die Menschen Sprache und Musik sind sehr einfach zu lokalisieren. Wenn jemand Ihren Namen aufruft, können Sie genau feststellen, welche Richtung die Stimme erhalten hat und wie weit entfernt. Kurze, unbekannte Sounds sind schwieriger zu lokalisieren.
 
-#### <a name="be-cognizant-of-user-expectations"></a>Werden Sie die Erwartungen der Benutzer kennen sollten
+#### <a name="be-cognizant-of-user-expectations"></a>Erkennen von Erwartungen von Benutzern
 
-Leben Erfahrung spielt eine Rolle in unserer Fähigkeit zur Identifizierung des Speicherorts eines Sounds. Dies ist ein Grund, warum die menschliche Stimme besonders einfach zu lokalisieren ist. Es ist wichtig zu beachten gelernten Erwartungen des Benutzers bei der Platzierung Ihrer Sounds.
+Die Lebensdauer spielt einen Teil der Möglichkeit, den Speicherort eines Sounds zu erkennen. Dies ist ein Grund, warum die menschliche Stimme besonders leicht lokalisiert werden kann. Es ist wichtig, dass Sie wissen, welche Erwartungen der Benutzer beim Platzieren Ihrer Sounds hat.
 
-Z. B. wenn ein Benutzer eine Bird "Song" hört suchen sie in der Regel, wie Vögel tendenziell über den uneingeschränkten Zugriff (fliegenden oder in einer Struktur). Es ist nicht ungewöhnlich, dass ein Benutzer in der richtigen Richtung eines Sounds, aber in vertikaler Richtung falsche suchen und verwechseln oder frustriert sind, wenn sie nicht die Hologramm gefunden werden.
+Wenn ein Benutzer beispielsweise einen vogelsong hört, sehen Sie sich im Allgemeinen an, da sich die Vögel in der Regel über der Sicht befinden (in der Struktur oder in einer Struktur). Es ist nicht ungewöhnlich, dass ein Benutzer die korrekte Richtung eines Sounds einschaltet, aber in der falschen vertikalen Richtung sucht und verwirrt oder frustriert wird, wenn er das Hologram nicht finden kann.
 
-#### <a name="avoid-hidden-emitters"></a>Vermeiden Sie ausgeblendete korrekturemitter ab
+#### <a name="avoid-hidden-emitters"></a>Vermeiden Sie verborgene Emitter.
 
-In der Praxis Wenn wir hören, dass eine solide, können wir in der Regel das Objekt identifizieren, das den Klang ausgibt. Dies sollte auch in Ihre Erfahrungen mit "true" enthalten. Sie können für Benutzer, einen Sound hören, wissen Sie in den Ursprung des Klang sehr verwirrend sein und nicht auf ein Objekt finden Sie unter.
+In der realen Welt können wir, wenn wir einen Sound hören, im Allgemeinen das Objekt identifizieren, das den Sound ausgibt. Dies sollte auch für Ihre Erfahrungen sorgen. Es kann sehr stark sein, dass Benutzer einen Sound hören und wissen, woher der Sound stammt und ein Objekt nicht sehen kann.
 
-Es gibt einige Ausnahmen von dieser Richtlinie. Beispielsweise müssen Ambiente Audiokomponenten wie Crickets in einem Feld nicht angezeigt. Life-Erfahrung bietet uns die Vertrautheit mit der Quelle dieser Sounds, ohne dass es finden Sie unter.
+Es gibt einige Ausnahmen zu dieser Richtlinie. Umgebungs Klänge wie z. b. Crickets in einem Feld müssen z. b. nicht sichtbar sein. Mit der Lebensdauer können wir uns mit der Quelle dieser Sounds vertraut machen, ohne Sie sehen zu müssen.
 
-### <a name="part-2---sound-mixing"></a>Teil 2 – Sound mischen.
+### <a name="part-2---sound-mixing"></a>Teil 2: Sound Mischung
 
-#### <a name="target-your-mix-for-70-volume-on-the-hololens"></a>Die Mischung für die HoloLens 70 % Volume als Ziel
+#### <a name="target-your-mix-for-70-volume-on-the-hololens"></a>Ziel ihrer Mischung für 70% Volume in den hololens
 
-Mixed Reality-Erfahrungen ermöglichen Hologramme, die in der realen Welt angezeigt werden. Sie sollten auch reale Welt Sounds zu ermöglichen. Ein Ziel 70 % Volume kann der Benutzer die Welt um diese zusammen mit Ihren Erfahrungen zu hören.
+Gemischte Realität ermöglicht das Erkennen von holograms in der realen Welt. Sie sollten auch das hören von echten Sounds erlauben. Ein 70%-volumespeicherziel ermöglicht dem Benutzer, die Welt mit dem Sound Ihrer Benutzerumgebung zu hören.
 
-#### <a name="hololens-at-100-volume-should-drown-out-external-sounds"></a>HoloLens unter 100 % Volume sollte herausfiltert externe ertrinken.
+#### <a name="hololens-at-100-volume-should-drown-out-external-sounds"></a>Hololens bei 100% Volume sollten externe Sounds auslagern
 
-Eine Volume-Ebene von 100 % entspricht in etwa eine Virtual Reality-Erfahrung. Visuell wird der Benutzer zu einem anderen System übertragen. Die gleiche muss "true" akustisch enthalten sind.
+Eine Volumeebene von 100% ist vergleichbar mit einer Virtual Reality-Darstellung. Der Benutzer wird visuell in eine andere Welt transportiert. Dasselbe sollte true sein.
 
-#### <a name="use-the-unity-audiomixer-to-adjust-categories-of-sounds"></a>Verwenden Sie die Unity-AudioMixer Kategorien von Sounds anpassen
+#### <a name="use-the-unity-audiomixer-to-adjust-categories-of-sounds"></a>Verwenden des Unity Audiomixer zum Anpassen von Sound Kategorien
 
-Beim Entwerfen Ihrer testmischung ist es oft hilfreich, sound Kategorien erstellen und haben die Möglichkeit, erhöhen oder Verringern ihres Umfangs als eine Einheit. Dies behält die relativen Leistungsstufen für jeden Sound gleichzeitig schnelle und einfache Änderungen an der Kombination aus. Allgemeine Kategorien sind: Soundeffekte, Umgebung, Voice-Failover und Hintergrundmusik.
+Beim Entwerfen ihrer Mischung ist es häufig hilfreich, audiokategorien zu erstellen, und Sie können das Volume als Einheit vergrößern oder verkleinern. Dies behält die relativen Ebenen jedes Sounds bei und ermöglicht gleichzeitig schnelle und einfache Änderungen an der gesamten Mischung. Zu den allgemeinen Kategorien gehören: Soundeffekte, Ambiente, Sprachausgabe und Hintergrundmusik.
 
-#### <a name="mix-sounds-based-on-the-users-gaze"></a>Kombinieren Sie anhand des Benutzers Blicke sounds
+#### <a name="mix-sounds-based-on-the-users-gaze"></a>Sounds auf der Grundlage des Benutzer Blicks mischen
 
-Es kann häufig hilfreich sein, ändern Sie den sound Mischung in Ihre Umgebung basierend auf den Speicherort ein Benutzers ist (oder nicht) suchen. Ein gängiges Szenario für dieses Verfahren werden die Volumeebene für Hologramme zu reduzieren, die außerhalb von den Holographic Frame für den Benutzer zu konzentrieren, die Informationen direkt vor ihnen erleichtern. Eine weitere Verwendungsmöglichkeit ist zum Erhöhen der Lautstärke eines Sounds aus, um die Aufmerksamkeit des Benutzers auf ein wichtiges Ereignis zu zeichnen.
+Häufig kann es hilfreich sein, die Sound Mischung in Ihrer Benutzer Darstellung zu ändern, je nachdem, wo ein Benutzer sucht (oder nicht). Diese Technik wird häufig verwendet, um die Volumeebene für holograms zu verringern, die sich außerhalb des Holographic Frame befinden, um dem Benutzer die Möglichkeit zu geben, sich auf die darin vorgelagerten Informationen zu konzentrieren. Eine andere Verwendung besteht darin, das Volume eines Sounds zu vergrößern, um die Aufmerksamkeit des Benutzers auf ein wichtiges Ereignis zu zeichnen.
 
-#### <a name="building-your-mix"></a>Erstellen die Mischung
+#### <a name="building-your-mix"></a>Entwickeln der Mischung
 
-Wenn Sie die Mischung erstellen zu können, empfiehlt es sich mit hintergrundaudiofunktion für Ihre Umgebung die beginnen, und basierte auf Wichtigkeit Ebenen hinzufügen. Oft führt dies in jeder Schicht wird als die vorherige lauter.
+Wenn Sie Ihre Mischung entwickeln, empfiehlt es sich, mit der Hintergrund Audiofunktion Ihrer Benutzererfahrung zu beginnen und Ebenen basierend auf der Wichtigkeit hinzuzufügen. Dies führt häufig dazu, dass jede Ebene lauter ist als die vorherige.
 
-Die Mischung vorstellen, als eine invertierte Trichter, mit dem am wenigsten wichtige (und in der Regel leisesten Sounds) im unteren Bereich wird empfohlen, die ähnlich wie im folgenden Diagramm Mischung Struktur.
+Wenn Sie Ihre Mischung als umgekehrten Trichter mit den geringsten wichtigen (und üblicherweise ruhigste Sounds) im unteren Bereich vorstellen, empfiehlt es sich, die Mischung ähnlich wie im folgenden Diagramm zu strukturieren.
 
-![Sound Mix-Struktur](images/soundlevels.png)
+![Sound Mischungs Struktur](images/soundlevels.png)
 
-Voice-Failover sind ein interessantes Szenario. Basierend auf der Erfahrung, die Sie erstellen Sie nach Wunsch eine (nicht lokalisierte) Stereosound oder Ihre Stimme Failover spatialize. Zwei Microsoft veröffentlichte Erfahrungen hervorragende Beispiele für jedes Szenario zu veranschaulichen.
+Die Sprachausgabe ist ein interessantes Szenario. Basierend auf der von Ihnen erstellten Benutzersprache möchten Sie möglicherweise einen Stereo-Sound (nicht lokalisiert) oder eine räumliche Sprache umgestalten. Zwei veröffentlichte Microsoft-Erfahrungen veranschaulichen hervorragende Beispiele für jedes Szenario.
 
-[HoloTour](http://www.microsoft.com/store/p/holotour/9nblggh5pj87) Sprachnotizen Stereo verwendet. Wenn die Sprachausgabe den Speicherort, der angezeigt wird, beschreibt, wird der Sound sind konsistent und ist nicht variieren je nach Position des Benutzers. Dies ermöglicht die Sprachausgabe um der Szene ohne Durchführung von die spatialized Sounds aus der Umgebung zu beschreiben.
+[Holotour](http://www.microsoft.com/store/p/holotour/9nblggh5pj87) verwendet eine Stereo Stimme über. Wenn die Sprachausgabe den Speicherort beschreibt, der angezeigt wird, ist der Sound konsistent und unterscheidet sich nicht je nach Position des Benutzers. Dadurch kann die Sprachausgabe die Szene beschreiben, ohne die räumlichen Klänge der Umgebung zu nutzen.
 
-[Fragmente](https://www.microsoft.com/store/p/fragments/9nblggh5ggm8) nutzt eine spatialized Stimme über in Form einer Detective. Des Detektivs Stimme wird verwendet, zu bringen die Aufmerksamkeit des Benutzers, ein wichtiger Hinweis darauf, wie bei einer tatsächlichen Menschen im Raum. Dies ermöglicht eine noch größere Eindruck davon zu Entwicklungsthemen in die Oberfläche der Rätsel lösen.
+[Fragmente](https://www.microsoft.com/store/p/fragments/9nblggh5ggm8) nutzt eine spatialisierte Stimme in Form eines Detektiven. Die Stimme des Detektivs wird verwendet, um dem Benutzer einen wichtigen Hinweis zu vermitteln, als wäre ein tatsächlicher Mensch im Raum. Dies bietet noch mehr Einblicke in die Möglichkeiten der Behebung des Geheimnisses.
 
 ### <a name="part-3--performance"></a>Teil 3: Leistung
 
 #### <a name="cpu-usage"></a>CPU-Auslastung
 
-Wenn räumliche Sound verwenden, werden 10.-12. korrekturemitter ungefähr 12 % der CPU verbraucht.
+Bei Verwendung von räumlichem Sound verbrauchen 10-12-Emitter ungefähr 12% der CPU.
 
-#### <a name="stream-long-audio-files"></a>Lange Audiodateien Stream
+#### <a name="stream-long-audio-files"></a>Lange Audiodateien streamen
 
-Audiodaten können vor allem bei allgemeinen Samplingraten (48, und 44,1 kHz) groß sein. Eine allgemeine Regel gilt, Audiodateien, die länger als 5 bis 10 Sekunden gestreamt werden sollen, um die speicherauslastung der Anwendung zu reduzieren.
+Audiodaten können groß sein, insbesondere bei häufigen Stichproben Raten (44,1 und 48 kHz). Eine allgemeine Regel ist, dass Audiodateien, die länger als 5-10 Sekunden sind, gestreamt werden sollten, um die Anwendungs Speicherauslastung zu reduzieren
 
-In Unity können Sie eine Audiodatei für das streaming in der Datei importeinstellungen markieren.
+In Unity können Sie eine Audiodatei für das Streaming in den Import Einstellungen der Datei markieren.
 
-![Audio Importieren von Einstellungen](images/audioimportsettings.png)
+![Audioimportierungseinstellungen](images/audioimportsettings.png)
 
-## <a name="chapter-5---special-effects"></a>Kapitel 5 – Spezialeffekte zu erzeugen
+## <a name="chapter-5---special-effects"></a>Kapitel 5: besondere Effekte
 
 ### <a name="objectives"></a>Ziele
 
-* Tiefe "Magic-Windows" hinzufügen.
-* Bringen Sie den Benutzer in der virtuellen Welt ein.
+* Fügen Sie "Magic Windows" Tiefe hinzu.
+* Bringen Sie den Benutzer in die virtuelle Welt.
 
-### <a name="magic-windows"></a>Magic Windows
+### <a name="magic-windows"></a>Magische Fenster
 
 #### <a name="key-concepts"></a>Wichtige Konzepte
 
-* Erstellen von Ansichten in einer ausgeblendeten Welt, ist eine visuell ansprechende.
-* Verbessern Sie realer zu gestalten, indem Sie das Hinzufügen von Audioeffekten Wenn ggf. ein Hologramm oder der Benutzer in der Nähe der ausgeblendeten Welt ist.
+* Das Erstellen von Ansichten in eine verborgene Welt ist visuell attraktiv.
+* Verbessern Sie die Realismus durch Hinzufügen von Audioeffekten, wenn ein – Hologramm oder der Benutzer sich in der Nähe der verborgenen Welt befindet
 
 #### <a name="instructions"></a>Anweisungen
 
-* In der **Hierarchie** erweitern **HologramCollection** , und wählen Sie **Underworld**.
-* Erweitern Sie **Underworld** , und wählen Sie **VoiceSource**.
-* In der **Inspektor** auf **Add Component** und fügen **User Voice-Effekt**.
+* Erweitern Sie im Bereich **Hierarchie** den Knoten **hologrammcollection** , und wählen Sie dann **Underworld**aus.
+* Erweitern Sie **Underworld** , und wählen Sie **voicesource**aus.
+* Klicken Sie im **Inspektor** -Panel auf **Komponente hinzufügen** , und fügen Sie den **Benutzer sprach Effekt**hinzu.
 
-Ein **AudioSource** Komponente hinzugefügt **VoiceSource**.
+Eine **audiosource** -Komponente wird " **voicesource**" hinzugefügt.
 
-* In **AudioSource**legen **Ausgabe** zu **UserVoice (Mixer)**.
-* Überprüfen Sie die **Spatialize** Kontrollkästchen.
-* Ziehen Sie die **räumliche Blend** Schieberegler ganz nach **3D**, oder geben Sie **1** in das Bearbeitungsfeld.
-* Erweitern Sie **3D Sound Einstellungen**.
-* Legen Sie **Doppler-Ebene** zu **0**.
-* In **User Voice-Effekt**legen **übergeordnetes Objekt** auf die **Underworld** aus der Szene.
-* Legen Sie **maximaler Abstand** zu **1**.
+* Legen Sie in **audiosource** **Output** auf **UserVoice (Mixer)** fest.
+* Aktivieren Sie das Kontrollkästchen **spatialize** .
+* Ziehen Sie  den Schieberegler räumlichkeits Weise in **3D**, oder geben Sie 1 in das Bearbeitungsfeld **ein** .
+* Erweitern Sie **3D-Sound Einstellungen**.
+* Legen Sie die **Doppler-Ebene** auf **0**fest.
+* Legen Sie unter **User Voice Effect**das über **geordnete Objekt** auf die **Unterwelt** aus der Szene fest.
+* Legen Sie **Max Distance** auf **1**fest.
 
-Festlegen von **maximaler Abstand** weist **User Voice-Effekt** wie nahe der Benutzer auf das übergeordnete Objekt sein muss, bevor der Effekt aktiviert ist.
+Durch das Festlegen von " **Max Distance** " wird der **Benutzer** darüber informiert, wie nah der Benutzer auf das übergeordnete Objekt sein muss, bevor der Effekt aktiviert ist.
 
-* In **User Voice-Effekt**, erweitern Sie **heißen Talbot Parameter**.
-* Legen Sie **Tiefe** zu **0,1**.
-* Legen Sie **Tippen Sie auf 1 Volume**, **Tippen Sie auf 2 Volume** und **Tippen Sie auf 3 Volume** zu **0,8**.
-* Legen Sie **ursprünglichen Sound Volume** zu **0,5**.
+* Erweitern Sie unter **User Voice Effect**den Eintrag **Chorus Parameters**.
+* Legen Sie die **Tiefe** auf **0,1**fest.
+* Legen Sie **Tap 1 Volume**, **Tap 2 Volume** und **3 Volume** auf **0,8**fest.
+* Legen Sie **ursprüngliches Sound Volume** auf **0,5**fest.
 
-Die vorherigen Einstellungen konfigurieren Sie die Parameter von Unity **AudioChorusFilter** verwendet, um Sie Umfang des Benutzers Stimme hinzufügen.
+Mit den vorherigen Einstellungen werden die Parameter des Unity- **audiochor-Filters** konfiguriert, der verwendet wird, um die Stimme des Benutzers zu ergänzen.
 
-* In **User Voice-Effekt**, erweitern Sie **Echo Parameter**.
-* Legen Sie **Verzögerung** zu **300**
-* Legen Sie **Decay-Verhältnis** zu **0,2**.
-* Legen Sie **ursprünglichen Sound Volume** zu **0**.
+* Erweitern Sie unter **User Voice Effect**den Eintrag **Echo Parameters**.
+* **Verzögerung** auf **300** festlegen
+* Legen Sie das **Zerfalls Verhältnis** auf **0,2**fest.
+* Legen Sie **ursprüngliches Sound Volume** auf **0**fest.
 
-Die vorherigen Einstellungen konfigurieren Sie die Parameter von Unity **AudioEchoFilter** verwendet, damit das Benutzerfeedback, das zurückgegeben wird.
+Mit den vorherigen Einstellungen werden die Parameter des Unity- **audioechofilters** konfiguriert, der verwendet wird, um die Stimme des Benutzers zu spiegeln.
 
-Das Skript User Voice-Effekt ist verantwortlich für:
+Das Skript für den Benutzer sprach Effekt ist für Folgendes zuständig:
 
-* Den Abstand zwischen dem Benutzer zu messen und die **"gameobject"** , dem das Skript zugeordnet ist.
-* Bestimmen, und zwar unabhängig davon, ob der Benutzer zeigt die **"gameobject"**.
+* Messen des Abstands zwischen dem Benutzer und dem **gameobject** , an das das Skript angefügt wird.
+* Es wird ermittelt, ob der Benutzer dem **gameobject-Objekt**zusteht.
 
-Der Benutzer muss das "gameobject", unabhängig vom Abstand für den Effekt zu aktivierenden verbunden ist.
+Der Benutzer muss das gameobject-Objekt, unabhängig von der Entfernung, sehen, damit der Effekt aktiviert wird.
 
-* Anwenden und konfigurieren eine **AudioChorusFilter** und ein **AudioEchoFilter** auf die **AudioSource**.
-* Deaktivieren den Effekt, indem Sie die Filter deaktivieren.
+* Anwenden und Konfigurieren eines **audiochor-Filters** und eines **audioechofilters** auf die **audiosource**.
+* Deaktivieren der Auswirkung durch Deaktivieren der Filter.
 
-User Voice-Effekt verwendet die Mic-Stream-Selektor-Komponente, aus der [MixedRealityToolkit für Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity), um die qualitativ hochwertige Sprachstream wählen aus, und sie in Unity-audio-System weiterzuleiten.
+Der Benutzer sprach Effekt verwendet die MIC-Datenstrom Auswahl Komponente aus dem [mixedrealitytoolkit für Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity), um den hochwertigen Voice-Stream auszuwählen und ihn in das Audiosystem von Unity weiterzuleiten.
 
-* In der **Hierarchie** wählen **Managern**.
-* In der **Inspektor** erweitern **Spracherkennung Eingabe Handler**.
-* In **Spracherkennung Eingabe Handler**, erweitern Sie **anzeigen Underworld**.
-* Änderung **keine Funktion** zu **UnderworldBase.OnEnable**.
+* Wählen Sie im Bereich **Hierarchie** die Option **Manager**aus.
+* Erweitern Sie im **Inspektor** -Panel den **Spracheingabe Handler**.
+* Erweitern Sie in **Spracheingabe Handler**die Option **Unterwelt anzeigen**.
+* Ändern Sie **keine Funktion** in " **underworldbase. onenable**".
 
-![Keyword: Underworld anzeigen](images/showunderworld.png)
+![Schlüsselwort Unterwelt anzeigen](images/showunderworld.png)
 
-* Erweitern Sie **ausblenden Underworld**.
-* Änderung **keine Funktion** zu **UnderworldBase.OnDisable**.
+* Erweitern Sie die Option **Unterwelt ausblenden**.
+* Ändern Sie **keine Funktion** in **underworldbase. ondeaktiviert**.
 
-![Keyword: Hide Underworld](images/hideunderworld.png)
+![Schlüsselwort Unterwelt ausblenden](images/hideunderworld.png)
 
 #### <a name="build-and-deploy"></a>Erstellen und bereitstellen
 
-* Wie zuvor erstellen Sie das Projekt im Unity, und stellen Sie in Visual Studio bereit.
+* Erstellen Sie wie zuvor das Projekt in Unity, und stellen Sie es in Visual Studio bereit.
 
-Nachdem die Anwendung bereitgestellt wird:
+Nachdem die Anwendung bereitgestellt wurde:
 
-* Sehen Sie eine Fläche (Wand, Floor, Tabelle) und sagen *"Underworld anzeigen"*.
+* Stellen Sie eine Oberfläche (Wall, Floor, Table) dar, und sagen Sie *"Show Underworld"* .
 
-Die Underworld wird angezeigt, und alle anderen Hologramme ausgeblendet werden. Die Underworld nicht angezeigt wird, sicher, dass eine reale Oberfläche aufgetretenen.
+Die Unterwelt wird angezeigt, und alle anderen holograms werden ausgeblendet. Wenn die Unterwelt nicht angezeigt wird, stellen Sie sicher, dass Sie mit der realen Oberfläche konfrontiert sind.
 
-* Innerhalb von 1 Meter Umkreis um die Underworld – Hologramm Ansatz, und sprechen.
+* Ansatz innerhalb von 1 Meter des Unterwelt – Hologramm, und beginnen Sie mit der Kommunikation.
 
-Es gibt jetzt Audioeffekte angewendet werden, um Ihre Stimme!
+Es gibt jetzt Audioeffekte, die auf Ihre Stimme angewendet werden!
 
-* Aktivieren Sie die Underworld, und beachten Sie, wie der Effekt nicht mehr angewendet wird.
-* Sagen Sie *"Underworld ausblenden"* der Underworld ausblenden.
+* Schalten Sie die Unterwelt aus, und beachten Sie, dass der Effekt nicht mehr angewendet wird.
+* Sagen Sie *"Unterwelt ausblenden"* , um die Unterwelt auszublenden.
 
-Die Underworld werden ausgeblendet, und die zuvor nicht Hologramme werden erneut angezeigt.
+Die Unterwelt wird ausgeblendet, und die zuvor ausgeblendeten holograms werden erneut angezeigt.
 
 ## <a name="the-end"></a>Das Ende
 
-Herzlichen Glückwunsch! Sie haben jetzt **MR räumliche 220: Räumliche Sound**.
+Herzlichen Glückwunsch! Sie haben jetzt die **räumliche 220 von abgeschlossen: Räumlicher**Sound.
 
-Lauschen auf der ganzen Welt, und setzen Sie Ihre Erfahrungen mit Sound!
+Lauschen Sie auf die Welt, und bringen Sie Ihre Erfahrungen mit Sound!

@@ -1,37 +1,37 @@
 ---
 title: Fokuspunkt in Unity
-description: Manuell – Hologramm Stabilität in Unity durch Festlegen der Fokuspunkt optimieren
+description: Manuelles Optimieren der – Hologramm-Stabilität in Unity durch Festlegen des Fokus Punkts
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, Fokuspunkt, den Fokus Ebene, Stabilisierung-Ebene, Stabilisierung Point, Reprojection, LSR, Tiefenpuffer
+keywords: Unity, Fokuspunkt, Fokusebene, Stabilisierungs Ebene, Stabilisierungs Punkt, neuprojektion, LSR, tiefen Puffer
 ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604884"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525469"
 ---
 # <a name="focus-point-in-unity"></a>Fokuspunkt in Unity
 
-**Namespace:** *UnityEngine.XR.WSA*<br>
-**Typ**: *HolographicSettings*
+**Namespace:** *Unityengine. XR. WSA*<br>
+**Typ**: *Holographicsettings*
 
-Die [konzentrieren Punkt](hologram-stability.md#stabilization-plane) kann angezeigt werden, auf HoloLens Geben Sie einen Hinweis dazu, wie Sie am besten Stabilisierung auf die Hologramme Grundsatzes festgelegt wird.
+Der [Fokuspunkt](hologram-stability.md#stabilization-plane) kann so festgelegt werden, dass hololens einen Hinweis zur optimalen Durchführung der Stabilisierung auf den derzeit angezeigten holograms bereitstellt.
 
-Wenn der Fokuspunkt in Unity festgelegt werden sollen, muss jeder Frame mit festgelegt werden *HolographicSettings.SetFocusPointForFrame()*. Wenn der Fokus Punkt für einen Frame nicht festgelegt ist, wird die standardmäßige Stabilisierung-Ebene verwendet werden.
+Wenn Sie den Fokuspunkt in Unity festlegen möchten, muss er jedes Frame mithilfe von *holographicsettings. setfocuspointforframe ()* festgelegt werden. Wenn der Fokuspunkt nicht für einen Frame festgelegt ist, wird die Standard Stabilisierungs Ebene verwendet.
 
 > [!NOTE]
-> Standardmäßig können neue Unity-Projekte "Tiefe Puffer Freigabe aktivieren" festgelegt.  Mit dieser Option eine Unity-app auf eine immersive desktop Kopfhörer oder eine HoloLens, mit der Windows 10 April 2018 Update (RS4) oder höher wird Ihre Tiefenpuffer zu Windows – Hologramm Stabilität automatisch, ohne Ihrer app optimieren Übermitteln einer Fokuspunkt:
-> * Für eine immersive desktop Kopfhörer wird diese pro-Pixel-Depth-basierte Reprojection aktivieren.
-> * Klicken Sie auf eine HoloLens Ausführen der Windows 10 April 2018 aktualisieren oder diese später analysiert den Tiefenpuffer, um eine optimale Stabilisierung Ebene automatisch ausgewählt.
+> In neuen Unity-Projekten ist die Option "Tiefe Puffer Freigabe aktivieren" standardmäßig festgelegt.  Mit dieser Option übermittelt eine Unity-APP, die auf einem immersiven Desktop-Headset oder einem hololens ausgeführt wird, auf dem das Windows 10 April 2018 Update (RS4) oder höher ausgeführt wird, ihren tiefen Puffer an Windows, um die – Hologramm-Stabilität automatisch zu optimieren, ohne dass Ihre APP eine Fokuspunkt:
+> * Auf einem immersiven Desktop-Headset wird dadurch eine auf pro Pixel basierende Reprojektion ermöglicht.
+> * Auf einem hololens, auf dem das Windows 10-Update vom April 2018 oder höher ausgeführt wird, wird der tiefen Puffer analysiert, um automatisch eine optimale Stabilisierungs Ebene auszuwählen.
 >
-> Beide Ansätze sollten noch bessere Bildqualität ohne explizite von Ihrer app auf einen Zeitpunkt fokusmodus auszuwählen jeden Frame bereitstellen.  Beachten Sie, dass wenn Sie einen Fokuspunkt manuell bereitstellen, wird das oben beschriebene automatische Verhalten überschreiben, und – Hologramm Stabilität in der Regel reduziert.  Im Allgemeinen sollten Sie nur einen manuelle Fokuspunkt beim Angeben Ihrer app auf einem HoloLens ausgeführt wird, die noch nicht auf dem Windows aktualisiert wurde 10 April 2018 aktualisieren.
+> Beide Ansätze sollten eine noch bessere Bildqualität bieten, ohne dass Sie von Ihrer APP explizit arbeiten müssen, um einen Fokuspunkt für jeden Frame auszuwählen.  Beachten Sie Folgendes: Wenn Sie einen Schwerpunkt Punkt manuell angeben, wird das oben beschriebene automatische Verhalten überschrieben, und die Stabilität des Hologramms wird normalerweise verringert.  Im Allgemeinen sollten Sie nur dann einen manuellen Fokuspunkt angeben, wenn die APP auf einem hololens ausgeführt wird, der noch nicht auf das Windows 10-Update vom April 2018 aktualisiert wurde.
 
 ### <a name="example"></a>Beispiel
 
-Es gibt viele Möglichkeiten, legen Sie den Fokuspunkt gemäß dem Vorschlag von Überladungen verfügbar, auf die *SetFocusPointForFrame* statische Funktion. Unten ist ein einfaches Beispiel für der Ebene der Fokus auf das angegebene Objekt jeden Frame festgelegt:
+Es gibt viele Möglichkeiten, den Schwerpunkt Punkt festzulegen, wie von den über Ladungen für die statische Funktion *setfocuspointforframe* vorgeschlagen. Im folgenden finden Sie ein einfaches Beispiel für die Festlegung der Fokusebene auf das bereitgestellte Objekt jedes Frames:
 
 ```cs
 public GameObject focusedObject;
@@ -48,7 +48,7 @@ void Update()
 }
 ```
 
-Beachten Sie, dass es sich bei der oben angegebenen einfachen Code – Hologramm Stabilität reduzieren, wenn das fokussierte Objekt hinter der Benutzer am Ende aufweisen kann.  Daher ist Sie in der Regel "Tiefe Puffer Freigabe aktivieren" festlegen sollten anstatt manuell einem Zeitpunkt fokusmodus.
+Beachten Sie, dass der obige einfache Code möglicherweise zu einer Verringerung der – Hologramm-Stabilität wird, wenn das fokussierte Objekt hinter dem Benutzer endet.  Daher sollten Sie in der Regel "Tiefe Puffer Freigabe aktivieren" festlegen, anstatt manuell einen Fokuspunkt anzugeben.
 
 ### <a name="see-also"></a>Siehe auch
-* [Stabilisierung-Ebene](hologram-stability.md#stabilization-plane)
+* [Stabilisierungs Ebene](hologram-stability.md#stabilization-plane)

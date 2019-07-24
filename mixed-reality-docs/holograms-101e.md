@@ -1,36 +1,36 @@
 ---
-title: MR Grundlagen 101E - vollständige Projekt mit dem emulator
-description: Führen Sie diese exemplarische Vorgehensweise mit Unity, Visual Studio Emulator für HoloLens zum Erlernen der Grundlagen einer holographic-Anwendung programmieren.
+title: Grundlagen 101 e-Complete Project with Emulator
+description: Befolgen Sie diese exemplarische Vorgehensweise, indem Sie Unity, Visual Studio und den hololens-Emulator verwenden, um die Grundlagen einer Holographic-Anwendung kennenzulernen.
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Gemischte Realität Windows Mixed Reality, HoloLens, Hologramm, Academy, Tutorial, emulator
+keywords: Gemischte Realität, Windows Mixed Reality, hololens, Hologram, Academy, Tutorial, Emulator
 ms.openlocfilehash: 77f7d497396937bf471a69fa514cef84ab0b699d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593988"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522322"
 ---
 >[!NOTE]
->In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
 
 <br>
 
-# <a name="mr-basics-101e-complete-project-with-emulator"></a>MR Basics 101E: Vollständige Projekt mit dem emulator
+# <a name="mr-basics-101e-complete-project-with-emulator"></a>Grundlagen 101 e: Projekt mit Emulator vervollständigen
 
  >[!VIDEO https://www.youtube.com/embed/Xzm8_s05mm8]
 
-Dieses Tutorial führt Sie durch ein vollständiges-Projekt, erstellt in Unity, die Windows Mixed Reality-Kernfunktionen auf, einschließlich HoloLens veranschaulicht [bestaunen](gaze.md), [Gesten](gestures.md), [voice-Eingabe](voice-input.md), [räumliche Sound](spatial-sound.md) und [räumliche Zuordnung](spatial-mapping.md). Das Tutorial dauert etwa eine Stunde bis zum Abschließen.
+In diesem Tutorial werden Sie durch ein vollständiges Projekt geführt, das in Unity integriert ist, das grundlegende Windows Mixed Reality-Features in hololens veranschaulicht, einschließlich [Blick](gaze.md), [Gesten](gestures.md), [Spracheingabe](voice-input.md), [räumlichem Sound](spatial-sound.md) und [räumlicher Zuordnung](spatial-mapping.md) . . Das Tutorial dauert ungefähr 1 Stunde.
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>MR Basics 101E: Vollständige Projekt mit dem emulator</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td>Grundlagen 101 e: Projekt mit Emulator vervollständigen</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
@@ -38,110 +38,110 @@ Dieses Tutorial führt Sie durch ein vollständiges-Projekt, erstellt in Unity, 
 
 ### <a name="prerequisites"></a>Vorraussetzungen
 
-* Ein Windows 10-PCs mit dem richtigen konfiguriert [-Tools installiert](install-the-tools.md).
+* Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md)konfiguriert ist.
 
 ### <a name="project-files"></a>Projektdateien
 
-* Herunterladen der [Dateien](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-101.zip) vom Projekt erforderlich sind. Ist Unity 2017.2 oder höher erforderlich.
-  * Wenn Sie weitere Unity 5.6-Unterstützung benötigen, verwenden Sie [dieser Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-101.zip).
-  * Wenn Sie weitere Unity 5.5-Unterstützung benötigen, verwenden Sie [dieser Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-101.zip).
-  * Wenn Sie weitere 5.4 von Unity-Unterstützung benötigen, verwenden Sie [dieser Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-101.zip).
-* Un-Archive die Dateien auf dem Desktop oder andere einfach auf den Speicherort zugreifen. Behalten Sie den Ordnernamen als **Origami**.
+* Herunterladen der [Dateien](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-101.zip) , die für das Projekt erforderlich sind. Erfordert Unity 2017,2 oder höher.
+  * Wenn Sie weiterhin Unity 5,6-Unterstützung benötigen, verwenden Sie [Diese Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-101.zip).
+  * Wenn Sie weiterhin Unity 5,5-Unterstützung benötigen, verwenden Sie [Diese Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-101.zip).
+  * Wenn Sie weiterhin Unity 5,4-Unterstützung benötigen, verwenden Sie [Diese Version](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-101.zip).
+* Deinstallieren Sie die Dateien auf Ihrem Desktop oder an einem anderen leicht zugänglichen Speicherort. Behalten Sie den Ordnernamen **Origami**bei.
 
 >[!NOTE]
->Wenn Sie vor dem Herunterladen, den Quellcode ansehen möchten es [auf GitHub verfügbar](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-101).
+>Wenn Sie den Quellcode vor dem herunterladen durchsuchen möchten, ist er [auf GitHub verfügbar](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-101).
 
-## <a name="chapter-1---holo-world"></a>Kapitel 1: "Holo" world
+## <a name="chapter-1---holo-world"></a>Kapitel 1: "Holo" World
 
 >[!VIDEO https://www.youtube.com/embed/qotpUpIQxVU]
 
-In diesem Kapitel wir unser erstes Unity-Projekt und durchlaufen Sie den Build einrichten und Bereitstellen von Prozess.
+In diesem Kapitel richten wir das erste Unity-Projekt ein und durchlaufen den Build-und Bereitstellungs Prozess.
 
 ### <a name="objectives"></a>Ziele
 
-* Richten Sie Unity aus, für die holographic Entwicklung.
-* Stellen Sie ggf. ein Hologramm.
-* Finden Sie ggf. ein Hologramm, die Sie vorgenommen.
+* Einrichten von Unity für die Holographic-Entwicklung.
+* Erstellen Sie ein Hologram.
+* Sehen Sie sich ein von Ihnen vorgenommene – Hologramm an.
 
 ### <a name="instructions"></a>Anweisungen
 
 * Starten Sie Unity.
-* Wählen Sie **öffnen**.
-* Geben Sie den Speicherort als dem **Origami** Ordner Sie zuvor nicht archiviert.
+* Wählen Sie **Öffnen**aus.
+* Geben Sie Location als den Ordner **Origami** ein, den Sie zuvor nicht archiviert haben.
 * Wählen Sie **Origami** , und klicken Sie auf **Ordner auswählen**.
-* Speichern Sie die neue Szene: **Datei** / **Szene speichern unter**.
-* Benennen Sie die Szene **Origami** , und drücken Sie die **speichern** Schaltfläche.
+* Speichern Sie die neue Szene: Datei / **Speichern**unter.
+* Nennen Sie die Szene **Origami** , und klicken Sie auf die Schaltfläche **Speichern** .
 
 #### <a name="setup-the-main-camera"></a>Einrichten der Hauptkamera
 
-* In der **Hierarchie Bereich**Option **Main Camera**.
-* In der **Inspektor** positionieren Sie die Transformation **0,0,0**.
-* Suchen der **löschen Flags** -Eigenschaft, und ändern die Dropdownliste aus **Skybox** zu **Volltonfarbe**.
-* Klicken Sie auf die **Hintergrund** Feld, um ein Farbwähler zu öffnen.
-* Legen Sie **R, G, B und A** zu **0**.
+* Wählen Sie im Bereich **Hierarchie**die Option **Hauptkamera**aus.
+* Legen Sie im **Inspektor** die Transformations Position auf **0, 0, 0**fest.
+* Suchen Sie die Eigenschaft **Clear Flags** , und ändern Sie die Dropdown Liste von  **Skybox** in voll Tonfarbe.
+* Klicken Sie auf das Feld **Hintergrund** , um eine Farbauswahl zu öffnen.
+* Legen Sie **R, G, B und A** auf **0**fest.
 
 #### <a name="setup-the-scene"></a>Einrichten der Szene
 
-* In der **Hierarchie Bereich**, klicken Sie auf **erstellen** und **leere erstellen**.
-* Mit der rechten Maustaste den neuen **"gameobject"** und "Umbenennen" auswählen. Benennen Sie das "gameobject" zu **OrigamiCollection**.
-* Von der **Hologramme** Ordner in der **Projektfenster**:
-  * Ziehen Sie **Phase** in die Hierarchie ein untergeordnetes Element des **OrigamiCollection**.
-  * Ziehen Sie **Sphere1** in die Hierarchie ein untergeordnetes Element des **OrigamiCollection**.
-  * Ziehen Sie **Sphere2** in die Hierarchie ein untergeordnetes Element des **OrigamiCollection**.
-* Mit der rechten Maustaste die **gerichtetes Licht** -Objekt in der **Hierarchie Bereich** , und wählen Sie **löschen**.
-* Von der **Hologramme** Ordner, ziehen Sie **Lichter** in das Stammverzeichnis der **Hierarchie Bereich**.
-* In der **Hierarchie**, wählen die **OrigamiCollection**.
-* In der **Inspektor**, positionieren Sie die Transformation **0, Verschiebung von -0,5 und 2.0**.
-* Drücken Sie die **spielen** -Schaltfläche in Unity, um Ihre Hologramme der Vorschau anzuzeigen.
-* Daraufhin sollte die Origami-Objekte im Vorschaufenster.
-* Drücken Sie **spielen** ein zweites Mal im Vorschaumodus zu beenden.
+* Klicken Sie im **Hierarchie Panel**auf **Erstellen** , und erstellen Sie eine **leere**.
+* Klicken Sie mit der rechten Maustaste auf das neue **gameobject** und wählen Sie umbenennen Benennen Sie das gameobject in **origamicollection**um.
+* Aus dem Ordner " **holograms** " im **Projekt Panel**:
+  * Ziehen Sie die **Phase** in die Hierarchie, um ein untergeordnetes Element von **origamicollection**zu sein.
+  * Ziehen Sie **Sphere1** in die Hierarchie, um ein untergeordnetes Element von **origamicollection**zu sein.
+  * Ziehen Sie **Sphere2** in die Hierarchie, um ein untergeordnetes Element von **origamicollection**zu sein.
+* Klicken Sie im Bereich **Hierarchie** mit der rechten Maustaste auf das Objekt **direktional hell** , und wählen Sie **Löschen**aus
+* Ziehen Sie aus dem Ordner **holograms** die **Beleuchtung** in das Stammverzeichnis des Bereichs **Hierarchie**.
+* Wählen Sie in der **Hierarchie**die Option **origamicollection**aus.
+* Legen Sie im **Inspektor**die Transformations Position auf **0,-0,5, 2,0**fest.
+* Klicken Sie in Unity auf die **Wiedergabe** Schaltfläche, um eine Vorschau der holograms anzuzeigen
+* Die Origami-Objekte sollten im Vorschaufenster angezeigt werden.
+* Drücken **Sie** ein zweites Mal, um den Vorschaumodus zu verhindern.
 
-#### <a name="export-the-project-from-unity-to-visual-studio"></a>Exportieren Sie das Projekt aus Unity in Visual Studio
+#### <a name="export-the-project-from-unity-to-visual-studio"></a>Exportieren des Projekts aus Unity in Visual Studio
 
-* Im Unity-Option **Datei > Buildeinstellungen**.
-* Wählen Sie **Windows Store** in die **Plattform** aus, und klicken Sie auf **Plattform wechseln**.
-* Legen Sie **SDK** zu **universelle 10** und **Buildtyp** zu **D3D**.
-* Überprüfen Sie **Unity C# Projekte**.
-* Klicken Sie auf **öffnen Szenen hinzufügen** die Szene hinzufügen.
-* Klicken Sie auf **Playereinstellungen...** .
-* Im Inspektor-Bereich die Option der **Windows Store-Logo**. Wählen Sie dann **Veröffentlichungseinstellungen**.
-* In der **Funktionen** wählen Sie im Abschnitt der **Mikrofon** und **SpatialPerception** Funktionen.
-* Klicken Sie im Fenster Buildeinstellungen auf **erstellen**.
-* Erstellen Sie eine **neuer Ordner** mit dem Namen "App".
-* Mausklick die **App-Ordner**.
-* Drücken Sie **wählen Sie Ordner**.
+* Wählen Sie in Unity **Datei >** Buildeinstellungen aus.
+* Wählen Sie in der Liste **Plattform** den **Windows Store** aus, und klicken Sie auf **Plattform wechseln**.
+* Legen Sie das **SDK** auf **Universal 10** und den Buildtyp auf **D3D**fest.
+* Überprüfen Sie **Unity C# -Projekte**.
+* Klicken Sie auf **offene Szenen hinzufügen** , um die Szene hinzuzufügen.
+* Klicken Sie auf **Player Einstellungen...** .
+* Wählen Sie im Inspektor-Panel das **Windows Store-Logo**aus. Wählen Sie dann **Veröffentlichungs Einstellungen**aus.
+* Wählen Sie im Abschnitt " **Funktionen** " die Funktionen " **Mikrofon** " und " **spatialperception** " aus.
+* Klicken Sie im Fenster "Buildeinstellungen" auf " **Erstellen**".
+* Erstellen Sie einen **neuen Ordner** mit dem Namen "App".
+* Klicken Sie einfach auf den **app-Ordner**.
+* Drücken **Sie Ordner auswählen**.
 * Wenn Unity abgeschlossen ist, wird ein Datei-Explorer-Fenster angezeigt.
-* Öffnen der **App** Ordner.
-* Öffnen der **Origami Visual Studio-Projektmappe**.
-* Verwenden obere auf der Symbolleiste in Visual Studio, ändern Sie das Ziel vom Debugmodus in den **Version** und ARM, **X86**.
-  * Klicken Sie auf den Pfeil neben der Schaltfläche ", und wählen **Emulator für HoloLens**.
-  * Klicken Sie auf **Debuggen -> Starten ohne debugging** , oder drücken Sie **STRG + F5**.
-  * Nach einiger Zeit wird der Emulator mit dem Origami-Projekt gestartet. Beim ersten Starten der [Emulator](using-the-hololens-emulator.md), es kann bis zu 15 Minuten, bis der Emulator gestartet wird. Nachdem es gestartet wurde, schließen Sie es nicht.
+* Öffnen Sie den **App** -Ordner.
+* Öffnen Sie die Visual Studio-Projekt Mappe **Origami**.
+* Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x86**.
+  * Klicken Sie auf den Pfeil neben der Schaltfläche Gerät, und wählen Sie **hololens Emulator**aus.
+  * Klicken Sie auf **Debuggen > Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
+  * Nach einiger Zeit wird der Emulator mit dem Origami-Projekt gestartet. Beim ersten Starten des [Emulators](using-the-hololens-emulator.md)kann es bis zu 15 Minuten dauern, bis der Emulator gestartet wird. Schließen Sie die Datei nach dem Start nicht.
 
-## <a name="chapter-2---gaze"></a>Kapitel 2: Blicke
+## <a name="chapter-2---gaze"></a>Kapitel 2: Blick
 
 >[!VIDEO https://www.youtube.com/embed/BPWTbAC210k]
 
-In diesem Kapitel werden wir zum Einfügen des ersten der drei Methoden zur Interaktion mit Ihrem Hologramme: [bestaunen](gaze.md).
+In diesem Kapitel werden die ersten von drei Möglichkeiten vorgestellt, mit denen Sie mit ihren holograms interagieren [können.](gaze.md)
 
 ### <a name="objectives"></a>Ziele
 
-* Visualisieren Sie Ihre Blicke mithilfe eines Cursors Welt gesperrt.
+* Visualisieren Sie Ihren Blick mithilfe eines weltweit gesperrten Cursors.
 
 ### <a name="instructions"></a>Anweisungen
 
-* Wechseln Sie zurück zu Ihrem Unity-Projekt, und schließen Sie das Fenster "erstellen" aus, wenn es noch geöffnet ist.
-* Wählen Sie die **Hologramme** Ordner in der **Projektfenster**.
-* Ziehen Sie die **Cursor** -Objekt in der **Hierarchie Bereich** auf der Stammebene.
-* Doppelklicken Sie auf die **Cursor** Objekt, das ein genauer ansehen.
-* Mit der rechten Maustaste auf die **Skripts** Ordner im Projektfenster.
-* Klicken Sie auf die **erstellen** Untermenü.
-* Wählen Sie  **C# Skript**.
-* Nennen Sie das Skript **WorldCursor**. Hinweis: Beim Namen wird Groß- und Kleinschreibung beachtet. Sie müssen sich nicht um die Erweiterung .cs hinzuzufügen.
-* Wählen Sie die **Cursor** -Objekt in der **Hierarchie Bereich**.
-* Drag & drop die **WorldCursor** Skript in die **Inspektor Bereich**.
-* Doppelklicken Sie auf die **WorldCursor** Skript, um es in Visual Studio zu öffnen.
-* Kopieren Sie diesen Code in **WorldCursor.cs** und **Alles speichern**.
+* Wechseln Sie zurück zu Ihrem Unity-Projekt, und schließen Sie das Fenster mit den Buildeinstellungen, wenn es noch geöffnet ist.
+* Wählen Sie im **Projekt Panel**den Ordner **holograms** aus.
+* Ziehen Sie das **Cursor** Objekt in das **Hierarchie Panel** auf der Stamm Ebene.
+* Doppelklicken Sie auf das **Cursor** Objekt, um es genauer zu betrachten.
+* Klicken Sie im Projekt Panel mit der rechten Maustaste auf den Ordner **Scripts** .
+* Klicken Sie auf das Untermenü **Erstellen** .
+* Wählen Sie  **C# Skript**aus.
+* Nennen Sie das Skript **worldcursor**. Hinweis: Beim Namen wird Groß- und Kleinschreibung beachtet. Sie müssen die Erweiterung ". cs" nicht hinzufügen.
+* Wählen Sie im **Hierarchie Panel**das **Cursor** Objekt aus.
+* Verschieben Sie das **worldcursor** -Skript per Drag & amp; Drop in den Bereich **Inspector**.
+* Doppelklicken Sie auf das Skript **worldcursor** , um es in Visual Studio zu öffnen.
+* Fügen Sie diesen Code in **WorldCursor.cs** ein, und **Speichern Sie alle**.
 
 ```cs
 using UnityEngine;
@@ -188,29 +188,29 @@ public class WorldCursor : MonoBehaviour
 }
 ```
 
-* Erstellen Sie die app neu **Datei > Buildeinstellungen**.
-* Zurück zu Visual Studio-Projektmappe zuvor verwendet, um auf dem Emulator bereitzustellen.
-* Wählen Sie "Alles neu laden" Wenn Sie aufgefordert werden.
-* Klicken Sie auf **Debuggen -> Starten ohne debugging** , oder drücken Sie **STRG + F5**.
-* Verwenden Sie die Xbox-Controller, um in der Szene zu suchen. Beachten Sie, wie der Cursor die Form der Objekte interagiert.
+* Erstellen Sie die APP aus dem **Datei >** den Buildeinstellungen neu.
+* Kehren Sie zur Visual Studio-Projekt Mappe zurück, die zuvor zur Bereitstellung im Emulator verwendet wurde.
+* Wählen Sie bei entsprechender Aufforderung "alle neu laden" aus.
+* Klicken Sie auf **Debuggen > Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
+* Verwenden Sie den Xbox-Controller, um die Szene zu überprüfen. Beachten Sie, wie der Cursor mit der Form von-Objekten interagiert.
 
-## <a name="chapter-3---gestures"></a>Kapitel 3 - Gesten
+## <a name="chapter-3---gestures"></a>Kapitel 3: Gesten
 
 >[!VIDEO https://www.youtube.com/embed/6d-0RHeKHq4]
 
-In diesem Kapitel werden wir fügen Unterstützung für [Gesten](gestures.md). Wenn der Benutzer eine Dokument Kugel auswählt, erstellen wir die Kugel liegen, indem die Schwerkraft mithilfe von Unity Physik-Engine aktivieren.
+In diesem Kapitel wird die Unterstützung für [Gesten](gestures.md)hinzugefügt. Wenn der Benutzer eine Papierkugel auswählt, wird die Kugel durch das Aktivieren der Schwerkraft mit der Physik-Engine von Unity erreicht.
 
 ### <a name="objectives"></a>Ziele
 
-* Steuern Sie Ihre Hologramme mit dieser Option Bewegung.
+* Steuern Sie Ihre Hologramme mit der SELECT-Geste.
 
 ### <a name="instructions"></a>Anweisungen
 
-Wir beginnen, Erstellen eines Skripts, als die Option Geste erkannt werden können.
+Wir beginnen mit dem Erstellen eines Skripts, als die SELECT-Geste erkennen zu können.
 
-* In der **Skripts** Ordner, erstellen Sie ein Skript, mit dem Namen **GazeGestureManager**.
-* Ziehen Sie die **GazeGestureManager** Skript auf die **OrigamiCollection** Objekt in der Hierarchie.
-* Öffnen der **GazeGestureManager** Skript im Visual Studio, und fügen Sie den folgenden Code hinzu:
+* Erstellen Sie im Ordner **Scripts** ein Skript mit dem Namen " **gazegesturemanager**".
+* Ziehen Sie das Skript " **gazegesturemanager** " auf das Objekt " **origamicollection** " in der Hierarchie.
+* Öffnen Sie das Skript " **gazegesturemanager** " in Visual Studio, und fügen Sie den folgenden Code hinzu:
 
 ```cs
 using UnityEngine;
@@ -277,11 +277,11 @@ public class GazeGestureManager : MonoBehaviour
 }
 ```
 
-* Erstellen Sie ein weiteres Skript im Ordner "Scripts", dieses Mal mit dem Namen **SphereCommands**.
-* Erweitern Sie die **OrigamiCollection** Objekt in der Hierarchie angezeigt.
-* Ziehen Sie die **SphereCommands** Skript auf die **Sphere1** Objekt in der Hierarchie-Bereich.
-* Ziehen Sie die **SphereCommands** Skript auf die **Sphere2** Objekt in der Hierarchie-Bereich.
-* Öffnen Sie das Skript zur Bearbeitung in Visual Studio, und Ersetzen Sie den Standardcode durch dies:
+* Erstellen Sie ein weiteres Skript im Ordner "Scripts", diesmal mit dem Namen **spherecommands**.
+* Erweitern Sie das Objekt **origamicollection** in der Hierarchie Ansicht.
+* Ziehen Sie das **spherecommands** -Skript auf das **Sphere1** -Objekt im Hierarchie Panel.
+* Ziehen Sie das **spherecommands** -Skript auf das **Sphere2** -Objekt im Hierarchie Panel.
+* Öffnen Sie das Skript in Visual Studio zur Bearbeitung, und ersetzen Sie den Standard Code durch den folgenden Code:
 
 ```cs
 using UnityEngine;
@@ -301,27 +301,27 @@ public class SphereCommands : MonoBehaviour
 }
 ```
 
-* Exportieren, erstellen und Bereitstellen der app im Emulator für HoloLens.
-* Suchen Sie in der Szene, und auf einem der die Kugeln center.
-* Drücken Sie die **ein** auf der Xbox-Controller auf die Schaltfläche, oder drücken Sie die LEERTASTE, um die Select-Aktion zu simulieren.
+* Exportieren, erstellen und Bereitstellen der APP auf dem hololens-Emulator.
+* Sehen Sie sich die Szene an, und zentrieren Sie eine der Bereiche.
+* Drücken Sie **die Schaltfläche** auf dem Xbox-Controller, oder drücken Sie die Leertaste, um die Auswahl Bewegung zu simulieren.
 
-## <a name="chapter-4---voice"></a>Kapitel 4 – Sprache
+## <a name="chapter-4---voice"></a>Kapitel 4: Stimme
 
 >[!VIDEO https://www.youtube.com/embed/LxbOhnd2_GM]
 
-In diesem Kapitel werden wir fügen Unterstützung für zwei [Sprachbefehle](voice-input.md): "Zurücksetzen World", gibt der gelöschten Kugeln an ihrem ursprünglichen Speicherort, und klicken Sie auf "Drop Kugel" die Kugel fallen vornehmen.
+In diesem Kapitel wird die Unterstützung für zwei [Sprachbefehle](voice-input.md)hinzugefügt: "World zurücksetzen" gibt die gelöschten Bereiche an ihren ursprünglichen Speicherort zurück, und "Drop Sphere", um die Kugel zu verlieren.
 
 ### <a name="objectives"></a>Ziele
 
-* Fügen Sie Sprachbefehle, die immer lauschen, im Hintergrund.
-* Erstellen Sie ggf. ein Hologramm, die auf einen Sprachbefehl reagiert.
+* Fügen Sie Sprachbefehle hinzu, die immer im Hintergrund lauschen.
+* Erstellen Sie ein – Hologramm, das auf einen Voice-Befehl reagiert.
 
 ### <a name="instructions"></a>Anweisungen
 
-* In der **Skripts** Ordner, erstellen Sie ein Skript, mit dem Namen **SpeechManager**.
-* Ziehen Sie die **SpeechManager** Skript auf die **OrigamiCollection** Objekt in der Hierarchie
-* Öffnen der **SpeechManager** Skripts in Visual Studio.
-* Kopieren Sie diesen Code in **SpeechManager.cs** und **Alles speichern**:
+* Erstellen Sie **im Ordner** Skripts ein Skript mit dem Namen " **Redner-Manager**".
+* Ziehen Sie das **sprach-Manager** -Skript auf das **origamicollection** -Objekt in der Hierarchie.
+* Öffnen Sie das **sprach-Manager** -Skript in Visual Studio.
+* Kopieren Sie diesen Code, und fügen Sie ihn in **SpeechManager.cs** ein. **Speichern Sie alle**
 
 ```cs
 using System.Collections.Generic;
@@ -372,7 +372,7 @@ public class SpeechManager : MonoBehaviour
 }
 ```
 
-* Öffnen der **SphereCommands** Skripts in Visual Studio.
+* Öffnen Sie das **spherecommands** -Skript in Visual Studio.
 * Aktualisieren Sie das Skript wie folgt:
 
 ```cs
@@ -424,36 +424,36 @@ public class SphereCommands : MonoBehaviour
 }
 ```
 
-* Exportieren, erstellen und Bereitstellen der app im Emulator für HoloLens.
-* Der Emulator unterstützen Ihres Computers Mikrofon und reagieren auf Ihre Stimme: Passen Sie die Ansicht aus, damit der Cursor auf einem der die Kugeln befindet, und sagen Sie "Drop Kugel".
-* Sagen Sie "**zurücksetzen Welt**", die sie wieder in ihre ursprünglichen Positionen verschieben.
+* Exportieren, erstellen und Bereitstellen der APP auf dem hololens-Emulator.
+* Der Emulator unterstützt das Mikrofon Ihres PCs und antwortet auf Ihre Stimme: passen Sie die Ansicht so an, dass sich der Cursor in einer der Bereiche befindet, und sagen Sie "Drop Sphere".
+* Sagen Sie "**Welt zurücksetzen**", um Sie wieder an Ihre ursprünglichen Positionen zu bringen.
 
-## <a name="chapter-5---spatial-sound"></a>Kapitel 5 – räumliche sound
+## <a name="chapter-5---spatial-sound"></a>Kapitel 5: räumlicher Sound
 
 >[!VIDEO https://www.youtube.com/embed/Xc3C4VA10w4]
 
-In diesem Kapitel wir Musik hinzufügen, um die app, und dann Soundeffekten auf bestimmte Aktionen auszulösen. Wir verwenden [räumliche Sound](spatial-sound.md) Sounds mit einen bestimmten Speicherort im 3D-Raum gewähren.
+In diesem Kapitel werden wir der App Musik hinzufügen und dann bei bestimmten Aktionen Soundeffekte auslöst. Wir verwenden den [räumlichen Ton](spatial-sound.md) , um Klänge an einem bestimmten Speicherort im 3D-Raum zu geben.
 
 ### <a name="objectives"></a>Ziele
 
-* Hören Sie Hologramme in Ihrer Umgebung.
+* Hören Sie holograms in ihrer Welt.
 
 ### <a name="instructions"></a>Anweisungen
 
-* Wählen Sie im oberen Menü Unity **Bearbeiten > Projekteinstellungen > Audio**
-* Suchen der **Spatializer-Plug-Ins** festlegen, und wählen **MS HRTF Spatializer**.
-* Von der **Hologramme** Ordner, ziehen Sie die **Umgebung** -Objekt auf den **OrigamiCollection** Objekt in der Hierarchie-Bereich.
-* Wählen Sie **OrigamiCollection** und suchen Sie die **Audio Source** Komponente. Ändern Sie diese Eigenschaften:
-  * Überprüfen Sie die **Spatialize** Eigenschaft.
-  * Überprüfen Sie die **auf aktiv wiedergeben**.
-  * Änderung **räumliche Blend** zu **3D** durch den Schieberegler ganz nach rechts ziehen.
-  * Überprüfen Sie die **Schleife** Eigenschaft.
-  * Erweitern Sie **3D Sound Einstellungen**, und geben Sie **0,1** für **Doppler Ebene**.
-  * Legen Sie **Volume Rolloff** zu **logarithmische Rolloff**.
-  * Legen Sie **maximaler Abstand** zu **20**.
-* In der **Skripts** Ordner, erstellen Sie ein Skript, mit dem Namen **SphereSounds**.
-* Ziehen Sie **SphereSounds** auf die **Sphere1** und **Sphere2** Objekte in der Hierarchie.
-* Open **SphereSounds** aktualisieren Sie den folgenden Code in Visual Studio und **Alles speichern**.
+* Wählen Sie in Unity im oberen Menü **> Projekteinstellungen > Audiodatei** aus.
+* Suchen Sie die Einstellung **spatializer Plugin** , und wählen Sie **MS HRTF spatializer**aus.
+* Ziehen Sie das **Ambiente** -Objekt aus dem Ordner **holograms** auf das Objekt **origamicollection** im Bereich Hierarchie.
+* Wählen Sie **origamicollection** aus, und suchen Sie die Komponente **Audioquelle** . Ändern Sie die folgenden Eigenschaften:
+  * Überprüfen Sie die **spatialize** -Eigenschaft.
+  * Überprüfen Sie die wieder **Gabe bei wach**.
+  * Ändern Sie **räumliche Blend** in **3D** , indem Sie den Schieberegler nach rechts ziehen.
+  * Überprüfen Sie die **Loop** -Eigenschaft.
+  * Erweitern Sie **3D-Sound Einstellungen**, und geben Sie **0,1** für die **Doppler-Ebene**ein.
+  * Legen Sie **volumenrolloff** auf **logarithmische Rolloff**fest.
+  * Legen Sie **Max Distance** auf **20**fest.
+* Erstellen Sie im Ordner **Scripts** ein Skript mit dem Namen " **spheresounds**".
+* Ziehen Sie " **spheresounds** " in die **Sphere1** -und **Sphere2** -Objekte in der Hierarchie.
+* Öffnen Sie " **spheresounds** " in Visual Studio, aktualisieren Sie den folgenden Code, und **Speichern Sie alle**.
 
 ```cs
 using UnityEngine;
@@ -533,39 +533,39 @@ public class SphereSounds : MonoBehaviour
 }
 ```
 
-* Speichern Sie das Skript aus, und zurück zu Unity.
-* Exportieren, erstellen und Bereitstellen der app im Emulator für HoloLens.
-* Wear Kopfhörer, um den vollen Effekt zu erhalten, und verschieben Sie genauere und weiter von der Phase zum Ändern der Audiowiedergabe an.
+* Speichern Sie das Skript, und kehren Sie zu Unity zurück.
+* Exportieren, erstellen und Bereitstellen der APP auf dem hololens-Emulator.
+* Tragen Sie Kopfhörer, um den vollständigen Effekt zu erhalten, und bewegen Sie sich näher und weiter von der Stufe aus, um die Geräusche zu ändern.
 
-## <a name="chapter-6---spatial-mapping"></a>Kapitel 6 – räumliche Zuordnung
+## <a name="chapter-6---spatial-mapping"></a>Kapitel 6: räumliche Zuordnung
 
 >[!VIDEO https://www.youtube.com/embed/S-517Y63Cnk]
 
-Nun verwenden wir [räumliche Zuordnung](spatial-mapping.md) ein wirkliches Objekt in der realen Welt die Spielfläche zu platzieren.
+Nun verwenden wir die [räumliche Zuordnung](spatial-mapping.md) , um das Spiel Board in einem realen Objekt in der realen Welt zu platzieren.
 
 ### <a name="objectives"></a>Ziele
 
-* Bringen Sie Ihre realen, in der virtuellen Welt.
-* Platzieren Sie Ihre Hologramme, wo sie sind die meisten für Sie.
+* Bringen Sie Ihre reale Welt in die virtuelle Welt.
+* Platzieren Sie Ihre Hologramme, wo Sie für Sie am wichtigsten sind.
 
 ### <a name="instructions"></a>Anweisungen
 
-* Klicken Sie auf die **Hologramme** Ordner im Projektfenster.
-* Ziehen Sie die **räumliche Zuordnung** Asset in das Stammverzeichnis der **Hierarchie**.
-* Klicken Sie auf die **räumliche Zuordnung** Objekt in der Hierarchie.
-* In der **Inspektor Bereich**, ändern Sie die folgenden Eigenschaften:
-  * Überprüfen Sie die **zeichnen Visual Gitter** Feld.
-  * Suchen Sie **zeichnen Material** , und klicken Sie auf den Kreis auf der rechten Seite. Typ "**Drahtmodell**" in das Suchfeld oben. Klicken Sie auf das Ergebnis, und klicken Sie dann schließen Sie das Fenster.
-* Exportieren, erstellen und Bereitstellen der app im Emulator für HoloLens.
-* Wenn die app ausgeführt wird, wird ein Netz von einer zuvor gescannte realen Wohnzimmer in Drahtmodell gerendert werden.
-* Sehen Sie sich, wie eine parallele Kugel die Bühne verließ, und klicken Sie auf dem Boden liegen wird.
+* Klicken Sie im Projekt Panel auf den Ordner **holograms** .
+* Ziehen Sie das Objekt für die **räumliche Zuordnung** in den Stamm der **Hierarchie**.
+* Klicken Sie in der Hierarchie auf das **räumliche Mapping** -Objekt.
+* Ändern Sie im **Inspektor-Panel**die folgenden Eigenschaften:
+  * Aktivieren Sie das Kontrollkästchen **visuelle Meshes zeichnen** .
+  * Suchen Sie das **Zeichnungs Material** , und klicken Sie auf den Kreis rechts. Geben Sie im Feld oben den Text "**Draht Modell**" in das Suchfeld ein. Klicken Sie auf das Ergebnis, und schließen Sie das Fenster.
+* Exportieren, erstellen und Bereitstellen der APP auf dem hololens-Emulator.
+* Wenn die app ausgeführt wird, wird ein Mesh eines zuvor gescannten realen Wohnraums in Wireframe gerendert.
+* Sehen Sie sich an, wie sich eine parallele Kugel auf der Ebene befindet und auf den Boden zeigt.
 
-Jetzt zeigen wir Ihnen die OrigamiCollection an einem neuen Speicherort zu verschieben:
+Nun zeigen wir Ihnen, wie Sie die origamicollection an einen neuen Speicherort verschieben:
 
-* In der **Skripts** Ordner, erstellen Sie ein Skript, mit dem Namen **TapToPlaceParent**.
-* In der **Hierarchie**, erweitern Sie die **OrigamiCollection** , und wählen Sie die **Phase** Objekt.
-* Ziehen Sie die **TapToPlaceParent** -Skript auf die Stage-Objekt.
-* Öffnen der **TapToPlaceParent** Skript im Visual Studio, und aktualisieren, um folgende sein:
+* Erstellen Sie im Ordner **Scripts** ein Skript mit dem Namen " **taptoplaceparent**".
+* Erweitern Sie in der- **Hierarchie**die **origamicollection** , und wählen Sie das **Stage** -Objekt aus.
+* Ziehen Sie das Skript **taptoplaceparent** auf das Stage-Objekt.
+* Öffnen Sie das Skript " **taptoplaceparent** " in Visual Studio, und aktualisieren Sie es wie folgt:
 
 ```cs
 using UnityEngine;
@@ -624,25 +624,25 @@ public class TapToPlaceParent : MonoBehaviour
 ```
 
 * Exportieren, erstellen und Bereitstellen der app.
-* Nachdem Sie nun das Spiel an einem bestimmten Speicherort zu platzieren, indem es gazing können soll, verwenden Sie die Option Aktion (**ein** oder die LEERTASTE) und klicken Sie dann an einen neuen Speicherort verschieben und die Select-Geste erneut zu verwenden.
+* Nun sollten Sie nun in der Lage sein, das Spiel an einem bestimmten Speicherort zu platzieren, indem Sie die Auswahl Bewegung (**eine** oder Leertaste) verwenden und dann an eine neue Position verschieben und die Auswahl erneut verwenden.
 
 ## <a name="the-end"></a>Das Ende
 
-Und das Ende dieses Tutorials ist!
+Und das ist das Ende dieses Tutorials!
 
 Sie haben Folgendes gelernt:
 
-* Vorgehensweise: erstellen eine app holographic in Unity.
-* Wie Sie Blicke, Gesten, Sprach-, Sounds und räumliche Zuordnung verwenden.
-* Informationen zum Erstellen und Bereitstellen einer app mithilfe von Visual Studio.
+* Erstellen einer Holographic-app in Unity.
+* Verwendung von Blick, Bewegung, Stimme, Sounds und räumlicher Zuordnung.
+* Erfahren Sie, wie Sie eine APP mit Visual Studio erstellen und bereitstellen.
 
-Sie können nun damit beginnen, Ihre eigenen holographic apps erstellen.
+Sie sind nun bereit, eigene Holographic apps zu erstellen!
 
 ## <a name="see-also"></a>Siehe auch
 
-* [MR Basics 101: Vollständige Projekt mit Gerät](holograms-101.md)
-* [Blicke](gaze.md)
+* [MR-Grundlagen 101: Vollständiges Projekt mit Gerät](holograms-101.md)
+* [Anvisieren](gaze.md)
 * [Gesten](gestures.md)
 * [Spracheingabe](voice-input.md)
-* [Räumliche sound](spatial-sound.md)
-* [Räumliche Zuordnung](spatial-mapping.md)
+* [Raumklang](spatial-sound.md)
+* [Räumliche Abbildung](spatial-mapping.md)

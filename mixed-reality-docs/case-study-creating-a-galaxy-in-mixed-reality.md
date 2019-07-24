@@ -1,49 +1,49 @@
 ---
-title: 'Fallstudie: Erstellen einer in mixed reality'
-description: Vor Microsoft HoloLens, fragten wir unsere Entwickler-Community welche Art von app sie möchten ein erfahrener internes Team für das neue Gerät zu erstellen. Mehr als 5000 Ideen wurden freigegeben und nach einem 24-Stunden-Twitter-Abruf der Gewinner war ein Konzept namens "Galaxy-Explorer".
+title: 'Fallstudie: Erstellen einer Galaxie in gemischter Realität'
+description: Bevor Microsoft hololens ausgeliefert wurde, fragten wir unsere Entwickler Community, welche Art von APP Ihnen einen erfahrenen internen TeamBuild für das neue Gerät bereitstellen möchte. Mehr als 5000 Ideen wurden freigegeben, und nach einer 24-stündigen Twitter-Umfrage war der Gewinner eine Idee namens "Galaxy Explorer".
 author: KarimLUCCIN
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Galaxy-Explorer, HoloLens, Windows Mixed Reality, Teilen Ihre Idee, Fallstudie
+keywords: Galaxy Explorer, hololens, Windows Mixed Reality, teilen Sie Ihre Idee, Fallstudie
 ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604834"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63523766"
 ---
-# <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Fallstudie: Erstellen einer in mixed reality
+# <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Fallstudie: Erstellen einer Galaxie in gemischter Realität
 
-Vor Microsoft HoloLens, fragten wir unsere Entwickler-Community welche Art von app sie möchten ein erfahrener internes Team für das neue Gerät zu erstellen. Mehr als 5000 Ideen wurden freigegeben und nach einem 24-Stunden-Twitter-Abruf der Gewinner eine Idee, die aufgerufen wurde [Galaxy Explorer](galaxy-explorer.md).
+Bevor Microsoft hololens ausgeliefert wurde, fragten wir unsere Entwickler Community, welche Art von APP Ihnen einen erfahrenen internen TeamBuild für das neue Gerät bereitstellen möchte. Mehr als 5000 Ideen wurden freigegeben, und nach einer 24-stündigen Twitter-Umfrage war der Gewinner eine Idee namens " [Galaxy Explorer](galaxy-explorer.md)".
 
-Sprechen Sie Andy Zibits, den Lead Art, auf das Projekt, und Karim Luccin, des Teams Grafiken Engineer, über die gemeinsamen Initiative zwischen Kunst und entwickeln, die mit der Erstellung von eine genaue, interaktive Darstellung der Galaxy arbeiten im Galaxy-Explorer geführt hat.
+Andy zibits, der Kunst Leiter im Projekt und Karim Luccin, der Grafik Techniker des Teams, sprechen über den kollaborativen Aufwand zwischen Kunst und Engineering, der zur Erstellung einer exakten, interaktiven Darstellung der MILCHWEG-Galaxy in Galaxy Explorer geführt hat.
 
-## <a name="the-tech"></a>Der Technologie
+## <a name="the-tech"></a>Die Technologie
 
-[Unser Team](galaxy-explorer.md#meet-the-team) – der zwei Designer drei Entwickler, vier Künstler, ein Producer und einem Tester fiktives – sechs Wochen zum Erstellen einer voll funktionsfähigen app ermöglicht Personen zu lernen und entdecken Sie die Umfangs und das Schöne an unserer Galaxy arbeiten mussten.
+[Unser Team](galaxy-explorer.md#meet-the-team) besteht aus zwei Designern, drei Entwicklern, vier Künstlern, einem Producer und einem Tester – es gab sechs Wochen, eine voll funktionsfähige APP zu erstellen, die es den Benutzern ermöglicht, sich mit der Menschen Nähe und der Schönheit unserer Milchwege-Galaxy vertraut zu machen.
 
-Wir wollten die Fähigkeit von HoloLens, direkt in Ihr Platz zum wohnen, 3D-Objekte zu rendern, damit wir uns, dass wir zum Erstellen einer realistischen suchen Galaxy entschieden, wo Benutzer wären können schließen vergrößern und einzelne Sternen, jeweils in eigene herabstürzendes optimal nutzen .
+Wir wollten die Fähigkeit von hololens in vollem Umfang nutzen, 3D-Objekte direkt in ihren Lebensbereich zu Rendering. Daher wollten wir eine realistische, aussehende Galaxie erstellen, in der die Benutzer in der Lage sind, die Schließung zu vergrößern und einzelne Sterne anzuzeigen .
 
-In der ersten Woche der Entwicklung haben wir einige Ziele für unsere Darstellung des Galaxy arbeiten: Es benötigt, um die Tiefe, Bewegung und Verhalten volumetrische verfügen – voll von Sternen, die die Form des Galaxy helfen würde.
+In der ersten Woche der Entwicklung haben wir einige Ziele für unsere Darstellung der Milchwege-Galaxy-Methode erreicht: Es brauchte Tiefe, Bewegung und Gefühl von "Volumetric – Full of Stars", die beim Erstellen der Form der Galaxie helfen würden.
 
-Das Problem mit dem Erstellen einer animierten Galaxy, die Milliarden von Sternen war, dass die bloße Anzahl von einzelnen Elementen, die die zu aktualisierenden pro Bild für HoloLens zum Animieren der CPU-Nutzung zu groß wäre. Unsere Lösung bei der eine komplexe Mischung aus Kunst und Wissenschaft.
+Das Problem bei der Erstellung einer animierten Galaxie mit Milliarden von Sternen war, dass die reine Anzahl von einzelnen Elementen, die aktualisiert werden müssen, pro Frame zu groß wäre, damit hololens mithilfe der CPU animiert werden. Unsere Lösung umfasste eine komplexe Mischung aus Kunst und Wissenschaft.
 
 ## <a name="behind-the-scenes"></a>Im Hintergrund
 
-Um Benutzer zum Durchsuchen einzelner Sterne zu ermöglichen, wurde im ersten Schritt herausfinden, wie viele Partikel, die wir auf einmal gerendert werden können.
+Der erste Schritt besteht darin, herauszufinden, wie viele Partikel gleichzeitig dargestellt werden könnten.
 
-### <a name="rendering-particles"></a>Rendern von Partikel
+### <a name="rendering-particles"></a>Rendern von Partikeln
 
-Aktuelle CPUs eignen sich hervorragend für die Verarbeitung von serieller Aufgaben und bis zu ein paar paralleler Aufgaben auf einmal (je nachdem wie viele Kerne aufweisen), aber GPUs sind viel effektiver Tausende von Vorgänge parallel verarbeiten. Aber da sie in der Regel nicht gemeinsam den gleichen Speicher wie die CPU nutzen, kann Austauschen von Daten zwischen CPU <> GPU schnell einen Engpass darstellen. Unsere Lösung bestand darin, einer auf der GPU machen, und es muss sich um vollständig live auf der GPU.
+Aktuelle CPUs eignen sich hervorragend für die Verarbeitung von seriellen Aufgaben und bis zu einem Paar paralleler Aufgaben auf einmal (abhängig von der Anzahl der Kerne). GPUs sind jedoch weitaus effektiver, wenn Tausende von Vorgängen parallel verarbeitet werden. Da Sie jedoch in der Regel nicht denselben Arbeitsspeicher wie die CPU gemeinsam nutzen, kann der Datenaustausch zwischen CPU-< > GPU schnell zu einem Engpass werden. Unsere Lösung bestand darin, eine Galaxie auf der GPU zu erstellen, die vollständig auf der GPU gelebt werden musste.
 
-Da fingen wir Belastungstests mit Tausenden von Punkt-Partikel in verschiedene Muster. Dadurch konnten wir die Galaxie für HoloLens, um festzustellen, was funktioniert und was nicht abrufen.
+Wir haben Belastungstests mit Tausenden von Punkt Partikeln in verschiedenen Mustern gestartet. Auf diese Art konnten wir die Galaxie auf hololens bringen, um zu sehen, was funktionierte und was nicht.
 
-### <a name="creating-the-position-of-the-stars"></a>Erstellen die Position der Sterne
+### <a name="creating-the-position-of-the-stars"></a>Erstellen der Position der Sterne
 
-Eines unserer Teammitglieder hatte bereits geschrieben. die C# Code, der Sterne in der ursprünglichen Position generieren würden. Die Sternchen sind auf eine Ellipse, und ihre Position kann dadurch beschrieben werden, (**CurveOffset**, **EllipseSize**, **Erhöhung der Rechte**), in denen **CurveOffset**ist der Winkel des Sterns entlang der Ellipse **EllipseSize** ist die Dimension der Ellipse entlang der X-Achse und Z und Erhöhung der richtigen Höhenwinkel des Sterns in die Galaxie. Daher erstellen wir einen Puffer ([Unity ComputeBuffer](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)), würde mit einzelnen Stern Attribute initialisiert werden und auf der GPU, in dem sie für den Rest der Benutzeroberfläche Leben würde, zu senden. Um diesen Puffer zu zeichnen, verwenden wir [Unity DrawProcedural](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) die auf einer beliebigen Gruppe von Punkten ermöglicht einen Shader (Code auf einer GPU) ausgeführt, ohne dass eine tatsächliche Mesh, das die Galaxie darstellt:
+Eines unserer Teammitglieder hat bereits den Code geschrieben C# , der Sterne an der ursprünglichen Position generieren würde. Die Sterne befinden sich auf einer Ellipse, und ihre Position kann von ("**Cursor Offset**", " **ellipsesize**", " **Erhöhung**") beschrieben werden, wobei " **Cursor Offset** " der Winkel des Sterns entlang der Ellipse ist, " **ellipsesize** " die Dimension der Ellipse. entlang von X und Z und Erhöhung der ordnungsgemäßen Erweiterung des Stern in der Galaxy. Daher können wir einen Puffer ([computebuffer](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) erstellen, der mit jedem Star-Attribut initialisiert und an die GPU gesendet wird, wo er für den Rest der Arbeit leben würde. Zum Zeichnen dieses Puffers verwenden wir das [drawprozeduren von Unity](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , das das Ausführen eines Shaders (Code auf einer GPU) für eine beliebige Gruppe von Punkten ermöglicht, ohne dass ein tatsächliches Mesh vorhanden ist, das das Galaxy darstellt:
 
-**CPU:**
+**CPU**
 
 
 
@@ -52,7 +52,7 @@ Eines unserer Teammitglieder hatte bereits geschrieben. die C# Code, der Sterne 
 GraphicsDrawProcedural(MeshTopology.Points, starCount, 1);
 ```
 
-**GPU:**
+**AUSSCHALTEN**
 
 
 
@@ -68,31 +68,31 @@ v2g vert (uint index : SV_VertexID)
 }
 ```
 
-Da fingen wir mit unformatierten zirkuläre Mustern mit Tausenden von Partikel. Wir erhielten dadurch den Nachweis, dass es erforderlich, dass wir viele Partikel verwalten und führen Sie es mit der Geschwindigkeit der leistungsfähig, aber wir nicht mit der Gesamtform des Galaxy zufrieden waren. Um die Form zu verbessern, haben wir verschiedene Muster und -Partikelsysteme mit einer Drehung von versucht. Dies waren ursprünglich vielversprechend, daran, dass die Anzahl der Partikel und Leistung konsistent sind geblieben, aber die Form eingestellt in der Mitte wurde und Sterne wurden nach außen was realistischer nicht ausgeben. Wir benötigten eine Ausgabe der Compilerdiagnose, die ermöglichen uns Zeit bearbeiten und die Partikel realistisch, verschieben Sie Schleifen in der Mitte des Galaxy je näher.
+Wir haben mit unformatierten zirkulären Mustern mit Tausenden von Partikeln begonnen. Wir haben uns die erforderliche Prüfung gegeben, dass wir viele Partikel verwalten und mit leistungsfähiger Geschwindigkeit ausführen können. Wir haben uns jedoch nicht mit der Gesamtform der Galaxie zufrieden gestellt. Um die Form zu verbessern, haben wir versucht, verschiedene Muster und Partikelsysteme mit Drehung zu entwickeln. Diese waren anfänglich vielversprechend, weil die Anzahl der Partikel und die Leistung konsistent waren, aber die Form nahe dem Mittelpunkt aufbrach und die Sterne ausgingen, was nicht realistisch war. Wir brauchten eine Ausgabe, mit der wir die Zeit verändern konnten, und die Partikel werden realistisch verschoben, und die Schleife wird immer näher an der Mitte der Galaxie durchlaufen.
 
-![Wir haben versucht, verschiedene Muster und -Partikelsysteme, die, wie diese gedreht.](images/galaxy-patterns-500px.png)
+![Wir haben versucht, verschiedene Muster und Partikelsysteme zu drehen, die wie folgt gedreht wurden.](images/galaxy-patterns-500px.png)
 
-Wir haben versucht, verschiedene Muster und -Partikelsysteme, die, wie diese gedreht.
+Wir haben versucht, verschiedene Muster und Partikelsysteme zu drehen, die wie folgt gedreht wurden.
 
-Unser Team hat ein wenig Recherche zu der Möglichkeit Galaxies-Funktion, und wir haben ein benutzerdefiniertes partikelsystem speziell für das Galaxy, damit wir die Partikel auf Grundlage von Ellipsen verschoben werden kann "[Dichte Wave Theorie](https://en.wikipedia.org/wiki/Density_wave_theory)," die theorizes, die die Arme, der eine Galaxy sind die Bereiche, in Konstanten Bewegung, z. B. einen datenverkehrsstau jedoch höhere Dichte. Stabil und solid angezeigt wird, aber die Sternchen sind tatsächlich verschieben in und aus Arms, wie sie ihre jeweiligen Ellipsen verschoben. In unserem System vorhanden, der Partikel nie vorhanden sind auf der CPU – wir die Karten zu generieren und sie alle in der GPU zu orientieren, also das gesamte System einfach Ausgangszustand + Zeit. Es fortgeschritten wie folgt:
+Unser Team hat einige Untersuchungen zur Funktionsweise von Galaxien durchgeführt, und wir haben ein benutzerdefiniertes Partikelsystem speziell für die Galaxie erstellt, sodass wir die Partikel auf Ellipsen basierend auf "[Dichtewellen Theorie](https://en.wikipedia.org/wiki/Density_wave_theory)" verschieben konnten. Dies weist darauf hin, dass es sich bei den Armen einer Galaxy um Bereiche von höhere Dichte, aber in konstantem Flux, wie z. b. eine Verkehrsampel. Es erscheint stabil und solide, aber die Sterne bewegen sich tatsächlich in den und aus den Armen, wenn Sie sich auf die jeweiligen Ellipsen bewegen. In unserem System sind die Partikel nie auf der CPU vorhanden – wir generieren die Karten und orientieren Sie alle auf der GPU, sodass das gesamte System einfach den anfänglichen Zustand und die Zeit hat. Dies ist wie folgt:
 
-![Fortschritt des partikelsystem mit GPU-rendering](images/spiral-galaxy-arms-500px.jpg)
+![Fortschritt des partikelsystems mit GPU-Rendering](images/spiral-galaxy-arms-500px.jpg)
 
-Fortschritt des partikelsystem mit GPU-rendering
-
-
-Sobald genügend Ellipsen hinzugefügt werden, und drehen festgelegt sind, seit die Galaxies Formular "Arms", in denen die Verschiebung von Sternen zusammengeführt. Der Abstand der Sterne entlang jeder elliptischen Pfads wurden einige Zufallszahlen zugewiesen, und jedes Sterns wurde ein wenig mit Feldern fester Breite Zufälligkeit hinzugefügt. Dies erstellt eine viel natürlichere aussehende Verteilung von datenverschiebung und Arm-Sternform aus. Schließlich haben wir die Möglichkeit zum Laufwerk Farbe auf Grundlage der Entfernung vom Mittelpunkt hinzugefügt.
-
-### <a name="creating-the-motion-of-the-stars"></a>Erstellen die Bewegung der Sterne
-
-Um die allgemeine Stern Bewegung zu animieren, mussten wir einen Konstanten Winkel für jeden Frame hinzufügen und die abzurufenden Sternen, die auf die Auslassungspunkte mit konstanter Geschwindigkeit radiale verschieben. Dies ist der Hauptgrund für die Verwendung von **CurveOffset**. Dies ist nicht technisch korrekt, Sterne werden entlang der lange Seiten der Ellipsen schneller, aber die allgemeine Bewegung gute spürbar.
-
-![Sterne agieren Sie schneller auf lange Bogens an den Rändern langsamer.](images/ellipse-movement.jpg)
-
-Sterne agieren Sie schneller auf lange Bogens an den Rändern langsamer.
+Fortschritt des partikelsystems mit GPU-Rendering
 
 
-Mit diesem jedes Sterns vollständig von beschrieben wird (**CurveOffset**, **EllipseSize**, **Erhöhung der Rechte**, **Alter**), in denen **Alter** ist eine Ansammlung der die Gesamtzeit, die seit dem Laden der Szene vergangen ist.
+Sobald genügend Auslassungs Punkte hinzugefügt wurden und für die Rotation festgelegt sind, begannen die Galaxien mit der Bildung von "Arms", bei der die Bewegung von Sternen konvergiert. Der Abstand der Sterne entlang der einzelnen Ellipsen Pfade hat eine gewisse Zufälligkeit eingeräumt, und jedem Stern wurde ein wenig Positions Zufälligkeit hinzugefügt. Dadurch wurde eine viel natürlichere Verteilung der Stern Bewegung und der Arm-Form erstellt. Schließlich haben wir die Möglichkeit hinzugefügt, die Farbe basierend auf der Entfernung vom Mittelpunkt zu steuern.
+
+### <a name="creating-the-motion-of-the-stars"></a>Erstellen der Bewegung der Sterne
+
+Um die allgemeine Stern Bewegung zu animieren, mussten wir einen konstanten Winkel für jeden Frame hinzufügen und Sterne an einer Konstanten radialen Geschwindigkeit entlang der Ellipsen bewegen. Dies ist der Hauptgrund für die Verwendung von " **Cursor Offset**". Dies ist technisch nicht korrekt, da Sterne auf den langen Seiten der Ellipsen schneller bewegt werden, aber die allgemeine Bewegung war gut.
+
+![Sterne bewegen sich auf dem langen Bogen schneller, langsamer an den Rändern.](images/ellipse-movement.jpg)
+
+Sterne bewegen sich auf dem langen Bogen schneller, langsamer an den Rändern.
+
+
+Dadurch wird jeder Stern vollständig durch beschrieben ("**Cursor Offset**", " **ellipssize**", " **Erhöhung**", " **Alter**"), wobei " **Age** " eine Ansammlung der Gesamtzeit ist, die seit dem Laden der Szene vergangen ist.
 
 
 
@@ -112,97 +112,97 @@ float3 ComputeStarPosition(StarDescriptor star)
 }
 ```
 
-Das hat uns ermöglicht, um Zehntausende von Sternen einmal am Anfang der Anwendung zu generieren, und wir einen einzelner Satz von Sternen, die auf den eingerichteten Kurven animiert. Da alles, was auf der GPU ist, kann das System alle Sterne parallel ohne Kosten für die CPU animieren.
+Dies ermöglichte uns, Zehntausende von Sternen einmal am Anfang der Anwendung zu generieren. anschließend animierten wir eine Reihe von Sternen entlang der etablierten Kurven. Da alles auf der GPU basiert, kann das System alle Sterne parallel zu den CPU-Kosten animieren.
 
-![Hier ist, wie es beim Zeichnen von weißen Quads aussieht.](images/drawing-white-quads-300px.jpg)
+![Hier sehen Sie, wie es aussieht, wenn Sie weiße Quads zeichnen.](images/drawing-white-quads-300px.jpg)
 
-Hier ist, wie es beim Zeichnen von weißen Quads aussieht.
-
-
-
-Um jedes Gesicht Quad die Kamera zu machen, verwendet haben wir einen Geometrie-Shader, jede Stern Position in einem 2D-Rechteck auf dem Bildschirm zu transformieren, die unsere Stern Textur enthalten soll.
-
-![Karo statt Quads.](images/drawing-white-quads-300px.jpg)
-
-Karo statt Quads.
-
-
-Da wir die Überzeichnung (Anzahl der Male, die eine Pixel verarbeitet werden) einschränken möchten so weit wie möglich, wir gedreht unsere Quads, damit sie weniger überschneiden müssten.
-
-### <a name="adding-clouds"></a>Hinzufügen von clouds
-
-Es gibt viele Möglichkeiten, um ein volumetrische Gefühl mit Partikel zu erhalten – von Ray marching innerhalb eines Volumes zum Zeichnen der so viele Partikel wie möglich in einer Cloud zu simulieren. Real-Time-Ray marching war im Begriff, zu teuer und schwierig zu erstellen, werden, daher wechselten wir zuerst eine stünden-System über eine Methode zur Rendering-Gesamtstrukturen in Spiele erstellen – mit einer Vielzahl von 2D-Bilder von Strukturen, die vor der Kamera. Wenn wir dazu ein Spiel verwenden möchten, können wir Texturen von Strukturen, die über eine Kamera, die auf, speichern Sie alle diese Images und zur Laufzeit für jede Karte Billboard rotiert gerendert haben, wählen Sie das Bild, das die ansichtsrichtung entspricht. Dies funktioniert auch nicht, wenn die Images Hologramme sind. Der Unterschied zwischen dem linken und der richtigen Auge erleichtern, damit wir eine viel höhere Auflösung benötigen, da ansonsten nur myblobstorage_storage flach, mit einem Alias versehen ist, oder sich wiederholende.
-
-Klicken Sie auf unserer zweiten Versuch haben wir versucht, dass so viele Partikel wie möglich. Die beste visuelle Elemente wurden erreicht, wenn wir lichtdurchlässigen Partikel Drew, und sie vor dem Hinzufügen der Szene verwischt. Probleme mit diesem Ansatz wurden für wie viele Partikel, die wir auf ein einziges Mal zeichnen können und wie viel Bildschirmbereich sie gleichzeitig 60fps behandelt. Das resultierende Image rufen Sie diese Cloud sei Weichzeichner wurde in der Regel ein sehr ressourcenintensiver Vorgang.
-
-![Ohne die Textur ist dies an, wie die Clouds mit 2 % Deckkraft aussehen würde.](images/clouds-without-texture-300px.jpg)
-
-Ohne die Textur ist dies an, wie die Clouds mit 2 % Deckkraft aussehen würde.
+Hier sehen Sie, wie es aussieht, wenn Sie weiße Quads zeichnen.
 
 
 
-Additive wird und dass viele von ihnen also mehrere Quads übereinander, müssten wir wiederholt Schattierung dasselbe Pixel. In der Mitte des Galaxy dasselbe Pixel hält Hunderte von Quads bauen aufeinander auf, und dies hat enormen Kosten verbunden, wenn Vollbildmodus ausgeführt wird.
+Um jedes Vierfache der Kamera zuzuordnen, haben wir einen Geometry-Shader verwendet, um jede Stern Position in ein 2D-Rechteck auf dem Bildschirm umzuwandeln, das die Stern Textur enthält.
 
-Vollbildmodus Clouds durchführen, und versuchen, diese blur hätten keine gute Idee, daher entschieden wir, die Hardware, die die Arbeit für uns leisten können.
+![Diamanten anstelle von Quads.](images/drawing-white-quads-300px.jpg)
 
-### <a name="a-bit-of-context-first"></a>Ein bit des Kontexts zunächst
-
-Bei Verwendung von Texturen in einem Spiel entspricht der Texturgröße selten Bereich in verwendet werden soll, jedoch können wir andere Art von texturfilterung zum Abrufen der Grafikkarte auf, um die Farbe zu interpolieren in Pixel der Textur erstellt werden sollten ([Texturfilterung](https://msdn.microsoft.com/library/dn642451.aspx)). Die Filterung, die uns interessiert ist [bilineare Filterung](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) die wird den Wert jedes Pixels mit dem 4 nächsten Nachbarn berechnet.
-
-![Ursprüngliche Filtervorgang](images/texture-1.png)
-
-![Führen Sie nach dem Filtern](images/texture-2.png)
-
-Diese Eigenschaft verwenden, sehen wir, dass jeder Versuch, eine Textur in einem Bereich doppelt so groß, zeichnen sie das Ergebnis verwischt.
-
-Statt in den Vollbildmodus Rendern und verlieren diese wertvollen in Millisekunden, die wir auf einen anderen Ausgaben werden konnte, Rendern es auf eine kleine Version des Bildschirms aus. Klicken Sie dann erhalten Sie durch Kopieren dieser Textur und Dehnen es mit einem Faktor von 2 mehrmals, Vollbildmodus und den Inhalt im Prozess Weichzeichner.
-
-![X3 an voller Auflösung vergrößern.](images/galaxy-resolutions-300px.png)
-
-X3 an voller Auflösung vergrößern.
+Diamanten anstelle von Quads.
 
 
+Da wir die Überschreibung (die Häufigkeit, mit der ein Pixel verarbeitet wird) so weit wie möglich einschränken wollten, haben wir unsere Quads so gedreht, dass Sie weniger überlappend haben.
 
-Dies konnten wir das Cloud-Part mit nur ein Bruchteil der Kosten der ursprünglichen abrufen. Anstatt zum Hinzufügen von Clouds für die vollständige Lösung, wir nur Paint 1/64. der Pixel und nur stretch die Textur an voller Auflösung.
+### <a name="adding-clouds"></a>Hinzufügen von Clouds
 
-![Links, mit einem hochpreisiger von 1/8. um voller Auflösung; und mit 3, vergrößern Potenz von 2 verwenden.](images/stars-upscaled-300px.jpg)
+Es gibt viele Möglichkeiten, ein volummetric-Gefühl mit Partikeln zu erzielen – von dem Ray, das sich innerhalb eines Volumes befindet, um so viele Partikel wie möglich zu zeichnen, um eine Cloud zu simulieren. Die Echtzeitdarstellung von Ray war zu teuer und schwer zu erstellen, daher haben wir zuerst versucht, ein unveränderliches System mit einer Methode zum Rendern von Gesamtstrukturen in spielen zu erstellen – mit einer großen Zahl von 2D-Bildern von Bäumen, die der Kamera ausgesetzt waren. Wenn wir dies in einem Spiel durchführen, können Sie Strukturen von Bäumen rendern, die von einer Kamera gerendert werden, die alle Bilder speichert, und zur Laufzeit für jede Billboard-Karte das Bild auswählen, das der Ansichts Richtung entspricht. Dies funktioniert auch nicht, wenn es sich um Hologramme handelt. Der Unterschied zwischen dem linken und dem rechten Auge ist, dass wir eine viel höhere Auflösung benötigen, oder es wird nur ein flach, ein Alias oder ein wiederholtes aussehen angezeigt.
 
-Links, mit einem hochpreisiger von 1/8. um voller Auflösung; und mit 3, vergrößern Potenz von 2 verwenden.
+Bei unserem zweiten Versuch haben wir versucht, so viele Partikel wie möglich zu haben. Die besten visuellen Elemente wurden erzielt, als wir die Partikel Additiv gezeichnet haben, bevor Sie der Szene hinzugefügt wurden. Die typischen Probleme bei diesem Ansatz standen in Bezug darauf, wie viele Partikel zu einem einzigen Zeitpunkt gezeichnet werden konnten und wie viel Bildschirmfläche Sie abgedeckt haben, während 60 fps beibehalten werden. Das resultierende Bild zu verschleiern, um dieses cloudgefühl zu erhalten, war normalerweise ein sehr kostspieliger Vorgang.
 
+![Ohne Textur würden die Clouds mit einer Deckkraft von 2% aussehen.](images/clouds-without-texture-300px.jpg)
 
-Beachten Sie, versuchen, wechseln von 1/64. die Größe auf die vollständige Größe in einer Aktion würde ganz anders aussehen, während der Grafikkarte weiterhin 4 Pixel in diesem Setup verwenden würde, um einen größeren Bereich schattieren aus, und starten Sie die Elemente angezeigt werden.
-
-Klicken Sie dann, wenn wir voller Auflösung Sterne mit kleineren Karten hinzufügen, erhalten wir die vollständige Galaxie:
-
-![In der Nähe Endergebnis Galaxy-Rendering mit voller Auflösung Sterne](images/full-galaxy-500px.png)
-
-Nachdem wir auf dem richtigen Weg mit der Form waren, haben wir eine Ebene von Clouds, die temporäre Punkte, mit denen, die wir in Photoshop gezeichnet, die und einige zusätzliche Farbe, ausgelagert hinzugefügt. Das Ergebnis war ein Galaxy arbeiten unsere moderne Entwicklungsteams beide spürbar gut gelungen ist und es unser Ziel mit Tiefe, Volumes und während der Übertragung erfüllt – ganz ohne hohe Anforderungen an die CPU.
-
-![Unsere letzte arbeiten Galaxy in 3D.](images/final-galaxy-500px.jpg)
-
-Unsere letzte arbeiten Galaxy in 3D.
+Ohne Textur würden die Clouds mit einer Deckkraft von 2% aussehen.
 
 
-### <a name="more-to-explore"></a>Auf die Zukunft
 
-Wir haben den Code für das Galaxy-Explorer-app als Open Source und auf zur Verfügung gestellt [GitHub](https://github.com/Microsoft/GalaxyExplorer) für Entwickler erstellen.
+Wenn Sie Additiv sind und viele davon haben, sind mehrere aufeinander folgende aufeinander folgende aufeinander folgende. In der Mitte der Galaxy hat das gleiche Pixel Hunderte von aufeinander folgenden, und dies hat bei vollständigem Bildschirm enorme Kosten.
 
-Weitere Informationen zu den Entwicklungsprozess für Galaxy Explorer herausfinden möchten? Sehen Sie sich alle unsere letzten Projekt Updates auf die [Microsoft HoloLens YouTube-Kanal](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL).
+Das Ausführen von voll Bild Clouds und das versuchen, Sie zu verwischen, wäre eine gute Idee. Wir haben uns also entschieden, die Hardware für uns zu Unternehmen.
 
-## <a name="about-the-authors"></a>Über die Autoren
+### <a name="a-bit-of-context-first"></a>Ein bisschen Kontext zuerst
+
+Bei der Verwendung von Texturen in einem Spiel entspricht die Textur Größe selten dem Bereich, in dem wir Sie verwenden möchten, aber wir können unterschiedliche Arten von Textur Filtern verwenden, um die Grafikkarte zum Interpolieren der gewünschten Farbe aus den Pixeln der Textur ([Textur Filterung](https://msdn.microsoft.com/library/dn642451.aspx)) zu verwenden. Die Filterung, die uns interessiert ist [bilineare Filterung](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) die wird den Wert jedes Pixels mit dem 4 nächsten Nachbarn berechnet.
+
+![Ursprüngliches vor dem Filtern](images/texture-1.png)
+
+![Ergebnis nach dem Filtern](images/texture-2.png)
+
+Mit dieser Eigenschaft sehen wir, dass jedes Mal, wenn wir versuchen, eine Textur in einem Bereich doppelt so groß zu zeichnen, das Ergebnis verwirft.
+
+Anstatt auf einen voll Bildschirm zu rendern und die kostbaren Millisekunden zu verlieren, würden wir uns auf eine kleine Version des Bildschirms rendern. Wenn Sie dann diese Textur kopieren und Sie um einen Faktor von 2 mehrmals Strecken, werden wir wieder zum voll Bildschirm zurückkehren, während wir den Inhalt des Prozesses verschleiern.
+
+![x3 hochskalieren bis vollständige Auflösung.](images/galaxy-resolutions-300px.png)
+
+x3 hochskalieren bis vollständige Auflösung.
+
+
+
+Dadurch konnten wir den cloudteil nur mit einem Bruchteil der ursprünglichen Kosten erreichen. Anstatt Clouds für die vollständige Auflösung hinzuzufügen, zeichnen wir nur die 1/64-Stel der Pixel und Strecken die Textur auf die vollständige Auflösung zurück.
+
+![Links, mit einer hochskalieren von 1/8 bis vollständiger Auflösung; und das Recht, mit drei hochskalieren von 2.](images/stars-upscaled-300px.jpg)
+
+Links, mit einer hochskalieren von 1/8 bis vollständiger Auflösung; und das Recht, mit drei hochskalieren von 2.
+
+
+Beachten Sie, dass der Versuch, zwischen 1 und 64 von der Größe in eine ganze Größe zu wechseln, vollständig anders aussehen würde, da die Grafikkarte weiterhin 4 Pixel im Setup verwendet, um einen größeren Bereich zu schattieren und die Artefakte angezeigt werden.
+
+Wenn wir dann voll auflösende Sterne mit kleineren Karten hinzufügen, erhalten wir die vollständige Galaxy-Version:
+
+![Fast Final result of Galaxy Rendering using Full Resolution Stars](images/full-galaxy-500px.png)
+
+Nachdem wir uns auf der rechten Spur mit der Form befanden, haben wir eine Schicht von Clouds hinzugefügt, die temporären Punkte ausgetauscht, die wir in Photoshop gezeichnet haben, und einige zusätzliche Farben hinzugefügt. Das Ergebnis war eine Milch Methode, die unsere Kunst-und Engineering-Teams sowohl gut als auch unsere Ziele für tiefe, Volumen und Bewegung –, ohne die CPU zu steuern.
+
+![Unsere endgültige Milchwege-Galaxy in 3D.](images/final-galaxy-500px.jpg)
+
+Unsere endgültige Milchwege-Galaxy in 3D.
+
+
+### <a name="more-to-explore"></a>Weitere Informationen
+
+Wir haben den Code für die Galaxy Explorer-app geöffnet und auf [GitHub](https://github.com/Microsoft/GalaxyExplorer) zur Verfügung gestellt, auf dem Entwickler aufbauen können.
+
+Möchten Sie mehr über den Entwicklungsprozess für den Galaxy Explorer erfahren? Sehen Sie sich alle früheren Projekt Updates auf dem [Microsoft hololens-YouTube-Kanal](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)an.
+
+## <a name="about-the-authors"></a>Informationen zu den Autoren
 
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"> <img alt="Picture of Karim Luccin at his desk" width="60" height="60" src="images/karim-thumb.jpg" /></td>
-<td style="border:0"><b>Karim Luccin</b> ist Software Engineer und mit Effekten Visuals Enthusiast. Er war der Techniker Grafiken für Galaxy-Explorer.</td>
+<td style="border:0"><b>Karim Luccin</b> ist ein Software Entwickler und Liebhaber von visuellen Elementen. Er war der Grafik Techniker für Galaxy Explorer.</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"> <img alt="Photo of art lead Andy Zibits" width="60" height="60" src="images/andy-avatar.png" /></td>
-<td style="border:0"><b>Andy Zibits</b> ist eine Art Lead und Speicherplatz Enthusiast verwaltet das Team 3D Modellierung für Galaxy-Explorer, und für noch mehr Partikel auseinander setzen.</td>
+<td style="border:0"><b>Andy zibits</b> ist ein Kunst Leiter und Platz Liebhaber, der das 3D-Modellierungs Team für den Galaxy Explorer verwaltet und für noch mehr Partikel gekämpft hat.</td>
 </tr>
 </table>
 
 
 ## <a name="see-also"></a>Siehe auch
-* [Galaxy-Explorer auf GitHub](https://github.com/Microsoft/GalaxyExplorer)
-* [Galaxy Explorer projektaktualisierungen auf YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)
+* [Galaxy Explorer auf GitHub](https://github.com/Microsoft/GalaxyExplorer)
+* [Galaxy Explorer-Projektaktualisierungen auf YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

@@ -1,138 +1,138 @@
 ---
-title: Grundlegendes zur Leistung für Mixed Reality
-description: Erweiterte Themen und Informationen zum Optimieren der Leistung für Windows Mixed Reality-Apps
+title: Grundlegendes zur Leistung für gemischte Realität
+description: Erweiterte Themen und Details zur Optimierung der Leistung für Windows Mixed Reality-apps
 author: Troy-Ferrell
 ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
-keywords: Windows Mixed Reality, Mixed Reality, virtuelle Realität, VR, MR, Leistung, Optimierung, CPU und GPU
+keywords: Gemischte Windows-Realität, gemischte Realität, Virtual Reality, VR, Mr, Leistung, Optimierung, CPU, GPU
 ms.openlocfilehash: ce59f9023c21dc7c981a2bb97d9fbd0c57622dbf
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596075"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548841"
 ---
-# <a name="understanding-performance-for-mixed-reality"></a>Grundlegendes zur Leistung für mixed reality
+# <a name="understanding-performance-for-mixed-reality"></a>Grundlegendes zur Leistung für gemischte Realität
 
-Dieser Artikel ist eine Einführung in die die Bedeutung der Leistung für Ihre Mixed Reality-app zu rationalisieren.  Benutzererfahrung kann erheblich beeinträchtigt sein, wenn Ihre Anwendung nicht auf eine optimale Framerate ausgeführt wird. Hologramme instabil angezeigt, und Head nachverfolgung der Umgebung sind ungenau zu einer schlechten benutzererfahrung führt. In der Tat muss Leistung als erstklassige Feature für Mixed Reality-Entwicklung und keine Stabilisierung, Ende des Zyklus-Vorgangs berücksichtigt werden.
+Dieser Artikel ist eine Einführung in die Rationalisierung der Bedeutung der Leistung für ihre gemischte Reality-app.  Die Benutzer Leistung kann erheblich beeinträchtigt werden, wenn Ihre Anwendung nicht mit optimaler Framerate ausgeführt wird. Holograms werden instabil angezeigt, und die Kopf Nachverfolgung der Umgebung ist ungenau, was zu einer mangelnden Benutzerumgebung führt. Tatsächlich muss die Leistung als First-Class-Feature für die Entwicklung gemischter Realität und nicht für eine Stabilisierung-, Ende-zu-Ende-Aufgabe angesehen werden.
 
-Für die Überprüfung werden die leistungsfähigen Framerate Werte für jede Zielplattform aufgeführt.
+Zur Überprüfung werden die leistungsstarken Framerate-Werte für jede Zielplattform unten aufgeführt.
 
-| Platform | Ziel-Bildfrequenz |
+| Platform | Zielframe Rate |
 |----------|-------------------|
 | [HoloLens](hololens-hardware-details.md) | 60 FPS |
-| [Windows Mixed Reality Ultra-PCs](immersive-headset-hardware-details.md) | 90 FPS |
+| [Windows Mixed Reality Ultra PCs](immersive-headset-hardware-details.md) | 90 FPS |
 | [Windows Mixed Reality-PCs](immersive-headset-hardware-details.md) | 60 FPS |
 
-Das folgende Framework bietet einen allgemeine Übersicht über bewährte Methoden und Frameraten als Ziel Kenntnisse zu erreichen. So können Sie weitere Details, sich die [Empfehlungen zur Leistung für Unity-Artikel](performance-recommendations-for-unity.md). Dieser Artikel wird insbesondere von Framerate in Ihrer Unity Windows Mixed Reality-app sowie die Schritte in der Unity-Umgebung zur Verbesserung der Leistung messen erläutert.
+Das unten stehende Framework bietet eine allgemeine Übersicht über bewährte Methoden und Erkenntnisse zum Erreichen von Ziel Frameraten. Weitere Informationen zu den Details finden Sie im [Artikel Leistungs Empfehlungen für Unity](performance-recommendations-for-unity.md). Insbesondere wird in diesem Artikel erläutert, wie Sie die Framerate in ihrer Unity Windows Mixed Reality-App Messen und welche Schritte in der Unity-Umgebung ausgeführt werden müssen, um die Leistung zu verbessern.
 
-## <a name="understanding-performance-bottlenecks"></a>Grundlegendes zu von Leistungsengpässen
+## <a name="understanding-performance-bottlenecks"></a>Grundlegendes zu Leistungs Engpässen
 
-Wenn Ihre app eine dieser Framerate aufweist, ist der erste Schritt, zu analysieren und zu verstehen, in denen Ihre Anwendung rechenintensiv ist. Es gibt zwei primäre Prozessoren für die Arbeit zum Rendern der Szene verantwortlich: CPU und GPU. Diese beiden Komponenten verarbeiten unterschiedliche Vorgänge und Phasen Ihrer Mixed Reality-App. Es gibt drei wichtige Orte, wo Engpässe auftreten können. 
+Wenn Ihre APP einen leistungsstarken Framerate hat, besteht der erste Schritt darin, zu analysieren und zu verstehen, wo Ihre Anwendung Rechen intensiv ist. Es gibt zwei primäre Prozessoren, die für die Arbeit zum Rendering Ihrer Szene verantwortlich sind: die CPU und die GPU. Jede dieser beiden Komponenten verarbeitet verschiedene Vorgänge und Phasen ihrer Mixed Reality-app. Es gibt drei wichtige Orte, an denen Engpässe auftreten können. 
 
-1. **App-Thread - CPU** -dieser Thread ist verantwortlich für die app-Logik. Dies schließt die Verarbeitung der Eingabe, Animationen, Physik und andere app-Logik/Status
-2. **Thread - CPU und GPU Rendern** -dieser Thread ist verantwortlich für die Übermittlung Ihrer Draw-Aufrufe an die GPU. Wenn Ihre app um ein Objekt z. B. eines Cubes oder Modells zu rendern, sendet dieser Thread eine Anforderung an die GPU, die über eine Architektur, optimiert für das Rendering verfügt, um diese Vorgänge auszuführen.
+1. **App-Thread-CPU** : dieser Thread ist für Ihre APP-Logik verantwortlich. Dies umfasst die Verarbeitung von Eingaben, Animationen, Physik und anderen APP-Logik/-Zuständen.
+2. **Thread-CPU zu GPU rentieren** : dieser Thread ist für das übermitteln der Draw-Aufrufe an die GPU verantwortlich. Wenn Ihre APP ein Objekt (z. b. einen Cube oder ein Modell) rendern möchte, sendet dieser Thread eine Anforderung an die GPU, die über eine für das Rendering optimierte Architektur verfügt, um diese Vorgänge auszuführen.
 3. **GPU** - 
-    dieser Prozessor am häufigsten behandelt die Grafikpipeline der Anwendung, um Datentransformation 3D (Modelle, Texturen usw.) in Pixel und letztendlich erzielen ein 2D-Bild an den Bildschirm des Geräts übermitteln.
+    Dieser Prozessor verarbeitet am häufigsten die Grafik Pipeline Ihrer Anwendung, um 3D-Daten (Modelle, Texturen usw.) in Pixel umzuwandeln, und erzeugt schließlich ein 2D-Bild, das an den Bildschirm Ihres Geräts gesendet wird.
 
 ![Lebensdauer eines Frames](images/lifetime-of-a-frame.png)
 
-HoloLens-Anwendungen werden in der Regel GPU begrenzt sein. Allerdings dies errichtet keine in der "true" in jeder Anwendung, und es wird daher empfohlen, die den Tools und Techniken unten verwenden, um für Ihre spezielle app basiswahrheit zu erhalten.
+Im Allgemeinen werden hololens-Anwendungen an GPU gebunden. Dies gilt jedoch nicht für jede Anwendung. Daher wird empfohlen, die Tools & Techniken unten zu verwenden, um die grundlegenden Informationen für Ihre APP zu erhalten.
 
-## <a name="how-to-analyze-your-application"></a>Gewusst wie: Analysieren der Anwendung
+## <a name="how-to-analyze-your-application"></a>Analysieren der Anwendung
 
-Es gibt viele Tools, die Ihnen als Entwickler das Leistungsprofil Ihrer Mixed Reality-Anwendung zu ermöglichen. Diese können Sie beide, in dem Sie Engpässe und wie sie selbst, um sie zu debuggen manifestieren sind haben, soll.
+Es gibt viele Tools, mit denen Sie als Entwickler das Leistungsprofil Ihrer gemischten Reality-Anwendung verstehen können. Diese ermöglichen es Ihnen, sowohl für Engpässe als auch für das Debuggen zu dienen.
 
-Dies ist eine Liste der beliebten und leistungsstarken Tools, um detaillierte Informationen für die profilerstellung für Ihre Anwendung zu erhalten.
-- [Intel Grafiken Performance Analyzer](https://software.intel.com/gpa)
-- [Visual Studio Grafik-Debugger](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics?view=vs-2017)
+Dies ist eine Liste beliebter und leistungsfähiger Tools, mit denen Sie umfassende Profil Erstellungs Informationen für Ihre Anwendung erhalten.
+- [Intel Graphics Performance Analyzer](https://software.intel.com/gpa)
+- [Visual Studio-Grafik-Debuggers](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics?view=vs-2017)
 - [Unity-Profiler](https://docs.unity3d.com/Manual/Profiler.html)
-- [Unity-Frame-Debugger](https://docs.unity3d.com/Manual/FrameDebugger.html)
+- [Unity-Frame Debugger](https://docs.unity3d.com/Manual/FrameDebugger.html)
 
-### <a name="how-to-profile-in-any-environment"></a>Wie in jeder Umgebung ein Profil erstellen
+### <a name="how-to-profile-in-any-environment"></a>Profilerstellung in einer beliebigen Umgebung
 
-Es gibt einen einfachen Test können Sie schnell feststellen, wenn Sie wahrscheinlich GPU begrenzt oder CPU, die in Ihrer Anwendung begrenzt. Wenn Sie die Auflösung der renderzielausgabe verringern, es gibt weniger Pixel berechnen, und daher weniger Arbeit die GPU ausgeführt werden, um ein Bild zu rendern muss. Viewport Skalierung (dynamische Auflösung-Skalierung) wird die Vorgehensweise zum Rendern des Bilds in eine kleinere Renderziel und dann Ihr Gerät anzeigen kann. Das Gerät wird nach-oben-aus dem kleineren Satz von Pixeln, um Ihr endgültiges Image anzuzeigen-Beispiel.
+Es gibt einen einfachen Test, mit dem Sie schnell feststellen können, ob Sie in Ihrer Anwendung wahrscheinlich eine GPU-Grenze oder eine CPU-Begrenzung Wenn Sie die Auflösung der Ausgabe des Renderziels verringern, sind weniger Pixel zu berechnen und somit weniger Arbeit, die die GPU zum renderingabbild ausführen muss. Die viewportskalierung (Skalierung dynamischer Lösungen) ist die Vorgehensweise, das Bild in ein kleineres Renderziel zu rendern, und das Ausgabegerät kann angezeigt werden. Das Gerät wird aus dem kleineren Satz von Pixeln hochskalieren, um das endgültige Bild anzuzeigen.
 
-Nach Verringern der Rendering-Lösung, wenn:
-1) Anwendung Framerate **erhöht**, sind Sie wahrscheinlich **GPU begrenzt.**
-1) Anwendung Framerate **unverändert**, sind Sie wahrscheinlich **CPU-gebunden**
+Nach dem verringern der renderinglösung:
+1) Anwendungs Framerate **erhöht**sich, dann ist die **GPU wahrscheinlich begrenzt**
+1) Die Anwendungs Framerate ist **unverändert**, und Sie sind wahrscheinlich **CPU-gebunden** .
 
 >[!NOTE]
->Unity bietet die Möglichkeit, mühelos die Render-zielauflösung des Ihrer Anwendung zur Laufzeit durch Ändern der *[XRSettings.renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* Eigenschaft. Das endgültige Bild angezeigt, auf dem Gerät wurde eine feste Auflösung. Die Plattform wird der niedrigeren Auflösung, erstellen Sie ein Bild mit höherer Auflösung für das Rendern auf zeigt die Ausgabe Stichproben. 
+>Unity bietet die Möglichkeit, die renderzielauflösung Ihrer Anwendung zur Laufzeit mithilfe der *[xrsettings. renderviewportscale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* -Eigenschaft problemlos zu ändern. Das endgültige Bild, das auf dem Gerät angezeigt wird, hat eine Fehlerbehebung. Die Plattform zeigt eine Stichprobe der Ausgabe mit niedrigerer Auflösung an, um ein höheres Auflösungs Bild für das Rendering in anzeigen zu erstellen. 
 >
 >```CS
 >UnityEngine.XR.XRSettings.renderScale = 0.7f;
 >```
 
-## <a name="how-to-improve-your-application"></a>Wie Sie Ihre Anwendung zu verbessern.
+## <a name="how-to-improve-your-application"></a>So verbessern Sie Ihre Anwendung
 
 ### <a name="cpu-performance-recommendations"></a>Empfehlungen zur CPU-Leistung
 
-Im Allgemeinen umfasst die meisten Aufgaben in einer mixed Reality-Anwendung auf der CPU, Ausführen der "Simulations" der Szene und Verarbeiten von umfangreichen eindeutige Anwendungs-Logik. Daher gelten die folgenden Bereiche in der Regel für die Optimierung.
+Im allgemeinen umfasst die meiste Arbeit in einer gemischten Reality-Anwendung auf der CPU das Ausführen der Simulation der Szene und die Verarbeitung umfangreicher eindeutiger Anwendungslogik. Daher sind die folgenden Bereiche in der Regel für die Optimierung bestimmt.
 
 - Animationen
-- Vereinfachen Sie die Physik
-- Speicherbelegung
-- Komplexe Algorithmen (d.h.) Inverse Kinematik, Auffinden von Pfad)
+- Vereinfachen der Physik
+- Speicher Belegungen
+- Komplexe Algorithmen (d. h. umgekehrte Kinematik, Pfad Suche)
 
 ### <a name="gpu-performance-recommendations"></a>Empfehlungen zur GPU-Leistung
 
-#### <a name="understanding-bandwidth-vs-fill-rate"></a>Grundlegendes zu Bandbreitenrate Vs Füllung
-Beim Rendern von eines Frames auf der GPU, ist eine Anwendung in der Regel entweder die von Bandbreite oder Fill-Rate des Speichers begrenzt.
+#### <a name="understanding-bandwidth-vs-fill-rate"></a>Grundlegendes zur Bandbreiten Vergleich
+Wenn ein Frame auf der GPU gerendert wird, wird eine Anwendung im Allgemeinen entweder durch die Arbeitsspeicher Bandbreite oder die Füllrate begrenzt.
 
-- **Speicherbandbreite** ist die Rate der Lesevorgänge, und schreibt die GPU Aktualisierungsoption aus dem Arbeitsspeicher
-    - Um Beschränkungen der Netzwerkbandbreite zu identifizieren, reduzieren Sie die Texturqualität, und überprüfen Sie, ob die Framerate verbessert.
-    - In Unity, dies ist möglich durch Ändern **Texturqualität** in **bearbeiten** > **Projekteinstellungen**  >   **[ Einstellungen von Quality](https://docs.unity3d.com/Manual/class-QualitySettings.html)**.
-- **Geben Sie die Rate** bezieht sich auf den Durchsatz der gerenderten Pixel, die pro Sekunde von der GPU gezeichnet werden können.
-    - Um Füllung Rate Einschränkungen zu identifizieren, verringern Sie die Bildschirmauflösung, und überprüfen Sie, ob die Framerate verbessert. 
-    - In Unity, dies kann erfolgen über die *[XRSettings.renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* Eigenschaft
+- Die Arbeits **Speicherbandbreite** ist die Rate der Lese-und Schreibvorgänge, die die GPU aus dem Arbeitsspeicher
+    - Um Bandbreiten Einschränkungen zu identifizieren, verringern Sie die Texturqualität und überprüfen, ob Framerate verbessert wurde.
+    - In Unity kann dies durch Ändern der **Texturqualität** in "**Projekteinstellungen** >  **Bearbeiten** > " **[Qualitätseinstellungen](https://docs.unity3d.com/Manual/class-QualitySettings.html)** geändert werden.
+- **Füllrate** bezieht sich auf den Durchsatz gerenderter Pixel, die pro Sekunde von der GPU gezeichnet werden können.
+    - Um die Einschränkungen der Füllrate zu identifizieren, verringern Sie die Bildschirmauflösung, und prüfen Sie, ob Framerate verbessert wurde 
+    - In Unity kann dies über die *[xrsettings. renderviewportscale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* -Eigenschaft erfolgen.
 
-Speicherbandbreite umfasst in der Regel entweder Optimierungen
-1) Verringern Sie die Textur-Lösungen
-2) Verwenden Sie weniger Texturen (d.h.) Normals, glänzende, usw.)
+Die Speicherbandbreite umfasst in der Regel Optimierungen für
+1) Verkleinern von Textur Auflösungen
+2) weniger Texturen verwenden (d. h. normale, Glanz usw.)
 
-Füllrate konzentriert sich hauptsächlich auf die Reduzierung der Anzahl von Vorgängen, die für die endgültige gerenderte Pixel berechnet werden müssen. Beispiele hierfür fallen häufig reduzieren
-1) Anzahl von Objekten, die Render-Vorgangs
-2) Anzahl von Vorgängen pro shader
-3) Anzahl der GPU-Phasen, um das endgültige Ergebnis (Geometrieshader Nachbearbeitung Effekte, usw.)
-4) Anzahl der Pixel, rendern (d.h.) Auflösung)
+Die Füllrate konzentriert sich hauptsächlich auf das Reduzieren der Anzahl von Vorgängen, die für ein letztes gerendertes Pixel berechnet werden müssen. Beispiele hierfür liegen häufig in der Reduzierung von
+1) Anzahl der zu Rendering/zu verarbeitenden Objekte
+2) Anzahl von Vorgängen pro Shader
+3) Anzahl von GPU-Phasen bis zum Endergebnis (Geometry-Shader, nach Verarbeitungs Effekte usw.)
+4) Anzahl der zu Rendering enden Pixel (d. h. Anzeige Auflösung)
 
-#### <a name="reduce-poly-count"></a>Reduzieren Sie Poly-Anzahl
-Höhere Polygon zählt führen mehr Vorgänge für die GPU ein, und Verringern der Anzahl von Polygonen in Ihrer Szene reduziert die Zeitspanne, Geometrie gerendert. Andere Faktoren beteiligt sind ebenfalls Schattierung die Geometrie an, die weiterhin teuer sein kann, aber Polygonzahl ist die grundlegende Metrik festlegen, welche Kosten eine Szene werden gerendert.
+#### <a name="reduce-poly-count"></a>Reduzieren der polyzahl
+Höhere Polygon Zahlen führen zu mehr Vorgängen für die GPU, und das Reduzieren der Anzahl von Polygonen in der Szene verringert die Zeitspanne, die für das Rendering der Geometrie gilt. Es gibt auch andere Faktoren, die bei der Schattierung der Geometrie zu berücksichtigen sind, die noch teuer sein kann, aber die Polygon Anzahl ist die Basis Metrik, um zu bestimmen, wie teuer eine Szene sein wird.
 
-#### <a name="limit-overdraw"></a>Limit-Elements zu überzeichnen
+#### <a name="limit-overdraw"></a>Limit überzeichnen
 
-High-Elements zu überzeichnen tritt auf, wenn mehrere Objekte gerendert werden, aber nicht auf dem Bildschirm ausgegeben, da sie von einem anderen, in der Regel genauer, occluding Objekt ausgeblendet sind. Stellen Sie sich, eine Wand, die mehrere Räume "und" Geometry dahinter ansehen. Alle der Geometry-Instanz für das Rendering verarbeitet werden, aber nur die nicht transparente Wand tatsächlich gerendert werden, wie sie die Ansicht von allen anderen Inhalten occludes muss. Dies führt zu einer Verschwendung Vorgänge, die nicht für die aktuelle Ansicht benötigt werden.
+Eine hohe Überschreibung tritt auf, wenn mehrere Objekte gerendert werden, aber nicht auf dem Bildschirm ausgegeben werden, da Sie von einem anderen, in der Regel engeren, nicht aufgeblendeten Objekt Stellen Sie sich vor, dass Sie eine Wand sehen, die mehrere Räume und Geometrie dahinter enthielt. Die gesamte Geometrie würde zum Rendern verarbeitet, aber nur die nicht transparente Wand muss tatsächlich gerendert werden, da Sie die Ansicht aller anderen Inhalte verbleibt. Dies führt zu verschwenderischen Vorgängen, die für die aktuelle Ansicht nicht benötigt werden.
 
 #### <a name="shaders"></a>Shader
 
-Shader sind kleine Programme, die auf der GPU ausgeführt, und ermitteln in der Regel zwei wichtige Schritte beim Rendern:
-1) Scheitelpunkten des Objekts die Ziehfeld gezeichnet werden soll, auf dem Bildschirm und, wo sie im Bildschirmbereich (d.h.) sind. der Vertex-Shader)
-    - Der Vertex-Shader wird pro Vertex in der Regel für jede "gameobject" ausgeführt werden.
-2) Was Sie Farbe, die die Pixel (d.h.) die Pixel-Shader)
-    - Der Pixel-Shader wird pro Pixel für die Textur, die für Gerät vorhanden gerendert wird ausgeführt.
+Shader sind kleine Programme, die auf der GPU ausgeführt werden und im Allgemeinen zwei wichtige Schritte beim Rendering bestimmen:
+1) die Scheitel Punkte des Objekts, die auf dem Bildschirm gezeichnet werden sollen, und wo Sie sich auf dem Bildschirmbereich befinden (d.h. der Vertex-Shader)
+    - Der Vertex-Shader wird im allgemeinen pro Scheitelpunkt für jedes gameobject-Objekt ausgeführt.
+2) Farbe der Pixel (d. h. der Pixelshader)
+    - Der Pixelshader wird pro Pixel für die Textur ausgeführt, die für das Gerät gerendert wird.
 
-Führen in der Regel Shader auf, viele Transformationen und Beleuchtung. Obwohl komplexe beleuchtungsmodelle, Schatten und andere Vorgänge fantastische Ergebnisse generieren können, sind sie auch mit einem Preis. Verringern der Anzahl von Vorgängen, die im Shader berechnet, kann die gesamte Arbeit, die von einer GPU pro Frame ausgeführt werden musste erheblich reduzieren.
+In der Regel führen Shader viele Transformationen und Beleuchtungsberechnungen durch. Obwohl komplexe Beleuchtungs Modelle, Schatten und andere Vorgänge tolle Ergebnisse erzeugen können, erhalten Sie auch einen Preis. Durch das Reduzieren der Anzahl von Vorgängen, die in Shader berechnet werden, kann die Gesamtarbeit, die für eine GPU pro Frame erforderlich ist, erheblich reduziert werden.
 
-##### <a name="shader-coding-recommendations"></a>Shader-Codierung von Empfehlungen
+##### <a name="shader-coding-recommendations"></a>Codierungs Empfehlungen für Shader
 
-- Verwenden Sie möglichst bilineare Filterung
-- Ordnen Sie Ausdrücke erstellen, um die MAD systeminternen Funktionen zu verwenden, um eine Multiply und eines "Add" zur gleichen Zeit durchführen
-- Vorauszuberechnen Sie so weit wie möglich auf der CPU, und übergeben Sie als Konstanten für das material
-- **Verschieben von Vorgängen aus dem Pixel-Shader in den Vertex-Shader bevorzugen**
-    - Im Allgemeinen die Anzahl der Scheitelpunkte << Anzahl von Pixeln (d.h.) 720p 921,600 Pixel 1080p == == 2,073,600 Pixel, usw.)
+- Verwenden Sie nach Möglichkeit die bilineare Filterung
+- Neuanordnung von Ausdrücken zur Verwendung von verrückten systeminternen Funktionen, um eine Multiplikation und ein hinzufügen gleichzeitig durchzuführen
+- So weit wie möglich auf der CPU vorab berechnen und als Konstanten an das Material übergeben
+- **Verschieben von Vorgängen vom Pixelshader zum Vertex-Shader bevorzugen**
+    - Im Allgemeinen ist die Anzahl der Scheitel Punkte < < Anzahl von Pixeln (d. h. 720p = = 921.600 Pixel, 1080p = = 2.073.600 Pixel usw.)
 
-#### <a name="remove-gpu-stages"></a>Entfernen Sie die GPU-Phasen
-Nachbearbeitung Auswirkungen kann sehr speicherintensiv sein und in der Regel behindern die Füllrate Ihrer Anwendung. Dies umfasst auch die Anti-Aliasing-Techniken wie z. B. MSAA. Für HoloLens wird empfohlen, diese Techniken vollständig zu vermeiden. Darüber hinaus sollten zusätzliche Shader-Phasen wie Geometrie, Hülle und Compute-Shadern nach Möglichkeit vermieden werden.
+#### <a name="remove-gpu-stages"></a>Entfernen von GPU-Stufen
+Die Auswirkungen nach der Verarbeitung können sehr kostspielig sein und die Füllrate der Anwendung im allgemeinen behindern. Dies umfasst auch Antialiasing-Techniken wie z. b. MSAA. Bei hololens empfiehlt es sich, diese Techniken vollständig zu vermeiden. Darüber hinaus sollten weitere shaderphasen wie Geometrie, Hülle und Compute-Shader möglichst vermieden werden.
 
-## <a name="memory-recommendations"></a>Speicherempfehlungen
-Eine übermäßige Speicheroperationen Zuordnung und Aufhebung der Zuordnung haben nachteilige Auswirkungen auf Ihre holographic Anwendung, was zu inkonsistenten Leistung, fixierte Frames und anderes Verhalten gleichzeitiger Aufrufe nachteilig auswirken. Es ist besonders wichtig, Überlegungen zum Arbeitsspeicher zu, bei der Entwicklung in Unity, da die Verwaltung des Arbeitsspeichers durch den Garbage Collector gesteuert wird.
+## <a name="memory-recommendations"></a>Speicher Empfehlungen
+Eine übermäßige Speicher Belegung & Zuordnungs Vorgängen kann negative Auswirkungen auf Ihre Holographic-Anwendung haben, was zu inkonsistenter Leistung, fixierten Frames und anderem schädlichen Verhalten führt. Es ist besonders wichtig, die Arbeitsspeicher Aspekte zu verstehen, wenn Sie in Unity entwickeln, da die Speicherverwaltung durch die Garbage Collector gesteuert wird.
 
-#### <a name="object-pooling"></a>Objektpooling
+#### <a name="object-pooling"></a>Objekt Pooling
 
-Objektpooling ist ein beliebtes Verfahren, um die Kosten continuous speicherbelegungen und Aufhebungen von Objekten zu reduzieren. Dies erfolgt, indem Sie eine große Gruppe von identischen Objekte zuordnen und neu inaktive, verfügbare Instanzen aus diesem Pool anstatt ständig erstellen und Zerstören von Objekten im Laufe der Zeit. Objektpools eignen sich hervorragend für aktionsentwicklung Komponenten, die die Lebensdauer der Variablen während einer app haben.
+Objekt Pooling ist eine gängige Methode, um die Kosten für fortlaufende Zuordnungen & die Zuordnung von Objekten zu reduzieren. Dies erfolgt durch Zuordnen eines großen Pools identischer Objekte und erneutes verwenden inaktiver, verfügbarer Instanzen aus diesem Pool, anstatt ständig Objekte im Zeitverlauf zu erzeugen und zu zerstören. Objekt Pools eignen sich hervorragend für wiederverwendbare Komponenten, die während einer APP über eine Variablen Lebensdauer verfügen.
 
 ## <a name="see-also"></a>Siehe auch
-- [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md)
+- [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
 - [Empfohlene Einstellungen für Unity](recommended-settings-for-unity.md)

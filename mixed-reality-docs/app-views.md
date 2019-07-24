@@ -1,52 +1,52 @@
 ---
 title: App-Ansichten
-description: Die beiden Arten von Ansichten in Windows Mixed Reality-apps sind faszinierende und Direct2D-Ansichten.
+description: Die zwei Arten von Ansichten in Windows Mixed Reality-apps sind immersive Ansichten und 2D-Ansichten.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: immersive Ansicht 2D-Ansicht, Tablet PCs,-app
+keywords: immersive Ansicht, 2D-Ansicht, Slate, App
 ms.openlocfilehash: 2cf65941616ac6906d40e4b4616311317ac705d3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604734"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516926"
 ---
 # <a name="app-views"></a>App-Ansichten
 
-Windows-apps können zwei Arten von Ansichten enthalten **immersive Ansichten** und **2D Ansichten**. Apps können zwischen ihren verschiedenen immersive und 2D Ansichten, zeigt ihre 2D-Ansichten entweder auf einem Monitor als ein Fenster oder in einen Kopfhörer als ein Slate wechseln. Apps, verfügen über mindestens eine immersive Ansicht, gehören zur Kategorie **mixed Reality-apps**. Apps, die nie eine immersive Sicht sind **2D apps**.
+Windows-Apps können zwei Arten von Ansichten, **immersive Ansichten** und **2D-Ansichten**enthalten. Apps können zwischen den verschiedenen immersiven Ansichten und 2D-Ansichten wechseln, wobei ihre 2D-Ansichten entweder in einem Monitor als Fenster oder in einem Headset als Slate angezeigt werden. Apps, die mindestens eine immersive Ansicht aufweisen, werden als **Mixed Reality-apps**kategorisiert. Apps, die nie eine immersive Ansicht haben, sind **2D-apps**.
 
 ## <a name="immersive-views"></a>Immersive Ansichten
 
-Eine immersive Ansicht bietet Ihrer app die Möglichkeit, Hologramme in die Welt um Sie zu erstellen, oder den Benutzer in einer virtuellen Umgebung tauchen. Beim Zeichnen von einer app in der Ansicht immersive ist ist keine anderen Apps zur gleichen Zeit zeichnen&mdash;Hologramme von mehreren apps sind nicht zusammengesetzte zusammen. Durch Anpassen der ständig die Perspektive aus, die Ihre [app rendert](rendering.md) der Szene entsprechend Head Bewegungen des Benutzers, kann Ihre app gerendert werden [World-locked](coordinate-systems.md) Hologramme, die an einem festen Punkt in die tatsächlichen bleiben Welt, oder es kann eine virtuelle Welt rendern, die die Position enthält, wenn ein Benutzer darin bewegt.
+Eine immersive Ansicht bietet Ihrer APP die Möglichkeit, auf der ganzen Welt Hologramme zu erstellen oder den Benutzer in eine virtuelle Umgebung einzuschließen. Wenn eine app in der immersiven Ansicht gezeichnet wird, wird keine andere APP gleichzeitig&mdash;gezeichnet, wenn holograms aus mehreren apps nicht zusammengeführt werden. Durch die kontinuierliche Anpassung der Perspektive, von der Ihre [App](rendering.md) die Szene rendert, sodass Sie den Kopfbewegungen des Benutzers entspricht, kann Ihre APP [weltweit gesperrte](coordinate-systems.md) holograms rendern, die an einem festgelegten Punkt in der realen Welt verbleiben, oder eine virtuelle Welt rendern, die die Position, in der sich ein Benutzer bewegt.
 
-![In eine immersive-Ansicht können Hologramme in der ganzen Welt, um Sie herum platziert werden.](images/designoverview.jpg)<br>
-*Hologramme können in eine immersive-Ansicht in der ganzen Welt, um Sie herum platziert werden*
+![Wenn Sie sich in einer immersiven Ansicht befinden, können Sie auf der ganzen Welt holograms platzieren.](images/designoverview.jpg)<br>
+*Wenn Sie sich in einer immersiven Ansicht befinden, können holograms auf der ganzen Welt platziert werden.*
 
-Auf [HoloLens](hololens-hardware-details.md), Ihre app rendert der Hologramme auf die reale Umgebung des Benutzers. Auf einem [immersive Windows Mixed Reality-Kopfhörer](immersive-headset-hardware-details.md), dem Benutzer kann nicht angezeigt, die reale Welt und dem Benutzer wird angezeigt, damit alles, was von Ihrer app gerendert werden muss.
+Bei [hololens](hololens-hardware-details.md)rendert Ihre APP Ihre Hologramme auf der realen Umgebung des Benutzers. In einem [Windows Mixed Reality-immersiven Headset](immersive-headset-hardware-details.md)kann der Benutzer die reale Welt nicht sehen, sodass Ihre APP alles Rendering muss, was dem Benutzer angezeigt wird.
 
-Die [Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md) (einschließlich des Startmenüs und Hologramme Sie, um die Umgebung platziert haben) rendert nicht in eine immersive entweder anzeigen. HoloLens werden Benachrichtigungen des Systems, die auftreten, während eine immersive Ansicht angezeigt werden von Cortana akustisch übertragen werden und der Benutzer mit der Spracheingabe reagieren kann.
+Die [Windows Mixed Reality-Startseite](navigating-the-windows-mixed-reality-home.md) (einschließlich des Start Menüs und holograms, die Sie um die Umgebung platziert haben) wird in einer immersiven Ansicht nicht angezeigt. Bei hololens werden alle System Benachrichtigungen, die während der Anzeige einer immersiven Ansicht auftreten, von Cortana übermittelt, und der Benutzer kann mit der Spracheingabe Antworten.
 
-Klicken Sie in eine immersive anzeigen, ist Ihre Anwendung auch verantwortlich für die Verarbeitung aller Eingaben. Eingabe in Windows Mixed Reality setzt sich aus [bestaunen](gaze.md), [Geste](gestures.md) (nur für HoloLens), [Voice](voice-input.md) und [motion Controller](motion-controllers.md) (immersive Headsets nur).
+In einer immersiven Ansicht ist Ihre APP auch für die Verarbeitung aller Eingaben verantwortlich. Die Eingabe in der gemischten Realität von Windows besteht aus [Blick](gaze.md), Bewegung [(nur](gestures.md) hololens), [sprach](voice-input.md) -und [Bewegungs Controllern](motion-controllers.md) (nur immersive Headsets).
 
-## <a name="2d-views"></a>2D Ansichten
+## <a name="2d-views"></a>2D-Ansichten
 
-![Mehrere 2D Ansichten angeordnet, um die Windows Mixed Reality home](images/teleportation-640px.png)<br>
-*Mehrere apps mit einer 2D-Ansicht platziert werden, um die Windows Mixed Reality home*
+![Mehrere 2D-Ansichten in der Windows Mixed Reality-Startseite](images/teleportation-640px.png)<br>
+*Mehrere apps mit einer 2D-Ansicht, die in der Windows Mixed Reality-Startseite platziert wird*
 
-Eine app mit einer 2D-Ansicht angezeigt wird, der [Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md) (der "Shell" bezeichnet) als eine virtuelle Slate-Objekt, gerendert werden soll, zusammen mit der app-startfeldern und andere Hologramme, die der Benutzer wurde in die Welt platziert. Der Benutzer kann diese Slate-Objekt zu verschieben und zu skalieren, anpassen, obwohl es mit einer festen Auflösung unabhängig von seiner Größe bleibt. Wenn eine Direct2D erste Ansicht Ihrer app ist, wird Ihre 2D-Inhalt die gleichen Slate-Objekt verwendet, um die app zu starten ausgefüllt.
+Eine APP mit einer 2D-Ansicht wird in der [Windows Mixed Reality-Start](navigating-the-windows-mixed-reality-home.md) Seite (manchmal als "Shell" bezeichnet) als virtuelles Slate angezeigt, das zusammen mit den App-launchern und anderen holograms gerendert wird, die der Benutzer in der Welt abgelegt hat. Der Benutzer kann diesen Slate so anpassen, dass er verschoben und skaliert wird, obwohl er unabhängig von seiner Größe bei fester Auflösung verbleibt. Wenn es sich bei der ersten Ansicht der App um eine 2D-Ansicht handelt, wird für den 2D-Inhalt das gleiche Slate-Element aufgefüllt, das zum Starten der APP
 
-In einer desktop-Kopfhörer können Sie apps, universelle Windows-Plattform (UWP) ausführen, die heute auf Ihrem desktop ausgeführt. Diese apps sind heute bereits 2D Rendern von Ansichten, und ihre Inhalte auf einem Slate-Objekt im Welt des Benutzers, beim Starten automatisch angezeigt. 2D UWP-apps können als Ziel der **Windows.Universal** Gerätefamilie auf beide desktop Headsets und HoloLens als Slate-PCs ausgeführt.
+In einem Desktop-Headset können Sie alle universelle Windows-Plattform-Apps (UWP) ausführen, die noch heute auf dem Desktop Monitor ausgeführt werden. Diese apps Rendern bereits heute 2D-Ansichten, und ihre Inhalte werden automatisch auf einem Schiefer in der Benutzer Welt angezeigt, wenn Sie gestartet werden. 2D UWP-Apps können die **Windows. Universal** -Gerätefamilie für die Ausführung sowohl auf Desktop-Headsets als auch auf hololens als Slates ausrichten.
 
-Eine wichtige Verwendung von 2D Ansichten ist ein Textformat-Eintrag angezeigt, die vornehmen können verwenden der Systemtastatur. Da die Shell nicht über eine immersive Ansicht rendern kann, muss die app in einer 2D-zum Anzeigen die Systemtastatur wechseln. Apps, die Texteingabe zustimmen können zu einer 2D-Ansicht ein Textfeld wechseln. Während dieses Textfeld den Fokus hat, zeigt das System die Systemtastatur, damit der Benutzer Text eingeben.
+Eine zentrale Verwendung von 2D-Ansichten besteht darin, ein Texteingabe Formular anzuzeigen, mit dem die System Tastatur verwendet werden kann. Da die Shell nicht über eine immersive Ansicht hinaus Rendering durchzuführen ist, muss die APP zu einer 2D-Ansicht wechseln, um die System Tastatur anzuzeigen. Apps, die Texteingaben akzeptieren möchten, können mit einem Textfeld zu einer 2D-Ansicht wechseln. Während dieses Textfeld den Fokus besitzt, zeigt das System die Tastatur des Systems an, sodass der Benutzer Text eingeben kann.
 
-Beachten Sie, dass auf einem desktop-PC, eine app 2D Ansichten, die auf dem desktop überwachen und in eine angefügte Kopfhörer verfügen kann. Beispielsweise können Sie Edge auf Ihrem desktop Monitor mithilfe der 2D Hauptansicht eine 360-Grad-Video durchsuchen. Wenn Sie das Video abspielen, startet Edge eine sekundäre immersive Ansicht innerhalb der Kopfhörer, um den Inhalt für immersive video anzuzeigen.
+Beachten Sie, dass eine APP auf einem Desktop-PC über 2D-Ansichten sowohl für den Desktop Monitor als auch für ein angefügtes Headset verfügen kann. Beispielsweise können Sie mit der zweiten 2D-Ansicht Edge auf dem Desktop Monitor durchsuchen, um ein Video mit dem 360-Grad zu finden. Wenn Sie das Video abspielen, startet Edge eine sekundäre immersive Ansicht im Headset, um die immersiven Videoinhalte anzuzeigen.
 
 ## <a name="see-also"></a>Siehe auch
 
 * [App-Modell](app-model.md)
-* [Aktualisieren von 2D UWP-apps für mixed reality](building-2d-apps.md)
-* [Abrufen einer HolographicSpace](getting-a-holographicspace.md)
-* [Navigieren Sie in der Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md)
-* [Mixed Reality-App-Typen](types-of-mixed-reality-apps.md)
+* [Aktualisieren von 2D-UWP-Apps für Mixed Reality](building-2d-apps.md)
+* [Abrufen eines HolographicSpace-Objekts](getting-a-holographicspace.md)
+* [Navigieren auf der Startseite von Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
+* [Typen von Mixed Reality-Apps](types-of-mixed-reality-apps.md)

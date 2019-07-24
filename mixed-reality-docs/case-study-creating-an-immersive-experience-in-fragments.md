@@ -1,26 +1,26 @@
 ---
-title: 'Fallstudie: erstellen ein Eintauchen in Fragmenten'
-description: Fragmente ist eine interaktive Crime Drama für Microsoft Hololens, in denen Sie, die Hinweise folgen, um ein Rätsel zu lösen, die in Ihrem Bereich der realen Welt stattfindet.
+title: 'Fallstudie: Erstellen eines immersiven Erlebnisses in Fragmenten'
+description: Fragmente ist ein interaktives Kriminalitäts Drama für Microsoft hololens, bei dem Sie die Hinweise zum Lösen eines Geheimnisses befolgen, das in Ihrem realen Raum stattfindet.
 author: mattzmsft
 ms.author: miharnis
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Fragmente, HoloLens, Windows Mixed Reality
+keywords: Fragmente, hololens, gemischte Windows-Realität
 ms.openlocfilehash: 90879ac914a76c61cf87a70f91c204e7f7b243c2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59604724"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516783"
 ---
-# <a name="case-study---creating-an-immersive-experience-in-fragments"></a>Fallstudie: erstellen ein Eintauchen in Fragmenten
+# <a name="case-study---creating-an-immersive-experience-in-fragments"></a>Fallstudie: Erstellen eines immersiven Erlebnisses in Fragmenten
 
-Fragmente ist eine interaktive Crime Drama für Microsoft Hololens, in denen Sie, die Hinweise folgen, um ein Rätsel zu lösen, die in Ihrem Bereich der realen Welt stattfindet. Erfahren Sie, wie das Entwicklungsteam Fragmente die einzigartigen Features der HoloLens, tauchen Spieler in der Aktion, die direkt in der Mitte der Story standortserveraktualisierung verwendet.
+Fragmente ist ein interaktives Kriminalitäts Drama für Microsoft hololens, bei dem Sie die Hinweise zum Lösen eines Geheimnisses befolgen, das in Ihrem realen Raum stattfindet. Erfahren Sie, wie das Fragmente-Entwicklungsteam die einzigartigen Features von hololens verwendet hat, um Spieler in der Aktion zu untersuchen und diese direkt in den Mittelpunkt der Story zu versetzen.
 
 
 
 >[!VIDEO https://www.youtube.com/embed/9ULJV4G5XkA]
 
 ## <a name="see-also"></a>Siehe auch
-* [Räumliche Zuordnung](spatial-mapping.md)
-* [Fragmente für Microsoft HoloLens](https://www.microsoft.com/p/fragments/9nblggh5ggm8)
+* [Räumliche Abbildung](spatial-mapping.md)
+* [Fragmente für Microsoft hololens](https://www.microsoft.com/p/fragments/9nblggh5ggm8)

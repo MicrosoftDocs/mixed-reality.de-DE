@@ -1,144 +1,144 @@
 ---
-title: Freigegebene Funktionen in mixed reality
-description: Holographic apps können räumliche Anker aus einem HoloLens zu einem anderen Benutzer Rendern ggf. ein Hologramm an derselben Stelle in der realen Welt auf mehreren Geräten gemeinsam nutzen.
+title: Gemeinsam genutzte Umgebungen in gemischter Realität
+description: Holographic Apps können räumliche Anker von einem hololens zu einem anderen gemeinsam nutzen, sodass Benutzer ein Hologramm an derselben Stelle in der realen Welt über mehrere Geräte hinweg Rendering können.
 author: thetuvix
 ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
-keywords: Gemischte Realität, Hologramm, räumliche Anker, mehrere Benutzer, mehrere freigegebene Benutzeroberfläche
+keywords: gemeinsam genutzte Benutzeroberflächen, gemischte Realität, Hologram, räumlicher Anker, mehrere Benutzer, mehrere
 ms.openlocfilehash: b27da1e73c927a26e33746cd2db08e67c6f70acc
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605134"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63518483"
 ---
-# <a name="shared-experiences-in-mixed-reality"></a>Freigegebene Funktionen in mixed reality
+# <a name="shared-experiences-in-mixed-reality"></a>Gemeinsam genutzte Umgebungen in gemischter Realität
 
-Hologramme müssen nicht nur einen Benutzer privat bleiben. Holographic apps freigeben können [räumliche Anker](coordinate-systems.md) aus einem HoloLens, iOS oder Android-Gerät zu einem anderen Benutzern ermöglichen, ggf. ein Hologramm an derselben Stelle in der realen Welt auf mehreren Geräten zu rendern.
+Holograms müssen nicht nur für einen Benutzer privat bleiben. Holographic Apps können [räumliche Anker](coordinate-systems.md) von einem hololens-, IOS-oder Android-Gerät zu einem anderen gemeinsam nutzen, sodass Benutzer ein Hologramm an derselben Stelle in der realen Welt über mehrere Geräte hinweg Rendering können.
 
-## <a name="six-questions-to-define-shared-scenarios"></a>Sechs Fragen zum Definieren von freigegebenen Szenarios
+## <a name="six-questions-to-define-shared-scenarios"></a>Sechs Fragen zum Definieren von freigegebenen Szenarien
 
-Bevor Sie den Entwurf für freigegebene Funktionen beginnen, ist es wichtig, definieren die Zielszenarios kennen. Diese Szenarien verdeutlichen, was Sie entwerfen und herstellen ein allgemeines Vokabular, um zu vergleichen und gegenüberstellen von Funktionen, die in Ihrer Umgebung erforderlich sind. Das Kernproblem und verschiedene Angriffsmethoden für Lösungen zu verstehen, ist entscheidend für hin Chancen, die in dieses neue Medium.
+Bevor Sie mit dem Entwerfen für freigegebene Umgebungen beginnen, ist es wichtig, die Ziel Szenarien zu definieren. In diesen Szenarien wird erläutert, was Sie entwerfen und ein gängiges Vokabular einrichten, mit dem Sie die für Ihre Benutzer Arbeit erforderlichen Features vergleichen und vergleichen können. Wenn Sie das grundlegende Problem und die verschiedenen Lösungsmöglichkeiten verstehen, ist es entscheidend, die Verkaufschancen dieses neuen Mediums zu decken.
 
-Durch interne Prototypen und auswertungen von unserem Partneragenturen HoloLens haben wir sechs Fragen, um Ihnen das Definieren von freigegebenen Szenarios erstellt. Diese Fragen bilden ein Framework, das nicht als vollständig ist, können Sie die wichtigen Attribute Ihrer Szenarien zu verwandeln.
+Mithilfe interner Prototypen und Explorationen von unseren hololens-Partnerbehörden haben wir sechs Fragen erstellt, um Ihnen beim Definieren von freigegebenen Szenarien zu helfen. Diese Fragen bilden ein Framework, das nicht vollständig ist, um die wichtigen Attribute Ihrer Szenarios zu unterstützen.
 
-### <a name="1-how-are-they-sharing"></a>1. Wie werden sie gemeinsam nutzen?
+### <a name="1-how-are-they-sharing"></a>1. Wie werden Sie gemeinsam genutzt?
 
-Eine Präsentation kann von einem einzelnen virtuellen Benutzer, geführt werden, während mehrere Benutzer können zusammenarbeiten, oder ein Lehrer kann bieten den virtuellen Schüler/Studenten, die Arbeit mit virtuellen Materialien, die Komplexität des Erfahrungen erhöht basierend auf der Ebene der Behörde, die ein Benutzer hat oder in einem Szenario möglich.
+Eine Präsentation kann von einem einzelnen virtuellen Benutzer geleitet werden, während mehrere Benutzer zusammenarbeiten können, oder ein Lehrer stellt Anleitungen für virtuelle Schüler und Studenten bereit, die mit virtuellen Materialien arbeiten – die Komplexität der Erfahrungen erhöht sich basierend auf der Ebene der Behörde, die ein Benutzer hat oder kann in einem Szenario vorhanden sein.
 
-![Mann und Frauen mit Holograph für Tabelle](images/man-and-women-with-holograph-on-table-500px.png)
+![Man und Women mit Holograph für die Tabelle](images/man-and-women-with-holograph-on-table-500px.png)
 
-Es gibt viele Möglichkeiten zum Freigeben, aber wir haben festgestellt, dass die meisten von ihnen in drei Kategorien einordnen:
-* **Präsentation**: Wenn der gleiche Inhalt an mehrere Benutzer angezeigt wird. Zum Beispiel: Professor ist für mehrere Schüler/Studenten, die mit dem gleichen holographic Material für alle Benutzer angezeigt wird, eine Vorlesung gewähren. Die Professor möglicherweise jedoch seinen eigenen Hinweise und die Anmerkungen zu dieser Version, die möglicherweise nicht für andere Benutzer sichtbar.
-* **Zusammenarbeit**: Wenn Personen arbeiten zusammen, um einige allgemeine Ziele zu erreichen. Zum Beispiel: Die Professor erhielten Sie ein Projekt erfahren Sie mehr über einen Kern oder ausführen. Schüler/Studenten, kombinieren Sie und erstellen eine freigegebene Fähigkeiten Lab-Umgebung medizinische Schüler/Studenten zur Zusammenarbeit, die auf dem Kern-Modell aus, und erfahren, wodurch.
-* **Anleitungen**: Wenn eine Person eine Person zur Lösung eines Problems in einer Interaktion mit mehr 1: 1-Format unterstützt. Zum Beispiel: Die Professor Ihnen Tipps an Schüler/Student ein, wenn er das Herzstück oder Fähigkeiten Lab in der freigegebenen Umgebung ausgeführt wird.
+Es gibt viele Möglichkeiten für die Freigabe, aber wir haben festgestellt, dass die meisten in drei Kategorien unterteilt sind:
+* **Präsentation**: Wenn mehrere Benutzer denselben Inhalt angezeigt werden. Zum Beispiel: Ein Professor gibt eine Präsentation an mehrere Studenten aus, die das gleiche Holographic-Material für jeden bereitstellt. Der Professor könnte jedoch seine eigenen Hinweise und Notizen enthalten, die für andere Personen möglicherweise nicht sichtbar sind.
+* **Zusammenarbeit**: Wenn die Mitarbeiter zusammenarbeiten, um einige gängige Ziele zu erreichen. Zum Beispiel: Der Professor hat ein Projekt gegeben, um mehr über die Durchführung einer Herzoperation zu erfahren. Schüler/Studenten koppeln und erstellen eine freigegebene Skills Lab-Umgebung, mit der medizinische Studenten am Kernmodell arbeiten und lernen können.
+* **Leitfaden**: Wenn eine Person eine Person unterstützt, um ein Problem in einer mehrstufigen Interaktion zu lösen. Zum Beispiel: Der Professor gibt eine Anleitung an einen Schüler/Student, wenn er das Herzstück für das Lab-Labor in der gemeinsamen Umgebung ausführt.
 
-### <a name="2-what-is-the-group-size"></a>2. Was ist die Größe der Gruppe?
+### <a name="2-what-is-the-group-size"></a>2. Was ist die Gruppengröße?
 
-**1: 1-** Freigabe von Erlebnissen können Sie eine sichere Baseline ermöglichen und idealerweise Ihre Proofs of Concept erstellen auf dieser Ebene erstellt werden. Beachten Sie jedoch, dass große Gruppen (über 6 Personen) freigeben zu schwierigkeiten aus technischen (Daten und Netzwerke), soziale Medien führen kann (die Auswirkungen der in einen Raum mit [mehrere Avatare](https://vimeo.com/160704056)). Komplexität wächst exponentiell beim Wechseln vom **kleine** zu **große Gruppen**.
+Die **einmalige** Nutzung bietet eine starke Baseline, und im Idealfall kann Ihr Konzept auf dieser Ebene erstellt werden. Beachten Sie aber, dass die Freigabe mit großen Gruppen (über 6 Personen) zu Schwierigkeiten von technischen (Daten und Netzwerken) bis hin zu sozialen Daten führen kann (die Auswirkung der Verwendung eines Raums mit [mehreren Avataren](https://vimeo.com/160704056)). Die Komplexität steigt exponentiell, wenn Sie zwischen **kleinen** und **großen Gruppen**wechseln.
 
-Wir haben festgestellt, dass die Anforderungen von Gruppen in drei Kategorien von Größe fallen können:
+Wir haben festgestellt, dass die Anforderungen von Gruppen in drei Größen Kategorien fallen können:
 * 1:1
-* Kleine < 7
-* Large >= 7
+* Small < 7
+* Große > = 7
 
-Gruppengröße ist für eine wichtige Frage, da er wirkt sich auf:
-* Darstellungen von Personen in der holografischen Speicherplatz
+Die Gruppengröße stellt eine wichtige Frage dar, da sich dies auf Folgendes auswirkt:
+* Darstellungen von Menschen in Holographic Space
 * Skalieren von Objekten
-* Skalierung der Umgebung
+* Skalieren der Umgebung
 
-### <a name="3-where-is-everyone"></a>3. Wo alle sind?
+### <a name="3-where-is-everyone"></a>3. Wo ist jeder?
 
-Die Stärke von mixed Reality ins Spiel, wenn es sich bei eine gemeinsame Erfahrung am gleichen Speicherort stattfinden kann. Nennen wir dies **zusammengestellte**. Im Gegensatz dazu aufrufen, wenn die Gruppe verteilt wird und mindestens einem Teilnehmer nicht im selben physischen Raum (wie häufig der Fall bei VR) wir, einen Remotebenutzer. Häufig ist es der Fall, die Ihre Gruppe **sowohl** zusammengestellte und remote-Teilnehmer (z. B. zwei Gruppen in Konferenzräumen).
+Die Stärke der gemischten Realität kommt ins Spiel, wenn eine gemeinsame Nutzung am gleichen Ort stattfinden kann. Wir nennen das **zusammen**gestellte. Wenn die Gruppe dagegen verteilt ist und sich mindestens ein Teilnehmer nicht im selben physischen Raum befindet (was häufig bei VR der Fall ist), wird ein Remote Vorgang aufgerufen. Häufig ist es der Fall, dass Ihre Gruppe **sowohl** zusammengestellte als auch Remote Teilnehmer (z. b. zwei Gruppen in Konferenzräumen) umfasst.
 
-![Drei Personen mit Holograph für Tabelle](images/three-people-with-holograph-on-table-500px.png)
+![Drei Personen mit Holograph für die Tabelle](images/three-people-with-holograph-on-table-500px.png)
 
-Folgende Kategorien können vermitteln, in denen Benutzer gespeichert sind:
-* Zusammengestellt: Alle Benutzer werden in den gleichen physischen Raum.
-* Remotecomputer: Alle Benutzer werden in separate physische Bereiche.
-* Beide: Ihre Benutzer, eine Mischung aus zusammengestellten und remote-Leerzeichen.
+Die folgenden Kategorien helfen Ihnen, den Speicherort der Benutzer zu vermitteln:
+* Zusammengestellt: Alle Ihre Benutzer befinden sich im selben physischen Bereich.
+* Gene Alle Ihre Benutzer befinden sich in separaten physischen Räumen.
+* Zwar Bei ihren Benutzern handelt es sich um eine Mischung aus zusammengestellten und Remote Plätzen.
 
-Einige Gründe, warum diese Frage entscheidend ist, da er wirkt sich auf:
-* Wie Personen zu kommunizieren?
-* Zum Beispiel: Gibt an, ob sie Avatare aufweisen sollen?
-* Welche Objekte angezeigt. Werden alle Objekte werden gemeinsam genutzt?
-* Gibt an, ob wir möchten Sie an ihre Umgebung anpassen?
+Einige Gründe, warum diese Frage entscheidend ist, weil Sie sich auf Folgendes auswirkt:
+* Wie werden Personen miteinander kommunizieren?
+* Zum Beispiel: Ob Sie über Avatare verfügen sollen?
+* Welche Objekte werden angezeigt? Werden alle Objekte freigegeben?
+* Ob wir uns an die Umgebung anpassen müssen?
 
-### <a name="4-when-are-they-sharing"></a>4. Wenn freigeben sie?
+### <a name="4-when-are-they-sharing"></a>4. Wann werden Sie gemeinsam genutzt?
 
-Dann in der Regel sind dies **synchrone** kommt, wenn freigegebene Umgebungen in Betracht kommen: Wir machen alle diese zusammen. Aber umfassen ein einzelnes virtuelles Element, das von einem anderen Benutzer hinzugefügt wurde, und Sie haben eine **asynchrone** Szenario. Angenommen Sie, eine Notiz oder Sprachnachricht, die Links in einer virtuellen Umgebung. Wie behandeln Sie 100 virtuelle Sprachnotizen, die Ihren Entwurf bleiben? Was geschieht, wenn davon unter Dutzenden von Personen mit unterschiedlichen Datenschutz?
+In der Regel sind **synchrone** Erfahrungen zu beachten, wenn die gemeinsame Oberfläche zu beachten ist Wir arbeiten damit. Sie können jedoch ein einzelnes virtuelles Element einschließen, das von einer anderen Person hinzugefügt wurde, und Sie haben ein **asynchrones** Szenario. Stellen Sie sich einen Hinweis oder ein sprach Memo in einer virtuellen Umgebung vor. Wie behandeln Sie 100 Virtual Sprachnotizen im Entwurf? Was geschieht, wenn Sie von Dutzenden von Menschen mit unterschiedlichen Datenschutz Ebenen abweichen?
 
-Beachten Sie, Ihre Erfahrungen als eine dieser Kategorien Zeit:
-* **Synchron**: Freigeben von holografischen Benutzeroberfläche zur gleichen Zeit. Zum Beispiel: Zwei Schüler und Studenten das Lab Fähigkeiten zur gleichen Zeit ausführen.
-* **Asynchron**: Freigeben von holografischen Benutzeroberfläche zu unterschiedlichen Zeitpunkten. Zum Beispiel: Zwei Schüler und Studenten die Fähigkeiten Übungseinheit durchführen, jedoch in separaten Abschnitten zu unterschiedlichen Zeiten arbeiten.
-* **Both**: Benutzern werden manchmal synchron aber in anderen Fällen asynchron frei. Zum Beispiel: Professor Abstufung der Zuweisung von Studenten verlassen Anmerkungen zu dieser Version für Studenten zu einem späteren Zeitpunkt für den nächsten Tag ausgeführt.
+Sehen Sie sich Ihre Erfahrungen als eine dieser Zeitkategorien an:
+* **Synchron**: Gleich Zeitangabe der Holographic-Darstellung. Zum Beispiel: Zwei Schüler und Studenten, die das Skills Lab gleichzeitig durchführen.
+* **Asynchron**: Freigeben der Holographic-Darstellung zu unterschiedlichen Zeitpunkten. Zum Beispiel: Zwei Schüler/Studenten, die das Skills Lab ausführen, aber zu unterschiedlichen Zeiten an separaten Abschnitten arbeiten.
+* **Beides**: Die Benutzer werden manchmal synchron, aber in anderen Fällen asynchron freigegeben. Zum Beispiel: Der Professor stuft die Zuweisung ein, die von den Schülern zu einem späteren Zeitpunkt durchgeführt wird, und gibt die Notizen für den nächsten Tag aus.
 
-Einige Gründe, warum diese Frage wichtig, ist da er wirkt sich auf:
-* Die Dauerhaftigkeit Objekt und der Umgebung. Zum Beispiel: Speichern die Zustände, sodass sie abgerufen werden können.
-* Perspektive des Benutzers. Zum Beispiel: Merken vielleicht, was der Benutzer ansah beim Verlassen der Anmerkungen zu dieser Version.
+Einige Gründe, warum diese Frage wichtig ist, weil Sie sich auf Folgendes auswirkt:
+* Objekt-und Umgebungs Persistenz. Zum Beispiel: Speichern der Zustände, damit Sie abgerufen werden können.
+* Benutzer Perspektive. Zum Beispiel: Vielleicht denken Sie daran, was der Benutzer beim hinterlassen von Notizen betrachtet hat.
 
-### <a name="5-how-similar-are-their-physical-environments"></a>5. Wie ihre physischen Umgebungen ähneln?
+### <a name="5-how-similar-are-their-physical-environments"></a>5. Wie ähnlich sind ihre physischen Umgebungen?
 
-Die Wahrscheinlichkeit, dass zwei identische realen Umgebungen, außerhalb zusammengestellten Benutzeroberflächen, ist slim, es sei denn, diese Umgebungen vorgesehen sind, identisch sein. Sie sind eher haben **ähnliche** Umgebungen. Z.B. Konferenzräume ähneln, sie haben in der Regel eine zentral gespeicherte Tabelle Stühle enthaltender. Wohnzimmer, in der Regel auf der anderen Seite sind **unterschiedlicher** und kann eine beliebige Anzahl von Teile Möbel in einem Array unendliche Layouts enthalten.
+Die Wahrscheinlichkeit, dass zwei identische reale Umgebungen außerhalb der zusammengestellten Erfahrung vorhanden sind, ist schlank, es sei denn, diese Umgebungen sind so konzipiert, dass Sie identisch sind. Es ist wahrscheinlicher, dass Sie **ähnliche** Umgebungen haben. Beispielsweise sind Konferenzräume ähnlich – Sie haben in der Regel eine zentral lokalisierte Tabelle, die von den Lehrstühlen umgeben ist. Wohn Räume sind dagegen normalerweise unter **schiedlich** und können eine beliebige Anzahl von Möbeln in einem unendlichen Array von Layouts enthalten.
 
 ![Holograph für Tabelle](images/holograph-on-table-500px.png)
 
-Beachten Sie, Ihre Freigaben Erfahrungen, die in einer dieser zwei Kategorien:
-* **Ähnlich wie**: Umgebungen, die ähnliche Möbel, Umgebungslicht und Sound, haben tendenziell physischen Größe. Zum Beispiel: Professor wird Vorlesung Hall ein, und Schüler und Studenten sind in Vorlesung Hall b Vorlesung Hall ein möglicherweise weniger Stühle als B jedoch beide möglicherweise eine physische – Hologramme auf platzieren.
-* **Unterschiedlicher**: Umgebungen, die in Möbel-Einstellungen, Raum Größen, helle und sound Überlegungen sehr unterschiedlich sind. Zum Beispiel: Professor ist in einem Raum konzentrieren, während der Schüler und Studenten in einer großen Vorlesung Hall mit Schüler/Studenten und Lehrkräfte gefüllt sind.
+Stellen Sie sich vor, dass ihre Freigabe Umgebungen in eine der folgenden beiden Kategorien passen:
+* **Ähnlich**: Umgebungen mit ähnlichen Möbeln, Umgebungslicht und Sound, physischer Raum. Zum Beispiel: Der Professor ist in der Vortragshalle a, und die Schüler/Studenten befinden sich in der Vortragshalle b. in der Vortragshalle a sind möglicherweise weniger Lehrstühle als B enthalten
+* **Ungleich**: Umgebungen, die sich in den Einstellungen von Möbeln, Raumgrößen, Licht-und Ton Überlegungen erheblich unterscheiden. Zum Beispiel: Der Professor ist in einem Schwerpunkt Raum, Studenten und Lehrkräfte sind jedoch in einer großen Vortragshalle.
 
-Es ist wichtig, über die Umgebung zu betrachten, wie sie beeinflussen:
-* Wie kommt es Personen diese Objekte. Zum Beispiel: Wenn Ihre Umgebung am besten für eine Tabelle aus, und der Benutzer keine Tabelle hat? Oder auf einer flachen Floor-Oberfläche, aber der Benutzer ein Überladen Leerzeichen enthält.
-* Die Skalierung der Objekte. Zum Beispiel: Platzieren von einem menschlichen 6 FT-Modell für eine Tabelle kann eine Herausforderung sein, aber ein Kern-Modell funktioniert hervorragend.
+Es ist wichtig, sich über die Umgebung zu Gedanken machen, da Sie sich darauf auswirken wird:
+* Wie werden diese Objekte durch Benutzer angezeigt? Zum Beispiel: Wenn Sie für eine Tabelle am besten geeignet sind und der Benutzer über keine Tabelle verfügt? Oder auf einer flachen Oberfläche, aber der Benutzer verfügt über einen Bereich mit Leerzeichen.
+* Skalieren der Objekte. Zum Beispiel: Das Platzieren eines 6-Meter-menschlichen Modells in einer Tabelle kann eine Herausforderung darstellen, aber ein Herzmodell würde hervorragend funktionieren.
 
-### <a name="6-what-devices-are-they-using"></a>6. Welche Geräte verwenden sie?
+### <a name="6-what-devices-are-they-using"></a>6. Welche Geräte verwenden Sie?
 
-Heute Sie wahrscheinlich häufig freigegebene Umgebungen zwischen zwei finden Sie unter **immersive Geräte** (unterscheiden sich diese Geräte etwas im Hinblick auf die Schaltflächen und relative-Funktion, aber nicht enorm) oder zwei **holographic-Geräten** erhält die Lösungen, die an diese Geräte abgezielt wird. Aber in Betracht ziehen, die **2D Geräte** (Mobile/Desktop-Teilnehmer oder Beobachter) werden erforderlichen berücksichtigt, insbesondere in Situationen von **gemischten 2D- und 3D-Spiele Geräte**. Grundlegendes zu den Arten von Geräten, die die Teilnehmer verwendet werden, ist wichtig, nicht nur, weil sie unterschiedliche Genauigkeit und Einschränkungen von Daten und Chancen aufweisen, aber da die Benutzer eindeutige Erwartungen für jede Plattform.
+Heutzutage ist es häufig wahrscheinlich, dass Sie gemeinsame Erfahrungen zwischen zwei **immersiven Geräten** sehen (diese Geräte unterscheiden sich möglicherweise geringfügig von Schaltflächen und relativer Funktionen, aber nicht erheblich) oder zwei **Holographic-Geräte** , die für die Ziel Lösungen konzipiert sind. auf diesen Geräten. Beachten Sie jedoch, dass **2D-Geräte** (ein mobiler/Desktop Teilnehmer oder Beobachter) eine notwendige Überlegung sein werden, insbesondere in Situationen mit **gemischten 2D-und 3D-Geräten**. Das Verständnis der Arten von Geräten, die von ihren Teilnehmern verwendet werden, ist wichtig, nicht nur, weil Sie unterschiedliche Treue-und Daten Einschränkungen und-Möglichkeiten aufweisen, sondern da die Benutzer für jede Plattform besondere Erwartungen haben.
 
-## <a name="exploring-the-potential-of-shared-experiences"></a>Untersuchen das Potenzial von gemeinsamen Erfahrungen
+## <a name="exploring-the-potential-of-shared-experiences"></a>Erkunden des Potenzials von freigegebenen Erfahrungen
 
-Antworten auf die Fragen oben können kombiniert werden, zum besseren Verständnis von Ihrem Szenario mit freigegebenem, crystallizing die Herausforderungen, wie Sie die Benutzeroberfläche erweitern. Für das Team bei Microsoft verwenden Sie diese geholfen, eine Roadmap für die Verbesserung von der Erfahrungen herzustellen wir heute, Grundlegendes zu den Nuance dieser komplexen Probleme und wie Sie profitieren von gemeinsamen Erfahrungen in mixed Reality.
+Antworten auf die obigen Fragen können kombiniert werden, um das freigegebene Szenario besser zu verstehen und die Herausforderungen zu verdeutlichen, wenn Sie die Benutzeroberflächen erweitern. Für das Team bei Microsoft trug dies dazu bei, eine Roadmap für die Verbesserung der heute verwendeten Erfahrungen zu schaffen, das Verständnis der Nuance dieser komplexen Probleme und die Vorteile der gemeinsamen Erfahrungen in gemischter Realität zu nutzen.
 
-Betrachten Sie beispielsweise eine Skype Szenarien aus dem HoloLens-Start: ein Benutzer bearbeitet [so eine unterbrochene Lichtschalter](https://www.youtube.com/watch?v=iBfzs3G8BEA) mit Hilfe von einem Remote-positionierte-Experten.
+Sehen Sie sich beispielsweise eines der Skype-Szenarien aus dem Start von hololens an: ein Benutzer hat sich mit der [Behebung eines unterbrochenen leichten Schalters](https://www.youtube.com/watch?v=iBfzs3G8BEA) mit Hilfe von einem Remote Experten beschäftigt.
 
-![Beheben als Lichtschalter mit über Skype-Unterstützung für HoloLens](images/fix-a-broken-switch-with-hololens-640px.jpg)
+![Beheben eines leichten Schalters mit Unterstützung über Skype für hololens](images/fix-a-broken-switch-with-hololens-640px.jpg)
 
-<i>Bietet ein Experte <b>1:1</b> Anleitungen aus seinem <b>2D</b>, desktop-PC zu einem Benutzer, der eine <b>3D, mixed Reality-</b> Gerät. Die <b>Anleitungen</b> ist <b>synchrone</b> und die physischen Umgebungen sind <b>unterschiedlicher</b>.</i>
+<i>Ein Experte stellt <b>1:1</b> -Anleitungen von seinem <b>2D</b>-Desktop Computer für einen Benutzer eines <b>3D-Geräts mit gemischter Realität</b> bereit. Die <b>Anleitung</b> ist <b>synchron</b> , und die physischen Umgebungen sind unter <b>schiedlich</b>.</i>
 
-Eine Erfahrung wie dieser ist eine Schritt-Änderung aus unseren Erfahrungen mit aktuellen – das Paradigma der Video- und in ein neues Medium anwenden. Aber wie wir in Zukunft aussehen, wir müssen besser definieren Sie die Möglichkeit, unsere Szenarien und Umgebungen, die die Stärke von mixed Reality widerspiegeln.
+Eine solche Vorgehensweise ist eine Schritt-für-Schritt-Änderung unserer aktuellen Darstellung – die Anwendung des Paradigmas von Video und Voice auf ein neues Medium. Wenn wir uns aber die Zukunft ansehen, müssen wir die Gelegenheit unserer Szenarios besser definieren und Erfahrungen mit der Sicherheit der gemischten Realität schaffen.
 
-Betrachten Sie die [OnSight Teamarbeitstool](https://www.youtube.com/watch?v=ZOWQp0-Bkkw) von der NASA Jet Propulsion Laboratory entwickelt. Datenanalysten, die auf Daten aus der Mars-Rover Missionen ganz arbeiten können Zusammenarbeit mit Kollegen in Echtzeit innerhalb der Daten aus der bricht-Landschaft.
+Sehen Sie sich das [onsight](https://www.youtube.com/watch?v=ZOWQp0-Bkkw) -Zusammenarbeits Tool an, das vom Jet Drive-Labor der NASA Analysten, die an Daten von Mars-Rover-Missionen arbeiten, können in den Daten aus dem Martian-Querformat in Echtzeit mit Kollegen zusammenarbeiten.
 
-![Remote getrennt zwischen Kollegen zusammenarbeiten, um die Arbeit für den Mars-Rover planen](images/onsight-nasa-jpl.gif)
+![Getrennte Zusammenarbeit zwischen Kollegen, um die Arbeit für den Mars-Rover zu planen](images/onsight-nasa-jpl.gif)
 
-<i>Ein Scientist untersucht eine Umgebung mit einem <b>3D, mixed Reality-</b> Gerät mit einer <b>kleine</b> Gruppe <b>remote</b> Kollegen teilen, indem <b>3D- und 2D-spielen</b> Geräte. Die <b>Zusammenarbeit</b> ist <b>synchrone</b> (aber asynchron revisited sein kann) und die physischen Umgebungen sind (virtuell) <b>ähnliche</b>.</i>
+<i>Ein Analyst untersucht eine Umgebung mithilfe eines <b>3D-Geräts mit gemischter Realität</b> und einer <b>kleinen</b> Gruppe von <b>Remote</b> Kollegen, die <b>3D-und 2D</b> -Geräte verwenden. Die <b>Zusammenarbeit</b> ist <b>synchron</b> (kann jedoch asynchron wieder besucht werden), und die physischen Umgebungen sind (virtuell) <b>ähnlich</b>.</i>
 
-Funktionen wie das OnSight stellen neue Möglichkeiten für die Zusammenarbeit. Von physisch Hinweise auf Elemente in der virtuellen Umgebung neben einem Kollegen ständigen und Freigeben ihrer Perspektive, wie sie ihre Ergebnisse erläutert. OnSight verwendet den Fokus von Immersion- und Anwesenheitsfunktionen Freigabe Erfahrungen in mixed Reality überdenken.
+Erfahrungen wie onsight bieten neue Möglichkeiten für die Zusammenarbeit. Von physischen verweisen auf Elemente in der virtuellen Umgebung auf die Position neben einem Kollegen und die gemeinsame Nutzung ihrer Perspektive, wenn Sie Ihre Ergebnisse erläutern. Onsight verwendet den Einblick in das Eintauchen und Anwesenheits Verfahren, um die Freigabe von Erfahrungen in gemischter Realität zu überdenken
 
-Intuitive Zusammenarbeit ist das Fundament der Konversation und arbeiten zusammen, und ist von entscheidender Bedeutung zu verstehen, wie wir diese Intuition auf die Komplexität von mixed Reality anwenden können. Wenn wir können nicht nur Freigabe Erfahrungen in mixed Reality neu erstellen, aber sie steigern der Leistung, wird es einen Paradigmenwechsel für die Zukunft der Arbeit sein. Entwerfen für freigegebene Funktionen in mixed Reality ist Speicherplatz für neue und interessante –, und wir sind nur am Anfang.
+Die intuitive Zusammenarbeit ist die Grundlage für die Konversation und die Zusammenarbeit und das Verständnis, wie wir diese Intuition auf die Komplexität gemischter Realität anwenden können. Wenn wir nicht nur die gemeinsame Nutzung von Erfahrungen in gemischter Realität neu erstellen können, sondern auch die Nutzung der Arbeit steigern, ist es ein Paradigmenwechsel für die Zukunft der Arbeit. Der Entwurf für freigegebene Umgebungen in gemischter Realität ist neuer und aufregender Bereich – und wir sind nur am Anfang.
 
-## <a name="get-started-sharing-experiences"></a>Erste Schritte Freigabe von Erlebnissen
+## <a name="get-started-sharing-experiences"></a>Einführung in den Einstieg in die Freigabe
 
-Abhängig von Ihrer Anwendung und jedes Szenario werden verschiedene Anforderungen an Ihre gewünschte Funktionalität erzielen. Dazu zählen
-* Match-Erstellung: Möglichkeit, die Sitzungen zu erstellen, -Sitzung ankündigen und ermitteln und Laden Sie bestimmte Personen, die sowohl lokal als auch Remote die Sitzung beitreten.
-* Verankern Sie die Freigabe: Möglichkeit zum Ausrichten von Koordinaten auf mehreren Geräten in einen gemeinsamen lokalen Raum, sodass Hologramme am selben Ort für alle Personen angezeigt werden.
-* Netzwerke: Möglichkeit, positioniert, Interaktionen, und die Bewegungen von Personen und Hologramme synchronisiert wird, im Real-Time für alle Teilnehmer.
-* Speichern des Zustands für: Die Fähigkeit zum Speichern von – Hologramm Merkmale und Speicherorte im Raum für Mid-Sitzung beitreten, denken Sie daran zu einem späteren Zeitpunkt, Stabilität für Netzwerkprobleme.
+Abhängig von Ihrer Anwendung und Ihrem Szenario müssen verschiedene Anforderungen erfüllt sein, damit Sie Ihre gewünschte benutzerfreundliche Anwendung erreichen können. Hierzu zählen u. a.
+* Treffer Findung: Möglichkeit zum Erstellen von Sitzungen, ankündigen der Sitzung und ermitteln und einladen bestimmter Personen, sowohl lokal als auch Remote, um der Sitzung beizutreten.
+* Anker Freigabe: Die Möglichkeit, Koordinaten auf mehreren Geräten in einem gemeinsamen lokalen Raum auszurichten, sodass holograms für alle Personen am gleichen Ort angezeigt werden.
+* Ungs Die Möglichkeit, Positionen, Interaktionen und Bewegungen von Personen und holograms in Echtzeit über alle Teilnehmer hinweg zu synchronisieren.
+* Zustands Speicher: Möglichkeit zum Speichern von – Hologramm-Merkmalen und-Speicherorten für die Teilnahme in der Mitte der Sitzung, Rückruf zu einem späteren Zeitpunkt und Stabilität vor Netzwerkproblemen.
 
 
-Die Taste, um geteilte ist, mehrere Benutzer, die die gleichen Hologramme in der Welt auf ihre eigenen Geräte, die häufig erfolgt anhand der Anker zum Ausrichten von Koordinaten auf Geräten angezeigt wird.
-Zum Freigeben Anker verwenden die <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>:
-* Zuerst wird der Benutzer die Hologramm platziert.
-* App erstellt ein [räumliche Anker](coordinate-systems.md) anheften, Hologramm genau in der ganzen Welt.
-* Die Anker können gemeinsam genutzt werden, für HoloLens, IOS- und Android-Geräte über die <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>. 
+Der Schlüssel für die gemeinsame Nutzung besteht darin, dass mehrere Benutzer die gleichen holograms weltweit auf Ihrem eigenen Gerät sehen. Dies geschieht häufig durch Freigeben von Ankern, um Koordinaten Geräte übergreifend auszurichten.
+Verwenden Sie zum Freigeben von Ankern die <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">räumlichen Azure-Anker</a>:
+* Zuerst platziert der Benutzer das Hologram.
+* Die App erstellt einen [räumlichen Anker](coordinate-systems.md) , um dieses Hologramm exakt in der Welt anzuheften.
+* Die Anker können über die <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">räumlichen Azure-Anker</a>für hololens-, IOS-und Android-Geräte freigegeben werden. 
 
-Mit einer freigegebenen räumliche Anker hat die app auf jedem Gerät jetzt eine allgemeine Koordinatensystem, die in der Inhalt platziert werden können. Nachdem die app, zum Positionieren und die Hologramm am selben Ort zu orientieren sicherstellen kann.
-Auf HoloLens-Geräten können Sie auch den Anker offline von einem Gerät in eine andere freigeben.  Verwenden Sie die folgenden Links, um entscheiden, was für Ihre Anwendung am besten geeignet ist.
+Bei einem freigegebenen räumlichen Anker verfügt die APP auf jedem Gerät nun über ein gemeinsames Koordinatensystem, in dem Sie Inhalte platzieren können. Nun kann die APP sicherstellen, dass Sie das – Hologramm am gleichen Speicherort positioniert und orientiert.
+Auf hololens-Geräten können Sie auch die Anker von einem Gerät an einen anderen offline freigeben.  Verwenden Sie die folgenden Links, um zu entscheiden, was für Ihre Anwendung am besten geeignet ist.
 
 
 ## <a name="see-also"></a>Siehe auch
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>
-* [Räumliche Anker in DirectX freigegeben](shared-spatial-anchors-in-directx.md)
-* [Freigegebene Funktionen in Unity](shared-experiences-in-unity.md)
-* [Spectator anzeigen](spectator-view.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* [Gemeinsame Raumanker in DirectX](shared-spatial-anchors-in-directx.md)
+* [Gemeinsame Erlebnisse in Unity](shared-experiences-in-unity.md)
+* [Spectator View](spectator-view.md)

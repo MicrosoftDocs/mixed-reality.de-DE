@@ -1,11 +1,11 @@
 ---
 title: Freisprechen
-description: Optimieren Ihre app für freisprechgeräte
+description: Optimieren Ihrer APP für praktische Übungen
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
-keywords: Mixed Reality, physisch, bestaunen, bestaunen Ziel ist, handelt es sich bei Interaktion, Entwurf
+keywords: Gemischte Realität, Hände frei, Blick, Blick auf die Ausrichtung, Interaktion, Entwurf
 ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -19,79 +19,79 @@ ms.locfileid: "67414392"
 
 ## <a name="scenarios"></a>Szenarien
 
-Wie in der [Interaktion Modellübersicht](interaction-fundamentals.md), nachdem Sie die Benutzer und ihre Ziele identifiziert haben, Fragen Sie sich, welche Herausforderungen Umwelt- oder Informationen, die sie möglicherweise konfrontiert, wenn sie zum Ausführen ihrer Aufgaben arbeiten. Beispielsweise viele Benutzer müssen auf der Hand zu verwenden, um ihre echten Ziele zu erreichen und haben schwierigkeiten beim Interagieren mit einer Basis Hands-und-Controller-Schnittstelle. 
+Wie in der [Übersicht über das Interaktionsmodell](interaction-fundamentals.md)erläutert, stellen Sie nach dem Ermitteln der Benutzer und ihrer Ziele selbst fest, welche Umgebungs-oder situations Probleme auftreten können, wenn Sie Ihre Aufgaben erledigen. Beispielsweise müssen viele Benutzer ihre Hand haben, um Ihre tatsächlichen Ziele zu erreichen, und Sie haben Schwierigkeiten bei der Interaktion mit einer auf der Hand-und Controller basierten Schnittstelle. 
 
-Unter Umständen einige spezifischen Szenarien: 
-* Durch eine Aufgabe, geführt werden, während Hands ausgelastet sind.
-* Verweisen auf die Materialien, während Sie sich mit der ausgelastet sind.
-* Hand-fatigue
+Einige spezifische Szenarien können wie folgt lauten: 
+* Sie werden durch eine Aufgabe geleitet, während die Hände ausgelastet sind.
+* Referenzierende Materialien, während Ihre Hände ausgelastet sind
+* Hand Müdigkeit
 * Handschuhe, die nicht überwacht werden können
-* Etwas ausführen
+* Ausführen von etwas
 
 
-## <a name="hands-free-modalities"></a>Physisch Modalitäten
+## <a name="hands-free-modalities"></a>Hände freie Modalitäten
 
 ### <a name="voice-commandingvoice-designmd"></a>[Sprachbefehle](voice-design.md)
 
-Verwenden Ihre Stimme zum Befehl und Steuerung, die eine Schnittstelle kann nicht nur ermöglicht dem Benutzer, arbeiten Handsfree, aber auch mehrere Schritte überspringen. Die Verwendung dieser Modalität reichen aus, damit der Benutzer einfach Lesen alle Schaltflächenname laut, um, wie finden Sie unter-It-Say-It zu aktivieren, um die Konversation mit einem Agent, der Aufgaben für Sie ausführen kann.
+Durch die Verwendung Ihrer Stimme für Befehls-und Steuerungsmöglichkeiten einer Schnittstelle kann der Benutzer nicht nur Handsfree betreiben, sondern auch mehrere Schritte überspringen. Die Verwendung dieser Modalität kann zwischen dem zulassen, dass der Benutzer einfach den Namen einer Schaltfläche ausliest, um ihn zu aktivieren, wie in "See-it-it-it", um eine konvergung mit einem Agent auszuführen, der Aufgaben für Sie ausführen kann.
 
 
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 
-In einigen Situationen physisch ist mit der Stimme nicht ideal oder sogar möglich. Laut Factoryumgebungen, Datenschutz oder soziale Normen können alle Einschränkungen sein. Die Kopfzeile bestaunen + länger aufhalten Modell kann der Benutzer die app zu navigieren, indem Sie ihre Head Vektor um zu zeigen, während die veralteten, oder auf eine Schaltfläche Einstichs wird Aktivieren der nach einem bestimmten Zeitraum, in der Regel ca. 1 Sekunde oder so. 
+In einigen praktischen Situationen ist die Verwendung Ihrer Stimme nicht ideal oder gar nicht möglich. Laute Factory-Umgebungen, Datenschutz oder soziale Standards können Einschränkungen aufweisen. Mit dem Modell "Head-Do + Dwell" kann der Benutzer durch die APP navigieren, indem er den Kopf Vektor verwendet, um zu zeigen, während er nicht mehr ist, oder auf einer Schaltfläche auf einer Schaltfläche, die ihn nach einem bestimmten Zeitraum aktiviert, in der Regel etwa 1 Sekunde. 
 
 
-## <a name="transitioning-in-and-out-of-hands-free"></a>Übergang und physisch
+## <a name="transitioning-in-and-out-of-hands-free"></a>Wechsel in und aus der Praxis freie Umstellung
 
-Für diese Szenarien können Sie sich von der Interaktion mit Hologramme für Befehle und Navigation freigeben reichen von wird eine zwingende Voraussetzung nicht erfüllt, die beim Betrieb von End-to-End der Anwendung auf benutzerfreundlichkeit, die der Benutzer in und aus der an jedem Übergang können Zeit. 
+In diesen Szenarien kann die Interaktion mit holograms für die Befehls-und Navigations Phase von einer absoluten Anforderung bis zum Ende des Betriebs der Anwendung bis zum Ende reichen, bis zu einer zusätzlichen Benutzererfahrung, von der der Benutzer jederzeit und von allen Zeit. 
 
-Wenn die Anforderung der Anwendung ist, dass er immer ohne Benutzereingriff, verwendet wird, ob mithilfe Dwell, Sprachbefehle, oder die einzigen Sprachbefehl, "select", und dann stellen Sie sicher, dass die entsprechenden für Unterkünfte in Ihrer Benutzeroberfläche vornehmen. 
+Wenn die Anforderung der Anwendung darin besteht, dass Sie immer mit der Hand frei verwendet wird, egal ob mithilfe von "Dwell", "Voice"-Befehlen oder mit einem einzelnen Sprachbefehl "Select", stellen Sie sicher, dass Sie die entsprechenden Unterkünfte in der Benutzeroberfläche vornehmen. 
 
-Wenn sich der Zielbenutzer von Hand zu physisch am nach eigenem Ermessen wechseln können muss, ist es wichtig, die folgenden Prinzipien berücksichtigen.
+Wenn Ihr Ziel Benutzer in der Lage sein muss, nach eigenem Ermessen von Hand zu Hand zu wechseln, ist es wichtig, dass Sie die folgenden Prinzipien berücksichtigen.
 
-### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Wird davon ausgegangen Sie, dass der Benutzer bereits in den Modus, der sie wechseln möchten.
-Z. B. wenn der Benutzer am Herstellerstandort ist, einen video Verweis auf ihr Hololens, überwachen und entscheidet, um ein Schraubenschlüsselsymbol zu übernehmen, um zu arbeiten, würden sie in den meisten Fällen arbeiten in Handsfree ohne das Schraubenschlüsselsymbol drücken eine Schaltfläche versetzt. Sie sollten eine Voice-Sitzung mit einem Voice-Befehl aufrufen, werden auf einer bereits sichtbare Benutzeroberfläche Dwell beginnen länger aufhalten Lage sein, oder z. B. das Wort "select".
+### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Gehen Sie davon aus, dass der Benutzer bereits im Modus ist, zu dem gewechselt werden soll.
+Wenn sich der Benutzer beispielsweise auf der Werks Seite befindet, sehen Sie sich einen Video Verweis auf den hololens an und beschließt, einen Schraubendreher zu starten, um die Arbeit zu starten, würde er wahrscheinlich in Handsfree arbeiten, ohne den Schrauben Strich zum Drücken einer Schaltfläche ablegen zu müssen. Sie sollte in der Lage sein, eine sprach Sitzung mit einem Voice-Befehl aufzurufen, eine bereits sichtbare Benutzeroberfläche zu finden, um zu beginnen, oder das Wort "Select".
 
-Der Benutzer muss die Möglichkeit, verfügen: 
-* Wechseln Sie zur zwar physisch freisprechgeräte
-* Wechseln Sie zur Hand, mit der Hand
-* Wechseln Sie zu dem Controller mithilfe eines Controllers 
+Der Benutzer sollte folgende Möglichkeiten haben: 
+* Wechseln Sie in die Hände frei, während Sie kostenlos
+* Wechseln Sie zur Hand.
+* Wechseln zum Controller mithilfe eines Controllers 
 
-### <a name="create-redundant-ways-to-switch-modes"></a>Erstellen Sie redundante Möglichkeiten, die für einen Moduswechsel
-Während das vorherrschende Prinzip bei Zugriff ist, ist der zweite über die Verfügbarkeit. Es sollten nur keine einzelne Möglichkeit für den Übergang in einen Modus. 
+### <a name="create-redundant-ways-to-switch-modes"></a>Erstellen von redundanten Möglichkeiten zum Wechseln von Modi
+Beim ersten Prinzip geht es um den Zugriff, bei dem zweiten Prinzip um die Verfügbarkeit. Es darf nicht nur eine Möglichkeit zum Wechseln in einen und aus einem Modus kommen. 
 
-Einige Beispiele für würde folgendermaßen lauten: 
-* Eine Schaltfläche, um die sprachliche Interaktionen zu beginnen
-* Einen Sprachbefehl für den Übergang zur Verwendung von Blicke + dwell
+Einige Beispiele sind: 
+* Eine Schaltfläche zum Starten von sprach Interaktionen
+* Ein Sprachbefehl für den Übergang zu Verwendung von Blick und wohnen
 
-### <a name="add-a-dash-of-drama"></a>Fügen Sie ein wenig vom Drama hinzu.
-Einen Moduswechsel ist sehr aufwendig – es ist wichtig, wenn diese Übergänge, die auftreten, werden einen expliziten, sogar erhebliche-Switch, damit der Benutzer wissen, was passiert ist. 
+### <a name="add-a-dash-of-drama"></a>Hinzufügen eines Bindestrichs
+Ein Modusschalter ist ein großer Unternehmen. es ist wichtig, dass Sie, wenn diese Übergänge eintreten, ein expliziter, sogar dramatischer Switch ist, damit der Benutzer weiß, was passiert ist. 
 
 
-## <a name="usability-checklist"></a>Checkliste für die benutzerfreundlichkeit
+## <a name="usability-checklist"></a>Benutzerfreundlichkeit
 
-**Möglich der Benutzer alles und jedes physisch, End-to-End-alles?**
-* Jede interactible zugänglich physisch sein sollen
-* Stellen Sie sicher, dass ein Ersatz für alle benutzerdefinierten stiftbewegungen, z. B. Ändern der Größe, platzieren, Kundenkarte, tippen usw. vorhanden ist.
-* Stellen Sie sicher, dass der Benutzer davon überzeugt Kontrolle über die Benutzeroberfläche vorhanden, Platzierung und Ausführlichkeit jederzeit
-    * Abrufen von UI aus dem Weg
-    * Behandeln von Benutzeroberfläche, die außerhalb des Sichtfelds (Blickfeld) liegt
-    * Wie viel angezeigt, wobei bei
+**Kann der Benutzer alles durchführen, und alles, was für das Ende von Hand ist.**
+* Jeder interacable sollte auf die Hände frei zugreifen können.
+* Stellen Sie sicher, dass alle benutzerdefinierten Gesten ersetzt werden, z. b. das Ändern der Größe, das platzieren, das Schwenken, das Tippen usw.
+* Stellen Sie sicher, dass der Benutzer jederzeit über eine sichere Kontrolle über das vorhanden sein von Benutzeroberflächen, die Platzierung und Ausführlichkeit verfügt.
+    * So erhalten Sie die Benutzeroberfläche
+    * Adressieren der Benutzeroberfläche, die nicht in der Ansicht angezeigt wird (FOV)
+    * Wie viel ich sehe, wo, wann
 
-**Sind die Mechanismen der Interaktion eines und Kopplung mit dem richtigen visueller Hinweise werden?**
+**Werden die Mechanismen der Interaktion mit den richtigen Kosten für die Interaktion gelehrt und verstärkt?**
 
-Der Benutzer ist versteht...
-* ... Modus sind sie in?
-* ... Welche Möglichkeiten sie in diesem Modus?
+Versteht der Benutzer...
+* ... In welchem Modus befinden Sie sich?
+* ... Was können Sie in diesem Modus tun?
 * ... Was ist der aktuelle Zustand?
-* ... Wie können sie sich wechseln?
+* ... Wie können Sie übergehen?
     
-**Ist die Benutzeroberfläche für freisprechgeräte optimiert?**   
+**Ist die Benutzeroberfläche für die Hände frei optimiert?**   
 
-* Beispiel: Dwell visueller Hinweise sind nicht in typischen 2D Muster integriert
-* Beispiel: Für die Zielgruppenadressierung von Voice ist besser mit Hervorhebung von Objekt
-* Beispiel: Sprachliche Interaktionen sind besser mit Beschriftungen, die aktiviert werden müssen
+* Beispiel: Das Verb-aufforstbau ist nicht in typische 2D-Muster integriert.
+* Beispiel: Die sprach Ausrichtung ist besser mit der Objekt Hervorhebung.
+* Beispiel: Sprach Interaktionen sind besser mit Untertiteln, die eingeschaltet werden müssen.
 
 
 ## <a name="see-also"></a>Siehe auch

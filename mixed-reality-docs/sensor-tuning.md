@@ -1,37 +1,37 @@
 ---
-title: Optimieren von Sensor
-description: So verwenden Sie den Sensor Hilfsprogramm finden Sie in den Einstellungen für HoloLens optimieren.
+title: Sensor Optimierung
+description: Verwenden des in den hololens-Einstellungen gefundenen Sensor Optimierungs Hilfsprogramms.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Sensoren, kalibrieren, Kalibrierung "," Optimieren "," Einstellungen "," Exemplarische Vorgehensweise
+keywords: Sensoren, kalibrieren, kalibrieren, optimieren, Einstellungen, Vorgehensweise
 ms.openlocfilehash: 5d81cbd98809c6cbacdc48d9099168c5bc05a300
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59595637"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63517147"
 ---
-# <a name="sensor-tuning"></a>Optimieren von Sensor
+# <a name="sensor-tuning"></a>Sensor Optimierung
 
 >[!WARNING]
->Diese app ist nicht mehr verfügbar ist, für HoloLens ab Windows 10 April 2018 aktualisieren. Die Sensoren neu überdenken jetzt selbst automatisch. 
+>Diese APP ist ab dem Windows 10-Update vom April 2018 nicht mehr auf hololens verfügbar. Die Sensoren werden nun automatisch neu initialisiert. 
 
-Der Sensor Optimierung Dienstprogramm ermöglicht es, HoloLens, um die Kalibrierung Sensorinformationen zu aktualisieren. Diese Anwendung ausführen kann – Hologramm Qualität verbessern.
+Mit dem Sensor Optimierungs Hilfsprogramm können hololens seine sensorenkalibrierungs-Informationen aktualisieren. Das Ausführen dieser Anwendung kann die Qualität des Hologramms verbessern.
 
-1. App "Einstellungen" Öffnen
+1. App "Einstellungen" öffnen
 
-   ![Einstellung "app" in HoloLens](images/settingssensortuning-500px.png)
+   ![Festlegen der app in hololens](images/settingssensortuning-500px.png)
   
-2. Wählen Sie die System
+2. System auswählen
 
-   ![Seite "System" in der app "Einstellungen"](images/systemsensortuning-500px.png)
+   ![System Seite in der App "Einstellungen"](images/systemsensortuning-500px.png)
   
-3. Wählen Sie Dienstprogramme
+3. Dienstprogramme auswählen
 
-   ![Seite "Dienstprogramme" in der app "Einstellungen"](images/utilitiessensortuning-500px.png)
+   ![Dienstprogramme](images/utilitiessensortuning-500px.png)
   
-4. Scrollen Sie zur Optimierung der Sensor
+4. Scrollen Sie nach unten zur Sensor Optimierung.
 
-   ![Sensor-Optimierung für die Seite "Dienstprogramme"](images/sensortuningsettingsapp-500px.png)
+   ![Seite "Sensor Optimierung auf Dienstprogrammen"](images/sensortuningsettingsapp-500px.png)

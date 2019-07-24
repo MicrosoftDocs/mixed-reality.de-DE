@@ -1,56 +1,56 @@
 ---
-title: Konten in HoloLens
-description: Informationen zum Einrichten und Verwalten von Benutzerkonten für HoloLens.
+title: Konten in hololens
+description: Einrichten und Verwalten von Benutzerkonten auf hololens.
 author: ''
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, Benutzer, Konto, Aad, Adfs, Microsoft-Konto, Msa, Anmeldeinformationen
+keywords: Hololens, Benutzer, Konto, AAD, ADFS, Microsoft-Konto, MSA, Anmelde Informationen
 ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594157"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516814"
 ---
-# <a name="accounts-on-hololens"></a>Konten in HoloLens
+# <a name="accounts-on-hololens"></a>Konten in hololens
 
-Während des anfangssetups, HoloLens müssen Benutzer sich anmelden, die sie auf dem Gerät verwenden möchten. Ein Consumer-Microsoft-Konto oder ein Enterprise-Konto an, die in Azure Active Directory (AAD) oder Active Directory Federation Services (ADFS) konfiguriert wurde, kann dieses Konto sein.
+Bei der anfänglichen Einrichtung von hololens müssen sich Benutzer mit dem Konto anmelden, das Sie auf dem Gerät verwenden möchten. Bei diesem Konto kann es sich entweder um einen Consumer-Microsoft-Konto oder um ein Enterprise-Konto handeln, das in Azure Active Directory (AAD) oder Active Directory-Verbunddienste (AD FS) (ADFS) konfiguriert wurde.
 
-Anmelden bei diesem Konto während des Setups erstellt ein Benutzerprofil auf dem Gerät die der Benutzer, um verwenden können Anmelde-, und für welche apps alle ihre Daten gespeichert werden. Dieses Konto bietet auch einmaliges Anmelden für apps wie Microsoft Edge oder Skype über die Windows-Konto-Manager-APIs.
+Bei der Anmeldung bei diesem Konto während des Setups wird ein Benutzerprofil auf dem Gerät erstellt, mit dem der Benutzer sich anmelden kann und für das alle apps Ihre Daten speichern. Dieses Konto bietet auch das einmalige Anmelden für apps wie z. b. Edge oder Skype über die Windows-Konto-Manager-APIs.
 
-Darüber hinaus kann beim Anmelden bei einem Unternehmen oder Organisations-Konto auf dem Gerät sie auch Richtlinien (Mobile Device Management, MDM) gelten, wenn von Ihrem IT-Administrator konfiguriert
+Wenn Sie sich bei einem Unternehmens-oder Unternehmens Konto auf dem Gerät anmelden, können Sie darüber hinaus auch die Richtlinie für die Verwaltung mobiler Geräte (MDM) anwenden, wenn Sie von Ihrem IT-Administrator konfiguriert wurde.
 
-Wenn das Gerät wird neu gestartet oder fortgesetzt, aus dem Standbymodus wird, werden die Anmeldeinformationen für dieses Konto verwendet, sich erneut anmelden. Wenn die Option, die eine explizite Anmeldung erzwingen, die in den Einstellungen aktiviert ist, die Benutzer müssen ihre Anmeldeinformationen erneut eingeben. Jedes Mal, wenn das Gerät neu gestartet wird, nach dem empfangen und ein Betriebssystemupdate anwenden, ist eine explizite Anmeldung erforderlich.
+Wenn das Gerät neu gestartet oder aus dem Standbymodus wieder aufgenommen wird, werden die Anmelde Informationen für dieses Konto verwendet, um sich erneut anzumelden. Wenn die Option zum Erzwingen einer expliziten Anmeldung in den Einstellungen aktiviert ist, muss der Benutzer die Anmelde Informationen erneut eingeben. Jedes Mal, wenn das Gerät nach dem Empfang und der Anwendung eines Betriebssystemupdates neu gestartet wird, ist eine explizite Anmeldung erforderlich.
 
 ## <a name="multi-user-support"></a>Unterstützung für mehrere Benutzer
 
 >[!NOTE]
->Unterstützung für mehrere Benutzer benötigt die Commercial Suite, da dies eine [Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) Feature.
+>Die Unterstützung für mehrere Benutzer erfordert die kommerzielle Suite, da es sich hierbei um ein [Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) -Feature handelt.
 
-Beginnend mit der [Windows 10 April 2018 Update](release-notes-april-2018.md), HoloLens unterstützt mehrere Benutzer im gleichen AAD-Mandanten. Verwendung dieses müssen Sie das Gerät zunächst mit einem Konto einrichten, die in Ihrer Organisation gehört. Anschließend werden andere Benutzer aus dem gleichen Mandanten können sich auf dem Gerät aus dem Anmeldebildschirm oder durch Tippen auf die Benutzerkachel "auf das Bedienfeld" Start "zum Abmelden des vorhandenen Benutzers. 
+Ab dem [Windows 10-Update vom April 2018](release-notes-april-2018.md)unterstützt hololens mehrere Benutzer innerhalb desselben Aad-Mandanten. Um dies zu verwenden, müssen Sie das Gerät anfänglich mit einem Konto einrichten, das zu Ihrer Organisation gehört. Anschließend können sich andere Benutzer desselben Mandanten über den Anmeldebildschirm beim Gerät anmelden oder indem Sie im Start Bereich auf die Benutzer Kachel tippen, um den vorhandenen Benutzer zu melden. 
 
-Auf dem Gerät installierten Apps werden alle anderen Benutzern zur Verfügung, aber jede hat ihre eigenen app-Daten und Einstellungen. Entfernen einer app wird auch für alle anderen Benutzer jedoch entfernt. 
+Apps, die auf dem Gerät installiert sind, stehen allen anderen Benutzern zur Verfügung, Sie verfügen jedoch über eigene APP-Daten und-Einstellungen. Wenn Sie eine APP entfernen, wird Sie auch für alle anderen Benutzer entfernt. 
 
-Sie können Benutzer von Geräten entfernen, von dem Gerät, Speicherplatz freizugeben, indem Sie auf Einstellungen > Konten > andere Personen. Dies auch entfernt all die anderen Benutzer app-Daten vom Gerät. 
+Sie können Gerätebenutzer vom Gerät entfernen, um Speicherplatz freizugeben, indem Sie zu Einstellungen > Konten > anderen Personen wechseln. Dadurch werden auch alle App-Daten anderer Benutzer vom Gerät entfernt. 
 
 ## <a name="linked-accounts"></a>Verknüpfte Konten
 
-In einem einzelnen Gerät-Konto können Benutzer zusätzliche Web-Kontoanmeldeinformationen für den einfacheren Zugriff innerhalb von apps (z. B. die Store) verknüpfen oder den Zugriff auf persönliche und geschäftliche Ressourcen, ähnlich wie die Desktopversion von Windows zu kombinieren. Auf diese Weise ein weiteres Konto anmelden, trennt die Daten auf dem Gerät, z. B. Bilder erstellt nicht oder downloads. Apps können vornehmen, nachdem ein Konto mit einem Gerät verbunden ist, verwenden mit Ihrer Erlaubnis, um zu reduzieren, melden Sie sich bei jeder app einzeln müssen.
+Innerhalb eines einzelnen Geräte Kontos können Benutzer zusätzliche Webkonto-Anmelde Informationen für den einfacheren Zugriff innerhalb von apps (z. b. den Store) oder für die Kombination des Zugriffs auf persönliche und geschäftliche Ressourcen, ähnlich der Desktop Version von Windows, verknüpfen. Wenn Sie sich auf diese Weise bei einem zusätzlichen Konto anmelden, werden die auf dem Gerät erstellten Benutzerdaten, z. b. Bilder oder Downloads, nicht getrennt. Sobald ein Konto mit einem Gerät verbunden ist, kann es von apps verwendet werden, um die Anmeldung bei jeder APP zu verringern.
 
-## <a name="using-single-sign-on-within-an-app"></a>Verwenden von SSO in einer app
+## <a name="using-single-sign-on-within-an-app"></a>Verwenden des einmaligen Anmeldens innerhalb einer APP
 
-Als app-Entwickler, profitieren Sie von müssen ein verbundenes Identitäts für HoloLens, mit der [Windows-Konto-Manager-APIs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx)genau wie für andere Windows-Geräte verwenden. Einige Codebeispiele für diese APIs stehen [hier](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+Als App-Entwickler können Sie die Vorteile einer verbundenen Identität auf hololens mit den [Windows-Konto-Manager-APIs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx)nutzen, genauso wie auf anderen Windows-Geräten. Einige Codebeispiele für diese APIs sind [hier](http://go.microsoft.com/fwlink/p/?LinkId=620621)verfügbar.
 
-Konto-Interrupts, die auftreten können, z. B. anfordernden Benutzers zustimmen Kontoinformationen, zweistufige Authentifizierung usw. muss verarbeitet werden, wenn die app einen Authentifizierungstoken anfordert.
+Alle Konto Unterbrechungen, die möglicherweise auftreten, z. b. das Anfordern der Zustimmung von Benutzern für Kontoinformationen, die zweistufige Authentifizierung usw., müssen behandelt werden, wenn die APP ein Authentifizierungs Token anfordert.
 
-Wenn Ihre app ein bestimmtes Konto, die zuvor noch nicht verknüpft wurden benötigt, kann Ihrer app das System fordert den Benutzer auf eine hinzufügen lassen. Dadurch wird der Bereich "abfrageeinstellungen Konto" als untergeordnetes modales Ihrer-App gestartet wird ausgelöst. Direct2D-apps in diesem Fenster wird gerendert, direkt über dem Mittelpunkt, die Ihrer App und für Unity-apps, kurz gelangen die Benutzer Ihrer app holographic, damit diesem untergeordneten Fenster gerendert werden kann. Anpassen von Befehlen und Aktionen in diesem Bereich finden Sie [hier](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.webaccountcommand.aspx).
+Wenn Ihre APP einen bestimmten Kontotyp erfordert, der zuvor noch nicht verknüpft war, kann Ihre APP das System auffordern, den Benutzer zur Eingabe aufzufordern. Dadurch wird der Bereich "Kontoeinstellungen" als modales untergeordnetes Element der APP gestartet. Für 2D-apps wird dieses Fenster direkt über den Mittelpunkt Ihrer APP und für Unity-apps gerendert. Dadurch wird der Benutzer kurz aus der Holographic-App herausgenommen, sodass dieses untergeordnete Fenster gerendert werden kann. Das Anpassen der Befehle und Aktionen in diesem Bereich wird [hier](https://msdn.microsoft.com/library/windows/apps/windows.ui.applicationsettings.webaccountcommand.aspx)beschrieben.
 
-## <a name="enterprise-and-other-authentication"></a>Unternehmen und andere Authentifizierung
+## <a name="enterprise-and-other-authentication"></a>Enterprise und andere Authentifizierung
 
-Wenn Ihre app stellt andere Arten von Authentifizierung verwenden, z. B. NTLM, Basic oder Kerberos, können Sie [UI für Windows-Anmeldeinformationen](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) um erfassen, verarbeiten und speichern Sie die Anmeldeinformationen des Benutzers. Die benutzererfahrung für das Sammeln von diese Anmeldeinformationen ähnelt anderen Konto Interrupts für cloudbasierte und erscheinen als untergeordnete app zusätzlich zu Ihrem Direct2D-app oder kurz anhalten eine Unity-app, um die Benutzeroberfläche anzuzeigen.
+Wenn Ihre APP andere Arten der Authentifizierung verwendet (z. b. NTLM, Basic oder Kerberos), können Sie die Benutzer [Oberfläche von Windows](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) -Anmelde Informationen verwenden, um die Anmelde Informationen des Benutzers zu erfassen, zu verarbeiten und zu speichern. Die Benutzeroberfläche für die Erfassung dieser Anmelde Informationen ähnelt anderen cloudgestützten Konto Interrupts und wird als untergeordnete App auf der 2D-App angezeigt, oder es wird eine Unity-App kurz angehalten, um die Benutzeroberfläche anzuzeigen.
 
-## <a name="deprecated-apis"></a>Nicht mehr unterstützte APIs
+## <a name="deprecated-apis"></a>Veraltete APIs
 
-Ein Unterschied für die Entwicklung für HoloLens Desktop besteht darin, die [OnlineIDAuthenticator](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.onlineid.onlineidauthenticator.aspx) API wird nicht vollständig unterstützt. Zwar wird, dass ein Token zurückgegeben ist das primäre Konto in gut stehende, unterbricht, z. B. den oben genannten keine Benutzeroberfläche für den Benutzer anzeigt werden und nicht das Konto ordnungsgemäß zu authentifizieren.
+Ein Unterschied bei der Entwicklung von hololens vom Desktop ist, dass die [onlineidauthenticator](https://msdn.microsoft.com/library/windows/apps/windows.security.authentication.onlineid.onlineidauthenticator.aspx) -API nicht vollständig unterstützt wird. Obwohl ein Token zurückgegeben wird, wenn sich das primäre Konto in einem guten Zustand befindet, werden Unterbrechungen, wie z. b. die oben beschriebenen, keine Benutzeroberfläche für den Benutzer anzeigen und das Konto nicht ordnungsgemäß authentifizieren.
 

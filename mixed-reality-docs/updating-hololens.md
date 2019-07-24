@@ -1,37 +1,37 @@
 ---
-title: Aktualisieren von HoloLens
-description: Wie HoloLens und verknüpfen das Windows-Insider-Programm für die Vorschau-builds.
+title: Aktualisieren von hololens
+description: Aktualisieren von hololens und beitreten zum Windows Insider-Programm für vorschaubuilds.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 10/23/2018
 ms.topic: article
-keywords: Exemplarische Vorgehensweise, Insider, Vorschau, Update, Features, neue Version
+keywords: Anleitungen, Insider, Vorschauversion, Update, Features, neue Version
 ms.openlocfilehash: 39df7f204af2edcfc83f6be245509e5d12c3bbc0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59594172"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548712"
 ---
-# <a name="updating-hololens"></a>Aktualisieren von HoloLens
+# <a name="updating-hololens"></a>Aktualisieren von hololens
 
-Ihre HoloLens werden automatisch heruntergeladen und installieren Systemupdates, wenn dabei handelt es sich Netzbetrieb Wi-Fi, selbst wenn es sich im Standbymodus ist verbunden. Allerdings können Sie auch ein Update manuell auslösen, wenn verfügbar wird.
+Ihre hololens werden Systemupdates automatisch herunterladen und installieren, wenn Sie angeschlossen sind und mit Wi-Fi verbunden sind, auch wenn Sie sich im Standbymodus befinden. Sie können jedoch auch manuell ein System Update auslöst, wenn ein solches vorhanden ist.
 
-## <a name="manual-update"></a>Manuelles Aktualisieren
+## <a name="manual-update"></a>Manuelles Update
 
 So führen Sie ein manuelles Update aus:
-* Öffnen der **Einstellungen** app.
-* Navigieren Sie zu **Update und Sicherheit** > **Windows Update**.
-* Wählen Sie die **nach Updates suchen** Schaltfläche.
+* Öffnen Sie die app " **Einstellungen** ".
+* Navigieren Sie zu **Update & Sicherheits** > **Windows Update**.
+* Wählen Sie die Schaltfläche **nach Updates suchen aus** .
 
-Wenn ein Update verfügbar ist, startet er die neue Version herunterladen. Sobald der Download abgeschlossen ist, wählen Sie die **jetzt neu starten** Schaltfläche, um die Installation auslösen. Wenn das Gerät unter 40 % ist und nicht angeschlossen, startet Neustart nicht Installation des Updates.
+Wenn ein Update verfügbar ist, wird die neue Version heruntergeladen. Nachdem der Download beendet wurde, klicken Sie auf die Schaltfläche **jetzt neu starten** , um die Installation zu starten. Wenn Ihr Gerät unter 40% liegt und nicht angeschlossen ist, wird die Installation des Updates bei einem Neustart nicht gestartet.
 
-Während Ihre HoloLens das Update installiert wird, werden sich drehende Gears und eine Statusanzeige angezeigt. Schalten Sie nicht aus Ihrem HoloLens während dieser Zeit. Es wird automatisch neu gestartet, sobald sie die Installation abgeschlossen ist.
+Während der hololens das Update installiert, zeigt es die drehenden Gänge und eine Statusanzeige an. Deaktivieren Sie die hololens während dieser Zeit nicht. Sobald die Installation abgeschlossen ist, wird Sie automatisch neu gestartet.
 
-Sie können die System-Versionsnummer überprüfen, indem Sie öffnen die **Einstellungen** -app und auswählen **System** und dann **zu**. HoloLens unterstützt derzeit nur ein Update zu einem Zeitpunkt angewendet werden, daher ist Ihre HoloLens mehr als eine Version älter ist die neueste Version Sie möglicherweise durch die Aktualisierung mehrmals ausführen, um es vollständig auf dem neuesten Stand zu erhalten müssen.
+Sie können die System Versionsnummer überprüfen, indem Sie die **Einstellungs** -APP öffnen und **System** **und dann Info**auswählen. Hololens unterstützt derzeit nur ein Update gleichzeitig. Wenn Ihre hololens mehr als eine Version hinter der aktuellen Version enthalten, müssen Sie den Aktualisierungs Vorgang möglicherweise mehrmals durchführen, um Sie vollständig auf den neuesten Stand zu bringen.
 
-## <a name="windows-insider-program-on-hololens"></a>Windows-Insider-Programm für HoloLens
+## <a name="windows-insider-program-on-hololens"></a>Windows-Insider-Programm auf hololens
 
-Durch Verknüpfen das Windows-Insider-Programm aus Ihrem HoloLens, erhalten Sie Zugriff auf die Vorschau HoloLens-Softwareupdates-Builds, bevor sie für die allgemeine Öffentlichkeit verfügbar sind.
+Durch das beitreten zum Windows Insider-Programm aus ihren hololens erhalten Sie Zugriff auf vorschaubuilds von hololens-Software Updates, bevor Sie für die allgemeine Öffentlichkeit verfügbar sind.
 
-Informationen dazu, wie zur Teilnahme am Windows Insider-Programm für HoloLens finden Sie in der [Insider Vorschau für Microsoft HoloLens](https://docs.microsoft.com/hololens/hololens-insider) Artikel in unseren IT-Experten-Dokumentation.
+Informationen dazu, wie Sie am Windows Insider-Programm in hololens teilnehmen können, finden Sie im Artikel [Insider Preview für Microsoft hololens](https://docs.microsoft.com/hololens/hololens-insider) in der Dokumentation zu den IT-Experten.

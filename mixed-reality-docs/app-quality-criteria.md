@@ -1,11 +1,11 @@
 ---
-title: Qualitätskriterien für die App
-description: Dieses Dokument beschreibt die obersten Faktoren, die Auswirkungen auf die Qualität von mixed Reality-apps.
+title: App-Qualitätskriterien
+description: In diesem Dokument werden die wichtigsten Faktoren beschrieben, die sich auf die Qualität von Mixed Reality-apps auswirken.
 author: cjdgit
 ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
-keywords: App-Qualitätskriterien, mixed Reality, mixed Reality-app
+keywords: App-Qualitätskriterien, gemischte Realität, Mixed Reality-App
 ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
 ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
@@ -13,21 +13,21 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67024497"
 ---
-# <a name="app-quality-criteria"></a>Qualitätskriterien für die App
+# <a name="app-quality-criteria"></a>App-Qualitätskriterien
 
-Dieses Dokument beschreibt die obersten Faktoren, die Auswirkungen auf die Qualität von mixed Reality-apps. Für die einzelnen Faktoren ist die folgenden Informationen bereitgestellt.
-* Übersicht – eine kurze Beschreibung der Qualitätsfaktor und warum es wichtig ist.
-* Gerät Auswirkungen, – welche Art von Fenster Mixed Reality-Gerät betroffen ist.
-* Qualitätskriterien – wie den Qualitätsfaktor ausgewertet.
-* So messen – Methoden, um das Problem zu messen (oder auftreten).
-* Empfehlungen – Zusammenfassung der Ansätze für eine bessere Benutzeroberfläche bereitzustellen.
-* Ressourcen – relevanten Entwickler- und Design-Ressourcen, die zum Erstellen besserer Benutzeroberflächen nützlich sind.
+In diesem Dokument werden die wichtigsten Faktoren beschrieben, die sich auf die Qualität von Mixed Reality-apps auswirken. Für jeden Faktor werden die folgenden Informationen bereitgestellt.
+* Übersicht – eine kurze Beschreibung des Qualitäts Faktors und deren Wichtigkeit.
+* Geräte Auswirkung: der Typ des Windows Mixed Reality-Geräts ist beeinträchtigt.
+* Qualitätskriterien – Auswerten des Qualitäts Faktors.
+* So messen Sie –-Methoden, um das Problem zu messen (oder zu erleben).
+* Empfehlungen – Zusammenfassung der Ansätze, um eine bessere Benutzer Leistung zu gewährleisten.
+* Ressourcen – relevante Entwickler-und Entwurfs Ressourcen, die nützlich sind, um bessere App-Erfahrungen zu erzielen.
 
 ## <a name="frame-rate"></a>Bildfrequenz
 
-Framerate ist die erste Säule des – Hologramm Stabilität Komfort für Benutzer. Framerate oberhalb der empfohlenen Ziele kann dazu führen, dass Hologramme ganz nervös, negative Auswirkungen auf die Believability der Benutzeroberfläche und führte potenziell zu Eye Ermüdung angezeigt werden. 60Hz oder 90Hz, je nachdem welche Windows Mixed Reality kompatibel PCs Sie unterstützen möchten, wird die Ziel-Framerate für Ihre Umgebung für immersive Headsets Windows Mixed Reality sein. Für HoloLens ist die Ziel-Framerate 60Hz.
+Die Framerate ist die erste Säule der – Hologramm-Stabilität und des Benutzer Komforts. Die Frame Rate unterhalb der empfohlenen Ziele kann dazu führen, dass holograms Jittery werden, was sich negativ auf die glaub Fähigkeit der Funktionalität auswirkt und möglicherweise Augen Müdigkeit auslöst. Die zielframeworkrate für Ihre Benutzeroberflächen in Windows Mixed Reality-immersiven Headsets ist entweder 60Hz oder 90Hz, je nachdem, welche Windows Mixed Reality-kompatiblen PCs Sie unterstützen möchten. Bei hololens beträgt die zielframeworkrate 60Hz.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -37,7 +37,7 @@ Framerate ist die erste Säule des – Hologramm Stabilität Komfort für Benutz
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -49,48 +49,48 @@ Framerate ist die erste Säule des – Hologramm Stabilität Komfort für Benutz
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-| Die app erfüllt konsistent Frames pro Sekunde (FPS)-Ziel für Zielgerät: 60fps im HoloLens; 90 f/s auf Ultra-PCs und 60fps auf gängige PCs. | Die app verfügt über periodische Frame löscht die Core-Umgebung nicht zu beeinträchtigen, oder f/s ist konsistent niedriger als der gewünschte Ziel, aber durch die app-Funktionalität nicht beeinträchtigt werden kann. | Die app hat einen Abfall der Framerate, die im Durchschnitt alle zehn Sekunden oder weniger. |
+| Die APP entspricht konstant den Frames pro Sekunde (fps) für Zielgerät: 60fps in hololens; 90fps auf ultrapcs; und 60fps auf gängigen PCs. | Die APP verfügt über zeitweilig auftretende Frame-Abstürze, die die Kernfunktionen nicht behindern. oder FPS ist konstant niedriger als das gewünschte Ziel, verhindert jedoch die APP-Darstellung. | In der APP tritt im Durchschnitt alle zehn Sekunden eine Dropdown-Rate auf. |
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Ein in Echtzeit Frame Rate Diagramm erfolgt über von der [Windows Device Portal](using-the-windows-device-portal.md#system-performance) unter "System Performance".
-* Fügen Sie für die Entwicklung zu debuggen einen Frame Rate-Diagnose-Zähler der app hinzu. Finden Sie Ressourcen für einen Beispiel-Indikator.
-* Frame Rate löscht können im Gerät auftreten können, während die app ausgeführt wird, durch das Verschieben der Kopf von rechts. Wenn die Hologramm unerwartete ganz nervös Bewegung angezeigt wird, dann niedrigen Framerate oder die Stabilität-Ebene ist wahrscheinlich die Ursache.
+* Ein Echtzeit-Frameraten Diagramm wird durch das [Windows-Geräte Portal](using-the-windows-device-portal.md#system-performance) unter "System Leistung" bereitgestellt.
+* Fügen Sie für das Entwicklungs Debuggen der APP einen framerraten-diagnosecounter hinzu. Einen Beispiel Zählers finden Sie unter Ressourcen.
+* Die abfrageate können auf dem Gerät auftreten, während die app ausgeführt wird, indem Sie Ihren Kopf von der Seite zu Seite wechseln. Wenn das – Hologramm unerwartete gezittert-Bewegung anzeigt, ist die niedrige Framerate oder die Stabilitäts Ebene wahrscheinlich die Ursache.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Fügen Sie einen Frame Rate Zähler am Anfang der Entwicklungsarbeit hinzu.
-* Änderungen, die einen Abfall der Framerate entstehen, ausgewertet und als leistungsfehler entsprechend behoben.
+* Fügen Sie am Anfang der Entwicklungsarbeit einen Frameraten-Counter hinzu.
+* Änderungen, die eine Ablage in der Framerate verursachen, sollten ausgewertet und als Leistungsfehler entsprechend aufgelöst werden.
 
 ### <a name="resources"></a>Ressourcen
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
-* [– Hologramm Stabilität und der Bildrate](hologram-stability.md#frame-rate)
-* [Asset-Leistungsbudget](asset-creation-process.md)
+* [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
+* [Hologram Stabilität und Framerate](hologram-stability.md#frame-rate)
+* [Asset Performance Budget](asset-creation-process.md)
 * [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [MRToolkit, f/s-Leistungsindikator-Anzeige](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Utilities/README.md)
-* [MRToolkit, Shadern](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Utilities/Shaders)
+* [Mrtoolkit, FPS-Counter-Anzeige](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Utilities/README.md)
+* [Mrtoolkit, Shaders](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Utilities/Shaders)
 
 #### <a name="external-references"></a>Externe Verweise
 
-* [Unity und Optimieren von mobilen Anwendungen](https://www.youtube.com/watch?v=j4YAY36xjwE)
+* [Unity, optimieren mobiler Anwendungen](https://www.youtube.com/watch?v=j4YAY36xjwE)
 
-## <a name="hologram-stability"></a>– Hologramm Stabilität
+## <a name="hologram-stability"></a>Hologram-Stabilität
 
-Stabile Hologramme werden erhöht die benutzerfreundlichkeit und Believability Ihrer App, und erstellen ein angenehmer Anzeigefunktionen für den Benutzer. Die Qualität der – Hologramm Stabilität ist das Ergebnis gute app-Entwicklung und die Fähigkeit des Geräts (Track) zu ihrer Umgebung. Während der Framerate für die erste Säule des Stabilität ist, können andere Faktoren, einschließlich Stabilität auswirken:
+Stabile Hologramme verbessern die Benutzerfreundlichkeit und Glaubwürdigkeit Ihrer APP und sorgen für einen komfortableren Anzeige Vorgang für den Benutzer. Die Qualität der – Hologramm-Stabilität ist das Ergebnis einer guten App-Entwicklung und der Fähigkeit des Geräts, die Umgebung zu verstehen (nachverfolgen). Obwohl die Framerate die erste Säule der Stabilität ist, können sich andere Faktoren auf die Stabilität auswirken, einschließlich:
 
-* Verwenden der Stabilisierung Ebene
-* Abstand und räumliche Anker
-* Nachverfolgung
+* Verwendung der Stabilisierungs Ebene
+* Entfernung zu räumlichen Ankern
+* Paletten
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -100,7 +100,7 @@ Stabile Hologramme werden erhöht die benutzerfreundlichkeit und Believability I
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -112,47 +112,47 @@ Stabile Hologramme werden erhöht die benutzerfreundlichkeit und Believability I
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Hologramme werden konsistent stabile angezeigt. | Sekundärer Inhalt weist unerwartete Bewegung; oder unerwartete Bewegung allgemeine app-Benutzeroberfläche nicht behindern. | Hauptinhalt in Rahmen weist unerwartete verschieben. |
+|  Holograms werden konsistent angezeigt. | Der sekundäre Inhalt zeigt unerwartete Verschiebungen an; oder unerwartete Verschiebungen beeinträchtigen nicht die gesamte App-Leistung. | Primärer Inhalt in Frame zeigt unerwartete Bewegung an. |
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-Während das Gerät steht, geteert und die zur Anzeige von:
+Beim Ausführen des Geräts und Anzeigen der Anzeige:
 
-* Verschieben Kopf von rechts, die Hologramme unerwartete Bewegung angezeigt dann niedrigen Framerate oder eine fehlerhafte Ausrichtung der Stabilität Ebene auf dieser Ebene wird wahrscheinlich dadurch verursacht.
-* Verschieben Sie die Hologramme und die Umgebung, suchen Sie nach Verhaltensweisen wie verantwortlichkeitsbereichs und Jumpiness. Diese Art von Motion wird wahrscheinlich durch das Gerät nicht die Umgebung oder die Entfernung verfolgt, auf den spatial Anker verursacht.
-* Bei einer großen oder mehrere Hologramme befinden sich in den Frame, – Hologramm-Verhalten in verschiedenen Ebenen zu beobachten, während Ihre Head Position von rechts, verschieben, wenn Shakiness angezeigt wird, dies ist wahrscheinlich der Stabilisierung Ebene zurückzuführen.
+* Bewegen Sie den Kopf von der Seite zur Seite, wenn die holograms unerwartete Verschiebungen anzeigen, dann ist die niedrige Framerate oder die falsche Ausrichtung der Stabilitäts Ebene auf die Fokusebene die wahrscheinliche Ursache.
+* Navigieren Sie in den holograms und in der Umgebung, und suchen Sie nach Verhaltensweisen wie z. b. Schwimmen und Sprung Diese Art von Bewegung wird wahrscheinlich dadurch verursacht, dass das Gerät die Umgebung nicht nachverfolgt, oder die Entfernung zum räumlichen Anker.
+* Wenn sich große oder mehrere holograms im Frame befinden, beobachten Sie das – Hologramm-Verhalten in unterschiedlichen Tiefen, während Sie die Kopfzeile von der Seite zu Seite bewegen, wenn die Schattierung auftritt, wird dies wahrscheinlich durch die Stabilisierungs Ebene verursacht.
 
-### <a name="recomendations"></a>Recomendations
+### <a name="recomendations"></a>Empfehlungen
 
-* Fügen Sie einen Frame Rate Zähler am Anfang der Entwicklungsarbeit hinzu.
-* Verwenden Sie die Stabilisierung-Ebene.
-* Rendern Sie immer verankerten Hologramme innerhalb von 3 Messgeräten, die von ihren Anker.
-* Stellen Sie sicher, dass Ihre Umgebung eingerichtet, für die ordnungsgemäße Überwachung ist.
-* Entwerfen Sie Ihrer Erfahrung Hologramme auf verschiedenen als zentrales Tiefenebenen innerhalb des Rahmens zu vermeiden.
+* Fügen Sie am Anfang der Entwicklungsarbeit einen Frameraten-Counter hinzu.
+* Verwenden Sie die Stabilisierungs Ebene.
+* Sie sollten immer verankert Hologramme innerhalb von drei Metern Ihres Ankers darstellen.
+* Stellen Sie sicher, dass Ihre Umgebung für die ordnungsgemäße Überwachung eingerichtet ist.
+* Entwerfen Sie Ihre Benutzeroberflächen, um Hologramme auf verschiedenen Schwerpunkt Ebenen innerhalb des Rahmens zu vermeiden.
 
 ### <a name="resources"></a>Ressourcen
 
 #### <a name="documentation"></a>Dokumentation
 
-* [– Hologramm Stabilität und der Bildrate](hologram-stability.md#frame-rate)
-* [Fallstudie, die mit der Stabilisierung-Ebene](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
-* [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
+* [Hologram Stabilität und Framerate](hologram-stability.md#frame-rate)
+* [Fallstudie mithilfe der Stabilisierungs Ebene](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
+* [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
 * [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
 * [Raumanker](spatial-anchors.md)
-* [Behandeln von Fehlern der nachverfolgung](coordinate-systems.md#handling-tracking-errors)
-* [Feststehende Verweisrahmen](coordinate-systems.md#stationary-frame-of-reference)
+* [Behandeln von nach Verfolgungs Fehlern](coordinate-systems.md#handling-tracking-errors)
+* [Stationärer Frame des Verweises](coordinate-systems.md#stationary-frame-of-reference)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [MR Companion Kit Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
+* [Mr Companion Kit, kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
 
-## <a name="holograms-position-on-real-surfaces"></a>Hologramme Position auf echten Oberflächen
+## <a name="holograms-position-on-real-surfaces"></a>Holograms-Position auf realen Oberflächen
 
-Fehler im Alignment von Hologramme mit physischer Objekte (sofern aneinander platziert werden soll) ist ein eindeutiger Hinweis darauf, der nicht-Union-Hologramme und reale. Genauigkeit der Platzierung sollte relativ zu den Anforderungen des Szenarios werden. z. B. allgemeine Oberfläche Platzierung räumliche Zuordnung verwenden kann, aber eine präzisere Platzierung benötigen einige mit markern und Kalibrierung.
+Falsche Abweichungen von holograms mit physischen Objekten (wenn Sie in Beziehung zueinander gesetzt werden sollen) sind ein eindeutiger Hinweis auf die nicht-Union von holograms und der realen Welt. Die Genauigkeit der Platzierung sollte in Relation zu den Anforderungen des Szenarios liegen. Beispielsweise kann bei der allgemeinen Oberflächen Platzierung die räumliche Karte verwendet werden, aber eine genauere Platzierung erfordert die Verwendung von Markern und die Kalibrierung.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -162,7 +162,7 @@ Fehler im Alignment von Hologramme mit physischer Objekte (sofern aneinander pla
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -174,49 +174,49 @@ Fehler im Alignment von Hologramme mit physischer Objekte (sofern aneinander pla
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-| Hologramme Ausrichten der Entwurfsoberfläche in der Regel in der Zentimeter Zoll-Bereich. Wenn eine größere Genauigkeit erforderlich ist, sollte die app eine effiziente Möglichkeit für die Zusammenarbeit in der Spezifikation für die gewünschte app bereitstellen. | Nicht verfügbar | Die Hologramme angezeigt mit der physischen Zielobjekt nicht ausgerichtete durch Unterbrechen der Surface-Ebene oder auf von der Oberfläche "float" angezeigt werden. Wenn Genauigkeit erforderlich ist, sollte die Hologramme die NEAR-Spezifikation des Szenarios erfüllen. | 
+| Holograms werden an der Oberfläche ausgerichtet, die sich in der Regel im Bereich von Zentimetern bis Zoll Wenn mehr Genauigkeit erforderlich ist, sollte die APP eine effiziente Möglichkeit zur Zusammenarbeit innerhalb der gewünschten App-Spezifikation bereitstellen. | Nicht verfügbar | Die Hologramme werden mit dem physischen Zielobjekt nicht ausgerichtet angezeigt, indem die Oberfläche unterbrochen wird oder die Fläche von der Oberfläche entfernt wird. Wenn die Genauigkeit erforderlich ist, sollten holograms die Näherungs Spezifikation des Szenarios erfüllen. | 
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Hologramme, die auf den spatial Karte platziert werden sollten nicht auf deutlich oberhalb oder unterhalb der Oberfläche "float" angezeigt.
-* Hologramme, die korrekte Platzierung erfordern sollte es sich um eine Form, Marker und Kalibrierung System verfügen, die auf das Szenario für die Anforderung wird.
+* Holograms, die auf räumlicher Zuordnung platziert werden, sollten nicht zu einem dramatischen Gleit Komma Wert oberhalb oder unterhalb der Oberfläche erscheinen.
+* Holograms, die eine exakte Platzierung erfordern, sollten eine Form von Marker-und Kalibrierungs Systemen aufweisen, die auf die Anforderungen des Szenarios zutreffen.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Räumliche Zuordnung ist nützlich für das Platzieren von Objekten auf Oberflächen, wenn die Genauigkeit nicht erforderlich ist.
-* Verwenden Sie für die beste Genauigkeit Marker oder Poster der Hologramme und eine Xbox-Controller (oder einen Mechanismus für die manuelle Ausrichtung) fest für die endgültige Kalibrierung.
-* Berücksichtigen Sie sehr große Hologramme in logische Teile aufteilen und Ausrichtung der einzelnen Teile der Oberfläche.
-* Nicht ordnungsgemäß auswirken festgelegten interpupilary Entfernung (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) kann auch – Hologramm Ausrichtung. Konfigurieren Sie immer die HoloLens, Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor des Benutzers.
+* Die räumliche Zuordnung eignet sich zum Platzieren von Objekten auf Oberflächen, wenn die Genauigkeit nicht erforderlich ist.
+* Verwenden Sie zum Festlegen der optimalen Genauigkeit Marker oder Poster, um die holograms und einen Xbox-Controller (oder einen manuellen Ausrichtungs Mechanismus) für die endgültige Kalibrierung festzulegen.
+* Es empfiehlt sich, zusätzliche große Hologramme in logische Teile zu zerlegen und die einzelnen Teile an der Oberfläche auszurichten.
+* Nicht ordnungsgemäß festgelegten interpupilary Distance (IPD) können auch die Ausrichtung von holograms beeinflussen. Konfigurieren Sie hololens immer für die IPD des Benutzers.
 
 ### <a name="resources"></a>Ressourcen
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Räumliche Zuordnung-Platzierung](spatial-mapping.md#placement)
-* [Raum Scanvorgang](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Bewährte Methoden von räumlichen Anker](spatial-anchors.md#best-practices)
-* [Behandeln von Fehlern der nachverfolgung](coordinate-systems.md#handling-tracking-errors)
+* [Platzierung räumlicher Zuordnung](spatial-mapping.md#placement)
+* [Raum Scanprozess](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Bewährte Methoden für räumliche Anker](spatial-anchors.md#best-practices)
+* [Behandeln von nach Verfolgungs Fehlern](coordinate-systems.md#handling-tracking-errors)
 * [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)
-* [Übersicht über die Entwicklung von Vuforia](vuforia-development-overview.md)
+* [Übersicht über die vuforia-Entwicklung](vuforia-development-overview.md)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
 * [MR räumlich 230: Räumliche Abbildung](holograms-230.md)
-* [Räumliche Zuordnung Bibliotheken MR Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
-* [MR Companion Kit Poster Kalibrierung-Beispiel](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
-* [MR Companion Kit Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
+* [Mr Toolkit, Bibliotheken für räumliche Zuordnung](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
+* [Mr Companion Kit, Poster-Kalibrierungs Beispiel](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
+* [Mr Companion Kit, kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
 
 #### <a name="external-references"></a>Externe Verweise
 
-* [Fallstudie Lowes Genauigkeit Ausrichtung](https://www.youtube.com/watch?v=LceMdyKZ4PI)
+* [Lowes-Fallstudie, Genauigkeits Ausrichtung](https://www.youtube.com/watch?v=LceMdyKZ4PI)
 
-## <a name="viewing-zone-of-comfort"></a>Anzeigen der Zone der Komfort
+## <a name="viewing-zone-of-comfort"></a>Anzeigen der Komfortzone
 
-App-Entwickler-Steuerelement, in denen Benutzer Augen konvergieren, durch die Platzierung von Inhalt und Hologramme in verschiedenen Ebenen. Benutzern steht, geteert HoloLens werden immer berücksichtigen, auf 2.0m zu verwalten, ein klares Bild da HoloLens angezeigt sind in einer optischen Abstand ungefähr 2.0m von der Benutzer fest. Ungültige Content Tiefe kann visual angefasst oder Ermüdung führen.
+App-Entwickler steuern, wohin die Augen der Benutzer konvergiert werden, indem Sie Inhalte und Hologramme in verschiedenen Tiefen platzieren. Benutzer, die hololens durchführen, unterstützen immer 2.0 m, um ein klares Bild zu erhalten, da hololens in einer optischen Entfernung von ungefähr 2,0 m vom Benutzer korrigiert werden. Eine nicht ordnungsgemäße Inhalts Tiefe kann zu einem visuellen Unbehagen oder Müdigkeit führen.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -226,7 +226,7 @@ App-Entwickler-Steuerelement, in denen Benutzer Augen konvergieren, durch die Pl
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -240,40 +240,40 @@ App-Entwickler-Steuerelement, in denen Benutzer Augen konvergieren, durch die Pl
 
 <table>
 <tr>
-<td> Am besten </td><td><ul>
-<li>Legen Sie Inhalte auf 2m ein.</li><li>Wenn Hologramme können nicht auf 2m platziert werden und Konflikte zwischen Konvergenz und beeinflusst nicht vermieden werden, liegt die optimale Zone für die Platzierung von – Hologramm 1,25 m "und" 5 Min.</li><li>In jedem Fall sollte Designer Struktur Inhalt empfehlen Benutzern die Interaktion von 1 + m entfernt (z. B. Inhaltsgröße anpassen und die Positionierungsparameter des Standard).</li><li>Es sei denn, die explizit nicht von dem Szenario erforderlich ist, sollte eine Clippingebene implementieren mit Fadeout beginnend mit 1 Million.</li><li>In Fällen, in denen genauer Beobachtung von einem bewegungslos Hologramm erforderlich ist, sollte der Inhalt nicht als 50 cm sein.</li>
+<td> Best </td><td><ul>
+<li>Platzieren Sie den Inhalt bei 2 m.</li><li>Wenn holograms bei 2 m nicht platziert werden können und Konflikte zwischen Konvergenz und Unterbringung nicht vermieden werden können, liegt die optimale Zone für die – Hologramm-Platzierung zwischen 1,25 m und 5 m.</li><li>In jedem Fall sollten Designer Inhalte strukturieren, um Benutzern die Interaktion von 1 + m zu empfehlen (z. b. Anpassen von Inhalts Größe und Standard Platzierungs Parametern).</li><li>Sofern dies nicht speziell für das Szenario erforderlich ist, sollte eine Clippingebene mit "FadeOut" implementiert werden, beginnend bei 1 Mio.</li><li>In Fällen, in denen eine genauere Betrachtung eines sehr großen holograms erforderlich ist, sollte der Inhalt nicht kleiner als 50 cm sein.</li>
 </ul></td>
 </tr><tr>
-<td> Erfüllt</td><td> Der Inhalt ist in der Anleitung anzeigen und während der Übertragung, aber nicht ordnungsgemäße sprachnutzung oder keine Verwendung von den Clipping-Ebene.</td>
+<td> Findet</td><td> Der Inhalt befindet sich in der Anzeige-und Bewegungs Anleitung, aber nicht ordnungsgemäß oder ohne Verwendung der Clippingebene.</td>
 </tr><tr>
-<td> Fehler </td><td> Der Inhalt zu nahe dargestellt wird (in der Regel &lt;1,25 m oder &lt;50 cm für stationäre Hologramme genauer Beobachtung erfordern.)</td>
+<td> UN </td><td> Der Inhalt wird zu nah dargestellt ( &lt;in der Regel 1,25 &lt;m oder 50 cm für stationäre Hologramme, die eine genauere Beobachtung erfordern).</td>
 </tr>
 </table>
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Der Inhalt muss in der Regel 2 m entfernt, jedoch nicht näher als 1,25 oder weiter als 5 Min. entsprechen.
-* Mit wenigen Ausnahmen sollte die HoloLens Clipping Render-Entfernung auf .85CM mit Fadeout von Inhalten, die beginnend bei 1 Mio. festgelegt werden. Ansatz des Inhalts, und notieren Sie den Freistellungseffekt-Ebene.
-* Stationär Inhalt darf nicht als 50 cm entfernt sein.
+* Der Inhalt sollte in der Regel 2 Mio., aber nicht größer als 1,25 oder größer als 5 Mio. sein.
+* Mit wenigen Ausnahmen sollte die Länge des Clipping-renderingrenderwerts auf. 85 cm festgelegt werden, wobei die faout-Inhalte beginnend bei 1 Mio. liegen. Wenden Sie sich an den Inhalt, und notieren Sie sich die Ausschneide Ebene.
+* Stationärer Inhalt sollte nicht kleiner als 50 cm sein.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Entwerfen Sie Inhalte für die optimale Anzeige Entfernung 2 m ein.
-* Legen Sie die Entfernung des Clipping gerendert, auf 85cm mit Fadeout von Inhalten, die beginnend bei 1 Million.
-* Für stationäre Hologramme, die näher anzeigen, sollten die Clipping-Ebene nicht näher als 30cm und Fadeout sollte mindestens 10cm Weg von den Clipping-Ebene beginnen.
+* Entwerfen Sie den Inhalt für die optimale Anzeige Distanz von 2 m.
+* Legen Sie die Entfernungs-renderingdistanz auf 85 cm mit dem faout-Inhalt ab 1 Mio. fest.
+* Bei stationären Hologrammen, die näher betrachtet werden müssen, sollte die Clippingebene nicht größer als 30 cm sein, und Fadeout sollte mindestens 10 cm von der Clippingebene ausgehen.
 
 ### <a name="resources"></a>Ressourcen
 
-* [Rendern von Abstand](hologram-stability.md#hologram-render-distances)
+* [Rendering-Entfernung](hologram-stability.md#hologram-render-distances)
 * [Fokuspunkt in Unity](focus-point-in-unity.md)
-* [Experimentieren mit der Skalierung](scale.md#experimenting-with-scale)
-* [Text Schriftgrad empfohlen](typography.md#recommended-font-size)
+* [Experimentieren mit der Skala](scale.md#experimenting-with-scale)
+* [Text, Empfohlene Schriftgröße](typography.md#recommended-font-size)
 
-## <a name="depth-switching"></a>Tiefe wechseln
+## <a name="depth-switching"></a>Tiefen Wechsel
 
-Unabhängig von der Zone der Komfort Probleme anzeigen fordert für den Benutzer häufig oder schnell wechseln, in der Nähe, und viel als zentrales Objekte (einschließlich Hologramme und den tatsächlichen Inhalt) oculomotor Fatigue und allgemeine angefasst führen können.
+Unabhängig von der Anzeige Zone von Komfort Problemen kann es sein, dass der Benutzer häufig oder schnell zwischen Near-und Far-Fokus Objekten (einschließlich holograms und realen Inhalten) wechselt.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -283,7 +283,7 @@ Unabhängig von der Zone der Komfort Probleme anzeigen fordert für den Benutzer
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -295,28 +295,28 @@ Unabhängig von der Zone der Komfort Probleme anzeigen fordert für den Benutzer
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Eingeschränkte oder natürliche Tiefe wechseln, die nicht dazu führen, dass den Benutzer, neuer Nachklang Fokus. | Switch abrupten Tiefe, dies ist der Kern und in der app-Erfahrung konzipiert, oder abrupten Tiefe-Switch, der von unerwarteten realen Inhalt verursacht wird. | Einheitliche Tiefe Switch oder abrupten Tiefe wechseln, die nicht erforderlich ist oder Core, um die app-Funktionalität. | 
+|  Eingeschränkter oder natürlicher tiefen Wechsel, der nicht bewirkt, dass sich der Benutzer nicht ganz natürlich neu konzentriert. | Abrupter tiefen Wechsel hierbei handelt es sich um einen Kern, der in die APP-Umgebung integriert wird, oder um einen abrupten Wechsel, der durch unerwartete reale Inhalte verursacht wurde. | Der konsistente tiefen Wechsel oder der abrupte, nicht erforderliche Wechsel oder Kern der APP-Leistung. | 
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Wenn den Benutzer konsistent und/oder plötzlich Tiefe ändern Sie den Fokus von der app erforderlich sind, ist Tiefe Problem wechseln.
+* Wenn die APP erfordert, dass der Benutzer den tiefen Fokus konsistent und/oder abrupt ändert, liegt ein Problem mit dem tiefen Wechsel vor.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Behalten Sie Hauptinhalt an einer konsistenten als zentrales Ebene bei, und stellen Sie sicher, dass die Stabilisierung-Ebene auf dieser Ebene entspricht. Dies lässt sich durch oculomotor Fatigue und unerwartete – Hologramm Bewegung beheben.
+* Behalten Sie primären Inhalt in einer konsistenten Fokusebene, und stellen Sie sicher, dass die Stabilisierungs Ebene mit der Fokusebene übereinstimmt. Dadurch wird die oomotor-Müdigkeit und unerwartete – Hologramm-Bewegung verringert.
 
 ### <a name="resources"></a>Ressourcen
 
-* [Rendern von Abstand](hologram-stability.md#hologram-render-distances)
+* [Rendering-Entfernung](hologram-stability.md#hologram-render-distances)
 * [Fokuspunkt in Unity](focus-point-in-unity.md)
 
-## <a name="use-of-spatial-sound"></a>Von räumlichen Sounds
+## <a name="use-of-spatial-sound"></a>Verwendung von räumlichem Sound
 
-In Windows Mixed Reality bietet das Audiomodul der sehen die mixed Reality-Erfahrung durch Simulieren von 3D sound mithilfe von environmental Simulationen, Entfernung und Richtung. Verwenden von räumlichen Sound in einer Anwendung kann Entwickler convincingly Platzieren von Sounds in einem 3 dimensionalen Raum (Kugel) für den Benutzer. Diese Sounds werden dann erscheinen, als ob sie von echten physischen Objekten oder der mixed Reality-Hologramme in der benutzerumgebung gestellt würden. Räumliche Sound ist ein leistungsstarkes Tool zum Immersion, Barrierefreiheit und UX-Entwurf in mixed Reality-Anwendungen.
+In Windows Mixed Reality bietet die Audioengine die Audiowiedergabe-Komponente der gemischten Realität, indem 3D-Sounds mithilfe von Richtungs-, Entfernungs-und Umgebungs Simulationen simuliert werden. Die Verwendung von räumlichem Sound in einer Anwendung ermöglicht Entwicklern das überzeugend Platzieren von Sounds in einem dreidimensionalen Raum (Kugel), der sich alle um den Benutzer dreht. Diese Sounds erscheinen dann so, als wären Sie von echten physischen Objekten oder den Mixed Reality holograms in der Benutzerumgebung. Räumlicher Sound ist ein leistungsfähiges Tool für das Eintauchen, die Barrierefreiheit und den UX-Entwurf in gemischten Reality-Anwendungen.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -326,7 +326,7 @@ In Windows Mixed Reality bietet das Audiomodul der sehen die mixed Reality-Erfah
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -338,23 +338,23 @@ In Windows Mixed Reality bietet das Audiomodul der sehen die mixed Reality-Erfah
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Sound wird logisch spatialized und die UX entsprechend Sound verwendet, zur Unterstützung bei der Objekt-Ermittlung und Benutzerfeedback. Sound ist die natürliche und auf Objekte relevant und eine normalisierte, über das Szenario. | Räumliche Audio ist entsprechend für Believability verwendet jedoch fehlen als Mittel, um Feedback von Benutzern und die Auffindbarkeit zu unterstützen. | Sound wird nicht wie erwartet, spatialized und/oder fehlende Sound bei der Benutzer in der UX. Räumliche Audio wurde oder nicht berücksichtigt, die in den Entwurf des Szenarios verwendet. | 
+|  Sound ist logisch räumlich, und die UX verwendet den Sound entsprechend, um die Objekt Ermittlung und das Benutzer Feedback zu unterstützen. Sound ist naturgemäß und relevant für Objekte und wird im gesamten Szenario normalisiert. | Räumliche Audiodaten werden in angemessener Weise verwendet, um Benutzer Feedback und Auffindbarkeit zu unterstützen. | Sound ist nicht erwartungsgemäß räumlich und/oder ungenügender Ton, um Benutzer innerhalb der UX zu unterstützen. Das räumliche audiobild wurde im Entwurf des Szenarios nicht berücksichtigt oder verwendet. | 
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Im Allgemeinen sollte die relevanten Sounds von Ziel-Hologramme ausgeben (z. b., Rinde Sound holographic Hund stammen.)
-* Sound Hinweise sollten in der UX verwendet werden, um dem Benutzer Feedback oder Kenntnis der Aktionen außerhalb der holographic Frame zu unterstützen.
+* Im Allgemeinen sollten relevante Sounds aus Ziel-holograms (z. b. "Bark Sound" von Holographic Dog) ausgegeben werden.
+* Sound Hinweise sollten in der gesamten Benutzeroberfläche verwendet werden, um dem Benutzer Feedback oder das Bewusstsein von Aktionen außerhalb des Holographic Frame zu unterstützen.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Verwenden Sie räumliche Audio, zur Unterstützung bei der Ermittlung und Benutzer-Schnittstellen.
-* Echte Sounds besser funktionieren als synthetisier oder unnatürlichen Sound.
-* Die meisten Sounds sollten spatialized sein.
-* Vermeiden Sie unsichtbar korrekturemitter ab.
-* Vermeiden Sie räumliche Maskierung.
-* Alle Sounds zu normalisieren.
+* Verwenden Sie räumliche Audiodaten, um die Objekt Ermittlung und Benutzeroberflächen zu unterstützen.
+* Echte Sounds funktionieren besser als synthetisieren oder unnatürlicher Sound.
+* Die meisten Sounds sollten räumlich behandelt werden.
+* Vermeiden Sie unsichtbare Emitter.
+* Vermeiden Sie die räumliche Maskierung.
+* Normalisieren Sie alle Sounds.
 
 ### <a name="resources"></a>Ressourcen
 
@@ -363,19 +363,19 @@ In Windows Mixed Reality bietet das Audiomodul der sehen die mixed Reality-Erfah
 * [Raumklang](spatial-sound.md)
 * [Raumklangentwurf](spatial-sound-design.md)
 * [Raumklang in Unity](spatial-sound-in-unity.md)
-* [Fallstudie für HoloTour sound räumlich](case-study-spatial-sound-design-for-holotour.md)
-* [Verwenden von räumlichen Sound in RoboRaid Fallstudie](case-study-using-spatial-sound-in-roboraid.md)
+* [Fallstudie, räumlicher Sound für holotour](case-study-spatial-sound-design-for-holotour.md)
+* [Fallstudie mit räumlichem Sound in roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
 * [MR räumlich 220: Raumklang](holograms-220.md)
-* [MRToolkit, Spatial Audio](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
+* [Mrtoolkit, räumliche Audiodaten](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
-## <a name="focus-on-holographic-frame-fov-boundaries"></a>Konzentrieren Sie sich an holographic Frame (Blickfeld) Grenzen
+## <a name="focus-on-holographic-frame-fov-boundaries"></a>Fokus auf Holographic Frame-Grenzen (FOV)
 
-Gut gestaltete Benutzeroberflächen erstellen und Warten von nützlichen Kontext der virtuellen Umgebung, die über die Benutzer erweitert. Einen durchdachten Entwurf Content skalierungs-und Kontext umfasst die Minderung der Auswirkungen der Blickfeld Grenzen, die räumliche Audio, Anleitungen, Systeme und Position des Benutzers. Wenn rechts durchgeführt wird, wird den Benutzer, dass weniger durch das Blickfeld Grenzen eingeschränkt, während Sie eine sich app-Erfahrung so aussehen.
+Gut gestaltete Benutzeroberflächen können den nützlichen Kontext der virtuellen Umgebung erstellen und verwalten, die sich um die Benutzer erstreckt. Das Verringern der Auswirkungen der FOV-Grenzen umfasst einen durchdachten Entwurf der Inhalts Skala und des Kontexts, die Verwendung räumlicher Audiodaten, Leitfäden und die Position des Benutzers. Wenn dies der Fall ist, wird der Benutzer durch die FOV-Grenzen weniger beeinträchtigt, während er eine bequeme App-Erfahrung bietet.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -385,7 +385,7 @@ Gut gestaltete Benutzeroberflächen erstellen und Warten von nützlichen Kontext
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -397,41 +397,41 @@ Gut gestaltete Benutzeroberflächen erstellen und Warten von nützlichen Kontext
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Benutzer verliert nie Kontext und Anzeigen von vertraut ist. Unterstützung der Kontext wird für große Objekte bereitgestellt. Auffindbarkeit und Anzeigen von Anweisungen für Objekte außerhalb des Rahmens bereitgestellt. Im Allgemeinen sind die Motion-Entwurf und die Skalierung der Hologramme für eine vertraut Anzeigefunktionen geeignet. | Benutzer werden niemals Kontext verliert, aber in bestimmten Situationen möglicherweise zusätzliche trichterhalses während der Übertragung erforderlich. In bestimmten Situationen wird Skalierung Hologramme entweder vertikal oder horizontal Frames verursacht manche Bewegung trichterhalses Hologramme anzeigen zu unterbrechen. | Wahrscheinlich Kontext und/oder konsistente trichterhalses Motion verlieren Benutzer ist erforderlich, um Hologramme anzuzeigen. Kein Kontext für große Objekte holographic, Verschieben von Objekten außerhalb des Rahmens ohne Erkennbarkeit Anleitungen oder hohe Hologramme verliert einfach gefordert regulären trichterhalses während der Übertragung an. | 
+|  Der Benutzer verliert nie den Kontext, und die Anzeige ist bequem. Für große Objekte wird Kontextunterstützung bereitgestellt. Ermittelbarkeits-und Anzeige Anleitungen werden für Objekte außerhalb des Frames bereitgestellt. Im Allgemeinen sind Bewegungs Entwurf und Skalierung der holograms für eine bequeme Anzeige geeignet. | Der Benutzer verliert den Kontext nie, aber in bestimmten Situationen ist möglicherweise eine zusätzliche Nacken Bewegung erforderlich. In einer begrenzten Situation bewirkt die Skalierung, dass holograms entweder den vertikalen oder horizontalen Rahmen unterbrechen, was dazu führt, dass die Bewegung holograms durch einen Hals | Der Benutzer verliert wahrscheinlich den Kontext und/oder eine konsistente Hals Bewegung zum Anzeigen von holograms. Keine Kontext Leit Fäden für große Holographic-Objekte, die das Verschieben von Objekten außerhalb des Frames ohne auffindbarkeits Leit Fäden vereinfachen, oder die Verwendung von hohen holograms erfordert eine reguläre Hals Bewegung zum anzeigen. | 
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Kontext für eine (groß) – Hologramm verloren geht oder aufgrund der an den Grenzen freigestellt wird nicht erkannt.
-* Speicherort der Hologramme sind schwer zu finden, die aufgrund des Mangels an Aufmerksamkeit Directors oder Inhalte, die schnell in und aus der holografischen Frame verschoben wird.
-* Szenario erfordert regelmäßige und sich wiederholende nach oben oder unten Head während der Übertragung ein Hologramm, wodurch trichterhalses Ermüdung vollständig angezeigt.
+* Der Kontext für ein (großes) – Hologramm geht verloren oder wird nicht verstanden, weil er an den Begrenzungen abgeschnitten wurde.
+* Der Speicherort von holograms ist schwierig zu finden, da es sich nicht um die Aufmerksamkeit von Regisseuren oder Inhalten handelt, die sich schnell in den Holographic-Frame bewegen.
+* Das Szenario erfordert reguläre und wiederkehrende aufruhenden aufruhenden Bewegung, um ein – Hologramm vollständig zu sehen
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Starten Sie die Benutzeroberfläche, mit kleine Objekte, die das Blickfeld anpassen, mit visuellen Hinweise auf größeren Versionen wechseln.
-* Verwenden Sie räumliche Audio- und Aufmerksamkeit Directors, um Benutzerinhalte suchen, die sich das Blickfeld.
-* Vermeiden Sie so weit wie möglich, Hologramme, die das Blickfeld vertikal zugeschnitten.
-* Geben Sie dem Benutzer mit in-app-Anleitung für die optimale Anzeige Speicherort ein.
+* Starten Sie die Arbeit mit kleinen Objekten, die für den FOV geeignet sind, und wechseln Sie dann mit visuellen Cues in größere Versionen.
+* Verwenden Sie die Directors für räumliche Audiodaten und Aufmerksamkeit, um dem Benutzer zu helfen, Inhalte außerhalb des FOV zu finden.
+* Vermeiden Sie so weit wie möglich Hologramme, die den FOV vertikal abschneiden.
+* Stellen Sie dem Benutzer einen in-App-Leitfaden für den optimalen Anzeige Speicherort zur Verfügung.
 
 ### <a name="resources"></a>Ressourcen
 
 #### <a name="documentation"></a>Dokumentation
 
 * [Holografischer Rahmen](holographic-frame.md)
-* [Fallstudie, HoloStudio UI und Interaktion entwerfen Erkenntnisse](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
+* [Fallstudie, Entwicklung von holostudio-UI und Interaktions Entwurf](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
 * [Skalieren von Objekten und Umgebungen](scale.md)
 * [Cursor, visuelle Hinweise](cursors.md#visual-cues)
 
 #### <a name="external-references"></a>Externe Verweise
 
-* [ActiveX Data Objects und das Blickfeld](https://www.linkedin.com/pulse/hololens-much-ado-field-of-view-michael-hoffman?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B6iQ%2FbTevLDU93w3I2ewLJw%3D%3D)
+* [Viel ADO zum FOV](https://www.linkedin.com/pulse/hololens-much-ado-field-of-view-michael-hoffman?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B6iQ%2FbTevLDU93w3I2ewLJw%3D%3D)
 
-## <a name="content-reacts-to-user-position"></a>Inhalte reagiert an Benutzerposition
+## <a name="content-reacts-to-user-position"></a>Inhalt reagiert auf Benutzer Position
 
-Hologramme sollte auf die Benutzerposition auf ungefähr die gleiche Weise reagieren, die "echten" Objekte. Eine wichtige Design-Herausforderungen ist UI-Elemente, die unbedingt eines Benutzers Position können nicht davon ausgehen nicht bewegt wird und sich Anpassen des Benutzers während der Übertragung. Das Entwerfen einer app, die ordnungsgemäß an Benutzerposition anpasst erstellt eine mehr glaubwürdig Erfahrung und einfacher zu verwenden.
+Holograms sollten auf ungefähr die gleiche Weise wie "echte" Objekte auf die Benutzer Position reagieren. Ein wichtiger Entwurfs Aspekt sind Benutzeroberflächen Elemente, die nicht unbedingt annehmen können, dass die Position eines Benutzers stationär ist und sich an die Bewegung des Benutzers anpasst. Das Entwerfen einer APP, die sich ordnungsgemäß an die Benutzer Position anpasst, führt zu einer besseren Benutzerfreundlichkeit und erleichtert die Verwendung.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -441,7 +441,7 @@ Hologramme sollte auf die Benutzerposition auf ungefähr die gleiche Weise reagi
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -455,46 +455,46 @@ Hologramme sollte auf die Benutzerposition auf ungefähr die gleiche Weise reagi
 
 <table>
 <tr>
-<td> Am besten </td><td> Inhalt und die Benutzeroberfläche anpassen an Benutzerpositionen, die Benutzer auf natürliche Weise mit Inhalt innerhalb des Bereichs der erwarteten Benutzer datenverschiebung kommunizieren kann.</td>
+<td> Best </td><td> Der Inhalt und die Benutzeroberfläche werden an Benutzer Positionen angepasst, damit Benutzer im Bereich der erwarteten Benutzer Bewegung natürlich mit Inhalten interagieren können.</td>
 </tr><tr>
-<td> Erfüllt </td><td> Benutzeroberfläche passt sich an die Benutzerposition an, aber Sie können die Ansicht der Aufforderung des Benutzers zum Anpassen ihrer Position schlüsselinhalt behindern.</td>
+<td> Findet </td><td> Die Benutzeroberfläche passt sich an die Benutzer Position an, kann jedoch die Ansicht von Schlüssel Inhalten behindern, die den Benutzer zum Anpassen Ihrer Position benötigen.</td>
 </tr><tr>
-<td> Fehler </td><td><ol>
-<li>UI-Elemente sind verloren gegangen oder gesperrt, während der Verschiebung zu Benutzer Steuerelemente Nachklang zurück zu (oder suchen).</li><li>UI-Elemente begrenzen, die Ansicht der Hauptinhalt.</li><li>UI-Bewegung ist nicht optimiert, für die Anzeige von Abstand und Momentum, insbesondere bei <a href="billboarding-and-tag-along.md">Tag-along</a> UI-Elemente.</li>
+<td> UN </td><td><ol>
+<li>Benutzeroberflächen Elemente gehen verloren oder sind während der Bewegung gesperrt, sodass der Benutzer nicht auf natürliche Weise zu den Steuerelementen zurückkehrt.</li><li>Elemente der Benutzeroberfläche beschränken die Ansicht von primärem Inhalt.</li><li>Die UI-Verschiebung ist nicht für die Anzeige von Distance und Impulsen vor allem mit <a href="billboarding-and-tag-along.md">tagbasierten</a> Benutzeroberflächen Elementen optimiert.</li>
 </ol></td>
 </tr>
 </table>
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Alle Messungen sollte innerhalb eines angemessenen Bereichs des Szenarios ausgeführt werden. Während der Verschiebung des Benutzers variieren kann, versuchen Sie nicht dazu bringen, die app mit extremer Benutzer verschieben.
-* Für Benutzeroberflächenelemente sollte relevante Steuerelemente zur Verfügung, unabhängig von der Benutzer verschieben. Z. B., wenn der Benutzer wird durchlaufen, um eine 3D Karte mit Zoom und zum Anzeigen, sollte das Zoomsteuerelement für den Benutzer unabhängig vom Standort sofort verfügbar sein.
+* Alle Messungen sollten innerhalb eines angemessenen Umfangs des Szenarios durchgeführt werden. Während die Benutzer Bewegung variieren kann, versuchen Sie nicht, die APP mit extremer Benutzer Bewegung zu täuschen.
+* Für Elemente der Benutzeroberfläche sollten relevante Steuerelemente unabhängig von der Benutzer Bewegung verfügbar sein. Wenn der Benutzer z. b. eine 3D-Karte mit Zoom anzeigen und durchläuft, sollte das Zoom Steuerelement dem Benutzer unabhängig von der Position sofort verfügbar sein.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Der Benutzer die Kamera und steuern sie die Bewegung. Sie steuern können.
-* Betrachten Sie billboarding für Text und Menüs-Systeme, die andernfalls Welt gesperrt oder verdeckt wird, wenn ein Benutzer verschoben wurden.
-* Verwenden Sie Tag-along für Inhalte, die folgen dem Benutzer während nach wie vor den Benutzer angezeigt, was vorangestellt ist.
+* Der Benutzer ist die Kamera und steuert die Bewegung. Das können Sie steuern.
+* Ziehen Sie die Abrechnung für Text-und menuingsysteme in Erwägung, die andernfalls in der Welt gesperrt oder verdeckt werden, wenn sich ein Benutzer bewegen würde.
+* Verwenden Sie tagzusammen für Inhalte, die dem Benutzer folgen müssen, während der Benutzer weiterhin sehen kann, was vor ihm steht.
 
 ### <a name="resources"></a>Ressourcen
 
 #### <a name="documentation"></a>Dokumentation
 
-* [Entwerfen für](hologram.md)
-* [Farbe, Material und Licht](color,-light-and-materials.md)
+* [Interaktions Entwurf](hologram.md)
+* [Farbe, Licht und Material](color,-light-and-materials.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
-* [Self-motion und Benutzer Locomotion](comfort.md#self-motion-and-user-locomotion)
+* [Selbst Bewegung und Benutzer Bewegung](comfort.md#self-motion-and-user-locomotion)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
 * [MR-Eingabe 210: Anvisieren](holograms-210.md)
 
-## <a name="input-interaction-clarity"></a>Eingabe Interaktion Klarheit
+## <a name="input-interaction-clarity"></a>Klarheit der Eingabe Interaktion
 
-Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und umfassen Eingabe Konsistenz, Zugänglichkeit, Auffindbarkeit der Interaction-Methode. Benutzer sollten plattformweiten allgemeine Aktivitäten ohne erlernen verwenden können. Wenn die app benutzerdefinierte Eingabe hat, muss klar kommuniziert und veranschaulicht werden.
+Die Übersichtlichkeit der Eingabe Interaktion ist wichtig für die Benutzerfreundlichkeit einer APP und umfasst Eingabe Konsistenz, genehmigende Zulässigkeit, Auffindbarkeit von Interaktions Methoden. Der Benutzer sollte in der Lage sein, plattformweite allgemeine Interaktionen ohne Relearning zu verwenden. Wenn die APP benutzerdefinierte Eingaben hat, sollte Sie eindeutig kommuniziert und demonstriert werden.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -504,7 +504,7 @@ Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und 
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -516,36 +516,36 @@ Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und 
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Eingabe Interaction-Methode sind konsistent mit den Windows Mixed Reality bereitgestellten [Anleitungen](interaction-fundamentals.md). Eine benutzerdefinierte Eingabe muss sollte nicht in Hinblick auf die Standardeingabe (stattdessen Verwendung standard Interaktion) werden deutlich kommuniziert und gezeigt, um den Benutzer. | Ähnlich wie bei der bewährten, aber benutzerdefinierte Eingaben, die mit standardmäßigen Eingabemethoden redundant sind. Benutzer kann weiterhin die Ziel und den Fortschritt über die app-Funktionalität erreichen. | Schwierig, input Methode oder eine Schaltfläche-Zuordnung zu verstehen. Eingabe stark angepasst wird, unterstützt nicht die Standardeingabe, keine Anweisungen oder Fatigue und Komfort Probleme verursachen. | 
+|  Eingabe Interaktions Methoden sind mit der von Windows Mixed Reality bereitgestellten [Anleitung](interaction-fundamentals.md)konsistent. Jede benutzerdefinierte Eingabe sollte nicht mit Standard Eingaben redundant sein (sondern eher die Standard Interaktion verwenden), und Sie muss für den Benutzer eindeutig kommuniziert und demonstriert werden. | Ähnlich wie die beste, aber benutzerdefinierte Eingaben sind bei Standardeingabe Methoden redundant. Der Benutzer kann das Ziel und den Fortschritt auch über die App-Benutzer Leistung erreichen. | Das Verständnis der Eingabemethode oder der Schaltflächen Zuordnung ist schwierig. Die Eingabe ist stark angepasst, bietet keine Unterstützung für Standard Eingaben, keine Anweisungen, oder es werden wahrscheinlich Ermüdungs-und komfortprobleme verursacht. | 
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Die app verwendet einheitliche [Standard Eingabe Methoden.](interaction-fundamentals.md)
-* Wenn die app ist Eingabe hat, wird sie eindeutig über kommuniziert:
-* Eindrucks beim ersten Ausführen
-* Einführende Bildschirme
+* Die APP verwendet konsistente [Standardeingabe Methoden.](interaction-fundamentals.md)
+* Wenn die APP über eine Customer-Eingabe verfügt, wird Sie eindeutig übermittelt:
+* Erstmaligen Testlauf
+* Einführungs Bildschirme
 * QuickInfos
-* Hand-coach
-* Hilfe
+* Hand Coach
+* Hilfe Abschnitt
 * Voice-over
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Verwenden Sie die standard-Eingabe-Methoden nach Möglichkeit.
-* Geben Sie Demos, Lernprogramme und QuickInfos für nicht standardmäßige Eingabemethoden an.
-* Verwenden Sie eine konsistente Interaktionsmodell in der gesamten app.
+* Verwenden Sie nach Möglichkeit immer Standardeingabe Methoden.
+* Stellen Sie Demonstrationen, Tutorials und Quick Infos für nicht standardmäßige Eingabemethoden bereit.
+* Verwenden Sie in der gesamten App ein konsistentes Interaktionsmodell.
 
 ### <a name="resources"></a>Ressourcen
 
 #### <a name="documentation"></a>Dokumentation
 
 * [Instinktive Interaktionen](interaction-fundamentals.md)
-* [Es Objekte](interactable-object.md)
+* [Interactable-Objekte](interactable-object.md)
 * [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 * [Cursor](cursors.md)
-* [Komfort und Blicke](comfort.md#gaze-direction)
+* [Komfort und Blick](comfort.md#gaze-direction)
 * [Gesten](gestures.md)
 * [Spracheingabe](voice-input.md)
 * [Sprachbefehle](voice-design.md)
@@ -560,21 +560,21 @@ Eingabe Interaktion Klarheit ist wichtig, zu der app-benutzerfreundlichkeit und 
 * [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [Fallstudie: Das Streben nach persönlichere Datenverarbeitung](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [CAST-Studie: Entwerfen von HoloStudio UI und Interaktion Erkenntnisse](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-* [Beispiel-app: Periodisch-Tabelle der Elemente](periodic-table-of-the-elements.md)
-* [Beispiel-app: Mondkalender-Modul](lunar-module.md)
+* [Fallstudie: Die Verfolgung von mehr persönlichen Computing](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [Umwandlungs Studie: Entwicklungs-und Interaktions Entwurfs Lernelemente von holostudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [Beispiel-App: Periodische Tabelle der Elemente](periodic-table-of-the-elements.md)
+* [Beispiel-App: Lunar-Modul](lunar-module.md)
 * [MR-Eingabe 210: Anvisieren](holograms-210.md)
-* [MR-Eingabe 211: Gesten](holograms-211.md)
+* [MR-Eingabe 211: Strei](holograms-211.md)
 * [MR-Eingabe 212: Sprache](holograms-212.md)
 
-## <a name="interactable-objects"></a>Es Objekte
+## <a name="interactable-objects"></a>Interactable-Objekte
 
-Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereignisses in der Welt für 2D abstrakt. In der dreidimensionalen mixed Reality-Welt müssen wir auf dieser Welt mehr Abstraktionsebenen beschränkt werden. Alles kann ein es Objekt sein, die ein Ereignis auslöst. Ein Objekt es kann als etwas von einer Tasse Kaffee für die Tabelle, eine Gleitkommazahl in der Luft Sprechblase dargestellt werden. Unabhängig von der Art sollte es Objekte vom Benutzer über SEH- und Hinweise klar erkennbar sein.
+Eine Schaltfläche ist lange eine Metapher, die zum Auslösen eines Ereignisses in der 2D-abstrakten Welt verwendet wird. In der dreidimensionalen Mixed Reality-Welt müssen wir nicht mehr auf diese Abstraktions Welt beschränkt werden. Dabei kann es sich um ein Objekt handeln, das ein Objekt ist, das ein Ereignis auslöst. Ein Objekt, das sich in der Tabelle befindet, kann als beliebiger von einem Kaffeebecher in der Tabelle dargestellt werden. Unabhängig vom Formular sollte der Benutzer durch visuelle und Audiohinweise eindeutig erkennbar sein.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -584,7 +584,7 @@ Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereigni
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -596,21 +596,21 @@ Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereigni
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Unabhängig von der Form, es Objekte sind über SEH- und Hinweise erkennbaren über drei Zustände: im Leerlauf, Ziel und ausgewählt. "Es noch einmal finden Sie unter" ist klarer und konsistent über die Umgebung verwendet. Objekte werden skaliert und verteilt, um für fehlerfrei zu ermöglichen. | Benutzer können erkennen Objekt als es durch Audio- oder visuelle Feedback, und als Ziel und aktivieren Sie das Objekt. | Wenn kein visual oder audio-Hinweise, kann Benutzer ein Objekt es nicht erkennen. Interaktionen sind Fehler aufgrund von Objekt skalieren oder den Abstand zwischen den Objekten entstehen. | 
+|  Unabhängig von der Form sind Interaktionen-Objekte durch visuelle und Audiohinweise in drei Zuständen erkennbar: im Leerlauf, gezielt und ausgewählt. "Wie Sie sehen, ist es klar und in der gesamten gesamten Darstellung verwendet. Objekte werden skaliert und verteilt, um eine fehlerfreie Zielversion zu ermöglichen. | Der Benutzer kann das Objekt als Interaktionen durch Audiomaterial oder visuelles Feedback erkennen und das Objekt auf das Objekt ausrichten und aktivieren. | Wenn keine visuellen oder Audiohinweise angezeigt werden, kann der Benutzer ein Objekt mit Interaktionen nicht erkennen. Interaktionen sind aufgrund der Objekt Skala oder der Entfernung zwischen Objekten fehleranfällig. | 
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Es stehen nebenbei gesagt, immer "es"; bestimmte Schaltflächen, Menüs und app-Inhalte, einschließlich. Als Faustregel dürfte eine Orientierungshilfe SEH- und wenn es Objekte.
+* Interactable-Objekte sind als "interactable" erkennbar. einschließen von Schaltflächen, Menüs und App-spezifischem Inhalt. Als Faustregel gilt, dass ein visueller und audiohinweis vorhanden sein sollte, wenn Sie auf Objekte mit Interaktionen abzielen.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Verwenden Sie SEH- und Feedback für Interaktionen.
-* Visuelles Feedback sollte unterschieden werden, für jede Zustand (im Leerlauf, gezielte, ausgewählte)
-* Es Objekte skaliert, und für die Zielgruppenadressierung fehlerfrei platziert.
-* Gruppierte es Objekte (z. B. eine Menüleiste oder Liste) sollte die richtigen Abstand für die Zielplattform verfügen.
-* Schaltflächen und Menüs, die Stimme-Befehl unterstützen sollten die Beschriftungen bereitstellen, für das Befehl-Schlüsselwort ("angezeigt, das so sagen")
+* Verwenden Sie visuelles und Audiofeedback für Interaktionen.
+* Visuelles Feedback sollte für jeden Eingabe Status unterschieden werden (im Leerlauf, gezielt, ausgewählt).
+* Interactable-Objekte sollten skaliert und für fehlerfreie Zielgruppen vorgesehen werden.
+* Gruppierte Interaktionen-Objekte (z. b. eine Menüleiste oder Liste) sollten über den richtigen Abstand zum Ziel verfügen.
+* Schaltflächen und Menüs, die den Voice-Befehl unterstützen, sollten Text Bezeichnungen für das Befehls Schlüsselwort bereitstellen ("siehe IT, sagen Sie")
 
 ### <a name="resources"></a>Ressourcen
 
@@ -621,15 +621,15 @@ Eine Schaltfläche war lange Zeit eine Metapher, die zum Auslösen eines Ereigni
 * [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
 * [Sprachbefehle](voice-design.md)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [Mixed Reality-Toolkit - UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
+* [Mixed Reality Toolkit-UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
 
-## <a name="room-scanning"></a>Raum Scannen
+## <a name="room-scanning"></a>Raum Überprüfung
 
-Apps, die räumliche Zuordnungsdaten erfordern basieren auf dem Gerät, um diese Daten im Laufe der Zeit automatisch zu erfassen und untersucht alle Sitzungen als Benutzer ihrer Umgebung mit dem Gerät aktiv. Der Vollständigkeit und die Qualität der Daten hängt von einer Reihe von Faktoren wie der Menge der, die der Benutzer ausgeführt hat, wie viel Zeit verstrichen ist, da die Auswertung und gibt an, ob die Objekte, z. B. Möbel und Türen verschoben haben, da das Gerät über den Bereich überprüft. Viele apps werden analysiert, die räumliche Zuordnungsdaten zu Beginn der Umgebung zu beurteilen, ob der Benutzer zusätzliche Schritte zur Verbesserung der Vollständigkeit und die Qualität der räumliche Zuordnung ausführen soll. Wenn der Benutzer erforderlich ist, um die Überprüfung der Umgebung, klar, dass während der Überprüfung Oberfläche Anleitungen bereitgestellt werden sollen.
+Apps, die räumliche Daten für die Zuordnung benötigen, benötigen das Gerät, um diese Daten automatisch über einen Zeitraum und Sitzungs übergreifend zu erfassen, da der Benutzer seine Umgebung mit dem aktiven Gerät untersucht. Die Vollständigkeit und Qualität dieser Daten hängt von einer Reihe von Faktoren ab, z. b. vom Umfang der durchgeführten Untersuchung, von der seit der Durchsuchung übergebenen Zeit und davon, ob Objekte wie z. b. Möbel und Türen verschoben wurden, seit das Gerät den Bereich überprüft hat. Viele apps analysieren die räumlichen Zuordnungs Daten zu Beginn der Benutzer Darstellung, um zu beurteilen, ob der Benutzer zusätzliche Schritte ausführen muss, um die Vollständigkeit und Qualität der räumlichen Karte zu verbessern. Wenn der Benutzer die Umgebung scannen muss, sollten Sie während der Überprüfung eine klare Anleitung bereitstellen.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -639,7 +639,7 @@ Apps, die räumliche Zuordnungsdaten erfordern basieren auf dem Gerät, um diese
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -651,40 +651,40 @@ Apps, die räumliche Zuordnungsdaten erfordern basieren auf dem Gerät, um diese
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Visualisierung der räumlichen Mesh erkennen Sie, dass Benutzer, die Überprüfung ausgeführt werden. Benutzer werden eindeutig weiß, was zu tun ist und wenn die Überprüfung wird gestartet und angehalten wird. | Visualisierung der räumlichen Mesh angegeben ist, ist aber der Benutzer wissen möglicherweise nicht klar, was zu tun ist und keine Statusinformationen. | Keine Visualisierung des Mesh. Keine Informationen bereitgestellt, um dem Benutzer, wo Sie suchen, oder wenn die Überprüfung startet/beendet wird. |
+|  Die Visualisierung des räumlichen Netzes weist auf die Überprüfung von Benutzern hin. Der Benutzer weiß eindeutig, was zu tun ist und wann die Überprüfung gestartet und beendet wird. | Die Visualisierung des räumlichen Netzes wird bereitgestellt, aber der Benutzer weiß möglicherweise nicht, was zu tun ist, und es werden keine Fortschrittsinformationen bereitgestellt. | Keine Visualisierung von Mesh. Für den Benutzer werden keine Leitfäden bezüglich des abzurufenden oder zum Starten/Beenden der Überprüfung bereitgestellt. |
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* SEH- und bei der Überprüfung erforderlichen Platz bietet es Anleitungen, der angibt, wo gesucht werden soll, und wann starten und beenden zu scannen.
+* Während eines erforderlichen Raum Scans werden visuelle und audioanleitungen bereitgestellt, die angeben, wo gesucht werden soll und wann das Scannen gestartet und beendet werden soll.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Geben Sie an, welcher Anteil der Gesamtgröße des Datenträgers in der Nähe der Benutzer muss in der Umgebung sein.
-* Wenn die Überprüfung wird gestartet und beendet werden, z. B. eine Statusanzeige zu kommunizieren.
-* Verwenden Sie eine Visualisierung des Netzes während der Überprüfung.
-* Geben Sie SEH- und Hinweise, um den Benutzern suchen, und bewegen den Raum empfehlen.
-* Informieren Sie den Benutzer, wohin Sie wechseln, um die Daten zu verbessern. In vielen Fällen ist es möglicherweise am besten, die dem Benutzer mitzuteilen, was sie (z. B. die Obergrenze suchen hinter Möbel ansehen), um die Überprüfung der erforderlichen Qualität zu erhalten.
+* Geben Sie an, wie viel des gesamten Volumes in der Benutzerumgebung in der Umgebung enthalten sein muss.
+* Kommunizieren, wenn die Überprüfung gestartet und beendet wird, z. b. eine Statusanzeige.
+* Verwenden Sie während des Scanvorgangs eine Visualisierung des Netzes.
+* Stellen Sie visuelle und Audiohinweise bereit, um den Benutzer zu unterstützen, um den Raum zu sehen und zu verschieben.
+* Informieren Sie den Benutzer, wohin Sie die Daten verbessern möchten. In vielen Fällen kann es am besten sein, den Benutzern mitzuteilen, was Sie tun müssen (z. b. die Obergrenze, das Aussehen hinter den Möbeln), um die erforderliche Scanqualität zu erhalten.
 
 ### <a name="resources"></a>Ressourcen
 
 #### <a name="documentation"></a>Dokumentation
 
 * [Raumabtastvisualisierung](room-scan-visualization.md)
-* [Fallstudie: Erweitern die räumlichen Funktionen für die Zuordnung von HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Fallstudie: Räumliche Entwurf für HoloTour](case-study-spatial-sound-design-for-holotour.md)
-* [Fallstudie: Erstellen ein Eintauchen in Fragmenten](case-study-creating-an-immersive-experience-in-fragments.md)
+* [Fallstudie: Erweitern der räumlichen Mapping-Funktionen von hololens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Fallstudie: Räumlicher Sound Entwurf für holotour](case-study-spatial-sound-design-for-holotour.md)
+* [Fallstudie: Erstellen eines immersiven Erlebnisses in Fragmenten](case-study-creating-an-immersive-experience-in-fragments.md)
 
-#### <a name="tools-and-tutorials"></a>Tools und tutorials
+#### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [Mixed Reality-Toolkit - UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
+* [Mixed Reality Toolkit-UX](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
 
 ## <a name="directional-indicators"></a>Direktionale Indikatoren
 
-In einer mixed Reality-app Inhalt möglicherweise außerhalb der Sichtfeld oder von realen Objekten okkludiert. Eine wohlgeformte-app wird für den Benutzer nicht sichtbaren Inhalt erleichtern. Direktionale Indikatoren warnen ein Benutzers auf wichtige Inhalte und bieten eine Anleitung, um den Inhalt relativ zur Position des Benutzers. Anleitungen, die nicht sichtbaren Inhalt kann es sich um die Form der sound korrekturemitter ab, mithilfe von Richtungspfeilen oder direkte visuelle Hinweise haben.
+In einer Mixed Reality-App kann es sein, dass sich Inhalte außerhalb des Felds befinden oder durch reale Objekte verdeckt werden. Eine gut entworfene App vereinfacht das Auffinden nicht sichtbarer Inhalte durch den Benutzer. Direktionale Indikatoren warnen einen Benutzer für wichtige Inhalte und bieten Anleitungen für den Inhalt in Bezug auf die Position des Benutzers an. Anleitungen für nicht sichtbare Inhalte können als audioemitter, direktionale Pfeile oder direkte visuelle Hinweise genutzt werden.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -694,7 +694,7 @@ In einer mixed Reality-app Inhalt möglicherweise außerhalb der Sichtfeld oder 
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -706,18 +706,18 @@ In einer mixed Reality-app Inhalt möglicherweise außerhalb der Sichtfeld oder 
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  SEH- und Hinweise führen den Benutzer direkt zu den relevanten Inhalten außerhalb Blickfeld. | Ein Pfeil, oder einige Indikator, der der Benutzer in die allgemeine Richtung an, der den Inhalt verweist. | Relevante Inhalte außerhalb der Sichtfeld, und eine schlechte oder kein Speicherort enthält Anweisungen für den Benutzer. | 
+|  Visuelle und Audiohinweise leiten den Benutzer direkt an relevante Inhalte außerhalb des Felds der Ansicht. | Ein Pfeil oder ein Indikator, der den Benutzer in der allgemeinen Richtung des Inhalts zeigt. | Relevante Inhalte sind nicht in der Ansicht enthalten, und dem Benutzer wird ein schlechter oder kein Orts Leit Faden bereitgestellt. | 
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Relevante Inhalte außerhalb der Sicht des Benutzers ist visual und/oder Hinweise ermittelt.
+* Relevante Inhalte außerhalb des Benutzer Felds können durch visuelle und/oder Audiohinweise erkannt werden.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Verwenden Sie, wenn außerhalb des Benutzers Sichtfeld relevanten Inhalt ist ein direktionaler Indikatoren und Audiohinweise an den Benutzer auf den Inhalt. In vielen Fällen wird eine direkte visuelle Anleitung über Richtungspfeile bevorzugt.
-* Direktionale Indikatoren sollten in den Cursor nicht erstellt werden.
+* Wenn relevante Inhalte außerhalb des Benutzer Felds liegen, verwenden Sie richtungsindikatoren und Audiohinweise, um den Benutzer zum Inhalt zu leiten. In vielen Fällen wird ein direkter visueller Leitfaden als direktionale Pfeile bevorzugt.
+* Direktionale Indikatoren sollten nicht in den Cursor integriert werden.
 
 ### <a name="resources"></a>Ressourcen
 
@@ -725,9 +725,9 @@ In einer mixed Reality-app Inhalt möglicherweise außerhalb der Sichtfeld oder 
 
 ## <a name="data-loading"></a>Laden von Daten
 
-Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird. Dies kann bedeuten, dass der Benutzer mit der app interagieren nicht möglich, wenn die Statusanzeige angezeigt wird und auch angeben kann, wie lange die Wartezeit möglicherweise.
+Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird. Dies kann bedeuten, dass der Benutzer nicht mit der APP interagieren kann, wenn die Statusanzeige sichtbar ist, und auch angeben kann, wie lange die Wartezeit dauern kann.
 
-### <a name="device-impact"></a>Auswirkungen des Geräts
+### <a name="device-impact"></a>Geräte Auswirkung
 
 <table>
     <colgroup>
@@ -737,7 +737,7 @@ Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mi
     </colgroup>
     <tr>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
         <td></td>
     </tr>
      <tr>
@@ -749,17 +749,17 @@ Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mi
 
 ### <a name="quality-criteria"></a>Qualitätskriterien
 
-|  Am besten  |  Erfüllt |  Fehler |
+|  Best  |  Findet |  UN |
 --- | --- | ---
-|  Animierte visueller Indikator in Form einer Statusanzeige oder Ring, das Aufzeigen von Fortschritten bei der keine Daten laden oder zu verarbeiten. Der visuelle Indikator enthält Anleitungen, wie lange die Wartezeit werden konnte. | Benutzer wird darüber informiert, dass das Laden von Daten ausgeführt wird, aber es gibt keinen Hinweis dafür, wie lange die Wartezeit sein kann. | Kein Laden von Daten oder die Prozess-Indikatoren für die Aufgabe, die länger als 5 Sekunden dauert. |
+|  Animierter visueller Indikator in Form einer Statusanzeige oder eines Rings, der den Fortschritt beim Laden oder Verarbeiten von Daten anzeigt. Der visuelle Indikator gibt eine Anleitung dazu, wie lange der Warte Vorgang sein könnte. | Der Benutzer wird darüber informiert, dass das Laden von Daten ausgeführt wird. es gibt jedoch keinen Hinweis darauf, wie lange der Warte Vorgang sein könnte. | Das Laden von Daten oder das Verarbeiten von Indikatoren für den Task dauert länger als 5 Sekunden. |
 
-### <a name="how-to-measure"></a>Gewusst wie: messen
+### <a name="how-to-measure"></a>So messen Sie
 
-* Stellen Sie sicher, dass es mehr als 5 Sekunden ist kein leerer Zustand, beim Laden der Daten.
+* Vergewissern Sie sich beim Laden von Daten, dass es für mehr als 5 Sekunden keinen leeren Zustand gibt.
 
 ### <a name="recommendations"></a>Empfehlungen
 
-* Geben Sie eine Data Loading Animator-aufzeigen von Fortschritten in allen Fällen, wenn der Benutzer diese app abgestürzt ist oder die Beantwortung wahrnehmen könnten. Eine gute Faustregel ist, alle "laden"-Aktivität, die mehr als 5 Sekunden dauern.
+* Stellen Sie eine Animation zum Laden von Daten bereit, die den Fortschritt in jeder Situation anzeigt, in der der Benutzer diese APP möglicherweise als angehalten oder abstürzt Eine vernünftige Faustregel ist jede "Lade Aktivität", die mehr als 5 Sekunden in Anspruch nehmen kann.
 
 ### <a name="resources"></a>Ressourcen
 

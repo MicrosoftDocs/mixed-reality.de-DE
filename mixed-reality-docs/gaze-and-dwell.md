@@ -5,14 +5,13 @@ author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Verweilen, Interaktion, Entwurf
-ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
-ms.translationtype: HT
+ms.openlocfilehash: d522ca3a6f36995959e8e6e87482279d05bf0aa3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516005"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387539"
 ---
 # <a name="head-gaze-and-dwell"></a>Anvisieren mit dem Kopf und Verweilen
 
@@ -90,7 +89,8 @@ Verwenden Sie eine kurze Verzögerung, bevor Sie mit dem visuellen Feedback begi
 ## <a name="ui-patterns"></a>Muster der Benutzeroberfläche
 
 ### <a name="high-frequency-buttons"></a>Schaltflächen mit häufiger Interaktion
-![Schaltfläche „Weiter“ der Microsoft Dynamics 365-Handbücher](images/GuideNextButton.png "Schaltfläche „Weiter“ der Microsoft Dynamics 365-Handbücher") Schaltflächen mit häufiger Interaktion sind Schaltflächen, die in einer Anwendung häufig verwendet werden. Ein gutes Beispiel hierfür sind die Schaltflächen „Weiter“ und „Zurück“ in Microsoft Dynamics 365-Handbüchern.
+![Schaltfläche "Microsoft Dynamics 365 Guides Next] " (images/GuideNextButton.png "Schaltfläche \"Microsoft Dynamics 365 Guides Next") "<br>
+*Schaltflächen mit hoher Frequenz sind Schaltflächen, die in der Regel in einer Anwendung verwendet werden. Ein gutes Beispiel hierfür sind die Schaltflächen "weiter" und "zurück" in Microsoft Dynamics 365 Guides.*
 
 Merkmale von Schaltflächen mit häufiger Interaktion:
 * Es sollte sich um größere Schaltflächen handeln, die beim Anvisieren mit dem Kopf leichter zu treffen sind.
@@ -114,7 +114,8 @@ Wenn eine Aktion erhebliche Auswirkungen hat, wie das Aufladen von Geld, das Lö
 Umschalter erfordern eine differenzierte Logik, um ordnungsgemäß zu funktionieren. Wenn eine Person auf einem Umschalter verweilt und ihn aktiviert, muss sie die Schaltfläche verlassen und dann zurückkehren, um die Verweillogik neu zu starten. Es ist wichtig, dass die umschaltbaren Schaltflächen einen eindeutigen aktiven und inaktiven Zustand aufweisen. 
 
 ### <a name="list-views"></a>Listenansichten
-![Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher](images/GuidesListView.png "Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher") Listenansichten stellen eine besondere Herausforderung für die Eingabe durch „Anvisieren mit dem Kopf und Verweilen“ dar. Benutzer müssen in der Lage sein, den Inhalt zu scannen, ohne das Gefühl zu haben, dass sie sich in der Nähe der Verweilziele besonders vorsichtig bewegen müssen. 
+![Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher](images/GuidesListView.png "Bestätigungsdialogfeld für Microsoft Dynamics 365-Handbücher")<br>
+*Listenansichten stellen eine besondere Herausforderung für Kopf-und eingabeeingaben dar. Personen müssen die Inhalte scannen können, ohne dass Sie sich so fühlen müssen, dass Sie die zielziele kippen müssen.*
 
 Einige Tipps zum Entwerfen von Listenansichten:
 * Beim Anvisieren mit dem Kopf die gesamte Zeile hervorheben, aber erst mit dem Verweilen beginnen, wenn das Anvisieren mit dem Kopf ein bestimmtes Verweilziel erreicht hat.
@@ -123,7 +124,7 @@ Einige Tipps zum Entwerfen von Listenansichten:
 * Nicht alle Verweilziele auf einmal anzeigen, um wiederholte Benutzeroberflächenelemente zu vermeiden.
 * Dasselbe Muster so oft wie möglich wiederverwenden, um die Vertrautheit mit der Benutzerumgebung herzustellen.
  
- ## <a name="see-also"></a>Weitere Informationen
+ ## <a name="see-also"></a>Siehe auch
 * [Direkte Manipulation mit den Händen](direct-manipulation.md)
 * [Zeigen und Ausführen mit den Händen](point-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)

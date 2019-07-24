@@ -1,61 +1,61 @@
 ---
-title: Räumliche Sound in Unity
-description: Räumliche Sound wiedergeben, die stammt von einem bestimmten 3D Punkt innerhalb der Unity-Szene.
+title: Räumlicher Sound in Unity
+description: Wiedergabe von räumlichem Sound, der von einem bestimmten 3D-Punkt in der Unity-Szene stammt.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, räumliche Sound, HRTF, Größe
+keywords: Unity, räumlicher Ton, HRTF, Raum Größe
 ms.openlocfilehash: e2b321d7086314a14a940d57aa17e67636c758b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593232"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63549083"
 ---
-# <a name="spatial-sound-in-unity"></a>Räumliche Sound in Unity
+# <a name="spatial-sound-in-unity"></a>Räumlicher Sound in Unity
 
-Dieses Thema beschreibt, wie Sie räumliche Sound in Ihre Unity-Projekte zu verwenden. Hierin sind die erforderlichen-Plug-in-Dateien als auch die Unity-Komponenten und die Eigenschaften, die räumliche Sound zu aktivieren.
+In diesem Thema wird beschrieben, wie räumlicher Sound in ihren Unity-Projekten verwendet wird. Dabei werden die erforderlichen Plug-in-Dateien sowie die Unity-Komponenten und-Eigenschaften behandelt, die räumliche Sounds ermöglichen.
 
-## <a name="enabling-spatial-sound-in-unity"></a>Aktivieren von räumlichen Sound in Unity
+## <a name="enabling-spatial-sound-in-unity"></a>Aktivieren von räumlichem Sound in Unity
 
-Räumliche Sound, in Unity ist eine audio Spatializer Plug-in aktiviert. Die Plug-in-Dateien werden direkt in Unity gebündelt, also aktivieren räumliche Sound so einfach wie das möchte **Bearbeiten > Projekteinstellungen > Audio** und Ändern der **Spatializer-Plug-Ins** im Inspektor auf den  **MS HRTF Spatializer**. Da der Microsoft-Spatializer nur 48000 Hz derzeit unterstützt, sollten Sie auch Ihr System Samplingrate festlegen, um 48000, um Fehler HRTF, in dem seltenen Fall zu verhindern, dass Ihr Systemgerät nicht bereits auf 48000 festgelegt ist:
+Räumlicher Sound wird in Unity mithilfe eines audiospatializer-Plug-ins aktiviert. Die Plug-in-Dateien werden direkt in Unity gebündelt, sodass das Aktivieren von räumlichem Sound so einfach ist wie das **Bearbeiten > Projekteinstellungen > Audio** und das Ändern des **spatializer-Plug** -ins im Inspektor in den " **MS HRTF spatializer**". Da Microsoft spatializer derzeit nur 48000Hz unterstützt, sollten Sie die System Stichproben Rate auch auf 48000 festlegen, um einen HRTF-Fehler zu vermeiden, wenn das System Ausgabegerät nicht bereits auf 48000 festgelegt ist:
 
-![Inspektor für AudioManager](images/audio-250px.png)<br>
-*Inspektor für AudioManager*
+![Inspektor für Audiomanager](images/audio-250px.png)<br>
+*Inspektor für Audiomanager*
 
-Ihr Unity-Projekt ist jetzt konfiguriert, um räumliche Sound zu verwenden.
+Ihr Unity-Projekt ist nun so konfiguriert, dass räumliche Töne verwendet werden.
 
 >[!NOTE]
->Wenn Sie ein Windows 10-PCs für die Entwicklung nicht verwenden, wird nicht räumlich Sound im Editor noch auf dem Gerät erhalten Sie (selbst wenn Sie das Windows 10-SDK verwenden).
+>Wenn Sie keinen Windows 10-PC für die Entwicklung verwenden, erhalten Sie keinen räumlichen Ton im Editor und nicht auf dem Gerät (auch wenn Sie das Windows 10 SDK verwenden).
 
-## <a name="using-spatial-sound-in-unity"></a>Verwenden von räumlichen Sound in Unity
+## <a name="using-spatial-sound-in-unity"></a>Verwenden von räumlichem Sound in Unity
 
-Räumliche Sound wird in Ihrem Unity-Projekt verwendet, durch Anpassen der drei Einstellungen für die Audio Source-Komponenten. Die folgenden Schritte aus, werden Ihre Audio Source-Komponenten für räumliche Sound konfiguriert.
-* In der **Hierarchie** wählen das spielobjekt, die eine angefügte **Audio Source**.
-* In der **Inspektor** Bereich unter der **Audio Source** Komponente
-    * Überprüfen Sie die **Spatialize** Option.
-    * Legen Sie **räumliche Blend** zu **3D** (numerischen Wert 1).
-    * Erweitern Sie für optimale Ergebnisse **3D Sound Einstellungen** und legen Sie **Volume Rolloff** zu **benutzerdefinierte Rolloff**.
+Räumlicher Sound wird in Ihrem Unity-Projekt verwendet, indem drei Einstellungen in den audioquellkomponenten angepasst werden. Mit den folgenden Schritten werden die audioquellkomponenten für räumliche Audiodaten konfiguriert.
+* Wählen Sie im Bereich **Hierarchie** das Spielobjekt aus, das über eine angefügte **Audioquelle**verfügt.
+* Im **Inspektor** -Panel unter der Komponente **Audioquelle**
+    * Aktivieren Sie die Option **spatialize** .
+    * Legen Sie **räumliche Blend** auf **3D** (numerischer Wert 1) fest.
+    * Um optimale Ergebnisse zu erzielen, erweitern Sie **3D Sound Settings** , und legen Sie **volumerrolloff** auf **benutzerdefiniertes Rolloff**fest
 
-![Inspector-Bereich, in die Audio-Quelle mit Unity](images/audiosource.png)<br>
-*Inspector-Bereich, in die Audio-Quelle mit Unity*
+![Inspektor-Panel in Unity, das die Audioquelle anzeigt](images/audiosource.png)<br>
+*Inspektor-Panel in Unity, das die Audioquelle anzeigt*
 
-Ihre Sounds werden jetzt innerhalb der Umgebung des Projekts realistisch betrachtet sind!
+Ihre Sounds sind nun realistisch in der Umgebung des Projekts vorhanden!
 
-Es wird dringend empfohlen, dass Sie sich mit vertraut der [räumlich Sound-Entwurfsrichtlinien](spatial-sound-design.md). Diese Richtlinien unterstützen, Ihre Audio-nahtlos in Ihr Projekt integrieren und weiteren Benutzern in der Umgebung tauchen, die Sie erstellt haben.
+Es wird dringend empfohlen, sich mit den [räumlichen Entwurfs Richtlinien](spatial-sound-design.md)vertraut zu machen. Diese Richtlinien tragen dazu bei, ihre Audioinhalte nahtlos in Ihr Projekt zu integrieren und Ihre Benutzer in die von Ihnen erstellte Benutzererlebnis zu vertiefen.
 
-## <a name="setting-spatial-sound-settings"></a>Einrichtung von räumlichen Sound
+## <a name="setting-spatial-sound-settings"></a>Festlegen räumlicher Sound Einstellungen
 
-Der Microsoft Spatial Sound-Plug-in bietet einen zusätzlichen Parameter, die auf festlegen werden kann, eine pro-Audio Source-Basis, um zusätzliche Kontrolle über die audio Simulation zu ermöglichen. Dieser Parameter ist die Größe des simulierten Raums.
+Das Microsoft Spatial Sound Plugin bietet einen zusätzlichen Parameter, der pro Audioquelle festgelegt werden kann, um eine zusätzliche Steuerung der Audiosimulation zu ermöglichen. Dieser Parameter ist die Größe des simulierten Raums.
 
-### <a name="room-size"></a>Der Größe
+### <a name="room-size"></a>Raum Größe
 
-Die Größe der Raum, der durch räumliche Sound simuliert werden wird. Die ungefähre Größe der Räume sind. klein (einem Büro auf einem kleinen Konferenzraum), Mittel (einen großen Konferenzraum) "und" large (ein Hörsaal). Sie können auch eine Größe ' None ' zum Simulieren einer outdoor-Umgebung angeben. Die Standardgröße des Raums ist klein.
+Die Größe des Raums, der durch räumlichen Ton simuliert wird. Die ungefähren Größen der Räume sind: klein (ein Büro in einem kleinen Konferenzraum), Mittel (ein großer Konferenzraum) und groß (ein Auditorium). Sie können auch eine Raum Größe von keine angeben, um eine Umgebung im Außenbereich zu simulieren. Die Standard Raum Größe ist klein.
 
 ### <a name="example"></a>Beispiel
 
-Die MixedRealityToolkit für Unity bietet es sich um eine statische Klasse, mit der Einrichtung der räumlich Sound einfach. Diese Klasse finden Sie in der [MixedRealityToolkit\SpatialSound Ordner](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialSound) und von einem Skript in Ihrem Projekt aufgerufen werden kann. Es wird empfohlen, dass Sie diese Parameter für jede Audio Source-Komponente in Ihr Projekt festlegen. Das folgende Beispiel zeigt die mittlere Größe für eine angefügte Audio-Datenquelle auswählen.
+Das mixedrealitytoolkit für Unity stellt eine statische Klasse bereit, die das Festlegen der räumlichen Sound Einstellungen vereinfacht. Diese Klasse befindet sich im [Ordner mixedrealitytoolkit\spatialsound](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialSound) und kann von jedem Skript in Ihrem Projekt aufgerufen werden. Es wird empfohlen, diese Parameter für jede audioquellkomponente im Projekt festzulegen. Das folgende Beispiel zeigt, wie die mittlere Raum Größe für eine angefügte Audioquelle ausgewählt wird.
 
 ```cs
 AudioSource audioSource = gameObject.GetComponent<AudioSource>()
@@ -65,9 +65,9 @@ if (audioSource != null) {
 }
 ```
 
-### <a name="directly-accessing-parameters-from-unity"></a>Direktes Zugreifen auf Parameter von Unity
+### <a name="directly-accessing-parameters-from-unity"></a>Direkter Zugriff auf Parameter aus Unity
 
-Wenn Sie nicht die ausgezeichnete Audio-Tools in der MixedRealityToolkit verwenden möchten, sieht aus wie Sie HRTF-Parameter ändern würde. Sie können kopieren und Einfügen dieser in ein Skript namens *SetHRTF.cs* , die Sie an jedem HRTF AudioSource anfügen möchten. Sie können Parameter, die wichtige zum HRTF zu ändern.
+Wenn Sie die ausgezeichneten Audiotools im mixedrealitytoolkit nicht verwenden möchten, finden Sie hier Informationen zum Ändern von HRTF-Parametern. Sie können diese Datei in ein Skript mit dem Namen *SetHRTF.cs* kopieren bzw. einfügen, das Sie an jede HRTF audiosource anfügen möchten. Damit können Sie die Parameter ändern, die für HRTF wichtig sind.
 
 ```cs
 using UnityEngine;
@@ -93,13 +93,13 @@ using UnityEngine;
        }
    }
 ```
-### <a name="spatial-sound-in-mixed-reality-toolkit"></a>Räumliche Sound in Mixed Reality-Toolkit
-- [HoloToolkit-Examples/SpatialSound/Scenes/UAudioManagerTest.unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/UAudioManagerTest.unity)
+### <a name="spatial-sound-in-mixed-reality-toolkit"></a>Räumlicher Sound im Mixed Reality Toolkit
+- [HoloToolkit-examples/spatialsound/Szenen/uaudiomanagertest. unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/UAudioManagerTest.unity)
 
-Die folgenden Beispiele aus dem Mixed Reality-Toolkit sind allgemeine Audioeffekt-Beispiele, die Möglichkeiten, um Ihre Erfahrungen seine machen, indem Sie mit der Sound zu veranschaulichen.
-- [HoloToolkit-Examples/SpatialSound/Scenes/AudioLoFiTest.unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioLoFiTest.unity)
-- [HoloToolkit-Examples/SpatialSound/Scenes/AudioOcclusionTest.unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioOcclusionTest.unity)
+Die folgenden Beispiele aus dem Mixed Reality Toolkit sind allgemeine Beispiele für Audioeffekte, die veranschaulichen, wie Sie Ihre Erfahrungen mit Sound rekursiv gestalten können.
+- [HoloToolkit-examples/spatialsound/Szenen/audiolometest. unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioLoFiTest.unity)
+- [HoloToolkit-examples/spatialsound/Szenen/audiookoksiontest. unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioOcclusionTest.unity)
 
 ## <a name="see-also"></a>Siehe auch
-* [Räumliche sound](spatial-sound.md)
-* [Räumliche Entwurf](spatial-sound-design.md)
+* [Raumklang](spatial-sound.md)
+* [Raumklangentwurf](spatial-sound-design.md)

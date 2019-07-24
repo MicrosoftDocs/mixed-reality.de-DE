@@ -1,33 +1,33 @@
 ---
-title: Abrufen einer HolographicSpace
-description: Erläutert die HolographicSpace-API, ein Kernkonzept für holographic Rendering und räumliche Eingabe.
+title: Erhalten eines holographicspace
+description: Erläutert die holographicspace-API, ein Kernkonzept für das holografische Rendering und räumliche Eingaben.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, HolographicSpace, "corewindow", räumliche Eingabe, rendering und swap-Kette, holographic Frame, "Update"-Schleife, spielschleife, Verweisrahmen, Locatability, Beispielcode, exemplarische Vorgehensweise
+keywords: Windows Mixed Reality, holographicspace, corewindow, räumliche Eingabe, Rendering, Austausch Kette, Holographic Frame, Update Schleife, Spiel Schleife, Frame der Referenz, loerability, Beispielcode, Exemplarische Vorgehensweise
 ms.openlocfilehash: 828352203b20ec38275796b3f172e7ecc5df3f00
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605084"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525444"
 ---
-# <a name="getting-a-holographicspace"></a>Abrufen einer HolographicSpace
+# <a name="getting-a-holographicspace"></a>Erhalten eines holographicspace
 
-Die <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> Klasse ist das Portal in die Welt der holographic. Immersive Rendering steuert, stellt Kameradaten und ermöglicht den Zugriff auf den spatial Argumentation APIs. Erstellen Sie eine für Ihre UWP-app <a href="https://docs.microsoft.com/api/windows.ui.core.corewindow" target="_blank">"corewindow"</a> oder Ihre Win32-app-HWND.
+Die <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">holographicspace</a> -Klasse ist Ihr Portal in der Holographic World. Es steuert das immersive Rendering, stellt Kameradaten bereit und ermöglicht den Zugriff auf APIs für räumliche Argumente. Sie erstellen einen für das <a href="https://docs.microsoft.com/api/windows.ui.core.corewindow" target="_blank">corewindow</a> ihrer UWP-APP oder das HWND ihrer Win32-app.
 
-## <a name="set-up-the-holographic-space"></a>Einrichten des holographic Speicherplatzes
+## <a name="set-up-the-holographic-space"></a>Einrichten des Holographic-Raums
 
-Erstellen des Objekts holographic Speicherplatz ist der erste Schritt bei der Erstellung Ihrer Windows Mixed Reality-app. Herkömmliche Windows-apps, die in einer Direct3D-SwapChain erstellt, die für das Fenster "Core" ihrer Anwendung Ansicht gerendert werden. Dieser SwapChain wird ein Slate-Objekt in der holografischen Benutzeroberfläche angezeigt. Ihre Anwendungsansicht statt 2D Slate holographic können, erstellen Sie ein holographic Speicherplatz für das Fenster "Core" anstatt einer Swapkette erläutert. Darstellen von holographic Frames, die von diesem holographic Bereich erstellt werden, stellt Ihre app in Full-Screen-Rendering-Modus.
+Das Erstellen des Holographic Space-Objekts ist der erste Schritt beim Erstellen der Windows Mixed Reality-app. Herkömmliche Windows-apps werden in einer Direct3D-Swap-Kette gerenttet, die für das Kern Fenster ihrer Anwendungs Ansicht erstellt wurde. Diese austauschkette wird in der Holographic-Benutzeroberfläche als Slate angezeigt. Erstellen Sie einen holografischen Raum für das Kern Fenster anstelle einer Swapkette, um die Anwendungs Ansicht anstelle eines 2D-Slate zu verwenden. Durch das präsentieren von Holographic Frames, die von diesem holografischen Raum erstellt werden, wird Ihre APP in den Vollbild-Rendermodus versetzt.
 
-Für eine **UWP-app** [beginnend mit der *Holographic DirectX 11-App (Universelles Windows) Vorlage*](creating-a-holographic-directx-project.md), suchen Sie nach diesen Code in die **"SetWindow"** die Methode in der AppView.cpp:
+Suchen Sie für eine **UWP-App** , [die mit der *Holographic DirectX 11-app (universelle Windows-Vorlage)* beginnt](creating-a-holographic-directx-project.md), in der **SetWindow** -Methode in appview. cpp nach diesem Code:
 
 ```cpp
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-Für eine **Win32-app** [beginnend mit der *BasicHologram* Win32-Beispiel](creating-a-holographic-directx-project.md#creating-a-win32-project), sehen Sie sich **App::CreateWindowAndHolographicSpace** für ein Beispiel für das Erstellen von einem HWND, und konvertieren Sie sie in eine immersive HWND durch das Erstellen eines zugeordneten <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>:
+Sehen Sie sich für eine **Win32-App** , die mit [dem bsichologram Win32-Beispiel beginnt, den  ](creating-a-holographic-directx-project.md#creating-a-win32-project)Eintrag " **App:: Erstellungs windowandholographicspace** " an, um ein Beispiel dafür zu erhalten, wie ein HWND erstellt und anschließend in ein immersives HWND <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">konvertiert wird Holographicspace</a>:
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 {
@@ -88,90 +88,90 @@ void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 }
 ```
 
-Nun, da Sie eine HolographicSpace für Ihre UWP "corewindow" oder Win32-HWND erhalten haben, verwenden Sie diese HolographicSpace behandeln holographic Kameras, Koordinatensysteme erstellen und holographic rendern. Der aktuelle holographic Speicherplatz wird an mehreren Stellen in der DirectX-Vorlage verwendet:
-* Die **DeviceResources** Klasse benötigt, um Informationen aus dem HolographicSpace-Objekt zu erhalten, um das Direct3D-Gerät zu erstellen. Dies ist die DXGI-Adapter-ID, die die holographic Anzeige zugeordnet. Die <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> Klasse verwendet die Geräte von Ihrer app Direct3D 11 zum Erstellen und Verwalten von gerätebasierten Ressourcen, z. B. die Hintergrundpuffer für jede holographic Kamera. Wenn Sie möchten sehen, was diese Funktion im Hintergrund ist, finden Sie es in "deviceresources.cpp".
-* Die Funktion **DeviceResources::InitializeUsingHolographicSpace** wird veranschaulicht, wie zum Abrufen des Adapters durch Aufrufen der LUID – und so ein Standardadapter ausgewählt, wenn keine bevorzugten Adapters angegeben wird.
-* Die Hauptklasse der Anwendung verwendet die holographic Speicherplatz von **AppView::SetWindow** oder **App::CreateWindowAndHolographicSpace** für Updates und -Rendering.
+Nachdem Sie nun einen holographicspace für das UWP-corewindow oder das Win32-HWND erhalten haben, verwenden Sie diesen holographicspace, um holografische Kameras zu verarbeiten, Koordinatensysteme zu erstellen und Holographic-Rendering durchzuführen. Der aktuelle holografische Raum wird an mehreren Stellen in der DirectX-Vorlage verwendet:
+* Die **deviceresources** -Klasse muss Informationen aus dem holographicspace-Objekt erhalten, um das Direct3D-Gerät zu erstellen. Dies ist die DXGI-Adapter-ID, die der Holographic-Anzeige zugeordnet ist. Die <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">holographicspace</a> -Klasse verwendet das Direct3D 11-Gerät Ihrer APP zum Erstellen und verwalten Geräte basierter Ressourcen, z. b. die Back Puffer für jede holografische Kamera. Wenn Sie wissen möchten, was diese Funktion im Hintergrund vornimmt, finden Sie Sie in deviceresources. cpp.
+* Die Funktion **deviceresources:: initializeusingholographicspace** zeigt, wie Sie den Adapter abrufen, indem Sie die LUID – suchen und einen Standard Adapter auswählen, wenn kein bevorzugter Adapter angegeben wird.
+* Die Hauptklasse der APP verwendet den Holographic-Speicherplatz aus **appview:: SetWindow** oder **App:: kreatewindowandholographicspace** für Updates und Rendering.
 
 >[!NOTE]
->Während in den folgenden Abschnitten ganz zu Funktionsnamen aus der Vorlage schweigen wie **AppView::SetWindow** , die wird davon ausgegangen, dass Sie aus der holografischen UWP-app-Vorlage gestartet, die Codeausschnitte, die Sie sehen, gelten gleichermaßen für UWP und Win32-apps.
+>In den folgenden Abschnitten werden Funktionsnamen aus der Vorlage wie **appview:: SetWindow** erwähnt, die voraussetzen, dass Sie von der Holographic UWP-App-Vorlage aus begonnen haben. die Code Ausschnitte, die Sie sehen, gelten gleichermaßen für UWP-und Win32-apps.
 
-Als Nächstes, wir analysieren dabei das Setup zu verarbeiten, die **SetHolographicSpace** ist verantwortlich für die in der AppMain-Klasse.
+Als nächstes betrachten wir den Setup Prozess, für den **setholographicspace** in der appmain-Klasse verantwortlich ist.
 
-## <a name="subscribe-to-camera-events-create-and-remove-camera-resources"></a>Kameraereignisse abonnieren Sie, erstellen Sie und entfernen Sie die Kamera-Ressourcen
+## <a name="subscribe-to-camera-events-create-and-remove-camera-resources"></a>Kamera Ereignisse abonnieren, Kamera Ressourcen erstellen und entfernen
 
-Den Inhalt Ihrer app holographic befindet sich in der holografischen Speicherplatz und wird über eine oder mehrere holographic Kameras, die verschiedene Perspektiven in der Szene darstellen angezeigt. Nun, da Sie die holographic Speicherplatz verfügen, können Sie Daten für holographic Kameras erhalten.
+Der Holographic-Inhalt Ihrer APP befindet sich in seinem holografischen Raum und wird über eine oder mehrere Holographic-Kameras angezeigt, die verschiedene Perspektiven in der Szene darstellen. Nun, da Sie über den Holographic-Raum verfügen, können Sie Daten für Holographic-Kameras empfangen.
 
-Ihre app muss auf reagieren **CameraAdded** Ereignisse nach Ressourcen zu erstellen, sind spezifisch für, Kamera, wie Ihre Hintergrundpuffer Ansicht des Renderziels. Sehen Sie diesen Code in die **DeviceResources::SetHolographicSpace** Funktion von **AppView::SetWindow** , bevor die app keine holographic Frames erstellt:
+Ihre APP muss auf " **cameraadded** "-Ereignisse reagieren, indem Sie für diese kameraspezifische Ressourcen erstellt, wie z. b. die Ansicht "rückrenderziel". Sie können diesen Code in der **deviceresources:: setholographicspace** -Funktion sehen, die von **appview:: SetWindow** aufgerufen wird, bevor die APP Holographic Frames erstellt:
 
 ```cpp
 m_cameraAddedToken = m_holographicSpace.CameraAdded(
     std::bind(&AppMain::OnCameraAdded, this, _1, _2));
 ```
 
-Ihre app muss außerdem auf reagieren **CameraRemoved** Ereignisse durch die Freigabe von Ressourcen, die für diese Kamera erstellt wurden.
+Ihre APP muss auch auf die **camerareverschoten** Ereignisse reagieren, indem Sie Ressourcen freigibt, die für diese Kamera erstellt wurden.
 
-Von **DeviceResources::SetHolographicSpace**:
+Aus **deviceresources:: CSpace**:
 
 ```cpp
 m_cameraRemovedToken = m_holographicSpace.CameraRemoved(
     std::bind(&AppMain::OnCameraRemoved, this, _1, _2));
 ```
 
-Die Ereignishandler müssen einige Aufgaben ausführen, um holographic reibungslos, fließt Rendering zu halten, damit Ihre app überhaupt rendern kann. Lesen Sie den Code und Kommentare für die Details: sehen Sie für **OnCameraAdded** und **OnCameraRemoved** in Ihrer main-Klasse, zu verstehen wie das **M_cameraResources** Zuordnung ist behandelt, indem **DeviceResources**.
+Die Ereignishandler müssen einige Aufgaben ausführen, um die reibungslose Ausführung des Holographic-Renderings zu gewährleisten, sodass Ihre APP überhaupt gerendert werden kann. Lesen Sie den Code und die Kommentare für die Details: Sie können in ihrer Hauptklasse nach **oncameraadded** und **oncamerareverschoden** Code suchen, um zu verstehen, wie die **m_cameraResources** Map von **deviceresources**verarbeitet wird.
 
-Moment, wir konzentrieren uns AppMain und der Einrichtung, die sie zum Aktivieren Ihrer app holographic Kameras kennen. In diesem Sinn ist es wichtig, sich die beiden folgenden Anforderungen:
+Zurzeit konzentrieren wir uns auf appmain und das Setup, damit Ihre APP über Holographic-Kameras informiert werden kann. Vor diesem Hintergrund ist es wichtig, die folgenden beiden Anforderungen zu berücksichtigen:
 
-1. Für die **CameraAdded** -Ereignishandler die app kann asynchron Arbeit zum Erstellen von Ressourcen, und Laden von Medienobjekten, die für die neue holographic Kamera abgeschlossen. Apps, die mehr als einem Frame zum Abschließen dieser Arbeit annehmen sollte eine Verzögerung anfordern und die Verzögerung abgeschlossen, nachdem asynchron geladen; eine [PPL-Aufgabe](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl) kann verwendet werden, um asynchrone Arbeit zu erledigen. Ihre app muss sicherstellen, dass es kann zu dieser Kamera direkt rendern, wenn den Ereignishandler vorhanden, oder bei Abschluss die Verzögerung. Beenden den Ereignishandler oder Abschluss der Verzögerung weist das System an, dass Ihre app jetzt für holographic Frames mit, Kamera, enthalten den Empfang bereit ist.
+1. Für den Ereignishandler " **cameraadded** " kann die APP asynchron ausgeführt werden, um das Erstellen von Ressourcen und das Laden von Assets für die neue Holographic-Kamera abzuschließen. Apps, die mehr als einen Frame zum Ausführen dieser Arbeit benötigen, sollten eine Verzögerung anfordern und die Verzögerung nach dem asynchronen Laden vervollständigen. eine [ppl-Aufgabe](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl) kann verwendet werden, um asynchrone Aufgaben auszuführen. Ihre APP muss sicherstellen, dass Sie sofort an die Kamera gerehehbt, wenn Sie den Ereignishandler verlässt oder wenn Sie die Verzögerung abschließt. Das Beenden des Ereignis Handlers oder das Abschließen der Verzögerung weist das System darauf hin, dass Ihre APP nun bereit ist, Holographic Frames mit dieser Kamera zu empfangen.
 
-2. Wenn die app empfängt eine **CameraRemoved** Ereignis müssen sie alle Verweise auf die Hintergrundpuffer, und beenden die Funktion rechts sofort freigeben. Dies schließt renderzielansichten und alle anderen Ressourcen, die einen Verweis auf enthalten möglicherweise die [IDXGIResource](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiresource). Die app muss auch sicherstellen, dass der Hintergrundpuffer nicht als ein Renderziel angefügt wird Siehe **CameraResources::ReleaseResourcesForBackBuffer**. Um die Geschwindigkeit von Dingen vorgehen können, kann Ihre app den Hintergrundpuffer freizugeben und starten Sie eine Aufgabe, um asynchron auf beliebige andere Arbeiten ausführen, die erforderlich ist, entfernen Sie diese Kamera. Die holographic app-Vorlage enthält PPL-Aufgabe, die Sie zu diesem Zweck verwenden können.
+2. Wenn die APP ein Ereignis  vom Typ "camerareverschobe" empfängt, muss Sie alle Verweise auf den Hintergrund Puffer freigeben und die Funktion sofort beenden. Dies schließt renderzielsichten und alle anderen Ressourcen ein, die möglicherweise einen Verweis auf die [idxgiresource](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiresource)enthalten. Außerdem muss die APP sicherstellen, dass der Hintergrund Puffer nicht als Renderziel angefügt wird, wie in **cameraresources:: releaseresourcesforbackbuffer**gezeigt. Um die Dinge zu beschleunigen, kann Ihre APP den Hintergrund Puffer freigeben und dann eine Aufgabe starten, um alle anderen Aufgaben, die zum Abfangen dieser Kamera erforderlich sind, asynchron abzuschließen. Die Vorlage für die Holographic-app enthält eine ppl-Aufgabe, die Sie zu diesem Zweck verwenden können.
 
 >[!NOTE]
->Wenn Sie möchten, um zu bestimmen, wenn eine Kamera hinzugefügte oder entfernte des Frames verwenden angezeigt werden die **HolographicFrame** [AddedCameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.addedcameras) und [RemovedCameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.removedcameras) Eigenschaften.
+>Wenn Sie bestimmen möchten, wann eine hinzugefügte oder entfernte Kamera im Frame angezeigt wird, verwenden Sie die Eigenschaften **holographicframe** [addedkameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.addedcameras) und [removedkameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.removedcameras) .
 
-## <a name="create-a-frame-of-reference-for-your-holographic-content"></a>Erstellen Sie einen Bezugsrahmen für Ihre holographic Inhalte
+## <a name="create-a-frame-of-reference-for-your-holographic-content"></a>Erstellen eines Bezugsrahmens für den Holographic-Inhalt
 
-Den Inhalt Ihrer app muss in positioniert werden eine [räumliche Koordinatensystem](coordinate-systems-in-directx.md) in die HolographicSpace gerendert werden soll. Das System bietet zwei primäre Frames als Referenz für die Sie verwenden können, um Koordinatensysteme für Ihre Hologramme herzustellen.
+Der Inhalt Ihrer APP muss in einem [räumlichen Koordinatensystem](coordinate-systems-in-directx.md) positioniert werden, das im holographicspace gerendert werden soll. Das System stellt zwei primäre Frame Frames bereit, mit denen Sie ein Koordinatensystem für Ihre Hologramme einrichten können.
 
-Es gibt zwei Arten von referenzbildern in Windows Holographic: Verweisen auf Frames, die an das Gerät angeschlossen und Referenz-Frames, die feststehend bleiben soll, wenn das Gerät über die Umgebung des Benutzers verschoben. Die holographic app-Vorlage einen Frame stationär Verweis wird standardmäßig verwendet; Dies ist eine der einfachsten Möglichkeiten zum Rendern von Hologramme Welt gesperrt.
+Es gibt zwei Arten von Bezugs Frames in Windows Holographic: Verweis Rahmen, die an das Gerät angeschlossen sind, und Bezugsrahmen, die stationär bleiben, wenn das Gerät die Umgebung des Benutzers durchläuft. In der Holographic-App-Vorlage wird standardmäßig ein stationärer Verweis Rahmen verwendet. Dies ist eine der einfachsten Möglichkeiten zum Rendering von weltweit gesperrten holograms.
 
-Stationär referenzbildern dienen zur Stabilisierung Positionen in der Nähe des Geräts die aktuelle Position. Dies bedeutet, dass Koordinaten das. des Geräts zulässig sind, um etwas in Bezug auf die Umgebung des Benutzers abweichen, wie das Gerät, die Weitere Informationen zu den Platz um es herum lernt. Es gibt zwei Möglichkeiten, erstellen eine feststehende Verweisrahmen: das Koordinatensystem vom Abrufen der [räumliche Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage), oder verwenden Sie die Standardeinstellung <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a>. Bei der Erstellung einer Windows Mixed Reality-app für immersive Headsets, ist der empfohlene Ausgangspunkt der [räumliche Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage), Informationen zu den Funktionen von der durch den Player abgenutzt immersive Kopfhörer bereit. Hier erfahren, wie die Standardeinstellung verwenden <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a>.
+Stationäre Verweis Rahmen sind so konzipiert, dass Positionen in der Nähe des aktuellen Speicher Orts des Geräts stabilisiert werden. Dies bedeutet, dass Koordinaten, die sich weiter vom Gerät unterscheiden, in Bezug auf die Benutzerumgebung geringfügig abweichen dürfen, da das Gerät mehr über den Platz herum erfährt. Es gibt zwei Möglichkeiten, einen stationären Frame des Verweises zu erstellen: das Koordinatensystem aus der [räumlichen Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)abzurufen oder den standardspaticator zu verwenden. <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank"></a> Wenn Sie eine Windows Mixed Reality-App für immersive Headsets erstellen, wird als Ausgangspunkt die [räumliche Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)empfohlen, in der auch Informationen über die Funktionen des immersiven Headsets, das vom Player getragen wird, bereitgestellt werden. Hier wird gezeigt, wie der standardzuordnerstandard verwendet wird. <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank"></a>
 
-Der räumliche Locator stellt das Gerät Windows Mixed Reality und verfolgt die Bewegung des Geräts und stellt die Koordinatensysteme, die relativ zu seinem Speicherort verstanden werden können.
+Der räumliche Serverlocatorpunkt stellt das Windows Mixed Reality-Gerät dar und verfolgt die Bewegung des Geräts und stellt Koordinatensysteme bereit, die relativ zum Speicherort verstanden werden können.
 
-From **AppMain::OnHolographicDisplayIsAvailableChanged**:
+Aus **appmain:: onholographicdisplayisavailablechanged**:
 
 ```cpp
 spatialLocator = SpatialLocator::GetDefault();
 ```
 
-Erstellen Sie den Rahmen eines stationären Zustands Verweis einmal aus, wenn die app gestartet wird. Dies ist vergleichbar mit einem Koordinatensystem der Welt definieren, mit dem Ursprung des Geräts Position platziert werden, wenn die app gestartet wird. Dieser Verweis Frame wird nicht mit dem Gerät verschoben werden.
+Erstellen Sie den stationären Verweis Rahmen einmal, wenn die APP gestartet wird. Dies ist analog zum Definieren eines Weltkoordinaten Systems, wobei der Ursprung an der Position des Geräts platziert wird, wenn die APP gestartet wird. Dieser Referenzrahmen bewegt sich nicht mit dem Gerät.
 
-Von **AppMain::SetHolographicSpace**:
+Aus **appmain:: abbildrfaden**:
 
 ```cpp
 m_stationaryReferenceFrame =
     m_spatialLocator.CreateStationaryFrameOfReferenceAtCurrentLocation();
 ```
 
-Alle referenzbildern sind Schwerkraft ausgerichtet, was bedeutet, dass die y-Achse zeigt, "up", um in Bezug auf die Umgebung des Benutzers. Da Windows "rechtshändige" Koordinatensysteme verwendet wird, stimmt die Richtung der Z-Achse, mit der "forward" Richtung an, die das Gerät mit Internetzugriff wird, wenn der Verweis Frame erstellt wird.
+Alle Verweis Rahmen sind Schwerpunkte, was bedeutet, dass die y-Achse in Bezug auf die Umgebung des Benutzers "up" zeigt. Da Windows "rechtsseitige" Koordinatensysteme verwendet, stimmt die Richtung der – z-Achse mit der Vorwärtsrichtung überein, mit der das Gerät beim Erstellen des Verweis Rahmens konfrontiert wird.
 
 >[!NOTE]
->Wenn Ihre app die präzise Platzierung von einzelnen Hologramme erfordert, verwenden Sie eine <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">SpatialAnchor</a> der einzelnen Hologramm an eine Position in der realen Welt verankert. Verwenden Sie z. B. einen räumlichen Anker auf, wenn der Benutzer gibt an, ein Punkt, besonders interessant sein. Anker Positionen werden nicht abweichen, aber sie angepasst werden können. In der Standardeinstellung, wenn ein Anker angepasst wird, erleichtert es seine Position an Ort über die nächsten mehrere Frames nachdem die Korrektur erfolgt ist. Je nach Anwendung in diesem Fall empfiehlt, behandeln die Anpassung auf andere Weise (z. B. durch Sie verzögern, bis die Hologramm aus der Ansicht ist). Die <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystem" target="_blank">RawCoordinateSystem</a> Eigenschaft und <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystemadjusted" target="_blank">RawCoordinateSystemAdjusted</a> Ereignisse ermöglichen diese Anpassungen.
+>Wenn Ihre APP eine exakte Platzierung einzelner holograms erfordert, verwenden Sie einen <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">spatialanchor</a> , um das einzelne – Hologramm an eine Position in der realen Welt zu verankern. Verwenden Sie z. b. einen räumlichen Anker, wenn der Benutzer einen Punkt angibt, der ein besonderes Interesse sein soll. Anker Positionen werden nicht abweichen, Sie können jedoch angepasst werden. Wenn ein Anker angepasst wird, wird seine Position standardmäßig vor dem Abschluss der Korrektur in die nächsten Frames hineingebracht. Abhängig von Ihrer Anwendung können Sie in diesem Fall die Anpassung auf andere Weise verarbeiten (indem Sie Sie z. b. verzögern, bis das – Hologramm nicht mehr in der Ansicht ist). Die <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystem" target="_blank">rawcoordinatesystem</a> -Eigenschaft und die <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.rawcoordinatesystemadjusted" target="_blank">rawcoordinatesystemadjusted</a> -Ereignisse ermöglichen diese Anpassungen.
 
-## <a name="respond-to-locatability-changed-events"></a>Reagieren Sie auf Ereignisse der Locatability geändert
+## <a name="respond-to-locatability-changed-events"></a>Reagieren auf geänderte Ereignisse bei der Ereignis Änderung
 
-World-locked-Hologramme rendern, muss das Gerät selbst in der ganzen Welt zu finden sein. Dies sind nicht immer unbedingt möglich, da umgebungsbedingungen, und wenn dies der Fall ist, kann der Benutzer einen visuellen Hinweis für die nachverfolgung Unterbrechung erwarten. Dieser visuelle indikatore muss mithilfe des Geräts, anstatt stationär auf der ganzen Welt referenzbildern gerendert werden.
+Das Rendern von Welt gesperrten holograms erfordert, dass das Gerät sich selbst in der Welt finden kann. Dies ist möglicherweise aufgrund von Umgebungsbedingungen nicht immer möglich, und wenn dies der Fall ist, kann der Benutzer einen visuellen Hinweis auf die nach Verfolgungs Unterbrechung erwarten. Diese visuelle Anzeige muss mithilfe von Verweis Frames gerendert werden, die mit dem Gerät verbunden sind, anstatt auf der ganzen Welt.
 
-Ihre app kann anfordern, benachrichtigt werden, wenn die nachverfolgung aus irgendeinem Grund unterbrochen wird. Registrieren Sie für das Ereignis LocatabilityChanged erkennen, wann die Fähigkeit des Geräts auf sich selbst in die Welt Änderungen gesucht werden soll. Von **AppMain::SetHolographicSpace:**
+Ihre APP kann anfordern, dass Sie benachrichtigt werden, wenn die Nachverfolgung aus irgendeinem Grund unterbrochen wird. Registrieren Sie sich für das loaufgeräterchanged-Ereignis, um zu erkennen, wann sich das Gerät in der Welt finden kann. Aus **appmain:: abbildrfaden:**
 
 ```cpp
 m_locatabilityChangedToken = m_spatialLocator.LocatabilityChanged(
     std::bind(&HolographicApp6Main::OnLocatabilityChanged, this, _1, _2));
 ```
 
-Klicken Sie dann verwenden Sie dieses Ereignis, um zu ermitteln, wann Hologramme nicht stationär auf der ganzen Welt gerendert werden können.
+Verwenden Sie dieses Ereignis dann, um zu bestimmen, wann holograms nicht auf der ganzen Welt gerendert werden können.
 
 ## <a name="see-also"></a>Siehe auch
 * [Rendern in DirectX](rendering-in-directx.md)
-* [Koordinatensysteme im DirectX](coordinate-systems-in-directx.md)
+* [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)

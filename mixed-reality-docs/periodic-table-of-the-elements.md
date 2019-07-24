@@ -1,111 +1,111 @@
 ---
-title: Periodisch-Tabelle der Elemente
-description: Periodisch-Tabelle der Elemente ist ein Open-Source-Beispiel-app in den Microsoft gemischte Realität Entwurf Labs, erfahren Sie, wie ein Array von Objekten im 3D-Raum mit verschiedenen Surface-Typen, die mit einer objektauflistung Layout können.
+title: Periodensystem der Elemente
+description: Die periodische Tabelle der Elemente ist eine Open-Source-Beispiel-App aus der Mixed Reality Design Labs von Microsoft, in der Sie erfahren, wie Sie mithilfe einer Objekt Auflistung ein Array von Objekten im 3D-Raum mit verschiedenen Oberflächentypen erstellen können.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, entwerfen, die Beispiel-app, die Steuerelemente
+keywords: Gemischte Windows-Realität, Entwurf, Beispiel-APP, Steuerelemente
 ms.openlocfilehash: ad95d2bcfd1b70d805adcceb36be0c6c29b838f0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59596693"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525349"
 ---
-# <a name="periodic-table-of-the-elements"></a>Periodisch-Tabelle der Elemente
+# <a name="periodic-table-of-the-elements"></a>Periodensystem der Elemente
 
 >[!NOTE]
->Dieser Artikel beschreibt ein Beispiel für eine explorative wir, in erstellt haben der [Mixed Reality Entwurf Labs](https://github.com/Microsoft/MRDesignLabs_Unity), einen Ort, in dem wir der Erkenntnisse zu teilen, und Vorschläge für mixed Reality-app-Entwicklung. Wenn wir neue Erkenntnisse vornehmen weiterentwickelt unser Entwurf bezogenen Artikeln und Code.
+>In diesem Artikel wird ein exploratives Beispiel erläutert, das wir in den [Entwurfs Labors für gemischte Realität](https://github.com/Microsoft/MRDesignLabs_Unity)erstellt haben, einem Ort, an dem wir unsere Erkenntnisse und Vorschläge für die Entwicklung gemischter Reality-apps teilen. Unsere Entwurfs bezogenen Artikel und Code werden sich weiterentwickeln, wenn wir neue Ermittlungen durchführen.
 
-[Periodisch-Tabelle der Elemente](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) ist eine Open-Source Beispielapp von den Microsoft Mixed Reality Entwurf Labs. Bei diesem Projekt erfahren Sie, wie ein Array von Objekten im 3D-Raum mit verschiedenen Oberflächentypen mit Layout ein  **[-objektauflistung](object-collection.md)**. Außerdem erfahren Sie, wie es Objekte erstellen, die auf standardmäßigen Eingaben von HoloLens reagieren. Sie können dieses Projekts Komponenten verwenden, zum Erstellen eines eigenen mixed Reality-app-Erfahrung.
+[Die periodische Tabelle der Elemente](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) ist eine Open-Source-Beispiel-App aus den Mixed Reality-Entwurfs Labs von Microsoft. Mit diesem Projekt können Sie erfahren, wie Sie ein Array von Objekten im 3D-Raum mit verschiedenen Oberflächentypen mithilfe einer **[Objekt](object-collection.md)** Auflistung aufstellen. Außerdem wird beschrieben, wie Sie Objekt übergreifende Objekte erstellen, die auf Standard Eingaben aus hololens reagieren. Sie können die Komponenten dieses Projekts verwenden, um Ihre eigene Benutzeroberflächen Funktion für gemischte Realität zu erstellen.
 
-![Punkt-Tabelle der Elemente-app](images/640px-periodictable-hero.jpg)
+![Period-Tabelle der Elements-App](images/640px-periodictable-hero.jpg)
 
-## <a name="about-the-app"></a>Informationen zur app
+## <a name="about-the-app"></a>Informationen zur APP
 
-Periodisch-Tabelle der Elemente visualisiert chemischen Elemente und ihre Eigenschaften in einem 3D-Raum. Es umfasst die grundlegenden Interaktionen von HoloLens wie Blicke und Air, tippen Sie auf. Benutzer erhalten weitere Informationen zu den Elementen mit animierte 3D-Modellen. Sie können visuell verstehen, ein Element den Electron-Shell und seine Kernstück - das Protons und Neutrons besteht.
+Eine periodische Tabelle der Elemente visualisiert die chemischen Elemente und ihre Eigenschaften in einem 3D-Raum. Es umfasst die grundlegenden Interaktionen von hololens, wie z. b. "Blick" und "Air Tap Benutzer können sich über die Elemente mit animierten 3D-Modellen informieren. Sie können die Elektronen Shell eines Elements und den Kern, der aus den Protonen und den neutralen besteht, visuell verstehen.
 
 ## <a name="background"></a>Hintergrund
 
-Nach dem ersten HoloLens habe, war einer periodisch-Tabellen-app eine Idee, die ich wusste, ich zum Experimentieren mit in mixed Reality wollte. Da jedes Element über viele Datenpunkte, die mit dem Text angezeigt werden verfügt, dachte ich, dass es gute fachlicher zum Untersuchen von typografischen Komposition in einem 3D-Raum wäre. Wird das Element den Electron-Modell visualisieren wurde eine andere interessante Teil des Projekts.
+Nachdem ich die ersten hololens erlebt habe, war eine regelmäßige Tabellen-App eine Idee, mit der ich wusste, dass ich in gemischter Realität experimentieren wollte. Da jedes Element viele Datenpunkte enthält, die mit Text angezeigt werden, dachte ich, dass es sich um die Untersuchung der typografischen Komposition in einem 3D-Raum handelt. Es war ein weiterer interessanter Bestandteil dieses Projekts, das-Elektronen Modell des Elements visuell darzustellen.
 
 ## <a name="design"></a>Entwurf
 
-Für die Standardansicht der Tabelle periodisch undenkbar ich dreidimensionalen Felder, die den Electron-Modell der einzelnen Elemente enthält. Die Oberfläche des jedes Feld wäre, sodass der Benutzer eine grobe Vorstellung des Elements Volumes konnte lichtdurchlässiger. Mit Blicke "und" Air-tippen kann der Benutzer eine detaillierte Ansicht der einzelnen Elemente öffnen. Um den Übergang zwischen Tabelle und Detailansicht smooth und natürliche machen, war ich es vergleichbar mit der physischen Interaktion eines Felds aus, öffnen in der Praxis.
+In der Standardansicht der periodischen Tabelle habe ich dreidimensionale Felder vorgestellt, die das Elektronen Modell der einzelnen Elemente enthalten würden. Die Oberfläche jedes Felds wäre über scheinend, sodass der Benutzer einen groben Überblick über das Volume des Elements erhalten könnte. Mit Blick und Luft tippen könnte der Benutzer eine ausführliche Ansicht der einzelnen Elemente öffnen. Um den Übergang zwischen der Tabellenansicht und der Detailansicht reibungslos und natürlich zu gestalten, habe ich die physische Interaktion eines Box-Öffnens in der Praxis ähnlich gestaltet.
 
-![Design-Sketches](images/640px-sketch20170406.jpg)<br>
-*Entwurf einen groben Entwurf*
+![Entwurfsskizze](images/640px-sketch20170406.jpg)<br>
+*Entwurfsskizzen*
 
-In der Detailansicht wollte ich die Informationen der einzelnen Elemente mit beeindruckend dargestellte Text im 3D-Raum zu visualisieren. Das animierte 3D Electron-Modell wird im mittleren Bereich angezeigt, und es kann aus verschiedenen Blickwinkeln angezeigt werden.
+In der Detailansicht wollte ich die Informationen jedes Elements mit schön gerendertem Text im 3D-Raum visualisieren. Das animierte 3D-Elektronen Modell wird im mittleren Bereich angezeigt und kann aus unterschiedlichen Winkeln angezeigt werden.
 
 ![Interaktion](images/640px-periodictable-interaction.jpg)
 
-![Prototypen](images/640px-periodictable-prototypes.jpg)<br>
-*Interaktion von Prototypen*
+![Ty](images/640px-periodictable-prototypes.jpg)<br>
+*Interaktions Prototypen*
 
-Der Benutzer kann den Surface-Typ in der Luft durch Tippen auf die Schaltflächen am unteren Rand der Tabelle ändern: sie können zwischen Plane, Zylinder, Kugel und Punkt (XY) wechseln.
+Der Benutzer kann den Surface-Typ ändern, indem er auf die Schaltflächen am unteren Ende der Tabelle tippt. er kann Zwischenebene, Zylinder, Kugel und Punkt wechseln.
 
-## <a name="common-controls-and-patterns-used-in-this-app"></a>Allgemeine Steuerelemente und Muster, die in dieser app verwendet werden.
+## <a name="common-controls-and-patterns-used-in-this-app"></a>In dieser APP verwendete allgemeine Steuerelemente und Muster
 
-### <a name="interactable-object-button"></a>Es Objekt (Schaltfläche)
+### <a name="interactable-object-button"></a>Interactable-Objekt (Schaltfläche)
 
-[Es Objekt](interactable-object.md) ist ein Objekt, das grundlegende HoloLens Eingaben reagieren kann. Er wird als Prefab/Skript bereitgestellt, die einfach auf ein beliebiges Objekt angewendet werden können. Sie können z. B. stellen eine Tasse Kaffee für die es in Ihrer Szene und reagieren auf Eingaben wie z. B. Blicke, tippen Sie auf, die Datennavigation und-Bearbeitung Gesten. [Weitere Informationen](interactable-object.md)
+Das [interactable-Objekt](interactable-object.md) ist ein Objekt, das auf grundlegende hololens-Eingaben reagieren kann. Sie wird als präfab/-Skript bereitgestellt, das Sie problemlos auf jedes beliebige Objekt anwenden können. Beispielsweise können Sie einen Kaffeebecher in der Szene in der Szene zusammenstellen und auf Eingaben wie z. b. Blick, Luft tippen, Navigation und Manipulations Gesten reagieren. [Weitere Informationen](interactable-object.md)
 
-![Nteractable-Objekt](images/640px-periodictable-interactableobject.jpg)
+![nteractable-Objekt](images/640px-periodictable-interactableobject.jpg)
 
-### <a name="object-collection"></a>Eine objektauflistung
+### <a name="object-collection"></a>Objektsammlung
 
-[-Objektauflistung](object-collection.md) ist ein Objekt, das die können Sie mehrere Objekte in verschiedenen Formen anordnen. Datenebene, Zylinder, Kugel und Punkt (XY) unterstützt. Sie können zusätzliche Eigenschaften wie z. B. Radius, Anzahl der Zeilen und den Abstand konfigurieren. [Weitere Informationen](object-collection.md)
+Die [Objektsammlung](object-collection.md) ist ein Objekt, mit dem Sie mehrere Objekte in verschiedenen Formen anordnen können. Es unterstützt die Ebenen, Zylinder, Kugel und Punkt. Sie können zusätzliche Eigenschaften wie RADIUS, Anzahl der Zeilen und den Abstand konfigurieren. [Weitere Informationen](object-collection.md)
 
-![Eine objektauflistung](images/640px-periodictable-collections.jpg)
+![Objektsammlung](images/640px-periodictable-collections.jpg)
 
 ### <a name="fitbox"></a>Fitbox
 
-In der Standardeinstellung die Hologramme platziert werden, an dem Speicherort, in denen der Benutzer gazing ist, derzeit die Anwendung wird gestartet. Dies führt gelegentlich zu unerwünschten Ergebnis wie z. B. Hologramme hinter einer Wand oder in der Mitte einer Tabelle platziert wird. Eine Fitbox kann einen Benutzer Blicke zu verwenden, um den Speicherort zu bestimmen, in denen die Hologramm platziert werden. Es erfolgt mit einer einfachen PNG-Bild-Textur, die problemlos mit Ihrer eigenen Images oder 3D-Objekte angepasst werden können.
+In der Standardeinstellung werden holograms an dem Speicherort abgelegt, an dem der Benutzer die Anwendung startet. Dies führt manchmal zu unerwünschten Ergebnissen, z. b. holograms, die hinter einer Wand oder in der Mitte einer Tabelle abgelegt werden. Eine fitbox-Funktion ermöglicht es einem Benutzer, die Position zu ermitteln, an der das – Hologramm platziert wird. Sie wird mit einer einfachen PNG-Bildtextur erstellt, die problemlos mit ihren eigenen Bildern oder 3D-Objekten angepasst werden kann.
 
 ![Fitbox](images/450px-periodictable-fitbox.jpg)
 
 ## <a name="technical-details"></a>Technische Details
 
-Finden Sie Skripts und prefabs (Vorlagen) für die Tabelle periodisch der app Elemente auf der [Mixed Reality-Design-Labs-GitHub](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable).
+Sie finden Skripts und Prefabs für die periodische Tabelle der Elements-App auf dem [Mixed Reality Design Labs GitHub](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable).
 
-## <a name="application-examples"></a>Beispiele für die Anwendung
+## <a name="application-examples"></a>Anwendungsbeispiele
 
-Hier sind einige Ideen für das was Sie durch die Nutzung der Komponenten in diesem Projekt erstellen können.
+Im folgenden finden Sie einige Ideen für das, was Sie erstellen können, indem Sie die Komponenten in diesem Projekt nutzen.
 
-### <a name="stock-data-visualization-app"></a>Vordefinierte datenvisualisierungs-app
+### <a name="stock-data-visualization-app"></a>Daten Visualisierungs-App für Aktien
 
-Verwenden die gleichen Steuerelemente und das Interaktionsmodell, wie in der Tabelle periodisch des Beispiels Elemente, können Sie eine app erstellen, die Börsendaten visualisiert. Dieses Beispiel verwendet die Steuerung der Datensammlung Objekt, um das Layout von Aktiendaten in einer sphärischen Form. Sie können es sich um eine Detailansicht vorstellen, wo zusätzliche Informationen zu jeder Aktie auf interessante Weise angezeigt werden kann.
+Wenn Sie die gleichen Steuerelemente und das Interaktionsmodell wie die periodische Tabelle des Elements Sample verwenden, können Sie eine APP erstellen, die die Daten von Aktienmärkten visualisiert. In diesem Beispiel wird das Objekt Auflistungs Steuerelement verwendet, um Aktiendaten in einer kugelförmigen Form anzuordnen. Sie können sich eine Detailansicht vorstellen, in der zusätzliche Informationen zu den einzelnen Aktien auf interessante Weise angezeigt werden können.
 
-![Beispiel: Finance (1 von 3)](images/640px-periodictable-applicationexamples-finance1.jpg)
+![Anwendungsbeispiel: Finanzen (1 von 3)](images/640px-periodictable-applicationexamples-finance1.jpg)
 
-![Beispiel: Finance (2 von 3)](images/640px-periodictable-applicationexamples-finance2.jpg)
+![Anwendungsbeispiel: Finanzen (2 von 3)](images/640px-periodictable-applicationexamples-finance2.jpg)
 
-![Beispiel: Finance (3 von 3)](images/640px-periodictable-applicationexamples-finance3.jpg)<br>
-*Verdeutlicht, wie die objektauflistung, die in der Tabelle periodisch Elemente-Beispiel-App verwendet, in einer Finance-app verwendet werden kann*
+![Anwendungsbeispiel: Finanzen (3 von 3)](images/640px-periodictable-applicationexamples-finance3.jpg)<br>
+*Ein Beispiel dafür, wie die Objekt Auflistung, die in der periodischen Tabelle der Beispiel-App für Elemente verwendet wird, in einer Finance-App verwendet werden kann*
 
-### <a name="sports-app"></a>Sport-app
+### <a name="sports-app"></a>Sport-App
 
-Dies ist ein Beispiel mit objektauflistung und anderen Komponenten aus der Tabelle periodisch der Beispiel-app Elemente Sport-Daten zu visualisieren.
+Dies ist ein Beispiel für die Visualisierung von Sportdaten mithilfe der Objekt Auflistung und anderer Komponenten aus der periodischen Tabelle der Elements-Beispiel-app.
 
-![Beispiel: Sport (1 von 3)](images/640px-periodictable-applicationexamples-sports0.jpg)
+![Anwendungsbeispiel: Sport (1 von 3)](images/640px-periodictable-applicationexamples-sports0.jpg)
 
-![Beispiel: Sport (2 von 3)](images/640px-periodictable-applicationexamples-sports1.jpg)
+![Anwendungsbeispiel: Sport (2 von 3)](images/640px-periodictable-applicationexamples-sports1.jpg)
 
-![Beispiel: Sport (3 von 3)](images/640px-periodictable-applicationexamples-sports3.jpg)<br>
-*Ein Beispiel für die objektauflistung wie in der Tabelle periodisch die Beispiel-Appcould Elemente verwendet, die in einer Sport-app verwendet werden*
+![Anwendungsbeispiel: Sport (3 von 3)](images/640px-periodictable-applicationexamples-sports3.jpg)<br>
+*Ein Beispiel dafür, wie die Objekt Auflistung, die in der periodischen Tabelle des Elements Sample appused verwendet wird, in einer Sport-App verwendet werden kann.*
 
-## <a name="about-the-author"></a>Der Autor
+## <a name="about-the-author"></a>Informationen zum Autor
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>Dong Yoon Park</b><br>UX-Designer @Microsoft</td>
+<td style="border-style: none"><b>Dong-Yoon-Park</b><br>UX-Designer@Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Es-Objekt](interactable-object.md)
-* [Eine objektauflistung](object-collection.md)
+* [Interaktionsfähiges Objekt](interactable-object.md)
+* [Objektsammlung](object-collection.md)

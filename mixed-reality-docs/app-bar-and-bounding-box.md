@@ -1,11 +1,11 @@
 ---
-title: Umgebendes Feld und App-Leiste
-description: Die App-Leiste ist ein auf Objektebene Menü mit einer Reihe von Schaltflächen, die auf dem unteren Rand der ggf. ein Hologramm Begrenzungen angezeigt.
+title: Begrenzungs Bereich und App-Leiste
+description: Die APP-Leiste ist ein Menü auf Objektebene, das eine Reihe von Schaltflächen enthält, die am unteren Rand der Begrenzungen eines holograms angezeigt werden.
 author: radicalad
 ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
-keywords: Windows Mixed Reality, App-Leiste, umgebendes Feld
+keywords: Windows Mixed Reality, App-Leiste, Begrenzungs Bereich
 ms.openlocfilehash: d289be31129324c6ff419b69dbce52bd8f62eb64
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,43 +13,43 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829685"
 ---
-# <a name="bounding-box-and-app-bar"></a>Umgebendes Feld und App-Leiste
-![Begrenzen, ist die Standardschnittstelle für die Bearbeitung des Objekts in Mixed Reality.](images/640px-boundingbox-hero.jpg)<br>
+# <a name="bounding-box-and-app-bar"></a>Begrenzungs Bereich und App-Leiste
+![Das Begrenzungs Zeichen ist die Standardschnittstelle für die Objekt Bearbeitung in gemischter Realität.](images/640px-boundingbox-hero.jpg)<br>
 
 ## <a name="what-is-the-bounding-box"></a>Was ist das umgebende Feld?
 
-Begrenzen, ist die Standardschnittstelle für die Bearbeitung des Objekts in Mixed Reality. Es bietet dem Benutzer eine Unterstützung, dass das Objekt derzeit überhaupt angepasst werden kann. Die Ecken, wird dem Benutzer mitgeteilt, dass das Objekt auch skalieren kann. Dieser visuelle Unterstützung zeigt Benutzer die Gesamtfläche des Objekts – auch wenn es nicht außerhalb einer Anpassung Modus angezeigt wird. Dies ist besonders wichtig, da ein Objekt, das an einem anderen Objekt oder Fläche Rasterlinie ausgerichtet, wenn er nicht vorhanden wäre, so verhält, als gäbe Platz um es herum, die es sollte nicht angezeigt werden kann. HoloLens-2 das umgebende Feld arbeitet mit direkten manuell bearbeiten und reagiert auf dem Finger des Benutzers die Nähe. Es zeigt visuelles Feedback den Benutzer, der den Abstand zwischen dem Objekt wahrnehmen können. 
+Das Begrenzungs Zeichen ist die Standardschnittstelle für die Objekt Bearbeitung in gemischter Realität. Der Benutzer erhält eine Kosten, die das Objekt momentan anpassbar ist. In den Ecken wird dem Benutzer mitgeteilt, dass das Objekt auch skaliert werden kann. Diese visuelle Visualisierung zeigt Benutzern den gesamten Bereich des Objekts an – auch dann, wenn Sie außerhalb eines Anpassungsmodus nicht sichtbar sind. Dies ist besonders wichtig, da das Objekt, das an ein anderes Objekt oder eine andere Oberfläche angedockt ist, sich so verhält, als ob es sich um ein Leerzeichen handelt, das nicht vorhanden sein sollte. Bei hololens 2 funktioniert das umgebende Feld mit direkter Hand Manipulation und antwortet auf die Nähe des Benutzers. Es zeigt visuelles Feedback, um dem Benutzer zu helfen, den Abstand zum Objekt zu erkennen. 
 
-![HoloLens-von-Sicht der Skalierung eines Objekts über umgebendes Feld](images/HoloLens2_BoundingBox.gif)<br>
-*Die Skalierung eines Objekts über umgebendes Feld*
+![Hololens zeigt das Skalieren eines Objekts über ein Begrenzungsfeld an](images/HoloLens2_BoundingBox.gif)<br>
+*Skalieren eines Objekts per Begrenzungs Rahmen*
 
-Die Handles in den Ecken des Begrenzungsrahmens führen Sie ein allgemein verstanden Muster für die Skalierung anpassen. 
+Die Handles in den Ecken des umgebenden Felds folgen einem weit verbreiteten Muster zur Anpassung der Skalierung. 
 
-![HoloLens-von-Sicht der Drehen eines Objekts über umgebendes Feld](images/HoloLens2_BoundingBox_Rotate.gif)<br>
-*Drehen eines Objekts über umgebendes Feld*
-
-
-![Visuelles Feedback auf der Hand NEAR](images/HoloLens2_Proximity.gif)<br>
-*Visuelles Feedback auf der Grundlage der Nähe*
-
-Die vertikale rechteckigen visueller Hinweise an den Rändern des umgebenden Felds handelt es sich um Drehung Indikatoren. Dadurch erhalten Benutzer weitere Feineinstellung über ihre Hologramme platziert. Nicht nur können sie anpassen und skalieren, aber jetzt auch drehen.
-
-* Unity-app-Entwicklung, finden Sie unter [umgebendes Feld auf Mixed Reality Toolkit-Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+![Hololens-Sicht der Drehung eines Objekts über das umgebende Feld](images/HoloLens2_BoundingBox_Rotate.gif)<br>
+*Drehen eines Objekts über ein Begrenzungs Fenster*
 
 
+![Visuelles Feedback in der Nähe](images/HoloLens2_Proximity.gif)<br>
+*Visuelles Feedback basierend auf der Nähe*
 
-## <a name="what-is-the-app-bar"></a>Was ist der App-Leiste?
+Die vertikalen rechteckigen Anlagen an den Rändern des umgebenden Felds sind Rotations Indikatoren. Dies ermöglicht dem Benutzer eine präzisere Anpassung der platzierten holograms. Sie können nicht nur angepasst und skaliert werden, sondern auch jetzt drehen.
 
-Die App-Leiste ist ein auf Objektebene Menü mit einer Reihe von Schaltflächen, die auf dem unteren Rand der ggf. ein Hologramm Begrenzungen angezeigt. Dieses Muster wird häufig verwendet, um Benutzern die Möglichkeit, zu entfernen, und passen Sie Hologramme zu ermöglichen.
+* Informationen zur Entwicklung von Unity-apps finden Sie [im Thema zum umgebenden Feld in Mixed Reality Toolkit-Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
 
-Da dieses Muster mit Objekten, die Welt gesperrt verwendet wird, wie ein Benutzer auf das Objekt bewegt wird die App-Leiste immer auf der Objekte neben dem Benutzer angezeigt. Während dies billboarding nicht ist, wird das gleiche Ergebnis effektiv erreicht; verhindert, dass Position verdeckt eines Benutzers oder der Block-Funktionen, die andernfalls von einem anderen Speicherort in ihrer Umgebung zur Verfügung stehen würden.
 
-![Um ggf. ein Hologramm durchlaufen. Die App-Leiste folgt.](images/HoloLens2_AppBarFollowing.gif)<br>
-*Durchlaufen, um ggf. ein Hologramm, folgt die App-Leiste*
 
-Die App-Leiste wurde in erster Linie als eine Möglichkeit zum Verwalten der platzierten Objekte in der Umgebung eines Benutzers entwickelt. Gekoppelt mit das umgebende Feld, ein Benutzer verfügt über Vollzugriff auf, wo und wie Objekte in mixed Reality ausgerichtet werden.
+## <a name="what-is-the-app-bar"></a>Was ist die APP-Leiste?
 
-* Unity-app-Entwicklung, finden Sie unter [App-Leiste auf Mixed Reality Toolkit-Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)
+Die APP-Leiste ist ein Menü auf Objektebene, das eine Reihe von Schaltflächen enthält, die am unteren Rand der Begrenzungen eines holograms angezeigt werden. Dieses Muster wird häufig verwendet, um Benutzern das Entfernen und Anpassen von holograms zu ermöglichen.
+
+Da dieses Muster mit Objekten verwendet wird, die in der Welt gesperrt sind, wird die APP-Leiste immer auf der Seite der Objekte angezeigt, die dem Benutzer am nächsten ist, wenn sich der Benutzer um das Objekt bewegt wird. Obwohl dies kein Abgleich ist, erzielt es effektiv dasselbe Ergebnis. verhindern, dass die Position eines Benutzers Funktionen sperrt oder blockiert, die andernfalls an einem anderen Speicherort in Ihrer Umgebung verfügbar wären.
+
+![Durchlaufen eines holograms. Die APP-Leiste folgt.](images/HoloLens2_AppBarFollowing.gif)<br>
+*Wenn Sie ein Hologramm durchlaufen, folgt die APP-Leiste.*
+
+Die APP-Leiste wurde primär als eine Möglichkeit zum Verwalten von platzierten Objekten in der Umgebung eines Benutzers entwickelt. In Verbindung mit dem umgebenden Feld hat ein Benutzer vollständige Kontrolle darüber, wo und wie Objekte in gemischter Realität ausgerichtet werden.
+
+* Informationen zur Entwicklung von Unity-apps finden Sie [in der APP-Leiste unter Mixed Reality Toolkit-Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)
 
 ## <a name="see-also"></a>Siehe auch
 * [Interaktionsfähiges Objekt](interactable-object.md)
