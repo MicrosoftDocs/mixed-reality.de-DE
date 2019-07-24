@@ -1,11 +1,11 @@
 ---
-title: Beginnen
-description: Dieses Handbuch skizziert die schnellste Möglichkeit, mit der Entwicklung von mixed Reality betriebsbereit zu machen.
+title: Erste Schritte
+description: In diesem Leitfaden wird die schnellste Möglichkeit zum Einstieg in die Entwicklung mit gemischter Realität erläutert.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
-keywords: Erste Schritte, Grundlagen, HoloLens, immersive Kopfhörer, Ar, Vr, Unity, visual Studio, Schnellstart, wie Sie
+keywords: Erste Schritte, Grundlagen, hololens, immersives Headset, AR, VR, Unity, Visual Studio, Schnellstart, Vorgehensweise
 ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
 ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
@@ -13,60 +13,60 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64873963"
 ---
-# <a name="get-started"></a>Beginnen
+# <a name="get-started"></a>Erste Schritte
 
-Willkommen Sie auf der ganzen Welt von mixed Reality-Entwicklung! Wenn Sie noch nicht mit MR sind, werden in der vorliegenden Ihren Hub einrichten und so schnell wie möglich ausgeführt. Wir unterstützen Sie Ihre PC-Gruppe für die Entwicklung einzurichten, bereiten Sie Ihre Geräte und Installieren von Tools, die den Entwicklungsprozess MR beschleunigen werden. 
+Willkommen bei der Welt der Mixed Reality-Entwicklung! Wenn Sie noch nicht mit Mr vertraut sind, ist dieser Leitfaden Ihr Hub, um so schnell wie möglich loslegen zu können. Wir unterstützen Sie dabei, Ihren PC für die Entwicklung einzurichten, Ihre Geräte bereit zu lassen und Tools zu installieren, mit denen der Entwicklungsprozess von Microsoft beschleunigt wird. 
 
-## <a name="intro-to-mixed-reality"></a>Einführung zu mixed reality
+## <a name="intro-to-mixed-reality"></a>Einführung in gemischte Realität
 
-Sie müssen möglicherweise einige Fragen darüber, was wir unter "mixed Reality" verstehen, und wie deren Beziehung zu augmented Reality-Modus (AR) und virtuelle Realität (VR). Kurz gesagt, werden mixed Reality die Mischung der realen Welt mit der digitalen Welt leben, daher wird ein Spektrum, die von augmented Reality-Modus, ist alles abgedeckt wird digitaler Inhalte in der realen Welt, um virtuelle Realität platziert, in denen die reale Welt fast vollständig ist durch die digitale ersetzt. 
+Möglicherweise haben Sie einige Fragen zu den Bedeutung von "Mixed Reality" und deren Beziehung zu "Augmented Reality (AR)" und "Virtual Reality (VR)". Kurz gesagt, die gemischte Realität ist die Mischung aus der physischen Welt mit der digitalen Welt, sodass es sich um ein Spektrum handelt, das alles von der erweiterten Realität abdeckt, bei dem digitale Inhalte in der realen Welt und in der virtuellen Realität platziert werden, in der die reale Welt fast vollständig ist. ersetzt durch den Digital. 
 
-![Beispiel für ein mixed Reality-app, die HoloLens und immersive Headsets von (VR) unterstützt](images/mr-island.png)<br>
-*Mixed Reality-apps können sowohl HoloLens auch immersive Headsets von (VR) unterstützen.*
+![Beispiel für eine Mixed Reality-APP, die sowohl hololens-als auch immersive-Headsets (VR) unterstützt](images/mr-island.png)<br>
+*Mixed Reality-Apps können sowohl hololens-als auch immersive-Headsets (VR) unterstützen.*
 
-Wir haben Windows Mixed Reality erstellt, als eine einzelne Entwicklungsplattform und eine Reihe von Tools, die das MR Spektrum abdecken können, und wir unterstützen derzeit zwei Gerätetypen, die die gleiche Spektrum abdecken: [Microsoft HoloLens](https://www.microsoft.com/hololens), weltweit erste eigenständige holographic Kopfhörer, und [immersive Headsets Windows Mixed Reality und der Motion-Controllern](https://www.microsoft.com/windows/windows-mixed-reality), die auf einem PC verbinden, leistungsstarke virtuelle Realität-Funktionen zu nutzen. Sehen Sie sich unsere Was ist [mixed Reality?] (finden Sie eine ausführlichere Antwort, wenn Sie sich interessieren.
+Wir haben Windows Mixed Reality als eine einzelne Entwicklungsplattform und eine Reihe von Tools erstellt, die das Spektrum von Mr abdecken können, und wir unterstützen derzeit zwei Gerätetypen, die das gleiche Spektrum abdecken: [Microsoft hololens](https://www.microsoft.com/hololens), das weltweit erste eigenständige Holographic-Headset und [Windows Mixed Reality-immersive Headsets und Motion Controller](https://www.microsoft.com/windows/windows-mixed-reality), die sich mit einem PC für eine leistungsstarke virtuelle Realität verbinden. Weitere Informationen finden Sie unter Was ist [gemischte Realität?] (eine gründlichere Antwort finden Sie im Artikel, wenn Sie interessiert sind.
 
-## <a name="choose-your-development-path"></a>Wählen Sie den Entwicklungspfad
+## <a name="choose-your-development-path"></a>Wählen Sie den Entwicklungspfad aus.
 
-Die einfachste Möglichkeit zum Entwickeln einer mixed Reality-app verwendet den [Unity](https://unity3d.com), eine leistungsstarke und beliebte Middleware-Tool, das häufig für die Entwicklung von Spielen verwendet. Wenn Sie eine benutzerdefinierte Engine verwenden möchten, können Sie auch [für DirectX erstellen](directx-development-overview.md), aber die meisten MR-Entwickler verwenden Unity für ihre Spiele und apps. Mit Unity werden Sie möglicherweise eine mixed Reality-app zu erstellen, die Ziel von HoloLens, immersive Headsets von (VR) oder beides!
+Die einfachste Methode zum Entwickeln einer Mixed Reality-APP ist die Verwendung von [Unity](https://unity3d.com), einem leistungsfähigen und beliebten middlewaretool, das häufig für die Spieleentwicklung verwendet wird. Wenn Sie ein benutzerdefiniertes Modul verwenden möchten, können Sie auch auf [DirectX aufbauen](directx-development-overview.md), aber die meisten Entwickler von Mr verwenden Unity für Ihre Spiele und apps. Mit Unity können Sie eine Mixed Reality-app erstellen, die auf hololens, immersive (VR) Headsets oder beides abzielt!
 
-## <a name="prepare-your-pc-and-devices-for-development"></a>Bereiten Sie Ihre PCs und Geräten für die Entwicklung
+## <a name="prepare-your-pc-and-devices-for-development"></a>Vorbereiten Ihres PCs und ihrer Geräte für die Entwicklung
 
-Egal ob Sie eine mixed Reality-app, die HoloLens, immersive Headsets von (VR) oder beides ausgerichtet ist erstellen, müssen Sie einen gemeinsamen Satz von Tools und APIs verwenden. Sie sollten auch sicherstellen, dass Ihr PC leistungsfähig genug ist, für die Entwicklung ist, die Sie durchführen müssen. 
+Unabhängig davon, ob Sie eine Mixed Reality-App entwickeln, die auf hololens, immersive Headsets (VR) oder beides abzielt, verwenden Sie einen gemeinsamen Satz von Tools und APIs. Außerdem sollten Sie sicherstellen, dass Ihr PC leistungsfähig genug für die Entwicklung ist, die Sie durchführen möchten. 
 
 >[!NOTE]
->Finden Sie unseren Empfehlungen auf Entwicklungs-PC-Spezifikationen, unterstützte Versionen der einzelnen Softwaretools und die relevanten Einstellungen oder Konfiguration Anmerkungen dieser für jede in der [Installieren der Tools](install-the-tools.md) Artikel. Überprüfen Sie diesen Artikel vor der Installation die folgenden Tools.
+>Sie finden unsere Empfehlungen in den Entwicklungs-PC-Spezifikationen, unterstützte Versionen der einzelnen Software Tools und relevante Einstellungen oder Konfigurations Hinweise für jede im Artikel [Installieren der Tools](install-the-tools.md) . Lesen Sie diesen Artikel, bevor Sie die folgenden Tools installieren.
 
-Tools zum installieren:
+Zu installier folgende Tools:
 * [Unity](https://store.unity.com/download)
 * [Visual Studio (mit Windows 10 SDK)](https://developer.microsoft.com/windows/downloads)
-* [Mixed Reality-Toolkit für Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md)
+* [Mixed Reality Toolkit für Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md)
 
-Sie sollten auch [Entwicklermodus Ihr Zielgerät abgelegt, und Konfigurieren von Visual Studio zum Bereitstellen von apps auf dem Zielgerät](using-visual-studio.md).
+Außerdem möchten Sie [das Zielgerät in den Entwicklermodus versetzen und Visual Studio für die Bereitstellung von apps auf dem Zielgerät konfigurieren](using-visual-studio.md).
 
-### <a name="a-note-about-the-mixed-reality-toolkit-for-unity"></a>Ein Hinweis zum Mixed Reality-Toolkit für Unity
+### <a name="a-note-about-the-mixed-reality-toolkit-for-unity"></a>Hinweis zum Mixed Reality Toolkit für Unity
 
-![MRTK für Unity](images/mrtkandunity.png)<br>
+![Mrtk für Unity](images/mrtkandunity.png)<br>
 
-***AN DEM SIE AUSZUARBEITEN DIESER OUT UND ERZÄHLEN SIE UNS AN, WARUM MRTK-UNITY IST SO EINDRUCKSVOLLE WEISE UND ALL DIE COOLEN DINGE IN :)***
+***ICH WEISS, DASS ES MIR GEFÄLLT, WARUM MRTK-UNITY SO ERSTAUNLICH IST, UND ALLES, WAS ES IN:)***
 
-Das Mixed Reality-Toolkit ist eine Sammlung von Skripts, und Komponenten, die zum Beschleunigen der Entwicklung von Anwendungen für Microsoft HoloLens und Windows Mixed Reality-Headsets Verwendung vorgesehen. Das Projekt zielt auf die Reduzierung von Sperren auf einen Eintrag in mixed Reality-Anwendungen zu erstellen und an der Community beitragen, wenn wir alle wachsen.
+Das Mixed Reality Toolkit ist eine Sammlung von Skripts und Komponenten, die dazu dienen, die Entwicklung von Anwendungen zu beschleunigen, die auf Microsoft hololens und Windows Mixed Reality-Headsets abzielen. Das Projekt ist darauf ausgerichtet, die Einstiegshürden zum Erstellen von Mixed Reality-Anwendungen zu verringern, und einen Beitrag für die Community zu leisten, während dieser Bereich weiter wächst.
 
-## <a name="start-your-first-mr-project"></a>Starten Sie Ihr erste MR-Projekt
+## <a name="start-your-first-mr-project"></a>Starten Sie Ihr erstes Mr-Projekt.
 
-Nun, Ihren PC und Geräte eingerichtet werden, können Sie Ihr erstes mixed Reality-Projekt in Unity zu erstellen. Nutzen Sie unsere erste MR Academy-Kurs [MR Grundlagen 100: Erste Schritte mit Unity](holograms-100.md), am Ende verfügen Sie über einen Cube auf eine Kopfhörer mixed Reality.
+Nachdem Sie Ihren PC und Ihre Geräte eingerichtet haben, können Sie Ihr erstes gemischtes Reality-Projekt in Unity erstellen. Befolgen Sie unsere ersten Mr Academy Course, [Mr Basics 100: In den ersten Schritten](holograms-100.md)mit Unity und schließlich wird ein Cube in einem Mixed Reality-Headset ausgeführt.
 
-![Screenshot eines Cubes in einem Unity-Projekt für mixed reality](images/mr-cube.PNG)<br>
-*Ihr erstes mixed Reality-Projekt im Unity - Hello World!*
+![Screenshot eines Cubes in einem Mixed Reality-Unity-Projekt](images/mr-cube.PNG)<br>
+*Ihr erstes gemischtes Reality-Projekt in Unity: Hello World!*
 
 ## <a name="learn-more-and-get-help"></a>Weitere Informationen und Hilfe
 
-Nachdem Sie Ihr erste MR-Projekt erfolgreich erstellt haben, können Sie wahrscheinlich viel mehr! Hier sind einige Ressourcen, die dabei helfen soll:
-* [Mixed Reality-Entwicklerdokumentation](mixed-reality.md) – Sie sind bereits hier, aber es gibt noch viele weitere Auschecken, einschließlich technischer Dokumentation, Leitfaden zum Entwerfen, Beispielprojekte und Fallstudien.
-* [Mixed Reality-Tutorials](tutorials.md) – nutzen Sie Lernprogramme, die alles von Projekten, für die Implementierung der wichtigsten Bausteine für MR einrichten, um die Integration von Azure-Clouddienste in Ihre app MR.
-* [Erfahren Sie, Unity](https://unity3d.com/learn) – der Unity-Website bietet Lernprogramme, Projekte und live-Schulungen für Entwickler in jeder Phase des Lernens.
+Nachdem Sie Ihr erstes "Mr"-Projekt erfolgreich erstellt haben, sind Sie wahrscheinlich mehr hungrig! Im folgenden finden Sie einige Ressourcen, die Ihnen helfen sollten:
+* [Entwicklerdokumentation von Mixed Reality](mixed-reality.md) : Sie sind bereits hier, aber es gibt noch viel mehr zu sehen, einschließlich technischer Dokumentation, Entwurfs Leit Faden, Beispiel Projekte und Fallstudien.
+* Lernprogramme für [gemischte Realität](tutorials.md) : Befolgen Sie die Lernprogramme, die sich von der Einrichtung von Projekten bis hin zur Implementierung von Kern Bausteinen in Azure und der Integration von Azure Cloud Services in Ihre Mr-App befassen.
+* [Erlernen von Unity](https://unity3d.com/learn) : die Website von Unity bietet Tutorials, Projekte und Live Schulungs Sitzungen für Ersteller in jeder Phase des Lernens.
 
-Sie können auch die Unterstützung von diesen große Community-Ressourcen erhalten:
-* [Mixed Reality-Entwicklerforen](https://forums.hololens.com/) – das offizielle-Forum für mixed Reality-Entwickler zu stellen und beantworten Sie Fragen, als auch MR Entwicklungsnachrichten direkt von Microsoft lesen.
-* [HoloDevelopers Slack-Kanal](https://holodevelopersslack.azurewebsites.net/) -die stabile und findigen Unternehmen externe mixed Reality-spezifische Developer Channel, der Entwickler hier kompetenten und hilfreich.
-* [Unity-Foren](https://forum.unity3d.com/) – offiziellen von Unity-Foren.
+Sie können auch Hilfe von diesen großartigen Communityressourcen erhalten:
+* [Mixed Reality-Entwickler Foren](https://forums.hololens.com/) : das offizielle Forum für Entwickler von Mixed Reality zum Fragen und beantworten von Fragen sowie zum Lesen von Neuigkeiten von Microsoft.
+* [Holodevelopers Slack-Channel](https://holodevelopersslack.azurewebsites.net/) : der stabilste und resourvste externe, in der Praxis spezifische Entwickler Kanal. die hier aufgeführten Entwickler sind kompetent und hilfreich.
+* [Unity-Foren](https://forum.unity3d.com/) : Offizielle Foren von Unity.

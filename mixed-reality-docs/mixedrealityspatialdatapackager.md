@@ -1,11 +1,11 @@
 ---
-title: Mixed Reality räumliche Daten-Manager-Dokumentation
-description: Dokumentation für die Verwendung von Mixed Reality räumliche Daten Packager
+title: Dokumentation für die gemischte Realität Spatial Data Packager
+description: Dokumentation zur Verwendung von Mixed Reality Spatial Data Packager
 author: alfred-msft
 ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
-keywords: lbe, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+keywords: LBE, mixedrealityspatialdatapackager. exe, mixedrealityspatialdatapackager
 ms.openlocfilehash: 7ad1159af9eecd3ca3622dd25cc1f49fb0b1700a
 ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
@@ -13,45 +13,45 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/20/2019
 ms.locfileid: "65942106"
 ---
-# <a name="mixed-reality-spatial-data-packager-documentation"></a>Mixed Reality räumliche Daten-Manager-Dokumentation
+# <a name="mixed-reality-spatial-data-packager-documentation"></a>Dokumentation für die gemischte Realität Spatial Data Packager
 
 >[!NOTE]
-> Dieses Tool und der Vorgang werden als angeboten – ist. Dabei handelt es sich vorbehalten ohne Benachrichtigung möglicherweise nicht kompatibel mit zukünftigen Windows oder Windows Mixed Reality HMD frei.
+> Dieses Tool und der zugehörige Vorgang werden unverändert angeboten. Er kann ohne vorherige Ankündigung geändert werden und ist möglicherweise nicht mit zukünftigen Windows-oder Windows Mixed Reality-HMD-Releases kompatibel.
 
 ## <a name="download"></a>Herunterladen
- Herunterladen [MixedRealitySpatialDataPackager hier](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
+ [Mixedrealityspatialdatapackager hier](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip) herunterladen
 
 ## <a name="quickstart"></a>Schnellstart
 
-Das Mixed Reality räumliche Daten Packager-Tool kopiert die räumlichen Daten von einem Ziel-app von einem PC zu einem anderen über eine zwei Schritten exportieren und Importieren von Prozess. Das Tool muss mit Administratorrechten ausgeführt werden, und löscht die vorhandenen räumlichen Daten beim Import. Export lässt sich die vorhandenen räumlichen Daten intakt.
+Mit dem Mixed Reality Spatial Data Packager-Tool werden die räumlichen Daten einer Ziel-App über einen zweistufigen Export-und Importprozess von einem PC auf einen anderen kopiert. Das Tool muss mit Administratorrechten ausgeführt werden und die vorhandenen räumlichen Daten beim Importieren löschen. Beim Export bleiben die vorhandenen räumlichen Daten intakt.
 
 Wichtige Anforderungen und Einschränkungen:
 
-1. Tool muss mit Administratorrechten ausgeführt werden 
-2. Möglicherweise müssen Sie den PC neu starten, wenn Mixed Reality-Portal instabil ist, nach dem Ausführen des Tools
-3. Tool wird nicht ausgeführt werden, wenn Versionskonflikte, die räumliche Daten oder Inkompatibilitäten festgestellt.
-4. Tools werden vorhandene räumliche Daten beim Import gelöscht.
-5. Ausfall Importvorgang vorherigen können nicht Daten wiederhergestellt werden, wenn sie gesichert wurde, indem zuvor exportieren
-6. Qualität der Importfunktion "Read-Only" Modus für räumliche Kartendaten abhängig
+1. Das Tool muss mit Administratorrechten ausgeführt werden. 
+2. Möglicherweise müssen Sie den PC neu starten, wenn das gemischte Reality-Portal nach dem Ausführen des Tools instabil ist.
+3. Das Tool wird nicht ausgeführt, wenn nicht übereinstimmende oder Inkompatibilitäten auf räumliche Daten stoßen.
+4. Das Tool löscht vorhandene räumliche Daten beim Importieren.
+5. Wenn der Import Vorgang fehlschlägt, können vorherige Daten nicht wieder hergestellt werden, es sei denn, Sie wurden durch Exportieren zuvor
+6. Qualität der Import Funktionalität abhängig vom schreibgeschützten Modus für räumliche Kartendaten
 ***
 
-## <a name="mapping-best-practices"></a>Zuordnen von bewährten Methoden
+## <a name="mapping-best-practices"></a>Bewährte Methoden für die Zuordnung
 
-1. Löschen von Zuordnungen in der Systemsteuerung (Mixed Reality-Einstellungen > >-Umgebung löschen Umgebungsdaten ->)
-2. Stellen Sie sicher über ausreichende Beleuchtung für gute Überwachung, und wenn mit gesperrten Zuordnungsmodus versuchen, die die gleiche Beleuchtung verwalten
-3. Wenn möglich gehalten Sie den dynamischen Bereich von Beleuchtung niedrig durch das Vermeiden der Bereiche der hohen Beleuchtung neben dunkle Bereiche Shadowing durchgeführt wurde
-4. Minimieren Sie leere, textureless Flächen platzieren z. B. einen Bereich von verschiedenen Poster auf weißen Wände
-5. Ordnen Sie den Adressraum ohne dynamische Objekte in der Szene, wie das Verschieben von Personen
-6. Sperren Sie die Zuordnung beim Import (verfügbar über Insider Preview)
-7. Entsperren Sie die Karte zu und Einlesen Sie die Umgebung neu, beim Nachverfolgen der Qualität beeinträchtigt wird, bzw. Änderungen in der Umgebung (Beleuchtung oder Änderungen in das Objektlayout) vorliegen.
+1. Löschen vorhandener Zuordnungen in der Systemsteuerung (Einstellungen-> Gemischte Realität > Umgebung > Löschen von Umgebungs Daten)
+2. Gewährleisten einer ausreichenden Beleuchtung für eine gute Nachverfolgung und beim Ausführen eines gesperrten Zuordnungs Modus versuchen, die gleiche Beleuchtung aufrechtzuerhalten
+3. Wenn möglich, sollten Sie den dynamischen Bereich der Beleuchtung gering halten, indem Sie Bereiche mit hoher Beleuchtung neben dunklen, Shadowing enden Bereichen vermeiden.
+4. Minimieren Sie leere, textulose Oberflächen, z. b. einen Bereich verschiedener Poster auf weißen Wänden platzieren.
+5. Ordnen Sie den Raum ohne dynamische Objekte in der Szene zu
+6. Karte beim Import Sperren (verfügbar über Insider Preview)
+7. Entsperren Sie die Zuordnung, und Scannen Sie die Umgebung neu, wenn die nach Verfolgungs Qualität abnimmt und/oder Änderungen in der Umgebung vorliegen (Beleuchtung oder Änderungen im Objekt Layout).
 ***
 
-## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Ausgeführte Mixed Reality räumliche Daten Packager mit Begleiterskript
+## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Ausführen von Mixed Reality Spatial Data Packager mit begleitenden Skripts
 
-Wir haben MRSpatialPackagerHelperScript.ps1 bereitgestellt, die die Map-Objekt-Manager Tools ausgeführt wird. 
+Wir haben mrspatialpackagerhelperscript. ps1 bereitgestellt, das den Map Packager die Tools ausführt. 
 
 
-Die Skriptparameter sind unten definiert:
+Die Skript Parameter sind unten definiert:
 
 ```
 -AppName <String>
@@ -78,9 +78,9 @@ Die Skriptparameter sind unten definiert:
     Path to MixedRealitySpatialDataPackager.exe, default value is current directory
 ```
 
-### <a name="powershell-script-example-usage-and-output"></a>Beispielsyntax für die PowerShell-Skript und die Ausgabe
+### <a name="powershell-script-example-usage-and-output"></a>PowerShell-Skript Beispiel Verwendung und-Ausgabe
 
-.\MRSpatialPackagerHelperScript.ps1 -AppName holoshell -UserName Administrator -Mode export -MapxPath D:\temp\ -LockMap 0
+.\Mrspatialpackagerhelperscript.ps1-appname holoshell-username Administrator Modus Export-mapxpath d:\temp\-lockmap 0
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
@@ -113,36 +113,36 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Wie Sie mithilfe von MixedRealityPackager.exe Export
+### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Exportieren mithilfe von "mixedrealitypackager. exe"
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
-Exportieren von Zuordnungen, die einem Gerät generiert zwei Mapx-Dateien, het.mapx und sa.mapx. Während des Exportvorgangs werden alle räumlichen Anker mit Ausnahme der angegebenen app und die Grenze benutzererstellte entfernt (falls vorhanden). Den paketfamiliennamen für die Quelle muss eine vorhandene installierte app übereinstimmen, oder die EXE-Datei schlägt fehl.
+Beim Exportieren von Zuordnungen vom Gerät werden zwei MapX-Dateien generiert: "Het. MapX" und "SA. MapX" Während des Export Vorgangs werden alle räumlichen Anker außer der angegebenen app und der vom Benutzer erstellten Grenze (sofern vorhanden) entfernt. Der Name der Quellpaket Familie muss mit einer vorhandenen installierten App identisch sein, oder die exe-Datei schlägt fehl.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Wie Sie mithilfe von MixedRealityPackager.exe importieren
+### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Importieren mithilfe von "mixedrealitypackager. exe"
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
-Importieren, löscht die vorhandenen räumlichen Daten und ersetzt es durch die Daten im angegebenen Verzeichnis. Die Eingabe der app-Name Gibt an, für der Paketnamen der die Ziel-app, die die räumlichen Anker wie importiert werden soll, und gibt an, die Zielbenutzer-SID für das der Benutzer, der Zugriff auf die importierten räumliche Anker haben sollen. Paketfamilienname Ziel und Benutzer-SIDs müssen vorhandene Werte in den PC übereinstimmen oder die EXE-Datei schlägt fehl.
+Beim Importieren werden die vorhandenen räumlichen Daten gelöscht und durch die Daten aus dem angegebenen Verzeichnis ersetzt. Die App-namens Eingabe gibt den Paketnamen der Ziel-APP an, die für den räumlichen Anker importiert werden soll, und die Ziel Benutzer-SID gibt den Benutzer an, der Zugriff auf die importierten räumlichen Anker haben soll. Der Name und die Benutzer-SIDs des Ziel Pakets müssen mit den vorhandenen Werten auf dem PC abgeglichen werden, andernfalls tritt ein Fehler auf.
 
 
 ***
 ## <a name="error-messages"></a>Fehlermeldungen
-Darüber hinaus werden die Fehlermeldungen unten Fehler auch mit dem HRESULT begleitet
+Außerdem werden die Fehlermeldungen unter Fehler ebenfalls mit einem HRESULT verknüpft.
 
-### <a name="if-there-was-an-error-invalid-arguments"></a>Wenn ein Fehler wurden ungültige Argumente aufgetreten
+### <a name="if-there-was-an-error-invalid-arguments"></a>Wenn ein Fehler ungültige Argumente vorhanden ist
 ```
 Invalid command line parameters
 ```
 
-### <a name="if-the-executable-was-not-run-in-administrator-mode"></a>Wenn die ausführbare Datei nicht im Administratormodus ausgeführt wurde
+### <a name="if-the-executable-was-not-run-in-administrator-mode"></a>Wenn die ausführbare Datei nicht im Administrator Modus ausgeführt wurde
 ```
 1. Unable to determine elevation privileges 
 2. Please run with administrator privileges 
 ```
 
-### <a name="if-there-was-an-error-enabling-or-disabling-the-driver"></a>Wenn ein Fehler aktivieren oder deaktivieren den Treiber
+### <a name="if-there-was-an-error-enabling-or-disabling-the-driver"></a>Wenn beim Aktivieren oder Deaktivieren des Treibers ein Fehler aufgetreten ist
 ```
 1. Could not find the specified driver with class GUID {d612553d-06b1-49ca-8938-e39ef80eb16f}
 2. Could not find the device instance ID for specified driver with class GUID {d612553d-06b1-49ca-8938-e39ef80eb16f}
@@ -150,31 +150,31 @@ Invalid command line parameters
 4. Failed to enable/disable driver
 ```
 
-### <a name="if-there-was-an-error-validating-the-spatial-database-version"></a>Wenn Fehler bei die spatial-Datenbank-Version überprüfen
+### <a name="if-there-was-an-error-validating-the-spatial-database-version"></a>Wenn beim Validieren der Version der räumlichen Datenbank ein Fehler aufgetreten ist
 ```
 1. Could not read database version
 2. This tool is not compatible with the current driver version of Windows Mixed Reality and/or the spatial data provided to replace the existing spatial data is an invalid version.
 3. No spatial data is present on the current device please connect your Mixed Reality device to initialize spatial data. If the problem persists please restart your PC.
 ```
 
-### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a>Wenn Fehler bei der Überprüfung den paketfamiliennamen für Ziel-Import/Export-app bereitgestellt
+### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a>Wenn beim Überprüfen des für die Ziel Import/Export-App bereitgestellten Paket Familiennamens ein Fehler aufgetreten ist.
 ```
 The package family name does not correspond to an installed app
 ```
 
-### <a name="if-there-was-an-error-validating-the-user-sid"></a>Wenn Fehler bei der Überprüfung der Benutzers-SID
+### <a name="if-there-was-an-error-validating-the-user-sid"></a>Wenn beim Validieren der Benutzer-SID ein Fehler aufgetreten ist
 ```
 Failed to find local user for passed in user SID
 ```
 
-### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a>Wenn gab es verknüpften Fehler an das Ziel oder die Quelle räumlicher Daten Dateien
+### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a>Wenn ein Fehler im Zusammenhang mit den räumlichen Datendateien des Ziels oder der Quelle aufgetreten ist
 ```
 1. Folder path to space store files doesn't exist 
 2. het.mapx or sa.mapx file doesn't exist in <PATH> for import
 3. Unable to create directory at <PATH> for export
 ```
 
-### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a>Wenn ein Fehler im Zusammenhang mit der Start- und das Beenden des Spektrums/SharedRealitySvc
+### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a>Bei einem Fehler im Zusammenhang mit dem Starten und Beenden von "Spectrum/sharedrealitysvc"
 ```
 1. Unable to open service manager <SERVICE>
 2. Timed out trying to start/stop <SERVICE>

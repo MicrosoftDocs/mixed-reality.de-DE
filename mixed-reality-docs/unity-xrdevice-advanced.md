@@ -1,11 +1,11 @@
 ---
-title: Gemischte Realität, systemeigene Objekte in Unity
-description: Erhalten Sie Zugriff auf die zugrunde liegenden Holographic systemeigene Objekte in Unity ein.
+title: Native Reality-Objekte in Unity
+description: Erhalten Sie Zugriff auf die zugrunde liegenden Holographic Native-Objekte in Unity.
 author: vladkol
 ms.author: vladkol
 ms.date: 05/20/2018
 ms.topic: article
-keywords: Unity, mixed Reality, systemeigen, Xrdevice, Spatialcoordinatesystem, Holographicframe, Holographiccamera, Ispatialcoordinatesystem, Iholographicframe, Iholographiccamera, getnativeptr
+keywords: Unity, Mixed Reality, Native, xrdevice, spatialcoordinatesystem, holographicframe, holographiccamera, ispatialcoordinatesystem, iholographicframe, iholographiccamera, getnativeptr
 ms.openlocfilehash: 76073f5b2adfdf27cfbb153f95bb3a533d02e196
 ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
@@ -13,18 +13,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/20/2019
 ms.locfileid: "65942096"
 ---
-# <a name="mixed-reality-native-objects-in-unity"></a>Gemischte Realität, systemeigene Objekte in Unity
+# <a name="mixed-reality-native-objects-in-unity"></a>Native Reality-Objekte in Unity
 
-[Abrufen einer HolographicSpace](getting-a-holographicspace.md) ist, was jede Mixed Reality-app ist, bevor es gestartet wird, Empfangen von Kameradaten und das rendering von frames. In Unity das Modul übernimmt diese Schritte für Sie Holographic Objekte behandeln und intern als Teil seiner renderloop aktualisiert.
+Das [erhalten eines holographicspace](getting-a-holographicspace.md) ist das, was jede gemischte Reality-APP tut, bevor Sie mit dem Empfang von Kameradaten und renderingframes beginnt In Unity übernimmt die Engine diese Schritte für Sie und verarbeitet holografische Objekte und Updates intern als Teil der Renderschleife.
 
-Allerdings in erweiterten Szenarien müssen Sie möglicherweise für den Zugriff auf die zugrunde liegende systemeigene Objekte, z. B. die <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a> und den aktuellen <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>. <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">UnityEngine.XR.XRDevice</a> ist, was den Zugriff auf diese systemeigene Objekte bietet.
+In erweiterten Szenarien müssen Sie jedoch möglicherweise Zugriff auf die zugrunde liegenden systemeigenen Objekte erhalten, wie z. b. <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">holographiccamera</a> und Current <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">holographicframe</a>. <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">Unityengine. XR. xrdevice</a> ermöglicht den Zugriff auf diese systemeigenen Objekte.
 
-## <a name="xrdevice"></a>XRDevice 
+## <a name="xrdevice"></a>Xrdevice 
 
-**Namespace:** *UnityEngine.XR*<br>
-**Typ:** *XRDevice*
+**Namespace:** *Unityengine. XR*<br>
+**Sorte** *Xrdevice*
 
-Die *XRDevice* Typ ermöglicht Ihnen das Zugreifen auf zugrunde liegende systemeigene Objekte, die mit der <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.GetNativePtr.html" target="_blank">GetNativePtr</a> Methode. Was GetNativePtr zurückgibt variiert zwischen verschiedenen Plattformen. XRDevice.GetNativePtr gibt einen Zeiger (IntPtr) für die universelle Windows-Plattform, bei Windows Mixed Reality XR SDK als Ziel die folgende Struktur zurück: 
+Der *xrdevice* -Typ ermöglicht es Ihnen, mithilfe der <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.GetNativePtr.html" target="_blank">getnativeptr</a> -Methode Zugriff auf zugrunde liegende Native Objekte zu erhalten. Was getnativeptr zurückgibt, variiert zwischen verschiedenen Plattformen. Auf dem universelle Windows-Plattform gibt xrdevice. getnativeptr einen Zeiger (IntPtr) auf die folgende Struktur zurück, wenn das Windows Mixed Reality-SDK-SDK als Ziel verwendet wird: 
 
 ```cs
 using System;
@@ -40,22 +40,22 @@ struct HolographicFrameNativeData
     public IntPtr IHolographicCameraPtr; // // Windows::Graphics::Holographic::IHolographicCamera
 }
 ```
-Sie können in HolographicFrameNativeData mit Marshal.PtrToStructure-Methode konvertieren:
+Sie können es mithilfe der Marshal. ptrumstructure-Methode in holographicframenativedata konvertieren:
 ```cs
 var nativePtr = UnityEngine.XR.XRDevice.GetNativePtr();
 HolographicFrameNativeData hfd = Marshal.PtrToStructure<HolographicFrameNativeData>(nativePtr);
 ```
-***IHolographicCameraPtr** ist ein Array von IntPtr als UnmanagedType.ByValArray gemarshallt werden, mit einer Länge gleich MaxNumberOfCameras* 
+***Iholographiccameraptr** ist ein Array von IntPtr, das als UnmanagedType. ByValArray gemarshallt wird, wobei eine Länge gleich maxnumofkameras ist.* 
 
 
-### <a name="using-holographicframenativedata"></a>Verwenden von HolographicFrameNativeData
+### <a name="using-holographicframenativedata"></a>Verwenden von holographicframenativedata
 
 > [!NOTE]
-> Ändern des Status der nativen Objekte über HolographicFrameNativeData empfangen kann zu unvorhersehbaren Verhalten und Rendern von Artefakten, verursachen, besonders wenn Unity auch Informationen zu diesen gleichen Zustand Gründe.  Z. B. HolographicFrame.UpdateCurrentPrediction sollte nicht aufgerufen werden, da ansonsten die Haltung Vorhersage, die Unity mit diesen Frame gerendert wird, werden nicht mehr synchron mit der Haltung, die Windows erwartet wird, zu reduzieren, [– Hologramm Stabilität](hologram-stability.md).
+> Das Ändern des Zustands der systemeigenen Objekte, die über holographicframenativedata empfangen werden, kann zu unvorhersehbarem Verhalten und Rendern von Artefakten führen, insbesondere dann, wenn Unity auch für denselben Zustand verantwortlich ist.  Sie sollten z. b. holographicframe. updatecurrentvorhersage nicht aufrufen, oder andernfalls ist die Pose-Vorhersage, die Unity mit diesem Frame rendert, nicht mit der von Windows erwarteten Pose synchron. Dadurch wird die [– Hologramm-Stabilität](hologram-stability.md)reduziert.
 
-Sie können Daten aus HolographicFrameNativeData verwenden, wenn der Zugriff auf systemeigene Schnittstellen für das Rendern oder das Debuggen verwendet werden, in Ihre native-Plug-Ins erforderlich ist oder C# Code. 
+Sie können Daten von holographicframenativedata verwenden, wenn der Zugriff auf systemeigene Schnittstellen zum Rendern oder Debuggen in Ihren C# nativen Plug-ins oder Code erforderlich ist. 
 
-Hier ist ein Beispiel, wie Sie HolographicFrameNativeData verwenden können, um den aktuellen Frame Vorhersage Photon Zeit zu erhalten. 
+Im folgenden finden Sie ein Beispiel dafür, wie Sie holographicframenativedata verwenden können, um die Vorhersage des aktuellen Frames für die Photonen Zeit zu erhalten. 
 ```cs
 using System;
 using System.Runtime.InteropServices;
@@ -86,7 +86,7 @@ public static bool GetCurrentFrameDateTime(out DateTime frameDateTime)
 ```
 
 ## <a name="see-also"></a>Siehe auch
-* <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>
-* <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>
+* <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">Spatialcoordinatesystem</a>
+* <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">Holographicframe</a>
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a>
 * [Rendern in DirectX](rendering-in-directx.md)

@@ -1,6 +1,6 @@
-# <a name="device-sharing"></a>Gemeinsame Nutzung von Geräten
+# <a name="device-sharing"></a>Geräte Freigabe
 
 
-# <a name="session-sharing"></a>Freigabe
+# <a name="session-sharing"></a>Sitzungs Freigabe
 
-Hololens-2-Geräts kann zwischen Personen, ohne für jede Person über die Einrichtung des Geräts und erstellen Sie ein Konto freigegeben werden. Mehrere Personen können ein Gerät Hololens 2 Teilen und der Einfachheit halber dasselbe Konto für die Anmeldung verwenden. Wenn ein Benutzer das Gerät (über ihre anmeldesitzung) mit einem anderen Benutzer freigibt, fordert das Gerät den neuen Benutzer schnell kalibrieren und Personalisieren der Umgebung anzeigen. Diese Kalibrierung können Sie dann auf dem Gerät automatisch für die Qualität und vertraut Anzeige in der Zukunft anpassen gespeichert werden, vermeiden eine erneute Kalibrierung. Es ist keine Änderung des Dienstkontos zwischen den Benutzern in diesem Fall ein. 
+Hololens 2-Geräte können von Personen gemeinsam genutzt werden, ohne dass jede Person das Geräte Setup durchlaufen und ein Konto erstellen muss. Mehrere Personen können ein hololens 2-Gerät freigeben und zur einfacheren Verwendung dasselbe Konto für die Anmeldung verwenden. Wenn ein Benutzer das Gerät (über seine Anmelde Sitzung) mit einem anderen Benutzer freigibt, fordert das Gerät den neuen Benutzer auf, die Anzeige schnell zu kalibrieren und zu personalisieren. Diese Kalibrierung kann dann auf dem Gerät gespeichert werden, sodass Sie in Zukunft automatisch auf Qualität und eine bequeme Anzeige angepasst wird, sodass eine erneute Kalibrierung vermieden wird. In diesem Fall ist keine Konto Änderung zwischen den Benutzern vorhanden. 

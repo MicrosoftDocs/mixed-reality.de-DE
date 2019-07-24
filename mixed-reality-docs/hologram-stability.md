@@ -1,11 +1,11 @@
 ---
-title: – Hologramm Stabilität
-description: HoloLens stabilisiert automatisch Hologramme, aber es gibt Schritte, die Entwickler durchführen können, um die Stabilität der – Hologramm weiter zu verbessern.
+title: Hologram-Stabilität
+description: Hololens stabilisiert holograms automatisch, aber es gibt Schritte, die Entwickler durchführen können, um die hologrammstabilität weiter zu verbessern.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Hologramme, Stabilität, hololens
+keywords: holograms, Stabilität, hololens
 ms.openlocfilehash: b35b904e3c662c5ebd0670a98044706fe208e348
 ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
@@ -13,76 +13,76 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/21/2019
 ms.locfileid: "65974936"
 ---
-# <a name="hologram-stability"></a>– Hologramm Stabilität
+# <a name="hologram-stability"></a>Hologram-Stabilität
 
-Um stabile Hologramme zu erreichen, hat die HoloLens eine integriertes Bild Stabilisierung-Pipeline. Die Stabilisierung Pipeline erfolgt automatisch im Hintergrund, daher gibt es keine zusätzlichen Schritte erforderlich, um ihn zu aktivieren. Allerdings sollten Entwickler führen Sie die Techniken kennen, die – Hologramm Stabilität zu verbessern und Vermeiden von Szenarien, die Stabilität zu reduzieren.
+Zum erreichen stabiler Hologramme verfügt hololens über eine integrierte Pipeline zur Bildstabilisierung. Die Stabilisierungs Pipeline funktioniert automatisch im Hintergrund, sodass keine zusätzlichen Schritte erforderlich sind, um Sie zu aktivieren. Entwickler sollten jedoch Techniken anwenden, die die Stabilität des Hologramms verbessern und Szenarios vermeiden, die die Stabilität verringern.
 
-## <a name="hologram-quality-terminology"></a>Die Qualität Terminologie – Hologramm
+## <a name="hologram-quality-terminology"></a>Hologram Quality-Terminologie
 
-Die Qualität der Hologramme ist das Ergebnis der gute Umgebung und gute app-Entwicklung. Apps, die eine Konstante 60 Frames pro Sekunde in einer Umgebung, in denen HoloLens die Umgebung können Sie verfolgen, erreicht werden Stellen Sie sicher, dass die Hologramm und das entsprechende Koordinatensystem synchron sind. Aus Sicht eines Benutzers wechselt Hologramme, die nicht bewegt werden sollen nicht relativ zu der Umgebung.
+Die Qualität von holograms ist das Ergebnis einer guten Umgebung und einer guten App-Entwicklung. Apps, die in einer Umgebung, in der hololens die Umgebung nachverfolgen können, eine Konstante 60 Frames pro Sekunde erreichen, stellen sicher, dass das Hologramm und das passende Koordinatensystem synchronisiert sind. Aus Sicht eines Benutzers werden holograms, die stationär sein sollen, nicht relativ zur Umgebung verschoben.
 
-Wenn Sie Probleme mit der Umgebung, inkonsistent oder niedriger-Rendering-Sätze oder andere Probleme bei der app angezeigt, die folgende Terminologie Identifizieren des Problems hilfreich sind.
-* **Genauigkeit.** Nach der Hologramm World-gesperrt ist, und in der realen Welt platziert, sollte diese Einstellung beizubehalten, in dem sie, relativ zu der Umgebung unabhängig vom Benutzer während der Übertragung oder Änderungen in kleinen und mit geringer Dichte abgelegt wurde. Wenn Sie ggf. ein Hologramm später in eine unerwartete Position angezeigt wird, ist es ein *Genauigkeit* Problem. Solche Szenarien möglich, wenn zwei unterschiedliche Räume identisch aussehen.
-* **Jitter.** Benutzer, die dies als hohe Auslastung von ggf. ein Hologramm Schütteln beobachten. Dies kann passieren, wenn die nachverfolgung der Umgebung beeinträchtigt wird. Für Benutzer, die Projektmappe ausgeführt wird [Sensor Optimierung](sensor-tuning.md).
-* **Judder.** Niedrige Rendering Frequenzen führen ungleichmäßige während der Übertragung und doppelte Images Hologramme. Dies ist vor allem dann bemerkbar in Hologramme mit während der Übertragung. Entwickler müssen zum Verwalten einer [Konstanten 60 FPS](hologram-stability.md#frame-rate).
-* **Abweichen.** Benutzer sehen diese wie – Hologramm angezeigt wird, um Abkehr von, in dem sie ursprünglich abgelegt wurde. Dies geschieht, wenn Hologramme von weit entfernt befinden [räumliche Anker](spatial-anchors.md), besonders in Teilen der Umgebung, die nicht vollständig zugeordnet wurden. Hologramme in der Nähe räumliche Anker erstellen, verringert die Wahrscheinlichkeit, dass abweichungen.
-* **Jumpiness.** Wenn ein Hologramm "wird" oder "springt" Weg sie den Speicherort von Zeit zu Zeit. Dies kann auftreten, wie die nachverfolgung Hologramme aktualisierte Verständnis Ihrer Umgebung entsprechend angepasst wird.
-* **Schwimmen.** Wenn angezeigt wird ggf. ein Hologramm, sway, die die Bewegung des Benutzers Head entspricht. Dieses Problem tritt bei Hologramme nicht auf sind die [Stabilisierung Ebene](hologram-stability.md#stabilization-plane), und wenn die HoloLens nicht [kalibriert](calibration.md) für den aktuellen Benutzer. Benutzer kann erneut ausführen, die [Kalibrierung](calibration.md) Anwendung für dieses Problem zu beheben. Entwickler können die Ebene der Stabilisierung zur weiteren Verbesserung der Stabilität aktualisieren.
-* **Farbliche Trennung.** Die Anzeige in HoloLens sind einer sequenziellen Anzeige der Farbe, die flash der Rot-Grün-Blau-Grün-Kanal bei 60Hz (einzelne Farbe, die Felder an 240 Hz angezeigt werden). Wenn ein Benutzer einen gleitenden Hologramm mit seinem Augen nachverfolgt, trennen Sie in ihren zugehörigen Farben, erzeugen einen Effekt Rainbow, Hologramm die führenden und nachgestellten Rand an. Das Maß an Trennung ist abhängig von der Geschwindigkeit des Hologramm. In einigen seltenen Fällen Verschieben von Anwendungen in einen Effekt Rainbow Head schnell beim Blick auf ein stationär Hologramm führen kann. Dies wird als bezeichnet  *[Farbe Trennung](hologram-stability.md#color-separation)*.
+Wenn Umgebungs Probleme, inkonsistente oder niedrige renderingraten oder andere APP-Probleme angezeigt werden, ist die folgende Terminologie hilfreich, um das Problem zu identifizieren.
+* **Genau.** Sobald das – Hologramm weltweit gesperrt und in der realen Welt platziert wurde, sollte es sich an der Stelle befinden, an der es platziert wurde, relativ zur umgebenden Umgebung, unabhängig von der Benutzer Bewegung oder kleinen und geringfügigen Umgebungs Änderungen. Wenn ein – Hologramm später an einem unerwarteten Speicherort angezeigt wird, ist dies ein *Genauigkeits* Problem. Solche Szenarien können eintreten, wenn zwei unterschiedliche Räume identisch aussehen.
+* **Jitter.** Benutzer beobachten dies als hohes Frequenz schütteln eines holograms. Dies kann vorkommen, wenn die Nachverfolgung der Umgebung beeinträchtigt wird. Für Benutzer wird die [Sensor](sensor-tuning.md)Optimierung von der Lösung ausgeführt.
+* **Der Judder.** Niedrige renderingfrequenzen führen zu ungleichen Bewegungs-und doppelten Bildern von holograms. Dies ist besonders in holograms mit Motion spürbar. Entwickler müssen eine [Konstante 60 fps](hologram-stability.md#frame-rate)beibehalten.
+* **Inter.** Benutzer sehen, dass das – Hologramm anscheinend von der Stelle entfernt wird, an der Sie ursprünglich platziert wurde. Dies geschieht, wenn holograms von [räumlichen Ankern](spatial-anchors.md)fern platziert werden, insbesondere in Teilen der Umgebung, die nicht vollständig zugeordnet wurden. Das Erstellen von holograms in der Nähe räumlicher Anker verringert die Wahrscheinlichkeit einer Abweichung.
+* **Schnell Einstieg.** Wenn ein – Hologramm-"Pops" oder "springt" von seiner Position gelegentlich Weg ist. Dies kann auftreten, wenn die Nachverfolgung holograms anpasst, um das aktualisierte Verständnis Ihrer Umgebung abzugleichen.
+* **MME.** Wenn ein – Hologramm zu bewegen scheint, das der Bewegung des Benutzer Kopfes entspricht. Dieser Fehler tritt auf, wenn holograms sich nicht auf der [Stabilisierungs Ebene](hologram-stability.md#stabilization-plane)befinden und der hololens nicht für den aktuellen Benutzer [kalibriert](calibration.md) ist. Der Benutzer kann die [Kalibrierungs](calibration.md) Anwendung erneut ausführen, um dieses Problem zu beheben. Entwickler können die Stabilisierungs Ebene aktualisieren, um die Stabilität zu verbessern.
+* **Farbtrennung.** Die Anzeige in hololens ist eine Farb sequenzielle Anzeige, bei der die Farbe der roten grün-grün-blau-grün bei 60Hz angezeigt wird (einzelne Farbfelder werden bei 240 Hz angezeigt). Jedes Mal, wenn ein Benutzer ein bewegendes – Hologramm mit seinen Augen verfolgt, werden die führenden und nachfolgenden Kanten des holograms in den einzelnen Farben getrennt und erzeugen einen Regenbogeneffekt. Der Grad der Trennung hängt von der Geschwindigkeit des holograms ab. In einigen seltenen Fällen kann es auch zu einem Regenbogeneffekt kommen, wenn Sie sich bei der Betrachtung eines stationären holograms schnell bewegen. Dies wird als *[Farbtrennung](hologram-stability.md#color-separation)* bezeichnet.
 
 ## <a name="frame-rate"></a>Bildfrequenz
 
-Framerate ist die erste Säule des – Hologramm Stabilität. Für Hologramme stabile in der ganzen Welt angezeigt werden müssen jedes Image, das dem Benutzer angezeigten der Hologramme in der richtigen Stelle gezeichnet. Zeigt die HoloLens aktualisieren 240 Mal pro Sekunde, mit vier separate Farbe Felder jeweils neu gerendert Image, was zu einer Verwendung von 60 FPS (Frames pro Sekunde). Um die beste Möglichkeit bereit, müssen Anwendungsentwickler 60 FPS beibehalten, den konsistent alle 16 Millisekunden stellt einem neuen Abbild des Betriebssystems mit übersetzt.
+Die Framerate ist die erste Säule der – Hologramm-Stabilität. Damit holograms weltweit stabil angezeigt werden, muss für jedes Bild, das dem Benutzer präsentiert wird, das holograms an der richtigen Stelle gezeichnet werden. Die Anzeige auf hololens wird 240 mal pro Sekunde aktualisiert, wobei vier separate Farbfelder für jedes neu gerenderte Bild angezeigt werden, was zu einer Benutzer Darstellung von 60 fps (Frames pro Sekunde) führt. Um die bestmögliche Leistung zu gewährleisten, müssen Anwendungsentwickler 60 FPS verwalten. Dies bedeutet, dass alle 16 Millisekunden stets ein neues Image für das Betriebssystem bereitgestellt wird.
 
-**60 FPS** um Hologramme, sehen Sie, wie sie in der realen Welt sitzen zu zeichnen, HoloLens, die zum Rendern von Bildern aus Position des Benutzers benötigt. Da Bildrendering Zeit dauert, sagt HoloLens, wo eines Benutzers Head werden sollen, wenn im zeigt die Bilder angezeigt werden. Dieser Vorhersagealgorithmus ist eine Näherung. HoloLens hat es sich um Hardware, der das gerenderte Bild-Konto für die Abweichung zwischen den vorhergesagten Head und der tatsächlichen Head Position angepasst wird. Dies ermöglicht, sieht das Bild des Benutzers, angezeigt werden, als wenn er, aus dem korrekten Speicherort gerendert wurde, und Hologramme stabil. Das Image aktualisiert Arbeit am besten mit kleinen Änderungen, und bestimmte Dinge in das gerenderte Bild wie Motion-Parallax nicht vollständig behoben werden.
+**60 fps** Um holograms so zu zeichnen, dass Sie sich in der realen Welt befinden, müssen hololens Bilder aus der Position des Benutzers Rendering. Da das Rendern von Bildern Zeit erfordert, prognostizieren hololens, wo sich der Benutzer befindet, wenn die Bilder in den anzeigen angezeigt werden. Dieser Vorhersagealgorithmus ist eine Näherung. Hololens verfügt über Hardware, die das gerenderte Bild anpasst, um die Diskrepanz zwischen der vorhergesagten Kopfzeile und der tatsächlichen Head-Position zu berücksichtigen. Dadurch wird das Bild, das dem Benutzer angezeigt wird, so angezeigt, als wäre es vom richtigen Speicherort gerendert worden, und holograms fühlen sich stabil. Die Image Aktualisierungen funktionieren am besten mit kleinen Änderungen und können bestimmte Dinge im gerenderten Image wie Motion-Parser nicht vollständig beheben.
 
-Durch das Rendern mit 60 FPS machen Sie drei Schritte, um stabile Hologramme zu machen:
-1. Minimieren die gesamtlatenz zwischen rendern, ein Bild und dieses Image wird den Benutzer sichtbar. In ein Modul mit einem Spiel Thread und einen Renderthread kann das Ausführen im Gleichschritt, 30 FPS mit 33.3ms zusätzliche Latenz hinzufügen. Durch Verringern der Latenz, Dies verringert die Vorhersagefehler und – Hologramm Stabilität erhöht.
-2. Somit, sodass jedes Bild des Benutzers Augen erreicht haben, einen konsistenten Betrag an Wartezeit. Wenn Sie mit 30 fps rendern, wird die Anzeige immer noch Bilder mit 60 FPS. Dies bedeutet, dass das gleiche Image zweimal in einer Zeile angezeigt wird. Der zweite Frame müssen 16.6ms längere Wartezeiten als der erste frame und muss eine ausgeprägter Menge an Fehler zu beheben. Diese Inkonsistenz in der Größenordnung von Fehler kann dazu führen, dass unerwünschte 60 hz Judder.
-3. Reduzieren die Darstellung der Judder, ist die durch ungleichmäßige während der Übertragung und doppelten Bildern gekennzeichnet. Schneller – Hologramm während der Übertragung und niedrigere Render Raten zugeordnet deutlicher judder. Aus diesem Grund trägt wollen 60 FPS zu pflegen Zeiten Judder für einen bestimmten verschieben – Hologramm zu vermeiden.
+Durch Rendering bei 60 fps führen Sie drei Dinge aus, um stabile Hologramme zu erstellen:
+1. Minimierung der Gesamt Latenz zwischen dem Rendern eines Bilds und dem Bild, das für den Benutzer sichtbar ist. In einer Engine mit einem Spiel Thread und einem Renderthread, der in Lockstep ausgeführt wird, kann die Ausführung mit 30fps eine zusätzliche Wartezeit von 33,3 MS addieren. Durch die Reduzierung der Latenzzeit wird der Vorhersagefehler verringert, und die hologrammstabilität wird erhöht.
+2. Dadurch wird für jedes Bild, das die Augen des Benutzers erreicht, eine konsistente Latenzzeit erzielt. Wenn Sie bei 30fps Rendering, zeigt die Anzeige weiterhin Bilder bei 60 fps an. Dies bedeutet, dass dasselbe Bild zweimal in einer Zeile angezeigt wird. Der zweite Frame weist eine höhere Latenz von 16,6 ms als der erste Frame auf und muss eine deutlichere Menge an Fehlern beheben. Diese Inkonsistenz in der Fehler Größe kann zu unerwünschten 60Hz-Judder führen.
+3. Die Darstellung des Judder wird verringert, was durch ungleichmäßige Bewegung und doppelte Bilder gekennzeichnet ist. Eine schnellere – Hologramm-Bewegung und niedrigere Rendering-Raten sind mit deutlicheren Judder verknüpft. Daher wird die Verwendung von 60 fps zu allen Zeitpunkten helfen, den Judder für ein bestimmtes bewegliches Hologram zu vermeiden.
 
-**Framerate Konsistenz** Frame Rate Konsistenz ist ebenso wichtig wie eine hohe Frames pro Sekunde. Gelegentlich gelöscht werden für jede Anwendung umfangreicher unvermeidlich, und die HoloLens implementiert einige hoch entwickelten Algorithmus zur Wiederherstellung nach gelegentlicher Störungen. Allerdings ist eine ständig wechselnde Framerate viel deutlicher zu einem Benutzer als bei der Ausführung konsistent zu den niedrigeren Tarifen von Frames. Beispielsweise wird eine Anwendung, die rendert reibungslos für 5 Frames (60 FPS für die Dauer dieser 5 Frames) und legt dann jedes anderen Frames für die nächsten 10 Frames (30 FPS für die Dauer dieser 10 Frames) mehr als eine Anwendung instabil diesen so konsistent angezeigt rendert auf 30 BpS.
+**Konsistenz der Frame Rate** Die Konsistenz der Framerate ist so wichtig wie ein hoher Rahmen pro Sekunde. Gelegentlich gelöschte Frames sind für jede Content-Rich-Anwendung unvermeidlich, und der hololens implementiert einige ausgereifte Algorithmen, um gelegentlich auftretende Fehler zu beheben. Ein ständig schwankender Framerate ist für einen Benutzer jedoch deutlich deutlicher als bei einer konsistenten Ausführung mit niedrigeren Frameraten. Beispielsweise wird eine Anwendung, die für 5 Frames reibungslos rendert (60 fps für die Dauer dieser 5 Frames) und dann jeden anderen Frame für die nächsten 10 Frames (30 fps für die Dauer dieser 10 Frames) als eine Anwendung, die konsistent wird bei 30 fps gerendert.
 
-In diesem Zusammenhang, das Betriebssystem wird Anwendungen auf 30 BpS Drosselung bei [mixed Reality-Erfassung](mixed-reality-capture.md) ausgeführt wird.
+Bei einem verwandten Hinweis drosselt das Betriebssystem Anwendungen auf bis zu 30 fps, wenn die [gemischte Reality-Erfassung](mixed-reality-capture.md) ausgeführt wird.
 
-**Informationen zur Leistungsanalyse** stehen eine Vielzahl von Tools, mit denen die Framerate der Anwendung wie z. B. Vergleichstests werden können:
+**Leistungsanalyse** Es gibt eine Reihe von Tools, die verwendet werden können, um die Anwendungs Frame Rate zu messen, wie z. b.:
 * GPUView
-* Visual Studio Grafik-Debugger
-* Profiler-3D-Engines wie z. B. Unity integriert
+* Visual Studio-Grafik Debugger
+* Profiler, die in 3D-Engines wie Unity integriert sind
 
-## <a name="hologram-render-distances"></a>Die Render entfernungen – Hologramm
+## <a name="hologram-render-distances"></a>Hologram-Rendering-Entfernungen
 
 >[!VIDEO https://www.youtube.com/embed/-606oZKLa_s]
 
-Das interaktive visual System integriert mehrere abhängige Abstand Signale fixates und konzentriert sich auf ein Objekt.
-* [Unterkunft](https://en.wikipedia.org/wiki/Accommodation_%28eye%29) -den Fokus der einzelnen Ausschau.
-* [Konvergenz](https://en.wikipedia.org/wiki/Convergence_(eye)) – zwei Augen nach innen verschoben oder nach außen, um den Mittelpunkt eines Objekts festzulegen.
-* [Fernglas Vision](https://en.wikipedia.org/wiki/Stereopsis) -Unterschiede zwischen den linken und rechten Eye-Bildern, die Entfernung eines Objekts, von Fixation Point abhängig sind.
-* Schattierung, relative angular-Größe und andere Hinweise monokularen (einzelne Eye).
+Das menschliche visuelle System integriert mehrere entfernungsabhängige Signale, wenn es ein Objekt korrigiert und fokussiert.
+* [Unterkunft](https://en.wikipedia.org/wiki/Accommodation_%28eye%29) : der Schwerpunkt eines einzelnen Auges.
+* [Konvergenz](https://en.wikipedia.org/wiki/Convergence_(eye)) : zwei Augen werden nach innen oder nach außen verschoben, um auf ein Objekt zu zentrieren.
+* [Binbichtbild](https://en.wikipedia.org/wiki/Stereopsis) : Unterschiede zwischen der linken und der rechten Seite, die von der Entfernung eines Objekts von Ihrem Fixpunkt abhängen.
+* Schattierung, relative Angular-Größe und andere monokuläre Cues (Single Eye).
 
-Konvergenz und Unterbringung sind eindeutig, da sie sehr Beispiel Hinweise, die im Zusammenhang sind mit der die Augen wie zu ändern, um Objekte auf verschiedenen Abstände wahrnehmen. In natürliche anzeigen, sind die Konvergenz und Unterbringung verknüpft. Wenn die Augen etwas in der Nähe (z. B. Ihre Nase) anzeigen wird die Augen überschreiten und zu einem Zeitpunkt Near aufzunehmen. Wenn anzeigen etwas die Augen auf unendlich, wenn die Augen parallele sind und vom Auge gilt für unendlich. Benutzern steht, geteert HoloLens werden immer berücksichtigen, auf 2.0m zu verwalten, ein klares Bild, da die HoloLens zeigt sind in einer optischen Abstand ungefähr 2.0m von der Benutzer fest. App-Entwickler-Steuerelement, in denen Benutzer Augen konvergieren, durch die Platzierung von Inhalt und Hologramme in verschiedenen Ebenen. Wenn Benutzer ermöglichen und zu anderen Abständen zusammengeführt, die natürliche Verknüpfung zwischen den beiden Hinweise sind fehlerhaft und kann dies zu visual angefasst oder Ermüdung, insbesondere, wenn die Größe des Konflikts groß ist. Angefasst aus den Vergence-Unterbringung Konflikt vermieden oder minimiert werden, da der Inhalt, der Benutzer auf 2.0 m möglichst nahe zusammengeführt werden kann (d. h. in einer Szene mit viel Tiefe setzen, die Bereiche von Interesse sind, in der Nähe von 2,0 m, wenn möglich). Wenn der Inhalt kann nicht platziert werden ist nahezu 2.0 m angefasst aus den Konflikt Vergence-Unterkunft größten angezeigt, wenn Benutzer die hin und her zwischen verschiedenen Abstände bestaunen. Das heißt, ist es viel besser vertraut sind, betrachten Sie ein stationär Hologramm, die 50 cm entfernt als, sehen Sie sich ggf. ein Hologramm 50 cm sofort bleibt, das sich im Laufe der Zeit auf und von Ihnen weg bewegt.
+Konvergenz und Unternehmen sind eindeutig, da es sich um zusätzliche Netzhaut Hinweise handelt, die sich darauf beziehen, wie sich die Augen ändern, um Objekte in unterschiedlichen Abständen zu erkennen In natürlicher Ansicht sind Konvergenz und Unterbringung verknüpft. Wenn die Augen etwas in der Nähe (z. b. ihre Nase) angezeigt werden, überschreiten die Augen die Augen und können zu einem nahe Punkt Wenn die Augen etwas unendlich sehen, werden die Augen parallel angezeigt, und das Auge ist unendlich. Benutzer, die hololens durchführen, unterstützen immer 2.0 m, um ein klares Bild zu erhalten, da die hololens-Anzeige in einer optischen Entfernung von ungefähr 2,0 m vom Benutzer entfernt wird. App-Entwickler steuern, wohin die Augen der Benutzer konvergiert werden, indem Sie Inhalte und Hologramme in verschiedenen Tiefen platzieren. Wenn Benutzer unterschiedliche Entfernungen aufnehmen und mit Ihnen zusammenführen, ist die natürliche Verknüpfung zwischen den beiden hinweisen beschädigt, und dies kann zu einem visuellen Unbehagen oder Müdigkeit führen, insbesondere wenn die Größe des Konflikts sehr groß ist. Die Unannehmlichkeiten aus dem Vergence--Unterbringungs Konflikt können vermieden oder minimiert werden, indem Inhalte, die von Benutzern konvergiert werden, so nah wie möglich an 2.0 m aufbewahrt werden (d.h. in einer Szene mit vielen tiefen, wenn möglich, die relevanten Bereiche in der Nähe von 2.0 m). Wenn Inhalt nicht in der Nähe von 2.0 m-Unbehagen aus dem Vergence--Unterbringungs Konflikt platziert werden kann, ist es am größten, wenn der Benutzer sich zwischen verschiedenen Entfernungen hin-und her Anders ausgedrückt: Es ist viel besser, sich ein stationäres – Hologramm anzusehen, das 50 cm entfernt wird, als ein – Hologramm 50cm zu betrachten, das sich im Laufe der Zeit von Ihnen hin und her bewegt.
 
-Platzieren von Inhalt an 2.0m ist auch vorteilhaft, da die zwei zeigt entwickelt wurden, um auf die Entfernung vollständig überlappen. Images, die aus dieser Ebene platziert werden wie sie außerhalb des Frames, holographic verschoben werden sie von einer Anzeige befinden, auf dem anderen sichtbaren werden ausgeblendet. Diese Fernglas Rivalry kann für die Wahrnehmung der Tiefe von der Hologramm störend sein.
+Das Platzieren von Inhalten auf 2.0 m ist ebenfalls vorteilhaft, da die beiden anzeigen so konzipiert sind, dass Sie sich in dieser Entfernung vollständig überlappen Bei Bildern, die auf dieser Ebene abgelegt werden, werden Sie bei der Verschiebung von der Seite des Holographic Frame aus einer Anzeige verschwinden, während Sie auf der anderen angezeigt werden. Diese binare Rivalität kann die Tiefe Wahrnehmung des holograms stören.
 
-**Optimale Abstand zur Platzierung von Hologramme des Benutzers**
+**Optimale Entfernung zum Platzieren von holograms vom Benutzer**
 
-![Optimale Abstand zur Platzierung von Hologramme des Benutzers](images/distanceguiderendering-750px.png)
+![Optimale Entfernung zum Platzieren von holograms vom Benutzer](images/distanceguiderendering-750px.png)
 
-**Schneiden Sie Ebenen** für optimalen Komfort Clipping Render Abstand am 85 cm mit Fadeout von Inhalten, die beginnend bei 1 Mio. empfohlen. In Anwendungen, in denen Hologramme und Benutzer beide stationär Hologramme sind, können angezeigt werden, problemlos als near als 50cm. Klicken Sie in diesen Fällen Anwendungen sollten eine vorderen Clippingebene nicht näher als 30cm platzieren, und ausblenden, sollten mindestens 10cm Weg von der vorderen Clippingebene beginnen. Jedes Mal, wenn der Inhalt ist als 85cm, es wichtig ist, stellen Sie sicher, dass Benutzer häufig nicht näher oder weiter Hologramme verschieben oder Hologramme nicht häufig näher oder weiter Weg der Benutzer verschieben, wie diese Fälle sind die häufigsten Ursachen angefasst aus, der Vergence-Unterbringung-Konflikt. Inhalte sollten so entworfen werden, dass die senken den Aufwand für die Interaktion näher als 85cm vom Benutzer, aber wenn der Inhalt gerendert werden muss näher als 85cm eine gute Faustregel für Entwickler ist, um Szenarien zu entwerfen, in denen Benutzer und/oder Hologramme nicht mehr als 25 % von t ausführlich verschieben er Zeit.
+**Clip Flächen** Für einen maximalen Komfort empfiehlt es sich, den Ausschneide-renderabstand bei 85 cm mit dem faout-Inhalt beginnend bei 1 Mio. zu verringern. In Anwendungen, in denen holograms und Benutzer beide stationär sind, können Sie bequem so nah wie 50 cm angezeigt werden. In diesen Fällen sollten Anwendungen eine Ausschneide Ebene nicht oberhalb von 30cm platzieren, und das ausblenden sollte mindestens 10 cm von der Ausschneide Ebene ausgehen. Wenn Inhalt größer als 85 cm ist, muss sichergestellt werden, dass die Benutzer nicht häufig von holograms näher oder weiter gehen oder dass holograms nicht häufig in den Benutzer gelangen, da diese Situationen am wahrscheinlichsten von der Vergence-Unterbringungs Konflikt. Der Inhalt sollte so entworfen werden, dass er die Notwendigkeit einer Interaktion mit einem Wert von 85 cm vom Benutzer minimiert, aber wenn Inhalt vor dem 85 cm gerendert werden muss, ist es sinnvoll, Szenarios zu entwerfen, in denen Benutzer und/oder holograms nicht mehr als 25% von t verschieben. Uhrzeit.
 
-**Bewährte Methoden** Wenn Hologramme können nicht auf 2 m platziert werden und Konflikte zwischen Konvergenz und beeinflusst nicht vermieden werden, ist die optimale Zone für die Platzierung von – Hologramm 1,25 m bis 5 m. In jedem Fall sollte Designer Struktur Inhalt empfehlen Benutzern die Interaktion von 1 + m entfernt (z. B. Inhaltsgröße anpassen und die Positionierungsparameter des Standard).
+**Bewährte Methoden** Wenn holograms bei 2 m nicht platziert werden können und Konflikte zwischen Konvergenz und Unterbringung nicht vermieden werden können, liegt die optimale Zone für die – Hologramm-Platzierung zwischen 1,25 m und 5 m. In jedem Fall sollten Designer Inhalte strukturieren, um Benutzern die Interaktion von 1 + m zu empfehlen (z. b. Anpassen von Inhalts Größe und Standard Platzierungs Parametern).
 
-## <a name="stabilization-plane"></a>Stabilisierung-Ebene
+## <a name="stabilization-plane"></a>Stabilisierungs Ebene
 > [!NOTE]
-> Für desktop immersive Headsets ist das einer Ebene für die Stabilisierung in der Regel kontraproduktiv, da sie weniger visuelle Qualität als die Bereitstellung Ihrer app Tiefenpuffer für das System für das Aktivieren von pro-Pixel-Depth-basierte Reprojection bietet. Wenn auf eine HoloLens ausgeführt wird, sollten Sie in der Regel, die Stabilisierung-Ebene festlegen.
+> Bei desktopsiven Desktops ist das Festlegen einer Stabilisierungs Ebene in der Regel kontraproduktiv, da Sie weniger visuelle Qualität bietet, als die Tiefe des App-tiefen Puffers für das System bereitzustellen, um eine pro-Pixel-Tiefe basierende neuprojektion zu ermöglichen. Wenn Sie nicht auf einem hololens ausgeführt werden, sollten Sie im Allgemeinen vermeiden, die Stabilisierungs Ebene festzulegen.
 
-HoloLens führt eine anspruchsvolle hardwareunterstützte holographic Stabilisierung-Methode. Dies erfolgt zum größten Teil automatisch und während der Übertragung und Änderung der Sicht (CameraPose) zusammen, animiert die Szene und der Benutzer richtet ihren Köpfen. Eine einzelne Ebene, die Stabilisierung-Ebene aufgerufen wird ausgewählt, um diese Stabilisierung zu maximieren. Während einige Stabilisierung alle Hologramme in der Szene angezeigt wird, erhalten Hologramme in der Ebene der Stabilisierung der Stabilisierung maximale Hardware.
+Hololens führt eine ausgereifte Hardware gestützte Holographic-Stabilisierungstechnik durch. Dies ist größtenteils automatisch und muss mit Bewegung und Änderung der Sicht ("camerapose") erfolgen, wenn die Szene animiert wird und der Benutzer seine Kopfzeile verschiebt. Eine einzelne Ebene, die als Stabilisierungs Ebene bezeichnet wird, wird ausgewählt, um diese Stabilisierung zu maximieren. Während alle holograms in der Szene eine gewisse Stabilisierung erhalten, erhalten holograms in der Stabilisierungs Ebene die maximale Hardware Stabilisierung.
 
-![Stabilisierung-Ebene für 3D-Objekte](images/stab-plane-500px.jpg)
+![Stabilisierungs Ebene für 3D-Objekte](images/stab-plane-500px.jpg)
 
-Das Gerät wird automatisch versuchen, auf dieser Ebene, aber die Anwendung kann durch Auswählen der Fokuspunkt in der Szene in diesem Prozess unterstützen. Unity-apps, die unter einem HoloLens sollten auswählen, die am besten zeigen basierend auf Ihrer Szene zu konzentrieren, und übergeben es in [SetFocusPoint()](focus-point-in-unity.md). Ein Beispiel zum Festlegen der Fokuspunkt in DirectX ist in der Standardvorlage für rotierenden Cube enthalten.
+Das Gerät versucht automatisch, diese Ebene auszuwählen, aber die Anwendung kann bei diesem Vorgang helfen, indem der Fokuspunkt in der Szene ausgewählt wird. Unity-apps, die auf einem hololens ausgeführt werden, sollten den besten Punkt auswählen, der auf Ihrer Szene basiert, und diesen an [setfocuspoint ()](focus-point-in-unity.md)übergeben. Ein Beispiel für das Festlegen des Fokus Punkts in DirectX ist in der standardmäßigen drehenden Cube-Vorlage enthalten.
 
-Beachten Sie, dass beim Ausführen Ihrer Unity-app auf eine immersive Kopfhörer, die mit einem desktop-PC verbundenen Unity übermittelt, Ihre Tiefenpuffer, Windows, die pro-Pixel-Reprojection, zu dem in der Regel besseren Bildqualität ohne explizite von der app enthalten sind. Wenn Sie einen Schwerpunkt,, die die pro-Pixel-Reprojection außer Kraft setzt bereitstellen, sollte also nur möchten bei der Ausführung Ihrer app auf einem HoloLens.
+Beachten Sie Folgendes: Wenn Ihre Unity-App auf einem immersiven Headset ausgeführt wird, das mit einem Desktop-PC verbunden ist, sendet Unity ihren tiefen Puffer an Windows, um die neuprojektion pro Pixel zu aktivieren, was in der Regel eine noch bessere Bildqualität ohne explizite Arbeit durch die APP bereitstellt. Wenn Sie einen Schwerpunkt Punkt angeben, wird die neuprojektion pro Pixel überschrieben. Sie sollten dies nur tun, wenn Ihre APP in einem hololens ausgeführt wird.
 
 
 
@@ -102,50 +102,50 @@ renderingParameters.SetFocusPoint(
     );
 ```
 
-Platzierung der Fokuspunkt hängt zum größten Teil der Hologramm ansehen. Die app verfügt über die Blicke Vektor zu Referenzzwecken und der app-Designer weiß, welche Inhalte sie den Benutzer, das überwacht werden soll.
+Die Platzierung des Fokus Punkts hängt größtenteils vom – Hologramm ab, das Sie prüft. Die APP verfügt über den Reflektionsvektor zur Referenz, und der APP-Designer weiß, welche Inhalte der Benutzer beobachten soll.
 
-Einzelne sehr wichtig, wie ein Entwickler kann Hologramme stabilisieren ist zum Rendern mit 60 FPS. Das Ablegen unterhalb 60 FPS werden – Hologramm Stabilität, unabhängig von der Stabilisierung Ebene Optimierung erheblich reduzieren.
+Das wichtigste, was ein Entwickler zum stabilisieren von holograms tun kann, ist das Rendering bei 60 fps. Wenn Sie unter 60 fps ablegen, wird die – Hologramm-Stabilität erheblich reduziert, unabhängig von der Stabilisierung der Stabilisierungs Ebene.
 
-**Bewährte Methoden** es gibt keine universelle Möglichkeit zum Einrichten der Stabilisierung-Ebene und app-spezifisch ist, bleiben kann, damit die wichtigsten Empfehlung ist, und beobachten, was am besten für Ihre Szenarien ist. Versuchen Sie jedoch die Stabilisierung-Ebene mit so viel Inhalt möglichst ausgerichtet werden, da sämtliche Inhalte stehen auf dieser Ebene perfekt stabilisiert ist.
+**Bewährte Methoden** Es gibt keine universelle Methode zum Einrichten der Stabilisierungs Ebene, und Sie ist APP-spezifisch. Daher besteht die wichtigste Empfehlung darin, zu experimentieren und zu sehen, was für Ihre Szenarien am besten geeignet ist. Versuchen Sie jedoch, die Stabilisierungs Ebene mit so vielen Inhalten wie möglich auszurichten, da der gesamte Inhalt auf dieser Ebene vollständig stabilisiert ist.
 
 Zum Beispiel:
-* Wenn Sie nur planare Inhalt (Lesen-app, Videowiedergabe app), die die Stabilisierung-Ebene mit der Ebene ausrichten haben hat, Ihre Inhalte.
-* Treten 3 kleine Kugeln, die World-gesperrt sind, stellen Sie die Stabilisierung-Ebene, "Ausschneiden", jedoch alle die Kugeln zentriert, die in die Ansicht des Benutzers aktuell sind.
-* Wenn die Szene Inhalt in grundlegend andere Ebenen enthält, bevorzugt weitere Objekte.
-* Stellen Sie sicher, dass den Stabilisierung Punkt anpassen, die jedes Einzelbild an mit der Hologramm des Benutzers ausgewertet wird
+* Wenn Sie nur planare Inhalte haben (Lesen der APP, Videowiedergabe-APP), richten Sie die Stabilisierungs Ebene mit der Ebene aus, die ihren Inhalt enthält.
+* Wenn es drei kleine Bereiche gibt, die weltweit gesperrt sind, nehmen Sie die Stabilisierungs Ebene in den Mittelpunkt aller Bereiche, die sich derzeit in der Ansicht des Benutzers befinden.
+* Wenn Ihre Szene Inhalte in deutlich unterschiedlichen Tiefen hat, bevorzugen Sie weitere Objekte.
+* Stellen Sie sicher, dass Sie den Stabilisierungs Punkt an jedem Frame anpassen, damit er mit dem – Hologramm übereinstimmt, das der Benutzer prüft.
 
-**Dinge, die** die Stabilisierung-Ebene ist eine gute Tool, um stabile Hologramme, aber wenn missbraucht werden sie erzielen kann dazu führen, schwerwiegende Image Systeminstabilität zur Folge.
-* Nicht von "fire and forget", da Sie am Ende können die snapshotisolierung Verwaltungsebene hinter der Benutzer oder an ein Objekt, das nicht mehr in die Ansicht des Benutzers ist angefügt. Stellen Sie sicher, dass die Stabilisierung-Ebene, die normale entgegengesetzten Kamera Weiterleitung (z. B. - camera.forward) festgelegt ist
-* Ändern Sie nicht schnell an der Stabilisierung-Ebene hin und her zwischen den extremen
-* Lassen Sie nicht die Stabilisierung-Ebene, die auf einem festen Abstand/Ausrichtung festgelegt
-* Lassen Sie nicht die Stabilisierung-Ebene, die über die Benutzerkontoeigenschaften Ausschneiden
-* Nicht den Fokuspunkt festgelegt, wenn auf einem Desktop-PC, anstatt eine HoloLens ausgeführt, und verwenden Sie stattdessen auf pro-Pixel-Depth-basierte Reprojection.
+**Zu vermeide Dinge** Die Stabilisierungs Ebene ist ein großartiges Tool zum erreichen stabiler Hologramme, aber wenn Sie missbraucht wird, kann dies zu schwerwiegenden Bild Instabilität führen.
+* Nicht "auslösen und vergessen", da Sie die Stabilisierungs Ebene hinter dem Benutzer oder an ein Objekt anhängen können, das sich nicht mehr in der Ansicht des Benutzers befindet. Stellen Sie sicher, dass die Stabilisierungs Ebene normal gegen Kamera-vorwärts (z. b. "Kamera. vorwärts") eingestellt ist.
+* Ändern Sie die Stabilisierungs Ebene nicht schnell zwischen den extremen
+* Belassen Sie die Stabilisierungs Ebene nicht auf eine festgelegte Distanz/Ausrichtung.
+* Nicht zulassen, dass die Stabilisierungs Ebene den Benutzer ausschneidet
+* Legen Sie den Schwerpunkt Punkt nicht fest, wenn Sie auf einem Desktop-PC statt auf einem hololens ausgeführt werden, und verwenden Sie stattdessen die Tiefe pro Pixel-neuprojektion.
 
-## <a name="color-separation"></a>Farbliche Trennung 
+## <a name="color-separation"></a>Farbtrennung 
 
-Aufgrund der Art der HoloLens angezeigt werden soll kann manchmal ein Element namens "Color: Trennung" angesehen werden. Sie manifestiert sich als das Bild, das die Aufteilung in einzelne Grundfarben – Rot, Grün und Blau. Das Element kann vor allem angezeigt werden, weiß Objekte angezeigt, da sie große Mengen von Rot, Grün und Blau aufweisen. Es ist am deutlichsten, wenn ein Benutzer ggf. ein Hologramm visuell verfolgt nach, die über den holographic Frame mit hoher Geschwindigkeit bewegt wird. Eine weitere Möglichkeit, die das Artefakt manifest kann ist Verzerren von/Verformung von Objekten. Wenn ein Objekt, hohen Kontrast verfügt und/oder reine Farben (Rot, Grün, Blau), farbliche Trennung wird als verzerren verschiedener Teile des Objekts von wahrgenommen werden.
+Aufgrund der Art der hololens-Anzeige kann ein Element mit dem Namen "Farbtrennung" manchmal wahrgenommen werden. Es manifestiert sich als Bild, das in einzelne Basis Farben (rot, grün und blau) aufgeteilt ist. Das Element kann vor allem sichtbar sein, wenn Sie weiße Objekte anzeigen, da Sie große Mengen von rot, grün und blau aufweisen. Es ist am deutlichsten, wenn ein Benutzer ein – Hologramm visuell verfolgt, das mit hoher Geschwindigkeit über den Holographic-Frame bewegt wird. Eine andere Möglichkeit des Artefakts ist das Durchlaufen von Objekten. Wenn ein Objekt einen hohen Kontrast und/oder reine Farben (rot, grün, blau) aufweist, wird die Farbtrennung als aufwärtuping verschiedener Teile des Objekts wahrgenommen.
 
-**Welche Trennung der Farbe eines Head-locked weißen round Beispiel könnte wie folgt aussehen, wie ein Benutzer ihren Köpfen auf der Seite dreht:**
+**Beispiel dafür, wie die Farbtrennung eines gesperrenden weißen runden Cursors aussehen könnte, wenn ein Benutzer seine Kopfzeile auf die Seite dreht:**
 
-![Welche Trennung der Farbe eines Head-locked weißen round Beispiel könnte wie folgt aussehen, wie ein Benutzer ihren Köpfen auf der Seite dreht.](images/colorseparationofroundwhitecursor-300px.png)
+![Beispiel dafür, wie die Farbtrennung eines gesperrenden weißen runden Cursors aussehen könnte, wenn ein Benutzer seine Kopfzeile auf die Seite dreht.](images/colorseparationofroundwhitecursor-300px.png)
 
-Obwohl es schwierig, eine farbliche Trennung vollständig zu vermeiden ist, gibt es verschiedene Techniken zur Verfügung, um es zu verringern.
+Obwohl es schwierig ist, die Trennung von Farben vollständig zu vermeiden, stehen mehrere Verfahren zur Verfügung, um das Problem zu verringern.
 
-**Farbe Trennung kann für angezeigt werden:**
-* Objekte, die schnell verschieben, einschließlich der Head-locked-Objekte wie z. B. die [Cursor](cursors.md).
-* Objekte, die im Wesentlichen weit von der [Stabilisierung Ebene](hologram-stability.md#stabilization-plane).
+**Die Farbtrennung finden Sie unter:**
+* -Objekte, die schnell verschoben werden, einschließlich der von einem Kopf gesperrten Objekte, z. b. des [Cursors](cursors.md).
+* Objekte, die sich weitgehend von der [Stabilisierungs Ebene](hologram-stability.md#stabilization-plane)unterliegen.
 
-**Um die Auswirkungen der Trennung Farbe Dämpfen:**
-* Stellen Sie das Objekt des Benutzers Blicke lag. Es sollte angezeigt werden, als ob er verfügt über einige Trägheit und die Blicke "on Federn" angefügt ist. Dies verlangsamt wird den Cursor (Trennung Entfernung verringert) und hinter der Benutzer wahrscheinlich Blicke eingefügt. Solange es schnell entdeckt einrichten, wenn der Benutzer beendet die Blicke Verschiebung fühlt es ganz natürlich.
-* Wenn Sie ggf. ein Hologramm verschieben möchten, sollten Sie Bewegung Geschwindigkeit unter 5 Grad pro Sekunde zu halten, wenn sich abzeichnet, dass der Benutzer mit ihren Augen Wirklichkeit folgen soll.
-* Verwendung *Licht* anstelle von *Geometrie* für den Cursor. Eine Quelle für virtuelle Beleuchtung, die an die Blicke angefügt wird als interaktiver Zeiger wahrgenommen werden, aber es verursacht keine Farbe Trennung.
-* Anpassen der Stabilisierung-Ebene, um die Hologramme übereinstimmen, denen der Benutzer am gazing ist.
-* Stellen Sie das Objekt Rot, Grün oder Blau.
-* Wechseln Sie zu einem weichgezeichnete Version des Inhalts. Beispielsweise kann ein round-weißer-Cursor Änderung zu einer etwas verschwommen Zeile in die Richtung der Bewegung ausgerichtet sein.
+**So mildern Sie die Auswirkungen der Farbtrennung:**
+* Sorgen Sie dafür, dass das Objekt den Benutzer Blick verzögert. Es sollte so aussehen, als ob es etwas Trägheit hat und an den Blick "on Springs" angefügt ist. Dadurch wird der Cursor verlangsamt (die Distanz wird reduziert), und er wird hinter dem wahrscheinlichen Blickpunkt des Benutzers abgelegt. Solange der Benutzer die Verschiebung seines Blicks nicht stoppt, ist es ganz natürlich.
+* Wenn Sie ein Hologramm verschieben möchten, sollten Sie versuchen, die Verschiebungs Geschwindigkeit unter 5 Grad/Sekunde beizubehalten, wenn Sie davon ausgehen, dass der Benutzer ihm die Augen folgt.
+* Verwenden Sie *Light* anstelle von *Geometry* für den Cursor. Eine Quelle der virtuellen Beleuchtung, die an den Blick angefügt ist, wird als interaktiver Zeiger wahrgenommen, bewirkt aber keine Farbtrennung.
+* Passen Sie die Stabilisierungs Ebene so an, dass Sie mit den Hologrammen identisch ist, bei denen der Benutzer die Benutzer
+* Legen Sie das-Objekt rot, grün oder blau.
+* Wechseln Sie zu einer unscharfen Version des Inhalts. Beispielsweise könnte ein runder weißer Cursor in eine etwas verschwommene Linie geändert werden, die in der Bewegungsrichtung ausgerichtet ist.
 
-Wie zuvor Rendern mit 60 FPS und Festlegen der Stabilisierung-Ebene die wichtigsten Techniken – Hologramm Stabilität sind. Wenn merkliche farbliche Trennung, stellen Sie zunächst sicher, dass die Framerate Erwartungen erfüllt.
+Wie zuvor sind das Rendering bei 60 fps und das Festlegen der Stabilisierungs Ebene die wichtigsten Techniken für die – Hologramm-Stabilität. Stellen Sie zunächst sicher, dass die Framerate den Erwartungen entspricht, wenn Sie mit einer merkbaren Farbtrennung
 
 ## <a name="see-also"></a>Siehe auch
-* [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
+* [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
 * [Farbe, Licht und Materialien](color,-light-and-materials.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)

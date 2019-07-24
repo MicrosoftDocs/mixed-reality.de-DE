@@ -1,11 +1,11 @@
 ---
-title: Übersicht über die Entwicklung
+title: Entwicklungs Übersicht
 description: Dieser Artikel beschreibt die grundlegenden Bausteine der Entwicklung einer Windows Mixed Reality-app.
 author: mattzmsft
 ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
-keywords: Erste Schritte, Grundlagen HoloLens, HoloLens-2, immersive Kopfhörer, Unity und visual Studio
+keywords: Getting Started, Basics, hololens, hololens 2, immersives Headset, Unity, Visual Studio
 ms.openlocfilehash: 23bd173f89a468b4403d44236534bfe811a968dd
 ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
@@ -13,39 +13,39 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64873971"
 ---
-# <a name="development-overview"></a>Übersicht über die Entwicklung
+# <a name="development-overview"></a>Entwicklungs Übersicht
 
-Mixed Reality-apps können mithilfe einer Vielzahl von entwicklertechnologien entwickelt werden.  HoloLens ausgeführt wird, apps, die mit basieren die [universelle Windows-Plattform](https://dev.windows.com/getstarted).  Führen Sie immersive Headsets apps der universellen Windows-Plattform als auch für Win32-Anwendungen.
-Durch die damit vertraut machen, Middleware-Tools wie Unity, können Sie beginnen, Erstellen von mixed Reality heute auftritt.  Nutzen Sie die open Source [Mixed Reality-Toolkit](install-the-tools.md) einen schnellen Einstieg.
-<a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">Mixed Reality-Services</a>, z. B. <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure räumliche Anker</a>, haben Sie die SDKs, die in verschiedenen plattformübergreifenden entwicklertechnologien auch integrieren können.
+Mixed Reality-Apps können mithilfe verschiedener Entwickler Technologien entwickelt werden.  Hololens führt Apps aus, die mit dem [universelle Windows-Plattform](https://dev.windows.com/getstarted)erstellt wurden.  Immersive Headsets werden universelle Windows-Plattform apps und Win32-Anwendungen ausgeführt.
+Wenn Sie sich mit Middleware-Tools wie Unity vertraut machen, können Sie heute mit dem entwickeln gemischter Realität beginnen.  Nutzen Sie das Open Source [Mixed Reality Toolkit](install-the-tools.md) , um schnell loslegen zu können.
+<a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">Gemischte Reality-Dienste</a>, wie z. b. <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">räumliche Azure-Anker</a>, haben sdgs, die auch in verschiedene plattformübergreifende Entwickler Technologien integriert werden können.
 
 >[!VIDEO https://www.youtube.com/embed/A784OdX8xzI]
 
-## <a name="basics-of-mixed-reality-development"></a>Grundlagen der Entwicklung von mixed reality
+## <a name="basics-of-mixed-reality-development"></a>Grundlagen der Mixed Reality-Entwicklung
 
-[Mixed Reality](mixed-reality.md) Funktionen werden durch neue Windows-Features für das Verständnis der Umgebung aktiviert. Diese ermöglichen Entwicklern das Platzieren einer [– Hologramm](hologram.md) in der realen Welt Benutzern ermöglicht, die digitale Welt buchstäblich Schritt für Schritt zu durchlaufen. 
+[Mixed Reality](mixed-reality.md)-Umgebungen werden durch neue Windows-Features zur Umgebungserkennung ermöglicht. Diese ermöglichen es Entwicklern, ein [Hologramm](hologram.md) in der realen Welt zu platzieren, und ermöglichen es zudem den Benutzern, sich durch digitale Welten zu bewegen, indem sie buchstäblich herumlaufen. 
 
-Dies sind die wichtigsten Bausteine für die Entwicklung von mixed Reality:
+Dies sind die zentralen Bausteine für die Mixed Reality-Entwicklung:
 
 <table>
 <tr>
-<th>Input</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th>Eingabe</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td> <a href="gaze.md">Head Blicke</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="gaze.md">Anvisieren mit dem Kopf</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="gaze.md">Eye Blicke</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
+<td> <a href="gaze.md">Anvisieren mit den Augen</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
 </tr><tr>
-<td> Praktische / <a href="gestures.md">Gesten</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
+<td> Hände/ <a href="gestures.md">Gesten</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td></td>
 </tr><tr>
-<td> <a href="voice-input.md">Voice</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="voice-input.md">Sprache</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="motion-controllers.md">Motion-Controller</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<th> Vorstellung und räumliche Funktionen</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive headsets</a></th>
+<th> Wahrnehmung und Raummerkmale</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td> <a href="coordinate-systems.md">Globale Koordinaten</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="coordinate-systems.md">Weltkoordinaten</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="spatial-sound.md">Raumklang</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
@@ -55,33 +55,33 @@ Dies sind die wichtigsten Bausteine für die Entwicklung von mixed Reality:
 
 
 
-Das grundlegende Interaktionsmodell für [HoloLens](hololens-hardware-details.md) ist [bestaunen](gaze.md), [Geste](gestures.md), und [Voice](voice-input.md), auch als bezeichnet *GGV* . [Windows Mixed Reality immersive Headsets](immersive-headset-hardware-details.md) auch verwenden Blicke "und" Stimme, aber "Swap [motion Controller](motion-controllers.md) für Gesten.
+Das grundlegende Interaktionsmodell für [HoloLens](hololens-hardware-details.md) ist [Anvisieren](gaze.md) (Gaze), [Gesten](gestures.md) (Gesture) und [Sprache](voice-input.md) (Voice), manchmal auch als *GGV* bezeichnet. [Windows Mixed Reality – Immersive Headsets](immersive-headset-hardware-details.md) verwenden ebenfalls Anvisieren und Sprache, aber [Motion-Controller](motion-controllers.md) anstelle der Gesten.
 
 
-Alle Windows-basierten mixed Reality-Geräte gibt das Eingabe-Ökosystem zur Verfügung, Windows, einschließlich Maus, Tastatur, Gamepads und mehr profitieren. Mit HoloLens [Hardwarezubehör](hardware-accessories.md) über Bluetooth verbunden sind. Verbinden mit immersive Headsets Zubehör zum Host-PC über Bluetooth, USB und anderen unterstützten Protokolle.
+Alle Windows-basierten Mixed Reality-Geräte profitieren von dem Eingabe Ökosystem, das für Windows verfügbar ist, einschließlich Maus, Tastatur, Gamepads und mehr. Bei HoloLens wird [Hardwarezubehör](hardware-accessories.md) über Bluetooth verbunden. Bei immersiven Headsets wird das Zubehör über Bluetooth, USB und andere unterstützte Protokolle mit dem Host-PC verbunden.
 
-Die Umwelt Grundlegendes zu Funktionen wie [Koordinaten](coordinate-systems.md), [räumliche Sound](spatial-sound.md), und [räumliche Zuordnung](spatial-mapping.md) bieten die notwendigen Funktionen für das Kombinieren von Realität. Räumliche Zuordnung gilt nur für HoloLens und ermöglicht Hologramme sowohl für den Benutzer als auch für die physische Welt zu interagieren. Koordinatensysteme ermöglichen der Bewegung der Benutzer Verschieben von Daten in die digitale Welt zu beeinflussen.
+Die umgebungsbezogenen Erkennungsmerkmale wie [Koordinaten](coordinate-systems.md), [Raumklang](spatial-sound.md) und [räumliche Abbildung](spatial-mapping.md) bieten die notwendigen Fähigkeiten für Mixed Reality. Die räumliche Abbildung ist einzigartig für HoloLens und ermöglicht es Hologrammen, sowohl mit dem Benutzer als auch mit der physischen Umgebung um sie herum zu interagieren. Koordinatensysteme ermöglichen es, dass die Bewegung des Benutzers die Bewegung in der digitalen Welt beeinflusst.
 
-[Hologramme](hologram.md) erfolgen von Licht und Sound, die von abhängig sind [holographic Rendering](rendering.md). Die Erfahrung der Platzierung und Persistenz zu verstehen, wie in der [Windows Mixed Reality home](navigating-the-windows-mixed-reality-home.md) (der "Shell" bezeichnet) ist eine gute Möglichkeit erden Sie sich auf der Benutzeroberfläche.
+[Holograms](hologram.md) bestehen aus Licht und Sound, die auf [Holographic Rendering](rendering.md)basieren. Wenn Sie das Konzept von Platzierung und Persistenz verstehen, wie es auf der [Windows Mixed Reality-Startseite](navigating-the-windows-mixed-reality-home.md) (manchmal als „Shell“ bezeichnet) veranschaulicht wird, ist dies eine gute Möglichkeit, sich in der Benutzerumgebung zu etablieren.
 
-## <a name="tools-for-developing-for-mixed-reality"></a>Tools für die Entwicklung für mixed reality
+## <a name="tools-for-developing-for-mixed-reality"></a>Tools zur Entwicklung für Mixed Reality
 
-Die Tools, die Sie verwenden, hängt von der [Art von app](app-views.md) erstellt werden soll.
-* [Apps mit einer 2D-Ansicht](building-2d-apps.md) nutzen Sie Tools für universelle Windows-Plattform-apps erstellen, die für die Umgebungen wie Windows Phone, PCs und Tablets geeignet. Diese apps als 2D Projektionen, die in die Windows Mixed Reality home platziert vertraut sind, und können über mehrere Gerätetypen (einschließlich Telefon und PC) arbeiten.
-* Immersive und holographic apps benötigen Tools, die Vorteile der Windows Mixed Reality-APIs nutzen. Wir [wird empfohlen, mithilfe von Unity](unity-development-overview.md) , mixed Reality-apps zu erstellen. Entwickler, die bei der Erstellung ihres eigenen Moduls können [DirectX und anderen Windows-APIs verwenden](directx-development-overview.md).
+Die von Ihnen verwendeten Tools hängen von der [Art der App](app-views.md) ab, die Sie erstellen möchten.
+* [Apps mit einer 2D-Ansicht](building-2d-apps.md) nutzen Tools zum Erstellen von Apps der universellen Windows-Plattform, die für Umgebungen wie Windows Phone, PC und Tablets geeignet sind. Diese Apps werden als 2D-Projektionen auf der Startseite von Windows Mixed Reality erlebt und können auf mehreren Gerätetypen (einschließlich Mobiltelefon und PC) eingesetzt werden.
+* Immersive und holografische Apps benötigen Tools, die die Vorteile der Windows Mixed Reality-APIs nutzen. Wir [empfehlen Unity](unity-development-overview.md) für die Erstellung von Mixed Reality-Apps. Entwickler, die daran interessiert sind, eine eigene Engine zu entwickeln, können [ DirectX und andere Windows-APIs](directx-development-overview.md) verwenden.
 
-Unabhängig von der Art der app, die Sie erstellen, werden diese Tools app-Entwicklungsprozess vereinfachen:
+Unabhängig davon, welche Art von App Sie erstellen, werden diese Tools Ihnen die Entwicklung von Apps erleichtern:
 * [Visual Studio und das Windows SDK](using-visual-studio.md)
 * [Windows-Geräteportal](using-the-windows-device-portal.md)
-* [Emulator für HoloLens](using-the-hololens-emulator.md) (HoloLens-2-Emulator in Kürze verfügbar)
-* [Windows Mixed Reality-simulator](using-the-windows-mixed-reality-simulator.md)
+* [Hololens-Emulator](using-the-hololens-emulator.md) (Hololens 2-Emulator in Kürze verfügbar)
+* [Windows Mixed Reality-Simulator](using-the-windows-mixed-reality-simulator.md)
 * [Kriterien für die App-Qualität](app-quality-criteria.md)
 
 ## <a name="see-also"></a>Siehe auch
 * [Installieren der Tools](install-the-tools.md)
 * <a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">Mixed Reality-Dienste</a>
-* [Mixed Reality-Lernprogramme](tutorials.md)
-* [Open Source-Projekte](open-source-projects.md)
+* [Lernprogramme für gemischte Realität](tutorials.md)
+* [Open-Source-Projekte](open-source-projects.md)
 * [MR-Grundlagen 100: Erste Schritte mit Unity](holograms-100.md)
-* [Windows Mixed Reality minimale PC Kompatibilität an die hardwareempfehlungen](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
-* [Übermitteln einer app an den Windows Store](submitting-an-app-to-the-microsoft-store.md)
+* [Windows Mixed Reality-Mindestanforderungen für die PC-Hardware Kompatibilität](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
+* [Übermitteln einer APP an den Windows Store](submitting-an-app-to-the-microsoft-store.md)
