@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 3e4be00ddeab6d91dbbc8226bfa3dc543cded095
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293682"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460320"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen mit mehreren Benutzern
 
@@ -50,7 +50,7 @@ Ziele
 
 ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. Navigieren Sie in der Projektansicht zu Assets-> Resources-> Prefabs. Ziehen Sie zuerst die Tabelle "Prefab" per Drag & Drop in den tableprefab-Slot der Klasse "photonroom". Ziehen Sie dann das lunarmodule-präfab per Drag & amp; Drop in das Modul Prefab-Slot der Klasse "photonroom".
+7. Navigieren Sie in der Projektansicht zu Assets-> Resources-> Prefabs. Ziehen Sie zuerst die Tabelle "Prefab" per Drag & Drop in den tableprefab-Slot der Klasse "photonroom". Ziehen Sie dann das rocketlaunchercompletevariantprefab per Drag & amp; Drop in das Modul Prefab Slot in der Klasse "photonroom".
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
@@ -67,10 +67,6 @@ Ziele
 10. Wenn das neue Objekt in Ihrer Hierarchie ausgewählt ist, ändern Sie im Inspektor-Panel den Namen des Objekts in tableanchor. Klicken Sie auch auf Komponente hinzufügen, und suchen Sie nach der tableanchor-Komponente. Wählen Sie Sie aus, und fügen Sie Sie dem-Objekt hinzu. 
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
-
-> Hinweis: Legen Sie die Positionierung auf x = 1, y =-0,55 und z = 2 fest. Legen Sie außerdem die Drehung auf y = 90 fest. 
->
-> ![Module3Chapter4step6im](images/module3chapter4noteim.PNG)
 
 11. Ziehen Sie nun aus dem Projekt Panel im Ordner "Prefabs" die Tabelle "Prefab" in das untergeordnete "tableanchor"-Objekt, das Sie soeben erstellt haben.
 
