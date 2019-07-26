@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Gemischte Realität, Hände, Bewegungs controllen, Interaktion, Entwurf
-ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: b6efb0a9651cad8eee9b80bb130aa1a85b9a9941
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039167"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507870"
 ---
 # <a name="hands-and-motion-controllers"></a>Hand-und Bewegungs Controller
 ## <a name="scenarios"></a>Szenarien
@@ -32,9 +32,11 @@ Dies ist eine Modalität, die die Leistungsfähigkeit nutzt, mit der Benutzer di
 Diese Modalität ermöglicht es Benutzern, mit holograms in einer Distanz zu interagieren. Sie ermöglicht es Benutzern, die Umgebung optimal zu nutzen. Benutzer können Hologramme an jedem beliebigen Ort platzieren und können weiterhin aus beliebigen Entfernungen auf Sie zugreifen. Die mentalen Modelle und Gesten zum Steuern und manipulieren von 2D-und 3D-holograms sind stark synchron mit denen der direkten Bearbeitung.
 
 ### <a name="motion-controllersmotion-controllersmd"></a>[Motion-Controller](motion-controllers.md)
-Bewegungs Controller sind Tools, mit denen die physischen Funktionen der Benutzer erweitert werden, indem präzise Interaktionen über einen großen Bereich von Entfernungen bereitgestellt werden, wenn ein oder beide Hände verwendet werden. Diese Hardware Zubehör bietet Verknüpfungen zu vielen häufig verwendeten Interaktionen und bietet ein untergeordnetes, taktiles Feedback für eine Reihe von Aktionen. Derzeit sind Motion-Controller nur für WMR-Szenarien verfügbar. 
+Bewegungs Controller sind Tools, mit denen die physischen Funktionen des Benutzers erweitert werden, indem genaue Interaktionen über einen großen Bereich von Entfernungen bereitgestellt werden, wenn ein oder beide Hände verwendet werden. Diese Hardware Zubehör bieten Verknüpfungen zu vielen häufig verwendeten Interaktionen und bieten unterschiedliche Aktionen, die Sie für eine Reihe von Aktionen durchsuchen können. Derzeit sind Motion-Controller nur für Windows Mixed Reality-Szenarios (WMR) verfügbar. 
 
-![](images/Hands-and-controllers-720px.jpg)<br>
+![Vergleich der Methoden des Hands-und Motion-Controllers](images/Hands-and-controllers-720px.jpg)<br>
+
+*Vergleich der Methoden des Hands-und Motion-Controllers*
 
 ## <a name="see-also"></a>Siehe auch
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)

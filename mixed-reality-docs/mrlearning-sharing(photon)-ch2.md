@@ -1,4 +1,4 @@
-### <a name="getting-unity-ready-for-development"></a>Vorbereiten von Unity für die Entwicklung 
+# <a name="2-getting-unity-ready-for-development"></a>2. Vorbereiten von Unity für die Entwicklung 
 
 
 In diesem Tutorial erfahren Sie, wie Sie Unity für die Anwendungsentwicklung vorbereiten und konfigurieren, einschließlich Importieren des Mixed Reality Toolkit, Konfigurieren von Buildeinstellungen und vorbereiten unserer Szene.
@@ -11,7 +11,7 @@ Ziele
 
 - Vorbereiten der Projekt Szene
 
-### <a name="instructions"></a>Anweisungen
+## <a name="instructions"></a>Anweisungen
 
 1. Klicken Sie hier, um das Unity-Paket für Mixed Reality Toolkit herunterzuladen und zu speichern [.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
 
@@ -76,5 +76,5 @@ Ziele
 
 Ihr Unity-Projekt ist nun für das Photon bereit. In den nächsten Tutorials bauen wir auf dieser Szene und unserem Unity-Projekt auf, um eine vollständige gemeinsame Nutzung zu ermöglichen.
 
-[Nächstes Tutorial: Verbinden mehrerer Benutzer](mrlearning-sharing(photon)-ch3.md)
+[Nächstes Tutorial: 3. Verbinden mehrerer Benutzer](mrlearning-sharing(photon)-ch3.md)
 

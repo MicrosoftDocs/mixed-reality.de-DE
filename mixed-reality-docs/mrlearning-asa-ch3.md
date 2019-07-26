@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: c6e902710eebe205b9e944b1bf95a9ddd3bd9044
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cfd6ac9997a8a5d962603922f473bd6fc5d708ed
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293806"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485733"
 ---
-# <a name="displaying-azure-spatial-anchor-feedback"></a>Anzeigen des Azure Spatial Anchor-Feedbacks
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen des Azure Spatial Anchor-Feedbacks
 
 In dieser Lektion erfahren Sie, wie Sie Benutzern Feedback zur Anker Ermittlung, zu Ereignissen und zum Status bei der Verwendung von räumlichen Azure-Ankern bereitstellen.
 
-Ziele
+## <a name="objectives"></a>Ziele
 
 * Erfahren Sie, wie Sie einen Benutzeroberflächen Bereich einrichten, in dem wichtige Informationen zur aktuellen ASA-Sitzung angezeigt werden.
 

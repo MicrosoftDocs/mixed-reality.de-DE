@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 51cfc123f7da8d25a53eecfb730f60cf10fe7377
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387786"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485721"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisieren Ihres Projekts und der ersten Anwendung
 
@@ -112,4 +112,4 @@ Sie haben nun Ihre erste hololens 2-Anwendung bereitgestellt. Beim durchlaufen w
 
 >Hinweis: Wie Sie den Frameratenzähler mithilfe eines Sprachbefehls umschalten, erfahren Sie in [Lektion 5](mrlearning-base-ch5.md).
 
-[Nächste Lektion: Benutzeroberfläche, Handverfolgung und Konfiguration des Mixed Reality-Toolkits](mrlearning-base-ch2.md)
+[Nächste Lektion: 3. Erstellen einer Benutzeroberfläche und Konfigurieren von Mixed Reality Toolkit](mrlearning-base-ch2.md)

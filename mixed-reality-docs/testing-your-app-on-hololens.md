@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Hololens, testen
-ms.openlocfilehash: 35e8eff230cdcd719952ad2633ec610c9a9a26a0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63549062"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507908"
 ---
 # <a name="testing-your-app-on-hololens"></a>Testen Ihrer APP auf hololens
 
@@ -67,11 +67,15 @@ Benutzer können über [Peripherie](hardware-accessories.md)Geräte mit Ihrer AP
 1. **Überprüfen Sie benutzerdefinierte Interaktionen.** Dinge wie benutzerdefinierte Tastenkombinationen für Ihre APP.
 2. **Überprüfen der Umstellung von Eingabetypen** Es wird versucht, mehrere Eingabemethoden zu verwenden, um eine Aufgabe (z. b. sprach-, Gesten-, Maus-und Tastatureingaben) im gleichen Szenario abzuschließen.
 
-## <a name="system-integration"></a>System Integration
+## <a name="system-integration"></a>Systemintegration
 
 ### <a name="battery"></a>Akku
 
-Testen Sie Ihre Anwendung, ohne dass eine Stromquelle verbunden ist, um zu verstehen, wie schnell der Akku abläuft. Mithilfe von Power LED-Messungen können Sie den Akku Status leicht nachvollziehen. ![LED-Zustände, die die Akkuleistung angeben](images/batterypowerledindication-500px.png)
+Testen Sie Ihre Anwendung, ohne dass eine Stromquelle verbunden ist, um zu verstehen, wie schnell der Akku abläuft. Mithilfe von Power LED-Messungen können Sie den Akku Status leicht nachvollziehen. 
+
+![LED-Zustände, die die Akkuleistung angeben](images/batterypowerledindication-500px.png)<br>
+
+*LED-Zustände, die die Akkuleistung angeben*
 
 ### <a name="power-state-transitions"></a>Energie Zustandsübergänge
 

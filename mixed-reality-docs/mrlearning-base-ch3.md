@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 4baee7ba8643f5bb80e0456eb97d915405431654
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387709"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485687"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Platzieren von dynamischem Inhalt und Verwenden von Solvers
 
@@ -74,8 +74,8 @@ In diesem Abschnitt konfigurieren wir das zuvor erstellte Würfelspielobjekt, um
 
 ![Lektion3 Kapitel3 Schritt5im](images/Lesson3_chapter3_step5im.PNG)
 
-### <a name="congratulations"></a>Herzlichen Glückwunsch!
+## <a name="congratulations"></a>Herzlichen Glückwunsch!
 In diesem Tutorial haben Sie gelernt, wie Sie mit den Solvers von mrtk eine Benutzeroberfläche intuitiv auf den Benutzer anwenden können. Sie haben auch erfahren, wie Sie einen Solver an ein Spielobjekt (z. B. einen Würfel) anfügen, um den nachverfolgten Händen des Benutzers zu folgen. Weitere Informationen zu diesen und anderen Solvern, die im MRTK enthalten sind, finden Sie auf der Seite [Solver der MRTK-Dokumentation](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html).
 
-[Nächste Lektion: 3D-Objektinteraktion](mrlearning-base-ch4.md)
+[Nächste Lektion: 5.    Interagieren mit 3D-Objekten](mrlearning-base-ch4.md)
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 5275e862d2dec78c98510f754162961c80e9e4b8
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387715"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485749"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Erstellen einer Benutzeroberfläche und Konfigurieren von Mixed Reality Toolkit 
 
@@ -167,8 +167,8 @@ In diesem Abschnitt erfahren Sie, wie Sie Text zu Ihrer Mixed Reality-Umgebung h
 
 ![Lektion2 Kapitel4 Schritt5](images/Lesson2_Chapter4_Step5.JPG)
 
-### <a name="congratulations"></a>Herzlichen Glückwunsch!
+## <a name="congratulations"></a>Herzlichen Glückwunsch!
 In dieser Lektion haben Sie erfahren, wie Sie eine MRTK-Profileinstellung (d. h. Sichtbarkeit des Gittermodells der räumlichen Wahrnehmung) kopieren, anpassen und konfigurieren. Sie haben auch erfahren, wie Sie mit einer Schaltfläche interagieren können, um Ereignisse mit nachverfolgten Händen für die HoloLens 2 auszulösen. Abschließend haben Sie erfahren, wie Sie mit „TextMeshPro“ von Unity und der MRTK-Komponente „Grid Object Collection“ (Rasterobjektsammlung) eine einfache Benutzeroberfläche erstellen.
 
-[Nächste Lektion: Dynamische Inhaltsplatzierung und Solver](mrlearning-base-ch3.md)
+[Nächste Lektion: 4. Platzieren dynamischer Inhalte und Verwenden von Solvern](mrlearning-base-ch3.md)
 

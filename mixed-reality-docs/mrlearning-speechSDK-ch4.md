@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 0cffb9ac8f61f77b77fc5925264b95ba57d94ece
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: b434b9c79a702067a9c3db6fb25b0f75cdc6030d
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460349"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485777"
 ---
-# <a name="speech-sdk-learning-module---intent-and-natural-language-understanding"></a>Sprach-SDK-Lernmodul: beabsichtigte und natürliche Language Understanding
+# <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Einrichten von Absicht und natürlicher Sprache
 
 In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Service. Mit der Intent-Funktion können wir unsere Anwendung mit Ki-gestützten Sprachbefehlen ausstatten, bei denen Benutzer nicht spezifische Sprachbefehle sagen können und dennoch vom System verstanden werden können. In dieser Lektion richten wir unser Azure-Luis-Portal ein, richten unsere Absichten/Entitäten/Äußerungen ein, veröffentlichen unsere Intent-Ressource, verbinden unsere Unity-App mit unserer Intent-Ressource und machen unseren ersten beabsichtigten API-Rückruf.
 

@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: e40cd50f75ca509c601d215cb865161ea3596565
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 46c32abaf45623b7ccba90f257959e4ef4f8e1b5
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293643"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485639"
 ---
-#  <a name="setting-up-photon-unity-networking"></a>Einrichten von Photon Unity-Netzwerken
+#  <a name="1-setting-up-photon-unity-networking"></a>1. Einrichten von Photon Unity-Netzwerken
 
 In diesem Tutorial erfahren Sie, wie Sie sich für das Erstellen einer gemeinsamen Benutzeroberfläche vorbereiten, indem Sie das Photon Unity-Netzwerk (pun) in Ihr Unity-Projekt importieren. Bei "Photon" handelt es sich um eine von mehreren Netzwerkoptionen, die für Mixed Reality-Entwickler zur Verfügung stehen Wir erfahren, wie ein Photon-Konto erstellt, ein Photon importiert und ein optionaler lokaler Server erstellt wird.
 
-Ziele
+## <a name="objectives"></a>Ziele
 
 * Erfahren Sie, wie Sie ein Photon-Konto erstellen.
 
@@ -27,7 +27,7 @@ Ziele
 
   
 
-### <a name="setting-up-photon"></a>Einrichten von PHOTON
+## <a name="setting-up-photon"></a>Einrichten von PHOTON
 
 1. Richten Sie ein [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) -Konto ein. Navigieren Sie zur Anmeldeseite von PHOTON, indem Sie auf [diesen Link](https://dashboard.photonengine.com/en-US/Account/SignUp)klicken. Befolgen Sie die Anweisungen auf der Registrierungsseite, um das Konto zu erstellen. 
    
@@ -69,5 +69,5 @@ Ziele
 
 Sie haben erfolgreich ein Photon-Konto erstellt, einen lokalen-Photon-Server eingerichtet und ein Wortspiel in Unity importiert. Der nächste Schritt besteht darin, das Projekt einzurichten und dann Verbindungen mit anderen Benutzern zuzulassen, damit mehrere Benutzer ihre Arbeit sehen können. 
 
-[Nächstes Tutorial: Vorbereiten von Unity für die Entwicklung](mrlearning-sharing(photon)-ch2.md)
+[Nächstes Tutorial: 2. Vorbereiten von Unity für die Entwicklung](mrlearning-sharing(photon)-ch2.md)
 

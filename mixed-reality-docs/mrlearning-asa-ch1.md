@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 690ece3a02aeefd598db18baa66de3ddabfa43eb
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293817"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485771"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Ersten Einstieg in Azure Spatial Anchor
 
@@ -199,5 +199,5 @@ In den vorherigen Abschnitten haben Sie die Grundlagen von räumlichen Azure-Ank
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 In diesem Tutorial haben Sie die Grundlagen von räumlichen Azure-Ankern kennengelernt. In diesem Abschnitt wurden mehrere Schaltflächen zur Verfügung gestellt, mit denen Sie die verschiedenen erforderlichen Schritte zum Starten und Beenden einer Azure-Sitzung und zum Erstellen, hochladen und Herunterladen von Azure-Ankern auf einem einzelnen Gerät untersuchen können. In der nächsten Lektion erfahren Sie, wie Sie Azure-Anker-IDs für den Abruf in den hololens 2 speichern, auch nachdem die Anwendung neu gestartet wurde. Während der Reihe erfahren Sie auch, wie Anker-IDs zwischen mehreren Geräten übertragen werden, um eine räumliche Ausrichtung zu erreichen, und erfahren mehr über freigegebene Sitzungen mit mehreren Benutzern, die im Rahmen der Freigabe des Tutorials demnächst erläutert werden.
 
-[Nächste Lektion: ASA-Lektion 2](mrlearning-asa-ch2.md)
+[Nächste Lektion: 2. Speichern, Abrufen und Freigeben von Azure Spatial Anchors](mrlearning-asa-ch2.md)
 

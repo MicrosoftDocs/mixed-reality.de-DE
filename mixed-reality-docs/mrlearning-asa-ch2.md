@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 80367ed818168c1d642fadbd7316d3d6481dd2a9
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293797"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485740"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Speichern, abrufen und Freigeben von räumlichen Azure-Ankern
 
@@ -81,5 +81,5 @@ Wir erfahren, wie Sie räumliche Azure-Anker im Rahmen einer vollständig intera
 
 In der nächsten Lektion erfahren Sie, wie Sie Benutzern Echtzeitfeedback bereitstellen. Dieses Feedback enthält Informationen zur Anker Erstellung, zur Qualität des Verständnisses der Umgebung und zum Status der Azure-Sitzung. Ohne Feedback wissen Benutzer möglicherweise nicht, ob ein Anker erfolgreich in Azure hochgeladen wurde, ob die Qualität der Umgebung für die Anker Erstellung ausreichend ist oder ob der aktuelle Zustand ist.
 
-[Nächste Lektion: ASA-Tutorial 3](mrlearning-asa-ch3.md)
+[Nächste Lektion: 3. Anzeigen des Azure Spatial Anchor-Feedbacks](mrlearning-asa-ch3.md)
 

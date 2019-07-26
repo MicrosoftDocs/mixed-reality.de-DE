@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: f9da038fe917e9e45b386de54049d6aa312ecfba
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387774"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485710"
 ---
-# <a name="6exploring-advanced-input-options"></a>6. untersuchen erweiterter Eingabeoptionen
+# <a name="6-exploring-advanced-input-options"></a>6. Untersuchen von erweiterten Eingabeoptionen
 
 In diesem Tutorial untersuchen wir mehrere erweiterte Eingabeoptionen für die hololens 2, einschließlich der Verwendung von Sprachbefehlen, der Schwenkbewegung und der Eye-Nachverfolgung. 
 
@@ -198,8 +198,9 @@ Fügen Sie im Feld neu erstellt das aktuelle Spielobjekt dem leeren Feld hinzu, 
 6. Vergewissern Sie sich vor der Erstellung in HoloLens 2, dass die Eyetracking-Funktionen ordnungsgemäß konfiguriert sind. Zum Zeitpunkt der Erstellung dieses Artikels ist Unity noch nicht in der Lage, die Blick Eingabe für die Augen Verfolgungs Funktionen festzulegen. Diese Funktion ist erforderlich, damit die Eye-Nachverfolgung in hololens 2 funktioniert. Befolgen Sie diese Anweisungen in der Dokumentation zum Mixed Reality-Toolkit, um die Eingabe per Anvisieren zu aktivieren: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2 
 
 
-### <a name="congratulations"></a>Herzlichen Glückwunsch! 
+## <a name="congratulations"></a>Herzlichen Glückwunsch!
+
 Sie haben der Anwendung erfolgreich grundlegende Funktionen zur Augen Verfolgung hinzugefügt. Diese Aktionen stellen nur den Einstieg in eine ganze Welt der Möglichkeiten mit Eyetracking dar. In diesem Kapitel wird außerdem Lektion 5 beendet, in dem wir mehr über erweiterte Eingabefunktionen erfahren, wie z. b. Sprachbefehle, Schwenkbewegungen und die Eye-Nachverfolgung. 
 
-[Nächste Lektion: Beispielerfahrung für Lunar-Modulassembly](mrlearning-base-ch6.md)
+[Nächste Lektion: 7. Erstellen einer Beispielanwendung für eine Mondlandefähre (Lunar Module)](mrlearning-base-ch6.md)
 

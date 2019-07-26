@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 92bea1f3130f67645c10e36fe40cd4bc6f8b9151
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 53519d7bb2832fe8ce500f1ee146c91488b09366
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293668"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485658"
 ---
-# <a name="connecting-multiple-users"></a>Verbinden von mehreren Benutzern
+# <a name="3-connecting-multiple-users"></a>3. Verbinden von mehreren Benutzern
 
 In dieser Lektion erfahren Sie, wie Sie mehrere Benutzer im Rahmen einer Live-freigegebenen Benutzererfahrung verbinden. Am Ende dieser Lektion sind Sie in der Lage, die Anwendung auf mehreren Geräten zu öffnen und den von einer Kugel dargestellten Avatar durch Darstellungen der einzelnen Joins anzuzeigen. 
 
@@ -23,7 +23,7 @@ Ziele
 - Konfigurieren von Playern
 - Erfahren Sie, wie Sie mehrere Benutzer mit einer gemeinsamen Benutzer Verbindung verbinden.
 
-### <a name="instructions"></a>Anweisungen
+## <a name="instructions"></a>Anweisungen
 
 1. Ziehen Sie im Projekt Panel im Ordner Assets-> Resources-> Prefabs den Ordner "networklobby" in die Hierarchie, wie in der folgenden Abbildung dargestellt.
 
@@ -72,5 +72,5 @@ Ziele
 
 Nachdem alle oben aufgeführten Schritte ausgeführt wurden und der Buildprozess ebenfalls vollständig ist, klicken Sie auf die Schaltfläche Wiedergabe, und verbinden Sie die hololens 2. Wenn Sie Ihre Kopfzeile bewegen, sollte eine Kugel angezeigt werden. Dies wird für jeden Benutzer angezeigt, der Ihrem Unity-Projekt Beitritt.
 
-[Nächste Lektion: Freigabe (Photon), Lektion 4](mrlearning-sharing(photon)-ch4.md)
+[Nächste Lektion: 4. Freigeben von Objektbewegungen für mehrere Benutzer](mrlearning-sharing(photon)-ch4.md)
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 77ae779b4bb32dd66a722c9793d1b83c4a64ae2e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460320"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485676"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen mit mehreren Benutzern
 
@@ -23,7 +23,7 @@ Ziele
 - Konfigurieren Sie das Projekt so, dass die Bewegungen des 3D-Modells gemeinsam genutzt werden.
 - Erfahren Sie, wie Sie eine grundlegende Anwendung für mehrere Benutzer Anwendungen erstellen.
 
-### <a name="instructions"></a>Anweisungen
+## <a name="instructions"></a>Anweisungen
 
 
 1. Speichern Sie die Szene aus der vorherigen Lektion (Control + S). Sie können den Namen HLSharedProjectMainPart4. unity benennen, damit er bei Bedarf leichter zu finden ist.
@@ -85,5 +85,5 @@ Obwohl alle Benutzer als Teil einer freigegebenen Umgebung verbunden sind und di
 
 Bevor Sie mit der nächsten Lektion fortfahren, müssen wir das ASA-Lernmodul vervollständigen, das die ASA-Grundlagen, das Azure-Konto und die Ressourcen Erstellung und andere grundlegende Bausteine umfasst, die erforderlich sind, bevor wir dies in unsere freigegebene Erfahrung integrieren können.
 
-[Nächste Lektion: Freigabe (Photon), Lektion 5](mrlearning-sharing(photon)-ch5.md)
+[Nächste Lektion: 5. Integrieren von Azure Spatial Anchors in eine gemeinsam genutzte Umgebung](mrlearning-sharing(photon)-ch5.md)
 

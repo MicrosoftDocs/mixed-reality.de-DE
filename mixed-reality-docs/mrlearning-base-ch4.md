@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: d47f2940ad741cb436322a824a67f54bb6376c55
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 314af3e1e38e1698943f07dc32f5e1e3e2f36d4f
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387701"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485703"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interagieren mit 3D-Objekten
 
@@ -202,8 +202,8 @@ In diesem Beispiel werden wir einen Soundeffekt wiedergeben, wenn Sie ein Objekt
 
 ![Lektion4 Kapitel4 Schritt3 5 Noteim](images/Lesson4_chapter4_step3-5-noteim.PNG)
 
-### <a name="congratulations"></a>Herzlichen Glückwunsch! 
+## <a name="congratulations"></a>Herzlichen Glückwunsch! 
 In diesem Tutorial haben Sie erfahren, wie Sie 3D-Objekte in einer Raster Auflistung organisieren und 3D-Objekte (Skalieren, drehen und verschieben) mithilfe der Near-Interaktion (direkt mit nach verfolgten Händen) und der äußersten Interaktion (mit Blick-und Handzeichen) bearbeiten. Außerdem haben Sie gelernt, wie sie umgebende Felder um 3D-Objekte platzieren können, und Sie haben gelernt, wie Sie die Gizmos in den Begrenzungs Feldern verwenden und anpassen. Schließlich haben Sie erfahren, wie Sie beim Berühren eines Objekts Ereignisse auslösen können.
 
-[Nächste Lektion: Erweiterte Eingabe](mrlearning-base-ch5.md)
+[Nächste Lektion: 6. Untersuchen erweiterter Eingabeoptionen](mrlearning-base-ch5.md)
 
