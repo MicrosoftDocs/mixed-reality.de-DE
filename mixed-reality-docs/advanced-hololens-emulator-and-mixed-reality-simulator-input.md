@@ -1,11 +1,11 @@
 ---
-title: Erweiterte HoloLens-Emulator und Mixed Reality-Simulator-Eingabe
-description: Ausführliche Anweisungen für die Verwendung der Tastatur, Maus und Xbox-Controller Eingaben für den Emulator für HoloLens und Windows Mixed Reality-Simulator zu simulieren.
+title: Erweiterte hololens-Emulator-und gemischte Reality-simulatoreingaben
+description: Ausführliche Anweisungen für die Verwendung des Tastatur-, Maus-und Xbox-Controllers zum Simulieren von Eingaben für den hololens-Emulator und den Windows Mixed Reality-Simulator.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
-keywords: HoloLens, Emulator, Simulation, die Windows Mixed Reality
+keywords: Hololens, Emulator, Simulation, gemischte Windows-Realität
 ms.openlocfilehash: 6ea493d8c1269ff0bea1d4102b9e224e30d06aef
 ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
@@ -13,136 +13,136 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64580591"
 ---
-# <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Erweiterte HoloLens-Emulator und Mixed Reality-Simulator-Eingabe
+# <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Erweiterte hololens-Emulator-und gemischte Reality-simulatoreingaben
 
-Die meisten Emulator-Benutzer müssen nur die grundlegenden Eingabesteuerelemente für verwenden die [Emulator für HoloLens](using-the-hololens-emulator.md#basic-emulator-input) oder [Windows Mixed Reality-Simulator](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). Die folgenden Details sind für erfahrene Benutzer, die Notwendigkeit, komplexe Typen der Eingabe zu simulieren gefunden haben.
+Die meisten emulatorbenutzer müssen nur die grundlegenden Eingabe Steuerelemente für den [hololens-Emulator](using-the-hololens-emulator.md#basic-emulator-input) oder den [Windows Mixed Reality-Simulator](using-the-windows-mixed-reality-simulator.md#basic-simulator-input)verwenden. Die folgenden Details sind für fortgeschrittene Benutzer bestimmt, die sich mit dem simulieren komplexer Typen von Eingaben herausgestellt haben.
 
 
 ## <a name="concepts"></a>Konzepte
 
-Informationen zum Einstieg die virtuelle Eingabe für den Emulator für HoloLens und Windows Mixed Reality-Simulator steuern zu können, sollten Sie über einige Konzepte kennen.
+Um mit dem Steuern der virtuellen Eingabe an den hololens-Emulator und dem Windows Mixed Reality-Simulator zu beginnen, sollten Sie sich zunächst mit einigen Konzepten vertraut machen.
 
-Während der Übertragung bezieht sich auf steuern und ändern Position und Ausrichtung eines Elements in der Szene. Für ein Zielobjekt steuerbar wird während der Übertragung mit Drehung und Übersetzung (Bewegung) entlang der drei Achsen gesteuert.
-* **Yaw bezeichnet**: Aktivieren Sie nach links oder rechts.
-* **Schriftbreite**: Aktivieren Sie nach oben oder unten.
-* **Zurücksetzen**: Setzen Sie die Seite-an-Seite.
-* **X**: Nach links oder rechts.
-* **Y**: Nach oben oder unten.
-* **Z**: Verschoben Sie vorwärts oder rückwärts.
+Bewegung bezieht sich auf das Steuern und Ändern der Position und Ausrichtung eines etwas in der Szene. Für ein Ziel steuerbares Objekt wird Bewegung sowohl mit Drehung als auch Übersetzung (Bewegung) entlang von drei Achsen gesteuert.
+* **Yaw**: Nach links oder rechts.
+* **Tonhöhe**: Ein-oder ausschalten.
+* **Rollout**: Parallele Ausführung.
+* **X**: Nach links oder rechts verschieben.
+* **J**: Nach oben oder unten verschieben.
+* **Z**: Vorwärts oder rückwärts.
 
-[Geste](gestures.md) und Eingabe der Motion-Controller eng zugeordnet sind, wie sie physische Geräte:
-* **Aktion**: Dies simuliert, dass die Aktion aus, drücken die Zeigefinger, um das Thumb-Steuerelement, oder ziehen die Schaltfläche "Aktion" auf einem Domänencontroller. Die Eingabe für die Aktion kann z. B. verwendet werden, um die tippbewegung Geste zum Scrollen durch Inhalt bis zum Drücken und halten zu simulieren.
-* **[Bloom](gestures.md#bloom)/System-Geste oder Home**: Die HoloLens Bloom/System-Geste oder einen Controller für die Schaltfläche "Home" wird an die Shell zurückgegeben und System-Aktionen verwendet.
+[Gesten](gestures.md) -und Bewegungs Controller Eingaben werden genau der Art der physischen Geräte zugeordnet:
+* **Aktion**: Dadurch wird die Aktion simuliert, mit der der Vordergrund zum Ziehpunkt gedrückt oder die Schaltfläche Aktion auf einem Controller gezogen wird. Beispielsweise kann die Aktions Eingabe verwendet werden, um die Luft tippen Bewegung zu simulieren, einen Bildlauf durch den Inhalt durchführen und die Tastenkombination zu drücken.
+* **[Bloom](gestures.md#bloom)/Systemanbieter Geste oder Startseite**: Die hololens-Blüte/System Bewegung oder die Start Schaltfläche eines Controllers wird verwendet, um zur Shell zurückzukehren und System Aktionen auszuführen.
 
-Praktische haben eine umfangreiche Reprresentation in HoloLens 2.  Verfolgt/nicht überwachte, bereitgestellt und fahrbedingungen Gesten, sondern haben praktische jetzt ein articulated Skelett-Modell angepasst werden und für den Entwickler verfügbar gemacht.  Dies führt zu 26 nachverfolgten Punkte auf jeder Seite.  
-* **Joint**: Einer der 20 nachverfolgten Positionen für eine bestimmte nachverfolgten Hand. Dies hat einen Punkt 3D-Raum zugeordnet ist.
-* **Pose**: Eine vollständige Auflistung aller der Gelenke in einer nachverfolgten Hand. Zu diesem Zeitpunkt ist dies eine Auflistung von 26 Joints. 
+Hände haben eine umfassende reprressentiments in hololens 2.  Neben der Nachverfolgung/nicht Nachverfolgung und der Verwendung für den Einsatz von Gesten verfügen die Hände nun über ein geclustertes Skelett Modell, das für den Entwickler verfügbar ist.  Dadurch werden jeweils 26 nach verfolgte Punkte eingeführt.  
+* **Gemeinsam**: Eine von 20 nach verfolgten Positionen für eine bestimmte verfolgte Hand. Dabei muss es sich um einen Punkt mit einem zugeordneten 3D--Bereich handelt.
+* **Pose**: Eine vollständige Auflistung aller Gelenke in einer nach verfolgten Hand. Zurzeit ist dies eine Auflistung von 26 Gelenken. 
 
-Zu diesem Zeitpunkt machen wir direkte Kontrolle der einzelnen gemeinsamen Position einzeln über die Benutzeroberfläche des Emulators, Sie nicht, wenn Sie diese durch die Simulation API festlegen können. Stattdessen haben wir eine Reihe von nützlich repräsentativ ist, die der Emulator zwischen wechseln kann.
+Zu diesem Zeitpunkt machen wir die direkte Steuerung der einzelnen gemeinsamen Positionen nicht einzeln über die Emulator-Benutzeroberfläche verfügbar. Sie können Sie jedoch über die Simulations-API festlegen. Stattdessen haben wir eine Reihe nützlicher Vertreter, die es Ihnen ermöglicht, zwischen zu wechseln.
 
-Sie können auch den Status des simulierten Sensoreingaben steuern:
-* **Zurücksetzen**: Dies gibt alle simulierte Sensoren auf ihre Standardwerte zurück.  Ab der 2-Emulator für HoloLens, kann ein Zurücksetzen zu einem oder beiden praxisorientierten heruntergebrochen werden machen, wenn die gewünschte Hand(s) mithilfe der entsprechenden Modifizierer Schlüssel oder die Tasten (links bzw. rechts Alt oder Stoßstange linken bzw. rechten auf den Gamepad).
-* **Nachverfolgen von**: Wechselt zwischen den Modi mit Feldern fester Breite nachverfolgen. Dazu zählen:
-  * **Standard**: Das Betriebssystem wählt die beste Modus zum Nachverfolgen von basierend auf Anforderungen des Systems.
-   * **Ausrichtung**: Erzwingt, dass nur Ausrichtung nachverfolgen, unabhängig von den Anforderungen des Systems.
-   * **Positional**: Erzwingt, dass mit Feldern fester Breite nachverfolgen, unabhängig von den Anforderungen des Systems.
+Sie können auch den Status der simulierten Sensor Eingabe Steuern:
+* **Zurücksetzen**: Dadurch werden alle simulierten Sensoren auf ihre Standardwerte zurückgegeben.  Beginnend mit dem hololens 2-Emulator kann eine zurück setzung auf ein oder beide Hände beschränkt werden, indem Sie die gewünschten Hand (e) mithilfe der entsprechenden Modifizierertasten oder Schaltflächen (Links und/rechts alt oder die linke und/oder Rechte Stoß Taste im Gamepad) einbinden.
+* Nach **Verfolgung**: Durchläuft die nach Verfolgungs Modi mit Feldern fester Breite. Dazu zählen:
+  * **Standard**: Das Betriebssystem wählt basierend auf den Anforderungen des Systems den besten Überwachungsmodus aus.
+   * **Ausrichtung**: Erzwingt die Ausrichtung, unabhängig von den Anforderungen des Systems.
+   * **Positions**: Erzwingt die Positionsüberwachung, unabhängig von den Anforderungen des Systems.
 
-## <a name="types-of-input"></a>Arten von Eingaben
+## <a name="types-of-input"></a>Eingabetypen
 
-Die folgende Tabelle zeigt wie jede von Art Eingabe zugeordnet, der Tastatur, Maus und Xbox-Controller. Jeder Typ verfügt über keine andere Zuordnung abhängig vom Steuerelement Modus; Weitere Informationen zu Eingabesteuerelement Modi wird weiter unten in diesem Dokument bereitgestellt.
+In der folgenden Tabelle ist dargestellt, wie die einzelnen Eingabetypen dem Tastatur-, Maus-und Xbox-Controller zugeordnet werden. Jeder Typ hat abhängig vom Eingabe Steuerungs Modus eine andere Zuordnung. Weitere Informationen zu den Eingabe Steuerungs Modi finden Sie weiter unten in diesem Dokument.
 
-|  |  Tastatur |  Maus |  Xbox-controller | 
+|  |  Tastatur |  Maus |  Xbox-Controller | 
 |----------|----------|----------|----------|
-|  Schwenken |  Nach links / rechts-Taste |  Ziehen Sie nach links / rechts |  Ministick von rechts nach links / rechts | 
-|  Nickwinkel |  Nach oben / nach-unten-Taste |  Ziehen Sie nach oben / unten |  Ministick nach oben / unten rechts | 
-|  Roll |  F / E |  |  Steuerkreuz nach links / rechts | 
-|  X |  A / D |  |  Linken Ministick links / rechts | 
-|  „Y“ zugeordnet ist |  Seite nach oben / nach-unten-Seiten |  |  Steuerkreuz hoch- / Herunterskalieren | 
-|  Z |  W / S |  |  Linken Ministick hoch- / Herunterskalieren | 
-|  Aktion |  Die EINGABETASTE oder LEERTASTE |  Rechte Schaltfläche |  Eine Schaltfläche oder beide trigger | 
-|  Bloom/System |  F2 oder Windows-Taste |  |  B-Taste | 
-|  Controller Ziehpunkt-Schaltfläche |  G  |  |  | 
-|  Controller-Schaltfläche |  M  |  |  | 
-|  Controller Touchpad touch |  U  |  |  | 
-|  Drücken Sie die Controller-touchpad |  P  |  |  | 
-|  Drücken Sie die Controller-Ministick |  K  |  |  | 
-|  Linken zustandsnachverfolgung controller |  F9 |  |  | 
-|  Richtige zustandsnachverfolgung controller |  F10 |  |  | 
-|  Seite 'Schließen' Haltung | 7 |  |  |
-|  Übergeben von "Open" Haltung (Standard) | 8 |  |  |
-|  Seite "Zeigen" Haltung | 9 |  |  |
-|  Seite 'Verkleinern' Haltung | 0 |  |  |
-|  Zurücksetzen |  ESC-Taste |  |  Starttaste | 
-|  Nachverfolgung |  T oder F3 |  |  X-Taste | 
+|  Schwenken |  Pfeile nach links/rechts |  Nach links/rechts ziehen |  Rechter Finger Stick links/rechts | 
+|  Nickwinkel |  Pfeile nach oben/nach unten |  Nach oben/unten ziehen |  Rechter fingerstick nach oben/unten | 
+|  Roll |  Q/E |  |  Dpad links/rechts | 
+|  X |  A/D |  |  Linker Finger Stick links/rechts | 
+|  J |  Bild-auf/Bild-ab |  |  Dpad nach oben/unten | 
+|  Z |  W/S |  |  Linker Finger Stick nach oben/unten | 
+|  Aktion |  Eingabe oder Leerraum |  Rechte Schaltfläche |  Eine Schaltfläche oder einen der beiden Optionen | 
+|  Blüht/System |  F2-oder Windows-Taste |  |  B-Taste | 
+|  Controller ziehfläche |  G  |  |  | 
+|  Schaltfläche "controller" |  M  |  |  | 
+|  Touchpad-Touch für Controller |  U  |  |  | 
+|  Controller Touchpad-Taste |  P  |  |  | 
+|  STRG-Taste für Controller |  K  |  |  | 
+|  Linker Controller-nach verfolgungsstatus |  F9 |  |  | 
+|  Rechter Controller-nach verfolgungsstatus |  F10 |  |  | 
+|  Hand "Close"-Pose | 7 |  |  |
+|  Hand ' Open '-Pose (Standard) | 8 |  |  |
+|  Hand Punkt darstellen | 9 |  |  |
+|  Hand "Pinch" darstellen | 0 |  |  |
+|  Zurücksetzen |  Escapeschlüssel |  |  Starttaste | 
+|  Paletten |  T oder F3 |  |  X-Taste | 
 
 
-Hinweis: Die Controller-Schaltflächen können es sich um die Zielgruppe einer Hand/Controller oder die andere mit der Hand, die Modifizierer für sein.
+Hinweis: Die Controller Schaltflächen können mithilfe der handzugriffsmodifizierern auf eine Hand/einen Controller oder die andere ausgerichtet werden.
 
 ## <a name="targeting"></a>Zielbestimmung 
 
-Einige der oben genannten Eingabe Konzepte bereitstellen, auf ihre eigenen.  Aktion "," Bloom/System "," Zurücksetzen "und" nachverfolgung sind vollständige Konzepte, ist nicht erforderlich und sind nicht betroffen, weiteren Modifizierer für die Zielplattform.  Die übrigen Konzepte können jedoch auf eine der mehrere Ziele angewendet werden. Wir haben Methoden zum angeben, das Ziel bestimmt, die auf der Befehl angewendet werden soll, eingeführt.  In allen Fällen ist es möglich, über die Benutzeroberfläche oder über die Tastatur drückt, auf welchen Objekttyp Sie Targtet angeben.  In einigen Fällen ist es auch möglich, direkt mit dem Xbox-Controller anzugeben. 
+Einige der oben genannten Eingabe Konzepte sind eigenständig.  Action, Bloom/System, Reset und Tracking sind umfassende Konzepte, die nicht benötigt werden und von denen keine weiteren modifiziererer für die Zielgruppe betroffen sind.  Die verbleibenden Konzepte können jedoch auf eines von mehreren Zielen angewendet werden. Wir haben Möglichkeiten zum Angeben des beabsichtigten Ziels eingeführt, auf das der Befehl angewendet werden soll.  In allen Fällen ist es möglich, über die Benutzeroberfläche oder über Tastatureingaben anzugeben, die auf targtett festgelegt sind.  In einigen Fällen ist es auch möglich, mit dem Xbox-Controller direkt anzugeben. 
 
-In der folgende Tabelle werden die Optionen für die Zielgruppenadressierung und die Möglichkeit zum Aktivieren aller beschrieben.
+In der folgenden Tabelle werden die Optionen für die Zielplattform und die Möglichkeit zum Aktivieren der einzelnen Optionen beschrieben.
 
-| Objekt | Tastatur-Modifizierer | Controller-Modifizierer | Modifizierer für Emulator-Benutzeroberfläche |
+| Objekt | Tastatur-Modifizierer | Controllermodifizierer | Emulator UI-Modifizierer |
 |----------|----------|----------|----------|
 | Text | (Standard) | (Standard) | (Standard) |
-| Head | Halten Sie H | (Nicht verfügbar) | (Nicht verfügbar) |
-| Linken/Controller | Halten Sie gedrückt, linke ALT-Taste | Halten Sie gedrückt, linken Schulter | Linken PIN | 
-| Rechte/Controller | Halten Sie Rechte ALT-Taste gedrückt | Halten Sie richtige Schulter | Rechte PIN |
-| Augen | Halten Sie Y | (Nicht verfügbar) | Augen PIN |
+| Stadt | Halten H | (Nicht verfügbar) | (Nicht verfügbar) |
+| Linker/Controller | Linke ALT-Taste gedrückt halten | Linke Schulter Taste halten | Linke Hand Nadel | 
+| Rechte Seite/Controller | Alt-Taste gedrückt halten | Rechte Schulter Taste halten | Rechte Hand Nadel |
+| Blicke | Halten Sie Y | (Nicht verfügbar) | Augen-PushPin |
   
-Die folgende Tabelle zeigt, wie jeder Modifizierer Ziel aller zu den kernkonzepten Bewegung Eingabe zugeordnet
+In der folgenden Tabelle wird gezeigt, wie die einzelnen zielmodifizierer die einzelnen Grundkonzepte der Verschiebungs Eingabe zuordnen.
 
-|  | Standard (Text) |  Manuell/Controller (halten Sie Alt, halten Gamepad Schulter Schaltfläche oder Umschaltfläche UI PIN) |  Hauptknoten (halten H)  |  Augen (Y enthalten oder ein-/ausschalten UI-PIN) |
+|  | Standard (Text) |  Hand-/Controller (alt, halten, Gamepad-Schulter Schaltfläche halten oder UI-PushPin umschalten) |  Head (halten H)  |  Augen (halten Sie die UI-PushPin gedrückt oder Umschalten) |
 |----------|----------|----------|----------|
-|  Schwenken |  Aktivieren Sie Text ein, nach links / rechts |  Verschieben von Hand links / rechts |  Aktivieren von Head links / rechts | Eye Blicke sucht nach links/rechts |
-|  Nickwinkel |  Aktivieren von Head hoch- / Herunterskalieren |  Verschieben von Hand hoch- / Herunterskalieren |  Aktivieren von Head hoch- / Herunterskalieren | Eye Blicke sieht nach oben/unten aus. | 
-|  Roll |  Zurücksetzen von Head links / rechts |  |  Zurücksetzen von Head links / rechts | (Keine Aktion) |
-|  X |  Folie Text links / rechts |  Verschieben von Hand/Controller-links / rechts |  Aktivieren von Head links / rechts | (Keine Aktion) |
-|  „Y“ zugeordnet ist |  Verschieben Sie Text ein, nach oben / unten |  Verschieben von Hand/Controller hoch- / Herunterskalieren |  Aktivieren von Head hoch- / Herunterskalieren | (Keine Aktion) |
-|  Z |  Verschieben von Text Vorwärts / rückwärts |  Manuell/Controller Vorwärts / Rückwärts verschieben |  Aktivieren von Head hoch- / Herunterskalieren | (Keine Aktion) |
+|  Schwenken |  Text nach links/rechts drehen |  Hand nach links/rechts verschieben |  Kopfzeile nach links/rechts | Der Augenblick sieht links/rechts aus. |
+|  Nickwinkel |  Kopf-/ausschalten |  Hand nach oben/unten verschieben |  Kopf-/ausschalten | Eye-Blick nach oben/unten | 
+|  Roll |  Rollenspitze links/rechts |  |  Rollenspitze links/rechts | (Keine Aktion) |
+|  X |  Folien Text Links/rechts |  Hand/Controller nach links/rechts verschieben |  Kopfzeile nach links/rechts | (Keine Aktion) |
+|  J |  Text nach oben/unten verschieben |  Hand/Controller nach oben/unten verschieben |  Kopf-/ausschalten | (Keine Aktion) |
+|  Z |  Text vorwärts/rückwärts verschieben |  Hand/Controller vorwärts/rückwärts verschieben |  Kopf-/ausschalten | (Keine Aktion) |
  
  
-## <a name="controlling-an-app"></a>Steuern von einer app
+## <a name="controlling-an-app"></a>Steuern einer APP
 
-Die folgende Gruppe von Steuerelementen wird für die alltägliche Verwendung empfohlen:
+Der folgende Satz von Steuerelementen wird für die alltägliche Verwendung vorgeschlagen:
 
 |  Vorgang |  Tastatur und Maus |  Controller | 
 |----------|----------|----------|
-|  Text X |  A / D |  Linken Ministick links / rechts | 
-|  Text Y |  Seite nach oben / nach-unten-Seiten |  Steuerkreuz hoch- / Herunterskalieren | 
-|  Text Z |  W / S |  Linken Ministick hoch- / Herunterskalieren | 
-|  Text Yaw |  Die Maus ziehen nach links / rechts |  Ministick von rechts nach links / rechts | 
-|  Head Yaw bezeichnet. |  H + Ziehen mit der Maus nach links / rechts |  H (auf der Tastatur) + Ministick von rechts nach links / rechts | 
-|  Head-Schriftbreite |  Ziehen Sie Maus nach oben / unten |  Ministick nach oben / unten rechts | 
-|  Head zurücksetzen |  F / E |  Steuerkreuz nach links / rechts | 
-|  Manuell/Controller X |  ALT + A / D |  Schulter + linken Ministick links / rechts | 
-|  Manuell/Controller Y |  ALT + Bild-oben / nach unten Seite |  Schulter + Steuerkreuz hoch- / Herunterskalieren | 
-|  Manuell/Controller Z |  ALT + W / S |  Schulter + linken Ministick hoch- / Herunterskalieren | 
-|  Manuell/Controller Yaw |  Alt + Ziehen mit der Maus nach links / rechts |  Schulter + Ministick von rechts nach links / rechts | 
-|  Manuell/Controller Tonhöhe |  Alt + Ziehen mit der Maus nach oben / unten |  Schulter + Ministick nach oben / unten rechts | 
-|  Manuell/Controller ein |  ALT + Q / E |  Schulter + Steuerkreuz nach links / rechts | 
-|  Aktion |  Rechtsklick |  Trigger | 
-|  Bloom / System / Home |  F2 oder Windows-Taste |  B-Taste | 
+|  Text X |  A/D |  Linker Finger Stick links/rechts | 
+|  Textkörper Y |  Bild-auf/Bild-ab |  Dpad nach oben/unten | 
+|  Text Z |  W/S |  Linker Finger Stick nach oben/unten | 
+|  Text-Yaw |  Ziehen Sie die Maus nach links/rechts |  Rechter Finger Stick links/rechts | 
+|  Head-Yaw |  H + Maus nach links/rechts ziehen |  H (auf Tastatur) + Rechte fingerstick links/rechts | 
+|  Head-Tonhöhe |  Maus nach oben/nach unten ziehen |  Rechter fingerstick nach oben/unten | 
+|  Head-Roll |  Q/E |  Dpad links/rechts | 
+|  Hand/Controller X |  Alt + A/D |  Schulter + Linker Finger Stick links/rechts | 
+|  Hand-/controllery |  Alt + Bild-auf/Bild-ab |  Schulter + Dpad nach oben/unten | 
+|  Hand/Controller Z |  Alt + W/S |  Schulter + Left-fingerstick nach oben/unten | 
+|  Hand-/Controller-Yaw |  Alt + Maus nach links/rechts ziehen |  Schulter + nach-rechts-Taste links/rechts | 
+|  Hand-/Controller-Tonhöhe |  Alt + Maus nach oben/unten ziehen |  Schulter + rechter fingerstick nach oben/unten | 
+|  Hand-/controllerrollen |  Alt + Q/E |  Schulter + Dpad links/rechts | 
+|  Aktion |  Rechte Maustaste |  Trigger | 
+|  Blüte/System/Startseite |  F2-oder Windows-Taste |  B-Taste | 
 |  Zurücksetzen |  Beenden |  Starttaste | 
-|  Nachverfolgung |  T |  X-Taste | 
-|  Bildlauf |  ALT + nach-rechts-Maustaste, und ziehen Sie die Maus nach oben / unten |  Schulter, Trigger und Ministick nach oben / unten rechts | 
-|  Rotieren Sie verschieben/schneller | Linke oder Rechte UMSCHALTTASTE | Drücken Sie und halten Sie die richtigen Ministick |
-|  Langsame verschieben und drehen | Linke oder rechte STRG-Taste | Drücken Sie und halten Sie den linken Ministick |
+|  Paletten |  T |  X-Taste | 
+|  Bildlauf |  Alt + nach-rechts-Taste + Maus nach oben/unten ziehen |  Schulter + Auslöse Taste + rechter fingerstick nach oben/unten | 
+|  Schneller verschieben/drehen | Linke oder Rechte UMSCHALTTASTE | Halten Sie den richtigen Finger Stick gedrückt. |
+|  Langsam verschieben/drehen | Links oder rechts STRG-Taste | Halten Sie den linken Finger Stick gedrückt. |
 
-## <a name="perception-simulation-control-panel-keyboard-shortcuts"></a>Perception Systemsteuerung für die Simulation von Tastenkombinationen
+## <a name="perception-simulation-control-panel-keyboard-shortcuts"></a>System Steuerungs Tastenkombinationen für die Wahrnehmungs Simulation
 
-Die folgenden Tastenkombinationen stehen für den Zugriff auf die Wahrnehmung Simulation-Systemsteuerung, und aktivieren, oder Deaktivieren für Eingabegeräte PC verwenden, mit Simulation.
+Die folgenden Tastenkombinationen sind für den Zugriff auf die Systemsteuerung für die Wahrnehmungs Simulation und das Aktivieren oder Deaktivieren von PC-Eingabegeräten zur Verwendung mit Simulationen verfügbar.
 
-| Vorgang | Tastenkombination | Beschreibung/Hinweise |
+| Vorgang | Tastenkombination | Beschreibung/Notizen |
 |-----------|----------|-------------|
-| Umschalten Sie "Verwenden der Tastatur für die Simulation" | F4 | Wenn deaktiviert, wird Tastatureingaben an die HoloLens oder Windows Mixed Reality-Anwendung ein. |
-| Umschalten Sie "Verwenden der Maus für die Simulation" | F5 | Wenn deaktiviert, wird die Mauseingabe der Mixed Reality-Umgebung (Windows Mixed Reality nur) |
-| Umschalten Sie "Verwenden von Gamepad für die Simulation" | F6 | Wenn deaktiviert, wird Gamepad-Eingabe durch Simulation ignoriert. |
+| "Tastatur für Simulation verwenden" umschalten | F4 | Wenn diese deaktiviert ist, wird die Tastatureingabe an die hololens-oder Windows Mixed Reality-Anwendung weitergeleitet. |
+| "Maus für Simulation verwenden" umschalten | F5 | Wenn Sie ausgeschaltet ist, wird die Mauseingabe an die gemischte Reality-Umgebung weitergeleitet (nur Windows Mixed Reality). |
+| "Gamepad für Simulation verwenden" umschalten | F6 | Wenn Sie ausgeschaltet ist, wird die Gamepad-Eingabe von der Simulation ignoriert. |
 | Anzeigen oder Ausblenden der Systemsteuerung | F7 | |
-| Legen Sie den Tastaturfokus auf die Systemsteuerung | F8 | Wenn der Bereich nicht derzeit angezeigt wird. wird es zuerst angezeigt. |
-| Docken Sie an oder docken Sie Bereich in und aus den Emulator oder das Fenster Mixed Reality-Portal ab | F9 | Wenn das Fenster geschlossen wird, wenn abgedockt, dabei handelt es sich angedockt ausgeblendet. |
+| Festlegen des Tastaturfokus auf die Systemsteuerung | F8 | Wenn das Panel momentan nicht sichtbar ist, wird es zuerst angezeigt. |
+| Andocken oder Abdocken des Bereichs im Emulator-oder Mixed Reality-Portal Fenster | F9 | Wenn das Fenster geschlossen wird, wenn es nicht angedockt ist, wird es angedockt und ausgeblendet. |
 
 ## <a name="see-also"></a>Siehe auch
 * [Installieren der Tools](install-the-tools.md)
