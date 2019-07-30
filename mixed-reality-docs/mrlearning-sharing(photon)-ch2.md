@@ -3,7 +3,7 @@
 
 In diesem Tutorial erfahren Sie, wie Sie Unity für die Anwendungsentwicklung vorbereiten und konfigurieren, einschließlich Importieren des Mixed Reality Toolkit, Konfigurieren von Buildeinstellungen und vorbereiten unserer Szene.
 
-Ziele
+## <a name="objectives"></a>Ziele
 
 - Konfigurieren von Unity für die Anwendungsentwicklung
 
