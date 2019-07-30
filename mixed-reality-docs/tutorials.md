@@ -4,28 +4,36 @@ title: Tutorials und Beispiel-apps
 description: Bietet Codebeispiele und Tutorials zur Entwicklung gemischter Realität.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 03/26/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, Tutorial
-ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 862cf8726df6143ece0d87a135a8e9cc6101948b
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415404"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601619"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutorials und Beispiel-apps
 
 Derzeit sind alle unsere Tutorials und Beispiel-apps Unity-basiert.  Bei der Entwicklung von Inhalten für andere Engines und Plattformen finden Sie diese unter der relevanten Überschrift im Inhaltsverzeichnis.
 
-## <a name="mr-learning-modules"></a>MR-Lernmodule
+## <a name="hololens-2-tutorials"></a>HoloLens 2: Tutorials
 
-Die Lernmodule von Mr sind so konzipiert, dass Entwickler sowohl Techniken als auch bewährte Methoden für die Entwicklung von Anwendungen mit gemischter Realität erlernen können.  Die anfänglichen Module sind für hololens 2 und implementieren das Mixed Reality Toolkit 2,0 (mrtk 2,0).
-* Das Basismodul soll Entwicklern zeigen, wie Sie Ihr Projekt mit mrtk einrichten und die Benutzeroberfläche, räumliche Zuordnung und sowohl grundlegende als auch erweiterte Interaktionen implementieren können.
+Das hololens 2-Lernprogramm soll Entwicklern helfen, sowohl Techniken als auch bewährte Methoden für die Entwicklung von Anwendungen mit gemischter Realität zu erlernen.  Die Tutorials basieren auf dem [Mixed Reality Toolkit 2,0 (mrtk 2,0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
 
-## <a name="open-source-sample-apps"></a>Open-Source-Beispiel-apps
+* Tutorials zu den ersten Schritten: [1 von 7 Übersicht und Ziele](mrlearning-base.md)
+* Azure Spatial Anchor-Tutorials- [1 von 3 ersten Schritten mit räumlichen Azure](mrlearning-asa-ch1.md) -Ankern
+* Tutorials zu Azure Speech Services- [1 von 4 integrieren und Verwenden von Spracherkennung und-](mrlearning-speechSDK-ch1.md) Aufzeichnung
+* Lernprogramme für Mehrbenutzerfunktionen- [1 von 5 Einrichten von Photon Unity-Netzwerken](mrlearning-sharing(photon)-ch1.md)
+
+## <a name="open-source-sample-apps"></a>Open Source-Beispiel-Apps
 
 Bei den Open Source-Beispiel-apps handelt es sich um Anwendungen, die von unseren Teams erstellt wurden, und wir haben den Quellcode bereitgestellt, damit Entwickler ihn sehen und aus unseren Projekten lernen können.
+
+* [Periodensystem der Elemente](periodic-table-of-the-elements.md)
+* [Lunar-Modul](lunar-module.md)
+* [Galaxie-Explorer](galaxy-explorer.md)
 
 ## <a name="mixed-reality-academy-tutorials"></a>Mixed Reality Academy-Tutorials
 
