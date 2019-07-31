@@ -8,18 +8,20 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Design, Entwurf, Interaktion, Stil, Farbe, App-Muster, Steuerelemente, Beispiel-Apps, Mixed Reality-Toolkit, MRTK
-ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6601f4c2dd75e6e555dd79bc92abcccc15eb1ab4
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66039213"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326192"
 ---
 # <a name="design-for-mixed-reality"></a>Entwerfen für Mixed Reality
 
 ![Entwerfen für Mixed Reality](images/Bicycle-Leschi10.gif)
 
-Dieser Leitfaden wurde von Microsoft-Designern, -Entwicklern, -Programmmanagern und -Forschern verfasst, deren Arbeit holografische Geräte (wie HoloLens) und immersive Geräte (wie die Windows Mixed Reality-Headsets von Acer und HP) umfasst. Betrachten Sie diese Arbeit also als eine Reihe von Themen für „Gewusst wie: Entwerfen für Windows-Kopfanzeigen (Head Mounted Displays, HMD)“.
+
+Dieser Leitfaden wurde von Microsoft-Designern, -Entwicklern, -Programmmanagern und -Forschern verfasst, deren Arbeit holografische Geräte, wie HoloLens, und immersive Geräte, wie die Windows Mixed Reality-Headsets von Acer und HP, umfasst. Betrachten Sie diese Arbeit also als eine Reihe von Themen für „Gewusst wie: Entwerfen für Windows-Kopfanzeigen (Head-Mounted Displays, HMD)“.
+
 
 ## <a name="article-categories"></a>Artikelkategorien
 
@@ -166,7 +168,7 @@ Dieser Leitfaden wurde von Microsoft-Designern, -Entwicklern, -Programmmanagern 
                             <a href="progress.md">Anzeigen des Fortschritts</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">App-Leiste und Begrenzungsrahmen</a>
+                            <a href="app-bar-and-bounding-box.md">Begrenzungsrahmen und App-Leiste</a>
                         </p>
                     </div>
                 </div>
@@ -232,7 +234,7 @@ Erstellen Sie großartige Oberflächen anhand der von unserem Team entworfenen u
                         </div>
                         <div class="cardText">
                             <h3>Galaxy Explorer</h3>
-                            <p>Das Galaxy Explorer-Projekt ist bereit. Sie haben Ihre Ideen mit der Community geteilt, eine App ausgewählt und beobachtet, wie ein Team sie erstellt hat. Und jetzt können Sie den Quellcode erhalten.</p>
+                            <p>Das Galaxy Explorer-Projekt ist bereit. Sie haben Ihre Ideen mit der Community geteilt, eine Anwendung ausgewählt und beobachtet, wie ein Team sie erstellt hat. Und jetzt können Sie den Quellcode erhalten.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +250,7 @@ Erstellen Sie großartige Oberflächen anhand der von unserem Team entworfenen u
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Mixed Reality-Toolkit – Unity" data-linktype="absolute-path">
+    <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/README.html#ui-and-interaction-building-blocks" title="Mixed Reality-Toolkit – Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -284,26 +286,7 @@ Erstellen Sie großartige Oberflächen anhand der von unserem Team entworfenen u
             </div>
         </div>
       </a>  
-    </li>   
-        <li>
-    <a href="case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md" title="HoloSketch" data-linktype="absolute-path">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="images/HoloSketch.png" alt="HoloSketch">
-                        </div>
-                    </div>                    
-            <div class="cardText">
-                        <h3>HoloSketch</h3>
-                        <p> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </a>  
-    </li>   
+    </li>       
             <li>
     <a href="https://www.simplygon.com" title="Simplygon" data-linktype="absolute-path">
         <div class="cardSize">
@@ -368,7 +351,7 @@ Erstellen Sie großartige Oberflächen anhand der von unserem Team entworfenen u
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Entwerfen von Apps für Universelle Windows-Plattform (UWP)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Entwerfen von Anwendungen für Universelle Windows-Plattform (UWP)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +361,7 @@ Erstellen Sie großartige Oberflächen anhand der von unserem Team entworfenen u
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Entwerfen von Apps für Universelle Windows-Plattform (UWP)</h3>
+                        <h3>Entwerfen von Anwendungen für Universelle Windows-Plattform (UWP)</h3>
                         <p> </p>
                     </div>
                 </div>

@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, entwickeln, Entwicklung, HoloLens, Unity, DirectX
-ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65974812"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414432"
 ---
 # <a name="development-launchpad"></a>Launchpad für die Entwicklung
 
@@ -114,7 +114,7 @@ ms.locfileid: "65974812"
                             <a href="directx-development-overview.md">Benutzerdefinierte Engine (DirectX)</a>
                         </p>
                         <p>
-Unreal – Bald verfügbar!
+                            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access">Unreal</a>
                         </p>                
                     </div>
                 </div>
@@ -175,7 +175,7 @@ Unreal – Bald verfügbar!
 
 ## <a name="overview"></a>Übersicht
 
-Mixed Reality-Anwendungen werden mit der [universellen Windows-Plattform](https://dev.windows.com/getstarted) erstellt. Alle Mixed Reality-Anwendungen sind universelle Windows-Apps, und alle universellen Windows-Apps können für die Ausführung auf Windows Mixed Reality-Geräten ausgelegt werden. Mit Windows 10 und Erfahrungen mit Middleware-Tools wie Unity können Sie noch heute mit dem Erstellen von Mixed Reality-Umgebungen beginnen.
+Mixed Reality-Anwendungen werden mit der [universellen Windows-Plattform](https://dev.windows.com/getstarted) (UWP) erstellt. Alle Mixed Reality-Anwendungen sind UWP-Anwendungen. Alle UWP-Anwendungen können auf Windows Mixed Reality-Geräten ausgeführt werden. Mit Windows 10 und Erfahrungen mit Middleware-Tools wie Unity können Sie noch heute Mixed Reality-Umgebungen erstellen.
 
 <br>
 
@@ -183,7 +183,7 @@ Mixed Reality-Anwendungen werden mit der [universellen Windows-Plattform](https:
 
 ## <a name="basics-of-mixed-reality-development"></a>Grundlagen der Mixed Reality-Entwicklung
 
-[Mixed Reality](mixed-reality.md)-Umgebungen werden durch neue Windows-Features zur Umgebungserkennung ermöglicht. Diese ermöglichen es Entwicklern, ein [Hologramm](hologram.md) in der realen Welt zu platzieren, und ermöglichen es zudem den Benutzern, sich durch digitale Welten zu bewegen, indem sie buchstäblich herumlaufen. 
+[Mixed Reality](mixed-reality.md)-Umgebungen werden durch neue Windows-Features zur Umgebungserkennung ermöglicht. Diese Funktionen ermöglichen es Entwicklern, ein [Hologramm](hologram.md) in der realen Welt zu platzieren, und ermöglichen es zudem den Benutzern, sich durch digitale Welten zu bewegen, indem sie buchstäblich herumlaufen. 
 
 Dies sind die zentralen Bausteine für die Mixed Reality-Entwicklung:
 
@@ -219,17 +219,17 @@ Dies sind die zentralen Bausteine für die Mixed Reality-Entwicklung:
 
 Das grundlegende Interaktionsmodell für [HoloLens](hololens-hardware-details.md) ist [Anvisieren](gaze.md) (Gaze), [Gesten](gestures.md) (Gesture) und [Sprache](voice-input.md) (Voice), manchmal auch als *GGV* bezeichnet. [Windows Mixed Reality – Immersive Headsets](immersive-headset-hardware-details.md) verwenden ebenfalls Anvisieren und Sprache, aber [Motion-Controller](motion-controllers.md) anstelle der Gesten.
 
-Alle Mixed Reality-Geräte profitieren von dem für Windows verfügbaren Eingabeökosystem, einschließlich Maus, Tastatur, Gamepad usw. Bei HoloLens wird [Hardwarezubehör](hardware-accessories.md) über Bluetooth verbunden. Bei immersiven Headsets wird das Zubehör über Bluetooth, USB und andere unterstützte Protokolle mit dem Host-PC verbunden.
+Alle Mixed Reality-Geräte profitieren von dem in Windows verfügbaren Eingabeökosystem, einschließlich Maus, Tastatur, Gamepad usw. Bei HoloLens wird [Hardwarezubehör](hardware-accessories.md) über Bluetooth verbunden. Bei immersiven Headsets wird das Zubehör über Bluetooth, USB und andere unterstützte Protokolle mit dem Host-PC verbunden.
 
-Die umgebungsbezogenen Erkennungsmerkmale wie [Koordinaten](coordinate-systems.md), [Raumklang](spatial-sound.md) und [räumliche Abbildung](spatial-mapping.md) bieten die notwendigen Fähigkeiten für Mixed Reality. Die räumliche Abbildung ist einzigartig für HoloLens und ermöglicht es Hologrammen, sowohl mit dem Benutzer als auch mit der physischen Umgebung um sie herum zu interagieren. Koordinatensysteme ermöglichen es, dass die Bewegung des Benutzers die Bewegung in der digitalen Welt beeinflusst.
+Umgebungsbezogene Erkennungsmerkmale wie [Koordinaten](coordinate-systems.md), [Raumklang](spatial-sound.md) und [räumliche Abbildung](spatial-mapping.md) bieten die notwendigen Fähigkeiten für Mixed Reality. Die räumliche Abbildung ist einzigartig für HoloLens und ermöglicht es Hologrammen, sowohl mit dem Benutzer als auch mit der physischen Umgebung um sie herum zu interagieren. Koordinatensysteme ermöglichen es, dass die Bewegung des Benutzers die Bewegung in der digitalen Welt beeinflusst.
 
-Hologramme bestehen aus Licht und Ton, die auf dem [Rendering](rendering.md) basieren. Wenn Sie das Konzept von Platzierung und Persistenz verstehen, wie es auf der [Windows Mixed Reality-Startseite](navigating-the-windows-mixed-reality-home.md) (manchmal als „Shell“ bezeichnet) veranschaulicht wird, ist dies eine gute Möglichkeit, sich in der Benutzerumgebung zu etablieren.
+Hologramme bestehen aus Licht und Ton, die auf dem [Rendering](rendering.md) basieren. Wenn Sie das Konzept von Platzierung und Persistenz verstehen, wie es auf der [Windows Mixed Reality-Startseite](navigating-the-windows-mixed-reality-home.md) (auch als „Shell“ bekannt) veranschaulicht wird, ist dies eine gute Möglichkeit, sich in der Benutzerumgebung zu etablieren.
 
-## <a name="tools-for-developing-for-mixed-reality"></a>Tools zur Entwicklung für Mixed Reality
+## <a name="tools-for-developing-mixed-reality"></a>Tools zum Entwickeln von Mixed Reality
 
 Die von Ihnen verwendeten Tools hängen von der [Art der App](app-views.md) ab, die Sie erstellen möchten.
-* [Apps mit einer 2D-Ansicht](building-2d-apps.md) nutzen Tools zum Erstellen von Apps der universellen Windows-Plattform, die für Umgebungen wie Windows Phone, PC und Tablets geeignet sind. Diese Apps werden als 2D-Projektionen auf der Startseite von Windows Mixed Reality erlebt und können auf mehreren Gerätetypen (einschließlich Mobiltelefon und PC) eingesetzt werden.
-* Immersive und holografische Apps benötigen Tools, die die Vorteile der Windows Mixed Reality-APIs nutzen. Wir [empfehlen Unity](unity-development-overview.md) für die Erstellung von Mixed Reality-Apps. Entwickler, die daran interessiert sind, eine eigene Engine zu entwickeln, können [ DirectX und andere Windows-APIs](directx-development-overview.md) verwenden.
+* [Apps mit einer 2D-Ansicht](building-2d-apps.md) nutzen Tools zum Erstellen von UWP-Anwendungen, die für Umgebungen wie Windows Phone, PC und Tablets geeignet sind. Diese Anwendungen werden als 2D-Projektionen auf der Startseite von Windows Mixed Reality erlebt und funktionieren auf mehreren Gerätetypen, einschließlich Mobiltelefon und PC.
+* Immersive und holografische Anwendungen erfordern Tools, die die Vorteile von Windows Mixed Reality-APIs nutzen. Wir [empfehlen Unity](unity-development-overview.md) für die Erstellung Ihrer Mixed Reality-Anwendungen. Entwickler, die daran interessiert sind, eine eigene Engine zu entwickeln, können [ DirectX und andere Windows-APIs](directx-development-overview.md) verwenden.
 
 Unabhängig davon, welche Art von App Sie erstellen, werden diese Tools Ihnen die Entwicklung von Apps erleichtern:
 * [Visual Studio und das Windows SDK](using-visual-studio.md)
