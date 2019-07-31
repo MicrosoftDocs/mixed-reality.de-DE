@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: Openxr, Khronos, basicxrapp, gemischte Realität openxr-Entwickler Portal, DirectX, Native, Native App Custom-Engine, Middleware
-ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: efad0809356f969c825ef7285885fdb9431c7fce
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601601"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671957"
 ---
 # <a name="openxr"></a>Openxr
 
@@ -36,7 +36,7 @@ Die zentrale openxr 1,0-API bietet die Basisfunktionalität, die Sie zum Erstell
 * Eingabe und Haptik
 * Grafik-API + Platt Form Integration
 
-Weitere Informationen zur openxr-API finden Sie in der [openxr 1,0-Spezifikation](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) und in der [openxr 1,0-API-Referenz](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/).  Weitere Informationen finden Sie auf der [Seite zu Khronos openxr](https://www.khronos.org/openxr/).
+Weitere Informationen zur openxr-API finden Sie in der [openxr 1,0-Spezifikation](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) und in der [openxr 1,0-API-Referenz](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html).  Weitere Informationen finden Sie auf der [Seite zu Khronos openxr](https://www.khronos.org/openxr/).
 
 Um den vollständigen Feature-Satz von hololens 2 als Ziel festzulegen, verwenden Sie auch herstellerübergreifende und herstellerspezifische openxr-Erweiterungen, die über openxr 1,0 Core hinausgehende Features ermöglichen, wie z. b. die Nachverfolgung von Hand, die Augen Verfolgung, die räumliche Zuordnung und räumliche Anker.  Weitere Informationen zu den weiter unten in diesem Jahr anstehenden Erweiterungen finden Sie im Abschnitt " [Roadmap](openxr.md#roadmap) " weiter unten.
 
@@ -117,5 +117,5 @@ Wenn die Schaltfläche "installieren" in der Mixed Reality-app "openxr-Entwickle
 
 * [Weitere Informationen zu openxr](https://www.khronos.org/openxr/)
 * [Openxr 1,0-Spezifikation](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
-* [Openxr 1,0-API-Referenz](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [Openxr 1,0-API-Referenz](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html)
 * [Openxr 1,0 kurz Referenzhandbuch](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)
