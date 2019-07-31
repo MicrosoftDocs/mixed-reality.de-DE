@@ -89,7 +89,7 @@ Verwenden Sie eine kurze Verzögerung, bevor Sie mit dem visuellen Feedback begi
 ## <a name="ui-patterns"></a>Muster der Benutzeroberfläche
 
 ### <a name="high-frequency-buttons"></a>Schaltflächen mit häufiger Interaktion
-![Schaltfläche "Microsoft Dynamics 365 Guides Next] " (images/GuideNextButton.png "Schaltfläche \"Microsoft Dynamics 365 Guides Next") "<br>
+![Schaltfläche Microsoft Dynamics 365 Guides Next](images/GuideNextButton.png "Schaltfläche \"Microsoft Dynamics 365 Guides Next")<br>
 *Schaltflächen mit hoher Frequenz sind Schaltflächen, die in der Regel in einer Anwendung verwendet werden. Ein gutes Beispiel hierfür sind die Schaltflächen "weiter" und "zurück" in Microsoft Dynamics 365 Guides.*
 
 Merkmale von Schaltflächen mit häufiger Interaktion:
