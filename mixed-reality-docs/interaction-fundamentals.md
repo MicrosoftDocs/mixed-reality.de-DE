@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hololens, MMR, kombiniert
-ms.openlocfilehash: 7b04141c832597be4bb58447629e0ef6e248dc2b
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415255"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507898"
 ---
 # <a name="introducing-instinctual-interactions"></a>Einführung in instinktive Interaktionen
 
@@ -31,7 +31,7 @@ Zwar haben wir erkannt, dass Mixed Reality (MR) Tausende von effektiven, ansprec
 
 Basierend auf unseren bisherigen Studien sowie dem Feedback von Kunden haben wir festgestellt, dass drei primäre Interaktionsmodelle für die meisten Mixed Reality-Umgebungen geeignet sind.
 
-In vielerlei Hinsicht ist das Interaktionsmodell das mentale Modell des Benutzers zur Durchführung seiner Abläufe. Jedes dieser Interaktionsmodelle ist für eine Reihe von Kundenanforderungen optimiert und ist für sich genommen benutzerfreundlich, leistungsstark und praktikabel. 
+In vielerlei Hinsicht ist das Interaktionsmodell das mentale Modell des Benutzers zur Durchführung seiner Abläufe. Jedes dieser Interaktionsmodelle ist für verschiedene Kundenanforderungen optimiert. Jede ist praktisch, leistungsstark und kann eigenständig verwendet werden. 
 
 Das folgende Diagramm stellt eine vereinfachte Übersicht dar. Ausführliche Informationen zur Verwendung der einzelnen Interaktionsmodelle sind auf den folgenden Seiten mit Bildern und Codebeispielen verknüpft. 
 
@@ -115,7 +115,7 @@ Hier folgen einige Beispiele dazu, wie Angebote und Verhaltensweisen für die ei
     <tr>
         <td><a href="hands-and-tools.md">Hände und Motion-Controller</a></td>
         <td>Ich sehe ein Handgittermodell, ich sehe ein Fingerspitzenangebot oder Hand-/Controllerstrahlen.</td>
-        <td>Es werden greifbare Ziehpunkte oder ein Begrenzungsrahmen angezeigt, wenn meine Hand in der Nähe ist.</td>
+        <td>Es werden greifbare Ziehpunkte oder ein Begrenzungsrahmen angezeigt, wenn die Hand sich in der Nähe des Objekts befindet.</td>
         <td>Ich höre Töne und sehe Animationen beim Greifen und Loslassen.</td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ Hier folgen einige Beispiele dazu, wie Angebote und Verhaltensweisen für die ei
     <tr>
         <td><a href="hands-free.md">Freihändig (Sprachbefehle)</a></td>
         <td>Ich sehe eine Anzeige zur Spracherkennung und Untertitel, die zeigen, was das System gehört hat.</td>
-        <td>Ich erhalte Sprachansagen und Hinweise. Wenn ich sage: „Was kann ich sagen?“ Ich sehe ein Feedback.</td>
+        <td>Ich erhalte Sprachansagen und Hinweise. Wenn ich Folgendes sage: Was kann ich sagen? Ich sehe ein Feedback.</td>
         <td>Ich sehe/höre visuelle und akustische Bestätigungen, wenn ich einen Befehl erteile, oder erhalte bei Bedarf die Benutzerumgebung zur Mehrdeutigkeitsvermeidung.</a></td>
     </tr>
 </table>

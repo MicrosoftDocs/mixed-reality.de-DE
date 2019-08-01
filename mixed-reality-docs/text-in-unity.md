@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Steuerelemente, Schriftart, Typografie, UI, UX
-ms.openlocfilehash: f57b04c7d57219b7426793879004ef010d2b1ea8
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415432"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701899"
 ---
 # <a name="text-in-unity"></a>Text in Unity
 
@@ -20,7 +20,7 @@ Text ist eine der wichtigsten Komponenten in Holographic apps. Zum Anzeigen von 
 ![So erhalten Sie einen scharfen und schönen Text](images/hug-text-02-640px.png)<br>
 *Unscharfe Standardtext in Unity*
 
-## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Arbeiten mit dem 3D-Text (textmesh) von Unity und dem Benutzeroberflächen Text
+## <a name="working-with-unitys-3d-text-text-mesh-and-ui-text"></a>Arbeiten mit dem 3D-Text (textmesh) von Unity und dem Benutzeroberflächen Text
 
 Unity geht davon aus, dass alle neuen Elemente, die einer Szene hinzugefügt werden, eine Unity-Einheit oder eine 100%-Transformations Skala sind, die in hololens ungefähr 1 Meter übersetzt. Im Fall von Schriftarten kommt das umgebende Feld für eine 3D-textmesh standardmäßig bei ungefähr 1 Meter Höhe ins Spiel.
 
@@ -32,6 +32,8 @@ Die meisten visuellen Designer verwenden Punkte, um Schriftgrößen in der reale
 
 ![Unity 3D-textmesh mit unterschiedlichen Schrift Graden](images/Text_In_Unity_Measurements1.png)<br>
 *Skalieren von Werten für den Unity 3D-Text und den UI-Text*
+
+<br>
 
 ![Unity 3D-textmesh mit unterschiedlichen Schrift Graden](images/hug-text-05-1000px.png)<br>
 *Unity 3D-textmesh mit optimierten Werten*
@@ -49,7 +51,7 @@ Wenn eine Benutzeroberfläche oder ein Canvas-basiertes Textelement einer Szene 
 
 ## <a name="working-with-text-mesh-pro"></a>Arbeiten mit Text Mesh pro
 
-Mit dem Text Mesh pro von Unity können Sie die textrenderingqualität sichern. Sie unterstützt die knackige Text Gliederung unabhängig von der Entfernung mithilfe der SDF-Technik [(signed Distance Field)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Mit derselben Berechnungsmethode, die wir oben für das 3D-textmesh und den UI-Text verwendet haben, können wir für die Verwendung des herkömmlichen typografischen Punkts geeignete Skalierungs Werte finden. Da die Standard Schriftart 3D Text Mesh in der Größe 36 den umgebenden Wert von 2,5 Unity Unit (2.5 m) anzeigt, können wir den Skalierungs Wert 0,005 verwenden, um die Punktgröße zu verwenden. Der Text Mesh pro im UI-Menü weist die standardmäßige Begrenzungs Größe von 25 Unity-Einheiten (25 Mio.) auf. Dadurch erhalten wir 0,0005 für den Skalierungs Wert.
+Mit dem Text Mesh pro von Unity können Sie die textrenderingqualität sichern. Es unterstützt ganz knackige Text Gliederungen unabhängig von der Entfernung mithilfe der SDF-Technik [(signed Distance Field)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Mit der gleichen Berechnungsmethode, die wir oben für das 3D-textmesh und den UI-Text verwendet haben, können wir die richtigen Skalierungs Werte finden, die mit herkömmlichen typografischen Punkten verwendet werden. Da die 3D-Standard Textzeile mit der Größe 36 eine Begrenzungs Größe von 2,5 Unity-Einheiten (2,5 Mio.) aufweist, können wir den Skalierungs Wert 0,005 verwenden, um die Punktgröße zu erhalten. Der Text Mesh pro im UI-Menü verfügt über die standardmäßige Begrenzungs Größe von 25 Unity-Einheiten (25M). Dadurch erhalten wir 0,0005 für den Skalierungs Wert.
 
 ![Unity 3D-textmesh mit unterschiedlichen Schrift Graden](images/Text_In_Unity_Measurements2.png)<br>
 *Skalieren von Werten für den Unity 3D-Text und den UI-Text*

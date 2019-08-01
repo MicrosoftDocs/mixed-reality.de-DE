@@ -1,17 +1,17 @@
 ---
-title: MR-Basislernmodul – erweiterte Eingabe
+title: 'Tutorials zu den ersten Schritten: 6. Untersuchen von erweiterten Eingabeoptionen'
 description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: d7ef68d1a1e64ca85d76b11376d0916b2693e8e1
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 0f01b789cfc358500ec94a10f82315bca55dd622
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485710"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702012"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. Untersuchen von erweiterten Eingabeoptionen
 

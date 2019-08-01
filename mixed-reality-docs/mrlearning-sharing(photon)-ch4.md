@@ -1,17 +1,17 @@
 ---
-title: Mr Learning Sharing Module für hololens 2
+title: Lernprogramme für Mehrbenutzerfunktionen-4. Freigeben von Objektbewegungen mit mehreren Benutzern
 description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie freigegebene Umgebungen mit mehreren Benutzern in einer hololens 2-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 77ae779b4bb32dd66a722c9793d1b83c4a64ae2e
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 2e676d319ba7221cf9549b200b3d748f26025aa7
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485676"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701905"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen mit mehreren Benutzern
 

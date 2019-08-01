@@ -7,16 +7,16 @@ ms.date: 04/12/19
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Testen, MRTK, MRTK Version 2, HoloLens 2
-ms.openlocfilehash: d0d406c6963866995164c9c004e51283df8d9382
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: ccf2bb9de1e69cfe306fe9fa8f7d3b80158348d4
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387633"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601611"
 ---
 # <a name="getting-your-existing-application-ready-for-hololens-2"></a>Vorbereiten Ihrer vorhandenen Anwendung für HoloLens 2
 
-Dieses Handbuch ist auf Entwickler zugeschnitten, um diese bei der Portierung einer vorhandenen Unity-Anwendung für HoloLens (1. Generation) in eine Anwendung für HoloLens 2-Geräte zu unterstützen. Beim Portieren einer Unity-Anwendung für HoloLens (1. Generation) in eine Anwendung für HoloLens 2 gibt es vier wichtige Schritte. Die folgenden Abschnitte enthalten Detailinformationen zu den einzelnen Phasen. 
+Dieses Handbuch soll Entwickler bei der Portierung einer vorhandenen Unity-Anwendung für HoloLens (1. Generation) in eine Anwendung für HoloLens 2-Geräte zu unterstützen. Beim Portieren einer Unity-Anwendung für HoloLens (1. Generation) in eine Anwendung für HoloLens 2 gibt es vier wichtige Schritte. Die folgenden Abschnitte enthalten Detailinformationen zu den einzelnen Phasen. 
 
 | Schritt 1 | Schritt 2 | Schritt 3 | Schritt 4 |
 |----------|-------------------|-------------------|-------------------|
@@ -50,13 +50,13 @@ Entwickler sollten alle derzeit im Projekt vorhandenen [Plug-In-Abhängigkeiten]
 
 Nach dem Update auf [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases) oder Unity 2019+ ist es für optimale Ergebnisse ratsam, auf dem Gerät bestimmte Einstellungen in Unity zu aktualisieren. Diese Einstellungen werden ausführlich unter **[Empfohlene Einstellungen für Unity](Recommended-settings-for-Unity.md)** beschrieben.
 
-Noch einmal: Das [.NET-Skriptverarbeitungs-Back-End](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) wird in Unity 2018 als veraltet markiert und in Unity 2019 *entfernt*. Entwickler sollten unbedingt eine Umstellung Ihres Projekts auf [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html) in Betracht ziehen. 
+Bedenken Sie, dass das [.NET-Back-End für die Skripterstellung](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) seit Unity 2018 veraltet ist und in Unity 2019 *entfernt* wird. Entwickler sollten Ihre Projekte auf [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html) umstellen. 
 
 > [!NOTE]
 > Das IL2CPP-Skriptverarbeitungs-Back-End kann von Unity bis zu Visual Studio längere Buildzeiten verursachen. Entwickler sollten ihren Entwicklungscomputer für eine [Optimierung der IL2CPP-Buildzeiten](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) einrichten.
 > Es kann außerdem vorteilhaft sein, besonders für Unity-Projekte mit sehr vielen Ressourcen (mit Ausnahme von Skriptdateien) oder ständig wechselnden Szenen und Ressourcen, einen [Cacheserver](https://docs.unity3d.com/Manual/CacheServer.html) einzurichten. Beim Öffnen eines Projekts speichert Unity die qualifizierenden Ressourcen in einem internen Cacheformat auf dem Entwicklercomputer. Bei Änderungen müssen Elemente neu importiert und neu verarbeitet werden. Dieser Prozess kann einmal durchgeführt, in einem Cacheserver gespeichert und anschließend für andere Entwickler freigegeben werden, damit diese Zeit sparen und den erneuten Import der Änderungen nicht mehr einzeln und lokal verarbeiten müssen.
 
-Wenn nach der Umstellung auf die aktualisierte Unity-Version alle wichtigen Änderungen behandelt wurden, sollten die Entwickler ihre aktuellen Anwendungen auf HoloLens (1. Generation) erstellen und testen. Dies ist ein guter Zeitpunkt, ein Commit in die Quellcodeverwaltung zu erstellen und zu speichern. 
+Wenn nach der Umstellung auf die aktualisierte Unity-Version alle Breaking Changes behoben wurden, sollten die Entwickler ihre aktuellen Anwendungen auf HoloLens (1. Generation) erstellen und testen. Dies ist ein guter Zeitpunkt, ein Commit in die Quellcodeverwaltung zu erstellen und zu speichern. 
 
 ## <a name="compile-dependenciesplugins-for-arm-processor"></a>Kompilieren von Abhängigkeiten/Plug-Ins für ARM-Prozessor
 
@@ -106,12 +106,12 @@ Weitere Informationen zu speziellen API-Unterschieden zwischen HTK/MRTK und MRTK
 
 Da nun HoloLens 2-Komponenten und -Funktionen in MRTK Version 2 ab [RC1](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/tag/v2.0.0-RC1) verfügbar sind, können Sie Handinteraktionen direkt in Unity simulieren sowie Entwicklungen mit den neuen APIs für Handinteraktionen und Eye-Tracking vornehmen. Das HoloLens 2-Gerät ist erforderlich, um eine zufriedenstellende Benutzererfahrung zu erzeugen. Ihnen wird empfohlen, die Dokumentation und die Tools zu studieren, um Ihr Verständnis zu erhöhen. [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity) unterstützt die Entwicklung auf HoloLens (1. Generation), und es können herkömmliche Eingabemodelle wie die Auswahl durch Tippen in die Luft auf HoloLens (1. Generation) getestet werden. 
 
-## <a name="updating-interaction-model-for-hololens-2"></a>Aktualisieren des Interaktionsmodells für HoloLens 2
+## <a name="updating-your-interaction-model-for-hololens-2"></a>Aktualisieren des Interaktionsmodells für HoloLens 2
 
 Nachdem Sie Ihre Anwendung portiert und für HoloLens 2 vorbereitet haben, können Sie die Aktualisierung Ihres Interaktionsmodells und der Hologrammentwurfsplatzierungen in Betracht ziehen.
 In HoloLens (1. Generation) verfügt Ihre Anwendung wahrscheinlich über das Interaktionsmodell „Anvisieren und Ausführen“, bei dem die Hologramme relativ weit entfernt sind, damit sie in das Sichtfeld passen.
 
-Schritte zum Aktualisieren Ihres Anwendungsentwurfs, damit er für HoloLens 2 optimal geeignet ist:
+Schritte zum Aktualisieren Ihres Anwendungsentwurfs, damit dieser für HoloLens 2 optimal geeignet ist:
 1.  MRTK-Komponenten: Wenn Sie [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity) hinzugefügt haben, gibt es aufgrund der Vorarbeit verschiedene Komponenten/Skripts, die für HoloLens 2 konzipiert und optimiert wurden, und die Sie nutzen können.
 
 2.  Interaktionsmodell: Ziehen Sie die Aktualisierung Ihres Interaktionsmodells in Betracht. In den meisten Fällen empfehlen wir, vom Anvisieren und Ausführen zur Handinteraktion zu wechseln. Wenn Sie mit Ihren Hologrammen, die sich in der Regel außer Reichweite befinden, zur Handinteraktion wechseln, ergibt sich daraus eine ferne Interaktion mit zielendem Lichtstrahl und Greifgesten.
@@ -129,7 +129,7 @@ Jede Anwendung und jedes Szenario ist anders, und wir werden auch in Zukunft anh
 
 - In manchen Fällen ist ein UWP/ARM-Plug-In für die Plug-Ins vorhanden, die für die Anwendung erforderlich sind, wodurch die Möglichkeit zum Portieren und Ausführen der Anwendung auf HoloLens 2 versperrt ist. Wenden Sie sich an Ihren Plug-In-Anbieter, um das Problem zu beheben und Support für ARM zu erhalten.
 
-- minfloat (und Varianten wie min16float, minint usw.) in Shaders verhalten sich auf HoloLens 2 möglicherweise anders als auf HoloLens (1. Generation). Diese sorgen insbesondere dafür, dass „mindestens die angegebene Bitanzahl verwendet wird“. Auf Intel/Nvidia-GPUs werden diese beispielsweise größtenteils nur als 32-Bit behandelt. Auf ARM wird tatsächlich die angegebene Bitanzahl eingehalten. Dies bedeutet in der Praxis, dass diese Zahlen auf HoloLens 2 möglicherweise eine geringere Genauigkeit/einen kleineren Bereich aufweisen, als dies auf HoloLens (1. Generation) der Fall war.
+- Variablen des Typs „minfloat“ (und Varianten wie min16float, minint usw.) in Shadern verhalten sich auf HoloLens 2 möglicherweise anders als auf HoloLens (1. Generation). Diese sorgen insbesondere dafür, dass „mindestens die angegebene Bitanzahl verwendet wird“. Auf Intel/Nvidia-GPUs werden diese beispielsweise größtenteils nur als 32-Bit behandelt. Auf ARM wird tatsächlich die angegebene Bitanzahl eingehalten. Dies bedeutet in der Praxis, dass diese Zahlen auf HoloLens 2 möglicherweise eine geringere Genauigkeit oder einen kleineren Bereich als auf HoloLens (1. Generation) aufweisen.
 
 - Die „_asm“-Anweisungen funktionieren anscheinend auf ARM nicht, was bedeutet, dass jeder Code mit „_asm“-Anweisungen neu geschrieben werden muss.
 

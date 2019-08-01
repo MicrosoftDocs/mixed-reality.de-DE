@@ -1,19 +1,19 @@
 ---
-title: Spracherkennung und-Aufzeichnung für das Lern-SDK-Modul von Mr
+title: Tutorials zu Azure Speech Services-2. Hinzufügen eines Offline Modus für die lokale Sprachübersetzung
 description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie das Azure Speech SDK in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485602"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701862"
 ---
-# <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    Hinzufügen eines Offline Modus für die lokale Sprachübersetzung
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Hinzufügen eines Offline Modus für die lokale Sprachübersetzung
 
 In diesem Tutorial fügen wir einen Offline Modus hinzu, mit dem Sie eine lokale Sprachübersetzung durchführen können, wenn keine Verbindung mit dem Azure-Dienst hergestellt werden kann. Wir *simulieren* auch den Zustand "getrennt".
 

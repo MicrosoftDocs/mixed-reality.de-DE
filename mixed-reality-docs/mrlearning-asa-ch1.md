@@ -1,17 +1,17 @@
 ---
-title: Mr Learning ASA-Modul Azure Spatial Anchor on hololens 2
+title: Tutorials zu Azure Spatial Anchor-1. Ersten Einstieg in Azure Spatial Anchor
 description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 9f830bc4ead35fd308108051617c61c65d98d451
-ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
+ms.openlocfilehash: 110c8ae1a529d4a3b4796a5d2b6ee44c150741cb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671969"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702072"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Ersten Einstieg in Azure Spatial Anchor
 
@@ -32,7 +32,7 @@ Bevor Sie beginnen, müssen Sie die folgenden Ressourcen herunterladen und impor
 
 [Mr Base Module Asset Pack v 1.2](https://github.com/microsoft/MixedRealityLearning/releases/download/1.2/BaseModuleAssets-1.2.unitypackage)
 
-[ASA-Modul Asset Pack v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/v1/ASAModuleAssets_1.unitypackage)
+[ASA-Modul Asset Pack v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/ASA_1.1/ASAModuleAssetsBeta.unitypackage)
 
 [Mixed Reality Toolkit 2.0.0 rc1](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1-Refresh.unitypackage)
 

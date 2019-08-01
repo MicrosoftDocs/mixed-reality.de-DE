@@ -1,3 +1,18 @@
+---
+title: Lernprogramme für Mehrbenutzerfunktionen-2. Vorbereiten von Unity für die Entwicklung
+description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie freigegebene Umgebungen mit mehreren Benutzern in einer hololens 2-Anwendung implementieren.
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 02/26/2019
+ms.topic: article
+keywords: Mixed Reality, Unity, Tutorial, HoloLens
+ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701979"
+---
 # <a name="2-getting-unity-ready-for-development"></a>2. Vorbereiten von Unity für die Entwicklung 
 
 

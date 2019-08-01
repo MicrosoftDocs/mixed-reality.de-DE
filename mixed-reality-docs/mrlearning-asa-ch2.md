@@ -1,17 +1,17 @@
 ---
-title: Mr Learning ASA-Modul Azure Spatial Anchor on hololens 2
+title: Tutorials für räumliche Azure-Anker-2. Speichern, abrufen und Freigeben von räumlichen Azure-Ankern
 description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485740"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702048"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Speichern, abrufen und Freigeben von räumlichen Azure-Ankern
 
@@ -81,5 +81,5 @@ Wir erfahren, wie Sie räumliche Azure-Anker im Rahmen einer vollständig intera
 
 In der nächsten Lektion erfahren Sie, wie Sie Benutzern Echtzeitfeedback bereitstellen. Dieses Feedback enthält Informationen zur Anker Erstellung, zur Qualität des Verständnisses der Umgebung und zum Status der Azure-Sitzung. Ohne Feedback wissen Benutzer möglicherweise nicht, ob ein Anker erfolgreich in Azure hochgeladen wurde, ob die Qualität der Umgebung für die Anker Erstellung ausreichend ist oder ob der aktuelle Zustand ist.
 
-[Nächste Lektion: 3. Anzeigen des Azure Spatial Anchor-Feedbacks](mrlearning-asa-ch3.md)
+[Nächste Lektion: 3. Anzeigen von Azure Spatial Anchors-Feedback](mrlearning-asa-ch3.md)
 

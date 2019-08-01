@@ -1,17 +1,17 @@
 ---
-title: MR-Basislernmodul – Beispielerfahrung für die Montage einer Mondlandefähre
+title: Tutorials zu den ersten Schritten-7. Erstellen einer Beispielanwendung für ein Mond Modul
 description: In dieser Lektion werden wir mehrere Konzepte, die wir in früheren Lektionen kennengelernt haben, kombinieren, um eine einzigartige Beispielerfahrung zu schaffen.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 79f2d3a4a3224533761ea2e4a7e73dc3d4d5e53e
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387687"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701991"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Erstellen einer Beispielanwendung für ein Mond Modul
 
