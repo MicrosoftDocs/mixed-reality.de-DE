@@ -6,21 +6,25 @@ ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, Holographic Remoting, Remote Rendering, Netzwerk Rendering, hololens, Remote holograms
-ms.openlocfilehash: 8d645f634ff0fc820893f5554fd602aa3a2f38e3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 71a763b0660867bf910c0dcecb5fba921f19d068
+ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829619"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68712432"
 ---
-# <a name="add-holographic-remoting"></a>Holographic-Remoting hinzufügen
+# <a name="add-holographic-remoting-hololens-1"></a>Holographic-Remoting hinzufügen (hololens 1)
+
+>[!IMPORTANT]
+>In diesem Dokument wird die Erstellung einer Host Anwendung für hololens 1 beschrieben. Die Host Anwendung für **hololens 1** muss das nuget-Paketversion **1. x. x**verwenden. Dies bedeutet, dass für hololens 1 geschriebene Host Anwendungen nicht mit hololens 2 und umgekehrt kompatibel sind.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Weitere Anleitungen sind für hololens 2 in [Kürze](index.md#news-and-notes)verfügbar.
+Hololens-Entwickler, die Holographic Remoting verwenden, müssen Ihre apps aktualisieren, damit Sie mit hololens 2 kompatibel sind. Hierfür ist eine neue Version des nuget-Pakets "Holographic Remoting" erforderlich. Wenn eine Anwendung, die das Holographic Remoting-nuget-Paket mit einer Versionsnummer kleiner als 2.0.0.0 verwendet, versucht, eine Verbindung mit dem Holographic Remoting Player auf hololens 2 herzustellen, schlägt die Verbindung fehl.
 
-Hololens-Entwickler, die Holographic Remoting verwenden, müssen Ihre apps aktualisieren, damit Sie mit hololens 2 kompatibel sind.  Hierfür wird eine neue Version des Holographic Remoting-nuget-Pakets benötigt, das noch nicht öffentlich verfügbar ist.  Wenn eine Anwendung, die das hololens-nuget-Paket verwendet, versucht, eine Verbindung mit dem Holographic Remoting Player auf hololens 2 herzustellen, schlägt die Verbindung fehl.  Sehen Sie sich diese Seite für Updates an, sobald das hololens 2 nuget-Paket verfügbar ist.
+>[!NOTE]
+>Anleitungen für hololens 2 finden Sie [hier](holographic-remoting-create-host.md).
+
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Hinzufügen von Holographic Remoting zu Ihrer Desktop-oder UWP-App
 
@@ -47,7 +51,7 @@ Führen Sie die folgenden Schritte aus, um das nuget-Paket für Holographic Remo
 
 Zuerst benötigen wir eine Instanz von holographicstreamerhilfsprogramme. Fügen Sie der Klasse, die Remoting verarbeitet, dieses hinzu.
 
-```
+```cpp
 #include <HolographicStreamerHelpers.h>
 
    private:
@@ -56,7 +60,7 @@ Zuerst benötigen wir eine Instanz von holographicstreamerhilfsprogramme. Fügen
 
 Außerdem müssen Sie den Verbindungsstatus nachverfolgen. Wenn Sie die Vorschau darstellen möchten, benötigen Sie eine Textur, in die Sie kopiert werden können. Außerdem benötigen Sie einige Dinge, wie z. b. eine Verbindungs Zustands Sperre, eine Möglichkeit, die IP-Adresse von hololens zu speichern, usw.
 
-```
+```cpp
 private:
        Microsoft::Holographic::HolographicStreamerHelpers^ m_streamerHelpers;
 
@@ -75,7 +79,7 @@ private:
 
 Zum Herstellen einer Verbindung mit einem hololens-Gerät erstellen Sie eine Instanz von holographicstreamerhilfsprogramme, und stellen Sie eine Verbindung mit der Ziel-IP-Adresse her Sie müssen die Video Frame Größe so festlegen, dass Sie mit der hololens-Anzeigebreite und-Höhe übereinstimmt, da die Holographic Remoting-Bibliothek erwartet, dass die Encoder-und decoderauflösungen genau übereinstimmen.
 
-```
+```cpp
 m_streamerHelpers = ref new HolographicStreamerHelpers();
        m_streamerHelpers->CreateStreamer(m_d3dDevice);
 
@@ -98,7 +102,7 @@ Die Geräte Verbindung ist asynchron. Ihre APP muss Ereignishandler für Connect
 
 Das onconnected-Ereignis kann die Benutzeroberfläche aktualisieren, das Rendering starten usw. In unserem Desktop Codebeispiel aktualisieren wir den Fenstertitel mit der Meldung "Connected" (verbunden).
 
-```
+```cpp
 m_streamerHelpers->OnConnected += ref new ConnectedEvent(
            [this]()
            {
@@ -108,7 +112,7 @@ m_streamerHelpers->OnConnected += ref new ConnectedEvent(
 
 Das ongetrennte-Ereignis kann die erneute Verbindung, Aktualisierungen der Benutzeroberfläche usw. verarbeiten. In diesem Beispiel wird die Verbindung wieder hergestellt, wenn ein vorübergehender Fehler vorliegt.
 
-```
+```cpp
 Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_streamerHelpers);
        m_streamerHelpers->OnDisconnected += ref new DisconnectedEvent(
            [this, streamerHelpersWeakRef](_In_ HolographicStreamerConnectionFailureReason failureReason)
@@ -148,7 +152,7 @@ Platform::WeakReference streamerHelpersWeakRef = Platform::WeakReference(m_strea
 
 Wenn die Remoting-Komponente bereit ist, einen Frame zu senden, bietet Ihre APP die Möglichkeit, eine Kopie davon im sendframeevent zu erstellen. Hier kopieren wir den Frame in eine Austausch Kette, damit wir ihn in einem Vorschaufenster anzeigen können.
 
-```
+```cpp
 m_streamerHelpers->OnSendFrame += ref new SendFrameEvent(
            [this](_In_ const ComPtr<ID3D11Texture2D>& spTexture, _In_ FrameMetadata metadata)
            {
@@ -180,13 +184,13 @@ Zum Rendering von Inhalten mithilfe von Remoting richten Sie eine virtuelle ifra
 
 Anstatt Sie selbst zu erstellen, stammen die Holographic Space-und Speech-Komponenten von ihrer holographikremumughelpers-Klasse:
 
-```
+```cpp
 m_appView->Initialize(m_streamerHelpers->HolographicSpace, m_streamerHelpers->RemoteSpeech);
 ```
 
 Anstatt eine Update-Schleife innerhalb einer Run-Methode zu verwenden, stellen Sie Tick-Updates aus der Hauptschleife ihrer Desktop-oder UWP-App bereit. Dies ermöglicht es Ihrer Desktop-oder UWP-APP, die Kontrolle über die Nachrichtenverarbeitung zu behalten.
 
-```
+```cpp
 void DesktopWindow::Tick()
    {
        auto lock = m_deviceLock.Lock();
@@ -198,7 +202,7 @@ void DesktopWindow::Tick()
 
 Die Tick ()-Methode der Holographic-App-Ansicht schließt eine Iterationen der Update-, Draw-, Present-Schleife ab.
 
-```
+```cpp
 void AppView::Tick()
    {
        if (m_main)
@@ -222,7 +226,7 @@ Die Holographic App View Update-, Rendering-und Present-Schleife ist identisch m
 
 So trennen Sie die Verbindung, z. b. wenn der Benutzer auf eine UI-Schaltfläche klickt, um die Verbindung zu trennen (), für die holographicstreamerhilfsprogramme.
 
-```
+```cpp
 void DesktopWindow::DisconnectFromRemoteDevice()
    {
        // Disconnecting from the remote device can change the connection state.
@@ -246,7 +250,7 @@ Der Windows Holographic Remoting Player wird im Windows App Store als Endpunkt f
 
 In der Ansicht der Holographic-app muss die APP über das Direct3D-Gerät bereitgestellt werden, das zum Initialisieren des Holographic-Raums verwendet werden muss. Ihre APP sollte dieses Direct3D-Gerät verwenden, um den Vorschau Rahmen zu kopieren und anzuzeigen.
 
-```
+```cpp
 internal:
        const std::shared_ptr<DX::DeviceResources>& GetDeviceResources()
        {
