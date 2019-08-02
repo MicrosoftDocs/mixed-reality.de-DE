@@ -134,8 +134,6 @@
 ## [Launchpad für die Entwicklung](development.md)
 ## Mixed Reality-Clouddienste
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
-### [Holographic Remoting-Player](holographic-remoting-player.md)
-### [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Unity-Entwicklung – Übersicht](unity-development-overview.md)
 ### Erste Schritte
@@ -188,7 +186,6 @@
 #### [Tastatur-, Maus- und Controllereingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Fortgeschrittene Themen
 #### [Verwenden von XAML mit holographischen DirectX-Apps](using-xaml-with-holographic-directx-apps.md)
-#### [Hinzufügen von holographischem Remoting](add-holographic-remoting.md)
 ### [OpenXR](openxr.md)
 ## WebVR
 ### [Verwenden von WebVR in Edge mit Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
@@ -289,7 +286,16 @@
 ## Remote- und Forschungstools
 ### [Verwenden des Windows-Geräteportals](using-the-windows-device-portal.md)
 ### [Referenz der Geräteportal-API](device-portal-api-reference.md)
+## Holographic Remoting
 ### [Holographic Remoting-Player](holographic-remoting-player.md)
+### [Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
+### [Schreiben eines benutzerdefinierten Holographic Remoting-Players](holographic-remoting-create-player.md)
+### [Benutzerdefinierte Holographic Remoting-Datenkanäle](holographic-remoting-custom-data-channels.md)
+### [Sichere Verbindung für Holographic Remoting](holographic-remoting-secure-connection.md)
+### [Problembehandlung und Einschränkungen](holographic-remoting-troubleshooting.md)
+### [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+### Holographic Remoting für HoloLens 1
+#### [Hinzufügen von Holographic Remoting](add-holographic-remoting.md)
 ## Andere
 ### [Nachverfolgen von QR-Codes](qr-code-tracking.md)
 ### [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
