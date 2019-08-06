@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Steuerelemente, Schriftart, Typografie, UI, UX
-ms.openlocfilehash: 238f99442bcc5cf02de6760f0ce52d07c9d9c567
-ms.sourcegitcommit: be3631932ea1c88ac3ad8b2390c98c5a6e8b93ed
+ms.openlocfilehash: 55c25400a061366e045398da3196db208b4ab590
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2019
-ms.locfileid: "68776391"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817363"
 ---
 # <a name="text-in-unity"></a>Text in Unity
 
@@ -51,7 +51,7 @@ Wenn eine Benutzeroberfläche oder ein Canvas-basiertes Textelement einer Szene 
 
 ## <a name="working-with-text-mesh-pro"></a>Arbeiten mit Text Mesh pro
 
-Mit dem Text Mesh pro von Unity können Sie die textrenderingqualität sichern. Es unterstützt ganz knackige Text Gliederungen unabhängig von der Entfernung mithilfe der SDF-Technik [(signed Distance Field)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Mit der gleichen Berechnungsmethode, die wir oben für das 3D-textmesh und den UI-Text verwendet haben, können wir die richtigen Skalierungs Werte finden, die mit herkömmlichen typografischen Punkten verwendet werden. Da die 3D-Standardtext-mespro-Schriftart mit der Größe 36 eine Begrenzungs Größe von 2,5 Unity-Einheiten (2,5 Mio.) aufweist, können wir den Skalierungs Wert 0,005 verwenden, um die Punktgröße zu erhalten. Der Text Mesh pro im UI-Menü verfügt über die standardmäßige Begrenzungs Größe von 25 Unity-Einheiten (25M). Dadurch erhalten wir 0,0005 für den Skalierungs Wert.
+Mit dem Text Mesh pro von Unity können Sie die textrenderingqualität sichern. Es unterstützt ganz knackige Text Gliederungen unabhängig von der Entfernung mithilfe der SDF-Technik [(signed Distance Field)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Mit der gleichen Berechnungsmethode, die wir oben für das 3D-textmesh und den UI-Text verwendet haben, können wir die richtigen Skalierungs Werte finden, die mit herkömmlichen typografischen Punkten verwendet werden. Da die 3D-textzeibschriftart mit der Größe 36 eine Begrenzungs Größe von 2,5 Unity-Einheiten (2,5 Mio.) aufweist, können wir den Skalierungs Wert 0,005 verwenden, um die Punktgröße zu erhalten. Der Text Mesh pro im UI-Menü verfügt über eine standardmäßige Begrenzungs Größe von 25 Unity-Einheiten (25M). Dadurch erhalten wir 0,0005 für den Skalierungs Wert.
 
 ![Unity 3D-textmesh mit unterschiedlichen Schrift Graden](images/Text_In_Unity_Measurements2.png)<br>
 *Skalieren von Werten für den Unity 3D-Text und den UI-Text*
