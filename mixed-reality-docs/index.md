@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Entdecken, Verteilen, Index, Einstiegsseite, Entwurf, Entwicklung, Tutorials, Beispiel-Apps, Grundlagen, Fallstudien, Ressourcen, HoloLens-Vorgehensweise, Open-Source-Projekte
-ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: c39a5f2f31dc962758456f743e17aaf37fd4ed64
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415389"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817361"
 ---
 # <a name="mixed-reality-documentation"></a>Mixed Reality-Dokumentation
 
@@ -23,7 +23,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
                             <li>
-                            <a href="design.md" title="Einstieg in Entwurf" data-linktype="absolute-path">
+                            <a href="design.md" title="Angebotsseite für Entwurf" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -42,7 +42,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
                                </a>
                             </li>
                             <li>
-                             <a href="development.md" title="Einstieg in Entwicklung" data-linktype="absolute-path">
+                             <a href="development.md" title="Angebotsseite für Entwicklung" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -104,7 +104,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
                                     </a>
                             </li>
                             <li>
-                              <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank" title="Spracherkennungsdienste" data-linktype="absolute-path">
+                              <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank" title="Spracherkennungdienste" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -147,7 +147,7 @@ Mixed Reality verbindet Inhalte der realen Welt und virtuelle Inhalte zu hybride
 
 [![HoloLens 2](images/hololens2.jpg)](https://www.microsoft.com/hololens/hardware)
 
-[HoloLens 2](https://www.microsoft.com/hololens/hardware) bietet die komfortabelste und immersivste verfügbare Mixed Reality-Umgebung mit branchenführenden Lösungen, die innerhalb von Minuten einen Mehrwert bringen – dies alles auf Basis der Zuverlässigkeit, Sicherheit und Skalierbarkeit der Cloud- und KI-Dienste von Microsoft. Die [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) kombiniert HoloLens 2 mit kostenlosen Testversionen der Unity-Software und Azure-Gutschriften für Clouddienste und dient damit als Starthilfe für Ihre Mixed Reality-Projekte.
+[HoloLens 2](https://www.microsoft.com/hololens/hardware) ist eine höchst komfortable und immersive Mixed Reality-Umgebung mit branchenführenden Lösungen, die innerhalb von Minuten einen Mehrwert bieten. Die Umgebung wird durch die Zuverlässigkeit, Sicherheit und Skalierbarkeit der Cloud- und KI-Dienste von Microsoft gestützt. Die [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) kombiniert HoloLens 2 mit kostenlosen Testversionen der Unity-Software und Azure-Gutschriften für Clouddienste und dient damit als Starthilfe für Ihre Mixed Reality-Projekte.
 
 <h2>Neuigkeiten und Anmerkungen</h2>
 
@@ -183,4 +183,4 @@ Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir 
 
 
 >[!IMPORTANT]
->Alle Mixed Reality-Entwicklungsmaterialien werden auf dieser Website nur zu Ihrer Information zur Verfügung gestellt. Ihre Anwendung, deren Nutzung sowie deren Auswirkungen auf die Endbenutzer liegen in Ihrer alleinigen Verantwortung als Anwendungsentwickler, einschließlich des Sicherstellens, dass Ihre Anwendung keine Unannehmlichkeiten, Verletzungen oder sonstigen Schäden beim Endbenutzer verursacht, und einschließlich entsprechender Warnungen und Haftungsausschlüsse. Sie müssen jederzeit entsprechende geeignete Schritte bei der Entwicklung und Veröffentlichung Ihrer Anwendung unternehmen, um sicherzustellen, dass Ihre Anwendung sicher ist und Sie alle Verpflichtungen aus Ihrer mit Microsoft geschlossenen [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) erfüllen. 
+>Alle Mixed Reality-Entwicklungsmaterialien werden auf dieser Website nur zu Ihrer Information zur Verfügung gestellt. Deine Anwendung, deren Nutzung sowie deren Auswirkungen auf die Endbenutzer liegen in deiner alleinigen Verantwortung als Anwendungsentwickler. Du musst sicherstellen, dass die Anwendung keine Unannehmlichkeiten, Verletzungen oder sonstigen Schäden beim Endbenutzer verursacht, und entsprechende Warnungen und Haftungsausschlüsse einschließen. Sie müssen jederzeit entsprechende geeignete Schritte bei der Entwicklung und Veröffentlichung Ihrer Anwendung unternehmen, um sicherzustellen, dass Ihre Anwendung sicher ist und Sie alle Verpflichtungen aus Ihrer mit Microsoft geschlossenen [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) erfüllen. 

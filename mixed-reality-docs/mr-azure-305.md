@@ -1,11 +1,11 @@
 ---
-title: MR und Azure-305 - Funktionen und Speicher
-description: Führen Sie diesen Kurs, um zu erfahren, wie Sie Azure Storage und-Funktionen innerhalb einer mixed Reality-Anwendung zu implementieren.
+title: Mr und Azure 305-Funktionen und Speicher
+description: Arbeiten Sie diesen Kurs durch, um zu erfahren, wie Sie Azure Storage und Funktionen innerhalb einer gemischten Reality-Anwendung implementieren.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: Azure, mixed Reality, Academy, Unity, Tutorials, api, Funktionen, Speicher, Hololens, immersive Vr
+keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Funktionen, Speicher, hololens, immersive, VR
 ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
 ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
@@ -14,197 +14,197 @@ ms.lasthandoff: 07/09/2019
 ms.locfileid: "67694558"
 ---
 >[!NOTE]
->In den Tutorials Mixed Reality Academy mit HoloLens entwickelt wurden (der 1. Generation) und Mixed Reality Immersive Headsets Bedenken.  Daher können wir, dass es ist wichtig, die in diesen Tutorials für Entwickler beizubehalten, die Informationen bei der Entwicklung für diese Geräte benötigen werden.  In diesen Tutorials werden **_nicht_** aktualisiert werden, mit der neuesten Toolsets oder Interaktionen für HoloLens 2 verwendet wird.  Sie werden zum Fortsetzen der Arbeit auf die unterstützten Geräte verwaltet werden. Es wird eine neue Reihe von Tutorials, die in der Zukunft ausgegeben wird, die Entwicklung für HoloLens 2 veranschaulichen vorhanden sein.  Dieser Hinweis wird mit einem Link zu dieser Tutorials aktualisiert werden, wenn sie bereitgestellt werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
 
 <br> 
 
-# <a name="mr-and-azure-305-functions-and-storage"></a>MR und Azure-305: Funktionen und Speicher
+# <a name="mr-and-azure-305-functions-and-storage"></a>Mr und Azure 305: Funktionen und Speicher
 
-![Endprodukt-starten](images/AzureLabs-Lab5-00.png)
+![Endgültiges Produkt-Start](images/AzureLabs-Lab5-00.png)
 
-In diesem Kurs erfahren Sie, wie zum Erstellen und Verwenden von Azure Functions aus, und speichern Sie Daten mit einem Azure Storage-Ressource in einer mixed Reality-Anwendung.
+In diesem Kurs erfahren Sie, wie Sie Azure Functions und Daten mit einer Azure Storage Ressource in einer gemischten Reality-Anwendung erstellen und verwenden.
 
-*Azure Functions* ist ein Microsoft-Dienst, die Entwickler kleine Teile des Codes ausgeführt werden kann, "Funktionen", in Azure. Dadurch wird eine Möglichkeit zum Delegieren der Arbeit an Ihrer lokalen Anwendung, die viele Vorteile haben kann, anstatt die Cloud. *Azure Functions* unterstützt verschiedene Entwicklungssprachen, darunter C\#, F\#, Node.js, Java und PHP. Weitere Informationen finden Sie auf die [Azure Functions-Artikel](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+*Azure Functions* ist ein Microsoft-Dienst, der Entwicklern das Ausführen von kleinen Code Elementen ("Functions") in Azure ermöglicht. Dies bietet eine Möglichkeit zum Delegieren von Arbeit an die Cloud und nicht an Ihre lokale Anwendung, die viele Vorteile haben kann. *Azure Functions* unterstützt mehrere Entwicklungs Sprachen, wie\#z.\#b. C, F, Node. js, Java und PHP. Weitere Informationen finden Sie im [Artikel Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
-*Azure-Speicher* ist ein Microsoft-Cloud-Dienst, der ermöglicht es Entwicklern, die zum Speichern von Daten mit der Versicherung, dass es hoch verfügbar, sichere, permanenten, skalierbar und redundant ist. Dies bedeutet, dass Microsoft alle Wartung und kritische Probleme für Sie übernimmt. Weitere Informationen finden Sie auf die [Azure Storage-Artikel](https://docs.microsoft.com/azure/storage/common/storage-introduction).
+*Azure Storage* ist ein Microsoft-clouddienst, der es Entwicklern ermöglicht, Daten zu speichern, mit der Versicherung, dass Sie hoch verfügbar, sicher, dauerhaft, skalierbar und redundant ist. Dies bedeutet, dass Microsoft alle Wartungsarbeiten und kritischen Probleme für Sie behandelt. Weitere Informationen finden Sie im [Artikel Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).
 
-Nach Abschluss dieses Kurses, verfügen Sie über ein mixed Reality immersive Kopfhörer Anwendung die können die folgenden Schritte ausführen:
+Nachdem Sie diesen Kurs abgeschlossen haben, verfügen Sie über eine gemischte Reality-Headset-Anwendung, die Folgendes ausführen kann:
 
-1.  Ermöglicht dem Benutzer, die in einer Szene bestaunen.
-2.  Das Erzeugen von Objekten, wenn der Benutzer auf ein 3D-Diagrammlayout "Button" gazes ausgelöst werden.
-3.  Die erzeugten Objekte werden durch eine Azure-Funktion ausgewählt werden.
-4.  Da jedes Objekt erzeugt wird, speichert die Anwendung den Objekttyp in einem *Azure File*befindet sich im *Azure Storage*.
-5.  Beim Laden eines zweiten Mal die *Azure File* Daten abgerufen, und zur Wiedergabe erzeugenden Aktionen auf der vorherigen Instanz der Anwendung verwendet werden.
+1.  Ermöglicht dem Benutzer das durchschauen einer Szene.
+2.  Löst das Erzeugen von Objekten aus, wenn der Benutzer auf einer 3D-Schaltfläche ' ' geklickt hat.
+3.  Die erzeugten Objekte werden von einer Azure-Funktion ausgewählt.
+4.  Während jedes Objekt erzeugt wird, speichert die Anwendung den Objekttyp in einer *Azure-Datei*, die sich in *Azure Storage*befindet.
+5.  Beim Laden eines zweiten Zeitraums werden die *Azure-Datei* Daten abgerufen und verwendet, um die erstellenden Aktionen aus der vorherigen Instanz der Anwendung wiederzugeben.
 
-In Ihrer Anwendung obliegt es Ihnen, wie Sie die Ergebnisse in Ihr Design integrieren werden. Dieser Kurs erfahren Sie, wie Sie ein Azure-Dienst in Ihrem Unity-Projekt zu integrieren. Es ist Ihre Aufgabe, verwenden Sie das wissen, dass Sie aus diesem Kurs zum Verbessern Ihrer mixed Reality-Anwendung erhalten.
+In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf integrieren. In diesem Kurs erfahren Sie, wie Sie einen Azure-Dienst in Ihr Unity-Projekt integrieren. Es ist Ihre Aufgabe, das wissen, das Sie aus diesem Kursgewinnen, zu nutzen, um ihre gemischte Reality-Anwendung zu verbessern.
 
 ## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
 <tr>
-<th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
+<th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>MR und Azure-305: Funktionen und Speicher</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Mr und Azure 305: Funktionen und Speicher</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
-> Während dieser Kurs in erster Linie für immersive Windows Mixed Reality (VR)-Headsets ausgerichtet ist, können Sie auch anwenden, was Sie in diesem Kurs, Microsoft HoloLens lernen. Wie Sie den Kurs halten, sehen Anmerkungen zu dieser Version auf Änderungen Sie möglicherweise zur Unterstützung von HoloLens einsetzen müssen.
+> Dieser Kurs konzentriert sich in erster Linie auf Windows Mixed Reality immersive (VR)-Headsets, aber Sie können auch das, was Sie in diesem Kurs lernen, auf Microsoft hololens anwenden. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise zur Unterstützung von hololens verwenden müssen.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
 > [!NOTE]
-> In diesem Tutorial wurde für Entwickler mit Erfahrung mit Unity entwickelt und C#. Bedenken Sie dabei auch, dass die Voraussetzungen und schriftliche Anweisungen in diesem Dokument darstellen, was getestet und zum Zeitpunkt des Schreibens von (Mai 2018) überprüft wurde. Sie können zur Verwendung der neuesten Software, wie in der [Installieren der Tools](install-the-tools.md) Artikel, obwohl es nicht davon ausgegangen werden soll, dass die Informationen in diesem Kurs perfekt was finden Sie in der neueren Software entspricht als die unten Angaben aufgeführten .
+> Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
 
-Es wird empfohlen, die folgende Hardware und Software für diesen Kurs:
+Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 
-- Eine Entwicklungs-PC [kompatibel mit Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) für immersive (VR) Kopfhörer-Entwicklung
-- [Windows 10 Fall Creators Update (oder höher) mit der Entwicklermodus aktiviert ist](install-the-tools.md#installation-checklist)
-- [Das neueste Windows 10-SDK](install-the-tools.md#installation-checklist)
-- [Unity 2017.4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
-- Ein [immersive Windows Mixed Reality (VR)-Kopfhörer](immersive-headset-hardware-details.md) oder [Microsoft HoloLens](hololens-hardware-details.md) mit Entwicklermodus aktiviert ist
+- Einen Entwicklungs-PC, der [mit der Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) for Immersive (VR)-Headset-Entwicklung kompatibel ist
+- [Windows 10 Fall Creators Update (oder höher) mit aktiviertem Entwicklermodus](install-the-tools.md#installation-checklist)
+- [Das neueste Windows 10 SDK](install-the-tools.md#installation-checklist)
+- [Unity 2017,4](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- Ein [Windows Mixed Reality-Headset (VR)](immersive-headset-hardware-details.md) oder [Microsoft hololens](hololens-hardware-details.md) mit aktiviertem Entwicklermodus
 - Ein Abonnement für ein Azure-Konto zum Erstellen von Azure-Ressourcen
-- Zugriff auf das Internet für den Abruf von Setup- und Azure
+- Internet Zugriff für Azure-Setup und Datenabruf
 
 ## <a name="before-you-start"></a>Bevor Sie beginnen
 
-Um zu vermeiden, bei der Probleme auftreten, die Erstellung dieses Projekts, es wird dringend empfohlen, dass Sie das Projekt in einem Ordner Stamm oder in der Nähe von Stamm in diesem Lernprogramm genannten erstellen (lange Ordnerpfade können dazu führen, dass Probleme, die zum Zeitpunkt der Erstellung).
+Um Probleme zu vermeiden, die beim Erstellen dieses Projekts auftreten, wird dringend empfohlen, dass Sie das in diesem Tutorial erwähnte Projekt in einem Stamm Ordner oder in einem Ordner mit einem Stamm Ordner erstellen (lange Ordner Pfade können zur Buildzeit Probleme verursachen).
 
-## <a name="chapter-1---the-azure-portal"></a>Kapitel 1: das Azure-Portal
+## <a name="chapter-1---the-azure-portal"></a>Kapitel 1: Azure-Portal
 
-Verwenden der **Azure Storage-Dienst**, Sie benötigen zum Erstellen und Konfigurieren einer **Speicherkonto** im Azure-Portal.
+Um den **Azure Storage-Dienst**zu verwenden, müssen Sie ein **Speicherkonto** in der Azure-Portal erstellen und konfigurieren.
 
-1.  Melden Sie sich bei der [Azure-Portal](https://portal.azure.com).
-
-    > [!NOTE]
-    > Wenn Sie nicht bereits über ein Azure-Konto verfügen, müssen Sie eine erstellen. Wenn Sie dieses Tutorial in einer Situation Classroom bzw. Ihrer testumgebung folgen, bitten Sie Ihre "Instructor" oder eine der aufsichtsführenden für Hilfe beim Einrichten Ihres neuen Kontos.
-
-2.  Sobald Sie angemeldet sind, klicken Sie auf **neu** in der oberen linken Ecke, und suchen Sie nach *Speicherkonto*, und klicken Sie auf **EINGABETASTE**.
-
-    ![Azure-Speicher-Suche](images/AzureLabs-Lab5-01.png)
+1.  Melden Sie sich beim [Azure-Portal](https://portal.azure.com)an.
 
     > [!NOTE]
-    > Das Wort **neu** wurden möglicherweise durch ersetzt **erstellen Sie eine Ressource**, in neueren-Portalen.
+    > Wenn Sie noch nicht über ein Azure-Konto verfügen, müssen Sie eines erstellen. Wenn Sie dieses Tutorial in einer Classroom-oder Lab-Situation befolgen, bitten Sie Ihren Dozenten oder einen der Proctors, Hilfe beim Einrichten Ihres neuen Kontos zu erhalten.
 
-3.  Die neue Seite bietet eine Beschreibung der *Azure Storage-Konto* Service. Unten links der Aufforderung, wählen die **erstellen** Schaltfläche, um eine Zuordnung mit diesem Dienst zu erstellen.
+2.  Nachdem Sie angemeldet sind, klicken Sie in der oberen linken Ecke auf **neu** , suchen Sie nach *Speicherkonto*, und drücken Sie die **Eingabe**Taste.
+
+    ![Azure Storage-Suche](images/AzureLabs-Lab5-01.png)
+
+    > [!NOTE]
+    > Das Wort **New** wurde möglicherweise durch **Create a Resource**in neueren Portalen ersetzt.
+
+3.  Auf der neuen Seite wird eine Beschreibung des *Azure Storage-Konto* Dienstanbieter bereitgestellt. Wählen Sie unten links in dieser Eingabeaufforderung die Schaltfläche **Erstellen** aus, um eine Verknüpfung mit diesem Dienst zu erstellen.
 
     ![Dienst erstellen](images/AzureLabs-Lab5-02.png)
 
-4.  Nachdem Sie auf geklickt haben **erstellen**:
+4.  Nachdem Sie auf **Erstellen**geklickt haben, klicken Sie auf:
 
-    1.  Fügen Sie eine *Namen* für Ihr Konto bedenken, dass dieses Feld akzeptiert nur Ziffern und Kleinbuchstaben zulässig.
+    1.  Fügen Sie einen *Namen* für Ihr Konto ein. Beachten Sie, dass dieses Feld nur Zahlen und Kleinbuchstaben akzeptiert.
 
-    2.  Für *Bereitstellungsmodell*Option **RM**.
+    2.  Wählen Sie unter *Bereitstellungs Modell*die Option **Resource Manager**aus.
 
-    3.  Für *Kontoart*Option **Speicher (Allgemein v1)** .
+    3.  Wählen Sie unter *Kontoart*die Option **Speicher (universell, Version v1)** aus.
 
-    4.  Bestimmen der *Speicherort* für Ihre Ressourcengruppe aus (Wenn Sie eine neue Ressourcengruppe erstellen). Der Speicherort würde idealerweise in der Region sein, in dem die Anwendung ausgeführt wird. Einige Azure-Ressourcen sind nur in bestimmten Regionen verfügbar.
+    4.  Bestimmen Sie den *Speicherort* für Ihre Ressourcengruppe (wenn Sie eine neue Ressourcengruppe erstellen). Der Speicherort wäre idealerweise in der Region, in der die Anwendung ausgeführt wird. Einige Azure-Ressourcen sind nur in bestimmten Regionen verfügbar.
 
-    5.  Für *Replikation* wählen **Read-Access-georedundanter Speicher (RA-GRS)** .
+    5.  Wählen Sie für die *Replikation* den **georedundanten Speicher mit Lesezugriff (RA-GRS)** aus.
 
-    6.  Für *Leistung*Option **Standard**.
+    6.  Wählen Sie für *Leistung*die Option **Standard**aus.
 
-    7.  Lassen Sie *sichere Übertragung erforderlich* als **deaktiviert**.
+    7.  Lassen Sie die Option " *sichere Übertragung erforderlich* " **deaktiviert**.
 
-    8.  Wählen Sie eine *Abonnement*.
+    8.  Wählen Sie ein *Abonnement*aus.
 
-    9. Wählen Sie eine *Ressourcengruppe* oder ein neues erstellen. Eine Ressourcengruppe bietet eine Möglichkeit zum Überwachen, steuern den Zugriff, bereitstellen und Verwalten der Abrechnung für eine Sammlung von Azure-Ressourcen. Es wird empfohlen, alle der Azure Dienste im Zusammenhang mit einem einzelnen Projekt (z. B. z. B. diesen Labs) unter einer allgemeinen Ressourcengruppe zu halten). 
+    9. Wählen Sie eine Ressourcengruppe aus, oder erstellen Sie eine neue *Ressourcengruppe* . Eine Ressourcengruppe bietet eine Möglichkeit zum überwachen, Steuern des Zugriffs, bereitstellen und Verwalten der Abrechnung für eine Sammlung von Azure-Ressourcen. Es wird empfohlen, alle Azure-Dienste, die einem einzelnen Projekt (z. b. diesen Labs) zugeordnet sind, in einer gemeinsamen Ressourcengruppe zu speichern. 
 
-        > Wenn Sie, um weitere Informationen möchten zu Azure-Ressourcengruppen, bitte [finden Sie im Artikel der Resource-Group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Weitere Informationen zu Azure-Ressourcengruppen finden Sie [im Artikel Ressourcengruppe](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
 
-    10. Sie müssen auch bestätigen, dass Sie verstanden haben, den Bestimmungen und Bedingungen, die auf diesen Dienst angewendet.
+    10. Außerdem müssen Sie bestätigen, dass Sie die auf diesen Dienst angewendeten Geschäftsbedingungen verstanden haben.
 
     11. Wählen Sie **Erstellen** aus.
 
-        ![Eingabe Dienstinformationen](images/AzureLabs-Lab5-03.png)
+        ![Eingabe Dienst Informationen](images/AzureLabs-Lab5-03.png)
 
-5.  Nachdem Sie auf geklickt haben **erstellen**, müssen Sie warten, bis der Dienst erstellt werden, dies kann einen Moment dauern.
+5.  Nachdem Sie auf **Erstellen**geklickt haben, müssen Sie warten, bis der Dienst erstellt wurde. dieser Vorgang kann einige Minuten in Anspruch nehmen.
 
-6.  Nachdem die Dienstinstanz erstellt wurde, wird im Portal eine Benachrichtigung angezeigt.
+6.  Nachdem die Dienst Instanz erstellt wurde, wird im Portal eine Benachrichtigung angezeigt.
 
-    ![Neue Benachrichtigung im Azure-portal](images/AzureLabs-Lab5-04.png)
+    ![neue Benachrichtigung im Azure-Portal](images/AzureLabs-Lab5-04.png)
 
-7.  Klicken Sie auf die Benachrichtigungen an Ihre neue Dienstinstanz zu untersuchen.
+7.  Klicken Sie auf die Benachrichtigungen, um die neue Dienst Instanz zu untersuchen.
 
-    ![zu Ressource wechseln](images/AzureLabs-Lab5-05.png)
+    ![Gehe zu Ressource](images/AzureLabs-Lab5-05.png)
 
-8.  Klicken Sie auf die **zu Ressource wechseln** in der Benachrichtigung aus, um Ihre neue Dienstinstanz zu untersuchen. Sie gelangen in die neue *Speicherkonto* Dienstinstanz.
+8.  Klicken Sie in der Benachrichtigung auf die Schaltfläche **Gehe zu Ressource** , um die neue Dienst Instanz zu untersuchen. Sie gelangen zu ihrer neuen *Speicherkonto* -Dienst Instanz.
 
     ![Zugriffstasten](images/AzureLabs-Lab5-06.png)
 
-9.  Klicken Sie auf *Zugriffsschlüssel*, um die Endpunkte für diesen Cloud-Dienst anzuzeigen. Verwenden Sie *Editor* oder eine ähnliche Kopie einen Ihrer Schlüssel zur späteren Verwendung. Beachten Sie außerdem die *Verbindungszeichenfolge* -Wert fest, wie er in verwendet werden, wird die *AzureServices* -Klasse, die Sie später erstellen.
+9.  Klicken Sie auf *Zugriffsschlüssel*, um die Endpunkte für diesen Cloud-Dienst anzuzeigen. Verwenden Sie *Notepad* oder ähnliches, um einen Ihrer Schlüssel zur späteren Verwendung zu kopieren. Beachten Sie auch den Wert der *Verbindungs Zeichenfolge* , wie er in der *azureservices* -Klasse verwendet wird, die Sie später erstellen werden.
 
-    ![Verbindungszeichenfolge kopieren](images/AzureLabs-Lab5-07.png)
+    ![Verbindungs Zeichenfolge kopieren](images/AzureLabs-Lab5-07.png)
 
 ## <a name="chapter-2---setting-up-an-azure-function"></a>Kapitel 2: Einrichten einer Azure-Funktion
 
-Schreiben Sie jetzt eine **Azure** **Funktion** im Azure-Dienst.
+Sie schreiben jetzt eine **Azure** - **Funktion** im Azure-Dienst.
 
-Sie können eine **Azure-Funktion** nahezu alles tun, die Sie mit einer klassischen-Funktion in Ihrem Code, den Unterschied ausführen würden, dass diese Funktion von jeder Anwendung zugegriffen werden kann, die Anmeldeinformationen zum Zugriff auf Ihr Azure-Konto verfügt.
+Sie können eine **Azure-Funktion** verwenden, um nahezu alles zu tun, was Sie mit einer klassischen Funktion in Ihrem Code tun würden. der Unterschied besteht darin, dass jede Anwendung, die über Anmelde Informationen für den Zugriff auf Ihr Azure-Konto verfügt, auf diese Funktion zugreifen kann.
 
-So erstellen Sie eine Azure-Funktion
+So erstellen Sie eine Azure-Funktion:
 
-1.  Aus Ihrem *Azure-Portal*, klicken Sie auf **neu** in der oberen linken Ecke, und suchen Sie nach *Funktions-App*, und klicken Sie auf **EINGABETASTE**.
+1.  Klicken Sie in Ihrem *Azure-Portal*in der oberen linken Ecke auf **neu** , suchen Sie nach *Funktionen-App*, und **drücken**Sie die EINGABETASTE.
 
-    ![Erstellen von Funktionen-app](images/AzureLabs-Lab5-08.png)
+    ![Erstellen einer Funktionen-App](images/AzureLabs-Lab5-08.png)
 
     > [!NOTE]
-    > Das Wort **neu** wurden möglicherweise durch ersetzt **erstellen Sie eine Ressource**, in neueren-Portalen.
+    > Das Wort **New** wurde möglicherweise durch **Create a Resource**in neueren Portalen ersetzt.
 
-2.  Die neue Seite bietet eine Beschreibung der *Azure Function-App* Service. Unten links der Aufforderung, wählen die **erstellen** Schaltfläche, um eine Zuordnung mit diesem Dienst zu erstellen.
+2.  Auf der neuen Seite wird eine Beschreibung des *Azure-Funktionen-App* Dienstanbieter bereitgestellt. Wählen Sie unten links in dieser Eingabeaufforderung die Schaltfläche **Erstellen** aus, um eine Verknüpfung mit diesem Dienst zu erstellen.
 
-    ![Funktion-app-info](images/AzureLabs-Lab5-09.png)
+    ![Funktions-APP-Informationen](images/AzureLabs-Lab5-09.png)
 
-3.  Nachdem Sie auf geklickt haben **erstellen**:
+3.  Nachdem Sie auf **Erstellen**geklickt haben, klicken Sie auf:
 
-    1.  Geben Sie eine *Anwendungsnamen*. Nur Buchstaben und Zahlen können hier verwendet werden (entweder Groß-/Kleinschreibung ist zulässig).
+    1.  Geben Sie einen *APP-Namen*an. Hier können nur Buchstaben und Ziffern verwendet werden (groß-oder Kleinbuchstaben sind zulässig).
 
-    2.  Wählen Sie die bevorzugte *Abonnement*.
+    2.  Wählen Sie Ihr bevorzugtes *Abonnement*aus.
 
-    3. Wählen Sie eine *Ressourcengruppe* oder ein neues erstellen. Eine Ressourcengruppe bietet eine Möglichkeit zum Überwachen, steuern den Zugriff, bereitstellen und Verwalten der Abrechnung für eine Sammlung von Azure-Ressourcen. Es wird empfohlen, alle der Azure Dienste im Zusammenhang mit einem einzelnen Projekt (z. B. z. B. diesen Labs) unter einer allgemeinen Ressourcengruppe zu halten). 
+    3. Wählen Sie eine Ressourcengruppe aus, oder erstellen Sie eine neue *Ressourcengruppe* . Eine Ressourcengruppe bietet eine Möglichkeit zum überwachen, Steuern des Zugriffs, bereitstellen und Verwalten der Abrechnung für eine Sammlung von Azure-Ressourcen. Es wird empfohlen, alle Azure-Dienste, die einem einzelnen Projekt (z. b. diesen Labs) zugeordnet sind, in einer gemeinsamen Ressourcengruppe zu speichern. 
 
-        > Wenn Sie, um weitere Informationen möchten zu Azure-Ressourcengruppen, bitte [finden Sie im Artikel der Resource-Group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Weitere Informationen zu Azure-Ressourcengruppen finden Sie [im Artikel Ressourcengruppe](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
 
-    4.  Wählen Sie für diese Übung *Windows* als das ausgewählte **OS**.
+    4.  Wählen Sie für diese Übung *Windows* als ausgewähltes **Betriebssystem**aus.
 
-    5.  Wählen Sie *Verbrauchsplan* für die **Hostingplan**.
+    5.  Wählen Sie den *Verbrauchs Plan* für den **Hostingplan**aus.
 
-    6.  Bestimmen der *Speicherort* für Ihre Ressourcengruppe aus (Wenn Sie eine neue Ressourcengruppe erstellen). Der Speicherort würde idealerweise in der Region sein, in dem die Anwendung ausgeführt wird. Einige Azure-Ressourcen sind nur in bestimmten Regionen verfügbar. Wählen Sie für eine optimale Leistung der gleichen Region wie das Speicherkonto aus.
+    6.  Bestimmen Sie den *Speicherort* für Ihre Ressourcengruppe (wenn Sie eine neue Ressourcengruppe erstellen). Der Speicherort wäre idealerweise in der Region, in der die Anwendung ausgeführt wird. Einige Azure-Ressourcen sind nur in bestimmten Regionen verfügbar. Wählen Sie die gleiche Region wie das Speicherkonto aus, um eine optimale Leistung zu erzielen.
 
-    7.  Für *Storage*Option **vorhandene**, und klicken Sie dann mit dem Dropdown-Menü, Ihre zuvor erstellten speicherkontonamen finden.
+    7.  Wählen Sie für *Speicher*die Option **vorhandene verwenden**aus, und suchen Sie dann mithilfe des Dropdown Menüs nach dem zuvor erstellten Speicher.
 
-    8.  Lassen Sie *Application Insights* für diese Übung deaktiviert.
+    8.  Lassen Sie für diese Übung *Application Insights* deaktiviert.
 
-        ![Eingabefunktion app-details](images/AzureLabs-Lab5-10.png)
+        ![Details der Eingabefunktionen-App](images/AzureLabs-Lab5-10.png)
 
 4.  Klicken Sie auf die Schaltfläche **Erstellen**.
 
-5.  Nachdem Sie auf geklickt haben **erstellen**, müssen Sie warten, bis der Dienst erstellt werden, dies kann einen Moment dauern.
+5.  Nachdem Sie auf **Erstellen**geklickt haben, müssen Sie warten, bis der Dienst erstellt wurde. dieser Vorgang kann einige Minuten in Anspruch nehmen.
 
-6.  Nachdem die Dienstinstanz erstellt wurde, wird im Portal eine Benachrichtigung angezeigt.
+6.  Nachdem die Dienst Instanz erstellt wurde, wird im Portal eine Benachrichtigung angezeigt.
 
-    ![neue Azure-portalbenachrichtigungen](images/AzureLabs-Lab5-11.png)
+    ![Benachrichtigung über das neue Azure-Portal](images/AzureLabs-Lab5-11.png)
 
-7.  Klicken Sie auf die Benachrichtigungen an Ihre neue Dienstinstanz zu untersuchen. 
+7.  Klicken Sie auf die Benachrichtigungen, um die neue Dienst Instanz zu untersuchen. 
 
-    ![Wechseln Sie zur Ressource Funktions-app](images/AzureLabs-Lab5-12.png)
+    ![Gehe zu Ressourcen Funktions-APP](images/AzureLabs-Lab5-12.png)
 
-8.  Klicken Sie auf die **zu Ressource wechseln** in der Benachrichtigung aus, um Ihre neue Dienstinstanz zu untersuchen. Sie gelangen in die neue *Funktions-App* Dienstinstanz.
+8.  Klicken Sie in der Benachrichtigung auf die Schaltfläche **Gehe zu Ressource** , um die neue Dienst Instanz zu untersuchen. Sie gelangen zu ihrer neuen *Funktionen-App* Dienst Instanz.
 
-9.  Auf der *Funktions-App* Dashboard den Mauszeiger auf *Funktionen*, innerhalb des Bereichs auf der linken Seite gefunden, und klicken Sie dann auf die **+ (plus)** Symbol.
+9.  Zeigen Sie im *Funktionen-App* Dashboard mit der Maus auf *Funktionen*, die sich im Bereich auf der linken Seite befinden, und klicken Sie dann auf das Symbol **+ (plus)** .
 
-    ![Erstellen Sie neue Funktion](images/AzureLabs-Lab5-13.png)
+    ![neue Funktion erstellen](images/AzureLabs-Lab5-13.png)
 
-10. Vergewissern Sie sich auf der nächsten Seite **Webhook + API** ausgewählt ist, und für *wählen Sie eine Sprache,* wählen **CSharp**, wie dies mit der Sprache, die für dieses Tutorial verwendet werden. Klicken Sie abschließend auf die **diese Funktion erstellen** Schaltfläche.
+10. Vergewissern Sie sich auf der nächsten Seite, dass **webhook + API** ausgewählt ist, und wählen Sie für *Sprache auswählen* die Option **CSharp**aus, da es sich hierbei um die für dieses Tutorial verwendete Sprache handelt. Klicken Sie abschließend auf die Schaltfläche **Diese Funktion erstellen** .
 
-    ![Wählen Sie Hook-Csharp web](images/AzureLabs-Lab5-14.png)
+    ![webhook CSharp auswählen](images/AzureLabs-Lab5-14.png)
 
-11. Sie sind, um den Code Seite ("Run.csx"), wenn nicht jedoch für die neu erstellte Funktion in der Liste der Funktionen innerhalb des Bereichs auf der linken Seite klicken.
+11. Sie sollten zur Codepage (Run. CSX) weitergeleitet werden. Klicken Sie auf der linken Seite auf die neu erstellte Funktion in der Liste der Funktionen, und klicken Sie dann auf der linken Seite auf die neu erstellte Funktion.
 
-    ![Öffnen Sie die neue Funktion](images/AzureLabs-Lab5-15.png)
+    ![neue Funktion öffnen](images/AzureLabs-Lab5-15.png)
 
-12. Kopieren Sie den folgenden Code in Ihrer Funktion. Diese Funktion gibt einfach eine zufällige ganze Zahl zwischen 0 und 2, die beim Aufruf zurück. Gedanken um den vorhandenen Code, fügen Sie oberhalb des Zertifikats können nicht.
+12. Kopieren Sie den folgenden Code in die-Funktion. Diese Funktion gibt einfach eine zufällige Ganzzahl zwischen 0 und 2 zurück, wenn aufgerufen wird. Machen Sie sich keine Sorgen um den vorhandenen Code, und Sie können ihn über den Anfang einfügen.
 
     ```csharp
         using System.Net;
@@ -227,311 +227,311 @@ So erstellen Sie eine Azure-Funktion
 
 14. Das Ergebnis sollte wie in der folgenden Abbildung aussehen.
 
-15. Klicken Sie auf **Funktions-URL abrufen** und notieren Sie sich die *Endpunkt* angezeigt. Sie benötigen, fügen Sie ihn in das *AzureServices* -Klasse, die Sie weiter unten in diesem Kurs erstellen.
+15. Klicken Sie auf **Get Function URL** , und notieren Sie sich den angezeigten *Endpunkt* . Sie müssen Sie in die *azureservices* -Klasse einfügen, die Sie später in diesem Kurs erstellen werden.
 
-    ![Rufen Sie Funktionsendpunkt](images/AzureLabs-Lab5-16.png)
+    ![Get-Funktions Endpunkt](images/AzureLabs-Lab5-16.png)
 
-    ![Rufen Sie Funktionsendpunkt](images/AzureLabs-Lab5-16-5.png)
+    ![Get-Funktions Endpunkt](images/AzureLabs-Lab5-16-5.png)
 
-## <a name="chapter-3---setting-up-the-unity-project"></a>Kapitel 3 – Einrichten des Unity-Projekts
+## <a name="chapter-3---setting-up-the-unity-project"></a>Kapitel 3: Einrichten des Unity-Projekts
 
-Im folgenden ist ein typischer Eigenschaftensatz für die Entwicklung mit Mixed Reality und daher ist eine gute Vorlage für andere Projekte.
+Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Realität und ist daher eine gute Vorlage für andere Projekte.
 
-Richten Sie ein und Testen Sie Ihrer mixed Reality immersive Kopfhörer.
+Richten Sie Ihr immersives Headset mit gemischter Realität ein und testen Sie es.
 
 > [!NOTE]
-> Sie **nicht** Motion-Controller für dieses Kurses erforderlich. Wenn Sie die Einrichtung der immersive Kopfhörer unterstützen müssen, wenden Sie [finden Sie auf die gemischte Realität Artikel richten](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).
+> Für diesen Kurs benötigen Sie **keine** Bewegungs Controller. Wenn Sie Unterstützung beim Einrichten des immersiven Headsets benötigen, [besuchen Sie den Artikel Mixed Reality](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)-Einrichtung.
 
-1.  Öffnen von Unity, und klicken Sie auf **neu**.
+1.  Öffnen Sie Unity, und klicken Sie auf **neu**.
 
-    ![Erstellen der neuen Unity-Projekt](images/AzureLabs-Lab5-17.png)
+    ![neues Unity-Projekt erstellen](images/AzureLabs-Lab5-17.png)
 
-2.  Sie müssen nun einen Namen für die Unity-Projekt bereitstellen. Fügen Sie **MR_Azure_Functions**. Stellen Sie sicher, dass der Projekttyp nastaven NA hodnotu **3D**. Legen Sie die *Speicherort* auf etwas für Sie geeignet (Denken Sie daran, näher an Stammverzeichnisse ist besser). Klicken Sie auf **projekterstellung**.
+2.  Sie müssen nun einen Unity-Projektnamen angeben. Fügen Sie **MR_Azure_Functions**ein. Stellen Sie sicher, dass Projekttyp auf **3D**festgelegt ist. Legen Sie den Speicherort auf einen geeigneten *Speicherort* fest (denken Sie daran, dass die Stamm Verzeichnisse besser sind). Klicken Sie dann auf **Projekt erstellen**.
 
-    ![Benennen Sie neue Unity-Projekt](images/AzureLabs-Lab5-18.png)
+    ![neues Unity-Projekt benennen](images/AzureLabs-Lab5-18.png)
 
-3.  Mit Unity geöffnet, es prüfen, ob der Standardwert ist **Skript-Editor** nastaven NA hodnotu **Visual Studio**. Wechseln Sie zu **bearbeiten** > **Voreinstellungen** und navigieren Sie dann im neuen Fenster zu **externe Tools**. Änderung **externen Skript-Editors** zu **Visual Studio 2017**. Schließen der **Voreinstellungen** Fenster.
+3.  Wenn Unity geöffnet ist, sollten Sie überprüfen, dass der Standard **Skript-Editor** auf **Visual Studio**festgelegt ist. Wechseln Sie zu**Einstellungen** **Bearbeiten** > , und navigieren Sie dann im neuen Fenster zu **externe Tools**. Ändern Sie den **Editor für externe Skripts** in **Visual Studio 2017**. Schließen Sie das Fenster " **Einstellungen** ".
 
-    ![Satz von visual Studio als Skript-editor](images/AzureLabs-Lab5-19.png)
+    ![Festlegen von Visual Studio als Skript-Editor](images/AzureLabs-Lab5-19.png)
 
-4.  Öffnen Sie als Nächstes **Datei** > **Buildeinstellungen** , und wechseln von der Plattform bereitgestellten **universelle Windows-Plattform**, durch Klicken auf die **Plattform wechseln**  Schaltfläche.
+4.  Navigieren Sie als nächstes zu > dateibuildeinstellungen, und schalten Sie die Plattform auf **universelle Windows-Plattform**, indem Sie auf die Schaltfläche **Plattform wechseln** klicken.
 
-    ![Plattform für die Uwp wechseln](images/AzureLabs-Lab5-20.png)
+    ![Plattform zu UWP wechseln](images/AzureLabs-Lab5-20.png)
 
-5.  Wechseln Sie zu **Datei** > **Buildeinstellungen** und stellen Sie sicher, dass:
+5.  Wechseln Sie zu > dateibuildeinstellungen, und stellen Sie Folgendes sicher:
 
-    1. **Geräte** nastaven NA hodnotu **einem beliebigen Gerät**.
+    1. Das **Zielgerät** ist auf **ein beliebiges Gerät**festgelegt.
 
-        > Legen Sie für Microsoft HoloLens, **Zielgerät** zu *HoloLens*.
+        > Legen Sie für Microsoft hololens das **Zielgerät** auf *hololens*fest.
 
-    2. **Buildtyp** nastaven NA hodnotu **D3D**
+    2. Der Buildtyp ist auf **D3D** festgelegt.
 
-    3. **SDK** nastaven NA hodnotu **zuletzt installierte**
+    3. **SDK** ist auf **neueste installierte** Version festgelegt.
 
-    4. **Visual Studio-Version** nastaven NA hodnotu **zuletzt installierte**
+    4. **Visual Studio-Version** ist auf **neueste installierte** Version festgelegt.
 
-    5. **Erstellen und ausführen** nastaven NA hodnotu **lokalen Computer**
+    5. **Build und Run** sind auf **lokaler Computer** festgelegt.
 
-    6. Die Szene speichern und mit dem Build hinzugefügt werden.
+    6. Speichern Sie die Szene, und fügen Sie Sie dem Build hinzu.
 
-        1.  Hierzu **öffnen Szenen hinzufügen**. Ein Speichern Fenster wird angezeigt.
+        1.  Wählen Sie hierzu die Option **geöffnete Szenen hinzufügen**aus. Ein Fenster zum Speichern wird angezeigt.
 
-            ![Hinzufügen von öffnen-Szenen](images/AzureLabs-Lab5-21.png)
+            ![Hinzufügen offener Szenen](images/AzureLabs-Lab5-21.png)
 
-        2.  Erstellen einen neuen Ordner für, und alle zukünftigen, Szene, klicken Sie dann auf die **neuer Ordner** Schaltfläche zum Erstellen eines neuen Ordners, nennen Sie sie **Szenen**.
+        2.  Erstellen Sie einen neuen Ordner für dieses und jede zukünftige Szene, und wählen Sie dann die Schaltfläche **neuer Ordner** aus, um einen neuen Ordner zu **erstellen.**
 
-            ![Erstellen Sie im Hintergrund-Ordner](images/AzureLabs-Lab5-22.png)
+            ![Ordner "Create Szenen"](images/AzureLabs-Lab5-22.png)
 
-        3.  Öffnen Sie den neu erstellten **Szenen** Ordner, und klicken Sie dann in der **Dateiname:** Textfeld **FunctionsScene**, drücken Sie dann die **speichern**.
+        3.  Öffnen Sie den neu erstellten **Szenen** Ordner, geben Sie im Feld **Dateiname:** Text **functionsscene**ein, und klicken Sie dann auf **Speichern**.
 
             ![Functions-Szene speichern](images/AzureLabs-Lab5-23.png)
 
-6.  Die Einstellungen im verbleibenden **Buildeinstellungen**, sollte jetzt als Standard bleiben.
+6.  Die restlichen Einstellungen in denBuildeinstellungen sollten vorerst als Standard belassen werden.
 
     ![Functions-Szene speichern](images/AzureLabs-Lab5-24.png)
 
-7.  In der *Buildeinstellungen* Fenster, klicken Sie auf der **Playereinstellungen** Schaltfläche, dadurch wird den entsprechenden Bereich geöffnet, im Bereich, in dem die *Inspektor* befindet.
+7.  Klicken Sie im Fenster Buildeinstellungen auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet.
 
-    ![Player-Einstellungen im Inspektor](images/AzureLabs-Lab5-25.png)
+    ![Player Einstellungen in Inspektor](images/AzureLabs-Lab5-25.png)
 
-8.  In diesem Bereich sind müssen einige Einstellungen überprüft werden:
+8.  In diesem Bereich müssen einige Einstellungen überprüft werden:
 
-    1.  In der **Weitere Einstellungen** Registerkarte:
+    1.  Auf der Registerkarte **andere Einstellungen** :
 
-        1.  **Scripting Runtime Version** muss **experimentell** (.NET 4.6 entspricht), löst der Editor neu starten müssen.
-        2.  **Back-End-Scripting** muss **.NET**
-        3.  **API-Kompatibilitätsebene** muss **.NET 4.6**
+        1.  Die CLR- **Lauf Zeit Version** sollte **experimentell** sein (.NET 4,6-Entsprechung), wodurch der Editor neu gestartet werden muss.
+        2.  **Skript** -Back-End sollte **.net** sein
+        3.  **API-Kompatibilitäts Grad** sollte **.NET 4,6** lauten
 
-    2.  In der **Veröffentlichungseinstellungen** Registerkarte **Funktionen**, überprüfen:
+    2.  Überprüfen Sie auf der Registerkarte **Veröffentlichungs Einstellungen** unter **Funktionen**Folgendes:
         
-        -  **InternetClient**
+        -  **Internet Client deklarieren**
 
-            ![Set-Funktionen](images/AzureLabs-Lab5-26.png)
+            ![Festlegen von Funktionen](images/AzureLabs-Lab5-26.png)
 
-    3.  Weiter unten im Bereich mit in **XR-Einstellungen** (finden Sie unten **Veröffentlichungseinstellungen**), Teilstriche **virtuelle Realität unterstützt**, stellen Sie sicher, dass die **Windows Mixed Reality SDK** hinzugefügt wird.
+    3.  Weiter unten im Bereich in den **XR-Einstellungen** (siehe **Veröffentlichungs Einstellungen**), **unterstützt Tick Virtual Reality**, stellen Sie sicher, dass das **Windows Mixed Reality SDK** hinzugefügt wurde.
 
-        ![Einstellungen der Set-XR](images/AzureLabs-Lab5-27.png)
+        ![XR-Einstellungen festlegen](images/AzureLabs-Lab5-27.png)
 
-9.  Im *Buildeinstellungen* *Unity C# Projekte* nicht mehr abgeblendet ist, aktivieren Sie das Kontrollkästchen neben dieser.
+9.  Zurück in Buildeinstellungen: *Unity C# -Projekte* sind nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this.
 
-    ![Teilstriche c#-Projekte](images/AzureLabs-Lab5-28.png)
+    ![Tick-c#-Projekte](images/AzureLabs-Lab5-28.png)
 
-10.  Schließen Sie das Fenster "erstellen".
+10.  Schließen Sie das Fenster mit den Buildeinstellungen.
 
-11. Speichern Sie Ihre Szene und das Projekt (**Datei** > **speichern SZENE / FILE** > **speichern Projekt**).
+11. Speichern Sie Ihre Szene und Ihr Projekt (**Datei** > **Speichern/Datei** > **speichern Projekt**).
 
-## <a name="chapter-4---setup-main-camera"></a>Kapitel 4: Einrichtung Hauptkamera
+## <a name="chapter-4---setup-main-camera"></a>Kapitel 4: Einrichten der Hauptkamera
 
 > [!IMPORTANT]
-> Wenn Sie, überspringen möchten die *Unity einrichten* Komponenten dieses Kurs, und direkt in Code fortfahren, können Sie [Herunterladen dieser .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage), und importieren Sie es in Ihr Projekt als eine [benutzerdefinierte Paket](https://docs.unity3d.com/Manual/AssetPackages.html). Dies wird auch die DLLs aus dem nächsten Kapitel enthalten. Ist eine Fortsetzung nach dem Import, [Kapitel 7](#chapter-7---create-the-azureservices-class). 
+> Wenn Sie die *Unity-Setup* Komponenten dieses Kurses überspringen und direkt mit dem Code fortfahren möchten, können Sie [dieses. unitypackage herunterladen](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)und als [benutzerdefiniertes Paket](https://docs.unity3d.com/Manual/AssetPackages.html)in das Projekt importieren. Dies enthält auch die DLLs aus dem nächsten Kapitel. Fahren Sie nach dem Import aus [Kapitel 7](#chapter-7---create-the-azureservices-class)fort. 
 
-1.  In der *Hierarchie Bereich*, sehen Sie ein Objekt namens **Main Camera**, diesem Objekt dargestellten Ihr "Head" Sicht aus, wenn Sie "in" Ihrer Anwendung sind.
+1.  Im *Hierarchie Panel*finden Sie ein Objekt mit dem Namen " **Main Camera**". dieses Objekt stellt den "Head"-Punkt dar, sobald Sie die Anwendung "in" haben.
 
-2.  Wählen Sie im Unity-Dashboard vor Ihnen die **Main Camera "gameobject"** . Sie werden feststellen, dass die *Inspektor Bereich* (in der Regel nach rechts im Dashboard gefunden) zeigt die verschiedenen Komponenten, die *"gameobject"* , mit *transformieren* oben, gefolgt von *Kamera*, und einige andere Komponenten. Sie müssen die Transformation der Main-Kamera, zurücksetzen, damit sie richtig positioniert ist.
+2.  Wählen Sie mit dem Unity-Dashboard vor Ihnen das **Hauptkamera-gameobject**aus. Sie werden feststellen, dass im *Inspektor-Panel* (in der Regel auf der rechten Seite im Dashboard) die verschiedenen Komponenten dieses *gameobject*angezeigt werden, mit der *Transformation* am oberen Rand, gefolgt von der *Kamera*und einigen anderen Komponenten. Sie müssen die Transformation der Hauptkamera zurücksetzen, damit Sie ordnungsgemäß positioniert ist.
 
-3.  Wählen Sie zu diesem Zweck die **Zahnradsymbol** Symbol neben der Kamera *transformieren* Komponente, und wählen **zurücksetzen**.
+3.  Wählen Sie dazu das **Zahnrad** Symbol neben der *Transformations* Komponente der Kamera aus, und klicken Sie auf **Zurücksetzen**.
 
     ![Transformation zurücksetzen](images/AzureLabs-Lab5-29.png)
 
-4.  Aktualisieren Sie dann die **transformieren** Komponente, die wie folgt aussehen:
+4.  Aktualisieren Sie dann die **Transformations** Komponente so, dass Sie wie folgt aussieht:
 
-    |         |    TRANSFORM - POSITION   |       |
+    |         |    TRANSFORMATION-POSITION   |       |
     | :-----: | :-----------------------: | :----:|
-    | **X**   | **Y**                     | **Z** |
+    | **STUBEN**   | **TEENIE**                     | **Z** |
     | 0       | 1                         | 0     |    
 
-    |       | TRANSFORM - DREHUNG |       |
+    |       | TRANSFORMATION-DREHUNG |       |
     | :---: | :------------------: | :----:|
-    | **X** | **Y**                | **Z** |
+    | **STUBEN** | **TEENIE**                | **Z** |
     | 0     | 0                    | 0     |
 
-    |       | TRANSFORM - SKALIERUNG |       |
+    |       | TRANSFORMIEREN: SKALIEREN |       |
     | :---: | :---------------: | :---: |
-    | **X** | **Y**             | **Z** |
+    | **STUBEN** | **TEENIE**             | **Z** |
     | 1     | 1                 | 1     |
 
-    ![Set-Kamera-Transformation](images/AzureLabs-Lab5-30.png)
+    ![Kamera Transformation festlegen](images/AzureLabs-Lab5-30.png)
 
 ## <a name="chapter-5---setting-up-the-unity-scene"></a>Kapitel 5: Einrichten der Unity-Szene
 
-1.  Mit der rechten Maustaste in einen leeren Bereich des der *Hierarchie Bereich*unter **3D-Objekt**, Hinzufügen einer **Ebene**.
+1.  Klicken Sie mit der rechten Maustaste in einen leeren Bereich des Bereichs *Hierarchie*, und fügen Sie unter **3D-Objekt**eine **Ebene**hinzu.
 
-    ![Erstellen Sie neue Ebene](images/AzureLabs-Lab5-31.png)
+    ![neue Ebene erstellen](images/AzureLabs-Lab5-31.png)
 
-2.  Mit der **Ebene** Objekt ausgewählt haben, ändern Sie die folgenden Parameter in der *Inspektor Bereich*:
+2.  Ändern Sie bei ausgewähltem **Plane** -Objekt im Inspektor- *Panel*die folgenden Parameter:
 
-    |       | TRANSFORM - POSITION |       |
+    |       | TRANSFORMATION-POSITION |       |
     | :---: | :------------------: | :---: |
-    | **X** | **Y**                | **Z** |
+    | **STUBEN** | **TEENIE**                | **Z** |
     | 0     | 0                    | 4     |
 
-    |       | TRANSFORM - SKALIERUNG |       |
+    |       | TRANSFORMIEREN: SKALIEREN |       |
     | :---: | :---------------: | :---: |
-    | **X** | **Y**             | **Z** |
+    | **STUBEN** | **TEENIE**             | **Z** |
     | 10    | 1                 | 10    |
 
-    ![Set-Ebene transformationsposition und-Skalierung](images/AzureLabs-Lab5-32.png)
+    ![Festlegen der Position und Skala der Ebene](images/AzureLabs-Lab5-32.png)
 
-    ![Szenenansicht Ebene](images/AzureLabs-Lab5-33.png)
+    ![Szenen Ansicht der Ebene](images/AzureLabs-Lab5-33.png)
 
-3.  Mit der rechten Maustaste in einen leeren Bereich des der *Hierarchie Bereich*unter **3D-Objekt**, Hinzufügen einer **Cube**.
+3.  Klicken Sie mit der rechten Maustaste in einen leeren Bereich des Bereichs *Hierarchie*, und fügen Sie unter **3D-Objekt**einen **Cube**hinzu.
 
-    1.  Benennen Sie den Cube zu **GazeButton** (mit dem Cube ausgewählt haben, drücken Sie "F2").
+    1.  Benennen Sie den Cube in " **gazebutton** " um (während der Cube ausgewählt ist, drücken Sie "F2").
 
-    2.  Ändern Sie die folgenden Parameter in der *Inspektor Bereich*:
+    2.  Ändern Sie im *Inspektor-Panel*die folgenden Parameter:
 
-        |       | TRANSFORM - POSITION |       |
+        |       | TRANSFORMATION-POSITION |       |
         | :---: | :------------------: |:-----:|
-        | **X** | **Y**                | **Z** |
+        | **STUBEN** | **TEENIE**                | **Z** |
         | 0     | 3                    | 5     |
 
 
-        ![Set Blicke Schaltfläche Transformation](images/AzureLabs-Lab5-34.png)
+        ![Schaltflächen Transformation für den Blick festlegen](images/AzureLabs-Lab5-34.png)
 
-        ![Schaltfläche Szenenansicht bestaunen](images/AzureLabs-Lab5-35.png)
+        ![Ansicht "Ansicht" der Ansicht](images/AzureLabs-Lab5-35.png)
 
-    3.  Klicken Sie auf die **Tag** Dropdown-Schaltfläche, und klicken Sie auf **Tag hinzufügen** zum Öffnen der *Tags und im Bereich*.
+    3.  Klicken Sie auf die Dropdown Schaltfläche **Tag** , und klicken Sie auf **Tag hinzufügen** , um den Bereich *Tags & Ebenen*zu öffnen.
 
-        ![Neues Tag hinzufügen](images/AzureLabs-Lab5-36.png)
+        ![neues Tag hinzufügen](images/AzureLabs-Lab5-36.png)
 
-        ![Select plus](images/AzureLabs-Lab5-37.png)
+        ![Plus auswählen](images/AzureLabs-Lab5-37.png)
 
-    4.  Wählen Sie die **+ (plus)** Schaltfläche, und klicken Sie in der *neue Tagnamen* Feld **GazeButton**, und drücken Sie **speichern**.
+    4.  Wählen Sie die Schaltfläche **+ (plus)** aus, und geben Sie im Feld *neuer Tagname den Namen* " **gazebutton**" ein, und klicken Sie auf **Speichern**.
 
-        ![Neues Tag Name](images/AzureLabs-Lab5-38.png)
+        ![neuer Tag benennen](images/AzureLabs-Lab5-38.png)
 
-    5.  Klicken Sie auf die **GazeButton** -Objekt in der *Hierarchie Bereich*, und klicken Sie in der *Inspektor Bereich*, weisen Sie den neu erstellten **GazeButton** Tag.
+    5.  Klicken Sie im *Hierarchie Panel*auf das Objekt " **gazebutton** ", und weisen Sie im *Inspektor-Panel*das neu erstellte " **gazebutton** "-Tag zu.
 
-        ![Weisen Sie das neue Tag Blicke-Schaltfläche](images/AzureLabs-Lab5-39.png)
+        ![Schaltfläche "Blick" für den neuen Tag zuweisen](images/AzureLabs-Lab5-39.png)
 
-4.  Mit der rechten Maustaste auf die **GazeButton** Objekt, in der *Hierarchie Bereich*, und fügen ein **leeres "gameobject"** (das wird als hinzugefügt eine *untergeordneten* -Objekt).
+4.  Klicken Sie mit der rechten Maustaste auf das **gazebutton** -Objekt im Bereich *Hierarchie*, und fügen Sie ein **leeres gameobject-Objekt** hinzu (das als unter *geordnetes Objekt hinzu* gefügt wird).
 
-5.  Wählen Sie das neue Objekt, und benennen Sie sie **ShapeSpawnPoint**.
+5.  Wählen Sie das neue Objekt aus, und benennen Sie es **shapespawnpoint**um.
 
-    1.  Ändern Sie die folgenden Parameter in der *Inspektor Bereich*:
+    1.  Ändern Sie im *Inspektor-Panel*die folgenden Parameter:
 
-        |       | TRANSFORM - POSITION |       |
+        |       | TRANSFORMATION-POSITION |       |
         | :---: | :------------------: |:----: |
-        | **X** |**Y**                 | **Z** |
+        | **STUBEN** |**TEENIE**                 | **Z** |
         | 0     | -1                   | 0     |
 
-        ![Aktualisieren Sie die Form Spawn Punkt Transformation](images/AzureLabs-Lab5-40.png)
+        ![Transformation für Erstellungspunkt aktualisieren](images/AzureLabs-Lab5-40.png)
 
-        ![Form Spawn Szenenansicht](images/AzureLabs-Lab5-41.png)
+        ![Szenen Ansicht des Shape-Spawn-Punkts](images/AzureLabs-Lab5-41.png)
 
-6.  Als Nächstes erstellen Sie eine **3D-Text** Objekt, das Feedback zu den Status des Azure-Diensts.
+6.  Als Nächstes erstellen Sie ein **3D-Text** Objekt, um Feedback zum Status des Azure-Dienstanbieter zu erhalten.
 
-    Klicken Sie mit der rechten Maustaste auf die **GazeButton** in der Hierarchie im Bereich erneut aus, und fügen eine **3D-Objekt** > **3D-Text** als Objekt ein *untergeordneten*.
+    Klicken Sie erneut mit der rechten Maustaste auf die **Schaltfläche** , und fügen Sie ein 3D- **Objekt** > **3D-Text** Objekt als untergeordnetes Element *hinzu.*
 
-    ![Erstellen Sie neue 3D-Text-Objekt](images/AzureLabs-Lab5-42.png)
+    ![Erstellen eines neuen 3D-Text Objekts](images/AzureLabs-Lab5-42.png)
 
-7.  Benennen Sie die **3D-Text** -Objekt **AzureStatusText**.
+7.  Benennen Sie das **3D-Text** Objekt in **azurestatustext**um.
 
-8.  Ändern der **AzureStatusText** -Objekt Transformation wie folgt:
+8.  Ändern Sie die **azurestatustext** -Objekt Transformation wie folgt:
 
-    |       | TRANSFORM - POSITION |       |
+    |       | TRANSFORMATION-POSITION |       |
     | :---: | :------------------: | :---: |
-    | **X** | **Y**                | **Z** |
-    | 0     | 0                    | -0.6  |
+    | **STUBEN** | **TEENIE**                | **Z** |
+    | 0     | 0                    | -0,6  |
 
-    |       | TRANSFORM - SKALIERUNG |       |
+    |       | TRANSFORMIEREN: SKALIEREN |       |
     | :---: | :---------------: | :---: |
-    | **X** | **Y**             | **Z** |
-    | 0.1   | 0.1               | 0.1   |
+    | **STUBEN** | **TEENIE**             | **Z** |
+    | 0,1   | 0,1               | 0,1   |
 
 
     > [!NOTE]
-    > Aber keine Sorge, wenn sie off-Center, scheint, wie dies bei behoben werden die folgenden Text Mesh Komponente aktualisiert wird.
+    > Machen Sie sich keine Sorgen, wenn Sie außerhalb der Mitte angezeigt werden, da dies korrigiert wird, wenn die folgende textmesh-Komponente aktualisiert wird.
 
-9.  Ändern der **Text Mesh** Komponente entsprechend der unten:
+9.  Ändern Sie die **textmesh** -Komponente entsprechend der folgenden:
 
-    ![Set Text Mesh-Komponente](images/AzureLabs-Lab5-43.png)
+    ![textmesh-Komponente festlegen](images/AzureLabs-Lab5-43.png)
 
     > [!TIP]
-    > Die ausgewählte Farbe hier ist Hexadezimalfarbe: **000000FF (Schwarz)** , jedoch können Sie Ihre eigenen auswählen, nur sicherzustellen, dass er gelesen.
+    > Die hier ausgewählte Farbe ist Hex-Farbe: **000000FF**, auch wenn Sie sich selbst entscheiden können, stellen Sie sicher, dass es lesbar ist.
 
-10. Die Struktur der Hierarchie Bereich sollte jetzt wie folgt aussehen:
+10. Ihre Hierarchie Panel-Struktur sollte nun wie folgt aussehen:
 
-    ![mesh-Text in der Szenenansicht](images/AzureLabs-Lab5-43b.png)
+    ![textmesh in der Szene Ansicht](images/AzureLabs-Lab5-43b.png)
 
-10. Die Szene sollte jetzt wie folgt aussehen:
+10. Ihre Szene sollte nun wie folgt aussehen:
 
-    ![mesh-Text in der Szenenansicht](images/AzureLabs-Lab5-44.png)
+    ![textmesh in der Szene Ansicht](images/AzureLabs-Lab5-44.png)
 
 
-## <a name="chapter-6---import-azure-storage-for-unity"></a>Kapitel 6: Importieren von Azure-Speicher für Unity
+## <a name="chapter-6---import-azure-storage-for-unity"></a>Kapitel 6: Importieren von Azure Storage für Unity
 
-Verwenden Sie Azure Storage für Unity (die wiederum nutzt das .net SDK für Azure). Weitere Informationen finden Sie unter den [Azure Storage für Unity-Artikel](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity).
+Sie verwenden Azure Storage für Unity (das wiederum das .NET SDK für Azure nutzt). Weitere Informationen hierzu finden Sie im [Artikel Azure Storage für Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity).
 
-Es befindet sich derzeit ein bekanntes Problem in Unity-Plug-Ins neu konfiguriert werden, nach dem Import erfordert. Diese Schritte (4 bis 7 in diesem Abschnitt) ist nicht mehr erforderlich, nachdem der Fehler behoben wurde.
+Zurzeit gibt es ein bekanntes Problem in Unity, das erfordert, dass Plug-ins nach dem Importieren neu konfiguriert werden. Diese Schritte (4-7 in diesem Abschnitt) werden nicht mehr benötigt, nachdem der Fehler behoben wurde.
 
-Um das SDK in Ihr eigenes Projekt zu importieren, stellen Sie sicher, dass Sie heruntergeladen haben, die neueste Version [".unitypackage" von GitHub](https://aka.ms/azstorage-unitysdk). Führen Sie anschließend folgende Schritte aus:
+Um das SDK in Ihr eigenes Projekt zu importieren, stellen Sie sicher, dass Sie das neueste [". unitypackage" aus GitHub](https://aka.ms/azstorage-unitysdk)heruntergeladen haben. Gehen Sie dann wie folgt vor:
 
-1.  Hinzufügen der **.unitypackage** Datei in Unity mithilfe der **Assets** > **Paket importieren** > **Custom Package**Option des Menüs.
+1.  Fügen Sie die **. unitypackage** -Datei zu Unity hinzu, indem Sie die Menüoption **Assets** > **Import Package** > **Custom Package** verwenden.
 
-2.  In der **Unity-Paket importieren** Feld angezeigt, alles unter können Sie auswählen **-Plug-Ins** > **Storage**. Deaktivieren Sie alles andere, da sie für diesen Kurs nicht benötigt wird.
+2.  Im Feld " **Unity-Paket importieren** ", das angezeigt wird, können Sie unter **Plug** > -in-**Speicher**alles auswählen. Deaktivieren Sie alles andere, da es für diesen Kurs nicht benötigt wird.
 
-    ![Paket importieren](images/AzureLabs-Lab5-45.png)
+    ![in Paket importieren](images/AzureLabs-Lab5-45.png)
 
-3.  Klicken Sie auf die **Import** , um die Elemente zu Ihrem Projekt hinzuzufügen.
+3.  Klicken Sie auf die Schaltfläche **importieren** , um dem Projekt die Elemente hinzuzufügen.
 
-4.  Wechseln Sie zu der *Storage* Unterordner *-Plug-Ins*in der Projektansicht, und wählen Sie die folgenden Plug-Ins *nur*:
+4.  Wechseln Sie in der Projektansicht *unter Plug*-in zum Ordner *Speicher* , und wählen Sie *nur*die folgenden Plug-ins aus:
 
     -   Microsoft.Data.Edm
     -   Microsoft.Data.OData
-    -   Microsoft.WindowsAzure.Storage
+    -   Microsoft. WindowsAzure. Storage
     -   Newtonsoft.Json
     -   System.Spatial
 
-        ![Deaktivieren Sie jede Plattform](images/AzureLabs-Lab5-46.png)
+        ![alle Plattformen deaktivieren](images/AzureLabs-Lab5-46.png)
 
-5.  Mit *bestimmte Plug-Ins* ausgewählt, **deaktivieren** *Any Platform* und **deaktivieren** *WSAPlayer* Klicken Sie dann auf **übernehmen**.
+5.  Wenn *Sie diese speziellen* Plug-Ins **ausgewählt haben,** deaktivieren Sie *eine beliebige Plattform* , deaktivieren Sie *wsaplayer* **, und klicken** Sie auf **anwenden**.
 
-    ![Anwenden von Plattform-dlls](images/AzureLabs-Lab5-47.png)
+    ![Platt Form-DLLs anwenden](images/AzureLabs-Lab5-47.png)
 
     > [!NOTE]
-    > Wir markieren diese bestimmten Plug-Ins, die nur im Unity-Editor verwendet werden. Dies ist, da es gibt verschiedene Versionen der gleichen Plug-Ins in das WSA-Ordner, der verwendet wird und nachdem das Projekt aus Unity exportiert werden.
+    > Wir markieren diese bestimmten Plug-ins, sodass Sie nur im Unity-Editor verwendet werden. Dies liegt daran, dass im WSA-Ordner verschiedene Versionen der gleichen Plug-ins vorhanden sind, die nach dem Exportieren des Projekts aus Unity verwendet werden.
 
-6.  In der *Storage* -Plug-in-Ordner, wählen Sie nur:
+6.  Wählen Sie im Ordner *Storage* -Plug-in nur die Option:
 
-    -   Microsoft.Data.Services.Client
+    -   Microsoft. Data. Services. Client
 
-        ![Gruppe nicht für DLL-Dateien verarbeiten](images/AzureLabs-Lab5-48.png)
+        !["nicht verarbeiten" für DLLs festlegen](images/AzureLabs-Lab5-48.png)
 
-7.  Überprüfen Sie die **Don't Prozess** Feld *Plattformeinstellungen* , und klicken Sie auf **übernehmen**.
+7.  Aktivieren Sie das Kontrollkästchen **nicht verarbeiten** unter *Platt Form Einstellungen* , und klicken Sie auf **anwenden**.
 
     ![keine Verarbeitung anwenden](images/AzureLabs-Lab5-49.png)
 
     > [!NOTE]
-    > Wir werden dieses Plug-in "Nicht verarbeiten" markieren, da die Unity-Assembly-Patcher schwierigkeiten beim Verarbeiten dieses Plug-in ist. Das Plug-in funktioniert weiterhin, auch wenn sie nicht verarbeitet wurde.
+    > Wir markieren dieses Plug-in "nicht verarbeiten", da das Unity-assemblypatcher Probleme beim Verarbeiten dieses Plug-ins hat. Das Plug-in funktioniert weiterhin, auch wenn es nicht verarbeitet wird.
 
-## <a name="chapter-7---create-the-azureservices-class"></a>Kapitel 7: Erstellen Sie die AzureServices-Klasse
+## <a name="chapter-7---create-the-azureservices-class"></a>Kapitel 7: Erstellen der azureservices-Klasse
 
-Die erste Klasse, die Sie erstellen wollen ist die *AzureServices* Klasse.
+Die erste Klasse, die Sie erstellen, ist die *azureservices* -Klasse.
 
-Die *AzureServices* Klasse ist zuständig für:
+Die *azureservices* -Klasse ist für Folgendes zuständig:
 
--   Das Speichern von Anmeldeinformationen für Azure-Konto.
+-   Azure-Konto Anmelde Informationen werden gespeichert.
 
--   Aufrufen von Ihrer Azure-App-Funktion.
+-   Der Azure-App-Funktion wird aufgerufen.
 
--   Der Upload und Download von der Datendatei in Ihrem Azure-Cloudspeicher.
+-   Hochladen und Herunterladen der Datendatei in Ihrem Azure-cloudspeicher.
 
-Zum Erstellen dieser Klasse:
+So erstellen Sie diese Klasse:
 
-1.  Mit der rechten Maustaste den *Asset* Ordner befindet sich im Projektfenster **erstellen** > **Ordner**. Nennen Sie den Ordner **Skripts**.
+1.  Klicken Sie mit der rechten Maustaste in den Ordner *Asset* , und klicken Sie im Projekt Panel auf**Ordner** **Erstellen** > . Benennen Sie den Ordner mit **Skripts**.
 
     ![neuen Ordner erstellen](images/AzureLabs-Lab5-50.png)
 
-    ![Rufen Sie die Ordner - Skripts](images/AzureLabs-Lab5-51.png)
+    ![callordnerskripts](images/AzureLabs-Lab5-51.png)
 
-2.  Doppelklicken Sie auf den Ordner, der gerade erstellt haben, um ihn zu öffnen.
+2.  Doppelklicken Sie auf den soeben erstellten Ordner, um ihn zu öffnen.
 
-3.  Mit der rechten Maustaste in den Ordner **erstellen**  >   **C# Skript**. Rufen Sie das Skript *AzureServices*.
+3.  Klicken Sie mit der rechten Maustaste in den Ordner, und **Erstellen**  >  **C#** Sie das Skript Nennen Sie das Skript *azureservices*.
 
-4.  Doppelklicken Sie auf dem neuen *AzureServices* Klasse, öffnen Sie ihn mit *Visual Studio*.
+4.  Doppelklicken Sie auf die neue Klasse *azureservices* , um Sie in *Visual Studio*zu öffnen.
 
-5.  Fügen Sie die folgenden Namespaces am Anfang der *AzureServices*:
+5.  Fügen Sie am Anfang der *azureservices*die folgenden Namespaces hinzu:
 
     ```csharp
         using System;
@@ -543,7 +543,7 @@ Zum Erstellen dieser Klasse:
         using System.Net;
     ```
 
-6.  Fügen Sie die folgenden Inspektor-Felder in der *AzureServices* Klasse:
+6.  Fügen Sie die folgenden Inspektor-Felder in der *azureservices* -Klasse hinzu:
 
     ```csharp
         /// <summary>
@@ -557,7 +557,7 @@ Zum Erstellen dieser Klasse:
         public TextMesh azureStatusText;
     ```
 
-7.  Fügen Sie dann die folgenden Membervariablen in der *AzureServices* Klasse:
+7.  Fügen Sie dann die folgenden Element Variablen in der *azureservices* -Klasse hinzu:
 
     ```csharp
         /// <summary>
@@ -610,9 +610,9 @@ Zum Erstellen dieser Klasse:
     ```
 
     > [!IMPORTANT]
-    > Stellen Sie sicher, dass Sie ersetzen die *Endpunkt* und *Verbindungszeichenfolge* durch die Werte aus Ihrem Azure-Speicher finden Sie im Azure-Portal
+    > Stellen Sie sicher, dass Sie die Werte für *Endpunkt* und *Verbindungs Zeichenfolge* durch die Werte aus Ihrem Azure-Speicher im Azure-Portal ersetzen.
 
-8.  Code für *Awake()* und *Start()* Methoden jetzt hinzugefügt werden muss. Diese Methoden werden aufgerufen, wenn die Klasse initialisiert:
+8.  Der Code für die Methoden " *Awake ()* " und " *Start ()* " muss nun hinzugefügt werden. Diese Methoden werden aufgerufen, wenn die-Klasse initialisiert:
 
     ```csharp
         private void Awake()
@@ -637,38 +637,38 @@ Zum Erstellen dieser Klasse:
     ```
 
     > [!IMPORTANT]
-    > Wir werden Geben Sie den Code für *CallAzureFunctionForNextShape()* in eine [zukünftige Kapitel](#chapter-10---completing-the-azureservices-class).
+    > In einem [zukünftigen Kapitel](#chapter-10---completing-the-azureservices-class)wird der Code für *callazurefunctionfornextshape ()* ausgefüllt.
 
-9.  Löschen der *Update()* Methode, da diese Klasse nicht verwendet wird.
+9.  Löschen Sie die *Update ()* -Methode, da Sie von dieser Klasse nicht verwendet wird.
 
-10. Speichern Sie die Änderungen in Visual Studio, und klicken Sie dann zurück zu Unity.
+10. Speichern Sie die Änderungen in Visual Studio, und kehren Sie dann zu Unity zurück.
 
-11. Klicken Sie auf, und ziehen Sie die *AzureServices* Klasse aus dem Ordner Scripts, um die Main Camera-Objekts in der *Hierarchie Bereich*.
+11. Klicken und ziehen Sie die Klasse *azureservices* aus dem Ordner Scripts auf das Hauptkamera Objekt im Bereich *Hierarchie*.
 
-12. Wählen Sie die Main Camera, und ziehen Sie die **AzureStatusText** untergeordnetes Objekt aus, unter der **GazeButton** Objekt aus, und platzieren Sie sie in der **AzureStatusText** Verweisziel Feld, in der *Inspektor*, geben Sie den Verweis auf die *AzureServices* Skript.
+12. Wählen Sie die Hauptkamera aus, und rufen Sie dann das untergeordnete **azurestatustext** -Objekt unter dem **gazebutton** -Objekt ab, und platzieren Sie es innerhalb des Felds **azurestatustext** -Verweis Ziel im *Inspektor*, um den Verweis auf das  *Azureservices* -Skript.
 
-    ![Weisen Sie Azure-Status Text Verweisziel](images/AzureLabs-Lab5-52.png)
+    ![Azure-Status-Text Verweis Ziel zuweisen](images/AzureLabs-Lab5-52.png)
 
-## <a name="chapter-8---create-the-shapefactory-class"></a>Kapitel 8 – erstellen Sie die ShapeFactory-Klasse
+## <a name="chapter-8---create-the-shapefactory-class"></a>Kapitel 8: Erstellen der shapefactory-Klasse
 
-Das nächste Skript zu erstellen, wird die *ShapeFactory* Klasse. Die Rolle von dieser Klasse besteht darin, während der Erstellung einer neuen Form angefordert, und Speichern eines Verlaufs der Formen in erstellt eine *Form Verlaufsliste*. Jedes Mal ein Shape erstellt wird, die *Form Verlaufsliste* wird aktualisiert, der *AzureService* Klasse, und klicken Sie dann in gespeichert Ihre *Azure Storage*. Beim Starten der Anwendung, wenn eine gespeicherte Datei, in gefunden wird Ihre *Azure Storage*, *Form Verlaufsliste* abgerufen und wiedergegeben, mit der **3D-Text** mit Gibt an, ob die generierte Form aus dem Speicher oder neuer ist.
+Das nächste Skript, das erstellt werden soll, ist die *shapefactory* -Klasse. Die Rolle dieser Klasse besteht darin, eine neue Form zu erstellen, wenn Sie angefordert wird, und einen Verlauf der Formen beizubehalten, die in einer Shape-Verlaufs *Liste*erstellt wurden. Jedes Mal, wenn eine Form erstellt wird, wird die Shape-Verlaufs *Liste* in der *azureservice* -Klasse aktualisiert und dann in Ihrem *Azure Storage*gespeichert. Wenn die Anwendung gestartet wird und eine gespeicherte Datei in der *Azure Storage*gefunden wird, wird die *Shape* -Verlaufs Liste abgerufen und wiedergegeben, wobei das **3D-Text** Objekt bereitstellt, ob die generierte Form aus Storage oder New ist.
 
-Diese Klasse zu erstellen:
+So erstellen Sie diese Klasse:
 
-1.  Wechseln Sie zu der **Skripts** Ordner, die Sie zuvor erstellt haben.
+1.  Wechseln Sie zum Ordner " **Scripts** ", den Sie zuvor erstellt haben.
 
-2.  Mit der rechten Maustaste in den Ordner **erstellen**  >   **C# Skript**. Rufen Sie das Skript *ShapeFactory*.
+2.  Klicken Sie mit der rechten Maustaste in den Ordner, und **Erstellen**  >  **C#** Sie das Skript Nennen Sie das Skript *shapefactory*.
 
-3.  Doppelklicken Sie auf dem neuen *ShapeFactory* Skript öffnen Sie ihn mit *Visual Studio*.
+3.  Doppelklicken Sie auf das neue *shapefactory* -Skript, um es in *Visual Studio*zu öffnen.
 
-4.  Stellen Sie sicher die *ShapeFactory* Klasse enthält die folgenden Namespaces:
+4.  Stellen Sie sicher, dass die *shapefactory* -Klasse die folgenden Namespaces umfasst:
 
     ```csharp
         using System.Collections.Generic;
         using UnityEngine;
     ```
 
-5.  Fügen Sie die folgenden Variablen das *ShapeFactory* Klasse, und Ersetzen Sie die *Start()* und *Awake()* Funktionen mit den folgenden:
+5.  Fügen Sie die unten gezeigten Variablen der *shapefactory* -Klasse hinzu, und ersetzen Sie die Funktionen " *Start ()* " und " *Awa()* " durch die folgenden:
 
     ```csharp
         /// <summary>
@@ -705,7 +705,7 @@ Diese Klasse zu erstellen:
         }
     ```
 
-6.  Die *CreateShape()* Methode generiert, die primitiven Formen auf Grundlage der bereitgestellten *Ganzzahl* Parameter. Der boolesche Parameter wird verwendet, um anzugeben, ob die gerade erstellte Form aus dem Speicher oder neuen. Platzieren Sie den folgenden Code in Ihre *ShapeFactory* -Klasse, unter der vorherigen Methoden:
+6.  Die Methode " *kreateshape ()* " generiert die primitiven Formen basierend auf dem bereitgestellten *ganzzahligen* Parameter. Der boolesche Parameter wird verwendet, um anzugeben, ob die derzeit erstellte Form aus Storage oder New ist. Platzieren Sie den folgenden Code in der *shapefactory* -Klasse unter den vorherigen Methoden:
 
     ```csharp
         /// <summary>
@@ -749,35 +749,35 @@ Diese Klasse zu erstellen:
         }
     ```
 
-7.  Achten Sie darauf, dass Sie Ihre Änderungen vor der Rückgabe an Unity in Visual Studio zu speichern.
+7.  Stellen Sie sicher, dass Sie die Änderungen in Visual Studio speichern, bevor Sie zu Unity zurückkehren.
 
-8.  Zurück in die Unity-Editor zu klicken und ziehen Sie die *ShapeFactory* -Klasse aus der **Skripts** Ordner, um die **Main Camera** -Objekt in der *Hierarchie Bereich*.
+8.  Klicken Sie im Unity-Editor auf die *shapefactory* -Klasse, und ziehen Sie Sie aus dem Ordner **Scripts** auf das **Hauptkamera** Objekt im *Hierarchie Panel*.
 
-9. Mit der Main-Kamera, die ausgewählt werden Sie feststellen der *ShapeFactory* Skriptkomponente fehlt die *Spawn Punkt* Verweis. Um dies zu beheben, ziehen Sie die **ShapeSpawnPoint** -Objekt aus der *Hierarchie Bereich* auf die **Spawn Punkt** Verweisziel.
+9. Wenn die Hauptkamera ausgewählt ist, sehen Sie, dass in der *shapefactory* -Skript Komponente der Verweis *Punkt* Verweis fehlt. Um dieses Problem zu beheben, ziehen Sie das **shapespawnpoint** -Objekt aus dem Bereich *Hierarchie* in das Referenz Ziel des-pullpunkts.
 
-    ![Verweisziel Factory "Form" Gruppe](images/AzureLabs-Lab5-53.png)
+    ![Shape-Factory-Verweis Ziel festlegen](images/AzureLabs-Lab5-53.png)
 
-## <a name="chapter-9---create-the-gaze-class"></a>Kapitel 9 – erstellen Sie die Blicke-Klasse
+## <a name="chapter-9---create-the-gaze-class"></a>Kapitel 9: Erstellen der "Blick"-Klasse
 
-Ist das letzte Skript Sie müssen die *bestaunen* Klasse.
+Das letzte Skript, das Sie erstellen müssen, ist die " *Gaze* "-Klasse.
 
-Diese Klasse ist zuständig für das Erstellen einer **Raycast** , wird von der Main-Kamera, welches Objekt erkannt, wird der Benutzer betrachten, vorwärts projiziert werden. In diesem Fall müssen die Raycast um festzustellen, ob der Benutzer ansieht der **GazeButton** Objekt in der Szene, und lösen Sie ein Verhalten.
+Diese Klasse ist für das Erstellen eines **raycast** verantwortlich, der von der Hauptkamera projiziert wird, um zu erkennen, welches Objekt der Benutzer untersucht. In diesem Fall muss der raycast ermitteln, ob der Benutzer das **gazebutton** -Objekt in der Szene prüft und ein Verhalten auslöst.
 
-Zum Erstellen dieser Klasse:
+So erstellen Sie diese Klasse:
 
-1.  Wechseln Sie zu der **Skripts** Ordner, die Sie zuvor erstellt haben.
+1.  Wechseln Sie zum Ordner " **Scripts** ", den Sie zuvor erstellt haben.
 
-2.  Mit der rechten Maustaste im Projektpanel, **erstellen**  >   **C# Skript**. Rufen Sie das Skript *bestaunen*.
+2.  Klicken Sie im Projekt Panel mit der rechten Maustaste, und **Erstellen**  >  **C#** Sie ein Skript. Ruft den Skript *Blick*auf.
 
-3.  Doppelklicken Sie auf dem neuen *bestaunen* Skript öffnen Sie ihn mit *Visual Studio.*
+3.  Doppelklicken Sie auf das neue *Blick* Skript, um es in *Visual Studio* zu öffnen.
 
-4.  Stellen Sie sicher, dass es sich bei der folgende Namespace am Anfang des Skripts enthalten ist:
+4.  Stellen Sie sicher, dass der folgende Namespace am Anfang des Skripts enthalten ist:
 
     ```csharp
         using UnityEngine;
     ```
 
-5.  Klicken Sie dann fügen Sie die folgenden Variablen in der *bestaunen* Klasse:
+5.  Fügen Sie dann die folgenden Variablen in der " *Blick* "-Klasse hinzu:
 
     ```csharp
         /// <summary>
@@ -863,9 +863,9 @@ Zum Erstellen dieser Klasse:
     ```
 
 > [!IMPORTANT]
-> Einige dieser Variablen kann bearbeitet werden, in der *Editor*.
+> Einige dieser Variablen können im *Editor*bearbeitet werden.
 
-6.  Code für die *Awake()* und *Start()* Methoden jetzt hinzugefügt werden muss.
+6.  Der Code für die Methoden " *Awake ()* " und " *Start ()* " muss nun hinzugefügt werden.
 
     ```csharp
         /// <summary>
@@ -887,7 +887,7 @@ Zum Erstellen dieser Klasse:
         }
     ```
 
-7.  Fügen Sie folgenden Code, der zusammen mit einem Cursor-Objekt am Anfang, erstellt die *Update()* -Methode, die ausgeführt wird, die Raycast-Methode, sowie, in dem der GazeEnabled boolesche ein-/ausgeschaltet wird:
+7.  Fügen Sie den folgenden Code hinzu, mit dem ein Cursor Objekt beim Start zusammen mit der *Update ()* -Methode erstellt wird, die die raycast-Methode ausgeführt wird, sowie den Speicherort für den booleschen Wert für die instanzaktivierung:
 
     ```csharp
         /// <summary>
@@ -931,7 +931,7 @@ Zum Erstellen dieser Klasse:
         }
     ```
 
-8. Als Nächstes fügen die *UpdateRaycast()* Methode, dem Projekt eine Raycast und das Trefferanzahl-Ziel zu erkennen.
+8. Fügen Sie als nächstes die *updateraycast ()* -Methode hinzu, die ein raycast-Projekt erstellt und das Treffer Ziel erkennt.
 
     ```csharp
         private void UpdateRaycast()
@@ -1004,7 +1004,7 @@ Zum Erstellen dieser Klasse:
         }
     ```
 
-9. Abschließend fügen die *ResetFocusedObject()* -Methode, die umschalten wird die GazeButton Objekte aktuelle Farbe, der angibt, ob er eine neue Form oder nicht erstellt.
+9. Fügen Sie abschließend die *resetfocusedobject ()* -Methode hinzu, die die aktuelle Farbe der gazebutton-Objekte umschalten und angibt, ob eine neue Form erstellt wird.
 
     ```csharp
         /// <summary>
@@ -1025,21 +1025,21 @@ Zum Erstellen dieser Klasse:
         }
     ```
 
-10.  Speichern Sie die Änderungen in Visual Studio vor der Rückgabe in Unity.
+10.  Speichern Sie die Änderungen in Visual Studio, bevor Sie zu Unity zurückkehren.
 
-11.  Klicken und ziehen Sie die *bestaunen* Klasse aus dem Ordner Scripts, um die **Main Camera** -Objekt in der *Hierarchie Bereich*.
+11.  Klicken und ziehen Sie die Klasse " *Blick* " aus dem Ordner Scripts auf das **Hauptkamera** Objekt im Bereich *Hierarchie*.
 
-## <a name="chapter-10---completing-the-azureservices-class"></a>Kapitel 10 – Abschließen der AzureServices-Klasse
+## <a name="chapter-10---completing-the-azureservices-class"></a>Kapitel 10: vervollständigen der azureservices-Klasse
 
-Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *AzureServices* Klasse. Dies wird durch erreicht werden:
+Wenn die anderen Skripts vorhanden sind, ist es jetzt möglich, die *azureservices* -Klasse *abzuschließen* . Dies wird durch Folgendes erreicht:
 
-1.  Hinzufügen einer neuen Methode mit dem Namen *CreateCloudIdentityAsync()* , um die Authentifizierung-Variablen, die erforderlich sind, für die Kommunikation mit Azure einzurichten.
+1.  Fügen Sie eine neue Methode mit dem Namen " *foratecloudidentityasync ()* " hinzu, um die Authentifizierungs Variablen einzurichten, die für die Kommunikation mit Azure erforderlich sind.
 
-    > Diese Methode überprüft auch das Vorhandensein einer zuvor gespeicherte Datei mit der Form-Liste.
+    > Mit dieser Methode wird auch überprüft, ob eine zuvor gespeicherte Datei mit der Form Liste vorhanden ist.
     >
-    > **Wenn die Datei gefunden wird**, wird es den Benutzer deaktiviert *bestaunen*, und die Form erstellen, nach dem Muster von Formen, die ausgelöst werden, da in gespeichert der **Azure Storage-Datei**. Der Benutzer dies sehen, wie die **Text Mesh** bieten anzeigen "Storage" oder "New", abhängig vom Ursprung Formen.
+    > **Wenn die Datei gefunden**wird, deaktiviert Sie den Benutzer *Blick*und löst die Form Erstellung gemäß dem Muster der Formen aus, wie Sie in der Azure Storage- **Datei**gespeichert werden. Der Benutzer kann dies sehen, da im **textmesh** abhängig vom Ursprung der Formen "Storage" oder "New" angezeigt wird.
     >
-    > **Wenn keine Datei gefunden wird**, können sie die *bestaunen*, aktivieren den Benutzer aus, um Formen zu erstellen, bei Betrachtung der **GazeButton** Objekts in der Szene.
+    > **Wenn keine Datei gefunden**wird, wird der *Blick*aktiviert, sodass der Benutzer bei der Betrachtung des **gazebutton** -Objekts in der Szene Formen erstellen kann.
 
     ```csharp
         /// <summary>
@@ -1088,7 +1088,7 @@ Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *A
         }
     ```
 
-2.  Der nächste Codeausschnitt ist innerhalb der *Start()* Methode, bei dem ein Aufruf an vorgenommen werden, die *CreateCloudIdentityAsync()* Methode. Gerne über Ihre aktuellen kopieren *Start()* -Methode, mit der folgenden:
+2.  Der nächste Code Ausschnitt erfolgt innerhalb der Methode " *Start ()* ". Dabei wird ein-Rückruf an die Methode "Methode" von "| *atecloudidentityasync ()* " durchgeführt. Sie können Ihre aktuelle *Start ()* -Methode mit den folgenden Informationen kopieren:
 
     ```csharp
         private void Start()
@@ -1106,7 +1106,7 @@ Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *A
         }
     ```
 
-3.  Geben Sie den Code für die Methode *CallAzureFunctionForNextShape()* . Verwenden Sie das zuvor erstellte *Azure Function-App* einen Index der Form "anfordern. Sobald die neue Form empfangen wird, sendet diese Methode die Form, um die *ShapeFactory* Klasse, um die neue Form in der Szene zu erstellen. Verwenden Sie den folgenden Code zum Abschließen des Texts der *CallAzureFunctionForNextShape()* .
+3.  Geben Sie den Code für die Methode *callazurefunctionfornextshape ()* ein. Sie verwenden den zuvor erstellten *Azure-Funktionen-App* , um einen Form Index anzufordern. Nachdem die neue Form empfangen wurde, sendet diese Methode die Form an die *shapefactory* -Klasse, um die neue Form in der Szene zu erstellen. Verwenden Sie den folgenden Code, um den Text von *callazurefunctionfornextshape ()* abzuschließen.
 
     ```csharp
         /// <summary>
@@ -1142,7 +1142,7 @@ Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *A
         }
     ```
 
-4.  Fügen Sie eine Methode zum Erstellen von einer Zeichenfolge, durch die Verkettung von ganzen Zahlen gespeichert, in der Verlaufsliste Form, und speichern es in Ihrer *Azure Storage File*.
+4.  Fügen Sie eine Methode hinzu, um eine Zeichenfolge zu erstellen, indem Sie die in der Form Verlaufs Liste gespeicherten Ganzzahlen verketten und in Ihrer *Azure Storage Datei*speichern.
 
     ```csharp
         /// <summary>
@@ -1157,9 +1157,9 @@ Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *A
         }
     ```
 
-5.  Fügen Sie eine Methode zum Abrufen des Texts in der Datei im Verzeichnis gespeicherten Ihre *Azure Storage File* und *Deserialisieren* ihn in eine Liste.
+5.  Fügen Sie eine Methode hinzu, um den in der Datei gespeicherten Text in der *Azure Storage-Datei* abzurufen und in eine Liste zu *Deserialisieren* .
 
-6.  Sobald der Vorgang abgeschlossen ist, aktiviert erneut die Methode die Blicke, damit der Benutzer weitere Formen der Szene hinzugefügt werden kann.
+6.  Sobald dieser Vorgang abgeschlossen ist, aktiviert die Methode den Blick erneut, sodass der Benutzer der Szene weitere Formen hinzufügen kann.
 
     ```csharp
         ///<summary>
@@ -1191,54 +1191,54 @@ Mit den anderen Skripts vorhanden, ist es jetzt möglich, *vollständige* der *A
         }
     ```
 
-7.  Speichern Sie die Änderungen in Visual Studio vor der Rückgabe in Unity.
+7.  Speichern Sie die Änderungen in Visual Studio, bevor Sie zu Unity zurückkehren.
 
-## <a name="chapter-11---build-the-uwp-solution"></a>Kapitel 11: Erstellen Sie die UWP-Projektmappe
+## <a name="chapter-11---build-the-uwp-solution"></a>Kapitel 11: Erstellen der UWP-Lösung
 
-Um den Buildprozess zu starten:
+So beginnen Sie den Buildprozess:
 
-1.  Wechseln Sie zu **Datei** > **Buildeinstellungen**.
+1.  Wechseln Sie zu > dateibuildeinstellungen.
 
-    ![Erstellen Sie die app](images/AzureLabs-Lab5-54.png)
+    ![Erstellen der APP](images/AzureLabs-Lab5-54.png)
 
-2.  Klicken Sie auf **Erstellen**. Unity startet eine *Datei-Explorer* Fenster, in denen man erstellen, und wählen Sie einen Ordner zum Erstellen der app in. Erstellen Sie jetzt auf diesen Ordner, und nennen Sie es *App*. Klicken Sie dann mit der *App* Ordner ausgewählt haben, drücken Sie **Ordner auswählen**.
+2.  Klicken Sie auf **Erstellen**. Unity startet ein *Datei-Explorer* -Fenster, in dem Sie einen Ordner erstellen und auswählen müssen, in dem die App erstellt wird. Erstellen Sie diesen Ordner jetzt, und nennen Sie ihn " *App*". Klicken Sie dann mit ausgewähltem *App* -Ordner auf **Ordner auswählen**.
 
-3.  Erstellen Ihres Projekts zu Unity beginnt die *App* Ordner.
+3.  Unity startet das Projekt in den *App* -Ordner.
 
-4.  Einmal Unity wurde (es kann einige Zeit dauern) erstellen, öffnen ein *Datei-Explorer* Fenster am Speicherort des Builds (Überprüfen Sie Ihre Taskleiste aus, wie es unter Umständen nicht immer über Ihre Windows angezeigt und Sie über das Hinzufügen eines neuen benachrichtigt Fenster ").
+4.  Nachdem die Erstellung von Unity abgeschlossen ist (Dies kann einige Zeit in Anspruch nehmen), wird ein *Datei-Explorer* -Fenster am Speicherort des Builds geöffnet (überprüfen Sie die Taskleiste, da Sie möglicherweise nicht immer über Ihrem Fenster angezeigt wird, sondern Sie über das Hinzufügen eines neuen Fensters benachrichtigt).
 
 ## <a name="chapter-12---deploying-your-application"></a>Kapitel 12: Bereitstellen der Anwendung
 
-Um die Anwendung bereitzustellen:
+So stellen Sie die Anwendung bereit:
 
-1.  Navigieren Sie zu der *App* Ordner, der erstellt wurde die [letzte Kapitel](#chapter-11---build-the-uwp-solution). Sehen Sie eine Datei durch den Namen der apps mit der Erweiterung ".sln", die Sie doppelklicken, sollten Sie so öffnen Sie sie in *Visual Studio*.
+1.  Navigieren Sie zum *App* -Ordner, der im [letzten Kapitel](#chapter-11---build-the-uwp-solution)erstellt wurde. Es wird eine Datei mit dem Namen Ihrer Apps mit der Erweiterung ". sln" angezeigt, auf die Sie doppelklicken, um Sie in *Visual Studio*zu öffnen.
 
-2.  In der **Projektmappenplattform**Option **X86, lokalen Computer**.
+2.  Wählen Sieauf der Projektmappenplattform die Option **x86, lokaler Computer**aus.
 
-3.  In der **Projektmappenkonfiguration** wählen **Debuggen**.
+3.  Wählen Sie in der Projektmappenkonfiguration **Debuggen**.
 
-    > Für die Microsoft HoloLens Umständen ist es einfacher, diese Einstellung auf *Remotecomputer*, sodass Sie nicht auf Ihren Computer angeschlossen sind. Allerdings müssen Sie auch die folgenden Schritte ausführen:
-    > - Kennen der **IP-Adresse** von Ihrem HoloLens, die sich in befinden die **Einstellungen** > **Netzwerk und Internet**  >   **Wi-Fi** > **erweiterte Optionen**; IPv4 ist die Adresse, die Sie verwenden sollten. 
-    > - Stellen Sie sicher **Entwicklermodus** ist **auf**; gefunden in **Einstellungen** > **Update und Sicherheit**  >  **Für Entwickler**.
+    > Für Microsoft hololens ist es möglicherweise einfacher, dies auf den *Remote*Computer festzulegen, damit Sie nicht auf Ihren Computer über das Team verfügen. Allerdings müssen Sie auch die folgenden Schritte ausführen:
+    > - Informieren Sie sich über die **IP-Adresse** ihrer hololens. diese befindet sich in den **Einstellungen** > **Network &**  > Advanced**Wi-Fi** > **Advanced Options**. IPv4 ist die Adresse, die Sie verwenden sollten. 
+    > - Stellen Sie sicher, dass der **Entwicklermodus** **auf**dem finden Sie unter **Einstellungen** > **Aktualisieren & Sicherheit** > **für Entwickler**.
 
-    ![Bereitstellen der Lösung](images/AzureLabs-Lab5-55.png)
+    ![Lösung bereitstellen](images/AzureLabs-Lab5-55.png)
 
-4.  Wechseln Sie zu der **erstellen** Menü, und klicken Sie auf **Projektmappe bereitstellen** zum querladen der Anwendung auf Ihrem Computer.
+4.  Wechseln Sie zum Menü **Erstellen** , und klicken Sie auf **Lösung** bereitstellen, um die Anwendung auf Ihren Computer zu übertragen.
 
-5.  Ihre App sollte nun angezeigt werden, in der Liste der installierten apps, die gestartet und getestet werden können.
+5.  Ihre APP sollte nun in der Liste der installierten apps angezeigt werden, die gestartet und getestet werden können.
 
-## <a name="your-finished-azure-functions-and-storage-application"></a>Die fertige Azure Functions und Storage-Anwendung
+## <a name="your-finished-azure-functions-and-storage-application"></a>Ihre fertiggestellte Azure Functions-und Speicher Anwendung
 
-Herzlichen Glückwunsch, Sie erstellt haben, eine mixed Reality-app, die sowohl die Azure Functions und Azure Storage-Dienste nutzt. Ihre app wird in der Lage gespeicherten Daten, und geben Sie eine Aktion, die auf Basis dieser Daten.
+Herzlichen Glückwunsch, Sie haben eine Mixed Reality-App erstellt, die sowohl die Azure Functions als auch die Azure Storage Dienste nutzt. Ihre APP kann auf gespeicherten Daten zeichnen und eine auf diesen Daten basierende Aktion bereitstellen.
 
 ![Endprodukt-Ende](images/AzureLabs-Lab5-00.png)
 
-## <a name="bonus-exercises"></a>Bonus-Übungen
+## <a name="bonus-exercises"></a>Bonus Übungen
 
 ### <a name="exercise-1"></a>Übung 1
 
-Erstellen Sie eine zweite erzeugen, Punkt und Datensatz, der Zeitpunkt zu erzeugen, die über ein Objekt erstellt wurde. Wenn Sie die Datei laden, Wiedergeben von Formen erzeugt wird, von dem Speicherort, die, den Sie erstellt wurden.
+Erstellen Sie einen zweiten Erstellungs Punkt, und notieren Sie den-Punkt, aus dem ein Objekt erstellt wurde. Wenn Sie die Datendatei laden, stellen Sie die Formen wieder her, die aus dem Speicherort der ursprünglichen Erstellung erstellt werden.
 
 ### <a name="exercise-2"></a>Übung 2
 
-Erstellen Sie eine Möglichkeit zum Starten der app, anstatt ihn jedes Mal erneut öffnen. **Laden Szenen** ist ein guter Platz, um zu starten. Anschließend erstellen Sie eine Möglichkeit zum Löschen der gespeicherten Liste *Azure Storage*, sodass sie problemlos von Ihrer app zurückgesetzt werden kann. 
+Erstellen Sie eine Möglichkeit, die APP neu zu starten, anstatt Sie jedes Mal erneut öffnen zu müssen. Das **Laden von Szenen** ist ein guter Ausgangspunkt. Erstellen Sie anschließend eine Möglichkeit, die gespeicherte Liste in *Azure Storage*zu löschen, damit Sie problemlos von der APP zurückgesetzt werden kann. 
