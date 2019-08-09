@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516225"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861718"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Beitrag zur Windows Mixed Reality-Entwicklerdokumentation
 
@@ -57,6 +57,28 @@ Verwenden Sie den folgenden Workflow, um Updates an *einem vorhandenen Artikel* 
 5. Wenn Sie Ihre Artikel Änderungen abgeschlossen haben, Scrollen Sie nach unten, und klicken Sie auf die Schaltfläche **Datei Änderung vorschlagen** .
 6. Klicken Sie auf der nächsten Seite auf **Pull Request erstellen** , um den automatisch erstellten Branch in "Master" zusammenzuführen.
 7. Wiederholen Sie die obigen Schritte für den nächsten Artikel, den Sie bearbeiten möchten.
+
+## <a name="renaming-or-deleting-an-existing-article"></a>Umbenennen oder Löschen eines vorhandenen Artikels
+
+Wenn die Änderung einen vorhandenen Artikel umbenennen oder löschen soll, müssen Sie eine Umleitung hinzufügen. Auf diese Weise wird jeder Benutzer mit einem Link zum vorhandenen Artikel immer noch an der richtigen Stelle angezeigt. Umleitungen werden von der. openpublishing. Redirect. JSON-Datei im Stammverzeichnis des Repository verwaltet.
+
+Fügen Sie dem `redirections` Array einen Eintrag hinzu, um eine Umleitung zu. openpublishing. Redirect. JSON hinzuzufügen:
+
+```json
+{
+    "redirections": [
+        {
+            "source_path": "mixed-reality-docs/old-article.md",
+            "redirect_url": "new-article#section-about-old-topic",
+            "redirect_document_id": false
+        },
+```
+
+- Der `source_path` ist der relative Repository-Pfad zu dem alten Artikel, den Sie entfernen. Stellen Sie sicher, dass der `mixed-reality-docs` Pfad mit beginnt `.md`und mit endet.
+- `redirect_url` Ist die relative öffentliche URL aus dem alten Artikel zum neuen Artikel. Stellen Sie sicher, dass diese URL nicht `mixed-reality-docs` oder `.md`enthält, da Sie auf die öffentliche URL und nicht auf den Repository-Pfad verweist. Das Verknüpfen mit einem Abschnitt innerhalb des neuen Artikels `#section` mit ist zulässig. Sie können bei Bedarf auch einen absoluten Pfad zu einer anderen Website verwenden.
+- `redirect_document_id`Gibt an, ob Sie die Dokument-ID aus der vorherigen Datei beibehalten möchten. Die Standardeinstellung ist `false`. Verwenden `true` Sie, wenn Sie den `ms.documentid` Attribut Wert aus dem umgeleiteten Artikel beibehalten möchten. Wenn Sie die Dokument-ID beibehalten, werden Daten, wie z. b. Seitenaufrufe und Rang folgen, in den Ziel Artikel übertragen. Dies ist der Fall, wenn die Umleitung primär eine Umbenennung ist, und kein Zeiger auf einen anderen Artikel, der nur einen Teil desselben Inhalts behandelt.
+
+Wenn Sie eine Umleitung hinzufügen, achten Sie darauf, dass Sie auch die alte Datei löschen.
 
 ## <a name="creating-a-new-article"></a>Erstellen eines neuen Artikels
 

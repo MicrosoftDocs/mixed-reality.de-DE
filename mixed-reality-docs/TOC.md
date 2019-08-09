@@ -182,7 +182,6 @@
 #### [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)
 ### Weitere Hauptmerkmale
 #### [Gemeinsame Raumanker in DirectX](shared-spatial-anchors-in-directx.md)
-#### [Ausrichtbare Kamera in DirectX](locatable-camera-in-directx.md)
 #### [Tastatur-, Maus- und Controllereingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Fortgeschrittene Themen
 #### [Verwenden von XAML mit holographischen DirectX-Apps](using-xaml-with-holographic-directx-apps.md)

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, Holographic Rendering, Native, Native APP, WinRT, WinRT-APP, Plattform-APIs, benutzerdefinierte Engine, Middleware
-ms.openlocfilehash: da6beae6e256fef49481b581395e507b3f2acd04
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 58b311038633dc325cc2c5425fd09b9a0192b161
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414383"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861705"
 ---
 # <a name="directx-development-overview"></a>DirectX-Entwicklungs Übersicht
 
@@ -56,7 +56,6 @@ Sie sollten die folgenden wichtigen Bausteine unterstützen, um den Benutzern Ih
 Es gibt noch weitere wichtige Features, die von vielen immersiven Anwendungen verwendet werden, die auch für DirectX-Anwendungen verfügbar gemacht werden:
 
 * [Gemeinsame Raumanker in DirectX](shared-spatial-anchors-in-directx.md)
-* [Ausrichtbare Kamera in DirectX](locatable-camera-in-directx.md)
 * [Tastatur-, Maus- und Controllereingaben in DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 
 ## <a name="see-also"></a>Siehe auch

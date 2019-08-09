@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: Kamera, hololens, Farbkamera, Vorderseite, hololens 2, CV, Maschinelles sehen, Zeichen, Marker, QR-Code, QR, Foto, Video
-ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694537"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861722"
 ---
 # <a name="locatable-camera"></a>Erhebbare Kamera
 
@@ -84,11 +84,13 @@ Um von den "cameraintrinsics" und "cameracoordinatesystem" in ihr Anwendungs-/Wo
 
 [Einsetzbare Kamera in Unity](locatable-camera-in-unity.md): Cameratoworldmatrix wird automatisch von der photocaptureframe-Klasse bereitgestellt (sodass Sie sich keine Gedanken über die cameracoordinatesystem-Transformationen machen müssen).
 
-[Einsetzbare Kamera in DirectX](locatable-camera-in-directx.md): Zeigt die relativ unkomplizierte Methode zum Abfragen der Transformation zwischen dem Koordinatensystem der Kamera und ihren eigenen Anwendungs Koordinatensystemen.
+[Einsetzbare Kamera in DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): Das Beispiel für die holografische Gesichts Verfolgung zeigt die relativ unkomplizierte Methode zum Abfragen der Transformation zwischen dem Koordinatensystem der Kamera und ihren eigenen Anwendungs Koordinatensystemen.
 
 ### <a name="distortion-error"></a>Verzerrungs Fehler
 
-Bei hololens sind das Video und die bildstreams in der Bild Verarbeitungs Pipeline des Systems unverzerrt, bevor die Frames der Anwendung zur Verfügung gestellt werden (der vorschaustream enthält die ursprünglichen verzerrten Rahmen). Da nur die cameraintrinsics verfügbar gemacht werden, müssen die Anwendungen davon ausgehen, dass Bild Rahmen eine perfekte pinklokamera darstellen, aber die Funktion zur unzersetzung im Bildprozessor hinterlässt möglicherweise weiterhin einen Fehler von bis zu 10 Pixeln in hololens (First Generation). bei Verwendung von cameraintrinsics in den Frame-Metadaten. In vielen Anwendungsfällen ist dieser Fehler nicht von Bedeutung. Wenn Sie z. b. Hologramme an realen Poster/Markierungen ausrichten, sehen Sie sich beispielsweise einen < 10px-Offset an (ungefähr 11mm für holograms, der 2 Meter entfernt ist), könnte dieser Fehler bei der Verzerrung auftreten. 
+Bei hololens sind das Video und die bildstreams in der Bild Verarbeitungs Pipeline des Systems unverzerrt, bevor die Frames der Anwendung zur Verfügung gestellt werden (der vorschaustream enthält die ursprünglichen verzerrten Rahmen). Da nur die cameraintrinsics verfügbar gemacht werden, müssen Anwendungen davon ausgehen, dass Bild Rahmen eine perfekte Kamera darstellen.
+
+Bei hololens (erste Generation) kann die unzerungs Funktion im Bildprozessor bei der Verwendung von cameraintrinsics in den Frame-Metadaten weiterhin einen Fehler von bis zu 10 Pixel hinterlassen. In vielen Anwendungsfällen ist dieser Fehler nicht von Bedeutung. Wenn Sie z. b. Hologramme an realen Poster/Markierungen ausrichten, sehen Sie sich beispielsweise einen < 10px-Offset an (ungefähr 11mm für holograms, der 2 Meter entfernt ist), könnte dieser Fehler bei der Verzerrung auftreten. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>Szenarios für die verwendbare Verwendung von Kameras
 
@@ -170,7 +172,7 @@ Beispiele:
 * Personen im Raum identifizieren und erkennen (z. b. Holographic-Kontaktkarten über Flächen platzieren)
 
 ## <a name="see-also"></a>Siehe auch
-* [Ausrichtbare Kamera in DirectX](locatable-camera-in-directx.md)
+* [Beispiel für eine abrechenbare Kamera](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Ausrichtbare Kamera in Unity](locatable-camera-in-unity.md)
 * [Mixed Reality-Aufnahme](mixed-reality-capture.md)
 * [Mixed Reality-Aufnahme für Entwickler](mixed-reality-capture-for-developers.md)
