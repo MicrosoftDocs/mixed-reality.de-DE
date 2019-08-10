@@ -6,16 +6,17 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, Video, Erfassung, Kamera
-ms.openlocfilehash: d1675d2d6c74c6d15ca245a66719e00f2a7c2111
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 740b02dd1714679028541a888d721ae74e8e1f32
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694363"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937076"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Erfassung gemischter Realität für Entwickler
 
-> [Hinweis!] Unter [Rendering von der folgenden PV-Kamera](#render-from-the-pv-camera-opt-in) finden Sie Anleitungen zu einer neuen MRC-Funktion für hololens 2.
+> [!NOTE]
+> Unter [Rendering von der folgenden PV-Kamera](#render-from-the-pv-camera-opt-in) finden Sie Anleitungen zu einer neuen MRC-Funktion für hololens 2.
 
 Da ein Benutzer jederzeit ein MRC-Foto ( [Mixed Reality Capture](mixed-reality-capture.md) ) oder ein Video erstellen kann, sollten Sie beim Entwickeln Ihrer Anwendung einige Punkte beachten. Dies umfasst bewährte Methoden für die visuelle MRC-Qualität und die Reaktion auf Systemänderungen, während mrcs aufgezeichnet werden.
 

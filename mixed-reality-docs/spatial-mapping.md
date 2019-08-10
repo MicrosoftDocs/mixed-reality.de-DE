@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: räumliche Zuordnung, hololens, gemischte Realität, Oberflächenrekonstruktion, Mesh, SR
-ms.openlocfilehash: 31abeca624512f1d5e721dbe879ca2243cf41345
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4914cf5b7864ecb2430a39af73729eb6dfc0e2bd
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550482"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937062"
 ---
 # <a name="spatial-mapping"></a>Räumliche Zuordnung
 
@@ -70,9 +70,9 @@ Das visuelle Feedback an den Benutzer ist bei der Platzierung von größter Wich
 
 Eine der Haupt Verwendungsmöglichkeiten räumlicher Mapping-Oberflächen besteht darin, die holograms einfach zu okzieren. Dieses einfache Verhalten hat eine große Auswirkung auf die wahrgenommene Bedeutung von holograms und hilft dabei, einen viskoen Sinn zu schaffen, der tatsächlich denselben physischen Raum wie der Benutzer hat.
 
-Die Okklusion stellt dem Benutzer auch Informationen zur Verfügung. Wenn ein – Hologramm von einer realen Oberfläche verdeckt wird, bietet dies ein zusätzliches visuelles Feedback zum räumlichen Speicherort dieses holograms weltweit. Umgekehrt kann die Okklusion auch Informationen  vom Benutzer einblenden. durch das Durchlaufen von holograms hinter den Wänden kann der visuelle Cluster auf intuitive Weise reduziert werden. Um ein Hologram auszublenden oder anzuzeigen, muss der Benutzer lediglich seine Kopfzeile verschieben.
+Die Okklusion stellt dem Benutzer auch Informationen zur Verfügung. Wenn ein – Hologramm von einer realen Oberfläche verdeckt wird, bietet dies ein zusätzliches visuelles Feedback zum räumlichen Speicherort dieses holograms weltweit. Umgekehrt kann die Okklusion auch Informationen vom Benutzer einblenden. durch das Durchlaufen von holograms hinter den Wänden kann der visuelle Cluster auf intuitive Weise reduziert werden. Um ein Hologram auszublenden oder anzuzeigen, muss der Benutzer lediglich seine Kopfzeile verschieben.
 
-Die Okklusion kann auch verwendet werden, um die Erwartungen an eine natürliche Benutzeroberfläche basierend auf vertrauten physischen Interaktionen zu formulieren. Wenn ein – Hologramm durch eine Oberfläche verdeckt wird, liegt dies daran, dass diese Oberfläche solide ist, sodass der Benutzer erwarten kann, dass das – Hologramm *mit dieser* Oberfläche in Konflikt steht und nicht einfach durchlaufen wird.
+Die Okklusion kann auch verwendet werden, um die Erwartungen an eine natürliche Benutzeroberfläche basierend auf vertrauten physischen Interaktionen zu formulieren. Wenn ein – Hologramm durch eine Oberfläche verdeckt wird, liegt dies daran, dass diese Oberfläche solide ist, sodass der Benutzer erwarten kann, dass das – Hologramm mit dieser Oberfläche in Konflikt steht und nicht einfach durchlaufen wird.
 
 Manchmal ist eine Okklusion von holograms nicht erwünscht. Wenn ein Benutzer in der Lage sein muss, mit einem Hologram zu interagieren, muss er in der Lage sein, ihn zu sehen, auch wenn er sich hinter einer realen Oberfläche befindet. In solchen Fällen ist es in der Regel sinnvoll, ein solches Hologramm anders zu gestalten, wenn es ausgeblendet wird (z. b. durch verringern seiner Helligkeit). Auf diese Weise wird der Benutzer in der Lage sein, das Hologramm visuell zu finden, aber es ist immer noch bewusst, dass es sich hinter etwas befindet.
 
@@ -220,4 +220,5 @@ Bedenken Sie jedoch, dass jeder raycast hohe Rechen Kosten aufweisen kann. Abhä
 * [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)
 * [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)
 * [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
+* [Szenen Verständnis](scene-understanding.md)
 * [Fallstudie – Schauen durch Löcher in Ihrer Realität](case-study-looking-through-holes-in-your-reality.md)
