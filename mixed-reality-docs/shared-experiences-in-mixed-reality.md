@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: gemeinsam genutzte Benutzeroberflächen, gemischte Realität, Hologram, räumlicher Anker, mehrere Benutzer, mehrere
-ms.openlocfilehash: b27da1e73c927a26e33746cd2db08e67c6f70acc
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: fbc636a5d65e605ae9e9f9655eb15550ff8de7b7
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63518483"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020205"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>Gemeinsam genutzte Umgebungen in gemischter Realität
 
@@ -118,7 +118,7 @@ Erfahrungen wie onsight bieten neue Möglichkeiten für die Zusammenarbeit. Von 
 
 Die intuitive Zusammenarbeit ist die Grundlage für die Konversation und die Zusammenarbeit und das Verständnis, wie wir diese Intuition auf die Komplexität gemischter Realität anwenden können. Wenn wir nicht nur die gemeinsame Nutzung von Erfahrungen in gemischter Realität neu erstellen können, sondern auch die Nutzung der Arbeit steigern, ist es ein Paradigmenwechsel für die Zukunft der Arbeit. Der Entwurf für freigegebene Umgebungen in gemischter Realität ist neuer und aufregender Bereich – und wir sind nur am Anfang.
 
-## <a name="get-started-sharing-experiences"></a>Einführung in den Einstieg in die Freigabe
+## <a name="get-started-building-shared-experiences"></a>Beginnen Sie mit dem Aufbau gemeinsamer Erfahrungen
 
 Abhängig von Ihrer Anwendung und Ihrem Szenario müssen verschiedene Anforderungen erfüllt sein, damit Sie Ihre gewünschte benutzerfreundliche Anwendung erreichen können. Hierzu zählen u. a.
 * Treffer Findung: Möglichkeit zum Erstellen von Sitzungen, ankündigen der Sitzung und ermitteln und einladen bestimmter Personen, sowohl lokal als auch Remote, um der Sitzung beizutreten.
@@ -135,6 +135,32 @@ Verwenden Sie zum Freigeben von Ankern die <a href="https://docs.microsoft.com/a
 
 Bei einem freigegebenen räumlichen Anker verfügt die APP auf jedem Gerät nun über ein gemeinsames Koordinatensystem, in dem Sie Inhalte platzieren können. Nun kann die APP sicherstellen, dass Sie das – Hologramm am gleichen Speicherort positioniert und orientiert.
 Auf hololens-Geräten können Sie auch die Anker von einem Gerät an einen anderen offline freigeben.  Verwenden Sie die folgenden Links, um zu entscheiden, was für Ihre Anwendung am besten geeignet ist.
+
+
+## <a name="evaluating-tech-options"></a>Auswerten von Tech-Optionen:
+Es stehen verschiedene Dienst-und Technologieoptionen zur Verfügung, mit denen Sie gemischte Umgebungen mit mehreren Benutzern entwickeln können.  Es kann schwierig sein, einen Pfad auszuwählen. Wenn Sie also eine szenariobezogene Perspektive treffen möchten, sind einige Optionen unten aufgeführt.
+
+## <a name="shared-static-holograms-no-interactions"></a>Freigegebene statische Hologramme (keine Interaktionen):
+Nutzen Sie <a href="https://docs.microsoft.com/azure/spatial-anchors/" target="_blank">räumliche Azure-Anker</a> in Ihrer APP.  Wenn Sie räumliche Anker Geräte übergreifend aktivieren und freigeben, können Sie eine Anwendung erstellen, bei der die Benutzer holograms gleichzeitig am gleichen Ort sehen.  Zusätzliche Synchronisierung über Geräte hinweg ist erforderlich, damit Benutzer mit holograms interagieren und Bewegungen oder Zustands Aktualisierungen von holograms anzeigen können.
+
+## <a name="share-1st-person-perspective"></a>Perspektive der 1. Person freigeben:
+Nutzen Sie integrierte miracast-Unterstützung für lokale Benutzer, wenn Sie über einen unterstützten miracast-Empfänger verfügen, z. b. einen PC oder ein Fernsehgerät – es ist kein zusätzlicher app-Code erforderlich.
+
+Nutzen Sie <a href="https://github.com/microsoft/mixedreality-webrtc" target="_blank">mixedreality-webrtc</a> in Ihrer APP für Remote Benutzer, oder wenn Sie über nicht-miracast-Geräte verfügen, für die Sie freigeben möchten.  Wenn Sie eine webrtc-Verbindung aktivieren, werden 1:1-Audiodaten und-Videostreams zwischen Benutzern mit einem Datenkanal für Geräte übergreifende Messaging Funktionen ermöglicht.  Die Implementierung gemischter Realität optimiert für hololens durch die Bereitstellung eines Videodaten Stroms für die gemischte Realität Erfassung der Ansicht des hololens-Benutzers für andere.  Wenn Sie Video Streaming auf mehrere Remote Clients zentral hochskalieren möchten, wird in der Regel ein <a href="https://webrtcglossary.com/mcu/" target="_blank">MCU-Dienstanbieter</a> (Multipoint-Konferenz Einheit) verwendet, z. b. signalwire.  Eine One-Click-signalwire-Bereitstellung in Azure ist über <a href="https://github.com/andywolk/azure-freeswitch-gpu-windows" target="_blank">FreeSWITCH</a>verfügbar.  Beachten Sie, dass es sich hierbei um einen kostenpflichtigen Dienst handelt, bei dem signalwire nicht im Besitz von Microsoft ist.
+
+## <a name="presenter-spectator-applications-and-demos"></a>Presenter-Betrachter-Anwendungen und-Demos:
+Nutzen Sie <a href="https://github.com/microsoft/MixedReality-SpectatorView" target="_blank">mixedreality-zuschauorview</a> in Ihrer APP.  Aktivieren Sie andere Geräte (HL, Android, IOS und Videokameras), um zu sehen, was die hololens aus einer anderen Perspektive am gleichen Speicherort sehen, und erhalten Sie Aktualisierungen bei Interaktionen des Hosts, von dem die Benutzer mit den holograms interagieren.  Sehen Sie sich an, machen Sie Bilder *, und notieren Sie sich das Video zu den Aktionen des Hosts mit den holograms in der Anwendung aus ihrer eigenen räumlichen Perspektive mit dem Betrachter-Begleit der gleichen app.
+
+Nebenbei Bilder werden über einen Screenshot auf IOS-/Android-Geräten erstellt.
+
+## <a name="multi-user-collaborative-experience"></a>Zusammenarbeit mit mehreren Benutzern:
+Beginnen Sie mit unserem Tutorial zum Lernprogramm für [mehrere Benutzer](mrlearning-sharing(photon)-ch1.md), das <a href="https://docs.microsoft.com/azure/spatial-anchors/" target="_blank">räumliche Azure-Anker</a> für lokale Benutzer und das <a href="https://www.photonengine.com/PUN" target="_blank">Photon SDK</a> zum Synchronisieren des Inhalts/Zustands in der Szene nutzt.  Erstellen Sie lokal kollaborative Anwendungen, in denen jeder Benutzer seine eigene Perspektive auf den holograms in der Szene hat und jede vollständige Interaktion mit den holograms durchführen kann.  Updates werden auf allen Geräten bereitgestellt, und die Interaktions Konflikt Verwaltung wird von Photon behandelt.  Beachten Sie, dass es sich bei "Photon" nicht um ein Microsoft-Produkt handelt, sodass eine abrechnungsbeziehung mit "Photon" erforderlich ist, um eine höhere Auslastung zu produzieren und zu skalieren.
+
+## <a name="future-work"></a>Zukünftige Arbeit:
+Komponenten Funktionen und-Schnittstellen helfen bei der Bereitstellung allgemeiner Konsistenz und stabiler Unterstützung in den verschiedenen Szenarien und zugrunde liegenden Technologien.  Wählen Sie bis dahin den besten Weg aus, der dem Szenario entspricht, das Sie in Ihrer Anwendung erreichen möchten.
+
+Anderes Szenario oder möchten Sie eine andere Technik/einen anderen Dienst verwenden?  
+Geben Sie Feedback als GitHub-Probleme im entsprechenden Repository unten auf dieser Seite an, oder wenden Sie sich an <a href="https://holodevelopers.slack.com/">holodevelopers Slack</a>.
 
 
 ## <a name="see-also"></a>Siehe auch

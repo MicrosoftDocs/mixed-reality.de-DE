@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräte Portal, hololens
-ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 5a2440c07ade1a9c41f3c28c332748e0c97cd3ed
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694582"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020222"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräte Portals
 
@@ -52,7 +52,7 @@ Diese Dokumentation dient speziell zum Windows-Geräte Portal für hololens. Inf
 
 1. [Installieren Sie die Tools](install-the-tools.md) , um sicherzustellen, dass Visual Studio Update 1 mit den Windows 10-Entwicklertools auf Ihrem PC installiert ist. Hierdurch wird USB-Konnektivität aktiviert.
 2. Schließen Sie die HoloLens mit einem Micro-USB-Kabel am PC an.
-3. Rufen Sie in einem Webbrowser auf dem PC „http://127.0.0.1:10080“ auf.
+3. Wechseln Sie in einem Webbrowser auf Ihrem PC zu [http://127.0.0.1:10080](http://127.0.0.1:10080).
 
 ## <a name="connecting-to-an-emulator"></a>Herstellen einer Verbindung mit einem Emulator
 
@@ -126,7 +126,7 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
 * Zoom: Maus scrollen.
 * **Überwachungs Optionen**
    * Aktivieren der kontinuierlichen visuellen Nachverfolgung durch Aktivieren der **visuellen Nachverfolgung erzwingen**. 
-   * **Anhalten beendet** visuelle Überwachung.
+   * Anhalten beendet visuelle Überwachung.
 * **Anzeigeoptionen**: Legen Sie Optionen für die 3D-Ansicht fest:
   * Nach **Verfolgung**: Gibt an, ob die visuelle Überwachung aktiv ist.
   * **Floor anzeigen**: Zeigt eine auf einem aktivierter Bodenebene an.
@@ -215,7 +215,7 @@ Verwaltet die apps, die auf den hololens installiert sind.
 * **Ausführen von apps**: Listet apps auf, die derzeit ausgeführt werden.
 * **App installieren**: Wählen Sie App-Pakete für die Installation aus einem Ordner auf Ihrem Computer/Netzwerk aus.
 * **Abhängigkeit**: Fügen Sie Abhängigkeiten für die APP hinzu, die Sie installieren möchten.
-* Bereit **stellen:** Stellen Sie die ausgewählten apps und Abhängigkeiten in den hololens bereit.
+* Bereitstellen: Stellen Sie die ausgewählten apps und Abhängigkeiten in den hololens bereit.
 
 ### <a name="app-crash-dumps"></a>Absturz Abbilder für apps
 

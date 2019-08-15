@@ -6,16 +6,16 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Gemischte Realität, Gesten, Interaktion, Entwurf
-ms.openlocfilehash: 8094caaf8a5d805606e9dac11ece56bc50122e5d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 70b03c6fa327bd987a681bba59abb725c3ddc6b4
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829769"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020215"
 ---
 # <a name="gestures"></a>Gesten
 
-Hand Gesten ermöglichen Benutzern das Ausführen von Aktionen in gemischter Realität. Die Interaktion basiert auf dem **Blick** auf das Ziel und die **Geste** oder **Stimme** , um auf das gewünschte Element zu reagieren. Hand Gesten bieten keine genaue Position im Raum, aber die Einfachheit der Verwendung von hololens und die sofortige Interaktion mit Inhalten ermöglicht es den Benutzern, ohne weitere Zubehör zu arbeiten.
+Hand Gesten ermöglichen es Benutzern, Aktionen in gemischter Realität auszuführen. Die Interaktion basiert auf dem **Blick** auf das Ziel und die **Geste** oder **Stimme** , um auf das gewünschte Element zu reagieren. Hand Gesten bieten keine genaue Position im Raum, aber die Einfachheit der Verwendung von hololens und die sofortige Interaktion mit Inhalten ermöglicht es den Benutzern, ohne weitere Zubehör zu arbeiten.
 
 <br>
 

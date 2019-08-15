@@ -3,15 +3,15 @@ title: Hololens-Emulator-Archiv
 description: Liste der veröffentlichten Builds des Microsoft hololens-Emulators.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 4/25/2019
+ms.date: 8/14/2019
 ms.topic: article
 keywords: Hololens, Emulator, Builds, Versionen
-ms.openlocfilehash: b209e444c223c3183d2680976f68c33a3b6ed79b
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 548e8fb72af137e53c10c4507c56f29c8bd6a4ca
+ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694431"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030150"
 ---
 Der hololens-Emulator (1st Gen) und der hololens 2-emulatorbuild werden nebeneinander installiert. Im Allgemeinen wird empfohlen, den neuesten verfügbaren Build zu verwenden. es gibt jedoch Fälle, in denen Sie eine APP mit einem alten Emulator testen möchten oder müssen. Diese Seite enthält Links zu freigegebenen Versionen.
 
@@ -21,7 +21,8 @@ Der hololens-Emulator (1st Gen) und der hololens 2-emulatorbuild werden nebenein
 
 |  Build |  Veröffentlichungsdatum |  Hinweise | 
 |----------|----------|----------|
-|  [Hololens 2-emulatorbuild 10.0.18362.1021](https://go.microsoft.com/fwlink/?linkid=2098508) | 8\. Juli 2019 | Letzter hololens 2-Build.  Adressiert ein Signatur Problem mit diskstream. dll. |
+|  [Hololens 2-emulatorbuild 10.0.18362.1028](https://go.microsoft.com/fwlink/?linkid=2101019) | 14. August 2019 | Der Buildvorgang vom August 2019 hololens 2.  Holographic-App-Vorlagen sind nicht mehr enthalten, sind aber im Visual Studio Marketplace ab September 2019 verfügbar.  Der Emulator funktioniert nun, wenn sdche an einem benutzerdefinierten Speicherort installiert werden. |
+|  [Hololens 2-emulatorbuild 10.0.18362.1021](https://go.microsoft.com/fwlink/?linkid=2098508) | 8\. Juli 2019 | Adressiert ein Signatur Problem mit diskstream. dll. |
 |  [Hololens 2-emulatorbuild 10.0.18362.1019](https://go.microsoft.com/fwlink/?linkid=2095316) | 11. Juni 2019 | Muss nicht mehr als Administrator ausgeführt werden.  Die Start Menü Verknüpfung wurde hinzugefügt. |
 |  [Hololens 2-emulatorbuild 10.0.18362.1005](https://go.microsoft.com/fwlink/?linkid=2087187) | 16. April, 2019 |  |
 
