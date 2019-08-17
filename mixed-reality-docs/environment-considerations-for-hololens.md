@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: Holographic Frame, Feld of View, FOV, Kalibrierung, Spaces, Environment, How-to
-ms.openlocfilehash: 0070455792e09cd59741362b201ca6b7b9af0aec
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670171"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69565987"
 ---
 # <a name="environment-considerations-for-hololens"></a>Überlegungen zur Umgebung für hololens
 
@@ -21,7 +21,7 @@ Die von Ihnen platzierten Hologramme bleiben erhalten, wo Sie sie abgelegt haben
 
 ## <a name="setting-up-an-environment"></a>Einrichten einer Umgebung
 
-Hololens-Geräte wissen, wie Sie stabile und exakte holograms platzieren können, indem Sie Benutzer in einem Bereich nach *verfolgen* . Ohne die richtige Nachverfolgung versteht das Gerät die Umgebung oder den darin enthaltenen Benutzer nicht. Daher können holograms an den falschen Stellen angezeigt werden, werden nicht jedes Mal an derselben Stelle angezeigt, oder Sie werden überhaupt nicht angezeigt.
+Hololens-Geräte wissen, wie Sie stabile und exakte holograms platzieren können, indem Sie Benutzer in einem Bereich nach *verfolgen* . Ohne die richtige Nachverfolgung versteht das Gerät die Umgebung oder den darin enthaltenen Benutzer nicht. Daher können holograms an den falschen Stellen angezeigt werden, werden nicht jedes Mal an derselben Stelle angezeigt, oder Sie werden überhaupt nicht angezeigt. Die Daten, die zum Nachverfolgen von Benutzern verwendet werden, werden in der *räumlichen Karte*dargestellt. 
 
 Die Nachverfolgung der Leistung hängt stark von der Umgebung ab, in der sich der Benutzer befindet, und das Optimieren einer Umgebung, um eine stabile und konsistente Nachverfolgung auszulösen, ist eine Kunst und keine Wissenschaft. Viele verschiedene Umgebungsfaktoren werden kombiniert, um die Nachverfolgung zu ermöglichen. als Entwickler für gemischte Realität können Sie jedoch verschiedene Faktoren beachten, um einen Raum für eine bessere Überwachung zu optimieren.
  
@@ -55,10 +55,12 @@ Wenn Sie über zwei Bereiche oder Bereiche verfügen, die gleich aussehen, könn
 
 Um Wurm Lücken zu verhindern, versuchen Sie, identische Bereiche im gleichen Bereich zu verhindern. Identische Bereiche können auch Factory-Stationen, Fenster in einem Gebäude, Server Racks oder Arbeitsstationen enthalten. Durch das bezeichnen von Bereichen oder das Hinzufügen eindeutiger Features zu jedem ähnlich aussehenden Bereich können Wurm Lücken verringert werden.
  
-### <a name="temporal-stability-of-a-space"></a>Temporale Stabilität eines leer Zeichens
+### <a name="movement-in-a-space"></a>Bewegung in einem Leerzeichen
 Wenn sich Ihre Umgebung ständig verschiebt und ändert, verfügt das Gerät nicht über stabile Features, die für das Gerät zu finden sind. 
 
 Die verschiebenden Objekte, die sich in einem Leerzeichen befinden, einschließlich der Personen, desto einfacher ist es, die Nachverfolgung zu verlieren. Das Verschieben von baubändern, Elementen in verschiedenen Konstruktions Zuständen und vielen Personen in einem Bereich hat bekanntermaßen Probleme Nachverfolgung verursacht.
+
+Die hololens können schnell an diese Änderungen angepasst werden, jedoch nur, wenn dieser Bereich für das Gerät eindeutig sichtbar ist. Bereiche, die nicht als häufig angesehen werden, können hinter der Realität liegen, was zu Fehlern in der räumlichen Karte führen kann. Ein Benutzer scannt z. b. einen Freund und schaltet sich um, während der Friend den Raum verlässt. Eine "inaktive" Darstellung des Friend behält die räumlichen Daten der Zuordnung bei, bis der Benutzer den nun leeren Bereich erneut scannt.
  
 ### <a name="proximity-of-the-user-to-items-in-the-space"></a>Benutzer Nähe zu Elementen im Raum
 Ähnlich wie bei der Konzentration von Objekten auf Objekte, die sich in der Nähe der Augen befinden, kämpfen hololens, wenn sich Objekte in der Nähe der Kameras befinden. Wenn ein Objekt zu nah ist, um mit beiden Kameras sichtbar zu sein, oder wenn ein Objekt eine Kamera blockiert, hat das Gerät weitaus mehr Probleme bei der Überwachung des Objekts. 
@@ -76,11 +78,7 @@ Solange WiFi aktiviert ist, werden Kartendaten mit einem WiFi-Fingerabdruck korr
 Die Netzwerk Identifizierung (d.h. SSID, Mac-Adresse) wird nicht an Microsoft gesendet, und alle WiFi-Verweise werden lokal auf den hololens gespeichert.
 
 ## <a name="mapping-new-spaces"></a>Zuordnung neuer Leerzeichen
-Wenn Sie ein neues Leerzeichen eingeben (oder ein vorhandenes laden), wird eine Mesh-Grafik angezeigt, die den Bereich verteilt. Dies bedeutet, dass Ihr Gerät [Ihrer Umgebung](spatial-mapping-design.md)entspricht. 
-
-Wenn Sie Probleme beim Platzieren von holograms haben, versuchen Sie, den Raum zu durchlaufen, damit hololens ihn vollständig zuordnen kann. 
-
-Wenn Ihre hololens Ihren Speicherplatz nicht zuordnen können oder nicht. Im eingeschränkten Modus können Sie holograms nicht in Ihrer Umgebung platzieren.
+Wenn Sie ein neues Leerzeichen eingeben (oder ein vorhandenes laden), wird eine Mesh-Grafik angezeigt, die den Bereich verteilt. Dies bedeutet, dass Ihr Gerät Ihrer Umgebung entspricht. Während ein hololens im Laufe der Zeit einen Raum erfährt, gibt es [Tipps und Tricks, um Leerzeichen](use-hololens-in-new-spaces.md)zuzuordnen. 
 
 ## <a name="environment-management"></a>Umgebungs Verwaltung
 Es gibt zwei Einstellungen, mit denen die Benutzer die Möglichkeit haben, Hologramme zu "bereinigen" und "hololens" ein Leerzeichen zu "vergessen".  Sie sind in "holograms und Umgebungen" in der App "Einstellungen" vorhanden, wobei die zweite Einstellung auch unter "Datenschutz" in der App "Einstellungen" angezeigt wird.
@@ -89,20 +87,14 @@ Es gibt zwei Einstellungen, mit denen die Benutzer die Möglichkeit haben, Holog
 
 2.  Alle holograms löschen – wenn Sie diese Einstellung auswählen, werden hololens alle Zuordnungs Daten löschen und Hologramme in den gesamten Daten Bank Bereichen verankert.  Es werden keine holograms wiedererkannt, und alle Hologramme müssen neu platziert werden, um Kartenabschnitte in der Datenbank zu speichern.
 
-### <a name="managing-your-spaces"></a>Verwalten von Leerzeichen
-
-Die Kartenabschnitte und verschiedene Leerzeichen wurden in eine einzelne Datenbank reduziert und lokal auf dem hololens-Gerät gespeichert. Die Map-Datenbank wird sicher gespeichert, und der Zugriff ist nur für das interne System und nie für einen Benutzer des Geräts verfügbar. Dies gilt auch, wenn Sie an einen PC angeschlossen sind und/oder die Datei-Explorer-App verwenden. Wenn BitLocker aktiviert ist, werden auch die gespeicherten Kartendaten verschlüsselt.
-
-Mehrere Kartenkomponenten sind vorhanden, wenn Hologramme an unterschiedlichen Positionen platziert werden, ohne dass ein konnektivitätspfad zwischen den Orten/holograms vorhanden ist.  Holograms, die innerhalb desselben Karten Abschnitts verankert sind, werden im aktuellen Bereich als "nahe" betrachtet.
-
-Es gibt eine Entwickler-API zum Exportieren einer kleinen Teilmenge des "aktuellen Raums" (einen Teil der derzeit erkannten Zuordnungs Komponente), um freigegebene – Hologramm-Szenarien zu ermöglichen.  Zurzeit gibt es keinen Mechanismus, um die gesamte Datenbank aller zugeordneten Leerzeichen herunterzuladen.
-
 
 ## <a name="hologram-quality"></a>Hologram-Qualität
 
 Holograms können in Ihrer Umgebung platziert werden – hoch, niedrig und alle um Sie – Sie werden jedoch über einen [Holographic-Frame](holographic-frame.md) angezeigt, der vor ihren Augen liegt. Um die beste Ansicht zu erhalten, stellen Sie sicher, dass Sie Ihr Gerät anpassen, damit Sie den gesamten Frame sehen können. Und erfahren Sie nicht, wie Sie Ihre Umgebung durchlaufen und entdecken!
 
 Damit Ihre [Hologramme](hologram.md) scharf, klar und stabil aussehen, müssen ihre hololens nur für Sie abgestimmt werden. Wenn Sie Ihre hololens zum ersten Mal einrichten, werden Sie durch diesen Vorgang geleitet. Wenn holograms später nicht mehr richtig aussehen oder viele Fehler auftreten, können Sie Anpassungen vornehmen.
+
+Wenn Sie Probleme bei der Zuordnung von Leerzeichen haben, versuchen Sie, nahe gelegene Hologramme zu löschen und den Speicherplatz neu zuzuordnen.
 
 ### <a name="calibration"></a>Energie
 
@@ -118,3 +110,4 @@ Wenn eine andere Person ihre hololens verwendet, sollten Sie die Kalibrierungs-A
 * [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
 * [Hologramme](hologram.md)
 * [Kalibrierung](calibration.md)
+* [Verwenden von hololens in neuen Leerzeichen](use-hololens-in-new-spaces.md)

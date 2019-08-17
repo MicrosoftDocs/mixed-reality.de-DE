@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, Tutorial, Geste
-ms.openlocfilehash: 76d2b4c0ac3d0a3783b091f7dc8c39548a18b548
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 694f51f1b56588e100d6d2676a8194d7e9936133
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522458"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559885"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -46,7 +46,7 @@ In diesem Kurs besuchen wir den Unity-Projekt **Modell-Explorer**, den wir in de
 
 ## <a name="before-you-start"></a>Bevor Sie beginnen
 
-### <a name="prerequisites"></a>Vorraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 * Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md)konfiguriert ist.
 * Einige Grund C# Legende Programmiermöglichkeiten.
@@ -64,7 +64,7 @@ In diesem Kurs besuchen wir den Unity-Projekt **Modell-Explorer**, den wir in de
 
 ### <a name="errata-and-notes"></a>Errata und Notizen
 
-* "Enable nur eigenen Code" muss in Visual Studio unter "Extras-> Optionen" deaktiviert*werden (>* Debuggen, um Breakpoints im Code zu erreichen.
+* "Enable nur eigenen Code" muss in Visual Studio unter"Extras-> Optionen" deaktiviert werden (> Debuggen, um Breakpoints im Code zu erreichen.
 
 ## <a name="chapter-0---unity-setup"></a>Kapitel 0: Einrichtung von Unity
 
@@ -83,7 +83,7 @@ In diesem Kurs besuchen wir den Unity-Projekt **Modell-Explorer**, den wir in de
 1. Wählen Sie in Unity **Datei >** Buildeinstellungen aus.
 2. Wenn **Szenen/Model Explorer** nicht in **Szenen im Build**aufgeführt ist, klicken Sie auf **offene Szenen hinzufügen** , um die Szene hinzuzufügen.
 3. Wenn Sie speziell für hololens entwickeln, legen Sie **Zielgerät** auf **hololens**fest. Andernfalls sollten Sie es auf **jedem Gerät**belassen.
-4. Stellen  Sie sicher, dass der Buildtyp auf **D3D** und das **SDK** auf **Latest installiert** festgelegt ist (was SDK 16299 oder höher sein sollte).
+4. Stellen Sie sicher, dass der Buildtyp auf **D3D** und das **SDK** auf **Latest installiert** festgelegt ist (was SDK 16299 oder höher sein sollte).
 5. Klicken Sie auf **Erstellen**.
 6. Erstellen Sie einen **neuen Ordner** mit dem Namen "App".
 7. Klicken Sie einfach auf den **App** -Ordner.
@@ -107,7 +107,7 @@ Bei der Bereitstellung auf einem immersiven Headset:
 1. Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x64**.
 2. Stellen Sie sicher, dass das Bereitstellungs Ziel auf **lokaler Computer**festgelegt ist.
 3. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
-4. Wenn die APP bereitgestellt wurde, schließen Sie die Funktion **, indem Sie** den-Typ auf einen Bewegungs Controller ziehen.
+4. Wenn die APP bereitgestellt wurde, schließen Sie die Funktion, indem Sie den-Typ auf einen Bewegungs Controller ziehen.
 
 >[!NOTE]
 >Im Visual Studio-Fehler Panel werden möglicherweise einige rote Fehler feststellen. Es ist sicher, Sie zu ignorieren. Wechseln Sie zum Ausgabebereich, um den tatsächlichen buildfortschritt anzuzeigen. Fehler im Ausgabe Panel erfordern eine Korrektur (meistens werden Sie durch einen Fehler in einem Skript verursacht).
@@ -120,6 +120,9 @@ Bei der Bereitstellung auf einem immersiven Headset:
 
 * Hiermit werden die Hand Verfolgungs Ereignisse abonniert.
 * Mit Cursor Feedback können Sie Benutzer anzeigen, wenn eine Hand nachverfolgt wird.
+
+>[!NOTE]
+>Bei hololens 2 werden Hände erkannt, wenn die Hände sichtbar sind (nicht nur, wenn ein Finger nach oben zeigt).
 
 ### <a name="instructions"></a>Anweisungen
 
@@ -142,7 +145,7 @@ Als nächstes aktualisieren wir den Cursor von der [Mr-Eingabe 210](holograms-21
 
 Die **Cursor Zustandsdaten** funktionieren wie folgt:
 
-* Jeder **Status** der Überprüfung bedeutet, dass keine Hand erkannt wird und der Benutzer einfach eine Suche durchführt.
+* Jeder Status der Überprüfung bedeutet, dass keine Hand erkannt wird und der Benutzer einfach eine Suche durchführt.
 * Jeder **Interaktions** Zustand bedeutet, dass eine Hand oder ein Controller erkannt wird.
 * Jeder **Hover** -Zustand bedeutet, dass der Benutzer ein Hologram ansieht.
 
@@ -367,7 +370,7 @@ Als nächstes richten wir das Manipulations Feedback für den Cursor ein.
 1. Suchen Sie im **Projekt** Panel **holograms** -Ordner das **pathingfeedback** -Asset.
 2. Ziehen Sie die vorfab **pathingfeedback** per Drag & amp; Drop auf das **Cursor** Objekt in der **Hierarchie**.
 3. Klicken Sie im **Hierarchie** Panel auf " **Cursor**".
-4. Ziehen Sie das **pathingfeedback** -Objekt per Drag & amp; Drop aus der- **Hierarchie** auf die  Eigenschaft für die Eigenschaft "" für das **festgelegte Spiel** im **Inspektor**.
+4. Ziehen Sie das **pathingfeedback** -Objekt per Drag & amp; Drop aus der- **Hierarchie** auf die Eigenschaft für die Eigenschaft "" für das **festgelegte Spiel** im **Inspektor**.
 
 Nun müssen Sie **GestureAction.cs** Code hinzufügen, um Folgendes zu ermöglichen:
 

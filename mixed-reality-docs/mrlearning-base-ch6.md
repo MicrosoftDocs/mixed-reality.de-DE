@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: f45aa7e2f07a8a67cd56f0aae140de3a68afc918
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701991"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559888"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Erstellen einer Beispielanwendung für ein Mond Modul
 
@@ -51,7 +51,7 @@ Wenn Sie das Launcher_Tutorial-Spielobjekt in der Hierarchie erweitern und das M
 
 > Hinweis: Die Spielobjekt Namen, die in der Basis Szenen Hierarchie angezeigt werden, entsprechen nicht den Namen der Objekte in der Szene.
 
-Schritt 2: Fügen Sie der Mondlandefähre eine Audioquelle hinzu. Stellen Sie sicher, dass das Mondmodul in der Basis Szenen Hierarchie ausgewählt ist, und klicken Sie auf Komponente hinzufügen. Suchen Sie nach Audioquelle, und fügen Sie Sie dem-Objekt hinzu. Lassen Sie es vorerst leer. Wir werden damit später den Startsound wiedergegeben.
+Schritt 2: Fügen Sie der Mondlandefähre eine Audioquelle hinzu. Stellen Sie sicher, dass das Mondmodul in der Basis Szenen Hierarchie ausgewählt ist, und klicken Sie auf Komponente hinzufügen. Suchen Sie nach Audioquelle, und fügen Sie Sie dem-Objekt hinzu. Lassen Sie das Feld jetzt leer, aber vergewissern Sie sich, dass Sie das Kontrollkästchen "spatialize" aktivieren, um räumliche Audiodaten zu aktivieren. Wir werden damit später den Startsound wiedergegeben.
 
  ![Lesson6 Chapter1 Step2im](images/Lesson6_Chapter1_step2im.PNG)  
 Schritt 3: Fügen Sie das Skript hinzu, und schalten Sie Platzierungs Hinweise um. Klicken Sie auf Komponente hinzufügen, und suchen Sie nach Platzierungs Hinweisen zum Umschalten. Dabei handelt es sich um ein benutzerdefiniertes Skript, mit dem Sie die weiter oben erwähnten durchlässigen Hinweise (Objekte mit dem x-ray-Material) aktivieren und deaktivieren können.  

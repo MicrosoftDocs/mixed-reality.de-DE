@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gemischte Windows-Realität, Entwurf, räumliche Zuordnung, hololens, Oberflächenrekonstruktion, Mesh
-ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 02e64727f9a23bea28e018d7c4e5a8b89c152447
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829958"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566008"
 ---
 # <a name="spatial-mapping-design"></a>Entwurf für räumliche Zuordnung
 
@@ -45,49 +45,9 @@ Visualisieren von Oberflächen beim platzieren oder Verschieben von holograms (V
 
 ## <a name="what-influences-spatial-mapping-quality"></a>Was beeinflusst die Qualität der räumlichen Zuordnung?
 
-Um die bestmögliche Benutzer Leistung zu gewährleisten, ist es wichtig, die Faktoren zu verstehen, die sich auf die Qualität räumlicher Mapping-Daten auswirken, die von hololens gesammelt werden.
-
-Fehler bei räumlichen Zuordnungsdaten lassen sich in eine von drei Kategorien unterteilen:
-* **Löcher**: In den räumlichen Mapping-Daten fehlen reale Oberflächen.
-* **Halluerationen**: In den räumlichen Mapping-Daten, die nicht in der realen Welt vorhanden sind, sind Oberflächen vorhanden.
-* **Bias**: Oberflächen in den räumlichen Zuordnungsdaten sind unpassend an realen Oberflächen ausgerichtet, die entweder per pushübertragung oder ausgecheckt werden.
-
-Die Häufigkeit und der Schweregrad dieser Fehler können durch mehrere Faktoren beeinflusst werden:
-
-* **Benutzer Bewegung**
-   * Die Art und Weise, wie der Benutzer die Umgebung durchläuft, bestimmt, wie gut die Umgebung gescannt wird, sodass der Benutzer möglicherweise Anleitungen benötigt, um eine gute Überprüfung zu erzielen.
-   * Die Kamera, die für die Überprüfung verwendet wird, stellt Daten innerhalb eines 70-Grad-Cone dar, von mindestens 0,8 Meter bis zu einer maximalen Länge von 3,1 Meter von der Kamera. Reale Oberflächen werden nur in diesem Feld der Ansicht gescannt. Beachten Sie, dass diese Werte in zukünftigen Versionen geändert werden können.
-   * Wenn der Benutzer nie innerhalb von 3,1 Meter eines Objekts gelangt, wird er nicht gescannt.
-   * Wenn der Benutzer nur ein Objekt aus einer Entfernung von weniger als 0,8 Metern anzeigt, wird es nicht gescannt (Dadurch wird das Scannen der Benutzer Hände vermieden).
-   * Wenn der Benutzer nicht nach oben sucht (was relativ normal ist), wird die Obergrenze wahrscheinlich nicht gescannt.
-   * Wenn ein Benutzer niemals hinter einem Möbel oder einer Wand sucht, werden die Objekte, die von Ihnen ausgeblendet werden, nicht gescannt.
-   * Oberflächen werden in der Regel mit einer höheren Qualität gescannt, wenn Sie nicht in einem flachen Winkel angezeigt werden.
-   * Wenn das Head-Tracking-System der hololens vorübergehend ausfällt (was möglicherweise auf eine schnelle Benutzer Bewegung, schlechte Beleuchtung, featulose Wände oder die Kameras zurückzuführen ist), kann dies zu Fehlern in den räumlichen Zuordnungs Daten führen. Alle diese Fehler werden im Laufe der Zeit korrigiert, wenn der Benutzer die Navigation fortsetzt und seine Umgebung scannt.
-
-* **Oberflächenmaterialien**
-   * Die Materialien, die auf realen Oberflächen gefunden werden, unterscheiden sich erheblich. Dies hat Auswirkungen auf die Qualität räumlicher Daten, da Sie sich darauf auswirken, wie Infrarotlicht reflektiert wird.
-   * Dunkle Oberflächen werden möglicherweise erst überprüft, wenn Sie sich näher an der Kamera befinden, da Sie weniger Licht widerspiegeln.
-   * Einige Oberflächen sind möglicherweise so dunkel, dass Sie zu wenig Licht darstellen, um von einer beliebigen Entfernung gescannt zu werden, sodass Sie an der Stelle der Oberfläche und manchmal auch hinter der Oberfläche einen Fehler mit Fehlern verursachen.
-   * Besonders glänzende Oberflächen können nur bei angezeigter Ansicht überprüft werden und nicht, wenn Sie von einem flachen Winkel aus angezeigt werden.
-   * Spiegelungen, da Sie eine Illusion von echten Leerzeichen und Oberflächen erzeugen, kann sowohl zu einer Fehlerursache als auch zu einem Fehler bei der hallulierung führen
-
-* **Szene Bewegung**
-   * Räumliche Zustellungen werden schnell an Änderungen in der Umgebung angepasst, z. b. das Verschieben von Menschen oder öffnenden und schließenden Türen.
-   * Die räumliche Zuordnung kann jedoch nur an Änderungen in einem Bereich angepasst werden, wenn der Bereich für die Kamera, die für die Überprüfung verwendet wird, eindeutig sichtbar ist.
-   * Aus diesem Grund ist es möglich, dass diese Anpassung hinter der Realität liegt, was zu Fehlern bei der Verlangsamung oder der halluination führen kann.
-   * Ein Benutzer scannt z. b. einen Friend und schaltet sich um, während der Friend den Raum verlässt. Eine "inaktive" Darstellung des Friend-Zeichens (ein volumenfehler) bleibt in den räumlichen Zuordnungsdaten erhalten, bis der Benutzer wieder zurückkehrt und den Bereich, in dem der Friend Stand, erneut scannt.
-
-* **Beleuchtungs Störungen**
-   * Ambient-Infrarotbeleuchtung in der Szene kann die Überprüfung beeinträchtigen, z. b. durch ein Fenster.
-   * Besonders glänzende Oberflächen beeinträchtigen möglicherweise die Überprüfung von nahe gelegenen Oberflächen, sodass das Licht abspringt, was zu Konflikten führt.
-   * Glanz Oberflächen, die das Licht direkt zurück in die Kamera reflektieren, können den nahe gelegenen Raum beeinträchtigen, entweder durch die Verwendung von Gleit Komma Zahlen oder durch verzögern der Anpassung an Szene Bewegung.
-   * Zwei hololens-Geräte im gleichen Raum sollten sich nicht gegenseitig stören, aber das vorhanden sein von mehr als fünf hololens-Geräten kann zu Störungen führen.
-
-Möglicherweise ist es möglich, einige dieser Fehler zu vermeiden oder zu korrigieren. Allerdings sollten Sie Ihre Anwendung so entwerfen, dass der Benutzer auch bei Fehlern in den räumlichen Daten der Zuordnung seine Ziele erreichen kann.
+Mehrere [hier](environment-considerations-for-hololens.md)ausführliche Faktoren können die Häufigkeit und den Schweregrad dieser Fehler beeinflussen.  Allerdings sollten Sie Ihre Anwendung so entwerfen, dass der Benutzer auch bei Fehlern in den räumlichen Daten der Zuordnung seine Ziele erreichen kann.
 
 ## <a name="the-environment-scanning-experience"></a>Umgebung zum Scannen der Umgebung
-
-Hololens erfährt über die Oberflächen in der Umgebung, während der Benutzer Sie anschaut. Im Laufe der Zeit erstellt der hololens eine Überprüfung aller Teile der Umgebung, die beobachtet wurden. Außerdem wird die Überprüfung aktualisiert, wenn Änderungen in der Umgebung beobachtet werden. Diese Überprüfung wird automatisch zwischen App-Starts beibehalten.
 
 Jede Anwendung, die räumliche Zuordnung verwendet, sollte die Bereitstellung einer "Scan Darstellung" in Erwägung gezogen werden. der Prozess, durch den die Anwendung den Benutzer zum Überprüfen von Oberflächen führt, die für eine ordnungsgemäße Funktionsweise der Anwendung erforderlich sind.
 
@@ -98,13 +58,13 @@ Die Art dieser Scanfunktion kann sich je nach Anforderungen der Anwendung stark 
 
 Erstens **ist die klare Kommunikation mit dem Benutzer das primäre Problem**. Der Benutzer sollte immer wissen, ob die Anforderungen der Anwendung erfüllt werden. Wenn Sie nicht erfüllt werden, sollten Sie dem Benutzer sofort klar sein, warum dies der Fall ist, und Sie sollten schnell dazu führen, dass Sie die entsprechende Aktion ausführen.
 
-Zweitens **sollten Anwendungen versuchen, ein Gleichgewicht zwischen Effizienz und Zuverlässigkeit zu erzielen**. Wenn dies möglich **ist, sollten**Anwendungen räumliche Daten automatisch analysieren, um die Benutzer Zeit zu sparen. Wenn es nicht möglich ist, dies zuverlässig zu tun, sollten Anwendungen den Benutzer stattdessen ermöglichen, der Anwendung schnell die zusätzlichen Informationen bereitzustellen, die Sie benötigt.
+Zweitens **sollten Anwendungen versuchen, ein Gleichgewicht zwischen Effizienz und Zuverlässigkeit zu erzielen**. Wenn dies möglich ist, sollten Anwendungenräumliche Daten automatisch analysieren, um die Benutzer Zeit zu sparen. Wenn es nicht möglich ist, dies zuverlässig zu tun, sollten Anwendungen den Benutzer stattdessen ermöglichen, der Anwendung schnell die zusätzlichen Informationen bereitzustellen, die Sie benötigt.
 
 Wenn Sie die richtige Scanfunktion entwerfen möchten, sollten Sie die folgenden Möglichkeiten für Ihre Anwendung beachten:
 
 * **Keine Scanvorgänge**
    * Eine Anwendung funktioniert problemlos, ohne dass eine gesteuerte Überprüfung durchgeführt werden kann. Sie erfahren mehr über Oberflächen, die im Kurs der natürlichen Benutzer Bewegung beobachtet werden.
-   * Eine Anwendung, die es dem Benutzer ermöglicht, auf Oberflächen mit Holographic spraypaint zu zeichnen, benötigt z. b. wissen, dass nur die Oberflächen für den Benutzer sichtbar sind.
+   * Eine Anwendung, die es dem Benutzer ermöglicht, auf Oberflächen mit Holographic Spray Paint zu zeichnen, benötigt z. b. wissen, dass nur die Oberflächen für den Benutzer sichtbar sind.
    * Die Umgebung wird möglicherweise bereits vollständig gescannt, wenn Sie eine solche ist, in der der Benutzer bereits viel Zeit für die Verwendung der hololens aufgewendet hat.
    * Bedenken Sie jedoch, dass für die Kamera, die von der räumlichen Zuordnung verwendet wird, nur 3.1 m vor dem Benutzer angezeigt werden kann, sodass die räumliche Zuordnung keine weiteren entfernten Oberflächen kennt, es sei denn, der Benutzer hat Sie in der Vergangenheit in der Vergangenheit beobachtet.
    * Damit der Benutzer weiß, welche Oberflächen gescannt wurden, sollte die Anwendung diesem Effekt visuelles Feedback bereitstellen, z. b. Wenn Sie virtuelle Schatten in überprüfte Oberflächen umwandeln, kann der Benutzer möglicherweise holograms auf diesen Oberflächen platzieren.
