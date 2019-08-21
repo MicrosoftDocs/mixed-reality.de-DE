@@ -1,3 +1,3 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source Verhaltenskodex
-Dieses Projekt folgt dem [Microsoft Open Source-Verhaltenskodex](https://opensource.microsoft.com/codeofconduct/).
-Weitere Informationen finden Sie unter den [Code von durchführen – häufig gestellte Fragen](https://opensource.microsoft.com/codeofconduct/faq/) oder wenden Sie sich an [ opencode@microsoft.com ](mailto:opencode@microsoft.com) weitere Fragen und Kommentare.
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source-Verhaltenskodex
+Dieses Projekt hat den [Microsoft Open Source-Verhaltenskodex](https://opensource.microsoft.com/codeofconduct/)übernommen.
+Weitere Informationen finden Sie in den [häufig gestellten Fragen zum Verhaltenskodex](https://opensource.microsoft.com/codeofconduct/faq/). Wenden Sie sich an [opencode@microsoft.com](mailto:opencode@microsoft.com), wenn Sie Fragen oder Anregungen haben.

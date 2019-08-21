@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 70f84c1ec03919a15bed486ffa51fb57db39deec
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702048"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977969"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Speichern, abrufen und Freigeben von räumlichen Azure-Ankern
 
@@ -46,13 +46,13 @@ In diesem Tutorial erfahren Sie, wie Sie unsere räumlichen Azure-Anker in mehre
 
    - Erstellen Sie für die Schaltfläche getfromdisk ein neues Ereignis sowohl unter dem Schaltflächen-gedrückten Ereignis-als auch auf dem Click-Ereignis-Auslösers. Ziehen Sie das Objekt "objeanchor" in das leere Feld, und weisen Sie die Methode "loadazureanchoridsfromdisk ()" aus der Komponente "asamodulescript" des Objekts "Objektanchor" zu.
 
-3. Befolgen Sie die Anweisungen von tuum 1, um die aktualisierte Anwendung auf Ihrem Gerät zu erstellen. Nachdem Sie die Schaltfläche Azure Anchor erstellen wie in der vorherigen Lektion gedrückt haben, können Sie die Azure-Anker-ID jetzt auf dem Datenträger speichern, indem Sie die Schaltfläche auf Datenträger speichern drücken.
+3. Befolgen Sie die Anweisungen in Tutorial 1, um die aktualisierte Anwendung auf Ihrem Gerät zu erstellen. Nachdem Sie die Schaltfläche Azure Anchor erstellen wie in der vorherigen Lektion gedrückt haben, können Sie die Azure-Anker-ID jetzt auf dem Datenträger speichern, indem Sie die Schaltfläche auf Datenträger speichern drücken.
 
 4. Starten Sie die Anwendung neu, starten Sie die Azure-Sitzung, klicken Sie auf Anker-ID laden, und klicken Sie dann auf Azure-Anker suchen, um den Anker zu suchen, der der ID zugeordnet ist, die wir Die gesamte Szene sollte nun an der Position, an der Sie den Anker zuvor gespeichert haben, an der Position andocken.
 
 ### <a name="share-azure-anchors-between-multiple-devices"></a>Freigeben von Azure-Ankern für mehrere Geräte
 
-In diesem Abschnitt erfahren Sie, wie Sie die Azure-Anker-ID für mehrere Geräte freigeben. Dies ermöglicht es mehreren Geräten, Azure nach der gleichen Anker-ID abzufragen, sodass die verankerten Hologramme und Szenen räumlich ausgerichtet werden können. Die räumliche Ausrichtung (das sehen der gleichen holograms am gleichen physischen Standort zwischen mehreren Geräten) ist der Schlüssel für die lokale gemeinsame Nutzung in den hololens 2. Es gibt viele Methoden zum Übertragen von Informationen in Bezug auf Azure-IDs zwischen Geräten, einschließlich der Methoden, die in den Azure Spatial Anchor-Lernprogrammen (TODO: Add Link) beschrieben werden. In diesem Beispiel wird ein einfacher Webdienst zum Hochladen und Herunterladen von Anker-IDs zwischen Geräten verwendet.
+In diesem Abschnitt erfahren Sie, wie Sie die Azure-Anker-ID für mehrere Geräte freigeben. Dies ermöglicht es mehreren Geräten, Azure nach der gleichen Anker-ID abzufragen, sodass die verankerten Hologramme und Szenen räumlich ausgerichtet werden können. Die räumliche Ausrichtung (das sehen der gleichen holograms am gleichen physischen Standort zwischen mehreren Geräten) ist der Schlüssel für die lokale gemeinsame Nutzung in den hololens 2. Es gibt viele Methoden zum Übertragen von Informationen in Bezug auf Azure-IDs zwischen Geräten, einschließlich der Methoden, die in den [Tutorials](mrlearning-sharing(photon)-ch1.md) für die gemeinsame Nutzung von Azure Spatial Anchor detailliert beschrieben werden. In diesem Beispiel wird ein einfacher Webdienst zum Hochladen und Herunterladen von Anker-IDs zwischen Geräten verwendet.
 
 1. Fügen Sie der-Hierarchie den Share Anchor-präfab hinzu. Diese Prefab fügt Ihrer Szene zwei neue Schaltflächen hinzu. eine zum Hochladen von Anker-ID-Informationen und eine weitere zum Herunterladen der Anker-ID 
 

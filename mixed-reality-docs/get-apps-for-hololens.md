@@ -1,52 +1,52 @@
 ---
-title: Abrufen von apps für HoloLens
-description: Beschreibt die Installation von apps für HoloLens, sowohl über die Microsoft Store und querladen.
+title: Apps für hololens erhalten
+description: Beschreibt die Installation von Apps für hololens, beides über das Microsoft Store und das Sideloading.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: per sideload übertragen, clientseitige auslastungs-, sideloading, Store, Uwp, -app installieren
+keywords: Sideload, Seitenlast, Sideloading, Store, UWP, APP, Installation
 ms.openlocfilehash: 5042c380e3a548e5001e045676190c2349a835a0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59593248"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522561"
 ---
-# <a name="get-apps-for-hololens"></a>Abrufen von apps für HoloLens
+# <a name="get-apps-for-hololens"></a>Apps für hololens erhalten
 
-HoloLens unterstützt viele vorhandene UWP-Anwendungen aus dem appstore als auch neue apps, die speziell für HoloLens, als ein Windows 10-Gerät. Zusätzlich dazu, möglicherweise sogar möchten [entwickeln](development-overview.md) herunter, und installieren Sie Ihre eigenen apps oder der Anmeldeinformationen Ihren Freunden!
+Als Windows 10-Gerät unterstützt hololens viele vorhandene UWP-Anwendungen aus dem App Store sowie neue apps, die speziell für hololens erstellt wurden. Darüber hinaus können Sie sogar Ihre eigenen Apps oder die Ihrer Freunde [entwickeln](development-overview.md) und installieren.
 
-## <a name="installing-apps"></a>Installieren von Apps
+## <a name="installing-apps"></a>Installieren von apps
 
-Es gibt drei Möglichkeiten, neue apps auf Ihre HoloLens zu installieren. Die primäre Methode werden neue Anwendungen aus dem Windows Store installiert werden. Allerdings können Sie auch Ihre eigenen Anwendungen mithilfe des Verwaltungsportals Gerät installieren oder indem Sie sie aus Visual Studio bereitstellen.
+Es gibt drei Möglichkeiten, neue apps auf Ihren hololens zu installieren. Die primäre Methode ist die Installation neuer Anwendungen aus dem Windows Store. Allerdings können Sie Ihre eigenen Anwendungen auch über das Geräte Portal oder durch Bereitstellung aus Visual Studio installieren.
 
-### <a name="from-the-microsoft-store"></a>Aus dem Microsoft Store
-1. Führen Sie eine [Bloom](gestures.md#bloom) Geste zum Öffnen der [Menü "Start"](navigating-the-windows-mixed-reality-home.md#start-menu).
-2. Wählen Sie die Store-app, und tippen Sie dann auf diese Kachel in Ihre Welt zu platzieren.
-3. Wenn die Store-app geöffnet wird, verwenden Sie die Suchleiste, um für alle gewünschten Anwendungen zu suchen.
-4. Wählen Sie **erhalten** oder **installieren** auf der Seite der Anwendung (eine Bestellung kann erforderlich sein).
+### <a name="from-the-microsoft-store"></a>Aus der Microsoft Store
+1. Führen Sie eine [Bloom-Geste](gestures.md#bloom) aus, um das [Startmenü](navigating-the-windows-mixed-reality-home.md#start-menu) zu öffnen.
+2. Wählen Sie die Store-App aus, und tippen Sie dann auf diese Kachel in die Welt.
+3. Nachdem die Store-App geöffnet wurde, verwenden Sie die Suchleiste, um nach einer beliebigen gewünschten Anwendung zu suchen.
+4. Wählen Sie auf der Seite der Anwendung die Option **Get** oder **install** (ein Kauf ist möglicherweise erforderlich).
 
-### <a name="installing-an-application-package-with-the-device-portal"></a>Installieren ein Anwendungspaket mit dem Device Portal
-1. Herstellen einer Verbindung zwischen [Device Portal](using-the-windows-device-portal.md) an das Ziel HoloLens.
-2. Navigieren Sie zu der **Apps** Seite im linken Navigationsbereich.
-3. Klicken Sie unter **App-Paket** navigieren Sie zu der AppX-Datei Ihrer Anwendung zugeordnet.
+### <a name="installing-an-application-package-with-the-device-portal"></a>Installieren eines Anwendungspakets mit dem Geräte Portal
+1. Stellen Sie eine Verbindung zwischen dem [Geräte Portal](using-the-windows-device-portal.md) und den Ziel-hololens her.
+2. Navigieren Sie im linken Navigationsbereich zur Seite **apps** .
+3. Navigieren Sie unter **App-Paket** zu der AppX-Datei, die Ihrer Anwendung zugeordnet ist.
   >[!IMPORTANT]
-  >Stellen Sie sicher, dass alle zugehörigen Abhängigkeiten und Zertifikat-Dateien zu verweisen.
+  >Stellen Sie sicher, dass Sie auf verknüpfte Abhängigkeits-und Zertifikat Dateien verweisen
 
-4. Klicken Sie auf **wechseln**.
+4. Klicken Sie auf **Go**.
 
-![Installieren von app-Formular in Windows Device Portal für Microsoft HoloLens](images/deviceportal-appmanager.jpg)<br>
-Mithilfe von Windows Device Portal-Installation eine app für HoloLens
+![App-Formular im Windows-Geräte Portal auf Microsoft hololens installieren](images/deviceportal-appmanager.jpg)<br>
+Verwenden des Windows-Geräte Portals zum Installieren einer APP auf hololens
 
 ### <a name="deploying-from-microsoft-visual-studio-2015"></a>Bereitstellen von Microsoft Visual Studio 2015
-1. Öffnen Sie Visual Studio-Projektmappe (SLN-Datei) Ihrer app.
-2. Öffnen des Projekts **Eigenschaften** .
-3. Wählen Sie die folgenden Build-Konfiguration: Master/X86/Remote-Computer.
-4. Wenn Sie Remotecomputer auswählen:
-   * Stellen Sie sicher die adresspunkte, die HoloLens' WiFi IP-Adresse.
-   * Festlegen der Authentifizierung auf universell (unverschlüsseltes Protokoll).
-5. Erstellen Sie die Projektmappe.
-6. Klicken Sie auf die **Remotecomputer** Schaltfläche, um die app von Ihrem Entwicklungs-PC auf Ihre HoloLens bereitgestellt. Wenn Sie bereits einen vorhandenen Build auf die HoloLens haben, wählen Sie Ja aus, um diese neuere Version neu installieren.<br>
-  ![Remote-computerbereitstellung für apps, Microsoft HoloLens in Visual Studio](images/vs2015-remotedeployment.jpg)<br>
-7. Die Anwendung installiert und automatisch zu starten, auf Ihre HoloLens.
+1. Öffnen Sie die Visual Studio-Projekt Mappe (SLN-Datei) Ihrer APP.
+2. Öffnen Sie die **Eigenschaften** des Projekts.
+3. Wählen Sie die folgende Buildkonfiguration aus: Master/x86/Remote Computer.
+4. Wenn Sie Remote Computer auswählen:
+   * Stellen Sie sicher, dass die Adresse auf die WiFi-IP-Adresse des hololens verweist.
+   * Legen Sie die Authentifizierung auf Universal (unverschlüsseltes Protokoll) fest.
+5. Erstellen Sie die Lösung.
+6. Klicken Sie auf die Schaltfläche **Remote Computer** , um die APP von Ihrem Entwicklungs-PC in ihren hololens bereitzustellen. Wenn Sie bereits über einen vorhandenen Build auf den hololens verfügen, wählen Sie ja aus, um diese neuere Version erneut zu installieren.<br>
+  ![Remote Computer Bereitstellung für Apps für Microsoft hololens in Visual Studio](images/vs2015-remotedeployment.jpg)<br>
+7. Die Anwendung wird auf Ihren hololens installiert und automatisch gestartet.
