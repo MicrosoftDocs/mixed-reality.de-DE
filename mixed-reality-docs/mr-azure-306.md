@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Media Services, Streaming-Video, 360, immersive, VR
-ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555878"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896587"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -47,7 +47,7 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im [Artikel Installieren der Tools](install-the-tools.md)aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -226,7 +226,7 @@ Zum Verwenden von Azure Media Service müssen Sie eine Instanz des Dienstanbiete
 
     ![Das Azure-Portal](images/AzureLabs-Lab6-21.png)
 
-20. Sehen Sie Ihr Video zusammen mit einem anderen vom **Ressourcentyp *Multi-Bitrate-MP4***.
+20. Ihr Video wird zusammen mit einem anderen angezeigt, d. h. vom **Ressourcentyp mit _Multi-Bitrate-MP4_** .
 
     ![Das Azure-Portal](images/AzureLabs-Lab6-22.png)
 
@@ -385,7 +385,7 @@ Gewusst wie: Importieren von **vstu**:
 
     ![Importieren des insideoutsphere Unity-Pakets](images/AzureLabs-Lab6-39.png)
 
-6.  Erweitern Sie das **insideoutsphere** -Objekt in der **Hierarchie** , indem Sie auf den kleinen Pfeil daneben klicken. Darunter **wird ein unter** geordnetes Objekt mit dem Namen " **gazebutton**" angezeigt. Diese wird verwendet, um Szenen und somit Videos zu ändern.
+6.  Erweitern Sie das **insideoutsphere** -Objekt in der **Hierarchie** , indem Sie auf den kleinen Pfeil daneben klicken. Darunter wird ein unter geordnetes Objekt mit dem Namen " **gazebutton**" angezeigt. Diese wird verwendet, um Szenen und somit Videos zu ändern.
 
     ![Importieren des insideoutsphere Unity-Pakets](images/AzureLabs-Lab6-40.png)
 
@@ -625,7 +625,7 @@ So erstellen Sie diese Klasse:
 
 1.  Wechseln Sie zum Ordner " **Scripts** ", den Sie zuvor erstellt haben.
 
-2.  Mit der rechten Maustaste den **Projekt** Bereich **erstellen* *C\# Script**. Benennen Sie das **Skript mit**dem Namen.
+2.  Mit der rechten Maustaste den **Projekt** Bereich **erstellen* *C\# Script**. Benennen Sie dasSkript mit dem Namen.
 
 3.  Doppelklicken Sie auf das neue ***Blick*** Skript, um es mit **Visual Studio 2017** zu öffnen.
 
@@ -795,7 +795,7 @@ In diesem Kapitel wird erläutert, wie Sie die beiden Kulissen einrichten, die j
 
 14. Die " **gazebutton"-Schaltfläche** ist nun teilweise aktualisiert, um anders aussehen zu können. Sie erstellen nun jedoch ein neues **Material**, damit es vollständig anders aussieht und leichter als ein anderes Objekt erkannt werden kann, als das Objekt in der ersten Szene.
 
-15. Navigieren Sie im **Projekt Panel**zum Ordner **Material** . Duplizieren **Sie das Inhalts** Material ( **STRG** + **D** auf der Tastatur, oder klicken Sie mit der linken Maustaste auf das **Material**, und wählen Sie dann in der Menüoption Datei **Bearbeiten** die Option **Duplizieren**aus.)
+15. Navigieren Sie im **Projekt Panel**zum Ordner **Material** . Duplizieren Sie das Inhalts Material ( **STRG** + **D** auf der Tastatur, oder klicken Sie mit der linken Maustaste auf das **Material**, und wählen Sie dann in der Menüoption Datei **Bearbeiten** die Option **Duplizieren**aus.)
 
     ![Kapitel 7: Einrichten der beiden Unity-Szenen](images/AzureLabs-Lab6-55.png)
     ![Kapitel 7: Einrichten der beiden Unity-Szenen](images/AzureLabs-Lab6-56.png)
@@ -855,7 +855,7 @@ Zum Bereitstellen auf dem lokalen Computer:
 
     ![Kapitel 9: Bereitstellung auf lokalem Computer](images/AzureLabs-Lab6-62.png)
 
-4.  Sie müssen nun alle Pakete in der Projekt Mappe wiederherstellen. Klicken Sie mit der rechten Maustaste **auf Ihre Projekt**Mappe, und klicken Sie auf **nuget-Pakete für Projekt Mappe wiederherstellen.**
+4.  Sie müssen nun alle Pakete in der Projekt Mappe wiederherstellen. Klicken Sie mit der rechtenMaustaste auf Ihre Projekt Mappe, und klicken Sie auf **nuget-Pakete für Projekt Mappe wiederherstellen.**
 
     > [!NOTE] 
     > Dies geschieht, da die Pakete, die von Unity erstellt werden, für die Arbeit mit Ihren lokalen Computer verweisen verwendet werden müssen.

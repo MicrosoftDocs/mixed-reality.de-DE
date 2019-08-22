@@ -1,17 +1,17 @@
 ---
 title: Asset-Erstellungs Prozess
 description: Leitfaden zum Erstellen von Assets für gemischte Realität.
-author: paseb
-ms.author: paseb
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Asset, Erstellung, Prozess, Budget, Polygone, Texturen, Shader, Leistung
-ms.openlocfilehash: 513a9856ac35e4229cfb7bc8bcb92d9d6a152980
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896506"
 ---
 # <a name="asset-creation-process"></a>Asset-Erstellungs Prozess
 
@@ -60,7 +60,7 @@ Im folgenden finden Sie ein Beispiel Budget für Ihre Benutzer. Die Leistung ist
 
 **Komplexität von Assets**
 * Wie viele Dreiecke/Polygone?
-* Wie komplex ist der Shader?
+* Wie komplex ist der Shader? Wenn Sie das Mixed Reality Toolkit verwenden, empfiehlt es sich, den [Mixed Reality Toolkit Standard-Shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) zu verwenden, um die Shader-Komplexität zu verringern.
 
 Sowohl Entwickler als auch Künstler müssen die Funktionen des Geräts und der Grafik-Engine in Erwägung gezogen werden. Microsoft hololens verfügt über alle in das Gerät integrierten Berechnungs-und Grafikdaten. Es gibt die Funktionen, die Entwickler auf einer mobilen Plattform finden.
 
@@ -77,10 +77,10 @@ Wir beginnen mit den Möglichkeiten, Ressourcen für Ihr Projekt zu erhalten:
 ### <a name="creating-assets"></a>Erstellen von Assets
 
 **Authoring Tools**<br>
-Zuerst können Sie Ihre eigenen Assets auf verschiedene Weise erstellen. 3D-Künstler verwenden eine Reihe von Anwendungen und Tools, um Modelle zu erstellen, die aus **Netzen**, **Texturen**und **Materialien**bestehen. Diese werden dann in einem Dateiformat gespeichert, das von der von der APP verwendeten Grafik-Engine importiert oder verwendet werden kann, z **. b. Oder** **. Obj**. Jedes Tool, das ein Modell generiert, das von der ausgewählten Grafik-Engine unterstützt wird, funktioniert in **hololens**. Bei 3D-Künstlern entscheiden sich viele für die Verwendung [von Autodesk Maya, die wiederum hololens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) zum Transformieren der Art und Weise der Erstellung von Assets verwenden können. Wenn Sie etwas schneller erhalten möchten, können Sie auch [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generator verwenden, der in Windows zum Exportieren verfügbar ist. Obj für die Verwendung in Ihrer Anwendung.
+Zuerst können Sie Ihre eigenen Assets auf verschiedene Weise erstellen. 3D-Künstler verwenden eine Reihe von Anwendungen und Tools, um Modelle zu erstellen, die aus **Netzen**, **Texturen**und **Materialien**bestehen. Diese werden dann in einem Dateiformat gespeichert, das von der von der APP verwendeten Grafik-Engine importiert oder verwendet werden kann, z **. b.** Oder **. Obj**. Jedes Tool, das ein Modell generiert, das von der ausgewählten Grafik-Engine unterstützt wird, funktioniert in **hololens**. Bei 3D-Künstlern entscheiden sich viele für die Verwendung [von Autodesk Maya, die wiederum hololens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) zum Transformieren der Art und Weise der Erstellung von Assets verwenden können. Wenn Sie etwas schneller erhalten möchten, können Sie auch [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generator verwenden, der in Windows zum Exportieren verfügbar ist. Obj für die Verwendung in Ihrer Anwendung.
 
 **Objekt Erfassung**<br>
-Außerdem ist die Option zum Erfassen von Objekten in 3D verfügbar. Die Erfassung von inanimieren-Objekten in 3D und deren Bearbeitung mit Software zur Erstellung digitaler Inhalte ist immer beliebter, wenn 3D-Druck entsteht. Mithilfe des **kinect 2** -Sensors und des [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generators können Sie mit der Capture-Funktion Ressourcen aus realen Objekten erstellen. Dabei handelt es sich um eine [Suite von Tools](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) , mit denen Sie die gleichen Schritte durchführen können **, indem Sie** eine Reihe von Bildern zum Zusammenführen und Mesh und Texturen verarbeiten.
+Außerdem ist die Option zum Erfassen von Objekten in 3D verfügbar. Die Erfassung von inanimieren-Objekten in 3D und deren Bearbeitung mit Software zur Erstellung digitaler Inhalte ist immer beliebter, wenn 3D-Druck entsteht. Mithilfe des **kinect 2** -Sensors und des [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generators können Sie mit der Capture-Funktion Ressourcen aus realen Objekten erstellen. Dabei handelt es sich um eine [Suite von Tools](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) , mit denen Sie die gleichen Schritte durchführen können, indem Sie eine Reihe von Bildern zum Zusammenführen und Mesh und Texturen verarbeiten.
 
 ### <a name="purchasing-assets"></a>Erwerben von Assets
 

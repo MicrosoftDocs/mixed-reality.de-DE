@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: Problembehandlung, bekanntes Problem, Hilfe
-ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
-ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
+ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887269"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896546"
 ---
 # <a name="hololens-known-issues"></a>Bekannte Probleme mit hololens
 
@@ -127,6 +127,9 @@ Wir schätzen Ihre Geduld, da wir den Vorgang durchgeführt haben, um dieses Pro
 Bei den Einstellungen für die & OOBE gibt es ein Timeout für Anmelde Informationen von 2 Minuten. Der Benutzername bzw. das Kennwort muss innerhalb von 2 Minuten eingegeben werden. andernfalls wird das Feld Benutzername automatisch gelöscht.
 
 Wir empfehlen die Verwendung einer Bluetooth-Tastatur für die Eingabe von langen Kenn Wörtern.
+
+>[!NOTE]
+> Wenn während der OOBE-Option das falsche Netzwerk ausgewählt ist, muss das Gerät vollständig zurückgesetzt werden. Anweisungen finden Sie [hier.](https://docs.microsoft.com/en-us/windows/mixed-reality/reset-or-recover-your-hololens#perform-a-full-device-recovery) 
 
 ## <a name="device-update"></a>Geräte Aktualisierung
 * 30 Sekunden nach einem neuen Update kann die Shell einmal verschwinden. Führen Sie die **aufblühenden** Gesten aus, um die Sitzung fortzusetzen.

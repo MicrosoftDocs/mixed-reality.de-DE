@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, Einstellungen, gemischte Realität
-ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 395363cb99fd7e9e61adbea8ebc341aab50755e0
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896536"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -25,7 +25,7 @@ Es ist wichtig, die **Unity-Qualitätseinstellungen** für Ihre Umgebung so zu �
 
 In Unity 2018 LTS und höher kann die Qualitätsstufe des Projekts wie folgt festgelegt werden:
 
-Klicken Sie unter**Projekteinstellungen** >  **Bearbeiten** >  **>** die **Standardeinstellung** festlegen, indem Sie auf den abwärts Pfeil auf den Wert " **sehr niedriger** Qualität" klicken.
+Klicken Sie unter**Projekteinstellungen** >  **Bearbeiten** > > die **Standardeinstellung** festlegen, indem Sie auf den abwärts Pfeil auf den Wert " **sehr niedriger** Qualität" klicken.
 
 ### <a name="lighting-settings"></a>Beleuchtungseinstellungen
 
@@ -67,9 +67,9 @@ Außerdem wird empfohlen, unter der Einstellung **Tiefe Format** in diesem Panel
 
 Damit die Windows Mixed Reality-Plattform die – Hologramm-Stabilität optimieren kann, basiert Sie darauf, dass der tiefen Puffer genau ist und jedem gerenderten Hologramm auf dem Bildschirm entspricht. Daher ist es bei der tiefen Puffer Freigabe für wichtig, dass es beim Rendern von Farben auch die Tiefe rendert. In Unity werden die meisten nicht transparenten oder transparentcutout-Materialien standardmäßig in der Tiefe gerenden, aber transparente und Textobjekte werden im Allgemeinen nicht ausführlich gerenden, obwohl dies shaderabhängig ist usw. 
 
-Wenn Sie den Mixed Reality Toolkit Standard-Shader verwenden, um Tiefe für transparente Objekte zu Renten:
+Wenn Sie den [Mixed Reality Toolkit Standard-Shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)verwenden, um Tiefe für transparente Objekte zu Renten:
 1) Wählen Sie das übergeordnete Material aus, das den mrtk-Standard-Shader verwendet, und öffnen Sie das Fenster Inspektor Editor.
-2) Legen  Sie den **Renderingmodus** auf **Custom** fest, und legen  Sie dann den **Modus** auf **transparent**
+2) Wählen Sie in der Warnung "Tiefe Puffer Freigabe" die Schaltfläche **jetzt reparieren** aus. Dies kann auch manuell erfolgen, indem der **Renderingmodus** auf **Benutzer** definiert festgelegt wird und der **Modus** auf **transparent** fest gelegt wird.
 
 >[!NOTE]
 > Entwickler sollten sich vor Z-kämpfen hüten, wenn Sie diese Werte zusammen mit den Einstellungen für die near/all-Ebene der Kamera ändern. Z-Kämpfe treten auf, wenn zwei gameobjects versuchen, zum gleichen Pixel zu rendern, und aufgrund von Einschränkungen bei der Genauigkeit des tiefen Puffers (d. h. z-Tiefe), Unity kann nicht erkennen, welches Objekt vor dem anderen liegt. Entwickler werden ein Flimmern zwischen zwei Spielobjekten bemerken, wenn Sie für denselben z-tiefen Wert *kämpfen* . Dies kann durch einen Wechsel zu einem 24-Bit-Tiefen Format gelöst werden, da für jedes Objekt eine größere Anzahl von Werten vorhanden ist, die für die jeweilige z-Tiefe von der Kamera berechnet werden sollen.
@@ -101,14 +101,14 @@ Hololens verfügt über eine CPU-und GPU-Version der mobilen Klasse, was bedeute
 
 So schalten Sie den Holographic-Begrüßungsbildschirm um:
 1) Zum **Bearbeiten** > der**Projekt Einstellungs** > Seite "**Player** " wechseln
-2) Klicken Sie auf die Registerkarte **Windows Store** ,  und öffnen Sie den Abschnitt Begrüßungs Abbild.
+2) Klicken Sie auf die Registerkarte **Windows Store** , und öffnen Sie den Abschnitt Begrüßungs Abbild.
 3) Wenden Sie das gewünschte Image unter der Eigenschaft **Windows Holographic > Holographic Splash Image** an.
     - Wenn Sie die Option **Unity-Begrüßungsbildschirm anzeigen** umschalten, wird der Begrüßungsbildschirm von Unity-Marken aktiviert oder deaktiviert. Wenn Sie nicht über eine Unity pro-Lizenz verfügen, wird immer der Bildschirm "der Unity-Marken Begrüßungs" angezeigt.
     - Wenn ein **Holographic** -Begrüßungs Bild angewendet wird, wird es immer angezeigt, unabhängig davon, ob das Kontrollkästchen Unity-Begrüßungsbildschirm anzeigen aktiviert oder deaktiviert ist. Das Angeben eines benutzerdefinierten Holographic-Begrüßungs Bilds ist nur für Entwickler mit einer Unity pro-Lizenz verfügbar.
 
 |  Unity-Begrüßungsbildschirm anzeigen  |  Holographic-Begrüßungs Bild  |  Verhalten |
 |----------|----------|----------|
-|  On  |  Keine  |  Standardmäßiger Unity-Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. | 
+|  On  |  None  |  Standardmäßiger Unity-Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. | 
 |  On  |  Benutzerdefiniert  |  Benutzerdefinierten Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. | 
 |  Off  |  None  |  Zeigen Sie transparent Black (Nothing) an, bis die App geladen wird. | 
 |  Off  |  Benutzerdefiniert  |  Benutzerdefinierten Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. | 
@@ -123,7 +123,7 @@ Wenn ein Verlust der Nachverfolgung auftritt, besteht das Standardverhalten von 
 
 So passen Sie das Abbild der Nachverfolgung verloren:
 1) Zum **Bearbeiten** > der**Projekt Einstellungs** > Seite "**Player** " wechseln
-2) Klicken Sie auf die Registerkarte **Windows Store** ,  und öffnen Sie den Abschnitt Begrüßungs Abbild.
+2) Klicken Sie auf die Registerkarte **Windows Store** , und öffnen Sie den Abschnitt Begrüßungs Abbild.
 3) Wenden Sie das gewünschte Image unter der Eigenschaft **Windows Holographic > Tracking Loss Image** an.
 
 #### <a name="opt-out-of-automatic-pause"></a>Automatische Pause beenden
@@ -132,7 +132,7 @@ Einige apps erfordern möglicherweise keine Nachverfolgung (z. b. nur für die [
 
 So beenden Sie das automatische anhalten:
 1) Zum **Bearbeiten** > der**Projekt Einstellungs** > Seite "**Player** " wechseln
-2) Klicken Sie auf die Registerkarte **Windows Store** ,  und öffnen Sie den Abschnitt Begrüßungs Abbild.
+2) Klicken Sie auf die Registerkarte **Windows Store** , und öffnen Sie den Abschnitt Begrüßungs Abbild.
 3) Ändern Sie das Kontrollkästchen **Windows Holographic > on Tracking Loss Pause and Show Image** .
 
 #### <a name="tracking-loss-events"></a>Nachverfolgen von Verlustereignissen

@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gemischte Windows-Realität, Design, Farbe, Licht, Materialien
-ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896510"
 ---
 # <a name="color-light-and-materials"></a>Farbe, Licht und Material
 
@@ -28,7 +28,7 @@ Nehmen Sie sich immer Zeit, um Ihre Holographic-Erfahrungen in einem Holographic
 ## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Grundlagen des Renderings auf Holographic-Geräten
 * **Holografische Geräte verfügen über Additive Anzeige** – holograms werden durch das Hinzufügen von Licht in der realen Welt erstellt – weiß weiß, während schwarz angezeigt wird.
 * **Die Auswirkung von Farben variiert je nach Benutzerumgebung** – es gibt viele verschiedene Beleuchtungsbedingungen im Raum eines Benutzers. Erstellen Sie Inhalte mit angemessenen Kontrast Ebenen, um die Übersichtlichkeit zu unterstützen.
-* **Vermeiden Sie dynamische Beleuchtung** – holograms, die in Holographic-Umgebungen einheitlich beleuchtet werden, sind die effizienteste Lösung. Mithilfe von Advanced werden die Funktionen mobiler Shader wahrscheinlich von der dynamischen Beleuchtung überschritten.
+* **Vermeiden Sie dynamische Beleuchtung** – holograms, die in Holographic-Umgebungen einheitlich beleuchtet werden, sind die effizienteste Lösung. Mithilfe von Advanced werden die Funktionen von mobilen Geräten wahrscheinlich durch die dynamische Beleuchtung überschritten. Wenn eine dynamische Beleuchtung erforderlich ist, wird empfohlen, den [Mixed Reality Toolkit Standard-Shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)zu verwenden. 
 
 ## <a name="designing-with-color"></a>Entwerfen mit Farbe
 
