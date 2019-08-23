@@ -31,6 +31,7 @@
 #### [Handbuch für den Enthusiasten](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Hardware-Zubehör](hardware-accessories.md)
 ### [HoloLens-Handbuch für Anpassen und Reinigen für Demos](hololens-demo-guide.md)
+### [Standortbasiertes Entertainment mit Windows Mixed Reality](location-based-experiences.md)
 ## Grundbausteine
 ### [Anvisieren](gaze.md)
 ### [Gesten](gestures.md)
