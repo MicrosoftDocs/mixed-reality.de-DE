@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Edge, IOT Edge, Tutorial, API, Benachrichtigung, Funktionen, Tabellen, hololens, immersive, VR, IOT, virtueller Computer, Ubuntu, python
-ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694597"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047241"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -22,7 +22,7 @@ ms.locfileid: "67694597"
 
 In diesem Kurs erfahren Sie, wie Sie eine **Azure IOT Hub Service** auf einem virtuellen Computer implementieren, auf dem das Betriebssystem Ubuntu 16,4 ausgeführt wird. Ein **Azure-Funktionen-App** wird dann zum Empfangen von Nachrichten von Ihrer Ubuntu-VM verwendet und speichert das Ergebnis in einem **Azure-Tabellen Speicherdienst**. Anschließend können Sie diese Daten mithilfe von **Power BI** auf dem Microsoft hololens oder im immersiven (VR)-Headset anzeigen.
 
-Der Inhalt *dieses Kurses gilt* für IOT Edge Geräte, aber im Rahmen dieses Kurses liegt der Schwerpunkt auf der Umgebung eines virtuellen Computers, sodass der Zugriff auf ein physisches Edgegerät nicht erforderlich ist.
+Der Inhalt dieses Kurses gilt für IOT Edge Geräte, aber im Rahmen dieses Kurses liegt der Schwerpunkt auf der Umgebung eines virtuellen Computers, sodass der Zugriff auf ein physisches Edgegerät nicht erforderlich ist.
 
 Wenn Sie diesen Kurs abschließen, lernen Sie Folgendes:
 
@@ -55,7 +55,7 @@ In diesem Kurs erfahren Sie, wie Sie den IOT Hub-Dienst einrichten und verwenden
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Aktuelle Voraussetzungen für die Entwicklung mit gemischter Realität, einschließlich der Microsoft hololens, finden Sie im Artikel [Installieren der Tools](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) .
 
@@ -84,7 +84,7 @@ Folgende Hardware und Software ist erforderlich:
 1. Richten Sie Ihre hololens ein, und testen Sie Sie. Wenn Sie Unterstützung für die Einrichtung ihrer hololens benötigen, [besuchen Sie den Artikel zum Einrichten von hololens](https://docs.microsoft.com/hololens/hololens-setup).
 2. Es empfiehlt sich, eine **Kalibrierung** und **Sensor** Optimierung durchzuführen, wenn Sie mit der Entwicklung einer neuen hololens-App beginnen (manchmal kann es hilfreich sein, diese Aufgaben für jeden Benutzer auszuführen).
 
-Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens).
+Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens-2).
 
 Hilfe zur Sensor Optimierung finden Sie unter diesem [Link zum Artikel zur Überwachung von hololens-Sensoren](sensor-tuning.md).
 
@@ -163,7 +163,7 @@ Der **IOT Hub-Dienst** , den Sie in diesem Kurs erstellen und verwenden, bezieht
 
 8. Notieren Sie sich (Sie können den Editor verwenden) der folgenden Parameter:
     1. **Anmelde Server**
-    2. **User**
+    2. **Username**
     3. **Kennwort**
 
     ![](images/AzureLabs-Lab313-09.png)
@@ -1149,7 +1149,7 @@ Zunächst müssen Sie eine Datei erstellen, die es ihrer Azure-Funktion ermögli
 
 22. Ein Panel wird von rechts nach rechts angezeigt. Klicken Sie in diesem Bereich auf **hochladen**, und ein *Datei Browser* wird angezeigt.
 
-23. Navigieren Sie zu, und klicken Sie auf die Datei **Project. JSON** , die Sie **zuvor im** Editor erstellt haben, und klicken Sie dann auf die Schaltfläche **Öffnen** . Diese Datei definiert die Bibliotheken, die von ihrer Funktion verwendet werden.
+23. Navigieren Sie zu, und klicken Sie auf die Datei **Project. JSON** , die Sie zuvor im Editor erstellt haben, und klicken Sie dann auf die Schaltfläche **Öffnen** . Diese Datei definiert die Bibliotheken, die von ihrer Funktion verwendet werden.
 
     ![benutzerdefinierte Funktion](images/AzureLabs-Lab313-67.png)
 

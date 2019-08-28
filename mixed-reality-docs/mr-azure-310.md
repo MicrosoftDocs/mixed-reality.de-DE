@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Custom Vision, Objekterkennung, gemischte Realität, Academy, Unity, Tutorial, API, hololens
-ms.openlocfilehash: 89ee79943a88de8a34c679ae33621db5770908b0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 71370db84a9b90b017e8d5fac0799a862883d046
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63544418"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047224"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -31,7 +31,7 @@ Mit diesem Dienst können Sie ein Machine Learning-Modell mithilfe von Objekt Im
 
 Nach Abschluss dieses Kurses verfügen Sie über eine Mixed Reality-Anwendung, die Folgendes ausführen kann:
 
-1. Der Benutzer *ist in der* Lage, ein Objekt zu sehen, das Sie mithilfe des Azure-Custom Vision Service (Objekterkennung) trainiert haben. 
+1. Der Benutzer ist in der Lage , ein Objekt zu sehen, das Sie mithilfe des Azure-Custom Vision Service (Objekterkennung) trainiert haben. 
 2. Der Benutzer verwendet die *Tap* -Geste, um ein Bild von dem zu erfassenden Bild zu erfassen.
 3. Die APP sendet das Image an den Azure-Custom Vision Service.
 4. Es wird eine Antwort vom Dienst angezeigt, die das Ergebnis der Erkennung als Welt Raum Text anzeigt. Dies wird durch die Verwendung der räumlichen Nachverfolgung von Microsoft hololens erreicht, um die Weltposition des erkannten Objekts zu verstehen, und dann das *Tag* zu verwenden, das den im Bild erkannten Werten zugeordnet ist, um den Bezeichnungs Text bereitzustellen.
@@ -53,7 +53,7 @@ In diesem Kurs erfahren Sie, wie Sie die Ergebnisse aus dem Azure-Custom Vision 
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Juli 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt werden.
@@ -75,7 +75,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 2.  Richten Sie Ihre hololens ein, und testen Sie Sie. Wenn Sie Unterstützung für die Einrichtung ihrer hololens benötigen, [besuchen Sie den Artikel zum Einrichten von hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es empfiehlt sich, eine Kalibrierung und Sensor Optimierung durchzuführen, wenn Sie mit der Entwicklung einer neuen hololens-App beginnen (manchmal kann es hilfreich sein, diese Aufgaben für jeden Benutzer auszuführen). 
 
-Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens).
+Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens-2).
 
 Hilfe zur Sensor Optimierung finden Sie unter diesem [Link zum Artikel zur Überwachung von hololens-Sensoren](sensor-tuning.md).
 
@@ -192,7 +192,7 @@ So trainieren Sie das Custom Vision Projekt:
     > [!NOTE] 
     > Der Endpunkt, der aus diesem bereitgestellt wird, wird auf den Wert festgelegt, welcher *iterations* Wert als Standard markiert wurde. Wenn Sie später eine neue *iterations* Zeit erstellen und diese als Standard aktualisieren, müssen Sie den Code nicht ändern.
 
-14. Nachdem Sie auf die **Vorhersage-URL**geklickt haben *, öffnen Sie*den Editor, und kopieren Sie die **URL** (auch als **Vorhersage Endpunkt**bezeichnet) und den **Dienst Vorhersage Schlüssel**, um Sie abzurufen, wenn Sie Sie später im Code benötigen.
+14. Nachdem Sie auf die **Vorhersage-URL**geklickthaben, öffnen Sie den Editor, und kopieren Sie die **URL** (auch als **Vorhersage Endpunkt**bezeichnet) und den **Dienst Vorhersage Schlüssel**, um Sie abzurufen, wenn Sie Sie später im Code benötigen.
 
     ![](images/AzureLabs-Lab310-20.png)
 
@@ -291,9 +291,9 @@ Sie finden das [Azure-Mr-310-Paket, das Sie hier herunterladen müssen](https://
 
     ![](images/AzureLabs-Lab310-35.png)
 
-    1.  Der Material **-Ordner enthält** das Material, das vom **Cursor Cursor**verwendet wird. 
+    1.  Der Material-Ordner enthält das Material, das vom **Cursor Cursor**verwendet wird. 
 
-    2.  Der **Ordner Plug** -in enthält die newtonsoft-dll, die vom Code zum Deserialisieren der Webantwort des Diensts verwendet wird. Die zwei (2) verschiedenen Versionen, die im Ordner und Unterordner enthalten sind, sind erforderlich, damit die Bibliothek vom Unity-Editor und dem UWP-Build verwendet und erstellt werden kann. 
+    2.  Der Ordner Plug-in enthält die newtonsoft-dll, die vom Code zum Deserialisieren der Webantwort des Diensts verwendet wird. Die zwei (2) verschiedenen Versionen, die im Ordner und Unterordner enthalten sind, sind erforderlich, damit die Bibliothek vom Unity-Editor und dem UWP-Build verwendet und erstellt werden kann. 
 
     3.  Der Ordner " **Prefabs** " enthält die in der Szene enthaltenen Prefabs. Dies sind die folgenden:
 
@@ -905,8 +905,8 @@ So erstellen Sie diese Klasse:
 
 8.  Fügen Sie die **finaliselabel ()** -Methode hinzu. Er ist für Folgendes zuständig:
 
-    *   Der Bezeichnungs *Text wird* mit dem *Tag* der Vorhersage mit dem höchsten Vertrauen festgelegt.
-    *   Aufrufen der Berechnung des umgebenden *Felds auf dem* Quad-Objekt, das zuvor positioniert wurde, und Platzieren der Bezeichnung in der Szene.
+    *   Der Bezeichnungs Text wird mit dem *Tag* der Vorhersage mit dem höchsten Vertrauen festgelegt.
+    *   Aufrufen der Berechnung des umgebenden Felds auf dem Quad-Objekt, das zuvor positioniert wurde, und Platzieren der Bezeichnung in der Szene.
     *   Anpassung der Bezeichnungs Tiefe mithilfe eines Raycasts in das umgebende *Feld*, das mit dem Objekt in der realen Welt kollidieren soll.
     * Zurücksetzen des Aufzeichnungsprozesses, um dem Benutzer zu ermöglichen, ein anderes Bild zu erfassen.
 

@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: VR, LBE, Location based Entertainment, VR-Arkade, Arcade, immersive, QR, QR-Code, hololens2
-ms.openlocfilehash: d51da88aa7bff1dc5c6d3068cb31793891c71e61
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: 736ab265db2145dd784c435e525059ed3a2fcbbb
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566000"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047160"
 ---
 # <a name="qr-code-tracking"></a>QR-Code Nachverfolgung
 
@@ -248,6 +248,9 @@ QR-Codes mit Logos wurden nicht getestet und werden zurzeit nicht unterstützt.
 Windows Mixed Reality-Geräte erkennen QR-Codes auf der Systemebene des Treibers. Wenn das Gerät neu gestartet wird, sind die erkannten QR-Codes verschwunden und werden als neue Objekte das nächste Mal wiedererkannt.
 
 Es wird empfohlen, die APP so zu konfigurieren, dass Sie QR-Codes ignoriert, die älter sind als ein bestimmter Zeitstempel Derzeit unterstützt die API das Löschen von QR-Code Verläufen nicht.
+
+### <a name="qr-code-placement-in-a-space"></a>QR-Code Platzierung in einem Leerzeichen
+Empfehlungen dazu, wo und wie QR-Codes platziert werden, finden Sie unter [Überlegungen zur Umgebung für hololens](environment-considerations-for-hololens.md).
 
 ## <a name="qr-api-reference"></a>QR-API-Referenz
 

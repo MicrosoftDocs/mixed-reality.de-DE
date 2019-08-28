@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Gesichtserkennung, hololens, immersive, VR
-ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63554708"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047184"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -50,7 +50,7 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf hololens, aber Sie können auch das Erlernen, was Sie in diesem Kurs lernen, auf Windows Mixed Reality-(VR)-Headsets. Da immersive Headsets (VR) nicht über barrierefreie Kameras verfügen, benötigen Sie eine externe Kamera, die mit Ihrem PC verbunden ist. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise für die Unterstützung von immersiven (VR)-Headsets verwenden müssen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -72,7 +72,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 2.  Richten Sie Ihre hololens ein, und testen Sie Sie. Wenn Sie Unterstützung für die Einrichtung ihrer hololens benötigen, [besuchen Sie den Artikel zum Einrichten von hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es empfiehlt sich, eine Kalibrierung und Sensor Optimierung durchzuführen, wenn Sie mit der Entwicklung einer neuen hololens-App beginnen (manchmal kann es hilfreich sein, diese Aufgaben für jeden Benutzer auszuführen). 
 
-Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens).
+Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens-2).
 
 Hilfe zur Sensor Optimierung finden Sie unter diesem [Link zum Artikel zur Überwachung von hololens-Sensoren](sensor-tuning.md).
 
@@ -293,7 +293,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 ## <a name="chapter-4---main-camera-setup"></a>Kapitel 4: Einrichtung der Hauptkamera
 
 > [!IMPORTANT]
-> Wenn Sie die *Unity-Setup* Komponente dieses Kurses überspringen und direkt mit dem Code fortfahren möchten, können Sie [dieses. unitypackage herunterladen](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)und als [benutzerdefiniertes Paket](https://docs.unity3d.com/Manual/AssetPackages.html)in das Projekt importieren. Beachten Sie, dass dieses Paket auch den Import der *newtonsoft-dll*enthält, die in [Kapitel 5](#chapter-5--import-the-newtonsoft.json-library)beschrieben wird. Mit diesem importierten Vorgang können Sie in [Kapitel 6](#chapter-6-create-the-faceanalysis-class)fortfahren.
+> Wenn Sie die *Unity-Setup* Komponente dieses Kurses überspringen und direkt mit dem Code fortfahren möchten, können Sie [dieses. unitypackage herunterladen](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)und als [benutzerdefiniertes Paket](https://docs.unity3d.com/Manual/AssetPackages.html)in das Projekt importieren. Beachten Sie, dass dieses Paket auch den Import der *newtonsoft-dll*enthält, die in [Kapitel 5](#chapter-5--import-the-newtonsoftjson-library)beschrieben wird. Mit diesem importierten Vorgang können Sie in [Kapitel 6](#chapter-6---create-the-faceanalysis-class)fortfahren.
 
 1.  Wählen Sie im Bereich *Hierarchie* die **Hauptkamera**aus.
 
@@ -314,7 +314,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 ## <a name="chapter-5--import-the-newtonsoftjson-library"></a>Kapitel 5 – Importieren der newtonsoft. JSON-Bibliothek
 
 > [!IMPORTANT]
-> Wenn Sie das ". unitypackage" im [letzten Kapitel](#chapter-4--main-camera-setup)importiert haben, können Sie dieses Kapitel überspringen.
+> Wenn Sie das ". unitypackage" im [letzten Kapitel](#chapter-4---main-camera-setup)importiert haben, können Sie dieses Kapitel überspringen.
 
 Zum Deserialisieren und Serialisieren von Objekten, die empfangen und an den bot-Dienst gesendet werden, müssen Sie die *newtonsoft. JSON* -Bibliothek herunterladen. Sie werden feststellen, dass eine kompatible Version bereits mit der richtigen Unity-Ordnerstruktur in dieser [Unity-Paketdatei](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/newtonsoftDLL.unitypackage)organisiert ist. 
 
@@ -647,7 +647,7 @@ Der Zweck der *imagecapture* -Klasse besteht darin, die Methoden zu hosten, die 
 
 So erstellen Sie die *imagecapture* -Klasse:
  
-1.  Klicken Sie **mit der rechten** Maustaste in den Skript Ordner, den Sie zuvor erstellt haben, und klicken Sie dann auf **Erstellen**,  **C# Skript**. Nennen Sie das Skript *imagecapture*. 
+1.  Klicken Sie mit der rechten Maustaste in den Skript Ordner, den Sie zuvor erstellt haben, und klicken Sie dann auf **Erstellen**,  **C# Skript**. Nennen Sie das Skript *imagecapture*. 
 2.  Doppelklicken Sie auf das neue *imagecapture* -Skript, um es mit Visual Studio 2017 zu öffnen.
 3.  Geben Sie die folgenden Namespaces oberhalb der imagecapture-Klasse ein:
 

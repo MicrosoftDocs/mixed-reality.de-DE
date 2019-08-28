@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Zuschauer Ansicht, iPhone, Ios, iPad, opencv, Kamera, Arkit, hololens, Mixed Reality, mixedrealitytoolkit, Demo, Datensatz
-ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 708ed694af3769f16d5dce0595e026f9a348d754
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387666"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047176"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Ansicht "Betrachter" für hololens und hololens 2
 
@@ -25,10 +25,8 @@ Die Zuschauer Ansicht bietet einen schnellen und kostengünstigen Ansatz zum Auf
 ## <a name="key-resources"></a>Wichtige Ressourcen
 
 * [**Ansicht "Betrachter" auf GitHub**](https://github.com/microsoft/MixedReality-SpectatorView)
-* [**Architektur**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
-* [**Stich**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
-* [**Anweisungen für die Mobile Installation**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**Anweisungen zur Installation von Video Kameras**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
+* [**Dokumentation zur Zuschauer Ansicht**](https://microsoft.github.io/MixedReality-SpectatorView/README.html)
+* [**Beispiele für die Zuschauer Ansicht**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>Anwendungsfälle
 * Sie können eine gemischte Realität mit einem iPhone oder Android-Gerät aufzeichnen. Notieren Sie sich die vollständige Festplatte, und wenden Sie Antialiasing auf holograms und sogar Schatten an. Es ist eine kostengünstige und schnelle Möglichkeit, Videos von holograms zu erfassen.

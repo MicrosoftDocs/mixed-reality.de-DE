@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: Holographic Frame, Feld of View, FOV, Kalibrierung, Spaces, Environment, How-to
-ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: cc856c42aaf4ddfca8365f63ab0c7df1a1a3b248
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69565987"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047079"
 ---
 # <a name="environment-considerations-for-hololens"></a>Überlegungen zur Umgebung für hololens
 
@@ -46,7 +46,7 @@ Hololens verwendet einzigartige Umgebungs Merkmale, auch bekannt als *Features*,
 
 Ein Gerät kann fast nie in einem Funktions Armen Bereich nachverfolgt werden, da das Gerät nicht weiß, wo er sich befindet. Das Hinzufügen von Features zu den Wänden eines leer Zeichens ist in der Regel eine gute Möglichkeit zur Verbesserung der Überwachung. Poster, Symbole, die an eine Wand, Werke, eindeutige Objekte oder andere ähnliche Elemente weitergeleitet werden. Ein Messtisch ist ein gutes Beispiel für eine Umgebung, die zu einer guten Nachverfolgung führt. es gibt viele verschiedene Features in einem einzelnen Bereich. 
 
-Verwenden Sie darüber hinaus eindeutige Features im gleichen Bereich. Das gleiche Poster, das mehrmals über einer Wand wiederholt wird, führt z. b. zu Geräte Verwirrung, da die hololens nicht wissen, welche der sich wiederholenden Poster Sie sehen. Ein gängiges Verfahren zum Hinzufügen eindeutiger Features ist die Verwendung von Zeilen des Maskierungs Bands, um eindeutige, nicht wiederholende Muster entlang der Wände und des Boden Raums eines leer Zeichens zu erstellen. 
+Verwenden Sie darüber hinaus eindeutige Features im gleichen Bereich. Das gleiche Poster, das mehrmals über einer Wand wiederholt wird, führt z. b. zu Geräte Verwirrung, da die hololens nicht wissen, welche der sich wiederholenden Poster Sie sehen. Eine gängige Methode zum Hinzufügen eindeutiger Features ist die Verwendung von Linien des Maskierungs Bands, um eindeutige, nicht wiederholende Muster entlang der Wände und des Boden Raums eines leer Zeichens zu erstellen. 
 
 Eine gute Frage ist: Wenn Sie nur einen kleinen Teil der Szene gesehen haben, können Sie sich im Raum eindeutig Auffinden? Wenn dies nicht der Fall ist, ist es wahrscheinlich, dass das Gerät ebenfalls Probleme nachverfolgt.
 
@@ -54,6 +54,15 @@ Eine gute Frage ist: Wenn Sie nur einen kleinen Teil der Szene gesehen haben, k�
 Wenn Sie über zwei Bereiche oder Bereiche verfügen, die gleich aussehen, könnte der Tracker vermuten, dass Sie identisch sind. Dies hat zur Folge, dass sich das Gerät an einem anderen Ort befindet. Diese Typen von wiederkehrenden Bereichen werden als *Wurmlöcher*bezeichnet. 
 
 Um Wurm Lücken zu verhindern, versuchen Sie, identische Bereiche im gleichen Bereich zu verhindern. Identische Bereiche können auch Factory-Stationen, Fenster in einem Gebäude, Server Racks oder Arbeitsstationen enthalten. Durch das bezeichnen von Bereichen oder das Hinzufügen eindeutiger Features zu jedem ähnlich aussehenden Bereich können Wurm Lücken verringert werden.
+
+### <a name="qr-codes-in-environments"></a>QR-Codes in Umgebungen.
+Hololens können [QR-Codes](qr-code-tracking.md) aus mehreren Gründen verwenden, wie z. b. das bezeichnen von Objekten oder das Bereitstellen zusätzlicher Kontext für Umgebungen. Sie können jedoch auch zur Verbesserung der Überwachungs Qualität verwendet werden. Hololens verwenden automatisch die QR-Codes, um eine Zuordnung zu erstellen, auch wenn Sie nicht die in den Codes eingebetteten Daten verarbeiten.
+
+Wenn Sie QR-Codes verwenden, um die Nachverfolgung zu unterstützen, benötigen Sie zwei bis drei Codes innerhalb eines bestimmten Sicht Felds. In vielen Szenarien bedeutet dies, dass Sie einen QR-Code alle 2-3 Meter oder 6-9 Füße platzieren.
+
+Stellen Sie sicher, dass die QR-Codes flach und eng an Wände oder andere Oberflächen angefügt sind.
+
+Bewährte Methoden zum Erstellen und Drucken von QR-Codes finden Sie unter [bewährte Methoden für die Erkennung von QR-Codes](qr-code-tracking.md#best-practices-for-qr-code-detection).
  
 ### <a name="movement-in-a-space"></a>Bewegung in einem Leerzeichen
 Wenn sich Ihre Umgebung ständig verschiebt und ändert, verfügt das Gerät nicht über stabile Features, die für das Gerät zu finden sind. 
@@ -110,4 +119,4 @@ Wenn eine andere Person ihre hololens verwendet, sollten Sie die Kalibrierungs-A
 * [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
 * [Hologramme](hologram.md)
 * [Kalibrierung](calibration.md)
-* [Verwenden von hololens in neuen Leerzeichen](use-hololens-in-new-spaces.md)
+* [Verwenden von HoloLens in neuen Räumen](use-hololens-in-new-spaces.md)

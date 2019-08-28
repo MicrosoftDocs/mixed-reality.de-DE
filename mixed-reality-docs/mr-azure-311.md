@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Microsoft Graph, hololens, immersive, VR
-ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 775971c4e4289d2dc963dfa2bf033192d9f3489e
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694527"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047205"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -43,7 +43,7 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Juli 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt werden.
@@ -66,7 +66,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 2.  Richten Sie Ihre hololens ein, und testen Sie Sie. Wenn Sie Unterstützung für die Einrichtung ihrer hololens benötigen, [besuchen Sie den Artikel zum Einrichten von hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es empfiehlt sich, eine Kalibrierung und Sensor Optimierung durchzuführen, wenn Sie mit der Entwicklung einer neuen hololens-App beginnen (manchmal kann es hilfreich sein, diese Aufgaben für jeden Benutzer auszuführen). 
 
-Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens).
+Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens-2).
 
 Hilfe zur Sensor Optimierung finden Sie unter diesem [Link zum Artikel zur Überwachung von hololens-Sensoren](sensor-tuning.md).
 
@@ -187,7 +187,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
 9.  Schließen Sie das Fenster mit den Buildeinstellungen.
 
-10.  Speichern Sie Ihre Szene und Ihr Projekt (**Datei** > **Speichern/**  > Speichern von Dateien **).**
+10.  Speichern Sie Ihre Szene und Ihr Projekt(**Datei** > **Speichern/**  > Speichern von Dateien).
 
 ## <a name="chapter-3---import-libraries-in-unity"></a>Kapitel 3: Importieren von Bibliotheken in Unity
 
@@ -207,17 +207,17 @@ So importieren Sie das Paket:
 
 1.  Fügen Sie das Unity-Paket Unity mithilfe der Menüoption **Assets** > **Import Package** > **Custom Package (benutzerdefiniertes Paket** importieren). Wählen Sie das soeben heruntergeladene Paket aus.
 
-2.  Vergewissern Sie sich, dass im Feld **Unity-Paket importieren** , das angezeigt wird, alles unter (und **einschließlich) Plug** -ins ausgewählt ist.
+2.  Vergewissern Sie sich, dass im Feld **Unity-Paket importieren** , das angezeigt wird, alles unter (und einschließlich) Plug-ins ausgewählt ist.
 
     ![](images/AzureLabs-Lab311-20.png)
 
 3.  Klicken Sie auf die Schaltfläche **importieren** , um dem Projekt die Elemente hinzuzufügen.
 
-4.  Wechseln Sie im *Projekt Panel* unter Plug-in zum Ordner **MSGraph** , und wählen Sie das Plug **-in mit** dem Namen **Microsoft. Identity. Client**aus.
+4.  Wechseln Sie im *Projekt Panel* unter Plug -in zum Ordner **MSGraph** , und wählen Sie das Plug-in mit dem Namen **Microsoft. Identity. Client**aus.
 
     ![](images/AzureLabs-Lab311-21.png)
 
-5.  Wenn das *Plug* -in aktiviert ist, **Stellen Sie sicher**, dass **alle Plattformen** deaktiviert sind, und stellen Sie sicher, dass **wsaplayer** ebenfalls deaktiviert ist. Dies dient nur zur Bestätigung, dass die Dateien ordnungsgemäß konfiguriert sind.
+5.  Wenn das *Plug* -in aktiviert ist, stellen Sie sicher, dass **alle Plattformen** deaktiviert sind, und stellen Sie sicher,dass **wsaplayer** ebenfalls deaktiviert ist. Dies dient nur zur Bestätigung, dass die Dateien ordnungsgemäß konfiguriert sind.
 
     ![](images/AzureLabs-Lab311-22.png)
 
@@ -911,7 +911,7 @@ So erstellen Sie das Skript:
 
 In diesem Kapitel müssen Sie das **Interaktionen** -Skript auf der **Hauptkamera**platzieren. Dieses Skript behandelt dann das Platzieren der anderen Skripts, wenn Sie es benötigen.
 
--  Ziehen Sie die Skript **Interaktionen** aus **dem Ordner "** Skripts" im *Projekt Panel*wie unten dargestellt auf das **Hauptkamera** Objekt.
+-  Ziehen Sie die Skript **Interaktionen** aus dem Ordner "Skripts" im *Projekt Panel*wie unten dargestellt auf das **Hauptkamera** Objekt.
 
     ![](images/AzureLabs-Lab311-29.png)
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Custom Vision, hololens, immersive, VR
-ms.openlocfilehash: e6e9782a8d559af660dc4765556f1e926c5360b1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63553544"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047209"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -49,7 +49,7 @@ In diesem Kurs erfahren Sie, wie Sie die Ergebnisse aus dem Custom Vision Servic
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf hololens, aber Sie können auch das Erlernen, was Sie in diesem Kurs lernen, auf Windows Mixed Reality-(VR)-Headsets. Da immersive Headsets (VR) nicht über barrierefreie Kameras verfügen, benötigen Sie eine externe Kamera, die mit Ihrem PC verbunden ist. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise für die Unterstützung von immersiven (VR)-Headsets verwenden müssen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Juli 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt werden.
@@ -72,7 +72,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 2.  Richten Sie Ihre hololens ein, und testen Sie Sie. Wenn Sie Unterstützung für die Einrichtung ihrer hololens benötigen, [besuchen Sie den Artikel zum Einrichten von hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es empfiehlt sich, eine Kalibrierung und Sensor Optimierung durchzuführen, wenn Sie mit der Entwicklung einer neuen hololens-App beginnen (manchmal kann es hilfreich sein, diese Aufgaben für jeden Benutzer auszuführen). 
 
-Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens).
+Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens-2).
 
 Hilfe zur Sensor Optimierung finden Sie unter diesem [Link zum Artikel zur Überwachung von hololens-Sensoren](sensor-tuning.md).
 
@@ -175,7 +175,7 @@ So trainieren Sie das Custom Vision Service Projekt:
 
     ![](images/AzureLabs-Lab302b-15.png)
 
-13. Kopieren Sie den **Trainings Schlüssel** *, und*fügen Sie ihn zur späteren Verwendung in einen Editor ein.
+13. Kopieren Sie den **Trainings Schlüssel** , und fügen Sieihn zur späteren Verwendung in einen Editor ein.
 
     ![](images/AzureLabs-Lab302b-16.png)
 
@@ -219,7 +219,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
             ![](images/AzureLabs-Lab302b-21.png)
 
-        2. Erstellen Sie einen neuen Ordner für dieses und jede zukünftige Szene, und wählen Sie dann die Schaltfläche **neuer Ordner** aus, um einen neuen Ordner zu **erstellen.**
+        2. Erstellen Sie einen neuen Ordner für dieses und jede zukünftige Szene, und wählen Sie dann die Schaltfläche **neuer Ordner** aus, um einen neuen Ordner zuerstellen.
 
             ![](images/AzureLabs-Lab302b-22.png)
 
@@ -278,7 +278,7 @@ Verwenden Sie das Unity-Paket, das in diesem Kurs verwendet wurde, um die newton
 
 1.  Fügen Sie das *. unitypackage* zu Unity hinzu, indem Sie die Menüoption **Assets* > *Import* *Package* > *Custom* *Package** verwenden.
 
-2.  Vergewissern Sie sich, dass im Feld **Unity-Paket importieren** , das angezeigt wird, alles unter (und **einschließlich) Plug** -ins ausgewählt ist.
+2.  Vergewissern Sie sich, dass im Feld **Unity-Paket importieren** , das angezeigt wird, alles unter (und einschließlich) Plug-ins ausgewählt ist.
 
     ![](images/AzureLabs-Lab302b-28.png)
 
@@ -288,7 +288,7 @@ Verwenden Sie das Unity-Paket, das in diesem Kurs verwendet wurde, um die newton
 
     ![](images/AzureLabs-Lab302b-29.png)
 
-5.  Vergewissern **Sie sich**, dass die Option " *newtonsoft. JSON* " ausgewählt **ist,** und stellen Sie sicher, dass **alle Plattformen** deaktiviert sind. Stellen Sie dann sicher, dass **wsaplayer** **ebenfalls deaktiviert**ist. Dies dient nur zur Bestätigung, dass die Dateien ordnungsgemäß konfiguriert sind.
+5.  Vergewissern Sie sich, dass dieOption " *newtonsoft. JSON* " ausgewähltist, und stellen Sie sicher, dass **alle Plattformen** deaktiviert sind. Stellen Sie dann sicher, dass **wsaplayer** ebenfalls deaktiviert ist. Dies dient nur zur Bestätigung, dass die Dateien ordnungsgemäß konfiguriert sind.
 
     ![](images/AzureLabs-Lab302b-30.png)
 
@@ -296,7 +296,7 @@ Verwenden Sie das Unity-Paket, das in diesem Kurs verwendet wurde, um die newton
     > Wenn Sie diese Plug-ins markieren, werden Sie nur im Unity-Editor verwendet. Im WSA-Ordner gibt es eine andere Gruppe, die verwendet wird, nachdem das Projekt aus Unity exportiert wurde.
 
 6.  Als nächstes müssen Sie den Ordner " **WSA** " im Ordner " **newtonsoft** " öffnen. Es wird eine Kopie derselben Datei angezeigt, die Sie soeben konfiguriert haben. Wählen Sie die Datei aus, und vergewissern Sie sich dann im Inspektor, dass
-    -   **Jede Plattform** ist **deaktiviert** . 
+    -   **Jede Plattform** ist deaktiviert. 
     -   **nur** **Wsaplayer** ist **aktiviert**
     -   "Nicht **verarbeiten** " ist **aktiviert**
 
@@ -781,7 +781,7 @@ So erstellen Sie diese Klasse:
     ```
 
     > [!IMPORTANT]
-    > Stellen Sie sicher, dass Sie den Wert für den **Dienst Schlüssel** (Trainings Schlüssel) und den **Projekt-ID** -Wert hinzufügen, den Sie zuvor notiert haben. Dies sind die Werte, die Sie [zuvor im Portal im Kurs erfasst haben (Kapitel 2, Schritt 10)](#chapter-2---training-your-custom-vision-oroject).
+    > Stellen Sie sicher, dass Sie den Wert für den **Dienst Schlüssel** (Trainings Schlüssel) und den **Projekt-ID** -Wert hinzufügen, den Sie zuvor notiert haben. Dies sind die Werte, die Sie [zuvor im Portal im Kurs erfasst haben (Kapitel 2, Schritt 10)](#chapter-2---training-your-custom-vision-project).
 
 5.  Fügen Sie die folgenden Methoden " **Start ()** " und " **Awa()** " hinzu. Diese Methoden werden bei der Initialisierung aufgerufen und enthalten den Aufruf, um die Benutzeroberfläche einzurichten:
 
@@ -1069,7 +1069,7 @@ Diese Klasse führt Folgendes aus:
 
 -   Erstellen Sie ein **Cursor** Objekt, das an die Hauptkamera angehängt werden soll.
 
--   Erstellen Sie **ein** Bezeichnungs Objekt, das angezeigt wird, wenn der Dienst die Objekte der realen Welt erkennt.
+-   Erstellen Sie ein Bezeichnungs Objekt, das angezeigt wird, wenn der Dienst die Objekte der realen Welt erkennt.
 
 -   Richten Sie die Hauptkamera ein, indem Sie die entsprechenden Komponenten an Sie anfügen.
 
@@ -1645,7 +1645,7 @@ Bevor Sie vorgehen, stellen Sie Folgendes sicher:
 
 ## <a name="chapter-13---build-and-sideload-your-application"></a>Kapitel 13: Erstellen und querladen der Anwendung
 
-So beginnen Sie *den* Buildprozess:
+So beginnen Sie den Buildprozess:
 
 1.  Wechseln Sie zu **Datei >** Buildeinstellungen.
 
@@ -1684,7 +1684,7 @@ So stellen Sie auf hololens bereit:
 6. Ihre APP sollte nun in der Liste der installierten apps auf Ihren hololens angezeigt werden, die bereit sind, gestartet zu werden.
 
 > [!NOTE]
-> Legen Sie für die Bereitstellung auf dem immersiven Headset die Projektmappenplattform auf *lokaler Computer*fest, und legen Sie die **Konfiguration** auf *Debuggen*und *x86* als **Plattform**fest. Stellen Sie dann auf dem lokalen Computer bereit, *und wählen Sie*dann Projekt Mappe bereitstellen aus. 
+> Legen Sie für die Bereitstellung auf dem immersiven Headset die Projektmappenplattform auf *lokaler Computer*fest, und legen Sie die **Konfiguration** auf *Debuggen*und *x86* als **Plattform**fest. Stellen Sie dann auf dem lokalen Computer bereit, und wählen Sie dann ProjektMappe bereitstellen aus. 
 
 ## <a name="to-use-the-application"></a>So verwenden Sie die Anwendung:
 
