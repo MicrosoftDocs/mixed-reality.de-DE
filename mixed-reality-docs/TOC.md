@@ -104,8 +104,7 @@
 #### [Sprachbefehle](Voice-design.md)
 #### [Anvisieren mit dem Kopf und Verweilen](Gaze-and-dwell.md)
 ### [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-### Zusätzliche Interaktionen
-#### [Anvisieren mit den Augen](eye-tracking.md)
+### [Anvisieren mit den Augen](eye-tracking.md)
 ## Format
 ### [Farbe, Licht und Materialien](color,-light-and-materials.md)
 ### [Raumklangentwurf](spatial-sound-design.md)
@@ -293,11 +292,11 @@
 ### [Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
 ### [Schreiben eines benutzerdefinierten Holographic Remoting-Players](holographic-remoting-create-player.md)
 ### [Benutzerdefinierte Holographic Remoting-Datenkanäle](holographic-remoting-custom-data-channels.md)
-### [Sichere Verbindung für Holographic Remoting](holographic-remoting-secure-connection.md)
+### [Sichere Verbindung mit Holographic Remoting](holographic-remoting-secure-connection.md)
 ### [Problembehandlung und Einschränkungen](holographic-remoting-troubleshooting.md)
 ### [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-### Holographic Remoting für HoloLens 1
-#### [Hinzufügen von Holographic Remoting](add-holographic-remoting.md)
+### Holographic Remoting für HoloLens (Gen1)
+#### [Hinzufügen von holographischem Remoting](add-holographic-remoting.md)
 ## Andere
 ### [Nachverfolgen von QR-Codes](qr-code-tracking.md)
 ### [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
