@@ -5,13 +5,13 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
-keywords: Augen Verfolgung, gemischte Realität, Eingabe, Augenblick, Augenblick
-ms.openlocfilehash: 6c51e1cdc2057142f47b6f96e8a1f1aec0bbcc17
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+keywords: Augen Verfolgung, gemischte Realität, Eingabe, Augenblick
+ms.openlocfilehash: 51779b7b210522aa4d19b5a32d7df6ccb2cb3a35
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047107"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122066"
 ---
 # <a name="eye-gaze-on-hololens-2"></a>Blick auf hololens 2
 Hololens 2 ermöglicht ein neues Maß an Kontext und menschliches Verständnis in der holografischen Benutzerfreundlichkeit, indem Entwicklern die Möglichkeit geboten wird, Informationen zu den Benutzern zu verwenden, die von Benutzern untersucht werden. Auf dieser Seite erfahren Entwickler, wie Sie von der Eye-Nachverfolgung für verschiedene Anwendungsfälle profitieren können, und worauf Sie achten müssen, wenn Sie auf Augenblick basierende Benutzeroberflächen entwerfen. 
@@ -47,13 +47,14 @@ Beachten Sie, dass das [Mixed Reality Toolkit](https://microsoft.github.io/Mixed
 ### <a name="user-intent"></a>Benutzerabsicht    
 Informationen dazu, wo und was ein Benutzer untersucht, bieten einen leistungsstarken **Kontext für andere Eingaben**, wie z. b. Voice, Hands und Controller.
 Dies kann für verschiedene Aufgaben verwendet werden.
-Dies kann z. b. von schnell und mühelos auf die gesamte Szene **abzielen** , indem Sie einfach ein Hologramm betrachten und "Select" (siehe auch [Kopf-und Commit](gaze-and-commit.md)) oder "put this..." und dann den Speicherort des Benutzers überprüfen. Das – Hologramm und sagen "... vorhanden sind. Beispiele hierfür finden Sie in den Artikeln [Mixed Reality Toolkit – Eye-supported Target Selection](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) (Mixed Reality-Toolkit – Blickgestützte Zielauswahl) und [Mixed Reality Toolkit – Eye-supported Target Positioning](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html) (Mixed Reality-Toolkit – Blickgestützte Zielpositionierung).
+Dies kann z. b. von der schnellen und mühelosen **Ausrichtung** auf die gesamte Szene reichen, indem Sie einfach ein Hologramm betrachten und "Select" (siehe auch [Kopf-und Commit](gaze-and-commit.md)) oder *"put this...".* Ich möchte das – Hologramm platzieren und sagen: *"... vorhanden*sind. Beispiele hierfür finden Sie in den Artikeln [Mixed Reality Toolkit – Eye-supported Target Selection](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) (Mixed Reality-Toolkit – Blickgestützte Zielauswahl) und [Mixed Reality Toolkit – Eye-supported Target Positioning](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html) (Mixed Reality-Toolkit – Blickgestützte Zielpositionierung).
 
 Außerdem kann ein Beispiel für die Benutzer Absicht die Verwendung von Informationen zu den Benutzern, die von Benutzern untersucht werden, beinhalten, um die Einbindung von verkörperten virtuellen Agents und interaktiven holograms Beispielsweise können virtuelle Agents verfügbare Optionen und ihr Verhalten basierend auf dem aktuell angezeigten Inhalt anpassen. 
 
 ### <a name="implicit-actions"></a>Implizite Aktionen
 Die Kategorie der impliziten Aktionen steht in enger Beziehung zur Benutzerabsicht.
-Die Idee ist, dass holograms oder Benutzeroberflächen Elemente in einer etwas instinstalen Weise reagieren, die nicht einmal so aussieht, als ob der Benutzer mit dem System interagiert, sondern dass das System und der Benutzer synchron sind. Ein Beispiel hierfür ist ein **auf Augenblick basierender automatischer** Bildlauf, bei dem der Benutzer Text liest, während der Text weiterhin durch einen Bildlauf oder einen Datenfluss synchron mit dem Benutzer angezeigt wird. Ein wichtiger Aspekt hierbei ist, dass sich die Scrollgeschwindigkeit an die Lesegeschwindigkeit des Benutzers anpasst.
+Die Idee ist, dass holograms oder Benutzeroberflächen Elemente in einer etwas instinstalen Weise reagieren, die nicht einmal so aussieht, als ob der Benutzer mit dem System interagiert, sondern dass das System und der Benutzer synchron sind. Ein Beispiel hierfür ist ein bidirektionaler **automatischer** Bildlauf, bei dem der Benutzer einen langen Text lesen kann, der automatisch mit dem Scrollen beginnt, sobald der Benutzer zum unteren Rand des Textfelds gelangt, damit der Benutzer den Lesevorgang ohne Fingerabdruck durchführt.  
+Ein wichtiger Aspekt hierbei ist, dass sich die Scrollgeschwindigkeit an die Lesegeschwindigkeit des Benutzers anpasst.
 Ein weiteres Beispiel sind die **Augen unterstützten Zoom-und Schwenken-** Elemente, bei denen der Benutzer das Gefühl hat, dass er sich genau zu dem befindet, worauf er sich konzentriert Das Auslösen von Zoom und das Steuern der Zoomgeschwindigkeit kann durch die Stimme oder Hand Eingabe gesteuert werden. Dies ist wichtig, um dem Benutzer das Gefühl der Kontrolle zu bieten, ohne dass eine über Überlastung erfolgt. Diese Entwurfs Richtlinien werden im folgenden ausführlicher erläutert. Nach dem vergrößern kann der Benutzer problemlos auf den Kurs einer Straße folgen, um seine Umgebung zu durchsuchen, indem er einfach den Augenblick verwendet.
 Demobeispiele für diese Arten von Interaktion finden Sie im Beispiel [Mixed Reality Toolkit – Eye-supported Navigation](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) (Mixed Reality-Toolkit – Blickgestützte Navigation).
 
@@ -73,26 +74,25 @@ Andere Anwendungen in diesem Bereich können Folgendes umfassen:
 ### <a name="additional-use-cases"></a>Weitere Anwendungsfälle
 - **Spiele:** Wollten Sie jemals übernatürliche Kräfte haben? Hier kommt Ihre Chance! Sie können holograms durch ein-und ansehen. Schießen Sie Laserstrahlen aus Ihren Augen. Verwandeln Sie Feinde in den Stein, oder fixieren Sie Sie. Verwenden Sie Ihren Röntgenblick, um Gebäude zu erkunden. Ihrer Phantasie sind keine Grenzen gesetzt!  
 
-- **Ausdrucksstarke Avatare:** Die Eye-Nachverfolgung hilft bei komplexeren 3D-Avataren durch die Verwendung von Live-Eye-nach Verfolgungs Daten, um die Augen des Avatare zu animieren, die den Inhalt des Benutzers angeben. Außerdem wird durch das Hinzufügen von Blinks weitere Ausdrucksfähigkeit hinzugefügt. 
+- **Ausdrucksstarke Avatare:** Die Eye-Nachverfolgung hilft bei komplexeren 3D-Avataren durch die Verwendung von Live-Eye-nach Verfolgungs Daten, um die Augen des Avatare zu animieren, die den Inhalt des Benutzers angeben. 
 
 - **Texteingabe:** Die Eye-Nachverfolgung kann als Alternative für den Text Eintrag mit geringem Aufwand verwendet werden, insbesondere dann, wenn Sprache oder Hände unpraktisch zu verwenden sind. 
 
 
-## <a name="eye-tracking-api"></a>Blickverfolgungs-API
-Bevor wir uns mit den speziellen Entwurfs Richtlinien für die Interaktion mit Blick auf das Auge befassen, möchten wir kurz auf die Funktionen hinweisen, die die hololens 2 Eye Tracker-API Entwicklern bereitstellt. Es stellt einen einzelnen Blick auf den Ursprung und die Richtung des Augenblicks bereit und stellt Daten bei ungefähr _30 Hz_bereit. 
+## <a name="available-eye-tracking-data"></a>Verfügbare Augen Verfolgungs Daten
+Bevor wir uns mit den spezifischen Entwurfs Richtlinien für die Interaktion mit Blick auf das Auge befassen, möchten wir kurz auf die Funktionen hinweisen, die von der hololens 2 [Eye Tracking-API](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) bereitstellt werden. Entwickler erhalten Zugriff auf einen Augenblick Strahl ("Ursprung" und "Richtung") bei ungefähr _30 fps (60 Hz)_ .
+Ausführlichere Informationen zum Zugreifen auf die Augen Verfolgungs Daten finden Sie in den Entwickler Handbüchern zur Verwendung von [Eye-Blick in DirectX](gaze-in-directx.md) und [im Blickwinkel in Unity](https://aka.ms/mrtk-eyes).
 
-Der vorhergesagte Augenblick liegt innerhalb der Zertifizierungsstelle. 1,0-1,5 Grad im visuellen Winkel um das tatsächliche Ziel. Da geringfügige Ungenauigkeiten zu erwarten sind, sollten Sie einen gewissen Spielraum um diesen unteren Wert einplanen. Dies wird im weiteren Verlauf noch behandelt. Damit die Blickverfolgung exakt funktioniert, muss jeder Benutzer eine Benutzerkalibrierung für seine Blickverfolgung durchlaufen. 
+Der vorhergesagte Augenblick liegt ungefähr innerhalb von 1,5 Grad im visuellen Winkel um das eigentliche Ziel (siehe Abbildung unten). Da geringfügige unveränderungen erwartet werden, sollten Entwickler einen gewissen Rand um diesen niedrigeren Grenzwert planen (z. b. können 2.0-3.0 Grad zu einer viel komfortableren Umgebung führen). Im folgenden wird erläutert, wie Sie die Auswahl kleiner Ziele im folgenden ausführlicher behandeln. Damit die Blickverfolgung exakt funktioniert, muss jeder Benutzer eine Benutzerkalibrierung für seine Blickverfolgung durchlaufen. 
 
 ![Optimale Zielgröße im Abstand von 2 Metern](images/gazetargeting-size-1000px.jpg)<br>
 *Optimale Zielgröße bei einer Entfernung von 2 Stunden*
-<br>
-<br>
-Der Zugriff auf die [Eye Tracking-API](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) ist über: "Windows. perception. People. eyespose" möglich. 
 
 ## <a name="calibration"></a>Energie 
-Damit die Blickverfolgung exakt funktioniert, muss jeder Benutzer eine Benutzerkalibrierung für seine Blickverfolgung durchlaufen. Bei hololens 2 wird der Benutzer beim Einrichten des Geräts zur Kalibrierung von visuellen Elementen aufgefordert, indem er den Satz von Fixierungs Zielen ansieht. Dies ermöglicht es dem Gerät, das Gerät für eine bequeme und qualitativ hochwertige Anzeige für den Benutzer anzupassen und gleichzeitig eine genaue Eye-Nachverfolgung sicherzustellen.  Die Kalibrierung sollte für die meisten Benutzer funktionieren, aber es gibt Fälle, in denen der Benutzer möglicherweise nicht in der Lage ist, die Kalibrierung erfolgreich durchzusetzen.  Weitere Informationen zur Kalibrierung finden Sie unter [Kalibrierung](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration).
+Damit die Eye-Nachverfolgung ordnungsgemäß funktioniert, muss jeder Benutzer eine nach [Verfolgungs Benutzer-Kalibrierung](calibration.md) durchlaufen, für die der Benutzer eine Reihe von Holographic-Zielen betrachten muss. Dies ermöglicht es dem Gerät, das System für eine komfortablere und qualitativ hochwertige Anzeige für den Benutzer anzupassen und gleichzeitig eine genaue Eye-Nachverfolgung sicherzustellen. Die Augen Verfolgung sollte für die meisten Benutzer funktionieren, aber es gibt Fälle, in denen ein Benutzer möglicherweise nicht in der Lage ist, die Kalibrierung erfolgreich durchzusetzen.
+Weitere Informationen zur Kalibrierung finden Sie unter [Kalibrierung](calibration.md).
 
-## <a name="eye-gaze-design-guidelines"></a>Entwurfs Richtlinien für den Augenblick
+## <a name="eye-gaze-input-design-guidelines"></a>Eingabe Entwurfs Richtlinien für den Augenblick
 Das Entwickeln einer Interaktion, die die schnelle Ziel Ausrichtung nutzt, kann eine Herausforderung darstellen. In diesem Abschnitt werden die wichtigsten Vorteile und Herausforderungen zusammengefasst, die beim Entwerfen Ihrer Anwendung zu beachten sind. 
 
 ### <a name="benefits-of-eye-gaze-input"></a>Vorteile der Eingabe für den Augenblick
@@ -126,7 +126,7 @@ Diese Lösung ermöglicht außerdem einen Modus, in dem der Benutzer sich ohne �
 Dies ist ein Gefühl, das Sie in Ihren Benutzern aufrufen können, wenn Sie erzwingen, dass Sie Ziele auswählen, die in Ihrer Anwendung mit der Ziel Ausrichtung zu klein sind.
 Damit Sie für Ihre Benutzer eine angenehme und komfortable Erfahrung schaffen, sollte bei Zielen für Ihren Entwurf der Sehwinkel mindestens 2 Grad (vorzugsweise mehr) betragen.
 
-- Unregelmäßige **Augenblicke Bewegungen** Unsere Augen führen zu schnellen Bewegungen von der Fixierung bis zur Fixierung. Wenn Sie Scanwege aufgezeichneter Blickbewegungen betrachten, können Sie die Flatterhaftigkeit erkennen. Unsere Augen bewegen sich gegenüber dem *Anvisieren mit dem Kopf* oder *Handbewegungen* schnell und springen spontan hin und her.  
+- Unregelmäßige **Augenblicke Bewegungen** Unsere Augen führen zu schnellen Bewegungen von der Fixierung bis zur Fixierung. Wenn Sie Scanwege aufgezeichneter Blickbewegungen betrachten, können Sie die Flatterhaftigkeit erkennen. Die Augen werden schnell und in spontanen Sprüngen im Vergleich zu *Kopf-* und *Handbewegungen*bewegt.  
 
 - **Zuverlässigkeit der Verfolgung:** Die Genauigkeit der Blickverfolgung wird ein wenig bei sich ändernden Lichtverhältnissen beeinträchtigt, während sich das Auge an die neuen Bedingungen anpasst.
 Dies sollte sich nicht notwendigerweise auf den Entwurf Ihrer Anwendung auswirken, da die Genauigkeit innerhalb der Begrenzung von 2 ° liegen sollte, ist es möglicherweise erforderlich, dass der Benutzer erneut eine Kalibrierung durchführe. 
@@ -147,7 +147,7 @@ Bei einem Cursor führt dies möglicherweise zu einem "flüchtig Cursor"-Effekt 
   
     - **Leistungsstarker Kontextanbieter:** Wenn Sie Informationen dazu verwenden, wo und was der Benutzer beim ututing eines sprach Befehls oder beim Ausführen einer Handbewegung sucht, kann die Eingabe nahtlos über das Feld der Ansicht hinweg übertragen werden. Zum Beispiel: Mit „Put that there“ (Auswählen, Verschieben, ...hierhin) können Sie schnell und flüssig ein Hologramm auswählen und über die Szene verschieben. Dazu brauchen Sie nur ein Ziel und den Bestimmungsort anzuschauen. 
 
-    - **Multimodale Eingaben müssen synchronisiert werden (Problem des vor dem Klicken abgewendeten Blicks):** Das Kombinieren von Rapid Eye-Bewegungen mit komplexeren zusätzlichen Eingaben, wie z. b. langen Sprachbefehlen oder Handgesten, birgt das Risiko, dass Sie Ihren Blick vor dem Abschluss des zusätzlichen Eingabe Befehls fortsetzen. Wenn Sie also Ihre eigenen Eingabe Steuerelemente erstellen (z. b. benutzerdefinierte Handgesten), sollten Sie das Auftreten dieser Eingabe oder der ungefähren Dauer protokollieren, um Sie mit dem zu korrelieren, was ein Benutzer in der Vergangenheit eingegeben hat.
+    - **Multimodale Eingaben müssen synchronisiert werden (Problem des vor dem Klicken abgewendeten Blicks):** Das Kombinieren von Rapid Eye-Bewegungen mit komplexeren zusätzlichen Eingaben, wie z. b. langen Sprachbefehlen oder Handgesten, birgt das Risiko, dass Sie Ihren Blick vor dem Abschluss des zusätzlichen Eingabe Befehls fortsetzen. Wenn Sie also Ihre eigenen Eingabe Steuerelemente erstellen (z. b. benutzerdefinierte Handgesten), sollten Sie das Auftreten dieser Eingabe oder der ungefähren Dauer protokollieren, um Sie mit dem zu korrelieren, was ein Benutzer in der Vergangenheit gesehen hat.
     
 3. **Dezentes Feedback für Eingaben über die Blickverfolgung:** Es ist hilfreich, Feedback zu geben, wenn ein Ziel untersucht wird, um anzugeben, dass das System wie beabsichtigt funktioniert, aber dennoch gering gehalten werden sollte. Dies kann eine langsame Mischung, ein-und ausgehende, visuelle Highlights oder andere, feine Ziel Verhaltensweisen, wie z. b. langsame Bewegungen, z. b. eine geringfügige Erhöhung der Zielgröße, beinhalten, um anzugeben, dass das System ordnungsgemäß erkannt hat, dass der Benutzer ein Ziel unnötiges unterbrechen des aktuellen Workflows des Benutzers. 
 
@@ -155,13 +155,44 @@ Bei einem Cursor führt dies möglicherweise zu einem "flüchtig Cursor"-Effekt 
 
 5. **Berücksichtigen von Ungenauigkeiten:** Wir unterscheiden zwei Arten von imsions, die für die Benutzer bemerkbar sind: Offset und Jitter. Die einfachste Möglichkeit, einen Offset zu behandeln, besteht darin, ausreichend große Ziele für die Interaktion bereitzustellen. Es wird empfohlen, einen visuellen Winkel größer als 2 ° als Verweis zu verwenden. Beispielsweise ist die Miniaturansicht ungefähr 2 ° im visuellen Winkel, wenn Sie den Arm ausdehnen. Dies führt zu folgender Richtlinie:
     - Erzwingen Sie nicht, dass Benutzer kleine Ziele auswählen. Die Untersuchung hat ergeben, dass die Interaktionen, wenn die Ziele ausreichend groß sind und das System gut entworfen wurde, mühelos und magisch beschrieben werden. Wenn Ziele zu klein sind, empfinden Benutzer die Erfahrung als ermüdend und frustrierend.
-   
+  
+## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Leitfaden für Entwickler: Was geschieht, wenn die Augen Verfolgung nicht verfügbar ist?
+Es kann Situationen geben, in denen Ihre APP aufgrund verschiedener Gründe keine Augen Verfolgungs Daten empfängt, einschließlich, aber nicht beschränkt auf:
+* Der Benutzer hat die Eye Tracking-Kalibrierung übersprungen.
+* Der Benutzer hat eine Kalibrierung durchführen, entschied sich aber dafür, der APP keine Berechtigung zur Verwendung Ihrer Überwachungsdaten zu erteilen.
+* Der Benutzer hat eine eindeutige Brillen-oder Augen Bedingung, die vom System noch nicht unterstützt wird.
+* Externe Faktoren behindern die zuverlässige Eye-Nachverfolgung, wie z. b. smudges auf den holten-Hypervisor oder-Brillen, intensive direkte Sonneneinstrahlung und-oksionen aufgrund von Haaren vor Augen.
+
+Als App-Entwickler bedeutet dies, dass Sie die Unterstützung von Benutzern berücksichtigen müssen, für die möglicherweise keine Überwachungsdaten verfügbar sind. Im folgenden wird erläutert, wie Sie erkennen können, ob die Eye-Nachverfolgung verfügbar ist, und wie Sie sich behandeln, wenn Sie für verschiedene Anwendungen nicht verfügbar ist.
+
+### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. So erkennen Sie, dass die Augen Verfolgung verfügbar ist
+Es gibt einige Überprüfungen, um zu bestimmen, ob die Augen Verfolgungs Daten verfügbar sind. Überprüfen Sie, ob...
+* ... Das System unterstützt die Augen Verfolgung überhaupt. Nennen Sie die folgende *Methode*: [Windows. perception. People. eyespose. IsSupported ()](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
+
+* ... der Benutzer ist kalibriert. Nennen Sie die folgende *Eigenschaft*: [Windows. perception. People. eyespose. iscalibrationvalid](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
+
+* ... der Benutzer hat der APP die Berechtigung zur Verwendung der Augen Verfolgungs Daten erteilt: Rufen Sie den aktuellen _"gazinput Access Status"_ ab. Ein Beispiel hierfür finden Sie unter [anfordern des Zugriffs auf die Eingabe](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
+
+Darüber hinaus können Sie überprüfen, ob Ihre Augen Verfolgungs Daten nicht veraltet sind, indem Sie ein Timeout zwischen empfangenen Datenaktualisierungen für die Augen Verfolgung hinzufügen und andernfalls auf den Haupt Blick zurückgreifen, wie unten erläutert. 
+
+Wie oben beschrieben, gibt es verschiedene Gründe, warum die Augen Verfolgungs Daten möglicherweise nicht verfügbar sind. Einige Benutzer haben sich möglicherweise bewusst entschieden, den Zugriff auf Ihre Augen Verfolgungs Daten aufzuheben, und sind mit dem Nachteil einer geringeren Benutzerfunktion für den Datenschutz, dass Sie keinen Zugriff auf Ihre Überwachungsdaten bereitstellt, in einigen Fällen kann dies unbeabsichtigt sein. Wenn Ihre APP die Augen Nachverfolgung verwendet, und dies ein wichtiger Bestandteil der Benutzeroberflächen ist, empfiehlt es sich, diese Funktion an den Benutzer zu übermitteln. Wenn Sie den Benutzer darüber informieren, warum die Augen Verfolgung für Ihre Anwendung wichtig ist (möglicherweise sogar durch das Auflisten einiger verbesserter Features), um das volle Potenzial Ihrer Anwendung zu erhalten, können Sie dem Benutzer helfen, die Ergebnisse besser zu verstehen. Helfen Sie dem Benutzer, herauszufinden, warum die Eye-Nachverfolgung möglicherweise nicht funktioniert (basierend auf den obigen Überprüfungen), und bieten Sie einige Vorschläge, um potenzielle Probleme schnell zu beheben. Wenn Sie z. b. feststellen können, dass das System die Eye-Nachverfolgung unterstützt, wird der Benutzer kalibriert und selbst seine Berechtigung erteilt, aber es werden keine Augen Verfolgungs Daten empfangen. Beachten Sie jedoch, dass es selten Fälle gibt, in denen die Eye-Nachverfolgung möglicherweise einfach nicht funktioniert. Achten Sie daher darauf, dass Sie Erinnerungen zum Aktivieren der Eye-Nachverfolgung in Ihrer APP verwerfen oder sogar deaktivieren können.
+
+### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. Fallback für apps, die den Augenblick als primären Eingabe Zeiger verwenden
+Wenn Ihre APP den Augenblick als Zeiger Eingabe verwendet, um in der Szene schnell holograms auszuwählen, sind die Augen Verfolgungs Daten nicht verfügbar. es wird empfohlen, auf den Mauszeiger zurückzukehren und den Cursor für den Cursor zu zeigen. Es wird empfohlen, ein Timeout (z. b. 500 – 1.500 ms) zu verwenden, um zu bestimmen, ob gewechselt werden soll. Dadurch wird verhindert, dass ein Cursor jedes Mal, wenn das System die Nachverfolgung aufgrund von schnellen Augenbewegungen oder winas und Blinks verliert. Wenn Sie ein Unity-Entwickler sind, wird der automatische Fall Back auf den Head-Blick bereits im Mixed Reality Toolkit behandelt. Wenn Sie ein DirectX-Entwickler sind, müssen Sie diesen Switch selbst verarbeiten.
+
+### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. Fallback für andere Überwachungs spezifische Anwendungen
+Ihre APP kann den Augenblick auf eine einzigartige Weise verwenden, die speziell auf die Augen zugeschnitten ist, z. b. zum Animieren der Augen eines Avatars oder zur Augen basierten Aufmerksamkeit Heatmaps, die sich auf genaue Informationen zur visuellen Aufmerksamkeit verlassen. In diesem Fall gibt es keinen klaren Fallback. Wenn die Augen Verfolgung nicht verfügbar ist, müssen diese Funktionen möglicherweise einfach deaktiviert werden. 
+
+<br>
+
+Auf dieser Seite haben Sie hoffentlich einen guten Überblick erhalten, mit dem Sie die Rolle der Eye-Nachverfolgung und die Eingabe des Augenblicks für hololens 2 verstanden haben. Informationen zu den ersten Schritten bei der Entwicklung finden Sie in den Informationen zu den [Augenblicken in Unity](https://aka.ms/mrtk-eyes) und im Blickwinkel [in DirectX](gaze-in-directx.md).
+
 
 ## <a name="see-also"></a>Siehe auch
-* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Kopf-und Augenblick in DirectX](gaze-in-directx.md)
+* [Blick in DirectX](gaze-in-directx.md)
 * [Blick in Unity (Mixed Reality Toolkit)](https://aka.ms/mrtk-eyes)
-* [Kalibrierung](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration)
+* [Kalibrierung](calibration.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Handgesten](gestures.md)
 * [Spracheingabe](voice-design.md)
 * [Motion-Controller](motion-controllers.md)

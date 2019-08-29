@@ -6,17 +6,17 @@ ms.author: jlyons
 ms.date: 08/01/2019
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: fe26092ec8f5895652d17f88bf3be15cb116e482
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: c3e31cdb5acf35ecc3101d3cf359e40771cc8cbd
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712684"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122076"
 ---
 # <a name="holographic-remoting-player"></a>Holographic Remoting Player
 
 >[!IMPORTANT]
->Holographic Remoting für hololens 2 ist eine wesentliche Versionsänderung. [Host Anwendungen für **hololens 1** ](add-holographic-remoting.md) müssen das nuget-Paketversion **1 verwenden. x. x** und [Host Anwendungen für **hololens 2** ](holographic-remoting-create-host.md) müssen **2. x. x**verwenden. Dies bedeutet, dass für hololens 2 geschriebene Host Anwendungen nicht mit hololens 1 und umgekehrt kompatibel sind.
+>Holographic Remoting für hololens 2 ist eine wesentliche Versionsänderung. [Host Anwendungen für **hololens (1st Gen)** ](add-holographic-remoting.md) müssen das nuget-Paketversion **1 verwenden. x. x** und [Host Anwendungen für **hololens 2** ](holographic-remoting-create-host.md) müssen **2. x. x**verwenden. Dies bedeutet, dass für hololens 2 geschriebene Host Anwendungen nicht mit hololens 1 und umgekehrt kompatibel sind.
 
 Der Holographic Remoting Player ist eine begleitende APP, die eine Verbindung mit PC-Apps und spielen herstellt, die Holographic Remoting unterstützen. Holographic Remoting streamt Holographic Content per Wi-Fi-Verbindung von einem PC zu Ihren Microsoft hololens in Echtzeit.
 
@@ -43,7 +43,7 @@ Die Qualität und die Leistung Ihrer Benutzeroberflächen variieren je nach den 
 
 ## <a name="diagnostics"></a>Diagnose
 
-Zum Messen der Qualität der Verbindung **Geben Sie "Diagnose aktivieren"** auf dem Hauptbildschirm des Holographic Remoting Players ein. Wenn die Diagnose aktiviert ist, werden Sie auf **hololens 1** von der App angezeigt:
+Zum Messen der Qualität der Verbindung **Geben Sie "Diagnose aktivieren"** auf dem Hauptbildschirm des Holographic Remoting Players ein. Wenn die Diagnose aktiviert ist, zeigt die APP auf **hololens (1. Gen)** Folgendes an:
 
 * **Fps** : die durchschnittliche Anzahl der gerenderten Frames, die der Remoting-Player empfängt und pro Sekunde rendert. Der ideale Wert ist 60 fps.
 * **Latenz** Zeit: die durchschnittliche Zeitspanne, die ein Frame benötigt, um von Ihrem PC auf die hololens zu gelangen. Je niedriger der bessere. Dies hängt größtenteils von Ihrem Wi-Fi-Netzwerk ab.
@@ -76,7 +76,7 @@ Auf dem Hauptbildschirm können Sie beispielsweise **"Diagnose deaktivieren"** ,
 * Wir empfehlen Ihnen, Ihren PC über Ethernet mit Ihrem Netzwerk zu verbinden, um die Anzahl der drahtlosen Hops zu verringern.
 
 ## <a name="see-also"></a>Siehe auch
-* [Hololens 1: Holographic-Remoting hinzufügen](add-holographic-remoting.md)
+* [Hololens (1. Generation): Holographic-Remoting hinzufügen](add-holographic-remoting.md)
 * [Hololens 2: Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
-* [Software Lizenzbedingungen für Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Datenschutzbestimmungen von Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

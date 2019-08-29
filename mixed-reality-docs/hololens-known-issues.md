@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: Problembehandlung, bekanntes Problem, Hilfe
-ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 80bd7499c0075399e516648dd92b7515fdba753a
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896546"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122132"
 ---
 # <a name="hololens-known-issues"></a>Bekannte Probleme mit hololens
 
@@ -28,7 +28,7 @@ Problem Ursache: Benutzer, die Visual Studio 2015 oder frühe Releases von Visua
  
 **Problemumgehung**: 
 
-Unser Team arbeitet zurzeit an einer Korrektur. In der Zwischenzeit können Sie die folgenden Schritte ausführen, um das Problem zu umgehen und die Blockierung der Bereitstellung und des Debuggens zu unterstützen:  
+Obwohl dieses Problem in Visual Studio 2019 16,2 behoben wurde, können Entwickler, die in früheren Versionen von Visual Studio bleiben möchten, die folgenden Schritte ausführen, um das Problem zu umgehen und die Blockierung der Bereitstellung und des Debuggens zu unterstützen:  
 1. Öffnen Sie Visual Studio.
 2. Datei > New->-Projekt
 3. Visual C# > Windows-Desktop > Konsolen-app (.NET Framework)
@@ -74,7 +74,6 @@ Unser Team arbeitet zurzeit an einer Korrektur. In der Zwischenzeit können Sie 
  
 15. Wenn das Tool ohne Nachrichten beendet wurde (Dies sollte nur einige Sekunden dauern), können Sie jetzt in Visual Studio 2017 oder höher bereitstellen und Debuggen.  Die fortgesetzte Verwendung des Tools ist nicht erforderlich.
 
-Wir werden weitere Updates bereitstellen, sobald Sie verfügbar werden.
 
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Probleme beim Starten des Microsoft Store und der apps auf hololens
 

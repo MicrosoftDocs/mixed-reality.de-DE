@@ -6,17 +6,17 @@ ms.author: bethau
 ms.date: 08/01/2019
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: 95cf98504f26e2362b3c4fd38e7d9228350798f3
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 6b0f92fce1099ec98d87100e015de9442bff6bd2
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718064"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122025"
 ---
 # <a name="writing-a-holographic-remoting-host-app"></a>Schreiben einer Holographic Remoting-Host-App
 
 >[!IMPORTANT]
->In diesem Dokument wird die Erstellung einer Host Anwendung für hololens 2 beschrieben. Die Host Anwendung für **hololens 1** muss das nuget-Paketversion **1. x. x**verwenden. Dies bedeutet, dass für hololens 2 geschriebene Host Anwendungen nicht mit hololens 1 und umgekehrt kompatibel sind. Die Dokumentation für hololens 1 finden Sie [hier](add-holographic-remoting.md).
+>In diesem Dokument wird die Erstellung einer Host Anwendung für hololens 2 beschrieben. Die Host Anwendung für **hololens (1st Gen)** muss das nuget-Paketversion **1. x. x**verwenden. Dies bedeutet, dass für hololens 2 geschriebene Host Anwendungen nicht mit hololens 1 und umgekehrt kompatibel sind. Die Dokumentation für hololens 1 finden Sie [hier](add-holographic-remoting.md).
 
 Durch das Erstellen einer Holographic Remoting Host-App können Remote Inhalte, die auf einem Remote Computer gerendert werden, an hololens 2 gestreamt werden. In diesem Artikel wird beschrieben, wie dies erreicht werden kann. Sämtlicher Code auf dieser Seite und in den Arbeitsprojekten finden Sie im [GitHub-Repository "Holographic Remoting Samples](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)".
 
@@ -24,7 +24,7 @@ Holographic Remoting ermöglicht es einer APP, hololens 2 mit Holographic-Inhalt
 
 Eine typische remotingverbindung verfügt über bis zu 50 ms Latenzzeit. Die Player-App kann die Latenzzeit in Echtzeit melden.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Ein guter Ausgangspunkt ist eine funktionierende DirectX-basierte Desktop-oder UWP-APP, die auf die Windows Mixed Reality-API abzielt. Weitere Informationen finden Sie unter [Übersicht über die DirectX-Entwicklung](directx-development-overview.md). Die [ C++ Holographic-Projektvorlage](creating-a-holographic-directx-project.md) ist ein guter Ausgangspunkt.
 
@@ -44,7 +44,7 @@ Die folgenden Schritte sind erforderlich, um das nuget-Paket einem Projekt in Vi
 6. Das nächste Dialogfeld, das angezeigt wird, ist die Lizenzvereinbarung. Klicken Sie auf **ich** Stimme zu, um den Lizenzvertrag zu akzeptieren.
 
 >[!NOTE]
->Version **1. x. x** des nuget-Pakets ist weiterhin für Entwickler verfügbar, die auf hololens 1 abzielen möchten. Weitere Informationen finden [Sie unter Hinzufügen von Holographic Remoting (hololens 1)](add-holographic-remoting.md).
+>Version **1. x. x** des nuget-Pakets ist weiterhin für Entwickler verfügbar, die auf hololens 1 abzielen möchten. Weitere Informationen finden [Sie unter Hinzufügen von Holographic Remoting (hololens (1st Gen))](add-holographic-remoting.md).
 
 ## <a name="create-the-remote-context"></a>Erstellen des Remote Kontexts
 
@@ -297,8 +297,8 @@ Benutzerdefinierte Datenkanäle können zum Senden von Benutzerdaten über die b
 
 ## <a name="see-also"></a>Siehe auch
 * [Schreiben einer benutzerdefinierten Holographic Remoting Player-App](holographic-remoting-create-player.md)
-* [Benutzerdefinierte Holographic-Remoting-Datenkanäle](holographic-remoting-custom-data-channels.md)
+* [Benutzerdefinierte Holographic Remoting-Datenkanäle](holographic-remoting-custom-data-channels.md)
 * [Einrichten einer sicheren Verbindung mit Holographic Remoting](holographic-remoting-secure-connection.md)
 * [Problembehandlung und Einschränkungen für Holographic Remoting](holographic-remoting-troubleshooting.md)
-* [Software Lizenzbedingungen für Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Datenschutzbestimmungen von Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
