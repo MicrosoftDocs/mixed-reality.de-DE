@@ -6,18 +6,64 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Kalibrierung, Komfort, visuelle Elemente, Qualität, IPD
-ms.openlocfilehash: 5f8e6aef1df0efe4c64c807e627f69c7949363f2
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: e86319dadeda02f71427b87980268eaf18942c49
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974802"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122090"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Verbessern der visuellen Qualität und des Komforts
 Hololens, hololens 2 und Windows Mixed Reality mit immersiven Headsets bieten verschiedene Möglichkeiten, die Qualität der visuellen Darstellung zu verbessern. 
 
-## <a name="hololens"></a>HoloLens
+## <a name="hololens-2"></a>Hololens 2
 
+### <a name="calibration"></a>Energie
+
+Hololens 2 ist darauf ausgelegt, für unsere Kunden die qualitativ hochwertige visuelle Darstellung und den Komfort zu bieten. Die Technologie für die Augen Nachverfolgung wird verwendet, um die Benutzerumgebung zum Anzeigen und interagieren mit der virtuellen Umgebung zu verbessern.  
+
+Auf hololens 2 werden Sie aufgefordert, Ihre visuellen Elemente während der Einrichtung des Geräts zu kalibrieren. Benutzer werden aufgefordert, eine Reihe von Fixierungs Zielen zu überprüfen. Dadurch kann das Gerät das Rendering von holograms an den Benutzer anpassen, um eine präzise positionierte holograms sicherzustellen, eine bequeme 3D-Anzeige und eine verbesserte Anzeigequalität. Alle Anpassungen erfolgen dynamisch, ohne dass eine manuelle Optimierung erforderlich ist. Wenn Sie die Augen als Meilensteine verwenden, wird das Gerät einzeln an jeden Benutzer angepasst, und die visuellen Elemente werden angepasst, wenn sich das Headset leicht in der gesamten Verwendung befindet. Die Nachverfolgung von Augen Positionen wird intern vom System verwendet, und Entwickler müssen nichts tun, um diese Funktion nutzen zu können. Tatsächlich sind diese Informationen für Entwickler nicht verfügbar.
+Weitere Informationen zu den Datentypen, die das Augen Verfolgungssystem für Entwickler bereitstellt, finden Sie in den [Überwachungs-APIs](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) .
+
+Bei hololens 2 wird durch das Durchführen der Kalibrierung auch eine genaue Überwachung des Augenblicks für jeden Benutzer sichergestellt. Mit der Blickverfolgung können Anwendungen in Echtzeit verfolgen, wohin der Benutzer schaut. Dies ist die Hauptfunktion, die Entwickler nutzen können, um ein ganz neues Kontext-, Grundlegendes und Interaktionen in der holografischen Benutzer Funktionalität zu ermöglichen.  
+
+Die Kalibrierungsdaten werden lokal auf dem Gerät gespeichert und sind keinen Kontoinformationen zugeordnet. Es gibt keinen Datensatz darüber, wer das Gerät ohne Kalibrierung verwendet hat. Dies bedeutet, dass Benutzer bei der erstmaligen Verwendung des Geräts zur Kalibrierung aufgefordert werden, sowie für Benutzer, die zuvor die Kalibrierung deaktiviert haben, oder wenn die Kalibrierung nicht erfolgreich war. Die Kalibrierungsdaten können immer aus dem Gerät in den **Einstellungen** > **Datenschutz** > **Eye Tracker**gelöscht werden. 
+
+### <a name="calibration-failures"></a>Kalibrierungs Fehler
+Die Kalibrierung sollte für die meisten Benutzer funktionieren, aber es gibt Fälle, in denen der Benutzer möglicherweise nicht in der Lage ist, die Kalibrierung erfolgreich durchzusetzen.  
+Einige Beispiele für die Kalibrierung von Fehlern sind folgende:
+- Der Benutzer hat die kalibrierungsziele während der Kalibrierung nicht betrachtet.
+- Nicht ordnungsgemäß positionierter oder nicht ordnungsgemäß positionierter Geräte Hypervisor oder Geräte-Hypervisor 
+- Bestimmte Arten von Kontaktlinsen und-Gläsern (farbige Kontaktlinsen, einige Toric-Kontaktlinsen, IR-Blockierungs Gläser, einige hoch verschreibungspflichtige Gläser, Sonnenbrillen usw.)
+- Geänderte oder gekratzte Gläser
+- Deutlichere Zusammensetzung, einige Wimpern Erweiterungen
+- Oksions-und/oder Geräte-Hypervisor (Haare, einige Dicke Brillenrahmen)
+- Eye Physiologie, bestimmte Augen Zustände und/oder Augenchirurgie (einige schmale Augen, lange Wimpern, amblyopia, Nystagmus, einige Fälle von LASIK oder andere Eye-Operationen usw.)
+
+Wenn die Kalibrierung nicht erfolgreich ist, versuchen Sie es mit einer der folgenden Korrekturen: 
+- Bereinigen des Geräte-Visors
+- Reinigen der Brille
+- Bewegen Sie Ihren Geräte-Hypervisor auf alle Weise in
+- Stellen Sie sicher, dass die Sensoren bzw. Ihre Augen nicht behindern (z. b. Haare). 
+- Stellen Sie sicher, dass in Ihrem Raum genügend Licht vorhanden ist, und dass Sie sich nicht unter direkter Sonneneinstrahlung befinden.
+- Stellen Sie sicher, dass Sie die Ziele bei der Kalibrierung sorgfältig befolgen.
+
+Wenn Sie alle Richtlinien befolgt haben und die Kalibrierung weiterhin fehlschlägt, können Sie die Kalibrierungs Aufforderung > in**Systemkalibrierung** > für Einstellungen deaktivieren: *"Wenn eine neue Person diese hololens verwendet, muss die automatische* aufzurufende" Eye-Kalibrierung "deaktiviert werden. Beachten Sie, dass dies zu einer schlechteren Qualität und zu Problemen beim Rendern von – Hologramm führen kann.
+
+### <a name="launching-the-calibration-app-from-settings"></a>Starten der Kalibrierungs-App aus den Einstellungen
+1. Wechseln Sie zur Seite "Einstellungen" auf den hololens 2.
+    * Verwenden Sie die *"Start Geste"* , um das [Startmenü anzuzeigen](navigating-the-windows-mixed-reality-home.md#start-menu). Alternativ dazu können Sie auch einfach *"Gehe zu Start"* sagen.
+    * Wenn die **Einstellungen** nicht zum Starten angeheftet sind, wählen Sie **alle apps** aus, um alle apps anzuzeigen.
+    * Start **Einstellungen**
+2. Navigieren Sie zu > **Systemkalibrierung** > **Eye-Kalibrierung** , und wählen Sie die Option **Eye**
+
+
+### <a name="calibration-when-sharing-a-devicesession"></a>Kalibrierung bei der Freigabe eines Geräts/einer Sitzung
+Hololens 2 können von Personen gemeinsam genutzt werden, ohne dass jede Person die Geräte Einrichtung durchlaufen muss.
+Hololens 2 fordert den Benutzer auf, visuelle Elemente zu kalibrieren, wenn das Gerät auf den Kopf gestellt wird, wenn der Benutzer nicht mit dem Gerät vertraut ist. Wenn der Benutzer zuvor die visuellen Elemente auf dem Gerät auf dem Gerät abgestimmt hat, wird die Anzeige nahtlos auf die Qualität abgestimmt, und es wird eine bequeme Anzeige angezeigt, wenn der Benutzer das Gerät auf den Kopf setzt. 
+
+
+## <a name="hololens-v1"></a>Hololens (v1)
 Das Kalibrieren Ihrer IPD (interpupillary Distance) kann die Qualität ihrer visuellen Elemente verbessern.
 
 ### <a name="during-setup"></a>Während des Setups
@@ -37,7 +83,7 @@ Benutzer werden aufgefordert, Ihren Finger mit einer Reihe von sechs Zielen pro 
 Die Kalibrierung kann jederzeit über die Kalibrierungs-app ausgeführt werden. Die Kalibrierungs-APP wird standardmäßig installiert, und Sie können über das Startmenü oder über die app "Einstellungen" auf Sie zugreifen. Die Kalibrierung wird empfohlen, wenn Sie die Qualität ihrer visuellen Elemente verbessern oder visuelle Elemente für einen neuen Benutzer kalibrieren möchten.
 
 **Starten der APP vom Start**
-1. Verwenden [Sie](gestures.md#bloom) die Option zum [starten](navigating-the-windows-mixed-reality-home.md#start-menu)des Startmenü.
+1. Verwenden [Sie](gestures.md#bloom) die Option zum [Starten des Startmenü](navigating-the-windows-mixed-reality-home.md#start-menu).
 2. Wählen **+** Sie diese Option, um alle apps anzuzeigen.
 3. Starten Sie die **Kalibrierung**.
 
@@ -46,28 +92,13 @@ Die Kalibrierung kann jederzeit über die Kalibrierungs-app ausgeführt werden. 
 ![Die als livecube nach dem Starten angezeigte Kalibrierungs-App](images/calibration-livecube-200px.png)
 
 **Starten der APP über Einstellungen**
-1. Verwenden [Sie](gestures.md#bloom) die Option zum [starten](navigating-the-windows-mixed-reality-home.md#start-menu)des Startmenü.
+1. Verwenden [Sie](gestures.md#bloom) die Option zum [Starten des Startmenü](navigating-the-windows-mixed-reality-home.md#start-menu).
 2. Wählen **+** Sie diese Option aus, um alle apps anzuzeigen, wenn **Einstellungen** nicht zum Starten angeheftet
 3. Start **Einstellungen**.
 4. Navigieren Sie zu **System** > **Hilfsprogramme** , und wählen Sie dann **Kalibrierung öffnen**aus.
 
 ![Starten der Kalibrierungs-App über die app "Einstellungen"](images/calibration-settings-500px.jpg)
 
-## <a name="hololens-2"></a>HoloLens 2
-
-### <a name="calibration"></a>Energie 
-
-Auf hololens 2 werden Sie aufgefordert, Ihre visuellen Elemente während der Einrichtung des Geräts zu kalibrieren. Benutzer werden aufgefordert, den Satz der Fixierungs Ziele zu überprüfen. Dadurch kann das Gerät das – Hologramm-Rendering für den Benutzer anpassen, um genau positionierte Hologramme zu gewährleisten, eine genauere Darstellung der 3D-Anzeige und eine verbesserte Anzeigequalität zu erzielen. Alle Anpassungen erfolgen dynamisch, ohne dass eine manuelle Optimierung erforderlich ist. 
-
-### <a name="calibration-when-sharing-a-device"></a>Kalibrierung bei der Freigabe eines Geräts 
-
-Hololens 2-Geräte können von Personen gemeinsam genutzt werden, ohne dass jede Person die Geräte Einrichtung durchlaufen muss. Hololens 2 fordert den Benutzer auf, visuelle Elemente zu kalibrieren, wenn das Gerät auf dem Kopf abgelegt ist, wenn der Benutzer nicht mit dem Gerät vertraut ist. Wenn der Benutzer bereits visuelle Elemente auf dem Gerät erstellt hat, wird die Anzeige nahtlos für die Qualität und die bequeme Anzeige angepasst, wenn der Benutzer das Gerät auf den Kopf setzt.  
-
-### <a name="launching-the-calibration-app-from-settings"></a>Starten der Kalibrierungs-App aus den Einstellungen
-1. Verwenden Sie Start Geste, um zum Startmenü zu gelangen.
-2. Wählen **+** Sie diese Option aus, um alle apps anzuzeigen, wenn **Einstellungen** nicht zum Starten angeheftet
-3. Start **Einstellungen**.
-4. Navigieren Sie zu **System** > **Hilfsprogramme** , und wählen Sie dann **Kalibrierung öffnen**aus.
 
 ## <a name="immersive-headsets"></a>Immersive Headsets
 

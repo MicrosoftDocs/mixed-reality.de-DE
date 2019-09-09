@@ -1,21 +1,21 @@
 ---
 title: 'Fallstudie: die Verfolgung von mehr persönlichen Computing'
-description: Die Verkaufschancen von morgen werden durch die heutige Produkt Bildung entdeckt. Die Lösungen, die diese Produkte bieten, geben Aufschluss über die Voraussetzungen für die Zukunft.
-author: mavitazk
-ms.author: mavitazk
+description: Die Chancen von morgen entstehen durch die Produkte, die heute produziert werden. Die von diesen Produkten gebotenen Lösungen öffnen den Blick für die Notwendigkeiten der Zukunft.
+author: danielescudero
+ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, Fallstudie, Vision, Szenarios
-ms.openlocfilehash: 64ec4b9e55758b760c294d933fb80a2a638e0088
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522968"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896524"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Fallstudie: die Verfolgung von mehr persönlichen Computing
 
-Die Verkaufschancen von morgen werden durch die heutige Produkt Bildung entdeckt. Die Lösungen, die diese Produkte bieten, geben Aufschluss über die Voraussetzungen für die Zukunft. Mit gemischter Realität ist dies besonders wichtig: Ein sinnvoller Einblick ergibt sich aus dem Einstieg in echte Arbeit – echte Geräte, echte Kunden, echte Probleme.
+Die Chancen von morgen entstehen durch die Produkte, die heute produziert werden. Die von diesen Produkten gebotenen Lösungen öffnen den Blick für die Notwendigkeiten der Zukunft. Dies tritt auf Mixed Reality in besonderem Maß zu: Sinnhafte Erkenntnisse ergeben sich aus dem Einstieg in praktische Arbeit – echte Geräte, echte Kunden, echte Probleme.
 
 Bei Microsoft bin ich Teil des Entwurfs Teams, das Unternehmenspartnern bei der Erstellung von Erfahrungen für Ihr Unternehmen mithilfe von Windows Mixed Reality unterstützt. Im vergangenen Jahr hat unser Team sich auf hololens konzentriert und weiß, wie das Flaggschiff-Holographic-Gerät von Microsoft heute ihren Kunden Mehrwert bieten kann. Wenn Sie mit Designern und Entwicklern dieser Unternehmen eng zusammenarbeiten, konzentriert sich unser Team auf das abdecken von Lösungen, die technisch gesehen, finanziell nicht praktikabel oder anderweitig ohne hololens nicht realisierbar sind.
 

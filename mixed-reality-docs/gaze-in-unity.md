@@ -5,24 +5,24 @@ author: thetuvix
 ms.author: yoyoz
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Blick, Unity, Hologram, gemischte Realität
-ms.openlocfilehash: b2cc86db156a1e97b013e4cd6debe3abe5ffb6dd
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+keywords: Eye-Do, Head-Blick, Unity, Hologram, gemischte Realität
+ms.openlocfilehash: 43e643bac00e3c889b14000331d2ed95014fdcc5
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453718"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122038"
 ---
-# <a name="head-gaze-in-unity"></a>Kopf Blicke in Unity
+# <a name="head-gaze-in-unity"></a>Kopf schauen in Unity
 
 Der Blick ist eine primäre Möglichkeit für Benutzer, die [Hologramme](hologram.md) , die Ihre APP in [gemischter Realität](mixed-reality.md)erstellt, als Ziel zu [betrachten](gaze.md) .
 
 
-## <a name="implementing-head-gaze"></a>Implementieren des Head-Blicks
+## <a name="implementing-head-gaze"></a>Implementieren von Head-Gaze
 
-Konzeptionell wird der [Blick](gaze.md) durch die Projektion eines Strahls aus dem Head des Benutzers, an dem sich das Headset befindet, in der Vorwärtsrichtung implementiert, und es wird festgelegt, mit welchem Strahl dieses Ray kollidiert. In Unity werden die Head-Position und die Richtung des Benutzers über die Unity-Haupt [Kamera](camera-in-unity.md), insbesondere [unityengine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html), verfügbar gemacht. [Transform. Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) und [unityengine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Position](http://docs.unity3d.com/ScriptReference/Transform-position.html).
+Konzeptionell wird die [Kopfzeile](gaze.md) implementiert, indem ein Strahl von der Kopfzeile des Benutzers projiziert wird, an der sich das Headset befindet, und in der Vorwärtsrichtung, mit der der Strahl in Konflikt steht. In Unity werden die Head-Position und die Richtung des Benutzers über die Unity-Haupt [Kamera](camera-in-unity.md), insbesondere [unityengine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html), verfügbar gemacht. [Transform. Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) und [unityengine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Position](http://docs.unity3d.com/ScriptReference/Transform-position.html).
 
-Der Aufruf von " [Physik. raycast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) " führt zu einer [raycasthit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) -Struktur, die Informationen über den Konflikt enthält, einschließlich des 3D-Punkts, bei dem der Konflikt aufgetreten ist, und des anderen gameobject, mit dem der Blick
+Das Aufrufen von " [Physik. raycast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) " führt zu einer [raycasthit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) -Struktur, die Informationen über den Konflikt enthält, einschließlich des 3D-Punkts, bei dem der Konflikt aufgetreten ist, und des anderen gameobject, mit dem der Kopf-und
 
 ### <a name="example-implement-head-gaze"></a>Beispiel: Implementieren des Haupt Blicks
 
@@ -44,19 +44,19 @@ void Update()
 }
 ```
 
-### <a name="best-practices"></a>Empfehlungen
+### <a name="best-practices"></a>Empfohlene Methoden
 
-Obwohl das obige Beispiel zeigt, wie ein einzelnes raycast in einer Update-Schleife ausgeführt wird, um das Suchziel zu finden, empfiehlt es sich, dies in einem einzelnen Objekt zu tun, das den Blick verwaltet, anstatt dies in einem Objekt zu tun, das potenziell an dem Objekt interessiert ist, bei dem es sich befindet. Dadurch kann Ihre APP die Verarbeitung speichern, indem Sie nur einen Blick auf jeden Frame durchläuft.
+Obwohl das obige Beispiel zeigt, wie ein einzelnes raycast in einer Update-Schleife ausgeführt wird, um das Ziel der Hauptbenutzer des Benutzers zu finden, empfiehlt es sich, dies in einem einzelnen Objekt zu tun, das die Kopfzeile verwaltet, anstatt dies in einem Objekt zu tun, das potenziell an dem Agentsoftware interessiert ist. t wird bei der Eingabe von. Dadurch kann Ihre APP die Verarbeitung speichern, indem Sie für jeden Frame nur einen Head-Gaze-raycast durchgeführt wird.
 
-## <a name="visualizing-gaze"></a>Visualisieren des Blicks
+## <a name="visualizing-head-gaze"></a>Visualisieren des Haupt Blicks
 
-Ebenso wie auf dem Desktop, auf dem Sie mit einem Mauszeiger auf Inhalte abzielen und mit ihnen interagieren, sollten Sie einen [Cursor](cursors.md) implementieren, der den Blick des Benutzers darstellt. Dadurch erhält der Benutzer Vertrauen in das, was Sie im Begriff sind, mit zu interagieren.
+Ebenso wie auf dem Desktop, auf dem Sie mit einem Mauszeiger auf Inhalte abzielen und mit ihnen interagieren, sollten Sie einen [Cursor](cursors.md) implementieren, der die Kopfzeile des Benutzers darstellt. Dadurch erhält der Benutzer Vertrauen in das, was Sie im Begriff sind, mit zu interagieren.
 
-## <a name="gaze-in-mixed-reality-toolkit-v2"></a>Blick in Mixed Reality Toolkit v2
-Sie können über den Eingabe- [Manager](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) in mrtk v2 auf den Blick zugreifen.
+## <a name="head-gaze-in-the-mixed-reality-toolkit-v2"></a>Der Haupt Blick im Mixed Reality Toolkit v2
+Sie können über den [Eingabe-Manager](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) in mrtk v2 auf den Haupt Blick zugreifen.
 
 ## <a name="see-also"></a>Siehe auch
 * [Kamera](camera-in-unity.md)
-* [Blick Eingabe](gaze.md)
 * [Cursor](cursors.md)
+* [Blick Eingabe](gaze.md)
 * [Anvisieren](gaze-targeting.md)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Maschinelles sehen, hololens, immersive, VR
-ms.openlocfilehash: 9d5288904dd6cae08a995ae40a31b00fea655776
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63552323"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047195"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -49,7 +49,7 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf hololens, aber Sie können auch das Erlernen, was Sie in diesem Kurs lernen, auf Windows Mixed Reality-(VR)-Headsets. Da immersive Headsets (VR) nicht über barrierefreie Kameras verfügen, benötigen Sie eine externe Kamera, die mit Ihrem PC verbunden ist. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise für die Unterstützung von immersiven (VR)-Headsets verwenden müssen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -71,7 +71,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 2.  Richten Sie Ihre hololens ein, und testen Sie Sie. Wenn Sie Unterstützung für die Einrichtung ihrer hololens benötigen, [besuchen Sie den Artikel zum Einrichten von hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es empfiehlt sich, eine Kalibrierung und Sensor Optimierung durchzuführen, wenn Sie mit der Entwicklung einer neuen hololens-App beginnen (manchmal kann es hilfreich sein, diese Aufgaben für jeden Benutzer auszuführen). 
 
-Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens).
+Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Kalibrierung](calibration.md#hololens-2).
 
 Hilfe zur Sensor Optimierung finden Sie unter diesem [Link zum Artikel zur Überwachung von hololens-Sensoren](sensor-tuning.md).
 
@@ -133,7 +133,7 @@ Wenn Sie den *Maschinelles Sehen-API* -Dienst in Azure verwenden möchten, müss
     ![Ihre neue Maschinelles Sehen-API-Dienst](images/AzureLabs-Lab2-05-5.png)
 
     > [!TIP]
-    > Sie können überprüfen, worum es sich bei den verschiedenen Endpunkten [handelt.](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa) 
+    > Sie können überprüfen, [worum es sich](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa)bei den verschiedenen Endpunkten handelt. 
 
 ## <a name="chapter-2--set-up-the-unity-project"></a>Kapitel 2 – Einrichten des Unity-Projekts
 
@@ -151,17 +151,17 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
     ![Skript-Editor-Einstellung aktualisieren.](images/AzureLabs-Lab2-08.png)
 
-4.  Navigieren Sie als nächstes zu **Datei >** Buildeinstellungen, wählen Sie **universelle Windows-Plattform**aus, und klicken Sie dann auf die Schaltfläche **Plattform wechseln** , um Ihre Auswahl zu übernehmen
+4.  Navigieren Sie als nächstes zu **Datei > Buildeinstellungen** , wählen Sie **universelle Windows-Plattform**aus, und klicken Sie dann auf die Schaltfläche **Plattform wechseln** , um Ihre Auswahl zu übernehmen
 
     ![Fenster "Buildeinstellungen", Plattform zu UWP wechseln.](images/AzureLabs-Lab2-10.png)
 
-5.  In **Datei >** Buildeinstellungen, und stellen Sie Folgendes sicher:
+5.  In **Datei > Buildeinstellungen** , und stellen Sie Folgendes sicher:
 
     1. **Zielgerät** ist auf **hololens** festgelegt
 
         > Legen Sie für die immersiven Headsets das **Zielgerät** auf *ein beliebiges Gerät*fest.
 
-    2. Der Buildtyp ist auf **D3D** festgelegt.
+    2. Der **Buildtyp** ist auf **D3D** festgelegt.
     3. **SDK** ist auf **neueste installierte** Version festgelegt.
     4. **Visual Studio-Version** ist auf **neueste installierte** Version festgelegt.
     5. **Build und Run** sind auf **lokaler Computer** festgelegt.
@@ -181,9 +181,9 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
             > Beachten Sie, dass Sie Ihre Unity-Szenen im Ordner " *Assets* " speichern müssen, da Sie dem Unity-Projekt zugeordnet werden müssen. Das Erstellen eines Szenen Ordners (und anderer ähnlicher Ordner) ist eine typische Methode zum Strukturieren eines Unity-Projekts.
 
-    7. Die restlichen Einstellungen in denBuildeinstellungen sollten vorerst als Standard belassen werden.
+    7. Die restlichen Einstellungen in den *Buildeinstellungen*sollten vorerst als Standard belassen werden.
 
-6. Klicken Sie im Fenster Buildeinstellungen auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
+6. Klicken Sie im Fenster *Buildeinstellungen* auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
 
     ![Öffnen Sie die Player-Einstellungen.](images/AzureLabs-Lab2-14.png)
 
@@ -208,7 +208,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
         ![Aktualisieren Sie die X R-Einstellungen.](images/AzureLabs-Lab2-17.png)
 
-8.  Zurück in Buildeinstellungen: _Unity C#_  -Projekte sind nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
+8.  Zurück in *Buildeinstellungen* : _Unity C#_  -Projekte sind nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
 9.  Schließen Sie das Fenster mit den Buildeinstellungen.
 10. Speichern Sie Ihre Szene und Ihr Projekt (**Datei > Speichern Sie Szenen/Dateien > Speichern**Sie das Projekt).
 
@@ -223,7 +223,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
     1. Das **Kamera Objekt** muss als **Hauptkamera** benannt werden (Beachten Sie die Schreibweise).
     2. Das Hauptkamera **Kennzeichen** muss auf **maincamera** festgelegt sein (Beachten Sie die Schreibweise).
     3. Stellen Sie sicher, dass die **Transformations Position** auf **0, 0, 0** festgelegt ist.
-    4. Legen Sie **klar Flags** auf voll Tonfarbe fest (diese Einstellung wird für immersives Headset ignoriert).
+    4. Legen Sie **klar Flags** auf voll **Tonfarbe** fest (diese Einstellung wird für immersives Headset ignoriert).
     5. Legen Sie die **Hintergrund** Farbe der Kamera Komponente auf **schwarz, Alpha 0 (Hexadezimal Code: #00000000)** fest (Dies wird für das immersive Headset ignoriert).
 
         ![Aktualisieren Sie die Kamerakomponenten.](images/AzureLabs-Lab2-18.png)
@@ -544,7 +544,7 @@ So erstellen Sie diese Klasse:
         using UnityEngine.Networking;
     ```
  
-5.  Am Anfang des Skripts *in der Klasse* " *visionmanager* " (oberhalb der Methode " *Start ()* ") müssen Sie nun zwei *Klassen* erstellen, die die deserialisierte JSON-Antwort von Azure darstellen:
+5.  Am Anfang des Skripts in der Klasse " *visionmanager* " (oberhalb der Methode " *Start ()* ") müssen Sie nun zwei *Klassen* *erstellen, die* die deserialisierte JSON-Antwort von Azure darstellen:
 
     ```csharp
         [System.Serializable]
@@ -693,8 +693,8 @@ Bevor Sie vorgehen, stellen Sie Folgendes sicher:
 ## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a>Kapitel 9 – Erstellen der UWP-Lösung und querladen der Anwendung
 Alles, was für den Unity-Abschnitt dieses Projekts erforderlich ist, ist nun abgeschlossen, sodass es an der Zeit ist, Sie aus Unity zu erstellen.
 
-1.  Navigieren Sie - zu buildeinstellungs**Datei > Buildeinstellungen...**
-2.  Klicken Sie im Fenster "Buildeinstellungen" auf " **Erstellen**".
+1.  Navigieren Sie zu -  *buildeinstellungs***Datei > Buildeinstellungen...**
+2.  Klicken Sie im Fenster " *Buildeinstellungen* " auf " **Erstellen**".
 
     ![Entwickeln der APP aus Unity](images/AzureLabs-Lab2-26.png)
 
