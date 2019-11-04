@@ -4,15 +4,15 @@ title: Tutorials und Beispiel-apps
 description: Bietet Codebeispiele und Tutorials zur Entwicklung gemischter Realität.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/26/2019
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, Tutorial
-ms.openlocfilehash: 862cf8726df6143ece0d87a135a8e9cc6101948b
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: 3ec675b6f32b734c846eb11221f2aa9c22dc36ff
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601619"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437427"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutorials und Beispiel-apps
 
@@ -20,10 +20,10 @@ Derzeit sind alle unsere Tutorials und Beispiel-apps Unity-basiert.  Bei der Ent
 
 ## <a name="hololens-2-tutorials"></a>HoloLens 2: Tutorials
 
-Das hololens 2-Lernprogramm soll Entwicklern helfen, sowohl Techniken als auch bewährte Methoden für die Entwicklung von Anwendungen mit gemischter Realität zu erlernen.  Die Tutorials basieren auf dem [Mixed Reality Toolkit 2,0 (mrtk 2,0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Die HoloLens 2-Tutorials sind dafür ausgelegt, Entwicklern sowohl Techniken als auch bewährte Methoden für das Entwickeln von Mixed Reality-Anwendungen zu vermitteln.  Die Tutorials basieren auf dem [Mixed Reality Toolkit 2,0 (mrtk 2,0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
 
 * Tutorials zu den ersten Schritten: [1 von 7 Übersicht und Ziele](mrlearning-base.md)
-* Azure Spatial Anchor-Tutorials- [1 von 3 ersten Schritten mit räumlichen Azure](mrlearning-asa-ch1.md) -Ankern
+* Azure Spatial Anchor-Tutorials- [1 von 3 ersten Schritten mit räumlichen Azure-Ankern](mrlearning-asa-ch1.md)
 * Tutorials zu Azure Speech Services- [1 von 4 integrieren und Verwenden von Spracherkennung und-](mrlearning-speechSDK-ch1.md) Aufzeichnung
 * Lernprogramme für Mehrbenutzerfunktionen- [1 von 5 Einrichten von Photon Unity-Netzwerken](mrlearning-sharing(photon)-ch1.md)
 
@@ -37,19 +37,20 @@ Bei den Open Source-Beispiel-apps handelt es sich um Anwendungen, die von unsere
 
 ## <a name="mixed-reality-academy-tutorials"></a>Mixed Reality Academy-Tutorials
 
-Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit entsprechenden Projektdateien: 
-* In den Tutorials werden die Themen 100, 200 und 300 behandelt. dabei handelt es sich um folgende Themen: in der 100-Ebene werden die Grundlagen des Projekts behandelt, wobei die 200-Ebenen Hauptbausteine von Hauptgrund lagen und die Clouddienstintegration auf 300 Ebenen abdecken.
-* In den meisten Kursen werden Konzepte behandelt, die auf hololens und immersive (VR)-Headsets zutreffen. 
-* Jedes Lernprogramm ist nach Kapiteln organisiert, und die meisten enthalten Video Demonstrationen der Schlüsselkonzepte. 
+Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit entsprechenden Projektdateien:
+
+* In den Tutorials werden die Themen "100", "200" und "300" behandelt, in denen die Grundlagen von "100-Level", "200" und "300-Level" für die Clouddienstintegration behandelt werden.
+* In den meisten Kursen werden Konzepte behandelt, die auf hololens und immersive (VR)-Headsets zutreffen.
+* Jedes Lernprogramm ist nach Kapiteln organisiert, und die meisten enthalten Video Demonstrationen der Schlüsselkonzepte.
 * Ein Windows 10-PC, auf dem die richtigen [Tools installiert](install-the-tools.md) sind, ist eine gängige Voraussetzung, um die einzelnen Lernprogramme abzuschließen.
 
 >[!NOTE]
->Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es wurde [eine neue Reihe von Tutorials](mrlearning-base.md) für hololens 2 gepostet.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
                             <li>
-                                    <a href="holograms-100.md" title="Grundlagen 100" data-linktype="absolute-path">
+                                    <a href="holograms-100.md" title="Mr Basics 100" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -68,7 +69,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                </a>
                             </li>
                             <li>
-                                  <a href="holograms-101.md" title="Grundlagen 101" data-linktype="absolute-path">
+                                  <a href="holograms-101.md" title="Mr Basics 101" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -78,7 +79,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Grundlagen 101: Projekt mit Gerät vervollständigen</h3>
+                                                    <h3>Grundlagen 101: Projekt mit Gerät abschließen</h3>
                                                     <p>Richten Sie ein vollständiges Projekt ein, und stellen Sie mit einem hololens-Gerät wichtige Mixed Reality-Features (Blick, Bewegung, Stimme, räumlicher Sound und räumliche Zuordnung) vor.</p>
                                                 </div>
                                             </div>
@@ -87,7 +88,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                </a>
                             </li>
                             <li>
-                                <a href="holograms-101e.md" title="Grundlagen 101 e" data-linktype="absolute-path">
+                                <a href="holograms-101e.md" title="Mr-Grundlagen 101 e" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -97,7 +98,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Grundlagen 101 e: Projekt mit Emulator vervollständigen</h3>
+                                                    <h3>Grundlagen 101 e: vervollständigen eines Projekts mit Emulator</h3>
                                                     <p>Richten Sie ein vollständiges Projekt ein, indem Sie den hololens-Emulator verwenden, um grundlegende Features für gemischte Realität (Blick, Bewegung, Stimme, räumlicher Sound und räumliche Zuordnung) vorzustellen.</p>
                                                 </div>
                                             </div>
@@ -106,9 +107,9 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                   </a>
                             </li>
                             <li>
-                             <a href="holograms-210.md" title="Mr-Eingabe 210" data-linktype="absolute-path">
-                              <div class="cardSize">
                                   <div class="cardPadding">
+                              <div class="cardSize">" data-linktype="absolute-path">210 
+                             <a href="holograms-210.md" title="
                                       <div class="card">
                                           <div class="cardImageOuter">
                                               <div class="cardImage">
@@ -116,7 +117,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr-Eingabe 210: Blickeingabe</h3>
+                                              <h3>Mr-Eingabe 210: Blick</h3>
                                               <p>Der Blick ist die erste Form der Eingabe und zeigt die Absicht und das Bewusstsein des Benutzers an. Sie werden dem Cursor und holograms kontextabhängige Informationen hinzufügen und dabei die Vorteile der APP im Überblick über den Benutzer in vollem Umfang nutzen.</p>
                                           </div>
                                       </div>
@@ -125,9 +126,9 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                </a>
                             </li>
                             <li>
-                            <a href="holograms-211.md" title="Mr-Eingabe 211" data-linktype="absolute-path">
-                              <div class="cardSize">
                                   <div class="cardPadding">
+                              <div class="cardSize">" data-linktype="absolute-path">211 
+                            <a href="holograms-211.md" title="
                                       <div class="card">
                                           <div class="cardImageOuter">
                                               <div class="cardImage">
@@ -144,9 +145,9 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                               </a>
                             </li>         
                             <li>
-                             <a href="holograms-212.md" title="Mr-Eingabe 212" data-linktype="absolute-path">
-                              <div class="cardSize">
                                   <div class="cardPadding">
+                              <div class="cardSize">" data-linktype="absolute-path">212 
+                             <a href="holograms-212.md" title="
                                       <div class="card">
                                           <div class="cardImageOuter">
                                               <div class="cardImage">
@@ -154,7 +155,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr-Eingabe 212: Spracheingabe</h3>
+                                              <h3>Mr-Eingabe 212: Stimme</h3>
                                               <p>Mit Voice können wir auf einfache und natürliche Weise mit unseren holograms interagieren. In diesem Kurs erfahren Sie, wie Sie es Benutzern ermöglichen, sich über verfügbare Sprachbefehle zu informieren, Feedback zu geben, dass ein Sprachbefehl gehört hat, und sich mit dem Diktat vertraut machen, um zu verstehen, was der Benutzer sagt.</p>
                                           </div>
                                       </div>
@@ -163,9 +164,9 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                               </a>
                             </li>
                              <li>
-                              <a href="mixed-reality-213.md" title="Mr-Eingabe 213" data-linktype="absolute-path">
-                              <div class="cardSize">
                                   <div class="cardPadding">
+                              <div class="cardSize">" data-linktype="absolute-path">213 
+                              <a href="mixed-reality-213.md" title="
                                       <div class="card">
                                           <div class="cardImageOuter">
                                               <div class="cardImage">
@@ -182,17 +183,17 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                               </a>
                             </li>   
                               <li>
-                              <a href="holograms-220.md" title="Räumliche Daten 220" data-linktype="absolute-path">
+                              <a href="holograms-220.md" title="
+                                      <div class="card">Spatial 220" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
-                                      <div class="card">
                                           <div class="cardImageOuter">
                                               <div class="cardImage">
                                                   <img src="images/Holograms220b.jpg" alt="MR Spatial 220 icon">
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Räumliche Daten 220: Raumklang</h3>
+                                              <h3>Mr Spatial 220: räumlicher Sound</h3>
                                               <p>Räumlicher Sound atmet Leben in holograms und ermöglicht Ihnen das vorhanden sein. In diesem Kurs erfahren Sie, wie Sie mit räumlichem Sound in der umgebenden Welt nach holograms Vorgehen, Feedback während Interaktionen abgeben und Audiodaten verwenden, um Ihre Hologramme zu finden.</p>
                                           </div>
                                       </div>
@@ -201,17 +202,17 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                               </a>
                             </li>      
                                <li>
-                               <a href="holograms-230.md" title="Räumliche Daten 230" data-linktype="absolute-path">
+                               <a href="holograms-230.md" title="
+                                      <div class="card">Spatial 230" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
-                                      <div class="card">
                                           <div class="cardImageOuter">
                                               <div class="cardImage">
                                                   <img src="images/Holograms230.jpg" alt="MR Spatial 230 icon">
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Räumliche Daten 230: Räumliche Zuordnung</h3>
+                                              <h3>Räumliche Daten 230: räumliche Zuordnung</h3>
                                               <p>Durch die räumliche Zuordnung werden die reale und die virtuelle Welt vereint. Sie werden Shader erkunden und Sie zum Visualisieren Ihres Platzes verwenden. Anschließend erfahren Sie, wie Sie das Raum Netz in einfache Ebenen vereinfachen, uns Feedback zum Platzieren von holograms auf realen Oberflächen und zum untersuchen visueller Effekte machen.</p>
                                           </div>
                                       </div>
@@ -219,18 +220,18 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                               </div>
                              </a>
                             </li> 
-                                <li>
-                                <a href="holograms-240.md" title="Mr-Freigabe 240" data-linktype="absolute-path">
+                                <li>240 
+                                <a href="holograms-240.md" title="
+                                      <div class="card">
+                                          <div class="cardImageOuter">" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
-                                      <div class="card">
-                                          <div class="cardImageOuter">
                                               <div class="cardImage">
                                                   <img src="images/Holograms240.jpg" alt="MR Sharing 240 icon">
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr-Freigabe 240: Mehrere hololens-Geräte</h3>
+                                              <h3>Mr-Freigabe 240: mehrere hololens-Geräte</h3>
                                               <p>Unser Build 2016-Projekt! Richten Sie ein umfassendes Projekt mit Koordinatensystemen ein, die von hololens-Geräten gemeinsam genutzt werden, sodass Benutzer an einer gemeinsam genutzten Holographic World teilnehmen können.</p>
                                           </div>
                                       </div>
@@ -238,18 +239,18 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Tutorials mit 
                               </div>
                              </a>
                             </li> 
-                                 <li>
-                                   <a href="mixed-reality-250.md" title="Mr-Freigabe 250" data-linktype="absolute-path">
+                                 <li>250 
+                                   <a href="mixed-reality-250.md" title="
+                                      <div class="card">
+                                          <div class="cardImageOuter">" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
-                                      <div class="card">
-                                          <div class="cardImageOuter">
                                               <div class="cardImage">
                                                   <img src="images/MR250-new.jpg" alt="MR Sharing 250 icon">
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr-Freigabe 250: Hololens und immersive Headsets</h3>
+                                              <h3>Mr-Freigabe 250: hololens und immersive Headsets</h3>
                                               <p>In unserem Build 2017-Projekt veranschaulichen wir das Entwickeln einer APP, die die einzigartigen Stärken von hololens und immersiven (VR)-Headsets innerhalb einer gemeinsam genutzten, Geräte übergreifenden Darstellung nutzt.</p>
                                           </div>
                                       </div>
@@ -275,7 +276,7 @@ Diese eigenständigen Tutorials eignen sich hervorragend zum Erlernen der Implem
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr und Azure 301: Übersetzung von Sprachen</h3>
+                                              <h3>Mr und Azure 301: Sprachübersetzung</h3>
                                               <p>Mithilfe des Azure-Textübersetzungs-API kann Ihre Mixed Reality-App Sprache in Text in einer anderen Sprache übersetzen. Weitere Informationen finden Sie in diesem Kurs!</p>
                                           </div>
                                       </div>
@@ -313,7 +314,7 @@ Diese eigenständigen Tutorials eignen sich hervorragend zum Erlernen der Implem
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr und Azure 302b: Benutzerdefinierte Vision</h3>
+                                              <h3>Mr und Azure 302b: benutzerdefinierte Vision</h3>
                                               <p>Erfahren Sie, wie Sie ein Machine Learning-Modell trainieren und das trainierte Modell für die Bildverarbeitung und-Analyse verwenden.</p>
                                           </div>
                                       </div>
@@ -332,7 +333,7 @@ Diese eigenständigen Tutorials eignen sich hervorragend zum Erlernen der Implem
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr und Azure 303: Verstehen natürlicher Sprache</h3>
+                                              <h3>Mr und Azure 303: verstehen natürlicher Sprache</h3>
                                               <p>In diesem Kurs erfahren Sie, wie Sie den Luis-Dienst (Azure Language Understanding) verwenden, um in ihrer Mixed Reality-App Kenntnisse in natürlicher Sprache hinzuzufügen.</p>
                                           </div>
                                       </div>
@@ -503,7 +504,7 @@ Diese eigenständigen Tutorials eignen sich hervorragend zum Erlernen der Implem
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>Mr und Azure 312: Bot-Integration</h3>
+                                              <h3>Mr und Azure 312: bot-Integration</h3>
                                               <p>Erstellen und Bereitstellen eines Bots mithilfe von Microsoft bot Framework v4 und Kommunikation mit dem bot in einer Mixed Reality-app.</p>
                                           </div>
                                       </div>
