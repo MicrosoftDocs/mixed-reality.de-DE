@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: bereitstellen, Unity, Visual Studio, hololens, hololens 2, immersives Headset
-ms.openlocfilehash: b2c345a8cc9bddcbc447531eb5f6cdacc62f2e98
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522311"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436964"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Bewährte Methoden für die Arbeit mit Unity und Visual Studio
 
@@ -35,7 +35,7 @@ Außerdem sollten Sie die [Visual Studio-Erweiterung *unityscriptanalyzer* ](htt
 
 ## <a name="visual-studio-tools-for-unity"></a>Visual Studio-Tools für Unity
 
-Download [Visual Studio-Tools für Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
+Download [Visual Studio-Tools für Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
 **Vorteile von Visual Studio-Tools für Unity**
 * Debuggen Sie den Unity-im-Editor-Wiedergabemodus in Visual Studio, indem Sie Haltepunkte einfügen, Variablen und komplexe Ausdrücke auswerten.
@@ -57,7 +57,7 @@ UWP-Visual Studio-Projektmappen, die in die Quell Code Verwaltung eingecheckt we
 
 Durch das Speichern von Medienobjekten im Textformat wird das Überprüfen von Änderungen der Inhalts Änderung in Visual Studio vereinfacht. Sie können dies in "Edit > Project Settings > Editor" aktivieren, indem Sie den **assetserialisierungsmodus** ändern, um **Text zu erzwingen**. Das Zusammenführen von Text-assetdateiänderungen ist jedoch fehleranfällig und wird nicht empfohlen. Daher sollten Sie in Ihrem Quell Code Verwaltungssystem exklusive binäre Auschecken aktivieren.
 
-## <a name="see-also"></a>Siehe auch
-- [Visual Studio Tools für Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+## <a name="see-also"></a>Weitere Informationen:
+- [Visual Studio-Tools für Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
 - [Optimieren von Buildzeiten für IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
 - [*Unityscriptanalyzer* Visual Studio-Erweiterung](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

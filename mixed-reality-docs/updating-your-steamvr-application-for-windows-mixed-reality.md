@@ -1,25 +1,24 @@
 ---
-title: Aktualisieren Ihrer steamvr-Anwendung für Windows Mixed Reality
+title: Aktualisieren Ihrer steamvr-Anwendung
 description: Bewährte Methoden zum Aktualisieren Ihrer steamvr-Anwendung, um die Kompatibilität mit Windows Mixed Reality-Headsets zu maximieren.
 author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Steamvr, Kompatibilität
-ms.openlocfilehash: db21651df8e586edf500f0d05def4b1ea5474284
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 6479130b14b8b50828ebecd3a648fd8a425aec15
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548677"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438205"
 ---
-# <a name="updating-your-steamvr-application-for-windows-mixed-reality"></a>Aktualisieren Ihrer steamvr-Anwendung für Windows Mixed Reality
-
+# <a name="updating-your-steamvr-application"></a>Aktualisieren Ihrer steamvr-Anwendung
 Wir empfehlen Entwicklern, ihre steamvr-Erfahrungen zu testen und zu optimieren, um Sie auf Windows Mixed Reality-Headsets auszuführen. Diese Dokumentation behandelt allgemeine Verbesserungen, die Entwickler durchführen können, um sicherzustellen, dass Ihre Arbeit in Windows Mixed Reality hervorragend verläuft
 
 ## <a name="initial-setup-instructions"></a>Anweisungen für die erste Einrichtung
 
-Um mit dem Testen Ihres Spiels oder ihrer app in Windows Mixed Reality zu beginnen, müssen Sie zunächst unseren ersten Schritten folgen [.](http://aka.ms/WindowsMixedRealitySteamVR)
+Um mit dem Testen Ihres Spiels oder ihrer app in Windows Mixed Reality zu beginnen, müssen Sie zunächst unseren ersten Schritten folgen [.](https://aka.ms/WindowsMixedRealitySteamVR)
 
 ## <a name="controller-models"></a>Controller Modelle
 1. Wenn Ihre APP Controller Modelle rendert:
@@ -59,13 +58,13 @@ Um die Windows Mixed Reality-Unterstützung für Ihren Titel anzuzeigen, wechsel
 
 Ihr Feedback ist äußerst nützlich, wenn es um die Verbesserung der Windows Mixed Reality-steamvr-Darstellung geht. Übermitteln Sie Feedback und Fehler über den [Windows-Feedback-Hub](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/filing-feedback). Im folgenden finden [Sie einige Tipps, wie Sie Ihr steamvr-Feedback so hilfreich wie möglich machen](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality#sharing-feedback-on-steamvr).
 
-Wenn Sie Fragen oder Kommentare haben, die Sie freigeben können, können Sie uns auch in unserem [Steam-Forum](http://steamcommunity.com/app/719950/discussions/)erreichen.
+Wenn Sie Fragen oder Kommentare haben, die Sie freigeben können, können Sie uns auch in unserem [Steam-Forum](https://steamcommunity.com/app/719950/discussions/)erreichen.
 
 ## <a name="faqs-and-troubleshooting"></a>FAQs und Problembehandlung
 
 Wenn Sie allgemeine Probleme beim Einrichten oder Wiedergeben Ihrer Umgebung haben, sehen Sie sich [die neuesten Schritte zur Problem](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#steamvr)Behandlung an.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Installieren der Tools](install-the-tools.md)
 * [Verlauf des Headset-und Motion Controller-Treibers](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/mixed-reality-software)
 * [Windows Mixed Reality-Mindestanforderungen für die PC-Hardware Kompatibilität](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)

@@ -6,18 +6,18 @@ ms.author: daescu
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Ereignis, Kalender, Academy, Schedule, SF, San Francisco, Reaktor
-ms.openlocfilehash: c5395fc8e9dfe473b04e88e498df08679c035d27
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: b7a410e40fa74cd76ed6c8dafd2519d6498d7af6
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861731"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438089"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Ereignisse in der gemischten Realität von Microsoft
 
 Treten Sie an den bevorstehenden Veranstaltungen an dem Microsoft Mixed Reality-Team Teil!
 
-**[San-Francisco-Reaktor](https://developer.microsoft.com/reactor/#ReactorSF)**<br>
+[San-Francisco-Reaktor](https://developer.microsoft.com/reactor/#ReactorSF)<br>
 680 Folsom St.<br>
 San Francisco, ca 94107
 
@@ -25,99 +25,56 @@ San Francisco, ca 94107
 
 ---
 
-
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="august-5-2019"></a>5\. August 2019
-Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
-
-[Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-
-<br>
-
----
-
-
-## <a name="hololens-mixed-reality-design-and-development-meetuphttpswwwmeetupcomhololens-mrevents263232210"></a>[Hololens, Entwurf und Entwicklung gemischter Realität](https://www.meetup.com/hololens-mr/events/263232210/)
-### <a name="august-12-2019"></a>12. August 2019
-Nehmen Sie an den hololens-und Mr-Experten Teil, an denen Jesse McCulloch, Developer Ecosystem Program Manager, ein praktisches Tutorial zum Erstellen Ihrer ersten hololens 2-Anwendung durchführt.
-
-[Für dieses Meetup registrieren](https://www.meetup.com/hololens-mr/events/263232210/)
-
-<br>
-
----
-
-
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="august-19-2019"></a>19. August 2019
-Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
-
-[Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-
-<br>
-
----
-
-
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="september-9-2019"></a>9\. September 2019
-Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
-
-[Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-
-<br>
-
----
-
-
-## <a name="hololens-mixed-reality-design-and-development-meetuphttpswwwmeetupcomhololens-mr"></a>[Hololens, Entwurf und Entwicklung gemischter Realität](https://www.meetup.com/hololens-mr/)
-### <a name="september-16-2019"></a>16. September 2019
-Weitere Informationen finden Sie in Kürze.
-
-[Für dieses Meetup registrieren](https://www.meetup.com/hololens-mr/)
-
-<br>
-
----
-
-
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="september-23-2019"></a>23. September 2019
-Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
-
-[Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-
-<br>
-
----
-
-
-## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-### <a name="october-10-2019"></a>10. Oktober 2019
-Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
-
-[Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
-
-<br>
-
----
-
-
-## <a name="hololens-mixed-reality-design-and-development-meetuphttpswwwmeetupcomhololens-mr"></a>[Hololens, Entwurf und Entwicklung gemischter Realität](https://www.meetup.com/hololens-mr/)
-### <a name="october-16-2019"></a>16. Oktober 2019
-Weitere Informationen finden Sie in Kürze.
-
-[Für dieses Meetup registrieren](https://www.meetup.com/hololens-mr/)
-
-<br>
-
----
-
 ## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
 ### <a name="october-21-2019"></a>21. Oktober 2019
+
 Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
 
 [Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
+
+<br>
+
+---
+
+## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
+### <a name="november-4-2019"></a>4\. November 2019
+
+Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
+
+[Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
+
+<br>
+
+---
+
+## <a name="hololens-mixed-reality-design-and-development-meetuphttpswwwmeetupcomhololens-mr"></a>[Hololens, Entwurf und Entwicklung gemischter Realität](https://www.meetup.com/hololens-mr/)
+### <a name="november-18-2019"></a>18. November 2019
+
+Weitere Informationen finden Sie in Kürze.
+
+[Für dieses Meetup registrieren](https://www.meetup.com/hololens-mr/)
+
+<br>
+
+---
+
+## <a name="mixed-reality-workgroup-san-francisco-reactorhttpsemea01safelinksprotectionoutlookcomurlhttps3a2f2fwwwmeetupcom2fhololens-mr2fdata027c017cdaescu40microsoftcom7ca8ddee063b7949a9992308d6903e62b07c72f988bf86f141af91ab2d7cd011db477c17c07c636854994961124360sdataymnaaiwvxij700mo9gj2boz4w82bgkdjdhijhytfczcfu3dreserved0"></a>[Mixed Reality Workgroup, San Francisco-Reaktor](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
+### <a name="december-9-2019"></a>9\. Dezember 2019
+
+Als Arbeitsgruppe möchten wir die Dinge so einfach wie möglich halten, nur um 6:00 herum herumlaufen und eine Weile arbeiten! Es ist eine großartige Gelegenheit, Feedback von anderen Entwicklern zu erhalten, Hilfe und Ratschläge von jemandem zu suchen, der das mal ausprobiert hat, oder eine Weile nach Arbeit und Code zu chillen! Bringen Sie also einen Laptop, bringen Sie ein Projekt, und bringen Sie einen offenen Geist! Der Microsoft-Reaktor ist ein guter Ort, und wir halten die Teilnahme eingeschränkt, sodass er nicht ausgelastet ist. Wir hoffen, dass Sie dort angezeigt werden!
+
+[Für dieses Arbeitsgruppen Ereignis registrieren](https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.meetup.com%2Fhololens-mr%2F&data=02%7C01%7Cdaescu%40microsoft.com%7Ca8ddee063b7949a9992308d6903e62b0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636854994961124360&sdata=YmnAAiWVxIJ700mO9gj%2BOz4W8%2BgKDjDhiJhYtfCzCFU%3D&reserved=0)
+
+<br>
+
+---
+
+## <a name="hololens-mixed-reality-design-and-development-meetuphttpswwwmeetupcomhololens-mr"></a>[Hololens, Entwurf und Entwicklung gemischter Realität](https://www.meetup.com/hololens-mr/)
+### <a name="december-16-2019"></a>16. Dezember 2019
+
+Weitere Informationen finden Sie in Kürze.
+
+[Für dieses Meetup registrieren](https://www.meetup.com/hololens-mr/)
 
 <br>
 

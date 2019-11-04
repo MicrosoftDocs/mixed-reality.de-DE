@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holograms, Stabilität, hololens
-ms.openlocfilehash: b35b904e3c662c5ebd0670a98044706fe208e348
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: b299df42bf02b837cb45faf5acb7a11b61f2e587
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974936"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435070"
 ---
 # <a name="hologram-stability"></a>Hologram-Stabilität
 
@@ -27,7 +27,7 @@ Wenn Umgebungs Probleme, inkonsistente oder niedrige renderingraten oder andere 
 * **Der Judder.** Niedrige renderingfrequenzen führen zu ungleichen Bewegungs-und doppelten Bildern von holograms. Dies ist besonders in holograms mit Motion spürbar. Entwickler müssen eine [Konstante 60 fps](hologram-stability.md#frame-rate)beibehalten.
 * **Inter.** Benutzer sehen, dass das – Hologramm anscheinend von der Stelle entfernt wird, an der Sie ursprünglich platziert wurde. Dies geschieht, wenn holograms von [räumlichen Ankern](spatial-anchors.md)fern platziert werden, insbesondere in Teilen der Umgebung, die nicht vollständig zugeordnet wurden. Das Erstellen von holograms in der Nähe räumlicher Anker verringert die Wahrscheinlichkeit einer Abweichung.
 * **Schnell Einstieg.** Wenn ein – Hologramm-"Pops" oder "springt" von seiner Position gelegentlich Weg ist. Dies kann auftreten, wenn die Nachverfolgung holograms anpasst, um das aktualisierte Verständnis Ihrer Umgebung abzugleichen.
-* **MME.** Wenn ein – Hologramm zu bewegen scheint, das der Bewegung des Benutzer Kopfes entspricht. Dieser Fehler tritt auf, wenn holograms sich nicht auf der [Stabilisierungs Ebene](hologram-stability.md#stabilization-plane)befinden und der hololens nicht für den aktuellen Benutzer [kalibriert](calibration.md) ist. Der Benutzer kann die [Kalibrierungs](calibration.md) Anwendung erneut ausführen, um dieses Problem zu beheben. Entwickler können die Stabilisierungs Ebene aktualisieren, um die Stabilität zu verbessern.
+* **MME.** Wenn ein – Hologramm zu bewegen scheint, das der Bewegung des Benutzer Kopfes entspricht. Dies tritt auf, wenn die Anwendung die [neuprojektion](hologram-stability.md#reprojection)nicht vollständig implementiert hat und die hololens nicht für den aktuellen Benutzer [kalibriert](calibration.md) sind. Der Benutzer kann die [Kalibrierungs](calibration.md) Anwendung erneut ausführen, um dieses Problem zu beheben. Entwickler können die Stabilisierungs Ebene aktualisieren, um die Stabilität zu verbessern.
 * **Farbtrennung.** Die Anzeige in hololens ist eine Farb sequenzielle Anzeige, bei der die Farbe der roten grün-grün-blau-grün bei 60Hz angezeigt wird (einzelne Farbfelder werden bei 240 Hz angezeigt). Jedes Mal, wenn ein Benutzer ein bewegendes – Hologramm mit seinen Augen verfolgt, werden die führenden und nachfolgenden Kanten des holograms in den einzelnen Farben getrennt und erzeugen einen Regenbogeneffekt. Der Grad der Trennung hängt von der Geschwindigkeit des holograms ab. In einigen seltenen Fällen kann es auch zu einem Regenbogeneffekt kommen, wenn Sie sich bei der Betrachtung eines stationären holograms schnell bewegen. Dies wird als *[Farbtrennung](hologram-stability.md#color-separation)* bezeichnet.
 
 ## <a name="frame-rate"></a>Bildfrequenz
@@ -72,15 +72,44 @@ Das Platzieren von Inhalten auf 2.0 m ist ebenfalls vorteilhaft, da die beiden a
 
 **Bewährte Methoden** Wenn holograms bei 2 m nicht platziert werden können und Konflikte zwischen Konvergenz und Unterbringung nicht vermieden werden können, liegt die optimale Zone für die – Hologramm-Platzierung zwischen 1,25 m und 5 m. In jedem Fall sollten Designer Inhalte strukturieren, um Benutzern die Interaktion von 1 + m zu empfehlen (z. b. Anpassen von Inhalts Größe und Standard Platzierungs Parametern).
 
-## <a name="stabilization-plane"></a>Stabilisierungs Ebene
+## <a name="reprojection"></a>Neuprojektion
+Hololens führt eine ausgereifte Hardware gestützte Holographic-Stabilisierungstechnik aus, die als neuprojektion bezeichnet wird. Dies berücksichtigt die Bewegung und Änderung der Perspektive (camerapose), wenn die Szene animiert und der Benutzer den Kopf bewegt.  Anwendungen müssen bestimmte Aktionen ausführen, um die neuprojektion am besten zu verwenden.
+
+
+Es gibt vier Haupttypen der neuprojektion.
+* **Tiefen neuprojektion:**  Dies führt zu den besten Ergebnissen mit dem geringsten Aufwand aus der Anwendung.  Alle Teile der gerenderten Szene werden abhängig von ihrer Entfernung zum Benutzer unabhängig voneinander stabilisiert.  Einige Renderingartefakte sind möglicherweise sichtbar, wenn eine Tiefe Tiefe von Änderungen vorliegt.  Diese Option ist nur für hololens 2 und immersive Headsets verfügbar.
+* **Planare neuprojektion:**  Dies ermöglicht der Anwendung die genaue Steuerung der Stabilisierung.  Eine Ebene wird von der Anwendung festgelegt, und alles auf dieser Ebene ist der stabilste Teil der Szene.  Wenn ein – Hologramm von der Ebene entfernt wird, desto weniger stabil ist es.  Diese Option ist auf allen Windows-Windows-Plattformen verfügbar.
+* **Automatische planare neuprojektion:**  Das System legt mithilfe der Informationen im tiefen Puffer eine Stabilisierungs Ebene fest.  Diese Option ist auf hololens-Generation 1 und hololens 2 verfügbar.
+* **Keine:** Wenn die Anwendung keine Aktion ausführt, wird die planare neuprojektion mit der auf zwei Metern gesetzten Stabilisierungs Ebene in der Richtung des Haupt Anblicks des Benutzers verwendet.  Dies führt in der Regel zu untergeordneten Ergebnissen.
+
+Anwendungen müssen bestimmte Aktionen durchführen, um die verschiedenen Arten der neuprojektion zu aktivieren.
+* **Tiefen neuprojektion:** Die Anwendung übermittelt ihren tiefen Puffer für jeden gerenderten Frame an das System.  Bei Unity erfolgt dies mit der Option "Tiefe Puffer Freigabe aktivieren" im Bereich "Player Einstellungen".  DirectX-apps CommitDirect3D11DepthBuffer-Aufrufe.  Die Anwendung sollte setfocuspoint nicht aufrufen.
+* **Planare neuprojektion:** Bei jedem Frame teilen Anwendungen dem System den Speicherort einer zu stabilisierende Ebene mit.  Unity-Anwendungen können setfocuspointforframe aufrufen und müssen die Option "Tiefe Puffer Freigabe aktivieren" deaktiviert haben.  DirectX-apps aufrufen setfocuspoint und sollten CommitDirect3D11DepthBuffer nicht aufrufen.
+* **Automatische planare neuprojektion:** Um dies zu ermöglichen, muss die Anwendung ihren tiefen Puffer an das System übermitteln, wie dies bei der tiefen neuprojektion der Fall wäre.  Bei hololens 2 muss die Anwendung dann setfocuspoint mit einem Punkt von 0 (null) für jeden Frame festlegen.  Bei hololens Generation 1 sollte die Anwendung setfocuspoint nicht aufrufen.
+
+### <a name="choosing-reprojection-technique"></a>Auswählen der Methode zum erneuten Projektion
+
+Stabilisierungstyp |    Immersive Headsets |    Hololens Generation 1 | HoloLens 2
+--- | --- | --- | ---
+Tiefen neuprojektion |    Empfohlen |   n. v. |   Empfohlen<br/><br/>Unity-Anwendungen müssen Unity 2018.4.12 oder höher oder Unity 2019,3 oder höher verwenden. Verwenden Sie andernfalls die automatische planare neuprojektion.
+Automatische planare neuprojektion | n. v. |   Empfohlene Standardeinstellung |   Empfohlen, wenn die tiefen neuprojektion nicht die besten Ergebnisse liefert.<br/><br/>Unity-Anwendungen werden für die Verwendung von Unity 2018.4.12 oder höher oder Unity 2019,3 oder höher empfohlen.  Frühere Unity-Versionen funktionieren mit leicht herabgestuften reprojektions Ergebnissen.
+Planare neuprojektion |   Nicht empfohlen |   Empfohlen, wenn die automatische Planar nicht die besten Ergebnisse liefert |    Verwenden Sie, wenn keine der tiefen Optionen gewünschte Ergebnisse liefert.    
+
+### <a name="verifying-depth-is-set-correctly"></a>Überprüfen der Tiefe Festlegung der Tiefe
+            
+Wenn eine reprojection-Methode den tiefen Puffer verwendet, muss sichergestellt werden, dass der Inhalt des tiefen Puffers die gerenderte Szene der Anwendung darstellt.  Eine Reihe von Faktoren kann Probleme verursachen.  Wenn eine zweite Kamera zum Renderingvorgang verwendet wird, beispielsweise Überlagerungen der Benutzeroberfläche, werden wahrscheinlich alle detaillierten Informationen aus der tatsächlichen Ansicht überschrieben.  Transparente Objekte legen oft keine Tiefe fest.  Bei einigen Text Rendering wird standardmäßig keine Tiefe festgelegt.  Im Rendering werden sichtbare Fehler angezeigt, wenn die Tiefe nicht den gerenderten holograms entspricht.
+            
+Hololens 2 verfügt über eine Schnellansicht, die anzeigt, wo die Tiefe ist und nicht festgelegt wird.  Aktivieren Sie diese Option über das Geräte Portal.  Wählen Sie auf der Registerkarte **Ansichten** > **Hologram-Stabilität** das Kontrollkästchen **Tiefe Visualisierung in Headset anzeigen aus** .  Bereiche, die eine Tiefe festgelegt haben, werden blau dargestellt.  Gerenderte Dinge, die keine tiefen Menge aufweisen, sind rot und müssen daher behoben werden.  Beachten Sie, dass die Visualisierung der Tiefe bei der Erfassung gemischter Realität nicht angezeigt wird.  Er ist nur über das Gerät sichtbar.
+            
+Einige GPU-Anzeige Tools ermöglichen die Visualisierung des tiefen Puffers.  Anwendungsentwickler können diese Tools verwenden, um sicherzustellen, dass die Tiefe ordnungsgemäß festgelegt wird.  Weitere Informationen finden Sie in der Dokumentation zu den Tools der Anwendung.
+
+### <a name="using-planar-reprojection"></a>Verwenden der planaren neuprojektion
 > [!NOTE]
 > Bei desktopsiven Desktops ist das Festlegen einer Stabilisierungs Ebene in der Regel kontraproduktiv, da Sie weniger visuelle Qualität bietet, als die Tiefe des App-tiefen Puffers für das System bereitzustellen, um eine pro-Pixel-Tiefe basierende neuprojektion zu ermöglichen. Wenn Sie nicht auf einem hololens ausgeführt werden, sollten Sie im Allgemeinen vermeiden, die Stabilisierungs Ebene festzulegen.
 
-Hololens führt eine ausgereifte Hardware gestützte Holographic-Stabilisierungstechnik durch. Dies ist größtenteils automatisch und muss mit Bewegung und Änderung der Sicht ("camerapose") erfolgen, wenn die Szene animiert wird und der Benutzer seine Kopfzeile verschiebt. Eine einzelne Ebene, die als Stabilisierungs Ebene bezeichnet wird, wird ausgewählt, um diese Stabilisierung zu maximieren. Während alle holograms in der Szene eine gewisse Stabilisierung erhalten, erhalten holograms in der Stabilisierungs Ebene die maximale Hardware Stabilisierung.
-
 ![Stabilisierungs Ebene für 3D-Objekte](images/stab-plane-500px.jpg)
 
-Das Gerät versucht automatisch, diese Ebene auszuwählen, aber die Anwendung kann bei diesem Vorgang helfen, indem der Fokuspunkt in der Szene ausgewählt wird. Unity-apps, die auf einem hololens ausgeführt werden, sollten den besten Punkt auswählen, der auf Ihrer Szene basiert, und diesen an [setfocuspoint ()](focus-point-in-unity.md)übergeben. Ein Beispiel für das Festlegen des Fokus Punkts in DirectX ist in der standardmäßigen drehenden Cube-Vorlage enthalten.
+Das Gerät versucht automatisch, diese Ebene auszuwählen, aber die Anwendung sollte bei diesem Vorgang helfen, indem der Fokuspunkt in der Szene ausgewählt wird. Unity-apps, die auf einem hololens ausgeführt werden, sollten den besten Punkt auswählen, der auf Ihrer Szene basiert, und diesen an [setfocuspoint ()](focus-point-in-unity.md)übergeben. Ein Beispiel für das Festlegen des Fokus Punkts in DirectX ist in der standardmäßigen drehenden Cube-Vorlage enthalten.
 
 Beachten Sie Folgendes: Wenn Ihre Unity-App auf einem immersiven Headset ausgeführt wird, das mit einem Desktop-PC verbunden ist, sendet Unity ihren tiefen Puffer an Windows, um die neuprojektion pro Pixel zu aktivieren, was in der Regel eine noch bessere Bildqualität ohne explizite Arbeit durch die APP bereitstellt. Wenn Sie einen Schwerpunkt Punkt angeben, wird die neuprojektion pro Pixel überschrieben. Sie sollten dies nur tun, wenn Ihre APP in einem hololens ausgeführt wird.
 
@@ -133,7 +162,7 @@ Obwohl es schwierig ist, die Trennung von Farben vollständig zu vermeiden, steh
 
 **Die Farbtrennung finden Sie unter:**
 * -Objekte, die schnell verschoben werden, einschließlich der von einem Kopf gesperrten Objekte, z. b. des [Cursors](cursors.md).
-* Objekte, die sich weitgehend von der [Stabilisierungs Ebene](hologram-stability.md#stabilization-plane)unterliegen.
+* Objekte, die sich weitgehend von der [Stabilisierungs Ebene](hologram-stability.md#reprojection)unterliegen.
 
 **So mildern Sie die Auswirkungen der Farbtrennung:**
 * Sorgen Sie dafür, dass das Objekt den Benutzer Blick verzögert. Es sollte so aussehen, als ob es etwas Trägheit hat und an den Blick "on Springs" angefügt ist. Dadurch wird der Cursor verlangsamt (die Distanz wird reduziert), und er wird hinter dem wahrscheinlichen Blickpunkt des Benutzers abgelegt. Solange der Benutzer die Verschiebung seines Blicks nicht stoppt, ist es ganz natürlich.
@@ -145,7 +174,8 @@ Obwohl es schwierig ist, die Trennung von Farben vollständig zu vermeiden, steh
 
 Wie zuvor sind das Rendering bei 60 fps und das Festlegen der Stabilisierungs Ebene die wichtigsten Techniken für die – Hologramm-Stabilität. Stellen Sie zunächst sicher, dass die Framerate den Erwartungen entspricht, wenn Sie mit einer merkbaren Farbtrennung
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
 * [Farbe, Licht und Materialien](color,-light-and-materials.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
+* [Mrtk Hologram-Stabilisierung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html)

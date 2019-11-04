@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, räumliche Zuordnung, Umgebung, Interaktion, DirectX, WinRT, API, Beispielcode, UWP, SDK, Exemplarische Vorgehensweise
-ms.openlocfilehash: db3f1464158c04127e456cadd5fb633336909344
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550696"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437442"
 ---
 # <a name="spatial-mapping-in-directx"></a>Räumliche Zuordnung in DirectX
 
@@ -21,6 +21,29 @@ In diesem Thema wird Code aus dem [holographicspatialmapping](https://github.com
 
 >[!NOTE]
 >Die Code Ausschnitte in diesem Artikel veranschaulichen derzeit die Verwendung C++von/CX anstelle von C + +17- C++kompatibler/WinRT, wie Sie in der [ C++ Holographic-Projektvorlage](creating-a-holographic-directx-project.md)verwendet werden.  Die Konzepte sind äquivalent für ein C++/WinRT-Projekt, obwohl Sie den Code übersetzen müssen.
+
+## <a name="device-support"></a>Geräteunterstützung
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Räumliche Zuordnung</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="directx-development-overview"></a>DirectX-Entwicklungs Übersicht
 
@@ -51,7 +74,7 @@ Beim Entwickeln einer Anwendung, die diese APIs verwendet, sieht Ihr grundlegend
   - Von hier aus kann die Anwendung optional eine Analyse oder [Verarbeitung](spatial-mapping.md#mesh-processing) der Mesh-Daten durchführen und diese zum [Rendern](spatial-mapping.md#rendering) und zum Auftreten von physikalischer und- [Kollisionen](spatial-mapping.md#raycasting-and-collision)verwenden.
   - Ein wichtiges Detail ist, dass Sie eine Skalierung auf die mesvertexpositionen anwenden müssen (z. b. im Vertexshader, der zum Rendern der Meshes verwendet wird), um Sie von den optimierten ganzzahligen Einheiten, in denen Sie im Puffer gespeichert sind, in Meter zu konvertieren. Sie können diese Skala abrufen, indem Sie [vertexpositionscale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)aufrufen.
 
-### <a name="troubleshooting"></a>Problembehandlung
+### <a name="troubleshooting"></a>Fehlerbehebung
 * Vergessen Sie nicht, Mesh-Vertex-Positionen in Ihrem Vertexshader zu skalieren, indem Sie die von [spatialsurfakemesh. vertexpositionscale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx) zurückgegebene Skala verwenden.
 
 ## <a name="spatial-mapping-code-sample-walkthrough"></a>Exemplarische Vorgehensweise zum Codebeispiel für räumliche Zuordnung
@@ -62,7 +85,7 @@ Nun erfahren Sie, wie Sie Ihrer DirectX-App Oberflächen Zuordnungsfunktionen hi
 
 ### <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Einrichten Ihrer APP für die Verwendung der spatialperception-Funktion
 
-Ihre APP muss die Funktion für räumliche Zuordnung verwenden können. Dies ist erforderlich, da das räumliche Mesh eine Darstellung der Benutzerumgebung ist, die als private Daten betrachtet werden kann. Deklarieren Sie diese Funktion in der Datei "Package. appxmanifest" für Ihre APP. Im Folgenden ein Beispiel:
+Ihre APP muss die Funktion für räumliche Zuordnung verwenden können. Dies ist erforderlich, da das räumliche Mesh eine Darstellung der Benutzerumgebung ist, die als private Daten betrachtet werden kann. Deklarieren Sie diese Funktion in der Datei "Package. appxmanifest" für Ihre APP. Beispiel:
 
 ```xml
 <Capabilities>
@@ -70,14 +93,14 @@ Ihre APP muss die Funktion für räumliche Zuordnung verwenden können. Dies ist
 </Capabilities>
 ```
 
-Die Funktion stammt aus dem **uap2** -Namespace. Um Zugriff auf diesen Namespace in ihrem Manifest zu erhalten, fügen Sie ihn als *xlmns* -Attribut &lt;in das Paket >-Element ein. Im Folgenden ein Beispiel:
+Die Funktion stammt aus dem **uap2** -Namespace. Um Zugriff auf diesen Namespace in ihrem Manifest zu erhalten, fügen Sie ihn als *xlmns* -Attribut in das &lt;Package >-Elements ein. Beispiel:
 
 ```xml
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap uap2 mp"
     >
 ```
@@ -222,7 +245,7 @@ m_surfaceObserver->ObservedSurfacesChanged += ref new TypedEventHandler<SpatialS
 
 Unser Codebeispiel ist auch so konfiguriert, dass auf diese Ereignisse reagiert wird. Sehen wir uns an, wie wir dies tun.
 
-**HINWEIS:** Dies ist möglicherweise nicht die effizienteste Methode, mit der Ihre APP Mesh-Daten verarbeiten kann. Dieser Code wird aus Gründen der Übersichtlichkeit geschrieben und ist nicht optimiert.
+**Hinweis:** Dies ist möglicherweise nicht die effizienteste Methode, mit der Ihre APP Mesh-Daten verarbeiten kann. Dieser Code wird aus Gründen der Übersichtlichkeit geschrieben und ist nicht optimiert.
 
 Die Oberflächen Mesh-Daten werden in einer schreibgeschützten Zuordnung bereitgestellt, in der [spatialsurfaceinfo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.aspx) -Objekte mithilfe von [Platform:: GUIDs](https://msdn.microsoft.com/library/windows/desktop/aa373931.aspx) als Schlüsselwerte gespeichert werden.
 
@@ -367,7 +390,7 @@ CreateDirectXBuffer(device, D3D11_BIND_VERTEX_BUFFER, positions, m_vertexPositio
 }
 ```
 
-**HINWEIS:** Informationen zu der im vorherigen Code Ausschnitt verwendeten Hilfsfunktion "featedirectxbuffer" finden Sie im Codebeispiel für die Oberflächen Zuordnung: "Surfakemesh. cpp", "getdatafromibuffer. h". Die Geräte Ressourcen Erstellung ist nun abgeschlossen, und das Mesh wird als geladen und bereit für Update und Rendering.
+**Hinweis:** Informationen zu der im vorherigen Code Ausschnitt verwendeten Hilfsfunktion "featedirectxbuffer" finden Sie im Codebeispiel für die Oberflächen Zuordnung: surfacemesh. cpp, getdatafromibuffer. h. Die Geräte Ressourcen Erstellung ist nun abgeschlossen, und das Mesh wird als geladen und bereit für Update und Rendering.
 
 ### <a name="update-and-render-surface-meshes"></a>Aktualisieren und renderoberflächen-Netzen
 
@@ -474,7 +497,7 @@ else
 }
 ```
 
-Nachdem dies geschehen ist, werden wir unsere Netzen durchlaufen und jede einzelne zeichnen. **HINWEIS:** Dieser Beispielcode ist nicht für die Verwendung einer beliebigen Art von Frustum-culelt optimiert, aber Sie sollten dieses Feature in Ihre APP einschließen.
+Nachdem dies geschehen ist, werden wir unsere Netzen durchlaufen und jede einzelne zeichnen. **Hinweis:** Dieser Beispielcode ist nicht für die Verwendung einer beliebigen Art von Frustum-culelt optimiert, aber Sie sollten dieses Feature in Ihre APP einschließen.
 
 ```cpp
 std::lock_guard<std::mutex> guard(m_meshCollectionLock);
@@ -629,7 +652,7 @@ else
 }
 ```
 
-**Hinweis**: Informationen zu unserer **gatherdepthless** -Routine finden Sie im Codebeispiel für die Oberflächen Zuordnung: Specialeffectpixelshader. HLSL.
+**Hinweis:** Informationen zu unserer **gatherdepthless** -Routine finden Sie im Codebeispiel für die Oberflächen Zuordnung: specialeffectpixelshader. HLSL.
 
 **Rendern von Oberflächen Mesh-Daten für die Anzeige**
 
@@ -638,7 +661,7 @@ Wir können auch einfach die Oberfläche für die Stereo Anzeige Puffer zeichnen
 Hier weist unser Codebeispiel den Mesh-Renderer an, die Auflistung zu zeichnen. Dieses Mal geben wir keinen tiefen Durchlauf an, sondern fügen einen PixelShader an und vervollständigen die Renderingpipeline mithilfe der Ziele, die wir für die aktuelle virtuelle Kamera angegeben haben.
 
 ```cpp
-// SR mesh rendering pass: Draw SR mesh over the world.
+// Spatial Mapping mesh rendering pass: Draw Spatial Mapping mesh over the world.
 context->ClearDepthStencilView(pCameraResources->GetSurfaceOcclusionDepthStencilView(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 // Set the render target to the current holographic camera's back buffer, and set the depth buffer.
@@ -650,6 +673,6 @@ context->OMSetRenderTargets(1, targets, pCameraResources->GetSurfaceDepthStencil
 m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Erstellen eines holographischen DirectX-Projekts](creating-a-holographic-directx-project.md)
 * [Windows. perception. Spatial-API](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)

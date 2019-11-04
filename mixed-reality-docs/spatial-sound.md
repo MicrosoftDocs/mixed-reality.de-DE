@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: räumlicher Sound, Umschließungs Sound, 3D--Audio, 3D--Ton, räumliche Audiodaten
-ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 31ec8f88a060127daab9bf3afc970457ec7c90a3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829921"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437395"
 ---
 # <a name="spatial-sound"></a>Raumklang
 
@@ -21,9 +21,9 @@ Obwohl holograms nur visuell angezeigt werden können, wenn der Benutzer den Bli
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/PTPvx7mDon4]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/PTPvx7mDon4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -33,9 +33,9 @@ Obwohl holograms nur visuell angezeigt werden können, wenn der Benutzer den Bli
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
@@ -52,7 +52,7 @@ Durch die Analyse, wie Sound sowohl unsere Ohren erreicht, bestimmt unser Gehirn
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Die "Left"-oder "Right Audio"-Cues (Azimuth) stammen aus den Unterschieden in der Zeit, die bei jedem Ohr Die nach-oben-und nach-unten-Hinweise stammen aus den von der äußeren Ohrform (pinnae) erzeugten Spektral Änderungen. Durch die Festlegung, woher die Audiodaten stammen, kann das System die Darstellung der Klänge simulieren, die zu unterschiedlichen Zeiten an den Ohren ankommen. Beachten Sie, dass bei hololens, während die Azimuth-Spatialisierung personalisiert ist, die Simulation der Rechte Erweiterung auf einem durchschnittlichen Satz von Anthropometrie basiert. Daher ist die Genauigkeit der Rechte Erweiterung möglicherweise weniger genau als die Azimuth-Genauigkeit.
 
@@ -69,7 +69,7 @@ Es ist auch wichtig zu beachten, dass die Kombination von standardstereo-Sounds 
 
 Die räumliche Sound-Engine von Windows unterstützt nur eine 48.000-Stichprobenrate für die Wiedergabe. Die meisten Middleware (z. b. unity) konvertiert Audiodateien automatisch in das unterstützte Format. Wenn Sie jedoch direkt Windows-Audio-APIs verwenden, müssen Sie das Format des Inhalts mit dem vom Effekt unterstützten Format vergleichen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Räumliche Daten 220](holograms-220.md)
 * [Raumklang in Unity](spatial-sound-in-unity.md)
 * [Raumklang in DirectX](spatial-sound-in-directx.md)

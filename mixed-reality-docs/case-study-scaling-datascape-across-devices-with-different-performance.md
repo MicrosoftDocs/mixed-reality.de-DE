@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: immersives Headset, Leistungsoptimierung, VR, Fallstudie
-ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 05f97188c81d85685540be998111ecfc47d9ef9c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523390"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436502"
 ---
 # <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Fallstudie: Skalieren von DataSet auf Geräten mit unterschiedlicher Leistung
 
@@ -43,7 +43,7 @@ Wir haben die Benutzeroberfläche und die Zuordnung zum Rendering im Budget erha
 
 ## <a name="background-on-cloud-data"></a>Hintergrundinformationen zu clouddaten
 
-Unsere clouddaten wurden von NOAA-Servern herunter http://nomads.ncep.noaa.gov/) geladen (und standen in drei unterschiedlichen 2D-Schichten, jeweils mit der oberen und unteren Höhe der Cloud, sowie der Dichte der Cloud für jede Zelle des Rasters. Die Daten wurden in eine Cloud-Informations Textur verarbeitet, in der jede Komponente in der roten, grünen und blauen Komponente der Textur gespeichert wurde, um den Zugriff auf die GPU zu vereinfachen.
+Unsere clouddaten wurden von NOAA-Servern heruntergeladen (https://nomads.ncep.noaa.gov/) und kamen in drei unterschiedlichen 2D-Schichten, jeweils mit der oberen und unteren Höhe der Cloud, sowie der Dichte der Cloud für jede Zelle des Rasters. Die Daten wurden in eine Cloud-Informations Textur verarbeitet, in der jede Komponente in der roten, grünen und blauen Komponente der Textur gespeichert wurde, um den Zugriff auf die GPU zu vereinfachen.
 
 ## <a name="geometry-clouds"></a>Geometry-Clouds
 
@@ -306,16 +306,16 @@ Entwerfen Sie für den schlimmsten Fallszenarien, und verwenden Sie ggf. das ada
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert ferrese</b><br>Anwendungsentwickler@Microsoft</td>
+<td style="border:0"><b>Robert ferrese</b><br>Software Entwickler @Microsoft</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>Anwendungsentwickler@Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>Software Entwickler @Microsoft</td>
 </tr>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
 * [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md)
 

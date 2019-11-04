@@ -1,17 +1,17 @@
 ---
 title: Konten in hololens
 description: Einrichten und Verwalten von Benutzerkonten auf hololens.
-author: ''
+author: tmlyon
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Hololens, Benutzer, Konto, AAD, ADFS, Microsoft-Konto, MSA, Anmelde Informationen
-ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5579cf53948b8bdbd4b41973dde7b8fc70a5aa31
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516814"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437087"
 ---
 # <a name="accounts-on-hololens"></a>Konten in hololens
 
@@ -38,9 +38,9 @@ Sie können Gerätebenutzer vom Gerät entfernen, um Speicherplatz freizugeben, 
 
 Innerhalb eines einzelnen Geräte Kontos können Benutzer zusätzliche Webkonto-Anmelde Informationen für den einfacheren Zugriff innerhalb von apps (z. b. den Store) oder für die Kombination des Zugriffs auf persönliche und geschäftliche Ressourcen, ähnlich der Desktop Version von Windows, verknüpfen. Wenn Sie sich auf diese Weise bei einem zusätzlichen Konto anmelden, werden die auf dem Gerät erstellten Benutzerdaten, z. b. Bilder oder Downloads, nicht getrennt. Sobald ein Konto mit einem Gerät verbunden ist, kann es von apps verwendet werden, um die Anmeldung bei jeder APP zu verringern.
 
-## <a name="using-single-sign-on-within-an-app"></a>Verwenden des einmaligen Anmeldens innerhalb einer APP
+## <a name="using-single-sign-on-within-an-app"></a>Verwenden von Single Sign-on in einer APP
 
-Als App-Entwickler können Sie die Vorteile einer verbundenen Identität auf hololens mit den [Windows-Konto-Manager-APIs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx)nutzen, genauso wie auf anderen Windows-Geräten. Einige Codebeispiele für diese APIs sind [hier](http://go.microsoft.com/fwlink/p/?LinkId=620621)verfügbar.
+Als App-Entwickler können Sie die Vorteile einer verbundenen Identität auf hololens mit den [Windows-Konto-Manager-APIs](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx)nutzen, genauso wie auf anderen Windows-Geräten. Einige Codebeispiele für diese APIs sind [hier](https://go.microsoft.com/fwlink/p/?LinkId=620621)verfügbar.
 
 Alle Konto Unterbrechungen, die möglicherweise auftreten, z. b. das Anfordern der Zustimmung von Benutzern für Kontoinformationen, die zweistufige Authentifizierung usw., müssen behandelt werden, wenn die APP ein Authentifizierungs Token anfordert.
 

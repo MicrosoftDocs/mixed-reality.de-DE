@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, Fallstudie, Projekt, Beispiel
-ms.openlocfilehash: a33a1541ef97298facfa9b0ef2d126654dd02f51
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 11cb2ad17f42fe49d84a61480dc8d43698386a1c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526533"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435409"
 ---
 # <a name="galaxy-explorer"></a>Galaxy Explorer
 
@@ -41,13 +41,13 @@ In diesen wenigen Wochen haben Sie über 5000 tolle Ideen freigegeben! Unser Ent
 
 Nach einer 24-stündigen Twitter-Umfrage war Galaxy Explorer die gewinneridee! Unser hololens-Entwicklungsteam von Designern, Entwicklern und Entwicklern, das den Galaxy Explorer entwickelt hat und alle Sie zu dieser Journey eingeladen hat. Sie können den Entwicklungsprozess in den folgenden Videos befolgen.
 
-## <a name="ep-1-trust-the-process"></a>EP 1: Dem Prozess Vertrauen
+## <a name="ep-1-trust-the-process"></a>EP 1: dem Prozess Vertrauen
 
 >[!VIDEO https://www.youtube.com/embed/rIX2XrRQgDg]
 
 In Folge 1 beginnt das Entwicklungsteam mit dem kreativen Prozess: Brainstorming, Konzept und Entscheidung, was für den Prototyp zu tun ist.
 
-## <a name="ep-2-lets-do-this"></a>EP 2: Gehen wir so vor
+## <a name="ep-2-lets-do-this"></a>EP 2:
 
 >[!VIDEO https://www.youtube.com/embed/q1ee8a-84Ro]
 
@@ -59,25 +59,25 @@ In Folge 2 schließt das Entwicklungsteam die Prototypenphase ab – schwerwiege
 
 In Episode 3 startet das Team die erste Woche der Entwicklung – das Erstellen eines Plans, das Schreiben von Produktionscode, das Erstellen von Kunst Ressourcen und das Ermitteln der Benutzeroberfläche.
 
-## <a name="ep-4-make-it-real"></a>EP 4: Real machen
+## <a name="ep-4-make-it-real"></a>EP 4: machen Sie es in Echtzeit
 
 >[!VIDEO https://www.youtube.com/embed/ePA6hcaqoug]
 
 In Folge 4 geht das Team tiefer in die Entwicklung – und bietet wissenschaftliche Daten, optimiert den Renderingprozess und integriert räumliche Zuordnung.
 
-## <a name="ep-5-see-what-happens"></a>EP 5: Sehen Sie, was passiert
+## <a name="ep-5-see-what-happens"></a>EP 5: siehe was passiert?
 
 >[!VIDEO https://www.youtube.com/embed/Up1EDRrCrho]
 
 In Folge 5 testet das Entwicklungsteam die APP, sucht nach Fehlern, die korrigiert werden müssen, und optimiert die Leistung.
 
-## <a name="ep-6-coming-to-life"></a>EP 6: Zum Leben
+## <a name="ep-6-coming-to-life"></a>EP 6: Lebenszyklus
 
 >[!VIDEO https://www.youtube.com/embed/sMuJFKbylY4]
 
 In Episode 6 schließt das Team die letzte Woche der Entwicklung ab, bereitet zwei Wochen Arbeit vor und gibt den Fortschritt an, den Sie vorgenommen haben.
 
-## <a name="ep-7-the-final-product"></a>EP 7: Das endgültige Produkt
+## <a name="ep-7-the-final-product"></a>EP 7: das Endprodukt
 
 >[!VIDEO https://www.youtube.com/embed/HsnH2Q7HxOA]
 
@@ -92,7 +92,7 @@ Weitere Einblicke und Lektionen aus der Entwicklung von Galaxy Explorer finden S
 ![Galaxy Explorer-Entwicklungsteam](images/syiteampic.jpg)<br>
 *Galaxy Explorer-Entwicklungsteam*
 
-Wir haben gelernt, dass die Erstellung des richtigen Teams eine der wichtigsten Investitionen ist. Wir haben uns entschieden, sich ähnlich wie ein Game Studio für diejenigen von Ihnen zu organisieren, die mit diesem Entwicklungsmodell vertraut sind. Wir haben uns entschieden, elf Kern Teammitglieder zu haben, um den Bereich zu steuern, da wir einen festes Zeitrahmen hatten (erstellen Sie vor dem 30. März etwas cool).
+Wir haben gelernt, dass die Erstellung des richtigen Teams eine der wichtigsten Investitionen ist. Wir haben uns entschieden, sich ähnlich wie ein Game Studio für diejenigen von Ihnen zu organisieren, die mit diesem Entwicklungsmodell vertraut sind. Wir haben uns entschieden, elf Kern Teammitglieder zu haben, um den Bereich zu steuern, da wir einen festes Zeitrahmen hatten (erstellen Sie vor dem 30. März 2016 etwas cooltes).
 
 Für dieses Projekt begannen wir mit einem Producer, Jessica, der die Planung durchführte, den Fortschritt überprüft und die Ausführung von Tages-zu-Tag aufrechterhalten hat. Sie ist das einzige mit rosa Haaren. Wir hatten einen Entwurfs Leiter (Jon) und einen Senior Designer (Peter). Sie hatten die kreative Vision für Galaxy Explorer. Jon ist das einzige in der Brille in der Front-Zeile, und Peter ist der zweite von der rechten Seite im Hintergrund.
 
@@ -104,6 +104,6 @@ Wir haben einen voll Zeit Tester – Lena –, der unsere Builds jeden Tag getes
 
 Wir sind Teil eines größeren Studio hier bei Microsoft (das Team in der Entwicklung von nicht-spielen). Es gab auch eine Reihe von anderen Personen, – wir haben die Talente unserer Kunst Director, Audiotechniker und Studio-Führungskräfte häufig im gesamten Projekt aufgerufen, aber diese Personen waren gemeinsam mit anderen Projekten, die unser breiteres Team hat, freigegeben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Fallstudie: Erstellen einer Galaxie in gemischter Realität](case-study-creating-a-galaxy-in-mixed-reality.md)
 * [Galaxy Explorer-GitHub-Repository](https://github.com/Microsoft/GalaxyExplorer)

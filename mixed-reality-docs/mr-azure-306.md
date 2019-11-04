@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Media Services, Streaming-Video, 360, immersive, VR
-ms.openlocfilehash: e27bda2a9309f335feb0056703da492555c39fde
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 6585aa731ff7ebb89beae67ab0b61ac5ef026e47
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896587"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438565"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -20,8 +20,8 @@ ms.locfileid: "69896587"
 
 # <a name="mr-and-azure-306-streaming-video"></a>Mr und Azure 306: Streaming-Video
 
-![Endgültiges Produkt-Start](images/AzureLabs-Lab6-00.png)
-![Final Product-Start](images/AzureLabs-Lab6-01.png)
+![endgültige Product-Start](images/AzureLabs-Lab6-00.png)
+![endgültige Produktstart](images/AzureLabs-Lab6-01.png)
 
 In diesem Kurs erfahren Sie, wie Sie Ihre Azure Media Services mit einer Windows Mixed Reality-VR-Benutzer Verbindung verbinden, um das Streaming von 360-Grad-Videowiedergabe auf immersiven Headsets zuzulassen. 
 
@@ -37,7 +37,7 @@ Nachdem Sie diesen Kurs abgeschlossen haben, verfügen Sie über eine gemischte 
 
 In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf integrieren. In diesem Kurs erfahren Sie, wie Sie einen Azure-Dienst in Ihr Unity-Projekt integrieren. Es ist Ihre Aufgabe, das wissen, das Sie aus diesem Kursgewinnen, zu nutzen, um ihre gemischte Reality-Anwendung zu verbessern.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
@@ -47,7 +47,7 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im [Artikel Installieren der Tools](install-the-tools.md)aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -58,7 +58,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 - [Windows 10 Fall Creators Update (oder höher) mit aktiviertem Entwicklermodus](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10 SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017,4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [Windows Mixed Reality-Headset (VR)](immersive-headset-hardware-details.md)
 - Internet Zugriff für Azure-Setup und Datenabruf
 - 2 360-Grad-Videos im MP4-Format ( [auf dieser Downloadseite](https://www.mettle.com/360vr-master-series-free-360-downloads-page)finden Sie einige gebührenfreie Videos)
@@ -69,13 +69,13 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 2.  Richten Sie Ihr immersives Headset mit gemischter Realität ein und testen Sie es.
 
     > [!NOTE]
-    > Für diesen Kurs benötigen Sie **keine** Bewegungs Controller. Wenn Sie Unterstützung beim Einrichten des immersiven Headsets benötigen, klicken Sie [auf verknüpfen, um Windows Mixed Reality einzurichten](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).
+    > Für diesen Kurs benötigen Sie **keine** Bewegungs Controller. Wenn Sie Unterstützung beim Einrichten des immersiven Headsets benötigen, klicken Sie [auf verknüpfen, um Windows Mixed Reality einzurichten](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality).
 
 ## <a name="chapter-1---the-azure-portal-creating-the-azure-storage-account"></a>Kapitel 1: Azure-Portal: Erstellen des Azure Storage Kontos
 
 Um den **Azure Storage-Dienst**zu verwenden, müssen Sie ein **Speicherkonto** in der Azure-Portal erstellen und konfigurieren.
 
-1.  Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
+1.  Melden Sie sich beim [Azure-Portal](https://portal.azure.com)an.
 
     > [!NOTE]
     > Wenn Sie noch nicht über ein Azure-Konto verfügen, müssen Sie eines erstellen. Wenn Sie dieses Tutorial in einer Classroom-oder Lab-Situation befolgen, bitten Sie Ihren Dozenten oder einen der Proctors, Hilfe beim Einrichten Ihres neuen Kontos zu erhalten.
@@ -96,7 +96,7 @@ Um den **Azure Storage-Dienst**zu verwenden, müssen Sie ein **Speicherkonto** i
 
     3.  Wählen Sie unter **Kontoart**die Option **Speicher (universell, Version v1)** aus.
 
-    4.  Für **Leistung**Option **Standard*.**
+    4.  Wählen Sie für **Leistung**die Option **Standard * aus.**
 
     5.  Wählen Sie für **Replikation** die Option **lokal redundanter Speicher (LRS)** aus.
 
@@ -222,7 +222,7 @@ Zum Verwenden von Azure Media Service müssen Sie eine Instanz des Dienstanbiete
     > [!IMPORTANT]
     > Die Zeit, die dies dauert, hängt von der Dateigröße Ihres Videos ab. Dieser Vorgang kann einige Zeit in Anspruch nehmen.
 
-19. Nachdem Sie nun die codierte Version des Videos erstellt haben, können Sie Sie veröffentlichen, um Sie zugänglich zu machen. Klicken Sie hierzu auf die blauen linkassets , um zur Seite Assets zurückzukehren.
+19. Nachdem Sie nun die codierte Version des Videos erstellt haben, können Sie Sie veröffentlichen, um Sie zugänglich zu machen. Klicken Sie hierzu auf die blauen **linkassets** , um zur Seite Assets zurückzukehren.
 
     ![Das Azure-Portal](images/AzureLabs-Lab6-21.png)
 
@@ -243,7 +243,7 @@ Zum Verwenden von Azure Media Service müssen Sie eine Instanz des Dienstanbiete
 
 23. Sie werden aufgefordert, einen **Locator**(den Einstiegspunkt) auf Datei/s in ihren Assets festzulegen. Legen Sie für Ihr Szenario die folgenden Eigenschaften fest:
 
-    1.  **Locatortyp** > **progressiv**.
+    1.  Der **Locatortyp** > **progressiv**.
 
     2.  Das **Datum** und die **Uhrzeit** werden von Ihrem aktuellen Datum auf eine Uhrzeit in der Zukunft (in diesem Fall 100 Jahre) festgelegt. Lassen Sie den Wert unverändert, oder ändern Sie ihn entsprechend.
 
@@ -275,7 +275,7 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
     ![Das Azure-Portal](images/AzureLabs-Lab6-28.png)
 
-2.  Sie müssen nun einen Unity-Projektnamen angeben und **Mr\_-360videostreaming einfügen.** Stellen Sie sicher, dass Projekttyp auf **3D**festgelegt ist. Legen Sie den Speicherort auf einen geeigneten Speicherort fest (denken Sie daran, dass die Stamm Verzeichnisse besser sind). Klicken Sie dann auf **Projekt erstellen**.
+2.  Sie müssen nun einen Unity-Projektnamen angeben und **Mr\_360videostreaming einfügen.** Stellen Sie sicher, dass Projekttyp auf **3D**festgelegt ist. Legen Sie den Speicherort auf einen geeigneten Speicherort fest (denken Sie daran, dass die Stamm Verzeichnisse besser sind). Klicken Sie dann auf **Projekt erstellen**.
 
     ![Das Azure-Portal](images/AzureLabs-Lab6-29.png)
 
@@ -289,7 +289,7 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
     1. Das **Zielgerät** ist auf **ein beliebiges Gerät** festgelegt.
     
-    2.  Der Buildtyp ist auf D3D festgelegt **.**
+    2.  Der **Buildtyp** ist auf D3D festgelegt **.**
 
     3.  **SDK** ist auf **zuletzt installiert** festgelegt.
 
@@ -303,13 +303,13 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
         ![Einrichten des Unity-Projekts](images/AzureLabs-Lab6-31.png)
 
-6.  Klicken Sie im Fenster Buildeinstellungen auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der **Inspektor** befindet. 
+6.  Klicken Sie im Fenster **Buildeinstellungen** auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der **Inspektor** befindet. 
 
 7. In diesem Bereich müssen einige Einstellungen überprüft werden:
 
     1.  Auf der Registerkarte **andere Einstellungen** :
 
-        1.  **Skript** Erstellung Die **Lauf Zeit Version** muss **stabil** sein (.NET 3,5-Entsprechung).
+        1.  Die **Lauf Zeit Version** der **Skript** Erstellung muss **stabil** sein (.NET 3,5-Entsprechung).
 
         2. Das Skript für die **Skript** Erstellung sollte **.net sein.**
 
@@ -327,9 +327,9 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
             ![Einrichten des Unity-Projekts](images/AzureLabs-Lab6-34.png)
 
-8.  Nachdem Sie diese Änderungen vorgenommen haben, schließen Sie das Fenster mit den Buildeinstellungen.
+8.  Nachdem Sie diese Änderungen vorgenommen haben, schließen Sie das Fenster mit den **Buildeinstellungen** .
 
-9.  Speichern Sie das Projekt **Datei* *speichern Projekt**.
+9.  Speichern Sie Ihr Projekt **File* * Save Project * *.
 
 
 
@@ -371,13 +371,13 @@ Gewusst wie: Importieren von **vstu**:
 
         2. Drehung = **X**: 0, **Y**: 0, **Z**: 0.
 
-        3. Skalieren von **X**: 1, **Y**: 1, **Z**: 1.
+        3. Skalieren Sie **X**: 1, **Y**: 1, **Z**: 1.
 
     2.  **Kamera**
 
-        1. **Flags löschen**: Voll Tonfarbe.
+        1. **Clear Flags**: Volltonfarbe.
 
-        2.  **Clipping-Ebenen**: Nahen 0,1, weit entfernt: 6.
+        2.  **Clipping-Ebenen**: fast: 0,1, weit: 6.
 
             ![Importieren des insideoutsphere Unity-Pakets](images/AzureLabs-Lab6-38.png)
 
@@ -385,21 +385,21 @@ Gewusst wie: Importieren von **vstu**:
 
     ![Importieren des insideoutsphere Unity-Pakets](images/AzureLabs-Lab6-39.png)
 
-6.  Erweitern Sie das **insideoutsphere** -Objekt in der **Hierarchie** , indem Sie auf den kleinen Pfeil daneben klicken. Darunter wird ein unter geordnetes Objekt mit dem Namen " **gazebutton**" angezeigt. Diese wird verwendet, um Szenen und somit Videos zu ändern.
+6.  Erweitern Sie das **insideoutsphere** -Objekt in der **Hierarchie** , indem Sie auf den kleinen Pfeil daneben klicken. Darunter **wird ein unter** geordnetes Objekt mit dem Namen " **gazebutton**" angezeigt. Diese wird verwendet, um Szenen und somit Videos zu ändern.
 
     ![Importieren des insideoutsphere Unity-Pakets](images/AzureLabs-Lab6-40.png)
 
 7.  Klicken Sie im Inspektor-Fenster auf die Transformations Komponente von **insideoutsphere**, und stellen Sie sicher, dass die folgenden Eigenschaften festgelegt sind:
 
-    |            |    TRANSFORMATION-POSITION   |           |
+    |            |    Transformation-Position   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |          **Y** 0          |  **Z** 0  |
 
-    |            |    TRANSFORMATION-DREHUNG   |           |
+    |            |    Transformation-Drehung   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |          **Y** -50        |  **Z** 0  |
 
-    |            |     TRANSFORMIEREN: SKALIEREN     |           |
+    |            |     Transformieren: Skalieren     |           |
     | :---------:| :-----------------------: | :--------:|
     |  **X** 1   |          **J** 1          |  **Z** 1  |
 
@@ -407,15 +407,15 @@ Gewusst wie: Importieren von **vstu**:
 
 8.  Klicken Sie auf das untergeordnete **gazebutton** -Objekt, und legen Sie die zugehörige **Transformation** wie folgt fest:
 
-    |            |    TRANSFORMATION-POSITION   |           |
+    |            |    Transformation-Position   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 3,6|          **J** 1,3        |  **Z** 0  |
 
-    |            |    TRANSFORMATION-DREHUNG   |           |
+    |            |    Transformation-Drehung   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |          **Y** 0          |  **Z** 0  |
 
-    |            |     TRANSFORMIEREN: SKALIEREN     |           |
+    |            |     Transformieren: Skalieren     |           |
     | :---------:| :-----------------------: | :--------:|
     |  **X** 1   |          **J** 1          |  **Z** 1  |
 
@@ -436,7 +436,7 @@ So erstellen Sie diese Klasse:
 
 2.  Doppelklicken Sie auf den Ordner " **Scripts** ", um ihn zu öffnen.
 
-3.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf **Create > C\# Script**. Benennen Sie das Skript **Videocontroller**.
+3.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf **> C\# Skript erstellen**. Benennen Sie das Skript **Videocontroller**.
 
     ![Erstellen der Videocontroller-Klasse](images/AzureLabs-Lab6-45.png)
 
@@ -604,7 +604,7 @@ So erstellen Sie diese Klasse:
     ```
 
     > [!TIP] 
-    > Die **changescene ()** -Methode verwendet ein praktisches\# C-Feature, das als *Bedingter Operator*bezeichnet wird. Dies ermöglicht, dass Bedingungen überprüft werden und dann basierend auf dem Ergebnis der Überprüfung zurückgegebene Werte in einer einzigen Anweisung zurückgegeben werden. [Weitere Informationen zum bedingten Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator)finden Sie unter diesem Link.
+    > Die **changescene ()** -Methode verwendet ein praktisches C-\# Feature, das als *Bedingter Operator*bezeichnet wird. Dies ermöglicht, dass Bedingungen überprüft werden und dann basierend auf dem Ergebnis der Überprüfung zurückgegebene Werte in einer einzigen Anweisung zurückgegeben werden. [Weitere Informationen zum bedingten Operator](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator)finden Sie unter diesem Link.
 
 11. Speichern Sie die Änderungen in Visual Studio, bevor Sie zu Unity zurückkehren.
 
@@ -612,10 +612,10 @@ So erstellen Sie diese Klasse:
 
 13. Klicken Sie auf die **Hauptkamera** , und sehen Sie sich den Bereich **Inspector**an. Sie werden feststellen, dass in der neu hinzugefügten Skript Komponente ein Feld mit einem leeren Wert vorhanden ist. Dies ist ein Verweis Feld, das die öffentlichen Variablen in Ihrem Code als Ziel hat.
 
-14. Ziehen Sie das insidebug-Objekt aus dem Bereich **Hierarchie** in den **Sphere** -Slot, wie in der folgenden Abbildung dargestellt.
+14. Ziehen Sie das **insidebug** -Objekt aus dem Bereich **Hierarchie** in den **Sphere** -Slot, wie in der folgenden Abbildung dargestellt.
 
-    ![Erstellen der Videocontroller-](images/AzureLabs-Lab6-47.png)
-    Klasse![Erstellen der Videocontroller-Klasse](images/AzureLabs-Lab6-48.png)
+    ![erstellen Sie die Videocontroller-Klasse](images/AzureLabs-Lab6-47.png)
+    ![die Videocontroller-Klasse erstellen](images/AzureLabs-Lab6-48.png)
 
 ## <a name="chapter-6---create-the-gaze-class"></a>Kapitel 6: Erstellen der "Blick"-Klasse
 
@@ -625,7 +625,7 @@ So erstellen Sie diese Klasse:
 
 1.  Wechseln Sie zum Ordner " **Scripts** ", den Sie zuvor erstellt haben.
 
-2.  Mit der rechten Maustaste den **Projekt** Bereich **erstellen* *C\# Script**. Benennen Sie dasSkript mit dem Namen.
+2.  Klicken Sie mit der rechten Maustaste in das **Projekt** Panel, und klicken Sie auf * C\# Skript * **Erstellen* . Benennen Sie das **Skript mit**dem Namen.
 
 3.  Doppelklicken Sie auf das neue ***Blick*** Skript, um es mit **Visual Studio 2017** zu öffnen.
 
@@ -754,26 +754,26 @@ In diesem Kapitel wird erläutert, wie Sie die beiden Kulissen einrichten, die j
 
     >  Sie sollten über **VideoScene1** und **VideoScene2**verfügen.
 
-7.  Navigieren Sie in den beiden Kulissen zu **Datei >** Buildeinstellungen. Wenn das Fenster "Buildeinstellungen" geöffnet ist, ziehen Sie die Kulissen in den Bereich " **Build** ".
+7.  Navigieren Sie in den beiden Kulissen zu **Datei > Buildeinstellungen**. Wenn das Fenster " **Buildeinstellungen** " geöffnet ist, ziehen Sie die Kulissen in den Bereich " **Build** ".
 
     ![Kapitel 7: Einrichten der beiden Unity-Szenen](images/AzureLabs-Lab6-50.png)
 
     > [!TIP] 
     > Sie können beide Szenen aus dem Ordner " **Szenen** " auswählen, indem Sie die **STRG** -Taste gedrückt halten und dann mit der linken Maustaste auf jede Szene klicken und schließlich beides ziehen.
 
-8.  Schließen Sie das Fenster Buildeinstellungen, und doppelklicken Sie auf **VideoScene2**.
+8.  Schließen Sie das Fenster **Buildeinstellungen** , und doppelklicken Sie auf **VideoScene2**.
 
 9.  Wenn die zweite Szene geöffnet ist, klicken Sie auf das untergeordnete **gazebutton** -Objekt von **insienoutsphere**, und legen Sie die Transformation wie folgt fest:
 
-    |            |    TRANSFORMATION-POSITION   |           |
+    |            |    Transformation-Position   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |         **J** 1,3         | **Z** 3,6 |
 
-    |            |    TRANSFORMATION-DREHUNG   |           |
+    |            |    Transformation-Drehung   |           |
     | :---------:| :-----------------------: | :--------:|
     |   **X** 0  |          **Y** 0          |  **Z** 0  |
 
-    |            |     TRANSFORMIEREN: SKALIEREN     |           |
+    |            |     Transformieren: Skalieren     |           |
     | :---------:| :-----------------------: | :--------:|
     |  **X** 1   |          **J** 1          |  **Z** 1  |
 
@@ -795,7 +795,7 @@ In diesem Kapitel wird erläutert, wie Sie die beiden Kulissen einrichten, die j
 
 14. Die " **gazebutton"-Schaltfläche** ist nun teilweise aktualisiert, um anders aussehen zu können. Sie erstellen nun jedoch ein neues **Material**, damit es vollständig anders aussieht und leichter als ein anderes Objekt erkannt werden kann, als das Objekt in der ersten Szene.
 
-15. Navigieren Sie im **Projekt Panel**zum Ordner **Material** . Duplizieren Sie das Inhalts Material ( **STRG** + **D** auf der Tastatur, oder klicken Sie mit der linken Maustaste auf das **Material**, und wählen Sie dann in der Menüoption Datei **Bearbeiten** die Option **Duplizieren**aus.)
+15. Navigieren Sie im **Projekt Panel**zum Ordner **Material** . Duplizieren Sie das Inhalts **Inhalts Material (** drücken Sie auf der Tastatur **STRG** + **D** , oder klicken Sie mit der linken Maustaste auf das **Material**, und wählen Sie dann in der Menüoption Datei **Bearbeiten** die Option **Duplizieren**aus.)
 
     ![Kapitel 7: Einrichten der beiden Unity-Szenen](images/AzureLabs-Lab6-55.png)
     ![Kapitel 7: Einrichten der beiden Unity-Szenen](images/AzureLabs-Lab6-56.png)
@@ -824,9 +824,9 @@ So erstellen Sie Folgendes:
 
 1.  Speichern Sie die aktuelle Szene, indem Sie auf **Datei > Speichern**klicken.
 
-2.  Aktivieren Sie das Kontrollkästchen **Unity\# -C-Projekte** . (Dies ist wichtig, da Sie die Klassen nach Abschluss des Builds bearbeiten können.)
+2.  Aktivieren Sie das Kontrollkästchen **Unity-C-\# Projekte** (Dies ist wichtig, da Sie die Klassen nach Abschluss des Builds bearbeiten können).
 
-3.  Wechseln Sie zu **Datei >** Buildeinstellungen, und klicken Sie auf **Erstellen**.
+3.  Wechseln Sie zu **Datei > Buildeinstellungen**, und klicken Sie auf **Erstellen**.
 
 4.  Sie werden aufgefordert, den Ordner auszuwählen, in dem die Projekt Mappe erstellt werden soll.
 
@@ -835,7 +835,7 @@ So erstellen Sie Folgendes:
 6.  Klicken Sie auf den neuen Ordner, und klicken Sie dann auf **Ordner auswählen**, um diesen Ordner auszuwählen, um den Build an diesem Speicherort zu starten.
 
     ![Kapitel 8: Erstellen der UWP-Lösung](images/AzureLabs-Lab6-60.png)
-    ![, Kapitel 8: Erstellen der UWP-Lösung](images/AzureLabs-Lab6-61.png)
+    ![Kapitel 8: Erstellen der UWP-Lösung](images/AzureLabs-Lab6-61.png)
 
 7.  Nachdem die Erstellung von Unity abgeschlossen ist (Dies kann einige Zeit in Anspruch nehmen), wird ein **Datei-Explorer** -Fenster am Speicherort des Builds geöffnet.
 
@@ -855,7 +855,7 @@ Zum Bereitstellen auf dem lokalen Computer:
 
     ![Kapitel 9: Bereitstellung auf lokalem Computer](images/AzureLabs-Lab6-62.png)
 
-4.  Sie müssen nun alle Pakete in der Projekt Mappe wiederherstellen. Klicken Sie mit der rechtenMaustaste auf Ihre Projekt Mappe, und klicken Sie auf **nuget-Pakete für Projekt Mappe wiederherstellen.**
+4.  Sie müssen nun alle Pakete in der Projekt Mappe wiederherstellen. Klicken Sie mit der rechten Maustaste **auf Ihre Projekt**Mappe, und klicken Sie auf **nuget-Pakete für Projekt Mappe wiederherstellen.**
 
     > [!NOTE] 
     > Dies geschieht, da die Pakete, die von Unity erstellt werden, für die Arbeit mit Ihren lokalen Computer verweisen verwendet werden müssen.

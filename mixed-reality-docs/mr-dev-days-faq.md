@@ -7,12 +7,12 @@ ms.author: jemccull
 ms.date: 02/25/2019
 ms.topic: article
 keywords: Gemischte Realität, Konferenz, Summit, Entwickler, hololens, hololens 2, kinect
-ms.openlocfilehash: 8d38d121ab76281497ab8d8ec11c096f9bc7cc71
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f9f68962229bfc66bf07040b79ea07345dfd5378
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526643"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438430"
 ---
 # <a name="mixed-reality-dev-days-faq"></a>Häufig gestellte Fragen zur gemischten Realität dev Days
 
@@ -40,7 +40,7 @@ ms.locfileid: "63526643"
 
     Wir entwickelten gemischte Realität dev Days für Sie – Experten in gemischter Realität und die zahlreichen Aspekte von Cloud-und Ki-Technologie, die in der IT enthalten sind, vom Maschinelles sehen bis zur – Hologramm-Erstellung. Wenn Sie ein gemischter Reality-Entwickler sind, der sich mit der Entwicklerplattform, den Tools, Diensten und Geräten vertraut machen möchte, sind dev-Tage mit gemischter Realität sehr gut geeignet. 
 
-    Mit [Microsoft Build](https://www.microsoft.com/en-us/build) werden Entwickler und Experten von Produktteams im gesamten Unternehmen vereint. Es wird eine breite Palette von Technologien und Anwendungs Mustern behandelt. Dieses Ereignis ersetzt nicht den Build, und wenn dies der Fall ist, empfehlen wir Ihnen, dies zu tun! 
+    Mit [Microsoft Build](https://www.microsoft.com//build) werden Entwickler und Experten von Produktteams im gesamten Unternehmen vereint. Es wird eine breite Palette von Technologien und Anwendungs Mustern behandelt. Dieses Ereignis ersetzt nicht den Build, und wenn dies der Fall ist, empfehlen wir Ihnen, dies zu tun! 
 
 * **Wie viel kostet das Ereignis?**
 
@@ -64,4 +64,4 @@ ms.locfileid: "63526643"
 
 * **An wen sollte ich mich wenden, um mehr zu erfahren?**
 
-    Weitere Informationen erhalten Sie per e-Mail.DevEvent@microsoft.com
+    Weitere Informationen finden Sie in der e-Mail DevEvent@microsoft.com

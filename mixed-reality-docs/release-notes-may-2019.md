@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Anmerkungen zu dieser Version, Version, Windows 10, Build, 19h1, Betriebssystem, Mai 2019
-ms.openlocfilehash: fe2532429842a2acd7868349a8df19214e9ae155
-ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
+ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67843305"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438318"
 ---
 # <a name="release-notes---may-2019"></a>Anmerkungen zu dieser Version-Mai 2019
 
@@ -38,7 +38,7 @@ Um eine Win32-Anwendung in Windows Mixed Reality zu starten, öffnen Sie den Pin
 ![Win32-Pin_Panel](images/mr-win32-slates-pinspanel.png)
 
 #### <a name="please-help-us-improve"></a>Helfen Sie uns bei der Verbesserung!
-Wir werden kontinuierlich darauf achten, die Kompatibilität zu verbessern.  Wenn Sie feststellen, dass sich Ihre bevorzugte klassische Win32-Anwendung in Windows Mixed Reality nicht korrekt verhält, senden Sie uns Feedback über unseren [Feedback-Hub](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
+Wir werden kontinuierlich darauf achten, die Kompatibilität zu verbessern.  Wenn Sie feststellen, dass sich Ihre bevorzugte klassische Win32-Anwendung in Windows Mixed Reality nicht korrekt verhält, senden Sie uns Feedback über unseren [Feedback-Hub](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
 
 ## <a name="hololens-1st-gen-long-term-servicing"></a>Langfristige Wartung (hololens) (1st Gen)
 
@@ -49,7 +49,7 @@ Hololens (1st Gen) wechselt in den LTS-Zustand (Long Term Service). Zukünftige 
 Verwenden Sie die [Feedback-Hub-App auf Ihrem Windows 10-PC](give-us-feedback.md) oder Ihrem hololens-Gerät, um Feedback zu geben und Probleme zu melden. Die Verwendung von Feedback Hub stellt sicher, dass alle erforderlichen Diagnoseinformationen enthalten sind, damit unsere Techniker das Problem schnell Debuggen und beheben können.
 
 >[!NOTE]
->Stellen Sie sicher, dass Sie die Eingabeaufforderung akzeptieren, in der Sie gefragt werden, ob der Feedback-  Hub auf den Ordner "Dokumente" zugreifen soll.
+>Stellen **Sie sicher** , dass Sie die Eingabeaufforderung akzeptieren, in der Sie gefragt werden, ob der Feedback-Hub auf den Ordner "Dokumente" zugreifen soll.
 
 ## <a name="prior-release-notes"></a>Vorherige Anmerkungen zu dieser Version
 
@@ -61,7 +61,7 @@ Verwenden Sie die [Feedback-Hub-App auf Ihrem Windows 10-PC](give-us-feedback.md
 * [Versionshinweise – Mai 2016](release-notes-may-2016.md)
 * [Versionshinweise – März 2016](release-notes-march-2016.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Immersive Headset-Unterstützung (externer Link)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Hololens-Unterstützung (externer Link)](https://support.microsoft.com/products/hololens)
 * [Installieren der Tools](install-the-tools.md)

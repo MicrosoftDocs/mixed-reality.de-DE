@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Gemischte Realität, räumlicher Locator, räumlicher Referenzrahmen, räumliches Koordinatensystem, räumliche Phase, Beispielcode, Bildstabilisierung, räumlicher Anker, räumlicher Anker Speicher, nach Verfolgungs Verlust, Exemplarische Vorgehensweise
-ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628971"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436222"
 ---
 # <a name="coordinate-systems-in-directx"></a>Koordinatensysteme in DirectX
 
@@ -37,7 +37,7 @@ Die Anwendung sollte spatialcoordinatesystems nicht direkt erstellen, stattdesse
 
 Alle Koordinatensysteme, die von diesen Objekten zurückgegeben werden, sind mit der rechten Hand, mit + y nach oben, + x nach rechts und + z rückwärts. Sie können sich merken, welche Richtung die positive z-Achse zeigt, indem Sie die Finger entweder von Links oder rechts in der positiven x-Richtung zeigen und in die positive y-Richtung hinein. Die Richtung, in die der Daumen zeigt, entweder auf Sie zu oder von Ihnen weg, ist die Richtung der positiven Z-Achse für das Koordinatensystem. Die folgende Abbildung zeigt diese zwei Koordinatensysteme.
 
-![Linke und Rechte Koordinatensysteme](images/left-hand-right-hand.gif)<br>
+![von linken und rechten Koordinatensystemen](images/left-hand-right-hand.gif)<br>
 *Linke und Rechte Koordinatensysteme*
 
 Verwenden Sie zum Bootstrapping in ein spatialcoordinatesystem, das auf der Position eines hololens basiert, die <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">spatizuweisung</a> -Klasse, um einen angefügten oder stationären Verweis Rahmen zu erstellen, wie in den folgenden Abschnitten beschrieben.
@@ -323,7 +323,7 @@ Sobald Sie mit räumlichen Azure-Ankern arbeiten, können Sie <a href="https://d
 
 ### <a name="create-spatialanchors-for-holographic-content"></a>Erstellen von spatialanchor für Holographic Content
 
-In diesem Codebeispiel wurde die Windows Holographic-App-Vorlage so geändert, dass Anker erstellt werden, wenn die gedrückte Bewegung erkannt wird. Der Cube wird dann während des Renderpass am Anker platziert.
+In diesem Codebeispiel wurde die Windows Holographic-App-Vorlage so geändert, dass Anker erstellt werden, wenn die **gedrückte** Bewegung erkannt wird. Der Cube wird dann während des Renderpass am Anker platziert.
 
 Da mehrere Anker von der Hilfsklasse unterstützt werden, können wir mit diesem Codebeispiel beliebig viele Cubes platzieren!
 
@@ -483,11 +483,11 @@ Wenn Sie bereit sind, die in-Memory-Anker im spatialanchorstore zu speichern, k�
 
 ### <a name="load-content-from-the-anchor-store-when-the-app-resumes"></a>Inhalt aus dem Anker Speicher laden, wenn die APP fortgesetzt wird
 
-Wenn Ihre APP fortgesetzt wird, oder zu einem beliebigen Zeitpunkt, der für die Implementierung Ihrer APP erforderlich ist, können Sie Anker wiederherstellen, die zuvor im anchorstore gespeichert wurden, indem Sie Sie aus der imapview des Anker Speichers in Ihre eigene in-Memory-Datenbank von spatialanchor übertragen.
+Wenn Ihre APP fortgesetzt wird, oder zu einem beliebigen Zeitpunkt, der für die Implementierung Ihrer APP erforderlich ist, können Sie Anker wiederherstellen, die zuvor im anchorstore gespeichert wurden, indem Sie Sie aus der imapview des Anker Stores in ihren eigenen in-Memory Database von spatialanchor übertragen.
 
 Um Anker aus dem spatialanchorstore wiederherzustellen, stellen Sie jeden, für den Sie sich interessieren, an ihrer eigenen Auflistung im Arbeitsspeicher wieder her.
 
-Sie benötigen eine eigene in-Memory-Datenbank von spatialanchor. eine Möglichkeit, Zeichen folgen den spatialanchor zuzuordnen, die Sie erstellen. In unserem Beispielcode wählen wir die Verwendung eines Windows:: Foundation:: Collections:: IMap zum Speichern der Anker aus, wodurch die Verwendung desselben Schlüssels und Datenwerts für den spatialanchorstore vereinfacht wird.
+Sie benötigen Ihren eigenen in-Memory Database von spatialanchor. eine Möglichkeit, Zeichen folgen den spatialanchor zuzuordnen, die Sie erstellen. In unserem Beispielcode wählen wir die Verwendung eines Windows:: Foundation:: Collections:: IMap zum Speichern der Anker aus, wodurch die Verwendung desselben Schlüssels und Datenwerts für den spatialanchorstore vereinfacht wird.
 
 ```
    // This is an in-memory anchor list that is separate from the anchor store.
@@ -574,7 +574,7 @@ Zum Rendern können Sie häufig bessere Ergebnisse erzielen, indem Sie Objekte e
 
 ## <a name="create-holograms-using-a-device-attached-frame-of-reference"></a>Erstellen von holograms mithilfe eines vom Gerät angefügten Referenzrahmens
 
-In einigen Fällen soll ein Hologramm gerendert werden, das an den Standort des Geräts [angefügt bleibt](coordinate-systems.md#attached-frame-of-reference) (z. B. ein Bereich mit Debuginformationen oder eine Informationsmeldung, wenn das Gerät nur seine Ausrichtung und nicht seine Position im Raum ermitteln kann). Hierfür wird ein angefügter Verweis Rahmen verwendet.
+Es kann vorkommen, dass Sie ein – Hologramm Rendering, das weiterhin an den Speicherort des Geräts [angefügt](coordinate-systems.md#attached-frame-of-reference) ist, z. b. einen Bereich mit Debuginformationen oder eine Informations Meldung, wenn das Gerät nur seine Ausrichtung ermitteln kann, und nicht seine Position in BRaum. Hierfür wird ein angefügter Verweis Rahmen verwendet.
 
 Die spatizuweisung-Klasse "spatichedframeofreferenzierungssysteme" definiert Koordinatensysteme, die relativ zum Gerät und nicht in der realen Welt sind. Dieser Frame verfügt über eine festgelegte Überschrift in Bezug auf die Benutzerumgebung, die in der Richtung angezeigt wird, die der Benutzer beim Erstellen des Verweis Rahmens aufzeigte. Danach sind alle Ausrichtungen in diesem Verweis Verweis relativ zu dieser festgelegten Überschrift, auch wenn der Benutzer das Gerät dreht.
 
@@ -616,7 +616,7 @@ Während des Updates erhalten wir nun das Koordinatensystem am Zeitstempel, der 
 
 ### <a name="get-a-spatial-pointer-pose-and-follow-the-users-gaze"></a>Stellen Sie eine räumliche Zeiger Pose dar, und folgen Sie dem Benutzer.
 
-Wir möchten, dass unser Beispiel – Hologramm dem [Blick](gaze.md)des Benutzers folgt, ähnlich wie die Holographic Shell dem Blick des Benutzers folgen kann. Hierfür müssen wir spatialpointerpose aus dem gleichen Zeitstempel erhalten.
+Wir möchten, dass unser Beispiel – Hologramm dem [Blick](gaze-and-commit.md)des Benutzers folgt, ähnlich wie die Holographic Shell dem Blick des Benutzers folgen kann. Hierfür müssen wir spatialpointerpose aus dem gleichen Zeitstempel erhalten.
 
 ```
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
@@ -730,7 +730,7 @@ Aus **holographictagalongsamplemain:: Rendering**:
        );
 ```
 
-Das ist alles! Das – Hologramm ist nun eine Position, die zwei Meter vor der Blick Richtung des Benutzers ist.
+Das war's. Das – Hologramm ist nun eine Position, die zwei Meter vor der Blick Richtung des Benutzers ist.
 
 >[!NOTE]
 >In diesem Beispiel werden auch weitere Inhalte geladen, siehe stationaryquadrenderer. cpp.
@@ -794,7 +794,7 @@ Aus **appmain. cpp:**
 
 Die APIs für die [räumliche Zuordnung](spatial-mapping-in-directx.md) verwenden Koordinatensysteme, um Modell Transformationen für Oberflächen Netze zu erhalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Koordinatensysteme](coordinate-systems.md)
 * [Raumanker](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

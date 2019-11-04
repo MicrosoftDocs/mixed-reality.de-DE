@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b29f27284c352d27fb1d4d4de701a1ebc2a7cd1c
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 141aa90f2bf5d90527a0fe1e6a812c1ce56bd0eb
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67327841"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437800"
 ---
 # <a name="photon-correct-me-if-im-wrong"></a>Photon (korrigieren, wenn ich falsch bin)
 
@@ -29,7 +29,7 @@ Ziele
 
 ### <a name="setting-up-photon"></a>Einrichten von PHOTON
 
-1. Richten Sie ein [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) -Konto ein. Dies führt dazu, dass Ihre e-Mail beeinträchtigt wird und einige Überprüfungs Schritte durchgeführt werden.
+1. Richten Sie ein [Photon](https://dashboard.photonengine.com//Account/SignUp) -Konto ein. Dies führt dazu, dass Ihre e-Mail beeinträchtigt wird und einige Überprüfungs Schritte durchgeführt werden.
    
 
 ![Module2Chapter4step1im](images/Module2chapter4step1im.png)
@@ -62,7 +62,7 @@ Ziele
 
 ![Module2Chapter4step4im](images/Module2chapter4step5im.png)
 
-> Hinweis: Wenn Sie Fragen zur IP-Adresse oder zu anderen ähnlichen Fragen haben, finden Sie die meisten Ihrer Informationen auf der Symbolleiste (wie in der Abbildung unten dargestellt).
+> Hinweis: Wenn Sie Fragen zur IP-Adresse oder zu anderen ähnlichen Fragen haben, finden Sie die meisten Ihrer Informationen in der Symbolleiste (wie in der Abbildung unten dargestellt).
 >
 > ![Module2Chapter4step4im](images/Module2chapter4noteim.png)
 
@@ -86,7 +86,7 @@ Ziele
 
 9. Erstellen Sie ein neues Unity-Projekt. Öffnen Sie den Unity-Hub, und klicken Sie auf "neu". Nennen Sie es "hlsharingproject". Klicken Sie anschließend auf erstellen. 
 
-   > Nebenbei Der Ladevorgang kann bis zu 2 Minuten dauern, je nach der Geschwindigkeit Ihres Computers.
+   > Hinweis: je nach Geschwindigkeit des Computers kann es bis zu 2 Minuten dauern, bis der Ladevorgang abgeschlossen ist.
 
 ![Module2Chapter4step9im](images/Module2chapter4step9im.png)
 
@@ -140,7 +140,7 @@ Ziele
 
 ![Module2Chapter4step19im](images/Module2chapter4step19im.png)
 
-> Nebenbei Stellen Sie außerdem sicher, dass das Kontrollkästchen neben "Szenen/hlsharedprojectmain" ebenfalls aktiviert ist.
+> Hinweis: Stellen Sie außerdem sicher, dass das Kontrollkästchen neben "Szenen/hlsharedprojectmain" ebenfalls aktiviert ist.
 
 20. Scrollen Sie im Inspektor-Panel unter "Veröffentlichungs Einstellungen" nach unten zu "Funktionen", und stellen Sie sicher, dass nur die folgenden Kontrollkästchen markiert sind:
 
@@ -158,7 +158,7 @@ Ziele
 
 ![Module2Chapter4step22im](images/Module2chapter4step21im.PNG)
 
-> Nebenbei Sie werden möglicherweise feststellen, dass ein Popup Fenster angezeigt wird, wenn Sie auf die vorfab klicken und Sie zu tmp Essentials auffordern. Klicken Sie auf "tmp Essentials importieren", wenn Sie benötigt werden.
+> Hinweis: Sie werden feststellen, dass ein Popup Fenster angezeigt wird, wenn Sie auf die vorfab klicken, und Sie werden aufgefordert, tmp Essentials anzuzeigen. Klicken Sie auf "tmp Essentials importieren", wenn Sie benötigt werden.
 >
 > ![Module2Chapter4note3im](images/Module2chapter4note3im.PNG)
 

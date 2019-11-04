@@ -1,23 +1,23 @@
 ---
-title: Erung
+title: Rendering
 description: Das Holographic-Rendering ermöglicht der APP, ein Hologramm an einer exakten Position in der Welt um den Benutzer zu zeichnen, unabhängig davon, ob es sich genau in der physischen Welt oder innerhalb eines virtuellen Bereichs befindet, den Sie erstellt haben.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Rendering, – Hologramm
-ms.openlocfilehash: 45713fd7a30fc55a799da7e89ef52aff8f7eec46
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415414"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437526"
 ---
-# <a name="rendering"></a>Erung
+# <a name="rendering"></a>Rendering
 
 Das Holographic-Rendering ermöglicht es Ihrer Anwendung, ein – Hologramm an einer exakten Position in der Welt um den Benutzer zu zeichnen, egal ob Sie genau in der physischen Welt oder innerhalb eines virtuellen Bereichs platziert ist, den Sie erstellt haben. [Holograms](hologram.md) sind Objekte aus Sound und Licht. Durch Rendering kann die Anwendung das Licht hinzufügen.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -27,13 +27,13 @@ Das Holographic-Rendering ermöglicht es Ihrer Anwendung, ein – Hologramm an e
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Erung</td>
+        <td>Rendering</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
@@ -66,7 +66,7 @@ Bei Anwendungen, die nicht mit der erforderlichen Aktualisierungsrate gerendert 
 
 Das Rendern von "Frustum", "Resolution" und "Framerate", in dem Ihre APP zum Rendern aufgefordert wird, kann sich auch von Frame zu Frame ändern und kann sich auf der linken und rechten Seite unterscheiden. Wenn z. b. die Transformation für [gemischtes auflösen (Mixed Reality Capture](mixed-reality-capture.md) , MRC) aktiv ist und die [Bild-/Videokamera-Ansichts Konfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) nicht aktiviert ist, kann ein Auge mit einem größeren FOV oder einer größeren Auflösung gerendert werden
 
-Für einen beliebigen Frame *muss* ihre App mithilfe der Ansichts Transformation, der Projektions Transformation und der viewportauflösung, die vom System bereitgestellt wird, renderingweise erfolgen. Außerdem darf die Anwendung niemals davon ausgehen, dass jeder Renderingparameter oder Sicht Parameter von Frame zu Frame korrigiert bleibt. Module wie Unity verarbeiten all diese Transformationen für Sie in ihren eigenen Kamera Objekten, sodass die physische Bewegung ihrer Benutzer und der Zustand des Systems immer berücksichtigt werden. Wenn Ihre Anwendung eine virtuelle Verschiebung des Benutzers über die Welt ermöglicht (z. b. die Verwendung des Fingerabdrucks auf einem Gamepad), können Sie ein übergeordnetes Rig-Objekt oberhalb der Kamera hinzufügen, das es verschiebt. Dies bewirkt, dass die Kamera den virtuellen und physischen Bewegungs Vorgang des Benutzers widerspiegelt. Wenn die Anwendung die vom System bereitgestellte Ansichts Transformation, Projektions Transformation oder viewportdimension ändert, muss Sie das System durch Aufrufen der entsprechenden Überschreibungs- [API](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicCameraPose#Windows_Graphics_Holographic_HolographicCameraPose)informieren.
+Für einen beliebigen Frame *muss* ihre App mithilfe der Ansichts Transformation, der Projektions Transformation und der viewportauflösung, die vom System bereitgestellt wird, renderingweise erfolgen. Außerdem darf die Anwendung niemals davon ausgehen, dass jeder Renderingparameter oder Sicht Parameter von Frame zu Frame korrigiert bleibt. Module wie Unity verarbeiten all diese Transformationen für Sie in ihren eigenen Kamera Objekten, sodass die physische Bewegung ihrer Benutzer und der Zustand des Systems immer berücksichtigt werden. Wenn Ihre Anwendung eine virtuelle Verschiebung des Benutzers über die Welt ermöglicht (z. b. die Verwendung des Fingerabdrucks auf einem Gamepad), können Sie ein übergeordnetes Rig-Objekt oberhalb der Kamera hinzufügen, das es verschiebt. Dies bewirkt, dass die Kamera den virtuellen und physischen Bewegungs Vorgang des Benutzers widerspiegelt. Wenn die Anwendung die vom System bereitgestellte Ansichts Transformation, Projektions Transformation oder viewportdimension ändert, muss Sie das System durch Aufrufen der entsprechenden [Überschreibungs-API](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicCameraPose#Windows_Graphics_Holographic_HolographicCameraPose)informieren.
 
 Um die Stabilität Ihres Holographic-Rendering zu verbessern, sollte Ihre APP für Windows jeden Frame den tiefen Puffer bereitstellen, der für das Rendering verwendet wurde. Wenn Ihre APP einen tiefen Puffer bereitstellt, sollte Sie über kohärente tiefen Werte verfügen, wobei die Tiefe in Meter von der Kamera ausgedrückt wird. Dies ermöglicht es dem System, ihre pro-Pixel-Tiefendaten zu verwenden, um Inhalte besser zu stabilisieren, wenn die Kopfzeile des Benutzers etwas von der vorhergesagten Position abweicht. Wenn Sie ihren tiefen Puffer nicht bereitstellen können, können Sie einen Fokuspunkt und normal bereitstellen, indem Sie eine Ebene definieren, die den größten Teil der Inhalte schneidet. Wenn sowohl der tiefen Puffer als auch eine Fokusebene bereitgestellt werden, verwendet das System möglicherweise beides. Insbesondere ist es hilfreich, sowohl den tiefen Puffer als auch einen Schwerpunkt Punkt bereitzustellen, der einen Geschwindigkeitsvektor enthält, wenn Ihre Anwendung holograms anzeigt, die sich in Bewegung befinden.
 
@@ -76,11 +76,11 @@ Ausführliche Informationen zu diesem Thema finden Sie [im Artikel Rendern im Di
 
 Mit Windows Mixed Reality wird das Konzept einer **Holographic Kamera**eingeführt. Holographic Kameras ähneln der herkömmlichen Kamera in 3D-Grafik Texten: Sie definieren sowohl die System externe (Position und Ausrichtung) als auch die systeminternen Kameraeigenschaften. (Z. b. wird das Feld Ansicht verwendet, um eine virtuelle 3D-Szene anzuzeigen.) Im Gegensatz zu herkömmlichen 3D-Kameras ist die Anwendung nicht in der Lage, die Position, die Ausrichtung und die intrinsischen Eigenschaften der Kamera zu steuern. Stattdessen wird die Position und Ausrichtung der Holographic-Kamera implizit durch die Bewegung des Benutzers gesteuert. Die Verschiebung des Benutzers wird über eine Ansichts Transformation per Frame an die Anwendung weitergeleitet. Ebenso werden die systeminternen Eigenschaften der Kamera durch die Matrix des Geräts und das Rahmen der Projektions Transformation definiert.
 
-Im Allgemeinen wird Ihre Anwendung für eine einzelne Stereokamera dargestellt. Eine robuste Renderingschleife unterstützt jedoch mehrere Kameras und unterstützt Mono-und Stereokameras. Das System kann z. b. die Anwendung zum Rendering aus einer alternativen Perspektive auffordern, wenn der Benutzer eine Funktion wie z. b. [Mixed Reality Capture](mixed-reality-capture.md) (MRC) aktiviert, abhängig von der Form des fraglichen-endbeispiels. Anwendungen, die mehrere Kameras unterstützen können, erhalten [diese durch die](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) Wahl der [Art](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) von Kameras, die Sie unterstützen können.
+Im Allgemeinen wird Ihre Anwendung für eine einzelne Stereokamera dargestellt. Eine robuste Renderingschleife unterstützt jedoch mehrere Kameras und unterstützt Mono-und Stereokameras. Das System kann z. b. die Anwendung zum Rendering aus einer alternativen Perspektive auffordern, wenn der Benutzer eine Funktion wie z. b. [Mixed Reality Capture](mixed-reality-capture.md) (MRC) aktiviert, abhängig von der Form des fraglichen-endbeispiels. Anwendungen, die mehrere Kameras unterstützen [können, erhalten diese durch die](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) Wahl der [Art](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) von Kameras, die Sie unterstützen können.
 
 ## <a name="volume-rendering"></a>Volumerendering
 
-Beim Rendern von medizinischen MRIs oder Produktionsvolumen in 3D werden oft Techniken zum [Volumenrendering](volume-rendering.md) verwendet. Diese Techniken können besonders interessant in gemischter Realität sein, in der Benutzer ein solches Volume auf natürliche Weise aus Schlüssel Winkeln anzeigen können, indem Sie einfach den Kopf bewegen.
+Beim Rendern von medizinischen MRIs oder Engineering-Volumes in 3D werden häufig [volumerenderingverfahren](volume-rendering.md) verwendet. Diese Techniken können besonders interessant in gemischter Realität sein, in der Benutzer ein solches Volume auf natürliche Weise aus Schlüssel Winkeln anzeigen können, indem Sie einfach den Kopf bewegen.
 
 ## <a name="supported-resolutions-on-hololens-1st-gen"></a>Unterstützte Auflösungen auf hololens (1. Gen)
 > [!NOTE]
@@ -93,9 +93,9 @@ Beim Rendern von medizinischen MRIs oder Produktionsvolumen in 3D werden oft Tec
 ## <a name="supported-resolutions-on-hololens-2"></a>Unterstützte Auflösungen auf hololens 2
 
 > [!NOTE]
-> Weitere Anleitungen sind für hololens 2 in [Kürze](index.md#news-and-notes)verfügbar.
+> Weitere Anleitungen sind für hololens 2 in [Kürze](news.md)verfügbar.
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Hologrammstabilität](hologram-stability.md)
 * [Rendern in DirectX](rendering-in-directx.md)

@@ -1,17 +1,17 @@
 ---
 title: Verwenden von vuforia mit Unity
 description: Nutzen Sie vuforia zum Erstellen von Windows Mixed Reality-Anwendungen in Unity.
-author: ailyadis
-ms.author: ''
+author: thetuvix
+ms.author: alexturn
 ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, Marker, Koordinaten, Referenzrahmen, Nachverfolgung
-ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 0ab87a6262cbe74fd116fdc0a7045961bf8695d9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750350"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437135"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Verwenden der vuforia-Engine mit Unity
 
@@ -60,7 +60,7 @@ Das Entwickeln einer vuforia-Engine-App für hololens ist im Grunde das gleiche 
 10. Build auswählen, um ein Visual Studio-Projekt zu generieren
 11. Erstellen Sie die ausführbare Datei aus Visual Studio, und installieren Sie Sie auf Ihren hololens.
 
-Hinweis: Ab Version 7,2 enthält das Beispiel für die vuforia-Engine für hololens eine Beispiel Szene einschließlich Beispiel Verwendung von Modell Zielen.
+Hinweis: ab Version 7,2 enthält das Beispiel für die vuforia-Engine für hololens eine Beispiel Szene einschließlich Beispiel Verwendung von Modell Zielen.
 
 ## <a name="the-vuforia-developer-portal"></a>Das vuforia-Entwickler Portal
 
@@ -70,12 +70,12 @@ Entwickler, die ihre eigenen aren Erfahrungen mit der vuforia-Engine und hololen
 
 Bei der [erweiterten Nachverfolgung](https://library.vuforia.com/articles/Training/Extended-Tracking) wird eine Zuordnung der Umgebung erstellt, um die Nachverfolgung beizubehalten, auch wenn ein Ziel nicht mehr angezeigt wird. Es ist das Pendant von vuforia Engines zu der räumlichen Zuordnung, die von hololens durchgeführt wird. Wenn Sie die erweiterte Nachverfolgung für ein Ziel aktivieren, können Sie die Pose dieses Ziels an das räumliche Zuordnungssystem weitergeben. Auf diese Weise können Ziele sowohl in der vuforia-Engine als auch in den räumlichen Koordinatensystemen hololens vorhanden sein, jedoch nicht gleichzeitig.
 
-![Unity-Einstellungsfenster](images/vuforia-extendedtracking.png)<br>
+Fenster "Unity-Einstellungen" ![](images/vuforia-extendedtracking.png)<br>
 *Unity-Einstellungsfenster*
 
 **Aktivieren der erweiterten Nachverfolgung für ein Ziel**
 
-Die vuforia-Engine transformiert automatisch die Pose eines Ziels, das die erweiterte Nachverfolgung verwendet, in das räumliche-Koordinatensystem hololens. Dadurch können hololens die Überwachung übernehmen und Inhalte integrieren, die in die räumliche Karte der Zielumgebung erweitert werden. Dieser Prozess findet zwischen der vuforia-Engine und Mixed Reality-APIs in Unity statt und erfordert keine Programmierung durch den Entwickler. er wird automatisch verarbeitet.
+Die vuforia-Engine transformiert automatisch die Pose eines Ziels, das die erweiterte Nachverfolgung verwendet, in das räumliche-Koordinatensystem hololens. Dadurch können hololens die Überwachung übernehmen und Inhalte integrieren, um die räumliche Zuordnung der Zielumgebung zu erhöhen. Dieser Prozess findet zwischen der vuforia-Engine und Mixed Reality-APIs in Unity statt und erfordert keine Programmierung durch den Entwickler. er wird automatisch verarbeitet.
 
 **Hier sehen Sie, was passiert...**
 1. Der Ziel-Tracker von vuforia erkennt das Ziel.
@@ -86,16 +86,16 @@ Die vuforia-Engine transformiert automatisch die Pose eines Ziels, das die erwei
 
 Der Entwickler kann diesen Prozess steuern, um die Steuerung an vuforia zurückzugeben, indem er die erweiterte Nachverfolgung für das targetbehaviour-Verhalten deaktiviert.
 
-**HINWEIS:** Ab vuforia 7,2 ist die erweiterte Nachverfolgung nicht mehr pro Ziel aktiviert. Stattdessen können Entwickler die Geräteüberwachung aktivieren, um eine ähnliche Funktionalität für alle Ziele in der Szene zu aktivieren.
+**Hinweis:** Ab vuforia 7,2 ist die erweiterte Nachverfolgung nicht mehr pro Ziel aktiviert. Stattdessen können Entwickler die Geräteüberwachung aktivieren, um eine ähnliche Funktionalität für alle Ziele in der Szene zu aktivieren.
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Installieren der Tools](install-the-tools.md)
 * [Koordinatensysteme](coordinate-systems.md)
 * [Räumliche Abbildung](spatial-mapping.md)
 * [Kamera in Unity](camera-in-unity.md)
 * [Exportieren und Erstellen einer Unity-Projektmappe für Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
-* [Vuforia-Dokumentation: Entwickeln für Windows 10 in Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
+* [Vuforia-Dokumentation: entwickeln für Windows 10 in Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
 * [Vuforia-Dokumentation: Installieren der vuforia Unity-Erweiterung](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
 * [Vuforia-Dokumentation: Arbeiten mit dem hololens-Beispiel in Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
 * [Vuforia-Dokumentation: Erweiterte Nachverfolgung in vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)

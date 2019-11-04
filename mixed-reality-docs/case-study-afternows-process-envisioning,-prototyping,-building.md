@@ -1,19 +1,19 @@
 ---
-title: 'Fallstudie-afternow-Prozess: Projekt Erstellung, Prototyperstellung, Erstellung'
+title: Fallstudie-afternow-Prozess
 description: Prozess der Nachfolgeversion, Erstellung von Prototypen, Erstellung
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, afternow, Projekt Erstellung, Prototypen, Erstellung
-ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d555c61c5c8ba917c99a94da594551658a717e70
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523486"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436934"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Fallstudie-afternow-Prozess: Projekt Erstellung, Prototyperstellung, Erstellung
+# <a name="case-study---afternows-process"></a>Fallstudie-afternow-Prozess
 
 Zu [diesem Zeitpunkt arbeiten](https://www.afternow.io/)wir mit Ihnen zusammen, um Ihre Ideen und Bestrebungen in konkrete, vollständig operative Produkte und Erfahrungen zu verwandeln, die für den Markt bereit sind. Bevor wir jedoch eine einzelne Codezeile schreiben, erstellen wir eine Blaupause durch einen Prozess namens "Projekt".
 
@@ -67,7 +67,7 @@ Das Ziel dieser Übung besteht darin, unser kollektives Verständnis des Problem
 
 Unsere bewährte Vorgehensweise für diesen Prozess tritt auf, wenn wir im Format des HMW-Formats (HMW-Format) einzelne Notizen verwenden. HMW ist eine Technik, die von P & G in den 70er Jahren entwickelt wurde. Es ist eine Methode, die in Form einer Frage in Form einer Frage ist, die letztendlich zu organisierten und priorisierten Notizen führt. Wir schlagen eine Idee pro Kurznotiz ein, die mit dem Ausdruck "wie können wir beginnen" beginnt. Wie können wir z. b. die Werte von [Ihrem Unternehmen] in gemischter Realität übermitteln?
 
-![Organisieren und entscheiden](images/organize-and-decide-640px.png)<br>
+![organisieren und entscheiden](images/organize-and-decide-640px.png)<br>
 *Organisieren und entscheiden*
 
 **Anordnen von HMW-Notizen**
@@ -88,7 +88,7 @@ Umkreisen Sie den wichtigsten Kunden und einen Ziel Zeitpunkt auf der Karte, und
 
 Alle Benutzer in der sprintgruppe werden vorhandene Produkte untersuchen, die Ihnen ähneln, um ähnliche Probleme zu beheben, die wir behandeln. Wir werden dann die Ergebnisse für den Rest der Gruppe demonstrieren. Dadurch erhalten wir eine gute Vorstellung von den Features, die wir interessant finden.
 
-**Notizen**
+**Hinweise**
 
 Wir verbringen 20 Minuten für den Raum, um Notizen zu sammeln.
 
@@ -104,7 +104,7 @@ Wir verbringen acht Minuten mit der Erstellung von acht Frames. An dieser Stelle
 
 Wir verbringen 30 Minuten mit dem Entfernen von Storyboards. Wir nehmen die besten Variationen von Ideen aus verrückten 8S vor und erstellen ein Storyboard mit drei Panels.
 
-![Entfernen von Storyboards](images/sketching-storyboards-640px.png)<br>
+![](images/sketching-storyboards-640px.png) von Storyboards<br>
 *Entfernen von Storyboards*
 
 ## <a name="day-3---decide"></a>Tag 3: Entscheidung

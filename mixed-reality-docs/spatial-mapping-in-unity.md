@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, räumliche Zuordnung, Renderer, Collider, Mesh, Scannen, Komponente
-ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 452e629a877df585ffbc0a6466ffeb2588b66ecf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148647"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438037"
 ---
 # <a name="spatial-mapping-in-unity"></a>Räumliche Zuordnung in Unity
 
@@ -22,6 +22,29 @@ Unity bietet vollständige Unterstützung für die räumliche Zuordnung, die Ent
 2. Räumliche Mapping-APIs auf niedrigerer Ebene, die Vollzugriff bieten und eine anspruchsvollere anwendungsspezifische Anpassung ermöglichen
 
 Um die räumliche Zuordnung in der APP zu verwenden, muss die spatialperception-Funktion in Ihrem appxmanifest festgelegt werden.
+
+## <a name="device-support"></a>Geräteunterstützung
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Räumliche Zuordnung</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="setting-the-spatialperception-capability"></a>Festlegen der spatialperception-Funktion
 
@@ -61,7 +84,7 @@ Wenn Sie physische Oberflächen visualisieren und mit ihnen interagieren möchte
 
 So verwenden Sie diese beiden Komponenten in ihrer Unity-App:
 1. Wählen Sie ein gameobject-Objekt in der Mitte des Bereichs aus, in dem Sie räumliche Oberflächen Netze erkennen möchten.
-2. **Fügen Sie** > im Inspektor-Fenster Komponenten- **XR** > -zuordnungszuordnungszuweisung**und-** **Renderer für räumliche Zuordnung**hinzu
+2. **Fügen Sie** im Inspektor-Fenster Komponenten > **XR** >  ** ** der oder **räumliche Zuordnung**hinzu.
 
 Weitere Informationen zur Verwendung dieser Komponenten finden Sie auf der <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">Unity-Dokumentations Website</a>.
 
@@ -75,8 +98,8 @@ Diese Komponenten vereinfachen den Einstieg in die räumliche Zuordnung.  Wenn 
 
 Wenn Sie mehr Kontrolle benötigen, als Sie von den Komponenten des Renderers für räumliche Zuordnung und der Komponenten Zuordnung für räumliche Zuordnung erhalten, können Sie die Low-Level-Skript-APIs für die räumliche Zuordnung verwenden.
 
-**Namespace:** *Unityengine. XR. WSA*<br>
-**Typen**: *Surfaceobserver*, *SurfaceChange*, *surfacedata*, *surfaceid*
+**Namespace:** *unityengine. XR. WSA*<br>
+**Typen**: *surfaceobserver*, *SurfaceChange*, *surfacedata*, *surfaceid*
 
 Im folgenden finden Sie einen Überblick über den empfohlenen Ablauf für eine Anwendung, die die APIs für die räumliche Zuordnung verwendet.
 
@@ -189,7 +212,7 @@ void Start () {
     }
 ```
 
-## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>Mesh-Analyse auf höherer Ebene: Spatialunderstanding
+## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>Mesh-Analyse auf höherer Ebene: spatialunderstanding
 
 <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">Mixedrealitytoolkit</a> ist eine Sammlung hilfreicher hilfsprogrammcodes für die Holographic-Entwicklung, die auf den Holographic Unity-APIs basiert.
 
@@ -239,7 +262,7 @@ Intern wird der raycast anhand der berechneten Voxel-Darstellung im 8cm-Format d
 
 Im Unity-Beispiel wandelt der Cursor einen Strahl in jedem Frame um. Zuerst für Unity-Kollisionen. Zweitens, mit der Welt Darstellung des grundlegenden Moduls. Und schließlich wieder Benutzeroberflächen Elemente. In dieser Anwendung erhält die Benutzeroberfläche Priorität, das Ergebnis des Ergebnisses und schließlich Unity-Kollisionen. Der surfaketype wird als Text neben dem Cursor gemeldet.
 
-![Der Surface-Typ wird neben dem Cursor bezeichnet.](images/su-raycastresults-300px.jpg)<br>
+![Surface-Typ wird neben dem Cursor bezeichnet](images/su-raycastresults-300px.jpg)<br>
 *Der Surface-Typ wird neben dem Cursor bezeichnet.*
 
 ### <a name="topology-queries"></a>Topologieabfragen
@@ -324,7 +347,7 @@ shapeConstraints = new List<ShapeConstraint>()
 
 Wrapper Funktionen werden im Unity-Modul bereitgestellt, um eine einfache Erstellung benutzerdefinierter Formen Definitionen zu erstellen. Die vollständige Liste der Komponenten-und Shape-Einschränkungen finden Sie in "SpatialUnderstandingDll.cs" innerhalb der "shapecomponenteinschränkung"-und "shapeconstraint"-Strukturen.
 
-![Die Rechteck Form wird auf dieser Oberfläche gefunden.](images/su-shapequery-300px.jpg)<br>
+auf dieser Oberfläche wird ![Rechteck Form gefunden](images/su-shapequery-300px.jpg)<br>
 *Die Rechteck Form wird auf dieser Oberfläche gefunden.*
 
 ### <a name="object-placement-solver"></a>Objektplatzierungs-Solver
@@ -396,7 +419,7 @@ Solver_PlaceObject(
 Wenn erfolgreich, wird eine "objectplacementresult"-Struktur mit der Platzierungsposition, den Dimensionen und der Ausrichtung zurückgegeben. Außerdem wird die Platzierung der internen Liste der platzierten Objekte der dll hinzugefügt. Bei nachfolgenden Platzierungs Abfragen wird dieses Objekt berücksichtigt. Die Datei "LevelSolver.cs" im Unity-Beispiel enthält weitere Beispielabfragen.
 
 ![Ergebnisse der Objekt Platzierung](images/su-objectplacement-1000px.jpg)<br>
-*Abbildung 3: Die blauen Felder, die ergeben, wie sich das Ergebnis von drei Positionen im Boden von der Kamera positionsregeln entfernt hat.*
+*Abbildung 3: die blauen Felder, die ergeben, wie sich das Ergebnis von drei Positionen im Boden von der Kamera positionsregeln entfernt hat*
 
 Wenn Sie für den Speicherort der Platzierung mehrerer Objekte, die für ein Level-oder Anwendungsszenario erforderlich sind, lösen möchten, lösen Sie zunächst unentbehrliche und große Objekte aus, um die Wahrscheinlichkeit zu maximieren, dass ein Platz gefunden wird Die Platzierungs Reihenfolge ist wichtig. Wenn die Platzierung von Objekten nicht gefunden werden kann, versuchen Sie es mit weniger eingeschränkten Konfigurationen. Eine Reihe von Fall Back Konfigurationen ist wichtig für die Unterstützung von Funktionen in vielen Raum Konfigurationen.
 
@@ -444,21 +467,21 @@ Der Scanvorgang, der vom "spatialunderstanding"-Verhalten gesteuert wird, ruft i
 
 Die Understanding dll speichert den Playspace intern als Raster von Voxel-Cubes mit 8 cm. Während des ersten Teils der Überprüfung wird eine Analyse der primären Komponenten abgeschlossen, um die Achsen des Raums zu ermitteln. Intern speichert Sie seinen Voxel-Bereich, der auf diese Achsen ausgerichtet ist. Ein Mesh wird ungefähr jede Sekunde generiert, indem die Isofläche aus dem Voxel-Volume extrahiert wird. 
 
-![Generiertes Mesh, das vom Voxel-Volume erstellt wurde](images/su-custommesh.jpg)<br>
+![generierte Gitter, das aus dem Voxel-Volume erstellt wurde](images/su-custommesh.jpg)<br>
 *Generiertes Mesh, das vom Voxel-Volume erstellt wurde*
 
-## <a name="troubleshooting"></a>Problembehandlung
+## <a name="troubleshooting"></a>Fehlerbehebung
 * Stellen Sie sicher, dass Sie die Funktion [spatialperception](#setting-the-spatialperception-capability) festgelegt haben
 * Wenn die Nachverfolgung verloren geht, entfernt das nächste onsurfacechanged-Ereignis alle Meshes.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Räumliche Zuordnung im Mixed Reality Toolkit
 Weitere Informationen zur Verwendung der räumlichen Zuordnung mit Mixed Reality Toolkit v2 finden Sie im <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">Abschnitt räumliche</a> Informationen der mrtk-Dokumentation.
 
-## <a name="see-also"></a>Siehe auch
-* [MR räumlich 230: Räumliche Abbildung](holograms-230.md)
+## <a name="see-also"></a>Weitere Informationen:
+* [Räumliche Daten 230: räumliche Zuordnung](holograms-230.md)
 * [Koordinatensysteme](coordinate-systems.md)
 * [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">Unityengine. meshfilter</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">Unityengine. meshcollider</a>
-* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">Unityengine. Bounds</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">Unityengine. meshfilter</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">Unityengine. meshcollider</a>
+* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">Unityengine. Bounds</a>

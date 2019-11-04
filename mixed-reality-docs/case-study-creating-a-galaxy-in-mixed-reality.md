@@ -6,12 +6,12 @@ ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, hololens, Windows Mixed Reality, teilen Sie Ihre Idee, Fallstudie
-ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523766"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436875"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Fallstudie: Erstellen einer Galaxie in gemischter Realität
 
@@ -25,7 +25,7 @@ Andy zibits, der Kunst Leiter im Projekt und Karim Luccin, der Grafik Techniker 
 
 Wir wollten die Fähigkeit von hololens in vollem Umfang nutzen, 3D-Objekte direkt in ihren Lebensbereich zu Rendering. Daher wollten wir eine realistische, aussehende Galaxie erstellen, in der die Benutzer in der Lage sind, die Schließung zu vergrößern und einzelne Sterne anzuzeigen .
 
-In der ersten Woche der Entwicklung haben wir einige Ziele für unsere Darstellung der Milchwege-Galaxy-Methode erreicht: Es brauchte Tiefe, Bewegung und Gefühl von "Volumetric – Full of Stars", die beim Erstellen der Form der Galaxie helfen würden.
+In der ersten Woche der Entwicklung haben wir einige Ziele für unsere Darstellung der Milch Milch Way-Methode geschaffen: Es brauchte Tiefe, Bewegung und Gefühl von "Volumetric – Full of Stars", die dabei helfen würden, die Form der Galaxy zu erzeugen.
 
 Das Problem bei der Erstellung einer animierten Galaxie mit Milliarden von Sternen war, dass die reine Anzahl von einzelnen Elementen, die aktualisiert werden müssen, pro Frame zu groß wäre, damit hololens mithilfe der CPU animiert werden. Unsere Lösung umfasste eine komplexe Mischung aus Kunst und Wissenschaft.
 
@@ -41,7 +41,7 @@ Wir haben Belastungstests mit Tausenden von Punkt Partikeln in verschiedenen Mus
 
 ### <a name="creating-the-position-of-the-stars"></a>Erstellen der Position der Sterne
 
-Eines unserer Teammitglieder hat bereits den Code geschrieben C# , der Sterne an der ursprünglichen Position generieren würde. Die Sterne befinden sich auf einer Ellipse, und ihre Position kann von ("**Cursor Offset**", " **ellipsesize**", " **Erhöhung**") beschrieben werden, wobei " **Cursor Offset** " der Winkel des Sterns entlang der Ellipse ist, " **ellipsesize** " die Dimension der Ellipse. entlang von X und Z und Erhöhung der ordnungsgemäßen Erweiterung des Stern in der Galaxy. Daher können wir einen Puffer ([computebuffer](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) erstellen, der mit jedem Star-Attribut initialisiert und an die GPU gesendet wird, wo er für den Rest der Arbeit leben würde. Zum Zeichnen dieses Puffers verwenden wir das [drawprozeduren von Unity](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , das das Ausführen eines Shaders (Code auf einer GPU) für eine beliebige Gruppe von Punkten ermöglicht, ohne dass ein tatsächliches Mesh vorhanden ist, das das Galaxy darstellt:
+Eines unserer Teammitglieder hat bereits den Code geschrieben C# , der Sterne an der ursprünglichen Position generieren würde. Die Sterne befinden sich auf einer Ellipse, und ihre Position kann von ("**Cursor Offset**", " **ellipsesize**", " **Erhöhung**") beschrieben werden, wobei " **Cursor Offset** " der Winkel des Sterns entlang der Ellipse ist, " **ellipsesize** " die Dimension der Ellipse. entlang von X und Z und Erhöhung der ordnungsgemäßen Erweiterung des Stern in der Galaxy. Daher können wir einen Puffer ([computebuffer](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) erstellen, der mit jedem Star-Attribut initialisiert und an die GPU gesendet wird, wo er für den Rest der Arbeit leben würde. Zum Zeichnen dieses Puffers verwenden wir das [drawprozeduren von Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , das das Ausführen eines Shaders (Code auf einer GPU) für eine beliebige Gruppe von Punkten ermöglicht, ohne dass ein tatsächliches Mesh vorhanden ist, das das Galaxy darstellt:
 
 **CPU**
 
@@ -52,7 +52,7 @@ Eines unserer Teammitglieder hat bereits den Code geschrieben C# , der Sterne an
 GraphicsDrawProcedural(MeshTopology.Points, starCount, 1);
 ```
 
-**AUSSCHALTEN**
+**Ausschalten**
 
 
 
@@ -147,7 +147,7 @@ Das Ausführen von voll Bild Clouds und das versuchen, Sie zu verwischen, wäre 
 
 ### <a name="a-bit-of-context-first"></a>Ein bisschen Kontext zuerst
 
-Bei der Verwendung von Texturen in einem Spiel entspricht die Textur Größe selten dem Bereich, in dem wir Sie verwenden möchten, aber wir können unterschiedliche Arten von Textur Filtern verwenden, um die Grafikkarte zum Interpolieren der gewünschten Farbe aus den Pixeln der Textur ([Textur Filterung](https://msdn.microsoft.com/library/dn642451.aspx)) zu verwenden. Die Filterung, die uns interessiert ist [bilineare Filterung](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) die wird den Wert jedes Pixels mit dem 4 nächsten Nachbarn berechnet.
+Bei der Verwendung von Texturen in einem Spiel entspricht die Textur Größe selten dem Bereich, in dem wir Sie verwenden möchten, aber wir können unterschiedliche Arten von Textur Filtern verwenden, um die Grafikkarte zum Interpolieren der gewünschten Farbe aus den Pixeln der Textur ([Textur Filterung](https://msdn.microsoft.com/library/dn642451.aspx)) zu verwenden. Beim Filtern, das uns interessiert, handelt es sich um eine [bilineare Filterung](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) , bei der der Wert eines beliebigen Pixels mithilfe der vier nächsten Nachbarn berechnet wird.
 
 ![Ursprüngliches vor dem Filtern](images/texture-1.png)
 
@@ -203,6 +203,6 @@ Möchten Sie mehr über den Entwicklungsprozess für den Galaxy Explorer erfahre
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Galaxy Explorer auf GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Galaxy Explorer-Projektaktualisierungen auf YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

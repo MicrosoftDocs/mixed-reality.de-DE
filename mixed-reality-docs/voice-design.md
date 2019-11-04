@@ -1,24 +1,24 @@
 ---
 title: Sprachbefehle
 description: Anvisieren, Gesten und Sprache sind primäre Möglichkeiten zur Interaktion für die HoloLens. Dieser Artikel bietet eine durchdachte Anleitung zum Sprachentwurf.
-author: shentan
+author: shengkait
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Entwurf, Interaktion, Sprache
-ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387643"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437215"
 ---
 # <a name="voice-commanding"></a>Sprachbefehle
 
 Bei der Verwendung von Sprachbefehlen wird das Anvisieren typischerweise als Mechanismus zur Zielbestimmung verwendet, sei es als Zeiger („auswählen“) oder um Ihren Befehl an eine Anwendung zu richten („Sehen, sagen“). Natürlich benötigen einige Sprachbefehle kein Ziel, wie „Zum Startmenü“ oder „Hey Cortana“.
 
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -28,9 +28,9 @@ Bei der Verwendung von Sprachbefehlen wird das Anvisieren typischerweise als Mec
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
@@ -47,13 +47,13 @@ Bei der Verwendung von Sprachbefehlen wird das Anvisieren typischerweise als Mec
 
 Erwägen Sie, Sprachbefehle zu jeder von Ihnen erstellten Umgebung hinzuzufügen. Die Spracheingabe ist eine leistungsstarke und komfortable Möglichkeit zur Steuerung von System und Apps. Da Benutzer mit einer Vielzahl von Dialekten und Akzenten sprechen, stellt die richtige Auswahl der Schlüsselwörter für die Spracherkennung sicher, dass die Befehle Ihrer Benutzer eindeutig interpretiert werden.
 
-### <a name="best-practices"></a>Empfohlene Methoden
+### <a name="best-practices"></a>Bewährte Verfahren
 
 Nachfolgend finden Sie einige Methoden aufgeführt, die eine reibungslose Spracherkennung ermöglichen.
-* **Präzise Befehle verwenden**: Wählen Sie nach Möglichkeit Schlüsselwörter mit zwei oder mehr Silben aus. Einsilbige Wörter neigen dazu, unterschiedliche Vokallaute zu verwenden, wenn sie von Personen mit unterschiedlichen Akzenten gesprochen werden. Beispiel: „Video wiedergeben“ ist besser als „Das aktuell ausgewählte Video wiedergeben“.
-* **Einfaches Vokabular verwenden** – Beispiel: „Hinweis anzeigen“ ist besser als „Plakat anzeigen“.
+* **Präzise Befehle verwenden**: Wählen Sie nach Möglichkeit Schlüsselwörter mit zwei oder mehr Silben aus. Einsilbige Wörter neigen dazu, unterschiedliche Vokallaute zu verwenden, wenn sie von Personen mit unterschiedlichen Akzenten gesprochen werden. Beispiel: "Video abspielen" ist besser als "das aktuell ausgewählte Video abspielen"
+* **Verwenden eines einfachen Vokabulars** -Beispiel: "Show Note" ist besser als "Placard anzeigen"
 * **Sicherstellen, dass Befehle nicht destruktiv sind**: Stellen Sie sicher, dass alle Aktionen, die von einem Spracherkennungsbefehl ausgeführt werden können, nicht destruktiv sind und leicht rückgängig gemacht werden können, falls eine andere Person, die in der Nähe des Benutzers spricht, versehentlich einen Befehl auslöst.
-* **Ähnlich klingende Befehle vermeiden**: Vermeiden Sie es, mehrere Spracherkennungsbefehle zu registrieren, die sehr ähnlich klingen. Beispiel: „Show more“ (Mehr anzeigen) und „Show store“ (Shop anzeigen) können z. B. sehr ähnlich klingen.
+* **Ähnlich klingende Befehle vermeiden**: Vermeiden Sie es, mehrere Spracherkennungsbefehle zu registrieren, die sehr ähnlich klingen. Beispiel: "mehr anzeigen" und "Store anzeigen" kann sehr ähnlich klingen.
 * **Registrierung der App aufheben, wenn sie nicht verwendet wird**: Wenn sich Ihre Anwendung nicht in einem Zustand befindet, in dem ein bestimmter Sprachbefehl gültig ist, sollten Sie die Registrierung der App aufheben, damit andere Befehle nicht mit diesem verwechselt werden.
 * **Mit verschiedenen Akzenten testen**: Testen Sie Ihre App mit Benutzern, die unterschiedliche Akzente verwenden.
 * **Konsistenz von Sprachbefehlen beibehalten**: Wenn „Zurück“ zur vorherigen Seite wechselt, übernehmen Sie dieses Verhalten in Ihren Anwendungen.
@@ -65,7 +65,7 @@ Nachfolgend finden Sie einige Methoden aufgeführt, die eine reibungslose Sprach
 
 Wenn Sie zu einem beliebigen Zeitpunkt „Auswählen“ sagen, wird das aktiviert, worauf der beim Anvisieren verwendete Cursor zeigt. 
 
->Hinweis: In HoloLens 2 muss der beim Anvisieren verwendete Cursor zunächst mit dem Wort „Auswählen“ aufgerufen werden. Sagen Sie zum Aktivieren erneut „Auswählen“. Um den beim Anvisieren verwendeten Cursor auszublenden, verwenden Sie Ihre Hände – Berühren Sie ein Objekt, oder tippen Sie in die Luft. 
+>Hinweis: in hololens 2 muss der Cursor Cursor zuerst durch das Wort "Select" aufgerufen werden. Sagen Sie zum Aktivieren erneut „Auswählen“. Um den beim Anvisieren verwendeten Cursor auszublenden, verwenden Sie Ihre Hände – Berühren Sie ein Objekt, oder tippen Sie in die Luft. 
 
 ### <a name="see-it-say-it"></a>Sehen, sagen
 
@@ -113,6 +113,6 @@ Wenn die Spracherkennung richtig angewendet wird, versteht der Benutzer, **was e
 * Wie richte ich meine Stimme auf eine bestimmte App oder einen bestimmten App-Befehl aus?
 * Kann ich Objekte per Sprachbefehl aus dem holografischen Rahmen der HoloLens bewegen?
 
-## <a name="see-also"></a>Siehe auch
-* [Gesten](gestures.md)
+## <a name="see-also"></a>Weitere Informationen:
+* [Gesten](gaze-and-commit.md#composite-gestures)
 * [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)

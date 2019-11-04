@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 45a71cada97dff4a2fb32f2eaf7700816f2e0d42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702027"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438412"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen des Azure Spatial Anchor-Feedbacks
 
@@ -32,7 +32,7 @@ In dieser Lektion erfahren Sie, wie Sie Benutzern Feedback zur Anker Ermittlung,
 
 ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
-2. Erstellen Sie als nächstes den Anweisungs Bereich. Klicken Sie mit der rechten Maustaste auf die Schaltfläche "Instructions", zeigen Sie auf "3D-Objekt", und wählen Sie "textmeshpro-Text" aus.
+2. Erstellen Sie den Anweisungs Bereich. Klicken Sie zunächst mit der rechten Maustaste auf die Schaltfläche "Instructions", zeigen Sie auf "3D-Objekt", und wählen Sie "textmeshpro-Text" aus.
 
 ![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
@@ -56,9 +56,9 @@ Klicken Sie [hier](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B73
 
 ![module2chapter3step5im](images/module2chapter3step6im.PNG)
 
-> Hinweis: Wenn Sie ein Popup abrufen, in dem Sie gefragt werden, ob Sie das alte überschreiben oder das alte behalten möchten, stellen Sie sicher, dass Sie überschreiben auswählen.
+> Hinweis: Wenn Sie eine Popup Meldung erhalten, in der Sie gefragt werden, ob Sie das alte überschreiben oder das alte behalten möchten, wählen Sie überschreiben aus.
 
-7. Kehren Sie jetzt zum Ordner "Assets" zurück. Wechseln Sie dann in den Ordner "azurespatialanchorsplugin", den Ordner "examples" und schließlich den Ordner "Scripts", und kopieren Sie den Demo-Wrapper für räumliche Azure-Anker in diesen Ordner. 
+7. Kehren Sie zum Ordner Assets zurück. Wechseln Sie dann in den Ordner "azurespatialanchorsplugin", gefolgt vom Ordner "examples" und schließlich dem Ordner "Scripts". Kopieren Sie dann den Demo-Wrapper für räumliche Azure-Anker in diesen Ordner. 
 
 ![module2chapter3step8im](images/module2chapter3step7im.PNG)
 
@@ -72,6 +72,6 @@ Klicken Sie [hier](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B73
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In dieser Lektion haben wir gelernt, wie ein UI-Panel erstellt wird, um den aktuellen Status der Azure Spatial Anchor-Oberfläche für den Benutzer mit Echtzeitfeedback anzuzeigen.
+In dieser Lektion haben wir gelernt, wie ein UI-Panel erstellt wird, um den aktuellen Status der Azure Spatial Anchor-Oberfläche anzuzeigen, um Benutzern Echtzeitfeedback zu bieten.
 
 

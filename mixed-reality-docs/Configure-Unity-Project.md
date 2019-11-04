@@ -1,17 +1,17 @@
 ---
 title: Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality
 description: Konfigurieren des Unity-Projekts ohne mrtk
-author: yoyoz
-ms.author: Yoyoz
+author: thetuvix
+ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, gemischte Realität, Entwicklung, Einstieg, neues Projekt
-ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326091"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437113"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality 
 
@@ -26,11 +26,11 @@ Um Windows Mixed Reality als Ziel festzulegen, müssen Sie zuerst Ihr Unity-Proj
 2. Wählen Sie in der Liste Plattform **universelle Windows-Plattform** aus, und klicken Sie auf **Plattform wechseln**
 3. Festlegen des **SDK** auf **Universal 10**
 4. Festlegen des **Zielgeräts** für **ein beliebiges Gerät** zur Unterstützung von immersiven Headsets oder wechseln zu **hololens**
-5. Buildtyp auf **D3D** festlegen
+5. **Buildtyp** auf **D3D** festlegen
 6. **UWP SDK** auf **Letztes installiert** festlegen
 
 Wir müssen Unity dann mitteilen, dass die zu exportierende App eine [immersive Ansicht](app-views.md) anstelle einer 2D-Ansicht erstellen sollte. Dies geschieht durch Aktivieren von "Virtual Reality supported":
-1. Öffnen Sie  im Fenster "Buildeinstellungen" die **Player-Einstellungen...**
+1. Öffnen Sie im Fenster " **Buildeinstellungen** " die **Player-Einstellungen...**
 2. Wählen Sie die **Einstellungen für universelle Windows-Plattform** Registerkarte aus.
 3. Erweitern der Gruppe " **XR-Einstellungen** "
 4. Aktivieren Sie im Abschnitt " **XR-Einstellungen** " das Kontrollkästchen " **Virtual Reality supported** ", um die Liste **Virtual Reality-Geräte** hinzuzufügen.
@@ -43,7 +43,7 @@ Ihre APP kann jetzt grundlegendes Holographic-Rendering und räumliche Eingaben 
 
 |  Funktion  |  APIs, die Funktionen erfordern | 
 |----------|----------|
-|  Spatialperception  |  "Surfaceobserver" (Zugriff auf [räumliche](spatial-mapping.md) zuordnungsnetze in hololens)&mdash;ist*für die allgemeine räumliche Nachverfolgung des Headsets nicht erforderlich* . | 
+|  Spatialperception  |  "Surfaceobserver" (Zugriff auf [räumliche](spatial-mapping.md) zuordnungsnetze in hololens)&mdash;*keine Funktion für die allgemeine räumliche Nachverfolgung des Headsets erforderlich* . | 
 |  Webcam  |  Photocapture und Videocapture | 
 |  Pictureslibrary/videoslibrary  |  Photocapture oder Videocapture bzw. (beim Speichern des erfassten Inhalts) | 
 |  Mikrofon  |  Videocapture (bei der Erfassung von Audiodaten), "diktationerkenzer", "grammarerkenzer" und "keywordrecognizer" | 
@@ -70,13 +70,13 @@ Nachdem Sie das Kontrollkästchen "Virtual Reality supported" aktiviert haben, v
 Wenn Ihre APP speziell auf hololens ausgerichtet ist, gibt es einige Einstellungen, die geändert werden müssen, um die transparente Anzeige des Geräts zu optimieren, sodass Ihre APP in der physischen Welt angezeigt wird:
 1. Wählen Sie in der **Hierarchie**die **Hauptkamera** aus.
 2. Legen Sie im **Inspektor** -Panel die Transformations **Position** auf **0, 0, 0** fest, sodass der Speicherort des Benutzers mit dem Ursprung der Unity-Welt beginnt.
-3. Ändern Sie die **Clear-Flags** in eine voll Tonfarbe.
+3. Ändern Sie die **Clear-Flags** in eine voll **Tonfarbe**.
 4. Ändern Sie die **Hintergrund** Farbe in **RGBA 0, 0, 0**, 0. Schwarz wird in hololens als transparent gerendert.
 5. Ändern Sie die **Clippingebenen in der Nähe** der [empfohlenen hololens](camera-in-unity.md#clip-planes) 0,85 (Meter).
 
 Wenn Sie eine neue Kamera löschen und eine neue Kamera erstellen, stellen Sie sicher, dass Ihre Kamera als " **maincamera**" **gekennzeichnet** ist.
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Mixed Reality Toolkit v2](mrtk-getting-started.md)
 * [Übersicht über Unity-Entwicklung](unity-development-overview.md)

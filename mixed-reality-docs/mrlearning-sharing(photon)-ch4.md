@@ -6,21 +6,21 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 2e676d319ba7221cf9549b200b3d748f26025aa7
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b4713caf2c4d913fe8f5b01c08b3cd0152e32cd9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701905"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438369"
 ---
-# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen mit mehreren Benutzern
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen für mehrere Benutzer
 
 In diesem Tutorial erfahren Sie, wie Sie die Bewegungen von Objekten freigeben, damit alle Teilnehmer einer freigegebenen Sitzung zusammenarbeiten und die Interaktionen der einzelnen Benutzer anzeigen können. Diese Lektion baut auf dem Mond Start Programm auf, das als Teil der Lernprogramme für das [Basismodul](mrlearning-base.md)erstellt wurde.
 
 Ziele
 
 - Bringen Sie das Mond Startfeld als 3D-Modell ein, das freigegeben werden soll.
-- Konfigurieren Sie das Projekt so, dass die Bewegungen des 3D-Modells gemeinsam genutzt werden.
+- Konfigurieren des Projekts für die Freigabe der Bewegungen des 3D-Modells
 - Erfahren Sie, wie Sie eine grundlegende Anwendung für mehrere Benutzer Anwendungen erstellen.
 
 ## <a name="instructions"></a>Anweisungen
@@ -32,7 +32,7 @@ Ziele
 
 ![module3chapter4updatestep2](images/module3chapter4updatestep2.png)
 
-3. Entfernen Sie in den Zeilen 34 und 38 das//, um den Code für die Tabelle zu aktivieren, die in dieser Lektion verwendet werden soll. Speichern Sie dann die Datei. 
+3. Entfernen Sie in den Zeilen 34 und 38 "//", um den Code für die Tabelle zu aktivieren, die Sie in dieser Lektion verwenden werden. Speichern Sie dann die Datei. 
 
 ![module3chapter4updatestep3](images/module3chapter4updatestep3.png)
 
@@ -40,7 +40,7 @@ Ziele
 
 ![module3chapter4updatestep4](images/module3chapter4updatestep4.png)
 
-5. Ebenso wie in Schritt 3 müssen wir das//Entfernen, um den Code in den Zeilen 25, 26 und 106 zu aktivieren.
+5. Ebenso wie in Schritt 3 müssen wir "//" entfernen, um den Code in den Zeilen 25, 26 und 106 zu aktivieren.
 
 ![module3chapter4updatestep5a](images/module3chapter4updatestep5a.png) 
 
@@ -50,29 +50,29 @@ Ziele
 
 ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. Navigieren Sie in der Projektansicht zu Assets-> Resources-> Prefabs. Ziehen Sie zuerst die Tabelle "Prefab" per Drag & Drop in den tableprefab-Slot der Klasse "photonroom". Ziehen Sie dann das rocketlaunchercompletevariantprefab per Drag & amp; Drop in das Modul Prefab Slot in der Klasse "photonroom".
+7. Navigieren Sie in der Projektansicht zu Assets-> Resources-> Prefabs. Ziehen Sie zuerst die Tabelle "Prefab" per Drag & Drop in den tableprefab-Slot der Klasse "photonroom". Ziehen Sie als nächstes das rocketlaunchercompletevariantprefab-Element in den Prefab-Slot der Klasse "photonroom".
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
-   Hinweis: Wenn Sie auf eines der Prefab-Objekte klicken und das Release durchführt, wechselt der Inspektor zu diesem Objekt. Klicken Sie auf, ziehen Sie die einzelnen Objekte in den entsprechenden Slot, und lassen Sie Sie dort ablegen.
+Hinweis: Wenn Sie auf eines der Prefab-Objekte klicken und das Release durchführt, wechselt der Inspektor zu diesem Objekt. Klicken Sie auf, ziehen Sie die einzelnen Objekte in den entsprechenden Slot, und lassen Sie Sie dort ablegen.
 
-8. Klicken Sie auf den Pfeil links neben mixedrealityplayspace, und verschieben Sie das untergeordnete Spielobjekt, maincamera, nach unten in die vorfab sharedplayground. Löschen Sie anschließend die Prefab-, mixedrealityplayspace-Eigenschaft, und wählen Sie die vorfab aus, und tippen Sie auf der Tastatur auf "Löschen".
+8. Klicken Sie auf den Pfeil links neben mixedrealityplayspace, und verschieben Sie das untergeordnete Spielobjekt maincamera nach unten in die vorfab sharedplayground. Löschen Sie anschließend den Prefab-, mixedrealityplayspace-Wert, indem Sie die vorfab auswählen und auf der Tastatur auf "Löschen" tippen.
 ![Module3hapter4step5im](images/module3chapter4step5im.PNG)
 
->Hinweis:  Stellen Sie sicher, dass sowohl die Hauptkamera-als auch die sharedplayground-Position auf 0, 0, 0 festgelegt ist.
+>Hinweis: Stellen Sie sicher, dass die Hauptkamera-und sharedplayground-Positionen auf 0, 0, 0 festgelegt sind.
 >
 
-9. Erstellen Sie ein neues Spielobjekt, das als untergeordnetes Objekt für das übergeordnete sharedplayground-Objekt festgelegt ist, um ein neues Objekt zu erstellen. Klicken Sie mit der rechten Maustaste auf das übergeordnete Objekt, und wählen Sie leere erstellen. 
+9. Erstellen Sie ein neues Spielobjekt, das als untergeordnetes Objekt für das übergeordnete sharedplayground-Objekt festgelegt ist, um ein neues Objekt zu erstellen. Klicken Sie mit der rechten Maustaste auf das übergeordnete Objekt, und wählen Sie leere 
 
 10. Wenn das neue Objekt in Ihrer Hierarchie ausgewählt ist, ändern Sie im Inspektor-Panel den Namen des Objekts in tableanchor. Klicken Sie auch auf Komponente hinzufügen, und suchen Sie nach der tableanchor-Komponente. Wählen Sie Sie aus, und fügen Sie Sie dem-Objekt hinzu. 
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
 
-11. Ziehen Sie nun aus dem Projekt Panel im Ordner "Prefabs" die Tabelle "Prefab" in das untergeordnete "tableanchor"-Objekt, das Sie soeben erstellt haben.
+11. Ziehen Sie aus dem Projekt Panel im Ordner "Prefabs" die Tabelle "Prefab" in das untergeordnete "tableanchor"-Objekt, das Sie soeben erstellt haben.
 
 ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
 
-12. Ändern Sie schließlich im debugWindow-Objekt die Breite auf 50 und die Höhe auf 20.
+12. Ändern Sie im debugWindow-Objekt die Breite auf 50 und die Höhe auf 20.
 
 ![Module3Chapter4step9im](images/module3chapter4step11im.PNG)
 
@@ -81,9 +81,9 @@ Ziele
 
 Sobald dieser Vorgang vollständig ist, können alle Benutzer, die Ihrem Unity-Projekt beitreten, das Mond-Start Programm verschieben. Alle Bewegungen werden synchronisiert, sodass jeder Benutzer die Interaktionen der anderen Benutzer sehen kann. Diese Konzepte dienen als wesentliche Bausteine für voll funktionsfähigen, gemeinsam genutzten Kollaborations Umgebungen. 
 
-Obwohl alle Benutzer als Teil einer freigegebenen Umgebung verbunden sind und die relativen Bewegungen von Objekten sehen können, kann die Anwendung keine genaue Ausrichtung von Avatare und Objekten durchgeführt werden, sodass lokale Benutzer einander und Objekte an derselben Stelle innerhalb der physischen World. Um eine lokale gemeinsame Nutzung zu verankern, erfordert jedes Gerät ein gängiges Verständnis der physischen Umgebung. In diesem Modul erreichen wir dies mithilfe von [Azure Spatial](<https://azure.microsoft.com/en-us/services/spatial-anchors/>) Anchor (ASA), die in der nächsten Lektion implementiert werden.
+Obwohl alle Benutzer als Teil einer freigegebenen Umgebung verbunden sind und die relativen Bewegungen von Objekten sehen können, kann die Anwendung keine genaue Ausrichtung von Avatare und Objekten durchgeführt werden, sodass lokale Benutzer einander und Objekte am gleichen Ort innerhalb der physischen World. Um eine lokale gemeinsame Nutzung zu verankern, erfordert jedes Gerät ein gängiges Verständnis der physischen Umgebung. In diesem Modul erreichen wir dies mithilfe von [Azure Spatial](<https://azure.microsoft.com//services/spatial-anchors/>) Anchor (ASA), das in der nächsten Lektion implementiert wird.
 
-Bevor Sie mit der nächsten Lektion fortfahren, müssen wir das ASA-Lernmodul vervollständigen, das die ASA-Grundlagen, das Azure-Konto und die Ressourcen Erstellung und andere grundlegende Bausteine umfasst, die erforderlich sind, bevor wir dies in unsere freigegebene Erfahrung integrieren können.
+Bevor Sie mit der nächsten Lektion fortfahren, müssen wir das ASA-Lernmodul vervollständigen, das die ASA-Grundlagen, das Azure-Konto und die Ressourcen Erstellung behandelt, sowie andere grundlegende Bausteine, die erforderlich sind, bevor wir dies in unsere freigegebene Erfahrung integrieren können.
 
-[Nächste Lektion: 5. Integrieren von Azure Spatial Anchors in eine gemeinsam genutzte Umgebung](mrlearning-sharing(photon)-ch5.md)
+[Nächste Lektion: 5. Integration von Azure Spatial Anchor in eine freigegebene Erfahrung](mrlearning-sharing(photon)-ch5.md)
 

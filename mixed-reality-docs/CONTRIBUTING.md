@@ -5,18 +5,18 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: 934171f26571b3219bbe390aff44349fb6908f74
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861718"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437126"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Beitrag zur Windows Mixed Reality-Entwicklerdokumentation
 
 Willkommen beim [öffentlichen Repository für die Windows Mixed Reality-Entwicklerdokumentation](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs)! Alle Artikel, die Sie in diesem Repository erstellen oder bearbeiten **, sind öffentlich sichtbar.** 
 
-Windows Mixed Reality-Dokumente befinden sich jetzt auf der docs.Microsoft.com-Plattform, die das GitHub-optimierte markdown (mit markdig-Features) verwendet. Im Wesentlichen wird der Inhalt, den Sie in diesem Repository bearbeiten, in formatierte und stilisierte Seiten https://docs.microsoft.com/windows/mixed-reality umgewandelt, die unter angezeigt werden. 
+Windows Mixed Reality-Dokumente befinden sich jetzt auf der docs.Microsoft.com-Plattform, die das GitHub-optimierte markdown (mit markdig-Features) verwendet. Im Wesentlichen wird der Inhalt, den Sie in diesem Repository bearbeiten, in formatierte und stilisierte Seiten umgewandelt, die auf https://docs.microsoft.com/windows/mixed-reality angezeigt werden. 
 
 Auf dieser Seite werden die grundlegenden Schritte und Richtlinien für den Beitrag sowie Links zu markdown-Grundlagen behandelt. Vielen Dank für Ihren Beitrag!
 
@@ -48,12 +48,12 @@ Verwenden Sie den folgenden Workflow, um Updates an *einem vorhandenen Artikel* 
    ![Bearbeiten Sie einen Artikel.](images/editpage.png)
 3. Bearbeiten Sie den Inhalt des Artikels (Weitere Informationen finden Sie unten unter ["Grundlagen zu markdown"](#markdown-basics) ).
 4. Aktualisieren Sie die Metadaten am Anfang jedes Artikels als relevant:
-   * Tel Dies ist der Seitentitel, der auf der Registerkarte Browser angezeigt wird, wenn der Artikel angezeigt wird. Da dies für SEO und Indizierung verwendet wird, sollten Sie den Titel nur dann ändern, wenn dies erforderlich ist (obwohl dies weniger kritisch ist, bevor die Dokumentation öffentlich wird).
-   * description: Schreiben Sie eine kurze Beschreibung des Inhalts des Artikels. Dies hilft bei SEO und Discovery.
-   * Schrift Wenn Sie der primäre Besitzer der Seite sind, fügen Sie hier Ihren GitHub-Alias hinzu.
-   * ms. Autor: Wenn Sie der primäre Besitzer der Seite sind, fügen Sie hier Ihren Microsoft-Alias hinzu (Sie @microsoft.combenötigen nicht, sondern nur den Alias).
-   * ms. Datum: Aktualisieren Sie das Datum, wenn Sie der Seite umfangreiche Inhalte hinzufügen, aber nicht für Korrekturen wie Erläuterungen, Formatierung, Grammatik oder Rechtschreibprüfung.
-   * Keywords Schlüsselwörter unterstützen in SEO (Suchmaschinenoptimierung). Fügen Sie Schlüsselwörter, getrennt durch ein Komma und ein Leerzeichen, ein, die für den Artikel spezifisch sind (aber kein Satzzeichen nach dem letzten Schlüsselwort in der Liste). Sie müssen keine globalen Schlüsselwörter hinzufügen, die für alle Artikel gelten, da diese an anderer Stelle verwaltet werden. 
+   * Title: Dies ist der Seitentitel, der auf der Registerkarte Browser angezeigt wird, wenn der Artikel angezeigt wird. Da dies für SEO und Indizierung verwendet wird, sollten Sie den Titel nur dann ändern, wenn dies erforderlich ist (obwohl dies weniger kritisch ist, bevor die Dokumentation öffentlich wird).
+   * Beschreibung: Schreiben Sie eine kurze Beschreibung des Inhalts des Artikels. Dies hilft bei SEO und Discovery.
+   * Autor: Wenn Sie der primäre Besitzer der Seite sind, fügen Sie hier Ihren GitHub-Alias hinzu.
+   * ms. Author: Wenn Sie der primäre Besitzer der Seite sind, fügen Sie hier Ihren Microsoft-Alias hinzu (Sie benötigen nicht @microsoft.com, sondern nur den Alias).
+   * ms. Date: Aktualisieren Sie das Datum, wenn Sie der Seite größere Inhalte hinzufügen, aber nicht für Korrekturen wie die Klärung, Formatierung, Grammatik oder Rechtschreibung.
+   * Schlüsselwörter: Unterstützung von Schlüsselwörtern in SEO (Suchmaschinenoptimierung). Fügen Sie Schlüsselwörter, getrennt durch ein Komma und ein Leerzeichen, ein, die für den Artikel spezifisch sind (aber kein Satzzeichen nach dem letzten Schlüsselwort in der Liste). Sie müssen keine globalen Schlüsselwörter hinzufügen, die für alle Artikel gelten, da diese an anderer Stelle verwaltet werden. 
 5. Wenn Sie Ihre Artikel Änderungen abgeschlossen haben, Scrollen Sie nach unten, und klicken Sie auf die Schaltfläche **Datei Änderung vorschlagen** .
 6. Klicken Sie auf der nächsten Seite auf **Pull Request erstellen** , um den automatisch erstellten Branch in "Master" zusammenzuführen.
 7. Wiederholen Sie die obigen Schritte für den nächsten Artikel, den Sie bearbeiten möchten.
@@ -74,9 +74,9 @@ Fügen Sie dem `redirections` Array einen Eintrag hinzu, um eine Umleitung zu. o
         },
 ```
 
-- Der `source_path` ist der relative Repository-Pfad zu dem alten Artikel, den Sie entfernen. Stellen Sie sicher, dass der `mixed-reality-docs` Pfad mit beginnt `.md`und mit endet.
-- `redirect_url` Ist die relative öffentliche URL aus dem alten Artikel zum neuen Artikel. Stellen Sie sicher, dass diese URL nicht `mixed-reality-docs` oder `.md`enthält, da Sie auf die öffentliche URL und nicht auf den Repository-Pfad verweist. Das Verknüpfen mit einem Abschnitt innerhalb des neuen Artikels `#section` mit ist zulässig. Sie können bei Bedarf auch einen absoluten Pfad zu einer anderen Website verwenden.
-- `redirect_document_id`Gibt an, ob Sie die Dokument-ID aus der vorherigen Datei beibehalten möchten. Die Standardeinstellung ist `false`. Verwenden `true` Sie, wenn Sie den `ms.documentid` Attribut Wert aus dem umgeleiteten Artikel beibehalten möchten. Wenn Sie die Dokument-ID beibehalten, werden Daten, wie z. b. Seitenaufrufe und Rang folgen, in den Ziel Artikel übertragen. Dies ist der Fall, wenn die Umleitung primär eine Umbenennung ist, und kein Zeiger auf einen anderen Artikel, der nur einen Teil desselben Inhalts behandelt.
+- Der `source_path` ist der relative Repository-Pfad zu dem alten Artikel, den Sie entfernen. Stellen Sie sicher, dass der Pfad mit `mixed-reality-docs` beginnt und mit `.md`endet.
+- Der `redirect_url` ist die relative öffentliche URL aus dem alten Artikel zum neuen Artikel. Stellen Sie sicher, dass diese URL **keine** `mixed-reality-docs` oder `.md`enthält, da Sie auf die öffentliche URL und nicht auf den Repository-Pfad verweist. Das Verknüpfen mit einem Abschnitt innerhalb des neuen Artikels mithilfe von `#section` ist zulässig. Sie können bei Bedarf auch einen absoluten Pfad zu einer anderen Website verwenden.
+- `redirect_document_id` gibt an, ob Sie die Dokument-ID aus der vorherigen Datei beibehalten möchten. Der Standardwert ist `false`. Verwenden Sie `true`, wenn Sie den Wert des `ms.documentid` Attributs aus dem umgeleiteten Artikel beibehalten möchten. Wenn Sie die Dokument-ID beibehalten, werden Daten, wie z. b. Seitenaufrufe und Rang folgen, in den Ziel Artikel übertragen. Dies ist der Fall, wenn die Umleitung primär eine Umbenennung ist, und kein Zeiger auf einen anderen Artikel, der nur einen Teil desselben Inhalts behandelt.
 
 Wenn Sie eine Umleitung hinzufügen, achten Sie darauf, dass Sie auch die alte Datei löschen.
 
@@ -111,7 +111,7 @@ Verwenden Sie den folgenden Workflow, um *neue Artikel* im Dokumentations Reposi
 
 5. Füllen Sie die relevanten Metadatenfelder gemäß den Anweisungen im [obigen Abschnitt](#editing-an-existing-article)aus.
 6. Schreiben Sie Artikel Inhalte mithilfe von [markdown-Grundlagen](#markdown-basics).
-7. Fügen Sie `## See also` am Ende des Artikels einen Abschnitt mit Links zu anderen relevanten Artikeln hinzu.
+7. Fügen Sie am Ende des Artikels einen `## See also` Abschnitt mit Links zu anderen relevanten Artikeln hinzu.
 8. Wenn Sie fertig sind, klicken Sie auf **Commit New File**.
 9. Klicken Sie auf **New Pull Request** , und führen Sie den Master-Branch ihrer Verzweigung in microsoftdocs/Mixed-Reality ' Master ' aus (stellen Sie sicher, dass der Pfeil auf die richtige Weise zeigt).
 
@@ -127,7 +127,7 @@ Die folgenden Ressourcen helfen Ihnen, zu erfahren, wie Sie die Dokumentation mi
 
 ### <a name="adding-tables"></a>Hinzufügen von Tabellen
 
-Aufgrund der Art und Weise, in der docs.Microsoft.com Stile Tabellen haben, haben Sie keine Rahmen oder benutzerdefinierten Stile, auch wenn Sie das Inline-CSS ausprobieren. Es scheint für einen kurzen Zeitraum zu funktionieren, aber schließlich entfernt die Plattform das Formatieren aus der Tabelle. Planen Sie also voraus, und halten Sie die Tabellen einfach. [Im folgenden finden Sie eine Website, mit der markdown-Tabellen einfach](http://www.tablesgenerator.com/markdown_tables)werden.
+Aufgrund der Art und Weise, in der docs.Microsoft.com Stile Tabellen haben, haben Sie keine Rahmen oder benutzerdefinierten Stile, auch wenn Sie das Inline-CSS ausprobieren. Es scheint für einen kurzen Zeitraum zu funktionieren, aber schließlich entfernt die Plattform das Formatieren aus der Tabelle. Planen Sie also voraus, und halten Sie die Tabellen einfach. [Im folgenden finden Sie eine Website, mit der markdown-Tabellen einfach](https://www.tablesgenerator.com/markdown_tables)werden.
 
 Die [docs markdown-Erweiterung für Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) erleichtert auch die Tabellen Generierung, wenn Sie [Visual Studio Code (siehe unten)](#using-visual-studio-code) verwenden, um die Dokumentation zu bearbeiten.
 
@@ -152,7 +152,7 @@ Während der Bearbeitung in GitHub über einen Webbrowser können Sie auf die Re
 >[!NOTE]
 >Die Vorschau der Änderungen auf Review.docs.Microsoft.com ist nur für Microsoft-Mitarbeiter verfügbar.
 
-Microsoft-Mitarbeiter: Nachdem Ihre Beiträge in den Branch "Master" zusammengeführt wurden, können Sie sehen, wie die Dokumentation aussehen wird, bevor Sie in https://review.docs.microsoft.com/windows/mixed-reality?branch=master der Öffentlichkeit erscheint (suchen Sie nach Ihrem Artikel mithilfe des Inhaltsverzeichnisses in der linken Spalte).
+Microsoft-Mitarbeiter: Nachdem Ihre Beiträge in den Branch "Master" zusammengeführt wurden, können Sie sehen, wie die Dokumentation aussehen wird, bevor Sie in https://review.docs.microsoft.com/windows/mixed-reality?branch=master öffentlich wird (suchen Sie Ihren Artikel mithilfe des Inhaltsverzeichnisses in der linken Spalte).
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Bearbeiten im Browser und bearbeiten mit einem Desktop Client
 
@@ -219,7 +219,7 @@ Die folgenden Visual Studio Code Erweiterungen sind beim Bearbeiten der Dokument
 
 - [Docs markdown-Erweiterung für Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) : Verwenden Sie **ALT + M** , um ein Menü mit Dokument Erstellungs Optionen wie den folgenden anzuzeigen:
    - Such-und Referenz Images, die Sie hochgeladen haben.
-   - Fügen Sie Formatierungen wie Listen, Tabellen und docs-spezifische aufrufsouts wie `>[!NOTE]`hinzu.
+   - Fügen Sie Formatierungen wie z. b. Listen, Tabellen und docs-spezifische aufrufsouts wie `>[!NOTE]`hinzu.
    - Suchen und verweisen auf interne Links und Lesezeichen (Links zu bestimmten Abschnitten innerhalb einer Seite).
    - Formatierungs Fehler sind hervorgehoben (zeigen Sie mit der Maus auf den Fehler, um weitere Informationen zu erhalten).
 - [Code Rechtschreib](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) Prüfung: falsch geschriebene Wörter werden unterstrichen. Klicken Sie mit der rechten Maustaste auf ein falsch geschriebenes Wort, um es zu ändern oder im Wörterbuch zu speichern.

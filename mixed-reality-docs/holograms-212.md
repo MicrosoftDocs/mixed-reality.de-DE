@@ -3,22 +3,22 @@ title: Mr-Eingabe 212-Stimme
 description: Befolgen Sie diese exemplarische Vorgehensweise, indem Sie Unity, Visual Studio und hololens verwenden, um die Details der sprach Konzepte zu erlernen.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, Tutorial, Stimme
-ms.openlocfilehash: 7e792bf40c47d4e1d57898fbe75ad050a030b7e3
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9db503ea4c7db9a3eb272ad9663024ca3a407dda
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522352"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434599"
 ---
 >[!NOTE]
->Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es wurde [eine neue Reihe von Tutorials](mrlearning-base.md) für hololens 2 gepostet.
 
 <br>
 
-# <a name="mr-input-212-voice"></a>Mr-Eingabe 212: Spracheingabe
+# <a name="mr-input-212-voice"></a>Mr-Eingabe 212: Stimme
 
 Die [Spracheingabe](voice-input.md) bietet uns eine weitere Möglichkeit, mit unseren holograms zu interagieren. Sprachbefehle funktionieren auf sehr natürliche und einfache Weise. Entwerfen Sie Ihre Sprachbefehle so, dass Sie wie folgt lauten:
 
@@ -43,19 +43,19 @@ In diesem Kurs überprüfen wir den Modell-Explorer, den wir in der [Eingabe 210
 >Die in den folgenden Kapiteln eingebetteten Videos wurden mit einer älteren Version von Unity und dem Mixed Reality Toolkit aufgezeichnet. Die Schritt-für-Schritt-Anweisungen sind genau und aktuell, aber es werden möglicherweise Skripts und Visualisierungen in den entsprechenden Videos angezeigt, die veraltet sind. Die Videos bleiben in der einwelt enthalten und werden weiterhin angewendet.
 
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>Mr-Eingabe 212: Spracheingabe</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Mr-Eingabe 212: Stimme</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 ## <a name="before-you-start"></a>Bevor Sie beginnen
 
-### <a name="prerequisites"></a>Vorraussetzungen
+### <a name="prerequisites"></a>Voraussetzungen
 
 * Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md)konfiguriert ist.
 * Einige Grund C# Legende Programmiermöglichkeiten.
@@ -83,17 +83,17 @@ In diesem Kurs überprüfen wir den Modell-Explorer, den wir in der [Eingabe 210
 1. Starten Sie Unity.
 2. Wählen Sie **Öffnen**aus.
 3. Navigieren Sie zum Ordner **holographicacademy-holograms-212-Voice** , den Sie zuvor nicht archiviert haben.
-4. Suchen und wählen Sie den **Start**/**Modell-Explorer** -Ordner aus.
+4. Suchen Sie den Ordner **Start**/**Model Explorer** , und wählen Sie ihn aus.
 5. Klicken Sie auf die Schaltfläche **Ordner auswählen** .
 6. Erweitern Sie im **Projekt** Panel den Ordner **Szenen** .
 7. Doppelklicken Sie auf **Model Explorer** Scene, um es in Unity zu laden.
 
-### <a name="building"></a>Erstellung
+### <a name="building"></a>Erstellen
 
-1. Wählen Sie in Unity **Datei >** Buildeinstellungen aus.
+1. Wählen Sie in Unity **Datei > Buildeinstellungen**aus.
 2. Wenn **Szenen/Model Explorer** nicht in **Szenen im Build**aufgeführt ist, klicken Sie auf **offene Szenen hinzufügen** , um die Szene hinzuzufügen.
 3. Wenn Sie speziell für hololens entwickeln, legen Sie **Zielgerät** auf **hololens**fest. Andernfalls sollten Sie es auf **jedem Gerät**belassen.
-4. Stellen  Sie sicher, dass der Buildtyp auf **D3D** und das **SDK** auf **Latest installiert** festgelegt ist (was SDK 16299 oder höher sein sollte).
+4. Stellen Sie sicher, dass der **Buildtyp** auf **D3D** und das **SDK** auf **Latest installiert** festgelegt ist (was SDK 16299 oder höher sein sollte).
 5. Klicken Sie auf **Erstellen**.
 6. Erstellen Sie einen **neuen Ordner** mit dem Namen "App".
 7. Klicken Sie einfach auf den **App** -Ordner.
@@ -109,7 +109,7 @@ Bei der Bereitstellung in hololens:
 1. Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x86**.
 2. Klicken Sie auf den Dropdown Pfeil neben der Schaltfläche lokaler Computer, und wählen Sie **Remote Computer**aus.
 3. Geben Sie **die IP-Adresse des hololens-Geräts** ein, und legen Sie den Authentifizierungsmodus auf **Universal (unverschlüsseltes Protokoll)** Klicken Sie auf **Auswählen**. Wenn Sie die IP-Adresse Ihres Geräts nicht kennen, suchen Sie unter **Einstellungen > Netzwerk & Internet > Erweiterte Optionen**.
-4. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**. Wenn Sie die Bereitstellung auf Ihrem Gerät zum ersten Mal durchführt, müssen Sie [es mit Visual Studio](using-visual-studio.md#pairing-your-device-hololens)koppeln.
+4. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**. Wenn Sie die Bereitstellung auf Ihrem Gerät zum ersten Mal durchführt, müssen Sie [es mit Visual Studio](using-visual-studio.md#pairing-your-device)koppeln.
 5. Wenn die APP bereitgestellt wurde, schließen Sie das **fitbox** -Gerät mit einer **Auswahl Bewegung**ab.
 
 Bei der Bereitstellung auf einem immersiven Headset:
@@ -117,7 +117,7 @@ Bei der Bereitstellung auf einem immersiven Headset:
 1. Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x64**.
 2. Stellen Sie sicher, dass das Bereitstellungs Ziel auf **lokaler Computer**festgelegt ist.
 3. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
-4. Wenn die APP bereitgestellt wurde, schließen Sie die Funktion **, indem Sie** den-Typ auf einen Bewegungs Controller ziehen.
+4. Wenn die APP bereitgestellt wurde, schließen Sie die Funktion **, indem Sie den-** Typ auf einen Bewegungs Controller ziehen.
 
 >[!NOTE]
 >Im Visual Studio-Fehler Panel werden möglicherweise einige rote Fehler feststellen. Es ist sicher, Sie zu ignorieren. Wechseln Sie zum Ausgabebereich, um den tatsächlichen buildfortschritt anzuzeigen. Fehler im Ausgabe Panel erfordern eine Korrektur (meistens werden Sie durch einen Fehler in einem Skript verursacht).
@@ -138,13 +138,13 @@ In diesem Kapitel erfahren Sie mehr über das Entwerfen von Sprachbefehlen. Beim
 
 #### <a name="do"></a>DO
 
-* Erstellen Sie präzise Befehle. Sie möchten nicht *"das aktuell ausgewählte Video abspielen*" verwenden, da dieser Befehl nicht präzise ist und vom Benutzer leicht vergessen wird. Verwenden Sie stattdessen Folgendes: *"Video abspielen"* , da es kurz ist und über mehrere Silben verfügt.
-* Verwenden Sie ein einfaches Vokabular. Versuchen Sie immer, gängige Wörter und Ausdrücke zu verwenden, die für den Benutzer leicht zu erkennen und zu merken sind. Wenn Ihre Anwendung z. b. ein Notiz Objekt hätte, das in der Ansicht angezeigt oder ausgeblendet werden kann, würden Sie den Befehl *"Placard anzeigen"* nicht verwenden, da "Placard" ein selten verwendeter Begriff ist. Verwenden Sie stattdessen den Befehl: *"Hinweis anzeigen"* , um den Hinweis in der Anwendung anzuzeigen.
+* Erstellen Sie präzise Befehle. Sie möchten nicht *"das aktuell ausgewählte Video abspielen*" verwenden, da dieser Befehl nicht präzise ist und vom Benutzer leicht vergessen wird. Verwenden Sie stattdessen *"Video abspielen"* , da es sich um einen präzisen Wert handelt, der über mehrere Silben verfügt.
+* Verwenden Sie ein einfaches Vokabular. Versuchen Sie immer, gängige Wörter und Ausdrücke zu verwenden, die für den Benutzer leicht zu erkennen und zu merken sind. Wenn Ihre Anwendung z. b. ein Notiz Objekt hätte, das in der Ansicht angezeigt oder ausgeblendet werden kann, würden Sie den Befehl *"Placard anzeigen"* nicht verwenden, da "Placard" ein selten verwendeter Begriff ist. Verwenden Sie stattdessen den Befehl *"Show Note"* , um den Hinweis in der Anwendung anzuzeigen.
 * Achten Sie auf Einheitlichkeit. Sprachbefehle sollten in der gesamten Anwendung konsistent gehalten werden. Stellen Sie sich vor, dass Sie in Ihrer Anwendung zwei Szenen haben und beide Szenen eine Schaltfläche zum Schließen der Anwendung enthalten. Wenn in der ersten Szene der Befehl *"Exit"* zum auslöst der Schaltfläche verwendet wird, aber die zweite Szene den Befehl *"APP schließen"* verwendet hat, wird der Benutzer sehr verwirrt. Wenn die gleiche Funktionalität in mehreren Szenen beibehalten wird, sollte der gleiche Sprachbefehl verwendet werden, um Sie zu initiieren.
 
-#### <a name="dont"></a>TUE NICHT
+#### <a name="dont"></a>Tue nicht
 
-* Verwenden Sie einzelne Silb Bare Befehle. Wenn Sie z. b. einen Sprachbefehl zum Abspielen eines Videos erstellt haben, sollten Sie die Verwendung des einfachen Befehls *"Play"* vermeiden, da es sich nur um eine einzelne Silb Bare Sprache handelt, die vom System leicht übersehen werden könnte. Verwenden Sie stattdessen Folgendes: *"Video abspielen"* , da es kurz ist und über mehrere Silben verfügt.
+* Verwenden Sie einzelne Silb Bare Befehle. Wenn Sie z. b. einen Sprachbefehl zum Abspielen eines Videos erstellt haben, sollten Sie die Verwendung des einfachen Befehls *"Play"* vermeiden, da es sich nur um eine einzelne Silb Bare Sprache handelt, die vom System leicht übersehen werden könnte. Verwenden Sie stattdessen *"Video abspielen"* , da es sich um einen präzisen Wert handelt, der über mehrere Silben verfügt.
 * Verwenden Sie Systembefehle. Der Befehl *"Select"* ist vom System für das auslöst eines Tap-Ereignisses für das aktuell fokussierte Objekt reserviert. Verwenden Sie den Befehl *"Select"* nicht in einem Schlüsselwort oder Ausdruck, da dies möglicherweise nicht erwartungsgemäß funktioniert. Wenn z. b. der Sprachbefehl zum Auswählen eines Cubes in der Anwendung *"Select Cube"* war, der Benutzer aber eine Kugel schaute, als er den Befehl aussprach, wird stattdessen die Kugel ausgewählt. Ähnliche app-leisten Befehle sind sprach fähig. Verwenden Sie die folgenden Sprachbefehle nicht in der corewindow-Ansicht:
     1. Zurück
     2. Scrolltool
@@ -159,20 +159,20 @@ In diesem Kapitel erfahren Sie mehr über das Entwerfen von Sprachbefehlen. Beim
 * Verwenden Sie im Bereich **Hierarchie** von Unity das Suchtool, um das **holoComm_screen_mesh** -Objekt zu suchen.
 * Doppelklicken Sie auf das **holoComm_screen_mesh** -Objekt, um es in der **Szene**anzuzeigen. Dies ist die Überwachung des Astronauten, die auf unsere Sprachbefehle antwortet.
 * Suchen Sie im **Inspektor** -Panel die Komponente **Spracheingabe Quelle (Skript)** .
-* Erweitern Sie den Abschnitt **Schlüsselwörter** , um den unterstützten Sprachbefehl anzuzeigen: **Öffnen Sie Communicator**.
+* Erweitern Sie den Abschnitt **Schlüsselwörter** , um den unterstützten Sprachbefehl anzuzeigen: **Open Communicator**.
 * Klicken Sie rechts auf das Zahnrad Symbol, und wählen Sie **Skript bearbeiten**aus.
 * Erkunden Sie **SpeechInputSource.cs** , um zu verstehen, wie das **keywordrecognizer** zum Hinzufügen von Sprachbefehlen verwendet wird.
 
 ### <a name="build-and-deploy"></a>Erstellen und bereitstellen
 
-* Verwenden Sie in Unity **Datei >** Buildeinstellungen, um die Anwendung neu zu erstellen.
+* Verwenden Sie in Unity **Datei > Buildeinstellungen** , um die Anwendung neu zu erstellen.
 * Öffnen Sie den **App** -Ordner.
 * Öffnen Sie die Visual Studio-Projekt Mappe **Model Explorer**.
 
 (Wenn Sie dieses Projekt bereits während der Einrichtung in Visual Studio erstellt bzw. bereitgestellt haben, können Sie diese Instanz von Visual Studio öffnen und auf "alles neu laden" klicken).
 
 * Klicken Sie in Visual Studio auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
-* Nachdem die Anwendung in den hololens bereitgestellt wurde, schließen Sie das Feld anpassen mithilfe der [Tasten](gestures.md#air-tap) Kombination.
+* Nachdem die Anwendung in den hololens bereitgestellt wurde, schließen Sie das Feld anpassen mithilfe der [Tasten](gaze-and-commit.md#composite-gestures) Kombination.
 * Schauen Sie sich die Überwachung des Astronauten an.
 * Wenn die Überwachung den Fokus besitzt, überprüfen Sie, ob sich der Cursor in ein Mikrofon ändert. Dadurch erhalten Sie Feedback, dass die Anwendung Sprachbefehle abhört.
 * Vergewissern Sie sich, dass auf der Überwachung eine QuickInfo angezeigt wird. Dadurch können Benutzer den Befehl *"Open Communicator"* ermitteln.
@@ -286,7 +286,7 @@ namespace Academy
         // Use this string to cache the text currently displayed in the text box.
         private StringBuilder textSoFar;
 
-        // Using an empty string specifies the default microphone. 
+        // Using an empty string specifies the default microphone.
         private static string deviceName = string.Empty;
         private int samplingRate;
         private const int messageLength = 10;
@@ -484,11 +484,13 @@ namespace Academy
 3. Klicken Sie rechts neben dem Feld **zu tagendes Objekt auf** den kleinen Kreis.
 4. Suchen Sie im Fenster, das angezeigt wird, nach **srgstoolbox** , und wählen Sie es aus der Liste aus.
 5. Sehen Sie sich die Datei " **srgscolor. XML** " im Ordner " **streamingassets** " an.
-* Die SRGS-Entwurfs Spezifikation finden Sie [hier](https://www.w3.org/TR/speech-grammar/)auf der W3C-Website.
-* In der SRGS-Datei gibt es drei Arten von Regeln:
-  * Eine Regel, mit der Sie eine Farbe aus einer Liste von zwölf Farben sagen können.
-  * Drei Regeln, die auf eine Kombination der Farbregel und einer der drei Formen lauschen.
-  * Die Stamm Regel colorchooser, die auf eine beliebige Kombination der drei "Color + Shape"-Regeln lauscht. Die Formen können in beliebiger Reihenfolge und in beliebiger Reihenfolge von nur einem bis zu allen drei Formen bezeichnet werden. Dies ist die einzige Regel, die überwacht wird, da Sie als Stamm Regel am Anfang der Datei im ursprünglichen &lt;Grammatik&gt; -Tag angegeben wird.
+    1. Die SRGS-Entwurfs Spezifikation finden Sie [hier](https://www.w3.org/TR/speech-grammar/)auf der W3C-Website.
+
+In der SRGS-Datei gibt es drei Arten von Regeln:
+
+* Eine Regel, mit der Sie eine Farbe aus einer Liste von zwölf Farben sagen können.
+* Drei Regeln, die auf eine Kombination der Farbregel und einer der drei Formen lauschen.
+* Die Stamm Regel colorchooser, die auf eine beliebige Kombination der drei "Color + Shape"-Regeln lauscht. Die Formen können in beliebiger Reihenfolge und in beliebiger Reihenfolge von nur einem bis zu allen drei Formen bezeichnet werden. Dies ist die einzige Regel, die überwacht wird, da Sie als Stamm Regel am Anfang der Datei in der ersten &lt;Grammatik&gt;-Tags angegeben ist.
 
 ### <a name="build-and-deploy"></a>Erstellen und bereitstellen
 
@@ -500,7 +502,7 @@ namespace Academy
 
 ## <a name="the-end"></a>Das Ende
 
-Herzlichen Glückwunsch! Sie haben nun die **Mr-Eingabe 212 abgeschlossen: Stimme**an.
+Gratulation! Nun haben Sie die **Mr-Eingabe 212: Voice**abgeschlossen.
 
 * Sie kennen die DOS-und die TS von Voice-Befehlen.
 * Sie haben gesehen, wie Quick Infos verwendet wurden, um die Benutzer auf Sprachbefehle aufmerksam zu machen.

@@ -6,23 +6,23 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Gemischte Windows-Realität, Design, Stil, Schriftart, Typografie, UI, Benutzeroberfläche
-ms.openlocfilehash: cc8e25e9cd7ba41bed179328fe7198e935e65d76
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 9664d355e941d800ac1ac862860fc5889b6b7686
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830014"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437421"
 ---
 # <a name="typography"></a>Typografie
 
-Text ist ein wichtiges Element zum Bereitstellung von Informationen in ihrer App-Funktion. Ebenso wie Typografie auf 2D-Bildschirmen ist das Ziel, klar und lesbar zu sein. Mit dem dreidimensionalen Aspekt der gemischten Realität gibt es eine Möglichkeit, den Text und die allgemeine Benutzer Darstellung in noch größerem Umfang zu beeinflussen.
-
 ![Typografiebeispiel in hololens](images/typography-cover.png)<br>
-*Typografiebeispiel in hololens*
+
+
+Text ist ein wichtiges Element zum Bereitstellung von Informationen in ihrer App-Funktion. Genau wie bei Typografie auf 2D-Bildschirmen ist das Ziel, klar und lesbar zu sein. Aufgrund des dreidimensionalen Aspekts von Mixed Reality bietet sich die Chance eines noch größeren Einflusses auf den Text und das allgemeine Benutzererleben.
 
 Wenn wir uns mit dem Typ in 3D beschäftigen, werden wir in der Regel den Text "extrudierte, volumetrische 3D" betrachten. Mit Ausnahme einiger Logotyp Entwürfe und einiger anderer eingeschränkter Anwendungen wird der Text in der Textform durch den Text der Lesbarkeit tendenziell herabgestuft. Obwohl wir Erfahrungen für 3D entwerfen, verwenden wir 2D für den Typ, da es besser lesbar und leichter lesbar ist.
 
-In hololens wird Type mit holograms erstellt, wobei Light auf Grundlage des Additiven Farbsystems verwendet wird. Ebenso wie andere Hologramme kann der Typ in der eigentlichen Umgebung abgelegt werden, in der er von einem beliebigen Winkel aus weltweit gesperrt und beobachtet werden kann. Der [parallax-Effekt](https://en.wikipedia.org/wiki/Parallax) zwischen dem Typ und der Umgebung verleiht der Umgebung zudem Tiefe.
+In hololens wird Type mit holograms erstellt, wobei Light auf Grundlage des Additiven Farbsystems verwendet wird. Ebenso wie andere Hologramme kann der Typ in der eigentlichen Umgebung abgelegt werden, in der er von einem beliebigen Winkel aus weltweit gesperrt und beobachtet werden kann. Der [parameterx](https://en.wikipedia.org/wiki/Parallax) -Effekt zwischen dem Typ und der Umgebung erhöht auch die Tiefe der Umgebung.
 
 ## <a name="typography-in-mixed-reality"></a>Typografie in gemischter Realität
 
@@ -32,7 +32,7 @@ Typografische Regeln in gemischter Realität unterscheiden sich nicht von andere
 
 Buildkontrast und Hierarchie mit unterschiedlichen typgrößen und Gewichtungen. Durch die Definition einer typrampe und deren anschließende Verwendung in der gesamten APP wird eine gute Benutzer Leistung mit der konsistenten Informationshierarchie bereitgestellt.
 
-![Beispiele für typrampen](images/typography-ramp-1000px.jpg)<br>
+Beispiele für ![typrampen](images/typography-ramp-1000px.jpg)<br>
 *Definieren Sie Ihre typrampe, und befolgen Sie Sie in der gesamten app.*
 
 ### <a name="limit-your-fonts"></a>Schriftarten einschränken
@@ -52,18 +52,26 @@ Da die Hologramme in hololens mit einem Additiven Lichtsystem erstellt werden, i
 <br>
 
 
-![Wir empfehlen die Verwendung von weißem Text auf einem dunklen oder farbigen Hintergrund. *Beispiele für weißen Text auf einem dunklen oder farbigen Hintergrund.* ](images/typography-whiteonblack2-1000px.jpg)
-
+![empfehlen wir die Verwendung von weißem Text auf einem dunklen oder farbigen Hintergrund.](images/typography-whiteonblack2-1000px.jpg)
+*Beispiele für weißen Text auf einem dunklen oder farbigen Hintergrund.*
 <br>
 
 Um dunklen Text zu verwenden, sollten Sie einen hellen Backplate verwenden, um ihn lesbar zu machen. In Additiven Farbsystemen wird schwarz als transparent angezeigt. Dies bedeutet, dass der schwarze Text ohne ein farbiges Backplate nicht angezeigt werden kann.
 
-![Schwarze Textbeispiele](images/typography-whiteonblack.png)
-<br>*Beispiele für weißes Hintergrund und schwarz für weißen Text*
+:::row:::
+    :::column:::
+        ![schwarze Textbeispiele](images/typography-whiteonblack.png)<br>
+        *Beispiele für weiß in schwarz und schwarz bei weißem Text*<br>
+    :::column-end:::
+    :::column:::
+        ![schwarze Textbeispiele](images/640px-typography-blackonwhite.jpg)<br>
+        *Beispiele für blacktext in den System-apps: Store und Einstellungen*<br>
+    :::column-end:::
+:::row-end:::
 
+<br>
 
-![Schwarze Textbeispiele](images/640px-typography-blackonwhite.jpg)
-<br>*Beispiele für blacktext in den System-apps: Store und Einstellungen*
+---
 
 ## <a name="recommended-font-size"></a>Empfohlene Schriftgröße
 
@@ -71,8 +79,8 @@ Wie Sie erwarten, sehen die typgrößen, die wir auf einem PC oder Tablet-Gerät
 
 Für die Near-Interaktion bei 0.45 m (45cm) ist der Anzeige Winkel der minimal lesbaren Schriftart und die Höhe 0,4 °-0,5 °/3.14 – 3,9 mm. Der Skalierungsfaktor für den in [Unity](text-in-unity.md)eingeführten Skalierungsfaktor liegt bei ungefähr 9-12pt.
 
-![Inhalte in naher und weitem](images/typography-distance-1000px.jpg)
-Interaktion im Bereich von*nahezu-und weitem Interaktionen*
+![Near-und Far-Interaktionsbereich](images/typography-distance-1000px.jpg)
+*Inhalt in nahezu-und weitem Interaktions Bereich*
 
 ### <a name="the-minimum-legible-font-size"></a>Die minimale lesbare Schriftgröße
 | Flüge | Anzeige Winkel | Texthöhe | Schrift Grad * * |
@@ -90,18 +98,37 @@ Interaktion im Bereich von*nahezu-und weitem Interaktionen*
 
 In den meisten Fällen funktioniert Segoe UI (die Standard Schriftart für Windows). Vermeiden Sie jedoch die Verwendung von hell-oder semilight-Schriftfamilien in geringer Größe, da Dünne vertikale Striche vibrieren und die Lesbarkeit beeinträchtigen. Moderne Schriftarten mit ausreichender Strichstärke funktionieren gut. Beispielsweise sind die Werte von Helvetica und Arial großartig und in hololens mit regulären oder fetten Gewichtungen sehr lesbar.
 
-\* * Ausführlichere Informationen zur Berechnung der Textgröße in Unity finden Sie im Seiten [Text in Unity](text-in-unity.md) .
+**Ausführlichere Informationen zur Berechnung der Textgröße in Unity finden Sie unter [Text in Unity](text-in-unity.md) .**
 
-![Anzeigen des](images/Text_In_Unity_ViewingAngle.jpg)
-*Abstands, des Winkels und der Texthöhe* des Winkels
+![Anzeige Winkel](images/Text_In_Unity_ViewingAngle.jpg)
+*Anzeigen der Entfernung, des Winkels und der Texthöhe*
+
+<br>
+
+---
 
 ## <a name="resources"></a>Ressourcen
-* [Schriftarten](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)
-* [Hololens-Schriftart](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)
 
-![Die Schriftart hololens gibt Ihnen die Symbol Symbole, die in der gemischten Realität von Windows verwendet werden.](images/300px-hololensmdl2symbols.jpg)
-<br>*Die Schriftart hololens gibt Ihnen die Symbol Symbole, die in der gemischten Realität von Windows verwendet werden.*
+:::row:::
+    :::column:::
+    ### <a name="segoe-fontshttpsdownloadmicrosoftcomdownload1bc1bcf071a-78ee-4968-acbe-15461c274b61segoe20fonts20v1705zipbr"></a>[Schriftarten](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
+    (ZIP-Datei)<br>
+    ### <a name="hololens-fonthttpsdownloadmicrosoftcomdownload38d38d659e2-4b9c-413a-b2e7-1956181dc427hololens20fontzipbr"></a>[Hololens-Schriftart](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
+    (ZIP-Datei)<br>
+    <br>
+    *Bild: die Schriftart hololens gibt Ihnen die Symbol Symbole, die in der gemischten Realität von Windows verwendet werden.*
+    :::column-end:::
+        :::column:::
+        ![Die Schriftart hololens gibt Ihnen die Symbol Symbole, die in der gemischten Realität von Windows verwendet werden.](images/hololensmdl2symbols.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>Siehe auch
+
+<br>
+
+---
+
+
+## <a name="see-also"></a>Weitere Informationen:
 * [Text in Unity](text-in-unity.md)
 * [Farbe, Licht und Materialien](color,-light-and-materials.md)

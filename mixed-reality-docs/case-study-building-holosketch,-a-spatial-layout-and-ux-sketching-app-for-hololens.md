@@ -6,21 +6,21 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Holosketch, hololens, Windows Mixed Reality, Sketching, App
-ms.openlocfilehash: d7f94a09bf4a8a16000c2345adf1a046dab4bd15
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d6d22aae7709bcc1a33b142a100d1a0f9645d3cc
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524549"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436943"
 ---
 # <a name="case-study---building-holosketch-a-spatial-layout-and-ux-sketching-app-for-hololens"></a>Fallstudie: Erstellen von holosketch, ein räumliches Layout und eine UX-skizzieren-App für hololens
 
 Holosketch ist ein auf dem Gerät räumliches Layout und UX-skeshottool für hololens, das Sie bei der Erstellung von Holographic-Erfahrungen unterstützt. Holosketch funktioniert mit einer gekoppelten Bluetooth-Tastatur und-Maus sowie mit Gesten-und Sprachbefehlen. Der Zweck von holosketch besteht darin, ein einfaches UX-Layouttool für die schnelle Visualisierung und Iterationen bereitzustellen.
 
-![Holosketch: Ein räumliches Layout und eine UX-verzerrungsapp für hololens.](images/holosketch-image-01-640px.png)<br>
+![holosketch: ein räumliches Layout und eine UX-skizzieren-App für hololens.](images/holosketch-image-01-640px.png)<br>
 *Holosketch: räumliche Layout und UX-App für hololens*
 
-![Ein einfaches UX-Layouttool für die schnelle Visualisierung und Iterationen.](images/holosketch-image-02.png)<br>
+![ein einfaches UX-Layouttool für die schnelle Visualisierung und Iterationen.](images/holosketch-image-02.png)<br>
 *Ein einfaches UX-Layouttool für die schnelle Visualisierung und Iterationen*
 
 ## <a name="features"></a>Features
@@ -63,14 +63,14 @@ Zum effektiven kommunizieren von UX-Flows und-Szenarien für andere kann es sein
 
 Da gemischte Realität eine neue Canvas für uns ist, umfasst Sie viele Entwurfs Iterationen und-Testversionen und-Fehler. Für Designer, die mit Tools wie Unity und Visual Studio nicht vertraut sind, ist es nicht einfach, etwas in hololens zu platzieren. In der Regel müssen Sie den folgenden Prozess durchlaufen, um Ihre 2D/3D-Grafik im Gerät anzuzeigen. Dies war eine große Barriere für Entwickler, die Ideen und Szenarios schnell durchlaufen.
 
-![Komplexer Bereitstellungs Prozess](images/holosketch-image-03-1000px.png)<br>
+![komplexer Bereitstellungs Prozess](images/holosketch-image-03-1000px.png)<br>
 *Bereitstellungs Prozess*
 
 ### <a name="simplified-process-with-holosketch"></a>Vereinfachter Prozess mit holosketch
 
 Mit holosketch wollten wir diesen Prozess vereinfachen, ohne die Entwicklungs Tools und Geräte Portal Kopplung einzubeziehen. Mithilfe von onedrive können Benutzer problemlos 2D/3D-Assets in hololens einfügen.
 
-![Vereinfachter Prozess mit holosketch](images/holosketch-image-04-1000px.png)<br>
+![vereinfachten Prozess mit holosketch](images/holosketch-image-04-1000px.png)<br>
 *Vereinfachter Prozess mit holosketch*
 
 ### <a name="encouraging-three-dimensional-design-thinking-and-solutions"></a>Fördern von dreidimensionalen Entwurfs Gedanken und-Lösungen
@@ -118,17 +118,17 @@ Führen Sie vor dem Hochladen in ihren onedrive-Ordner die folgenden Schritte au
    ![Klicken Sie im unteren Bereich des inspektorbereichs auf die Dropdown Liste, und weisen Sie einen neuen eindeutigen Namen zu.](images/holosketch-14-assetbundles-1000px.png)
 
 10. Bereiten Sie ein Miniaturbild für das Modell Objekt vor. 
-   ![Ziehen Sie ein Bild in das Projekt Panel, und weisen Sie den Namen zu, der für das Objekt verwendet wird.](images/holosketch-15-assetbundles-1000px.png)
+   ![ziehen Sie ein Bild in das Projekt Panel, und weisen Sie den Namen zu, der für das Objekt verwendet wird.](images/holosketch-15-assetbundles-1000px.png)
 
 11. Erstellen Sie im Ordner "Asset" des Unity-Projekts einen Ordner mit dem Namen "assetbundles".
 
 12. Wählen Sie im Menü Assets die Option zum Erstellen von assetbundles aus, um die Datei zu generieren. 
-   ![Wählen Sie im Menü Assets die Option zum Erstellen von assetbundles aus, um die Datei zu generieren.](images/holosketch-15a-assetbundles.png)
+   Wählen Sie ![im Menü Assets die Option zum Erstellen von assetbundles aus, um die Datei zu generieren.](images/holosketch-15a-assetbundles.png)
 
 
 13. **Laden Sie die generierte Datei in den Ordner/Files/Documents/HoloSketch auf onedrive hoch.** Laden Sie die Datei asset_unique_name nur hoch. Manifestressourcen oder assetbundle-Dateien müssen nicht hochgeladen werden. <br>
-![Dateien zu Dateien/Dokumenten/holosketch/Ordner](images/holosketch-onedriveupload-1000px.png)
-![hinzufügen im onedrive-Menü von holosketch wird ein hinzugefügtes 3D-Objekt angezeigt.](images/holosketch-14-onedriveexample-1000px.jpg)
+![Hinzufügen von Dateien zu Dateien/Dokumenten/holosketch/Ordner](images/holosketch-onedriveupload-1000px.png)
+![wird das hinzugefügte 3D-Objekt im onedrive-Menü von holosketch angezeigt](images/holosketch-14-onedriveexample-1000px.jpg)
 
 ## <a name="how-to-manipulate-the-objects"></a>Vorgehensweise beim Bearbeiten der Objekte
 
@@ -136,7 +136,7 @@ Holosketch unterstützt die herkömmliche Oberfläche, die häufig in 3D-Softwar
 
 ### <a name="object-manipulation-modes"></a>Objekt Bearbeitungsmodi
 
-![Vorgehensweise beim Bearbeiten der Objekte](images/holosketch-image-06-1000px.png)<br>
+![, wie die Objekte bearbeitet werden](images/holosketch-image-06-1000px.png)<br>
 *Vorgehensweise beim Bearbeiten der Objekte*
 
 ### <a name="contextual-and-tool-belt-menus"></a>Kontext-und toolbandmenüs
@@ -147,8 +147,8 @@ Doppel Tippen Sie auf, um das Kontextmenü zu öffnen.
 
 Menü Elemente:
 * **Layoutoberfläche:** Dabei handelt es sich um ein 3D-Raster System, in dem Sie mehrere Objekte erstellen und als Gruppe verwalten können. Doppel Tippen Sie auf die layoutoberfläche, um Ihr Objekte hinzuzufügen.
-* **Primitives** Verwenden Sie Cubes, Bereiche, Zylinder und Kegel zum Durchführen von Studien.
-* **OneDrive** Öffnen Sie das onedrive-Menü, um Objekte zu importieren.
+* **Primitive:** Verwenden Sie Cubes, Bereiche, Zylinder und Kegel zum Durchführen von Studien.
+* **Onedrive:** Öffnen Sie das onedrive-Menü, um Objekte zu importieren.
 * **Hilfe:** Zeigt den Hilfe Bildschirm an.
 
 ![Kontextmenü](images/holosketch-image-07.png)<br>
@@ -160,7 +160,7 @@ Verschieben, drehen, skalieren, speichern und Laden von Szenen sind im Menüband
 
 ## <a name="using-keyboard-gestures-and-voice-commands"></a>Verwenden von Tastatur, Gesten und Sprachbefehlen
 
-![Tastatur-, Gesten-und Sprachbefehle](images/holosketch-image-08-1000px.png)<br>
+![Tastatur, Gesten und Sprachbefehle](images/holosketch-image-08-1000px.png)<br>
 *Tastatur-, Gesten-und Sprachbefehle*
 
 ## <a name="download-the-app"></a>Herunterladen der APP
@@ -190,10 +190,10 @@ Sie können das Video Aufzeichnungs Feature in hololens verwenden, indem Sie "He
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>Dong-Yoon-Park</b><br>UX-Designer@Microsoft</td>
+<td style="border-style: none"><b>Dong-Yoon-Park</b><br>UX-Designer-@Microsoft</td>
 </tr>
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Patrick Sebring" width="60" height="60" src="images/paseb-60px.jpg"></td>
-<td style="border-style: none"><b>Patrick-Bring</b><br>Trägers@Microsoft</td>
+<td style="border-style: none"><b>Patrick-Bring</b><br>Entwickler @Microsoft</td>
 </tr>
 </table> 

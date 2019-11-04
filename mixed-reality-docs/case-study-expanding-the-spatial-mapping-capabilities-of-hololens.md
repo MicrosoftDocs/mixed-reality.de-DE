@@ -2,20 +2,23 @@
 title: 'Fallstudie: Erweitern der räumlichen Mapping-Funktionen von hololens'
 description: Beim Erstellen unserer ersten Apps für Microsoft hololens waren wir gespannt darauf zu sehen, wie weit wir die Grenzen der räumlichen Zuordnung auf dem Gerät Übertragung konnten.
 author: jevertt
-ms.author: jevertt
+ms.author: jemccull
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, räumliche Zuordnung
-ms.openlocfilehash: 602b629afa5900ff34c28b3a3a32725af06590b7
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5142cb383d4408b29eb17eb5ede84d19b2533dc4
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522692"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436723"
 ---
 # <a name="case-study---expanding-the-spatial-mapping-capabilities-of-hololens"></a>Fallstudie: Erweitern der räumlichen Mapping-Funktionen von hololens
 
 Beim Erstellen unserer ersten Apps für Microsoft hololens waren wir gespannt darauf zu sehen, wie weit wir die Grenzen der räumlichen Zuordnung auf dem Gerät Übertragung konnten. Jeff evertt, ein Softwareentwickler bei Microsoft Studio, erläutert, wie eine neue Technologie entwickelt wurde, um mehr Kontrolle über die Platzierung von holograms in der realen Umgebung eines Benutzers zu erhalten.
+
+> [!NOTE]
+> Hololens 2 implementiert eine neue [Szene zum Verständnis der Laufzeit](scene-understanding.md), die Entwicklern gemischter Realität eine strukturierte, hochwertige Umgebungs Darstellung bietet, die entwickelt wurde, um die Entwicklung für Anwendungen mit hoher Ebene intuitiv zu gestalten. 
 
 ## <a name="watch-the-video"></a>Video ansehen
 
@@ -23,9 +26,9 @@ Beim Erstellen unserer ersten Apps für Microsoft hololens waren wir gespannt da
 
 ## <a name="beyond-spatial-mapping"></a>Über räumliche Zuordnung hinaus
 
-Beim Arbeiten an [Fragmenten](https://www.microsoft.com/p/fragments/9nblggh5ggm8) und [jungen](https://www.microsoft.com/p/young-conker/9nblggh5ggk1)den ersten spielen für hololens stellten wir fest, dass wir bei der prozeduralen Platzierung von holograms in der physischen Welt ein höheres Maß an Kenntnissen benötigten. Umgebung. Jedes Spiel hat seine eigenen speziellen Platzierungs Anforderungen: In Fragmenten soll beispielsweise zwischen verschiedenen Oberflächen – z. b. dem Boden oder einer Tabelle – unterschieden werden können, um Anhaltspunkte an relevanten Orten zu platzieren. Wir wollten auch in der Lage sein, Oberflächen zu identifizieren, auf denen holografische Zeichen in der Größe, z. b. ein Couch oder ein Stuhl, angeordnet werden können. Wir wollten, dass sich der zusammengesetzte und seine Angreifer in der Groß-und klein Sprache eines Players als Plattformen verwenden können.
+Beim Arbeiten an [Fragmenten](https://www.microsoft.com/p/fragments/9nblggh5ggm8) und [jungen](https://www.microsoft.com/p/young-conker/9nblggh5ggk1)den ersten spielen für hololens stellten wir fest, dass wir bei der prozeduralen Platzierung von holograms in der physischen Welt ein höheres Maß an Kenntnissen benötigten. Umgebung. Jedes Spiel verfügte über eigene spezifische Platzierungs Anforderungen: in Fragmenten wollten wir beispielsweise zwischen verschiedenen Oberflächen unterscheiden können – z. b. dem Boden oder einer Tabelle – um Hinweise an relevanten Positionen zu platzieren. Wir wollten auch in der Lage sein, Oberflächen zu identifizieren, auf denen holografische Zeichen in der Größe, z. b. ein Couch oder ein Stuhl, angeordnet werden können. Wir wollten, dass sich der zusammengesetzte und seine Angreifer in der Groß-und klein Sprache eines Players als Plattformen verwenden können.
 
-[Asobo Studio](http://www.asobostudio.com/index.html), unser Entwicklungspartner für diese Spiele, stieß auf dieses Problem und erstellte eine Technologie, die die räumlichen Zuordnungsfunktionen von hololens erweitert. Dabei konnten wir den Raum eines Players analysieren und Oberflächen wie Wände, Tabellen, Stühle und Fußböden identifizieren. Außerdem haben wir die Möglichkeit, eine Reihe von Einschränkungen zu optimieren, um die beste Platzierung für Holographic-Objekte zu ermitteln.
+[Asobo Studio](https://www.asobostudio.com/index.html), unser Entwicklungspartner für diese Spiele, stieß auf dieses Problem und erstellte eine Technologie, die die räumlichen Zuordnungsfunktionen von hololens erweitert. Dabei konnten wir den Raum eines Players analysieren und Oberflächen wie Wände, Tabellen, Stühle und Fußböden identifizieren. Außerdem haben wir die Möglichkeit, eine Reihe von Einschränkungen zu optimieren, um die beste Platzierung für Holographic-Objekte zu ermitteln.
 
 ## <a name="the-spatial-understanding-code"></a>Der räumliche Verständnis Code
 
@@ -34,10 +37,10 @@ Wir haben den ursprünglichen Code von Asobo erstellt und eine Bibliothek erstel
 Im Unity-Beispiel sind viele nützliche Abfragen enthalten, die es Ihnen ermöglichen, leere Leerzeichen auf Wänden zu finden, Objekte an der Oberfläche zu platzieren, Objekte auf der Oberfläche zu platzieren, Positionen für die Platzierung von Zeichen zu ermitteln und unzählige andere Abfragen für räumliche Abfragen durchzusetzen.
 
 Die von hololens bereitgestellte räumliche Mappinglösung ist so konzipiert, dass Sie so generisch genug ist, dass Sie die Anforderungen der gesamten Bereiche von Problembereichen erfüllt, das räumliche Verständnis Modul wurde erstellt, um die Anforderungen von zwei bestimmten spielen zu unterstützen. Daher wird die Lösung um einen bestimmten Prozess und eine Reihe von Annahmen strukturiert:
-* **Playspace mit fester Größe**: Der Benutzer gibt die maximale Wiedergabe leergröße im Init-Befehl an.
-* **Einmal Scanvorgang**: Der Prozess erfordert eine diskrete Überprüfungsphase, bei der der Benutzer durchläuft und den Playspace definiert. Abfragefunktionen funktionieren erst, nachdem die Überprüfung abgeschlossen wurde.
-* **Benutzergesteuerte Playspace-"zeichnen"** : Während der Überprüfungsphase wird der Benutzer die Wiedergabe Fläche bewegt und durchsucht. Dadurch werden die Bereiche, die eingeschlossen werden sollen, tatsächlich gezeichnet. Das generierte Mesh ist wichtig, um Benutzer Feedback in dieser Phase bereitzustellen.
-* **Startseite oder Office-Setup**: Die Abfragefunktionen werden um flache Flächen und Wände in der rechten Ecke entworfen. Dies ist eine weiche Einschränkung. Während der Scan Phase wird jedoch eine primäre Achsen Analyse abgeschlossen, um das Gitter Mosaik entlang der Haupt-und der Nebenachse zu optimieren.
+* **Playspace mit fester Größe**: der Benutzer gibt die maximale Playspace-Größe im Init-Befehl an.
+* **Einmal Scanvorgang**: der Prozess erfordert eine diskrete Scan Phase, in der der Benutzer durchläuft und den Playspace definiert. Abfragefunktionen funktionieren erst, nachdem die Überprüfung abgeschlossen wurde.
+* **Benutzergesteuerte Playspace-"Zeichnung"** : während der Überprüfungsphase wird der Benutzer durch den Wiedergabe Bereich bewegt und den Wiedergabe Bereich durchsucht. Dadurch werden die Bereiche, die eingeschlossen werden sollen, tatsächlich gezeichnet. Das generierte Mesh ist wichtig, um Benutzer Feedback in dieser Phase bereitzustellen.
+* **Home-oder Office-Einrichtung im Innenbereich**: die Abfragefunktionen werden um flache Oberflächen und Wände im rechten Winkel entworfen. Dies ist eine weiche Einschränkung. Während der Scan Phase wird jedoch eine primäre Achsen Analyse abgeschlossen, um das Gitter Mosaik entlang der Haupt-und der Nebenachse zu optimieren.
 
 ### <a name="room-scanning-process"></a>Raum Scanprozess
 
@@ -52,20 +55,20 @@ Räumliche Zuordnung in weiß und verstehen des Playspace-Mesh in grün
 
 
 Die enthaltene SpatialUnderstanding.cs-Datei verwaltet den Scan Phasen Prozess. Die folgenden Funktionen werden aufgerufen:
-* **SpatialUnderstanding_Init**: Wird einmal am Anfang aufgerufen.
-* **GeneratePlayspace_InitScan**: Gibt an, dass die scanphase beginnen soll.
-* **GeneratePlayspace_UpdateScan_DynamicScan**: Wird jedes Frame aufgerufen, um den Scanvorgang zu aktualisieren. Die Kameraposition und-Ausrichtung wird weitergegeben und wird für den oben beschriebenen Zeichnungsprozess von Playspace verwendet.
-* **GeneratePlayspace_RequestFinish**: Wird aufgerufen, um den Playspace abzuschließen. Dabei werden die Bereiche "gezeichnet" während der Überprüfungsphase verwendet, um den Playspace zu definieren und zu sperren. Die Anwendung kann während der Überprüfungsphase Statistiken Abfragen und das benutzerdefinierte Mesh zum Bereitstellen von Benutzer Feedback Abfragen.
-* **Import_UnderstandingMesh**: Während der Überprüfung fragt das von dem-Modul bereitgestellte **spatialverhalingcustommesh** -Verhalten und das Einverständnis der Prefab in regelmäßigen Abständen das vom Prozess generierte benutzerdefinierte Mesh ab. Außerdem wird dies nach Abschluss der Überprüfung noch einmal durchgeführt.
+* **SpatialUnderstanding_Init**: einmal am Anfang aufgerufen.
+* **GeneratePlayspace_InitScan**: gibt an, dass die scanphase beginnen soll.
+* **GeneratePlayspace_UpdateScan_DynamicScan**: jeder Frame wird aufgerufen, um den Scanvorgang zu aktualisieren. Die Kameraposition und-Ausrichtung wird weitergegeben und wird für den oben beschriebenen Zeichnungsprozess von Playspace verwendet.
+* **GeneratePlayspace_RequestFinish**: wird aufgerufen, um den Playspace abzuschließen. Dabei werden die Bereiche "gezeichnet" während der Überprüfungsphase verwendet, um den Playspace zu definieren und zu sperren. Die Anwendung kann während der Überprüfungsphase Statistiken Abfragen und das benutzerdefinierte Mesh zum Bereitstellen von Benutzer Feedback Abfragen.
+* **Import_UnderstandingMesh**: während der Überprüfung fragt das von dem-Modul bereitgestellte **spatialverhalingcustommesh** -Verhalten und das Einverständnis der Prefab in regelmäßigen Abständen das vom Prozess generierte benutzerdefinierte Mesh ab. Außerdem wird dies nach Abschluss der Überprüfung noch einmal durchgeführt.
 
 Der Scanvorgang, der vom **spatialunderstanding** -Verhalten gesteuert wird, ruft **initscan**auf und **aktualisiert** dann jeden Frame. Wenn die Statistik Abfrage eine angemessene Abdeckung meldet, kann der Benutzer auf " **requestfinish** " antippen, um das Ende der Scan Phase anzugeben. **Updatescan** wird weiterhin aufgerufen, bis der Rückgabewert angibt, dass die dll die Verarbeitung abgeschlossen hat.
 
 ## <a name="the-queries"></a>Die Abfragen
 
 Nachdem die Überprüfung durchgeführt wurde, können Sie auf drei verschiedene Arten von Abfragen in der Schnittstelle zugreifen:
-* **Topologieabfragen**: Dabei handelt es sich um schnelle Abfragen, die auf der Topologie des gescannten Raums basieren.
-* **Shape-Abfragen**: Diese verwenden die Ergebnisse der Topologieabfragen, um horizontale Oberflächen zu suchen, die für benutzerdefinierte Formen geeignet sind, die Sie definieren.
-* **Objekt Platzierungs Abfragen**: Dabei handelt es sich um komplexere Abfragen, die die am besten geeignete Position basierend auf einem Satz von Regeln und Einschränkungen für das Objekt finden.
+* **Topologieabfragen**: Hierbei handelt es sich um schnelle Abfragen, die auf der Topologie des gescannten Raums basieren.
+* **Shape-Abfragen**: diese verwenden die Ergebnisse der Topologieabfragen, um horizontale Oberflächen zu suchen, die für benutzerdefinierte Formen geeignet sind, die Sie definieren.
+* **Objekt Platzierungs Abfragen**: Hierbei handelt es sich um komplexere Abfragen, die den am besten geeigneten Speicherort basierend auf einem Satz von Regeln und Einschränkungen für das Objekt finden.
 
 Zusätzlich zu den drei primären Abfragen gibt es eine Raycasting-Schnittstelle, die verwendet werden kann, um markierte Oberflächentypen abzurufen, und ein benutzerdefiniertes wasserdichtes Raum Mesh kann kopiert werden.
 
@@ -304,7 +307,7 @@ Im Unity-Beispiel wandelt der Cursor einen Strahl in jedem Frame um. Zuerst für
 Schnittmenge der raycast-ergebnisberichterstattung mit dem Boden.
 
 
-## <a name="get-the-code"></a>Abrufen des Codes
+## <a name="get-the-code"></a>Beziehen des Codes
 
 Der Open Source-Code ist in [mixedrealitytoolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)verfügbar. Informieren Sie uns in den [hololens-Entwickler Foren](https://forums.hololens.com/) , wenn Sie den Code in einem Projekt verwenden. Wir können nicht warten, um zu sehen, was Sie mit Ihnen tun!
 
@@ -318,9 +321,9 @@ Der Open Source-Code ist in [mixedrealitytoolkit](https://github.com/Microsoft/M
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Räumliche Abbildung](spatial-mapping.md)
-* [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
+* [Grundlegendes zu Szenen](scene-understanding.md)
 * [Raumabtastvisualisierung](room-scan-visualization.md)
 * [Mixedrealitytoolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-* [Asobo Studio: Lektionen aus der an vorderster Front der hololens-Entwicklung](http://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)
+* [Asobo Studio: Lektionen aus der an vorderster Front der hololens-Entwicklung](https://www.gamesindustry.biz/articles/2016-05-12-asobo-lessons-from-the-frontline-of-ar-development)

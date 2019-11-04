@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
-ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
+ms.openlocfilehash: 6ce5d96e98fd5489632f942c9b9f4885a7aa1480
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629185"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437779"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Erstellen einer Benutzeroberfläche und Konfigurieren von Mixed Reality Toolkit 
 
-In der vorherigen Lektion haben Sie einige Funktionen kennengelernt, die das Mixed Reality Toolkit (mrtk) bietet, indem Sie Ihre erste Anwendung für die hololens 2 starten. In der nächsten Lektion erfahren Sie, wie Sie Schaltflächen zusammen mit UI-Textbereichen erstellen und organisieren und die Standard Interaktion (Toucheingabe) verwenden, um mit den einzelnen Schaltflächen zu interagieren. Sie werden auch das Hinzufügen einfacher Aktionen und Effekte untersuchen, z. B. das Ändern von Größe, Klang und Farbe von Objekten. Dieses Modul führt grundlegende Konzepte zum Ändern von mrtk-Profilen ein, beginnend mit dem Ausschalten der Visualisierung für räumliche Netze. 
+In der vorherigen Lektion haben Sie einige Funktionen kennengelernt, die das Mixed Reality Toolkit (mrtk) bietet, indem Sie Ihre erste Anwendung für die hololens 2 starten. In der nächsten Lektion erfahren Sie, wie Sie Schaltflächen zusammen mit UI-Textbereichen erstellen und organisieren und die Standard Interaktion (Toucheingabe) verwenden, um mit den einzelnen Schaltflächen zu interagieren. Sie werden auch das Hinzufügen einfacher Aktionen und Effekte untersuchen, z. B. das Ändern von Größe, Klang und Farbe von Objekten. Dieses Modul führt grundlegende Konzepte zum Ändern von mrtk-Profilen ein, beginnend mit dem Ausschalten der Mesh-Visualisierung für [räumliche Karten](spatial-mapping.md) . 
 
 ## <a name="objectives"></a>Ziele
 
@@ -32,7 +32,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die standardmäßigen mrtk-profile anp
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step1im.PNG)
 
->Hinweis: Standardmäßig können die MRTK-Profile nicht bearbeitet werden. Dabei handelt es sich um Standardprofil Vorlagen, die Sie kopieren und anpassen können. Es gibt mehrere Ebenen von Anpassung und Profilen. Daher ist es eine Standardübung, mehrere Profile zu kopieren und anzupassen, wenn Sie eine oder mehrere Einstellungen konfigurieren.
+>Hinweis: Standardmäßig können die mrtk-Profile nicht bearbeitet werden. Dabei handelt es sich um Standardprofil Vorlagen, die Sie kopieren und anpassen können. Es gibt mehrere Ebenen von Anpassung und Profilen. Daher ist es eine Standardübung, mehrere Profile zu kopieren und anzupassen, wenn Sie eine oder mehrere Einstellungen konfigurieren.
 >
 >Weitere Informationen zu mrtk-Profilen und deren Architektur finden Sie in der [mrtk-Dokumentation](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
@@ -50,13 +50,13 @@ In diesem Abschnitt erfahren Sie, wie Sie die standardmäßigen mrtk-profile anp
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step4im.PNG)
 
-5. Als Nächstes passen Sie die Einstellungen für die Anzeigeoption „Occlusion“ (Okklusion) an. Dadurch wird das räumliche Mesh unsichtbar, aber trotzdem werden die Spielobjekte hinter dem räumlichen Mesh ausgeblendet, auch bekannt als oksion.
+5. Als Nächstes passen Sie die Einstellungen für die Anzeigeoption „Occlusion“ (Okklusion) an. Dadurch lässt sich das räumliche Mapping-Mesh unsichtbar machen, blendet jedoch weiterhin Spielobjekte hinter dem räumlichen zuordnungsmesh aus, das auch als oksion bezeichnet wird.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step5im.PNG)
 
->Hinweis: Obwohl das räumliche Zuordnungsgitter nicht angezeigt wird, ist es dennoch vorhanden und Sie können mit ihm interagieren. Alle holograms hinter dem räumlichen zuordnungsmesh, z. b. ein – Hologramm hinter der sichtbaren Wand, werden aufgrund der oksions Einstellung nicht angezeigt.
+>Hinweis: das räumliche Mapping-Netz ist zwar nicht sichtbar, aber es ist immer noch vorhanden, und Sie können damit interagieren. Alle holograms hinter dem räumlichen zuordnungsmesh, z. b. ein – Hologramm hinter der sichtbaren Wand, werden aufgrund der oksions Einstellung nicht angezeigt.
 
-Herzlichen Glückwunsch! Sie haben soeben erfahren, wie Sie eine Einstellung im MRTK-Profil ändern können. Wie Sie sehen können, müssen Sie, um die MRTK-Einstellungen zu ändern, Kopien der Standardprofile erstellen, damit Sie diese bearbeiten können. Sie verfügen immer über die Standardprofile, die nicht bearbeitet werden können, wenn Sie ein Profil mit neuen Einstellungen erstellen möchten, oder Sie können auf die Standardprofile zurückgreifen. Es gibt zahlreiche Einstellungen, die Sie anpassen können. Die vollständige Referenz zu MRTK-Profileinstellungen finden Sie hier in der MRTK-Dokumentation: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html
+Gratulation! Sie haben soeben erfahren, wie Sie eine Einstellung im MRTK-Profil ändern können. Wie Sie sehen können, müssen Sie, um die MRTK-Einstellungen zu ändern, Kopien der Standardprofile erstellen, damit Sie diese bearbeiten können. Sie verfügen immer über die Standardprofile, die nicht bearbeitet werden können, wenn Sie ein Profil mit neuen Einstellungen erstellen möchten, oder Sie können auf die Standardprofile zurückgreifen. Es gibt zahlreiche Einstellungen, die Sie anpassen können. Die vollständige Referenz zu MRTK-Profileinstellungen finden Sie hier in der MRTK-Dokumentation: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html
 
 ### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Gesten für Handtracking und interaktionsfähige Schaltflächen
 In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um eine Schaltfläche mit dem Druckvorgang zu drücken.
@@ -69,7 +69,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um ei
 
 3. Ziehen Sie das Prefab (dargestellt durch ein blaues Feld) namens „PressableButton“ in Ihre Hierarchie. 
 
-   > Hinweis: Wenn Sie eine Meldung zu "Importieren von tmp Essentials" erhalten, importieren Sie Sie zu diesem Zeitpunkt. Wenn tmp Essentials noch nicht Bestandteil des Projekts ist, müssen Sie diesen Schritt nach dem Importieren von tmp Essentials möglicherweise wiederholen. andernfalls wird der Schaltflächen Text möglicherweise nicht angezeigt.
+   > Hinweis: Wenn Sie eine Meldung zum "Importieren von tmp Essentials" erhalten, importieren Sie Sie zu diesem Zeitpunkt. Wenn tmp Essentials noch nicht Bestandteil des Projekts ist, müssen Sie diesen Schritt nach dem Importieren von tmp Essentials möglicherweise wiederholen. andernfalls wird der Schaltflächen Text möglicherweise nicht angezeigt.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-2step3im.PNG)
 
@@ -83,7 +83,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um ei
 
 6. Fügen Sie der Szene einen Würfel hinzu. Klicken Sie mit der rechten Maustaste auf den Hierarchie Bereich, wählen Sie ein 3D-Objekt aus, und klicken Sie auf Jetzt sollte sich ein Würfel in Ihrer Anzeige befinden. Es wird sehr groß angezeigt. Sie können die Koordinaten anpassen (während der Cube noch im Hierarchie Bereich ausgewählt ist), um die Größe zu verringern. Stellen Sie die Skalierungswerte auf „x = 0,1“, „y = 0,1“, „z = 0,1“ ein. Stellen Sie sicher, dass der Würfel in Ihrer Szene in der Nähe der drückbaren Schaltfläche, aber nicht mit der Schaltfläche überlappend positioniert wird. In der folgenden Abbildung ist die Position des Würfels „x = 0“, „y = 0,2“ und „z = 1“. 
 
-   > Hinweis: Im Allgemeinen entspricht 1 Einheit in Unity ungefähr einem Meter in der physischen Umgebung. Es gibt Ausnahmen, z. B. wenn Objekte untergeordnete Objekte von skalierten Objekten sind.
+   > Hinweis: im Allgemeinen entspricht 1 Einheit in Unity ungefähr 1 Meter in der physischen Welt. Es gibt Ausnahmen, z. B. wenn Objekte untergeordnete Objekte von skalierten Objekten sind.
    
    ![MR213_BuildSettings](images/mrlearning-base-ch2-1step6ima.PNG)
 
@@ -143,7 +143,7 @@ Mit der Raster Objekt Auflistungs Komponente können Sie Schaltflächen oder ein
 
 ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3step5im.PNG)
 
->Hinweis: Abhängig von der Ausrichtung der untergeordneten Objekte oder des übergeordneten Objekts müssen Sie die Einstellung der Ausrichtung in zukünftigen Projekten wahrscheinlich anders anpassen. Die Felder für die Zellenbreite und Zellenhöhe müssen je nach Größe der Objekte in Ihrer Sammlung möglicherweise ebenfalls anders definiert werden.
+>Hinweis: abhängig von der Ausrichtung der untergeordneten Objekte oder des übergeordneten Objekts müssen Sie die Ausrichtung in zukünftigen Projekten wahrscheinlich anders anpassen. Die Felder für die Zellenbreite und Zellenhöhe müssen je nach Größe der Objekte in Ihrer Sammlung möglicherweise ebenfalls anders definiert werden.
 
 ### <a name="adding-text-into-your-scene"></a>Hinzufügen von Text zu Ihrer Szene
 
@@ -168,7 +168,7 @@ In diesem Abschnitt erfahren Sie, wie Sie Text zu Ihrer Mixed Reality-Umgebung h
 ![Lektion2 Kapitel4 Schritt5](images/Lesson2_Chapter4_Step5.JPG)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
-In dieser Lektion haben Sie erfahren, wie Sie eine MRTK-Profileinstellung (d. h. Sichtbarkeit des Gittermodells der räumlichen Wahrnehmung) kopieren, anpassen und konfigurieren. Sie haben auch erfahren, wie Sie mit einer Schaltfläche interagieren können, um Ereignisse mit nachverfolgten Händen für die HoloLens 2 auszulösen. Abschließend haben Sie erfahren, wie Sie mit „TextMeshPro“ von Unity und der MRTK-Komponente „Grid Object Collection“ (Rasterobjektsammlung) eine einfache Benutzeroberfläche erstellen.
+In dieser Lektion haben Sie gelernt, wie Sie eine mrtk-Profileinstellung (d.h. Sichtbarkeit des räumlichen Informationsnetzes) kopieren, anpassen und konfigurieren. Außerdem haben Sie gelernt, wie Sie mit einer Schaltfläche interagieren können, um Ereignisse mithilfe von nach verfolgten Händen in den hololens 2 zu Triggern Abschließend haben Sie erfahren, wie Sie mit „TextMeshPro“ von Unity und der MRTK-Komponente „Grid Object Collection“ (Rasterobjektsammlung) eine einfache Benutzeroberfläche erstellen.
 
-[Nächste Lektion: 4. Platzieren dynamischer Inhalte und Verwenden von Solvern](mrlearning-base-ch3.md)
+[Nächste Lektion: 4. Platzieren von dynamischem Inhalt und Verwenden von Solvers](mrlearning-base-ch3.md)
 

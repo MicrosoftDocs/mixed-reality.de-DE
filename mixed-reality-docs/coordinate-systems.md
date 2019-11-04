@@ -6,22 +6,22 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Koordinatensystem, geografischer Koordinatensystem, nur Ausrichtung, sitzender Skalierung, aneinandergreifende Skala, Raum Skala, Welt weite, 360 Grad, sitzend, stehend, Raum, Welt, Skala, Position, Ausrichtung, stationär, angefügt, Phase, Anker, räumlicher Anker, weltweit gesperrt, Welt sperren, Text gesperrt, Body-Lock, Begrenzungen, Persistenz, Freigabe, nach Verfolgungs Verlust, räumliche cloudanker
-ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829858"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436142"
 ---
 # <a name="coordinate-systems"></a>Koordinatensysteme
 
-Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, die wie echte Objekte Aussehen und klingen. Dies umfasst die genaue Positionierung und Orientierung dieser Hologramme an Orten in der Welt, die für den Benutzer von Bedeutung sind, unabhängig davon, ob es sich um den physischen Raum oder einen virtuellen Bereich handelt, den Sie erstellt haben. Wenn Sie sich über die Position und Ausrichtung ihrer Hologramme oder eine beliebige andere Geometrie, wie z. b. den [Blick](gaze.md) Strahl oder die [Handpositionen](gestures.md), in Bezug auf die Position und Ausrichtung der Argumente anwenden, bietet Windows verschiedene reale Koordinatensysteme an  **räumliche Koordinatensysteme**.
+Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, die wie echte Objekte Aussehen und klingen. Dies umfasst die genaue Positionierung und Orientierung dieser Hologramme an Orten in der Welt, die für den Benutzer von Bedeutung sind, unabhängig davon, ob es sich um den physischen Raum oder einen virtuellen Bereich handelt, den Sie erstellt haben. Wenn Sie sich über die Position und Ausrichtung ihrer Hologramme oder eine beliebige andere Geometrie, wie z. b. den [Blick](gaze-and-commit.md) Strahl oder die [Handpositionen](hands-and-tools.md), in Bezug auf die Position und Ausrichtung der Argumente anwenden, bietet Windows verschiedene reale Koordinatensysteme an  **räumliche Koordinatensysteme**.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/TneGSeqVAXQ]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -31,9 +31,9 @@ Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, di
     <col width="20%" />
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
@@ -66,6 +66,12 @@ Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, di
         <td>✔️</td>
         <td>❌</td>
     </tr>
+    <tr>
+        <td><a href="scene-understanding.md">Grundlegendes zu Szenen</a></td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Skalierbarkeit mit gemischter Realität
@@ -93,7 +99,7 @@ Diese Erfahrungs Skala folgt dem Modell "Schachteln von Puppen". Das wichtigste 
 |  **Ja** |  **Ja** |  **Ja** |  **Ja** |  Nein |  **Versand** | 
 |  **Ja** |  **Ja** |  **Ja** |  **Ja** |  **Ja** |  **World** | 
 
-Beachten Sie, dass der stagingframe von Reference für hololens noch nicht unterstützt wird. Eine Raum basierte App auf hololens muss derzeit eine [räumliche Zuordnung](spatial-mapping.md) verwenden, um den Boden und die Wände des Benutzers zu ermitteln.
+Beachten Sie, dass der stagingframe von Reference für hololens noch nicht unterstützt wird. Eine Raum basierte App auf hololens muss derzeit [räumliche Zuordnung](spatial-mapping.md) oder [Szenen Verständnis](scene-understanding.md) verwenden, um den Boden und die Wände des Benutzers zu ermitteln.
 
 ## <a name="spatial-coordinate-systems"></a>Räumliche Koordinatensysteme
 
@@ -131,7 +137,7 @@ Wenn das Headset nicht ermitteln kann, wo es sich auf der Welt befindet, stellt 
 
 ## <a name="building-a-standing-scale-or-room-scale-experience"></a>Aufbauen einer Dauer-oder Raum Skalierung
 
-Um die Skalierung über ein immersives Headset hinaus zu übersetzen und eine Funktion für eine permanente Skalierung zu erstellen, können Sie den **Stufen Rahmen der Referenz**verwenden.
+Um die Skalierung über ein immersives Headset hinaus zu übersetzen und eine Funktion für eine permanente **Skalierung**zu erstellen, können Sie den **Stufen Rahmen der Referenz**verwenden.
 
 Um eine **Raum**Umgebung bereitzustellen, die es Benutzern ermöglicht, innerhalb der von Ihnen vordefinierten 5-Meter-Grenze zu navigieren, können Sie auch nach **Phasen Begrenzungen** suchen.
 
@@ -189,7 +195,7 @@ Sie können <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" 
 
 Ihre APP kann auch einen räumlichen Anker in Echtzeit mit anderen Geräten gemeinsam nutzen, sodass Sie gemeinsam genutzte Echtzeitumgebungen nutzen können.
 
-Durch die Verwendung von <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">räumlichen Azure</a>-Ankern kann Ihre APP einen räumlichen Anker für mehrere hololens-, IOS-und Android-Geräte freigeben. Indem jedes Gerät ein Hologramm mit demselben Raumanker rendert, wird das Hologramm in der realen Welt für alle Benutzer an der gleichen Stelle angezeigt.
+Durch die Verwendung von <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">räumlichen Azure-Ankern</a>kann Ihre APP einen räumlichen Anker für mehrere hololens-, IOS-und Android-Geräte freigeben. Indem jedes Gerät ein Hologramm mit demselben Raumanker rendert, wird das Hologramm in der realen Welt für alle Benutzer an der gleichen Stelle angezeigt.
 
 ## <a name="avoid-head-locked-content"></a>Vermeiden von Kopf gesperrten Inhalten
 
@@ -221,7 +227,7 @@ Wenn Sie in einer Umgebung, in der viele Änderungen durchgeführt wurden (z. b.
 
 Manchmal kann ein Zuhause oder ein anderer Bereich zwei identische Bereiche haben. Beispielsweise zwei identische Konferenzräume, zwei identische Eckbereiche, zwei große identische Poster, die das Ansichts Feld des Geräts abdecken. In solchen Szenarien kann das Gerät manchmal zwischen identischen Teilen verwechselt und in der internen Darstellung als identisch markiert werden. Dies kann dazu führen, dass die holograms aus einigen Bereichen an anderen Speicherorten angezeigt werden. Das Gerät verliert möglicherweise die Nachverfolgung, da die interne Darstellung der Umgebung beschädigt ist. In diesem Fall wird empfohlen, das Umweltverständnis des Systems zurückzusetzen. Beachten Sie, dass das Zurücksetzen der Zuordnung zum Verlust aller räumlichen Anker Platzierungen führt. Dies führt dazu, dass das Headset in den eindeutigen Bereichen der Umgebung gut nachverfolgt wird. Das Problem kann jedoch erneut auftreten, wenn das Gerät erneut zwischen den identischen Bereichen verwechselt wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [GDC 2017-Präsentation zu räumlichen Koordinatensystemen und Holographic-Rendering](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
 * [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)

@@ -6,21 +6,21 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Tastatur, Eingabe, Unity, touchscreenkeyboard
-ms.openlocfilehash: 35f6f0df993931eea35db7b167110b341ea0c0f2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f506415f9658d9723bf31b339d63fe4569100ace
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515740"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438561"
 ---
 # <a name="keyboard-input-in-unity"></a>Tastatureingabe in Unity
 
-**Namespace:** *UnityEngine*<br>
- **Typ**: *[Touchscreenkeyboard](http://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
+**Namespace:** *unityengine*<br>
+ **Typ**:  *[touchscreenkeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)*
 
 Obwohl hololens viele Formen von Eingaben einschließlich Bluetooth-Tastaturen unterstützt, können die meisten Anwendungen nicht davon ausgehen, dass für alle Benutzer eine physische Tastatur verfügbar ist. Wenn für Ihre Anwendung Texteingaben erforderlich sind, sollte eine Form von auf Bildschirmtastatur angegeben werden.
 
-Unity stellt die *[touchscreenkeyboard](http://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)* -Klasse bereit, um Tastatureingaben zu akzeptieren, wenn keine physische Tastatur verfügbar ist.
+Unity stellt die *[touchscreenkeyboard](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html)* -Klasse bereit, um Tastatureingaben zu akzeptieren, wenn keine physische Tastatur verfügbar ist.
 
 ## <a name="hololens-system-keyboard-behavior-in-unity"></a>Hololens System Tastatur Verhalten in Unity
 
@@ -48,8 +48,8 @@ Es stehen sechs verschiedene Tastatur Ansichten zur Verfügung:
 
 Die System Tastatur hololens ist nur für Unity-Anwendungen verfügbar, die mit dem "UWP Build Type" auf "XAML" exportiert werden. Wenn Sie "XAML" als "UWP Build Type" über "D3D" auswählen, müssen Sie die vor-und Nachteile treffen. Wenn Sie mit diesen vor-und Nachteile nicht vertraut sind, möchten Sie möglicherweise eine [Alternative Eingabe Lösung](#alternative-keyboard-options) für die System Tastatur untersuchen.
 1. Öffnen Sie das Menü **Datei** , und wählen Sie Buildeinstellungen aus **.**
-2. Stellen Sie sicher, dass die **Plattform** auf **Windows Store**festgelegt ist, das **SDK** auf **Universal 10**festgelegt ist, und legen Sie den **UWP** -Buildtyp auf **XAML**fest.
-3. Klicken Sie  im Dialogfeld "Buildeinstellungen" auf die Schaltfläche **Player Einstellungen...** .
+2. Stellen Sie sicher, dass die **Plattform** auf **Windows Store**festgelegt ist, das **SDK** auf **Universal 10**festgelegt ist, und legen Sie den **UWP-Buildtyp** auf **XAML**fest.
+3. Klicken Sie im Dialogfeld " **Buildeinstellungen** " auf die Schaltfläche **Player Einstellungen...** .
 4. Wählen Sie die Registerkarte **Einstellungen für Windows Store aus** .
 5. Erweitern Sie die Gruppe **andere Einstellungen** .
 6. Aktivieren Sie im Abschnitt " **Rendering** " das Kontrollkästchen " **Virtual Reality supported** ", um eine neue **Virtual Reality-Geräte** Liste hinzuzufügen.

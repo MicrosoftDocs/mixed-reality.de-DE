@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, Logo, Symbol, Modellierung, Start Programm, 3D-Start Programm, Kachel, Live Cube, Win32
-ms.openlocfilehash: ac3d5e17614bcd1072f6843a46bf0525f441f130
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 87eadfb5184f9fb5f8d513ab00a2a954e71df376
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515604"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438574"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>Implementieren von 3D-App-launchern (Win32-Apps)
 
@@ -53,7 +53,7 @@ Win32-Anwendungen werden in der Liste "alle apps" im Windows Mixed Reality-Start
 ### <a name="sample-visual-elements-manifest"></a>Beispiel für visuelle Element Manifeste
 
 ```xml
-<Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Application xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
   <VisualElements
     ShowNameOnSquare150x150Logo="on"
     Square150x150Logo="YOUR_APP_LOGO_150X150.png"
@@ -165,7 +165,7 @@ IconFile=C:\Program Files (x86)\MyLauncher\apps\app-identifier\game.exe
 IconIndex=0
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 * [Gemischtes Reality-Modell Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) mit einem 3D-App-Start Programm.
 * [Entwurfsanleitung für 3D-App-Startprogramm](3d-app-launcher-design-guidance.md)

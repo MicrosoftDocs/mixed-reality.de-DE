@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Gesichtserkennung, hololens, immersive, VR
-ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: ef75be5485f85538eb8b3db3eebec63b166f7aa3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047184"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438497"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -37,7 +37,7 @@ Auf diese Weise erfahren Sie, wie Sie die Ergebnisse aus dem Gesichtserkennungs-
 
 In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf integrieren. In diesem Kurs erfahren Sie, wie Sie einen Azure-Dienst in Ihr Unity-Projekt integrieren. Es ist Ihre Aufgabe, das wissen, das Sie aus diesem Kursgewinnen, zu nutzen, um ihre gemischte Reality-Anwendung zu verbessern.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
@@ -50,7 +50,7 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf hololens, aber Sie können auch das Erlernen, was Sie in diesem Kurs lernen, auf Windows Mixed Reality-(VR)-Headsets. Da immersive Headsets (VR) nicht über barrierefreie Kameras verfügen, benötigen Sie eine externe Kamera, die mit Ihrem PC verbunden ist. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise für die Unterstützung von immersiven (VR)-Headsets verwenden müssen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -61,7 +61,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 - [Windows 10 Fall Creators Update (oder höher) mit aktiviertem Entwicklermodus](install-the-tools.md)
 - [Das neueste Windows 10 SDK](install-the-tools.md)
 - [Unity 2017,4](install-the-tools.md)
-- [Visual Studio 2017](install-the-tools.md)
+- [Visual Studio 2017](install-the-tools.md)
 - Ein [Windows Mixed Reality-Headset (VR)](immersive-headset-hardware-details.md) oder [Microsoft hololens](hololens-hardware-details.md) mit aktiviertem Entwicklermodus
 - Eine Kamera, die mit Ihrem PC verbunden ist (für die immersive Headset-Entwicklung)
 - Internet Zugriff für Azure-Setup und Gesichtserkennungs-API-Abruf
@@ -112,11 +112,11 @@ Wenn Sie den *Gesichtserkennungs-API* -Dienst in Azure verwenden möchten, müss
 
     6. Außerdem müssen Sie bestätigen, dass Sie die auf diesen Dienst angewendeten Geschäftsbedingungen verstanden haben.
 
-    7. Wählen Sie **erstellen*.**
+    7. Wählen Sie **erstellen *.**
 
         ![Face-API-Dienst erstellen](images/AzureLabs-Lab4-03.png)
 
-5.  Nachdem Sie auf geklickt haben **erstellen*** müssen Sie warten, bis der Dienst erstellt werden, dies kann einen Moment dauern.
+5.  Nachdem Sie auf " **Erstellen** " geklickt haben, müssen Sie warten, bis der Dienst erstellt wird. dieser Vorgang kann einige Minuten in Anspruch nehmen.
 
 6.  Nachdem die Dienst Instanz erstellt wurde, wird im Portal eine Benachrichtigung angezeigt.
 
@@ -169,7 +169,7 @@ Wenn Sie diese APP zum Erkennen von Benutzern Schulen möchten, benötigen Sie z
 
 2.  Nachdem die *personmaker-Lösung* geöffnet ist, stellen Sie Folgendes sicher:
 
-    1. Die Projektmappenkonfiguration ist auf **Debug**festgelegt.
+    1. Die *Projektmappenkonfiguration* ist auf **Debug**festgelegt.
 
     2. Die *Lösungsplattform* ist auf **x86** festgelegt.
 
@@ -231,7 +231,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
     ![Skript-Editor-Einstellung aktualisieren.](images/AzureLabs-Lab4-10.png)
 
-4.  Navigieren Sie als nächstes zu **Datei >** Buildeinstellungen, und schalten Sie die Plattform auf **universelle Windows-Plattform**, indem Sie auf die Schaltfläche **Plattform wechseln** klicken.
+4.  Navigieren Sie als nächstes zu **Datei > Buildeinstellungen** , und schalten Sie die Plattform auf **universelle Windows-Plattform**, indem Sie auf die Schaltfläche **Plattform wechseln** klicken.
 
     ![Fenster "Buildeinstellungen", Plattform zu UWP wechseln.](images/AzureLabs-Lab4-11.png)
 
@@ -241,7 +241,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
         > Legen Sie für die immersiven Headsets das **Zielgerät** auf *ein beliebiges Gerät*fest.
 
-    2. Der Buildtyp ist auf **D3D** festgelegt.
+    2. Der **Buildtyp** ist auf **D3D** festgelegt.
     3. **SDK** ist auf **neueste installierte** Version festgelegt.
     4. **Visual Studio-Version** ist auf **neueste installierte** Version festgelegt.
     5. **Build und Run** sind auf **lokaler Computer** festgelegt.
@@ -259,9 +259,9 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
             ![Benennen Sie neue Szene.](images/AzureLabs-Lab4-14.png)
 
-    7. Die restlichen Einstellungen in denBuildeinstellungen sollten vorerst als Standard belassen werden.
+    7. Die restlichen Einstellungen in den *Buildeinstellungen*sollten vorerst als Standard belassen werden.
 
-6. Klicken Sie im Fenster Buildeinstellungen auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
+6. Klicken Sie im Fenster *Buildeinstellungen* auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
 
     ![Öffnen Sie die Player-Einstellungen.](images/AzureLabs-Lab4-15.png)
 
@@ -269,7 +269,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
     1. Auf der Registerkarte **andere Einstellungen** :
 
-        1. **Skript** Erstellung Die **Lauf Zeit Version** sollte **experimentell** sein (.NET 4,6-Entsprechung). Wenn Sie diese Änderung ändern, muss der Editor neu gestartet werden.
+        1. Die **Skript** **Lauf Zeit Version** sollte **experimentell** sein (.NET 4,6-Entsprechung). Wenn Sie diese Änderung ändern, muss der Editor neu gestartet werden.
         2. **Skript** -Back-End sollte **.net** sein
         3. **API-Kompatibilitäts Grad** sollte **.NET 4,6** lauten
 
@@ -286,7 +286,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
         ![Aktualisieren Sie die X R-Einstellungen.](images/AzureLabs-Lab4-18.png)
 
-8.  Wieder inden Buildeinstellungen ist **Unity C# -Projekte** nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
+8.  Wieder in den *Buildeinstellungen*ist **Unity C# -Projekte** nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
 9.  Schließen Sie das Fenster mit den Buildeinstellungen.
 10. Speichern Sie Ihre Szene und Ihr Projekt (**Datei > Speichern Sie Szenen/Dateien > Speichern**Sie das Projekt).
 
@@ -305,7 +305,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
     3. Stellen Sie sicher, dass die **Transformations Position** auf **0, 0, 0** festgelegt ist.
 
-    4. **Klartext** auf voll Tonfarbe festlegen
+    4. **Klartext** auf voll **Tonfarbe** festlegen
 
     5. Legen Sie die **Hintergrund** Farbe der Kamera Komponente auf **schwarz, Alpha 0 (Hexadezimal Code: #00000000)** fest.
 
@@ -339,12 +339,12 @@ Der Zweck der faceanalysis-Klasse besteht darin, die Methoden zu hosten, die fü
 
 So erstellen Sie die *faceanalysis* -Klasse:
 
- 1. Klicken Sie im Projekt Panel mit der rechten Maustaste in den *Ordner Objekte* , und klicken Sie dann auf**Ordner** **Erstellen** > . Nennen Sie die Ordner **Skripts**. 
+ 1. Klicken Sie im Projekt Panel mit der rechten Maustaste in den *Ordner Objekte* , und klicken Sie dann auf > **Ordner** **Erstellen** . Nennen Sie die Ordner **Skripts**. 
 
     ![Erstellen Sie die faceanalysis-Klasse.](images/AzureLabs-Lab4-22.png)
 
 2.  Doppelklicken Sie auf den soeben erstellten Ordner, um ihn zu öffnen. 
-3.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf **C# Skript** **Erstellen**  >  . Nennen Sie das Skript *faceanalysis*. 
+3.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf >  **C# Skript** **Erstellen** . Nennen Sie das Skript *faceanalysis*. 
 4.  Doppelklicken Sie auf das neue *faceanalysis* -Skript, um es mit Visual Studio 2017 zu öffnen.
 5.  Geben Sie die folgenden Namespaces oberhalb der *faceanalysis* -Klasse ein:
 
@@ -647,7 +647,7 @@ Der Zweck der *imagecapture* -Klasse besteht darin, die Methoden zu hosten, die 
 
 So erstellen Sie die *imagecapture* -Klasse:
  
-1.  Klicken Sie mit der rechten Maustaste in den Skript Ordner, den Sie zuvor erstellt haben, und klicken Sie dann auf **Erstellen**,  **C# Skript**. Nennen Sie das Skript *imagecapture*. 
+1.  Klicken Sie **mit der rechten** Maustaste in den Skript Ordner, den Sie zuvor erstellt haben, und klicken Sie dann auf **Erstellen**,  **C# Skript**. Nennen Sie das Skript *imagecapture*. 
 2.  Doppelklicken Sie auf das neue *imagecapture* -Skript, um es mit Visual Studio 2017 zu öffnen.
 3.  Geben Sie die folgenden Namespaces oberhalb der imagecapture-Klasse ein:
 
@@ -864,4 +864,4 @@ Der **Azure-Gesichtserkennungs-API** ist leistungsfähig genug, um bis zu 64 Ges
 
 ### <a name="exercise-2"></a>Übung 2
 
-Der **Azure-Gesichtserkennungs-API** kann auch alle Arten von Attributinformationen zurückgeben. Integrieren Sie diese in die Anwendung. Dies könnte noch interessanter sein, wenn Sie mit dem [Emotionen-API](https://azure.microsoft.com/en-au/services/cognitive-services/emotion/)kombiniert werden.
+Der **Azure-Gesichtserkennungs-API** kann auch alle Arten von Attributinformationen zurückgeben. Integrieren Sie diese in die Anwendung. Dies könnte noch interessanter sein, wenn Sie mit dem [Emotionen-API](https://azure.microsoft.com/services/cognitive-services/emotion/)kombiniert werden.

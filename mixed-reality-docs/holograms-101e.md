@@ -3,40 +3,40 @@ title: Grundlagen 101 e-Complete Project with Emulator
 description: Befolgen Sie diese exemplarische Vorgehensweise, indem Sie Unity, Visual Studio und den hololens-Emulator verwenden, um die Grundlagen einer Holographic-Anwendung kennenzulernen.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: Gemischte Realität, Windows Mixed Reality, hololens, Hologram, Academy, Tutorial, Emulator
-ms.openlocfilehash: 77f7d497396937bf471a69fa514cef84ab0b699d
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b1d8e1f3f272051bdd6f69ab88c3aef4f86f13ef
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522322"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434704"
 ---
 >[!NOTE]
->Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es wurde [eine neue Reihe von Tutorials](mrlearning-base.md) für hololens 2 gepostet.
 
 <br>
 
-# <a name="mr-basics-101e-complete-project-with-emulator"></a>Grundlagen 101 e: Projekt mit Emulator vervollständigen
+# <a name="mr-basics-101e-complete-project-with-emulator"></a>Grundlagen 101 e: vervollständigen eines Projekts mit Emulator
 
  >[!VIDEO https://www.youtube.com/embed/Xzm8_s05mm8]
 
-In diesem Tutorial werden Sie durch ein vollständiges Projekt geführt, das in Unity integriert ist, das grundlegende Windows Mixed Reality-Features in hololens veranschaulicht, einschließlich [Blick](gaze.md), [Gesten](gestures.md), [Spracheingabe](voice-input.md), [räumlichem Sound](spatial-sound.md) und [räumlicher Zuordnung](spatial-mapping.md) . . Das Tutorial dauert ungefähr 1 Stunde.
+In diesem Tutorial werden Sie durch ein vollständiges Projekt geführt, das in Unity integriert ist, das grundlegende Windows Mixed Reality-Features in hololens veranschaulicht, einschließlich [Blick](gaze-and-commit.md), [Gesten](gaze-and-commit.md#composite-gestures), [Spracheingabe](voice-input.md), [räumlichem Sound](spatial-sound.md) und [räumlicher Zuordnung](spatial-mapping.md) . . Das Tutorial dauert ungefähr 1 Stunde.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>Grundlagen 101 e: Projekt mit Emulator vervollständigen</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td>Grundlagen 101 e: vervollständigen eines Projekts mit Emulator</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
 ## <a name="before-you-start"></a>Bevor Sie beginnen
 
-### <a name="prerequisites"></a>Vorraussetzungen
+### <a name="prerequisites"></a>Voraussetzungen
 
 * Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md)konfiguriert ist.
 
@@ -69,14 +69,14 @@ In diesem Kapitel richten wir das erste Unity-Projekt ein und durchlaufen den Bu
 * Wählen Sie **Öffnen**aus.
 * Geben Sie Location als den Ordner **Origami** ein, den Sie zuvor nicht archiviert haben.
 * Wählen Sie **Origami** , und klicken Sie auf **Ordner auswählen**.
-* Speichern Sie die neue Szene: Datei / **Speichern**unter.
+* Speichern Sie die neue Szene: **File** / **Szene speichern**unter.
 * Nennen Sie die Szene **Origami** , und klicken Sie auf die Schaltfläche **Speichern** .
 
 #### <a name="setup-the-main-camera"></a>Einrichten der Hauptkamera
 
 * Wählen Sie im Bereich **Hierarchie**die Option **Hauptkamera**aus.
 * Legen Sie im **Inspektor** die Transformations Position auf **0, 0, 0**fest.
-* Suchen Sie die Eigenschaft **Clear Flags** , und ändern Sie die Dropdown Liste von  **Skybox** in voll Tonfarbe.
+* Suchen Sie die Eigenschaft **Clear Flags** , und ändern Sie die Dropdown Liste von **Skybox** in voll **Tonfarbe**.
 * Klicken Sie auf das Feld **Hintergrund** , um eine Farbauswahl zu öffnen.
 * Legen Sie **R, G, B und A** auf **0**fest.
 
@@ -98,7 +98,7 @@ In diesem Kapitel richten wir das erste Unity-Projekt ein und durchlaufen den Bu
 
 #### <a name="export-the-project-from-unity-to-visual-studio"></a>Exportieren des Projekts aus Unity in Visual Studio
 
-* Wählen Sie in Unity **Datei >** Buildeinstellungen aus.
+* Wählen Sie in Unity **Datei > Buildeinstellungen**aus.
 * Wählen Sie in der Liste **Plattform** den **Windows Store** aus, und klicken Sie auf **Plattform wechseln**.
 * Legen Sie das **SDK** auf **Universal 10** und den Buildtyp auf **D3D**fest.
 * Überprüfen Sie **Unity C# -Projekte**.
@@ -122,7 +122,7 @@ In diesem Kapitel richten wir das erste Unity-Projekt ein und durchlaufen den Bu
 
 >[!VIDEO https://www.youtube.com/embed/BPWTbAC210k]
 
-In diesem Kapitel werden die ersten von drei Möglichkeiten vorgestellt, mit denen Sie mit ihren holograms interagieren [können.](gaze.md)
+In diesem Kapitel werden die ersten von drei Möglichkeiten vorgestellt, mit denen Sie mit ihren holograms interagieren [können.](gaze-and-commit.md)
 
 ### <a name="objectives"></a>Ziele
 
@@ -137,7 +137,7 @@ In diesem Kapitel werden die ersten von drei Möglichkeiten vorgestellt, mit den
 * Klicken Sie im Projekt Panel mit der rechten Maustaste auf den Ordner **Scripts** .
 * Klicken Sie auf das Untermenü **Erstellen** .
 * Wählen Sie  **C# Skript**aus.
-* Nennen Sie das Skript **worldcursor**. Hinweis: Beim Namen wird Groß- und Kleinschreibung beachtet. Sie müssen die Erweiterung ". cs" nicht hinzufügen.
+* Nennen Sie das Skript **worldcursor**. Hinweis: bei dem Namen wird die Groß-/Kleinschreibung beachtet. Sie müssen die Erweiterung ". cs" nicht hinzufügen.
 * Wählen Sie im **Hierarchie Panel**das **Cursor** Objekt aus.
 * Verschieben Sie das **worldcursor** -Skript per Drag & amp; Drop in den Bereich **Inspector**.
 * Doppelklicken Sie auf das Skript **worldcursor** , um es in Visual Studio zu öffnen.
@@ -188,7 +188,7 @@ public class WorldCursor : MonoBehaviour
 }
 ```
 
-* Erstellen Sie die APP aus dem **Datei >** den Buildeinstellungen neu.
+* Erstellen Sie die APP aus dem **Datei > den Buildeinstellungen**neu.
 * Kehren Sie zur Visual Studio-Projekt Mappe zurück, die zuvor zur Bereitstellung im Emulator verwendet wurde.
 * Wählen Sie bei entsprechender Aufforderung "alle neu laden" aus.
 * Klicken Sie auf **Debuggen > Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
@@ -198,7 +198,7 @@ public class WorldCursor : MonoBehaviour
 
 >[!VIDEO https://www.youtube.com/embed/6d-0RHeKHq4]
 
-In diesem Kapitel wird die Unterstützung für [Gesten](gestures.md)hinzugefügt. Wenn der Benutzer eine Papierkugel auswählt, wird die Kugel durch das Aktivieren der Schwerkraft mit der Physik-Engine von Unity erreicht.
+In diesem Kapitel wird die Unterstützung für [Gesten](gaze-and-commit.md#composite-gestures)hinzugefügt. Wenn der Benutzer eine Papierkugel auswählt, wird die Kugel durch das Aktivieren der Schwerkraft mit der Physik-Engine von Unity erreicht.
 
 ### <a name="objectives"></a>Ziele
 
@@ -309,7 +309,7 @@ public class SphereCommands : MonoBehaviour
 
 >[!VIDEO https://www.youtube.com/embed/LxbOhnd2_GM]
 
-In diesem Kapitel wird die Unterstützung für zwei [Sprachbefehle](voice-input.md)hinzugefügt: "World zurücksetzen" gibt die gelöschten Bereiche an ihren ursprünglichen Speicherort zurück, und "Drop Sphere", um die Kugel zu verlieren.
+In diesem Kapitel fügen wir die Unterstützung für zwei [Sprachbefehle](voice-input.md)hinzu: "Reset World", um die gelöschten Bereiche an ihren ursprünglichen Speicherort zurückzugeben, und "Drop Sphere", um die Kugel zu verlieren.
 
 ### <a name="objectives"></a>Ziele
 
@@ -318,7 +318,7 @@ In diesem Kapitel wird die Unterstützung für zwei [Sprachbefehle](voice-input.
 
 ### <a name="instructions"></a>Anweisungen
 
-* Erstellen Sie **im Ordner** Skripts ein Skript mit dem Namen " **Redner-Manager**".
+* Erstellen Sie **im Ordner Skripts ein** Skript mit dem Namen " **Redner-Manager**".
 * Ziehen Sie das **sprach-Manager** -Skript auf das **origamicollection** -Objekt in der Hierarchie.
 * Öffnen Sie das **sprach-Manager** -Skript in Visual Studio.
 * Kopieren Sie diesen Code, und fügen Sie ihn in **SpeechManager.cs** ein. **Speichern Sie alle**
@@ -638,11 +638,11 @@ Sie haben Folgendes gelernt:
 
 Sie sind nun bereit, eigene Holographic apps zu erstellen!
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-* [MR-Grundlagen 101: Vollständiges Projekt mit Gerät](holograms-101.md)
-* [Anvisieren](gaze.md)
-* [Gesten](gestures.md)
+* [Grundlagen 101: Projekt mit Gerät abschließen](holograms-101.md)
+* [Anvisieren](gaze-and-commit.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Spracheingabe](voice-input.md)
 * [Raumklang](spatial-sound.md)
 * [Räumliche Abbildung](spatial-mapping.md)

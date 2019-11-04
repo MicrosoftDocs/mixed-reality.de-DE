@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Edge, IOT Edge, Tutorial, API, Benachrichtigung, Funktionen, Tabellen, hololens, immersive, VR, IOT, virtueller Computer, Ubuntu, python
-ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047241"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437964"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -22,7 +22,7 @@ ms.locfileid: "70047241"
 
 In diesem Kurs erfahren Sie, wie Sie eine **Azure IOT Hub Service** auf einem virtuellen Computer implementieren, auf dem das Betriebssystem Ubuntu 16,4 ausgeführt wird. Ein **Azure-Funktionen-App** wird dann zum Empfangen von Nachrichten von Ihrer Ubuntu-VM verwendet und speichert das Ergebnis in einem **Azure-Tabellen Speicherdienst**. Anschließend können Sie diese Daten mithilfe von **Power BI** auf dem Microsoft hololens oder im immersiven (VR)-Headset anzeigen.
 
-Der Inhalt dieses Kurses gilt für IOT Edge Geräte, aber im Rahmen dieses Kurses liegt der Schwerpunkt auf der Umgebung eines virtuellen Computers, sodass der Zugriff auf ein physisches Edgegerät nicht erforderlich ist.
+Der Inhalt dieses Kurses gilt für IOT Edge Geräte, aber im Rahmen dieses *Kurses liegt der* Schwerpunkt auf der Umgebung eines virtuellen Computers, sodass der Zugriff auf ein physisches Edgegerät nicht erforderlich ist.
 
 Wenn Sie diesen Kurs abschließen, lernen Sie Folgendes:
 
@@ -35,17 +35,17 @@ Wenn Sie diesen Kurs abschließen, lernen Sie Folgendes:
 
 Zu den Diensten, die Sie verwenden werden, gehören:
 
-- **Azure IOT Hub** ist ein Microsoft Azure Dienst, mit dem Entwickler IOT-Assets verbinden, überwachen und verwalten können. Weitere Informationen finden Sie auf der [Seite **Azure IOT Hub-Dienst** ](https://azure.microsoft.com/en-au/services/iot-hub/).
+- **Azure IOT Hub** ist ein Microsoft Azure Dienst, mit dem Entwickler IOT-Assets verbinden, überwachen und verwalten können. Weitere Informationen finden Sie auf der [Seite **Azure IOT Hub-Dienst** ](https://azure.microsoft.com/services/iot-hub/).
 
-- **Azure Container Registry** ist ein Microsoft Azure Dienst, der Entwicklern das Speichern von Container Images für verschiedene Containertypen ermöglicht. Weitere Informationen finden Sie auf der [Seite **Azure Container Registry-Dienst** ](https://azure.microsoft.com/en-au/services/container-registry/).
+- **Azure Container Registry** ist ein Microsoft Azure Dienst, der Entwicklern das Speichern von Container Images für verschiedene Containertypen ermöglicht. Weitere Informationen finden Sie auf der [Seite **Azure Container Registry-Dienst** ](https://azure.microsoft.com/services/container-registry/).
 
-- Bei **Azure Funktionen-App** handelt es sich um einen Microsoft Azure Dienst, der es Entwicklern ermöglicht, in Azure kleine Code Elemente, "Functions", auszuführen. Dies bietet eine Möglichkeit zum Delegieren von Arbeit an die Cloud und nicht an Ihre lokale Anwendung, die viele Vorteile haben kann. **Azure Functions** unterstützt mehrere Entwicklungs Sprachen, wie\#z.\#b. C, F, Node. js, Java und PHP. Weitere Informationen finden Sie auf der [Seite **Azure Functions** ](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+- Bei **Azure Funktionen-App** handelt es sich um einen Microsoft Azure Dienst, der es Entwicklern ermöglicht, in Azure kleine Code Elemente, "Functions", auszuführen. Dies bietet eine Möglichkeit zum Delegieren von Arbeit an die Cloud und nicht an Ihre lokale Anwendung, die viele Vorteile haben kann. **Azure Functions** unterstützt mehrere Entwicklungs Sprachen, wie z. b. C\#, F\#, Node. js, Java und PHP. Weitere Informationen finden Sie auf der [Seite **Azure Functions** ](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
 - **Azure Storage: Tabellen** sind ein Microsoft Azure Dienst, mit dem Entwickler strukturierte, nicht-SQL-Daten in der Cloud speichern können, sodass Sie überall problemlos zugänglich sind. Der Dienst verfügt über einen Schema losen Entwurf, der die Weiterentwicklung von Tabellen nach Bedarf ermöglicht und daher sehr flexibel ist. Weitere Informationen finden Sie auf der Seite mit den [ **Azure-Tabellen** .](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 
 In diesem Kurs erfahren Sie, wie Sie den IOT Hub-Dienst einrichten und verwenden und dann eine Antwort visualisieren, die von einem Gerät bereitgestellt wird. Sie müssen diese Konzepte auf eine benutzerdefinierte IOT Hub Service-Einrichtung anwenden, die Sie möglicherweise erstellen.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
@@ -55,7 +55,7 @@ In diesem Kurs erfahren Sie, wie Sie den IOT Hub-Dienst einrichten und verwenden
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Aktuelle Voraussetzungen für die Entwicklung mit gemischter Realität, einschließlich der Microsoft hololens, finden Sie im Artikel [Installieren der Tools](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) .
 
@@ -72,7 +72,7 @@ Folgende Hardware und Software ist erforderlich:
 - Windows 10 SDK (neueste Version)
 - Hololens, **Entwicklermodus aktiviert**
 - Visual Studio 2017.15.4 (nur für den Zugriff auf die Azure-Cloud-Explorer verwendet)
-- Internet Zugriff für Azure und für IOT Hub-Dienst. Weitere Informationen finden Sie [unter diesem Link zur IOT Hub Dienst Seite](https://azure.microsoft.com/en-au/services/iot-hub/) .
+- Internet Zugriff für Azure und für IOT Hub-Dienst. Weitere Informationen finden Sie [unter diesem Link zur IOT Hub Dienst Seite](https://azure.microsoft.com/services/iot-hub/) .
 - Ein Machine Learning-Modell. Wenn Sie nicht über ein eigenes Modell verfügen, [können Sie das mit diesem Kurs bereitgestellte Modell verwenden](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20313%20-%20IoT%20Hub%20Service/Custom%20Vision%20Model.zip).
 - Auf Ihrem Windows 10-Entwicklungs Computer ist **Hyper-V-** Software aktiviert.
 - Ein virtueller Computer, auf dem Ubuntu (16,4 oder 18,4) ausgeführt wird und der auf dem Entwicklungs Computer ausgeführt wird. Alternativ können Sie einen separaten Computer mit Linux (Ubuntu 16,4 oder 18,4) verwenden. Weitere Informationen zum Erstellen eines virtuellen Computers unter Windows mit Hyper-V finden Sie im [Kapitel "bevor Sie beginnen"](#before-you-start). (https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine).  
@@ -89,7 +89,7 @@ Hilfe zur Kalibrierung finden Sie unter diesem [Link zum Artikel zur hololens-Ka
 Hilfe zur Sensor Optimierung finden Sie unter diesem [Link zum Artikel zur Überwachung von hololens-Sensoren](sensor-tuning.md).
 
 3. Richten Sie Ihren **virtuellen Ubuntu-Computer** mithilfe von **Hyper-V**ein. Die folgenden Ressourcen helfen Ihnen bei diesem Vorgang.
-    1.  Befolgen Sie zuerst den folgenden Link, um die ISO-Datei von [Ubuntu 16.04.4 LTS (xenial Xerus) herunterzuladen](http://au.releases.ubuntu.com/16.04/). Wählen Sie das **amd64-Desktop Image (64-Bit-PC)** aus.
+    1.  Befolgen Sie zuerst den folgenden Link, um die ISO-Datei von [Ubuntu 16.04.4 LTS (xenial Xerus) herunterzuladen](https://au.releases.ubuntu.com/16.04/). Wählen Sie das **amd64-Desktop Image (64-Bit-PC)** aus.
     2.  Stellen Sie sicher, dass **Hyper-V** auf Ihrem Windows 10-Computer aktiviert ist. Unter diesem Link finden Sie Anleitungen zum [Installieren und Aktivieren von Hyper-V unter Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
     3.  Starten Sie Hyper-V, und erstellen Sie einen neuen virtuellen Ubuntu-Computer. Unter diesem Link finden Sie eine Schritt-für- [Schritt-Anleitung zum Erstellen eines virtuellen Computers mit Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Wenn Sie die **Option "Betriebssystem von einer Start baren Image Datei installieren"** angefordert haben, wählen Sie die zuvor heruntergeladene **Ubuntu-ISO** -Datei aus.
 
@@ -193,7 +193,7 @@ Nun beginnen Sie mit der Erstellung und Einrichtung Ihres **IOT Hub Dienstanbiet
 
     3. Fügen Sie den gewünschten **Namen** für diese Dienst Instanz ein.    
 
-5.  Klicken Sie unten auf der Seite auf weiter **: Größe und Skalierung**.
+5.  Klicken Sie am unteren Rand der Seite auf weiter **: Größe und Skalierung**.
 
     ![Speicher Instanz erstellen](images/AzureLabs-Lab313-12.png)
 
@@ -243,18 +243,18 @@ Zum Erstellen und Bereitstellen von Modulen für *IOT Hub Edge*müssen die folge
 
 1.  [Docker für Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)werden Sie aufgefordert, ein Konto zu erstellen, das heruntergeladen werden kann. 
 
-    [![docker für Windows herunterladen](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+    [![herunterladen von Docker für Windows](images/AzureLabs-Lab313-21.png)](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 
     > [!IMPORTANT]
     > Docker erfordert, dass *Windows 10 pro*, *Enterprise 14393*oder *Windows Server 2016 RTM*ausgeführt wird. Wenn Sie andere Versionen von Windows 10 ausführen, können Sie versuchen, docker mithilfe der [docker-Toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/)zu installieren.
 
 2.  [Python 3,6](https://www.python.org/downloads/).
 
-    [![Herunterladen von Python 3,6](images/AzureLabs-Lab313-22.png)](https://www.python.org/downloads/)
+    [![herunterladen von Python 3,6](images/AzureLabs-Lab313-22.png)](https://www.python.org/downloads/)
 
 3.  [Visual Studio Code (auch bekannt als vs Code)](https://code.visualstudio.com/download).
 
-    [![Download vs Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
+    [![herunterladen vs Code](images/AzureLabs-Lab313-23.png)](https://code.visualstudio.com/download)
 
 Nach der Installation der oben erwähnten Software müssen Sie den Computer neu starten.
 
@@ -271,7 +271,7 @@ Nun können Sie mit dem Einrichten Ihres Geräts fortfahren, auf dem **Ubuntu OS
 
 1.  Öffnen Sie das **Ubuntu-Terminal**, und installieren Sie **PIP**mit dem folgenden Befehl:
 
-    > [! Hinweis] Sie können das *Terminal* problemlos mithilfe der Tastenkombination öffnen: **STRG + ALT + T**.
+    > [! Hinweis] Sie können das *Terminal* problemlos mit der Tastenkombination öffnen: **STRG + ALT + T**.
 
     ```bash
         sudo apt-get install python-pip
@@ -320,7 +320,7 @@ Nun können Sie mit dem Einrichten Ihres Geräts fortfahren, auf dem **Ubuntu OS
 
     1.  Verwenden Sie die Pfeiltasten auf der Tastatur, um einen Bildlauf nach unten durchführen (Sie müssen einen Bildlauf nach unten durchführen), um die Zeile zu erreichen, die Folgendes enthält:
 
-        **"\<GERÄTE VERBINDUNGS ZEICHENFOLGE HIER HINZUFÜGEN >** ".
+        " **\<>" Geräte Verbindungs Zeichenfolge hinzufügen**".
 
     2. Ersatz Linie, **einschließlich der Klammern**, mit der **Geräte Verbindungs Zeichenfolge** , die Sie zuvor notiert haben.
 
@@ -370,7 +370,7 @@ Nun können Sie mit dem Einrichten Ihres Geräts fortfahren, auf dem **Ubuntu OS
 
 4. Nachdem Sie die Erweiterungen installiert haben, schließen Sie vs Code, und öffnen Sie es erneut.
 
-5. Wenn vs Code noch einmal geöffnet ist, navigieren Sie zu **Anzeige** > **integrierter Terminal**.
+5. Wenn vs Code noch einmal geöffnet ist, navigieren Sie zu > **integriertes Terminal** **anzeigen** .
 
 6. Sie installieren nun **cookiecutter**. Führen Sie im Terminal den folgenden bash-Befehl aus:
 
@@ -390,9 +390,9 @@ Nun können Sie mit dem Einrichten Ihres Geräts fortfahren, auf dem **Ubuntu OS
 
 An diesem Punkt müssen Sie den Container mit dem-Modul erstellen, damit er in die *Container Registry*übermittelt werden kann. Nachdem Sie den Container per Pushvorgang übermittelt haben, verwenden Sie den *IOT Hub Edge* -Dienst, um ihn auf Ihrem Gerät bereitzustellen, auf dem die *IOT Edge Laufzeit*ausgeführt wird.
 
-1. Klicken Sie in vs Code auf**Befehls Palette** **anzeigen** > .
+1. Klicken Sie in vs Code auf **Ansicht** > **Befehls Palette**.
 
-2. Suchen und führen **Sie in der Palette Azure IOT Edge aus: Neue IOT Edge-** Lösung.
+2. Suchen Sie in der Palette nach **Azure IOT Edge: neue IOT Edge-Lösung**, und führen Sie Sie aus.
 
 3. Navigieren Sie zu einem Speicherort, an dem Sie die Projekt Mappe erstellen möchten. Drücken **Sie die Eingabe** Taste, um den Speicherort zu akzeptieren.
 
@@ -744,7 +744,7 @@ Anschließend erstellen Sie den Ordner *Images* , der vom Python-Skript verwende
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Kapitel 9: Verpacken der Projekt Mappe als Container
 
-1.  Sie sind jetzt bereit, Ihre Dateien als Container zu verpacken und per Push an Ihre **Azure Container Registry**zu übersetzen. Öffnen Sie in vs Code das *integrierte Terminal* (**anzeigen** > **integrierter Terminals** oder **STRG**+ **\`** ), und verwenden Sie die folgende Zeile, um sich bei **docker** anzumelden (ersetzen Sie die Werte des Befehl mit den Anmelde Informationen Ihres **Azure Container Registry (ACR)** ):
+1.  Sie sind jetzt bereit, Ihre Dateien als Container zu verpacken und per Push an Ihre **Azure Container Registry**zu übersetzen. Öffnen Sie in vs Code das *integrierte Terminal* (**anzeigen** > **integriertes Terminal** oder **STRG**+ **\`** ), und verwenden Sie die folgende Zeile, um sich bei **docker** anzumelden (ersetzen Sie die Werte des Befehls durch). die Anmelde Informationen Ihres **Azure Container Registry (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -754,7 +754,7 @@ Anschließend erstellen Sie den Ordner *Images* , der vom Python-Skript verwende
 
     ![Bereitstellung erstellen](images/AzureLabs-Lab313-30.png)
 
-3. Öffnen Sie die **Befehls Palette** erneut, und suchen **Sie nach Azure: Melden Sie**sich an. Befolgen Sie die Anweisungen unter Verwendung der Anmelde Informationen Ihres Azure-Kontos. VS Code wird Ihnen eine Option zum *Kopieren und öffnen*zur Verfügung gestellt, die den Geräte Code kopiert, den Sie in Kürze benötigen, und den Standard Webbrowser öffnen. Wenn Sie gefragt werden, fügen Sie den Geräte Code ein, um den Computer zu authentifizieren.
+3. Öffnen Sie die **Befehls Palette** erneut, und suchen Sie nach **Azure: Anmelden**. Befolgen Sie die Anweisungen unter Verwendung der Anmelde Informationen Ihres Azure-Kontos. VS Code wird Ihnen eine Option zum *Kopieren und öffnen*zur Verfügung gestellt, die den Geräte Code kopiert, den Sie in Kürze benötigen, und den Standard Webbrowser öffnen. Wenn Sie gefragt werden, fügen Sie den Geräte Code ein, um den Computer zu authentifizieren.
 
     ![Kopieren und öffnen](images/AzureLabs-Lab313-31.png)
 
@@ -805,7 +805,7 @@ Im folgenden finden Sie eine Liste mit Befehlszeilen und Tipps, die Sie beim Üb
         sudo iotedge list
     ```
 
-    oder
+    Oder
 
     ```bash
         sudo docker ps
@@ -916,7 +916,7 @@ Nachdem Sie das Speicher **Dienst** -Speicherkonto eingerichtet haben, ist es an
 
 1. Öffnen Sie **Visual Studio** (**nicht** Visual Studio Code).
 
-2. Klicken Sie im Menü auf**Cloud-Explorer** **anzeigen** > .
+2. Klicken Sie im Menü auf > **Cloud-Explorer** **anzeigen** .
 
     ![Cloud-Explorer öffnen](images/AzureLabs-Lab313-45.png)
 
@@ -935,7 +935,7 @@ Nachdem Sie das Speicher **Dienst** -Speicherkonto eingerichtet haben, ist es an
 
 5. Nach der Erweiterung sollte Ihr neu erstelltes **Speicherkonto** verfügbar sein. Klicken Sie auf den Pfeil links neben dem Speicher, und wählen Sie dann nach dem Erweitern der Tabelle **Tabellen** aus, und klicken Sie auf den Pfeil daneben, um die **Tabelle** anzuzeigen, die Sie im letzten Kapitel erstellt haben. Doppelklicken Sie auf die **Tabelle**.
 
-6. Ihre Tabelle wird in der Mitte Ihres Visual Studio-Fensters geöffnet. Klicken Sie auf das Symboltabelle **+** mit dem (plus)-Symbol.
+6. Ihre Tabelle wird in der Mitte Ihres Visual Studio-Fensters geöffnet. Klicken Sie auf das Symboltabelle mit dem **+** (plus).
 
     ![neue Tabelle hinzufügen](images/AzureLabs-Lab313-48.png)
 
@@ -991,7 +991,7 @@ Zunächst müssen Sie eine Datei erstellen, die es ihrer Azure-Funktion ermögli
     }
     ```
 
-3.  Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
+3.  Melden Sie sich beim [Azure-Portal](https://portal.azure.com)an.
 
 4.  Wenn Sie angemeldet sind, klicken Sie in der oberen linken Ecke auf **Ressource erstellen** , suchen Sie nach **Funktionen-App**, und drücken Sie die **Eingabe** Taste, um zu suchen. Klicken Sie in den Ergebnissen auf *Funktionen-App* , um einen neuen Bereich zu öffnen.
 
@@ -1039,7 +1039,7 @@ Zunächst müssen Sie eine Datei erstellen, die es ihrer Azure-Funktion ermögli
 
     ![Gehe zu Ressource](images/AzureLabs-Lab313-57.png)
 
-11. Klicken Sie auf der linken Seite des neuen Panels auf das **+** Symbol (Pluszeichen) neben *Functions*, um eine neue Funktion zu erstellen.
+11. Klicken Sie auf der linken Seite des neuen Panels auf das Symbol **+** (plus) neben *Functions*, um eine neue Funktion zu erstellen.
 
     ![neue Funktion hinzufügen](images/AzureLabs-Lab313-58.png)
 
@@ -1143,13 +1143,13 @@ Zunächst müssen Sie eine Datei erstellen, die es ihrer Azure-Funktion ermögli
 
 20. Klicken Sie mit dem Code auf **Speichern**.
 
-21. Klicken Sie anschließend auf **\<** der rechten Seite der Seite auf das Symbol (Pfeil).
+21. Klicken Sie anschließend auf der rechten Seite der Seite auf das Symbol **\<** (Pfeil).
 
     ![benutzerdefinierte Funktion](images/AzureLabs-Lab313-66.png)
 
 22. Ein Panel wird von rechts nach rechts angezeigt. Klicken Sie in diesem Bereich auf **hochladen**, und ein *Datei Browser* wird angezeigt.
 
-23. Navigieren Sie zu, und klicken Sie auf die Datei **Project. JSON** , die Sie zuvor im Editor erstellt haben, und klicken Sie dann auf die Schaltfläche **Öffnen** . Diese Datei definiert die Bibliotheken, die von ihrer Funktion verwendet werden.
+23. Navigieren Sie zu, und klicken Sie auf die Datei **Project. JSON** , die Sie **zuvor im** Editor erstellt haben, und klicken Sie dann auf die Schaltfläche **Öffnen** . Diese Datei definiert die Bibliotheken, die von ihrer Funktion verwendet werden.
 
     ![benutzerdefinierte Funktion](images/AzureLabs-Lab313-67.png)
 

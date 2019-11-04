@@ -1,21 +1,21 @@
 ---
-title: 'Fallstudie: erfassen und Erstellen von Inhalten für holotour'
-description: Holotour für Microsoft hololens bietet immersive persönliche 3D-Touren von berühmten Standorten auf der ganzen Welt.
+title: Fallstudie-holotour
+description: Holotour für Microsoft hololens bietet immersive persönliche 3D-Touren von berühmten Standorten auf der ganzen Welt. Diese Fallstudie führt Sie durch den Prozess des Erstellens und Erstellens der Inhalte, die für holotour verwendet werden.
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Holotour, hololens, Windows Mixed Reality
-ms.openlocfilehash: 6c9e5f44c439310883c8b0271187a7b2263b0854
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63518274"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436927"
 ---
-# <a name="case-study---capturing-and-creating-content-for-holotour"></a>Fallstudie: erfassen und Erstellen von Inhalten für holotour
+# <a name="case-study---holotour"></a>Fallstudie-holotour
 
-Holotour für Microsoft hololens bietet immersive persönliche 3D-Touren von berühmten Standorten auf der ganzen Welt. Wie Designer, Entwickler, Producer, audiodesigner und Entwickler, die an diesem Projekt arbeiten, haben Sie herausgefunden. das Erstellen eines überzeugender realen 3D-Renderings eines bekannten Standorts ist eine einzigartige Mischung aus Creative und Logical Wizardry.
+Holotour für Microsoft hololens bietet immersive persönliche 3D-Touren von berühmten Standorten auf der ganzen Welt. Wie Designer, Entwickler, Producer, audiodesigner und Entwickler, die an diesem Projekt arbeiten, haben Sie herausgefunden. das Erstellen eines überzeugender realen 3D-Renderings eines bekannten Standorts ist eine einzigartige Mischung aus Creative und Logical Wizardry. Diese Fallstudie führt Sie durch den Prozess des Erstellens und Erstellens der Inhalte, die für holotour verwendet werden.
 
 ## <a name="the-tech"></a>Die Technologie
 
@@ -42,7 +42,6 @@ Wir haben unser rig von Velcro und Pappe auf einen 3D-gedruckten Kamera-Gehäuse
 
 Die 360 °-Kamera-Rig-Verfilmung in Machu Picchu. 
 
-
 ## <a name="behind-the-scenes"></a>Im Hintergrund
 
 Vor dem Filmen mussten wir herausfinden, welche Standorte wir in unsere virtuelle Tour einschließen wollten. Rom war der erste Ort, der ausgeliefert werden soll, und wir wollten ihn richtig machen, also haben wir uns entschlossen, eine pfadtour durchzuführen. Wir haben ein Team von sechs Personen – einschließlich Künstlern, Designern und Producer – an die Websites gesendet, die wir in Erwägung gezogen haben. Die Fahrt hat ungefähr 9 Tage gedauert – 2,5 für Reisen, den Rest für die-Verfilmung. (Bei Machu Picchu haben wir uns entschieden, einen Scout-Trip durchzuführen, im Voraus zu forschen und einige Tage Puffer für das Filmen zu reservieren.)
@@ -58,7 +57,7 @@ Nachdem der Scout-Trip abgeschlossen wurde, wurde für das eigentliche drehen ei
 
 ### <a name="capturing-the-video"></a>Erfassen des Videos
 
-Das Ausführen einiger einfacher Dinge während der Erfassung kann die Nachbearbeitung erheblich vereinfachen. Wenn Sie z. b. Bilder von mehreren Kameras zusammenfügen, erhalten Sie visuelle Artefakte, da jede Kamera eine etwas andere Ansicht hat. Je näher die Objekte der Kamera sind, desto größer ist der Unterschied zwischen den Ansichten und desto größer die zusammen fügenden Artefakte. Hier ist eine einfache Möglichkeit, das Problem visuell darzustellen: halten Sie Ihren Ziehpunkt vor dem Gesicht, und betrachten Sie ihn nur mit einem Auge. Wechseln Sie jetzt zu Augen. Sie werden feststellen, dass der Ziehpunkt relativ zum Hintergrund bewegt wird. Wenn Sie Ihren Ziehpunkt nicht mehr von Ihrem Gesicht halten und das Experiment wiederholen, scheint Ihr Thumb-Steuer Vorgang weniger zu verschieben. Diese sichtbare Bewegung ähnelt dem Problem beim Zusammenfügen: Ihre Augen sehen, wie die Kameras, nicht genau dasselbe Bild, da Sie durch eine kleine Entfernung voneinander getrennt sind.
+Das Ausführen einiger einfacher Dinge während der Erfassung kann die Nachbearbeitung erheblich vereinfachen. Wenn Sie z. b. Bilder von mehreren Kameras zusammenfügen, erhalten Sie visuelle Artefakte, da jede Kamera eine etwas andere Ansicht hat. Je näher die Objekte der Kamera sind, desto größer ist der Unterschied zwischen den Ansichten und desto größer die zusammen fügenden Artefakte. Hier ist eine einfache Möglichkeit, das Problem visuell darzustellen: halten Sie Ihren Ziehpunkt vor dem Gesicht, und betrachten Sie ihn nur mit einem Auge. Wechseln Sie jetzt zu Augen. Sie werden feststellen, dass der Ziehpunkt relativ zum Hintergrund bewegt wird. Wenn Sie Ihren Ziehpunkt nicht mehr von Ihrem Gesicht halten und das Experiment wiederholen, scheint Ihr Thumb-Steuer Vorgang weniger zu verschieben. Diese sichtbare Bewegung ähnelt dem Problem, das wir mit der zusammen Fügung konfrontiert haben: Ihre Augen sehen, wie die Kameras, nicht genau dasselbe Bild, da Sie durch eine kleine Entfernung voneinander getrennt sind.
 
 Da es viel einfacher ist, die schlechtesten Artefakte während der Verfilmung zu vermeiden, als Sie bei der Nachbearbeitung zu korrigieren, haben wir versucht, Personen und Dinge weit weg von der Kamera zu halten. Eine große Herausforderung im Zusammenhang mit der Kamera war wahrscheinlich eine der größten Herausforderungen, die bei der Ausführung aufgetreten sind, und wir mussten kreativ werden, damit Sie funktionieren. Das Arbeiten mit lokalen Handbüchern war eine große Hilfe bei der Verwaltung von Menschen, aber wir stellten auch fest, dass die Verwendung von Vorzeichen – und manchmal kleine Kegel oder Bohnen Behälter – zum Markieren des drehraums Recht effektiv war, insbesondere, da wir nur eine kurze Menge von Material an jedem Ort erhalten mussten. Häufig ist die beste Möglichkeit, eine gute Erfassung zu erzielen, nur sehr früh am Morgen zu erreichen, bevor die meisten Benutzer angezeigt werden.
 
@@ -77,7 +76,7 @@ Die Erfassung von 360 °-Inhalten ist nur der erste Schritt – eine Menge an Ve
 Eine grobe Ausschneide von Pantheon-Footage vor dem zusammenfügen. 
 
 
-Um die Videos zusammenzufassen, haben wir ein Tool namens [PTGui](http://www.ptgui.com/) verwendet und in unsere Verarbeitungs Pipeline integriert. Im Rahmen der Nachbearbeitung haben wir weiterhin Frames aus unseren Videos extrahiert und ein Muster gefunden, das für einen dieser Frames gut aussieht. Anschließend haben wir dieses Muster auf ein benutzerdefiniertes Plug-in angewendet, das wir geschrieben haben, das es unseren Videokünstlern ermöglichte, das Kontext Muster direkt zu optimieren 
+Um die Videos zusammenzufassen, haben wir ein Tool namens [PTGui](https://www.ptgui.com/) verwendet und in unsere Verarbeitungs Pipeline integriert. Im Rahmen der Nachbearbeitung haben wir weiterhin Frames aus unseren Videos extrahiert und ein Muster gefunden, das für einen dieser Frames gut aussieht. Anschließend haben wir dieses Muster auf ein benutzerdefiniertes Plug-in angewendet, das wir geschrieben haben, das es unseren Videokünstlern ermöglichte, das Kontext Muster direkt zu optimieren 
 
 ![Screenshot der PTGui, die das angeheftete Pantheon-Material anzeigt.](images/stitching-tool-pantheon-500px.png)
 
@@ -153,5 +152,5 @@ Wir hoffen, dass die gemeinsame Nutzung von Lösungen für einige der größeren
 
 
 
-## <a name="see-also"></a>Siehe auch
-* [Video: Microsoft hololens: Holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+## <a name="see-also"></a>Weitere Informationen:
+* [Video: Microsoft hololens: holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

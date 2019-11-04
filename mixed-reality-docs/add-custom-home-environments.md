@@ -1,28 +1,28 @@
 ---
-title: Hinzufügen von benutzerdefinierten Heim Umgebungen
+title: Entwerfen Sie Ihre eigenen immersiven Umgebungen
 description: Zusätzlich zu den Windows Mixed Reality-Start Umgebungen, die wir bereitstellen, können Sie mit der Erstellung und Verwendung ihrer eigenen experimentieren.
 author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, Mr, Home, Custom Environment, Places, Klippe House, SkyLoft, User, CREATE
-ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e133e1438410540592a51f54ed136aecd04c6244
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024531"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437079"
 ---
-# <a name="add-custom-home-environments"></a>Hinzufügen von benutzerdefinierten Heim Umgebungen
+# <a name="design-your-own-immersive-environments"></a>Entwerfen Sie Ihre eigenen immersiven Umgebungen
 
 >[!NOTE]
 >Dies ist ein experimentelles Feature. Probieren Sie es aus, und machen Sie sich damit vertraut, aber es ist nicht verwunderlich, wenn alles wie erwartet funktioniert. Wir evaluieren die Fähigkeit dieses Features und arbeiten daran, Sie zu verwenden. Teilen Sie uns daher ihre Erfahrung (und alle gefundenen Fehler) in den [Entwickler Foren](https://forums.hololens.com/categories/custom-home-environments)mit.
 
-Ab dem [Windows 10 April 2018-Update](#release-notes-april-2018.md)haben wir eine experimentelle Funktion aktiviert, mit der Sie der Stellen Auswahl (im Startmenü) benutzerdefinierte Umgebungen hinzufügen können, um Sie als [Windows Mixed Reality Home](#navigating-the-windows-mixed-reality-home.md)zu verwenden. Windows Mixed Reality verfügt über zwei Standard Umgebungen, die Sie als Startseite auswählen können. Durch das Erstellen von benutzerdefinierten Umgebungen können Sie diese Liste mit ihren eigenen Schöpfungen erweitern. Wir stellen dies in einem frühen Zustand zur Verfügung, um die Interessen von Creators und Entwicklern zu evaluieren, die Art der von Ihnen erstellten Umgebungen anzuzeigen und zu verstehen, wie Sie mit verschiedenen Authoring Tools arbeiten.
+Ab dem [Windows 10 April 2018-Update](release-notes-april-2018.md)haben wir eine experimentelle Funktion aktiviert, mit der Sie der Stellen Auswahl (im Startmenü) benutzerdefinierte Umgebungen hinzufügen können, um Sie als [Windows Mixed Reality Home](navigating-the-windows-mixed-reality-home.md)zu verwenden. Windows Mixed Reality verfügt über zwei Standard Umgebungen, die Sie als Startseite auswählen können. Durch das Erstellen von benutzerdefinierten Umgebungen können Sie diese Liste mit ihren eigenen Schöpfungen erweitern. Wir stellen dies in einem frühen Zustand zur Verfügung, um die Interessen von Creators und Entwicklern zu evaluieren, die Art der von Ihnen erstellten Umgebungen anzuzeigen und zu verstehen, wie Sie mit verschiedenen Authoring Tools arbeiten.
 
 Wenn Sie eine benutzerdefinierte Umgebung verwenden, werden Sie feststellen, dass die teleportierung, die Interaktion mit apps und das Platzieren von holograms so funktioniert, wie es im-und SkyLoft funktioniert. Sie können das Web in einer Fantasy-Landschaft durchsuchen oder einen futuristischen Ort mit holograms ausfüllen. die Möglichkeiten sind unendlich.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -31,7 +31,7 @@ Wenn Sie eine benutzerdefinierte Umgebung verwenden, werden Sie feststellen, das
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
@@ -45,9 +45,9 @@ Wenn Sie eine benutzerdefinierte Umgebung verwenden, werden Sie feststellen, das
 ## <a name="trying-a-sample-environment"></a>Ausprobieren einer Beispiel Umgebung
 
 Wir haben eine Beispiel Umgebung erstellt, in der einige der kreativen Möglichkeiten von benutzerdefinierten Heim Umgebungen gezeigt werden. Führen Sie die folgenden Schritte aus, um es auszuprobieren:
-1. [Herunterladen der Beispiel-Fantasy-Inselumgebung](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (Link verweist auf selbst extrahierende ausführbare Dateien).
+1. [Laden Sie unsere Beispiel-Fantasy-Inselumgebung herunter](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) (Link Punkte auf selbst extrahierende ausführbare Datei).
 
-    ![Beispiel Umgebung der Fantasy-Insel](images/FantasyLand.jpg)<br>
+    ![Fantasy-Insel-Beispiel Umgebung](images/FantasyLand.jpg)<br>
     *Beispiel Umgebung der Fantasy-Insel*<br>
 
 2. Führen Sie die soeben heruntergeladene Datei **Fantasy_Island. exe** aus.
@@ -55,7 +55,7 @@ Wir haben eine Beispiel Umgebung erstellt, in der einige der kreativen Möglichk
     > [!NOTE]
     > Wenn Sie versuchen, eine aus dem Web heruntergeladene EXE-Datei auszuführen (z. b. diese), kann das Popup Fenster "Windows-geschützter PC" angezeigt werden. Um Fantasy_Island. exe in diesem Popup auszuführen, wählen Sie **Weitere Informationen** aus, und **führen**Sie dann trotzdem aus. Diese Sicherheitseinstellung soll Sie vor dem Herunterladen von Dateien schützen, denen Sie nicht vertrauen möchten. Wählen Sie daher diese Option nur aus, wenn Sie der Quelle der Datei vertrauen.
 
-3. Öffnen Sie den **Datei-Explorer** , und navigieren Sie zum Ordner Umgebungen, indem Sie Folgendes in die `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`Adressleiste einfügen:.
+3. Öffnen Sie den **Datei-Explorer** , und navigieren Sie zum Ordner Umgebungen, indem Sie Folgendes in die Adressleiste einfügen: `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`.
 4. Kopieren Sie die Beispiel Umgebung, die Sie in diesen Ordner heruntergeladen haben.
 5. Starten Sie **Mixed Reality-Portal**neu. Dadurch wird die Liste der Umgebungen in der Auswahl Orte der Orte aktualisiert.
 6. Legen Sie auf Ihrem Headset ab. Wenn Sie sich in der Startseite befinden, öffnen Sie das **Startmenü** mithilfe der Windows-Schaltfläche für den Controller.
@@ -111,7 +111,7 @@ WindowsMRAssetConverter FileToConvert.gltf -max-texture-size 1024 -min-version 1
 
 Sobald Sie die endgültige. GLB-Umgebung haben, können Sie Sie im Headset testen. Beginnen Sie mit Schritt 2 im Abschnitt ["ausprobieren einer Beispiel Umgebung"](#trying-a-sample-environment) , um Ihre benutzerdefinierte Umgebung als gemischte Reality-Startseite zu verwenden. 
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback"></a>Feedback senden
 
 Während wir diese experimentelle Funktion evaluieren, möchten wir uns mit der Verwendung von benutzerdefinierten Umgebungen, den Fehlern, die auftreten können, und der Art der Funktion vertraut machen. Bitte geben Sie ein beliebiges Feedback zum Erstellen und Verwenden von benutzerdefinierten Heim Umgebungen in den [Entwickler Foren](https://forums.hololens.com/categories/custom-home-environments)frei.
 
@@ -123,7 +123,7 @@ Der Dateiname im Ordner "Umgebungen" wird in der Auswahl "Orte" verwendet. Um de
 
 ### <a name="how-do-i-remove-custom-environments-from-my-places-picker"></a>Gewusst wie benutzerdefinierte Umgebungen aus meiner stellen Auswahl entfernen?
 
-Um eine benutzerdefinierte Umgebung zu entfernen, öffnen Sie den Ordner Umgebungen auf`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`Ihrem PC (), und löschen Sie die Umgebung. Nachdem Sie das Mixed Reality-Portal neu gestartet haben, wird diese Umgebung nicht mehr in der Auswahl der Orte angezeigt. 
+Um eine benutzerdefinierte Umgebung zu entfernen, öffnen Sie den Ordner Umgebungen auf Ihrem PC (`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`), und löschen Sie die Umgebung. Nachdem Sie das Mixed Reality-Portal neu gestartet haben, wird diese Umgebung nicht mehr in der Auswahl der Orte angezeigt. 
 
 ### <a name="how-do-i-default-to-my-favorite-custom-environment"></a>Gewusst wie standardmäßig meine bevorzugte benutzerdefinierte Umgebung?
 
@@ -149,6 +149,6 @@ Der standardmäßige Speicherort für die Suche befindet sich in der Umgebung be
 
 Wenn Sie Ihre benutzerdefinierte Umgebung erstellen, wird eine Akustik-Rendering-Simulation verwendet, die nicht mit dem von Ihnen erstellten physischen Speicherplatz identisch ist. Sound kann aus den falschen Richtungen stammen und mit einem gedämpften Sound klingen. 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Windows Mixed Reality Asset Converter (auf GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

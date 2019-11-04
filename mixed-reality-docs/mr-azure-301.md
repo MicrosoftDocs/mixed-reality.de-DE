@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Translator Text, hololens, immersive, VR
-ms.openlocfilehash: 6fe31d1bcb72337f0a3e8664893ea0f7c0540aae
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 012eb5522c866e9e0f1caf5e4024305af07e298c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63554336"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438529"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
 
 <br>
 
-# <a name="mr-and-azure-301-language-translation"></a>Mr und Azure 301: Übersetzung von Sprachen
+# <a name="mr-and-azure-301-language-translation"></a>Mr und Azure 301: Sprachübersetzung
 
 In diesem Kurs erfahren Sie, wie Sie mithilfe von Azure Cognitive Services Übersetzungsfunktionen zu einer gemischten Reality-Anwendung hinzufügen, mit der Textübersetzungs-API.
 
@@ -34,20 +34,20 @@ Nach Abschluss dieses Kurses verfügen Sie über eine Mixed Reality-Anwendung, d
 
 In diesem Kurs erfahren Sie, wie Sie die Ergebnisse des Konvertierungs Dienstanbieter in einer Unity-basierten Beispielanwendung erhalten. Sie müssen diese Konzepte auf eine benutzerdefinierte Anwendung anwenden, die Sie möglicherweise aufbauen.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td> Mr und Azure 301: Übersetzung von Sprachen</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> Mr und Azure 301: Sprachübersetzung</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf Windows Mixed Reality immersive (VR)-Headsets, aber Sie können auch das, was Sie in diesem Kurs lernen, auf Microsoft hololens anwenden. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise zur Unterstützung von hololens verwenden müssen. Wenn Sie hololens verwenden, bemerken Sie möglicherweise bei der sprach Erfassung einen Echo.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -58,7 +58,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 - [Windows 10 Fall Creators Update (oder höher) mit aktiviertem Entwicklermodus](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10 SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017,4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [Windows Mixed Reality-Headset (VR)](immersive-headset-hardware-details.md) oder [Microsoft hololens](hololens-hardware-details.md) mit aktiviertem Entwicklermodus
 - Eine Reihe von Kopfhörern mit einem integrierten Mikrofon (wenn das Headset nicht über eine integrierte Mic-und-Sprech Anwendung verfügt)
 - Internet Zugang für das Einrichten und Übersetzen von Azure
@@ -134,7 +134,7 @@ Um die Azure Translator-API zu verwenden, müssen Sie eine Instanz des-Dienstanb
 Richten Sie Ihr immersives Headset mit gemischter Realität ein und testen Sie es.
 
 > [!NOTE]
-> Für diesen Kurs benötigen Sie keine Bewegungs Controller. Wenn Sie Unterstützung bei der Einrichtung eines immersiven Headsets benötigen, führen Sie [die folgenden Schritte](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)aus.
+> Für diesen Kurs benötigen Sie keine Bewegungs Controller. Wenn Sie Unterstützung bei der Einrichtung eines immersiven Headsets benötigen, führen Sie [die folgenden Schritte](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)aus.
 
 Folgendes ist ein typisches Setup für die Entwicklung mit gemischter Realität und eine gute Vorlage für andere Projekte:
 
@@ -150,7 +150,7 @@ Folgendes ist ein typisches Setup für die Entwicklung mit gemischter Realität 
 
     ![Skript-Editor-Einstellung aktualisieren.](images/AzureLabs-Lab1-10.png)
 
-4.  Navigieren Sie als nächstes zu **Datei >** Buildeinstellungen, und schalten Sie die Plattform auf **universelle Windows-Plattform**, indem Sie auf die Schaltfläche **Plattform wechseln** klicken.
+4.  Navigieren Sie als nächstes zu **Datei > Buildeinstellungen** , und schalten Sie die Plattform auf **universelle Windows-Plattform**, indem Sie auf die Schaltfläche **Plattform wechseln** klicken.
 
     ![Fenster "Buildeinstellungen", Plattform zu UWP wechseln.](images/AzureLabs-Lab1-11.png)
 
@@ -160,7 +160,7 @@ Folgendes ist ein typisches Setup für die Entwicklung mit gemischter Realität 
 
         > Legen Sie für Microsoft hololens das **Zielgerät** auf *hololens*fest.
 
-    2. Der Buildtyp ist auf **D3D** festgelegt.
+    2. Der **Buildtyp** ist auf **D3D** festgelegt.
     3. **SDK** ist auf **neueste installierte** Version festgelegt.
     4. **Visual Studio-Version** ist auf **neueste installierte** Version festgelegt.
     5. **Build und Run** sind auf **lokaler Computer** festgelegt.
@@ -180,9 +180,9 @@ Folgendes ist ein typisches Setup für die Entwicklung mit gemischter Realität 
 
             > Beachten Sie, dass Sie Ihre Unity-Szenen im Ordner " *Assets* " speichern müssen, da Sie dem Unity-Projekt zugeordnet werden müssen. Das Erstellen eines Szenen Ordners (und anderer ähnlicher Ordner) ist eine typische Methode zum Strukturieren eines Unity-Projekts.
 
-    7. Die restlichen Einstellungen in denBuildeinstellungen sollten vorerst als Standard belassen werden.
+    7. Die restlichen Einstellungen in den *Buildeinstellungen*sollten vorerst als Standard belassen werden.
 
-6. Klicken Sie im Fenster Buildeinstellungen auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
+6. Klicken Sie im Fenster *Buildeinstellungen* auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
 
     ![Öffnen Sie die Player-Einstellungen.](images/AzureLabs-Lab1-15.png)
 
@@ -207,7 +207,7 @@ Folgendes ist ein typisches Setup für die Entwicklung mit gemischter Realität 
 
         ![Aktualisieren Sie die X R-Einstellungen.](images/AzureLabs-Lab1-18.png)
 
-8.  Wieder inden Buildeinstellungen ist *Unity C# -Projekte* nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
+8.  Wieder in den **Buildeinstellungen**ist *Unity C# -Projekte* nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
 9.  Schließen Sie das Fenster mit den Buildeinstellungen.
 10. Speichern Sie Ihre Szene und Ihr Projekt (**Datei > Speichern Sie Szenen/Dateien > Speichern**Sie das Projekt).
 
@@ -230,7 +230,7 @@ Folgendes ist ein typisches Setup für die Entwicklung mit gemischter Realität 
 
         ![Transformations Informationen für Kamera](images/AzureLabs-Lab1-20.png)
 
-5.  Wenn das **Hauptkamera** Objekt ausgewählt ist, sehen Sie sich die Schaltfläche **Komponente hinzufügen** am unteren Rand desinspektorbereichs an. 
+5.  Wenn das **Hauptkamera** Objekt ausgewählt ist, sehen Sie sich die Schaltfläche **Komponente hinzufügen** am unteren Rand des *inspektorbereichs*an. 
 6.  Wählen Sie diese Schaltfläche aus, und suchen Sie (entweder geben Sie *Audioquelle* in das Suchfeld ein, oder navigieren Sie in den Abschnitten) für die Komponente namens **Audioquelle** , wie unten dargestellt, und wählen Sie Sie aus.
 7.  Der **Hauptkamera**wird eine *audioquellkomponente* hinzugefügt, wie unten gezeigt.
 
@@ -252,15 +252,15 @@ Zum Anzeigen der Eingabe und der Ausgabe der Übersetzung muss eine grundlegende
 2.  Wenn Sie das Canvas-Objekt ausgewählt haben, ändern Sie im *Inspektor-Panel* (innerhalb der Canvas-Komponente) den **Rendermodus** in den **Raum**. 
 3.  Im nächsten Schritt ändern Sie die folgenden Parameter in der *Rect-Transformation des inspektorpanels*:
 
-    1. *POS* X 0 Y 0 Z 40 -  
+    1. *POS* -  **X** 0 **Y** 0 **Z** 40
     2. *Breite* -500
     3. *Höhe* -300
-    4. *Skalieren* - von**X** 0,13 **Y** 0,13 **Z** 0,13
+    4. *Skalieren* - **X** 0,13 **Y** 0,13 **Z** 0,13
 
         ![Aktualisieren Sie die Rect-Transformation für den Zeichenbereich.](images/AzureLabs-Lab1-23.png)
  
-4.  Klicken Sie mit der rechten Maustaste auf den Zeichen **Bereich im** *Hierarchie Panel*unter **UI**, und fügen Sie ein **Panel**hinzu. Dieser **Bereich** bietet einen Hintergrund für den Text, den Sie in der Szene anzeigen werden.
-5.  Klicken Sie im *Hierarchie Panel*mit der rechten Maustaste auf **den Bereich** , und fügen Sie ein **Text Objekt**hinzu. Wiederholen Sie den gleichen Prozess, bis Sie insgesamt vier UI-Textobjekte erstellt haben (Hinweis: Wenn Sie das erste "Text"-Objekt ausgewählt haben, können Sie einfach **"Strg +** d" drücken, um es zu duplizieren, bis vier vorhanden sind). 
+4.  Klicken Sie **mit der rechten** Maustaste auf den Zeichenbereich im *Hierarchie Panel*unter **UI**, und fügen Sie ein **Panel**hinzu. Dieser **Bereich** bietet einen Hintergrund für den Text, den Sie in der Szene anzeigen werden.
+5.  Klicken Sie im *Hierarchie Panel*mit der rechten Maustaste **auf den Bereich** **, und**fügen Sie ein **Text Objekt**hinzu. Wiederholen Sie den gleichen Prozess, bis Sie insgesamt vier UI-Textobjekte erstellt haben (Hinweis: Wenn Sie das erste "Text"-Objekt ausgewählt haben, können Sie einfach **"Strg +** d" drücken, um es zu duplizieren, bis vier vorhanden sind). 
 6.  Wählen Sie für jedes **Text Objekt**die Option aus, und verwenden Sie die folgenden Tabellen, um die Parameter im *Inspektor-Panel*festzulegen.
 
     1. Für die Komponente *Rect Transform* :
@@ -276,7 +276,7 @@ Zum Anzeigen der Eingabe und der Ausgabe der Übersetzung muss eine grundlegende
     2. Für die **Text-Komponente (Skript)** :
 
 
-        | Name                   | Text               | Schriftgrad    |
+        | Name                   | Text               | Schrift Grad    |
         |:----------------------:|:------------------:|:------------:|
         | "Mikrophonestatus Label"  | Mikrofon Status: | 20           |
         | Azureresponselabel     | Azure-Webantwort | 20           |
@@ -289,7 +289,7 @@ Zum Anzeigen der Eingabe und der Ausgabe der Übersetzung muss eine grundlegende
 
         ![Fett Schrift.](images/AzureLabs-Lab1-25.png)
 
-7.  Erstellen Sie für jedes *UI-Textobjekt* , das in [Kapitel 5](#chapter-5--create-the-results-class)erstellt wurde, *ein neues unter* geordnetes UI- **Textobjekt**. Diese untergeordneten Elemente zeigen die Ausgabe der Anwendung an. Erstellen *Sie* untergeordnete Objekte, indem Sie mit der rechten Maustaste auf das gewünschte übergeordnete Element klicken (z. b." *mikrophonestatus Label*"), und wählen Sie dann **Benutzeroberfläche**
+7.  Erstellen Sie für jedes *UI-Textobjekt* , das in [Kapitel 5](#chapter-5--create-the-results-class)erstellt wurde, *ein neues unter* geordnetes UI- **Textobjekt**. Diese untergeordneten Elemente zeigen die Ausgabe der Anwendung an. Erstellen *Sie* untergeordnete Objekte, indem Sie mit der rechten Maustaste auf das gewünschte übergeordnete Element klicken (z. b. " *mikrophonestatus Label*"), **und wählen Sie**dann **Benutzeroberfläche**
 8.  Wählen Sie für jedes dieser untergeordneten Elemente die Option aus, und verwenden Sie die folgenden Tabellen, um die Parameter im Inspektor-Panel festzulegen.
 
     1. Für die Komponente **Rect Transform** :
@@ -303,7 +303,7 @@ Zum Anzeigen der Eingabe und der Ausgabe der Übersetzung muss eine grundlegende
 
     2. Für die **Text-Komponente (Skript)** :
 
-        | Name                  | Text          | Schriftgrad    |
+        | Name                  | Text          | Schrift Grad    |
         |:---------------------:|:-------------:|:------------:|
         | "Mikrophonestatustext"  |      ??       | 20           |
         | Azureresponabtext     |      ??       | 20           |
@@ -318,7 +318,7 @@ Zum Anzeigen der Eingabe und der Ausgabe der Übersetzung muss eine grundlegende
 
     ![Geben Sie entsprechende Werte für die Textausgaben der Benutzeroberfläche ein.](images/AzureLabs-Lab1-27.png)
  
-11. Ändern Sie dann im neuen, kleinen *Farb* Fenster die hexadezimale *Farbe* in: **0032EAFF**
+11. Ändern Sie dann im neuen, kleinen *Farb* Fenster die hexadezimale *Farbe* in: **0032eaff**
 
     ![Aktualisieren Sie Farbe in blau.](images/AzureLabs-Lab1-28.png)
  
@@ -608,7 +608,7 @@ So erstellen Sie diese Klasse:
 
     > [!NOTE]
     > - Die Sprachen, die in die Sprachen-Aufzählung **eingefügt werden,** sind nur Beispiele. Wenn Sie möchten, können Sie weitere hinzufügen. die [API unterstützt mehr als 60 Sprachen](https://docs.microsoft.com/azure/cognitive-services/translator/languages) (einschließlich Klingonischer Sprache).
-    > - Es gibt eine [interaktive Seite, die die verfügbaren Sprachen abdeckt](https://www.microsoft.com/translator/business/languages/), aber beachten Sie, dass die Seite nur angezeigt wird, wenn die Website Sprache auf "en-US" festgelegt ist (und die Microsoft-Website wahrscheinlich an Ihre native Sprache umgeleitet wird). Sie können die Website Sprache am unteren Rand der Seite oder durch Ändern der URL ändern.
+    > - Es gibt eine [interaktive Seite, die die verfügbaren Sprachen abdeckt](https://www.microsoft.com/translator/business/languages/), aber beachten Sie, dass die Seite nur dann funktioniert, wenn die Website Sprache auf "" festgelegt ist (und die Microsoft-Website wahrscheinlich an Ihre native Sprache umgeleitet wird). Sie können die Website Sprache am unteren Rand der Seite oder durch Ändern der URL ändern.
     > - Der **authorizationkey** -Wert im obigen Code Ausschnitt muss der **Schlüssel** sein, den Sie erhalten haben, als Sie das *Azure-Textübersetzungs-API*abonniert haben. Dies wurde in [Kapitel 1](#chapter-1--the-azure-portal)beschrieben.
 
 6.  Der Code für die Methoden " *Awake ()* " und " *Start ()* " muss nun hinzugefügt werden. 
@@ -730,9 +730,9 @@ Stellen Sie Folgendes sicher:
 
 - Alle in [Kapitel 1](#chapter-1--the-azure-portal) erwähnten Einstellungen sind richtig festgelegt. 
 - Die Skripts " *results*", " *Translator*" und " *mikrophonemanager*" werden an das **Hauptkamera** Objekt angefügt. 
-- Sie haben ihren *Azure Textübersetzungs-API* Service- **Schlüssel** innerhalb der Variablen " **authorizationkey** " innerhalb des Konvertierungs *Skripts* platziert.  
+- Sie haben ihren *Azure Textübersetzungs-API* Service- **Schlüssel** *innerhalb der Variablen* " **authorizationkey** " innerhalb des Konvertierungs Skripts platziert.  
 - Alle Felder im Hauptbereich der *Kamera Inspektor* sind ordnungsgemäß zugewiesen.
-- Ihr Mikrofon funktioniert beim Ausführen Ihrer Szene (wenn nicht, überprüfen Sie, ob Ihr angefügtes Mikrofon das *Standard* Gerät ist, und dass Sie [es in Windows ordnungsgemäß eingerichtet](https://support.microsoft.com/en-au/help/4027981/windows-how-to-set-up-and-test-microphones-in-windows-10)haben).
+- Ihr Mikrofon funktioniert beim Ausführen Ihrer Szene (wenn nicht, überprüfen Sie, ob Ihr angefügtes Mikrofon das *Standard* Gerät ist, und dass Sie [es in Windows ordnungsgemäß eingerichtet](https://support.microsoft.com/help/4027981/windows-how-to-set-up-and-test-microphones-in-windows-10)haben).
 
 Sie können das immersive Headset testen, indem Sie die **Wiedergabe** Schaltfläche im *Unity-Editor*drücken.
 Die APP sollte über das angefügte immersive Headset funktionieren.
@@ -744,8 +744,8 @@ Die APP sollte über das angefügte immersive Headset funktionieren.
 
 Alles, was für den Unity-Abschnitt dieses Projekts erforderlich ist, ist nun abgeschlossen, sodass es an der Zeit ist, Sie aus Unity zu erstellen.
 
-1.  Navigieren Siezu den Buildeinstellungen: **Datei > Build-Einstellungen...**
-2.  Klicken Sie im Fenster "Buildeinstellungen" auf " **Erstellen**".
+1.  Navigieren Sie zu **Buildeinstellungen**: **Datei > Buildeinstellungen...**
+2.  Klicken Sie im Fenster " **Buildeinstellungen** " auf " **Erstellen**".
 
     ![Erstellen Sie die Unity-Szene.](images/AzureLabs-Lab1-36.png)
   

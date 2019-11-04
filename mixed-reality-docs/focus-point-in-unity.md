@@ -6,19 +6,19 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, Fokuspunkt, Fokusebene, Stabilisierungs Ebene, Stabilisierungs Punkt, neuprojektion, LSR, tiefen Puffer
-ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d48f6f1878a68a17be263f10b809229dc2705c58
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525469"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435412"
 ---
 # <a name="focus-point-in-unity"></a>Fokuspunkt in Unity
 
-**Namespace:** *Unityengine. XR. WSA*<br>
-**Typ**: *Holographicsettings*
+**Namespace:** *unityengine. XR. WSA*<br>
+**Typ**: *holographicsettings*
 
-Der [Fokuspunkt](hologram-stability.md#stabilization-plane) kann so festgelegt werden, dass hololens einen Hinweis zur optimalen Durchführung der Stabilisierung auf den derzeit angezeigten holograms bereitstellt.
+Der [Fokuspunkt](hologram-stability.md#reprojection) kann so festgelegt werden, dass hololens einen Hinweis zur optimalen Durchführung der Stabilisierung auf den derzeit angezeigten holograms bereitstellt.
 
 Wenn Sie den Fokuspunkt in Unity festlegen möchten, muss er jedes Frame mithilfe von *holographicsettings. setfocuspointforframe ()* festgelegt werden. Wenn der Fokuspunkt nicht für einen Frame festgelegt ist, wird die Standard Stabilisierungs Ebene verwendet.
 
@@ -50,5 +50,5 @@ void Update()
 
 Beachten Sie, dass der obige einfache Code möglicherweise zu einer Verringerung der – Hologramm-Stabilität wird, wenn das fokussierte Objekt hinter dem Benutzer endet.  Daher sollten Sie in der Regel "Tiefe Puffer Freigabe aktivieren" festlegen, anstatt manuell einen Fokuspunkt anzugeben.
 
-### <a name="see-also"></a>Siehe auch
-* [Stabilisierungs Ebene](hologram-stability.md#stabilization-plane)
+### <a name="see-also"></a>Weitere Informationen:
+* [Stabilisierungs Ebene](hologram-stability.md#reprojection)

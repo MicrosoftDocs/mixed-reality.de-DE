@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Maschinelles sehen, hololens, immersive, VR
-ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: d6f792a67adfd1038ca4cdbc44b2ef1bf12a1173
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047195"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437942"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -36,7 +36,7 @@ Nachdem Sie diesen Kurs abgeschlossen haben, verfügen Sie über eine Mixed Real
 
 In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf integrieren. In diesem Kurs erfahren Sie, wie Sie einen Azure-Dienst in Ihr Unity-Projekt integrieren. Es ist Ihre Aufgabe, das wissen, das Sie aus diesem Kursgewinnen, zu nutzen, um ihre gemischte Reality-Anwendung zu verbessern.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
@@ -49,7 +49,7 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf hololens, aber Sie können auch das Erlernen, was Sie in diesem Kurs lernen, auf Windows Mixed Reality-(VR)-Headsets. Da immersive Headsets (VR) nicht über barrierefreie Kameras verfügen, benötigen Sie eine externe Kamera, die mit Ihrem PC verbunden ist. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise für die Unterstützung von immersiven (VR)-Headsets verwenden müssen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -60,7 +60,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 - [Windows 10 Fall Creators Update (oder höher) mit aktiviertem Entwicklermodus](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10 SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017,4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [Windows Mixed Reality-Headset (VR)](immersive-headset-hardware-details.md) oder [Microsoft hololens](hololens-hardware-details.md) mit aktiviertem Entwicklermodus
 - Eine Kamera, die mit Ihrem PC verbunden ist (für die immersive Headset-Entwicklung)
 - Internet Zugriff für Azure-Setup und Maschinelles Sehen-API-Abruf
@@ -361,7 +361,7 @@ So erstellen Sie diese Klasse:
 7.  Klicken Sie im *Unity-Editor*auf die *resultslabel* -Klasse, und ziehen Sie Sie aus dem Ordner **Scripts** auf das **Hauptkamera** Objekt im Bereich *Hierarchie*.
 8.  Klicken Sie auf die **Hauptkamera** , und sehen Sie sich den Bereich *Inspector*an.
 
-Sie werden feststellen, dass Sie aus dem soeben in die Kamera gezogenen Skript zwei Felder haben: **Cursor** -und Bezeichnungs **präfab**.
+Sie werden feststellen, dass Sie aus dem Skript, das Sie soeben in die Kamera gezogen haben, zwei Felder haben: **Cursor** -und Bezeichnungs **präfab**.
 
 9.  Ziehen Sie das Objekt **Cursor** aus dem Bereich *Hierarchie* in den Slot mit dem Namen **Cursor**, wie in der folgenden Abbildung dargestellt.
 10. Ziehen Sie das Objekt " **LabelText** " aus dem *Ordner "Assets* " im *Projekt Panel* in den Slot mit dem Namen " **Label Prefab**", wie in der folgenden Abbildung dargestellt. 
@@ -413,7 +413,7 @@ Die Variable **tapscount** speichert die Anzahl der vom Benutzer erfassten Tap-G
 
         void Start()
         {
-            // subscribing to the Hololens API gesture recognizer to track user gestures
+            // subscribing to the HoloLens API gesture recognizer to track user gestures
             recognizer = new GestureRecognizer();
             recognizer.SetRecognizableGestures(GestureSettings.Tap);
             recognizer.Tapped += TapHandler;
@@ -586,9 +586,9 @@ So erstellen Sie diese Klasse:
 
     > [!WARNING] 
     > Die " **visionanalysisendpoint** "-Variable kann sich von der in diesem Beispiel angegebenen unterscheiden. **USA, Westen** bezieht sich strikt auf Dienst Instanzen, die für die Region "USA, Westen" erstellt wurden. Aktualisieren Sie dies mit der [Endpunkt-URL](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa). Im folgenden finden Sie einige Beispiele dafür, wie Sie aussehen können:
-    > - Europa, Westen:`https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
-    > - Südostasien:`https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
-    > - Australien, Osten:`https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Europa, Westen: `https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Südostasien: `https://southeastasia.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
+    > - Australien, Osten: `https://australiaeast.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags`
 
 7.  Der Code für "awado" muss nun hinzugefügt werden. 
 
@@ -693,7 +693,7 @@ Bevor Sie vorgehen, stellen Sie Folgendes sicher:
 ## <a name="chapter-9--build-the-uwp-solution-and-sideload-the-application"></a>Kapitel 9 – Erstellen der UWP-Lösung und querladen der Anwendung
 Alles, was für den Unity-Abschnitt dieses Projekts erforderlich ist, ist nun abgeschlossen, sodass es an der Zeit ist, Sie aus Unity zu erstellen.
 
-1.  Navigieren Sie zu -  *buildeinstellungs***Datei > Buildeinstellungen...**
+1.  Navigieren Sie zu *Buildeinstellungen* - **Datei > Buildeinstellungen...**
 2.  Klicken Sie im Fenster " *Buildeinstellungen* " auf " **Erstellen**".
 
     ![Entwickeln der APP aus Unity](images/AzureLabs-Lab2-26.png)

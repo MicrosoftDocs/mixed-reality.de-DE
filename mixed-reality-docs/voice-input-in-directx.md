@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Exemplarische Vorgehensweise, Sprachbefehl, Ausdruck, Erkennung, Sprache, DirectX, Plattform, Cortana, Windows Mixed Reality
-ms.openlocfilehash: 728457a495616e5f65ec3986dfb6ac60231f9e46
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be8c0e570a0e112e01b580ad571c06fe3482ff9f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548663"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437199"
 ---
 # <a name="voice-input-in-directx"></a>Spracheingabe in DirectX
 
@@ -22,7 +22,7 @@ In diesem Thema wird erläutert, wie [Sprachbefehle](voice-input.md)und kleine A
 
 ## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>Verwenden eines Sprech Erkennungs Moduls für die kontinuierliche Erkennung von Sprachbefehlen
 
-In diesem Abschnitt wird beschrieben, wie die fortlaufende Spracherkennung verwendet wird, um Sprachbefehle in Ihrer APP zu aktivieren. In dieser exemplarischen Vorgehensweise wird Code aus dem [holographicvoiceinput](http://go.microsoft.com/fwlink/p/?LinkId=844964) -Beispiel verwendet. Wenn das Beispiel ausgeführt wird, sprechen Sie mit dem Namen eines der registrierten Farb Befehle, um die Farbe des drehenden Cubes zu ändern.
+In diesem Abschnitt wird beschrieben, wie die fortlaufende Spracherkennung verwendet wird, um Sprachbefehle in Ihrer APP zu aktivieren. In dieser exemplarischen Vorgehensweise wird Code aus dem [holographicvoiceinput](https://go.microsoft.com/fwlink/p/?LinkId=844964) -Beispiel verwendet. Wenn das Beispiel ausgeführt wird, sprechen Sie mit dem Namen eines der registrierten Farb Befehle, um die Farbe des drehenden Cubes zu ändern.
 
 Erstellen Sie zunächst eine neue **Windows:: Media:: Redner Recognition:: sprecherkenzer** -Instanz.
 
@@ -252,7 +252,7 @@ catch (Exception^ exception)
    });
 ```
 
-**HINWEIS:** Es gibt mehrere vordefinierte [sprechererkennungsszenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) zur Optimierung der Spracherkennung.
+**Hinweis:** Es gibt mehrere vordefinierte [sprechererkennungsszenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) zur Optimierung der Spracherkennung.
 * Wenn Sie die diktierung optimieren möchten, verwenden Sie das Diktat Szenario:
 
 ```
@@ -426,7 +426,7 @@ catch (Exception^ exception)
    });
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Sprach-App-Entwurf](https://msdn.microsoft.com/library/dn596121.aspx)
 * [Raumklang in DirectX](spatial-sound-in-directx.md)
 * [Beispiel für die Spracherkennung](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

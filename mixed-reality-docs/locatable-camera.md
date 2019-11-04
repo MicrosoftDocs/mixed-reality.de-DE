@@ -2,16 +2,16 @@
 title: Erhebbare Kamera
 description: Allgemeine Informationen zu der hololens-Front-Kamera, ihrer Funktionsweise und den Profilen und Auflösungen, die Entwicklern zur Verfügung stehen.
 author: cdedmonds
-ms.author: wguyman, cdedmonds
+ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: Kamera, hololens, Farbkamera, Vorderseite, hololens 2, CV, Maschinelles sehen, Zeichen, Marker, QR-Code, QR, Foto, Video
-ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: e906da63b07643ccbf386c6fc72cc3c58006ae72
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861722"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438505"
 ---
 # <a name="locatable-camera"></a>Erhebbare Kamera
 
@@ -25,10 +25,10 @@ Hololens enthält eine weltweit eingebundene Kamera, die auf der Vorderseite des
 * Die Welt der weißen Datenschutz wird immer dann beleuchtet, wenn die Kamera aktiv ist.
 * Die Kamera unterstützt die folgenden Modi (alle Modi sind 16:9-Seitenverhältnis) bei 30, 24, 20, 15 und 5 fps:
 
-  |  Video  |  Vorschau  |  Auch  |  Horizontales Feld der Ansicht (H-FOV) |  Empfohlene Verwendung | 
+  |  Video  |  Preview  |  Auch  |  Horizontales Feld der Ansicht (H-FOV) |  Empfohlene Verwendung | 
   |----------|----------|----------|----------|----------|
   |  1\.280 x 720 |  1\.280 x 720 |  1\.280 x 720 |  45deg  |  (Standardmodus mit Videostabilisierung) | 
-  |  Nicht zutreffend |  Nicht zutreffend |  2048x1152 |  67deg |  Bild mit der höchsten Auflösung | 
+  |  n. v. |  n. v. |  2048x1152 |  67deg |  Bild mit der höchsten Auflösung | 
   |  1408x792 |  1408x792 |  1408x792 |  48deg |  Überprüfung (Padding) vor der Videostabilisierung | 
   |  1344x756 |  1344x756 |  1344x756 |  67deg |  Großer FOV-Videomodus mit Overscan | 
   |  896x504 |  896x504 |  896x504 |  48deg |  Niedriger Energie-/tieflösungmodus für Abbild Verarbeitungsaufgaben | 
@@ -37,10 +37,10 @@ Hololens enthält eine weltweit eingebundene Kamera, die auf der Vorderseite des
 
 * Auto-Fokus Foto/Video-Kamera (PV) mit automatischem Leerraum, automatischer Verfügbarkeit und vollständiger Bild Verarbeitungs Pipeline.
 * Die Welt der weißen Datenschutz wird immer dann beleuchtet, wenn die Kamera aktiv ist.
-* Hololens 2 unterstützt verschiedene Kameraprofile. Erfahren Sie, wie [Sie Kamerafunktionen ermitteln und auswählen](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles)können.
+* Hololens 2 unterstützt verschiedene Kameraprofile. Erfahren Sie, wie [Sie Kamerafunktionen ermitteln und auswählen](https://docs.microsoft.com//windows/uwp/audio-video-camera/camera-profiles)können.
 * Die Kamera unterstützt die folgenden Profile und Auflösungen (alle Video Modi sind 16:9-Seitenverhältnis):
   
-  | Profile                                         | Video     | Vorschau   | Auch     | Frame Raten | Horizontales Feld der Ansicht (H-FOV) | Empfohlene Verwendung                             |
+  | Profil                                         | Video     | Preview   | Auch     | Frame Raten | Horizontales Feld der Ansicht (H-FOV) | Empfohlene Verwendung                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Legacy, 0 balancedvideoandphoto, 100             | 2272x1278 | 2272x1278 |           | 15, 30       | 64,69                            | Videoaufzeichnung mit hoher Qualität                |
   | Legacy, 0 balancedvideoandphoto, 100             | 896x504   | 896x504   |           | 15, 30       | 64,69                            | Vorschau Datenstrom für hochwertige Foto Erfassung |
@@ -69,22 +69,22 @@ Wenn hololens Fotos und Videos aufnimmt, beinhalten die erfassten Frames den Ort
 
 "Kamera" an anderer Stelle in der hololens-Dokumentation bezieht sich auf die "virtuelle Spiel Kamera" (die Frustration, in der die APP rendert). Sofern nicht anders angegeben, bezieht sich "Kamera" auf dieser Seite auf die tatsächliche RGB-Farbkamera.
 
-Die Details auf dieser Seite decken mithilfe der [mediaframereferenzierungsklasse](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference) ab, aber es gibt auch APIs zum Abrufen von systeminternen systeminternen Funktionen und Speicherorten mithilfe von [Media Foundation Attributen](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Weitere Informationen finden Sie im Beispiel für die [holografische Gesichts Verfolgung](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) .
+Die Details auf dieser Seite decken mithilfe der [mediaframereferenzierungsklasse](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) ab, aber es gibt auch APIs zum Abrufen von systeminternen systeminternen Funktionen und Speicherorten mithilfe von [Media Foundation Attributen](https://msdn.microsoft.com/library/windows/desktop/mt740395(v=vs.85).aspx). Weitere Informationen finden Sie im Beispiel für die [holografische Gesichts Verfolgung](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) .
 
 ### <a name="images-with-coordinate-systems"></a>Images mit Koordinatensystemen
 
-Jeder Bild Rahmen (egal ob Foto oder Video) enthält ein [spatialcoordinatesystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) , das zum Zeitpunkt der Erfassung auf der Kamera verankert ist, auf die mithilfe der [CoordinateSystem](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) -Eigenschaft von [mediaframereferenziert](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)werden kann. Außerdem enthält jeder Frame eine Beschreibung des Kamera Zeichen Modells, das in der Eigenschaft [cameraintrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) zu finden ist. In der Regel definieren diese Transformationen für jedes Pixel einen Strahl in 3D-Raum, der den Pfad darstellt, der von den Photonen, die das Pixel erzeugt haben, übernommen wird. Diese Strahlen können mit anderem Inhalt in der APP verknüpft werden, indem die Transformation aus dem Koordinatensystem des Frames in ein anderes Koordinatensystem (z. b. aus einem [stationären Verweis Rahmen](coordinate-systems.md#stationary-frame-of-reference)) bezogen wird. Zusammenfassend bietet jeder Bild Rahmen Folgendes:
+Jeder Bild Rahmen (egal ob Foto oder Video) enthält ein [spatialcoordinatesystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) , das zum Zeitpunkt der Erfassung auf der Kamera verankert ist, auf die mithilfe der [CoordinateSystem](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) -Eigenschaft von [mediaframereferenziert](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference)werden kann. Außerdem enthält jeder Frame eine Beschreibung des Kamera Zeichen Modells, das in der Eigenschaft [cameraintrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) zu finden ist. In der Regel definieren diese Transformationen für jedes Pixel einen Strahl in 3D-Raum, der den Pfad darstellt, der von den Photonen, die das Pixel erzeugt haben, übernommen wird. Diese Strahlen können mit anderem Inhalt in der APP verknüpft werden, indem die Transformation aus dem Koordinatensystem des Frames in ein anderes Koordinatensystem (z. b. aus einem [stationären Verweis Rahmen](coordinate-systems.md#stationary-frame-of-reference)) bezogen wird. Zusammenfassend bietet jeder Bild Rahmen Folgendes:
 * Pixel Daten (im Format RGB/NV12/JPEG/usw.)
-* Ein [spatialcoordinatesystem](https://docs.microsoft.com/en-us/uwp/api/windows.perception.spatial.spatialcoordinatesystem) vom Speicherort der Erfassung
-* Eine [cameraintrinsics](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) -Klasse, die den Linsen Modus der Kamera enthält.
+* Ein [spatialcoordinatesystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) vom Speicherort der Erfassung
+* Eine [cameraintrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) -Klasse, die den Linsen Modus der Kamera enthält.
 
 ### <a name="camera-to-application-specified-coordinate-system"></a>Von der Kamera zu Anwendung angegebenes Koordinaten System
 
 Um von den "cameraintrinsics" und "cameracoordinatesystem" in ihr Anwendungs-/World-Koordinatensystem zu wechseln, benötigen Sie Folgendes:
 
-[Einsetzbare Kamera in Unity](locatable-camera-in-unity.md): Cameratoworldmatrix wird automatisch von der photocaptureframe-Klasse bereitgestellt (sodass Sie sich keine Gedanken über die cameracoordinatesystem-Transformationen machen müssen).
+[Einsetzbare Kamera in Unity](locatable-camera-in-unity.md): cameratoworldmatrix wird automatisch von der photocaptureframe-Klasse bereitgestellt (sodass Sie sich keine Gedanken über die "cameracoordinatesystem"-Transformationen machen müssen).
 
-[Einsetzbare Kamera in DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): Das Beispiel für die holografische Gesichts Verfolgung zeigt die relativ unkomplizierte Methode zum Abfragen der Transformation zwischen dem Koordinatensystem der Kamera und ihren eigenen Anwendungs Koordinatensystemen.
+[Einsetzbare Kamera in DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): das Beispiel für die holografische Gesichts Verfolgung zeigt die relativ unkomplizierte Methode zum Abfragen der Transformation zwischen dem Koordinatensystem der Kamera und ihren eigenen Anwendungs Koordinatensystemen.
 
 ### <a name="distortion-error"></a>Verzerrungs Fehler
 
@@ -105,13 +105,13 @@ Viele Mixed Reality-Anwendungen verwenden ein erkennbares Bild oder visuelles Mu
 Um ein visuelles Muster zu erkennen und dieses Objekt dann in den Anwendungs Raum zu versetzen, benötigen Sie einige Dinge:
 1. Ein Bildmuster Erkennungs-Toolkit, z. b. QR-Code, AR-Tags, Gesichts Finder, Zirkel Tracker, OCR usw.
 2. Bild Rahmen zur Laufzeit erfassen und an die Erkennungs Schicht übergeben
-3. Entprojizieren Sie Ihre Image Positionen wieder in die Welt Positionen oder wahrscheinlich weltweit. Unter
+3. Entprojizieren Sie Ihre Image Positionen wieder in die Welt Positionen oder wahrscheinlich weltweit. Details zu diesen Features finden Sie unter
 4. Positionieren Sie Ihre virtuellen Modelle an den Standorten der Welt.
 
 Einige wichtige Bild Verarbeitungs Links:
-* [OpenCV](http://opencv.org/)
+* [OpenCV](https://opencv.org/)
 * [QR-Tags](https://en.wikipedia.org/wiki/QR_code)
-* [Fakesdk](http://research.microsoft.com/projects/facesdk/)
+* [Fakesdk](https://research.microsoft.com/projects/facesdk/)
 * [Microsoft Translator](https://www.microsoft.com/translator/business)
 
 Die Beibehaltung einer interaktiven Anwendungsframe-Rate ist wichtig, insbesondere beim Umgang mit Bild Erkennungsalgorithmen mit langer Laufzeit. Aus diesem Grund verwenden wir häufig das folgende Muster:
@@ -171,7 +171,7 @@ Beispiele:
 * Identifizieren und erkennen von Objekten im Raum
 * Personen im Raum identifizieren und erkennen (z. b. Holographic-Kontaktkarten über Flächen platzieren)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Beispiel für eine abrechenbare Kamera](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Ausrichtbare Kamera in Unity](locatable-camera-in-unity.md)
 * [Mixed Reality-Aufnahme](mixed-reality-capture.md)

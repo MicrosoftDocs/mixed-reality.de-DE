@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Asset, Erstellung, Prozess, Budget, Polygone, Texturen, Shader, Leistung
-ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: fb8266a018e11a8fb944819a0cac5ace38f2cb25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896506"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437009"
 ---
 # <a name="asset-creation-process"></a>Asset-Erstellungs Prozess
 
@@ -33,23 +33,23 @@ Im folgenden finden Sie ein Beispiel Budget für Ihre Benutzer. Die Leistung ist
 <tr>
 <th style="text-align:left;"><b>Werten</b></th><th style="text-align:right;"> CPU</th><th> GPU</th><th> Arbeitsspeicher</th>
 </tr><tr>
-<td> Polygone</td><td> 1,0</td><td> 5%</td><td> 10 %</td>
+<td> Polygone</td><td> 1,0</td><td> 5 %</td><td> 10 %</td>
 </tr><tr>
-<td> Texturen</td><td> 5%</td><td> 17.15</td><td>25%</td>
+<td> Texturen</td><td> 5 %</td><td> 17.15</td><td>25 %</td>
 </tr><tr>
 <td> Shader</td><td> 17.15</td><td> 35 %</td><td> 1,0</td>
 </tr><tr>
 <td> <b>Dynamics</b></td><td></td><td></td><td></td>
 </tr><tr>
-<td> Mikro</td><td> 5%</td><td> 17.15</td><td> 1,0</td>
+<td> Mikro</td><td> 5 %</td><td> 17.15</td><td> 1,0</td>
 </tr><tr>
 <td> Echtzeitbeleuchtung</td><td> 10 %</td><td> 1,0</td><td> 1,0</td>
 </tr><tr>
-<td> Medien (Audiodatei/Video)</td><td> -</td><td> 17.15</td><td> 25%</td>
+<td> Medien (Audiodatei/Video)</td><td> -</td><td> 17.15</td><td> 25 %</td>
 </tr><tr>
-<td> Skript/Logik</td><td> 25%</td><td> 1,0</td><td> 5%</td>
+<td> Skript/Logik</td><td> 25 %</td><td> 1,0</td><td> 5 %</td>
 </tr><tr>
-<td> Allgemeiner Verwaltungsaufwand</td><td> 5%</td><td> 5%</td><td> 5%</td>
+<td> Allgemeiner Verwaltungsaufwand</td><td> 5 %</td><td> 5 %</td><td> 5 %</td>
 </tr><tr>
 <td> <b>Totales</b></td><td> <b>65%</b></td><td> <b>90%</b></td><td> <b>70%</b></td>
 </tr>
@@ -77,14 +77,14 @@ Wir beginnen mit den Möglichkeiten, Ressourcen für Ihr Projekt zu erhalten:
 ### <a name="creating-assets"></a>Erstellen von Assets
 
 **Authoring Tools**<br>
-Zuerst können Sie Ihre eigenen Assets auf verschiedene Weise erstellen. 3D-Künstler verwenden eine Reihe von Anwendungen und Tools, um Modelle zu erstellen, die aus **Netzen**, **Texturen**und **Materialien**bestehen. Diese werden dann in einem Dateiformat gespeichert, das von der von der APP verwendeten Grafik-Engine importiert oder verwendet werden kann, z **. b.** Oder **. Obj**. Jedes Tool, das ein Modell generiert, das von der ausgewählten Grafik-Engine unterstützt wird, funktioniert in **hololens**. Bei 3D-Künstlern entscheiden sich viele für die Verwendung [von Autodesk Maya, die wiederum hololens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) zum Transformieren der Art und Weise der Erstellung von Assets verwenden können. Wenn Sie etwas schneller erhalten möchten, können Sie auch [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generator verwenden, der in Windows zum Exportieren verfügbar ist. Obj für die Verwendung in Ihrer Anwendung.
+Zuerst können Sie Ihre eigenen Assets auf verschiedene Weise erstellen. 3D-Künstler verwenden eine Reihe von Anwendungen und Tools, um Modelle zu erstellen, die aus **Netzen**, **Texturen**und **Materialien**bestehen. Diese werden dann in einem Dateiformat gespeichert, das von der von der APP verwendeten Grafik-Engine importiert oder verwendet werden kann, z **. b. Oder** **. Obj**. Jedes Tool, das ein Modell generiert, das von der ausgewählten Grafik-Engine unterstützt wird, funktioniert in **hololens**. Bei 3D-Künstlern entscheiden sich viele für die Verwendung [von Autodesk Maya, die wiederum hololens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) zum Transformieren der Art und Weise der Erstellung von Assets verwenden können. Wenn Sie etwas schneller erhalten möchten, können Sie auch [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generator verwenden, der in Windows zum Exportieren verfügbar ist. Obj für die Verwendung in Ihrer Anwendung.
 
 **Objekt Erfassung**<br>
-Außerdem ist die Option zum Erfassen von Objekten in 3D verfügbar. Die Erfassung von inanimieren-Objekten in 3D und deren Bearbeitung mit Software zur Erstellung digitaler Inhalte ist immer beliebter, wenn 3D-Druck entsteht. Mithilfe des **kinect 2** -Sensors und des [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generators können Sie mit der Capture-Funktion Ressourcen aus realen Objekten erstellen. Dabei handelt es sich um eine [Suite von Tools](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) , mit denen Sie die gleichen Schritte durchführen können, indem Sie eine Reihe von Bildern zum Zusammenführen und Mesh und Texturen verarbeiten.
+Außerdem ist die Option zum Erfassen von Objekten in 3D verfügbar. Die Erfassung von inanimieren-Objekten in 3D und deren Bearbeitung mit Software zur Erstellung digitaler Inhalte ist immer beliebter, wenn 3D-Druck entsteht. Mithilfe des **kinect 2** -Sensors und des [3D-](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) Generators können Sie mit der Capture-Funktion Ressourcen aus realen Objekten erstellen. Dabei handelt es **sich um eine** [Suite von Tools](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) , mit denen Sie die gleichen Schritte durchführen können, indem Sie eine Reihe von Bildern zum Zusammenführen und Mesh und Texturen verarbeiten.
 
 ### <a name="purchasing-assets"></a>Erwerben von Assets
 
-Eine weitere hervorragende Möglichkeit besteht darin, Ressourcen für Ihre Benutzer zu erwerben. Es gibt eine Menge von Ressourcen, die über Dienste wie z. b. den Unity-Ressourcen [Speicher](https://www.assetstore.unity3d.com/) oder den [TurboSquid](http://www.turbosquid.com/) unter anderen angeboten werden.
+Eine weitere hervorragende Möglichkeit besteht darin, Ressourcen für Ihre Benutzer zu erwerben. Es gibt eine Menge von Ressourcen, die über Dienste wie z. b. den Unity-Ressourcen [Speicher](https://www.assetstore.unity3d.com/) oder den [TurboSquid](https://www.turbosquid.com/) unter anderen angeboten werden.
 
 Wenn Sie Assets von einem Drittanbieter erwerben, sollten Sie immer Folgendes überprüfen:
 * **Was ist die Anzahl der polyds?**
@@ -92,7 +92,7 @@ Wenn Sie Assets von einem Drittanbieter erwerben, sollten Sie immer Folgendes ü
 * **Gibt es Detailstufen (LODs) für das Modell?**
   * Die Detailstufe eines Modells ermöglicht es Ihnen, die Details eines Modells für die Leistung zu skalieren.
 * **Ist die Quelldatei verfügbar?**
-  * Normalerweise nicht im [Unity-Asset-Speicher](https://www.assetstore.unity3d.com/) enthalten, aber immer in Diensten wie [Turbo squid](http://www.turbosquid.com/)enthalten.
+  * Normalerweise nicht im [Unity-Asset-Speicher](https://www.assetstore.unity3d.com/) enthalten, aber immer in Diensten wie [Turbo squid](https://www.turbosquid.com/)enthalten.
   * Ohne die Quelldatei können Sie das Medienobjekt nicht ändern.
   * Stellen Sie sicher, dass die angegebene Quelldatei von ihren 3D-Tools importiert werden kann.
 * **Wissen Sie, was Sie erhalten**

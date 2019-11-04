@@ -3,22 +3,22 @@ title: Mr-Freigabe 250-hololens und immersive Headsets
 description: Befolgen Sie diese exemplarische Vorgehensweise zum Programmieren mit Unity, Visual Studio, hololens und Windows Mixed Reality-Headsets, um die Details der Freigabe von holograms zwischen gemischten Reality-Geräten zu erlernen.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, immersive, Motion Controller, Freigabe, Xbox Controller, Networking, Geräte übergreifend
-ms.openlocfilehash: 9e1cb0d168b8bf830b4477190516cd19caef7972
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: c8d341f75424887ca1b0994c8a4d16a0bded671e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63506112"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437863"
 ---
 >[!NOTE]
->Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es wurde [eine neue Reihe von Tutorials](mrlearning-base.md) für hololens 2 gepostet.
 
 <br>
 
-# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>Mr-Freigabe 250: Hololens und immersive Headsets
+# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>Mr-Freigabe 250: hololens und immersive Headsets
 
 Mit der Flexibilität von universelle Windows-Plattform (UWP) ist es einfach, eine Anwendung zu erstellen, die mehrere Geräte umfasst. Mit dieser Flexibilität können wir Umgebungen erstellen, die die Stärken der einzelnen Geräte nutzen. Dieses Tutorial behandelt eine grundlegende freigegebene Darstellung, die auf hololens und Windows Mixed Reality-immersiven Headsets ausgeführt wird. Dieser Inhalt wurde ursprünglich auf der Microsoft Build 2017-Konferenz in Seattle, WA, bereitgestellt.
 
@@ -29,19 +29,19 @@ Mit der Flexibilität von universelle Windows-Plattform (UWP) ist es einfach, ei
 * Richten Sie abhängig davon, welches gemischte Reality-Gerät verwendet wird, eine andere Ansicht der Anwendung ein.
 * Sorgen Sie für eine gemeinsame Nutzung, bei der hololens-Benutzer über einige einfache Rätsel mit den Benutzer in der Hand arbeiten.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>Mr-Freigabe 250: Hololens und immersive Headsets</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Mr-Freigabe 250: hololens und immersive Headsets</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 ## <a name="before-you-start"></a>Bevor Sie beginnen
 
-### <a name="prerequisites"></a>Vorraussetzungen
+### <a name="prerequisites"></a>Voraussetzungen
 
 * Einen Windows 10-PC mit den [erforderlichen Entwicklungs Tools](install-the-tools.md) [, die zur Unterstützung eines Windows Mixed Reality-immersiven Headsets konfiguriert](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)sind.
 * Einen Xbox-Controller, der mit Ihrem PC funktioniert.
@@ -69,6 +69,7 @@ Stellen Sie sicher, dass die Entwicklungsumgebung mit einem einfachen Projekt fe
 Eine Anwendung, die ein – Hologramm für hololens oder ein Windows Mixed Reality-immersives Headset anzeigt.
 
 ### <a name="steps"></a>Schritte
+
 * Öffnen Sie Unity.
     * Wählen Sie **Öffnen**aus.
     * Navigieren Sie dorthin, wo Sie die Projektdateien extrahiert haben.
@@ -92,7 +93,7 @@ Eine Anwendung, die ein – Hologramm für hololens oder ein Windows Mixed Reali
     * Speichern (entweder **Control + S** oder **File > Szene speichern**)
     * Da es sich um eine neue Szene handelt, müssen Sie diese benennen. Der Name ist nicht wichtig, aber wir verwenden sharedmixedreality.
 * In Visual Studio exportieren
-    * Öffnen Sie das Menü "Build" (STRG +**UMSCHALT + B** oder **Datei >** Buildeinstellungen).
+    * Öffnen Sie das Menü "Build" (STRG +**UMSCHALT + B** oder **Datei > Buildeinstellungen**).
     * Klicken Sie auf **offene Szenen hinzufügen.**
     * **Unity C# -Projekte** überprüfen
     * Klicken Sie auf **Erstellen**.
@@ -112,7 +113,7 @@ Eine Anwendung, die ein – Hologramm für hololens oder ein Windows Mixed Reali
 
 Navigieren Sie im Projekt Panel zu **asset\holotoolkit\input\script\utilities** , und doppelklicken Sie auf **MixedRealityCameraManager.cs** , um es zu öffnen.
 
-**Übersicht über** MixedRealityCameraManager.cs ist ein einfaches Skript, das Qualitäts-und Hintergrundeinstellungen basierend auf dem Gerät anpasst. Schlüssel hier ist holographicsettings. isdisplaytransparent, mit dem ein Skript erkennen kann, ob es sich bei dem Gerät um einen hololens handelt (isdisplayopaque gibt false zurück), oder ein immersives Headset (isdisplayopaque gibt true zurück).
+**Übersicht:** MixedRealityCameraManager.cs ist ein einfaches Skript, das Qualitäts-und Hintergrundeinstellungen basierend auf dem Gerät anpasst. Schlüssel hier ist holographicsettings. isdisplaytransparent, mit dem ein Skript erkennen kann, ob es sich bei dem Gerät um einen hololens handelt (isdisplayopaque gibt false zurück), oder ein immersives Headset (isdisplayopaque gibt true zurück).
 
 ### <a name="enjoy-your-progress"></a>Nutzen Sie Ihren Fortschritt
 
@@ -130,9 +131,10 @@ Zeigt, wie Eingaben für eine Windows Mixed Reality-Anwendung behandelt werden.
 
 Auf der Grundlage der Anwendung aus Kapitel 1 fügen wir Funktionen hinzu, die es dem Benutzer ermöglichen, das Hologramm zu übernehmen und es auf der realen Oberfläche in hololens oder einer virtuellen Tabelle in einem immersiven Headset zu platzieren.
 
-**Eingabe Auffrischung:** Bei hololens ist die Auswahl Geste die **Luftlinie**. Bei immersiven Headsets verwenden wir die Schaltfläche **A** auf dem Xbox-Controller. Weitere Informationen zum Eingabe [Anfang finden Sie hier](gestures.md).
+**Eingabe Auffrischung:** Bei hololens ist die Auswahl Geste die **Luftlinie**. Bei immersiven Headsets verwenden wir die Schaltfläche **A** auf dem Xbox-Controller. Weitere Informationen finden Sie in der [Übersicht über das Interaktionsmodell](interaction-fundamentals.md).
 
 ### <a name="steps"></a>Schritte
+
 * Eingabe-Manager hinzufügen
     * Aus **holotoolkit > Eingabe > Prefabs** als untergeordnetes Element von **Vorgesetzten** **in die** **Hierarchie** ziehen.
     * Aus **holotoolkit > Eingabe > präfabs > Cursor** Cursor **in** die **Hierarchie**ziehen.
@@ -193,8 +195,9 @@ Stellen Sie sicher, dass das Netzwerk ordnungsgemäß konfiguriert ist, und erl�
 Das Projekt wird in ein multiplayerprojekt konvertiert. Wir fügen Benutzeroberfläche und Logik zum Hosten oder Verknüpfen von Sitzungen hinzu. Hololens-Benutzer werden einander in der Sitzung mit Clouds über ihren Köpfen sehen, und immersive Headset-Benutzer haben Clouds in der Nähe des Ankers. Benutzer in den immersiven Headsets sehen die hololens-Benutzer relativ zum Ursprung der Szene. Hololens-Benutzer sehen alle das Hologramm der Insel am gleichen Ort. Beachten Sie, dass die Benutzer in den immersiven dashboarden in diesem Kapitel nicht auf der Insel sein werden, sondern sich ähnlich wie hololens Verhalten, mit einer Vogelperspektive auf der Insel.
 
 ### <a name="steps"></a>Schritte
+
 * Insel und vrroom entfernen
-    * Klicken Sie in **Hierarchie** mit der  rechten Maustaste auf **Insel** .
+    * Klicken **Sie in** **Hierarchie** mit der rechten Maustaste auf **Insel** .
     * Klicken Sie in **Hierarchie** mit der rechten Maustaste auf **vrroom** Select **Delete**
 * Add-in
     * **Ziehen Sie** in **appprefabs** auf die **Hierarchie**.
@@ -250,10 +253,12 @@ Sorgen Sie für die einzelnen Arten gemischter Reality-Geräte.
 Wir werden die Anwendung aktualisieren, um immersive Headset-Benutzer auf der Insel mit einer immersiven Ansicht zu platzieren. Hololens-Benutzer verfügen weiterhin über die Augen Ansicht der Insel. Benutzer jedes Gerätetyps können andere Benutzer sehen, wie Sie in der Welt angezeigt werden. Beispielsweise können immersive Headset-Benutzer die anderen Avatare in anderen Pfaden auf der Insel sehen, und Sie sehen die hololens-Benutzer als riesige Clouds oberhalb der Insel. Immersive Headset-Benutzer sehen auch den Cursor des Blicks Strahl des hololens-Benutzers, wenn der hololens-Benutzer die Insel ansieht. Hololens-Benutzern wird ein Avatar auf der Insel angezeigt, der jeden immersiven Headset-Benutzer darstellt.
 
 **Aktualisierte Eingabe für das immersive Gerät:**
+
 * Die Schaltflächen Linker und rechter Stoß Taste auf dem Xbox-Controller drehen den Player.
 * Wenn Sie die Y-Schaltfläche auf dem Xbox-Controller halten, wird ein [teleportcursor](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) aktiviert. Wenn der Cursor einen drehenden Pfeil anzeigt, wenn Sie die Y-Schaltfläche loslassen, werden Sie an die Position des Cursors portiert.
 
 ### <a name="steps"></a>Schritte
+
 * Mixedrealityteleport zu mixedrealitycameraparent hinzufügen
     * Wählen Sie in **Hierarchie**die Option " **Verwendung**von".
     * Aktivieren Sie im **Inspektor**das **Steuerelement Ebene**.
@@ -288,6 +293,7 @@ Dieses Mal müssen Sie einen Freund suchen.
 Ein Benutzer mit dem hololens-Host hostet wiederum eine Sitzung. Andere Benutzer werden an der Sitzung teilnehmen. Die Anwendung platziert die ersten drei Benutzer, um von einem immersiven Headset an einem der drei Pfade auf der Insel beizutreten. Sie können sich die Insel in diesem Abschnitt ansehen.
 
 Beachten Sie die folgenden Details:
+
 1. Sie können Gesichter in den Clouds sehen, was einem eingetauchten Benutzer hilft, zu sehen, welche Richtung ein hololens-Benutzer sucht.
 2. Die Avatare auf der Insel haben Hals Striche, die sich drehen. Sie gehen nicht darauf ein, was der Benutzer tatsächlich macht (da wir nicht über diese Informationen verfügen), sondern eine schöne benutzerfreundliche Darstellung.
 3. Wenn der hololens-Benutzer die Insel ansieht, können die eingetauchten Benutzer Ihren Cursor sehen.
@@ -306,6 +312,7 @@ Erstellen Sie eine interaktive Interaktion zwischen den beiden Gerätetypen.
 Wenn ein Benutzer mit einem immersiven Headset in Kapitel 4 in der Nähe eines Rätsels auf der Insel kommt, erhalten die hololens-Benutzer eine QuickInfo mit einem Hinweis auf das Rätsel. Sobald alle immersiven Headset-Benutzer ihre Rätsel und den "Ready Pad" im Raketen Raum erhalten haben, wird die-Rakete gestartet.
 
 ### <a name="steps"></a>Schritte
+
 * Wählen Sie in **Hierarchie**die Option " **Verwendung**von".
 * Aktivieren Sie im **Inspektor**in der **Ebene-Steuerung**die Option **Zusammenarbeit aktivieren**.
 
@@ -323,20 +330,20 @@ Checkgoal führt einige mathematische Berechnungen durch, um zu sehen, ob Sie me
 
 ```cs
 private void CmdSendAtGoal(int GoalIndex)
-       {
-           levelState.SetGoalIndex(GoalIndex);
-       }
+{
+    levelState.SetGoalIndex(GoalIndex);
+}
 ```
 
 ```cs
 public void SendAtGoal(int GoalIndex)
-       {
-           if (isLocalPlayer)
-           {
-               Debug.Log("sending at goal " + GoalIndex);
-               CmdSendAtGoal(GoalIndex);
-           }
-       }
+{
+    if (isLocalPlayer)
+    {
+        Debug.Log("sending at goal " + GoalIndex);
+        CmdSendAtGoal(GoalIndex);
+    }
+}
 ```
 
 Beachten Sie, dass sendatgoalmessage cmdsendatgoal aufruft, das "levelstate. setgoalindex" aufruft, das sich wieder in LevelControl.cs befindet. Auf den ersten Blick erscheint dies seltsam. Warum nicht einfach nur setgateindex aufrufen, sondern nicht das seltsame Routing durch den Player Controller? Der Grund hierfür ist, dass wir mit dem Datenmodell übereinstimmen, das uNet verwendet, um Daten synchron zu halten. Um das betrügen und übersetzen zu verhindern, erfordert uNet, dass jedes-Objekt über einen Benutzer verfügt, der über die Berechtigung zum Ändern der synchronisierten Variablen verfügt. Außerdem kann nur der Host (der Benutzer, der die Sitzung gestartet hat) Daten direkt ändern. Benutzer, die nicht der Host sind, aber über eine Autorität verfügen, müssen einen "Befehl" an den Host senden, um die Variable zu ändern. Standardmäßig verfügt der Host über eine Autorität für alle Objekte, mit Ausnahme des Objekts, das zur Darstellung des Benutzers erzeugt wird. In unserem Fall weist dieses Objekt das playercontoller-Skript auf. Es gibt eine Möglichkeit, eine Autorität für ein Objekt anzufordern und dann Änderungen vorzunehmen, aber wir wählen die Tatsache aus, dass der Player Controller über eine Self-Authority-und Route-Befehle über den Player Controller verfügt.
@@ -349,5 +356,6 @@ Zurück in LevelControl.cs betrachten Sie setgoalindex. Hier legen wir den Wert 
 
 Im vorherigen Kapitel wird die Sitzung wie zuvor gestartet. Wenn die Benutzer im immersiven Headset das "Door" in Ihrem Pfad erreichen, wird eine QuickInfo angezeigt, die nur die hololens-Benutzer sehen können. Die hololens-Benutzer sind dafür verantwortlich, diesen Hinweis an die Benutzer im immersiven Headset zu übermitteln. Die Rakete wird in den Speicherplatz gestartet, sobald jeder Avatar auf dem entsprechenden braunen Pad innerhalb des Vulkans verstrichen ist. Die Szene wird nach 60 Sekunden zurückgesetzt, damit Sie Sie wiederholen können.
 
-## <a name="see-also"></a>Siehe auch
-* [MR-Eingabe 213: Motion-Controller](mixed-reality-213.md)
+## <a name="see-also"></a>Weitere Informationen:
+
+* [Mr-Eingabe 213: Motion-Controller](mixed-reality-213.md)

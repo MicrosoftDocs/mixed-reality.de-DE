@@ -1,22 +1,39 @@
 ---
-title: Anvisieren mit dem Kopf und Ausführen
-description: Übersicht über das Eingabemodell „Anvisieren mit dem Kopf und Ausführen“
-author: caseymeekhof
-ms.author: cmeekhof
-ms.date: 03/31/2019
+title: Blick und Commit
+description: 'Allgemeine Übersicht über das Eingabe Modell "Blick und Commit": mithilfe von "Eye" oder "Head Input".'
+author: sostel
+ms.author: sostel
+ms.date: 10/31/2019
 ms.topic: article
-keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf
-ms.openlocfilehash: aeca5ceacf5ae350aa06cb58cc68162f885f6d78
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+keywords: Gemischte Realität, Blick, Blick auf die Ausrichtung, Interaktion, Entwurf, Eye Tracking, Head Tracking
+ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
+ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387678"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73441129"
 ---
-# <a name="head-gaze-and-commit"></a>Anvisieren mit dem Kopf und Ausführen
-Der Kopf-und Commit-Vorgang ist ein Eingabe Modell, das die Ausrichtung auf ein Objekt mit der Richtung ihrer Kopfzeile (Kopfzeile) umfasst und dann mit einer sekundären Eingabe, wie z. b. der Handbewegung oder dem Sprachbefehl SELECT, agiert. Es wird als ein weitreichendes Eingabe Modell mit indirekter Bearbeitung betrachtet, was bedeutet, dass es am besten für die Interaktion mit Inhalten verwendet werden kann
+# <a name="gaze-and-commit"></a>Blick und Commit
 
-## <a name="device-support"></a>Unterstützung von Geräten
+" _Blick" und "Commit_ " ist ein grundlegendes Eingabe Modell, das eng mit der Interaktion mit unseren Computern verknüpft ist. verwenden Sie dazu die Maus: Punkt- _& Klicken_.
+Auf dieser Seite stellen wir zwei Arten von Blick Eingaben (Head-and-Eye-Eye) und verschiedene Typen von COMMIT-Aktionen vor. 
+Der _Blick und der Commit_ werden als ein weit reichtes Eingabe Modell mit indirekter Bearbeitung betrachtet.
+Dies bedeutet, dass Sie am besten für die Interaktion mit Holographic-Inhalten verwendet werden kann, die nicht erreichbar sind.
+
+Gemischte Reality-Headsets können die Position und Ausrichtung des Benutzer Kopfes verwenden, um den Kopf Richtung Vektor zu bestimmen. Sie können sich dies als einen Laser vorstellen, der direkt zwischen den Augen des Benutzers geradeaus zeigt. Dies ist eine ziemlich grobe Annäherung hinsichtlich der Position, die der Benutzer betrachtet. Die Anwendung kann diesen Strahl mit virtuellen oder echten Objekten überschneiden und einen Cursor an dieser Stelle zeichnen, um dem Benutzer mitzuteilen, was er derzeit als Ziel verwendet.
+
+Zusätzlich zu den Köpfen können einige gemischte Reality-Headsets, wie hololens 2, Eye Tracking-Systeme einschließen, die einen Blick Vektor liefern. Dies ermöglicht eine präzisere Messung der Position, die der Benutzer betrachtet. In beiden Fällen stellt der Blick ein wichtiges Signal für die Absicht des Benutzers dar. Umso besser kann das System die beabsichtigten Aktionen des Benutzers interpretieren und Vorhersagen, die Benutzer Zufriedenheit nimmt zu, und die Leistung wird verbessert.
+
+Im folgenden finden Sie einige Beispiele für die Art und Weise, wie Sie als Entwickler mit gemischter Realität von der Kopf-oder dem Augenblick profitieren können:
+* Ihre APP kann den Blick mit den holograms in Ihrer Szene überschneiden, um zu bestimmen, an welcher Stelle die Aufmerksamkeit des Benutzers (genauer mit dem Augenblick) liegt.
+* Ihre APP kann Gesten und Controller-Pressen basierend auf dem Blick des Benutzers leiten, sodass der Benutzer nahtlos auf seine Hologramme zugreifen, Sie aktivieren, einlesen, Scrollen oder anderweitig interagieren kann.
+* Ihre APP ermöglicht dem Benutzer das Platzieren von holograms auf realen Oberflächen, indem er seinen Blick Strahl mit dem räumlichen Mapping-Gitter schneidet.
+* Ihre APP kann wissen, wenn der Benutzer *nicht* in der Richtung eines wichtigen Objekts sucht, was dazu führen kann, dass Ihre APP visuelle und Audiohinweise zum Umwandeln des Objekts erhält.
+
+<br>
+
+
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -28,7 +45,7 @@ Der Kopf-und Commit-Vorgang ist ein Eingabe Modell, das die Ausrichtung auf ein 
     <tr>
         <td><strong>Eingabemodell</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
@@ -37,65 +54,179 @@ Der Kopf-und Commit-Vorgang ist ein Eingabe Modell, das die Ausrichtung auf ein 
         <td>✔️ Empfohlen (dritte Auswahl – <a href="interaction-fundamentals.md">Siehe andere Optionen</a>)</td>
         <td>➕ Alternative Option</td>
     </tr>
+         <tr>
+        <td>Anvisieren mit den Augen und Ausführen</td>
+        <td>❌ nicht verfügbar</td>
+        <td>✔️ Empfohlen (dritte Auswahl – <a href="interaction-fundamentals.md">Siehe andere Optionen</a>)</td>
+        <td>❌ nicht verfügbar</td>
+    </tr>
 </table>
 
-## <a name="head-gaze"></a>Anvisieren mit dem Kopf
-Mixed Reality-Headsets nutzen Position und Ausrichtung des Kopfes des Benutzers, um dessen Kopfrichtungsvektor zu bestimmen. Sie können sich dies als einen Laser vorstellen, der direkt zwischen den Augen des Benutzers geradeaus zeigt. Dies ist eine ziemlich grobe Annäherung hinsichtlich der Position, die der Benutzer betrachtet. Die Anwendung kann diesen Strahl mit virtuellen oder echten Objekten überschneiden und einen Cursor an dieser Stelle zeichnen, um dem Benutzer mitzuteilen, was er derzeit als Ziel verwendet.
 
-Zusätzlich zu den Köpfen können einige gemischte Reality-Headsets, wie hololens 2, Eye Tracking-Systeme einschließen, die einen Blick Vektor liefern. Dies ermöglicht eine präzisere Messung der Position, die der Benutzer betrachtet. Es ist möglich, die Interaktion mit Blick und Commit mithilfe des Augenblicks zu erstellen. Dies ist jedoch mit einem ganz anderen Satz von Entwurfs Einschränkungen zu tun, die separat im [Augenblick Artikel](eye-tracking.md)behandelt werden.
+## <a name="gaze"></a>Anvisieren
+
+### <a name="eye--or-head-gaze"></a>Augen-oder Haupt Blick?
+Es gibt verschiedene Aspekte, die Sie berücksichtigen sollten, wenn Sie sich mit der Frage befassen, ob Sie das Eingabe Modell "Augenblick und Commit" oder "Head-Gaze und Commit" verwenden sollten. Wenn Sie für ein immersives Headset oder für hololens (1st Gen) entwickeln, ist die Wahl einfach: Head-Blick und Commit. Wenn Sie für hololens 2 entwickeln, ist die Auswahl etwas schwieriger. aus diesem Grund ist es wichtig, die Vorteile und Herausforderungen zu verstehen, die in den einzelnen Komponenten enthalten sind.
+Wir haben einige umfassende pro-und-con in der nachfolgenden Tabelle kompiliert, um die Zielvorgabe für das Ziel zu vergleichen. Dieser Vorgang ist weit von der Fertigstellung entfernt, und wir empfehlen, dass Sie hier mehr über die Ausrichtung des Augenblicks erfahren:
+* [Eye Tracking on hololens 2](eye-tracking.md): Allgemeine Einführung in unsere neue Funktion für die Augen Verfolgung auf hololens 2, einschließlich einiger Entwickler Anleitungen. 
+* [Interaktion](eye-gaze-interaction.md)mit Blick auf das Auge: Entwurfs Überlegungen und Empfehlungen bei der Planung der Verwendung von Eye Tracking als Eingabe.
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+   <tr>
+        <td><strong>Ziel Ausrichtung</strong></td>
+        <td><strong>Head-Blick-Ziel</strong></td>
+    </tr>
+    <tr>
+        <td>Schnelle!</td>
+        <td>Voran</td>
+    </tr>
+    <tr>
+        <td>Niedriger Aufwand (kaum Text Bewegungen notwendig)</td>
+        <td>Mögliche Unannehmlichkeiten (z. b. Hals Belastung)</td>
+    </tr>
+    <tr>
+        <td>Erfordert keinen Cursor, aber es wird ein feines Feedback empfohlen.</td>
+        <td>Erfordert, dass ein Cursor angezeigt wird.</td>
+    </tr>
+    <tr>
+        <td>Keine Smooth Eye-Bewegungen – z. b. nicht gut zum Zeichnen</td>
+        <td>Kontrollierter und expliziter</td>
+    </tr>
+    <tr>
+        <td>Schwierig für sehr kleine Ziele (z. b. kleine Schaltflächen oder Weblinks)</td>
+        <td>Zuverlässiges! Großartiger Fallback!</td>
+    </tr>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+</table>
+
+Unabhängig davon, ob Sie den Kopf-oder Augenblick für das Eingabe Modell für den Blick und das Commit verwenden, gibt es unterschiedliche Sätze von Entwurfs Einschränkungen, die separat in den Artikeln für den [Augenblick und den Commit](gaze-and-commit-eyes.md) und den [Haupt-und Commit](gaze-and-commit-head.md) -Artikel behandelt werden.
+
+<br>
+
+---
+
+### <a name="cursor"></a>Cursor
+
+:::row:::
+    :::column:::
+        Für den Kopf Blick sollten die meisten apps einen [Cursor](cursors.md) (oder einen anderen Auditory/visuellen Hinweis) verwenden, um dem Benutzer die Gewissheit zu verschaffen, mit welchem Element er interagiert. In der Regel positionieren Sie diesen Cursor in der Welt, in der der Head-Blick Strahl zuerst ein Objekt schneidet, das ein Hologramm oder eine reale Oberfläche sein kann.<br>
+        <br>
+        Für den Augenblick empfiehlt es sich im allgemeinen *nicht* , einen Cursor anzuzeigen, da dies für den Benutzer schnell ablenkend und lästig werden kann. Markieren Sie stattdessen visuelle Ziele, oder verwenden Sie einen sehr schwachen Augen Cursor, um sicherzustellen, womit der Benutzer interagieren soll. Weitere Informationen finden Sie in unserem [Entwurfs Leit Faden für die Augen basierte Eingabe](eye-tracking.md) auf hololens 2.
+    :::column-end:::
+        :::column:::
+       ![einen visuellen Beispiel Cursor zum Anzeigen von Blick](images/cursor.jpg)<br>
+       *Bild: ein visueller Beispiel Cursor zum Anzeigen des Blicks*
+    :::column-end:::
+:::row-end:::
+
+<br>
+
+---
 
 ## <a name="commit"></a>Ausführen
-Nachdem ein Objekt oder ein UI-Element als Ziel verwendet wurde, kann der Benutzer mit einer sekundären Eingabe interagieren oder darauf klicken. Dies wird als „Ausführen“-Schritt des Modells bezeichnet. Die folgenden Methoden zum Ausführen werden unterstützt:
+Nachdem Sie über verschiedene Möglichkeiten zum _betrachten_ eines Ziels gesprochen haben, sprechen wir etwas über den _Commit_ -Teil im _Blick und Commit_.
+Nachdem ein Objekt oder ein UI-Element als Ziel verwendet wurde, kann der Benutzer mit einer sekundären Eingabe interagieren oder darauf klicken. Dies wird als Commit-Schritt des Eingabe Modells bezeichnet. 
 
-- Luft tippen Bewegung
-- Sprechen Sie den Voice-Befehl, wählen Sie oder einen der Ziel Sprachbefehle aus.
+Die folgenden Methoden zum Ausführen werden unterstützt:
+- Tippen Sie auf die Handbewegung (d. h., machen Sie Ihre Hand vor Ihnen, und bringen Sie Ihren Index Finger und Thumb)
+- Sagen _Sie "Select"_ oder einen der Ziel Sprachbefehle
 - Eine einzelne Schaltfläche auf einem [hololens-Clicker](hardware-accessories.md#hololens-clicker) drücken
 - Schaltfläche "A" auf einem Xbox Gamepad drücken
 - Schaltfläche "A" auf einem adaptiven Xbox-Controller drücken
 
-### <a name="head-gaze-and-air-tap-gesture"></a>Anvisieren mit dem Kopf und Tippbewegung in die Luft
+### <a name="gaze-and-air-tap-gesture"></a>Bewegung für Blick und Luft tippen
 „In die Luft tippen“ ist eine Tippbewegung mit aufrecht gehaltener Hand Um eine Luft Abzweigung auszuführen, erhöhen Sie den Finger des Indexes an die bereite Position, und drücken Sie dann mit dem Ziehpunkt. Bei hololens (1. Generation) ist Air Tap die häufigste sekundäre Eingabe.
 
-![Finger in der Bereitschaftsposition und dann eine Tipp- oder Klickbewegung](images/readyandpress.jpg)<br>
+
+:::row:::
+    :::column:::
+       ![Finger in der Ready-Position](images/readyandpress-ready.jpg)<br>
+       **Finger an der Ready-Position**<br>
+    :::column-end:::
+    :::column:::
+       ![drücken Sie den Finger nach unten, um auf](images/readyandpress-press.jpg)<br>
+        **Drücken Sie die nach-unten-Taste, um auf**<br>
+    :::column-end:::
+:::row-end:::
+
 
 Air Tap ist auch auf hololens 2 verfügbar. Es wurde von der ursprünglichen Version gelockert. Fast alle Arten von Pinches werden jetzt unterstützt, solange die Hand gleich ist und weiterhin ist. Dadurch kann der Benutzer die Geste viel einfacher erlernen und ausführen. Diese neue Luftlinie ersetzt die alte durch dieselbe API, sodass vorhandene Anwendungen das neue Verhalten automatisch nach der Neukompilierung für hololens 2 aufweisen.
 
-### <a name="head-gaze-and-select-voice-command"></a>Anvisieren mit dem Kopf und Sprachbefehl „Auswählen“
-Voice-Befehle sind eine der primären Interaktions Methoden in gemischter Realität. Es bietet einen sehr leistungsfähigen, kostenlosen Mechanismus zur Steuerung des Systems. Es gibt verschiedene Arten von Modellen für die Sprachinteraktion:
+<br>
 
-- Der generische Befehl SELECT, der eine Klick-oder einen Commit als sekundäre Eingabe ausführt.
-- Objekt Befehle wie "Close" oder eine größere Leistung und Commit für eine Aktion als sekundäre Eingabe.
-- Für globale Kommas wie "Gehe zu Start" ist kein Ziel erforderlich.
+---
+
+### <a name="gaze-and-select-voice-command"></a>"Stimme" und "Select"-Befehl
+Voice-Befehle sind eine der primären Interaktions Methoden in gemischter Realität. Es bietet einen sehr leistungsfähigen, kostenlosen Mechanismus zur Steuerung des Systems. Es gibt verschiedene Typen von sprach Interaktions Modellen:
+
+- Der generische SELECT-Befehl, der eine Klick-oder einen Commit als sekundäre Eingabe ausführt.
+- Objekt Befehle (z. b. "Close" oder "make it Bigger") führen eine Aktion als sekundäre Eingabe aus und führen Sie aus.
+- Für globale Befehle (z. b. "Gehe zu Start") ist kein Ziel erforderlich.
 - Benutzeroberflächen für die Konversation oder Entitäten wie Cortana verfügen über eine künstliche Ki-Sprache.
-- Benutzerdefinierte Befehle
+- Benutzerdefinierte Sprachbefehle
 
-Weitere Informationen sowie eine comprenhesive Liste der verfügbaren Befehle und deren Verwendung finden Sie in unserem Leitfaden für die [sprach](voice-design.md) Befehlsführung.
+Weitere Informationen sowie eine umfassende Liste der verfügbaren Sprachbefehle und deren Verwendung finden Sie in unserer [sprach befehlsanleitung](voice-design.md) .
 
+<br>
 
-### <a name="head-gaze-and-hololens-clicker"></a>Anvisieren mit dem Kopf und HoloLens-Klick-Gerät
-Der hololens-Clicker ist das erste Peripheriegerät, das speziell für hololens erstellt wurde. Es ist in der Entwicklungs Edition hololens (1st Gen) enthalten. Der hololens-Clicker ermöglicht dem Benutzer das Klicken mit minimaler Handbewegung und das Commit als sekundäre Eingabe. Der hololens-Clicker stellt mithilfe von Bluetooth Low Energy (btle) eine Verbindung mit hololens (1 St Gen) oder hololens 2 her.
-
-![HoloLens-Klick-Gerät](images/hololens-clicker-500px.jpg)<br>
-*HoloLens-Klick-Gerät*
-
-Weitere Informationen und Anweisungen zum Koppeln des Geräts finden Sie [hier](hardware-accessories.md#pairing-bluetooth-accessories).
+---
 
 
+### <a name="gaze-and-hololens-clicker"></a>Blick und hololens Clicker
+
+:::row:::
+    :::column:::
+        Der hololens-Clicker ist das erste Peripheriegerät, das speziell für hololens erstellt wurde. Es ist in der Entwicklungs Edition hololens (1st Gen) enthalten. Der hololens-Clicker ermöglicht dem Benutzer das Klicken mit minimaler Handbewegung und das Commit als sekundäre Eingabe. Der hololens-Clicker stellt mithilfe von Bluetooth Low Energy (btle) eine Verbindung mit hololens (1 St Gen) oder hololens 2 her.<br>
+        <br>
+        [Weitere Informationen und Anweisungen zum Koppeln des Geräts](hardware-accessories.md#pairing-bluetooth-accessories)<br>
+        <br>
+        *Image: hololens Clicker*
+    :::column-end:::
+        :::column:::
+       ![Hololens Clicker](images/hololens-clicker-500px.jpg)<br>
+    :::column-end:::
+:::row-end:::
+
+<br>
+
+---
 
 
-### <a name="head-gaze-and-xbox-wireless-controller"></a>Anvisieren mit dem Kopf und Xbox Wireless Controller
-Der Xbox Wireless-Controller führt mit der Schaltfläche "a" eine Klick-und eine sekundäre Eingabe durch. Das Gerät ist einem Standardsatz von Aktionen zugeordnet, die bei der Navigation und Steuerung des Systems helfen. Wenn Sie den Controller anpassen möchten, verwenden Sie die Xbox accesories-Anwendung, um Ihren Xbox Wireless-Controller zu konfigurieren.
+### <a name="gaze-and-xbox-wireless-controller"></a>Blick und Xbox Wireless Controller
 
-![Xbox Wireless Controller](images/xboxcontroller.jpg)<br>
-*Xbox Wireless Controller*
+:::row:::
+    :::column:::
+        Der Xbox Wireless-Controller führt mit der Schaltfläche "a" eine Klick-und eine sekundäre Eingabe durch. Das Gerät ist einem Standardsatz von Aktionen zugeordnet, die beim Navigieren und Steuern des Systems helfen. Wenn Sie den Controller anpassen möchten, verwenden Sie die Xbox Accessories-Anwendung, um Ihren Xbox Wireless-Controller zu konfigurieren.<br>
+        <br>
+        [Koppeln eines Xbox-Controllers mit Ihrem PC](hardware-accessories.md#pairing-bluetooth-accessories)<br>
+        <br>
+        *Bild: Xbox Wireless Controller*
+    :::column-end:::
+        :::column:::
+       ![Xbox Wireless Controller](images/xboxcontroller.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-[Koppeln eines Xbox-Controllers mit Ihrem PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="head-gaze-and-xbox-adaptive-controller"></a>Anvisieren mit dem Kopf und Xbox Adaptive Controller
+<br>
+
+---
+
+
+### <a name="gaze-and-xbox-adaptive-controller"></a>Blick und adaptiver Xbox-Controller
 Der Xbox Adaptive Controller ist in erster Linie für die Bedürfnisse von Spielern mit eingeschränkter Mobilität konzipiert und stellt einen einheitlichen Hub für Geräte dar, mit denen gemischte Realität leichter zugänglich gemacht werden kann.
 
-Der Xbox Adaptive Controller führt mit der Schaltfläche "a" eine Klick-und eine sekundäre Eingabe durch. Das Gerät ist einem Standardsatz von Aktionen zugeordnet, die beim Navigieren und Steuern des Systems helfen. Wenn Sie den Controller anpassen möchten, verwenden Sie die Xbox accesories-Anwendung, um Ihren Xbox Adaptive Controller zu konfigurieren.
+Der Xbox Adaptive Controller führt mit der Schaltfläche "a" eine Klick-und eine sekundäre Eingabe durch. Das Gerät ist einem Standardsatz von Aktionen zugeordnet, die beim Navigieren und Steuern des Systems helfen. Wenn Sie den Controller anpassen möchten, verwenden Sie die Xbox Accessories-Anwendung, um den adaptiven Xbox-Controller zu konfigurieren.
 
 ![Xbox Adaptive Controller](images/xbox-adaptive-controller-devices.jpg)<br>
 *Xbox Adaptive Controller*
@@ -107,54 +238,11 @@ Verbinden Sie externe Geräte, wie z. b. Switches, Schaltflächen, bereit Stellu
 
 [Anweisungen zum Koppeln des Geräts](hardware-accessories.md#pairing-bluetooth-accessories)
 
-<a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Weitere Informationen, die auf der Xbox-Website verfügbar sind</a>
+<a href=https://www.xbox.com/xbox-one/accessories/controllers/xbox-adaptive-controller>Weitere Informationen, die auf der Xbox-Website verfügbar sind</a>
 
+<br>
 
-## <a name="design-guidelines"></a>Entwurfsrichtlinien
-> [!NOTE]
-> Weitere Anleitungen zum Entwurf von „Anvisieren“ sind [bald verfügbar](index.md).
-
-## <a name="head-gaze-targeting"></a>Anvisieren mit dem Kopf
-Alle Interaktionen basieren auf der Fähigkeit eines Benutzers, das Element, mit dem er interagieren möchte, unabhängig von der Eingabemethode auszuwählen. In Windows Mixed Reality erfolgt dies in der Regel durch das Anvisieren durch den Benutzer.
-Damit ein Benutzer erfolgreich mit einer Benutzer Arbeit arbeiten kann, muss das System das Verständnis der Absicht eines Benutzers und die tatsächliche Absicht des Benutzers so genau wie möglich ausrichten. In dem Maße, in dem das System die beabsichtigten Aktionen des Benutzers richtig interpretiert, steigen Zufriedenheit und Leistung.
-
-
-## <a name="target-sizing-and-feedback"></a>Skalieren von Zielen und Feedback
-Der Gaze-Vektor wurde wiederholt angezeigt, um für die fein Ausrichtung geeignet zu sein. er eignet sich jedoch oft am besten für das anvisieren von Brutto-Zielen. Die minimalen Zielgrößen von 1 bis 1,5 Grad ermöglichen in den meisten Szenarien erfolgreiche Benutzeraktionen, wobei Ziele von 3 Grad jedoch häufig eine höhere Geschwindigkeit ermöglichen. Beachten Sie, dass die Größe, auf die der Benutzer ausgerichtet ist, auch für 3D-Elemente effektiv ein 2D-Bereich ist. Die ihm jeweils zugewandte Projektion sollte der Zielbereich sein. Ein Hinweis darauf, dass ein Element "aktiv" ist (der der Benutzer als Ziel verwendet), ist äußerst hilfreich. Dies kann z. b. z. b. sichtbare "Hover"-Effekte, audiohighlights oder Klicks oder eine klare Ausrichtung eines Cursors mit einem Element umfassen.
-
-![Optimale Zielgröße im Abstand von 2 Metern](images/gazetargeting-size-1000px.jpg)<br>
-*Optimale Zielgröße im Abstand von 2 Metern*
-
-![Beispiel für die Hervorhebung eines anvisierten Objekts](images/gazetargeting-highlighting-640px.jpg)<br>
-*Beispiel für die Hervorhebung eines anvisierten Objekts*
-
-## <a name="target-placement"></a>Zielpositionierung
-Benutzer können häufig keine UI-Elemente finden, die in ihrer Ansicht sehr hoch oder sehr niedrig angeordnet sind. Sie konzentrieren sich auf Bereiche, die sich in der Nähe des Hauptfokus befinden, also ungefähr in der Perspektive. Die Positionierung der meisten Ziele in einem vernünftigen Bereich auf Augenhöhe kann helfen. Angesichts der Tendenz, dass sich der Benutzer jeweils auf einen relativ kleinen visuellen Bereich konzentrieren kann (der Blickwinkel beträgt etwa 10 Grad), kann die Gruppierung von Benutzeroberflächenelementen in dem Maße, in dem sie konzeptionell verwandt sind, das Verhalten zum Kombinieren der Aufmerksamkeit von Element zu Element nutzen, wenn der Blick eines Benutzers durch einen Bereich schweift. Beachten Sie beim Entwerfen der Benutzeroberfläche die potenziellen großen Unterschiede beim Sichtfeld zwischen HoloLens und immersiven Headsets.
-
-![Beispiel für gruppierte Benutzeroberflächenelemente zur einfacheren Zielbestimmung in Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg).<br>
-*Beispiel für gruppierte Benutzeroberflächenelemente zur einfacheren Zielbestimmung in Galaxy Explorer*.
-
-## <a name="improving-targeting-behaviors"></a>Verbessern des Verhaltens bei der Zielbestimmung
-Wenn der Benutzer beabsichtigt ist, etwas als Ziel festzustellen, kann es sehr hilfreich sein, fast Fehlversuche bei der Interaktion zu akzeptieren, als wären Sie ordnungsgemäß als Ziel festgelegt. Im folgenden finden Sie eine Reihe von erfolgreichen Methoden, die in gemischte Realität integriert werden können:
-
-### <a name="head-gaze-stabilization-gravity-wells"></a>Stabilisierung beim Anvisieren mit dem Kopf („Gravitationsbrunnen“)
-Dies sollte in den meisten Fällen oder in der Zeit aktiviert werden. Diese Methode entfernt die natürlichen Kopf-und Hals Jitter, die Benutzer möglicherweise durch das Aussehen und Sprech Verhalten durchsuchen.
-
-### <a name="closest-link-algorithms"></a>Algorithmen für die engste Verbindung
-Diese funktionieren am besten in Bereichen mit wenig interaktiven Inhalten. Wenn eine hohe Wahrscheinlichkeit besteht, dass Sie bestimmen können, mit welchem Benutzer versucht wurde, zu interagieren, können Sie die Zielfunktionen ergänzen, indem Sie eine gewisse Absicht annehmen.
-
-### <a name="backdating-and-postdating-actions"></a>Sicherungs-und postdating-Aktionen
-Dieser Mechanismus ist hilfreich bei Aufgaben, die Geschwindigkeit erfordern. Wenn ein Benutzer mit der Geschwindigkeit eine Reihe von Ziel-und Aktivierungs Manövern durchläuft, ist es sinnvoll, eine Absicht anzunehmen und versäumte Schritte zuzulassen, um auf Ziele zu reagieren, auf die sich der Benutzer vor oder nach dem tippen etwas bewegt hat (50 ms vor/nach war in EA wirksam). RLY-Tests).
-
-### <a name="smoothing"></a>Glättung
-Dieser Mechanismus eignet sich für die Bewegung von bewegungsbewegungen, wodurch das leichte Jitter und das Wackeln aufgrund natürlicher Kopf Verschiebungs Merkmale reduziert werden. Bei der Glättung von bewegungsbewegungen durch die Größe und die Entfernung von Bewegungen und nicht über die Zeit.
-
-### <a name="magnetism"></a>Magnetismus
-Dieser Mechanismus kann sich als allgemeinere Version der nächstgelegenen Verknüpfungs Algorithmen vorstellen: das Zeichnen eines Cursors in Richtung eines Ziels oder das einfache erhöhen der Treffer Felder, egal ob sichtbar oder nicht, wenn Benutzer wahrscheinliche Ziele erreichen, indem Sie einige Kenntnisse des interaktiven Layouts verwenden, um eine bessere Herangehensweise an die Benutzer Absicht. Dies kann insbesondere bei kleinen Zielen sehr wirkungsvoll sein.
-
-### <a name="focus-stickiness"></a>Fokusbindung
-Wenn Sie bestimmen, auf welche nahe gelegenen interaktiven Elemente der Fokus gelegt werden soll, stellt die Fokus Bindung eine Abweichung für das Element bereit, das momentan fokussiert ist. Dies trägt dazu bei, das Verhalten von erratischen Fokuswechsel Verhalten zu verringern, wenn Sie in einem Mittelpunkt zwischen zwei Elementen mit natürlichem Rauschen schweben
-
+---
 
 ## <a name="composite-gestures"></a>Zusammengesetzte Gesten
 
@@ -177,14 +265,14 @@ Navigation mit Rails bezieht sich auf die Fähigkeit, Bewegungen auf einer besti
 
 Innerhalb von 2D-Apps können Benutzer mit vertikalen Navigationsgesten innerhalb der App scrollen, zoomen oder ziehen. Dadurch werden virtuelle Fingerberührungen in der App eingeführt, um Gesten für die Toucheingabe desselben Typs zu simulieren. Benutzer können auswählen, welche dieser Aktionen durchgeführt werden, indem Sie zwischen den Tools auf der Leiste oberhalb der Anwendung wechseln, indem Sie entweder die Schaltfläche auswählen oder die Option "< Scrollmodus/Drag & Zoom > Tools" verwenden.
 
-[Weitere Informationen zu zusammengesetzten Gesten](gestures.md#composite-gestures)
+[Weitere Informationen zu zusammengesetzten Gesten](gaze-and-commit.md#composite-gestures)
 
 ## <a name="gesture-recognizers"></a>Gestenerkennung
 
 Ein Vorteil bei der Verwendung der Gestenerkennung besteht darin, dass Sie eine Gestenerkennung nur für die Gesten konfigurieren können, die das derzeit zielgerichtete – Hologramm annehmen kann. Die Plattform ist nur bei Bedarf eindeutig, um die unterstützten Gesten unterscheiden zu können. Auf diese Weise kann ein – Hologramm, das nur Air Tap unterstützt, jede Zeitspanne zwischen dem Drücken und dem Release akzeptieren, während ein – Hologramm, das sowohl Tap als auch Hold unterstützt, die Abzweigung nach dem Schwellenwert für die Aufbewahrungszeit auf einen Halt herauf Stufen kann.
 
 ## <a name="hand-recognition"></a>Handerkennung
-HoloLens erkennt Handgesten, indem die Position einer oder beider Hände, die für das Gerät sichtbar sind, verfolgt wird. HoloLens erkennt Hände, wenn sie sich entweder im Bereitschaftszustand (Handrücken mit nach oben gerichtetem Zeigefinger zu Ihnen gewandt) oder im gedrückten Zustand (Handrücken mit nach unten gerichtetem Zeigefinger zu Ihnen gewandt) befinden. Wenn sich die Hände in anderen Posen befinden, ignorieren hololens themz.
+HoloLens erkennt Handgesten, indem die Position einer oder beider Hände, die für das Gerät sichtbar sind, verfolgt wird. HoloLens erkennt Hände, wenn sie sich entweder im Bereitschaftszustand (Handrücken mit nach oben gerichtetem Zeigefinger zu Ihnen gewandt) oder im gedrückten Zustand (Handrücken mit nach unten gerichtetem Zeigefinger zu Ihnen gewandt) befinden. Wenn sich die Hände in anderen Posen befinden, werden Sie von hololens ignoriert.
 Für jede Hand, die hololens erkennt, können Sie ohne Ausrichtung und gedrücktem Zustand auf seine Position zugreifen. Wenn sich die Hand dem Rand des Gestenrahmens nähert, erhalten Sie auch einen Richtungsvektor, den Sie dem Benutzer zeigen können, damit er weiß, wie er seine Hand bewegen muss, um sie dorthin zurückzubringen, wo sie von HoloLens erkannt werden kann.
 
 ## <a name="gesture-frame"></a>Gestenrahmen
@@ -201,14 +289,14 @@ Sie sollten die folgenden drei Aspekte berücksichtigen:
 - Die Folgen des Überschreitens der Begrenzungen des Gestenrahmens sollten minimiert werden. Im Allgemeinen bedeutet dies, dass das Ergebnis einer Geste an der Grenze angehalten und nicht umgekehrt werden soll. Wenn ein Benutzer beispielsweise ein Holographic-Objekt über einen Raum verschiebt, sollte die Bewegung angehalten werden, wenn der Gesten Rahmen verletzt wird und nicht an den Ausgangspunkt zurückgegeben wird. Der Benutzer kann einige Frustrationen erkennen, aber die Grenzen vielleicht besser verstehen und nicht jedes Mal die vollständigen beabsichtigten Aktionen neu starten.
 
 
-## <a name="see-also"></a>Siehe auch
-* [Direkte Manipulation mit den Händen](direct-manipulation.md)
-* [Zeigen und Ausführen mit den Händen](point-and-commit.md)
+
+## <a name="see-also"></a>Weitere Informationen:
+* [Eye-basierte Interaktion](eye-gaze-interaction.md)
+* [Augen Verfolgung auf hololens 2](eye-tracking.md)
+* [Anvisieren und Verweilen](gaze-and-dwell.md)
+* [Bearbeitung von Hand direkt](direct-manipulation.md)
+* [Handgesten](gaze-and-commit.md#composite-gestures)
+* ["Hand Punkt" und "Commit"](point-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
-* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
-* [Sprachbefehle](voice-design.md)
-
-
-
-
+* [Spracheingabe](voice-input.md)
 

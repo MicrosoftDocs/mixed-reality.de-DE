@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Holographic APP, New APP, UWP APP, Template APP, holograms, neues Projekt, Exemplarische Vorgehensweise, Download, Beispielcode
-ms.openlocfilehash: 24f217021cd448f19a744696de42f580f139f76f
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 1a6071d692d4a2470493b8f5dc2af6e234aca6f2
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387615"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435751"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Erstellen eines Holographic DirectX-Projekts
 
@@ -22,7 +22,7 @@ Die Vorlage DirectX 11 Holographic UWP App ähnelt der APP-Vorlage DirectX 11 UW
 Die Mixed Reality-App bietet jedoch einige zusätzliche Funktionen, die in einer typischen Direct3D 11 UWP-APP nicht vorhanden sind. Die Vorlage für die Windows Holographic-App kann folgende Aktionen ausführen:
 * Handle Direct3D Geräte Ressourcen, die mit Holographic Kameras verknüpft sind.
 * Rückruf Puffer aus dem System abrufen.
-* Behandeln Sie die über [Blicks](gaze.md) Eingaben, und erkennen Sie eine einfache [Geste](gestures.md).
+* Behandeln Sie die über [Blicks](gaze-and-commit.md) Eingaben, und erkennen Sie eine einfache [Geste](gaze-and-commit.md#composite-gestures).
 * Wechseln Sie in den Vollbild-Stereo Renderingmodus.
 
 ## <a name="how-do-i-get-started"></a>Gewusst wie starten?
@@ -49,9 +49,9 @@ So erstellen Sie ein neues Projekt:
    ![Screenshot der Festlegung von Windows 10, Version 1903, als Ziel-und Mindestversion](images/new-uwp-project.png)<br>
    *Festlegen von **Windows 10, Version 1903** als Ziel-und Mindestversion*
    >[!IMPORTANT]
-   >Wenn **Windows 10, Version 1903** , nicht als Option angezeigt wird, ist das neueste Windows 10 SDK nicht installiert.  Um diese Option anzuzeigen, installieren Sie <a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">die Version 10.0.18362.0 oder höher des Windows 10 SDK</a>.
+   >Wenn **Windows 10, Version 1903** , nicht als Option angezeigt wird, ist das neueste Windows 10 SDK nicht installiert.  Um diese Option anzuzeigen, installieren Sie <a href="https://developer.microsoft.com/windows/downloads/windows-10-sdk" target="_blank">die Version 10.0.18362.0 oder höher des Windows 10 SDK</a>.
 
-Die Vorlage generiert ein Projekt mit <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, einer c++ 17-sprach Projektion der Windows-Runtime-APIs, die jeden Standard kompatiblen c++ 17-Compiler unterstützen.  Das Projekt zeigt, wie ein weltweit gesperrter Cube erstellt wird, der zwei Meter vom Benutzer platziert wird. Der Benutzer kann auf dem Controller auf eine Schaltfläche [tippen](gestures.md#air-tap) oder auf eine Schaltfläche klicken, um den Cube an einer anderen Position zu platzieren, die durch den Benutzer angezeigt [wird.](gaze.md) Sie können dieses Projekt ändern, um eine beliebige gemischte Reality-APP zu erstellen.
+Die Vorlage generiert ein Projekt mit <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, einer c++ 17-sprach Projektion der Windows-Runtime-APIs, die jeden Standard kompatiblen c++ 17-Compiler unterstützen.  Das Projekt zeigt, wie ein weltweit gesperrter Cube erstellt wird, der zwei Meter vom Benutzer platziert wird. Der Benutzer kann auf dem Controller auf eine Schaltfläche [tippen](gaze-and-commit.md#composite-gestures) oder auf eine Schaltfläche klicken, um den Cube an einer anderen Position zu platzieren, die durch den Benutzer angezeigt [wird.](gaze-and-commit.md) Sie können dieses Projekt ändern, um eine beliebige gemischte Reality-APP zu erstellen.
 
 Alternativ können Sie ein neues Projekt erstellen, indem Sie **die C# Visual** Holographic-Projektvorlage verwenden, die auf sharpdx basiert.  Wenn Ihr Holographic C# -Projekt nicht mit der Windows Holographic-App-Vorlage gestartet wurde, müssen Sie die Datei "MS. fxcompile. targets" aus einem Windows C# Mixed Reality-Vorlagen Projekt kopieren und in die CSPROJ-Datei importieren, um HLSL zu kompilieren. Dateien, die Sie dem Projekt hinzufügen.
 
@@ -81,7 +81,7 @@ Ab diesem Zeitpunkt behandelt die appview-Klasse die Interaktion mit Windows Bas
 
 Die einfachste Möglichkeit, um mit dem Aufbau eines Win32 Holographic-Projekts zu beginnen, besteht darin, das <a href="https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/BasicHologram" target="_blank">Win32-Beispiel *basichologram* </a>anzupassen.
 
-Dieses Win32-Beispiel verwendet <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, eine c++ 17-sprach Projektion der Windows-Runtime-APIs, die jeden Standard kompatiblen c++ 17-Compiler unterstützen.  Das Projekt zeigt, wie ein weltweit gesperrter Cube erstellt wird, der zwei Meter vom Benutzer platziert wird. Der Benutzer kann auf dem Controller auf eine Schaltfläche klicken, um den Cube an einer anderen Position zu platzieren, die durch den Benutzer [Blick](gaze.md)angegeben wird. Sie können dieses Projekt ändern, um eine beliebige gemischte Reality-APP zu erstellen.
+Dieses Win32-Beispiel verwendet <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, eine c++ 17-sprach Projektion der Windows-Runtime-APIs, die jeden Standard kompatiblen c++ 17-Compiler unterstützen.  Das Projekt zeigt, wie ein weltweit gesperrter Cube erstellt wird, der zwei Meter vom Benutzer platziert wird. Der Benutzer kann auf dem Controller auf eine Schaltfläche klicken, um den Cube an einer anderen Position zu platzieren, die durch den Benutzer [Blick](gaze-and-commit.md)angegeben wird. Sie können dieses Projekt ändern, um eine beliebige gemischte Reality-APP zu erstellen.
 
 ### <a name="win32-app-entry-point"></a>Win32-App-Einstiegspunkt
 
@@ -141,7 +141,7 @@ Der Unterordner **Shaders** enthält vier standardshaderimplementierungen:
 |  `VertexShader.hlsl` |  Einfacher Shader für die Verarbeitung von Scheitel Punkten auf der GPU. | 
 |  `VPRTVertexShader.hlsl` |  Einfacher Shader für die Verarbeitung von Scheitel Punkten auf der GPU, die für Windows Mixed Reality-Stereo Rendering optimiert ist. | 
 
-`VertexShaderShared.hlsl`enthält gemeinsamen Code, `VertexShader.hlsl` der `VPRTVertexShader.hlsl`von und gemeinsam verwendet wird.
+`VertexShaderShared.hlsl` enthält gemeinsamen Code, der von `VertexShader.hlsl` und `VPRTVertexShader.hlsl`gemeinsam verwendet wird.
 
 Die Shader werden kompiliert, wenn das Projekt erstellt wird, und Sie werden in die Methode " **spinningcuberenderer:: createdevicedependentresources** " geladen.
 
@@ -151,11 +151,11 @@ Benutzereingaben werden in der **spatialinputhandler** -Klasse verarbeitet, die 
 
 ## <a name="update-holographic-content"></a>Holographic-Inhalt aktualisieren
 
-Ihre Mixed Reality-APP wird in einer Spiel Schleife aktualisiert, die standardmäßig in der **Update** -Methode `AppMain.cpp`in implementiert wird. Die **Update** -Methode aktualisiert Szenen Objekte, wie z. b. den drehenden Cube, und gibt ein <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">holographicframe</a> -Objekt zurück, das verwendet wird, um aktuelle Ansichts-und Projektions Matrizen zu erhalten und die Austausch Kette darzustellen.
+Ihre Mixed Reality-APP wird in einer Spiel Schleife aktualisiert, die standardmäßig in `AppMain.cpp`in der **Update** -Methode implementiert wird. Die **Update** -Methode aktualisiert Szenen Objekte, wie z. b. den drehenden Cube, und gibt ein <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">holographicframe</a> -Objekt zurück, das verwendet wird, um aktuelle Ansichts-und Projektions Matrizen zu erhalten und die Austausch Kette darzustellen.
 
-Die  Rendermethode `AppMain.cpp` in nimmt den <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">holographicframe</a> an und rendert den aktuellen Frame entsprechend der aktuellen APP und dem räumlichen Positions Zustand für jede Holographic-Kamera.
+Die **Rendermethode** in `AppMain.cpp` nimmt den <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">holographicframe</a> an und rendert den aktuellen Frame entsprechend der aktuellen APP und dem räumlichen Positions Zustand für jede Holographic-Kamera.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Abrufen eines HolographicSpace-Objekts](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">Holographicspace</a>
 * [Rendern in DirectX](rendering-in-directx.md)

@@ -1,21 +1,21 @@
 ---
 title: Farbe, Licht und Material
-description: Das Entwerfen von Inhalten für gemischte Realität erfordert sorgfältige Überlegung von Farbe, Beleuchtung und Material für jedes visuelle Objekt, das in Ihrer Benutzer Darstellung verwendet wird.
+description: Das Entwerfen von Inhalten für Mixed Reality erfordert eine sorgfältige Auswahl von Farbe, Beleuchtung und Material für jedes visuelle Objekt, das in Ihrer Darstellung verwendet wird.
 author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gemischte Windows-Realität, Design, Farbe, Licht, Materialien
-ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: c49d88c2bb53c07adcb77e8dbb0e3cd77e1e78ae
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896510"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436408"
 ---
 # <a name="color-light-and-materials"></a>Farbe, Licht und Material
 
-Das Entwerfen von Inhalten für gemischte Realität erfordert sorgfältige Überlegung von Farbe, Beleuchtung und Material für jedes visuelle Objekt, das in Ihrer Benutzer Darstellung verwendet wird. Diese Entscheidungen können sowohl für Ästhetik als auch für die Verwendung von Licht und Material zum Festlegen des Klangs einer immersiven Umgebung und funktionaler Zwecke verwendet werden, wie z. b. das Verwenden von markanten Farben, um Benutzer über eine bevorstehende Aktion zu benachrichtigen. Jede dieser Entscheidungen muss gegen die Möglichkeiten und Einschränkungen für das Zielgerät ihrer Arbeit abgewogen werden.
+Das Entwerfen von Inhalten für Mixed Reality erfordert eine sorgfältige Auswahl von Farbe, Beleuchtung und Material für jedes visuelle Objekt, das in Ihrer Darstellung verwendet wird. Diese Entscheidungen können sowohl für Ästhetik als auch für die Verwendung von Licht und Material zum Festlegen des Klangs einer immersiven Umgebung und funktionaler Zwecke verwendet werden, wie z. b. das Verwenden von markanten Farben, um Benutzer über eine bevorstehende Aktion zu benachrichtigen. Jede dieser Entscheidungen muss gegen die Möglichkeiten und Einschränkungen für das Zielgerät ihrer Arbeit abgewogen werden.
 
 Im folgenden finden Sie Richtlinien, die speziell für das Rendern von Assets auf immersiven und Holographic Viele davon sind eng an andere technische Bereiche gebunden, und eine Liste verwandter Themen finden Sie im Abschnitt " [Siehe auch](color,-light-and-materials.md#see-also) " am Ende dieses Artikels.
 
@@ -43,7 +43,7 @@ Aufgrund der Art der additiven Anzeige können einige Farben in Holographic-anze
 
 Aufgrund der Art von Additiven anzeigen werden dunkle Farben transparent angezeigt. Ein solides Schwarzes Objekt wird nicht anders als die reale Welt angezeigt. Siehe Alpha Kanal weiter unten. Um die Darstellung von "Black" zu verwenden, verwenden Sie einen sehr dunklen RGB-Wert, z. b. 16, 16, 16.
 
-![Normaler Vergleich mit breit farbiger Farbpalette](images/640px-widegamut.png)<br>
+![normale im Vergleich zu breite Farbpalette](images/640px-widegamut.png)<br>
 *Normaler Vergleich mit breit farbiger Farbpalette*
 
 ## <a name="technical-considerations"></a>Technische Überlegungen
@@ -54,13 +54,25 @@ Aufgrund der Art von Additiven anzeigen werden dunkle Farben transparent angezei
 ## <a name="storytelling-with-light-and-color"></a>Storytelling mit Licht und Farbe
 
 "Light" und "Color" können dazu beitragen, dass Ihre Hologramme in der Umgebung eines Benutzers natürlicher angezeigt werden, und Sie bieten Anleitungen und Hilfe für den Benutzer. Berücksichtigen Sie die folgenden Faktoren, um die Beleuchtung und die Farbe zu untersuchen:
-* **Vignetup** : ein "Vignette"-Effekt auf abdunkeln Materialien kann die Aufmerksamkeit des Benutzers auf den Mittelpunkt des Felds der Ansicht konzentrieren. Dadurch wird das Material des Hologramms in einem RADIUS aus dem Blick Vektor des Benutzers dunkel. Beachten Sie, dass dies auch wirksam ist, wenn die Ansichten des Benutzers aus einem schrägen oder einem ausöffnende Winkel holograms.
-* **Akzente** : ziehen Sie die Aufmerksamkeit auf Objekte oder Interaktionspunkte durch kontrastreiche Farben, Helligkeit und Beleuchtung. Eine ausführlichere Betrachtung der Beleuchtungs Methoden in Storytelling finden Sie unter [Pixel-kinemgraphy-a-Beleuchtungs Ansatz für Computer Grafiken](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
 
-![Verwendung von Color zum Anzeigen der Betonung von Storytelling-Elementen, die hier in einer Szene von Fragmenten dargestellt werden.](images/640px-fragments.jpg)<br>
-*Verwendung von Color zum Anzeigen der Betonung von Storytelling-Elementen, die hier in einer Szene von [Fragmenten](https://www.microsoft.com/p/fragments/9nblggh5ggm8)dargestellt werden.*
+:::row:::
+    :::column:::
+* **Vignetup** : ein "Vignette"-Effekt auf abdunkeln Materialien kann die Aufmerksamkeit des Benutzers auf den Mittelpunkt des Felds der Ansicht konzentrieren. Dadurch wird das Material des Hologramms in einem RADIUS aus dem Blick Vektor des Benutzers dunkel. Beachten Sie, dass dies auch wirksam ist, wenn die Ansichten des Benutzers aus einem schrägen oder einem ausöffnende Winkel holograms.<br>
+* **Akzente** : ziehen Sie die Aufmerksamkeit auf Objekte oder Interaktionspunkte durch kontrastreiche Farben, Helligkeit und Beleuchtung. Eine ausführlichere Betrachtung der Beleuchtungs Methoden in Storytelling finden Sie unter [Pixel-kinemgraphy-a-Beleuchtungs Ansatz für Computer Grafiken](https://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).<br>
+        <br>
+        *Image: Verwenden von Color zum Anzeigen der Betonung von Storytelling-Elementen, die hier in einer Szene von [Fragmenten](https://www.microsoft.com/p/fragments/9nblggh5ggm8)dargestellt werden.*
+    :::column-end:::
+        :::column:::
+        ![Verwendung von Color zum Anzeigen der Betonung von Storytelling-Elementen, die hier in einer Szene von Fragmenten dargestellt werden.](images/640px-fragments.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>Siehe auch
+
+<br>
+
+---
+
+## <a name="see-also"></a>Weitere Informationen:
 * [Farbtrennung](hologram-stability.md#color-separation)
 * [Hologramme](hologram.md)
 * [Microsoft Design Language-Farbe](https://www.microsoft.com/design/color)

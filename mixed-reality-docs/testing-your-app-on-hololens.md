@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Hololens, testen
-ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507908"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437382"
 ---
 # <a name="testing-your-app-on-hololens"></a>Testen Ihrer APP auf hololens
 
@@ -42,18 +42,16 @@ Holographic apps müssen problemlos in verschiedenen Umgebungen ausgeführt werd
 3. **Befolgen Sie die Richtlinien für die – Hologramm-Qualität.** Leistungsfähige apps, die den [Leitfaden für die Qualität von holograms](hologram-stability.md) implementieren, werden weniger wahrscheinlich zu Benutzer Unannehmlichkeiten führen.
 4. **Sie sollten Hologramme horizontal und nicht vertikal verteilen.** Wenn Sie den Benutzer zwingen, erweiterte Zeiträume für die Suche nach oben oder unten zu verbringen, kann dies zu Ermüdung im Nacken führen.
 
-## <a name="input"></a>Eingabe
 
-### <a name="gaze-and-gestures"></a>Blick und Gesten
+## <a name="input"></a>Input
 
-Der [Blick](gaze.md) ist eine grundlegende Form der Eingabe auf hololens, die es Benutzern ermöglichen, holograms und die Umgebung zu Zielen. Basierend auf der Cursorposition können Sie visuell sehen, wohin Ihr Blick ausgerichtet ist. Es ist üblich, den Cursor Cursor einem Maus Cursor zuzuordnen.
+### <a name="interaction-models"></a>Interaktionsmodelle
 
-[Gesten](gestures.md) sind die Interaktion mit holograms, wie z. b. mit einem Mausklick. In den meisten Fällen sind die Maus-und Berührungs Verhalten identisch, aber es ist wichtig, zu verstehen und zu überprüfen, wann Sie sich unterscheiden.
+Stellen Sie sicher, dass die – Hologramm-Interaktionen mit dem gewählten [Interaktionsmodell](interaction-fundamentals.md)funktionieren.
+Es ist auch eine gute Idee, mit einem anderen Zubehör zu validieren, wie z. b. Maus und Tastatur, wenn diese Zubehör zur Unterstützung der Barrierefreiheit benötigt werden.
 
 **Überprüfen Sie, ob Ihre APP über ein anderes Verhalten mit Maus und Fingereingabe verfügt.** Dadurch werden Inkonsistenzen und Hilfe bei Entwurfsentscheidungen identifiziert, um die Benutzeroberflächen für Benutzer natürlicher zu gestalten. Beispielsweise wird eine Aktion ausgelöst, die auf Hover basiert.
 
-> [!NOTE]
-> Weitere Anleitungen sind für hololens 2 in [Kürze](index.md#news-and-notes)verfügbar.
 
 ### <a name="custom-voice-commands"></a>Benutzerdefinierte Sprachbefehle
 
@@ -69,7 +67,7 @@ Benutzer können über [Peripherie](hardware-accessories.md)Geräte mit Ihrer AP
 
 ## <a name="system-integration"></a>Systemintegration
 
-### <a name="battery"></a>Akku
+### <a name="battery"></a>Akku“ aus,
 
 Testen Sie Ihre Anwendung, ohne dass eine Stromquelle verbunden ist, um zu verstehen, wie schnell der Akku abläuft. Mithilfe von Power LED-Messungen können Sie den Akku Status leicht nachvollziehen. 
 
@@ -114,5 +112,5 @@ Einige App-Entwickler möchten möglicherweise das Testen Ihrer Apps automatisie
 
 Damit Ihre APP die beste Chance erhält, [im Windows Store veröffentlicht](submitting-an-app-to-the-microsoft-store.md)zu werden, überprüfen und testen Sie Sie lokal, bevor Sie Sie zur Zertifizierung einreichen. Wenn Ihre APP auf die Windows. Holographic-Gerätefamilie abzielt, führt das [zertifizierungskit für Windows-apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) nur lokale statische Analyse Tests auf Ihrem PC aus. Auf den hololens werden keine Tests ausgeführt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Übermitteln einer APP an den Windows Store](submitting-an-app-to-the-microsoft-store.md)

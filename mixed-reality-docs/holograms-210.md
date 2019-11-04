@@ -3,22 +3,22 @@ title: Mr-Eingabe 210-Blick
 description: Befolgen Sie diese exemplarische Vorgehensweise, indem Sie Unity, Visual Studio und hololens verwenden, um die Details von Blick Konzepten zu erlernen.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, Tutorial, Blick
-ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 8608701a1dd0a9a20aede1737d16d5af2e715f6b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993546"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434683"
 ---
 >[!NOTE]
->Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
+>Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es wurde [eine neue Reihe von Tutorials](mrlearning-base.md) für hololens 2 gepostet.
 
-# <a name="mr-input-210-gaze"></a>Mr-Eingabe 210: Blickeingabe
+# <a name="mr-input-210-gaze"></a>Mr-Eingabe 210: Blick
 
-Der [Blick](gaze.md) ist die erste Form der Eingabe und zeigt die Absicht und das Bewusstsein des Benutzers an. Die Eingabe 210 (auch Projekt-Explorer genannt) ist ein tiefer Einblick in die im Blick zusammenhängenden Konzepte für Windows Mixed Reality. Wir werden dem Cursor und holograms kontextbezogene Informationen hinzufügen und dabei die Vorteile der APP im Überblick über den Benutzer in vollem Umfang nutzen.
+Der [Blick](gaze-and-commit.md) ist die erste Form der Eingabe und zeigt die Absicht und das Bewusstsein des Benutzers an. Die Eingabe 210 (auch Projekt-Explorer genannt) ist ein tiefer Einblick in die im Blick zusammenhängenden Konzepte für Windows Mixed Reality. Wir werden dem Cursor und holograms kontextbezogene Informationen hinzufügen und dabei die Vorteile der APP im Überblick über den Benutzer in vollem Umfang nutzen.
 
 >[!VIDEO https://www.youtube.com/embed/yKAttGduVp0]
 
@@ -33,19 +33,19 @@ Wir haben hier einen freundlichen Astronauten, der Sie beim Erlernen von Blick K
 >[!IMPORTANT]
 >Die in den folgenden Kapiteln eingebetteten Videos wurden mit einer älteren Version von Unity und dem Mixed Reality Toolkit aufgezeichnet. Die Schritt-für-Schritt-Anweisungen sind genau und aktuell, aber es werden möglicherweise Skripts und Visualisierungen in den entsprechenden Videos angezeigt, die veraltet sind. Die Videos bleiben in der einwelt enthalten und werden weiterhin angewendet.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>Mr-Eingabe 210: Blickeingabe</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Mr-Eingabe 210: Blick</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 ## <a name="before-you-start"></a>Bevor Sie beginnen
 
-### <a name="prerequisites"></a>Vorraussetzungen
+### <a name="prerequisites"></a>Voraussetzungen
 
 * Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md)konfiguriert ist.
 * Einige Grund C# Legende Programmiermöglichkeiten.
@@ -90,8 +90,8 @@ Wir müssen Unity mitteilen, dass die zu exportierende App eine [immersive Ansic
 1. Wechseln Sie zu **Edit > Project Settings > Player**.
 2. Wählen Sie im **Inspektor-Panel** für die Player Einstellungen das **Windows Store** -Symbol aus.
 3. Erweitern Sie die Gruppe " **XR-Einstellungen** ".
-4. Aktivieren Sie im Abschnitt " **Rendering** " das Kontrollkästchen " **Virtual Reality supported** ", um eine neue **Virtual Reality** -sdsliste hinzuzufügen.
-5. Vergewissern Sie sich, dass **Windows Mixed Reality** in der Liste angezeigt wird. Wenn nicht, klicken Sie **+** auf die Schaltfläche unten in der Liste, und wählen Sie **Windows Holographic**aus.
+4. Aktivieren Sie im Abschnitt " **Rendering** " das Kontrollkästchen " **Virtual Reality supported** ", um eine neue **Virtual Reality-sdsliste** hinzuzufügen.
+5. Vergewissern Sie sich, dass **Windows Mixed Reality** in der Liste angezeigt wird. Wenn dies nicht der Grund ist, wählen Sie die Schaltfläche **+** unten in der Liste aus, und wählen Sie **Windows Holographic**aus.
 
 Als nächstes müssen wir unser Skript-Back-End auf .net festlegen.
 
@@ -138,11 +138,11 @@ Zum Schluss aktualisieren wir unsere Qualitätseinstellungen, um eine schnelle L
 
 ### <a name="build-the-project"></a>Erstellen des Projekts
 
-1. Wählen Sie in Unity **Datei >** Buildeinstellungen aus.
+1. Wählen Sie in Unity **Datei > Buildeinstellungen**aus.
 2. Klicken Sie auf **offene Szenen hinzufügen** , um die Szene hinzuzufügen.
 3. Wählen Sie in der Liste **Plattform** **universelle Windows-Plattform** aus, und klicken Sie auf **Plattform wechseln**.
 4. Wenn Sie speziell für hololens entwickeln, legen Sie **Zielgerät** auf **hololens**fest. Andernfalls sollten Sie es auf **jedem Gerät**belassen.
-5. Stellen  Sie sicher, dass der Buildtyp auf **D3D** und das **SDK** auf **Latest installiert** festgelegt ist (was SDK 16299 oder höher sein sollte).
+5. Stellen Sie sicher, dass der **Buildtyp** auf **D3D** und das **SDK** auf **Latest installiert** festgelegt ist (was SDK 16299 oder höher sein sollte).
 6. Klicken Sie auf **Erstellen**.
 7. Erstellen Sie einen **neuen Ordner** mit dem Namen "App".
 8. Klicken Sie einfach auf den **App** -Ordner.
@@ -158,7 +158,7 @@ Bei der Bereitstellung in hololens:
 1. Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x86**.
 2. Klicken Sie auf den Dropdown Pfeil neben der Schaltfläche lokaler Computer, und wählen Sie **Remote Computer**aus.
 3. Geben Sie **die IP-Adresse des hololens-Geräts** ein, und legen Sie den Authentifizierungsmodus auf **Universal (unverschlüsseltes Protokoll)** Klicken Sie auf **Auswählen**. Wenn Sie die IP-Adresse Ihres Geräts nicht kennen, suchen Sie unter **Einstellungen > Netzwerk & Internet > Erweiterte Optionen**.
-4. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**. Wenn Sie die Bereitstellung auf Ihrem Gerät zum ersten Mal durchführt, müssen Sie [es mit Visual Studio](using-visual-studio.md#pairing-your-device-hololens)koppeln.
+4. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**. Wenn Sie die Bereitstellung auf Ihrem Gerät zum ersten Mal durchführt, müssen Sie [es mit Visual Studio](using-visual-studio.md#pairing-your-device)koppeln.
 5. Wenn die APP bereitgestellt wurde, schließen Sie das **fitbox** -Gerät mit einer **Auswahl Bewegung**ab.
 
 Bei der Bereitstellung auf einem immersiven Headset:
@@ -166,7 +166,7 @@ Bei der Bereitstellung auf einem immersiven Headset:
 1. Ändern Sie das Ziel mithilfe der oberen Symbolleiste in Visual Studio von Debug in **Release** und von Arm in **x64**.
 2. Stellen Sie sicher, dass das Bereitstellungs Ziel auf **lokaler Computer**festgelegt ist.
 3. Klicken Sie in der oberen Menüleiste auf **Debuggen-> Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
-4. Wenn die APP bereitgestellt wurde, schließen Sie die Funktion **, indem Sie** den-Typ auf einen Bewegungs Controller ziehen.
+4. Wenn die APP bereitgestellt wurde, schließen Sie die Funktion **, indem Sie den-** Typ auf einen Bewegungs Controller ziehen.
 
 ## <a name="chapter-2---cursor-and-target-feedback"></a>Kapitel 2: Cursor-und Ziel Feedback
 
@@ -197,7 +197,7 @@ Wir werden unsere Arbeit auf einige Grundsätze von Cursor Entwürfen basieren, 
 
 ### <a name="build-and-deploy"></a>Erstellen und bereitstellen
 
-1. Erstellen Sie die APP aus dem **Datei >** den Buildeinstellungen neu.
+1. Erstellen Sie die APP aus dem **Datei > den Buildeinstellungen**neu.
 2. Öffnen Sie den **app-Ordner**.
 3. Öffnen Sie die Visual Studio-Projekt Mappe **Model Explorer**.
 4. Klicken Sie auf **Debuggen > Starten ohne Debugging** , oder drücken Sie **STRG + F5**.
@@ -205,7 +205,7 @@ Wir werden unsere Arbeit auf einige Grundsätze von Cursor Entwürfen basieren, 
 
 ### <a name="instructions"></a>Anweisungen
 
-1. Erweitern Sie im Bereich **Hierarchie** das Objekt " **Astroman**->**GEO_G**->**Back_Center** ".
+1. Erweitern Sie im Bereich **Hierarchie** das Objekt **Astroman**->**GEO_G**->**Back_Center** .
 2. Doppelklicken Sie auf **Interactible.cs** , um es in Visual Studio zu öffnen.
 3. Heben Sie die Auskommentierung der Zeilen in den Rückrufe **ifocverwendbare. onfocusenter ()** und **ifocverwendbare. onfocusexit ()** in **Interactible.cs**auf. Diese werden vom InputManager des Mixed Reality-Toolkits aufgerufen, wenn der Fokus (entweder durch den Blick oder durch den Controller) in den Konflikt des jeweiligen gameobject-Objekts wechselt und diesen verlässt.
 
@@ -232,7 +232,7 @@ void IFocusable.OnFocusExit()
 ```
 
 >[!NOTE]
->Wir verwenden `EnableKeyword` und `DisableKeyword` höher. Um diese in ihrer eigenen App mit dem Standard-Shader des Toolkits zu nutzen, müssen Sie die [Unity-Richtlinien für den Zugriff auf Materialien per Skript](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html)befolgen. In diesem Fall haben wir bereits die [drei Varianten von hervorgehobenem Material](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) in den Ressourcen Ordner eingefügt (suchen Sie nach den drei Materialien, deren Name hervorgehoben ist).
+>Wir verwenden `EnableKeyword` und `DisableKeyword` weiter oben. Um diese in ihrer eigenen App mit dem Standard-Shader des Toolkits zu nutzen, müssen Sie die [Unity-Richtlinien für den Zugriff auf Materialien per Skript](https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html)befolgen. In diesem Fall haben wir bereits die [drei Varianten von hervorgehobenem Material](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-210-Gaze/Completed/ModelExplorer/Assets/Resources/Models/AstroMan/Materials) in den Ressourcen Ordner eingefügt (suchen Sie nach den drei Materialien, deren Name hervorgehoben ist).
 
 ### <a name="build-and-deploy"></a>Erstellen und bereitstellen
 
@@ -295,7 +295,7 @@ Wir verwenden die Datei **Billboard.cs** , um ein gameobject-Objekt so zu speich
 1. Wählen Sie im Bereich **Hierarchie** das Objekt **Astroman** aus.
 2. Klicken Sie im **Inspektor** -Panel auf die Schaltfläche **Komponente hinzufügen** .
 3. Geben Sie im Menü im Suchfeld den Suchbegriff **ein.** Wählen Sie das Suchergebnis aus.
-4. Legen Sie im **Inspektor** die  pivotachse auf **Y**fest.
+4. Legen Sie im **Inspektor** die **pivotachse** auf **Y**fest.
 5. Probieren Sie es aus! Erstellen und stellen Sie die APP wie zuvor bereit.
 6. Sehen Sie sich an, wie das Billboard-Objekt Ihnen unabhängig von der Änderung des Standpunkts steht.
 7. Löschen Sie das Skript für den Moment aus dem **Astroman** .

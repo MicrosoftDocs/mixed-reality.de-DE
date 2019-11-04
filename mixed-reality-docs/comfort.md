@@ -6,37 +6,38 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Gemischte Realität, Entwurf, Komfort, hololens 2, hololens (1. Gen)
-ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e71b8d73a37a5d10a07d37d91cf14c88b7a85687
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024441"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436387"
 ---
 # <a name="comfort"></a>Bequem
 
-Während der natürlichen Anzeige basiert das menschliche visuelle System auf mehreren Informationsquellen oder "Cues", um 3D-Formen und die relativen Positionen von Objekten zu interpretieren. Einige Hinweise basieren nur auf einem einzelnen Auge (monosecues), einschließlich [linearer Perspektive](https://en.wikipedia.org/wiki/Perspective_(graphical)), [bekannter Größe](https://en.wikipedia.org/wiki/Size#Perception_of_size), Okklusion, [Tiefe der Tiefe](https://en.wikipedia.org/wiki/Depth_of_field)und unter [bringung](https://en.wikipedia.org/wiki/Accommodation_(eye)). Andere Hinweise basieren auf beiden Augen (binokulare Hinweise) und enthalten [Konvergenz](https://en.wikipedia.org/wiki/Vergence) (quasi die gegensinnige Bewegung der Augen, die zum Ansehen eines Objekts nötig ist) sowie die [binokulare Disparität](https://en.wikipedia.org/wiki/Stereopsis) (das Unterscheidungsmuster zwischen den Projektionen der Szene im Augenhintergrund). Um einen maximalen Komfort für die bereitgestellten anzeigen zu gewährleisten, ist es wichtig für Designer und Entwickler, Inhalte auf eine Weise zu erstellen und darzustellen, die die Funktionsweise dieser Hinweise in der natürlichen Welt imitiert. Aus physischer Sicht ist es auch wichtig, Inhalte zu entwerfen, die keine ermüdenden Bewegungen des Hals oder der Arme erfordern. In diesem Artikel werden die wichtigsten Überlegungen beschrieben, die Sie beachten sollten, um diese Ziele zu erreichen.
+Während der natürlichen Anzeige basiert das menschliche visuelle System auf mehreren Informationsquellen oder "Cues", um 3D-Formen und die relativen Positionen von Objekten zu interpretieren. Einige Hinweise basieren nur auf einem einzelnen Auge (monosecues), einschließlich [linearer Perspektive](https://en.wikipedia.org/wiki/Perspective_(graphical)), [bekannter Größe](https://en.wikipedia.org/wiki/Size#Perception_of_size), Okklusion, [Tiefe der Tiefe](https://en.wikipedia.org/wiki/Depth_of_field)und unter [bringung](https://en.wikipedia.org/wiki/Accommodation_(eye)). Andere Hinweise basieren auf beiden Augen (binofactorycues) und enthalten [Verben](https://en.wikipedia.org/wiki/Vergence) (im Wesentlichen die relative Drehung der Augen, die für die Betrachtung eines Objekts erforderlich sind) und [Binaritäten](https://en.wikipedia.org/wiki/Stereopsis) (das Muster der Unterschiede zwischen den Projektionen der Szene auf der zurück der beiden Augen). Um bei am Kopf fixierten Anzeigeeinheiten maximalen Komfort sicherzustellen, müssen Designer und Entwickler Inhalte in einer Weise präsentieren, die das Verhalten dieser Hinweise in der natürlichen Umgebung nachahmt. Aus physischer Sicht ist es auch wichtig, Inhalte zu entwerfen, die keine ermüdenden Bewegungen des Hals oder der Arme erfordern. In diesem Artikel werden die wichtigsten Überlegungen beschrieben, die Sie beachten sollten, um diese Ziele zu erreichen.
 
 ## <a name="vergence-accommodation-conflict"></a>Vergence-Unterbringungs Konflikt
 
-Um-Objekte eindeutig anzuzeigen, müssen die Menschen den Fokus des Augen Bildes Objekts [berücksichtigen](https://en.wikipedia.org/wiki/Accommodation_%28eye%29)oder anpassen. Gleich [zeitig muss die](https://en.wikipedia.org/wiki/Convergence_(eye)) Drehung beider Augen mit der Entfernung des Objekts übereinstimmen, um zu vermeiden, dass doppelte Bilder angezeigt werden. In natürlicher Ansicht sind die Vergence-und die-Unterbringung verknüpft. Wenn Sie etwas in der Nähe anzeigen (z. b. ein Haus, das in der Nähe ihrer Nase liegt), überschreiten Sie einen Punkt und können zu einem bestimmten Punkt Wenn Sie im Gegensatz dazu etwas in der optischen unendlich sehen (ungefähr mit 6 m oder mehr für die normale Vision), werden die Augenblicke von Augen parallel und die Linsen der Augen auf unendlich angepasst. 
+Um-Objekte eindeutig anzuzeigen, müssen die Menschen den Fokus des Augen Bildes Objekts [berücksichtigen](https://en.wikipedia.org/wiki/Accommodation_%28eye%29)oder anpassen. Gleichzeitig muss die Drehung beider Augen mit der Entfernung des Objekts übereinstimmen, [um zu vermeiden](https://en.wikipedia.org/wiki/Convergence_(eye)) , dass doppelte Bilder angezeigt werden. In natürlicher Ansicht sind die Vergence-und die-Unterbringung verknüpft. Wenn Sie etwas in der Nähe anzeigen (z. b. ein Haus, das in der Nähe ihrer Nase liegt), überschreiten Sie einen Punkt und können zu einem bestimmten Punkt Wenn Sie im Gegensatz dazu etwas in der optischen unendlich sehen (ungefähr mit 6 m oder mehr für die normale Vision), werden die Augenblicke von Augen parallel und die Linsen der Augen auf unendlich angepasst. 
 
 In den meisten Köpfen werden die Benutzer immer auf die Fokus Abstände der Anzeige (zum erhalten eines Sharp-Bilds) zugreifen, aber Sie werden mit dem Abstand des Objekts zusammengeführt, das von Interesse ist (um ein einzelnes Bild zu erhalten). Wenn Benutzer unterschiedliche Entfernungen aufnehmen und mit Ihnen zusammenführen, muss die natürliche Verknüpfung zwischen den beiden hinweisen beschädigt werden, und dies kann zu einem visuellen Unbehagen oder Ermüdung führen.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/-606oZKLa_s]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/-606oZKLa_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### <a name="guidance-for-holographic-devices"></a>Leitfaden zu Holographic-Geräten
 
 Hololens-anzeigen werden in einer optischen Entfernung von etwa 2,0 m vom Benutzer entfernt. Daher müssen Benutzer immer fast 2.0 m aufnehmen, um ein eindeutiger Abbild auf dem Gerät zu erhalten. App-Entwickler können durch das Platzieren von Inhalten und holograms in unterschiedlichen Tiefen die konvergieren der Benutzer steuern. Das Problem des Konflikts zwischen Vergence und Unterbringung kann vermieden oder minimiert werden, indem Inhalte, auf die sich die Benutzer so nah wie möglich in etwa 2.0 m konvergieren, wie möglich beibehalten werden (d.h. in einer Szene mit sehr viel Tiefe, wenn möglich, die interessanten Bereiche, die in der Nähe von 2.0 Mio. liegen). Wenn Inhalt nicht in der Nähe von 2.0 m platziert werden kann, sind die Unannehmlichkeiten beim Konflikt zwischen Vergence und Unterkunft am größten, wenn der Blick des Benutzers zwischen unterschiedlichen Entfernungen hin und her wechselt. Anders ausgedrückt: Es ist viel besser, sich ein stationäres – Hologramm anzusehen, das 50 cm entfernt wird, als ein – Hologramm 50cm zu betrachten, das sich im Laufe der Zeit von Ihnen hin und her bewegt.
 
-![Optimale Entfernung zum Platzieren von holograms vom Benutzer.](images/distanceguiderendering-950px.png)<br>
+![optimale Entfernung zum Platzieren von holograms vom Benutzer.](images/distanceguiderendering-950px.png)<br>
 *Optimale Entfernung zum Platzieren von holograms vom Benutzer*
 
 ### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Bewährte Methoden für hololens (1. Gen) und hololens 2
 
-Für maximalen Komfort **liegt die optimale Zone für die – Hologramm-Platzierung zwischen 1,25 m und 5 m**. In jedem Fall sollten Designer versuchen, Inhalts Szenen zu strukturieren, um Benutzer zu ermutigen, mit dem Inhalt von 1 oder mehr zu interagieren (z. b. [Inhalts Größe und Standard Platzierungsparameter](gaze-targeting.md)anpassen). 
+Für maximalen Komfort **liegt die optimale Zone für die – Hologramm-Platzierung zwischen 1,25 m und 5 m**. In jedem Fall sollten Designer versuchen, Inhalts Szenen zu strukturieren, um Benutzer zu ermutigen, mit dem Inhalt von 1 oder mehr zu interagieren (z. b. [Inhalts Größe und Standard Platzierungsparameter](gaze-and-commit.md)anpassen). 
 
 Obwohl der Inhalt gelegentlich mehr als 1 Mio. angezeigt werden muss, wird empfohlen, die Hologramme vor dem 40 cm zu präsentieren. Daher wird empfohlen, den **Inhalt bei 40 cm auszublenden und eine Renderingebene bei 30cm zu platzieren** , um nähere Objekte zu vermeiden.
 
@@ -44,7 +45,7 @@ Bei Objekten, die ausführlich verschoben werden, handelt es sich wahrscheinlich
 
 ### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Weitere Überlegungen zu hololens 2 und Near Interaction Distance
 
-Beim Entwerfen von Inhalten für die direkte (Near) Interaktion in hololens 2 oder **in allen Anwendungen, in denen Inhalte näher als 1 Million platziert werden müssen, muss besonders darauf geachtet werden, dass die Benutzerfreundlichkeit gewährleistet ist**. Die Unannehmlichkeiten aufgrund des Konflikts bei der vererhöhung der-Unterkünfte erhöhen sich exponentiell durch das Verringern der Anzeige Abstände. Darüber hinaus kann es bei Benutzern bei der Anzeige von Inhalten in naher Interaktions Abständen zu erhöhter Unschärfe kommen. Daher empfiehlt es sich, Inhalte zu testen, die sowohl innerhalb der Zone der optimalen – Hologramm-Platzierung als auch näher gerendert werden (weniger als 1,0 Mio. bis zur clippinbene). Stellen Sie sicher, dass es offensichtlich und bequem angezeigt wird. 
+Beim Entwerfen von Inhalten für die direkte (Near) Interaktion in hololens 2 oder **in allen Anwendungen, in denen Inhalte näher als 1 Million platziert werden müssen, muss besonders darauf geachtet werden, dass die Benutzerfreundlichkeit gewährleistet ist**. Die Unannehmlichkeiten aufgrund des Konflikts bei der vererhöhung der-Unterkünfte erhöhen sich exponentiell durch das Verringern der Anzeige Abstände. Darüber hinaus können Benutzer beim Anzeigen von Inhalten in naher Interaktions Abständen eine bessere Unschärfe erleben. Daher empfiehlt es sich, Inhalte zu testen, die sowohl innerhalb der Zone der optimalen – Hologramm-Platzierung als auch näher gerendert werden (weniger als 1,0 Mio. bis zur clippinbene). Stellen Sie sicher, dass es offensichtlich und bequem angezeigt wird. 
 
 **Wir empfehlen die Erstellung eines "tiefen Budgets" für apps, basierend auf der Zeitspanne, in der ein Benutzer erwartet, Inhalte anzuzeigen, die in der Nähe von (weniger als 1,0 Mio.) liegen und**sich ausführlich bewegen. Ein Beispiel hierfür ist, das Platzieren des Benutzers in diesen Situationen in mehr als 25% der Fälle zu vermeiden. Wenn das tiefen Budget überschritten wird, empfehlen wir sorgfältige Benutzer Tests, um sicherzustellen, dass es sich um eine bequeme Benutzerfunktion handelt. 
 
@@ -65,11 +66,11 @@ IPD bezieht sich auf den Abstand zwischen den Schülern bzw. den Mittel stellen 
 
 #### <a name="hololens-1st-gen"></a>HoloLens (1. Generation)
 
-Bei HoloLens (1. Generation) wird IPD geschätzt und während der [Gerätekalibrierung](calibration.md) festgelegt. Für neue Benutzer auf einem bereits eingerichteten Gerät muss die Kalibrierung ausgeführt werden, oder IPD muss manuell festgelegt werden. VO hängt vollständig von der Geräte Anpassung ab. Um z. b. den Verwaltungsaufwand zu minimieren, muss sich das Gerät auf der Kopfzeile des Benutzers befinden, sodass die Anzeige eine Ebene mit der Achse ihrer Augen ist. 
+Bei hololens (1. Gen) wird IPD geschätzt und während der [Gerätekalibrierung](calibration.md)festgelegt. Für neue Benutzer auf einem bereits eingerichteten Gerät muss die Kalibrierung ausgeführt werden, oder IPD muss manuell festgelegt werden. VO hängt vollständig von der Geräte Anpassung ab. Um z. b. den Verwaltungsaufwand zu minimieren, muss sich das Gerät auf der Kopfzeile des Benutzers befinden, sodass die Anzeige eine Ebene mit der Achse ihrer Augen ist. 
 
 #### <a name="hololens-2"></a>HoloLens 2
 
-Bei HoloLens (2. Generation) wird IPD geschätzt und während der [Augen- bzw. Gerätekalibrierung](calibration.md) festgelegt. Für neue Benutzer mit einem bereits eingerichteten Gerät muss eine Kalibrierung ausgeführt werden, um sicherzustellen, dass die IPD ordnungsgemäß festgelegt ist. VO wird in hololens 2 automatisch berücksichtigt. 
+Bei hololens 2 wird IPD geschätzt und während der Eye- [/Gerätekalibrierung](calibration.md)festgelegt. Für neue Benutzer mit einem bereits eingerichteten Gerät muss eine Kalibrierung ausgeführt werden, um sicherzustellen, dass die IPD ordnungsgemäß festgelegt ist. VO wird in hololens 2 automatisch berücksichtigt. 
 
 ### <a name="guidance-for-immersive-devices"></a>Leitfaden für immersive Geräte
 
@@ -164,15 +165,15 @@ Um den Inhalt von Augen-und Hals Belastungen zu vermeiden, sollten Sie so entwor
 
 Der optimale (ruhende) Blickwinkel wird zwischen 10-20 Grad unterhalb der horizontalen betrachtet, da sich der Kopf in der Regel leicht nach unten neigt, insbesondere bei Aktivitäten.
 
-![Zulässiges Feld der Ansicht (FOV), wie durch den Halsbereich der Bewegung bestimmt](images/optimal-field-of-view-2-750px.png)<br>
+![zulässiges Feld der Ansicht (FOV), wie durch den Bereich der Bewegung bestimmt](images/optimal-field-of-view-2.png)<br>
 *Zulässiges Feld der Ansicht (FOV), wie durch den Halsbereich der Bewegung bestimmt*
 
 ## <a name="arm-positions"></a>Arm-Positionen
 
 Die Muskelmüdigkeit kann zunehmen, wenn Benutzer in der gesamten Dauer einer Benutzer Arbeit eine Hand haben. Es kann auch ermüdet sein, dass der Benutzer eine wiederholte Bewegung von Luft Tippen über lange Dauer erzwingen muss. Aus diesem Grund wird empfohlen, dass Sie die Verwendung konstanter, wiederholter Gesten Eingaben vermeiden. Diese Ziele können erreicht werden, indem kurze Umbrüche integriert werden oder eine Mischung aus Gesten und Spracheingaben für die Interaktion mit der APP angeboten wird.
 
-## <a name="see-also"></a>Siehe auch
-* [Anvisieren](gaze.md)
+## <a name="see-also"></a>Weitere Informationen:
+* [Anvisieren](gaze-and-commit.md)
 * [Hologrammstabilität](hologram-stability.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Holografischer Rahmen](holographic-frame.md)

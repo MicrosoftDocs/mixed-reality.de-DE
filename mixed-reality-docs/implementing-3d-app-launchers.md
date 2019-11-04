@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, Logo, Symbol, Modellierung, Start Programm, 3D-Start Programm, Kachel, Live Cube, Deep-Link, secondarytile, Sekundär Kachel, UWP
-ms.openlocfilehash: 4a8d4a696ff6ef19d7332b20580f1f5ee67bf045
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516746"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438014"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementieren von 3D-App-launchern (UWP-Apps)
 
@@ -42,12 +42,12 @@ Suchen Sie zuerst das App-Paket Manifest in Ihrem aktuellen Projekt. Standardmä
 Fügen Sie am Anfang des Manifests das uap5-Schema hinzu, und fügen Sie es als Ignorable-Namespace ein:
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
          IgnorableNamespaces="uap uap2 uap5 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 
 Geben Sie als nächstes "mixedrealitymodel" in der Standard Kachel für Ihre Anwendung an:
@@ -75,7 +75,7 @@ Geben Sie als nächstes "mixedrealitymodel" in der Standard Kachel für Ihre Anw
 Die mixedrealitymodel-Elemente akzeptieren einen Dateipfad, der auf ein 3D-Asset verweist, das in Ihrem App-Paket gespeichert ist. Zurzeit werden nur 3D-Modelle unter Verwendung des. GLB-Datei Formats bereitgestellt, die für die [Windows Mixed Reality 3D Asset Authoring-Anweisungen](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) erstellt wurden. Assets müssen im App-Paket gespeichert werden, und die Animation wird derzeit nicht unterstützt. Wenn der Parameter "Path" leer gelassen wird, zeigt Windows das 2D-Slate anstelle des 3D-Start Programms an. **Hinweis:** das. GLB-Asset muss in ihren Buildeinstellungen als "Inhalt" gekennzeichnet werden, bevor Sie Ihre APP erstellen und ausführen.
 
 
-![Wählen Sie im Projektmappen-Explorer die GLB-Datei aus, und markieren Sie Sie mithilfe des Abschnitts Eigenschaften als "Inhalt" in den Buildeinstellungen.](images/buildsetting-content-300px.png)<br>
+![die. GLB-Datei im Projektmappen-Explorer auswählen und den Abschnitt Eigenschaften verwenden, um Sie in den Buildeinstellungen als "Inhalt" zu markieren](images/buildsetting-content-300px.png)<br>
 *Wählen Sie im Projektmappen-Explorer die GLB-Datei aus, und markieren Sie Sie mithilfe des Abschnitts Eigenschaften als "Inhalt" in den Buildeinstellungen.*
 
 ### <a name="bounding-box"></a>Begrenzungsrahmen
@@ -85,13 +85,13 @@ Ein Begrenzungs Rahmen kann verwendet werden, um optional einen zusätzlichen Pu
 Die Unterstützung für das Begrenzungsfeld Attribut wird mit dem Windows-Update-Update als Eigenschaft für das mixedrealitymodel-Element erreicht. Fügen Sie zum Definieren eines Begrenzungs Rahmens zuerst am oberen Rand des App-Manifests das uap6-Schema hinzu, und fügen Sie es als Ignorable Namespaces ein:
 
 ```xml
-<Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
-         xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
-         xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-         xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+<Package xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2" 
+         xmlns:uap5="https://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+         xmlns:uap6="https://schemas.microsoft.com/appx/manifest/uap/windows10/6"
          IgnorableNamespaces="uap uap2 uap5 uap6 mp"
-         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10">
+         xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10">
 ```
 Legen Sie als nächstes auf dem mixedrealitymodel die spatialboundingbox-Eigenschaft auf das Begrenzungsfeld fest: 
 
@@ -118,7 +118,7 @@ Beim Arbeiten mit Unity muss das Projekt in Visual Studio erstellt und geöffnet
 >[!IMPORTANT]
 >3D-Deep-Links (secondarytiles) funktionieren nur mit 2D-UWP-apps. Sie können jedoch ein [3D-App-](implementing-3d-app-launchers.md) Startfeld erstellen, um eine exklusive App aus dem Windows Mixed Reality-Start Programm zu starten.
 
-Ihre 2D-Anwendungen können für die gemischte Windows-Realität erweitert werden, indem Sie die Möglichkeit zum Platzieren von 3D-Modellen aus Ihrer [App als tiefe](navigating-the-windows-mixed-reality-home.md) Links zu Inhalten in ihrer 2D-app hinzufügen, wie z [. b. zwei sekundäre Kacheln](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) auf dem Windows-Start. stehen. Sie können z. b. 360 °-photosphären erstellen, die direkt in eine 360 °-Foto-Viewer-App verweisen, oder Benutzern das Platzieren von 3D-Inhalten aus einer Sammlung von Objekten ermöglichen, die eine Detailseite zum Autor öffnet. Dies sind nur einige Möglichkeiten, die Funktionalität Ihrer 2D-Anwendung mit 3D-Inhalten zu erweitern.
+Ihre 2D-Anwendungen können für die gemischte Windows-Realität erweitert werden, indem Sie die Möglichkeit zum Platzieren von 3D-Modellen aus Ihrer APP als tiefe Links zu Inhalten in ihrer 2D-app hinzufügen [, wie z](navigating-the-windows-mixed-reality-home.md) [. b. zwei sekundäre Kacheln](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) auf dem Windows-Start. stehen. Sie können z. b. 360 °-photosphären erstellen, die direkt in eine 360 °-Foto-Viewer-App verweisen, oder Benutzern das Platzieren von 3D-Inhalten aus einer Sammlung von Objekten ermöglichen, die eine Detailseite zum Autor öffnet. Dies sind nur einige Möglichkeiten, die Funktionalität Ihrer 2D-Anwendung mit 3D-Inhalten zu erweitern.
 
 ### <a name="creating-a-3d-secondarytile"></a>Erstellen einer 3D-"secondarytile"
 
@@ -166,7 +166,7 @@ Zum Hinzufügen eines zusätzlichen Puffer Bereichs um das Objekt kann ein Begre
 
 Sie können das Aktivierungs Verhalten für eine 3D-secondarytile definieren, um zu steuern, wie Sie reagiert, wenn ein Benutzer Sie auswählt. Dies kann verwendet werden, um 3D-Objekte in die gemischte Realität zu platzieren, die absichtlich oder dekorativ sind. Die folgenden Aktivierungs Verhaltenstypen werden unterstützt:
 1. Standard: Wenn ein Benutzer die 3D-secondarytile auswählt, wird die App aktiviert.
-2. None: Wenn die Benutzer die 3D-secondarytile auswählen, geschieht nichts, und die APP ist nicht aktiviert.
+2. Keine: Wenn die Benutzer die 3D-secondarytile auswählen, geschieht nichts, und die APP ist nicht aktiviert.
 
 ### <a name="obtaining-and-updating-an-existing-secondarytile"></a>Abrufen und Aktualisieren einer vorhandenen "secondarytile"
 
@@ -202,7 +202,7 @@ Bei Kachel Benachrichtigungen wird das Senden eines Updates mit einem 3D-Medieno
 
 Weitere Informationen zu den anderen Kacheln Features und Attributen und deren Verwendung für 2D-Kacheln finden Sie in der [Dokumentation zu Kacheln für UWP-apps](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 * [Gemischtes Reality-Modell Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) mit einem 3D-App-Start Programm.
 * [Entwurfsanleitung für 3D-App-Startprogramm](3d-app-launcher-design-guidance.md)

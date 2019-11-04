@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, roboraid, räumlicher Sound
-ms.openlocfilehash: 4bb050b4a4051c121c488ea38e150a8973bd7c04
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524155"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436501"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>Fallstudie: Verwenden von räumlichem Sound in roboraid
 
-Charles Sinex, audioleiter im Microsoft hololens-Team, spricht über die besonderen Herausforderungen, die bei der Erstellung von Audiodaten für [roboraid](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j)aufgetreten sind, einem gemischten Reality First-Person-Shooter.
+Charles Sinex, audioleiter im Microsoft hololens-Team, spricht über die besonderen Herausforderungen, die bei der Erstellung von Audiodaten für [roboraid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)aufgetreten sind, einem gemischten Reality First-Person-Shooter.
 
 ## <a name="the-tech"></a>Die Technologie
 
@@ -35,9 +35,9 @@ Räumlicher Sound kann auf der CPU anspruchsvoll sein. Für eine ausgelastete Um
 
 Der Dodging-Mechaniker ist einer der wichtigsten Aspekte des Spiels in roboraid, und auch etwas, das wir uns fühlen, war für die hololens-Umgebung wirklich einzigartig. Daher wollten wir die erfolgreichen Dodges für den Player sehr lohnend gestalten. Wir haben den Doppler "Whizz-by" ("Whizz-by") in die Entwicklung gebracht. Anfänglich war der Plan, eine Schleife zu verwenden und Sie in Echtzeit mithilfe von Volume, Tonhöhe und Filter zu manipulieren. Die Implementierung für diese Vorgehensweise war sehr aufwendig, daher haben wir vor dem Commit von Ressourcen zur eigentlichen Erstellung einen kostengünstigen Prototyp mit einem Asset erstellt, bei dem der Doppler Effekt, der in gebacken wurde Unsere begabten Entwickler haben es so gestaltet, dass dieses Whizz-by-Asset genau 0,7 Sekunden wiedergegeben würde, bevor die Projekt Kachel vom Player gereicht wird und die Ergebnisse sehr erstaunlich waren! Natürlich haben wir die komplexere Lösung unterzogen und den Prototyp implementiert.
 
-\* * (Wenn Sie weitere Informationen über das Erstellen eines audioassets mit dem integrierten Doppler-Effekt erhalten möchten, sehen Sie sich einen Artikel von Sounddesigner Charles deeran, der [in zwei Minuten als "100 whooshes](http://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)" bezeichnet wird.) *
+\* * (Wenn Sie weitere Informationen über das Erstellen eines audioassets mit dem integrierten Doppler-Effekt erhalten möchten, sehen Sie sich einen Artikel von Sounddesigner Charles deeran, der [in zwei Minuten als "100 whooshes](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)" bezeichnet wird.) *
 <br>
-![Durch das erfolgreiche Dodging eines "projectile" eines Feindes wird der Spieler durch einen Sound zufriedenstellend.](images/successful-dodge-roboraid-500px.jpg)
+![die Projekt Kachel eines Feindes erfolgreich zu dohiert hat, wird der Spieler durch einen Sound zufriedenstellend durch den Sound belohnt.](images/successful-dodge-roboraid-500px.jpg)
 
 ### <a name="ditching-ineffective-sounds"></a>Abrufen von ineffektiven Sounds
 
@@ -49,7 +49,7 @@ Ein interessantes Problem, das wir uns für die hololens-Funktion befunden haben
 
 Spieler fühlen sich offensichtlich nichts, wenn Sie auf Sie stoßen. Daher mussten wir eine Möglichkeit finden, den Player zu überzeugen, dass etwas schlecht war. In herkömmlichen spielen wird möglicherweise eine Animation angezeigt, mit der Sie wissen, dass Ihr Zeichen einen Treffer ausgelöst hat, oder der Bildschirm ist rot, und Ihr Zeichen ist möglicherweise ein wenig. Da diese Arten von Hinweisen nicht in gemischter Realität funktionieren, haben wir uns dazu entschieden, den visuellen Hinweis mit einem wirklich übertriebenen Sound zu kombinieren, der anzeigt, dass Sie Schaden anrichten. Ich habe einen großen Sound erstellt und ihn so hervorgehoben, dass er in der Mischung alles hervorgehoben hat. Um den Code noch weiter zu machen, haben wir eine kurze Warnmeldung mit dem Hinweis hinzugefügt, dass eine atomarische Untermenge nicht versinkt. 
 <br>
-![Wenn ein Player in roboraid erreicht wird, sehen Sie einen visuellen Hinweis, Sie erhalten aber auch einen übertriebenen audiohinweis, der Sie darüber informiert, dass Sie Schaden anrichten.](images/player-hit-roboraid-500px.jpg)
+![wenn ein Player in roboraid erreicht wird, sehen Sie einen visuellen Hinweis, erhalten aber auch einen übertriebenen audiohinweis, der Sie darüber informiert, dass Sie Schaden anrichten.](images/player-hit-roboraid-500px.jpg)
 
 ### <a name="getting-big-sound-from-small-speakers"></a>Holen Sie sich einen großen Sound von kleinen Referenten
 
@@ -88,10 +88,10 @@ Sie können dies selbst ausprobieren, indem Sie die folgenden Audioressourcen ve
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>Audioingenieur@Microsoft</td>
+<td style="border-style: none"><b>Charles Sinex</b><br>Audiotechniker @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Raumklang](spatial-sound.md)
-* [Roboraid für Microsoft hololens](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j)
+* [Roboraid für Microsoft hololens](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)

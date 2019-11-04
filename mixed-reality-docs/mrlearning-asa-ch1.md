@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 95e5a5bfbf289731512554f2e4e73feeae96f432
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: 563ed67a388444753e3b560d76d4e6be48249e15
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978013"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438467"
 ---
-# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Ersten Einstieg in Azure Spatial Anchor
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Einstieg in Azure Spatial Anchor
 
-Willkommen beim zweiten Modul der hololens 2-Tutorials. Bevor Sie beginnen, stellen Sie sicher, dass alle [Voraussetzungen](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) erfüllt sind. Wenn Sie das erste [Basismodul](mrlearning-base.md) noch nicht abgeschlossen haben, empfiehlt es sich, dieses Modul zuerst abzuschließen. Wenn Sie mit einem neuen Unity-Projekt beginnen, befolgen Sie die Schritte zum Erstellen eines neuen Projekts im [Basismodul](mrlearning-base.md). 
+Willkommen beim zweiten Modul der hololens 2-Tutorials. Bevor Sie beginnen, stellen Sie sicher, dass alle [Voraussetzungen](https://docs.microsoft.com//azure/spatial-anchors/quickstarts/get-started-unity-hololens) erfüllt sind. Wenn Sie das erste [Basismodul](mrlearning-base.md) noch nicht abgeschlossen haben, empfiehlt es sich, dieses Modul zuerst abzuschließen. Wenn Sie mit einem neuen Unity-Projekt beginnen, befolgen Sie die Schritte zum Erstellen eines neuen Projekts im [Basismodul](mrlearning-base.md). 
 
 ## <a name="objectives"></a>Ziele
 
@@ -36,7 +36,7 @@ Bevor Sie beginnen, müssen Sie die folgenden Ressourcen herunterladen und impor
 
 [Mixed Reality Toolkit 2.0.0 rc1](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1-Refresh.unitypackage)
 
-> Hinweis: In Schritt 5 finden Sie spezifische Anweisungen zum Importieren von Azure Spatial Anchor (Schritt 6) für spezifische Anweisungen zum Azure-Basismodul Asset Pack und die Schritte 3 bis 4 für spezifische Anweisungen zum Mixed Reality Toolkit (MRKT).
+> Hinweis: in Schritt 5 finden Sie spezifische Anweisungen zum Importieren von Azure Spatial Anchor (Schritt 6) für spezifische Anweisungen zum Ressourcenpaket des Mr Base-Moduls und Schritte 3 bis 4 für spezifische Anweisungen zum Mixed Reality Toolkit (MRKT).
 
 1. Erstellen Sie eine neue Szene in Ihrem Projekt. Klicken Sie mit der rechten Maustaste auf den Ordner Szene, klicken Sie auf Erstellen und dann auf Nennen Sie die neue Szene asalearningmodule.
 
@@ -47,7 +47,7 @@ Bevor Sie beginnen, müssen Sie die folgenden Ressourcen herunterladen und impor
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> Hinweis: Es wird ein Popup Fenster angezeigt, das besagt, dass Sie eine Datei für das Mixed Reality Toolkit auswählen müssen. Wenn Sie auf OK klicken, gelangen Sie zu Schritt 4.
+> Hinweis: Sie sehen ein Popup, das besagt, dass Sie eine Datei für das Mixed Reality Toolkit auswählen müssen. Wenn Sie auf OK klicken, gelangen Sie zu Schritt 4.
 
 4. Wenn Sie eine Datei für den mrtk auswählen, wählen Sie defaultmixedrealitytoolkitconfigurationprofile aus.
 
@@ -69,7 +69,7 @@ Daraufhin wird ein Popup Fenster mit einer Liste von Tools und Einstellungen ang
 
 ![module2chapter1step5cim](images/module2chapter1step5cim.PNG)
 
-> Hinweis: Seien Sie geduldig, es dauert einige Minuten, bis der Import Vorgang abgeschlossen ist. 
+> Hinweis: seien Sie geduldig, es dauert einige Minuten, bis der Import Vorgang abgeschlossen ist. 
 
 6. Importieren Sie das [Asset Pack "Mr Base Module](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2) ". Klicken Sie ähnlich wie in Schritt 5 auf den obigen Link. Klicken Sie dann mit der rechten Maustaste auf basemoduleassets-1.2. unitypackage, klicken Sie auf Ziel speichern unter, und speichern Sie es auf Ihrem Computer.
 
@@ -81,7 +81,7 @@ Gehen Sie wie in Schritt 5 zurück zu Unity, klicken Sie auf Assets, und zeigen 
 
 ![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
 
-> Hinweis: Möglicherweise werden später in diesem Modul weitere Ressourcen benötigt. Führen Sie diese Schritte aus, um alle Objekte zu importieren, die ab diesem Punkt erwähnt werden. 
+> Hinweis: möglicherweise sind später in diesem Modul weitere Ressourcen erforderlich. Führen Sie diese Schritte aus, um alle Objekte zu importieren, die ab diesem Punkt erwähnt werden. 
 
 7. Importieren Sie das [ASA Module Pack](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.3) mit dem gleichen Ansatz wie beim Importieren der vorherigen Pakete.
 
@@ -89,7 +89,7 @@ Gehen Sie wie in Schritt 5 zurück zu Unity, klicken Sie auf Assets, und zeigen 
 
 In diesem Abschnitt fügen wir Prefabs und Skripts in die Szene ein, um eine Reihe von Schaltflächen zu erstellen, die die Grundlagen der Art und Weise darstellen, wie sich sowohl lokale Anker als auch räumliche Azure-Anker in einer Anwendung Verhalten.
 
-8. Klicken Sie auf der Registerkarte Projekt unterhalb des Ordners Assets auf asamoduleassets. Nachdem Sie diese Option ausgewählt haben, werden Ihnen zwei Vorabinformationen angezeigt: Buttonparent und para Anker.
+8. Klicken Sie auf der Registerkarte Projekt unterhalb des Ordners Assets auf asamoduleassets. Nachdem diese Option ausgewählt wurde, werden zwei präfabs angezeigt: buttonparent und para Anker.
 
 ![module2chapter1step7im](images/module2chapter1step7im.PNG)
 
@@ -103,7 +103,7 @@ Hinweis: Wenn Sie die Debugprotokolle in den hololens überprüfen möchten. Sie
 
 Machen Sie sich mit der vorfab-vorfab vertraut. Derzeit ist das Game-Objekt mit dem Namen "", "", "", "". Schließlich blenden wir den Cube aus und platzieren den Inhalt als untergeordnetes Element des Parametern "Parser". Diese vorfab umfasst das AzureSpatialAnchorsDemoWrapper.cs-Skript (das im ASA SDK enthalten ist) und das ASAmoduleScript.cs-Skript, das als Teil dieses Moduls für das Objekt "objeanchor" enthalten ist. 
 
-Hinweis: Nachdem Sie das buttonparent-Element der Szene hinzugefügt haben, wird ein Popup Fenster mit der Aufforderung angezeigt, tmp-Assets zu importieren. Importieren Sie nur "tmp Essentials". Wenn in der Szene ein großer Schriftart Text angezeigt wird, löschen Sie das buttonparent-Objekt, und fügen Sie es erneut aus dem Ordner asamoduleassets hinzu.
+Hinweis: nach dem Hinzufügen des Button Parent in der Szene wird ein Popup Fenster angezeigt, in dem Sie aufgefordert werden, tmp-Assets zu importieren. Importieren Sie nur "tmp Essentials". Wenn in der Szene ein großer Schriftart Text angezeigt wird, löschen Sie das buttonparent-Objekt, und fügen Sie es erneut aus dem Ordner asamoduleassets hinzu.
 
 11. Konfigurieren von Schaltflächen. Beachten Sie unter der Schaltfläche buttonparent eine Reihe beschriftete Schaltflächen. Diese Schaltflächen werden aus den Prefabs von mrtk erstellt. Erfahren Sie mehr über das Erstellen von druckbaren Schaltflächen aus dem [Basismodul](mrlearning-base-ch2.md). Fügen Sie für jede Schaltfläche ein Ereignis hinzu, das ausgelöst wird, wenn der Benutzer die Schaltfläche entsprechend der nachstehenden Liste drückt oder auswählt. 
 
@@ -125,7 +125,7 @@ Hinweis: Nachdem Sie das buttonparent-Element der Szene hinzugefügt haben, wird
 
 - Erstellen Sie für die Schaltfläche "lokalen Anker löschen" ein neues Ereignis unter dem gedrückten Ereignis-und aktivierten Ereignis-Auslösers. Ziehen Sie das Objekt "objeanchor" in das leere Feld, und weisen Sie die removelocalanchor ()-Methode aus der Komponente "asamodulescript" des Objekts "Objektanchor" zu.
 
-  Wechseln Sie zum Einrichten von Azure Spatial Anchor in den Ordner "azurespatialanchorsplugin" im Ordner "Assets", und navigieren Sie dann zu "examples-> Resources->" azurespatialanchorsdemoconfig "-Datei. Fügen Sie im Inspektor-Panel die zuvor erstellte Azure-Konto-ID und den Kontoschlüssel hinzu. Wenn Sie diese nicht erstellt oder nicht haben, befolgen Sie die [Voraussetzungen](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens). module2chapter1step13im
+  Wechseln Sie zum Einrichten von Azure Spatial Anchor in den Ordner "azurespatialanchorsplugin" im Ordner "Assets", und navigieren Sie dann zu "examples-> Resources->" azurespatialanchorsdemoconfig "-Datei. Fügen Sie im Inspektor-Panel die zuvor erstellte Azure-Konto-ID und den Kontoschlüssel hinzu. Wenn Sie diese nicht erstellt oder nicht haben, befolgen Sie die [Voraussetzungen](https://docs.microsoft.com//azure/spatial-anchors/quickstarts/get-started-unity-hololens). module2chapter1step13im
   
   ![module2chapter1step13im](images/module2chapter1step13im.PNG)
 
@@ -137,14 +137,14 @@ Nachdem Ihre Szene nun so konfiguriert wurde, dass Sie die Grundlagen der räuml
 ![Lesson1Chapter5Step1](images/Lesson1Chapter5Step1.JPG)
 2. Stellen Sie sicher, dass die gewünschte Szene in den Kulissen in der Buildliste angezeigt wird, indem Sie auf die Schaltfläche offene Szenen hinzufügen klicken.
 3. Vergewissern Sie sich, dass die Plattform auf universelle Windows-Plattform festgelegt ist Wenn dies nicht der Fall ist, legen Sie den Wert auf denselben Wert fest
-4. Klicken Sie auf die Schaltfläche Player Einstellungen, und wechseln Sie zu Veröffentlichungs Einstellungen. Aktivieren Sie unter "Funktionen" Folgendes: Internet, Internet Client Server, privater Netzwerkclient Server, Wechsel Datenträger, Webcam, Mikrofon und räumliche Wahrnehmung.
+4. Klicken Sie auf die Schaltfläche Player Einstellungen, und wechseln Sie zu Veröffentlichungs Einstellungen. Aktivieren Sie unter "Funktionen" Folgendes: Internet, Internet Client Server, privater Netzwerkclient Server, Wechselmedien, Webcam, Mikrofon und räumliche Wahrnehmung.
 5. Wechseln Sie in den gleichen Player Einstellungen zu "XR Settings", und wählen Sie die virtuelle Realität aus, die unterstützt wird.
 6. Klicken Sie auf die Schaltfläche „Erstellen“, um den Buildprozess zu starten.
    ![Lesson1Chapter5Step3](images/Lesson1Chapter5Step3.JPG)
 7. Erstellen und benennen Sie einen neuen Ordner für Ihre Anwendung. In der folgenden Abbildung wurde ein Ordner mit dem Namen "App" erstellt, der die Anwendung enthält. Klicken Sie auf Ordner auswählen, um mit dem Erstellen in den neu erstellten Ordner zu beginnen. Nachdem der Build abgeschlossen wurde, schließen Sie möglicherweise das Fenster "Buildeinstellung" in Unity. 
     ![Lesson1Chapter5Step4](images/Lesson1Chapter5Step4.JPG)
 
-  > HINWEIS: Wenn der Vorgang fehlschlägt, wiederholen Sie den Buildvorgang, oder starten Sie Unity neu, und wiederholen Sie dann den Buildvorgang. Wenn ein Fehler angezeigt wird, z. b. "Fehler: CS0246 = der Typ-oder Namespace Name "XX" konnte nicht gefunden werden. (fehlt eine using-Direktive oder ein Assemblyverweis?). Möglicherweise müssen Sie das [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) installieren. 
+  > Hinweis: Wenn der Build fehlschlägt, versuchen Sie es erneut, oder starten Sie Unity neu, und erstellen Sie es erneut. Wenn ein Fehler wie z. b. "Error: CS0246 = der Typ-oder Namespace Name" XX "angezeigt wird, wurde nicht gefunden (fehlt eine using-Direktive oder ein Assemblyverweis?). Möglicherweise müssen Sie das [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>) installieren. 
   >
 
 8. Öffnen Sie nach Abschluss des Buildvorgangs den neu erstellten Ordner, der Ihre neu erstellten Anwendungsdateien enthält. Doppelklicken Sie auf die Projekt Mappe "mixedrealitybase. sln" oder den entsprechenden Namen. Wenn Sie einen alternativen Namen für das Projekt verwendet haben, um die Projektmappendatei in Visual Studio zu öffnen.
@@ -153,11 +153,11 @@ Nachdem Ihre Szene nun so konfiguriert wurde, dass Sie die Grundlagen der räuml
 
 ![Lesson1Chapter5Step5](images/Lesson1Chapter5Step5.JPG)
 
-> Hinweis: Wenn Sie von Visual Studio aufgefordert werden, neue Komponenten zu installieren, nehmen Sie sich einen Moment Zeit, um sicherzustellen, dass alle erforderlichen Komponenten auf [der Seite "Tools installieren"](install-the-tools.md) installiert sind. 
+> Hinweis: Wenn Visual Studio die Installation neuer Komponenten anfordert, nehmen Sie sich einen Moment Zeit, um sicherzustellen, dass alle erforderlichen Komponenten auf [der Seite "Tools installieren"](install-the-tools.md) installiert sind. 
 
-9. Schließen Sie das HoloLens 2-Gerät über das USB-Kabel an Ihren PC an. In diesen Lektion wird davon ausgegangen, dass Sie eine Test Bereitstellung mit einem hololens 2-Gerät bereitstellen. Sie können aber auch die Bereitstellung auf dem [hololens 2-Emulator](using-the-hololens-emulator.md) oder das Erstellen eines [App-Pakets für das Sideload](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>) auswählen.
+9. Schließen Sie das HoloLens 2-Gerät über das USB-Kabel an Ihren PC an. In diesen Lektion wird davon ausgegangen, dass Sie eine Test Bereitstellung mit einem hololens 2-Gerät bereitstellen. Sie können aber auch die Bereitstellung auf dem [hololens 2-Emulator](using-the-hololens-emulator.md) oder das Erstellen eines [App-Pakets für das Sideload](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>) auswählen.
 
-10. Stellen Sie vor dem Erstellen der App auf Ihrem Gerät sicher, dass sich das Gerät im Entwicklermodus befindet. Wenn das Ihre erste Bereitstellung auf dem HoloLens 2-Gerät ist, werden Sie möglicherweise von Visual Studio aufgefordert, Ihr HoloLens 2-Gerät mit einer PIN zu koppeln. Befolgen Sie [diese Anweisungen](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) , wenn Sie den Entwicklermodus aktivieren oder mit Visual Studio koppeln müssen.
+10. Stellen Sie vor dem Erstellen der App auf Ihrem Gerät sicher, dass sich das Gerät im Entwicklermodus befindet. Wenn das Ihre erste Bereitstellung auf dem HoloLens 2-Gerät ist, werden Sie möglicherweise von Visual Studio aufgefordert, Ihr HoloLens 2-Gerät mit einer PIN zu koppeln. Befolgen Sie [diese Anweisungen](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) , wenn Sie den Entwicklermodus aktivieren oder mit Visual Studio koppeln müssen.
 11. Konfigurieren Sie Visual Studio für die Erstellung auf Ihre hololens 2, indem Sie die Releasekonfiguration und die ARM-Architektur auswählen.
     ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
 
@@ -202,10 +202,10 @@ In den vorherigen Abschnitten haben Sie die Grundlagen von räumlichen Azure-Ank
 
 ![module2chapter1step12im](images/module2chapter1step12im.PNG)
 
-> Hinweis: Es gibt eine Vielzahl von Benutzeroberflächen Abläufen für die Neupositionierung, einschließlich der Verwendung einer Schaltfläche, um ein umgebendes Feld zu wechseln, das das Erlebnis umgibt, der Verwendung eines neu positionierenden Objekts (z. b. des in diesem Schritt verwendeten Cubes), der Verwendung der Position und Drehung Gizmos. und mehr.
+> Hinweis: Es gibt eine Vielzahl von Benutzeroberflächen Abläufen für die Neupositionierung, einschließlich der Verwendung einer Schaltfläche zum Umschalten eines umgebenden Felds, das die Oberfläche umgibt, der Verwendung eines neu positionierenden Objekts (z. b. des in diesem Schritt verwendeten Cubes), der Verwendung von Position und Rotation. Gizmos und mehr.
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 In diesem Tutorial haben Sie die Grundlagen von räumlichen Azure-Ankern kennengelernt. In dieser Lektion haben Sie mehrere Schaltflächen zur Verfügung gestellt, mit denen Sie die verschiedenen erforderlichen Schritte zum Starten und Beenden einer Azure-Sitzung sowie zum Erstellen, hochladen und Herunterladen von Azure-Ankern auf einem einzelnen Gerät untersuchen können. In der nächsten Lektion erfahren Sie, wie Sie Azure-Anker-IDs für den Abruf in den hololens 2 speichern, auch nachdem die Anwendung neu gestartet wurde. Während der Reihe erfahren Sie auch, wie Anker-IDs zwischen mehreren Geräten übertragen werden, um eine räumliche Ausrichtung zu erreichen, und erfahren mehr über freigegebene Sitzungen mit mehreren Benutzern, die im Rahmen der Freigabe des Tutorials demnächst erläutert werden.
 
-[Nächste Lektion: 2. Speichern, Abrufen und Freigeben von Azure Spatial Anchors](mrlearning-asa-ch2.md)
+[Nächste Lektion: 2. speichern, abrufen und Freigeben von räumlichen Azure-Ankern](mrlearning-asa-ch2.md)
 

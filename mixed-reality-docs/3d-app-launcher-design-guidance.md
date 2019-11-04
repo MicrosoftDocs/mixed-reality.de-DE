@@ -6,18 +6,18 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Design, 3D-App-Startfeld, immersives Headset, Live Cube
-ms.openlocfilehash: 47db5bffa121c0cc11d246dc749c464e5f187270
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: ce9d242e26d67c8fe5af7ac32f4e910a15715d25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63517718"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437231"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>Leitfaden zum Entwerfen von 3D-apps
 
 Wenn Sie ein Windows Mixed Reality immersive (VR)-Headset platzieren, können Sie die Windows Mixed Reality-Startseite eingeben und als Haus auf einer Klippe visualisieren, die von Bergen und Wasser umgeben ist (Sie können jedoch [auch andere Umgebungen auswählen und sogar eigene Umgebungen erstellen](add-custom-home-environments.md)). Innerhalb des Raums dieses Zuhause kann ein Benutzer die 3D-Objekte und-apps, die für Sie wichtig sind, anordnen und organisieren. Ein **3D-App-** Startfeld ist ein "physisches" Objekt im gemischten Reality-Haus des Benutzers, das Sie auswählen können, um eine APP zu starten.
 
-![Anpassen von mit VSTU Floaty Bird 3D-App-Startfeld](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
+![Beispiel: floaty Bird 3D-App-Startfeld](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
 *Beispiel für floaty Bird 3D-App-Startfeld (fiktive APP)*
 
 ## <a name="3d-app-launcher-creation-process"></a>Erstellung eines 3D-App-Start Programms
@@ -39,7 +39,7 @@ Die Windows Mixed Reality-Umgebung, in der sich Ihr App-Startfeld befindet, ist 
 
 Wenn Sie sich Ihr App-Startfeld ansehen, sollte der Zweck zum Starten Ihrer APP offensichtlich sein und keine Verwirrung verursachen. Stellen Sie sich z. b. vor, dass Ihr Start Programm ein offensichtlich-genug repräsentativ für Ihre APP ist, dass Sie nicht mit einem Teil der Einrichtung im Klippe-Haus verwechselt wird. Ihr App-Start Programm sollte Personen einladen, Sie zu berühren bzw. auszuwählen.
 
-![Anpassen von mit VSTU Neues Hinweis 3D-App-Startfeld](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
+![Beispiel: neues Hinweis 3D-App-Startfeld](images/20171016-152145-mixedreality1-1200px-1000px.jpg)<br>
 *Neues Hinweis Beispiel für 3D-App-Start Programm (fiktive APP)*
 
 ### <a name="home-scale"></a>Start Skala
@@ -50,7 +50,7 @@ Wenn Sie sich Ihr App-Startfeld ansehen, sollte der Zweck zum Starten Ihrer APP 
 
 Das App-Start Programm sollte sich wie ein Objekt erweisen, das eine Person im Raum haben würde. Sie werden sich praktisch durch diese Dinge umgeben, sodass das Start Programm so aussehen sollte, wie etwas, was der Benutzer als wünschenswert erachtet hat
 
-![Anpassen von mit VSTU Astrowarp 3D-App-Startfeld](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
+![Beispiel: Astro Warp 3D-App-Startfeld](images/20171016-132936-mixedreality-1200px-1000px.jpg)<br>
 *Beispiel für ein Beispiel für die Astro Warp 3D-app (fiktive APP)*
 
 ### <a name="recognizable"></a>Unerkannt
@@ -64,31 +64,27 @@ Ihre APP verdient mehr als nur Ihr Logo auf eine flache Ebene zu bringen und Sie
 
 :::row:::
     :::column:::
-        ![Logo only](images/20171016-140436-mixedreality-640px.jpg)
-        *Logo only*
+        ![Logo nur](images/20171016-140436-mixedreality-640px.jpg) *Logo*
     :::column-end:::
     :::column:::
-        ![More recognizable with a character](images/20171016-140557-mixedreality-640px.jpg)
-        *More recognizable with a character*
+        ![mit einem Zeichen besser erkennbar](images/20171016-140557-mixedreality-640px.jpg) *mit einem Zeichen besser erkennbar*
     :::column-end:::
 :::row-end:::
 
 
 :::row:::
     :::column:::
-        ![Flat approach, not surprisingly, feels flat](images/20171016-155101-mixedreality-640px.jpg)
-        *Flat approach, not surprisingly, feels flat*
+        ![flachen Ansatz, nicht überraschend, ist ein flacher](images/20171016-155101-mixedreality-640px.jpg) *flacher Ansatz, nicht überraschend, ist flach* .
     :::column-end:::
     :::column:::
-        ![Volumetric approach better showcases your app](images/20171016-161407-mixedreality-640px.jpg)
-        *Volumetric approach better showcases your app*
+        ![Volumetric-Ansatz stellt Ihre APP besser dar](images/20171016-161407-mixedreality-640px.jpg) *volumetriansatz Ihre APP besser präsentiert* .
     :::column-end:::
 :::row-end:::
 
 
 ## <a name="tips-for-good-3d-models"></a>Tipps für gute 3D-Modelle
 
-### <a name="best-practices"></a>Empfohlene Methoden
+### <a name="best-practices"></a>Bewährte Verfahren
 * Wenn Sie Dimensionen für das App-Start Programm planen, sollten Sie ungefähr einen 30cm-Cube durchsuchen. Also ein Größenverhältnis von 1:1:1.
 * Modelle müssen unter 10.000 Polygone liegen. [Weitere Informationen zu Dreiecks Zählungen und Ebenen der Details (LODs)](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#triangle-counts-and-levels-of-detail-lods)
 * Testen Sie nach Möglichkeit ein immersives Headset.
@@ -106,12 +102,12 @@ Ihre APP verdient mehr als nur Ihr Logo auf eine flache Ebene zu bringen und Sie
 * Verwenden Sie Thin Geometry nicht – es funktioniert nicht gut in einer Entfernung und ist falsch.
 * Lassen Sie Teile des Modells nicht zu viel über das Größenverhältnis von 1:1:1 hinaus erweitern. Es werden Skalierungsprobleme entstehen.
 
-![Vermeiden Sie Muster mit hohem Kontrast und geringer Auslastung](images/20171013-143603-mixedreality-640px.jpg)<br>
+![vermeiden Sie Muster mit hohem Kontrast und wenig ausgelastet](images/20171013-143603-mixedreality-640px.jpg)<br>
 *Vermeiden Sie große Kontraste, kleine, ausgelastete Muster*
 
 ## <a name="how-to-handle-type"></a>Vorgehensweise beim Behandeln von Typen
 
-### <a name="best-practices"></a>Empfohlene Methoden
+### <a name="best-practices"></a>Bewährte Verfahren
 * Es wird empfohlen, dass Ihr Typ ungefähr 1/3 ihres App-Start Programms umfasst (oder mehr). Der Typ ist das wichtigste, das den Benutzern eine Vorstellung gibt, dass es sich bei Ihrem Start Programm tatsächlich um ein Start Programm handelt, sodass es sehr schön ist.
 * Vermeiden Sie einen Super weiten Typ – versuchen Sie, ihn innerhalb der Grenzen der Kerndimensionen der App-Launcher (mehr oder weniger) zu halten.
 * Der flattype kann funktionieren, aber beachten Sie, dass er in bestimmten Winkeln und in bestimmten Umgebungen schwer zu erkennen ist. Möglicherweise sollten Sie ein solides Objekt oder einen Hintergrund dahinter ablegen, um dies zu unterstützen.
@@ -120,36 +116,33 @@ Ihre APP verdient mehr als nur Ihr Logo auf eine flache Ebene zu bringen und Sie
 
 :::row:::
     :::column:::
-        ![Flat type without a backdrop can be hard to view from certain angles and in certain environments](images/flattype-640px.png)
-        *Flat type without a backdrop can be hard to view from certain angles and in certain environments*
+        ![flattype ohne einen Hintergrund kann in bestimmten Winkeln und in bestimmten Umgebungen schwer zu finden sein](images/flattype-640px.png) *flacher Typ ohne Hintergrund kann in bestimmten Winkeln und in bestimmten Umgebungen schwer zu sehen sein* .
     :::column-end:::
     :::column:::
-        ![Type with a built-in backdrop can work well](images/flattypeandbkg-640px.png)
-        *Type with a built-in backdrop can work well*
+        ![Typ mit einem integrierten Hintergrund kann gut funktionieren](images/flattypeandbkg-640px.png) *Typ mit einem integrierten Hintergrund kann gut funktionieren* .
     :::column-end:::
     :::column:::
-        ![Extruded type can work well if you shade the sides](images/20171016-160221-mixedreality-640px.jpg)
-        *Extruded type can work well if you shade the sides*
+        Wenn Sie die Seiten schattieren, ![der Typ "extrudiert" gut funktioniert,](images/20171016-160221-mixedreality-640px.jpg) der *Typ "extrudiert" gut funktionieren, wenn Sie die Seiten schattieren*
     :::column-end:::
 :::row-end:::
 
 
 **Typfarben, die funktionieren**
-* Weiß
-* Schwarz
+* Weisse
+* Box
 * Helle halb satte Farbe
 
-![Typfarben, die funktionieren.](images/20171016-112111-mixedreality-640px.jpg)<br>
+![typfarben, die funktionieren.](images/20171016-112111-mixedreality-640px.jpg)<br>
 *Typfarben, die funktionieren*
 
 ### <a name="what-to-avoid"></a>Was Sie vermeiden sollten
 
 **Typfarben, die Probleme verursachen**
 * Mitteltöne
-* Grau
+* grau
 * Über satte Farben oder nicht satte Farben
 
-![Typfarben, die Probleme verursachen.](images/20171016-112246-mixedreality-640px.jpg)<br>
+![typfarben, die Probleme verursachen.](images/20171016-112246-mixedreality-640px.jpg)<br>
 *Typfarben, die Probleme verursachen*
 
 ## <a name="lighting"></a>Beleuchtung
@@ -158,16 +151,16 @@ Die Beleuchtung für das App-Start Programm stammt aus der Umgebung "Klippe Hous
 
 Ein guter Ausgangspunkt, um zu testen, wie das Start Programm in den verschiedenen Lichtern in der Umgebung aussieht, sind Studio, der Medienraum, an einer beliebigen Stelle außerhalb und auf der Rückseite (der konkrete Bereich mit dem Rasen). Ein weiterer guter Test besteht darin, den halblicht-und Halbschatten zu platzieren und zu sehen, wie er aussieht.
 
-![Stellen Sie sicher, dass das Start Programm sowohl in Beleuchtung als auch in Schatten angezeigt wird.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
+![stellen Sie sicher, dass das Start Programm sowohl in Beleuchtung als auch in Schatten angezeigt wird.](images/20171013-145523-mixedreality-1200px-1000px.jpg)<br>
 *Stellen Sie sicher, dass das Start Programm in Licht und Schatten gut aussieht*
 
 ## <a name="texturing"></a>Texturierung
 
 ### <a name="authoring-your-textures"></a>Erstellen von Texturen
 
-Das Endformat des 3D-App-Start Programms ist eine. GLB-Datei, die mithilfe der PBR-Pipeline (physisch basiertes Rendering) erstellt wird. Dies kann ein kniffliger Prozess sein. jetzt ist es ein guter Zeitpunkt, einen technischen Künstler zu verwenden, wenn Sie dies noch nicht getan haben. Wenn Sie ein mutiger DIY sind und sich die Zeit nehmen, sich mit der [PBR-Terminologie](http://wiki.polycount.com/wiki/PBR) vertraut zu machen und zu erfahren, was im Hintergrund passiert, bevor Sie beginnen, können Sie häufige Fehler vermeiden. 
+Das Endformat des 3D-App-Start Programms ist eine. GLB-Datei, die mithilfe der PBR-Pipeline (physisch basiertes Rendering) erstellt wird. Dies kann ein kniffliger Prozess sein. jetzt ist es ein guter Zeitpunkt, einen technischen Künstler zu verwenden, wenn Sie dies noch nicht getan haben. Wenn Sie ein mutiger DIY sind und sich die Zeit nehmen, sich mit der [PBR-Terminologie](https://wiki.polycount.com/wiki/PBR) vertraut zu machen und zu erfahren, was im Hintergrund passiert, bevor Sie beginnen, können Sie häufige Fehler vermeiden. 
 
-![Anpassen von mit VSTU Neue Notiz-App](images/pbr-freshnote1-640px-500px.png)<br>
+![Beispiel: App für neue Notiz](images/pbr-freshnote1-640px-500px.png)<br>
 *Neues Hinweis Beispiel für 3D-App-Start Programm (fiktive APP)*
 
 **Empfohlenes Authoring Tool**
@@ -176,7 +169,7 @@ Es wird empfohlen, den [Substanz Maler](https://www.allegorithmic.com/products/s
 
 (Alternativ kann [3D-Coat](https://3dcoat.com/home/), [Quixel Suite 2](https://quixel.se/suite2/)oder [marthset](https://www.marmoset.co/toolbag/) auch verwendet werden, wenn Sie mit einer der beiden vertraut sind.)
 
-### <a name="best-practices"></a>Empfohlene Methoden
+### <a name="best-practices"></a>Bewährte Verfahren
 
 * Wenn das App-Start Programmobjekt für PBR erstellt wurde, sollte es recht einfach sein, es für die Umgebung "Klippe" zu konvertieren.
 * Unser Shader erwartet einen Metal/roughness-Workflow – der Unreal PBR-Shader ist ein schließende Fax.
@@ -186,7 +179,7 @@ Es wird empfohlen, den [Substanz Maler](https://www.allegorithmic.com/products/s
     * Vermeiden Sie eine gebackenes Beleuchtung in den Texturen
     * Verwenden Sie eines der Pakete zur Erstellung von PBR-Materialien, um die richtigen Zuordnungen für den Shader zu erhalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 * [Erstellen von 3D-Modellen für die Verwendung in der Mixed Reality-Startseite](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 * [Implementieren von 3D-App-Startprogrammen (UWP-Apps)](implementing-3d-app-launchers.md)

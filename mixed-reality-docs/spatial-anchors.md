@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Koordinatensystem, Raumkoordinatensystem, Weltmaßstab, Welt, Maßstab, Position, Ausrichtung, Anker, Raumanker, weltumschlossen, weltumschließend, Beständigkeit, Freigabe
-ms.openlocfilehash: 27b1dcd86c7edba176ca54840bdd27550736a16d
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387738"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438028"
 ---
 # <a name="spatial-anchors"></a>Raumanker
 
@@ -22,11 +22,11 @@ Sie können auch räumliche Anker für Anwendungs Sitzungen und Geräte übergre
 * Durch die Verwendung von <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial</a> Anchor zum Erstellen eines cloudankers kann Ihre Anwendung einen räumlichen Anker für mehrere hololens-, IOS-und Android-Geräte freigeben. Wenn jedes Gerät ein – Hologramm mithilfe desselben räumlichen Ankers erstellt, sehen Benutzer, dass das – Hologramm an derselben Stelle in der realen Welt angezeigt wird. Dies ermöglicht gemeinsame Erfahrungen in Echtzeit.
 * Sie können <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> auch für die asynchrone Hologrammpersistenz auf HoloLens-, iOS- und Android-Geräten verwenden. Durch die gemeinsame Nutzung eines dauerhaften Cloudraumankers können mehrere Geräte dasselbe persistierte Hologramm im Verlauf der Zeit beobachten, auch wenn diese Geräte nicht gleichzeitig vorhanden sind.
 
-Für den Einsatz von Desktop-Headsets, die sich in einem 5-Meter-Durchmesser befinden, können Sie den stagingframe [von Reference](coordinate-systems.md#stage-frame-of-reference) anstelle räumlicher Anker verwenden, wodurch ein einzelnes Koordinatensystem bereitgestellt wird, in dem Sie Alle Inhalte Wiedergabe. Wenn Ihre Anwendung es jedoch ermöglicht, dass Benutzer über 5 Meter in hololens hinaus bewegen können, was vielleicht in einem vollständigen Fußboden eines Gebäudes betrieben wird, benötigen Sie räumliche Anker, um Inhalte stabil zu halten.
+Für den Einsatz von Desktop-Headsets, die sich in einem Fünfdimensionalen Durchmesser befinden, können Sie in der Regel den [stagingframe von Reference](coordinate-systems.md#stage-frame-of-reference) anstelle räumlicher Anker verwenden, der ein einzelnes Koordinatensystem bereitstellt, in dem Sie Alle Inhalte Wiedergabe. Wenn Ihre Anwendung es jedoch ermöglicht, dass Benutzer über 5 Meter in hololens hinaus bewegen können, was vielleicht in einem vollständigen Fußboden eines Gebäudes betrieben wird, benötigen Sie räumliche Anker, um Inhalte stabil zu halten.
 
 Obwohl Raumanker ideal für Hologramme sind, die in der Umgebung verankert bleiben sollen, kann ein Anker nach der Positionierung nicht mehr bewegt werden. Es gibt Alternativen zu ankern, die für dynamische Hologramme geeignet sind, die mit dem Benutzer versehen werden. Dynamische Hologramme sollten am besten mit einem stationären Bezugsrahmen (die Grundlage für die Weltkoordinaten von Unity) oder einem angefügten Bezugsrahmen positioniert werden.
 
-## <a name="best-practices"></a>Empfohlene Methoden
+## <a name="best-practices"></a>Bewährte Verfahren
 
 Diese Richtlinien für Raumanker helfen Ihnen, stabile Hologramme zu rendern, die die reale Welt präzise nachverfolgen.
 
@@ -34,7 +34,7 @@ Diese Richtlinien für Raumanker helfen Ihnen, stabile Hologramme zu rendern, di
 
 Normalerweise platzieren Benutzer explizit räumliche Anker.
 
-Beispielsweise kann eine Anwendung auf hololens den [Blick](gaze.md) Strahl des Benutzers mit dem [räumlichen Mapping](spatial-mapping.md) -Mesh überschneiden, damit der Benutzer entscheiden kann, wo ein Hologram platziert werden soll. Wenn der Benutzer tippt, um dieses – Hologramm zu platzieren, erstellen Sie am schnittspunkt einen räumlichen Anker, und platzieren Sie dann das – Hologramm am Ursprung des Koordinatensystems dieses Ankers.
+Beispielsweise kann eine Anwendung auf hololens den [Blick](gaze-and-commit.md) Strahl des Benutzers mit dem [räumlichen Mapping](spatial-mapping.md) -Mesh überschneiden, damit der Benutzer entscheiden kann, wo ein Hologram platziert werden soll. Wenn der Benutzer tippt, um dieses – Hologramm zu platzieren, erstellen Sie am schnittspunkt einen räumlichen Anker, und platzieren Sie dann das – Hologramm am Ursprung des Koordinatensystems dieses Ankers.
 
 Lokale räumliche Anker sind einfach und leistungsfähig zum Erstellen. Das System konsolidiert seine internen Daten, wenn die zugrunde liegenden Sensordaten von mehreren Anker gemeinsam genutzt werden können. Sie sollten in der Regel einen neuen lokalen räumlichen Anker für jedes Hologramm erstellen, das ein Benutzer explizit platziert, außer in den nachstehend aufgeführten Fällen, wie z. b. feste Gruppen von holograms.
 
@@ -71,7 +71,7 @@ Dies ist insbesondere für lokale Anker wichtig, die Sie im Raumankerspeicher au
 
 Bei Cloudraumankern kann Ihr Speicher entsprechend den Anforderungen Ihres Szenarios skaliert werden. Sie können beliebig viele cloudananker speichern und nur dann freigeben, wenn Sie wissen, dass die Benutzer nicht erneut holograms an diesem Anker finden müssen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Koordinatensysteme](coordinate-systems.md)
 * [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

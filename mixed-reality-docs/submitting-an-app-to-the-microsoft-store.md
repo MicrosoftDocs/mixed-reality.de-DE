@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: APP, UWP, Übermittlung, Übermittlung, Filter, Metadaten, Systemanforderungen, Schlüsselwörter, Wack, Zertifizierung, Paket, AppX, Merchandising
-ms.openlocfilehash: af8ee89b2cae42fc3abeec072acde20f437eb820
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 63377239498319e84666ba0dbdbe36ce626901c5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387748"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437435"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Senden einer APP an den Microsoft Store
 
@@ -27,9 +27,9 @@ Es gibt mehrere Bild Ressourcen, die für die AppX-Buildtools erforderlich sind,
 
 | Erforderliches Asset | Empfohlene Skalierung | Bild Format | Wo wird dieses angezeigt? | 
 |----------|----------|----------|------------------|
-| Quadratisches Logo 71x71 | Beliebig |  PNG | Nicht zutreffend | 
+| Quadratisches Logo 71x71 | Beliebig |  PNG | n. v. | 
 | Quadratisches Logo 150x150 | 150x150 (100% Skala) oder 225 x 225 (150% Skalierung) | PNG | Start-Pins und alle apps (wenn 310x310 nicht bereitgestellt wird), Store-Suchvorschläge, Store-Listenseite, Store-durchsuchen, Store-Suche | 
-|  Breites 310x150-Logo |  Beliebig  |  PNG  |  Nicht zutreffend | 
+|  Breites 310x150-Logo |  Beliebig  |  PNG  |  n. v. | 
 |  Store-Logo |  75x75 (150% Skalierung)  |  PNG  |  Partner Center, Berichts-APP, Schreiben einer Überprüfung, meine Bibliothek | 
 |  Begrüßungsbildschirm |  930x450 (150% Skalieren)  |  PNG  |  2D-App-Startfeld (Slate) | 
 
@@ -53,7 +53,7 @@ Wenn Ihre Mixed Reality-App Features enthält, die für eine bestimmte Version v
 
 Wenn Sie in Visual Studio ein neues universelles Windows-Projekt erstellen, werden Sie aufgefordert, die Ziel-und Mindestversion von Windows festzulegen. Sie können diese Einstellung auch für ein vorhandenes Projekt ändern, indem Sie im Menü "Projekt" die > Eigenschaften Ihres App-namens unten im Dropdown Menü <.
 
-![Festlegen der Mindest-und Ziel Platt Form Versionen in Visual Studio 2019](images/visual-studio-min-version-500px.png)<br>
+![Festlegen der Versionen der minimal-und Zielplattform in Visual Studio 2019](images/visual-studio-min-version-500px.png)<br>
 Festlegen der Mindest-und Ziel Platt Form Versionen in Visual Studio
 
 ### <a name="specifying-target-device-families"></a>Angeben von Zielgeräte Familien
@@ -216,7 +216,7 @@ Wenn Ihre Mixed Reality-App auf immersiven Headsets funktioniert, sollte mindest
 >[!TIP]
 >Viele Entwickler treten beim Hochladen des App-Pakets im Zusammenhang mit Konflikten zwischen dem Paket Manifest und ihren App-/Herausgeber-Kontoinformationen in Partner Center Fehler auf. Diese Fehler können häufig vermieden werden, indem Sie sich bei Visual Studio mit demselben Konto anmelden, das mit Ihrem Windows-Entwicklerkonto verknüpft ist (das Konto, das Sie zum Anmelden bei Partner Center verwenden). Wenn Sie dasselbe Konto verwenden, können Sie Ihre APP mit ihrer Identität in der Microsoft Store verknüpfen, bevor Sie Sie Verpacken.
 
-![Verknüpfen Sie die APP mit der Microsoft Store](images/associate-your-app-700px.png)<br>
+![Ihre APP mit der Microsoft Store verknüpfen](images/associate-your-app-700px.png)<br>
 Zuordnen der APP zum Microsoft Store in Visual Studio
 
 ### <a name="store-listing-page"></a>Store-Listenseite
@@ -226,16 +226,16 @@ Auf der Seite [Store-Auflistung](https://docs.microsoft.com/windows/uwp/publish/
 >[!IMPORTANT]
 >Um sicherzustellen, dass Ihre APP ordnungsgemäß vom Store kategorisiert und für Windows Mixed Reality-Kunden auffindbar ist, sollten Sie **"Windows Mixed Reality"** als einen ihrer "Suchbegriffe" für die APP hinzufügen. (Sie können Suchbegriffe suchen, indem Sie die "freigegebenen Felder" erweitern. -Abschnitt).
 
-![Hinzufügen von Windows Mixed Reality zu Suchbegriffen](images/search-terms-800px.png)<br>
+![Windows Mixed Reality zu Suchbegriffen hinzufügen](images/search-terms-800px.png)<br>
 Zu Suchbegriffen "Windows Mixed Reality" hinzufügen
 
 ## <a name="offering-a-free-trial-for-your-game-or-app"></a>Kostenlose Testversion für Ihr Spiel oder Ihre APP
 
 Viele Consumer sind vor dem Erwerb eines Windows Mixed Reality-immersiven Headsets auf keine benutzerfreundliche Realität beschränkt. Sie wissen möglicherweise nicht, was von intensiven Spielen zu erwarten ist, und sind unter Umständen nicht mit Ihrem eigenen Komfort Schwellenwert vertraut. Viele Kunden können auch ein Windows Mixed Reality-immersives Headset auf PCs testen, die nicht als [Windows Mixed Reality-PCs](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)gebadelt sind. Aus diesen Gründen wird dringend empfohlen, eine [Kostenlose Testversion](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) für Ihre kostenpflichtige Mixed Reality-APP oder Ihr Spiel zu bieten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Mixed Reality](mixed-reality.md)
-* [Entwicklung – Übersicht](development-overview.md)
+* [Entwicklung – Übersicht](development.md)
 * [App-Ansichten](app-views.md)
 * [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
 * [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md)

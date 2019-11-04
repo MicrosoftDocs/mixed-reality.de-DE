@@ -6,14 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Spracheingabe, keywordrecognizer, grammarerkenzer, Mikrofon, Diktat, Stimme
-ms.openlocfilehash: ef8114a1c877fe9b858122e0c64628d4b71a69cd
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d1cd2a2b954a195bc3f2688d915965f89aa30f98
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548685"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438198"
 ---
 # <a name="voice-input-in-unity"></a>Spracheingabe in Unity
+
+>[!NOTE]
+>Verwenden Sie anstelle der folgenden Informationen das Unity-Plug-in für das Cognitive Speech Services SDK, das deutlich bessere Ergebnisse bei der sprach Genauigkeit bietet und einen einfachen Zugriff auf die sprach-zu-Text-Decodierung und erweiterte sprach Features wie Dialog, Intent-basiert bietet. Interaktion, Übersetzung, Text-zu-Sprache-Synthese und Spracherkennung in natürlicher Sprache. Hier finden Sie das Beispiel und Dokumentation: https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
 
 Unity bietet drei Möglichkeiten zum Hinzufügen von [Spracheingaben](voice-input.md) zu ihrer Unity-Anwendung.
 
@@ -37,8 +40,8 @@ Damit Ihre APP auf bestimmte vom Benutzer gesprochene Ausdrücke lauschen kann, 
 
 ### <a name="keywordrecognizer"></a>Keywordrecognizer
 
-**Namespace:** *Unityengine. Windows. Speech*<br>
-**Solche** *Keywordrecognizer*, *phraserecognizedeventargs*, *Sprachfehler*, *Sprachsystem Status*
+**Namespace:** *unityengine. Windows. Speech*<br>
+**Typen:** *keywordrecognizer*, *phraserecognizedeventargs*, *delegatfehler*, Sprech *Systemstatus*
 
 Zum Speichern einiger Tastatureingaben benötigen wir einige using-Anweisungen:
 
@@ -99,12 +102,12 @@ keywordRecognizer.Start();
 
 ### <a name="grammarrecognizer"></a>Grammarerkenzer
 
-**Namespace:** *Unityengine. Windows. Speech*<br>
-**Typen**: *Grammarerkenzer*, *phraserecognizedeventargs*, *Sprachfehler*, *Sprachsystem Status*
+**Namespace:** *unityengine. Windows. Speech*<br>
+**Typen**: *grammarerkenzer*, *phraserecognizedeventargs*, *delegatfehler*, Sprech *Systemstatus*
 
-Die Grammatiken werden verwendet, wenn Sie Ihre Erkennungs Grammatik mithilfe von SRGS angeben. Dies kann hilfreich sein, wenn Ihre APP mehr als nur einige wenige Schlüsselwörter aufweist, wenn Sie komplexere Ausdrücke erkennen möchten, oder wenn Sie Sätze von Befehlen problemlos aktivieren und deaktivieren möchten. Thema [Erstellen Sie Grammatiken mithilfe von SRGS XML](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) für Dateiformat Informationen.
+Die Grammatiken werden verwendet, wenn Sie Ihre Erkennungs Grammatik mithilfe von SRGS angeben. Dies kann hilfreich sein, wenn Ihre APP mehr als nur einige wenige Schlüsselwörter aufweist, wenn Sie komplexere Ausdrücke erkennen möchten, oder wenn Sie Sätze von Befehlen problemlos aktivieren und deaktivieren möchten. Informationen zum Dateiformat finden [Sie unter Erstellen von Grammatiken mithilfe von SRGS XML](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) .
 
-Sobald Sie die SRGS-Grammatik haben und sich in Ihrem Projekt in einem [Ordner "streamingassets](http://docs.unity3d.com/Manual/StreamingAssets.html)" befinden:
+Sobald Sie die SRGS-Grammatik haben und sich in Ihrem Projekt in einem [Ordner "streamingassets](https://docs.unity3d.com/Manual/StreamingAssets.html)" befinden:
 
 ```
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
@@ -141,8 +144,8 @@ grammarRecognizer.Start();
 
 ## <a name="dictation"></a>Diktieren
 
-**Namespace:** *Unityengine. Windows. Speech*<br>
-**Typen**: " *Diktationerkenzer*", "sprecherfehler", " *Redner Systemstatus*
+**Namespace:** *unityengine. Windows. Speech*<br>
+**Typen**: " *diktationerkenzer*", "sprecherfehler", " *Redner Systemstatus*
 
 Verwenden Sie das diktationerkenzer-Element, um die Sprache des Benutzers in Text zu konvertieren. Der Diktat-Erkennungs Modul macht [Diktat](voice-input.md#dictation) Funktionen verfügbar und unterstützt das registrieren und lauschen auf Hypothese und Ausdrucks fertige Ereignisse, sodass Sie Ihrem Benutzer Feedback geben können, während Sie sprechen und danach. Die Methoden "Start ()" und "stoppt ()" aktivieren und deaktivieren die Diktat Erkennung. Sobald die Erkennung erfolgt ist, sollte Sie mithilfe der verwerfen ()-Methode freigegeben werden, um die verwendeten Ressourcen freizugeben. Diese Ressourcen werden während Garbage Collection automatisch freigegeben, wenn Sie noch nicht freigegeben werden.
 

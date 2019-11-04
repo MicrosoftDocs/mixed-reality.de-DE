@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräte Portal, hololens
-ms.openlocfilehash: 5a2440c07ade1a9c41f3c28c332748e0c97cd3ed
-ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
+ms.openlocfilehash: cc83a4e987d77be53222b8e9537eeec359446465
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69020222"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438217"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräte Portals
 
@@ -19,7 +19,7 @@ ms.locfileid: "69020222"
 <tr>
 <th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
+<td> Windows Geräteportal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
 </table>
 
@@ -30,12 +30,12 @@ Diese Dokumentation dient speziell zum Windows-Geräte Portal für hololens. Inf
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>Einrichten von hololens für die Verwendung des Windows-Geräte Portals
 
 1. Schalten Sie die HoloLens ein, und setzen Sie sie auf.
-2. Führen Sie die [Blütengeste](gestures.md#bloom) aus, um das Hauptmenü zu starten.
-3. Schauen Sie sich die Kachel " **Einstellungen** " an, und führen Sie die [Tasten](gestures.md#air-tap) Kombination aus. Führen Sie eine zweite Luft Abzweigung aus, um die app in Ihrer Umgebung zu platzieren. Die Einstellungs-App wird gestartet, nachdem Sie sie platziert haben.
+2. Führen Sie die [Blütengeste](system-gesture.md#bloom) aus, um das Hauptmenü zu starten.
+3. Schauen Sie sich die Kachel " **Einstellungen** " an, und führen Sie die [Tasten](gaze-and-commit.md#composite-gestures) Kombination aus. Führen Sie eine zweite Luft Abzweigung aus, um die app in Ihrer Umgebung zu platzieren. Die Einstellungs-App wird gestartet, nachdem Sie sie platziert haben.
 4. Wählen Sie das Menüelement **Aktualisieren** aus.
 5. Wählen Sie das Menüelement **Für Entwickler** aus.
 6. Aktivieren Sie den **Entwicklermodus**.
-7. [Scrollen Sie nach unten](gestures.md#composite-gestures) , und aktivieren Sie das **Geräte Portal**.
+7. [Scrollen Sie nach unten](gaze-and-commit.md#composite-gestures) , und aktivieren Sie das **Geräte Portal**.
 8. Wenn Sie das Windows-Geräte Portal einrichten, sodass Sie Apps auf diesen hololens über USB oder WLAN bereitstellen können, klicken Sie auf **paar** , um [eine paarweise PIN zu generieren](using-visual-studio.md). Belassen Sie die Einstellungs-APP im Popup Fenster, bis Sie die PIN während der ersten Bereitstellung in Visual Studio eingeben.
 
    ![Aktivieren des Entwicklermodus in der App "Einstellungen" für Windows Holographic](images/deviceportalsettings.png)
@@ -46,17 +46,17 @@ Diese Dokumentation dient speziell zum Windows-Geräte Portal für hololens. Inf
 2. Suchen Sie die IP-Adresse Ihres Geräts.
    * Suchen Sie die IP-Adresse auf dem Gerät unter **Einstellungen > Netzwerk & Internet > Wi-Fi-> Erweiterte Optionen**.
 3. Wechseln Sie in einem Webbrowser auf Ihrem PC zu "https://< YOUR_HOLOLENS_IP_ADDRESS" >
-   * Im Browser wird die folgende Meldung angezeigt: "Es gibt ein Problem mit dem Sicherheitszertifikat der Website". Der Grund dafür ist, dass das für das Geräteportal ausgestellte Zertifikat ein Testzertifikat ist. Sie können diesen Zertifikatfehler vorerst ignorieren und fortfahren.
+   * Im Browser wird die folgende Meldung angezeigt: "Es besteht ein Problem mit dem Sicherheitszertifikat dieser Website". Der Grund dafür ist, dass das für das Geräteportal ausgestellte Zertifikat ein Testzertifikat ist. Sie können diesen Zertifikatfehler vorerst ignorieren und fortfahren.
 
 ## <a name="connecting-over-usb"></a>Herstellen einer Verbindung über USB
 
 1. [Installieren Sie die Tools](install-the-tools.md) , um sicherzustellen, dass Visual Studio Update 1 mit den Windows 10-Entwicklertools auf Ihrem PC installiert ist. Hierdurch wird USB-Konnektivität aktiviert.
 2. Schließen Sie die HoloLens mit einem Micro-USB-Kabel am PC an.
-3. Wechseln Sie in einem Webbrowser auf Ihrem PC zu [http://127.0.0.1:10080](http://127.0.0.1:10080).
+3. Wechseln Sie in einem Webbrowser auf Ihrem PC zu [https://127.0.0.1:10080](https://127.0.0.1:10080).
 
 ## <a name="connecting-to-an-emulator"></a>Herstellen einer Verbindung mit einem Emulator
 
-Sie können das Geräteportal auch mit dem Emulator verwenden. Verwenden Sie die [Symbolleiste](using-the-hololens-emulator.md), um eine Verbindung mit dem Geräte Portal herzustellen. Klicken Sie auf dieses Symbol: ![Symbol](images/emulator-deviceportal.png) "Geräte Portal öffnen" **Geräte Portal öffnen**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
+Sie können das Geräteportal auch mit dem Emulator verwenden. Verwenden Sie die [Symbolleiste](using-the-hololens-emulator.md), um eine Verbindung mit dem Geräte Portal herzustellen. Klicken Sie auf dieses Symbol: ![Symbol zum Öffnen des Geräte Portals](images/emulator-deviceportal.png) öffnen Sie das Geräte **Portal**: Öffnen Sie das Windows-Geräte Portal für das hololens-Betriebssystem im Emulator.
 
 ## <a name="creating-a-username-and-password"></a>Erstellen eines Benutzernamens und Kennworts
 
@@ -82,42 +82,42 @@ Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL
 2. Laden Sie das Zertifikat dieses Geräts von der Seite "Sicherheit" im Geräte Portal herunter.
    * Navigieren Sie zu: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm
 3. Installieren Sie das Zertifikat im Speicher "Vertrauenswürdige Stamm Zertifizierungsstellen" auf Ihrem PC.
-   * Geben Sie im Windows-Menü Folgendes ein: Verwalten Sie Computer Zertifikate, und starten Sie das Applet.
+   * Geben Sie im Windows-Menü Folgendes ein: Computer Zertifikate verwalten, und starten Sie das Applet.
    * Erweitern Sie den Ordner **Vertrauenswürdige Stamm Zertifizierungs** Stelle.
    * Klicken Sie auf den Ordner **Zertifikate** .
-   * Wählen Sie im Menü Aktion Folgendes aus: Alle Tasks > importieren...
+   * Wählen Sie im Menü „Aktion“ die Aktion „Alle Aufgaben“ > „Importieren“ aus.
    * Führen Sie den Zertifikatimport-Assistenten mit der Zertifikatdatei aus, die Sie vom Geräteportal heruntergeladen haben.
 4. Starten Sie den Browser neu.
 
 ## <a name="device-portal-pages"></a>Seiten des Geräteportals
 
-### <a name="home"></a>Privat
+### <a name="home"></a>„Startseite“,
 
-![Windows-Geräte Portal-Startseite für Microsoft hololens](images/windows-device-portal-home-page-1000px.png)<br>
+![Windows-Geräte Portal-Startseite auf Microsoft hololens-](images/windows-device-portal-home-page-1000px.png)<br>
 *Windows-Geräte Portal-Startseite für Microsoft hololens*
 
 Die Geräteportalsitzung beginnt auf der Startseite. Der Zugriff auf andere Seiten erfolgt über die Navigationsleiste links von der Startseite.
 
 Die Symbolleiste am oberen Rand der Seite ermöglicht den Zugriff auf häufig verwendete Status und Features.
-* **Online**: Gibt an, ob das Gerät mit Wi-Fi verbunden ist.
-* **Herunter**fahren: Schaltet das Gerät aus.
-* **Neu starten**: Zyklen Stromversorgung des Geräts.
-* **Sicherheit**: Öffnet die Seite Gerätesicherheit.
+* **Online**: Gibt an, ob das Gerät mit dem WLAN verbunden ist.
+* **Herunterfahren**: Schaltet das Gerät aus.
+* **Neu starten**: Schaltet das Gerät aus und wieder ein.
+* **Sicherheit**: Öffnet die Seite „Device Security“.
 * **Cool**: Gibt die Temperatur des Geräts an.
-* **A/C**: Gibt an, ob das Gerät angeschlossen und berechnet wird.
-* **Hilfe**: Öffnet die Dokumentationsseite der Rest-Schnittstelle.
+* **A/C**: Gibt an, ob das Gerät angeschlossen ist und geladen wird.
+* **Hilfe**: Öffnet die Seite mit der Dokumentation der REST-Schnittstelle.
 
 Auf der Startseite werden die folgenden Informationen angezeigt:
 * **Geräte Status:** überwacht die Integrität des Geräts und meldet kritische Fehler.
 * **Windows-Informationen:** zeigt den Namen der hololens und die aktuell installierte Version von Windows an.
 * **Einstellungen**: Dieser Abschnitt enthält die folgenden Einstellungen:
-   * **IPD**: Legt den interpupillary Distance (IPD) fest. Hierbei handelt es sich um den Abstand zwischen der Mitte der Schüler und der Benutzer Mitte, wenn Sie direkt vorwärts suchen. Die Einstellung wird sofort wirksam. Der Standardwert wurde beim Einrichten des Geräts automatisch berechnet.
-   * **Gerätename**: Weisen Sie den hololens einen Namen zu. Nach dem Ändern dieses Werts müssen Sie das Gerät neu starten, damit er wirksam wird. Nachdem Sie auf **Speichern**geklickt haben, wird ein Dialogfeld gefragt, ob Sie das Gerät sofort neu starten oder später neu starten möchten.
-   * Standby- **Einstellungen**: Legt die Zeitspanne fest, die gewartet wird, bevor das Gerät in den Standbymodus wechselt, wenn es angeschlossen ist, und wenn es sich im Akku Betrieb befindet.
+   * **IPD**: Legt den Pupillenabstand (Interpupillary Distance, IPD) fest. Dies ist der Abstand in Millimeter zwischen dem Mittelpunkt der Pupillen des Benutzers, wenn dieser geradeaus schaut. Die Einstellung wird sofort wirksam. Der Standardwert wurde beim Einrichten des Geräts automatisch berechnet.
+   * **Gerätename**: Weisen Sie der HoloLens einen Namen zu. Nach dem Ändern dieses Werts müssen Sie das Gerät neu starten, damit er wirksam wird. Nachdem Sie auf **Speichern**geklickt haben, wird ein Dialogfeld gefragt, ob Sie das Gerät sofort neu starten oder später neu starten möchten.
+   * **Standbymoduseinstellungen**: Hier legen Sie die Wartezeit fest, bevor das Gerät in den Ruhezustand wechselt, wenn es angeschlossen ist und wenn es mit Akkustrom betrieben wird.
 
 ### <a name="3d-view"></a>3D View
 
-![3D-Ansichts Seite im Windows-Geräte Portal unter Microsoft hololens](images/3dview-1000px.png)<br>
+![3D-Ansichts Seite im Windows-Geräte Portal auf Microsoft hololens-](images/3dview-1000px.png)<br>
 *3D-Ansichts Seite im Windows-Geräte Portal unter Microsoft hololens*
 
 Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung interpretiert. Navigieren Sie mit der Maus in der Ansicht:
@@ -126,36 +126,36 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
 * Zoom: Maus scrollen.
 * **Überwachungs Optionen**
    * Aktivieren der kontinuierlichen visuellen Nachverfolgung durch Aktivieren der **visuellen Nachverfolgung erzwingen**. 
-   * Anhalten beendet visuelle Überwachung.
-* **Anzeigeoptionen**: Legen Sie Optionen für die 3D-Ansicht fest:
-  * Nach **Verfolgung**: Gibt an, ob die visuelle Überwachung aktiv ist.
-  * **Floor anzeigen**: Zeigt eine auf einem aktivierter Bodenebene an.
-  * **Frustum anzeigen**: Zeigt die Ansicht "Frustum" an.
-  * **Stabilisierungs Ebene anzeigen**: Zeigt die Ebene an, die hololens für die Stabilisierung der Bewegung verwendet.
-  * **Mesh anzeigen**: Zeigt das räumliche Mapping-Mesh an, das Ihre Umgebung darstellt.
-  * **Räumliche Anker anzeigen**: Zeigt räumliche Anker für die aktive APP an. Sie müssen auf die Schaltfläche Aktualisieren klicken, um die Anker zu erhalten und zu aktualisieren.
-  * **Details anzeigen**: Zeigt Handpositionen, Head-Rotation-Quaternionen und den Geräte Ursprungs Vektor an, wenn Sie in Echtzeit geändert werden.
-  * **Vollbild-Schaltfläche**: Zeigt die 3D-Ansicht im Vollbildmodus an. Drücken Sie die ESC-Taste, um die Vollbildansicht zu beenden.
-* **Oberflächen wieder**Herstellung: Klicken oder tippen Sie auf **Aktualisieren** , um das neueste räumliche zuordnungsmesh vom Gerät anzuzeigen. Ein vollständiger Durchlauf kann bis zu einige Sekunden lang dauern. Das Mesh wird in der 3D-Ansicht nicht automatisch aktualisiert, und Sie müssen manuell auf " **Aktualisieren** " klicken, um das neueste Mesh vom Gerät zu erhalten. Klicken Sie auf **Speichern** , um das aktuelle räumliche Mapping-Mesh als obj-Datei auf Ihrem PC zu speichern.
-* **Räumliche Anker**: Klicken Sie auf aktualisieren, um die räumlichen Anker für die aktive App anzuzeigen oder zu aktualisieren.
+   * **Anhalten beendet** visuelle Überwachung.
+* **Ansichtsoptionen**: Legen Sie Optionen für die 3D-Ansicht fest:
+  * **Tracking**: gibt an, ob die visuelle Überwachung aktiv ist.
+  * **Boden anzeigen**: Zeigt eine schachbrettartige Bodenfläche an.
+  * **Frustum anzeigen**: Zeigt das Ansichts-Frustum an.
+  * **Stabilisierungsebene anzeigen**: Zeigt die Ebene an, die von der HoloLens für die Bewegungsstabilisierung verwendet wird.
+  * **Mesh anzeigen**: zeigt das räumliche Mapping-Mesh an, das Ihre Umgebung darstellt.
+  * **Räumliche Anker anzeigen**: zeigt räumliche Anker für die aktive APP an. Sie müssen auf die Schaltfläche Aktualisieren klicken, um die Anker zu erhalten und zu aktualisieren.
+  * **Details anzeigen**: Zeigt die Änderung von Handpositionen, der Kopfdrehungsquaternionen und des Geräteursprungsvektors in Echtzeit an.
+  * **Vollbildschaltfläche**: Mit dieser Schaltfläche wird die Seite „3D View“ im Vollbildmodus angezeigt. Drücken Sie die ESC-Taste, um die Vollbildansicht zu beenden.
+* **Oberfläche-wieder**Herstellung: Klicken oder tippen Sie auf **Aktualisieren** , um das neueste räumliche zugriffsmesh vom Gerät anzuzeigen. Ein vollständiger Durchlauf kann bis zu einige Sekunden lang dauern. Das Mesh wird in der 3D-Ansicht nicht automatisch aktualisiert, und Sie müssen manuell auf " **Aktualisieren** " klicken, um das neueste Mesh vom Gerät zu erhalten. Klicken Sie auf **Speichern** , um das aktuelle räumliche Mapping-Mesh als obj-Datei auf Ihrem PC zu speichern.
+* **Räumliche Anker**: Klicken Sie auf "Aktualisieren", um die räumlichen Anker für die aktive App anzuzeigen oder zu aktualisieren.
 
 ### <a name="mixed-reality-capture"></a>Mixed Reality Capture
 
-![Gemischte Reality-Erfassungs Seite im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-mixed-reality-capture-page-1000px.png)<br>
+![Mixed Reality Capture Page im Windows-Geräte Portal auf Microsoft hololens-](images/windows-device-portal-mixed-reality-capture-page-1000px.png)<br>
 *Gemischte Reality-Erfassungs Seite im Windows-Geräte Portal unter Microsoft hololens*
 
 Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der HoloLens speichern.
-* **Einstellungen**: Steuern Sie die Mediendaten Ströme, die erfasst werden, indem Sie die folgenden Einstellungen überprüfen:
-  * **Holograms**: Erfasst den Holographic-Inhalt im Videostream. Hologramme werden in Mono und nicht in Stereo gerendert.
-  * **PV-Kamera**: Zeichnet den Videostream von der Foto-/Videokamera auf.
-  * **MIC-Audiodaten**: Erfasst Audiodaten aus dem Mikrofon-Array.
-  * **App-Audiodatei**: Erfasst Audiodaten aus der aktuell laufenden app.
-  * **Aus Kamera Rendering**: Richtet die Erfassung so aus, dass Sie aus der Perspektive der Foto-/Videokamera besteht, wenn Sie [von der laufenden App unterstützt](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) wird (nur hololens 2).
-  * **Live Vorschau Qualität**: Wählen Sie die Bildschirmauflösung, die Frame Rate und die streamingrate für die Live Vorschau aus.
+* **Einstellungen**: Steuern der Mediendaten Ströme, die erfasst werden, indem die folgenden Einstellungen überprüft werden:
+  * **Holograms**: erfasst den Holographic-Inhalt im Videostream. Hologramme werden in Mono und nicht in Stereo gerendert.
+  * **PV-Kamera**: Erfasst den Videodatenstrom der Foto-/Videokamera.
+  * **Mic Audio**: Erfasst Audioaufnahmen vom Mikrofonarray.
+  * **App Audio**: Erfasst Audioaufnahmen von der derzeit ausgeführten App.
+  * **Rendering von Kamera**: richtet die Erfassung so aus, dass Sie aus der Perspektive der Foto-/Videokamera besteht, wenn Sie [von der laufenden App unterstützt](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) wird (nur hololens 2).
+  * **Qualität der Live-Vorschau**: Wählen Sie die Bildschirmauflösung, Bildfrequenz und Streamingrate für die Live-Vorschau aus.
 * Klicken oder tippen Sie auf die **Live Vorschau** Schaltfläche, um den Aufzeichnungsdaten Strom anzuzeigen. " **Live Preview beenden** " beendet den Aufzeichnungsdaten Strom.
 * Klicken oder tippen Sie auf **Datensatz** , um mit den angegebenen Einstellungen zu beginnen, den Mixed-Reality-Stream aufzuzeichnen. **Aufzeichnung beenden** beendet die Aufzeichnung und speichert Sie.
 * Klicken oder tippen Sie auf **Foto aufnehmen** , um ein Bild aus dem Erfassungsdaten Strom zu übernehmen.
-* **Videos und Fotos**: Zeigt eine Liste der auf dem Gerät ausgeführten Video-und Foto Erfassungen an.
+* **Videos und Fotos**: Zeigt eine Liste der auf dem Gerät aufgenommenen Videos und Fotos an.
 
 > [!NOTE]
 > Es gibt [Einschränkungen für die gleichzeitige MRC](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations)-Authentifizierung:
@@ -174,8 +174,8 @@ Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der
 *Seite "Leistungs Ablauf Verfolgung" im Windows-Geräte Portal unter Microsoft hololens*
 
 Erfassen Sie [Windows Performance Recorder](https://msdn.microsoft.com/library/windows/hardware/hh448205.aspx) (WPR)-Ablauf Verfolgungen aus ihren hololens.
-* **Verfügbare Profile**: Wählen Sie in der Dropdown Liste das WPR-Profil aus, und klicken oder tippen Sie auf **starten** , um die Ablauf Verfolgung zu
-* **Benutzerdefinierte Profile**: Klicken oder tippen Sie auf **Durchsuchen** , um ein WPR-Profil auf Ihrem PC auszuwählen. Klicken oder tippen Sie auf **Hochladen und starten**, um die Ablaufverfolgung zu starten.
+* **Verfügbare Profile**: Wählen Sie in der Dropdownliste das WPR-Profil aus, und klicken oder tippen Sie auf **Starten**, um die Ablaufverfolgung zu starten.
+* **Benutzerdefinierte Profile**: Klicken oder tippen Sie auf **Durchsuchen**, um ein WPR-Profil vom PC auszuwählen. Klicken oder tippen Sie auf **Hochladen und starten**, um die Ablaufverfolgung zu starten.
 
 Zum Beenden der Überwachung klicken Sie auf den Link „Beenden“. Bleiben Sie auf dieser Seite, bis das Herunterladen der Ablauf Verfolgungs Datei abgeschlossen ist.
 
@@ -183,50 +183,50 @@ Aufgezeichnete ETL-Dateien können in [Windows Performance Analyzer](https://msd
 
 ### <a name="processes"></a>Prozesse
 
-![Seite "Prozesse" im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-running-processes-page-1000px.png)<br>
+Seite "![Prozesse" im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-running-processes-page-1000px.png)<br>
 *Seite "Prozesse" im Windows-Geräte Portal unter Microsoft hololens*
 
 Zeigt Details zu derzeit ausgeführten Prozessen an. Diese umfassen Apps und Systemprozesse.
 
 ### <a name="system-performance"></a>Systemleistung
 
-![Seite "System Leistung" im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-system-performance-page-1000px.png)<br>
+![Seite "System Leistung" im Windows-Geräte Portal auf Microsoft hololens](images/windows-device-portal-system-performance-page-1000px.png)<br>
 *Seite "System Leistung" im Windows-Geräte Portal unter Microsoft hololens*
 
 Zeigt Echtzeitgraphen mit Informationen zur Systemdiagnose an, z. B. Stromverbrauch, Bildfrequenz und CPU-Last.
 
 Die folgenden Metriken sind verfügbar:
-* **SOC-Leistung**: Sofortige System-on-Chip-Strom Auslastung, Mittelwert über eine Minute
-* **System Leistung**: Sofortige System Energie Auslastung, Mittelwert über eine Minute
-* Framerate: Frames pro Sekunde, fehlende vblank pro Sekunde und aufeinander folgende fehlende vblank
-* **GPU**: GPU-Engine-Auslastung, Prozentsatz der insgesamt verfügbaren
+* **SoC Power**: Sofortige Nutzung des System-on-a-Chip-Stroms, gemittelt über eine Minute.
+* **Systemstromversorgung**: Sofortige Nutzung des Systemstroms, gemittelt über eine Minute.
+* **Bildfrequenz**: Bilder pro Sekunde, übersprungene VBlanks pro Sekunde und aufeinanderfolgende übersprungene VBlanks
+* **GPU**: Auslastung des GPU-Moduls, gesamte Verfügbarkeit in Prozent
 * **CPU**: Verfügbarkeit in Prozent
-* E **/** A: Lese-und Schreibvorgänge
-* **Netzwerk**: Empfangen und gesendet
-* Arbeits **Speicher**: Insgesamt, in Verwendung, committen, auslagerbaren und nicht auslagerbaren
+* **E/A**: Lese- und Schreibvorgänge
+* **Netzwerk**: Empfangene und gesendete Daten
+* Arbeits **Speicher**: Gesamtmenge, Verwendung, Commit, Auslagerung und nicht Auslagerungsseiten
 
 ### <a name="apps"></a>Apps
 
-![Seite "Apps" im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-apps-page-1000px.png)<br>
+![Seite "Apps" im Windows-Geräte Portal auf Microsoft hololens](images/windows-device-portal-apps-page-1000px.png)<br>
 *Seite "Apps" im Windows-Geräte Portal unter Microsoft hololens*
 
 Verwaltet die apps, die auf den hololens installiert sind.
-* **Installierte apps**: Entfernen und starten Sie apps.
-* **Ausführen von apps**: Listet apps auf, die derzeit ausgeführt werden.
+* **Installierte Apps**: Hier können Sie Apps entfernen und starten.
+* **Ausgeführte Apps**: Listet Apps auf, die derzeit ausgeführt werden.
 * **App installieren**: Wählen Sie App-Pakete für die Installation aus einem Ordner auf Ihrem Computer/Netzwerk aus.
-* **Abhängigkeit**: Fügen Sie Abhängigkeiten für die APP hinzu, die Sie installieren möchten.
-* Bereitstellen: Stellen Sie die ausgewählten apps und Abhängigkeiten in den hololens bereit.
+* **Abhängigkeit**: Hier fügen Sie Abhängigkeiten für die zu installierende App hinzu.
+* Bereit **stellen: Stellen**Sie die ausgewählten apps und Abhängigkeiten in den hololens bereit.
 
 ### <a name="app-crash-dumps"></a>Absturz Abbilder für apps
 
-![Seite "Absturz Abbilder für App" im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-dev-apps-crash-dumps-page-1000px.png)<br>
+Seite "![App-Absturz Abbilder" im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-dev-apps-crash-dumps-page-1000px.png)<br>
 *Seite "Absturz Abbilder für App" im Windows-Geräte Portal unter Microsoft hololens*
 
 Auf dieser Seite können Sie Absturzabbilder für die quergeladenen Apps erfassen. Aktivieren Sie das Kontrollkästchen "Absturz Abbilder **aktiviert** " für jede APP, für die Sie Absturz Abbilder sammeln möchten. Kehren Sie zum Erfassen von Absturzabbildern zu dieser Seite zurück. Dumpdateien können [zum Debuggen in Visual Studio geöffnet](https://msdn.microsoft.com/library/d5zhxt22.aspx)werden.
 
 ### <a name="file-explorer"></a>Datei-Explorer
 
-![Seite "Datei-Explorer" im Windows-Geräte Portal unter Microsoft hololens](images/fileexplorer-1000px.png)<br>
+![Seite "Datei-Explorer" im Windows-Geräte Portal für Microsoft hololens](images/fileexplorer-1000px.png)<br>
 *Seite "Datei-Explorer" im Windows-Geräte Portal unter Microsoft hololens*
 
 Verwenden Sie den Datei-Explorer, um Dateien zu durchsuchen, hochzuladen und herunterzuladen. Sie können mit Dateien im Ordner "Dokumente", im Ordner "Bilder" und in den lokalen Speicher Ordnern für apps arbeiten, die Sie über Visual Studio oder das Geräte Portal bereitgestellt haben.
@@ -240,23 +240,23 @@ Aktuelle Anweisungen zum Aktivieren des Kiosk Modus über das Windows-Geräte Po
 
 ### <a name="logging"></a>Protokollierung
 
-![Seite "Protokollierung" im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-logging-page-1000px.png)<br>
+![Seite "Protokollierung" im Windows-Geräte Portal auf Microsoft hololens](images/windows-device-portal-logging-page-1000px.png)<br>
 *Seite "Protokollierung" im Windows-Geräte Portal unter Microsoft hololens*
 
 Verwaltet die Echtzeit-Ereignis Ablauf Verfolgung für Windows (ETW) auf den hololens.
 
 Aktivieren Sie **Anbieter ausblenden** , um nur die **Ereignis** Liste anzuzeigen.
-* **Registrierte Anbieter**: Wählen Sie den ETW-Anbieter und die Ablauf Verfolgungs Ebene aus. Für die Ablaufverfolgungsebene wird einer der folgenden Werte festgelegt:
+* **Registrierte Anbieter**: Wählen Sie den ETW-Anbieter und die Ablaufverfolgungsebene aus. Für die Ablaufverfolgungsebene wird einer der folgenden Werte festgelegt:
    1. Abnormal exit or termination
    2. Severe errors
    3. Warnungen
    4. Non-error warnings
 
 Klicken oder tippen Sie auf **Aktivieren**, um die Ablaufverfolgung zu starten. Der Anbieter wird der Liste **Aktivierte Anbieter** hinzugefügt.
-* **Benutzerdefinierte Anbieter**: Wählen Sie einen benutzerdefinierten ETW-Anbieter und die Ablauf Verfolgungs Ebene aus. Identifizieren Sie den Anbieter anhand seiner GUID. Fügen Sie keine Klammern in die GUID ein.
+* **Benutzerdefinierte Anbieter**: Wählen Sie einen benutzerdefinierten ETW-Anbieter und die Ablaufverfolgungsebene aus. Identifizieren Sie den Anbieter anhand seiner GUID. Fügen Sie keine Klammern in die GUID ein.
 * **Aktivierte Anbieter**: Listet die aktivierten Anbieter auf. Wählen Sie einen Anbieter aus der Dropdownliste aus, und klicken oder tippen Sie auf **Deaktivieren**, um die Ablaufverfolgung zu beenden. Klicken oder tippen Sie auf **Beenden**, um sämtliche Ablaufverfolgung anzuhalten.
-* **Anbieter Verlauf**: Zeigt die ETW-Anbieter an, die während der aktuellen Sitzung aktiviert wurden. Klicken oder tippen Sie auf **Aktivieren**, um einen Anbieter zu aktivieren, der deaktiviert war. Klicken oder tippen Sie auf **Löschen**, um den Verlauf zu löschen.
-* **Ereignisse**: Listet ETW-Ereignisse von den ausgewählten Anbietern im Tabellenformat auf. Diese Tabelle wird in Echtzeit aktualisiert. Klicken Sie unterhalb der Tabelle auf die Schaltfläche **Löschen** , um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
+* **Anbieterverlauf**: Zeigt die ETW-Anbieter an, die während der aktuellen Sitzung aktiviert wurden. Klicken oder tippen Sie auf **Aktivieren**, um einen Anbieter zu aktivieren, der deaktiviert war. Klicken oder tippen Sie auf **Löschen**, um den Verlauf zu löschen.
+* **Ereignisse**: Listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform auf. Diese Tabelle wird in Echtzeit aktualisiert. Klicken Sie unterhalb der Tabelle auf die Schaltfläche **Löschen** , um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
 * **Filter**: Hiermit können Sie die ETW-Ereignisse filtern, die nach ID, Schlüsselwort, Ebene, Anbieter Name, Aufgaben Name oder Text gesammelt werden. Sie können mehrere Kriterien zusammen kombinieren:
    1. Bei Kriterien, die auf dieselbe Eigenschaft angewendet werden, kann jedes dieser Kriterien erfüllt werden.
    2. Bei Kriterien, die auf unterschiedliche Eigenschaften angewendet werden, müssen alle Kriterien erfüllt werden.
@@ -265,28 +265,28 @@ Sie können z. b. die Kriterien angeben *(der Taskname enthält ' foo ' oder ' B
 
 ### <a name="simulation"></a>Simulation
 
-![Simulations Seite im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-simulation-page-1000px.png)<br>
+![Simulations Seite im Windows-Geräte Portal für Microsoft hololens](images/windows-device-portal-simulation-page-1000px.png)<br>
 *Simulations Seite im Windows-Geräte Portal unter Microsoft hololens*
 
 Ermöglicht Ihnen das Aufzeichnen und Wiedergeben von Eingabedaten für Testzwecke.
-* **Erfassungs Raum**: Wird verwendet, um eine simulierte Raum Datei herunterzuladen, die das räumliche zuordnungsmesh für die Benutzerumgebung enthält. Benennen Sie den Raum, und klicken Sie dann auf **erfassen** , um die Daten als xef-Datei auf Ihrem PC zu speichern. Diese Raumdatei kann in den HoloLens-Emulator geladen werden.
+* **Erfassungsraum**: Wird verwendet, um eine Datei für einen simulierten Raum herunterzuladen, die das Spatial-Mapping-Gitter für die Umgebung des Benutzers enthält. Benennen Sie den Raum, und klicken Sie dann auf **erfassen** , um die Daten als xef-Datei auf Ihrem PC zu speichern. Diese Raumdatei kann in den HoloLens-Emulator geladen werden.
 * **Aufzeichnung**: Überprüfen Sie die Datenströme, die aufgezeichnet werden sollen, benennen Sie die Aufzeichnung, und klicken oder tippen Sie auf **Datensatz** , um das neu Führen Sie Aktionen mit ihren hololens aus, und klicken Sie dann auf " **Abbrechen** ", um die Daten als xef-Datei auf Ihrem PC zu speichern. Diese Datei kann im HoloLens-Emulator oder auf dem Gerät geladen werden.
 * **Wiedergabe**: Klicken oder tippen Sie auf **Aufzeichnung hochladen** , um eine xef-Datei von Ihrem PC auszuwählen und die Daten an die hololens zu senden.
 * **Steuerelement Modus**: Wählen Sie in der Dropdown Liste die Option **Standard** oder **Simulation** aus, und klicken oder tippen Sie auf die Schaltfläche **festlegen** , um den Modus auf den hololens auszuwählen. Durch Auswahl von „Simulation“ werden die realen Sensoren auf der HoloLens deaktiviert und stattdessen hochgeladene simulierte Daten verwendet. Wenn Sie zu „Simulation“ wechseln, reagiert die HoloLens nicht auf den realen Benutzer, bis Sie zurück zu „Standard“ wechseln.
 
-### <a name="networking"></a>Netzwerk
+### <a name="networking"></a>-Netzwerk
 
-![Netzwerkseite im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-networking-page-1000px.png)<br>
+![Netzwerkseite im Windows-Geräte Portal für Microsoft hololens](images/windows-device-portal-networking-page-1000px.png)<br>
 *Netzwerkseite im Windows-Geräte Portal unter Microsoft hololens*
 
 Verwaltet WLAN-Verbindungen auf den hololens.
 * **WiFi-Adapter**: Wählen Sie einen WLAN-Adapter und ein Profil mithilfe der Dropdown-Steuerelemente aus. Klicken oder tippen Sie auf **verbinden** , um den ausgewählten Adapter zu verwenden.
-* **Verfügbare Netzwerke**: Listet die Wi-Fi-Netzwerke auf, mit denen die hololens eine Verbindung herstellen können. Klicken oder tippen Sie auf **Aktualisieren** , um die Liste zu aktualisieren.
-* **IP-Konfiguration**: Zeigt die IP-Adresse und andere Details der Netzwerkverbindung an.
+* **Verfügbare Netzwerke**: Listet die WLAN-Netzwerke auf, mit denen die hololens eine Verbindung herstellen können. Klicken oder tippen Sie auf **Aktualisieren** , um die Liste zu aktualisieren.
+* **IP-Konfiguration**: zeigt die IP-Adresse und andere Details der Netzwerkverbindung an.
 
 ### <a name="virtual-input"></a>Virtual Input
 
-![Virtuelle Eingabe Seite im Windows-Geräte Portal unter Microsoft hololens](images/windows-device-portal-virtual-input-page-1000px.png)<br>
+![Seite virtuelle Eingabe im Windows-Geräte Portal auf Microsoft hololens-](images/windows-device-portal-virtual-input-page-1000px.png)<br>
 *Virtuelle Eingabe Seite im Windows-Geräte Portal unter Microsoft hololens*
 
 Sendet die Tastatureingabe vom Remotecomputer an die HoloLens.

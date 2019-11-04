@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Probleme, Fehler, Problembehandlung, Behebung, Hilfe, Support, hololens
-ms.openlocfilehash: 7b7a32a9a358ff75b2675d265445d9ef1acc1b9e
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 855bb0cafb0d3fba0d8d97c93d9415b51bcc2fb3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550883"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438280"
 ---
 # <a name="hololens-troubleshooting"></a>Hololens-Problembehandlung
 
@@ -38,7 +38,7 @@ Wenn Ihre Hologramme instabil, schnell oder nicht richtig aussehen, versuchen Si
 
 ## <a name="hololens-doesnt-respond-to-my-gestures"></a>Hololens reagiert nicht auf meine Gesten.
 
-Um sicherzustellen, dass hololens ihre Gesten sehen können, behalten Sie die Hand in dem Gesten Rahmen, der einige Füße auf beiden Seiten von Ihnen erweitert. Wenn hololens Ihre Hand sehen können, ändert sich der Cursor von einem Punkt in einen Ring. Erfahren Sie mehr über die Verwendung von [Gesten](gestures.md).
+Um sicherzustellen, dass hololens ihre Gesten sehen können, behalten Sie die Hand in dem Gesten Rahmen, der einige Füße auf beiden Seiten von Ihnen erweitert. Wenn hololens Ihre Hand sehen können, ändert sich der Cursor von einem Punkt in einen Ring. Erfahren Sie mehr über die Verwendung von [Gesten](gaze-and-commit.md#composite-gestures).
 
 Wenn Ihre Umgebung zu dunkel ist, werden hololens möglicherweise nicht angezeigt. Stellen Sie also sicher, dass genügend Licht vorhanden ist.
 
@@ -63,7 +63,7 @@ Wenn auf Ihrem Gerät häufig die Meldung "eingeschränkter Modus" oder "Nachver
 
 ## <a name="my-hololens-cant-tell-what-space-im-in"></a>Meine hololens können nicht erkennen, in welchem Bereich ich bin.
 
-Wenn Ihre hololens den verwendeten Speicherplatz nicht automatisch identifizieren und laden können, stellen Sie sicher, dass Sie mit Wi-Fi verbunden sind, dass es viel Licht in den Raum gibt, und es gab keine größeren Änderungen an der Umgebung. Sie können ein Leerzeichen auch manuell laden oder die Leerzeichen verwalten, indem Sie zu **Einstellungen** > **System** > **Plätze**wechseln.
+Wenn Ihre hololens den verwendeten Speicherplatz nicht automatisch identifizieren und laden können, stellen Sie sicher, dass Sie mit Wi-Fi verbunden sind, dass es viel Licht in den Raum gibt, und es gab keine größeren Änderungen an der Umgebung. Sie können ein Leerzeichen auch manuell laden oder die Leerzeichen verwalten, indem Sie zu **Einstellungen** > **System** > **Spaces**wechseln.
 
 ## <a name="im-getting-a-low-disk-space-error"></a>Ich erhalte den Fehler "wenig Speicherplatz".
 

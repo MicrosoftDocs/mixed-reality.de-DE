@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: 4baef90f8e00e5da1063c708ae24d2057e0dc227
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68977993"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438375"
 ---
-# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integrieren und Verwenden der Spracherkennung und-Aufzeichnung
+# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integrieren und Verwenden der Spracherkennung und-Aufzeichnung
 
 In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwendung des Azure Cognitive Services Speech SDK mit den hololens 2 untersucht. Wenn Sie diese tutorialreihe abgeschlossen haben, können Sie das Mikrofon Ihres Geräts verwenden, um Spracheingaben in Echtzeit zu übersetzen, Ihre Sprache in andere Sprachen übersetzen und die beabsichtigte Funktion des Speech SDK nutzen, um Sprachbefehle mithilfe von künstliche Intelligenz.
 
@@ -31,7 +31,7 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
 ![Module2Chapter3step1im](images/module4chapter1step1im.PNG)
 
-> Hinweis: Stellen Sie sicher, dass die Vorlage auf 3D festgelegt ist, wie in der Abbildung oben gezeigt.
+> Hinweis: Stellen Sie sicher, dass die Vorlage auf "3D" festgelegt ist, wie in der Abbildung oben gezeigt.
 
 2. Laden Sie das [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.unitypackage) Unity-Paket herunter, und speichern Sie es in einem Ordner auf Ihrem PC. Importieren Sie das Paket in Ihr Unity-Projekt. Ausführliche Anweisungen hierzu finden Sie in der [Lektion 1 des Basismoduls](mrlearning-base-ch1.md). 
 
@@ -45,7 +45,7 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
 ![Module4Chapter1step4im](images/module4chapter1step4im.PNG)
 
-5. Laden Sie das Speech SDK Module Asset Pack herunter, das auch als lunarcom-Paket bekannt ist, indem Sie auf [diesen Link](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2)klicken. Das lunarcom-Asset-Paket ist eine Sammlung von Assets und Skripts, die für diese Lektion entwickelt wurden, um die praktische Verwendung des sprach-SDKs von Azure vorzustellen. Es handelt sich um ein Stimmbefehlterminal, das letztendlich eine Schnittstelle mit der Assemblyoberfläche des lunaren Moduls darstellt, die im [Tutorial zum Basismodul](mrlearning-base-ch6.md) entwickelt wurde.
+5. Laden Sie das Speech SDK Module Asset Pack herunter, das auch als lunarcom-Paket bekannt ist, indem Sie auf [diesen Link](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2)klicken. Das lunarcom-Asset-Paket ist eine Sammlung von Assets und Skripts, die für diese Lektion entwickelt wurden, um die praktische Verwendung des sprach-SDKs von Azure vorzustellen. Es handelt sich um ein Voice-Command-Terminal, das letztendlich eine Schnittstelle mit der Oberfläche [für die Mond](mrlearning-base-ch6.md) Modul Assembly bietet
 
 6. Importieren Sie das lunarcom-Asset-Paket in Ihr Unity-Projekt, indem Sie ähnliche Schritte ausführen, die Sie zum Importieren des Mixed Reality Toolkit und Sprach-SDK ausgeführt haben
 7. Konfigurieren Sie das Mixed Reality Toolkit (mrtk). Klicken Sie hierzu oben in Ihrem Fenster auf das Mixed Reality Toolkit-Panel, und wählen Sie dann zu Szene hinzufügen und konfigurieren aus.
@@ -58,7 +58,7 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
 8. In Ihrer Szene gibt es nun mehrere neue Elemente aus der mrtk. Speichern Sie Ihre Szene unter einem anderen Namen, indem Sie auf "Datei" und dann auf "Speichern unter" klicken und der Szene "Sprech Szene" benennen. 
 
-> Hinweis: Wenn Sie nach dem Hinzufügen des mrtk zum Projekt nach dem Hinzufügen des mrtk in Ihrer Szene spielen und nicht in den Wiedergabemodus wechseln, müssen Sie Unity möglicherweise neu starten. 
+> Hinweis: Wenn Sie nach dem Hinzufügen des mrtk zum Projekt in Ihrer Szene auf "Play" klicken und der Wiedergabemodus nicht in den Wiedergabemodus wechselt, müssen Sie Unity möglicherweise neu starten. 
 
 9. Wenn das mixedrealitytoolkit-Objekt in Ihrer Hierarchie ausgewählt ist, klicken Sie im Inspektor-Panel auf Kopieren und anpassen.
 
@@ -96,7 +96,7 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
 ![Module4Chapter1step13im](images/module4chapter1step13im.PNG)
 
-17. Zum Verbinden der Anwendung mit Azure Cognitive Services müssen Sie einen Abonnement Schlüssel (auch als API-Schlüssel bezeichnet) für den Sprachdienst eingeben. Befolgen Sie die [hier](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started) aufgeführten Anweisungen, um einen kostenlosen Abonnement Schlüssel zu erhalten. Nachdem Sie den Abonnement Schlüssel erhalten haben, geben Sie ihn in das Feld Sprachdienst-API-Schlüssel der lunarcomcontroller-Komponente im Inspektor-Panel ein, wie in der folgenden Abbildung dargestellt.
+17. Zum Verbinden der Anwendung mit Azure Cognitive Services müssen Sie einen Abonnement Schlüssel (auch als API-Schlüssel bezeichnet) für den Sprachdienst eingeben. Befolgen Sie die [hier](https://docs.microsoft.com//azure/cognitive-services/speech-service/get-started) aufgeführten Anweisungen, um einen kostenlosen Abonnement Schlüssel zu erhalten. Nachdem Sie den Abonnement Schlüssel erhalten haben, geben Sie ihn in das Feld Sprachdienst-API-Schlüssel der lunarcomcontroller-Komponente im Inspektor-Panel ein, wie in der folgenden Abbildung dargestellt.
 
 18. Geben Sie die Region, die Sie bei der Registrierung für den Abonnement Schlüssel ausgewählt haben, in das Feld Sprachdienst Region der Komponente lunarcomcontroller im Inspektor-Panel ein. Geben Sie beispielsweise für die Region "USA, Westen" in "westus" ein.
 
@@ -143,18 +143,18 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
 ![Lesson1 Chapter5 Schritt 4](images/Lesson1Chapter5Step4.JPG)
 
-> HINWEIS: Wenn der Vorgang fehlschlägt, wiederholen Sie den Buildvorgang, oder starten Sie Unity neu, und wiederholen Sie dann den Buildvorgang. Wenn ein Fehler angezeigt wird, z. b. "Fehler: CS0246 = der Typ-oder Namespace Name "XX" konnte nicht gefunden werden (fehlt eine using-Direktive oder ein Assemblyverweis?), dann müssen Sie möglicherweise das [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) installieren.
+> Hinweis: Wenn der Build fehlschlägt, versuchen Sie es erneut, oder starten Sie Unity neu, und erstellen Sie es erneut. Wenn ein Fehler wie "Fehler: CS0246 = der Typ-oder Namespace Name" XX "nicht gefunden werden konnte (fehlt eine using-Direktive oder ein Assemblyverweis?), müssen Sie möglicherweise das [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>) installieren.
 
 7. Öffnen Sie nach Abschluss des Buildvorgangs den neu erstellten Ordner, der Ihre neu erstellten Anwendungsdateien enthält. Doppelklicken Sie auf die Projektmappendatei ". sln", um die Projektmappendatei in Visual Studio zu öffnen.
 
-> Hinweis: Achten Sie darauf, dass Sie den neu erstellten Ordner öffnen (also den Ordner „App“, wenn Sie die Namenskonventionen in den vorherigen Schritten befolgt haben), weil außerhalb dieses Ordners noch eine SLN-Datei mit einem ähnlichen Namen vorhanden ist, die nicht mit der SLN-Datei im Buildordner verwechselt werden darf. 
+> Hinweis: Stellen Sie sicher, dass Sie den neu erstellten Ordner (d. h. den Ordner "App") öffnen, wenn Sie die Benennungs Konventionen aus den vorherigen Schritten befolgen), da eine ähnlich benannte sln-Datei außerhalb des Ordners vorhanden ist, die nicht mit der SLN-Datei im Buildordner verwechselt werden muss. 
 
 ![Lektion1 Kapitel5 Schritt5](images/Lesson1Chapter5Step5.JPG)
 
-> Hinweis: Wenn Sie von Visual Studio zur Installation neuer Komponenten aufgefordert werden, nehmen Sie sich einen Moment Zeit, um zu überprüfen, ob alle erforderlichen Komponenten (wie auf der Seite [Installieren der Tools](install-the-tools.md) angegeben) installiert sind.
+> Hinweis: Wenn Sie von Visual Studio aufgefordert werden, neue Komponenten zu installieren, nehmen Sie sich einen Moment Zeit, um sicherzustellen, dass alle erforderlichen Komponenten installiert sind, wie auf [der Seite "Tools installieren"](install-the-tools.md) angegeben.
 
-8. Schließen Sie das HoloLens 2-Gerät über das USB-Kabel an Ihren PC an. Bei diesen Lektionsanweisungen wird davon ausgegangen, dass Sie einen Test mit einem HoloLens 2-Gerät bereitstellen. Sie können die Bereitstellung aber auch auf dem [HoloLens 2-Emulator](using-the-hololens-emulator.md) vornehmen oder ein [App-Paket für das Querladen](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>) erstellen.
-9. Stellen Sie vor dem Erstellen der App auf Ihrem Gerät sicher, dass sich das Gerät im Entwicklermodus befindet. Wenn das Ihre erste Bereitstellung auf dem HoloLens 2-Gerät ist, werden Sie möglicherweise von Visual Studio aufgefordert, Ihr HoloLens 2-Gerät mit einer PIN zu koppeln. Folgen Sie [diesen Anweisungen](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio), wenn Sie den Entwicklermodus aktivieren oder das Gerät mit Visual Studio koppeln müssen.
+8. Schließen Sie das HoloLens 2-Gerät über das USB-Kabel an Ihren PC an. Bei diesen Lektionsanweisungen wird davon ausgegangen, dass Sie einen Test mit einem HoloLens 2-Gerät bereitstellen. Sie können die Bereitstellung aber auch auf dem [HoloLens 2-Emulator](using-the-hololens-emulator.md) vornehmen oder ein [App-Paket für das Querladen](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>) erstellen.
+9. Stellen Sie vor dem Erstellen der App auf Ihrem Gerät sicher, dass sich das Gerät im Entwicklermodus befindet. Wenn das Ihre erste Bereitstellung auf dem HoloLens 2-Gerät ist, werden Sie möglicherweise von Visual Studio aufgefordert, Ihr HoloLens 2-Gerät mit einer PIN zu koppeln. Folgen Sie [diesen Anweisungen](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio), wenn Sie den Entwicklermodus aktivieren oder das Gerät mit Visual Studio koppeln müssen.
 
 10. Konfigurieren Sie Visual Studio für die Erstellung auf Ihrem HoloLens 2-Gerät, indem Sie die Konfiguration „Release“ und die Architektur „ARM“ auswählen.
 
@@ -168,5 +168,5 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
 Sie haben die Spracherkennung in Ihrer Anwendung mithilfe von Azure eingerichtet. Führen Sie die Anwendung aus, um sicherzustellen, dass alle Funktionen und Funktionen ordnungsgemäß funktionieren. Beginnen Sie mit der Verwendung des Wake-Worts, das Sie in Schritt 22 eingegeben haben, aktivieren Sie Terminal. Wählen Sie die Schaltfläche Mikrofon, um die Spracherkennung zu starten. Sprechen Sie. Sie sehen, dass Ihre Wörter im Terminal bei der Sprachübertragung überschrieben werden. Drücken Sie ein zweites Mal die Mikrofon Schaltfläche, um die Spracherkennung anzuhalten. Nehmen Sie an, Terminal schließen, um das lunarcom-Terminal auszublenden In der nächsten Lektion erfahren Sie, wie Sie mithilfe der Geräte gestützten Spracherkennung in Situationen, in denen das Sprach-SDK von Azure nicht verfügbar ist, dynamisch wechseln, weil die hololens 2 offline sind.
 
-[Nächstes Tutorial: 2. Hinzufügen eines Offlinemodus für die lokale Sprache-zu-Text-Übersetzung](mrlearning-speechSDK-ch2.md)
+[Nächstes Tutorial: 2. Hinzufügen eines Offline Modus für die lokale Sprachübersetzung](mrlearning-speechSDK-ch2.md)
 

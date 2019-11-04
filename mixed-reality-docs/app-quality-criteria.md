@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: App-Qualitätskriterien, gemischte Realität, Mixed Reality-App
-ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024497"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437048"
 ---
 # <a name="app-quality-criteria"></a>App-Qualitätskriterien
 
@@ -51,7 +51,7 @@ Die Framerate ist die erste Säule der – Hologramm-Stabilität und des Benutze
 
 |  Best  |  Findet |  UN |
 --- | --- | ---
-| Die APP entspricht konstant den Frames pro Sekunde (fps) für Zielgerät: 60fps in hololens; 90fps auf ultrapcs; und 60fps auf gängigen PCs. | Die APP verfügt über zeitweilig auftretende Frame-Abstürze, die die Kernfunktionen nicht behindern. oder FPS ist konstant niedriger als das gewünschte Ziel, verhindert jedoch die APP-Darstellung. | In der APP tritt im Durchschnitt alle zehn Sekunden eine Dropdown-Rate auf. |
+| Die APP erfüllt konstant Frames pro Sekunde (fps) für Zielgerät: 60fps on hololens; 90fps auf ultrapcs; und 60fps auf gängigen PCs. | Die APP verfügt über zeitweilig auftretende Frame-Abstürze, die die Kernfunktionen nicht behindern. oder FPS ist konstant niedriger als das gewünschte Ziel, verhindert jedoch die APP-Darstellung. | In der APP tritt im Durchschnitt alle zehn Sekunden eine Dropdown-Rate auf. |
 
 ### <a name="how-to-measure"></a>So messen Sie
 
@@ -66,7 +66,7 @@ Die Framerate ist die erste Säule der – Hologramm-Stabilität und des Benutze
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
 * [Hologram Stabilität und Framerate](hologram-stability.md#frame-rate)
@@ -134,7 +134,7 @@ Beim Ausführen des Geräts und Anzeigen der Anzeige:
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Hologram Stabilität und Framerate](hologram-stability.md#frame-rate)
 * [Fallstudie mithilfe der Stabilisierungs Ebene](case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)
@@ -192,7 +192,7 @@ Falsche Abweichungen von holograms mit physischen Objekten (wenn Sie in Beziehun
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Platzierung räumlicher Zuordnung](spatial-mapping.md#placement)
 * [Raum Scanprozess](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
@@ -203,7 +203,7 @@ Falsche Abweichungen von holograms mit physischen Objekten (wenn Sie in Beziehun
 
 #### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [MR räumlich 230: Räumliche Abbildung](holograms-230.md)
+* [Räumliche Daten 230: räumliche Zuordnung](holograms-230.md)
 * [Mr Toolkit, Bibliotheken für räumliche Zuordnung](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [Mr Companion Kit, Poster-Kalibrierungs Beispiel](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [Mr Companion Kit, kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -246,7 +246,7 @@ App-Entwickler steuern, wohin die Augen der Benutzer konvergiert werden, indem S
 </tr><tr>
 <td> Findet</td><td> Der Inhalt befindet sich in der Anzeige-und Bewegungs Anleitung, aber nicht ordnungsgemäß oder ohne Verwendung der Clippingebene.</td>
 </tr><tr>
-<td> UN </td><td> Der Inhalt wird zu nah dargestellt ( &lt;in der Regel 1,25 &lt;m oder 50 cm für stationäre Hologramme, die eine genauere Beobachtung erfordern).</td>
+<td> UN </td><td> Der Inhalt wird zu nah dargestellt (in der Regel &lt;1,25 Mio.), oder &lt;50 cm für stationäre Hologramme, die eine genauere Beobachtung erfordern.</td>
 </tr>
 </table>
 
@@ -358,7 +358,7 @@ In Windows Mixed Reality bietet die Audioengine die Audiowiedergabe-Komponente d
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Raumklang](spatial-sound.md)
 * [Raumklangentwurf](spatial-sound-design.md)
@@ -368,7 +368,7 @@ In Windows Mixed Reality bietet die Audioengine die Audiowiedergabe-Komponente d
 
 #### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [MR räumlich 220: Raumklang](holograms-220.md)
+* [Mr Spatial 220: räumlicher Sound](holograms-220.md)
 * [Mrtoolkit, räumliche Audiodaten](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Fokus auf Holographic Frame-Grenzen (FOV)
@@ -416,7 +416,7 @@ Gut gestaltete Benutzeroberflächen können den nützlichen Kontext der virtuell
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Holografischer Rahmen](holographic-frame.md)
 * [Fallstudie, Entwicklung von holostudio-UI und Interaktions Entwurf](case-study-3-holostudio-ui-and-interaction-design-learnings.md?#problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame)
@@ -478,7 +478,7 @@ Holograms sollten auf ungefähr die gleiche Weise wie "echte" Objekte auf die Be
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Interaktions Entwurf](hologram.md)
 * [Farbe, Licht und Material](color,-light-and-materials.md)
@@ -488,7 +488,7 @@ Holograms sollten auf ungefähr die gleiche Weise wie "echte" Objekte auf die Be
 
 #### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [MR-Eingabe 210: Anvisieren](holograms-210.md)
+* [Mr-Eingabe 210: Blick](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Klarheit der Eingabe Interaktion
 
@@ -539,16 +539,14 @@ Die Übersichtlichkeit der Eingabe Interaktion ist wichtig für die Benutzerfreu
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Interactable-Objekte](interactable-object.md)
 * [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 * [Cursor](cursors.md)
 * [Komfort und Blick](comfort.md#gaze-direction)
-* [Gesten](gestures.md)
 * [Spracheingabe](voice-input.md)
-* [Sprachbefehle](voice-design.md)
 * [Motion-Controller](motion-controllers.md)
 * [Leitfaden für Eingabeportierung für Unity](input-porting-guide-for-unity.md)
 * [Tastatureingabe in Unity](keyboard-input-in-unity.md)
@@ -562,13 +560,13 @@ Die Übersichtlichkeit der Eingabe Interaktion ist wichtig für die Benutzerfreu
 
 #### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
-* [Fallstudie: Die Verfolgung von mehr persönlichen Computing](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [Umwandlungs Studie: Entwicklungs-und Interaktions Entwurfs Lernelemente von holostudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-* [Beispiel-App: Periodische Tabelle der Elemente](periodic-table-of-the-elements.md)
-* [Beispiel-App: Lunar-Modul](lunar-module.md)
-* [MR-Eingabe 210: Anvisieren](holograms-210.md)
-* [MR-Eingabe 211: Strei](holograms-211.md)
-* [MR-Eingabe 212: Sprache](holograms-212.md)
+* [Fallstudie: die Verfolgung von mehr persönlichen Computing](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [Umwandlungs Studie: Entwicklung von holostudio-UI-und Interaktions Entwürfen](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [Beispiel-App: periodische Tabelle der Elemente](periodic-table-of-the-elements.md)
+* [Beispiel-App: Mond Modul](lunar-module.md)
+* [Mr-Eingabe 210: Blick](holograms-210.md)
+* [Mr-Eingabe 211: Gesten](holograms-211.md)
+* [Mr-Eingabe 212: Stimme](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Interactable-Objekte
 
@@ -614,12 +612,12 @@ Eine Schaltfläche ist lange eine Metapher, die zum Auslösen eines Ereignisses 
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Text in Unity](text-in-unity.md)
 * [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
-* [Sprachbefehle](voice-design.md)
+* [Spracheingabe](voice-input.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und Tutorials
 
@@ -669,11 +667,11 @@ Apps, die räumliche Daten für die Zuordnung benötigen, benötigen das Gerät,
 
 ### <a name="resources"></a>Ressourcen
 
-#### <a name="documentation"></a>Dokumentation
+#### <a name="documentation"></a>Unterlagen
 
 * [Raumabtastvisualisierung](room-scan-visualization.md)
-* [Fallstudie: Erweitern der räumlichen Mapping-Funktionen von hololens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Fallstudie: Räumlicher Sound Entwurf für holotour](case-study-spatial-sound-design-for-holotour.md)
+* [Fallstudie: Erweitern der Funktionen für räumliche Zuordnung von hololens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Fallstudie: räumliches Sound Design für holotour](case-study-spatial-sound-design-for-holotour.md)
 * [Fallstudie: Erstellen eines immersiven Erlebnisses in Fragmenten](case-study-creating-an-immersive-experience-in-fragments.md)
 
 #### <a name="tools-and-tutorials"></a>Tools und Tutorials

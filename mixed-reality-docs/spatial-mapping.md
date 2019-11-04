@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: räumliche Zuordnung, hololens, gemischte Realität, Oberflächenrekonstruktion, Mesh, SR
-ms.openlocfilehash: 4914cf5b7864ecb2430a39af73729eb6dfc0e2bd
-ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
+keywords: räumliche Zuordnung, hololens, gemischte Realität, Oberflächenrekonstruktion, Mesh
+ms.openlocfilehash: 2988056b5caf50a4428d39c725bfe5432867a9c0
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68937062"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437457"
 ---
 # <a name="spatial-mapping"></a>Räumliche Zuordnung
 
@@ -21,17 +21,35 @@ Die räumliche Zuordnung bietet eine detaillierte Darstellung der realen Oberfl�
 
 >[!VIDEO https://www.youtube.com/embed/zff2aQ1RaVo]
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
-<tr>
-<th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
-</tr><tr>
-<td> Räumliche Zuordnung</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Räumliche Zuordnung</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 
+## <a name="why-is-spatial-mapping-important"></a>Warum ist die räumliche Zuordnung wichtig?
+
+Räumliche Zuordnung macht es möglich, Objekte auf realen Oberflächen zu platzieren. Dies hilft bei der Verankerung von Objekten in der Benutzer Welt und nutzt die Vorteile der tatsächlichen tiefen Hinweise. Das Verwahren von holograms auf der Grundlage von anderen holograms und realen Objekten hilft dem Benutzer zu überzeugen, dass sich diese Hologramme tatsächlich in Ihrem Bereich befinden. Hologramme, die leer sind oder sich mit dem Benutzer bewegen, werden nicht als Real angezeigt. Platzieren Sie Elemente nach Möglichkeit aus Gründen der Bequemlichkeit.
+
+Visualisieren von Oberflächen beim platzieren oder Verschieben von holograms (Verwenden eines einfachen projizierten Rasters). Dadurch kann der Benutzer wissen, wo er seine Hologramme am besten platzieren kann. der Benutzer wird angezeigt, wenn die Stelle, an der er das – Hologramm platzieren möchte, noch nicht zugeordnet wurde. Sie können für den Benutzer "Billboard Items" hinzufügen, wenn er zu viel Winkel hat.
 
 ## <a name="conceptual-overview"></a>Konzeptionelle Übersicht
 
@@ -46,9 +64,24 @@ Diese Volumes sind möglicherweise stationär (an einem bestimmten Speicherort i
 
 Da hololens neue Daten über die Umgebung sammelt und Änderungen an der Umgebung auftreten, werden räumliche Oberflächen angezeigt, verschwinden und ändern.
 
-## <a name="common-usage-scenarios"></a>Allgemeine Verwendungsszenarien
+## <a name="spatial-mapping-vs-scene-undesranding-worldmesh"></a>Räumliche Zuordnung im Vergleich zu Szenen, die das worldmesh deinstaleren
+Bei hololens 2 ist es möglich, eine statische Version der räumlichen Mapping-Daten mithilfe der [Scene Understanding SDK](scene-understanding-SDK.md) (enableworldmesh-Einstellung) abzufragen. Im folgenden finden Sie die Unterschiede zwischen zwei Möglichkeiten, auf die räumlichen Zuordnungsdaten zuzugreifen:
+* Räumliche Mapping-API:
+   * Begrenzter Bereich: die räumlichen Daten, die für Anwendungen in einer begrenzten Größe, die für den Benutzer zwischengespeichert ist, verfügbar sind.
+   * Ermöglicht das Aktualisieren von geänderten Netzbereichen durch Ereignisse mit geringer Latenzzeit über Ereignisse, die über ein Ereignis verfügen.
+   * Variable Ebene von Details, die von Dreiecken pro Kubikmeter Parameter gesteuert werden.
+* Nicht aufstehendes SDK der Szene:
+   * Unbegrenzter Bereich: stellt alle überprüften räumlichen Mapping-Daten im Abfrage RADIUS bereit.
+   * Stellt eine statische Momentaufnahme der räumlichen Mapping-Daten bereit. Um die aktualisierten räumlichen Zuordnungsdaten zu erhalten, muss eine neue Abfrage für das gesamte Mesh ausgeführt werden.
+   * Konsistente Detailebene, die von der requestedmeshlevelofdetail-Einstellung gesteuert wird.
 
-![Abbildungen allgemeiner Verwendungs Szenarien für räumliche Zuordnung: Platzierung, Okklusion, Physik und Navigation](images/sm-concepts-1000px.png)
+## <a name="what-influences-spatial-mapping-quality"></a>Was beeinflusst die Qualität der räumlichen Zuordnung?
+
+Mehrere [hier](environment-considerations-for-hololens.md)ausführliche Faktoren können die Häufigkeit und den Schweregrad dieser Fehler beeinflussen.  Allerdings sollten Sie Ihre Anwendung so entwerfen, dass der Benutzer auch bei Fehlern in den räumlichen Daten der Zuordnung seine Ziele erreichen kann.
+
+## <a name="common-usage-scenarios"></a>Allgemeine Verwendungsszenarios
+
+![Abbildungen allgemeiner Verwendungs Szenarien für räumliche Zuordnung: Platzierung, oksion, Physik und Navigation](images/sm-concepts-1000px.png)
 
 ### <a name="placement"></a>Platzierung
 
@@ -62,7 +95,7 @@ Anwendungen können auch die Form und die Richtung der Oberflächen verwenden, u
 
 Im äußersten Fall kann die Benutzereingabe vollständig vereinfacht werden, und räumliche Oberflächen können verwendet werden, um eine vollständige automatische – Hologramm-Platzierung auszuführen. Beispielsweise könnte die Anwendung einen Holographic Light-Switch irgendwo auf der Wand platzieren, auf die der Benutzer klicken kann. Der gleiche Nachteil bei der Vorhersagbarkeit gilt hier doppelt. Wenn der Benutzer die Kontrolle über die – Hologramm-Platzierung erwartet, die Anwendung jedoch nicht immer holograms platziert, wo Sie erwartet werden (wenn der helle Switch irgendwo angezeigt wird, dass der Benutzer nicht erreichbar ist), ist dies ein frustrierender Vorgang. Es kann sogar schlimmer sein, eine automatische Platzierung auszuführen, bei der die Benutzer Korrektur einiger Zeit erforderlich ist. Da eine erfolgreiche automatische Platzierung *erwartet*wird, ist die manuelle Korrektur eine Belastung.
 
-Beachten Sie außerdem, dass die Fähigkeit einer Anwendung, räumliche Oberflächen für die Platzierung zu verwenden, stark vom [Scan](spatial-mapping-design.md#the-environment-scanning-experience)Vorgang der Anwendung abhängt. Wenn eine Oberfläche nicht gescannt wurde, kann Sie nicht für die Platzierung verwendet werden. Es ist für die Anwendung von der Anwendung, dies für den Benutzer klar zu machen, damit Sie entweder neue Oberflächen Scannen oder einen neuen Speicherort auswählen können.
+Beachten Sie außerdem, dass die Fähigkeit einer Anwendung, räumliche Oberflächen für die Platzierung zu verwenden, stark vom [Scan](spatial-mapping.md#the-environment-scanning-experience)Vorgang der Anwendung abhängt. Wenn eine Oberfläche nicht gescannt wurde, kann Sie nicht für die Platzierung verwendet werden. Es ist für die Anwendung von der Anwendung, dies für den Benutzer klar zu machen, damit Sie entweder neue Oberflächen Scannen oder einen neuen Speicherort auswählen können.
 
 Das visuelle Feedback an den Benutzer ist bei der Platzierung von größter Wichtigkeit. Der Benutzer muss wissen, wo sich das – Hologramm in Bezug auf die nächstgelegene Oberfläche mit [Erden Effekten](spatial-mapping.md#visualization)befindet. Sie sollten verstehen, warum die Verschiebung ihres holograms eingeschränkt wird (z. b. aufgrund eines Konflikts mit einer anderen nahe gelegenen Oberfläche). Wenn Sie am aktuellen Speicherort kein – Hologramm platzieren können, sollte das visuelle Feedback den Grund dafür verdeutlichen, warum dies nicht der Fall ist. Wenn der Benutzer z. b. versucht, eine Holographic-Couch in der Wand zu platzieren, sollte sich die Teile der Couch, die sich hinter der Wand befinden, in einer wütenden Farbe durchlaufen. Wenn die Anwendung dagegen keine räumliche Oberfläche an einem Speicherort findet, an dem der Benutzer eine reale Oberfläche sehen kann, sollte die Anwendung dies klar machen. Das offensichtliche Fehlen eines Erden Effekts in diesem Bereich kann diesen Zweck erfüllen.
 
@@ -70,9 +103,9 @@ Das visuelle Feedback an den Benutzer ist bei der Platzierung von größter Wich
 
 Eine der Haupt Verwendungsmöglichkeiten räumlicher Mapping-Oberflächen besteht darin, die holograms einfach zu okzieren. Dieses einfache Verhalten hat eine große Auswirkung auf die wahrgenommene Bedeutung von holograms und hilft dabei, einen viskoen Sinn zu schaffen, der tatsächlich denselben physischen Raum wie der Benutzer hat.
 
-Die Okklusion stellt dem Benutzer auch Informationen zur Verfügung. Wenn ein – Hologramm von einer realen Oberfläche verdeckt wird, bietet dies ein zusätzliches visuelles Feedback zum räumlichen Speicherort dieses holograms weltweit. Umgekehrt kann die Okklusion auch Informationen vom Benutzer einblenden. durch das Durchlaufen von holograms hinter den Wänden kann der visuelle Cluster auf intuitive Weise reduziert werden. Um ein Hologram auszublenden oder anzuzeigen, muss der Benutzer lediglich seine Kopfzeile verschieben.
+Die Okklusion stellt dem Benutzer auch Informationen zur Verfügung. Wenn ein – Hologramm von einer realen Oberfläche verdeckt wird, bietet dies ein zusätzliches visuelles Feedback zum räumlichen Speicherort dieses holograms weltweit. Umgekehrt kann die Okklusion auch Informationen vom Benutzer *Einblenden* . durch das Durchlaufen von holograms hinter den Wänden kann der visuelle Cluster auf intuitive Weise reduziert werden. Um ein Hologram auszublenden oder anzuzeigen, muss der Benutzer lediglich seine Kopfzeile verschieben.
 
-Die Okklusion kann auch verwendet werden, um die Erwartungen an eine natürliche Benutzeroberfläche basierend auf vertrauten physischen Interaktionen zu formulieren. Wenn ein – Hologramm durch eine Oberfläche verdeckt wird, liegt dies daran, dass diese Oberfläche solide ist, sodass der Benutzer erwarten kann, dass das – Hologramm mit dieser Oberfläche in Konflikt steht und nicht einfach durchlaufen wird.
+Die Okklusion kann auch verwendet werden, um die Erwartungen an eine natürliche Benutzeroberfläche basierend auf vertrauten physischen Interaktionen zu formulieren. Wenn ein – Hologramm durch eine Oberfläche verdeckt wird, liegt dies daran, dass diese Oberfläche solide ist, sodass der Benutzer erwarten kann, dass das – Hologramm *mit dieser* Oberfläche in Konflikt steht und nicht einfach durchlaufen wird.
 
 Manchmal ist eine Okklusion von holograms nicht erwünscht. Wenn ein Benutzer in der Lage sein muss, mit einem Hologram zu interagieren, muss er in der Lage sein, ihn zu sehen, auch wenn er sich hinter einer realen Oberfläche befindet. In solchen Fällen ist es in der Regel sinnvoll, ein solches Hologramm anders zu gestalten, wenn es ausgeblendet wird (z. b. durch verringern seiner Helligkeit). Auf diese Weise wird der Benutzer in der Lage sein, das Hologramm visuell zu finden, aber es ist immer noch bewusst, dass es sich hinter etwas befindet.
 
@@ -84,7 +117,7 @@ Die Physik-Simulation bietet auch eine Möglichkeit für eine Anwendung, natürl
 
 Um realistisches physisches Verhalten zu generieren, müssen Sie wahrscheinlich einige [Gitter Verarbeitungs](spatial-mapping.md#mesh-processing) Vorgänge ausführen, wie z. b. das Füllen von Löchern, das Entfernen von Gleit Komma Zuordnungen und das Glätten von groben Oberflächen.
 
-Außerdem müssen Sie Bedenken, wie sich die [scannerart](spatial-mapping-design.md#the-environment-scanning-experience) Ihrer Anwendung auf die Physik Simulation auswirkt. Erstens können fehlende Oberflächen nicht mit etwas kollidieren. Was geschieht, wenn der Gummi Ball in den Korridor und am Ende der bekannten Welt aufrollt? Zweitens müssen Sie entscheiden, ob Sie im Laufe der Zeit weiterhin auf Änderungen in der Umgebung reagieren werden. In einigen Fällen möchten Sie so schnell wie möglich reagieren. nehmen wir beispielsweise an, wenn der Benutzer Türen und Möbel als bewegliche Barrikaden verwendet, um sich gegen eine Tempest eingehender römischer Pfeile zu verteidigen. In anderen Fällen möchten Sie jedoch möglicherweise neue Updates ignorieren. Es ist möglicherweise plötzlich nicht so unterhaltsam, dass Ihr Holographic Sport Car um die Rennstrecke im Boden unterwegs ist.
+Außerdem müssen Sie Bedenken, wie sich die [scannerart](spatial-mapping.md#the-environment-scanning-experience) Ihrer Anwendung auf die Physik Simulation auswirkt. Erstens können fehlende Oberflächen nicht mit etwas kollidieren. Was geschieht, wenn der Gummi Ball in den Korridor und am Ende der bekannten Welt aufrollt? Zweitens müssen Sie entscheiden, ob Sie im Laufe der Zeit weiterhin auf Änderungen in der Umgebung reagieren werden. In einigen Fällen möchten Sie so schnell wie möglich reagieren. nehmen wir beispielsweise an, wenn der Benutzer Türen und Möbel als bewegliche Barrikaden verwendet, um sich gegen eine Tempest eingehender römischer Pfeile zu verteidigen. In anderen Fällen möchten Sie jedoch möglicherweise neue Updates ignorieren. Es ist möglicherweise plötzlich nicht so unterhaltsam, dass Ihr Holographic Sport Car um die Rennstrecke im Boden unterwegs ist.
 
 ### <a name="navigation"></a>Navigation
 
@@ -94,7 +127,7 @@ Navigationsfunktionen können auch für Benutzer nützlich sein. Nachdem eine Na
 
 Die wichtigsten technischen Herausforderungen bei der Implementierung der Navigations Funktionalität sind die zuverlässige Erkennung von begewaybaren Oberflächen (Menschen werden nicht auf Tabellen hin) und die ordnungsgemäße Anpassung an die Änderungen in der Umgebung (Menschen werden nicht durch geschlossene Türen durchlaufen!). Das Mesh erfordert möglicherweise einige [Verarbeitungs](spatial-mapping.md#mesh-processing) Vorgänge, bevor es für die Pfad Planung und die Navigation durch ein virtuelles Zeichen verwendet werden kann. Das Glättung des Netzes und Entfernen von Zuordnungen kann dazu beitragen, dass Zeichen nicht mehr hängen. Möglicherweise möchten Sie das Mesh auch drastisch vereinfachen, um die Pfad-und Navigations Berechnungen Ihres Zeichens zu beschleunigen. Diese Herausforderungen haben bei der Entwicklung von Videogame-Technologie viel Aufmerksamkeit geschenkt, und es gibt eine Vielzahl von Forschungsliteratur zu diesen Themen.
 
-Beachten Sie, dass die integrierte navmesh-Funktionalität in Unity nicht mit räumlichen zuordnungsoberflächen verwendet werden kann. Dies liegt daran, dass räumliche Zustellungs Oberflächen erst bekannt sind, wenn die Anwendung gestartet wird, wohingegen navmesh-Datendateien vorab aus quellassets generiert werden müssen. Beachten Sie auch, dass das räumliche Mapping-System keine [Informationen über Oberflächen](spatial-mapping-design.md#the-environment-scanning-experience) bereitstellt, die sich weit entfernt von der aktuellen Position des Benutzers befinden. Daher muss die Anwendung "erinnern", wenn Sie eine Karte eines sehr großen Bereichs erstellen soll.
+Beachten Sie, dass die integrierte navmesh-Funktionalität in Unity nicht mit räumlichen zuordnungsoberflächen verwendet werden kann. Dies liegt daran, dass räumliche Zustellungs Oberflächen erst bekannt sind, wenn die Anwendung gestartet wird, wohingegen navmesh-Datendateien vorab aus quellassets generiert werden müssen. Beachten Sie auch, dass das räumliche Mapping-System keine [Informationen über Oberflächen](spatial-mapping.md#the-environment-scanning-experience) bereitstellt, die sich weit entfernt von der aktuellen Position des Benutzers befinden. Daher muss die Anwendung "erinnern", wenn Sie eine Karte eines sehr großen Bereichs erstellen soll.
 
 ### <a name="visualization"></a>Visualisierung
 
@@ -107,6 +140,9 @@ Durch die Visualisierung von Oberflächen kann die Anwendung für den Benutzer f
 Die Visualisierung von Oberflächen kann eine nützliche Möglichkeit darstellen, um den Benutzern nahe gelegene Bereiche anzuzeigen, die in der Ansicht ausgeblendet sind. Dies könnte eine einfache Möglichkeit bieten, dem Benutzer den Zugriff auf seine Küche (und alle darin enthaltenen Hologramme) aus dem Wohnraum zu ermöglichen.
 
 Die von der räumlichen Zuordnung bereitgestellten Oberflächen Netze sind möglicherweise nicht besonders "Clean". Daher ist es wichtig, diese entsprechend visuell darzustellen. Bei herkömmlichen Beleuchtungsberechnungen werden möglicherweise Fehler in Oberflächen normalen in visuell ablenkend hervorgehoben, während "saubere" Texturen, die auf die Oberfläche projiziert werden, dazu beitragen können, dass Sie eine mehrstufige Darstellung erhalten. Es ist auch möglich, die Gitter [Verarbeitung](spatial-mapping.md#mesh-processing) durchzuführen, um Gitter Eigenschaften zu verbessern, bevor die Oberflächen gerendert werden.
+
+> [!NOTE]
+> Hololens 2 implementiert eine neue [Szene zum Verständnis der Laufzeit](scene-understanding.md), die Entwicklern gemischter Realität eine strukturierte, hochwertige Umgebungs Darstellung bietet, die zur Vereinfachung der Implementierung von Platzierung, Okklusion, Physik und Navigation konzipiert ist.
 
 ## <a name="using-the-surface-observer"></a>Verwenden des Oberflächen Beobachters
 
@@ -164,17 +200,17 @@ Im folgenden finden Sie eine Beispiel Strategie für das Mesh-Caching, bei der r
 * Da eine räumliche Oberfläche aufgrund von nach Verfolgungs Verlusten auch temporär verschwinden kann, wird die Anwendung beim Nachverfolgen des Verlusts auch zum verwerfen entfernter räumlicher Oberflächen eingestellt.
 * Im Allgemeinen sollte eine Anwendung den Kompromiss zwischen reduzierter Update Verarbeitung und erhöhter Speicherauslastung auswerten, um die ideale zwischen Speicherungs Strategie zu ermitteln.
 
-## <a name="rendering"></a>Erung
+## <a name="rendering"></a>Rendering
 
 Es gibt drei Hauptmethoden, mit denen die Netzen für räumliche zuordnet häufig zum Rendern verwendet werden:
 * Zur Oberflächen Visualisierung
    * Es ist häufig nützlich, räumliche Oberflächen direkt visuell darzustellen. Wenn Sie z. b. "Shadows" aus Objekten in räumliche Oberflächen umwandeln, kann der Benutzer nützliches visuelles Feedback bereitstellen, während Sie Hologramme auf Oberflächen platzieren.
-   * Beachten Sie, dass räumliche Netze sich von der Art der Netzen unterscheiden, die von einem 3D-Künstler erstellt werden könnten. Die Dreiecks Topologie wird nicht als "Clean"-Topologie verwendet, und das Mesh wird von [verschiedenen Fehlern](spatial-mapping-design.md#what-influences-spatial-mapping-quality)beeinträchtigt.
+   * Beachten Sie, dass räumliche Netze sich von der Art der Netzen unterscheiden, die von einem 3D-Künstler erstellt werden könnten. Die Dreiecks Topologie wird nicht als "Clean"-Topologie verwendet, und das Mesh wird von [verschiedenen Fehlern](spatial-mapping.md#what-influences-spatial-mapping-quality)beeinträchtigt.
    * Um eine ansprechende visuelle Ästhetik zu erstellen, können Sie daher eine gewisse [Gitter Verarbeitung](spatial-mapping.md#mesh-processing)durchführen, z. b. zum Auffüllen von Lücken oder zur Glättung von Oberflächen Normalisierungen. Möglicherweise möchten Sie auch einen Shader verwenden, um auf dem Mesh entwickelte Texturen zu projizieren, anstatt die Mesh-Topologie und normale direkt zu visualisieren.
 * Zum okdieren von holograms hinter realen Oberflächen
    * Räumliche Oberflächen können in einem tiefen Durchlauf gerendert werden, der sich nur auf den [tiefen Puffer](https://msdn.microsoft.com/library/windows/desktop/bb219616(v=vs.85).aspx) auswirkt und sich nicht auf Farb Renderziele auswirkt.
    * Dadurch wird der tiefen Puffer zum okdieren von nachfolgend gerenderten holograms hinter räumlichen Oberflächen primes. Die genaue okgrams-okgramme verbessern den Sinn, dass holograms tatsächlich im physischen Raum des Benutzers vorhanden sind.
-   * Um das tiefe Rendering zu aktivieren, aktualisieren Sie den Blend-Status, um [rendertargetwrite temask](https://msdn.microsoft.com/library/windows/desktop/hh404492(v=vs.85).aspx) für alle farbrenderziele auf NULL festzulegen.
+   * Um das tiefe Rendering zu aktivieren, aktualisieren Sie den Blend-Status, um [rendertargetwrite temask für alle farbrenderziele](https://msdn.microsoft.com/library/windows/desktop/hh404492(v=vs.85).aspx) auf NULL festzulegen.
 * So ändern Sie die Darstellung von holograms, die von realen Oberflächen verdeckt werden
    * Normalerweise wird die gerenderte Geometrie ausgeblendet, wenn Sie verdeckt wird. Dies wird erreicht, indem die tiefen Funktion in Ihrem [Status der tiefen Schablone](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx) auf "kleiner als oder gleich" festgelegt wird, wodurch die Geometrie nur dann sichtbar ist, wenn Sie sich **näher** an der Kamera befindet als alle zuvor gerenderten Geometrie.
    * Es kann jedoch hilfreich sein, bestimmte Geometrie sichtbar zu machen, auch wenn Sie verdeckt ist, und die Darstellung zu ändern, wenn Sie als Möglichkeit zum Bereitstellen von visuellem Feedback für den Benutzer bereitgestellt wird. So kann die Anwendung z. b. den Speicherort eines Objekts anzeigen, während klar ist, dass sich hinter einer realen Oberfläche befindet.
@@ -202,7 +238,7 @@ Da jeder Oberflächen Beobachter mehrere nicht verbundene räumliche Oberfläche
 
 ## <a name="raycasting-and-collision"></a>Raycasting und Kollision
 
-Damit eine-Physik-API (z. b. [Havok](http://www.havok.com/)) eine Anwendung mit Raycasting-und Kollisions Funktionen für räumliche Oberflächen bereitstellt, muss die Anwendung räumliche Oberflächen Netze für die Physik-API bereitstellen. Für die Physik verwendete Meshes verfügen häufig über die folgenden Eigenschaften:
+Damit eine-Physik-API (z. b. [Havok](https://www.havok.com/)) eine Anwendung mit Raycasting-und Kollisions Funktionen für räumliche Oberflächen bereitstellt, muss die Anwendung räumliche Oberflächen Netze für die Physik-API bereitstellen. Für die Physik verwendete Meshes verfügen häufig über die folgenden Eigenschaften:
 * Sie enthalten nur eine kleine Anzahl von Dreiecken. Physik Vorgänge sind Rechen intensiver als Renderingvorgänge.
 * Sie sind "Wasser-eng". Oberflächen, die als solide fest gedacht sind, sollten keine kleinen Lücken enthalten. sogar Lücken zu klein, um sichtbar zu sein, können Probleme verursachen.
 * Sie werden in die in die-Konstante umwandl konvertiert. Bei der Verarbeitung von Netz-und Konfigurationsobjekten sind nur wenige Polygone vorhanden, und die Verarbeitung ist weitaus Rechen effizienter als bei rohdreiecks Netzen.
@@ -211,14 +247,133 @@ Beachten Sie bei der Durchführung von Raycasts gegen räumliche Oberflächen, d
 
 Bedenken Sie jedoch, dass jeder raycast hohe Rechen Kosten aufweisen kann. Abhängig von Ihrem Verwendungs Szenario sollten Sie daher die berechnungskosten zusätzlicher Raycasts (durch die jeder Frame ausgeführt wird) gegen die berechnungskosten der [Mesh-Verarbeitung](spatial-mapping.md#mesh-processing) abwägen, um Löcher in räumlichen Oberflächen zu glätten und zu entfernen (bei räumlichem Netzen werden aktualisiert.)
 
-## <a name="troubleshooting"></a>Problembehandlung
+## <a name="the-environment-scanning-experience"></a>Umgebung zum Scannen der Umgebung
+
+Jede Anwendung, die räumliche Zuordnung verwendet, sollte die Bereitstellung einer "Scan Darstellung" in Erwägung gezogen werden. der Prozess, durch den die Anwendung den Benutzer zum Überprüfen von Oberflächen führt, die für eine ordnungsgemäße Funktionsweise der Anwendung erforderlich sind.
+
+![Beispiel für das Scannen](images/sr-mixedworld-140429-8pm-00068-1000px.png)<br>
+*Beispiel für das Scannen*
+
+Die Art dieser Scanfunktion kann sich je nach Anforderungen der Anwendung stark unterscheiden, aber zwei Hauptprinzipien sollten den Entwurf berücksichtigen.
+
+Erstens **ist die klare Kommunikation mit dem Benutzer das primäre Problem**. Der Benutzer sollte immer wissen, ob die Anforderungen der Anwendung erfüllt werden. Wenn Sie nicht erfüllt werden, sollten Sie dem Benutzer sofort klar sein, warum dies der Fall ist, und Sie sollten schnell dazu führen, dass Sie die entsprechende Aktion ausführen.
+
+Zweitens **sollten Anwendungen versuchen, ein Gleichgewicht zwischen Effizienz und Zuverlässigkeit zu erzielen**. Wenn **dies möglich ist, sollten**Anwendungen räumliche Daten automatisch analysieren, um die Benutzer Zeit zu sparen. Wenn es nicht möglich ist, dies zuverlässig zu tun, sollten Anwendungen den Benutzer stattdessen ermöglichen, der Anwendung schnell die zusätzlichen Informationen bereitzustellen, die Sie benötigt.
+
+Wenn Sie die richtige Scanfunktion entwerfen möchten, sollten Sie die folgenden Möglichkeiten für Ihre Anwendung beachten:
+
+* **Keine Scanvorgänge**
+   * Eine Anwendung funktioniert problemlos, ohne dass eine gesteuerte Überprüfung durchgeführt werden kann. Sie erfahren mehr über Oberflächen, die im Kurs der natürlichen Benutzer Bewegung beobachtet werden.
+   * Eine Anwendung, die es dem Benutzer ermöglicht, auf Oberflächen mit Holographic Spray Paint zu zeichnen, benötigt z. b. wissen, dass nur die Oberflächen für den Benutzer sichtbar sind.
+   * Die Umgebung wird möglicherweise bereits vollständig gescannt, wenn Sie eine solche ist, in der der Benutzer bereits viel Zeit für die Verwendung der hololens aufgewendet hat.
+   * Bedenken Sie jedoch, dass für die Kamera, die von der räumlichen Zuordnung verwendet wird, nur 3.1 m vor dem Benutzer angezeigt werden kann, sodass die räumliche Zuordnung keine weiteren entfernten Oberflächen kennt, es sei denn, der Benutzer hat Sie in der Vergangenheit in der Vergangenheit beobachtet.
+   * Damit der Benutzer weiß, welche Oberflächen gescannt wurden, sollte die Anwendung diesem Effekt visuelles Feedback bereitstellen, z. b. Wenn Sie virtuelle Schatten in überprüfte Oberflächen umwandeln, kann der Benutzer möglicherweise holograms auf diesen Oberflächen platzieren.
+   * In diesem Fall sollten die umgebenden Volumes des räumlichen Oberflächen Beobachters jedes Frame in ein im Text gesperrtes [räumliches Koordinatensystem](coordinate-systems.md)aktualisiert werden, damit Sie dem Benutzer folgen.
+
+* **Suchen nach einem passenden Speicherort**
+   * Eine Anwendung kann für die Verwendung an einem Speicherort mit speziellen Anforderungen entworfen werden.
+   * Beispielsweise ist für die Anwendung möglicherweise ein leerer Bereich um den Benutzer erforderlich, damit Sie Holographic Kung-Fu sicher üben kann.
+   * Anwendungen sollten alle speziellen Anforderungen an den Benutzer übermitteln und Sie mit unbestimmtem visuellen Feedback verstärken.
+   * In diesem Beispiel sollte die Anwendung den Umfang des erforderlichen leeren Bereichs visualisieren und das vorhanden sein von nicht gewünschten Objekten in dieser Zone visuell hervorheben.
+   * In diesem Fall sollten die umgebenden Volumes des räumlichen Oberflächen Beobachters das weltweit gesperrte [räumliche Koordinatensystem](coordinate-systems.md) am ausgewählten Speicherort verwenden.
+
+* **Suchen nach einer passenden Konfiguration von Oberflächen**
+   * Eine Anwendung erfordert möglicherweise eine bestimmte Konfiguration von Oberflächen, z. b. zwei große, flache und gegen Wände, um eine Holographic Hall of Spiegel zu erstellen.
+   * In solchen Fällen muss die Anwendung die von der räumlichen Zuordnung bereitgestellten Oberflächen analysieren, um geeignete Oberflächen zu erkennen und den Benutzer an Sie weiterzuleiten.
+   * Der Benutzer sollte über eine Fall Back Option verfügen, wenn die Oberflächenanalyse der Anwendung nicht vollständig zuverlässig ist. Wenn die Anwendung z. b. fälschlicherweise eine Tür als flache Wand identifiziert, benötigt der Benutzer eine einfache Methode, um diesen Fehler zu beheben.
+
+* **Einen Teil der Umgebung scannen**
+   * Eine Anwendung möchte möglicherweise nur einen Teil der Umgebung erfassen, wie vom Benutzer gesteuert.
+   * Die Anwendung scannt z. b. einen Teil eines Raums, sodass der Benutzer eine Holographic-Klassifikation für die zu verkaufenden Möbel veröffentlichen kann.
+   * In diesem Fall sollte die Anwendung räumliche Mapping-Daten innerhalb der Regionen erfassen, die vom Benutzer während des Scans beobachtet werden.
+
+* **Gesamten Raum Scannen**
+   * Eine Anwendung erfordert möglicherweise eine Überprüfung aller Oberflächen im aktuellen Raum, einschließlich derjenigen hinter dem Benutzer.
+   * Beispielsweise kann ein Spiel den Benutzer in die Rolle "gulleber" versetzen, die von Hunderten von kleinen lilliputians aus allen Richtungen fast erreicht werden kann.
+   * In solchen Fällen muss die Anwendung bestimmen, wie viele der Oberflächen im aktuellen Raum bereits gescannt wurden, und den Blick des Benutzers darauf ausrichten, große Lücken zu füllen.
+   * Der Schlüssel zu diesem Prozess ist das Bereitstellen von visuellem Feedback, mit dem der Benutzer klar ist, welche Oberflächen noch nicht gescannt wurden. Die Anwendung könnte z. b. einen [Entfernungs basierten Nebel](https://msdn.microsoft.com/library/windows/desktop/bb173401%28v=vs.85%29.aspx) verwenden, um Bereiche visuell hervorzuheben, die nicht von räumlichen Mapping-Flächen abgedeckt werden.
+
+* **Erstellen Sie eine anfängliche Momentaufnahme der Umgebung.**
+   * Eine Anwendung möchte möglicherweise alle Änderungen in der Umgebung ignorieren, nachdem Sie eine anfängliche "Momentaufnahme" übernommen haben.
+   * Dies kann sinnvoll sein, um eine Unterbrechung von Benutzer erstellten Daten zu vermeiden, die eng mit dem ursprünglichen Zustand der Umgebung verknüpft sind.
+   * In diesem Fall sollte die Anwendung eine Kopie der räumlichen Zuordnungen im ursprünglichen Zustand erstellen, sobald die Überprüfung beendet ist.
+   * Anwendungen sollten weiterhin Updates für räumliche Zuordnungs Daten empfangen, wenn Hologramme weiterhin von der Umgebung ordnungsgemäß verschlossen werden.
+   * Fortlaufende Updates für räumliche Zuordnungsdaten ermöglichen auch das Visualisieren von Änderungen, die aufgetreten sind, und verdeutlichen den Benutzern die Unterschiede zwischen dem früheren und dem aktuellen Zustand der Umgebung.
+
+* **Benutzer initiierte Momentaufnahmen der Umgebung erstellen**
+   * Eine Anwendung möchte möglicherweise nur auf Umgebungs Änderungen reagieren, wenn Sie vom Benutzer angewiesen werden.
+   * Der Benutzer könnte z. b. mehrere 3D-"Statuen" eines Friend erstellen, indem er seine Posen in verschiedenen Augenblicken erfasst.
+
+* **Benutzern das Ändern der Umgebung gestatten**
+   * Eine Anwendung kann so entworfen werden, dass Sie in Echtzeit auf alle Änderungen in der Benutzerumgebung antwortet.
+   * Der Benutzer, der einen Vorhang zeichnet, könnte z. b. "Szenen Änderung" für eine holografische Wiedergabe auf der anderen Seite auslöst.
+
+* **Leiten Sie den Benutzer ein, um Fehler in den räumlichen Daten zu vermeiden.**
+   * Eine Anwendung möchte dem Benutzer beim Scannen der Umgebung möglicherweise Anleitungen bereitstellen.
+   * Dies kann den Benutzer dabei unterstützen, bestimmte Arten von [Fehlern in den räumlichen Daten](spatial-mapping.md#what-influences-spatial-mapping-quality)zu vermeiden, z. b. durch die Entfernung von Fenstern oder spiegeln.
+
+Ein zusätzliches Detail, das zu beachten ist, besteht darin, dass der Bereich der räumlichen Zuordnungsdaten nicht unbegrenzt ist. Während die räumliche Zuordnung eine permanente Datenbank mit großen Leerzeichen erstellt, werden diese Daten nur für Anwendungen in einer begrenzten Größe um den Benutzer verfügbar gemacht. Wenn Sie also am Anfang eines langen Korridors beginnen und weit genug weg vom Start Weg gehen, werden die räumlichen Oberflächen am Anfang nicht mehr angezeigt. Sie können dies natürlich verringern, indem Sie diese Oberflächen in der Anwendung Zwischenspeichern, nachdem Sie aus den verfügbaren räumlichen Zuordnungsdaten verschwunden sind.
+
+## <a name="mesh-processing"></a>Mesh-Verarbeitung
+
+Es kann hilfreich sein, häufige Arten von Fehlern in Oberflächen zu erkennen und die räumlichen Zuordnungsdaten nach Bedarf zu filtern, zu entfernen oder zu ändern.
+
+Beachten Sie, dass räumliche Zuordnungsdaten so wie möglich an reale Oberflächen ausgerichtet werden sollen, sodass bei jeder Verarbeitung, die Sie anwenden, ihre Oberflächen weiter von der Wahrheit entfernt werden.
+
+Im folgenden finden Sie einige Beispiele für verschiedene Arten der Mesh-Verarbeitung, die Sie möglicherweise hilfreich finden:
+
+* **Loch Füllung**
+   * Wenn ein kleines Objekt, das aus einem dunklen Material besteht, nicht gescannt werden kann, wird eine Lücke auf der umgebenden Oberfläche hinterlassen.
+   * Löcher wirken sich auf die Okklusion aus: holograms können durch ein Loch in einer vermeintlich nicht transparenten realen Oberfläche angezeigt werden.
+   * Löcher wirken sich auf Raycasts aus: Wenn Sie Raycasts verwenden, um Benutzer bei der Interaktion mit Oberflächen zu unterstützen, ist es möglicherweise nicht wünschenswert, dass diese Strahlen Lücken passieren. Eine Entschärfung besteht darin, ein Bündel mehrerer Raycasts zu verwenden, die einen entsprechend großen Bereich abdecken. Auf diese Weise können Sie die Ergebnisse von "outreißer" filtern, damit das Aggregat Ergebnis auch dann gültig ist, wenn ein raycast eine kleine Lücke durchläuft. Beachten Sie jedoch, dass dieser Ansatz zu Rechen Kosten kommt.
+   * Löcher wirken sich auf die Physik aus: ein Objekt, das von der Physik-Simulation gesteuert wird, kann eine Lücke im Boden ablegen und geht verloren.
+   * Es ist möglich, diese Lücken im Oberflächen Mesh algorithmisch zu füllen. Sie müssen jedoch ihren Algorithmus optimieren, damit "echte Lücken" wie Windows und Doorways nicht ausgefüllt werden. Es kann schwierig sein, "echte Löcher" von "imaginären Löchern" zuverlässig zu unterscheiden, sodass Sie mit unterschiedlichen Heuristiken experimentieren müssen, wie z. b. "size" und "Boundary Shape".
+
+* **Entfernen von halluziierung**
+   * Reflektionen, helle Lichter und verschiebende Objekte können kleine "halluzationen" in Mittel Luft bewegen.
+   * Halluzerungen wirken sich auf die oksion aus: halluformen können als dunkle Formen sichtbar werden, die vor und nach anderen holograms stehen.
+   * Hallutrisierungen wirken sich auf Raycasts aus: Wenn Sie Raycasts verwenden, um Benutzer bei der Interaktion mit Oberflächen zu unterstützen, können diese Strahlen eine halluziierung anstelle der dahinter liegenden Oberfläche erreichen. Wie bei den Lücken besteht eine Entschärfung darin, viele Raycasts anstelle eines einzelnen raycast zu verwenden, aber auch hier werden die Rechen Kosten berechnet.
+   * Hallutrisierungen wirken sich auf die Physik aus: ein Objekt, das von der Physik-Simulation gesteuert wird, kann sich gegen eine volumumeration befinden und kann nicht durch einen scheinbar unklaren Bereich des Raums wechseln.
+   * Es ist möglich, solche hallumeerungen aus dem Oberflächen Mesh zu filtern. Allerdings müssen Sie, wie bei Lücken, ihren Algorithmus optimieren, sodass echte kleine Objekte wie z. b. LAMP-und türhandles nicht entfernt werden.
+
+* **End**
+   * Räumliche Zusätze können Oberflächen zurückgeben, die im Vergleich zu ihren echten Gegenstücken grob oder "laut" sind.
+   * Glätte wirkt sich auf physikalische Konflikte aus: Wenn der Boden grob ist, kann ein physisch simulierter Golfball in einer geraden Linie nicht nahtlos über ihn hinweg ausgeführt werden.
+   * Glätte wirkt sich auf das Rendering aus: Wenn eine Oberfläche direkt visualisiert wird, können sich grobe Oberflächen normale auf ihre Darstellung auswirken und ein "sauberes" Erscheinungsbild unterbrechen. Dies ist möglich, indem Sie die entsprechende Beleuchtung und Texturen im Shader verwenden, die zum renderende der Oberfläche verwendet werden.
+   * Es ist möglich, die rautheit in einem Oberflächen Mesh zu glätten. Dadurch wird die Oberfläche jedoch möglicherweise von der entsprechenden realen Oberfläche entfernt. Die Beibehaltung einer Schluss Stimme ist wichtig, um eine genaue Hologramm-Okklusion zu erzielen und es Benutzern zu ermöglichen, präzise und vorhersagbare Interaktionen mit Holographic-Oberflächen zu erzielen
+   * Wenn nur eine kosmetische Änderung erforderlich ist, kann es ausreichen, Vertex-Normale zu glätten, ohne die Scheitelpunkt Positionen zu ändern.
+
+* **Auffinden von Ebenen**
+   * Es gibt viele Analyse Formen, die eine Anwendung auf den von der räumlichen Zuordnung bereitgestellten Oberflächen ausführen kann.
+   * Ein einfaches Beispiel ist die "Plane-Suche". Identifizierung von begrenzten, größtenteils planaren Bereichen von Oberflächen.
+   * Planare Regionen können als holografische Arbeits Oberflächen verwendet werden, in denen Holographic-Inhalte automatisch von der Anwendung platziert werden können.
+   * Planare Regionen können die Benutzeroberfläche einschränken, um Benutzer zur Interaktion mit den Oberflächen zu leiten, die Ihren Anforderungen am besten entsprechen.
+   * Planare Regionen können wie in der realen Welt verwendet werden, für holografische Entsprechungen zu funktionalen Objekten, wie z. b. LCD-Bildschirmen, Tabellen oder Whiteboards.
+   * Planare Regionen können Wiedergabe Bereiche definieren, die die Basis von Videogame-Ebenen bilden.
+   * Planare Regionen können virtuellen Agents dabei helfen, in der realen Welt zu navigieren, indem Sie die Bereiche ermitteln, in denen echte Menschen wahrscheinlich gehen.
+
+## <a name="prototyping-and-debugging"></a>Prototypen und Debuggen
+
+### <a name="useful-tools"></a>Nützliche Tools
+* Der [hololens-Emulator](using-the-hololens-emulator.md) kann verwendet werden, um Anwendungen mit räumlicher Zuordnung zu entwickeln, ohne auf physische hololens zuzugreifen. Sie ermöglicht es Ihnen, eine Live Sitzung auf einem hololens in einer realistischen Umgebung zu simulieren, mit allen Daten, die Ihre Anwendung normalerweise verbraucht, einschließlich hololens-Bewegung, räumlichen Koordinatensystemen und räumlichen Zuordnungs Netzen. Dies kann verwendet werden, um zuverlässige, wiederholbare Eingaben bereitzustellen, die für das Debuggen von Problemen und das Auswerten von Änderungen an Ihrem Code nützlich sein können.
+* Zum reproduzieren eines Szenarios erfassen Sie räumliche Zuordnungsdaten über das Netzwerk aus einem aktiven hololens, speichern Sie Sie dann auf einem Datenträger, und verwenden Sie Sie in nachfolgenden Debugsitzungen erneut.
+* Die [3D-Ansicht des Windows-Geräte Portals](using-the-windows-device-portal.md#3d-view) bietet eine Möglichkeit, alle räumlichen Oberflächen anzuzeigen, die zurzeit über das räumliche Mapping-System verfügbar sind. Dies ist eine Grundlage für den Vergleich der räumlichen Oberflächen innerhalb Ihrer Anwendung. Beispielsweise können Sie leicht erkennen, ob räumliche Oberflächen fehlen oder an der falschen Stelle angezeigt werden.
+
+### <a name="general-prototyping-guidance"></a>Leitfaden für allgemeine Prototypen
+* Da [Fehler](spatial-mapping.md#what-influences-spatial-mapping-quality) in den räumlichen Mapping-Daten sich stark auf die Benutzerumgebung auswirken können, empfiehlt es sich, die Anwendung in einer Vielzahl von Umgebungen zu testen.
+* Nehmen Sie nicht an der Gewohnheit vor, sich immer am gleichen Ort zu testen, z. b. an Ihrem Schreibtisch. Stellen Sie sicher, dass Sie auf verschiedenen Oberflächen unterschiedlichen Positionen, Formen, Größen und Materialien testen.
+* Auch wenn synthetische oder aufgezeichnete Daten für das Debuggen hilfreich sein können, werden Sie nicht auf die gleichen wenige Testfälle angewiesen. Dadurch werden möglicherweise wichtige Probleme ermittelt, die zuvor durch mehr unterschiedliche Tests abgefangen wurden.
+* Es empfiehlt sich, Tests mit echten (und im Idealfall nicht gespoinierten) Benutzern durchzuführen, da Sie die hololens oder Ihre Anwendung möglicherweise nicht exakt auf die gleiche Weise wie Sie verwenden. Dies kann Ihnen vielleicht überraschen, wie sich das Verhalten, das Wissen und die Annahmen der unterschiedlichen Benutzer Verhalten.
+
+## <a name="troubleshooting"></a>Fehlerbehebung
 * Damit die Oberflächen Netzen ordnungsgemäß ausgerichtet werden, muss jedes gameobject aktiv sein, bevor es an den surfaceobeserver gesendet wird, damit das Mesh erstellt wird. Andernfalls werden die Netze in Ihrem Raum angezeigt, aber in seltsamen Winkeln gedreht.
 * Das gameobject, das das Skript ausführt, das mit dem surfaceobserver kommuniziert, muss auf den Ursprung festgelegt werden. Andernfalls verfügen alle von Ihnen erstellten und an den surfaceobserver gesendeten gameobjects-Objekte, deren Netzen erstellt werden, über einen Offset, der gleich dem Offset des übergeordneten Spiel Objekts ist. Dies kann dazu führen, dass ihre Netze mehrere Meter entfernt werden, sodass es sehr schwierig ist, das zu debuggen, was passiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Koordinatensysteme](coordinate-systems.md)
 * [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)
 * [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)
-* [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
 * [Szenen Verständnis](scene-understanding.md)
+* [Raumabtastvisualisierung](room-scan-visualization.md)
+* [Raumklangentwurf](spatial-sound-design.md)
 * [Fallstudie – Schauen durch Löcher in Ihrer Realität](case-study-looking-through-holes-in-your-reality.md)

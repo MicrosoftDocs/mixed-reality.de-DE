@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Gemischte Windows-Realität, App-Muster, Entwurf, hololens, Raum Überprüfung, räumliche Zuordnung, Oberflächenrekonstruktion, Mesh
-ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+keywords: Gemischte Windows-Realität, App-Muster, Entwurf, hololens, Raum Überprüfung, räumliche Zuordnung, Mesh
+ms.openlocfilehash: bdb070407f27d04046bd022894c7a8a01b9658d1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829912"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437514"
 ---
 # <a name="room-scan-visualization"></a>Raum Scan Visualisierung
 
@@ -24,7 +24,7 @@ Anwendungsentwickler haben mehrere Möglichkeiten, um hilfreiche räumliche Date
 
 Beachten Sie, dass in allen diesen Fällen die während der Durchsuchung gesammelten tatsächlichen Daten vom System gespeichert werden, und die Anwendung muss dies nicht tun.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -33,7 +33,7 @@ Beachten Sie, dass in allen diesen Fällen die während der Durchsuchung gesamme
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
@@ -72,7 +72,7 @@ Bei einer zwischengespeicherten räumlichen Zuordnung erstellt die Anwendung in 
 * Ein einzelner Zeitaufwand für die Verarbeitung räumlicher Daten für Physik, Grafiken und andere Zwecke.
 
 **Nachteil**
-* Die Verschiebung von realen Objekten oder Personen wird von den zwischengespeicherten Daten nicht widergespiegelt. Beispiel: die Anwendung wird möglicherweise eine Tür geöffnet, wenn Sie jetzt tatsächlich geschlossen wird.
+* Die Verschiebung von realen Objekten oder Personen wird von den zwischengespeicherten Daten nicht widergespiegelt. z. B. die Anwendung wird möglicherweise eine Tür geöffnet, wenn Sie jetzt tatsächlich geschlossen wird.
 * Potenziell mehr Anwendungs Speicher, um die zwischengespeicherte Version der Daten beizubehalten.
 
 Ein guter Fall für diese Methode ist eine kontrollierte Umgebung oder ein Top-Spiel der Tabelle.
@@ -92,7 +92,7 @@ Bestimmte Anwendungen verlassen sich möglicherweise auf das Fortsetzen des Scan
 
 Ein guter Fall für diese Methode ist eine Methode, bei der holograms mit verschiebenden Objekten interagieren soll, z. b. Wenn ein Holographic Car, das auf dem Boden ist, möglicherweise korrekt in eine Tür wechselt, je nachdem, ob es geöffnet oder geschlossen ist.
 
-## <a name="see-also"></a>Siehe auch
-* [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
+## <a name="see-also"></a>Weitere Informationen:
+* [Räumliche Abbildung](spatial-mapping.md)
 * [Koordinatensysteme](coordinate-systems.md)
 * [Raumklangentwurf](spatial-sound-design.md)

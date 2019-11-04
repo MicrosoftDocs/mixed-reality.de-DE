@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 2D-APP, UWP, flatapp, hololens, immersives Headset, App-Modell, Schaltfläche "zurück", App-Leiste, dpi, Auflösung, Skalierung
-ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 46d2a9ca044dee977faecc84d610dc0811a4bfb7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414221"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436979"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Aktualisieren von 2D-UWP-Apps für gemischte Realität
 
@@ -51,7 +51,7 @@ Wechseln Sie einfach zum Startmenü im Mixed Reality-Headset, und starten Sie di
 
 ## <a name="targeting-both-immersive-headsets-and-hololens"></a>Ziel für immersive Headsets und hololens
 
-Herzlichen Glückwunsch! Ihre APP verwendet jetzt die Windows 10-universelle Windows-Plattform (UWP).
+Gratulation! Ihre APP verwendet jetzt die Windows 10-universelle Windows-Plattform (UWP).
 
 Ihre APP ist jetzt in der Lage, auf den heutigen Windows-Geräten wie Desktop, Mobile, Xbox, Windows Mixed Reality-und hololens und zukünftigen Windows-Geräten ausgeführt zu werden. Allerdings müssen Sie sicherstellen, dass Ihre APP für die Windows. Universal-Gerätefamilie steht, damit Sie tatsächlich auf alle diese Geräte abzielen.
 
@@ -116,7 +116,7 @@ Nun, da ihre UWP-App auf immersiven Headsets und/oder hololens als 2D Hologram a
 
 ![Vom reaktionsfähigen Design](images/scale-500px.png)
 
-Windows 10 verschiebt den gesamten visuellen Entwurf von "Real Screen Pixels" in " **effektive Pixel**". Das heißt, Entwickler entwerfen Ihre Benutzeroberfläche gemäß den Windows 10-Richtlinien für die Benutzeroberfläche für effektive Pixel, und die Windows-Skalierung stellt sicher, dass diese effektiven Pixel die richtige Größe für die Verwendbarkeit über Geräte, Auflösungen, dpi usw. sind Weitere Informationen zu dieser [BUILD-Darstellung](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) finden Sie in diesem [MSDN-Artikel](http://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx).
+Windows 10 verschiebt den gesamten visuellen Entwurf von "Real Screen Pixels" in " **effektive Pixel**". Das heißt, Entwickler entwerfen Ihre Benutzeroberfläche gemäß den Windows 10-Richtlinien für die Benutzeroberfläche für effektive Pixel, und die Windows-Skalierung stellt sicher, dass diese effektiven Pixel die richtige Größe für die Verwendbarkeit über Geräte, Auflösungen, dpi usw. sind Weitere Informationen zu dieser [buildpräsentation](https://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx)finden Sie [in diesem großartigen Lesevorgang auf MSDN](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) .
 
 Auch wenn die einzigartige Möglichkeit besteht, apps in einer Reihe von Entfernungen in ihrer Welt zu platzieren, wird empfohlen, TV-ähnliche Anzeige Abstände zu erzielen, um die beste Lesbarkeit und Interaktion mit Blick und Gesten zu erzielen. Aus diesem Grund zeigt ein virtuelles Slate in der Mixed Reality-Startseite ihre flache UWP-Ansicht an:
 
@@ -149,23 +149,23 @@ Das [App-Modell](app-model.md) für Mixed Reality ist für die Verwendung der Mi
 
 **Zurück-Schaltfläche:** löst beim Drücken das *[Rück](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* gerufene Ereignis aus. Die Sichtbarkeit der Schaltfläche "zurück" wird durch *[systemnavigationmanager. appviewbackbuttonvisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* gesteuert.
 
-![Benutzeroberfläche der APP-Leiste in der 2D-App](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
+![App-leisten-UI in der 2D-App-Ansicht](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *Benutzeroberfläche der APP-Leiste in der 2D-App*
 
 ### <a name="test-your-2d-apps-design"></a>Testen des Entwurfs Ihrer 2D-App
 
-Es ist wichtig, Ihre APP zu testen, um sicherzustellen, dass der Text lesbar ist, die Schaltflächen targetable sind und die gesamte App korrekt aussieht. Sie können auf einem Desktop-Headset, hololens, einem Emulator oder einem Fingerabdruck Gerät [Testen](testing-your-app-on-hololens.md) , bei dem die Auflösung auf 1280x 720 @150% festgelegt ist.
+Es ist wichtig, Ihre APP zu testen, um sicherzustellen, dass der Text lesbar ist, die Schaltflächen targetable sind und die gesamte App korrekt aussieht. Sie können auf einem Desktop-Headset, hololens, einem Emulator oder einem Fingerabdruck Gerät [Testen](testing-your-app-on-hololens.md) , bei dem die Auflösung auf 1.280 x 720 @150% festgelegt ist.
 
 ## <a name="new-input-possibilities"></a>Neue Eingabemöglichkeiten
 
-Hololens verwendet erweiterte tiefen Sensoren, um die Welt anzuzeigen und Benutzer anzuzeigen. Dies ermöglicht erweiterte Handgesten wie z. b. [Bloom](gestures.md#bloom) und [Luft tippen](gestures.md#air-tap). Leistungsstarke Mikrofone ermöglichen auch [Spracherfahrung](voice-input.md).
+Hololens verwendet erweiterte tiefen Sensoren, um die Welt anzuzeigen und Benutzer anzuzeigen. Dies ermöglicht erweiterte Handgesten wie z. b. [Bloom](system-gesture.md#bloom) und [Luft tippen](gaze-and-commit.md#composite-gestures). Leistungsstarke Mikrofone ermöglichen auch [Spracherfahrung](voice-input.md).
 
 Mit Desktop-Headsets können Benutzer Bewegungs Controller verwenden, um auf apps zu verweisen und Maßnahmen zu ergreifen. Sie können auch einen Gamepad verwenden, der auf Objekte mit dem Blick abzielt.
 
-Windows kümmert sich um all diese Komplexität für UWP-apps und übersetzt Ihren [Blick](gaze.md), Gesten, sprach-und Bewegungs Controller Eingaben in [Zeiger Ereignisse](https://msdn.microsoft.com/library/windows/apps/mt404610#pointer_events) , die den Eingabe Mechanismus abstrahieren. Ein Benutzer hat z. b. möglicherweise eine Luft tippen oder den SELECT-Auslösevorgang auf einem Motion Controller abgerufen, aber 2D-Anwendungen müssen nicht wissen, woher die Eingabe stammt. es wird nur ein 2D-touchpress angezeigt, wie bei einem Touchscreen.
+Windows kümmert sich um all diese Komplexität für UWP-apps und übersetzt Ihren [Blick](gaze-and-commit.md), Gesten, sprach-und Bewegungs Controller Eingaben in [Zeiger Ereignisse](https://msdn.microsoft.com/library/windows/apps/mt404610#pointer_events) , die den Eingabe Mechanismus abstrahieren. Ein Benutzer hat z. b. möglicherweise eine Luft tippen oder den SELECT-Auslösevorgang auf einem Motion Controller abgerufen, aber 2D-Anwendungen müssen nicht wissen, woher die Eingabe stammt. es wird nur ein 2D-touchpress angezeigt, wie bei einem Touchscreen.
 
 Im folgenden finden Sie die grundlegenden Konzepte und Szenarios, die Sie für die Eingabe verstehen sollten, wenn Sie Ihre UWP-app in hololens bringen:
-* Der [Blick](gaze.md) wandelt sich in Hover-Ereignisse um, die unerwartet Menüs, Flyouts oder andere Elemente der Benutzeroberfläche aufklappen können, um nur durch das Überprüfen der APP herum zu navigieren.
+* Der [Blick](gaze-and-commit.md) wandelt sich in Hover-Ereignisse um, die unerwartet Menüs, Flyouts oder andere Elemente der Benutzeroberfläche aufklappen können, um nur durch das Überprüfen der APP herum zu navigieren.
 * Der Blick ist nicht so präzise wie die Maus Eingaben. Verwenden Sie für hololens entsprechend große Treffer Ziele, ähnlich wie bei mobilen Anwendungen mit Touchscreen. Kleine Elemente in der Nähe der Kanten der APP sind besonders schwer zu interagieren.
 * Benutzer müssen die Eingabemodi wechseln, damit Sie vom Bildlauf zu Drag & Drop auf zwei Finger schwenken wechseln können. Wenn Ihre APP für Touch-Eingaben konzipiert wurde, sollten Sie sicherstellen, dass keine größeren Funktionen hinter zwei Finger schwenken gesperrt sind. Wenn dies der Fall ist, sollten Sie über alternative Eingabe Mechanismen wie Schaltflächen verfügen, die zwei Finger schwenken initiieren können. Beispielsweise kann die Maps-APP mit zwei Finger schwenken vergrößert werden, verfügt aber über eine Plus-, minus-und Drehungs Schaltfläche, um die gleichen Zoom Interaktionen mit nur einem Mausklick zu simulieren.
 
@@ -175,10 +175,9 @@ Im folgenden finden Sie die grundlegenden Konzepte und Szenarios, die Sie für d
 
 Sobald Ihre APP ausgeführt wird, Verpacken Sie Ihre APP, um [Sie an den Microsoft Store zu senden](submitting-an-app-to-the-microsoft-store.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [App-Modell](app-model.md)
-* [Anvisieren](gaze.md)
-* [Gestaltungs](gestures.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Motion-Controller](motion-controllers.md)
 * [Spracheingabe](voice-input.md)
 * [Senden einer App an den Microsoft Store](submitting-an-app-to-the-microsoft-store.md)

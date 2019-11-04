@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: cb4645d197238d8712719625bf11eac0650a8246
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701872"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437571"
 ---
-# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Integrieren von Azure Spatial Anchor in eine gemeinsame Nutzung
+# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrieren von Azure Spatial Anchor in eine freigegebene Darstellung
 
 In dieser Lektion erfahren Sie, wie Sie Azure Spatial Anchor (ASA) in unsere freigegebene Erfahrung integrieren. ASA ermöglicht es, dass mehrere zusammengestellte Geräte über einen allgemeinen Verweis verfügen, wenn ihre physische Umgebung darin besteht, virtuelle Oberflächen so zu verankern, dass alle Teilnehmer Objekte am gleichen physischen Speicherort sehen.
 
@@ -37,21 +37,23 @@ Ziele
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Wählen Sie nun in der Hierarchie shareazureanchorbutton aus, und verschieben Sie Ihre Aufmerksamkeit auf den Bereich "inaspector". Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung dargestellt ist, und wählen Sie anchormodulescript aus, und klicken Sie auf shareanchornetework ().
+4. Wählen Sie nun in der Hierarchie shareazureanchorbutton aus, und verschieben Sie Ihre Aufmerksamkeit auf den Bereich "inaspector". Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung dargestellt ist, wählen Sie anchormodulescript aus, und klicken Sie auf shareanchornetework ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Wählen Sie getazureanchorbutton aus (siehe Schritt 4), und verschieben Sie die Aufmerksamkeit zurück zum Inspektor-Panel. Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung dargestellt ist, und wählen Sie anchormodulescript aus, und klicken Sie auf getsharedanchornetwork () und dann auf speichern.
+5. Wählen Sie getazureanchorbutton aus (siehe Schritt 4), und verschieben Sie Ihre Aufmerksamkeit zurück zum Inspektor-Panel. Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung dargestellt ist, und wählen Sie anchormodulescript aus, und klicken Sie auf getsharedanchornetwork () und dann auf speichern.
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Um das Freigabe Modul zu testen, klicken Sie auf die Schaltfläche "Azure-ASA-Sitzung starten", die die Azure-Sitzung für räumliche Anker startet, und erstellen Sie dann den Azure-Anker, indem Sie auf die Schaltfläche "Azure-Anker erstellen" klicken und warten, bis der Azure-Anker erstellt wird Nachdem der Azure-Anker erstellt wurde, klicken Sie auf die Schaltfläche "Azure-Anker freigeben", um den erstellten Azure-Anker aus den hololens zu teilen.
+6. Um das Freigabe Modul zu testen, klicken Sie auf die Schaltfläche "Azure ASA-Sitzung starten", die die Azure-Sitzung für räumliche Anker startet, und erstellen Sie dann den Azure-Anker durch Klicken auf die Schaltfläche "Azure-Anker erstellen" Warten Sie, bis der Azure-Anker erstellt wurde. Nachdem der Azure-Anker erstellt wurde, klicken Sie auf die Schaltfläche "Azure-Anker freigeben", um den erstellten Azure-Anker aus den hololens zu teilen.
 
-7. Um den freigegebenen Azure-Anker in einem anderen hololens zu erhalten, klicken Sie auf "Azure ASA-Sitzung starten", um die aktuelle ASA-Sitzung zu starten, und klicken Sie auf die Schaltfläche "Get Azure Anchor", um den freigegebenen Azure-Anker aus den anderen hololens zu erhalten.
+7. Um den gemeinsam genutzten Azure-Anker in einem anderen hololens zu erhalten, klicken Sie auf die "Azure ASA-Sitzung starten", um zu beginnen und zur aktuellen ASA-Sitzung zu gelangen.
 
-   > Hinweis: Alle Details der entsprechenden Aktionen auf den einzelnen Schaltflächen werden im Debugfenster angezeigt.
+8. Klicken Sie auf die Schaltfläche "Azure-Anker erhalten", um den freigegebenen Azure-Anker aus den anderen hololens zu erhalten.
+
+   > Hinweis: alle Details der entsprechenden Aktionen auf den einzelnen Schaltflächen werden im Fenster "Debuggen" angezeigt.
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In dieser Lektion haben Sie erfahren, wie Sie die leistungsfähigen neuen räumlichen Anker von Azure integrieren, um zusammengestellte Geräte in einer freigegebenen Erfahrung auszurichten. Diese Lektion schließt auch das Freigabe Modul ein. Wir haben gelernt, wie Sie ein neues Photon-Konto einrichten, die Verwendung von Photon und pun in eine neue Unity-Anwendung, das Konfigurieren von Avatare und freigegebenen Objekten und schließlich das Ausrichten mehrerer Teilnehmer mithilfe von ASA. 
+In dieser Lektion haben Sie erfahren, wie Sie die leistungsfähigen neuen räumlichen Anker von Azure integrieren, um zusammengestellte Geräte in einer freigegebenen Erfahrung auszurichten. Dies schließt auch das Freigabe Modul ein. Wir haben gelernt, wie Sie ein neues Photon-Konto einrichten, die Verwendung von Photon und pun in eine neue Unity-Anwendung, das Konfigurieren von Avatare und freigegebenen Objekten und schließlich das Ausrichten mehrerer Teilnehmer mithilfe von ASA. 
 

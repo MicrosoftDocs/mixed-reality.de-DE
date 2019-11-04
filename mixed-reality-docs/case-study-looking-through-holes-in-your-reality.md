@@ -2,16 +2,16 @@
 title: 'Fallstudie: Durchsuchen der Lücken in ihrer Realität'
 description: In dieser Fallstudie wird erläutert, wie der "Magic Window"-Effekt auf hololens implementiert wird, sodass der Benutzer hinter den Wänden, in der Etage und in virtuellen Öffnungen innerhalb der eigentlichen Umgebung sehen kann.
 author: EricRehmeyer
-ms.author: ericrehm
-ms.date: 03/21/2018
+ms.author: bestruku
+ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, Magic Window, Parser
-ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873930"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436667"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Fallstudie: Durchsuchen der Lücken in ihrer Realität
 
@@ -67,7 +67,7 @@ Was Sie in Screenshots und Videos sehen:
 ( Reality * ( 1 - hologram_alpha ) ) + Holograms * hologram_alpha
 ```
 
-AUF ENGLISCH: Das, was Sie durch hololens sehen, ist eine einfache Kombination aus der dunklen Realität (z. b. über Sonnenbrillen) und den Hologrammen, die die App anzeigen möchte. Wenn Sie jedoch einen Screenshot erstellen, wird das Bild der Kamera gemäß dem Transparenz Wert pro Pixel mit den Hologrammen der APP kombiniert.
+In englischer Sprache: das, was Sie durch hololens sehen, ist eine einfache Kombination aus der dunklen Realität (z. b. über Sonnenbrillen) und der von der APP anzuzeigenden Hologramme. Wenn Sie jedoch einen Screenshot erstellen, wird das Bild der Kamera gemäß dem Transparenz Wert pro Pixel mit den Hologrammen der APP kombiniert.
 
 Eine Möglichkeit, dieses Problem zu umgehen, besteht darin, das "Blackbox"-Material so zu ändern, dass nur in den tiefen Puffer geschrieben wird, und mit allen anderen nicht transparenten Materialien zu sortieren. Ein Beispiel hierfür finden Sie in der Datei " [windowocclusion. Shader" im mixedrealitytoolkit auf GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Common/Shaders/WindowOcclusion.shader). Die relevanten Zeilen werden hier kopiert:
 
@@ -104,12 +104,12 @@ Im folgenden finden Sie einige Ideen dazu, wo Sie diese Idee als nächstes treff
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Eric Rehmeyer" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Eric rehmeyer</b><br>Senior Software Engineer@Microsoft</td>
+<td style="border-style: none"><b>Eric rehmeyer</b><br>Senior Software Engineer @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Siehe auch
-* [MR-Grundlagen 101: Vollständiges Projekt mit Gerät](holograms-101.md)
+## <a name="see-also"></a>Weitere Informationen:
+* [Grundlagen 101: Projekt mit Gerät abschließen](holograms-101.md)
 * [Koordinatensysteme](coordinate-systems.md)
 * [Raumanker](spatial-anchors.md)
 * [Räumliche Abbildung](spatial-mapping.md)

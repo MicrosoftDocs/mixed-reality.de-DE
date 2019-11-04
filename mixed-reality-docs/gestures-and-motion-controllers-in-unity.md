@@ -2,20 +2,20 @@
 title: Gesten und Bewegungs Controller in Unity
 description: Es gibt zwei wichtige Möglichkeiten, um ihre Blicke in Unity, Handgesten und Bewegungs Controllern zu übernehmen.
 author: thetuvix
-ms.author: yoyoz
+ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gesten, Bewegungs Controller, Unity, Blick, Eingabe
-ms.openlocfilehash: f0d2835a08ef534af1310db35ccb81888e49aeb8
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525760"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435226"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gesten und Bewegungs Controller in Unity
 
-Es gibt zwei wichtige Möglichkeiten, um Ihre [Blicke in Unity](gaze-in-unity.md), [Handgesten](gestures.md) und [Bewegungs Controllern](motion-controllers.md) in hololens und immersiven HMD zu ergreifen. Sie greifen über dieselben APIs in Unity auf die Daten für beide Quellen räumlicher Eingaben zu.
+Es gibt zwei wichtige Möglichkeiten, um Ihre [Blicke in Unity](gaze-in-unity.md), [Handgesten](gaze-and-commit.md#composite-gestures) und [Bewegungs Controllern](motion-controllers.md) in hololens und immersiven HMD zu ergreifen. Sie greifen über dieselben APIs in Unity auf die Daten für beide Quellen räumlicher Eingaben zu.
 
 Unity bietet zwei Hauptmethoden für den Zugriff auf räumliche Eingabedaten für Windows Mixed Reality, die gängigen *Input. getbutton/Input. getaxis-* APIs, die über mehrere Unity-XR-sdker hinweg verwendet werden können, sowie eine API für *interaktionmanager/GestureRecognizer* . Windows Mixed Reality, das den vollständigen Satz räumlicher Eingabedaten verfügbar macht.
 
@@ -31,7 +31,7 @@ Die Zuordnungen von Schaltflächen/Achsen-IDs für Windows Mixed Reality untersc
 
 <table>
 <tr>
-<th rowspan="2">Eingabe </th><th colspan="2"><a href="gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">Allgemeine Unity-APIs</a><br />(Input. getbutton/getaxis) </th><th rowspan="2"><a href="gestures-and-motion-controllers-in-unity.md#">Windows-spezifische Eingabe-API</a><br />XR. WSA. Der</th>
+<th rowspan="2">Input </th><th colspan="2"><a href="gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">Allgemeine Unity-APIs</a><br />(Input. getbutton/getaxis) </th><th rowspan="2"><a href="gestures-and-motion-controllers-in-unity.md#">Windows-spezifische Eingabe-API</a><br />XR. WSA. Der</th>
 </tr><tr>
 <th> Links </th><th> Rechte Seite</th>
 </tr><tr>
@@ -59,9 +59,9 @@ Die Zuordnungen von Schaltflächen/Achsen-IDs für Windows Mixed Reality untersc
 </tr><tr>
 <td> Touchpad gedrückt </td><td> Schaltfläche 16 * </td><td> Schaltfläche 17 * </td><td> touchpadpressed</td>
 </tr><tr>
-<td> 6DOF-Zieh Punkt Pose oder Zeiger Pose </td><td colspan="2"> Nur Ziehpunkt <i>darstellen:</i> <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. Inputtracking. getlocalposition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. Input Tracking. getlocalrotation</a></td><td> Pass <i>-</i> oder <i>Zeiger</i> als Argument: SourceState. sourcepose. trygetposition<br />SourceState. sourcepose. trygetrotation<br /></td>
+<td> 6DOF-Zieh Punkt Pose oder Zeiger Pose </td><td colspan="2"> <i></i> Nur Ziehpunkt: <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. Inputtracking. getlocalposition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. Input Tracking. getlocalrotation</a></td><td> Pass <i>-</i> oder <i>Zeiger</i> als Argument: SourceState. sourcepose. trygetposition<br />SourceState. sourcepose. trygetrotation<br /></td>
 </tr><tr>
-<td> Nach verfolgungsstatus </td><td colspan="2"> <i>Die Positionsgenauigkeit und das Risiko von Quell Verlusten sind nur über die Mr-spezifische API verfügbar.</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">SourceState. sourcepose. positionaccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">SourceState. Properties. sourcelossrisk</a></td>
+<td> Nach verfolgungsstatus </td><td colspan="2"> Die <i>Positionsgenauigkeit und das Risiko von Quell Verlusten sind nur über eine bestimmte API verfügbar</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">SourceState. sourcepose. positionaccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">SourceState. Properties. sourcelossrisk</a></td>
 </tr>
 </table>
 
@@ -72,7 +72,7 @@ Die Zuordnungen von Schaltflächen/Achsen-IDs für Windows Mixed Reality untersc
 
 Windows Mixed Reality unterstützt Bewegungs Controller in einer Vielzahl von Formfaktoren, wobei sich der Entwurf des Controllers in seiner Beziehung zwischen der Handposition des Benutzers und der natürlichen Vorwärtsrichtung unterscheidet, die apps beim Rendern der ern.
 
-Um diese Controller besser darzustellen, gibt es zwei Arten von Posen, die Sie für jede Interaktions Quelle untersuchen können **, die** Ziehpunkt-und die **Zeiger**Darstellung. Sowohl die Ziehpunkt-als auch die zeigerpose-Koordinaten werden von allen Unity-APIs in globalen Unity-Weltkoordinaten ausgedrückt.
+Um diese Controller besser darzustellen, gibt es zwei Arten von Posen, die Sie für jede Interaktions Quelle untersuchen können, die Ziehpunkt- **und die** **Zeiger**Darstellung. Sowohl die Ziehpunkt-als auch die zeigerpose-Koordinaten werden von allen Unity-APIs in globalen Unity-Weltkoordinaten ausgedrückt.
 
 ### <a name="grip-pose"></a>Ziehpunkt darstellen
 
@@ -81,10 +81,10 @@ Die Ziehpunkt- **Pose** stellt die Position der Palme einer Hand dar, die von ei
 Bei immersiven Headsets eignet sich die Zieh Punkt Darstellung am besten zum Rendering **der Benutzer Hand** oder **eines Objekts, das in der Hand des Benutzers gehalten**wird, z. b. ein Schwert oder eine Waffe. Die Zieh Punkt Darstellung wird auch bei der Visualisierung eines Bewegungs Controllers verwendet, da das **renderbare Modell** , das von Windows für einen Motion-Controller bereitgestellt wird, die Zieh Punkt Darstellung als Ursprung und Mittelpunkt der Drehung verwendet.
 
 Die Ziehpunkt-Pose wird wie folgt definiert:
-* Die Zieh **Punktposition**: Der Palmen Schwerpunkt, wenn der Controller auf natürliche Weise nach links oder rechts angepasst wird, um die Position im Ziehpunkt zu zentrieren. Auf dem Windows Mixed Reality Motion Controller richtet sich diese Position im Allgemeinen nach der Schaltfläche "verstehen".
-* Die **Rechte Achse**der Ziehpunkt Ausrichtung: Wenn Sie Ihre Hand vollständig geöffnet haben, um eine flache 5-Finger-Darstellung zu bilden, ist der Strahl, der normal ist, für das Palmen (vorwärts von der linken Palme, rückwärts von der rechten Palme)
-* Die **Vorwärts Achse**der Zieh Richtung: Wenn Sie die Hand teilweise schließen (wie beim Halten des Controllers), wird der Strahl, der durch das von Ihnen nicht-Thumb-Finger formatierte Rohr auf "Vorwärts" zeigt.
-* Die **aufwärts-Achse**der Zieh Richtung: Die aufwärts-Achse, die durch die Rechte-und vorwärts Definitionen impliziert wird.
+* Die Zieh **Punktposition**: der Palmen Schwerpunkt bei der natürlichen Aufbewahrung des Controllers, nach links oder rechts, um die Position im Ziehpunkt zu zentrieren. Auf dem Windows Mixed Reality Motion Controller richtet sich diese Position im Allgemeinen nach der Schaltfläche "verstehen".
+* Die **Rechte Achse**der Ziehpunkt Ausrichtung: Wenn Sie Ihre Hand vollständig geöffnet haben, um eine flache 5-Finger-Darstellung zu bilden, ist das Strahl-Ray, das normal ist (vorwärts von links nach links, rückwärts von rechter Palme).
+* Die **Forward-Achse**der Ziehpunkt Ausrichtung: Wenn Sie die Hand teilweise schließen (wie beim Halten des Controllers), wird der Strahl, der durch das durch ihre nicht-Thumb-Finger formatierte Rohr auf "Vorwärts" zeigt.
+* Die **aufwärts Achse**der Ziehpunkt Ausrichtung: die aufwärts Achse, die durch die Rechte-und vorwärts Definitionen impliziert wird.
 
 Sie können auf die Ziehpunkt-Pose über die Anbieter übergreifende Eingabe-API von Unity (XR) zugreifen *[. Inputtracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). Getlocalposition/Rotation*) oder über die Windows-spezifische API (*SourceState. sourcepose. trygetposition/Rotation*), die die Daten für den **Zieh Knoten** anfordert.
 
@@ -118,13 +118,13 @@ Apps, die Positionen basierend auf dem nach verfolgungsstatus unterschiedlich be
 <tr>
 <th> Nach verfolgungsstatus </th><th> Sourcelossrisk </th><th> Positionsgenauigkeit </th><th> Trygetposition</th>
 </tr><tr>
-<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt;1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> Wahr</td>
 </tr><tr>
-<td> <b>Hohe Genauigkeit (Risiko eines Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Hohe Genauigkeit (Risiko des Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> Wahr</td>
 </tr><tr>
-<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> Wahr</td>
 </tr><tr>
-<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> false</td>
+<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> Falsch</td>
 </tr>
 </table>
 
@@ -136,8 +136,8 @@ Diese Motion Controller-Überwachungs Zustände werden wie folgt definiert:
 
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>Allgemeine Unity-APIs (Input. getbutton/getaxis)
 
-**Namespace:** *Unityengine*, *unityengine. XR*<br>
-**Typen**: *Eingabe*, *XR. Inputtracking*
+**Namespace:** *unityengine*, *unityengine. XR*<br>
+**Typen**: *Input*, *XR. Inputtracking*
 
 Unity verwendet derzeit die allgemeinen *Input. getbutton/Input. getaxis-* APIs, um Eingaben für [das Oculus SDK](https://docs.unity3d.com/Manual/OculusControllers.html), [das openvr SDK](https://docs.unity3d.com/Manual/OpenVRControllers.html) und Windows Mixed Reality, einschließlich der Hands-und Motion-Controller, verfügbar zu machen. Wenn Ihre APP diese APIs für die Eingabe verwendet, kann Sie Bewegungs Controller über mehrere XR-sdche hinweg unterstützen, einschließlich Windows Mixed Reality.
 
@@ -145,9 +145,9 @@ Unity verwendet derzeit die allgemeinen *Input. getbutton/Input. getaxis-* APIs,
 
 Wenn Sie die allgemeinen Unity-Eingabe-APIs verwenden möchten, beginnen Sie in der Regel mit dem Verknüpfen von Schaltflächen und Achsen mit logischen Namen im [Unity-Eingabe-Manager](https://docs.unity3d.com/Manual/ConventionalGameInput.html), und binden Sie eine Schaltfläche oder eine Achsen-ID an jeden Namen Anschließend können Sie Code schreiben, der auf den Namen der logischen Schaltfläche/Achse verweist.
 
-Um z. b. die triggerschaltfläche des linken Bewegungs Controllers der Aktion senden zuzuordnen, wechseln Sie zu **Edit > Project Settings > Input** in Unity, und erweitern Sie die Eigenschaften des Abschnitts übermitteln unter Achsen. Ändern **Sie die**Schaltfläche "pokschaltfläche" oder die positiv Schaltfläche "alt", um die **Schalt** Fläche "
+Um z. b. die triggerschaltfläche des linken Bewegungs Controllers der Aktion senden zuzuordnen, wechseln Sie zu **Edit > Project Settings > Input** in Unity, und erweitern Sie die Eigenschaften des Abschnitts übermitteln unter Achsen. Ändern Sie die Schaltfläche " **pokschaltfläche** " oder die positiv Schaltfläche "alt", um die **Schalt** **Fläche "**
 
-![InputManager von Unity](images/unity-input-manager.png)<br>
+der InputManager von Unity ![](images/unity-input-manager.png)<br>
 *Unity-InputManager*
 
 Das Skript kann dann mithilfe von " *Input. getbutton*" die Aktion "Senden" überprüfen:
@@ -186,8 +186,8 @@ Beachten Sie, dass die Beziehung zwischen diesem Ziehpunkt und der Zeiger Pose (
 
 ## <a name="windows-specific-apis-xrwsainput"></a>Windows-spezifische APIs (XR. WSA. Der
 
-**Namespace:** *Unityengine. XR. WSA. Input*<br>
-**Typen**: *Interaktionsmanager*, *interaktionsourcestate*, *interaktionsource*, *interaktionsourceproperties*, *interaktionsourcekind*, *interaktionsourcelokation*
+**Namespace:** *unityengine. XR. WSA. Input*<br>
+**Typen**: *interaktionsmanager*, *interaktionsourcestate*, *interaktionsource*, *interaktionsourceproperties*, *interaktionsourcekind*, *interaktionsourcelokation*
 
 Um ausführlichere Informationen zu Windows Mixed Reality-Hand Eingaben (für hololens) und Bewegungs Controller zu erhalten, können Sie die Windows-spezifischen räumlichen Eingabe-APIs im Namespace *unityengine. XR. WSA. Input* verwenden. Auf diese Weise können Sie auf zusätzliche Informationen zugreifen, wie z. b. Die Positionsgenauigkeit oder die quellart, sodass Sie die Hände und Controller voneinander trennen können.
 
@@ -240,7 +240,7 @@ Jedes *interaktionsourcestate* , das Sie zurückerhalten, stellt eine Interaktio
    }
    ```
 
-* Sie können auch die vorwärts Gesagte Kopfzeile für diesen aktuellen Frame erhalten.  Wie bei der Quell **Darstellung** ist dies für das Rendern eines Cursors nützlich, obwohl das Ziel einer bestimmten Presse oder Freigabe am genauesten ist, wenn Sie die unten beschriebenen Vergangenheits Ereignis-APIs verwenden.
+* Sie können auch die vorwärts Gesagte Kopfzeile für diesen aktuellen Frame erhalten.  Wie bei der Quell Darstellung ist dies für das **Rendern** eines Cursors nützlich, obwohl das Ziel einer bestimmten Presse oder Freigabe am genauesten ist, wenn Sie die unten beschriebenen Vergangenheits Ereignis-APIs verwenden.
 
    ```cs
    var headPose = interactionSourceState.headPose;
@@ -290,9 +290,9 @@ InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSou
 Die folgenden Interaktions Quell Ereignisse sind verfügbar:
 * *Interaktionsourceerkannt* (Quelle wird aktiv)
 * *Interaktionsourcelost* (wird inaktiv)
-* *Interaktionsourcepressed* (tippen, Schaltfläche "drücken" oder "auswählen")
-* *Interaktionsourcereleasing* (Ende einer Tap-Taste, Schaltfläche freigegeben oder Ende der "Select"-Taste)
-* *Interaktionsourceupdatiert* (verschiebt oder ändert einen anderen Zustand.)
+* *Interaktionsourcepressed* (tippen, drücken der Schaltfläche oder "auswählen")
+* *Interaktionsourcereleasing* (Ende einer Tap-Schaltfläche, oder Ende der "Select"-Taste)
+* *Interaktionsourceupveraltet* (verschieben oder anderweitig ändern eines Zustands)
 
 ### <a name="events-for-historical-targeting-poses-that-most-accurately-match-a-press-or-release"></a>Ereignisse für Vergangenheits Ziele, die mit einem Press oder Release am genauesten zu vergleichen sind
 
@@ -305,7 +305,7 @@ Dies bedeutet, dass bei der Abfrage eine Quell Pose oder eine Kopfzeile angezeig
 Um basierend auf der ursprünglichen Absicht des Benutzers für eine Hand oder einen Controller eine genaue Zielsetzung zu erreichen, sollten Sie die historische Quell Pose oder die Kopfzeile aus dem *interaktionsourcepressed* -oder *interaktionsourcereleasing* -Eingabe Ereignis verwenden.
 
 Sie können eine Presse oder eine Freigabe mit Verlaufs Daten des Benutzers oder des Controllers als Ziel haben:
-* Die Kopfzeile zu dem Zeitpunkt, an dem eine Geste oder eine Controller Bewegung aufgetreten ist, die für die **Ziel** Bestimmung verwendet werden kann, um zu bestimmen, was der [Benutzer untersucht](gaze.md) hat:
+* Die Kopfzeile zu dem Zeitpunkt, an dem eine Geste oder eine Controller Bewegung aufgetreten ist, die für die **Ziel** Bestimmung verwendet werden kann, um zu bestimmen, was der [Benutzer untersucht hat:](gaze-and-commit.md)
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args) {
@@ -398,10 +398,10 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 
 ## <a name="high-level-composite-gesture-apis-gesturerecognizer"></a>APIs für zusammengesetzte Gesten auf hoher Ebene (GestureRecognizer)
 
-**Namespace:** *Unityengine. XR. WSA. Input*<br>
+**Namespace:** *unityengine. XR. WSA. Input*<br>
 **Typen**: *GestureRecognizer*, *gesturesettings*, *interaktionsourcekind*
 
-Ihre APP kann auch zusammengesetzte Gesten auf höherer Ebene für räumliche Eingabe Quellen, Tap-, Halt-, Manipulations-und Navigations Gesten erkennen. Mit dem GestureRecognizer können Sie diese zusammengesetzten Gesten sowohl in [Hand](gestures.md) -als auch in [Bewegungs Controllern](motion-controllers.md) erkennen.
+Ihre APP kann auch zusammengesetzte Gesten auf höherer Ebene für räumliche Eingabe Quellen, Tap-, Halt-, Manipulations-und Navigations Gesten erkennen. Mit dem GestureRecognizer können Sie diese zusammengesetzten Gesten sowohl in [Hand](gaze-and-commit.md#composite-gestures) -als auch in [Bewegungs Controllern](motion-controllers.md) erkennen.
 
 Jedes Gesten Ereignis für den GestureRecognizer stellt sowohl sourcekind für die Eingabe als auch den Ziel-Head-Strahl zum Zeitpunkt des Ereignisses bereit. Einige Ereignisse bieten zusätzliche kontextspezifische Informationen.
 
@@ -476,12 +476,12 @@ void OnDestroy()
 
 ## <a name="rendering-the-motion-controller-model-in-unity"></a>Rendern des Motion Controller-Modells in Unity
 
-![Motion Controller-Modell und-teleportierung](images/motioncontrollertest-teleport-1000px.png)<br>
+![Motion Controller Modell und Teleportations](images/motioncontrollertest-teleport-1000px.png)<br>
 *Motion Controller-Modell und-teleportierung*
 
 Zum Rendering von Bewegungs Controllern in Ihrer APP, die den physischen Controllern entsprechen, die die Benutzer als verschiedene Schaltflächen verwenden, die Sie verwenden, können Sie die **vorfab von "mutioncontroller** " im [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity/)verwenden.  Dieser Prefab lädt das korrekte gltf-Modell zur Laufzeit dynamisch aus dem installierten Motion Controller-Treiber des Systems.  Es ist wichtig, dass diese Modelle dynamisch geladen werden, anstatt Sie manuell in den Editor zu importieren, damit Ihre APP physisch genaue 3D-Modelle für alle aktuellen und zukünftigen Controller anzeigt, die Ihre Benutzer möglicherweise haben.
 
-1. Befolgen Sie [die Anweisungen für](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md) die ersten Schritte, um das Mixed Reality Toolkit herunterzuladen und es Ihrem Unity-Projekt hinzuzufügen.
+1. Befolgen Sie [die Anweisungen für die ersten](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md) Schritte, um das Mixed Reality Toolkit herunterzuladen und es Ihrem Unity-Projekt hinzuzufügen.
 2. Wenn Sie Ihre Kamera durch das *mixedrealitycameraparent* -präfab im Rahmen der Schritte für die ersten Schritte ersetzt haben, können Sie es tun!  Dieses präfab umfasst das Rendern von Bewegungs Controllern.  Andernfalls fügen Sie *Assets/holotoolkit/Input/Prefabs/mutioncontrollers. Prefab* aus dem Projektbereich in die Szene ein.  Sie sollten diese Prefab als untergeordnetes Element eines beliebigen übergeordneten Objekts hinzufügen, das Sie verwenden, um die Kamera zu bewegen, wenn der Benutzer in der Szene Teleports verwendet, sodass die Controller mit dem Benutzer zusammenkommen.  Wenn Ihre APP keine teleportierung umfasst, fügen Sie einfach die vorfab im Stammverzeichnis Ihrer Szene hinzu.
 
 ## <a name="throwing-objects"></a>Auslösen von Objekten
@@ -490,8 +490,8 @@ Das Auslösen von Objekten in Virtual Reality ist ein schwierigeres Problem, das
 
 Ein Beispiel für die Implementierung von "throw" finden Sie [hier](https://github.com/keluecke/MixedRealityToolkit-Unity/blob/master/External/Unitypackages/ThrowingStarter.unitypackage). Dieses Beispiel befolgt diese vier Richtlinien:
 * **Verwenden Sie die *Geschwindigkeit* des Controllers anstelle der Position**. Im November-Update für Windows haben wir eine Änderung des Verhaltens eingeführt, wenn der [ungefähre Status der Positionsüberwachung ("ungefähre"](motion-controllers.md#controller-tracking-state)) ist. In diesem Zustand werden Velocity-Informationen über den Controller weiterhin angezeigt, solange wir glauben, dass es sich um eine hohe Genauigkeit handelt, die häufig länger ist als die Position mit hoher Genauigkeit.
-* **Integrieren Sie die *Winkelgeschwindigkeit* des Controllers**. Diese Logik ist in der- `throwing.cs` Datei `GetThrownObjectVelAngVel` in der statischen-Methode innerhalb des oben verknüpften Pakets enthalten:
-   1. Wenn die Angular-Geschwindigkeit beibehalten wird, muss das ausgelöste Objekt dieselbe Angular-Geschwindigkeit wie in der Zeit der throw-Ausnahme beibehalten:`objectAngularVelocity = throwingControllerAngularVelocity;`
+* **Integrieren Sie die *Winkelgeschwindigkeit* des Controllers**. Diese Logik ist alle in der `throwing.cs`-Datei in der `GetThrownObjectVelAngVel` statischen Methode in dem oben verknüpften Paket enthalten:
+   1. Wenn die Angular-Geschwindigkeit beibehalten wird, muss das ausgelöste Objekt dieselbe Angular-Geschwindigkeit wie im Moment der throw-Ausnahme beibehalten: `objectAngularVelocity = throwingControllerAngularVelocity;`
    2. Da sich der Mittelpunkt der Masse des ausgelösten Objekts wahrscheinlich nicht am Ursprung der Ziehpunkt-Pose befindet, weist er wahrscheinlich eine andere Geschwindigkeit auf als der Controller im Verweis auf den Benutzer. Der Teil der auf diese Weise beigetragenen Geschwindigkeit des Objekts ist die sofortige tangential Geschwindigkeit des Mittelpunkts der Masse des ausgelösten Objekts um den Controller Ursprung. Diese tangential-Geschwindigkeit ist das Kreuz Produkt der Angular-Geschwindigkeit des Controllers mit dem Vektor, der den Abstand zwischen dem Controller Ursprung und dem Mittelpunkt der Masse des ausgelösten Objekts darstellt.
     
       ```cs
@@ -499,10 +499,10 @@ Ein Beispiel für die Implementierung von "throw" finden Sie [hier](https://gith
       Vector3 tangentialVelocity = Vector3.Cross(throwingControllerAngularVelocity, radialVec);
       ```
    
-   3. Die Gesamtgeschwindigkeit des ausgelösten Objekts entspricht daher der Summe der Geschwindigkeit des Controllers und der tangential Geschwindigkeit:`objectVelocity = throwingControllerVelocity + tangentialVelocity;`
+   3. Die Gesamtgeschwindigkeit des ausgelösten Objekts entspricht daher der Summe der Geschwindigkeit des Controllers und der tangential Geschwindigkeit: `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
 
-* Achten **Sie genau auf die *Zeit* , zu der wir die Geschwindigkeit anwenden**. Wenn eine Schaltfläche gedrückt wird, kann es bis zu 20 ms dauern, bis das Ereignis durch Bluetooth bis zum Betriebssystem hochskalieren kann. Dies bedeutet Folgendes: Wenn Sie eine Änderung des Controller Zustands von "gedrückt" in "nicht gedrückt" oder umgekehrt abrufen, werden die Informationen, die Sie mit dem Controller erhalten, tatsächlich vor dieser Zustandsänderung angezeigt. Außerdem wird die von unserer Abruf-API dargestellte Controller Darstellung vorhergesagt, um eine wahrscheinliche Darstellung zum Zeitpunkt der Anzeige des Frames widerzuspiegeln, der in der Zukunft mehr als 20 ms betragen kann. Dies eignet sich gut  für das Rendern von gehaltenen Objekten, stellt jedoch unser Zeitproblem für das *Ziel des Objekts* dar Wenn beim November-Update ein Unity-Ereignis wie *interaktionsourcepressed* oder *interaktionsourcereleasing* gesendet wird, enthält der Zustand die Vergangenheits Daten von hinten, wenn die Schaltfläche tatsächlich gedrückt oder freigegeben wurde.  Um das präzisere Controller Rendering und die Zielplattform für das Ausführen von Triggeroptionen zu erhalten, müssen Sie nach Bedarf Abruf-und Ereignis Ereignisse ordnungsgemäß verwenden:
-   * Für den Controller, der die einzelnen Frames rendert, sollte Ihre APP das *gameobject* des Controllers an der vorwärts Gesagten Controller **Darstellung** für die Photon-Zeit des aktuellen Frames positionieren.  Sie erhalten diese Daten von Unity-Abruf-APIs wie *[XR. Inputtracking. getlocalposition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* oder *[XR. WSA. Input. interaktionmanager. getcurrentreading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)* .
+* Achten **Sie genau auf die *Zeit* , zu der wir die Geschwindigkeit anwenden**. Wenn eine Schaltfläche gedrückt wird, kann es bis zu 20 ms dauern, bis das Ereignis durch Bluetooth bis zum Betriebssystem hochskalieren kann. Dies bedeutet Folgendes: Wenn Sie eine Änderung des Controller Zustands von "gedrückt" in "nicht gedrückt" oder umgekehrt abrufen, werden die Informationen, die Sie mit dem Controller erhalten, tatsächlich vor dieser Zustandsänderung angezeigt. Außerdem wird die von unserer Abruf-API dargestellte Controller Darstellung vorhergesagt, um eine wahrscheinliche Darstellung zum Zeitpunkt der Anzeige des Frames widerzuspiegeln, der in der Zukunft mehr als 20 ms betragen kann. Dies eignet sich gut für das *Rendern* von gehaltenen Objekten, stellt jedoch unser Zeitproblem für das *Ziel des Objekts* dar Wenn beim November-Update ein Unity-Ereignis wie *interaktionsourcepressed* oder *interaktionsourcereleasing* gesendet wird, enthält der Zustand die Vergangenheits Daten von hinten, wenn die Schaltfläche tatsächlich gedrückt oder freigegeben wurde.  Um das präzisere Controller Rendering und die Zielplattform für das Ausführen von Triggeroptionen zu erhalten, müssen Sie nach Bedarf Abruf-und Ereignis Ereignisse ordnungsgemäß verwenden:
+   * Für den Controller, der die einzelnen Frames **rendert** , sollte Ihre APP das *gameobject* des Controllers an der vorwärts Gesagten Controller Darstellung für die Photon-Zeit des aktuellen Frames positionieren.  Sie erhalten diese Daten von Unity-Abruf-APIs wie *[XR. Inputtracking. getlocalposition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* oder *[XR. WSA. Input. interaktionmanager. getcurrentreading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)* .
    * Für den Controller, der auf eine Presse oder ein Release **abzielt** , sollte Ihre APP auf der Grundlage der Verlaufs Controller-Pose für das Press-oder releaseereignis auf der Grundlage der Verlaufs Controller-  Sie erhalten diese Daten aus den Unity-Ereignis-APIs, wie z. b. *[interaktionmanager. interaktionsourcepressed](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.InteractionSourcePressed.html)* .
 * **Verwenden Sie die**Ziehpunkt-Pose. Winkelgeschwindigkeit und-Geschwindigkeit werden relativ zur Zieh Punkt Pose, nicht zum Darstellen von Zeigern, angezeigt.
 
@@ -519,15 +519,15 @@ Sie können über den Eingabe-Manager auf Gesten-und Bewegungs Controller zugrei
 
 Schritt-für-Schritt-Tutorials mit ausführlicheren Anpassungs Beispielen sind in der Mixed Reality Academy verfügbar:
 
-- [MR-Eingabe 211: Geste](holograms-211.md)
-- [MR-Eingabe 213: Motion-Controller](mixed-reality-213.md)
+- [Mr-Eingabe 211: Geste](holograms-211.md)
+- [Mr-Eingabe 213: Motion-Controller](mixed-reality-213.md)
 
 [![Mr-Eingabe 213-Motion Controller](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Mr-Eingabe 213-Motion Controller*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-* [Gesten](gestures.md)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Motion-Controller](motion-controllers.md)
 
 

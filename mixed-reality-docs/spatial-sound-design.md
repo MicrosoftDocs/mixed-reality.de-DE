@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, räumlicher Sound, Entwurf, Stil
-ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750307"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438288"
 ---
 # <a name="spatial-sound-design"></a>Räumlicher Sound Entwurf
 
@@ -21,9 +21,9 @@ Wenn Sie jemals [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(game))ges
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -32,7 +32,7 @@ Wenn Sie jemals [Marco Polo](https://en.wikipedia.org/wiki/Marco_Polo_(game))ges
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
@@ -100,12 +100,12 @@ Die Entfernungs Dämpfung erfolgt schnell innerhalb der ersten Verbrauchseinheit
 
 **Objekt Ermittlung und Benutzeroberflächen**
 
-Wenn Sie Audiohinweise verwenden, um die Aufmerksamkeit des Benutzers außerhalb der aktuellen Ansicht zu leiten, sollte der Sound in der Mischung, auch über alle Stereo Sounds und alle anderen räumlichen Sounds, die vom direktionalen audiohinweis abweichen können, hörbar und deutlich werden. Bei Sounds und Musik, die einem Element der Benutzeroberfläche (z. b. einem Menü) zugeordnet sind, sollte der audioemitter an dieses Objekt angefügt werden. Stereo und andere nicht positionelle Audiowiedergabe können das Auffinden von räumlichen Elementen erschweren (siehe oben). Vermeiden Sie räumliche Maskierung).
+Wenn Sie Audiohinweise verwenden, um die Aufmerksamkeit des Benutzers außerhalb der aktuellen Ansicht zu leiten, sollte der Sound in der Mischung, auch über alle Stereo Sounds und alle anderen räumlichen Sounds, die vom direktionalen audiohinweis abweichen können, hörbar und deutlich werden. Bei Sounds und Musik, die einem Element der Benutzeroberfläche (z. b. einem Menü) zugeordnet sind, sollte der audioemitter an dieses Objekt angefügt werden. Stereo und andere nicht positionelle Audiowiedergabe können das Auffinden von räumlichen Elementen erschweren (siehe oben: vermeiden räumlicher Maskierung).
 
 **Verwenden Sie den räumlichen Sound über den 3D-Standard Sound so weit wie möglich**
 
 In gemischter Realität sollte 3D-Audio mit räumlichem Sound anstelle von Legacy-3D-Audiotechnologien erzielt werden. Im Allgemeinen sind bei der verbesserten Spatialisierung die kleinen CPU-Kosten im Vergleich zum 3D-Standard Sound zu verbessern. Standard mäßige 3D-Audiodaten können für Sounds mit niedriger Priorität verwendet werden, für die ein räumliches, aber nicht notwendigerweise an ein physisches oder virtuelles Objekt gebunden ist, sowie für Objekte, die der Benutzer niemals zum interagieren mit der APP benötigt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Raumklang](spatial-sound.md)
 * [Räumliche Abbildung](spatial-mapping.md)

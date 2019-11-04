@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Introduction, Leitfaden
-ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414163"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437093"
 ---
 # <a name="about-this-design-guidance"></a>Informationen zu diesem Entwurfs Leit Faden
 
@@ -29,14 +29,12 @@ Und wir wissen, dass viele Innovationen von der größeren Entwurfs Community ge
 
 ## <a name="overview"></a>Übersicht
 
-Im folgenden finden Sie eine kurze Übersicht darüber, wie dieser Entwurfs Leit Faden organisiert ist. Sie finden Abschnitte für jeden dieser Bereiche mit Links zu mehreren Artikeln.
-* **[Beginnen Sie mit dem Entwurf](mixed-reality.md)** : Lesen Sie unsere grundlegenden Gedanken, und verstehen Sie die folgenden Prinzipien.
-* **[Instanzielle Interaktionen](interaction-fundamentals.md)** : erfahren Sie mehr über Eingabe-, Befehls-, Navigations-und andere Interaktions Grundlagen für das Entwerfen von apps.
-* **[Stil](typography.md)** : machen Sie Ihre Anwendung mithilfe von Farbe, Typografie und Bewegung reizvoll.
-* **[App-Muster](types-of-mixed-reality-apps.md)** : erfahren Sie, wie Anwendungen Szenarien in immersiven und realen Umgebungen umfassen können.
-* Steuer **[Elemente](interactable-object.md)** : Verwenden Sie Steuerelemente und Muster als Bausteine, um Ihre eigene Anwendung zu erstellen.
-* **[Beispiel-apps](design.md#sample-apps)** : Erstellen Sie gute Erfahrungen aus Beispielen, die von unserem Team entworfen und erstellt wurden.
-* **[Entwurfs Tools und-Ressourcen](design.md#design-tools)** : Starten Sie Ihr Projekt mit Entwurfsvorlagen und-Tools.
+Im folgenden finden Sie eine kurze Übersicht darüber, wie dieser Entwurfs Leit Faden organisiert ist. 
+* **[Übersicht](design.md)** : erfahren Sie mehr über den Entwurfsprozess, die wichtigsten Konzepte und Interaktions Faktoren, die berücksichtigt werden müssen.
+* **[Grundlegende Konzepte](core-concepts-landingpage.md)** : erfahren Sie mehr über Komfort, Holographic Frame, räumliche Zuordnung und andere wichtige Konzepte, die berücksichtigt werden müssen.
+* **[Interaktionsmodelle](interaction-fundamentals.md)** : Diese Anleitung ist in drei Haupt Interaktions Modellen gegliedert.
+* **[UX-Elemente](app-patterns-landingpage.md)** : Verwenden Sie Steuerelemente und Verhaltensweisen als Bausteine zum Erstellen Ihrer eigenen Anwendungserfahrung.
+* **[Ressourcen](design.md#choose-a-prototyping-option)** : Starten Sie Ihr Projekt mit Entwurfs Tools und Prototypen-Optionen.
 
 Für alle oben genannten Ziele soll die richtige Mischung aus Text, Abbildungen und Diagrammen und Videos bereitgestellt werden, sodass wir mit unterschiedlichen Formaten und Techniken experimentieren können, die alles mit der Absicht bereitstellen, was Sie brauchen. In den kommenden Monaten wird diese Taxonomie erweitert, um einen umfassenderen Satz von Entwurfs Themen einzubeziehen. Nach Möglichkeit geben wir Ihnen einen Überblick darüber, was als nächstes geplant ist. Bitte überprüfen Sie also immer wieder.
 
@@ -72,7 +70,7 @@ Eine der Herausforderungen bei der Bereitstellung eines Entwurfs Leitfadens in d
 
 ![Das richtige Gleichgewicht des globalen und des lokalen Entwurfs](images/500px-fluentdesign.jpg) <br>
 
-Wir bieten zwei Entwurfs Leit Fäden: Global und local. Unser "Global"-Entwurfs Leit Faden ist im Design [System "fließend](http://fluent.microsoft.com)" enthalten. Es wird ausführlich erläutert, wie wir über Grundlagen wie Light, Tiefe, Bewegung, Material und Skalierung für alle Microsoft-Entwürfe nachzudenken, unsere Geräte, Produkte, Tools und Dienste. Dies bedeutet, dass in diesem größeren System erhebliche gerätespezifische Unterschiede vorhanden sind. Der "lokale" Entwurfs Leit Faden für die in der Eingabe bereitgestellten anzeigen beschreibt den Entwurf für holografische und immersive Geräte, die häufig verschiedene Eingabe-und Ausgabemethoden sowie unterschiedliche Benutzer Anforderungen und-Szenarien aufweisen. Leitfaden zum lokalen Design behandelt die für HMDs eindeutigen Themen. Zum Beispiel: 3D-Umgebungen und-Objekte; freigegebene Umgebungen; Verwendung von Sensoren, Augen Verfolgung und räumlicher Zuordnung und die Möglichkeiten räumlicher Audiodaten. Im Rahmen unserer Anleitung werden Sie wahrscheinlich sowohl auf die globalen als auch auf die lokalen Aspekte Bezug sehen. Hoffentlich hilft Ihnen dies, ihre Arbeit in einer größeren Entwurfs Grundlage zu unterstützen und gleichzeitig die Entwurfs Unterschiede zwischen bestimmten Geräten zu nutzen.
+Wir bieten zwei Entwurfs Leit Fäden: Global und local. Unser "Global"-Entwurfs Leit Faden ist im Design [System "fließend](https://fluent.microsoft.com)" enthalten. Es wird ausführlich erläutert, wie wir über Grundlagen wie Light, Tiefe, Bewegung, Material und Skalierung für alle Microsoft-Entwürfe nachzudenken, unsere Geräte, Produkte, Tools und Dienste. Dies bedeutet, dass in diesem größeren System erhebliche gerätespezifische Unterschiede vorhanden sind. Der "lokale" Entwurfs Leit Faden für die in der Eingabe bereitgestellten anzeigen beschreibt den Entwurf für holografische und immersive Geräte, die häufig verschiedene Eingabe-und Ausgabemethoden sowie unterschiedliche Benutzer Anforderungen und-Szenarien aufweisen. Leitfaden zum lokalen Design behandelt die für HMDs eindeutigen Themen. Beispiel: 3D-Umgebungen und-Objekte; freigegebene Umgebungen; Verwendung von Sensoren, Augen Verfolgung und räumlicher Zuordnung und die Möglichkeiten räumlicher Audiodaten. Im Rahmen unserer Anleitung werden Sie wahrscheinlich sowohl auf die globalen als auch auf die lokalen Aspekte Bezug sehen. Hoffentlich hilft Ihnen dies, ihre Arbeit in einer größeren Entwurfs Grundlage zu unterstützen und gleichzeitig die Entwurfs Unterschiede zwischen bestimmten Geräten zu nutzen.
 
 ### <a name="have-a-discussion"></a>Diskussion
 

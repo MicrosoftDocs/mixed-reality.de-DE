@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Hololens, synchronisieren, räumlicher Anker, Übertragung, Multiplayer, Ansicht, Szenario, Exemplarische Vorgehensweise, Beispielcode, Übertragung, lokale Anker Übertragung, Anker Export, Anker Import
-ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515446"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437958"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Lokale Anker Übertragungen in DirectX
 
@@ -33,7 +33,7 @@ Beachten Sie, dass räumliche Anker nicht zwischen verschiedenen Gerätetypen ü
 
 Ihrer APP muss die Berechtigung zum Verwenden der spatialperception-Funktion erteilt werden, bevor Sie den [spatialanchortransfermanager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx)verwenden kann. Dies ist erforderlich, da das übertragen eines räumlichen Ankers das Freigeben von Sensor Bildern im Laufe der Zeit in der Nähe dieses Ankers beinhaltet, die vertrauliche Informationen enthalten können.
 
-Deklarieren Sie diese Funktion in der Datei "Package. appxmanifest" für Ihre APP. Im Folgenden ein Beispiel:
+Deklarieren Sie diese Funktion in der Datei "Package. appxmanifest" für Ihre APP. Beispiel:
 
 ```
 <Capabilities>
@@ -41,19 +41,19 @@ Deklarieren Sie diese Funktion in der Datei "Package. appxmanifest" für Ihre AP
 </Capabilities>
 ```
 
-Die Funktion stammt aus dem **uap2** -Namespace. Um Zugriff auf diesen Namespace in ihrem Manifest zu erhalten, fügen Sie ihn als *xlmns* -Attribut &lt;in das Paket >-Element ein. Im Folgenden ein Beispiel:
+Die Funktion stammt aus dem **uap2** -Namespace. Um Zugriff auf diesen Namespace in ihrem Manifest zu erhalten, fügen Sie ihn als *xlmns* -Attribut in das &lt;Package >-Elements ein. Beispiel:
 
 ```
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap mp"
     >
 ```
 
-**HINWEIS:** Ihre APP muss die Funktion zur Laufzeit anfordern, bevor Sie auf die APIs für den Zugriff auf spatialanchor exportieren/importieren zugreifen kann. Weitere Informationen finden Sie in den folgenden Beispielen unter [requestaccessasync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) .
+**Hinweis:** Ihre APP muss die Funktion zur Laufzeit anfordern, bevor Sie auf die APIs für den Zugriff auf spatialanchor exportieren/importieren zugreifen kann. Weitere Informationen finden Sie in den folgenden Beispielen unter [requestaccessasync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) .
 
 ## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serialisieren von Anker Daten durch Exportieren mit spatialanchortransfermanager
 
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-Zuerst müssen wir den Datenstream einrichten. Dies ermöglicht uns 1.) Verwenden Sie tryexportanchorsasync, um die Daten in einem Puffer zu platzieren, der der APP gehört, und 2.) Lesen von Daten aus dem exportierten Byte-Puffer Datenstrom, bei dem es sich um einen WinRT-Datenstrom handelt, in unseren eigenen Speicher&lt;Puffer, bei dem es sich um ein Std:: Vector-> Byte
+Zuerst müssen wir den Datenstream einrichten. Dies ermöglicht uns 1.) Verwenden Sie tryexportanchorsasync, um die Daten in einem Puffer zu platzieren, der der APP gehört, und 2.) Lesen von Daten aus dem exportierten Byte-Puffer Datenstrom, bei dem es sich um einen WinRT-Datenstrom handelt, in unseren eigenen Speicherpuffer, bei dem es sich um eine Std:: Vector-&lt;> Byte
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -270,7 +270,7 @@ Wenn die Daten importiert werden können, erhalten Sie eine Kartenansicht von Sc
 }
 ```
 
-**HINWEIS:** Nur weil Sie einen Anker importieren können, bedeutet nicht notwendigerweise, dass Sie ihn sofort verwenden können. Der Anker befindet sich möglicherweise in einem anderen Raum oder an einem anderen physischen Standort. der Anker kann erst nach dem Gerät, das es empfangen hat, genug visuelle Informationen über die Umgebung haben, in der der Anker erstellt wurde, um die Position des Ankers relativ zur bekannten aktuellen Umgebung wiederherzustellen. Die Client Implementierung sollte versuchen, den Anker relativ zum lokalen Koordinatensystem oder Referenzrahmen zu finden, bevor Sie mit dem Versuch fortfahren, ihn für Live-Inhalte zu verwenden. Versuchen Sie z. b., den Anker in regelmäßigen Abständen relativ zu einem aktuellen Koordinatensystem zu suchen, bis der Anker als zu verwendbar festgelegt ist.
+**Hinweis:** Nur weil Sie einen Anker importieren können, bedeutet nicht notwendigerweise, dass Sie ihn sofort verwenden können. Der Anker befindet sich möglicherweise in einem anderen Raum oder an einem anderen physischen Standort. der Anker kann erst nach dem Gerät, das es empfangen hat, genug visuelle Informationen über die Umgebung haben, in der der Anker erstellt wurde, um die Position des Ankers relativ zur bekannten aktuellen Umgebung wiederherzustellen. Die Client Implementierung sollte versuchen, den Anker relativ zum lokalen Koordinatensystem oder Referenzrahmen zu finden, bevor Sie mit dem Versuch fortfahren, ihn für Live-Inhalte zu verwenden. Versuchen Sie z. b., den Anker in regelmäßigen Abständen relativ zu einem aktuellen Koordinatensystem zu suchen, bis der Anker als zu verwendbar festgelegt ist.
 
 ## <a name="special-considerations"></a>Besondere Überlegungen
 
@@ -464,7 +464,7 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 
 Zuerst müssen wir eine Verbindung mit dem Server herstellen. Dieses Codebeispiel veranschaulicht das Erstellen und Konfigurieren eines Streamsockets und das Erstellen eines DataReader, den Sie zum Abrufen von Netzwerkdaten mithilfe der Socketverbindung verwenden können.
 
-**HINWEIS:** Wenn Sie diesen Beispielcode ausführen, stellen Sie sicher, dass Sie den Server konfigurieren und starten, bevor Sie den Client starten.
+**Hinweis:** Wenn Sie diesen Beispielcode ausführen, stellen Sie sicher, dass Sie den Server konfigurieren und starten, bevor Sie den Client starten.
 
 ```
 task<bool> SampleAnchorTcpClient::ConnectToServer()
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-Das ist alles! Nun sollten Sie über genügend Informationen verfügen, um zu versuchen, die Anker zu suchen, die über das Netzwerk empfangen werden. Beachten Sie, dass der Client über ausreichend visuelle Überwachungsdaten verfügen muss, damit der-Platz gefunden werden kann. Wenn es nicht sofort funktioniert, versuchen Sie es für eine Weile. Wenn dies immer noch nicht funktioniert, lassen Sie den Server weitere Anker senden, und verwenden Sie die Netzwerkkommunikation, um eine Zustimmung für den Client zu erhalten. Sie können dies ausprobieren, indem Sie das holographicspatialanchortransfersample herunterladen, die Client-und Server-IPS konfigurieren und Sie auf Client-und Server-hololens-Geräten bereitstellen.
+Das war's. Nun sollten Sie über genügend Informationen verfügen, um zu versuchen, die Anker zu suchen, die über das Netzwerk empfangen werden. Beachten Sie, dass der Client über ausreichend visuelle Überwachungsdaten verfügen muss, damit der-Platz gefunden werden kann. Wenn es nicht sofort funktioniert, versuchen Sie es für eine Weile. Wenn dies immer noch nicht funktioniert, lassen Sie den Server weitere Anker senden, und verwenden Sie die Netzwerkkommunikation, um eine Zustimmung für den Client zu erhalten. Sie können dies ausprobieren, indem Sie das holographicspatialanchortransfersample herunterladen, die Client-und Server-IPS konfigurieren und Sie auf Client-und Server-hololens-Geräten bereitstellen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Parallel Patterns Library (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. Networking. Streamsocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. Networking. streamsocketlistener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

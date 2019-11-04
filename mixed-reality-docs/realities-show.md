@@ -6,19 +6,19 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: Realitäten, Show, Calendar, Academy, Schedule, SF, San Francisco, Reaktor
-ms.openlocfilehash: 0a568e5d72bb7ed502d783df2f0815f2d9c75364
-ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
+ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69020185"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438331"
 ---
 # <a name="the-realities-show"></a>Die Realitäten zeigen
 ![Entwerfen für Mixed Reality](images/therealitiesshow.jpg)
 
 **Die Realitäten zeigen einen 30-minütigen Livestream über hololens 2, Mixed Reality-Dienste und Mr-Technologien. In jeder Folge werden die Features, Funktionen, die Technologie dahinter erläutert, wie Sie für die verschiedenen Geräte entwickeln, bewährte Methoden empfehlen und natürlich Fragen unserer Zielgruppe beantworten können. Wird von der San Francisco-Reaktor Phase an Entwickler weltweit gestreamt (und gelegentlich von anderen Standorten).**
 
-**[Schauen Sie sich Live und vergangene folgen an.](http://aka.ms/trs)**
+**[Schauen Sie sich Live und vergangene folgen an.](https://aka.ms/trs)**
 ___
 
 ## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**Hololens 2-und Mixed Reality-Dienste** -12. März 2019, 8 Uhr (PDT)

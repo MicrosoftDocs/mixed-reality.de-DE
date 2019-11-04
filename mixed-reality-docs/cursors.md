@@ -2,97 +2,159 @@
 title: Cursor
 description: Ein Cursor oder Indikator Ihres Ziel Vektor bietet fortlaufendes Feedback für den Benutzer, um zu verstehen, was hololens über seine Absichten versteht.
 author: thetuvix
-ms.author: alexturn, thgable
+ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Hololens (1. Gen), hololens 2, gemischte Realität, Cursor, Zielvorgabe, Blick, Gesten
-ms.openlocfilehash: cdedcaffabe0f90e7956fdb19a7b85e202fcf403
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: ef011d8400de1e23db3d6fb4b0f2a853d787ae86
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526212"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435753"
 ---
 # <a name="cursors"></a>Cursor
 
-> [!NOTE]
-> Weitere Anleitungen sind für hololens 2 in [Kürze](index.md#news-and-notes)verfügbar.
-
-
-Ein Cursor oder Indikator Ihres aktuellen Ziel Vektor bietet fortlaufendes Feedback für den Benutzer, um zu verstehen, wo hololens glaubt, dass der aktuelle Fokus zu diesem Zeitpunkt liegt. Der Cursor ermöglicht dem Benutzer das Verständnis seines aktuellen Zielpunkts und fungiert als Feedback, um anzugeben, welcher Bereich, welches Hologramm oder welcher Punkt auf die Eingabe reagiert. Dabei handelt es sich um die digitale Darstellung von, bei der das Gerät die Aufmerksamkeit des Benutzers versteht (obwohl dies möglicherweise nicht der gleiche ist wie das Ermitteln von Informationen über ihre Absichten).
+Ein Cursor oder Indikator Ihres aktuellen Ziel Vektor bietet fortlaufendes Feedback für den Benutzer, um zu verstehen, wo das Headset seinen aktuellen Fokus hat. Der Cursor ermöglicht dem Benutzer das Verständnis seines aktuellen Zielpunkts und fungiert als Feedback, um anzugeben, welcher Bereich, welches Hologramm oder welcher Punkt auf die Eingabe reagiert. Dabei handelt es sich um die digitale Darstellung von, bei der das Gerät die Aufmerksamkeit des Benutzers versteht (obwohl dies möglicherweise nicht der gleiche ist wie das Ermitteln von Informationen über ihre Absichten).
 
 Das vom Cursor bereitgestellte Feedback bietet Benutzern die Möglichkeit, zu sehen, wie das System antwortet, und verwendet dieses Signal als Feedback, um ihre Absicht an das Gerät besser zu vermitteln, und schließlich ist es sicherer, sich über ihre Interaktionen zu informieren.
 
-## <a name="hololens-1st-gen"></a>HoloLens (1. Generation)
-
-Die Zielsetzung von Inhalten in hololens (1. Gen) erfolgt hauptsächlich mit dem [Blick](gaze.md) Vektor (ein Strahl, der von der Position und Drehung des Kopfes gesteuert wird). Dies bietet eine direkte Eingabe für den Benutzer, der nur wenig Lehrkräfte benötigt. Benutzer haben jedoch Schwierigkeiten bei der Verwendung eines nicht markierten Mittelpunkts für die genaue Ausrichtung, sodass ein Cursor sicherstellt, dass Benutzer den Punkt kennen, auf den Sie aktuell abzielen. 
+Es gibt drei Arten von Cursorn: **Finger, Ray**und **Head-Gaze**. Diese zeigenden Cursor funktionieren mit unterschiedlichen Eingabe Modalitäten für hololens, hololens 2 und immersive Headsets. Im folgenden finden Sie Anleitungen dazu, welche Art von Cursor für die einzelnen Typen von Headset-und Interaktions Modellen verwendet werden kann. Im Mixed Reality Toolkit (mrtk) haben wir Drag & amp; Drop-cursormodule erstellt, um Sie bei der Erstellung der richtigen Zeige Erfahrung zu unterstützen.
 
 
-## <a name="positioning"></a>Positionierung
+## <a name="device-support"></a>Geräteunterstützung
 
-Im Allgemeinen sollte der Indikator in ungefähr einem 1:1-Verhältnis mit Head Movement verschoben werden. Es gibt einige Fälle, in denen der Gewinn (Vergrößerung oder abnehmender Verschiebungs Aufwand) als beabsichtigter Mechaniker verwendet werden kann. es werden jedoch Probleme für Benutzer verursacht, wenn Sie unerwartet verwendet werden. (Beachten Sie, dass für den Cursor ein kleines Bit von "lag" empfohlen wird, um Probleme mit zu vermeiden. vollständig Anzeige-gesperrter Inhalt). Am wichtigsten ist jedoch, dass Erfahrungen in der Darstellung der Cursorposition "ehrlich" sein sollten. wenn Glättung, Magnetismus, Gewinn oder andere Effekte eingeschlossen werden, sollte das System den Cursor immer noch anzeigen, wenn das System die Position hat. Effekte enthalten. Der Cursor ist das System, um dem Benutzer mitzuteilen, womit er interagieren kann, und nicht die Möglichkeit des Benutzers, dem System mitzuteilen.
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
+    </tr>
+     <tr>
+        <td>Finger Cursor</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+     <tr>
+        <td>Strahl Cursor</td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td>Cursor Cursor</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+</table>
 
-Der Indikator sollte idealerweise eine Tiefe Sperre für alle Elemente erhalten, auf die der Benutzer ein Ziel haben kann. Dies kann zu einer Oberflächen Sperre führen, wenn es ein [räumliches Mapping](spatial-mapping.md) -Mesh oder eine Sperre für die Tiefe aller "unverankerten" Benutzeroberflächen Elemente gibt, um dem Benutzer zu helfen, die Interaktion mit in Echtzeit zu verstehen.
+## <a name="finger-cursor"></a>Finger Cursor
+Der Finger Cursor ist nur in den hololens 2 verfügbar, um den Interaktionsmodus "[direkte Bearbeitung von Hand](direct-manipulation.md)" zu verbessern. Um besser zu verstehen, wo der Finger zeigt, haben wir Ringe an die Tipps beider Index Fingern angefügt. Die Ring Größe basiert auf der Nähe des Fingers und der UI-Oberfläche (je näher der Finger, der kleinere Ring) und wird zu einer punkteform verkleinert, wenn der Finger den Kontakt mit der Benutzeroberfläche herstellt. <br>
 
-## <a name="cursor-design-principles"></a>Cursor Entwurfs Prinzipien
+![fingercursor](images/finger-cursor.png)<br>
+**Visuelle Feedback Zustände von Finger Cursor** 1: der Ring wird auf einen Punkt verkleinert. 2: der Ring richtet sich nach der Oberfläche. 3: der Ring ist senkrecht zum Finger Vektor. 4: kein Ring.
 
-### <a name="always-present"></a>Immer vorhanden
-* Es wird empfohlen, dass der Cursor immer vorhanden ist.
-* Wenn der Benutzer den Cursor nicht finden kann, gehen diese verloren.
-* Ausnahmen hierfür sind Instanzen, bei denen ein Cursor eine suboptimale Benutzer Darstellung für den Benutzer bereitstellt. Ein Beispiel hierfür ist ein Benutzer, der ein Video überwacht. Der Cursor wird an dieser Stelle nicht mehr erwünscht sein, da er sich in der Mitte des Videos ständig befindet. Hierbei handelt es sich um ein Szenario, in dem Sie den Cursor nur dann sichtbar machen können, wenn der Benutzer seine Hand anweist, eine Aktion durchführen zu müssen. Andernfalls ist Sie im Video nicht sichtbar.
+## <a name="ray-cursor"></a>Strahl Cursor
+Ray-Cursors werden an das Ende von weit zeigenden Strahlen angehängt, um die Bearbeitung von Objekten zu ermöglichen, die nicht in der Hand reich sind. In immersiven Headsets werden die Strahlen von Bewegungs Controllern abgeraten und mit Punkt Cursorn enden. In hololens 2 nutzen wir das geistige Modell dieser Bewegungs Controller-Strahlen und entworfenen Hand Striche, die aus den Palmen stammen und mit den bei der direkten Bearbeitung verwendeten fingercursorn enden. <br>
+:::row:::
+    :::column:::
+        ![Ray-Cursor Controller](images/ray-cursor-controller.png)<br>
+        **Strahl Cursor von Bewegungs Controllern**<br>
+    :::column-end:::
+    :::column:::
+        ![Ray-Cursor Hand](images/ray-cursor-hand.png)<br>
+        **Strahl Cursor von Händen**<br>
+    :::column-end:::
+:::row-end:::
+
+<br>
+
+---
+
+
+## <a name="head-gaze-cursor"></a>Cursor Cursor
+Der Head-Gaze-Cursor ist ein Punkt, der an das Ende eines unsichtbaren Kopf Zeigers angefügt wird, der die Position und Drehung des Kopfes verwendet, um zu zeigen. Zum Ausführen von Aktionen wird dieser Zeige Cursor mit verschiedenen Commit-Eingaben gekoppelt, wie z. b. Air Tap, Voice Commands, Dwell und Button Press. In hololens 2 ist der Head-Blick am besten mit allen Commit-Eingaben gekoppelt, die nicht per Luft tippen verwendet werden, da es einen Interaktions Konflikt zwischen Luft tippen und fern Strahlen gibt. <br>
+:::row:::
+    :::column:::
+        ![Cursor Hand](images/head-gaze-cursor-hand.png)<br>
+        **Cursor Cursor mit Handbewegung**<br>
+    :::column-end:::
+    :::column:::
+        ![Head-Gaze-Cursor Stimme](images/head-gaze-cursor-voice.png)<br>
+        **Kopf zeiligen Cursor mit Sprachbefehl**<br>
+    :::column-end:::
+:::row-end:::
+
+<br>
+
+---
+
+
+## <a name="cursor-customization-recommendations"></a>Empfehlungen für die Cursor Anpassung
+Wenn Sie das Verhalten und den Anschein von Cursor Feedback anpassen möchten, finden Sie hier einige Entwurfs Empfehlungen:
 
 ### <a name="cursor-scale"></a>Cursor Skala
 * Der Cursor sollte nicht größer sein als die verfügbaren Ziele, sodass Benutzer problemlos mit dem Inhalt interagieren und ihn anzeigen können.
-* Abhängig von der Umgebung, die Sie erstellen, ist das Skalieren des Cursors, wie der Benutzer aussieht, auch ein wichtiger Aspekt. Wenn der Benutzer z. b. in der Umgebung weiter geht, sollte der Cursor nicht zu klein werden, sodass er verloren geht.
-* Beim Skalieren des Cursors empfiehlt es sich, bei der Skalierung eine weiche Animation anzuwenden.
+* Abhängig von der Umgebung, die Sie erstellen, ist das Skalieren des Cursors, wie der Benutzer aussieht, auch ein wichtiger Aspekt. Beispielsweise sollte der Cursor nicht zu klein werden, da der Benutzer nicht mehr zu klein ist, sodass er verloren geht.
+* Beim Skalieren des Cursors sollten Sie eine weiche Animation darauf anwenden, während Sie skaliert wird, um ihr ein organisches Gefühl zu vermitteln.
 * Vermeiden Sie das Blockieren von Inhalt. Holograms machen das Erlebnis als unvergesslich, und der Cursor sollte nicht davon entfernt werden.
 
-### <a name="directionless-cursor"></a>Directionless-Cursor
-* Obwohl es keine Rechte Cursor Form gibt, empfiehlt es sich, eine direktionale Form wie einen "Tor" oder etwas anderes zu verwenden. Ein Cursor, der in einer Richtung zeigt (z.: ein herkömmlicher Pfeilcursor), kann den Benutzer so verwechseln, dass er immer auf diese Weise aussieht.
-* Eine Ausnahme besteht darin, dass der Cursor verwendet wird, um dem Benutzer Interaktions Anweisungen mitzuteilen. Wenn z. b. Hologramme in der Windows Holographic Shell skaliert werden, schließt der Cursor temporär Pfeile ein, die den Benutzer anweisen, wie Sie seine Hand bewegen, um das Hologram zu skalieren.
+### <a name="directionless-cursor-shape"></a>Direktionlose Cursor Form
+* Obwohl es keine Rechte Cursor Form gibt, empfiehlt es sich, eine direktionlose Form wie einen "Tor" zu verwenden. Ein Cursor, der in einer Richtung zeigt (z. b. ein herkömmlicher Pfeilcursor), kann den Benutzer so verwechseln, dass er immer auf diese Weise aussieht.
+* Eine Ausnahme besteht darin, dass der Cursor verwendet wird, um dem Benutzer Interaktions Anweisungen mitzuteilen. Wenn z. b. Hologramme im Mixed Reality-Betriebssystem skaliert werden, schließt der Cursor temporär Pfeile ein, die den Benutzer darüber informiert, wie Sie seine Hand verschieben, um das Hologram zu skalieren.
 
 ### <a name="look-and-feel"></a>Aussehen und Gefühl
 * Ein Ring Diagramm oder ein mit einem Tor gegeformter Cursor funktioniert für viele Anwendungen.
 * Wählen Sie eine Farbe und eine Form aus, die die von Ihnen erstellten Funktionen am besten repräsentiert.
 * Cursor sind besonders anfällig für die [Trennung von Farben](hologram-stability.md#color-separation).
 * Ein kleiner Cursor mit ausgewogener Deckkraft sorgt dafür, dass er informativ ist, ohne die visuelle Hierarchie zu dominieren.
-* Stellen Sie sich vor, dass Schatten oder Highlights hinter dem Cursor verwendet werden, da Sie Inhalte behindern und vom Zweck abweichen können.
-* Cursor sollten sich an den Oberflächen in der APP ausrichten und Sie anspiegeln. Dadurch erhält der Benutzer ein Gefühl, dass das System sehen kann, wo er aussieht, aber auch, dass das System seine Umgebung kennt.
-* Im Windows Holographic-Betriebssystem richtet sich der Cursor z. b. an den Oberflächen der Benutzer Welt, wodurch ein Gefühl der Kenntnis der Welt entsteht, auch wenn der Benutzer nicht direkt an einem Hologram interessiert ist.
-* Sperrt den Cursor magnetisch zu einem interaktiven Element, wenn er sich innerhalb der Nähe befindet. Dadurch kann das Vertrauen verbessert werden, dass Benutzer mit diesem Element interagieren, wenn Sie eine Auswahl Aktion ausführen.
+* Sie sollten die Verwendung von Shadowing oder Highlights hinter dem Cursor erkennen, da Sie Inhalte behindern und von der Aufgabe ablendieren können.
+* Cursor sollten sich an den Oberflächen in der APP ausrichten und Sie anspiegeln. Dadurch erhält der Benutzer ein Gefühl, dass das System sehen kann, wo er aussieht, aber auch, dass das System seine Umgebung kennt. Im Mixed Reality-Betriebssystem richtet sich der Cursor z. b. an den Oberflächen der Benutzer Welt, wodurch ein Gefühl der Kenntnis der Welt entsteht, auch wenn der Benutzer nicht direkt in einem Hologram sucht.
+* Das magnetisch Sperren des Cursors an ein interaktives Element, wenn es sich innerhalb der Nähe befindet, kann dabei helfen, das Vertrauen zu verbessern, dass der Benutzer mit diesem Element interagiert, wenn eine Auswahl Aktion ausgeführt wird
 
 ### <a name="visual-cues"></a>Visuelle Hinweise
-* Es gibt zahlreiche Informationen in unserer Welt und mit holograms werden weitere Informationen hinzugefügt. Ein Cursor ist eine großartige Möglichkeit, mit dem Benutzer zu kommunizieren, was wichtig ist.
-* Wenn sich Ihre Benutzeroberflächen auf ein einzelnes Hologramm konzentrieren, richtet sich der Cursor möglicherweise nur an das – Hologramm und die Form "ändern", wenn Sie dieses Hologramm betrachten. Dadurch kann der Benutzer übermittelt werden, dass es sich um ein spezielles – Hologramm handelt, und Sie können damit interagieren.
-* Wenn Ihre Anwendung eine räumliche Zuordnung verwendet, könnte der Cursor jede sichtbare Oberfläche ausrichten und umarmen. Dadurch erhalten die Benutzer Feedback, dass hololens und Ihre Anwendung Ihren Speicherplatz sehen können.
-* Dies trägt dazu bei, die Tatsache zu verstärken, dass holograms Real und in unserer Welt sind. Sie helfen dabei, die Lücke zwischen Real und Virtual zu überbrücken.
+* Wenn Sie sich auf ein einzelnes Hologramm konzentrieren, sollte Ihr Cursor nur dieses – Hologramm ausrichten und die Form ändern, wenn Sie von diesem – Hologramm Weg gehen. Dies kann dem Benutzer vermitteln, dass das – Hologramm handlungsfähig ist und mit ihm interagieren kann.
+* Wenn Ihre Anwendung eine räumliche Zuordnung verwendet, könnte der Cursor jede sichtbare Oberfläche ausrichten und umarmen. Dadurch erhalten die Benutzer Feedback, dass hololens und Ihre Anwendung Ihren Speicherplatz sehen können. Dadurch wird die Tatsache verstärkt, dass holograms Real und in unserer Welt sind und die Lücke zwischen Real und Virtual überbrücken.
 * Sehen Sie sich an, was der Cursor tun soll, wenn keine holograms oder Oberflächen in der Ansicht vorhanden sind. Eine Möglichkeit besteht darin, den Benutzer in einem vordefinierten Abstand vor dem Benutzer zu platzieren.
 
-## <a name="cursor-feedback"></a>Cursor Feedback
-
-Wie bereits erwähnt, empfiehlt es sich, den Cursor immer darzustellen, da Sie den Cursor verwenden können, um einige wichtige Informationen zu vermitteln.
-
 ### <a name="possible-actions"></a>Mögliche Aktionen
-* Wenn der Benutzer mit einem – Hologramm und der Cursor sich auf diesem – Hologramm befindet, können Sie den Cursor verwenden, um mögliche Aktionen für dieses – Hologramm zu übermitteln.
-* Sie können ein Symbol auf dem Cursor anzeigen, über das der Benutzer beispielsweise das Element erwerben kann, oder dieses Hologramm skalieren. Oder auch etwas so einfaches wie das – Hologramm kann angetippt werden.
+* Der Cursor kann durch verschiedene Symbole dargestellt werden, um mögliche Aktionen zu vermitteln, die ein – Hologramm ausführen kann, z. b. Skalierung oder Drehung.
 * Fügen Sie dem Cursor nur dann zusätzliche Informationen hinzu, wenn er etwas für den Benutzer bedeutet. Andernfalls bemerken die Benutzer möglicherweise nicht, dass sich der Status ändert, oder Sie werden durch den Cursor verwirrt.
 
 ### <a name="input-state"></a>Eingabe Status
-* Der Cursor kann verwendet werden, um den Eingabe Zustand des Benutzers anzuzeigen. Beispielsweise könnte ein Symbol angezeigt werden, das dem Benutzer mitteilt, ob das System seinen Hand Zustand sieht. Dadurch wird dem Benutzer mitgeteilt, dass die Anwendung weiß, dass der Benutzer bereit ist, Aktionen auszuführen.
-* Wir könnten den Cursor auch verwenden, um dem Benutzer zu ermöglichen, dass ein Sprachbefehl verfügbar ist. Oder Sie können die Farbe des Cursors vorübergehend ändern, um dem Benutzer mitzuteilen, dass der Sprachbefehl vom System gehört.
+* Der Cursor kann verwendet werden, um den Eingabe Zustand oder die Absicht des Benutzers anzuzeigen. Beispielsweise könnte ein Symbol angezeigt werden, das dem Benutzer mitteilt, dass das System seinen Hand Zustand hat und die Anwendung weiß, dass Sie bereit sind, Maßnahmen zu ergreifen.
+* Wir könnten auch den Cursor verwenden, um Benutzern anzuzeigen, dass Sprachbefehle vom System über eine vorübergehende Farbe changehört wurden.
 
-Diese verschiedenen Cursor Zustände können auf unterschiedliche Weise implementiert werden. Sie können diese verschiedenen Zustände implementieren, indem Sie den Cursor wie einen Zustands Automat modellieren. Zum Beispiel:
-* Im Leerlaufzustand wird der Standard Cursor angezeigt.
-* Der Status "bereit" ist, wenn Sie festgestellt haben, dass die Benutzer die Hand in der Bereitschaft haben.
-* Der Interaktions Zustand ist, wenn der Benutzer eine bestimmte Interaktion ausführt.
-* Der mögliche Aktions Status ist, wenn Sie mögliche Aktionen übermitteln, die für ein Hologram ausgeführt werden können.
+* Die folgenden Cursor Zustände können auf unterschiedliche Weise implementiert werden. Sie können diese verschiedenen Zustände implementieren, indem Sie den Cursor wie einen Zustands Automat modellieren. Zum Beispiel:
+    * Im Leerlaufzustand wird der Standard Cursor angezeigt.
+    * Der Status "bereit" ist, wenn Sie festgestellt haben, dass die Benutzer die Hand in der Bereitschaft haben.
+    * Der Interaktions Zustand ist, wenn der Benutzer eine bestimmte Interaktion ausführt.
+    * Der Status "mögliche Aktionen" oder "Hover" ist, wenn Sie mögliche Aktionen übermitteln, die für ein Hologram ausgeführt werden können.
 
 Sie können diese Zustände auch auf die gleiche Weise implementieren, sodass Sie unterschiedliche Kunstobjekte anzeigen können, wenn verschiedene Zustände erkannt werden.
 
+<br>
+
+---
+
+
 ## <a name="going-cursor-free"></a>"Cursor frei"
+Das Entwerfen ohne Cursor wird empfohlen, wenn das Eintauchen eine wichtige Komponente einer-Funktion ist und wenn für das zeigen von Interaktionen (durchschauen und Gesten) keine hohe Genauigkeit erforderlich ist. Das System muss immer noch die Anforderungen erfüllen, die normalerweise von einem Cursor erfüllt werden, indem Benutzern Kontinuierliches Feedback zum Verständnis des Systems bereitgestellt wird. Dies kann durch andere spürbare Zustandsänderungen erreicht werden.
 
-Das Entwerfen ohne Cursor wird nur empfohlen, wenn das Eintauchen eine wichtige Komponente einer-Funktion ist und Interaktionen, bei denen die Zielvorgabe (durchschauen und Gesten) einbezogen werden, keine hohe Genauigkeit erfordern. Das System muss die Anforderungen, die normalerweise von einem Cursor erfüllt werden, trotzdem erfüllen, um den Benutzern Kontinuierliches Feedback zum Verständnis der Zielsetzung des Systems zu bieten und Sie dabei zu unterstützen, ihre Absichten zuverlässig an das System zu übermitteln. Dies kann durch andere spürbare Zustandsänderungen erreicht werden.
+<br>
 
-## <a name="see-also"></a>Siehe auch
-* [Gesten](gestures.md)
-* [Anvisieren](gaze-targeting.md)
+---
+
+
+## <a name="see-also"></a>Weitere Informationen:
+* [Gesten](gaze-and-commit.md#composite-gestures)
+* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)

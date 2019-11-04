@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Custom Vision, hololens, immersive, VR
-ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 2c8bd31958cca3b0e27fb0e97839d75fcdebe8c5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047209"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438518"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
 
 <br>
 
-# <a name="mr-and-azure-302b-custom-vision"></a>Mr und Azure 302b: Benutzerdefinierte Vision
+# <a name="mr-and-azure-302b-custom-vision"></a>Mr und Azure 302b: benutzerdefinierte Vision
 
 In diesem Kurs erfahren Sie, wie Sie benutzerdefinierte visuelle Inhalte in einem bereitgestellten Image erkennen können, indem Sie die Funktionen von Azure Custom Vision in einer Mixed Reality-Anwendung verwenden.
 
@@ -36,20 +36,20 @@ Nach Abschluss dieses Kurses verfügen Sie über eine Mixed Reality-Anwendung, d
 
 In diesem Kurs erfahren Sie, wie Sie die Ergebnisse aus dem Custom Vision Service in einer Unity-basierten Beispielanwendung erhalten. Sie müssen diese Konzepte auf eine benutzerdefinierte Anwendung anwenden, die Sie möglicherweise aufbauen.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td> Mr und Azure 302b: Benutzerdefinierte Vision</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> Mr und Azure 302b: benutzerdefinierte Vision</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf hololens, aber Sie können auch das Erlernen, was Sie in diesem Kurs lernen, auf Windows Mixed Reality-(VR)-Headsets. Da immersive Headsets (VR) nicht über barrierefreie Kameras verfügen, benötigen Sie eine externe Kamera, die mit Ihrem PC verbunden ist. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise für die Unterstützung von immersiven (VR)-Headsets verwenden müssen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Juli 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt werden.
@@ -60,7 +60,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 - [Windows 10 Fall Creators Update (oder höher) mit aktiviertem Entwicklermodus](install-the-tools.md#installation-checklist)
 - [Das neueste Windows 10 SDK](install-the-tools.md#installation-checklist)
 - [Unity 2017,4](install-the-tools.md#installation-checklist)
-- [Visual Studio 2017](install-the-tools.md#installation-checklist)
+- [Visual Studio 2017](install-the-tools.md#installation-checklist)
 - Ein [Windows Mixed Reality-Headset (VR)](immersive-headset-hardware-details.md) oder [Microsoft hololens](hololens-hardware-details.md) mit aktiviertem Entwicklermodus
 - Eine Kamera, die mit Ihrem PC verbunden ist (für die immersive Headset-Entwicklung)
 - Internet Zugriff für den Azure-Setup-und Custom Vision-API-Abruf
@@ -125,7 +125,7 @@ Wenn Sie sich im Custom Vision Portal befinden, besteht das Hauptziel darin, das
 
 So trainieren Sie das Custom Vision Service Projekt:
 
-1.  Klicken Sie auf **+** die Schaltfläche neben **Tags.**
+1.  Klicken Sie neben Tags auf die Schaltfläche **+** **.**
 
     ![](images/AzureLabs-Lab302b-06.png)
 
@@ -175,7 +175,7 @@ So trainieren Sie das Custom Vision Service Projekt:
 
     ![](images/AzureLabs-Lab302b-15.png)
 
-13. Kopieren Sie den **Trainings Schlüssel** , und fügen Sieihn zur späteren Verwendung in einen Editor ein.
+13. Kopieren Sie den **Trainings Schlüssel** *, und*fügen Sie ihn zur späteren Verwendung in einen Editor ein.
 
     ![](images/AzureLabs-Lab302b-16.png)
 
@@ -195,21 +195,21 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
     ![](images/AzureLabs-Lab302b-18.png)
 
-3.  Wenn Unity geöffnet ist, sollten Sie überprüfen, dass der Standard **Skript-Editor** auf **Visual Studio**festgelegt ist. Wechseln Sie zu **Einstellungen* *Bearbeiten* > * , und navigieren Sie dann im neuen Fenster zu **externe Tools**. Ändern Sie den **Editor für externe Skripts** in **Visual Studio 2017**. Schließen Sie das Fenster " **Einstellungen** ".
+3.  Wenn Unity geöffnet ist, sollten Sie überprüfen, dass der Standard **Skript-Editor** auf **Visual Studio**festgelegt ist. Wechseln Sie zu  **Edit* > *Preferences (Einstellungen* bearbeiten* ), und navigieren Sie dann im neuen Fenster zu **externe Tools**. Ändern Sie den **Editor für externe Skripts** in **Visual Studio 2017**. Schließen Sie das Fenster " **Einstellungen** ".
 
     ![](images/AzureLabs-Lab302b-19.png)
 
-4.  Navigieren Sie als nächstes zu **Datei >** Buildeinstellungen, wählen Sie **universelle Windows-Plattform**aus, und klicken Sie dann auf die Schaltfläche **Plattform wechseln** , um Ihre Auswahl zu übernehmen
+4.  Navigieren Sie als nächstes zu **Datei > Buildeinstellungen** , wählen Sie **universelle Windows-Plattform**aus, und klicken Sie dann auf die Schaltfläche **Plattform wechseln** , um Ihre Auswahl zu übernehmen
 
     ![](images/AzureLabs-Lab302b-20.png)
 
-5.  In **Datei >** Buildeinstellungen, und stellen Sie Folgendes sicher:
+5.  In **Datei > Buildeinstellungen** , und stellen Sie Folgendes sicher:
 
     1.  **Zielgerät** ist auf **hololens** festgelegt
 
         > Legen Sie für die immersiven Headsets das **Zielgerät** auf *ein beliebiges Gerät*fest.
         
-    2.  Der Buildtyp ist auf **D3D** festgelegt.
+    2.  Der **Buildtyp** ist auf **D3D** festgelegt.
     3.  **SDK** ist auf **neueste installierte** Version festgelegt.
     4.  **Visual Studio-Version** ist auf **neueste installierte** Version festgelegt.
     5.  **Build und Run** sind auf **lokaler Computer** festgelegt.
@@ -219,7 +219,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
             ![](images/AzureLabs-Lab302b-21.png)
 
-        2. Erstellen Sie einen neuen Ordner für dieses und jede zukünftige Szene, und wählen Sie dann die Schaltfläche **neuer Ordner** aus, um einen neuen Ordner zuerstellen.
+        2. Erstellen Sie einen neuen Ordner für dieses und jede zukünftige Szene, und wählen Sie dann die Schaltfläche **neuer Ordner** aus, um einen neuen Ordner zu **erstellen.**
 
             ![](images/AzureLabs-Lab302b-22.png)
 
@@ -229,11 +229,11 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
             > Beachten Sie, dass Sie Ihre Unity-Szenen im Ordner " *Assets* " speichern müssen, da Sie dem Unity-Projekt zugeordnet werden müssen. Das Erstellen eines Szenen Ordners (und anderer ähnlicher Ordner) ist eine typische Methode zum Strukturieren eines Unity-Projekts.
             
-    7.  Die restlichen Einstellungen in denBuildeinstellungen sollten vorerst als Standard belassen werden.
+    7.  Die restlichen Einstellungen in den *Buildeinstellungen*sollten vorerst als Standard belassen werden.
 
         ![](images/AzureLabs-Lab302b-24.png)
 
-6.  Klicken Sie im Fenster Buildeinstellungen auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet.
+6.  Klicken Sie im Fenster *Buildeinstellungen* auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet.
 
 7. In diesem Bereich müssen einige Einstellungen überprüft werden:
 
@@ -261,7 +261,7 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 
     ![](images/AzureLabs-Lab302b-27.png)
 
-8.  Zurück in Buildeinstellungen: *Unity-C\# -Projekte* sind nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this.
+8.  Zurück in *Buildeinstellungen* : *Unity C-\# Projekte* sind nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this.
 
 9.  Schließen Sie das Fenster mit den Buildeinstellungen.
 
@@ -276,19 +276,19 @@ Folgendes ist eine typische Einrichtung für die Entwicklung mit gemischter Real
 Für diesen Kurs muss die **newtonsoft** -Bibliothek verwendet werden, die Sie Ihren Assets als dll hinzufügen können. Das Paket, das [Diese Bibliothek enthält, kann von diesem Link heruntergeladen werden](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/NewtonsoftDLL.unitypackage).
 Verwenden Sie das Unity-Paket, das in diesem Kurs verwendet wurde, um die newtonsoft-Bibliothek in Ihr Projekt zu importieren.
 
-1.  Fügen Sie das *. unitypackage* zu Unity hinzu, indem Sie die Menüoption **Assets* > *Import* *Package* > *Custom* *Package** verwenden.
+1.  Fügen Sie *das. unitypackage* zu Unity hinzu, indem Sie die Menüoption **Assets* >  > *benutzerdefiniertes* *Paket* *importieren** verwenden.
 
-2.  Vergewissern Sie sich, dass im Feld **Unity-Paket importieren** , das angezeigt wird, alles unter (und einschließlich) Plug-ins ausgewählt ist.
+2.  Vergewissern Sie sich, dass im Feld **Unity-Paket importieren** , das angezeigt wird, alles unter (und **einschließlich) Plug** -ins ausgewählt ist.
 
     ![](images/AzureLabs-Lab302b-28.png)
 
 3.  Klicken Sie auf die Schaltfläche **importieren** , um dem Projekt die Elemente hinzuzufügen.
 
-4.  Wechseln Sie in der Projektansicht in den Ordner **Newton Soft** unter Plug-in, und wählen Sie das *Newton Soft. JSON-Plug*-in aus.
+4.  Wechseln Sie in der Projekt **Ansicht in den** Ordner **Newton Soft** unter Plug-in, und wählen Sie das *Newton Soft. JSON-Plug*-in aus.
 
     ![](images/AzureLabs-Lab302b-29.png)
 
-5.  Vergewissern Sie sich, dass dieOption " *newtonsoft. JSON* " ausgewähltist, und stellen Sie sicher, dass **alle Plattformen** deaktiviert sind. Stellen Sie dann sicher, dass **wsaplayer** ebenfalls deaktiviert ist. Dies dient nur zur Bestätigung, dass die Dateien ordnungsgemäß konfiguriert sind.
+5.  Vergewissern **Sie sich**, dass die Option " *newtonsoft. JSON* " ausgewählt **ist,** und stellen Sie sicher, dass **alle Plattformen** deaktiviert sind. Stellen Sie dann **sicher, dass** **wsaplayer** ebenfalls deaktiviert ist. Dies dient nur zur Bestätigung, dass die Dateien ordnungsgemäß konfiguriert sind.
 
     ![](images/AzureLabs-Lab302b-30.png)
 
@@ -296,8 +296,8 @@ Verwenden Sie das Unity-Paket, das in diesem Kurs verwendet wurde, um die newton
     > Wenn Sie diese Plug-ins markieren, werden Sie nur im Unity-Editor verwendet. Im WSA-Ordner gibt es eine andere Gruppe, die verwendet wird, nachdem das Projekt aus Unity exportiert wurde.
 
 6.  Als nächstes müssen Sie den Ordner " **WSA** " im Ordner " **newtonsoft** " öffnen. Es wird eine Kopie derselben Datei angezeigt, die Sie soeben konfiguriert haben. Wählen Sie die Datei aus, und vergewissern Sie sich dann im Inspektor, dass
-    -   **Jede Plattform** ist deaktiviert. 
-    -   **nur** **Wsaplayer** ist **aktiviert**
+    -   **Jede Plattform** ist **deaktiviert** . 
+    -   **nur** **wsaplayer** ist **aktiviert** .
     -   "Nicht **verarbeiten** " ist **aktiviert**
 
     ![](images/AzureLabs-Lab302b-31.png)
@@ -314,7 +314,7 @@ Verwenden Sie das Unity-Paket, das in diesem Kurs verwendet wurde, um die newton
 
     3.  Stellen Sie sicher, dass die **Transformations Position** auf **0, 0, 0** festgelegt ist.
 
-    4.  Legen Sie **klar Flags** auf voll Tonfarbe fest (diese Einstellung wird für immersives Headset ignoriert).
+    4.  Legen Sie **klar Flags** auf voll **Tonfarbe** fest (diese Einstellung wird für immersives Headset ignoriert).
 
     5.  Legen Sie die **Hintergrund** Farbe der Kamera Komponente auf **schwarz, Alpha 0 (Hexadezimal Code: #00000000)** fest (Dies wird für das immersive Headset ignoriert).
 
@@ -348,7 +348,7 @@ So erstellen Sie diese Klasse:
 
 2.  Doppelklicken Sie auf den soeben erstellten Ordner, um ihn zu öffnen.
 
-3.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf **\# Skript** **Erstellen** > . Benennen Sie das Skript *customvisionanalyser*.
+3.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf > **C\# Skript** **Erstellen** . Benennen Sie das Skript *customvisionanalyser*.
 
 4.  Doppelklicken Sie auf das neue *customvisionanalyser* -Skript, um es in **Visual Studio**zu öffnen.
 
@@ -473,7 +473,7 @@ Dieses Skript enthält eine Reihe von Objekten, die von anderen Klassen zum Seri
 
 So erstellen Sie diese Klasse:
 
-1.  Klicken Sie mit der rechten Maustaste in den Ordner >  **\# Skripts**, und klicken Sie dann auf Skript **Erstellen**. Nennen Sie das Skript *customvisionobjects*.
+1.  Klicken Sie mit der rechten Maustaste in den Ordner **Skripts** , und klicken Sie dann auf > **C\# Skript** **Erstellen** . Nennen Sie das Skript *customvisionobjects*.
 
 2.  Doppelklicken Sie auf das neue **customvisionobjects** -Skript, um es in **Visual Studio**zu öffnen.
 
@@ -610,7 +610,7 @@ Diese Klasse erkennt die Spracheingabe des Benutzers.
 
 So erstellen Sie diese Klasse:
 
-1.  Klicken Sie mit der rechten Maustaste in den Ordner >  **\# Skripts**, und klicken Sie dann auf Skript **Erstellen**. Nennen Sie das Skript *voicerecognizer*.
+1.  Klicken Sie mit der rechten Maustaste in den Ordner **Skripts** , und klicken Sie dann auf > **C\# Skript** **Erstellen** . Nennen Sie das Skript *voicerecognizer*.
 
 2.  Doppelklicken Sie auf das neue **voicerecognizer** -Skript, um es in **Visual Studio**zu öffnen.
 
@@ -718,7 +718,7 @@ Diese Klasse verkettet eine Reihe von webaufrufen, um die *Custom Vision Service
 
 So erstellen Sie diese Klasse:
 
-1.  Klicken Sie mit der rechten Maustaste in den Ordner >  **\# Skripts**, und klicken Sie dann auf Skript **Erstellen**. Nennen Sie das Skript *customvisiontrainer*.
+1.  Klicken Sie mit der rechten Maustaste in den Ordner **Skripts** , und klicken Sie dann auf > **C\# Skript** **Erstellen** . Nennen Sie das Skript *customvisiontrainer*.
 
 2.  Doppelklicken Sie auf das neue *customvisiontrainer* -Skript, um es in **Visual Studio**zu öffnen.
 
@@ -737,7 +737,7 @@ So erstellen Sie diese Klasse:
 4.  Fügen Sie dann die folgenden Variablen in der *customvisiontrainer* -Klasse oberhalb der **Start ()** -Methode hinzu. 
 
     > [!NOTE]
-    > Die hier verwendete Schulungs-URL wird in der Dokumentation zum *Custom Vision Training 1,2* bereitgestellt und hat eine Struktur von: https://southcentralus.api.cognitive.microsoft.com/customvision/v1.2/Training/projects/{projectId}/  
+    > Die hier verwendete Schulungs-URL wird in der Dokumentation zum *Custom Vision Training 1,2* bereitgestellt und verfügt über eine Struktur von: https://southcentralus.api.cognitive.microsoft.com/customvision/v1.2/Training/projects/{projectId}/  
     > Weitere Informationen finden Sie in der [*Referenz-API zu Custom Vision Training v 1.2*](https://southcentralus.dev.cognitive.microsoft.com/docs/services/f2d62aa3b93843d79e948fe87fa89554/operations/5a3044ee08fa5e06b890f11f).
 
     > [!WARNING]
@@ -1069,7 +1069,7 @@ Diese Klasse führt Folgendes aus:
 
 -   Erstellen Sie ein **Cursor** Objekt, das an die Hauptkamera angehängt werden soll.
 
--   Erstellen Sie ein Bezeichnungs Objekt, das angezeigt wird, wenn der Dienst die Objekte der realen Welt erkennt.
+-   Erstellen Sie **ein** Bezeichnungs Objekt, das angezeigt wird, wenn der Dienst die Objekte der realen Welt erkennt.
 
 -   Richten Sie die Hauptkamera ein, indem Sie die entsprechenden Komponenten an Sie anfügen.
 
@@ -1079,7 +1079,7 @@ Diese Klasse führt Folgendes aus:
 
 So erstellen Sie diese Klasse:
 
-1.  Klicken Sie mit der rechten Maustaste in den Ordner >  **\# Skripts**, und klicken Sie dann auf Skript **Erstellen**. Nennen Sie das Skript *sceneorganisator*.
+1.  Klicken Sie mit der rechten Maustaste in den Ordner **Skripts** , und klicken Sie dann auf > **C\# Skript** **Erstellen** . Nennen Sie das Skript *sceneorganisator*.
 
 2.  Doppelklicken Sie auf das neue *sceneorganisator* -Skript, um es in **Visual Studio**zu öffnen.
 
@@ -1325,7 +1325,7 @@ So erstellen Sie diese Klasse:
 11. Stellen Sie sicher, dass Sie die Änderungen in **Visual Studio** speichern, bevor Sie zu **Unity**zurückkehren.
 
 > [!IMPORTANT]
-> Bevor Sie fortfahren, öffnen Sie die **customvisionanalyser** -Klasse, und heben Sie die Auskommentierung der folgenden Zeilen innerhalb der **analyselastimageaufgezeichnet ()** -Methode auf:
+> Bevor Sie fortfahren, öffnen Sie die **customvisionanalyser** -Klasse, und heben Sie die *Auskommentierung* der folgenden Zeilen innerhalb der **analyselastimageaufgezeichnet ()** -Methode auf:
 >
 > ```csharp
 >   AnalysisObject analysisObject = new AnalysisObject();
@@ -1343,13 +1343,13 @@ Diese Klasse ist für Folgendes zuständig:
 
 -   Behandlung von TAP-Gesten vom Benutzer.
 
--   Beibehalten des Enumerationswerts, der bestimmt, ob die Anwendung im *Analyse* Modus oder im *Trainings* Modus ausgeführt wird.
+-   Beibehalten des *Enumerationswerts, der bestimmt* , ob die Anwendung im *Analyse* Modus oder im *Trainings* Modus ausgeführt wird.
 
 So erstellen Sie diese Klasse:
 
 1.  Wechseln Sie zum Ordner " **Scripts** ", den Sie zuvor erstellt haben.
 
-2.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf **Create > C\# Script**. Benennen Sie das Skript mit *imagecapture*.
+2.  Klicken Sie mit der rechten Maustaste in den Ordner, und klicken Sie dann auf **> C\# Skript erstellen**. Benennen Sie das Skript mit *imagecapture*.
 
 3.  Doppelklicken Sie auf das neue **imagecapture** -Skript, um es in **Visual Studio**zu öffnen.
 
@@ -1447,7 +1447,7 @@ So erstellen Sie diese Klasse:
                 }
             } 
 
-            // Subscribing to the Hololens API gesture recognizer to track user gestures
+            // Subscribing to the HoloLens API gesture recognizer to track user gestures
             recognizer = new GestureRecognizer();
             recognizer.SetRecognizableGestures(GestureSettings.Tap);
             recognizer.Tapped += TapHandler;
@@ -1645,11 +1645,11 @@ Bevor Sie vorgehen, stellen Sie Folgendes sicher:
 
 ## <a name="chapter-13---build-and-sideload-your-application"></a>Kapitel 13: Erstellen und querladen der Anwendung
 
-So beginnen Sie den Buildprozess:
+So beginnen Sie *den* Buildprozess:
 
-1.  Wechseln Sie zu **Datei >** Buildeinstellungen.
+1.  Wechseln Sie zu **Datei > Buildeinstellungen**.
 
-2.  Teil Strich **Unity\# -C-Projekte**.
+2.  Teil Strich **Unity-C-\# Projekte**.
 
 3.  Klicken Sie auf **Erstellen**. Unity startet ein **Datei-Explorer** -Fenster, in dem Sie einen Ordner erstellen und auswählen müssen, in dem die App erstellt wird. Erstellen Sie diesen Ordner jetzt, und nennen Sie ihn " **App**". Klicken Sie dann mit ausgewähltem **App** -Ordner auf **Ordner auswählen**.
 
@@ -1663,11 +1663,11 @@ So stellen Sie auf hololens bereit:
 
     1.  Öffnen Sie die Einstellungen, während Sie die hololens- **Einstellungen**durch tragen.
 
-    2.  Navigieren Sie zu **Netzwerk &**  > erweiterte**Wi-Fi** > -**Optionen** für das Internet.
+    2.  Navigieren Sie zu **Netzwerk & Internet** > **Wi-Fi** > **Erweiterte Optionen**
 
     3.  Notieren Sie sich die **IPv4** -Adresse.
 
-    4.  Navigieren Sie als nächstes wieder zu **Einstellungen**, und aktualisieren Sie die **& Sicherheit** > **für Entwickler** .
+    4.  Navigieren Sie als nächstes wieder zu **Einstellungen**, und aktualisieren Sie dann **& Sicherheits** > **für Entwickler** .
 
     5.  Legen Sie **den Entwicklermodus auf**fest.
 
@@ -1684,7 +1684,7 @@ So stellen Sie auf hololens bereit:
 6. Ihre APP sollte nun in der Liste der installierten apps auf Ihren hololens angezeigt werden, die bereit sind, gestartet zu werden.
 
 > [!NOTE]
-> Legen Sie für die Bereitstellung auf dem immersiven Headset die Projektmappenplattform auf *lokaler Computer*fest, und legen Sie die **Konfiguration** auf *Debuggen*und *x86* als **Plattform**fest. Stellen Sie dann auf dem lokalen Computer bereit, und wählen Sie dann ProjektMappe bereitstellen aus. 
+> Legen Sie für die Bereitstellung auf dem immersiven Headset die Projektmappenplattform auf *lokaler Computer*fest, und legen Sie die **Konfiguration** auf *Debuggen*und *x86* als **Plattform**fest. Stellen Sie dann **auf dem lokalen** Computer bereit, *und wählen Sie*dann Projekt Mappe bereitstellen aus. 
 
 ## <a name="to-use-the-application"></a>So verwenden Sie die Anwendung:
 

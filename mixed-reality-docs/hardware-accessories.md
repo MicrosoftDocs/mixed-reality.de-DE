@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Anleitungen, Zubehör, Bluetooth, BT, Controller, Gamepad, Clicker, Xbox
-ms.openlocfilehash: c25f849cbf05a78ba2fe7118dbe160d05e0f5e3f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526614"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435148"
 ---
 # <a name="hardware-accessories"></a>Hardware Zubehör
 
@@ -19,7 +19,7 @@ Windows Mixed Reality-Geräte unterstützen Zubehör. Sie koppeln unterstützte 
 
 Zwei gängige Szenarios für die Verwendung von Zubehör mit hololens sind die Ersatz für die Luft tippen Bewegung und die virtuelle Tastatur. Hierfür sind die beiden gängigsten Zubehör Punkte der **hololens-Clicker** und **Bluetooth-Tastaturen**. Microsoft hololens enthält ein Bluetooth 4,1-Radio und unterstützt [Bluetooth HID](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Human_Interface_Device_Profile_.28HID.29) -und [Bluetooth-GATT](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Generic_Attribute_Profile_.28GATT.29) -Profile.
 
-Immersive Headsets in Windows Mixed Reality erfordern Zubehör für Eingaben, die über den [Blick](gaze.md) und die [Stimme](voice-input.md)hinausgehen. Unterstützte Zubehör sind **Tastatur-und Maus-** , **Gamepad**-und **[Bewegungs Controller](motion-controllers.md)** .
+Immersive Headsets in Windows Mixed Reality erfordern Zubehör für Eingaben, die über den [Blick](gaze-and-commit.md) und die [Stimme](voice-input.md)hinausgehen. Unterstützte Zubehör sind **Tastatur-und Maus-** , **Gamepad**-und **[Bewegungs Controller](motion-controllers.md)** .
 
 ## <a name="pairing-bluetooth-accessories"></a>Kopplung von Bluetooth-Zubehör
 
@@ -29,7 +29,7 @@ Die Kopplung einer Bluetooth-Peripherie mit Microsoft hololens ähnelt der Koppl
 3. Aktivieren Sie das Bluetooth-Radio, wenn es mit dem Schieberegler deaktiviert ist.
 4. Platzieren Sie Ihr Bluetooth-Gerät im Paarmodus. Dies variiert von Gerät zu Gerät. Auf den meisten Bluetooth-Geräten erfolgt dies durch Drücken und halten einer oder mehrerer Schaltflächen.
 5. Warten Sie, bis der Name des Geräts in der Liste der Bluetooth-Geräte angezeigt wird. Wählen Sie dann das Gerät aus, und wählen Sie dann die Schaltfläche **paar** aus. Wenn Sie über viele Bluetooth-Geräte in der Nähe verfügen, müssen Sie möglicherweise einen Bildlauf zum Ende der Bluetooth-Geräteliste durchführen, um das Gerät anzuzeigen, das Sie koppeln möchten.
-6. Beim Koppeln von Bluetooth-Peripheriegeräten mit Eingabefunktionen (z. b.: Bluetooth-Tastaturen), eine 6-stellige oder eine 8-stellige PIN kann angezeigt werden. Achten Sie darauf, dass Sie diese Pin am Peripheriegerät eingeben und dann die EINGABETASTE drücken, um die Kopplung mit Microsoft hololens abzuschließen.
+6. Beim Koppeln von Bluetooth-Peripheriegeräten mit Eingabefunktionen (z. b. Bluetooth-Tastaturen) kann eine 6-stellige oder eine 8-stellige PIN angezeigt werden. Achten Sie darauf, dass Sie diese Pin am Peripheriegerät eingeben und dann die EINGABETASTE drücken, um die Kopplung mit Microsoft hololens abzuschließen.
 
 ## <a name="motion-controllers"></a>Motion-Controller
 
@@ -39,7 +39,7 @@ Windows Mixed Reality [Motion Controller](motion-controllers.md) werden von imme
 
 ## <a name="hololens-clicker"></a>Hololens Clicker
 
-Der hololens-Clicker ist das erste Peripheriegerät, das speziell für hololens entwickelt wurde und in der hololens Development Edition enthalten ist. Der hololens-Clicker ermöglicht Benutzern das Klicken und Scrollen mit minimaler Handbewegung als Ersatz für die Tastenkombination. Es ist kein Ersatz für alle [Gesten](gestures.md). Beispielsweise sind für die [aufblühende](gestures.md#bloom) Geste oder die Geste zum [Ändern der Größe oder Verschieben](gestures.md#composite-gestures) eine Handbewegung nötig. Der hololens-Clicker ist ein Ausrichtungs Sensorgerät mit einer einfachen Schaltfläche. Es stellt eine Verbindung mit den hololens mithilfe von Bluetooth Low Energy (btle) her.
+Der hololens-Clicker ist das erste Peripheriegerät, das speziell für hololens entwickelt wurde und in der hololens Development Edition enthalten ist. Der hololens-Clicker ermöglicht Benutzern das Klicken und Scrollen mit minimaler Handbewegung als Ersatz für die Tastenkombination. Es ist kein Ersatz für alle [Gesten](gaze-and-commit.md#composite-gestures). Beispielsweise verwenden die Gesten zum [aufblühen](system-gesture.md#bloom) und [Ändern der Größe und verschieben](gaze-and-commit.md#composite-gestures) Handbewegungen. Der hololens-Clicker ist ein Ausrichtungs Sensorgerät mit einer einfachen Schaltfläche. Es stellt eine Verbindung mit den hololens mithilfe von Bluetooth Low Energy (btle) her.
 
 ![Der hololens-Clicker](images/hololens-clicker-500px.jpg)
 
