@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, Holographic Rendering, Native, Native APP, WinRT, WinRT-APP, Plattform-APIs, benutzerdefinierte Engine, Middleware
-ms.openlocfilehash: 698ccb57a39189b9c0634c47ad6cbd6325c06caa
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435588"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641093"
 ---
 # <a name="directx-development-overview"></a>DirectX-Entwicklungs Übersicht
 
@@ -49,7 +49,7 @@ Sie sollten die folgenden wichtigen Bausteine unterstützen, um den Benutzern Ih
 * [Anvisieren mit dem Kopf und mit den Augen in DirectX](gaze-in-directx.md)
 * [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
-* [Raumklang in DirectX](spatial-sound-in-directx.md)
+* [Raumklang](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound)
 * [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)
 
 
