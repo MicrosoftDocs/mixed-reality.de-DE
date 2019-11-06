@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: Openxr, Khronos, basicxrapp, gemischte Realität openxr-Entwickler Portal, DirectX, Native, Native App Custom-Engine, Middleware
-ms.openlocfilehash: cf8795e6fed7db9fd0743d0902ce1585d56fa5e0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d29b59d7dec19e5423c83ea6e61bb5625c8981dd
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438134"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641131"
 ---
 # <a name="openxr"></a>Openxr
 
@@ -90,7 +90,7 @@ Am Ende des Jahres unterstützt die openxr-Laufzeit von Windows Mixed Reality ei
 * [Handgelenke und Hand Mesh](hands-and-tools.md)
 * [Anvisieren mit den Augen](eye-tracking.md)
 * [Sekundäre Ansichts Konfigurationen (Mixed Reality Capture)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in)
-* [Räumliche Abbildung](spatial-mapping.md)
+* [Grundlegendes zu Szenen](scene-understanding.md)
 * Interop mit Windows SDK-APIs
 
 Während einige dieser Erweiterungen als anbieterspezifische MSFT-Erweiterungen gestartet werden können, arbeiten Microsoft und andere openxr-Lauf Zeit Anbieter zusammen, um Anbieter übergreifende ext-oder KHR-Erweiterungen für viele dieser Featurebereiche zu entwerfen.  Dadurch kann der Code, den Sie für diese Funktionen schreiben, über Lauf Zeit Anbieter hinweg portabel sein, ebenso wie bei der Kern Spezifikation.
