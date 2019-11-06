@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Grafiken, CPU, GPU, Rendering, Garbage Collection, hololens
-ms.openlocfilehash: 16a923697985e3686992dc31ea8e6fc39249c276
-ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
+ms.openlocfilehash: 724ec24408e70360fda07c59a4ca2ffc30b49c1f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817344"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438128"
 ---
 # <a name="performance-recommendations-for-unity"></a>Empfehlungen zur Leistung für Unity
 
@@ -38,7 +38,7 @@ Der folgende Inhalt umfasst ausführlichere Leistungs Praktiken, insbesondere f�
 
 #### <a name="cache-references"></a>Cache Verweise
 
-Es wird empfohlen, Verweise auf alle relevanten Komponenten und gameobjects bei der Initialisierung zwischenzuspeichern. Dies liegt daran, dass sich wiederholende Funktionsaufrufe, wie z. b. *[getComponent\<T > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , relativ zu den Arbeitsspeicher Kosten zum Speichern eines Zeigers erheblich verteueren. Dies gilt auch für die sehr regelmäßig verwendete [Kamera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html). " *Camera. Main* " verwendet tatsächlich " *[findgameobjectwithtag ()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* ", unter dem Ihre Szenen Diagramme mit dem Tag *"maincamera"* nach einem Kamera Objekt durchsucht werden.
+Es wird empfohlen, Verweise auf alle relevanten Komponenten und gameobjects bei der Initialisierung zwischenzuspeichern. Dies liegt daran, dass sich wiederholende Funktionsaufrufe, wie z. b. *[getComponent\<t > ()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , relativ zu den Arbeitsspeicher Kosten zum Speichern eines Zeigers deutlich teurer sind. Dies gilt auch für die sehr regelmäßig verwendete [Kamera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html). " *Camera. Main* " verwendet tatsächlich " *[findgameobjectwithtag ()](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)* ", unter dem Ihre Szenen Diagramme mit dem Tag *"maincamera"* nach einem Kamera Objekt durchsucht werden.
 
 ```CS
 using UnityEngine;
@@ -117,6 +117,31 @@ public class ExampleClass : MonoBehaviour
 
     [Boxing](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing) ist ein Grundkonzept der C# Sprache und Laufzeit. Dabei handelt es sich um den Prozess, bei dem Werte typisierte Variablen wie char, int, bool usw. in Verweis typisierte Variablen umwickelt werden. Wenn eine Wert typisierte Variable "geschachtelt" ist, wird Sie in ein System. Object umgeschrieben, das auf dem verwalteten Heap gespeichert wird. Daher wird der Arbeitsspeicher zugeordnet, und schließlich muss der Speicherplatz verworfen werden, wenn er vom Garbage Collector verarbeitet wird. Diese Zuordnungen und Aufhebungen verursachen einen Leistungs Aufwand, und in vielen Szenarien sind Sie unnötig oder können einfach durch eine kostengünstigere Alternative ersetzt werden.
 
+    Eine der gängigsten Formen des Boxens in der Entwicklung ist die Verwendung von [Werttypen](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/), die NULL-Werte zulassen. Es ist üblich, dass Sie in der Lage sein möchten, NULL für einen Werttyp in einer Funktion zurückzugeben, insbesondere dann, wenn der Vorgang möglicherweise nicht versucht, den Wert zu erhalten. Das potenzielle Problem bei diesem Ansatz besteht darin, dass die Zuordnung jetzt auf dem Heap erfolgt und daher später eine Garbage Collection durchgeführt werden muss.
+
+    **Beispiel für Boxing inC#**
+
+    ```csharp
+    // boolean value type is boxed into object boxedMyVar on the heap
+    bool myVar = true;
+    object boxedMyVar = myVar;
+    ```
+
+    **Beispiel für problematischen Boxing über Werttypen, die NULL-Werte zulassen**
+
+    Dieser Code veranschaulicht eine Dummy-Partikel Klasse, die in einem Unity-Projekt erstellt werden kann. Ein Aufruf von `TryGetSpeed()` bewirkt, dass die Objekt Zuordnung auf dem Heap erfolgt, der zu einem späteren Zeitpunkt in den Garbage Collector aufgenommen werden muss. Dieses Beispiel ist besonders problematisch, da in einer Szene 1000 oder mehr Partikel vorhanden sein können, die jeweils zur aktuellen Geschwindigkeit aufgefordert werden. Folglich würden 1000 von Objekten zugeordnet und folglich die Zuordnung jedes Frames aufgehoben, wodurch die Leistung erheblich beeinträchtigt wird. Wenn Sie die Funktion so umschreiben, dass ein negativer Wert, wie z. b.-1, zurückgegeben wird, um einen Fehler anzugeben, wird dieses Problem vermieden, und der Arbeitsspeicher
+
+    ```csharp
+        public class MyParticle
+        {
+            // Example of function returning nullable value type
+            public int? TryGetSpeed()
+            {
+                // Returns current speed int value or null if fails
+            }
+        }
+    ```
+
 #### <a name="repeating-code-paths"></a>Wiederholte Codepfade
 
 Alle wiederholten Unity-Rückruf Funktionen (d. h. Update), die mehrmals pro Sekunde und/oder Frame ausgeführt werden, sollten sehr sorgfältig geschrieben werden. Alle teuren Vorgänge hier haben eine enorme und konsistente Auswirkung auf die Leistung.
@@ -132,7 +157,7 @@ Alle wiederholten Unity-Rückruf Funktionen (d. h. Update), die mehrmals pro Sek
     ```
 
 >[!NOTE]
-> Update () ist die häufigste Erscheinung dieses Leistungs Problems, aber andere sich wiederholende Unity-Rückrufe wie die folgenden können gleichermaßen schlecht sein, wenn Sie nicht schlechter sind: Fixedupdate (), lateupdate (), onpostranender ", OnPreRender (), onrenderimage () usw. 
+> Update () ist die häufigste Erscheinung dieses Leistungs Problems, aber andere sich wiederholende Unity-Rückrufe wie die folgenden können gleichermaßen schlecht sein, wenn Sie nicht schlechter sind: fixedupdate (), lateupdate (), onpostranender ", OnPreRender (), onrenderimage () usw. 
 
 2) **Vorgänge, die eine einmalige Ausführung pro Frame bevorzugen**
 
@@ -153,7 +178,9 @@ Alle wiederholten Unity-Rückruf Funktionen (d. h. Update), die mehrmals pro Sek
 
 3) **Vermeiden von Schnittstellen und virtuellen Konstrukten**
 
-    Das Aufrufen von Funktionsaufrufen über Schnittstellen im Vergleich zu direkten Objekten oder Aufrufen von virtuellen Funktionen kann häufig sehr viel teurer sein als die Verwendung von direkten Konstrukten oder direkten Funktionsaufrufen. Wenn die virtuelle Funktion oder Schnittstelle unnötig ist, sollte Sie entfernt werden. Die Leistungseinbußen, die für diese Ansätze erzielt werden, sind jedoch in der Regel der Kompromiss, wenn Sie die Entwicklung, die Lesbarkeit von Code und die Verwaltbarkeit des Codes vereinfachen. 
+    Das Aufrufen von Funktionsaufrufen über Schnittstellen im Vergleich zu direkten Objekten oder Aufrufen von virtuellen Funktionen kann häufig sehr viel teurer sein als die Verwendung von direkten Konstrukten oder direkten Funktionsaufrufen. Wenn die virtuelle Funktion oder Schnittstelle unnötig ist, sollte Sie entfernt werden. Die Leistungseinbußen, die für diese Ansätze erzielt werden, sind jedoch in der Regel der Kompromiss, wenn Sie die Entwicklung, die Lesbarkeit von Code und die Verwaltbarkeit des Codes vereinfachen.
+
+    Im Allgemeinen wird empfohlen, Felder und Funktionen nicht als virtuell zu markieren, es sei denn, es gibt eine klare Annahme, dass dieser Member überschrieben werden muss. Sie sollten vor allem bei hochfrequenten Codepfade vorsichtig sein, die mehrmals pro Frame oder sogar einmal pro Frame aufgerufen werden, wie z. b. eine `UpdateUI()` Methode.
 
 4) **Vermeiden Sie das Übergeben von Strukturen nach Wert.**
 
@@ -191,8 +218,8 @@ Unity bietet einen großartigen Artikel, der einen Überblick über die Batch Ve
 Bei einem Single Pass-instanziierten Rendering in Unity können zeichnen-Aufrufe für jedes Auge auf einen instanziierten Draw-Aufruf reduziert werden. Aufgrund der Cache Kohärenz zwischen zwei Draw-aufrufen gibt es auch eine gewisse Leistungsverbesserung bei der GPU.
 
 So aktivieren Sie dieses Feature in Ihrem Unity-Projekt
-1)  Öffnen Sie die **Player-XR-Einstellungen** (wechseln Sie zu **Edit** > **Project Settings** > **Player** > **XR Settings**)
-2) Wählen Sie im Dropdown Menü der **Stereo Renderingmethode** die Option **Single Pass** -instanziierten aus (Kontrollkästchen**Virtual Reality supported** muss aktiviert sein).
+1)  Öffnen Sie die **Player-XR-Einstellungen** (wechseln Sie zu **Edit** > **Project Settings** > **Player** > **XR-Einstellungen**)
+2) Wählen Sie im Dropdown Menü der **Stereo Renderingmethode** die Option **Single Pass-instanziierten** aus (Kontrollkästchen**Virtual Reality supported** muss aktiviert sein).
 
 Weitere Informationen zu diesem renderingansatz finden Sie in den folgenden Artikeln von Unity.
 - [Maximieren der AR-und VR-Leistung mit dem erweiterten Stereo Rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
@@ -207,7 +234,7 @@ Weitere Informationen zu diesem renderingansatz finden Sie in den folgenden Arti
 
 Unity kann viele statische Objekte in Batches erstellen, um Draw-Aufrufe an die GPU zu verringern. Die statische Batchverarbeitung funktioniert für die meisten [Renderer](https://docs.unity3d.com/ScriptReference/Renderer.html)-Objekte in Unity, die **dasselbe Material aufweisen** und **als *Static* markiert sind**. (Wählen Sie ein Objekt in Unity aus, und klicken Sie auf das Kontrollkästchen in der oberen rechten Ecke des Inspektors.) Gameobjects, die als *statisch* gekennzeichnet sind, können nicht während der Laufzeit der Anwendung verschoben werden. Daher kann es schwierig sein, die statische Batch Verarbeitung auf hololens zu nutzen, bei dem praktisch jedes Objekt platziert, verschoben, skaliert usw. werden muss. Bei immersiven Headsets kann die statische Batch Verarbeitung zeichnen-Aufrufe drastisch reduzieren und somit die Leistung verbessern.
 
-Ausführlichere Informationen finden Sie unter [Batch Verarbeitung in der Batch Verarbeitung in Unity](https://docs.unity3d.com/Manual/DrawCallBatching.html) .
+Ausführlichere Informationen *finden Sie unter* [Batch Verarbeitung in der Batch Verarbeitung in Unity](https://docs.unity3d.com/Manual/DrawCallBatching.html) .
 
 #### <a name="dynamic-batching"></a>Dynamische Batch Verarbeitung
 
@@ -219,30 +246,38 @@ Lesen Sie die *dynamische Batch* Verarbeitung unter [Zeichnen von zeichnen-aufru
 
 Die Batch Verarbeitung kann nur auftreten, wenn mehrere gameobjects dasselbe Material gemeinsam verwenden können. Dies wird in der Regel dadurch blockiert, dass gameobjects eine eindeutige Textur für das jeweilige Material aufweisen muss. Es ist üblich, Texturen in eine große Textur zu kombinieren, eine Methode, die als [Textur](https://en.wikipedia.org/wiki/Texture_atlas)Nachweis bezeichnet wird.
 
-Außerdem ist es in der Regel besser, nach Möglichkeit und vernünftig Nachrichten in einem gameobject zu kombinieren. Jeder Renderer in Unity verfügt über einen zugeordneten zeichnen-Befehl (en) im Vergleich zum Senden eines kombinierten Netzes unter einem Renderer. 
+Außerdem ist es in der Regel besser, nach Möglichkeit und vernünftig Nachrichten in einem gameobject zu kombinieren. Jeder Renderer in Unity verfügt über einen zugeordneten zeichnen-Befehl (en) im Vergleich zum Senden eines kombinierten Netzes unter einem Renderer.
 
 >[!NOTE]
 > Wenn Sie die Eigenschaften von Renderer. Material zur Laufzeit ändern, wird eine Kopie des Materials erstellt und somit die Batch Verarbeitung möglicherweise unterbrechen. Verwenden Sie Renderer. sharedmaterial, um freigegebene Materialeigenschaften über gameobjects zu ändern.
 
 ## <a name="gpu-performance-recommendations"></a>Empfehlungen zur GPU-Leistung
 
-Weitere Informationen zum [Optimieren des Grafik Rendering in Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 
+Weitere Informationen zum [Optimieren des Grafik Rendering in Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games)
 
 ### <a name="optimize-depth-buffer-sharing"></a>Optimieren der tiefen Puffer Freigabe
 
-Im Allgemeinen wird empfohlen, die **Tiefe Puffer Freigabe** unter den Einstellungen von " **Player XR** " zu aktivieren, um die [Stabilität von – Hologramm](Hologram-stability.md)zu optimieren Beim Aktivieren der tiefen basierten neuprojektion mit dieser Einstellung wird jedoch empfohlen, anstelle des **24-Bit-Tiefen**Formats ein **16-Bit-Tiefen Format** auszuwählen. Durch die 16-Bit-Tiefen Puffer wird die Bandbreite (und damit auch die Stromversorgung) drastisch verringert, die dem tiefen Puffer Datenverkehr zugeordnet Dies kann ein großer Leistungsgewinn sein, ist aber nur auf Erfahrungen mit einem kleinen tiefenbereich anwendbar, da es wahrscheinlicher ist, dass [z-und](https://en.wikipedia.org/wiki/Z-fighting) mehr als 24-Bit-Werte auftreten. Um diese Artefakte zu vermeiden, ändern Sie die Near-und Far-Clip-Ebenen der [Unity-Kamera](https://docs.unity3d.com/Manual/class-Camera.html) , um die geringere Genauigkeit zu berücksichtigen. Bei hololens-basierten Anwendungen kann die mittlere Ausschneide Ebene von 50 Mio. anstelle des Unity-Standardwerts von 1000 Millionen in der Regel alle z-Kämpfe eliminieren.
+Im Allgemeinen wird empfohlen, die **Tiefe Puffer Freigabe** unter den Einstellungen von " **Player XR** " zu aktivieren, um die [Stabilität von – Hologramm](Hologram-stability.md)zu optimieren Beim Aktivieren der tiefen basierten neuprojektion mit dieser Einstellung wird jedoch empfohlen, anstelle des **24-Bit-Tiefen**Formats ein **16-Bit-Tiefen Format** auszuwählen. Durch die 16-Bit-Tiefen Puffer wird die Bandbreite (und damit auch die Stromversorgung) drastisch verringert, die dem tiefen Puffer Datenverkehr zugeordnet Dies kann ein großer Gewinn sowohl bei der Energie Reduzierung als auch bei der Leistungsverbesserung sein. Es gibt jedoch zwei mögliche negative Ergebnisse, wenn Sie ein *16-Bit-Tiefen Format*verwenden.
+
+**Z-kämpfen**
+
+Die Genauigkeit der reduzierten tiefen Bereiche bewirkt, dass [z-Kämpfe](https://en.wikipedia.org/wiki/Z-fighting) mit einem 16-Bit-Wert als 24-Bit wahrscheinlicher werden. Um diese Artefakte zu vermeiden, ändern Sie die Near-und Far-Clip-Ebenen der [Unity-Kamera](https://docs.unity3d.com/Manual/class-Camera.html) , um die geringere Genauigkeit zu berücksichtigen. Bei hololens-basierten Anwendungen kann die mittlere Ausschneide Ebene von 50 Mio. anstelle des Unity-Standardwerts von 1000 Millionen in der Regel alle z-Kämpfe eliminieren.
+
+**Deaktivierter Schablonen Puffer**
+
+Wenn Unity eine [rendertextur mit 16-Bit-Tiefe](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html)erstellt, wird kein Schablonen Puffer erstellt. Durch die Auswahl des 24-Bit-Tiefen Formats pro Unity-Dokumentation wird ein 24-Bit-z-Puffer und ein [8-Bit-Schablone](https://docs.unity3d.com/Manual/SL-Stencil.html) erstellt (wenn 32-Bit auf dem Gerät anwendbar ist, was im Allgemeinen der Fall ist, z. b. hololens).
 
 ### <a name="avoid-full-screen-effects"></a>Vermeiden von vollbildeffekten
 
-Techniken, die auf dem Vollbildmodus ausgeführt werden, können sehr aufwendig sein, da die Reihenfolge der Größe in jedem Frame Millionen von Vorgängen ist. Daher wird empfohlen, [nach Verarbeitungs Effekten](https://docs.unity3d.com/Manual/PostProcessingOverview.html) wie Antialiasing, Blüte und mehr zu vermeiden. 
+Techniken, die auf dem Vollbildmodus ausgeführt werden, können sehr aufwendig sein, da die Reihenfolge der Größe in jedem Frame Millionen von Vorgängen ist. Daher wird empfohlen, [nach Verarbeitungs Effekten](https://docs.unity3d.com/Manual/PostProcessingOverview.html) wie Antialiasing, Blüte und mehr zu vermeiden.
 
 ### <a name="optimal-lighting-settings"></a>Optimale Beleuchtungseinstellungen
 
-Mit der [globalen Echtzeitbeleuchtung](https://docs.unity3d.com/Manual/GIIntro.html) in Unity können visuelle Ergebnisse bereitgestellt werden, aber es sind sehr teure Beleuchtungsberechnungen enthalten. Es wird empfohlen, die globale Echtzeitbeleuchtung für jede Unity-Szenen Datei über **Fenster** > **renderingbeleuchtungs** > **Einstellungen** zu deaktivieren > die **Globale Beleuchtung in Echtzeit**zu deaktivieren. 
+Mit der [globalen Echtzeitbeleuchtung](https://docs.unity3d.com/Manual/GIIntro.html) in Unity können visuelle Ergebnisse bereitgestellt werden, aber es sind sehr teure Beleuchtungsberechnungen enthalten. Es wird empfohlen, die globale Echtzeitbeleuchtung für jede Unity-Szenen Datei über **Fenster** > **Rendering** > **Beleuchtungseinstellungen** zu deaktivieren > die **Globale Beleuchtung in Echtzeit**zu deaktivieren.
 
-Außerdem wird empfohlen, alle Schatten Umwandlungen zu deaktivieren, da diese auch teure GPU-Pässe zu einer Unity-Szene hinzufügen. Schatten können pro Licht deaktiviert werden, können aber auch über Qualitätseinstellungen ganzheitlich gesteuert werden. 
- 
-Bearbeiten > Sie die**Projekteinstellungen**, und wählen Sie dann die Kategorie **Qualität** aus, > für die UWP-Plattform **niedrige Qualität** auszuwählen. Sie können auch die **Shadows** -Eigenschaft so festlegen, dass **Schatten deaktiviert**werden.
+Außerdem wird empfohlen, alle Schatten Umwandlungen zu deaktivieren, da diese auch teure GPU-Pässe zu einer Unity-Szene hinzufügen. Schatten können pro Licht deaktiviert werden, können aber auch über Qualitätseinstellungen ganzheitlich gesteuert werden.
+
+**Bearbeiten** Sie > **Projekteinstellungen**, und wählen Sie dann die Kategorie **Qualität** aus, > Wählen Sie für die UWP-Plattform **niedrige Qualität** aus. Sie können auch die **Shadows** -Eigenschaft so festlegen, dass **Schatten deaktiviert**werden.
 
 ### <a name="reduce-poly-count"></a>Reduzieren der polyzahl
 
@@ -282,7 +317,7 @@ Unity bietet auch eine nicht beleuchtete, vertexlit, diffuse und andere vereinfa
 
 #### <a name="shader-preloading"></a>Shader-vorab laden
 
-Verwenden Sie das *Vorladen von Shader* und andere Tricks, um die [Shader-Ladezeit](http://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html)zu optimieren. Das Vorladen von Shader bedeutet insbesondere, dass Sie aufgrund der Laufzeit-Shader-Kompilierung keine Treffer anzeigen können.
+Verwenden Sie das *Vorladen von Shader* und andere Tricks, um die [Shader-Ladezeit](https://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html)zu optimieren. Das Vorladen von Shader bedeutet insbesondere, dass Sie aufgrund der Laufzeit-Shader-Kompilierung keine Treffer anzeigen können.
 
 ### <a name="limit-overdraw"></a>Limit überzeichnen
 
@@ -320,7 +355,7 @@ Sie sollten die app in einer kleineren Szene starten und dann *[scenemanager. lo
 
 Beachten Sie, dass beim Laden der Startszene der Holographic-Begrüßungsbildschirm für den Benutzer angezeigt wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 - [Optimieren des Grafik Rendering in Unity-spielen](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
 - [Optimieren von Garbage Collection in Unity-spielen](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
 - [Bewährte Methoden für die Physik [Unity]](https://unity3d.com/learn/tutorials/topics/physics/physics-best-practices)
