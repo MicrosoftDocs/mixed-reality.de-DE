@@ -1,31 +1,25 @@
 ---
 title: Eyetracking – Blickverfolgung
-description: Mit HoloLens 2 erschließt sich in Bezug auf Kontext und menschliches Verständnis eine neue Ebene der holografischen Erfahrung. Das Gerät bietet Entwicklern nämlich die Möglichkeit, Informationen zur Zielanvisierung mit den Augen und zur Blickbewegung des Benutzers zu verwenden.
+description: Hololens 2 ermöglicht ein neues Maß an Kontext und menschliches Verständnis in der holografischen Benutzerfreundlichkeit, indem Entwicklern die Möglichkeit geboten wird, Informationen über den Benutzer zu verwenden.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Augen Verfolgung, gemischte Realität, Eingabe, Augenblick, Kalibrierung
-ms.openlocfilehash: 60de5ceb9f55ca7e2f74856af9bd75567763e382
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441119"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641146"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Blickverfolgung auf HoloLens 2
 
 ![Demo zur Eye-Nachverfolgung in mrtk](images/mrtk_et_scenemenu.jpg)
 
-Mit HoloLens 2 erschließt sich in Bezug auf Kontext und menschliches Verständnis eine neue Ebene der holografischen Erfahrung. Das Gerät bietet Entwicklern nämlich die Möglichkeit, Informationen zur Zielanvisierung mit den Augen und zur Blickbewegung des Benutzers zu verwenden. Auf dieser Seite finden Sie eine Übersicht über diese neue Funktion für Entwickler und Designer, wie Sie von der Augen Verfolgung für verschiedene Anwendungsfälle und grundlegenden Anleitungen für Entwickler profitieren können. 
+Hololens 2 ermöglicht ein neues Maß an Kontext und menschliches Verständnis in der holografischen Benutzerfreundlichkeit, indem Entwicklern die Möglichkeit geboten wird, Informationen über den Benutzer zu verwenden. Auf dieser Seite finden Sie eine Übersicht über diese neue Funktion für Entwickler und Designer, wie Sie von der Augen Verfolgung für verschiedene Anwendungsfälle und grundlegenden Anleitungen für Entwickler profitieren können. 
 
-
-## <a name="calibration"></a>Energie 
-Damit die Eye-Nachverfolgung ordnungsgemäß funktioniert, muss jeder Benutzer eine nach [Verfolgungs Benutzer-Kalibrierung](calibration.md) durchlaufen, für die der Benutzer eine Reihe von Holographic-Zielen betrachten muss. Dies ermöglicht es dem Gerät, das System für eine komfortablere und qualitativ hochwertige Anzeige für den Benutzer anzupassen und gleichzeitig eine genaue Eye-Nachverfolgung sicherzustellen. Die Augen Verfolgung sollte für die meisten Benutzer funktionieren, aber es gibt selten Fälle, in denen ein Benutzer möglicherweise nicht in der Lage ist, die Kalibrierung erfolgreich durchzusetzen.
-Weitere Informationen zur Kalibrierung und zur Gewährleistung eines reibungslosen Erlebnisses finden Sie auf unserer Seite zur [Benutzer seitigen Überwachung](calibration.md) .
-
-
-## <a name="device-support"></a>Geräteunterstützung
+### <a name="device-support"></a>Geräteunterstützung
 <table>
 <colgroup>
     <col width="25%" />
@@ -46,6 +40,24 @@ Weitere Informationen zur Kalibrierung und zur Gewährleistung eines reibungslos
      <td>❌</td>
 </tr>
 </table>
+
+<br>
+
+## <a name="calibration"></a>Energie 
+Damit die Eye-Nachverfolgung ordnungsgemäß funktioniert, muss jeder Benutzer eine nach [Verfolgungs Benutzer-Kalibrierung](calibration.md) durchlaufen, für die der Benutzer eine Reihe von Holographic-Zielen betrachten muss. Dies ermöglicht es dem Gerät, das System für eine komfortablere und qualitativ hochwertige Anzeige für den Benutzer anzupassen und gleichzeitig eine genaue Eye-Nachverfolgung sicherzustellen. 
+
+Die Augen Verfolgung sollte für die meisten Benutzer funktionieren, aber es gibt selten Fälle, in denen ein Benutzer möglicherweise nicht in der Lage ist, eine Kalibrierung erfolgreich durchzusetzen. Die Kalibrierung kann aus verschiedenen Gründen fehlschlagen, einschließlich, aber nicht beschränkt auf: 
+* Der Benutzer hat sich zuvor für den Kalibrierungsprozess entschieden.
+* Der Benutzer ist abgelenkt und hat die kalibrierungsziele nicht befolgt.
+* Der Benutzer verfügt über bestimmte Arten von Kontaktlinsen und-Gläsern, die das System noch nicht unterstützt. 
+* Der Benutzer hat bestimmte Augen Physiologie, Augen Bedingungen oder eine Augenoperation, die das System noch nicht unterstützt.  
+* Externe Faktoren behindern die zuverlässige Eye-Nachverfolgung, wie z. b. smudges auf den holten-Hypervisor oder-Brillen, intensive direkte Sonneneinstrahlung und-oksionen aufgrund von Haaren vor Augen.
+
+Entwickler sollten sicherstellen, dass Sie angemessene Unterstützung für Benutzer bereitstellen, für die die Augen Verfolgungs Daten möglicherweise nicht verfügbar sind (die nicht in der Lage sind, erfolgreich zu kalibrieren). Wir haben Empfehlungen für Fall Back Lösungen im Abschnitt unten auf dieser Seite bereitgestellt. 
+
+Weitere Informationen zur Kalibrierung und zur Gewährleistung eines reibungslosen Erlebnisses finden Sie auf unserer Seite zur [Benutzer seitigen Überwachung](calibration.md) .
+
+<br>
 
 ## <a name="available-eye-tracking-data"></a>Verfügbare Augen Verfolgungs Daten
 Bevor Sie sich ausführlich über bestimmte Anwendungsfälle für die Augenblick Eingaben beschäftigen, möchten wir kurz auf die Funktionen hinweisen, die von der hololens 2 [Eye Tracking-API](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) bereitstellt werden. Entwickler erhalten Zugriff auf einen Augenblick Strahl ("Ursprung" und "Richtung") bei ungefähr _30 fps (30 Hz)_ .
@@ -103,35 +115,33 @@ Achten Sie darauf, den Benutzer nicht zu überfordern. um weitere Informationen 
 
 ## <a name="using-eye-gaze-for-interaction"></a>Verwenden des Augenblicks für die Interaktion
 Das Entwickeln einer Interaktion, die die schnelle Ziel Ausrichtung nutzt, kann eine Herausforderung darstellen.
-Einerseits bewegen sich die Augen so schnell, dass Sie sorgfältig darauf achten müssen, wie Sie die Eingabe im Blickwinkel verwenden, da der Benutzer andernfalls die Benutzeroberflächen ausstellt, die überwältigend oder ablenkend sind. Andererseits können Sie auch wirklich magische Erfahrungen erstellen, die Ihre Benutzer begeistern werden! Um Ihnen zu helfen, sehen Sie sich die Übersicht über die wichtigsten Vorteile, Herausforderungen und Entwurfs Empfehlungen für die [Interaktion](eye-gaze-interaction.md)an. 
+Einerseits bewegen sich die Augen so schnell, dass Sie sorgfältig darauf achten müssen, wie Sie die Eingabe im Blickwinkel verwenden, da die Benutzer die Benutzeroberflächen möglicherweise als überwältigend oder ablenkend empfinden. Andererseits können Sie auch wirklich magische Erfahrungen erstellen, die Ihre Benutzer begeistern werden! Um Ihnen zu helfen, sehen Sie sich die Übersicht über die wichtigsten Vorteile, Herausforderungen und Entwurfs Empfehlungen für die [Interaktion](eye-gaze-interaction.md)an. 
 
 <br>
  
-## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Entwicklungs Leit Faden: Was geschieht, wenn die Augen Nachverfolgung nicht verfügbar ist?
-Es kann Situationen geben, in denen Ihre APP aufgrund verschiedener Gründe keine Augen Verfolgungs Daten empfängt, einschließlich, aber nicht beschränkt auf:
-* Der Benutzer hat die Eye Tracking-Kalibrierung übersprungen.
-* Der Benutzer hat eine Kalibrierung durchführen, entschied sich aber dafür, der APP keine Berechtigung zur Verwendung Ihrer Überwachungsdaten zu erteilen.
-* Der Benutzer hat eine eindeutige Brillen-oder Augen Bedingung, die vom System noch nicht unterstützt wird.
-* Externe Faktoren behindern die zuverlässige Eye-Nachverfolgung, wie z. b. smudges auf den holten-Hypervisor oder-Brillen, intensive direkte Sonneneinstrahlung und-oksionen aufgrund von Haaren vor Augen.
+## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Fall Back Lösungen, wenn die Augen Verfolgung nicht verfügbar ist
+In seltenen Fällen sind keine Überwachungsdaten für den Augenblick verfügbar.
+Dies kann auf verschiedene Ursachen zurückzuführen sein, von denen die am häufigsten aufgelisteten aufgeführt sind:
+* Das System konnte [den Benutzer nicht kalibrieren](calibration.md).
+* Der Benutzer hat die [Kalibrierung](calibration.md)übersprungen.   
+* Der Benutzer ist zwar kalibriert, hat sich jedoch entschieden, der APP keine Berechtigung zur Verwendung der Augen Verfolgungs Daten zu erteilen.    
+* Der Benutzer hat eine eindeutige Brillen-oder Augen Bedingung, die vom System noch nicht unterstützt wird.    
+* Externe Faktoren behindern die zuverlässige Eye-Nachverfolgung, wie z. b. smudges auf den holten-Hypervisor oder-Brillen, intensive direkte Sonneneinstrahlung und-oksionen aufgrund von Haaren vor Augen.   
+Daher sollten Entwickler sicherstellen, dass für diese Benutzer eine geeignete Ausweich Unterstützung vorhanden ist. Auf der Seite " [Eye Tracking in DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) " werden die APIs erläutert, die erforderlich sind, um zu ermitteln, ob Eye-Überwachungsdaten verfügbar sind. 
 
-Als App-Entwickler bedeutet dies, dass Sie die Unterstützung von Benutzern berücksichtigen müssen, für die möglicherweise keine Überwachungsdaten verfügbar sind. Im folgenden wird erläutert, wie Sie erkennen können, ob die Eye-Nachverfolgung verfügbar ist, und wie Sie sich behandeln, wenn Sie für verschiedene Anwendungen nicht verfügbar ist.
+Wie oben beschrieben, gibt es verschiedene Gründe, warum die Augen Verfolgungs Daten möglicherweise nicht verfügbar sind.   
+Einige Benutzer haben sich möglicherweise bewusst entschieden, den Zugriff auf Ihre Augen Verfolgungs Daten aufzuheben, und sind mit dem Nachteil einer geringeren Benutzerfunktion für den Datenschutz, dass Sie keinen Zugriff auf Ihre Überwachungsdaten bereitstellt, in einigen Fällen kann dies unbeabsichtigt sein.  
+Wenn Ihre APP die Augen Nachverfolgung verwendet, und dies ein wichtiger Bestandteil der Benutzeroberflächen ist, empfiehlt es sich, diese Funktion an den Benutzer zu übermitteln.     
+Wenn Sie den Benutzer darüber informieren, warum die Augen Verfolgung für Ihre Anwendung wichtig ist (möglicherweise sogar durch das Auflisten einiger verbesserter Features), um das volle Potenzial Ihrer Anwendung zu erhalten, können Sie dem Benutzer helfen, die Ergebnisse besser zu verstehen.    
+Helfen Sie dem Benutzer, herauszufinden, warum die Eye-Nachverfolgung möglicherweise nicht funktioniert (basierend auf den obigen Überprüfungen), und bieten Sie einige Vorschläge, um potenzielle Probleme schnell zu beheben.  
+Wenn Sie z. b. feststellen können, dass das System die Eye-Nachverfolgung unterstützt, wird der Benutzer kalibriert und selbst seine Berechtigung erteilt, aber es werden keine Augen Verfolgungs Daten empfangen.    
+Beachten Sie jedoch, dass es selten Fälle gibt, in denen die Eye-Nachverfolgung möglicherweise einfach nicht funktioniert.    
+Achten Sie daher darauf, dass Sie Erinnerungen zum Aktivieren der Eye-Nachverfolgung in Ihrer APP verwerfen oder sogar deaktivieren können.
 
-### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. erkennen, dass die Augen Verfolgung verfügbar ist
-Es gibt einige Überprüfungen, um zu bestimmen, ob die Augen Verfolgungs Daten verfügbar sind. Überprüfen Sie, ob...
-* ... Das System unterstützt die Augen Verfolgung überhaupt. Wenden Sie die folgende *Methode*an: [Windows. perception. People. eyespose. IsSupported ()](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
-
-* ... der Benutzer ist kalibriert. Folgende *Eigenschaft*aufzurufen: [Windows. perception. People. eyespose. iscalibrationvalid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
-
-* ... der Benutzer hat der APP die Berechtigung zur Verwendung der Augen Verfolgungs Daten erteilt: Rufen Sie den aktuellen _"gazinput Access Status"_ ab. Ein Beispiel hierfür finden Sie unter [anfordern des Zugriffs auf die Eingabe](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
-
-Darüber hinaus können Sie überprüfen, ob Ihre Augen Verfolgungs Daten nicht veraltet sind, indem Sie ein Timeout zwischen empfangenen Datenaktualisierungen für die Augen Verfolgung hinzufügen und andernfalls auf den Haupt Blick zurückgreifen, wie unten erläutert. 
-
-Wie oben beschrieben, gibt es verschiedene Gründe, warum die Augen Verfolgungs Daten möglicherweise nicht verfügbar sind. Einige Benutzer haben sich möglicherweise bewusst entschieden, den Zugriff auf Ihre Augen Verfolgungs Daten aufzuheben, und sind mit dem Nachteil einer geringeren Benutzerfunktion für den Datenschutz, dass Sie keinen Zugriff auf Ihre Überwachungsdaten bereitstellt, in einigen Fällen kann dies unbeabsichtigt sein. Wenn Ihre APP die Augen Nachverfolgung verwendet, und dies ein wichtiger Bestandteil der Benutzeroberflächen ist, empfiehlt es sich, diese Funktion an den Benutzer zu übermitteln. Wenn Sie den Benutzer darüber informieren, warum die Augen Verfolgung für Ihre Anwendung wichtig ist (möglicherweise sogar durch das Auflisten einiger verbesserter Features), um das volle Potenzial Ihrer Anwendung zu erhalten, können Sie dem Benutzer helfen, die Ergebnisse besser zu verstehen. Helfen Sie dem Benutzer, herauszufinden, warum die Eye-Nachverfolgung möglicherweise nicht funktioniert (basierend auf den obigen Überprüfungen), und bieten Sie einige Vorschläge, um potenzielle Probleme schnell zu beheben. Wenn Sie z. b. feststellen können, dass das System die Eye-Nachverfolgung unterstützt, wird der Benutzer kalibriert und selbst seine Berechtigung erteilt, aber es werden keine Augen Verfolgungs Daten empfangen. Beachten Sie jedoch, dass es selten Fälle gibt, in denen die Eye-Nachverfolgung möglicherweise einfach nicht funktioniert. Achten Sie daher darauf, dass Sie Erinnerungen zum Aktivieren der Eye-Nachverfolgung in Ihrer APP verwerfen oder sogar deaktivieren können.
-
-### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. Fallback für apps, die den Augenblick als primären Eingabe Zeiger verwenden
+### <a name="fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Fallback für apps, die den Augenblick als primären Eingabe Zeiger verwenden
 Wenn Ihre APP den Augenblick als Zeiger Eingabe verwendet, um in der Szene schnell holograms auszuwählen, sind die Augen Verfolgungs Daten nicht verfügbar. es wird empfohlen, auf den Mauszeiger zurückzukehren und den Cursor für den Cursor zu zeigen. Es wird empfohlen, ein Timeout (z. b. 500 – 1.500 ms) zu verwenden, um zu bestimmen, ob gewechselt werden soll. Dadurch wird verhindert, dass ein Cursor jedes Mal, wenn das System die Nachverfolgung aufgrund von schnellen Augenbewegungen oder winas und Blinks verliert. Wenn Sie ein Unity-Entwickler sind, wird der automatische Fall Back auf den Head-Blick bereits im Mixed Reality Toolkit behandelt. Wenn Sie ein DirectX-Entwickler sind, müssen Sie diesen Switch selbst verarbeiten.
 
-### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. Fallback für andere Überwachungs spezifische Anwendungen
+### <a name="fallback-for-other-eye-tracking-specific-applications"></a>Fallback für andere Überwachungs spezifische Anwendungen
 Ihre APP kann den Augenblick auf eine einzigartige Weise verwenden, die speziell auf die Augen zugeschnitten ist, z. b. zum Animieren der Augen eines Avatars oder zur Augen basierten Aufmerksamkeit Heatmaps, die sich auf genaue Informationen zur visuellen Aufmerksamkeit verlassen. In diesem Fall gibt es keinen klaren Fallback. Wenn die Augen Verfolgung nicht verfügbar ist, müssen diese Funktionen möglicherweise einfach deaktiviert werden.
 Auch hier wird empfohlen, dass Sie dem Benutzer, der möglicherweise nicht weiß, dass die Funktion nicht funktioniert, eindeutig kommunizieren.
 

@@ -6,12 +6,12 @@ ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, holotour, räumlicher Sound, Fallstudie
-ms.openlocfilehash: eca675534dba12dd65a20fb9d85e4df57f725288
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e1da80bd647084aa4d7839c0f1b1848b46c2b1b4
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522444"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641153"
 ---
 # <a name="case-study---spatial-sound-design-for-holotour"></a>Fallstudie: räumliches Sound Design für holotour
 
@@ -33,7 +33,7 @@ Wir haben holotour-Erfahrungen von zwei verschiedenen Standorten erstellt: Rom u
 
 In unserer [Fallstudie zur Erfassung des visuellen Inhalts für holotour](case-study-capturing-and-creating-content-for-holotour.md)haben wir uns über den benutzerdefinierten Entwurf unseres Kamera-Rigs gesprochen. Es umfasste 14 GoPro-Kameras, die in einem 3D-gedruckten Gehäuse enthalten waren, das auf die spezifischen Abmessungen des-endms zugeschnitten ist. Um Audiodaten von diesem Rig zu erfassen, haben wir unter den Kameras ein vier-Mikrofon-Array hinzugefügt, das in eine kompakte 4-Kanal-Aufzeichnungseinheit gebracht wurde, die an der Basis des Stamms saß. Wir haben das Mikrofon ausgewählt, das nicht nur gut ausgeführt wurde, sondern nur einen sehr geringen Speicherbedarf hat, um die Ansicht der Kamera nicht zu verzieren.
 
-![Benutzerdefinierte Kamera und Mikrofon](images/camera-rig-microphones-300px.png)<br>
+![benutzerdefinierte Kamera-und Mikrofon](images/camera-rig-microphones-300px.png)<br>
 *Benutzerdefinierte Kamera und Mikrofon*
 
 In dieser Einrichtung wurde Sound in vier Richtungen vom genauen Speicherort der Kamera aufgezeichnet, sodass wir genügend Informationen zum erneuten Erstellen eines 3D-Informations Panoramas mit räumlichem Sound erhalten, das wir später mit dem 360-Grad-Video synchronisieren konnten.
@@ -59,26 +59,25 @@ Ein anderer Ansatz besteht darin, ein schleifenes Stereo-Ambiente in Verbindung 
 ## <a name="tips-and-tricks"></a>Tipps und Tricks
 
 Wenn Sie Audio für eine Szene erstellen, gibt es einige zusätzliche Methoden, die Sie verwenden können, um die Direktionalität und das Eintauchen genauer hervorzuheben, wobei die räumlichen Audiofunktionen von hololens vollständig genutzt werden. Wir haben eine Liste mit einigen unten bereitgestellt – lauschen Sie auf diese, wenn Sie das nächste Mal mit holotour versuchen.
-* **Ziele suchen**: Dies sind Sounds, die nur dann auslöst, wenn Sie ein bestimmtes Objekt oder einen Bereich des Holographic-Frames betrachten. Wenn Sie z. b. in der Richtung des Straßencafés in der Piazza Navona von Rom suchen, werden die Klänge eines ausgelasteten Restaurants auf eine beliebige Weise angezeigt.
-* **Lokale Vision**: Die Tour in holotour enthält bestimmte Beats, bei denen Ihr Einführungs Handbuch, das von holograms unterstützt wird, ein Thema eingehend untersucht. Wenn sich beispielsweise die Fassade des Pantheon auflöst, um den Oculus offenzulegen, wird der Benutzer beim Durchsuchen von Audiodaten, die als 3D-Emitter aus dem Innenbereich der Pantheon platziert werden, dazu ermutigt, das innere Modell zu durchsuchen.
-* **Erweiterte Direktionalität**: In vielen Szenen haben wir Klänge auf verschiedene Weise platziert, um der Direktionalität hinzuzufügen. In der Pantheon-Szene wurde z. b. der Sound des Brunnens als separater Emitter in den Benutzer eingefügt, sodass er beim Durchlaufen des Wiedergabe Raums den Eindruck hat, dass es sich um einen Eindruck von ' Sonic Parser ' handelt. In der Welt von Peru, in der sich die einzelnen Datenströme befinden, handelte es sich um einen separaten Emitter, um eine immersive Umgebungsumgebung zu schaffen, die den Benutzer mit den authentischen Tönen dieses Standorts umgibt.
-* **Spline-Emitter**: Dieser besondere räumliche audioemitter bewegt sich in 3D-Raum relativ zur visuellen Position des Objekts, mit dem es verbunden ist. Ein Beispiel hierfür war das Training in Machu Picchu, bei dem wir einen Spline-Emitter verwendet haben, um einen eindeutigen Eindruck von Direktionalität und Bewegung zu vermitteln.
-* **Musik und SFX**: Bestimmte Aspekte von holotour, die eine stärker stilisierte oder filmische Herangehensweise darstellen, nutzen Musik und Soundeffekte, um die emotionalen Auswirkungen zu erhöhen. Im Gladiator-Kampf am Ende der Rom-Tour wurden besondere Effekte wie z. b. "whooshes" oder "Stingers" verwendet, um die Auswirkung von Bezeichnungen in Szenen zu verstärken.
+* **Zielziele**: Dies sind Sounds, die nur dann auslöst, wenn Sie ein bestimmtes Objekt oder einen Bereich des Holographic-Frames betrachten. Wenn Sie z. b. in der Richtung des Straßencafés in der Piazza Navona von Rom suchen, werden die Klänge eines ausgelasteten Restaurants auf eine beliebige Weise angezeigt.
+* **Lokale Vision**: die Tour mit holotour enthält bestimmte Beats, bei denen Ihr Einführungs Handbuch, das von holograms unterstützt wird, ein Thema eingehend untersucht. Wenn sich beispielsweise die Fassade des Pantheon auflöst, um den Oculus offenzulegen, wird der Benutzer beim Durchsuchen von Audiodaten, die als 3D-Emitter aus dem Innenbereich der Pantheon platziert werden, dazu ermutigt, das innere Modell zu durchsuchen.
+* **Erweiterte Direktionalität**: in vielen Szenen haben wir Klänge auf verschiedene Weise platziert, um der Direktionalität hinzuzufügen. In der Pantheon-Szene wurde z. b. der Sound des Brunnens als separater Emitter in den Benutzer eingefügt, sodass er beim Durchlaufen des Wiedergabe Raums den Eindruck hat, dass es sich um einen Eindruck von ' Sonic Parser ' handelt. In der Welt von Peru, in der sich die einzelnen Datenströme befinden, handelte es sich um einen separaten Emitter, um eine immersive Umgebungsumgebung zu schaffen, die den Benutzer mit den authentischen Tönen dieses Standorts umgibt.
+* **Spline-Emitter**: dieser spezielle räumliche audioemitter bewegt sich in 3D-Raum relativ zur visuellen Position des Objekts, mit dem es verbunden ist. Ein Beispiel hierfür war das Training in Machu Picchu, bei dem wir einen Spline-Emitter verwendet haben, um einen eindeutigen Eindruck von Direktionalität und Bewegung zu vermitteln.
+* **Musik und SFX**: bestimmte Aspekte von holotour, die eine stärker stilisierte oder filmische Herangehensweise darstellen, nutzen Musik und Soundeffekte, um die emotionalen Auswirkungen zu erhöhen. Im Gladiator-Kampf am Ende der Rom-Tour wurden besondere Effekte wie z. b. "whooshes" oder "Stingers" verwendet, um die Auswirkung von Bezeichnungen in Szenen zu verstärken.
 
 ## <a name="about-the-author"></a>Informationen zum Autor
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Jason Syltebo" width="60" height="60" src="images/syltebo.png"></td>
-<td style="border-style: none"><b>Jason syltebo</b><br>Audiodesigner@Microsoft</td>
+<td style="border-style: none"><b>Jason syltebo</b><br>@Microsoft des audiodesigners</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Raumklang](spatial-sound.md)
 * [Raumklangentwurf](spatial-sound-design.md)
 * [Raumklang in Unity](spatial-sound-in-unity.md)
-* [Räumliche Daten 220](holograms-220.md)
-* [Video: Microsoft hololens: Holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+* [Video: Microsoft hololens: holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
 
  
