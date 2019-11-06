@@ -39,6 +39,7 @@
 ### [Raumabtastvisualisierung](room-scan-visualization.md)
 ### [Grundlegendes zu Szenen](scene-understanding.md)
 ### [Raumanker](spatial-anchors.md)
+### [Sound](spatial-sound.md)
 ### [Räumliche Abbildung](spatial-mapping.md)
 ### [System-Geste](system-gesture.md)
 ### [Typen von Mixed Reality-Apps](types-of-mixed-reality-apps.md)
@@ -65,7 +66,6 @@
 ### Format
 #### [Farbe, Licht und Materialien](color,-light-and-materials.md)
 #### [Skalieren](scale.md)
-#### [Raumklang](spatial-sound.md)
 #### [Raumklangentwurf](spatial-sound-design.md)
 #### [Typografie](typography.md)
 ### Steuerelemente und Verhaltensweisen
@@ -193,7 +193,6 @@
 #### [Anvisieren mit Kopf und Augen](gaze-in-directx.md)
 #### [Hände und Motion-Controller](hands-and-motion-controllers-in-directx.md)
 #### [Spracheingabe](voice-input-in-directx.md)
-#### [Raumklang](spatial-sound-in-directx.md)
 #### [Räumliche Abbildung](spatial-mapping-in-directx.md)
 #### [Grundlegendes zu Szenen](scene-understanding-sdk.md)
 #### [Gemeinsam verwendete Raumanker](shared-spatial-anchors-in-directx.md)
