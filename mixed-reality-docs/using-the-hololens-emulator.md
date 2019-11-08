@@ -1,18 +1,18 @@
 ---
 title: Verwendung des HoloLens-Emulators
-description: Mit dem HoloLens-Emulator können Sie Mixed Reality-Apps auf Ihrem PC ohne eine physische HoloLens testen.
+description: Verwenden des HoloLens-Emulators zum Testen von Mixed Reality-Apps auf Ihrem PC ohne eine physische HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 08/14/2019
+ms.date: 09/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, Emulator
-ms.openlocfilehash: 6c112b7706f1dfff7c4affbdb4ee7326f0e15c8a
-ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
+ms.openlocfilehash: 455abfabede5bc1e646bd273afa09068feb886a1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69030173"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437350"
 ---
 # <a name="using-the-hololens-emulator"></a>Verwendung des HoloLens-Emulators
 
@@ -25,7 +25,7 @@ Wenn Sie Anwendungen für immersive Windows Mixed Reality-Headsets (VR) oder Spi
 Lade den HoloLens-Emulator herunter.
 
 Versionen: 
-* [HoloLens 2-Emulator](https://go.microsoft.com/fwlink/?linkid=2101019).
+* [HoloLens 2-Emulator (Update von Oktober 2019)](https://go.microsoft.com/fwlink/?linkid=2106649)
 * [HoloLens-Emulator (1. Generation) und holografische Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2065980)
 
 Ältere Builds des HoloLens-Emulators finden Sie auf der Seite [HoloLens-Emulator – Archiv](hololens-emulator-archive.md).
@@ -40,7 +40,7 @@ Der HoloLens-Emulator verwendet Hyper-V mit RemoteFx (Emulator der 1. Generation
 * 64-Bit-CPU
 * CPU mit 4 Kernen (oder mehrere CPUs mit insgesamt 4 Kernen)
 * Mindestens 8 GB RAM
-* Im BIOS müssen die folgenden Features [unterstützt und aktiviert sein](http://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx):
+* Im BIOS müssen die folgenden Features [unterstützt und aktiviert sein](https://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx):
    * Hardwareunterstützte Virtualisierung
    * Adressübersetzung der zweiten Ebene (Second Level Address Translation, SLAT)
    * Hardwarebasierte Datenausführungsverhinderung (Data Execution Prevention, DEP)
@@ -104,16 +104,16 @@ Mithilfe der Systemsteuerung der Simulation können Sie die aktuelle Position un
 * Bewegen Sie den Mauszeiger über ein Steuerelement oder Feld, um eine QuickInfo anzuzeigen, die zugehörige Tastatur-, Maus- und Gamepad-Steuerelemente enthält.
 * Um eine Hand ein- oder auszublenden, schalten Sie den entsprechenden Schalter unter der linken oder rechten Hand um.
 * Verwenden Sie zum Steuern der Hand entweder die linke oder rechte ALT-Taste auf Ihrer Tastatur oder den linken oder rechten Bumper des Gamepads.
-* Um alle Eingaben an eine oder beide Hände weiterzuleiten, klicken Sie auf die Markierungstaste unter dem Umschalter.  Dies entspricht dem Halten der ALT-Taste für die Hand.
+* Um alle Eingaben an eine oder beide Hände weiterzuleiten, klicken Sie auf die Markierungstaste unter dem Umschalter. Dies entspricht dem Halten der ALT-Taste für die Hand.
 * Klicken Sie zur Steuerung der Richtung für das Anvisieren mit den Augen auf die Markierung im Abschnitt „Eyes“ (Augen). Dies entspricht dem Halten der Y-Taste auf der Tastatur.
 * Klicken Sie zum Laden einer Raumaufzeichnung auf die Schaltfläche „Load“ (Laden) im Abschnitt „Recording“ (Aufzeichnung). Weitere Informationen finden Sie unter [simulierte Räume](#simulated-rooms).
 * Um die Geschwindigkeit anzupassen, mit der sich der simulierte Benutzer oder die simulierten Eingabegeräte als Reaktion auf die Eingabe von Tastatur, Maus oder Gamepad bewegen oder drehen, klicken Sie auf das Zahnradsymbol neben „Input settings“ (Eingabeeinstellungen), und passen Sie die Schieberegler an.
-* Standardmäßig steuert die Tastatureingabe den simulierten Benutzer und die simulierte Eingabe. Damit die Tastatureingabe Ihres PCs an die HoloLens weitergeleitet wird, deaktivieren Sie das Kontrollkästchen „Use Keyboard for Simulation“ (Tastatur für Simulation verwenden).  F4 ist die Tastenkombination für diese Einstellung.
+* Standardmäßig steuert die Tastatureingabe den simulierten Benutzer und die simulierte Eingabe. Damit die Tastatureingabe Ihres PCs an die HoloLens weitergeleitet wird, deaktivieren Sie das Kontrollkästchen „Use Keyboard for Simulation“ (Tastatur für Simulation verwenden). F4 ist die Tastenkombination für diese Einstellung.
 * Wenn der Simulationsbereich bereits angezeigt wird, drücken Sie F8, um den Tastaturfokus dorthin zu verschieben.
 * Klicken Sie auf die Schaltfläche am unteren Rand des Bereichs, oder drücken Sie F9 auf Ihrer Tastatur, um den Simulationsbereich beim Emulatorfenster auszudocken.  Wenn Sie das Fenster schließen oder erneut F9 drücken, kehrt das Fenster zum Emulator zurück.
 * Die Systemsteuerung der Simulation kann als separate Anwendung gestartet werden, sodass Sie sich mit dem HoloLens 2-Emulator, einem HoloLens 2-Gerät oder der Windows Mixed Reality-Simulation verbinden und dieses steuern können, indem Sie „PerceptionSimulationInput.exe“ unter „%ProgramFiles(x86)%\Windows Kits\10\Microsoft XDE\10.0.18362.0\“ ausführen.
 
-### <a name="account-tab"></a>Die Registerkarte „Konto“
+### <a name="account-tab"></a>Registerkarte „Account“ (Konto)
 
 Auf der Registerkarte „Account“ (Konto) können Sie den Emulator für die Anmeldung mit einem Microsoft-Konto konfigurieren. Dies ist beim Testen von APIs hilfreich, bei denen der Benutzer mit einem Konto angemeldet sein muss. Das Umschalten dieser Option erfordert, dass Sie den HoloLens-Emulator vollständig schließen und neu starten, damit die Einstellung wirksam wird. Wenn diese Option aktiviert ist, werden Sie bei nachfolgenden Starts des Emulators zur Anmeldung aufgefordert, genau wie ein Benutzer beim ersten Start der HoloLens. Um Ihre Anmeldeinformationen über die Tastatur Ihres PCs einzugeben, deaktivieren Sie zunächst „Use Keyboard for Simulation“ (Tastatur für Simulation verwenden) in der Systemsteuerung für die Simulation, oder drücken Sie F4 auf Ihrer Tastatur, um die Tastatureinstellung zu aktivieren oder zu deaktivieren.
 
@@ -124,6 +124,42 @@ Auf der Registerkarte „Optional Settings“ (Optionale Einstellungen) wird ein
 ### <a name="diagnostics-tab"></a>Registerkarte „Diagnostics“ (Diagnose)
 
 Auf der Registerkarte „Diagnostics“ (Diagnose) wird die IP-Adresse des Emulators in Form eines Links zum Windows-Geräteportal sowie der Status der virtuellen GPU angezeigt.
+
+### <a name="network-tab"></a>Registerkarte „Network“ (Netzwerk)
+
+Auf der Registerkarte „Network“ (Netzwerk) werden die Netzwerkadapterdetails für den Emulator sowie die Netzwerkadapterdetails für den Hostcomputer angezeigt. Beachten Sie, dass diese Registerkarte für den HoloLens 2-Emulator nur angezeigt wird, wenn Sie den Emulator unter Windows 10 May 2019 Update oder neuer ausführen.
+
+### <a name="nat-configuration-tab"></a>Registerkarte „NAT Configuration“ (NAT-Konfiguration)
+
+Diese Registerkarte wird nur angezeigt, wenn Sie den Emulator unter Windows 10 May 2019 Update oder neuer ausführen.
+
+Der Emulator verwendet die Netzwerkverbindung Ihres PCs und befindet sich hinter einem NAT.  Diese Registerkarte ermöglicht es Ihnen, Ports von Ihrem Hostcomputer dem Emulator zuzuordnen, wodurch Remotegeräte eine Verbindung zu Anwendungen und Diensten herstellen können, die im Emulator ausgeführt werden.
+
+Wenn Sie z. B. von einem Remotecomputer aus auf das Geräteportal auf dem Emulator zugreifen möchten:
+
+1. Fügen Sie einen Eintrag für den internen Port 80 (der Port, an dem das Geräteportal lauscht) hinzu, indem Sie in der Tabelle auf eine freie Zeile doppelklicken.  Geben Sie für andere Anwendungen die Portnummer ein, an der diese Anwendung lauscht.
+2. Wählen Sie einen beliebigen externen Port aus.  In diesem Beispiel verwenden wir Port 8080 als externen Port.
+3. Wählen Sie das Protokoll aus.  Die Standardeinstellung ist „TCP“.  Da das Geräteportal TCP verwendet, übernehmen wir die Standardeinstellung.
+4. Klicken Sie auf „Änderungen übernehmen“, um die Zuordnung zu aktivieren.  Der „Status“ wechselt von „Ausstehend“ zu „Aktiv“.
+5. Öffnen Sie auf dem Remotecomputer einen Browser, und navigieren Sie zu (IP-des-PCs-der-den-Emulator-ausführt):8080.  Die Geräteportalschnittstelle wird angezeigt.  Beachten Sie, dass die IP-Adresse, die Sie auf einem Remotecomputer verwenden, die IP-Adresse des Computers sein muss, auf dem der Emulator ausgeführt wird, und nicht die IP-Adresse des Emulators selbst.  Sie können die IP-Adresse auf verschiedene Weise abrufen, z. B. über die App „Einstellungen“ auf dem PC in der Kategorie „Netzwerk und Internet“, über „ipconfig“ über eine Eingabeaufforderung und über die Registerkarte „Netzwerk“ im Dialogfeld für Emulatortools, indem Sie nach dem Eintrag für den Desktopadapter suchen.
+
+Beachten Sie außerdem, dass Sie den Emulator, wenn Sie eine Portzuordnung für das Geräteportal hinzufügen, mit dem in der Emulatorinstallation enthaltenen Perception Simulation Control-Tool oder mit den Perception Simulation-APIs remote steuern können, indem Sie sich mit der IP-Adresse des Hostcomputers und dem externen Port des Geräteportals verbinden, wie z. B. 8080 im obigen Beispiel.  Wenn Sie die Perception Simulation Control verwenden, um eine Verbindung zum Emulator herzustellen und ihn remote zu steuern, geben Sie nur die IP-Adresse des PCs und den konfigurierten Port an.  Fügen Sie nicht „https://“ ein.
+
+Standardmäßig sind keine Portzuordnungen eingerichtet.  Alle von Ihnen konfigurierten Zuordnungen sind beim Start des HoloLens 2-Emulators persistent und werden automatisch aktiviert, wenn der Emulator vollständig gestartet wurde.
+
+Verwenden Sie die Schaltfläche „Exportieren“, um Ihre Zuordnungen in einer Datei zu speichern.  Sie können diese Datei dann mit anderen Teammitgliedern teilen, die über die Schaltfläche „Importieren“ automatisch dieselben Zuordnungen konfigurieren können.
+
+![Registerkarte „NAT Configuration“ (NAT-Konfiguration) des HoloLens-Emulators](images/emulator-natconfig-500px.png)
+
+### <a name="updates-tab"></a>Registerkarte „Updates“
+
+Diese Registerkarte wird nur angezeigt, wenn Sie den Emulator unter Windows 10 May 2019 Update oder neuer ausführen.
+
+Beim Start prüft der Emulator auf neue Versionen.  Wenn eine neue Version verfügbar ist, zeigt der Emulator eine Eingabeaufforderung an, die die von Ihnen verwendete Version zusammen mit der verfügbaren Version anzeigt und fragt, ob Sie ein Update durchführen möchten.  Wenn Sie „Ja“ auswählen, wird das Installationsprogramm für die neue Version heruntergeladen.
+
+Auf der Registerkarte „Updates“ können Sie steuern, ob der Emulator nach neuen Versionen sucht, indem Sie das Kontrollkästchen „Automatically check for updates“ (Automatisch nach Updates suchen) auf dieser Registerkarte aktivieren.  Es ermöglicht Ihnen auch, andere verfügbare Emulator-Versionen anzuzeigen und herunterzuladen, beginnend mit dem Update vom September 2019.  Für andere als die aktuell aktive Version steht ein Link für den Download zur Verfügung.  Wenn Sie auf diesen Link klicken, wird das Installationsprogramm für diese Version heruntergeladen.
+
+![Registerkarte „Updates“ des HoloLens-Emulators](images/emulator-updates-500px.png)
 
 
 ## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>Aufbau des HoloLens-Emulators (1. Generation)
@@ -163,7 +199,7 @@ Der Emulator simuliert die Eingaben für die Umgebung in Form des Gittermodells 
 
 Weitere Informationen finden Sie unter [simulierte Räume](#simulated-rooms).
 
-### <a name="account-tab"></a>Die Registerkarte „Konto“
+### <a name="account-tab"></a>Registerkarte „Account“ (Konto)
 
 Auf der Registerkarte „Account“ (Konto) können Sie den Emulator für die Anmeldung mit einem Microsoft-Konto konfigurieren. Dies ist beim Testen von APIs hilfreich, bei denen der Benutzer mit einem Konto angemeldet sein muss. Nachdem Sie das Kontrollkästchen auf dieser Seite aktiviert haben, werden Sie bei nachfolgenden Starts des Emulators zur Anmeldung aufgefordert, genau wie ein Benutzer beim ersten Start der HoloLens.
 
@@ -182,7 +218,7 @@ Im Emulator sehen Sie nur die von Ihnen gerenderten Hologramme. Den simulierten 
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Möglicherweise wird bei der Installation des Emulators ein Fehler angezeigt, dass Sie *Visual Studio 2015 Update 1 und die UWP-Tools Version 1.2* benötigen. Es gibt drei mögliche Ursachen für diesen Fehler:
+Möglicherweise wird bei der Installation des Emulators eine Fehlermeldung angezeigt, dass Sie *Visual Studio 2015 Update 1 und die UWP-Tools Version 1.2* benötigen. Es gibt drei mögliche Ursachen für diesen Fehler:
 * Sie verfügen nicht über eine ausreichend aktuelle Version von Visual Studio (Visual Studio 2019, Visual Studio 2017 oder Visual Studio 2015 Update 1 oder höher). Installieren Sie zur Behebung dieses Problems die neueste Version von Visual Studio.
 * Sie verfügen über eine neuere Version von Visual Studio, aber Sie haben nicht die UWP-Tools (universelle Windows-Plattform) installiert. Dies ist ein optionales Feature für Visual Studio.
 
@@ -191,7 +227,7 @@ Möglicherweise wird auch ein Fehler bei der Installation des Emulators auf eine
 * Stellen Sie außerdem sicher, dass das Hyper-V-Feature auf Ihrem System aktiviert ist.
 
 Wenn Ihre Installation erfolgreich abgeschlossen wurde, der HoloLens-Emulator jedoch nicht als Option für die Bereitstellung und das Debuggen zur Verfügung steht, überprüfen Sie die folgenden Punkte:
-* Ihre Visual Studio-Projektkonfiguration ist auf x86 (HoloLens 1. Generation) bzw. x86 oder x64 (HoloLens 2-Emulator) eingestellt.
+* Ihre Visual Studio-Projektkonfiguration ist auf x86 (HoloLens 1. Generation), x86 oder x64 (HoloLens 2-Emulator) eingestellt.
 * Wenn Sie Visual Studio 2019 verwenden, ist das Plattformtoolset in Ihrer Projektkonfiguration auf „v142“ festgelegt.
 
 Wenn Ihre Installation erfolgreich abgeschlossen wurde, Visual Studio jedoch beim Starten des HoloLens-Emulators einen Fehler anzeigt, versuchen Sie Folgendes:

@@ -1,37 +1,38 @@
 ---
-title: Kombinierte Interaktionen – Übersicht
-description: Übersicht über die kombinierten Interaktionen
+title: Instinktive Interaktionen
+description: Lernen Sie die Philosophie der einfachen, instinktiven Interaktionen kennen, die in der gesamten Mixed Reality-Plattform verwurzelt ist.
 author: shengkait
-ms.author: shengkait
+ms.author: shentan
 ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hololens, MMR, kombiniert
-ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: abd82947be08a2f6aecc4462abc34c4674abfb7a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507898"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437973"
 ---
 # <a name="introducing-instinctual-interactions"></a>Einführung in instinktive Interaktionen
 
-Die Philosophie der einfachen, instinktiven Interaktionen ist in der gesamten Mixed Reality-Plattform verwurzelt.  Wir haben drei Schritte unternommen, um sicherzustellen, dass Anwendungsdesigner und -entwickler ihren Kunden einfache und intuitive Interaktionen bereitstellen können. 
+Die Philosophie der einfachen, instinktiven Interaktionen ist in der gesamten Mixed Reality-Plattform (MR) verwurzelt. Wir haben drei Schritte unternommen, um sicherzustellen, dass Anwendungsdesigner und -entwickler ihren Kunden einfache und intuitive Interaktionen bereitstellen können. 
 
-Zunächst haben wir sichergestellt, dass sich unsere Sensoren und Eingabetechnologien (die Hand- und Eyetracking sowie natürliche Spracheingabe umfassen) zu nahtlos kombinierten Interaktionsmodellen verbinden.  Basierend auf unseren Studien ist das kombinierte Entwerfen und Entwickeln in einem multimodalen Framework – und nicht die Fokussierung auf einzelne Eingaben – der Schlüssel zur Realisierung instinktiver Erfahrungen.
+Zunächst haben wir sichergestellt, dass sich unsere Sensoren und Eingabetechnologien (die Hand- und Eyetracking sowie natürliche Spracheingabe umfassen) zu nahtlos kombinierten Interaktionsmodellen verbinden.  
+Basierend auf unseren Studien ist das kombinierte Entwerfen und Entwickeln in einem multimodalen Framework – und nicht die Fokussierung auf einzelne Eingaben – der Schlüssel zur Realisierung instinktiver Erfahrungen.
 
-Zweitens haben wir erkannt, dass viele Entwickler auf mehrere HoloLens-Geräte ausgerichtet sind, z. B. HoloLens 2 und HoloLens (1. Generation) oder HoloLens und VR.  Deshalb haben wir unsere Interaktionsmodelle so konzipiert, dass sie geräteübergreifend funktionieren, auch wenn die Eingabetechnologie von Gerät zu Gerät variiert.  So verwenden z. B. die ferne Interaktion bei einem Windows Immersive Headset mit einem 6DoF-Controller und die ferne Interaktion bei HoloLens 2 jeweils dieselben Angebote und Muster, wodurch es sich für die Entwicklung geräteübergreifender Anwendungen, die den Interaktionen der Endbenutzer ein natürliches Gefühl verleiht, einfach gestaltet. 
+Zweitens haben wir erkannt, dass viele Entwickler auf mehrere HoloLens-Geräte ausgerichtet sind, z. B. HoloLens 2 und HoloLens (1. Generation) oder HoloLens und VR.  
+Deshalb haben wir unsere Interaktionsmodelle so konzipiert, dass sie geräteübergreifend funktionieren, auch wenn die Eingabetechnologie von Gerät zu Gerät variiert.  
+So verwenden z. B. die ferne Interaktion bei einem Windows Immersive Headset mit einem 6DoF-Controller und die ferne Interaktion bei HoloLens 2 jeweils dieselben Angebote und Muster, was die geräteübergreifende Anwendungsentwicklung erleichtert und den Benutzerinteraktionen ein natürliches Gefühl verleiht. 
 
-Zwar haben wir erkannt, dass Mixed Reality (MR) Tausende von effektiven, ansprechenden und einzigartigen Interaktionen bietet, aber wir haben festgestellt, dass der bewusste Einsatz eines einzelnen umfassenden Interaktionsmodells in einer Anwendung der beste Weg ist, um sicherzustellen, dass Benutzer erfolgreich sind und ein großartiges Erlebnis haben. Zu diesem Zweck haben wir drei Punkte in diese Interaktionsanleitung einbezogen:
-* Diese Anleitung ist um die drei primären Interaktionsmodelle und die für jedes einzelne Modell erforderlichen Komponenten und Muster herum strukturiert.
-* Es wurden zusätzliche Anleitungen zu weiteren Vorteilen einbezogen, die unsere Plattform bietet.
-* Es wurden außerdem Anleitungen zur Auswahl des geeigneten Interaktionsmodells für Ihr Entwicklungsszenario einbezogen.
+Wir haben zwar erkannt, dass Mixed Reality (MR) Tausende von effektiven, ansprechenden und einzigartigen Interaktionen bietet, aber wir haben festgestellt, dass der bewusste Einsatz eines einzelnen umfassenden Interaktionsmodells in einer Anwendung der beste Weg ist, um sicherzustellen, dass Benutzer erfolgreich sind und ein großartiges Erlebnis haben. Zu diesem Zweck haben wir drei Punkte in diese Interaktionsanleitung einbezogen:
+* Diese Anleitung um die drei primären Interaktionsmodelle und die für jedes einzelne Modell erforderlichen Komponenten und Muster.
+* Zusätzliche Anleitungen zu weiteren Vorteilen, die unsere Plattform bietet.
+* Allgemeine Anleitungen zur Auswahl des geeigneten Interaktionsmodells für Ihr Entwicklungsszenario.
 
 ## <a name="multimodal-interaction-models"></a>Kombinierte Interaktionsmodelle
 
-Basierend auf unseren bisherigen Studien sowie dem Feedback von Kunden haben wir festgestellt, dass drei primäre Interaktionsmodelle für die meisten Mixed Reality-Umgebungen geeignet sind.
-
-In vielerlei Hinsicht ist das Interaktionsmodell das mentale Modell des Benutzers zur Durchführung seiner Abläufe. Jedes dieser Interaktionsmodelle ist für verschiedene Kundenanforderungen optimiert. Jede ist praktisch, leistungsstark und kann eigenständig verwendet werden. 
+Basierend auf unseren bisherigen Studien sowie dem Feedback von Kunden haben wir festgestellt, dass drei primäre Interaktionsmodelle für die meisten Mixed Reality-Umgebungen geeignet sind. In vielerlei Hinsicht ist das Interaktionsmodell das mentale Modell des Benutzers zur Durchführung eines Workflows. Jedes dieser Interaktionsmodelle ist für eine Reihe von Kundenanforderungen optimiert und ist bei richtiger Anwendung benutzerfreundlich, leistungsstark und praktikabel. 
 
 Das folgende Diagramm stellt eine vereinfachte Übersicht dar. Ausführliche Informationen zur Verwendung der einzelnen Interaktionsmodelle sind auf den folgenden Seiten mit Bildern und Codebeispielen verknüpft. 
 
@@ -62,7 +63,7 @@ Das folgende Diagramm stellt eine vereinfachte Übersicht dar. Ausführliche Inf
         <td>HoloLens 2<br>HoloLens (1. Generation)<br>Immersive Headsets</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Anvisieren mit dem Kopf und Ausführen</a></td>
+        <td><a href="gaze-and-commit.md">Anvisieren und Ausführen</a></td>
         <td>Click-Through-Erfahrungen, z. B. 3D-Präsentationen, Demos.</td>
         <td>Erfordert Training für HMDs, aber nicht für mobile Geräte. Ideal für verfügbare Controller. Ideal für HoloLens (1. Generation).</td>
         <td>HoloLens 2<br>HoloLens (1. Generation)<br>Immersive Headsets<br>Mobile AR</td>
@@ -70,32 +71,29 @@ Das folgende Diagramm stellt eine vereinfachte Übersicht dar. Ausführliche Inf
 </table>
 <br>
 
-Die beste Möglichkeit, um sicherzustellen, dass es keine Lücken oder Unterbrechungen bei der Interaktion für Ihr Erlebnis gibt, besteht darin, der Anleitung für ein einzelnes Modell von Anfang bis Ende zu folgen. 
-
-Um den Entwurf und die Entwicklung zu beschleunigen, haben wir ausführliche Informationen und Links zu Bildern und Codebeispielen in unsere Beschreibung der einzelnen Modelle aufgenommen.
+Die beste Möglichkeit, um sicherzustellen, dass es keine Lücken bei der Interaktion für Ihr Erlebnis gibt, besteht darin, der Anleitung für ein einzelnes Modell von Anfang bis Ende zu folgen.
 
 Die folgenden Abschnitte führen durch die Schritte zur Auswahl und Implementierung eines dieser Interaktionsmodelle.  
  
 ### <a name="by-the-end-of-this-page-you-will-understand-our-guidance-on"></a>Am Ende dieser Seite werden Sie unsere Anleitung zu Folgendem verstehen:
  
 * Auswählen eines Interaktionsmodells für Ihren Kunden
-* Verwenden der Anleitung zum Interaktionsmodell
+* Implementieren des Interaktionsmodells
 * Wechseln zwischen Interaktionsmodellen
 * Entwerfen der nächsten Schritte
 
 
 ## <a name="choose-an-interaction-model-for-your-customer"></a>Auswählen eines Interaktionsmodells für Ihren Kunden
 
-
 In der Regel haben Entwickler und Ersteller die Arten von Interaktionen, die Ihre Kunden ausführen können, bereits durchdacht. Um einen kundenorientierten Ansatz für den Entwurf zu fördern, empfehlen wir Ihnen die folgende Anleitung zur Auswahl des für Ihren Kunden optimierten Interaktionsmodells.
 
 ### <a name="why-follow-this-guidance"></a>Gründe zum Befolgen dieser Anleitung
 
 * Unsere Interaktionsmodelle werden auf objektive und subjektive Kriterien wie physische und kognitive Leistung, Intuitivität und Erlernbarkeit getestet. 
-* Da die Interaktion unterschiedlich verläuft, können sich auch die visuellen und akustischen Angebote sowie das Objektverhalten zwischen Interaktionsmodellen unterscheiden.  
-* Die Kombination von Komponenten verschiedener Interaktionsmodelle birgt das Risiko konkurrierender Angebote, z. B. simultane Handstrahlen und ein Cursor zum Anvisieren mit dem Kopf, die den Benutzer überfordern und verwirren können.
+* Da die Interaktion unterschiedlich verläuft, können sich auch die visuellen/akustischen Angebote sowie das Objektverhalten zwischen Interaktionsmodellen unterscheiden.  
+* Die Kombination von Komponenten verschiedener Interaktionsmodelle birgt das Risiko konkurrierender Angebote, z. B. simultane Handstrahlen und ein Cursor zum Anvisieren mit dem Kopf. Dies kann Benutzer überfordern und verwirren.
 
-Hier folgen einige Beispiele dazu, wie Angebote und Verhaltensweisen für die einzelnen Interaktionsmodelle optimiert werden.  Neue Benutzer haben häufig ähnliche Fragen, z. B. „Woher weiß ich, dass das System funktioniert?“, „Woher weiß ich, über welche Möglichkeiten ich verfüge?“ und „Woher weiß ich, ob es verstanden hat, was ich gerade getan habe?“.
+Hier folgen einige Beispiele dazu, wie Angebote und Verhaltensweisen für die einzelnen Interaktionsmodelle optimiert werden. Neue Benutzer haben häufig ähnliche Fragen, z. B. _„Woher weiß ich, dass das System funktioniert?“_ , _„Woher weiß ich, über welche Möglichkeiten ich verfüge?“_ und _„Woher weiß ich, ob es verstanden hat, was ich gerade getan habe?“_ .
 
 <br>
 
@@ -114,14 +112,14 @@ Hier folgen einige Beispiele dazu, wie Angebote und Verhaltensweisen für die ei
     </tr>
     <tr>
         <td><a href="hands-and-tools.md">Hände und Motion-Controller</a></td>
-        <td>Ich sehe ein Handgittermodell, ich sehe ein Fingerspitzenangebot oder Hand-/Controllerstrahlen.</td>
+        <td>Ich sehe ein Handgittermodell, ein Fingerspitzenangebot oder Hand-/Controllerstrahlen.</td>
         <td>Es werden greifbare Ziehpunkte oder ein Begrenzungsrahmen angezeigt, wenn die Hand sich in der Nähe des Objekts befindet.</td>
         <td>Ich höre Töne und sehe Animationen beim Greifen und Loslassen.</td>
     </tr>
     <tr>
         <td><a href="gaze-and-commit.md">Anvisieren mit dem Kopf und Ausführen</a></td>
         <td>Ich sehe einen Cursor in der Mitte meines Sichtfelds.</td>
-        <td>Der Cursor zum Anvisieren mit dem Kopf wechselt den Zustand, wenn er sich über bestimmten Objekten befindet.</td>
+        <td>Der Cursor wechselt den Zustand, wenn er sich über bestimmten Objekten befindet.</td>
         <td>Ich sehe/höre beim Agieren visuelle und akustische Bestätigungen.</td>
     </tr>   
     <tr>
@@ -138,10 +136,10 @@ Hier folgen einige Beispiele dazu, wie Angebote und Verhaltensweisen für die ei
     </tr>
 </table>
 
-### <a name="below-are-the-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Nachfolgend sind die Fragen aufgeführt, die Teams (gemäß unserer Erfahrung) bei der Auswahl eines Interaktionsmodells geholfen haben:
+### <a name="below-are-questions-that-weve-found-help-teams-select-an-interaction-model"></a>Nachfolgend sind Fragen aufgeführt, die Teams (gemäß unserer Erfahrung) bei der Auswahl eines Interaktionsmodells geholfen haben:
  
 1.  Q:  Möchten meine Benutzer Hologramme berühren und präzise holografische Eingriffe durchführen?<br><br>
-A:  In diesem Fall sollten Sie das Interaktionsmodell für Hände und Motion-Controller für die Präzisionszielbestimmung und für Eingriffe mit Händen oder Motion-Controllern ausprobieren.
+A:  In diesem Fall sollten Sie das Interaktionsmodell für Hände und Motion-Controller für die Präzisionszielbestimmung und für Eingriffe ausprobieren.
  
 2.  Q:  Müssen meine Benutzer für reale Aufgaben die Hände frei haben?<br><br>
 A:  In diesem Fall sollten Sie sich das Interaktionsmodell „Freihändig“ ansehen, das durch blick- und sprachbasierte Interaktionen eine großartige freihändige Umgebung bietet.
@@ -165,27 +163,30 @@ A:  Da „Anvisieren mit dem Kopf und Ausführen“ das Interaktionsmodell für 
 A:  Für diese Benutzer ist jedes der Interaktionsmodelle geeignet.  
 
 > [!NOTE]
-> Weitere Anleitungen zum App-Design sind [bald verfügbar](index.md#news-and-notes).
+> Weitere Anleitungen zum App-Design sind [bald verfügbar](news.md).
 
 
 ## <a name="transitioning-interaction-models"></a>Wechseln zwischen Interaktionsmodellen
-Es kann auch vorkommen, dass Ihre Anwendungsfälle die Verwendung mehrerer Interaktionsmodelle erfordern. Beim „Erstellungsablauf“ Ihrer Anwendung wird z. B. das Interaktionsmodell „Hände und Motion-Controller“ verwendet, aber Sie möchten einen Freihandmodus für Außendiensttechniker verwenden.  
-
-Wenn Ihre Umgebung mehrere Interaktionsmodelle erfordert, sollten Sie daran denken, dass viele Endbenutzer Schwierigkeiten beim Übergang von einem Modell zum anderen haben können – insbesondere Benutzer, die noch nicht mit Mixed Reality vertraut sind.
+Es kann auch vorkommen, dass Ihre Anwendungsfälle die Verwendung mehrerer Interaktionsmodelle erfordern. Beim „Erstellungsablauf“ Ihrer Anwendung wird z. B. das Interaktionsmodell _„Hände und Motion-Controller“_ verwendet, aber Sie möchten einen Freihandmodus für Außendiensttechniker verwenden.
+Wenn Ihre Umgebung mehrere Interaktionsmodelle erfordert, sollten Sie daran denken, dass viele Benutzer Schwierigkeiten beim Übergang von einem Modell zum anderen haben können – insbesondere Benutzer, die noch nicht mit Mixed Reality vertraut sind.
 
 > [!Note]
 > Wir arbeiten ständig an weiteren Anleitungen, die Entwicklern und Designern zur Verfügung stehen werden und sie über das Wie, Wann und Warum für den Einsatz mehrerer MR-Interaktionsmodelle informieren sollen.
  
 
 ## <a name="see-also"></a>Weitere Informationen
-* [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
-* [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
-* [Direkte Manipulation mit den Händen](direct-manipulation.md)
-* [Zeigen und Ausführen mit den Händen](point-and-commit.md)
-* [Gesten](gestures.md)
-* [Sprachbefehle](voice-design.md)
-* [Motion-Controller](motion-controllers.md)
-* [Raumklangentwurf](spatial-sound-design.md)
-* [Gestaltung von räumlicher Abbildung](spatial-mapping-design.md)
 * [Komfort](comfort.md)
+* [Augenbasierte Interaktion](eye-gaze-interaction.md)
+* [Blickverfolgung auf HoloLens 2](eye-tracking.md)
+* [Anvisieren und Ausführen](gaze-and-commit.md)
+* [Anvisieren und Verweilen](gaze-and-dwell.md)
+* [Hände – Direkte Manipulation](direct-manipulation.md)
+* [Hände – Gesten](gaze-and-commit.md#composite-gestures)
+* [Hände – Zeigen und Ausführen](point-and-commit.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
+* [Motion-Controller](motion-controllers.md)
+* [Räumliche Abbildung](spatial-mapping.md)
+* [Raumklangentwurf](spatial-sound-design.md)
+* [Spracheingabe](voice-input.md)
+
 
