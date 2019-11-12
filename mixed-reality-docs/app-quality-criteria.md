@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: App-Qualitätskriterien, gemischte Realität, Mixed Reality-App
-ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d167e141b536f9247d22e40afefa718ecc399f5a
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437048"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926589"
 ---
 # <a name="app-quality-criteria"></a>App-Qualitätskriterien
 
@@ -124,7 +124,7 @@ Beim Ausführen des Geräts und Anzeigen der Anzeige:
 * Navigieren Sie in den holograms und in der Umgebung, und suchen Sie nach Verhaltensweisen wie z. b. Schwimmen und Sprung Diese Art von Bewegung wird wahrscheinlich dadurch verursacht, dass das Gerät die Umgebung nicht nachverfolgt, oder die Entfernung zum räumlichen Anker.
 * Wenn sich große oder mehrere holograms im Frame befinden, beobachten Sie das – Hologramm-Verhalten in unterschiedlichen Tiefen, während Sie die Kopfzeile von der Seite zu Seite bewegen, wenn die Schattierung auftritt, wird dies wahrscheinlich durch die Stabilisierungs Ebene verursacht.
 
-### <a name="recomendations"></a>Empfehlungen
+### <a name="recommendations"></a>Empfehlungen
 
 * Fügen Sie am Anfang der Entwicklungsarbeit einen Frameraten-Counter hinzu.
 * Verwenden Sie die Stabilisierungs Ebene.
@@ -188,7 +188,7 @@ Falsche Abweichungen von holograms mit physischen Objekten (wenn Sie in Beziehun
 * Die räumliche Zuordnung eignet sich zum Platzieren von Objekten auf Oberflächen, wenn die Genauigkeit nicht erforderlich ist.
 * Verwenden Sie zum Festlegen der optimalen Genauigkeit Marker oder Poster, um die holograms und einen Xbox-Controller (oder einen manuellen Ausrichtungs Mechanismus) für die endgültige Kalibrierung festzulegen.
 * Es empfiehlt sich, zusätzliche große Hologramme in logische Teile zu zerlegen und die einzelnen Teile an der Oberfläche auszurichten.
-* Nicht ordnungsgemäß festgelegten interpupilary Distance (IPD) können auch die Ausrichtung von holograms beeinflussen. Konfigurieren Sie hololens immer für die IPD des Benutzers.
+* Nicht ordnungsgemäß festgelegten interpupillary Distance (IPD) können auch die Ausrichtung von holograms beeinflussen. Konfigurieren Sie hololens immer für die IPD des Benutzers.
 
 ### <a name="resources"></a>Ressourcen
 
@@ -523,7 +523,7 @@ Die Übersichtlichkeit der Eingabe Interaktion ist wichtig für die Benutzerfreu
 ### <a name="how-to-measure"></a>So messen Sie
 
 * Die APP verwendet konsistente [Standardeingabe Methoden.](interaction-fundamentals.md)
-* Wenn die APP über eine Customer-Eingabe verfügt, wird Sie eindeutig übermittelt:
+* Wenn die APP über benutzerdefinierte Eingaben verfügt, wird Sie eindeutig übermittelt:
 * Erstmaligen Testlauf
 * Einführungs Bildschirme
 * QuickInfos

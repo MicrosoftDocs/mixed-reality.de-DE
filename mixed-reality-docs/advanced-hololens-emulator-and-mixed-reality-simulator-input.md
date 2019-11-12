@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Hololens, Emulator, Simulation, gemischte Windows-Realität
-ms.openlocfilehash: 01277e4b00dafaecdfd4e5205feccbf055e0caf5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c5601ae2caf235cb22248ce7c6bf7e29225ade2c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437065"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926599"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Erweiterte hololens-Emulator-und gemischte Reality-simulatoreingaben
 
@@ -34,7 +34,7 @@ Gesten-und Bewegungs Controller Eingaben werden genau der Art der physischen Ger
 * **Aktion**: Dadurch wird die Aktion simuliert, mit der der Vorder-Finger zum Ziehpunkt gedrückt oder die Aktions Schaltfläche auf einem Controller abgerufen wird. Beispielsweise kann die Aktions Eingabe verwendet werden, um die Luft tippen Bewegung zu simulieren, einen Bildlauf durch den Inhalt durchführen und die Tastenkombination zu drücken.
 * **[Bloom](system-gesture.md#bloom)/Systemanbieter Geste oder Home**: die hololens-Blüte/System Bewegung oder die Start Schaltfläche eines Controllers wird verwendet, um zur Shell zurückzukehren und System Aktionen auszuführen.
 
-Hände haben eine umfassende reprressentiments in hololens 2.  Neben der Nachverfolgung/nicht Nachverfolgung und der Verwendung für den Einsatz von Gesten verfügen die Hände nun über ein geclustertes Skelett Modell, das für den Entwickler verfügbar ist.  Dadurch werden jeweils 26 nach verfolgte Punkte eingeführt.  
+Hände haben eine umfangreiche Darstellung in hololens 2.  Neben der Nachverfolgung/nicht Nachverfolgung und der Verwendung für den Einsatz von Gesten verfügen die Hände nun über ein geclustertes Skelett Modell, das für den Entwickler verfügbar ist.  Dadurch werden jeweils 26 nach verfolgte Punkte eingeführt.  
 * **Joint**: eine von 20 nach verfolgten Positionen für eine bestimmte verfolgte Hand. Dabei muss es sich um einen Punkt mit einem zugeordneten 3D--Bereich handelt.
 * **Pose**: eine vollständige Auflistung aller Gelenke in einer nach verfolgten Hand. Zurzeit ist dies eine Auflistung von 26 Gelenken. 
 
@@ -76,11 +76,11 @@ In der folgenden Tabelle ist dargestellt, wie die einzelnen Eingabetypen dem Tas
 |  Paletten |  T oder F3 |  |  X-Taste | 
 
 
-Hinweis: die Controller Schaltflächen können mithilfe der handzugriffsmodifizierern auf eine Hand/einen Controller oder die andere ausgerichtet werden.
+Hinweis: die Controller Schaltflächen können mit den Modifizierern für die Hand Ausrichtung auf eine Hand/einen Controller oder die andere als Ziel verwendet werden.
 
 ## <a name="targeting"></a>Zielbestimmung 
 
-Einige der oben genannten Eingabe Konzepte sind eigenständig.  Action, Bloom/System, Reset und Tracking sind umfassende Konzepte, die nicht benötigt werden und von denen keine weiteren modifiziererer für die Zielgruppe betroffen sind.  Die verbleibenden Konzepte können jedoch auf eines von mehreren Zielen angewendet werden. Wir haben Möglichkeiten zum Angeben des beabsichtigten Ziels eingeführt, auf das der Befehl angewendet werden soll.  In allen Fällen ist es möglich, über die Benutzeroberfläche oder über Tastatureingaben anzugeben, die auf targtett festgelegt sind.  In einigen Fällen ist es auch möglich, mit dem Xbox-Controller direkt anzugeben. 
+Einige der oben genannten Eingabe Konzepte sind eigenständig.  Action, Bloom/System, Reset und Tracking sind umfassende Konzepte, die nicht benötigt werden und von denen keine weiteren modifiziererer für die Zielgruppe betroffen sind.  Die verbleibenden Konzepte können jedoch auf eines von mehreren Zielen angewendet werden. Wir haben Möglichkeiten zum Angeben des beabsichtigten Ziels eingeführt, auf das der Befehl angewendet werden soll.  In allen Fällen ist es möglich, über die Benutzeroberfläche oder über Tastatureingaben anzugeben, welches Objekt als Ziel festgelegt wird.  In einigen Fällen ist es auch möglich, mit dem Xbox-Controller direkt anzugeben. 
 
 In der folgenden Tabelle werden die Optionen für die Zielplattform und die Möglichkeit zum Aktivieren der einzelnen Optionen beschrieben.
 

@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Gemischte Realität, Windows Mixed Reality, hololens, immersive, VR, Mr, Einstieg, Hologram, Academy, Tutorial
-ms.openlocfilehash: 5e9a90af6b80333addbde2a2e11086372483b7c3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434773"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926639"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es wurde [eine neue Reihe von Tutorials](mrlearning-base.md) für hololens 2 gepostet.
@@ -156,7 +156,7 @@ Nachdem wir nun den Cube erstellt haben, ist es an der Zeit, eine schnell Überp
 ### <a name="initial-setup"></a>Anfängliche Einrichtung
 
 1. Öffnen Sie auf dem Entwicklungs-PC in Unity das Fenster **Datei > Fenster Build-Einstellungen** .
-2. Ändern Sie **Platform** in **universelle Windows-Plattform** , und klicken Sie auf **PLATFROM wechseln** .
+2. Ändern Sie **Platform** in **universelle Windows-Plattform** und klicken Sie auf **Plattform wechseln** .
 
 ### <a name="for-hololens-use-unity-remoting"></a>Verwenden Sie für hololens Unity-Remoting
 

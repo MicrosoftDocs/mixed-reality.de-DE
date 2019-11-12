@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Gemischte Realität, Gesten, Interaktion, Entwurf
-ms.openlocfilehash: b46f642babb18387da2e76d5bdbb7631577c85de
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439821"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926726"
 ---
 # <a name="system-gesture"></a>System Geste
 
@@ -62,7 +62,7 @@ Um das Startmenü in hololens (1. Generation) aufzurufen, haben wir "Bloom" entw
     :::column-end:::
     :::column:::
         ![Blüte geöffnet](images/bloom-open.png)<br>
-        **Schritt 2: mit der Hand**<br>
+        **Schritt 2: überschreiten der handbreiten Verteilung**<br>
     :::column-end:::
 :::row-end:::
 

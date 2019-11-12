@@ -6,29 +6,29 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: volumetribild, volumenrendering, Leistung, gemischte Realität
-ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548631"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926676"
 ---
 # <a name="volume-rendering"></a>Volumerendering
 
 Informationen zu medizinischen MRT-oder Engineering-Volumes finden Sie unter [Volume Rendering auf Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering). Diese "Volumetric Images" enthalten umfangreiche Informationen mit Deckkraft und farbiger Farbe im gesamten Volume, das nicht einfach als Oberflächen, wie z. b. [polygonale Netze](https://en.wikipedia.org/wiki/Polygon_mesh), ausgedrückt werden kann.
 
 Wichtige Lösungen zum Verbessern der Leistung
-1. SCHLECHTEM Naive Vorgehensweise: Gesamtes Volume anzeigen, wird in der Regel zu langsam ausgeführt
-2. GLÜCK Ausschnittsebene: Nur ein einzelnes Slice des Volumes anzeigen
-3. GLÜCK Das untergeordnete Volume wird abgeschnitten: Nur wenige Ebenen des Volumes anzeigen
-4. GLÜCK Verringern der Auflösung des volumerendering (siehe ' Mixed Resolution Scene Rendering ')
+1. Schlecht: naive Vorgehensweise: gesamtes Volume anzeigen, wird in der Regel zu langsam ausgeführt.
+2. Gut: ausschnittsebene: nur ein einzelnes Slice des Volumes anzeigen
+3. Gut: das untergeordnete Volume wird abgeschnitten: Es werden nur wenige Ebenen des Volumes angezeigt.
+4. Gut: Verringern der Auflösung des volumerendering (siehe ' Mixed Resolution Scene Rendering ')
 
 Es gibt nur eine bestimmte Menge von Informationen, die von der Anwendung auf den Bildschirm in einem bestimmten Frame übertragen werden können. Dies ist die gesamte Arbeitsspeicher Bandbreite. Außerdem erfordert jede Verarbeitung (oder ' Schattierung '), die zum Transformieren der Daten für die Präsentation erforderlich ist, Zeit. Die wichtigsten Überlegungen zum Rendern von Volumes lauten wie folgt:
 * Bildschirmbreite * Bildschirmhöhe * Bildschirm-count * Volume-Layer-on-this-Pixel = Total-Volume-Samples-per Frame
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (vollständiges res-Volume: zu viele Beispiele)
-* 1028 * 720 * 2 * 1 = 1480320 (0,3% vollständig) (dünner Slice: 1 Stichprobe pro Pixel, reibungslos läuft)
+* 1028 * 720 * 2 * 1 = 1480320 (0,3% vollständig) (dünner Slice: 1 Stichprobe pro Pixel, reibungsloses ausführen)
 * 1028 * 720 * 2 * 10 = 14803200 (3,9% vollständig) (unter volumeslice: 10 Stichproben pro Pixel, läuft Recht reibungslos, sieht 3D aus)
-* 200 * 200 * 2 * 256 = 20480000 (5% vollständig) (niedrigeres Volume: weniger Pixel, vollständiges Volume, sieht 3D-, aber eine Bit-blurY aus)
+* 200 * 200 * 2 * 256 = 20480000 (5% vollständig) (niedrigeres Volume: weniger Pixel, vollständiges Volume, sieht 3D-, aber etwas verschwommen)
 
 ## <a name="representing-3d-textures"></a>Darstellen von 3D-Texturen
 

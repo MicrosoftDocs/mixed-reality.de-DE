@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, Logo, Symbol, Modellierung, Start Programm, 3D-Start Programm, Kachel, Live Cube, Deep-Link, secondarytile, Sekundär Kachel, UWP
-ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438014"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926770"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementieren von 3D-App-launchern (UWP-Apps)
 
@@ -164,7 +164,7 @@ Zum Hinzufügen eines zusätzlichen Puffer Bereichs um das Objekt kann ein Begre
 > [!NOTE]
 > Diese Funktion wird ab dem Windows-Update "RS4" unterstützt. Stellen Sie sicher, dass Ihre Anwendung auf eine Version der Windows SDK, die größer als oder gleich 10.0.17125 ist, wenn Sie beabsichtigen, dieses Feature zu verwenden.
 
-Sie können das Aktivierungs Verhalten für eine 3D-secondarytile definieren, um zu steuern, wie Sie reagiert, wenn ein Benutzer Sie auswählt. Dies kann verwendet werden, um 3D-Objekte in die gemischte Realität zu platzieren, die absichtlich oder dekorativ sind. Die folgenden Aktivierungs Verhaltenstypen werden unterstützt:
+Sie können das Aktivierungs Verhalten für eine 3D-secondarytile definieren, um zu steuern, wie Sie reagiert, wenn ein Benutzer Sie auswählt. Dies kann verwendet werden, um 3D-Objekte in die gemischte Realität zu platzieren, die rein informativ oder dekorativ sind. Die folgenden Aktivierungs Verhaltenstypen werden unterstützt:
 1. Standard: Wenn ein Benutzer die 3D-secondarytile auswählt, wird die App aktiviert.
 2. Keine: Wenn die Benutzer die 3D-secondarytile auswählen, geschieht nichts, und die APP ist nicht aktiviert.
 

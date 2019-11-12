@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräte Portal, hololens
-ms.openlocfilehash: cc83a4e987d77be53222b8e9537eeec359446465
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438217"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926747"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräte Portals
 
@@ -45,7 +45,7 @@ Diese Dokumentation dient speziell zum Windows-Geräte Portal für hololens. Inf
 1. [Verbinden Sie Ihre hololens mit Wi-Fi](connecting-to-wi-fi-on-hololens.md).
 2. Suchen Sie die IP-Adresse Ihres Geräts.
    * Suchen Sie die IP-Adresse auf dem Gerät unter **Einstellungen > Netzwerk & Internet > Wi-Fi-> Erweiterte Optionen**.
-3. Wechseln Sie in einem Webbrowser auf Ihrem PC zu "https://< YOUR_HOLOLENS_IP_ADDRESS" >
+3. Wechseln Sie in einem Webbrowser auf Ihrem PC zu https://< YOUR_HOLOLENS_IP_ADDRESS >
    * Im Browser wird die folgende Meldung angezeigt: "Es besteht ein Problem mit dem Sicherheitszertifikat dieser Website". Der Grund dafür ist, dass das für das Geräteportal ausgestellte Zertifikat ein Testzertifikat ist. Sie können diesen Zertifikatfehler vorerst ignorieren und fortfahren.
 
 ## <a name="connecting-over-usb"></a>Herstellen einer Verbindung über USB
@@ -160,7 +160,7 @@ Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der
 > [!NOTE]
 > Es gibt [Einschränkungen für die gleichzeitige MRC](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations)-Authentifizierung:
 > * Wenn eine APP versucht, auf die Foto-/Videokamera zuzugreifen, während das Windows-Geräte Portal ein Video zeichnet, wird die Videoaufzeichnung angehalten.
->   * Hololens 2 hält das Aufzeichnen von Videos nicht an, wenn die APP die Foto-/Videokamera im sharedreadonly-Modus eingibt.
+>   * Hololens 2 hält das Aufzeichnen von Videos nicht an, wenn die APP mit dem sharedreadonly-Modus auf die Foto-/Videokamera zugreift.
 > * Wenn eine APP aktiv die Foto-/Videokamera verwendet, kann das Windows-Geräte Portal ein Foto aufnehmen oder ein Video aufzeichnen.
 > * Live Streaming:
 >   * Hololens (1st Gen) verhindert, dass eine APP auf die Foto-/Videokamera zugreift, während Live Streaming vom Windows-Geräte Portal aus durchführen.

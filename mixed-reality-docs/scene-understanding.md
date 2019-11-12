@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Szenen Verständnis, räumliche Zuordnung, Windows Mixed Reality, Unity
-ms.openlocfilehash: 7ee0cf3af8012a053733896a8bf92192306b7f8b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437496"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926919"
 ---
 # <a name="scene-understanding"></a>Szenen Verständnis
 
@@ -95,7 +95,7 @@ Das Erstellen von exakten NAV-Meshes erfordert zurzeit noch die Nachbearbeitung.
 
 ### <a name="visualization"></a>Visualisierung
 
-Obwohl die Visualisierung für die [räumliche Zuordnung](spatial-mapping.md#visualization) für Echtzeitfeedback der Umgebung verwendet werden kann, gibt es viele Szenarios, in denen die Einfachheit von planaren und wasserdichten Objekten mehr Leistung oder visuelle Qualität bietet. Schattenprojektions-und Erdungs Techniken, die mithilfe räumlicher Zuordnung beschrieben werden, sind möglicherweise ansprechender, wenn Sie auf den planaren Oberflächen projiziert werden, die von Quads oder dem planaren wasserdichten Mesh Dies gilt insbesondere für Umgebungen/Szenarios, in denen die vorab Überprüfung aufgrund der Tatsache, dass die Szene nicht durchgeführt wird, nicht optimal ist
+Obwohl die Visualisierung für die [räumliche Zuordnung](spatial-mapping.md#visualization) für Echtzeitfeedback der Umgebung verwendet werden kann, gibt es viele Szenarios, in denen die Einfachheit von planaren und wasserdichten Objekten mehr Leistung oder visuelle Qualität bietet. Schattenprojektions-und Erdungs Techniken, die mithilfe räumlicher Zuordnung beschrieben werden, sind möglicherweise ansprechender, wenn Sie auf den planaren Oberflächen projiziert werden, die von Quads oder dem planaren wasserdichten Mesh Dies gilt insbesondere für Umgebungen/Szenarios, in denen eine gründliche vorab Überprüfung aufgrund der Tatsache, dass die Szene abgeleitet wird, nicht optimal ist, und durch vollständige Umgebungen und planare Annahmen werden Artefakte minimiert.
 
 Darüber hinaus wird die Gesamtanzahl der von der räumlichen Zuordnung zurückgegebenen Oberflächen durch den internen räumlichen Cache beschränkt, während die Version des räumlichen zuordnungsnetzes der räumlichen Zuordnung auf räumliche Zuordnungsdaten zugreifen kann, die nicht zwischengespeichert werden. Aus diesem Grund ist das Verständnis der Szene besser für die Erfassung von Netz Darstellungen für größere Bereiche (z. b. mehr als einen einzelnen Raum) für die Visualisierung oder weitere Gitter Verarbeitung geeignet. Das mit enableworldmesh zurückgegebene World Mesh verfügt über eine konsistente Detailebene, die bei gerenderter Darstellung als Wireframe eine ansprechendere Visualisierung ergeben kann.
 

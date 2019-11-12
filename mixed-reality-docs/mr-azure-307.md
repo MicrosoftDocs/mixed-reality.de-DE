@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Machine Learning, ml, Machine Learning Studio, hololens, immersive, VR
-ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e302e287049cd746a436904c2af2bcc2b0835796
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437924"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926621"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
@@ -731,7 +731,7 @@ So erstellen Sie diese Klasse:
 
             Debug.LogFormat("Score request built");
 
-            // Serialise the request
+            // Serialize the request
             string json = JsonConvert.SerializeObject(ro);
 
             using (UnityWebRequest www = UnityWebRequest.Post(serviceEndpoint, "POST"))
@@ -849,7 +849,7 @@ So stellen Sie die Anwendung bereit:
 
 1.  Navigieren Sie zu Ihrem neuen Unity-Build ( **App** -Ordner), und öffnen Sie die Projektmappendatei mit **Visual Studio**.
 
-2.  Wenn Visual Studio geöffnet ist, müssen Sie die nuget-Pakete wiederherstellen, indem Sie mit der rechten Maustaste auf Projektmappen-Explorer die MachineLearningLab_Build-Projekt Mappe Klicken (auf der rechten Seite von Visual Studio) und dann auf nuget-Pakete wiederherstellen klicken:
+2.  Wenn Sie Visual Studio geöffnet haben, müssen Sie die nuget-Pakete wiederherstellen, indem Sie mit der rechten Maustaste auf die MachineLearningLab_Build Projekt Mappe klicken, die Projektmappen-Explorer (rechts neben Visual Studio) und dann auf nuget-Pakete wiederherstellen klicken:
 
     ![Hinzufügen von nuget-Paketen](images/AzureLabs-Lab7-57.png)
 

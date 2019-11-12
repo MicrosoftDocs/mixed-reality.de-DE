@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9f57cb9874aade2d6b19d0c061fd83eb04b9ef11
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438412"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914383"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen des Azure Spatial Anchor-Feedbacks
 
@@ -45,28 +45,11 @@ In dieser Lektion erfahren Sie, wie Sie Benutzern Feedback zur Anker Ermittlung,
 
 ![module2chapter3step4im](images/module2chapter3step4im.PNG)
 
-5. Wählen Sie im Projekt Panel "Assets" aus, klicken Sie mit der rechten Maustaste, und wählen Sie dann "in Explorer anzeigen" aus.
-   
-
-![module2chapter3step4im](images/module2chapter3step5im.PNG)
-
-Klicken Sie [hier](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) , um die Dateien herunterzuladen, die in den nächsten Schritten benötigt werden.
-
-6. Nachdem der Explorer geöffnet wurde, wählen Sie den Ordner "Assets" und dann den Ordner "asamodulesassets" aus, und kopieren Sie das Anchor-Feedback Skript sowie die Skriptdateien für das Anker Modul in den Ordner. 
-
-![module2chapter3step5im](images/module2chapter3step6im.PNG)
-
-> Hinweis: Wenn Sie eine Popup Meldung erhalten, in der Sie gefragt werden, ob Sie das alte überschreiben oder das alte behalten möchten, wählen Sie überschreiben aus.
-
-7. Kehren Sie zum Ordner Assets zurück. Wechseln Sie dann in den Ordner "azurespatialanchorsplugin", gefolgt vom Ordner "examples" und schließlich dem Ordner "Scripts". Kopieren Sie dann den Demo-Wrapper für räumliche Azure-Anker in diesen Ordner. 
-
-![module2chapter3step8im](images/module2chapter3step7im.PNG)
-
-8. Nachdem die Dateien hochgeladen wurden, stellen Sie sicher, dass der Text "Feedbackpanel" in der ASA_feedback-Hierarchie ausgewählt ist, klicken Sie auf "Komponente hinzufügen", und fügen Sie das Anchor-Feedback Skript hinzu, indem Sie danach suchen und es auswählen. 
+5. Stellen Sie sicher, dass der Text "Feedbackpanel" in der ASA_feedback Hierarchie ausgewählt ist, klicken Sie auf "Komponente hinzufügen", und fügen Sie das Anchor-Feedback Skript hinzu, indem Sie es suchen und es auswählen 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-9. Ziehen Sie das Textobjekt "Feedbackpanel" aus der ASA_Feedback-Hierarchie in den leeren Slot unterhalb des Skripts, wie in der folgenden Abbildung dargestellt. 
+6. Ziehen Sie das Textobjekt "Feedbackpanel" aus der ASA_Feedback Hierarchie in den leeren Slot unterhalb des Skripts, wie in der folgenden Abbildung dargestellt. 
 
 ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 

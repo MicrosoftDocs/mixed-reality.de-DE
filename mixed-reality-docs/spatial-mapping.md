@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: räumliche Zuordnung, hololens, gemischte Realität, Oberflächenrekonstruktion, Mesh
-ms.openlocfilehash: 2988056b5caf50a4428d39c725bfe5432867a9c0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437457"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926737"
 ---
 # <a name="spatial-mapping"></a>Räumliche Zuordnung
 
@@ -64,13 +64,13 @@ Diese Volumes sind möglicherweise stationär (an einem bestimmten Speicherort i
 
 Da hololens neue Daten über die Umgebung sammelt und Änderungen an der Umgebung auftreten, werden räumliche Oberflächen angezeigt, verschwinden und ändern.
 
-## <a name="spatial-mapping-vs-scene-undesranding-worldmesh"></a>Räumliche Zuordnung im Vergleich zu Szenen, die das worldmesh deinstaleren
+## <a name="spatial-mapping-vs-scene-understanding-worldmesh"></a>Räumliche Zuordnung im Vergleich zu Szenen, die das worldmesh verstehen
 Bei hololens 2 ist es möglich, eine statische Version der räumlichen Mapping-Daten mithilfe der [Scene Understanding SDK](scene-understanding-SDK.md) (enableworldmesh-Einstellung) abzufragen. Im folgenden finden Sie die Unterschiede zwischen zwei Möglichkeiten, auf die räumlichen Zuordnungsdaten zuzugreifen:
 * Räumliche Mapping-API:
    * Begrenzter Bereich: die räumlichen Daten, die für Anwendungen in einer begrenzten Größe, die für den Benutzer zwischengespeichert ist, verfügbar sind.
    * Ermöglicht das Aktualisieren von geänderten Netzbereichen durch Ereignisse mit geringer Latenzzeit über Ereignisse, die über ein Ereignis verfügen.
    * Variable Ebene von Details, die von Dreiecken pro Kubikmeter Parameter gesteuert werden.
-* Nicht aufstehendes SDK der Szene:
+* Scene Understanding SDK:
    * Unbegrenzter Bereich: stellt alle überprüften räumlichen Mapping-Daten im Abfrage RADIUS bereit.
    * Stellt eine statische Momentaufnahme der räumlichen Mapping-Daten bereit. Um die aktualisierten räumlichen Zuordnungsdaten zu erhalten, muss eine neue Abfrage für das gesamte Mesh ausgeführt werden.
    * Konsistente Detailebene, die von der requestedmeshlevelofdetail-Einstellung gesteuert wird.
@@ -366,7 +366,7 @@ Im folgenden finden Sie einige Beispiele für verschiedene Arten der Mesh-Verarb
 * Es empfiehlt sich, Tests mit echten (und im Idealfall nicht gespoinierten) Benutzern durchzuführen, da Sie die hololens oder Ihre Anwendung möglicherweise nicht exakt auf die gleiche Weise wie Sie verwenden. Dies kann Ihnen vielleicht überraschen, wie sich das Verhalten, das Wissen und die Annahmen der unterschiedlichen Benutzer Verhalten.
 
 ## <a name="troubleshooting"></a>Fehlerbehebung
-* Damit die Oberflächen Netzen ordnungsgemäß ausgerichtet werden, muss jedes gameobject aktiv sein, bevor es an den surfaceobeserver gesendet wird, damit das Mesh erstellt wird. Andernfalls werden die Netze in Ihrem Raum angezeigt, aber in seltsamen Winkeln gedreht.
+* Damit die Oberflächen Netzen ordnungsgemäß ausgerichtet werden, muss jedes gameobject aktiv sein, bevor es an den surfaceobserver gesendet wird, damit das Mesh erstellt werden kann. Andernfalls werden die Netze in Ihrem Raum angezeigt, aber in seltsamen Winkeln gedreht.
 * Das gameobject, das das Skript ausführt, das mit dem surfaceobserver kommuniziert, muss auf den Ursprung festgelegt werden. Andernfalls verfügen alle von Ihnen erstellten und an den surfaceobserver gesendeten gameobjects-Objekte, deren Netzen erstellt werden, über einen Offset, der gleich dem Offset des übergeordneten Spiel Objekts ist. Dies kann dazu führen, dass ihre Netze mehrere Meter entfernt werden, sodass es sehr schwierig ist, das zu debuggen, was passiert.
 
 ## <a name="see-also"></a>Weitere Informationen:

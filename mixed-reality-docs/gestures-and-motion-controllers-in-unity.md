@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gesten, Bewegungs Controller, Unity, Blick, Eingabe
-ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435226"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926564"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gesten und Bewegungs Controller in Unity
 
@@ -145,7 +145,7 @@ Unity verwendet derzeit die allgemeinen *Input. getbutton/Input. getaxis-* APIs,
 
 Wenn Sie die allgemeinen Unity-Eingabe-APIs verwenden möchten, beginnen Sie in der Regel mit dem Verknüpfen von Schaltflächen und Achsen mit logischen Namen im [Unity-Eingabe-Manager](https://docs.unity3d.com/Manual/ConventionalGameInput.html), und binden Sie eine Schaltfläche oder eine Achsen-ID an jeden Namen Anschließend können Sie Code schreiben, der auf den Namen der logischen Schaltfläche/Achse verweist.
 
-Um z. b. die triggerschaltfläche des linken Bewegungs Controllers der Aktion senden zuzuordnen, wechseln Sie zu **Edit > Project Settings > Input** in Unity, und erweitern Sie die Eigenschaften des Abschnitts übermitteln unter Achsen. Ändern Sie die Schaltfläche " **pokschaltfläche** " oder die positiv Schaltfläche "alt", um die **Schalt** **Fläche "**
+Um z. b. die triggerschaltfläche des linken Bewegungs Controllers der Aktion senden zuzuordnen, wechseln Sie zu **Edit > Project Settings > Input** in Unity, und erweitern Sie die Eigenschaften des Abschnitts übermitteln unter Achsen. Ändern Sie die Schaltfläche **positiv** oder **alt positive Schaltfläche** , um die Schaltfläche "Taste **14**" wie folgt zu lesen:
 
 der InputManager von Unity ![](images/unity-input-manager.png)<br>
 *Unity-InputManager*
@@ -446,7 +446,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>Erfassungs Gesten starten
 
-Standardmäßig überwacht ein *GestureRecognizer* die Eingabe erst, wenn *startcapturinggesten ()* aufgerufen wird. Möglicherweise wird ein Gesten Ereignis generiert, nachdem *stopcapturinggesten ()* aufgerufen wurde, wenn Eingaben vor dem Frame durchgeführt wurden, in dem *stopcapturinggesten ()* verarbeitet wurde. Der *GestureRecognizer* weiß, ob er während des previou-Frames, in dem die Geste tatsächlich aufgetreten ist, ein-oder ausgeschaltet war, und daher ist es zuverlässig, die Gesten Überwachung auf der Grundlage der Anzeige Ziele dieses Frames zu starten und zu beenden.
+Standardmäßig überwacht ein *GestureRecognizer* die Eingabe erst, wenn *startcapturinggesten ()* aufgerufen wird. Möglicherweise wird ein Gesten Ereignis generiert, nachdem *stopcapturinggesten ()* aufgerufen wurde, wenn Eingaben vor dem Frame durchgeführt wurden, in dem *stopcapturinggesten ()* verarbeitet wurde. Der *GestureRecognizer* weiß, ob er während des vorherigen Frames ein-oder ausgeschaltet war, in dem die Geste tatsächlich aufgetreten ist, und daher ist es zuverlässig, die Gesten Überwachung auf der Grundlage der Anzeige Ziele dieses Frames zu starten und zu beenden.
 
 ```cs
 recognizer.StartCapturingGestures();

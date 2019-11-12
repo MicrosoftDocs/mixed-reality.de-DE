@@ -6,12 +6,12 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: 75e7c276560b4efbbdcbf2ea7579ed5ad7aadb4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9ff6a5f7594eb67dd4c1c8690812ab724cac9012
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439231"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926651"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic Remoting-Versionsverlauf
 
@@ -21,7 +21,7 @@ ms.locfileid: "73439231"
 ## Version 2.0.14 (26. Oktober 2019)<a name="v2.0.14"></a>
 * Unterstützung für neue "perceptiondevice"-APIs (Windows 10-Update vom November 2019).
 * Ein Problem wurde behoben, durch das das Auslösen von halte Gesten Ereignissen durch spatialgesturerecognizer verhindert wird.
-* Das Problem wurde behoben, wenn spatialsurfaceobserver. setboundingvolume verwendet wurde.
+* Das Threading Problem wurde behoben, wenn spatialsurfaceobserver. setboundingvolume verwendet wurde.
 
 ## Version 2.0.12 (18. Oktober 2019)<a name="v2.0.12"></a>
 * Absturz in spatialgesturerecognizer bei Verwendung von navigationrail (X/Y/Z) korrigiert.

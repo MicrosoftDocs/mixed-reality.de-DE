@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/25/2018
 ms.topic: article
 keywords: Unity, gemischte Realität, Entwicklung, Einstieg, neues Projekt, portieren, Funktion, Kamera, Simulation, Emulation, Dokumentation
-ms.openlocfilehash: b78afb0cf6557ec9b61a029e2d557debbd0b6b46
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9b314bfc7c58e72b11ecfd76fe7293ef2f6c11e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437372"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926696"
 ---
 # <a name="unity-development-overview"></a>Übersicht über Unity-Entwicklung
 
@@ -37,7 +37,7 @@ Wenn Sie mrtk v2 mit Ihrem Projekt eingerichtet haben oder Ihr Projekt wie oben 
 
 Das Hinzufügen von Unterstützung für Windows Mixed Reality-Features, z. b. [räumliche Stufen](coordinate-systems.md#spatial-coordinate-systems), [Gesten, Bewegungs Controller](gestures-and-motion-controllers-in-unity.md) oder [Spracheingaben](voice-input-in-unity.md) , wird mithilfe der direkt in Unity erstellten APIs erreicht. 
 
-Überprüfen Sie zunächst die [Skalierungs](coordinate-systems.md) Möglichkeiten, die ihre applicatioin als Ziel haben können:
+Überprüfen Sie zunächst die [Skalierungs](coordinate-systems.md) Möglichkeiten, auf die Ihre Anwendung abzielen kann:
 * Wenn Sie **nur eine Orientierung** oder eine **Skalierung**mit fester Größe erstellen möchten, müssen Sie den Überwachungsbereich von Unity auf " [stationär](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)" festlegen.
 * Wenn **Sie eine Skalierungs-oder** **Raum Skalierungs**Oberfläche erstellen möchten, müssen Sie sicherstellen, dass der nach verfolgungsbereich von Unity erfolgreich auf " [roomscale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)" festgelegt ist.
 * Wenn Sie eine **Welt weite** Umgebung auf hololens aufbauen möchten, die Benutzern das Roaming über 5 Meter ermöglicht, müssen Sie die [worldanchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) -Komponente verwenden.

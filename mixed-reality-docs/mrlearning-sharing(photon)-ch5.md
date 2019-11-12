@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9d76d5323705c001dbafe4411a9334dd3403d0ca
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437571"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926239"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrieren von Azure Spatial Anchor in eine freigegebene Darstellung
 
 In dieser Lektion erfahren Sie, wie Sie Azure Spatial Anchor (ASA) in unsere freigegebene Erfahrung integrieren. ASA ermöglicht es, dass mehrere zusammengestellte Geräte über einen allgemeinen Verweis verfügen, wenn ihre physische Umgebung darin besteht, virtuelle Oberflächen so zu verankern, dass alle Teilnehmer Objekte am gleichen physischen Speicherort sehen.
 
-Bevor Sie mit dieser Lektion fortfahren, müssen wir das ASA-Lernmodul ausführen, das die ASA-Grundlagen, die Erstellung von Azure-Konten und-Ressourcen und andere grundlegende Bausteine behandelt, die erforderlich sind, bevor wir ASA in unsere freigegebene Erfahrung integrieren können.
+Bevor Sie mit dieser Lektion fortfahren, müssen Sie das ASA-Lernmodul ausführen, das die ASA-Grundlagen, die Erstellung von Azure-Konten und-Ressourcen sowie andere grundlegende Bausteine behandelt, die erforderlich sind, bevor Sie ASA in unsere freigegebene Erfahrung integrieren.
 
 Ziele
 
@@ -37,11 +37,11 @@ Ziele
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Wählen Sie nun in der Hierarchie shareazureanchorbutton aus, und verschieben Sie Ihre Aufmerksamkeit auf den Bereich "inaspector". Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung dargestellt ist, wählen Sie anchormodulescript aus, und klicken Sie auf shareanchornetework ().
+4. Wählen Sie nun in der Hierarchie shareazureanchorbutton aus, und verschieben Sie Ihre Aufmerksamkeit auf den Inspektor-Bereich. Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung dargestellt ist, wählen Sie anchormodulescript aus, und klicken Sie auf shareanchornetwork ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Wählen Sie getazureanchorbutton aus (siehe Schritt 4), und verschieben Sie Ihre Aufmerksamkeit zurück zum Inspektor-Panel. Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung dargestellt ist, und wählen Sie anchormodulescript aus, und klicken Sie auf getsharedanchornetwork () und dann auf speichern.
+5. Wählen Sie getazureanchorbutton aus (siehe Schritt 4), und verschieben Sie Ihre Aufmerksamkeit zurück zum Inspektor-Panel. Scrollen Sie nach unten zum Dropdown Menü, das in der folgenden Abbildung angezeigt wird, wählen Sie anchormodulescript aus, klicken Sie auf getsharedanchornetwork () und dann auf speichern.
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
@@ -55,5 +55,5 @@ Ziele
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In dieser Lektion haben Sie erfahren, wie Sie die leistungsfähigen neuen räumlichen Anker von Azure integrieren, um zusammengestellte Geräte in einer freigegebenen Erfahrung auszurichten. Dies schließt auch das Freigabe Modul ein. Wir haben gelernt, wie Sie ein neues Photon-Konto einrichten, die Verwendung von Photon und pun in eine neue Unity-Anwendung, das Konfigurieren von Avatare und freigegebenen Objekten und schließlich das Ausrichten mehrerer Teilnehmer mithilfe von ASA. 
+In dieser Lektion haben Sie gelernt, wie Sie die leistungsstarken neuen räumlichen Anker von Azure integrieren, um zusammengestellte Geräte in einer freigegebenen Erfahrung auszurichten. Dies schließt auch das Freigabe Modul ein. Wir haben gelernt, wie Sie ein neues Photon-Konto einrichten, die Verwendung von Photon und pun in eine neue Unity-Anwendung, das Konfigurieren von Avatare und freigegebenen Objekten und schließlich das Ausrichten mehrerer Teilnehmer mithilfe von ASA. 
 

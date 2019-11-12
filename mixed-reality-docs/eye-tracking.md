@@ -6,18 +6,21 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Augen Verfolgung, gemischte Realität, Eingabe, Augenblick, Kalibrierung
-ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 88c1827d3656ceb851e8f778daa2303b88dd17c8
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641146"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913221"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Blickverfolgung auf HoloLens 2
 
 ![Demo zur Eye-Nachverfolgung in mrtk](images/mrtk_et_scenemenu.jpg)
 
-Hololens 2 ermöglicht ein neues Maß an Kontext und menschliches Verständnis in der holografischen Benutzerfreundlichkeit, indem Entwicklern die Möglichkeit geboten wird, Informationen über den Benutzer zu verwenden. Auf dieser Seite finden Sie eine Übersicht über diese neue Funktion für Entwickler und Designer, wie Sie von der Augen Verfolgung für verschiedene Anwendungsfälle und grundlegenden Anleitungen für Entwickler profitieren können. 
+Hololens 2 ermöglicht ein neues Maß an Kontext und menschliches Verständnis in der holografischen Benutzerfreundlichkeit, indem Entwicklern die Möglichkeit geboten wird, Informationen über den Benutzer zu verwenden. Auf dieser Seite werden Entwickler darauf hingewiesen, wie Sie von der Eye-Nachverfolgung für verschiedene Anwendungsfälle profitieren können, und worauf Sie achten müssen, wenn Sie auf Augenblick basierende Benutzerinteraktionen entwerfen. 
+
+Die Eye Tracking-API wurde im Hinblick auf den Datenschutz durch den Benutzer entworfen und verhindert, dass alle identifizierbaren Informationen, insbesondere alle Biometrie, übergeben werden. Bei der Überwachung von nach Verfolgungs fähigen Anwendungen muss der Benutzer der APP die Berechtigung zur Verwendung von Augen Verfolgungs Informationen erteilen. 
+
 
 ### <a name="device-support"></a>Geräteunterstützung
 <table>
@@ -94,13 +97,16 @@ Weitere Anwendungsfälle für _implizite Aktionen_:
 - **Aufmerksame Hologramme:** Holograms, die bei der Verwendung von auf eine beliebige Weise reagieren. Dies kann von leicht leuchtenden Benutzeroberflächen Elementen bis hin zu einem langsam blühenden Blumen Wert zu einem virtuellen Hund, der mit der Betrachtung des Benutzers beginnt, und dem Ende seines Endes. Diese Interaktion kann ein interessantes Gefühl der Konnektivität und Zufriedenheit in Ihrer Anwendung darstellen.
 
 ### <a name="attention-tracking"></a>Aufmerksamkeitsverfolgung   
-Informationen dazu, wo oder was Benutzer sehen, ist ein äußerst leistungsfähiges Tool zum Bewerten der Nutzbarkeit von Entwürfen und zum Erkennen von Problemen in effizienten Workflows. Die Visualisierung und Analyse von Augen Nachverfolgung ist eine gängige Vorgehensweise in verschiedenen Anwendungsbereichen. Mit hololens 2 bieten wir eine neue Dimension für dieses Verständnis, da 3D holograms in realen Kontexten platziert und entsprechend bewertet werden können. Das [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) enthält grundlegende Beispiele für das Protokollieren und Laden von Augen Verfolgungs Daten und deren Visualisierung.
+Informationen dazu, wo oder was Benutzer sehen, können ein äußerst leistungsfähiges Tool sein – Sie können dabei helfen, die Nutzbarkeit von Entwürfen zu bewerten und Probleme in Workflows zu identifizieren, um Sie effizienter zu gestalten.
+Die Visualisierung und Analyse von Augen Nachverfolgung ist eine gängige Vorgehensweise in verschiedenen Anwendungsbereichen. Mit hololens 2 bieten wir eine neue Dimension für dieses Verständnis, da 3D holograms in realen Kontexten platziert und entsprechend bewertet werden können. Das [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) enthält grundlegende Beispiele für das Protokollieren und Laden von Augen Verfolgungs Daten und deren Visualisierung.
+Microsoft ist für die Vereinfachung von Innovationen vorgesehen und stellt gleichzeitig sicher, dass die Benutzer über eine fundierte und transparente benutzerfreundliche Darstellung verfügen.  Wir arbeiten mit unseren Entwicklern und UX-Teams zusammen, um Anleitungen für Drittanbieter bereitzustellen, die sicherstellen, dass die Benutzererfahrung auf den Benutzer ausgerichtet wird.  
+
 
 Zu diesem Bereich zählen möglicherweise auch die folgenden Anwendungen: 
--   Remote Ansicht für den **Augenblick:** Visualisieren Sie, welche Remote Mitarbeiter sich ansehen, um das gemeinsame Verständnis zu verbessern.
--   **Forschungsstudien für Benutzer:** Mit der Nachverfolgung von Nachrichten können Sie besser verstehen, wie wir unsere Umgebung wahrnehmen und mit ihr in Kontakt treten, was zu besseren sinnvollen Modellen bei der Verwendung von Benutzer Computern beiträgt. 
--   **Schulung:** Verbessertes Training von Einsteiger durch das besseren Verständnis der visuellen Suchmuster von Experten und deren Hand Zeitangabe für komplexe Aufgaben, wie z. b. die Analyse von medizinischen Daten oder betriebsmaschinen.
--   **Entwurfs Auswertungen und Marktforschung:** Die Augen Verfolgung ist ein gängiges Tool für Marktforschung, wenn Sie Website-und Produktentwürfe evaluieren. Mit hololens 2 können wir dies auf 3D-Räume ausweiten, indem wir die Entwurfs Varianten digitaler Produkte mit der physischen Umgebung Zusammenführen. 
+-   Remote Ansicht für den **Augenblick:** Remote-Blick Visualisierungen: visualisieren Sie, welche Remote Mitarbeiter sich ansehen, um sofortiges Feedback bereitzustellen und eine genauere Informationsverarbeitung zu ermöglichen.
+-   **Forschungsstudien für Benutzer:** Die Nachverfolgung von Nachrichten kann den Forschern helfen, mehr Einblicke in die Art und Weise zu erhalten, wie Benutzer eine natürliche Umgebung wahrnehmen und mit ihr interagieren, ohne sich gegenseitig zu stören. Die Augen Verfolgung kann Informationen bereitstellen, die nicht direkt von Teilnehmern in der Studie artikuliert werden, die andernfalls vom Forscher leicht übersehen werden könnten. 
+-   **Schulungs-und Leistungsüberwachung:** Üben und optimieren Sie die Ausführung von Tasks, indem Sie Engpässe im Ausführungs Fluss effektiver erkennen. Die Eye-Nachverfolgung kann natürliche Echtzeitinformationen und Ziel Informationen bereitstellen, um die Schulung, Produktivität und Sicherheit am Arbeitsplatz zu verbessern. 
+-   **Entwurfs Auswertungen, Marketing-und consumerforschung:** Die Augen Verfolgung ermöglicht kommerziellen Unternehmen das Durchführen von Marketing-und consumerstudien in realen Umgebungen oder das Analysieren der Aufmerksamkeit von Benutzern, um das Produkt oder den Raum Entwurf zu verbessern. 
 
 ### <a name="additional-use-cases"></a>Weitere Anwendungsfälle
 - **Spiele:** Wollten Sie jemals über Supermächte verfügen? Hier kommt Ihre Chance! Sie können holograms durch ein-und ansehen. Lösen Sie die Laserstrahlen von ihren Augen. Probieren Sie es in [roboraid für hololens 2](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)aus.
@@ -116,10 +122,9 @@ Achten Sie darauf, den Benutzer nicht zu überfordern. um weitere Informationen 
 ## <a name="using-eye-gaze-for-interaction"></a>Verwenden des Augenblicks für die Interaktion
 Das Entwickeln einer Interaktion, die die schnelle Ziel Ausrichtung nutzt, kann eine Herausforderung darstellen.
 Einerseits bewegen sich die Augen so schnell, dass Sie sorgfältig darauf achten müssen, wie Sie die Eingabe im Blickwinkel verwenden, da die Benutzer die Benutzeroberflächen möglicherweise als überwältigend oder ablenkend empfinden. Andererseits können Sie auch wirklich magische Erfahrungen erstellen, die Ihre Benutzer begeistern werden! Um Ihnen zu helfen, sehen Sie sich die Übersicht über die wichtigsten Vorteile, Herausforderungen und Entwurfs Empfehlungen für die [Interaktion](eye-gaze-interaction.md)an. 
-
-<br>
  
 ## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Fall Back Lösungen, wenn die Augen Verfolgung nicht verfügbar ist
+
 In seltenen Fällen sind keine Überwachungsdaten für den Augenblick verfügbar.
 Dies kann auf verschiedene Ursachen zurückzuführen sein, von denen die am häufigsten aufgelisteten aufgeführt sind:
 * Das System konnte [den Benutzer nicht kalibrieren](calibration.md).
@@ -127,9 +132,9 @@ Dies kann auf verschiedene Ursachen zurückzuführen sein, von denen die am häu
 * Der Benutzer ist zwar kalibriert, hat sich jedoch entschieden, der APP keine Berechtigung zur Verwendung der Augen Verfolgungs Daten zu erteilen.    
 * Der Benutzer hat eine eindeutige Brillen-oder Augen Bedingung, die vom System noch nicht unterstützt wird.    
 * Externe Faktoren behindern die zuverlässige Eye-Nachverfolgung, wie z. b. smudges auf den holten-Hypervisor oder-Brillen, intensive direkte Sonneneinstrahlung und-oksionen aufgrund von Haaren vor Augen.   
+
 Daher sollten Entwickler sicherstellen, dass für diese Benutzer eine geeignete Ausweich Unterstützung vorhanden ist. Auf der Seite " [Eye Tracking in DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) " werden die APIs erläutert, die erforderlich sind, um zu ermitteln, ob Eye-Überwachungsdaten verfügbar sind. 
 
-Wie oben beschrieben, gibt es verschiedene Gründe, warum die Augen Verfolgungs Daten möglicherweise nicht verfügbar sind.   
 Einige Benutzer haben sich möglicherweise bewusst entschieden, den Zugriff auf Ihre Augen Verfolgungs Daten aufzuheben, und sind mit dem Nachteil einer geringeren Benutzerfunktion für den Datenschutz, dass Sie keinen Zugriff auf Ihre Überwachungsdaten bereitstellt, in einigen Fällen kann dies unbeabsichtigt sein.  
 Wenn Ihre APP die Augen Nachverfolgung verwendet, und dies ein wichtiger Bestandteil der Benutzeroberflächen ist, empfiehlt es sich, diese Funktion an den Benutzer zu übermitteln.     
 Wenn Sie den Benutzer darüber informieren, warum die Augen Verfolgung für Ihre Anwendung wichtig ist (möglicherweise sogar durch das Auflisten einiger verbesserter Features), um das volle Potenzial Ihrer Anwendung zu erhalten, können Sie dem Benutzer helfen, die Ergebnisse besser zu verstehen.    
@@ -153,10 +158,10 @@ Auf dieser Seite haben Sie hoffentlich einen guten Überblick erhalten, mit dem 
 ## <a name="see-also"></a>Weitere Informationen:
 * [Kalibrierung](calibration.md)
 * [Komfort](comfort.md)
-* [Auf Augenblick basierende Interaktion](eye-gaze-interaction.md)
+* [Interaktion durch Anvisieren](eye-gaze-interaction.md)
 * [Blick in DirectX](gaze-in-directx.md)
 * [Blick in Unity (Mixed Reality Toolkit)](https://aka.ms/mrtk-eyes)
-* [Blick und Commit](gaze-and-commit.md)
+* [Anvisieren und Ausführen](gaze-and-commit.md)
 * [Spracheingabe](voice-design.md)
 
 

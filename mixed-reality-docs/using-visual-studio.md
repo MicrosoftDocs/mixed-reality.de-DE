@@ -6,18 +6,18 @@ ms.author: pbarnett
 ms.date: 10/24/2019
 ms.topic: article
 keywords: Visual Studio, hololens, gemischte Realität, Debuggen, bereitstellen
-ms.openlocfilehash: 2b84183417a1bd4eaa90eef58bebe2b65966b933
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 07854c800008658835b169607d85d562682cf194
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437299"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73914124"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Verwenden von Visual Studio zum Bereitstellen und Debuggen
 
-Unabhängig davon, ob Sie DirectX oder Unity zur Entwicklung ihrer Mixed Reality-App verwenden möchten, verwenden Sie Visual Studio zum Debuggen und bereitstellen. In diesem Abschnitt lernen Sie Folgendes:
-* Erfahren Sie, wie Sie Anwendungen in den hololens oder im immersiven Windows Mixed Reality-Headset über Visual Studio bereitstellen.
-* So verwenden Sie den in Visual Studio integrierten hololens-Emulator.
+Unabhängig davon, ob Sie DirectX oder Unity zur Entwicklung ihrer Mixed Reality-App verwenden möchten, verwenden Sie Visual Studio zum Debuggen und bereitstellen. In diesem Abschnitt erfahren Sie Folgendes:
+* Stellen Sie Anwendungen mithilfe von Visual Studio in ihren hololens oder im immersiven Windows Mixed Reality-Headset bereit.
+* Verwenden Sie den in Visual Studio integrierten hololens-Emulator.
 * Debuggen von Mixed Reality-apps
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -26,7 +26,7 @@ Unabhängig davon, ob Sie DirectX oder Unity zur Entwicklung ihrer Mixed Reality
 
 ## <a name="enabling-developer-mode"></a>Aktivieren des Entwicklermodus
 
-Beginnen Sie, indem Sie den **Entwicklermodus** auf Ihrem Gerät aktivieren, damit Visual Studio eine Verbindung damit herstellen kann.
+Beginnen Sie, indem Sie den **Entwicklermodus** auf Ihrem Gerät aktivieren, sodass Visual Studio eine Verbindung mit dem Gerät herstellen kann.
 
 ### <a name="hololens"></a>HoloLens
 1. Schalten Sie die hololens ein, und legen Sie Sie auf dem Gerät ab.
@@ -59,7 +59,7 @@ Wenn Sie mit einem Windows Mixed Reality-Headset arbeiten, das mit dem PC verbun
 2. Wählen Sie im Dropdown Menü Bereitstellungs Ziel den **Remote Computer** aus ![Bereitstellungs Ziel für Remote Computer in Visual Studio](images/remotemachinesetting_arm64.png)
 3. Wechseln C++ Sie für-und JavaScript-Projekte zu **Project > Eigenschaften > Konfigurations Eigenschaften > Debuggen**. Für C# -Projekte wird automatisch ein Dialogfeld angezeigt, in dem die Verbindung konfiguriert wird.
   a. Geben Sie die IP-Adresse Ihres Geräts in das Feld **Adresse** oder **Computer Name** ein. Suchen Sie die IP-Adresse in den hololens unter **Einstellungen > Netzwerk & Internet > Erweiterte Optionen**, oder Fragen Sie Cortana "Was ist meine IP-Adresse?".
-  b. Legen Sie den Authentifizierungsmodus auf **Universelles (unverschlüsseltes Protokoll)** ![Dialogfeld "Remote Verbindung" in Visual Studio](images/remotedeploy.png)
+  b. Legen Sie den Authentifizierungsmodus auf **Universelles (unverschlüsseltes Protokoll)** ![Dialogfeld Remote Verbindung in Visual Studio](images/remotedeploy.png)
 4. Wählen Sie **Debuggen > Debuggen starten**](images/deploywithdebugging.png) aus, um die APP bereitzustellen und das Debuggen zu starten![starten ohne Debugging
 5. Wenn Sie eine APP zum ersten Mal auf Ihrem PC auf Ihren hololens bereitstellen, werden Sie aufgefordert, eine PIN einzugeben. Befolgen Sie die Anweisungen unter Kopplung **Ihrer Geräte** .
 

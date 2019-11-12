@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: bereitstellen, Unity, Visual Studio, hololens, hololens 2, immersives Headset
-ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436964"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926547"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Bewährte Methoden für die Arbeit mit Unity und Visual Studio
 
@@ -45,7 +45,7 @@ Download [Visual Studio-Tools für Unity](https://docs.microsoft.com/visualstudi
 
 ## <a name="expose-c-class-variables-for-easy-tuning"></a>Verfügbar C# machen von Klassen Variablen für die einfache Optimierung
 
-Es gibt zwei Möglichkeiten, Klassen Variablen verfügbar zu machen. Die empfohlene Vorgehensweise besteht darin, das Attribut [serializefield] den privaten Variablen hinzuzufügen. Auf diese Weise können Sie über den Editor darauf zugreifen, werden aber nicht Programm gesteuert bereitgestellt.  Die andere Möglichkeit besteht darin, C# Klassen Variablen öffentlich zu machen, um Sie in der Benutzeroberfläche des Editors verfügbar zu machen. 
+Es gibt zwei Möglichkeiten, Klassen Variablen verfügbar zu machen. Die empfohlene Vorgehensweise besteht darin, das Attribut [serializefield] den privaten Variablen hinzuzufügen. Auf diese Weise können Sie über den Editor darauf zugreifen, aber nicht Programm gesteuert verfügbar machen.  Die andere Möglichkeit besteht darin, C# Klassen Variablen öffentlich zu machen, um Sie in der Benutzeroberfläche des Editors verfügbar zu machen. 
 
 Beide Ansätze ermöglichen es, Variablen während der Wiedergabe in-Editor problemlos zu optimieren. Dies ist besonders nützlich für das Optimieren von Interaktions Eigenschaften.
 
