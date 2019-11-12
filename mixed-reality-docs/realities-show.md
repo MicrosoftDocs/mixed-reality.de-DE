@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: Realitäten, Show, Calendar, Academy, Schedule, SF, San Francisco, Reaktor
-ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a7cecd4dcce63afb17c3f6d26596c138490f0181
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438331"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926846"
 ---
 # <a name="the-realities-show"></a>Die Realitäten zeigen
 ![Entwerfen für Mixed Reality](images/therealitiesshow.jpg)
@@ -35,7 +35,7 @@ Wie intelligent Edge-Geräte die Rechenleistung der Cloud nutzen, um die Welt zu
 
 ___
 ## <a name="mixedrealitytoolkit---coming-soon"></a>**Mixedrealitytoolkit** : demnächst verfügbar
-Das mixedrealitytoolkit (mrtk) bietet eine Reihe grundlegender Komponenten und Features, die die Entwicklung von apps beschleunigen. Die neueste Version von mrtk-Unity (v2) unterstützt die Plattformen hololens/hololens 2, Windows Mixed Reality und openvr. Werfen wir einen detaillierten Einblick in die dahinter liegenden-und Designer.
+Das mixedrealitytoolkit (mrtk) bietet eine Reihe grundlegender Komponenten und Features, die die Entwicklung von apps beschleunigen. Die neueste Version von mrtk-Unity (v2) unterstützt die Plattformen hololens/hololens 2, Windows Mixed Reality und openvr. Werfen wir einen detaillierten Einblick in die Entwickler und Designer dahinter.
 
 ___
 ## <a name="designing-for-hololens-2---coming-soon"></a>**Entwerfen für hololens 2** : demnächst verfügbar

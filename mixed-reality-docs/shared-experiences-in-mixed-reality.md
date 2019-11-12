@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: gemeinsam genutzte Benutzeroberflächen, gemischte Realität, Hologram, räumlicher Anker, mehrere Benutzer, mehrere
-ms.openlocfilehash: 4e71bdefa32d2f6cf3b85b074c3d9fcbdb6aa909
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c846bcd8c9c52f1f169d306df3afd4f982656078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437471"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926927"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>Gemeinsam genutzte Umgebungen in gemischter Realität
 
@@ -166,7 +166,7 @@ Nutzen Sie [mixedreality-webrtc](https://github.com/microsoft/mixedreality-webrt
 
 ## <a name="presenter-spectator-applications-and-demos"></a>Presenter-Betrachter-Anwendungen und-Demos
 
-Nutzen Sie [mixedreality-zuschauorview](https://github.com/microsoft/MixedReality-SpectatorView) , um die [Funktionen der specator-Ansicht](spectator-view.md) in Ihre APP zu bringen.  Aktivieren Sie andere Geräte (HL, Android, IOS und Videokameras), um zu sehen, was die hololens aus einer anderen Perspektive am gleichen Speicherort sehen, und erhalten Sie Aktualisierungen bei Interaktionen des Hosts, von dem die Benutzer mit den holograms interagieren.  Sehen Sie sich an, zeichnen Sie Bilder auf, und zeichnen Sie Videos aus, die der Host mit den holograms in der Anwendung aus ihrer eigenen räumlichen Perspektive mit dem Betrachter der gleichen App verwendet.
+Nutzen Sie [mixedreality-zuschauorview](https://github.com/microsoft/MixedReality-SpectatorView) , um die [Funktion "Zuschauer Ansicht](spectator-view.md) " in Ihre APP zu bringen.  Aktivieren Sie andere Geräte (HL, Android, IOS und Videokameras), um zu sehen, was die hololens aus einer anderen Perspektive am gleichen Speicherort sehen, und erhalten Sie Aktualisierungen bei Interaktionen des Hosts, von dem die Benutzer mit den holograms interagieren.  Sehen Sie sich an, zeichnen Sie Bilder auf, und zeichnen Sie Videos aus, die der Host mit den holograms in der Anwendung aus ihrer eigenen räumlichen Perspektive mit dem Betrachter der gleichen App verwendet.
 
 **Hinweis:** Bilder werden über einen Screenshot auf IOS-/Android-Geräten erstellt.
 

@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Szenen Verständnis, räumliche Zuordnung, Windows Mixed Reality, Unity
-ms.openlocfilehash: e31c0b1c954516db2dbb025d849dba3e3203a04b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b7d4103697d94f5e59c77237b4948f62e4e4b621
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438298"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926904"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Übersicht über das Szene Verständnis von SDK
 
@@ -23,7 +23,7 @@ Das sceneunderstanding SDK kann über nuget heruntergeladen werden.
 
 [Sceneunderstanding-SDK](https://www.nuget.org/packages/Microsoft.MixedReality.SceneUnderstanding/)
 
-**Hinweis:** die neueste Version hängt von der Vorschauversion ab, und Sie müssen vorab Versions Pakete aktivieren, um Sie anzuzeigen.
+**Hinweis:** die neueste Version hängt von den Vorschau Paketen ab, und Sie müssen die Vorabversion von Paketen aktivieren, um Sie anzuzeigen.
 
 Ab Version 0.5.2022-RC unterstützt Szenen Verständnis sprach Projektionen für C# und ermöglicht C++ Anwendungen das Entwickeln von Anwendungen für Win32-oder UWP-Plattformen. Ab dieser Version unterstützt sceneunderstanding die Unterstützung von Unity im Editor, wobei der sceneobserver, der ausschließlich für die Kommunikation mit HoloLens2 verwendet wird, verwendet wird. 
 
@@ -35,7 +35,7 @@ Wenn Sie das SDK in einem Unity-Projekt verwenden, verwenden Sie [nuget für Uni
 
 ### <a name="the-scene"></a>Die Szene
 
-Ihr gemischtes Reality-Gerät integriert ständig Informationen zu den in Ihrer Umgebung angezeigten Informationen. In der Szene werden alle diese Datenquellen verstanden und eine einzelne, zusammenhängende Abstraktion erzeugt. Szenen Verständnis generiert Szenen, bei denen es sich um eine Komposition von [sceneobjects](scene-understanding-SDK.md#sceneobjects) handelt, die eine Instanz eines einzelnen Objekts darstellen (z. b. eine Wand/Ceiling/Floor). Szenen Objekte selbst sind eine Komposition von [scenecomponents](scene-understanding-SDK.md#scenecomponents) , die präziseste Teile darstellen, die dieses sceneobject bilden. Beispiele für Komponenten sind Quads und Meshes, aber in der Zukunft könnten Begrenzungs Felder, Kollisions-mehses, Metadaten usw. darstellen.
+Ihr gemischtes Reality-Gerät integriert ständig Informationen zu den in Ihrer Umgebung angezeigten Informationen. In der Szene werden alle diese Datenquellen verstanden und eine einzelne, zusammenhängende Abstraktion erzeugt. Szenen Verständnis generiert Szenen, bei denen es sich um eine Komposition von [sceneobjects](scene-understanding-SDK.md#sceneobjects) handelt, die eine Instanz eines einzelnen Objekts darstellen (z. b. eine Wand/Ceiling/Floor). Szenen Objekte selbst sind eine Komposition von [scenecomponents](scene-understanding-SDK.md#scenecomponents) , die präziseste Teile darstellen, die dieses sceneobject bilden. Beispiele für Komponenten sind Quads und Meshes, aber in der Zukunft könnten Begrenzungs Felder, Kollisions Netze, Metadaten usw. darstellen.
 
 Der Prozess der Umstellung der Rohdaten des Sensors in eine Szene ist ein potenziell kostspieliger Vorgang, der für sehr große Leerzeichen (~ 10X 10m) bis zu Minuten für sehr große Leerzeichen (~ 50X 50M) Sekunden in Anspruch nehmen kann und daher nicht vom Gerät berechnet wird. Anwendungsanforderung. Stattdessen wird die Szenen Generierung von Ihrer Anwendung Bedarfs gesteuert ausgelöst. Die sceneobserver-Klasse verfügt über statische Methoden, die eine Szene berechnen oder deserialisieren können, die Sie dann auflisten/mit der Sie interagieren können. Die "Compute"-Aktion wird Bedarfs gesteuert ausgeführt und wird auf der CPU ausgeführt, aber in einem separaten Prozess (dem Mixed Reality-Treiber). Während wir in einem anderen Prozess berechnen, werden die resultierenden Szenen Daten jedoch in der Anwendung im Scene-Objekt gespeichert und verwaltet. 
 
@@ -43,7 +43,7 @@ Das folgende Diagramm veranschaulicht den Prozessfluss und zeigt Beispiele für 
 
 ![Prozessdiagramm](images/SU-ProcessFlow.png)
 
-Auf der linken Seite befindet sich ein Diagramm der Mixed Reality-Laufzeit, die immer aktiv ist und in einem eigenen Prozess ausgeführt wird. Diese Laufzeit ist für die Durchführung von Geräte Nachverfolgung, räumlicher Zuordnung und anderen Vorgängen zuständig, die von der Szene verstanden werden, um die Welt zu verstehen und zu verstehen. Auf der rechten Seite des Diagramms zeigen wir zwei theoretische Anwendungen, die das Verständnis von Szenen nutzen. Die erste Anwendung stellt mit mrtk eine Schnittstelle dar, die das Scene Understanding SDK intern verwendet, die zweite App berechnet und verwendet zwei separate Szenen Instanzen. In allen drei Szenen in diesem Diagramm werden unterschiedliche Instanzen der Kulissen generiert. der Treiber verfolgt keinen globalen Status, der von Anwendungen gemeinsam genutzt wird, und Szenen Objekte in einer Szene werden nicht in einer anderen Szene gefunden. Der Einblick in die Szene bietet einen Mechanismus, mit dem Sie die Zeit nachverfolgen können. Dies geschieht jedoch mithilfe des SDKs, und der Code, der diese Nachverfolgung ausführt, wird im SDK im App-Prozess ausgeführt.
+Auf der linken Seite befindet sich ein Diagramm der Mixed Reality-Laufzeit, die immer aktiv ist und in einem eigenen Prozess ausgeführt wird. Diese Laufzeit ist für die Durchführung von Geräte Nachverfolgung, räumlicher Zuordnung und anderen Vorgängen zuständig, die von der Szene verstanden werden, um die Welt zu verstehen und zu verstehen. Auf der rechten Seite des Diagramms zeigen wir zwei theoretische Anwendungen, die das Verständnis von Szenen nutzen. Die erste Anwendung stellt mit mrtk eine Schnittstelle dar, die das Scene Understanding SDK intern verwendet, die zweite App berechnet und verwendet zwei separate Szenen Instanzen. In allen drei Szenen in diesem Diagramm werden unterschiedliche Instanzen der Kulissen generiert. der Treiber verfolgt keinen globalen Status, der von Anwendungen gemeinsam genutzt wird, und Szenen Objekte in einer Szene werden nicht in einer anderen Szene gefunden. Das Verständnis von Szenen bietet einen Mechanismus, mit dem Sie die Zeit nachverfolgen können. Dies geschieht jedoch mithilfe des SDKs, und der Code, der diese Nachverfolgung ausführt, wird im SDK im App-Prozess ausgeführt.
 
 Da jede Szene Ihre Daten im Speicherbereich Ihrer Anwendung speichert, können Sie davon ausgehen, dass alle Funktionen des Szene Objekts oder der internen Daten immer im Prozess ihrer Anwendung ausgeführt werden.
 
@@ -95,7 +95,7 @@ Im folgenden finden Sie ein Beispiel für eine Struktur in der flachen und logis
 </tr>
 </table>
 
-In dieser Abbildung wird der Unterschied zwischen dem physischen und dem logischen Layout der Szene hervorgehoben. Auf der rechten Seite sehen Sie das hierarchische Layout der Daten, die Ihre Anwendung beim Auflisten der Szene sieht. Auf der linken Seite sehen Sie, dass die Szene tatsächlich aus 12 unterschiedlichen Komponenten besteht, auf die Sie ggf. einzeln zugreifen können. Bei der Verarbeitung einer neuen Szene erwarten wir, dass Anwendungen diese Hierarchie logisch durchlaufen. bei der Überwachung zwischen Szenen Aktualisierungen sind einige Anwendungen jedoch möglicherweise nur für bestimmte Komponenten interessant, die von zwei Szenen gemeinsam genutzt werden.
+In dieser Abbildung wird der Unterschied zwischen dem physischen und dem logischen Layout der Szene hervorgehoben. Auf der linken Seite sehen Sie das hierarchische Layout der Daten, die Ihre Anwendung beim Auflisten der Szene sieht. Auf der rechten Seite sehen Sie, dass die Szene tatsächlich aus 12 unterschiedlichen Komponenten besteht, auf die bei Bedarf einzeln zugegriffen werden kann. Bei der Verarbeitung einer neuen Szene erwarten wir, dass Anwendungen diese Hierarchie logisch durchlaufen. bei der Überwachung zwischen Szenen Aktualisierungen sind einige Anwendungen jedoch möglicherweise nur für bestimmte Komponenten interessant, die von zwei Szenen gemeinsam genutzt werden.
 
 ## <a name="api-overview"></a>API-Übersicht
 
@@ -223,7 +223,7 @@ firstFloor = (SceneObject)myNextScene.FindComponent(firstFloor.Id);
 
 if (firstFloor != null)
 {
-    // We found it again, we can now update the transforms of all objects we attatched to this floor transform
+    // We found it again, we can now update the transforms of all objects we attached to this floor transform
 }
 ```
 
@@ -249,7 +249,7 @@ foreach (var mesh in firstFloor.Meshes)
 }
 ```
 
-Beachten Sie, dass es sich um das sceneobject-Objekt mit der Transformation handelt, die relativ zum Ursprung der Szene ist. Der Grund hierfür ist, dass das sceneobject-Objekt eine Instanz eines "Thing" darstellt und im Raum einstellbar ist, die Quads und die Netze stellen eine Geometrie dar, die relativ zu ihrem übergeordneten Element transformiert wird. Es ist möglich, dass separate sceneobjects auf denselben scenemesh/scenequad scenecomponewnts verweisen. Außerdem ist es möglich, dass ein sceneobject-Objekt über mehr als eine scenemesh/scenequad verfügt.
+Beachten Sie, dass es sich um das sceneobject-Objekt mit der Transformation handelt, die relativ zum Ursprung der Szene ist. Der Grund hierfür ist, dass das sceneobject-Objekt eine Instanz eines "Thing" darstellt und im Raum einstellbar ist, die Quads und die Netze stellen eine Geometrie dar, die relativ zu ihrem übergeordneten Element transformiert wird. Es ist möglich, dass separate sceneobjects auf die gleichen scenemesh/scenequad scenecomponents verweisen. Außerdem ist es möglich, dass ein sceneobject-Objekt über mehr als eine scenemesh/scenequad verfügt.
 
 ### <a name="dealing-with-transforms"></a>Umgang mit Transformationen
 
@@ -285,7 +285,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Jede `SceneObject` verfügt über eine `Position` und `Orientation`-Eigenschaft, die verwendet werden kann, um den entsprechenden Inhalt relativ zum Ursprung der enthaltenden `Scene`zu positionieren. Im folgenden Beispiel wird z. b. angenommen, dass das Spiel ein untergeordnetes Element des Szenen Stamms ist, und die lokale Position und die Drehung werden zugewiesen, um Sie an einem angegebenen `SceneObject`auszurichten:
+Jede `SceneObject` verfügt über eine `Position` und `Orientation`-Eigenschaft, die verwendet werden kann, um den entsprechenden Inhalt relativ zum Ursprung der enthaltenden `Scene`zu positionieren. Im folgenden Beispiel wird z. b. davon ausgegangen, dass das Spiel ein untergeordnetes Element des Szenen Stamms ist, und seine lokale Position und Drehung zugewiesen, um Sie an einem angegebenen `SceneObject`auszurichten:
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -324,14 +324,14 @@ foreach (var sceneObject in myScene.SceneObjects)
                 // Step 1: Create a new game object for the quad itself as a child of the scene root
                 // Step 2: Set the local transform from quads[0].Position and quads[0].Orientation
                 // Step 3: Create your hologram and set it as a child of the quad's game object
-                // Step 4: Set the hologram's local tranform to a translation (location.x, location.y, 0)
+                // Step 4: Set the hologram's local transform to a translation (location.x, location.y, 0)
             }
         }
     }
 }
 ```
 
-Die Schritte 1-4 sind stark von Ihrem speziellen Framework/der Implementierung abhängig, die Designs sollten jedoch ähnlich sein. Es ist wichtig zu beachten, dass das Vierfache eine begrenzte 2D-Ebene darstellt, die im Raum lokalisiert wird. Wenn Ihr Modul/Framework weiß, wo das Vierfache ist, und die Objekte in Relation zum Quad Hogen, werden Ihre Hologramme ordnungsgemäß mit repect in der realen Welt gefunden. Ausführlichere Informationen finden Sie in unseren Beispielen zu den Quads, in denen bestimmte Implementierungen angezeigt werden.
+Die Schritte 1-4 sind stark von Ihrem speziellen Framework/der Implementierung abhängig, die Designs sollten jedoch ähnlich sein. Es ist wichtig zu beachten, dass das Vierfache eine begrenzte 2D-Ebene darstellt, die im Raum lokalisiert wird. Wenn Ihr Modul/Framework weiß, wo das Vierfache ist, und die Objekte in Relation zum Quad Hogen, werden Ihre Hologramme in Bezug auf die reale Welt ordnungsgemäß gefunden. Ausführlichere Informationen finden Sie in unseren Beispielen zu den Quads, in denen bestimmte Implementierungen angezeigt werden.
 
 ### <a name="mesh"></a>Schigen
 

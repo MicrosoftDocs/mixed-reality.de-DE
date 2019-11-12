@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, immersive, Motion Controller, Academy, Tutorial
-ms.openlocfilehash: e2199c3afed21f9396ed84f71093a8b2fb3bb23b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 273d1bf384d588ab24bfe29e30f299b7a41fe541
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438547"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926820"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es wurde [eine neue Reihe von Tutorials](mrlearning-base.md) für hololens 2 gepostet.
@@ -197,7 +197,7 @@ In einem späteren Kapitel erfahren Sie, wie diese Skripts zum Anfügen von UI-E
 
 Sie können die Szene mit Motion Controller in Ihrem Headset sehen. Sie können ausführliche Animationen für Schaltflächen Klicks, die Fingereingabe Bewegung und Touchpad Touch-Hervorhebung sehen.
 
-![MR213_Controller-Visualisierungs Standard](images/mr213-controllervisualizationdefault-500px.jpg)
+![Standard der MR213_Controller Visualisierung](images/mr213-controllervisualizationdefault-500px.jpg)
 
 ## <a name="chapter-2---attaching-ui-elements-to-the-controller"></a>Kapitel 2: Anfügen von Benutzeroberflächen Elementen an den Controller
 
@@ -277,7 +277,7 @@ private void AttachElementToController(MotionControllerInfo newController)
 }
 ```
 
-Die einfachste Möglichkeit zur Verwendung des **attachtoicontroller** -Skripts ist die Vererbung von der Anwendung, wie dies im Fall von **colorpickerwheel** der Fall ist. Überschreiben Sie einfach die Funktionen **onattachdecontroller** und **ondetatchfromcontroller** , um Setup/Aufschlüsselung auszuführen, wenn der Controller erkannt/getrennt wird.
+Die einfachste Möglichkeit zur Verwendung des **attachtoicontroller** -Skripts ist die Vererbung von der Anwendung, wie dies im Fall von **colorpickerwheel** der Fall ist. Überschreiben Sie einfach die Funktionen " **onattachdecontroller** " und " **ondetachfromcontroller** ", um Setup/Aufschlüsselung auszuführen, wenn der Controller erkannt/getrennt wird.
 
 **Anweisungen**
 
@@ -294,7 +294,7 @@ Da **colorpickerwheel** " **AttachTo Controller**" erbt, zeigt es die **häntigk
 
 ![Colorpickerwheel-Skript](images/mr213-attachtocontroller-300px.jpg)
 
-**Colorpickerwheel** überschreibt den **onattachto Controller** und **onde tatchfromcontroller** , um das Eingabe Ereignis zu abonnieren, das im nächsten Kapitel für die Farbauswahl mit der Touchpad-Eingabe verwendet wird.
+**Colorpickerwheel** überschreibt den **onattachto Controller** und den **ondetachfromcontroller** , um das Eingabe Ereignis zu abonnieren, das im nächsten Kapitel für die Farbauswahl mit der Touchpad-Eingabe verwendet wird.
 
 ```cs
 public class ColorPickerWheel : AttachToController, IPointerTarget
@@ -346,7 +346,7 @@ private IEnumerator Start() {
 ### <a name="instructions"></a>Anweisungen
 
 * Klicken Sie im **Hierarchie** Panel auf **colorpickerwheel** .
-* Doppelklicken Sie im **Inspektor** -Panel unter **animatior**auf **colorpickerwheelcontroller** .
+* Doppelklicken Sie im **Inspektor** -Panel unter **Animator**auf **colorpickerwheelcontroller** .
 * Sie können die **animatorregister** Karte geöffnet sehen.
 
 **Anzeige/Ausblenden der Benutzeroberfläche mit dem Animations Controller von Unity**
@@ -624,7 +624,7 @@ private void SpawnObject()
 {
     // Instantiate the spawned object
     GameObject newObject = Instantiate(displayObject.gameObject, spawnParent);
-    // Detatch the newly spawned object
+    // Detach the newly spawned object
     newObject.transform.parent = null;
     // Reset the scale transform to 1
     scaleParent.localScale = Vector3.one;
@@ -801,7 +801,7 @@ Der **Radierer** ist ein spezieller Pinseltyp, der die **drawovertime ()** -Funk
 
 ## <a name="advanced-design---teleportation-and-locomotion"></a>Erweiterte Design-teleportierung und-Bewegung
 
-Wenn Sie zulassen möchten, dass der Benutzer die Szene mit der teleportierung über den Finger Stick bewegt, verwenden Sie **mixedrealitycameraparent** anstelle von **mixedrealitycamera**. Außerdem müssen Sie **InputManager** und **defaultcusor**hinzufügen. Da **mixedrealitycameraparent** bereits " **mutioncontrollers** " und " **Border** " als untergeordnete Komponenten enthält, sollten Sie vorhandene " **mueconcontrollers** " und " **Umgebungs** vorfab" entfernen.
+Wenn Sie zulassen möchten, dass der Benutzer die Szene mit der teleportierung über den Finger Stick bewegt, verwenden Sie **mixedrealitycameraparent** anstelle von **mixedrealitycamera**. Außerdem müssen Sie **InputManager** und **DefaultCursor**hinzufügen. Da **mixedrealitycameraparent** bereits " **mutioncontrollers** " und " **Border** " als untergeordnete Komponenten enthält, sollten Sie vorhandene " **mueconcontrollers** " und " **Umgebungs** vorfab" entfernen.
 
 ### <a name="instructions"></a>Anweisungen
 
@@ -834,7 +834,7 @@ Nun können Sie mit der Erstellung Ihrer eigenen immersiven Benutzer Arbeit mit 
 ## <a name="completed-scenes"></a>Abgeschlossene Szenen
 
 * Klicken Sie im Unity- **Projekt** Panel auf den Ordner **Szenen** .
-* Sie finden zwei Unity-Sceens- **MixedReality213** und **MixedReality213Advanced**.
+* Sie finden zwei Unity-Szenen **MixedReality213** und **MixedReality213Advanced**.
     * **MixedReality213**: Abgeschlossene Szene mit einem Pinsel
     * **MixedReality213Advanced**: Abgeschlossene Szene mit mehreren Pinseln mit dem Press Amount-Beispiel der Schaltfläche "drücken"
 

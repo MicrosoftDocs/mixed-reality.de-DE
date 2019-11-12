@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, Tutorial, API, Language Understanding Intelligence Service, Luis, hololens, immersive, VR
-ms.openlocfilehash: fb00fe9079e49a7ada507e7407ef45fa7eeb0d7e
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9b3e4f081dc8a054d783246554f904a38f43f26c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63555157"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926806"
 ---
 >[!NOTE]
 >Die Mixed Reality Academy-Lernprogramme wurden mit hololens (1. Gen) und gemischten rekursiven Gedanken Köpfen entworfen.  Daher ist es wichtig, dass Sie diese Tutorials für Entwickler, die nach wie vor eine Anleitung für die Entwicklung für diese Geräte suchen, behalten.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für hololens 2 verwendet werden.  Sie werden verwaltet, um weiterhin auf den unterstützten Geräten arbeiten zu können. Es gibt eine neue Reihe von Tutorials, die in Zukunft veröffentlicht werden, um die Entwicklung für hololens 2 zu veranschaulichen.  Dieser Hinweis wird mit einem Link zu diesen Tutorials aktualisiert, wenn diese veröffentlicht werden.
 
 <br>
 
-# <a name="mr-and-azure-303-natural-language-understanding-luis"></a>Mr und Azure 303: Verständnis in natürlicher Sprache (Luis)
+# <a name="mr-and-azure-303-natural-language-understanding-luis"></a>Mr und Azure 303: verstehen in natürlicher Sprache (Luis)
 
 In diesem Kurs erfahren Sie, wie Sie Language Understanding mithilfe von Azure Cognitive Services mit dem Language Understanding-API in eine gemischte Reality-Anwendung integrieren.
 
@@ -38,20 +38,20 @@ In Ihrer Anwendung liegt es an Ihnen, wie Sie die Ergebnisse in Ihren Entwurf in
 
 Seien Sie darauf vorbereitet, Luis mehrmals zu trainieren. Dies wird in [Kapitel 12](#chapter-12--improving-your-luis-service)behandelt. Wenn Luis schneller trainiert wurde, erhalten Sie bessere Ergebnisse.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Natürlich</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>Mr und Azure 303: Verständnis in natürlicher Sprache (Luis)</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Mr und Azure 303: verstehen in natürlicher Sprache (Luis)</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
 > [!NOTE]
 > Dieser Kurs konzentriert sich in erster Linie auf Windows Mixed Reality immersive (VR)-Headsets, aber Sie können auch das, was Sie in diesem Kurs lernen, auf Microsoft hololens anwenden. Wenn Sie den Kurs befolgen, finden Sie Hinweise zu allen Änderungen, die Sie möglicherweise zur Unterstützung von hololens verwenden müssen. Wenn Sie hololens verwenden, bemerken Sie möglicherweise bei der sprach Erfassung einen Echo.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 > [!NOTE]
 > Dieses Tutorial richtet sich an Entwickler, die über grundlegende Kenntnisse in C#Unity und verfügen. Beachten Sie auch, dass die Voraussetzungen und Anweisungen in diesem Dokument darstellen, was zum Zeitpunkt des Schreibens getestet und überprüft wurde (Mai 2018). Sie können die neueste Software verwenden, die im Artikel [Installieren der Tools](install-the-tools.md) aufgeführt ist. es sollte jedoch nicht davon ausgegangen werden, dass die Informationen in diesem Kurs genau mit den Informationen in neueren Software vergleichen, als im folgenden aufgeführt sind.
@@ -62,7 +62,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 - [Windows 10 Fall Creators Update (oder höher) mit aktiviertem Entwicklermodus](install-the-tools.md)
 - [Das neueste Windows 10 SDK](install-the-tools.md)
 - [Unity 2017,4](install-the-tools.md)
-- [Visual Studio 2017](install-the-tools.md)
+- [Visual Studio 2017](install-the-tools.md)
 - Ein [Windows Mixed Reality-Headset (VR)](immersive-headset-hardware-details.md) oder [Microsoft hololens](hololens-hardware-details.md) mit aktiviertem Entwicklermodus
 - Eine Reihe von Kopfhörern mit einem integrierten Mikrofon (wenn das Headset nicht über eine integrierte Mic-und-Sprech Anwendung verfügt)
 - Internet Zugriff für Azure-Setup und Luis-Abruf
@@ -80,7 +80,7 @@ Für diesen Kurs empfehlen wir die folgende Hardware und Software:
 
 Wenn Sie den *Language Understanding* -Dienst in Azure verwenden möchten, müssen Sie eine Instanz des-Dienstanbieter konfigurieren, die für die Anwendung verfügbar gemacht wird.
 
-1.  Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
+1.  Melden Sie sich beim [Azure-Portal](https://portal.azure.com)an.
 
     > [!NOTE]
     > Wenn Sie noch nicht über ein Azure-Konto verfügen, müssen Sie eines erstellen. Wenn Sie dieses Tutorial in einer Classroom-oder Lab-Situation befolgen, bitten Sie Ihren Dozenten oder einen der Proctors, Hilfe beim Einrichten Ihres neuen Kontos zu erhalten.
@@ -125,7 +125,7 @@ Wenn Sie den *Language Understanding* -Dienst in Azure verwenden möchten, müss
     ![Zugriff auf Luis-Schlüssel](images/AzureLabs-Lab3-06.png)
 
 9.  In diesem Lernprogramm muss Ihre Anwendung Aufrufe an Ihren Dienst durchführen. Dies erfolgt über den Abonnement Schlüssel Ihres dienstanzschlüssels.
-10. Navigieren Sie auf der Seite " *Schnellstart* " Ihres *Luis-API* -Diensts zum ersten Schritt, rufen Sie *Ihre Schlüssel*ab, und klicken Sie auf " **Schlüssel** " (Sie können dies auch erreichen, indem Sie auf die blauen Hyperlink-Schlüssel klicken, die sich im Navigationsmenü Dienste befinden, gekennzeichnet durch das Schlüsselsymbol). Dadurch werden die Dienst *Schlüssel*angezeigt.
+10. Navigieren Sie auf der Seite " *Schnellstart* " Ihres *Luis-API* -Diensts zum ersten Schritt, rufen Sie *Ihre Schlüssel*ab, und klicken Sie auf " **Schlüssel** " (Sie können dies auch erreichen, indem Sie auf die blauen Hyperlink-Schlüssel klicken, die sich im Navigationsmenü der Dienste befinden und durch das Schlüsselsymbol gekennzeichnet sind). Dadurch werden die Dienst *Schlüssel*angezeigt.
 11. Erstellen Sie eine Kopie von einem der angezeigten Schlüssel, da Sie dies später in Ihrem Projekt benötigen. 
 12. Klicken Sie auf der Seite *Dienst* auf *Language Understanding Portal* , um zu der Webseite umgeleitet zu werden, die Sie zum Erstellen des neuen Dienstanbieter in der Luis-App verwenden. 
 
@@ -177,7 +177,7 @@ Zunächst erstellen Sie die *Entitäten* , die zum Erstellen dieses Kurses benö
 
     -   *Upsizing*
     -   *Verkleinern*
-    -   *target*
+    -   *Spar*
 
 Das Ergebnis sollte wie in der folgenden Abbildung aussehen:
 
@@ -301,7 +301,7 @@ Für jede Äußerung, die Sie erstellt haben, müssen Sie identifizieren, welche
 26. Im Abschnitt *Ressourcen und Schlüssel*:
 
     1.  Wählen Sie die Region aus, die Sie für die Dienst Instanz im Azure-Portal festlegen.
-    2.  Unten wird ein **Starter_Key** -Element angezeigt, das Sie ignorieren.
+    2.  Sie werden feststellen, dass ein **Starter_Key** -Element unten angezeigt wird.
     3.  Klicken Sie auf **Schlüssel hinzufügen** , und fügen Sie den *Schlüssel* ein, den Sie beim Erstellen Ihrer Dienst Instanz im Azure-Portal abgerufen haben. Wenn Ihr Azure-und das Luis-Portal beim gleichen Benutzer angemeldet sind, erhalten Sie Dropdown Menüs für den Mandanten *Namen*, den *Abonnement Namen*und den *Schlüssel* , den Sie verwenden möchten (hat denselben Namen wie zuvor im Azure-Portal angegeben).
 
     > [!IMPORTANT] 
@@ -323,7 +323,7 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
     ![Skript-Editor-Einstellung aktualisieren.](images/AzureLabs-Lab3-26.png)
  
-4.  Navigieren Sie als nächstes zu **Datei >** Buildeinstellungen, und schalten Sie die Plattform auf **universelle Windows-Plattform**, indem Sie auf die Schaltfläche **Plattform wechseln** klicken.
+4.  Navigieren Sie als nächstes zu **Datei > Buildeinstellungen** , und schalten Sie die Plattform auf **universelle Windows-Plattform**, indem Sie auf die Schaltfläche **Plattform wechseln** klicken.
 
     ![Fenster "Buildeinstellungen", Plattform zu UWP wechseln.](images/AzureLabs-Lab3-27.png)
  
@@ -333,7 +333,7 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
         > Legen Sie für Microsoft hololens das **Zielgerät** auf *hololens*fest.
 
-    2. Der Buildtyp ist auf **D3D** festgelegt.
+    2. Der **Buildtyp** ist auf **D3D** festgelegt.
     3. **SDK** ist auf **neueste installierte** Version festgelegt.
     4. **Visual Studio-Version** ist auf **neueste installierte** Version festgelegt.
     5. **Build und Run** sind auf **lokaler Computer** festgelegt.
@@ -351,9 +351,9 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
             ![Benennen Sie neue Szene.](images/AzureLabs-Lab3-30.png)
 
-    7. Die restlichen Einstellungen in denBuildeinstellungen sollten vorerst als Standard belassen werden.
+    7. Die restlichen Einstellungen in den *Buildeinstellungen*sollten vorerst als Standard belassen werden.
 
-6. Klicken Sie im Fenster Buildeinstellungen auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
+6. Klicken Sie im Fenster *Buildeinstellungen* auf die Schaltfläche **Player Einstellungen** . Dadurch wird der entsprechende Bereich in dem Bereich geöffnet, in dem sich der *Inspektor* befindet. 
 
     ![Öffnen Sie die Player-Einstellungen.](images/AzureLabs-Lab3-31.png) 
  
@@ -378,7 +378,7 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
         ![Aktualisieren Sie die X R-Einstellungen.](images/AzureLabs-Lab3-34.png)
 
-8.  Zurück in Buildeinstellungen: _Unity C#_  -Projekte sind nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
+8.  Zurück in *Buildeinstellungen* : _Unity C#_  -Projekte sind nicht mehr abgeblendet. Aktivieren Sie das Kontrollkästchen neben this. 
 9.  Schließen Sie das Fenster mit den Buildeinstellungen.
 10. Speichern Sie Ihre Szene und Ihr Projekt (**Datei > Speichern Sie Szenen/Dateien > Speichern**Sie das Projekt).
 
@@ -405,7 +405,7 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
     ![Einrichtung der Szenen Hierarchie.](images/AzureLabs-Lab3-36.png)
  
 5.  Klicken Sie mit der linken Maustaste auf die **Hauptkamera** , um Sie auszuwählen. im *Inspektor-Panel* sehen Sie das Kamera Objekt mit allen zugehörigen Komponenten.
-6.  Klicken Sie auf die Schaltfläche **Komponente hinzufügen** , die sich amunteren Rand des inspektorbereichs befindet.
+6.  Klicken Sie auf die Schaltfläche **Komponente hinzufügen** , die sich am unteren Rand des *inspektorbereichs*befindet.
 
     ![Audioquelle hinzufügen](images/AzureLabs-Lab3-37.png)
  
@@ -424,7 +424,7 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
     |       | Transformation- *Position* |       |
     |:-----:|:----------------------:|:-----:|
-    | **STUBEN** | **TEENIE**                  | **Z** |
+    | **Stuben** | **Teenie**                  | **Z** |
     | 0     | -1                     | 0     |
 
 
@@ -432,28 +432,28 @@ Im folgenden finden Sie eine typische Einrichtung für die Entwicklung mit gemis
 
     |       | Transformation- *Position* |       |
     |:-----:|:----------------------:|:-----:|
-    | **STUBEN** | **TEENIE**                  | **Z** |
+    | **Stuben** | **Teenie**                  | **Z** |
     | 2     | 1                      | 2     |
 
 11. Klicken Sie mit der linken Maustaste auf den **Zylinder** , um ihn auszuwählen. Legen Sie im *Inspektor-Panel* die *Transformations* Komponente mit den folgenden Werten fest:
 
     |       | Transformation- *Position* |       |
     |:-----:|:----------------------:|:-----:|
-    | **STUBEN** | **TEENIE**                  | **Z** |
+    | **Stuben** | **Teenie**                  | **Z** |
     | -2    | 1                      | 2     |
 
 12. Klicken Sie mit der linken Maustaste auf den **Cube** , um ihn auszuwählen. Legen Sie im *Inspektor-Panel* die *Transformations* Komponente mit den folgenden Werten fest:
 
     |        | Transformation- *Position* |       |  \| |       | Transformation- *Drehung* |       |
     |:------:|:----------------------:|:-----:|:---:|:-----:|:----------------------:|:-----:|
-    | **STUBEN** | **TEENIE**                   | **Z** |  \| | **STUBEN** | **TEENIE**                  | **Z** |
+    | **Stuben** | **Teenie**                   | **Z** |  \| | **Stuben** | **Teenie**                  | **Z** |
     | 0     | 1                       | 4     |  \| | 45    | 45                     | 0     | 
 
 13. Klicken Sie mit der linken Maustaste auf das **neue Text** Objekt, um es auszuwählen. Legen Sie im *Inspektor-Panel* die *Transformations* Komponente mit den folgenden Werten fest:
 
     |       | Transformation- *Position* |       |  \| |       | Transformieren: *skalieren* |       |
     |:-----:|:----------------------:|:-----:|:---:|:-----:|:-------------------:|:-----:|
-    | **STUBEN** | **TEENIE**                  | **Z** |  \| | **STUBEN** | **TEENIE**               | **Z** |
+    | **Stuben** | **Teenie**                  | **Z** |  \| | **Stuben** | **Teenie**               | **Z** |
     | -2    | 6                      | 9     |  \| | 0,1   | 0,1                 | 0,1   | 
 
 14. Ändern Sie den **Schrift** Grad in der **texmesh** -Komponente in **50**.
@@ -594,7 +594,7 @@ Es ist an der Zeit, die *luismanager* -Klasse zu erstellen, die den Aufruf an de
 
 Der Zweck dieser Klasse besteht darin, den Diktat Text von der Klasse " *mikrophonemanager* " zu empfangen und an die zu analysierende *Azure-Language Understanding-API* zu senden.
 
-Diese Klasse deserialisiert die *JSON* -Antwort und ruft die entsprechenden Methoden der Behaviour *-Klasse auf* , um eine Aktion zu initiieren.
+Diese Klasse deserialisiert die *JSON* -Antwort und ruft die entsprechenden *Methoden der Behaviour-Klasse auf* , um eine Aktion zu initiieren.
 
 So erstellen Sie diese Klasse: 
 
@@ -666,7 +666,7 @@ So erstellen Sie diese Klasse:
     ```
 
 9.  Nun benötigen Sie die Methoden, die von dieser Anwendung verwendet werden, um die von *der Klasse "* -Klasse" empfangene Diktat an *Luis*zu senden und die Antwort zu empfangen und zu deserialisieren. 
-10. Nachdem der Wert der Absicht und der zugeordneten Entitäten ermittelt wurden, werden Sie an die Instanz der Behaviour *-Klasse über* mittelt, um die beabsichtigte Aktion zu initiieren.
+10. Nachdem der Wert der Absicht und der zugeordneten Entitäten ermittelt wurden, werden Sie an die *Instanz der Behaviour-Klasse über* mittelt, um die beabsichtigte Aktion zu initiieren.
 
     ```csharp
         /// <summary>
@@ -706,7 +706,7 @@ So erstellen Sie diese Klasse:
         }
     ```
  
-11. Erstellen Sie eine neue Methode mit dem Namen *analyseresponcelements ()* , mit der die resultierende *analysedquery* gelesen und die Entitäten bestimmt werden. Nachdem diese Entitäten ermittelt wurden, werden Sie an die Instanz der Behaviour- *Klasse zur* Verwendung in den Aktionen übermittelt.
+11. Erstellen Sie eine neue Methode mit dem Namen *analyseresponcelements ()* , mit der die resultierende *analysedquery* gelesen und die Entitäten bestimmt werden. Nachdem diese Entitäten ermittelt wurden, werden Sie an die *Instanz der Behaviour-Klasse zur* Verwendung in den Aktionen übermittelt.
 
     ```csharp
         private void AnalyseResponseElements(AnalysedQuery aQuery)
@@ -721,7 +721,7 @@ So erstellen Sie diese Klasse:
                 entityDic.Add(ed.type, ed.entity);
             }
 
-            // Depending on the topmost recognised intent, read the entities name
+            // Depending on the topmost recognized intent, read the entities name
             switch (aQuery.topScoringIntent.intent)
             {
                 case "ChangeObjectColor":
@@ -871,7 +871,7 @@ So erstellen Sie diese Klasse:
 
     ```csharp
         /// <summary>
-        /// Determines which obejct reference is the target GameObject by providing its name
+        /// Determines which object reference is the target GameObject by providing its name
         /// </summary>
         private GameObject FindTarget(string name)
         {
@@ -1029,7 +1029,7 @@ Nachdem Sie sichergestellt haben, dass die Anwendung im Unity-Editor funktionier
 So erstellen Sie Folgendes:
 
 1.  Speichern Sie die aktuelle Szene, indem Sie auf **Datei > Speichern**klicken.
-2.  Wechseln Sie zu **Datei >** Buildeinstellungen.
+2.  Wechseln Sie zu **Datei > Buildeinstellungen**.
 3.  Aktivieren Sie das Feld mit dem Namen **Unity C# -Projekte** (nützlich zum Anzeigen und Debuggen des Codes, nachdem das UWP-Projekt erstellt wurde.
 4.  Klicken Sie auf **offene Szenen hinzufügen**, und klicken Sie dann auf **Erstellen**.
 
@@ -1041,14 +1041,14 @@ So erstellen Sie Folgendes:
 6.  Klicken Sie auf **Ordner auswählen** , um den Build an diesem Speicherort zu starten.
  
     ![Ordner Create Builds](images/AzureLabs-Lab3-44.png)
-    ![Select Builds Folder](images/AzureLabs-Lab3-45.png)
+    ![Ordner Builds auswählen](images/AzureLabs-Lab3-45.png)
  
 7.  Nachdem die Erstellung von Unity abgeschlossen ist (Dies kann einige Zeit in Anspruch nehmen), sollte ein **Datei-Explorer** -Fenster am Speicherort des Builds geöffnet werden.
 
 Zum Bereitstellen auf dem lokalen Computer:
 
 1.  Öffnen Sie in *Visual Studio*die Projektmappendatei, die im [vorherigen Kapitel](#chapter-10--test-in-the-unity-editor)erstellt wurde.
-2.  Wählen Sieauf der Projektmappenplattform die Option **x86**, **lokaler Computer**aus.
+2.  Wählen Sie auf der Projektmappenplattform die Option **x86**, **lokaler Computer**aus.
 3.  Wählen Sie in der Projektmappenkonfiguration **Debuggen**.
 
     > Für Microsoft hololens ist es möglicherweise einfacher, dies auf den *Remote*Computer festzulegen, damit Sie nicht auf Ihren Computer über das Team verfügen. Allerdings müssen Sie auch die folgenden Schritte ausführen:
@@ -1064,7 +1064,7 @@ Zum Bereitstellen auf dem lokalen Computer:
 ## <a name="chapter-12--improving-your-luis-service"></a>Kapitel 12 – verbessern Ihres Luis-Dienstanbieter
 
 >[!IMPORTANT] 
-> Dieses Kapitel ist äußerst wichtig und muss möglicherweise mehrmals interiert werden, da es zur Verbesserung der Genauigkeit ihres Luis-Dienstanbieter beiträgt: Stellen Sie sicher, dass Sie dies durchführen.
+> Dieses Kapitel ist äußerst wichtig und muss möglicherweise mehrmals durchlaufen werden, da es zur Verbesserung der Genauigkeit ihres Luis-Dienstanbieter beiträgt: Stellen Sie sicher, dass Sie dies durchführen.
 
 Um das von Luis bereitgestellte Maß an Verständnis zu verbessern, müssen Sie neue Äußerungen erfassen und diese zum erneuten trainieren ihrer Luis-App verwenden.
 
@@ -1088,8 +1088,8 @@ Wenn Sie mit dem Mauszeiger auf jedes markierte Wort zeigen, können Sie jede Ä
 
 Im obigen Beispiel wurde festgestellt, dass das Wort "Spear" als Ziel hervorgehoben wurde. es ist daher notwendig, den Fehler zu korrigieren, indem Sie mit der Maus auf das Wort zeigen und auf " **Bezeichnung entfernen**" klicken.
 
-![Überprüfen,](images/AzureLabs-Lab3-49.png)
-ob das Bezeichnungs Bild "Ausdrucks![](images/AzureLabs-Lab3-50.png)
+![überprüfen Sie](images/AzureLabs-Lab3-49.png)
+![Label-Image entfernen](images/AzureLabs-Lab3-50.png)
  
 5.  Wenn Sie Äußerungen gefunden haben, die vollständig falsch sind, können Sie Sie mithilfe der Schaltfläche **Löschen** auf der rechten Seite des Bildschirms löschen.
 

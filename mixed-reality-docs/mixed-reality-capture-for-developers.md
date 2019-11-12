@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, Video, Erfassung, Kamera
-ms.openlocfilehash: 740b02dd1714679028541a888d721ae74e8e1f32
-ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
+ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68937076"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926801"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Erfassung gemischter Realität für Entwickler
 
@@ -48,7 +48,7 @@ Wenn kein Fokuspunkt festgelegt ist, wird die Stabilisierungs Ebene standardmä�
 
 #### <a name="render-from-the-pv-camera-opt-in"></a>Rendering von der PV-Kamera (Opt-in)
 
-Hololens 2 bietet die Möglichkeit, eine immersive APP **aus der PV-Kamera** zu Renderern, während die gemischte Reality-Erfassung ausgeführt wird. Um sicherzustellen, dass die APP das zusätzliche Rendering ordnungsgemäß unterstützt, muss diese Funktion von der APP übernommen werden.
+Hololens 2 bietet die Möglichkeit, eine immersive APP **aus der PV-Kamera zu Renderern** , während die gemischte Reality-Erfassung ausgeführt wird. Um sicherzustellen, dass die APP das zusätzliche Rendering ordnungsgemäß unterstützt, muss diese Funktion von der APP übernommen werden.
 
 Das Rendering von der PV-Kamera bietet die folgenden Verbesserungen im Vergleich zum MRC-Standardverhalten:
 * Die Ausrichtung von holograms an die physische Umgebung und die Hände (bei nahezu Interaktionen) sollte in allen Abständen genau sein, anstatt einen Offset in anderen Entfernungen als dem Punkt zu verwenden, wie Sie in der standardmäßigen MRC-Datei sehen könnten.
@@ -128,7 +128,7 @@ Der wichtigste Schritt besteht darin, sicherzustellen, dass Ihre APP in transpar
 
 Im folgenden finden Sie einige Elemente, die Sie möglicherweise in MRC sehen, wenn Ihre APP nicht in transparent Black gelöscht wird:
 
-**Beispiel Fehler**: Schwarze Ränder um den Inhalt (Fehler beim Löschen in transparente schwarze)
+**Beispiel Fehler**: schwarze Ränder um den Inhalt (Fehler beim Löschen in transparente schwarze)
 
 <table>
 <tr>
@@ -141,11 +141,11 @@ Im folgenden finden Sie einige Elemente, die Sie möglicherweise in MRC sehen, w
 </tr>
 </table>
 
-**Beispiel Fehler**: Die gesamte Hintergrundszene des holograms wird schwarz angezeigt. Das Festlegen eines Hintergrund-Alpha-Werts von 1 ergibt einen schwarzen Hintergrund.
+**Beispiel Fehler**: die gesamte Hintergrundszene des holograms wird schwarz angezeigt. Das Festlegen eines Hintergrund-Alpha-Werts von 1 ergibt einen schwarzen Hintergrund.
 
 ![Das Festlegen eines Hintergrund-Alpha-Werts von 1 ergibt einen schwarzen Hintergrund.](images/clearopaqueblack-300px.png)
 
-**Erwartetes Ergebnis**: Holograms werden ordnungsgemäß mit der realen Umgebung vermischt (erwartetes Ergebnis beim Löschen auf transparente schwarze).
+**Erwartetes Ergebnis**: holograms werden ordnungsgemäß mit der realen Umgebung gemischt (erwartetes Ergebnis beim Löschen auf transparente schwarze)
 
 ![Erwartetes Ergebnis beim Löschen auf transparente schwarze](images/cleartransparentblack-300px.png)
 
@@ -190,23 +190,23 @@ Andere Anwendungen können hierfür die [Windows Media Capture-APIs](https://doc
 
 Anwendungen haben zwei Möglichkeiten, den Effekt hinzuzufügen:
 * Die ältere API: [Windows. Media. Capture. mediacapture. addeffectasync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* Die neue von Microsoft empfohlene API (gibt ein-Objekt zurück, sodass dynamische Eigenschaften geändert werden können): [Windows. Media. Capture. mediacapture. addvideoeffectasync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) / [Windows. Media. Capture. mediacapture. addaudioeffectasync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) , die erfordert, dass die APP eine eigene Implementierung von [ivideoeffectdefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) erstellt und [ Iaudioeffectdefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). Ein Beispiel für die Verwendung finden Sie im Beispiel für den MRC-Effekt.
+* Die neue von Microsoft empfohlene API (gibt ein-Objekt zurück, so können Sie dynamische Eigenschaften bearbeiten): [Windows. Media. Capture. mediacapture. addvideoeffectasync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) / [Windows. Media. Capture. mediacapture. addaudioeffectasync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) , die erfordert, dass die APP eine eigene Implementierung von [ivideoeffectdefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) und [iaudioeffectdefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition)erstellt. Ein Beispiel für die Verwendung finden Sie im Beispiel für den MRC-Effekt.
 
 >[!NOTE]
 > Der Windows. Media. mixedrealitycapture-Namespace wird von Visual Studio nicht erkannt, aber die Zeichen folgen sind immer noch gültig.
 
 MRC-Video Effekt (**Windows. Media. mixedrealitycapture. mixedrealitycapturevideoeffect**)
 
-|  Eigenschaftenname  |  Typ  |  Standardwert  |  Beschreibung | 
+|  Eigenschaftenname  |  Geben Sie in das Suchfeld auf der Taskleiste  |  Standardwert  |  Beschreibung | 
 |----------|----------|----------|----------|
 |  Streamtype  |  UInt32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (videorecord)  |  Beschreiben Sie den Erfassungsdaten Strom, für den dieser Effekt verwendet wird. Audiodaten sind nicht verfügbar. | 
-|  Hologramcompositionaktivierte  |  boolean  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren von holograms bei der Video Erfassung. | 
-|  Recordingindialisioraktiviert  |  boolean  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren des Aufzeichnungs Indikators auf dem Bildschirm während der – Hologramm-Erfassung. | 
-|  Videostabilizationaktivierte  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Videostabilisierung, die von hololens-Tracker unterbunden wird. | 
+|  Hologramcompositionaktivierte  |  boolesch  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren von holograms bei der Video Erfassung. | 
+|  Recordingindialisioraktiviert  |  boolesch  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren des Aufzeichnungs Indikators auf dem Bildschirm während der – Hologramm-Erfassung. | 
+|  Videostabilizationaktivierte  |  boolesch  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Videostabilisierung, die von hololens-Tracker unterbunden wird. | 
 |  Videostabilizationbufferlength  |  UINT32  |  0  |  Legen Sie fest, wie viele historische Frames für die Videostabilisierung verwendet werden. 0 (null): Latenz und nahezu "kostenlos" aus Leistungs-und Leistungs Perspektive. 15 wird für die höchste Qualität empfohlen (auf Kosten von 15 Frames an Latenz und Arbeitsspeicher). | 
 |  Globalopacitykoeffizienten  |  float  |  0,9 (hololens) 1,0 (immersives Headset)  |  Legen Sie den globalen Deckkraft Koeffizienten von – Hologramm im Bereich von 0,0 (vollständig transparent) auf 1,0 (vollständig deckend) fest. | 
-|  Blankonprotectedcontent  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Rückgabe eines leeren Frames, wenn eine 2D-UWP-App geschützte Inhalte anzeigt. Wenn dieses Flag false ist und eine 2D-UWP-App geschützte Inhalte anzeigt, wird die 2D-UWP-app durch eine geschützte Inhalts Textur sowohl im Headset als auch in der Mixed Reality-Erfassung ersetzt. |
-|  Showhiddenmesh  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Anzeige des ausgeblendeten Bereichs Netzes der Holographic-Kamera und des benachbarten Inhalts. |
+|  Blankonprotectedcontent  |  boolesch  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Rückgabe eines leeren Frames, wenn eine 2D-UWP-App geschützte Inhalte anzeigt. Wenn dieses Flag false ist und eine 2D-UWP-App geschützte Inhalte anzeigt, wird die 2D-UWP-app durch eine geschützte Inhalts Textur sowohl im Headset als auch in der Mixed Reality-Erfassung ersetzt. |
+|  Showhiddenmesh  |  boolesch  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Anzeige des ausgeblendeten Bereichs Netzes der Holographic-Kamera und des benachbarten Inhalts. |
 | Outputsize | Größe | 0, 0 | Legen Sie die gewünschte Ausgabegröße nach dem Zuschneiden für die Videostabilisierung fest. Eine standardmäßige zuergröße wird ausgewählt, wenn 0 oder eine ungültige Ausgabegröße angegeben wird. |
 | Preferredhologrammperspective | UINT32 | 1 (photovideocamera) | Eine Aufzählung, mit der angegeben wird, welche Konfiguration der holografischen Kameraansicht aufgezeichnet werden soll. Das Festlegen von 0 (anzeigen) bedeutet, dass die APP nicht zum Rendering von der Foto-/Videokamera aufgefordert wird. |
 
@@ -215,7 +215,7 @@ MRC-Audioeffekt (**Windows. Media. mixedrealitycapture. mixedrealitycaptureaudio
 <table>
 <tr>
 <th>Eigenschaftenname</th>
-<th>Typ</th>
+<th>Geben Sie in das Suchfeld auf der Taskleiste</th>
 <th>Standardwert</th>
 <th>Beschreibung</th>
 </tr>
@@ -225,9 +225,9 @@ MRC-Audioeffekt (**Windows. Media. mixedrealitycapture. mixedrealitycaptureaudio
 <td>2</td>
 <td>
 <ul>
-<li>1,0 Nur MIC-Audiodaten</li>
-<li>1 Nur systemaudiodatei</li>
-<li>2,2 MIC-und systemaudiodaten</li>
+<li>0: nur MIC-Audiodaten</li>
+<li>1: nur systemaudiodatei</li>
+<li>2: MIC-und systemaudiodatei</li>
 </ul>
 </td>
 </tr>
@@ -253,10 +253,10 @@ Allerdings wurde die Unterstützung für jedes Subsystem hinzugefügt, um in ein
 * Wenn die integrierte MRC gestartet wird, während eine APP exclusivecontrol hat, wird die integrierte MRC-Datei im sharedreadonly-Modus ausgeführt.
 
 Diese Funktion für den freigegebenen Modus weist bestimmte Einschränkungen auf:
-* Foto über Cortana, Hardware Verknüpfungen oder Startmenü: Erfordert das Windows 10-Update vom April 2018 (oder höher)
-* Video über Cortana, Hardware Verknüpfungen oder das Startmenü: Erfordert das Windows 10-Update vom April 2018 (oder höher)
-* Streaming von MRC über miracast: Erfordert das Windows 10-Update vom Oktober 2018 (oder höher)
-* Streaming von MRC über das Windows-Geräte Portal oder über die "hololens"-Begleit-App: Erfordert hololens 2
+* Foto über Cortana, Hardware Verknüpfungen oder Startmenü: erfordert Windows 10 April 2018 Update (oder höher)
+* Video über Cortana, Hardware Verknüpfungen oder Startmenü: erfordert Windows 10 April 2018 Update (oder höher)
+* Streaming von MRC über miracast: erfordert das Windows 10-Update vom Oktober 2018 (oder höher)
+* Streaming von MRC über das Windows-Geräte Portal oder über die "hololens Companion"-App: erfordert hololens 2
 
 >[!NOTE]
 > Die Auflösung und die Framerate der integrierten MRC-Kamera-Benutzeroberfläche werden möglicherweise von den normalen Werten reduziert, wenn eine andere APP die Foto-/Videokamera verwendet.
@@ -267,6 +267,6 @@ Beim Windows 10-Update vom April 2018 gibt es keine Einschränkung mehr für meh
 
 Vor dem Windows 10-Update vom April 2018 konnte sich die benutzerdefinierte MRC-Aufzeichnung einer APP mit System MRC (Aufzeichnen von Fotos, Aufzeichnen von Videos oder Streaming aus dem Windows-Geräte Portal) gegenseitig ausschließen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Mixed Reality-Aufnahme](mixed-reality-capture.md)
 * [Spectator View](spectator-view.md)

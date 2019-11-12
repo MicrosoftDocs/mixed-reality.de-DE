@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Mixed Reality, Holographic, AR, VR, Mr, XR, Augmented Reality, Virtual Reality, Erläuterung
-ms.openlocfilehash: 83beca8b6abad56fc37800ddfc9faad0d21859bf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437912"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926775"
 ---
 # <a name="what-is-mixed-reality"></a>Was ist Mixed Reality?
 
@@ -71,7 +71,7 @@ Die meisten Mobiltelefone auf dem Markt haben heute kaum noch keine Kenntnisse i
 <br>
 
 ![Sie das gemischte Reality-Spektrum](images/MixedRealitySpectrum.jpg)<br>
-*Der Glanz der gemischten Realität*
+*Das gemischte Reality-Spektrum*
 
 <br>
 
@@ -120,5 +120,5 @@ Häufig ist es am besten, zu sehen, welche Art von Anwendung ein Anwendungs-oder
 * [Was ist ein Hologramm?](hologram.md)
 * [Verstehen der Grundlagen von Mixed Reality](index.md#understand-the-basics)
 * [Beginnen Sie mit dem Erstellen und Prototypen](design.md)
-* [Erlernen der Tools und der Architektur](development.md)
+* [Erlernen von Tools und Architektur](development.md)
 
