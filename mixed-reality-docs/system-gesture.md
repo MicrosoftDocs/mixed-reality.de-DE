@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Gemischte Realität, Gesten, Interaktion, Entwurf
-ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926726"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064241"
 ---
 # <a name="system-gesture"></a>System Geste
 
@@ -98,7 +98,7 @@ Wir haben auch eine eindimensionale Lösung für den einfachen Zugriff in holole
     :::column-end:::
     :::column:::
         ![-Schaltflächen-Pinsel](images/wrist-button-pinch.png)<br>
-        **Schritt: Augenblick auf die Schaltfläche und dann auf die Schaltfläche**<br>
+        **Schritt 2: Augenblick auf die Schaltfläche und dann auf die Schaltfläche**<br>
     :::column-end:::
 :::row-end:::
 

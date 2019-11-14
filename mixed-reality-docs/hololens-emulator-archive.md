@@ -3,15 +3,15 @@ title: Hololens-Emulator-Archiv
 description: Liste der veröffentlichten Builds des Microsoft hololens-Emulators.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 9/11/2019
+ms.date: 11/11/2019
 ms.topic: article
 keywords: Hololens, Emulator, Builds, Versionen
-ms.openlocfilehash: c2d0c8d9e81bae906c786a32f08d0e701638535e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9ce72febfd07b7dc743b9ee202e8c4353f1de96
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434204"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064224"
 ---
 # <a name="hololens-2-emulator-archive"></a>Hololens 2-Emulator-Archiv
 
@@ -19,6 +19,7 @@ Der hololens-Emulator (1st Gen) und der hololens 2-emulatorbuild werden nebenein
 
 |  Version |  Datum der Veröffentlichung |  Anmerkungen | 
 |----------|----------|----------|
+|  [Hololens 2-emulatorbuild 10.0.18362.1039](https://go.microsoft.com/fwlink/?linkid=2110553) | 11. November 2019 | Vom November 2019 hololens 2-Build. |
 |  [Hololens 2-emulatorbuild 10.0.18362.1034](https://go.microsoft.com/fwlink/?linkid=2106649) | 8\. Oktober 2019 | Oktober 2019 hololens 2-Build.  Beim Ausführen einer Version, die älter als die neueste verfügbare Version ist, wird der Emulator aufgefordert, auf eine neue Version zu aktualisieren.  Bei Verwendung des Emulators unter Windows 10 Mai 2019 Update oder neuer ermöglicht die neue NAT-Konfigurations Registerkarte Entwicklern das Öffnen von Ports für Anwendungen, die auf separaten Geräten ausgeführt werden, um eine Verbindung mit dem Emulator herzustellen  Weitere Informationen finden Sie in der [hololens-Emulator-Dokumentation](using-the-hololens-emulator.md) . |
 |  [Hololens 2-emulatorbuild 10.0.18362.1031](https://go.microsoft.com/fwlink/?linkid=2103724) | 11. September 2019 | September 2019 hololens 2-Build.  Die Registerkarte Netzwerk wird im Fenster emulatortools angezeigt, wenn Sie den Emulator auf dem Windows 10-Update vom Mai 2019 oder höher ausführen. |
 |  [Hololens 2-emulatorbuild 10.0.18362.1028](https://go.microsoft.com/fwlink/?linkid=2101019) | 14. August 2019 | Der Buildvorgang vom August 2019 hololens 2.  Holographic-App-Vorlagen sind nicht mehr enthalten, sind aber im Visual Studio Marketplace verfügbar.  Der Emulator funktioniert nun, wenn sdche an einem benutzerdefinierten Speicherort installiert werden. |

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 32a77d6032335ab3ae769b85c5f947440658743f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913536"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064258"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Platzieren von dynamischem Inhalt und Verwenden von Solvers
 
@@ -72,7 +72,7 @@ In diesem Abschnitt konfigurieren wir das zuvor erstellte Cube-Spielobjekt so, d
 
     ![mrlearning-Base-CH3-3-step2b. png](images/mrlearning-base-ch3-3-step2b.png)
 
-3. Legen Sie den maximalen und den minimalen Abstand der radialen Ansicht auf 0 fest, damit der Cube keinen Abstand zwischen ihm und dem Handgelenk des Benutzers hat. Nach der Einstellung ist der Würfel perfekt mit dem Handgelenk ausgerichtet. Sie können auch das Feld Bezugs Richtung anpassen, um das Verhalten des Cubes anzupassen, z. b. Wenn Sie zulassen möchten, dass das Objekt mit dem Handgelenk des Benutzers gedreht wird, indem die Verweis Richtung auf die Ausrichtung mit dem überwachten Objekt festgelegt wird.
+3. Legen Sie den maximalen und den minimalen Abstand der radialen Ansicht auf 0 fest, damit der Cube keinen Abstand zwischen ihm und dem Handgelenk des Benutzers hat. Nach der Einstellung ist der Würfel perfekt mit dem Handgelenk ausgerichtet. Sie können auch das Feld Bezugs Richtung anpassen, um das Verhalten des Cubes anzupassen, z. b. Wenn Sie zulassen möchten, dass das Objekt mit dem Handgelenk des Benutzers gedreht wird, indem die Verweis Richtung auf objektorientiert festgelegt wird.
 
     ![mrlearning-Base-CH3-3-step3. png](images/mrlearning-base-ch3-3-step3.png)
 

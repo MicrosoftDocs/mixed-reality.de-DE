@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 5599fe48f62a35d1dc02ce30fb7858fd74e87685
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926536"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064321"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. untersuchen erweiterter Eingabeoptionen
 
@@ -110,7 +110,7 @@ In diesem Abschnitt werden zwei Sprachbefehle implementiert. Zuerst wird die Mö
 
 ### <a name="the-pan-gesture"></a>Die Geste „Schwenken“
 
-In diesem Abschnitt erfahren Sie, wie Sie die Schwenkbewegung verwenden. Dies ist hilfreich, wenn Sie mit dem Finger oder der Hand einen Bildlauf durch den Inhalt durchführen möchten. Sie können mit der Schwenkbewegung auch Objekte drehen, eine Auflistung von 3D-Objekten durchlaufen oder sogar einen Bildlauf in einer 2D-Benutzeroberfläche durchführen. <!--TMP You will also learn how to use the pan gesture to warp a texture, and how to move a collection of 3D objects.-->
+In diesem Abschnitt erfahren Sie, wie Sie die Schwenkbewegung verwenden. Dies ist hilfreich, wenn Sie mit dem Finger oder der Hand einen Bildlauf durch den Inhalt durchführen möchten. Sie können mit der Schwenkbewegung auch Objekte drehen, eine Auflistung von 3D-Objekten durchlaufen oder sogar einen Bildlauf in einer 2D-Benutzeroberfläche durchführen.
 
 1. Erstellen Sie einen Quader. Klicken Sie in der basescene-Hierarchie mit der rechten Maustaste auf "3D-Objekt" gefolgt von Quad.
 
@@ -128,10 +128,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die Schwenkbewegung verwenden. Dies is
 4. Geben Sie im Projekt Panel "Pan Content" in das Suchfeld ein. Ziehen Sie dieses Material auf das Vierfache in Ihrer Szene.
 
     >[!NOTE]
-    >Das Inhalts Material von Pan ist nicht in der mrtk enthalten, sondern eine Ressource in dem Asset-Paket dieses Moduls, das in vorherigen Lektionen importiert wurde.
-
-    >[!NOTE]
-    >Der importierte geschwenkte Inhalt kann gestreckt aussehen. Sie können dieses Problem heben, indem Sie die Werte x, y und z für die Abmessungen des Quaders anpassen, bis Sie mit dem Erscheinungsbild zufrieden sind.
+    >Das pancontent-Material ist nicht Bestandteil von mrtk, sondern ist im basemoduleassets-Asset enthalten, das in der vorherigen Lektion importiert wurde.
 
     Zum Verwenden der Geste „Schwenken“ benötigen Sie ein Collider für das Objekt. Sie stellen möglicherweise fest, dass der Quader bereits ein Gitter-Collider aufweist. Das Gitter-Collider ist jedoch nicht ideal, da es äußerst schmal und daher schwer auszuwählen ist. Es empfiehlt sich, das Gitter-Collider durch ein Feld-Collider zu ersetzen.
 
@@ -157,26 +154,45 @@ In diesem Abschnitt erfahren Sie, wie Sie die Schwenkbewegung verwenden. Dies is
 
     Und damit verfügen Sie über ein Schwenk-aktiviertes Quad.
 
-    Wie Sie sehen, hat die Komponente "Hand Interaktion schwenken schwenken" verschiedene Einstellungen, als optionale Übung, Sie können mit Ihnen experimentieren.
+    Wie Sie sehen, verfügt die Skript Komponente "Hand Interaktion schwenken schwenken" über verschiedene Einstellungen. als optionale Übung können Sie mit Ihnen experimentieren.
 
     ![mrlearning-Base-CH5-2-step8b. png](images/mrlearning-base-ch5-2-step8b.png)
 
-<!--TMP
-   Next, we will learn how to pan 3D objects. 
+9. Nun erfahren Sie, wie Sie 3D-Objekte schwenken.
 
-10. Right-click the quad object, select 3D object and click Cube. Scale the cube so that it’s roughly x = 0.1, y = 0.1 and z = 0.1. Copy that cube three times by right-clicking the cube and pressing duplicate, or by pressing control/command D. Space them out evenly. Your scene should look similar to the image below.
+    Klicken Sie in der Hierarchie mit der rechten Maustaste auf das Quad-Objekt, um das Kontextmenü für das Kontextmenü zu öffnen, und wählen Sie dann **3D-Objekt** > **Cube** aus, um der Szene einen Cube
 
-![Lesson5 Chapter2 Step10im](images/Lesson5_chapter2_step10im.PNG)
+    Stellen Sie sicher, dass die **Position** des Cubes auf _0, 0, 0_ (null) festgelegt ist. Skalieren Sie den Cube auf eine **Skala** von _0,1, 0,1 und 0,1_.
 
-11. Select the quad again and under the hand interaction pan script, set the pan actions to each of the cubes. Under Pan Event Receivers, we want to specify the number of objects receiving the event. Since there are four cubes, type “4” and press Enter. Four empty fields should appear.
+    ![mrlearning-Base-CH5-2-step9. png](images/mrlearning-base-ch5-2-step9.png)
 
-![Lesson5 Chapter2 Step11im](images/Lesson5_chapter2_step11im.PNG)
+    Duplizieren Sie den Cube dreimal, indem Sie mit der rechten Maustaste auf den Cube klicken, das Kontextmenü für den Kontext öffnen und **Duplizieren**auswählen.
 
-12. Drag each of the cubes into each of the empty element slots.
-     ![Lesson5 Chapter2 Step12im](images/Lesson5_chapter2_step12im.PNG)
-    
-13. Add the Move with Pan script to all of the cubes by pressing and holding control/command and select each object. From the Inspector panel, click Add Component and search for “move with pan.” Click the script and it is added to each cube. Now the 3D objects will move with your pan gesture. If you remove the mesh render on your quad, you should now have an invisible quad where you can pan through a list of 3D objects.
--->
+    Leerraum, der die Cubes gleichmäßig verteilt. Die Szene sollte in etwa wie in der folgenden Abbildung aussehen.
+
+10. Fügen Sie das Skript "muvewithpan" allen Cubes hinzu, indem Sie die STRG-Taste gedrückt halten, während **Sie jedes** Cubeobjekt im Hierarchie Panel auswählen. Klicken Sie im Inspektor-Panel auf Komponente hinzufügen, suchen Sie nach dem Skript **mit Schwenken verschieben** , und wählen Sie es aus, um es zu allen Cubes hinzuzufügen.
+
+    ![mrlearning-Base-CH5-2-step10a. png](images/mrlearning-base-ch5-2-step10a.png)
+
+    >[!NOTE]
+    >Das Skript "muvewithpan" ist nicht Bestandteil von mrtk, aber in das basemoduleassets-Asset eingeschlossen, das in der vorherigen Lektion importiert wurde.
+
+    Ziehen Sie das **Quad** -Objekt aus dem Bereich Hierarchie in das Feld **Pan Input Source** der **Move with Pan** Script-Komponente, wenn die Cubes noch ausgewählt sind.
+
+    ![mrlearning-Base-CH5-2-step10b. png](images/mrlearning-base-ch5-2-step10b.png)
+
+    Nun werden die Cubes mit der Schwenkbewegung bewegt.
+
+    >[!TIP]
+    >Die "muvewithpan"-Instanz auf jedem Cube lauscht auf das von der handinteraktionpanzoom-Instanz auf dem Quad-Objekt gesendete "panaktualisierte" Ereignis, das dem Eingabe Quellfeld "Pan Input" für jeden der Cubes hinzugefügt wurde, und aktualisiert die Position des entsprechenden Cubeobjekts entsprechend.
+
+    Wenn die Cubes noch ausgewählt sind, verschieben Sie Sie entlang ihrer **Z-Achse**, sodass sich das Mesh des Cubes innerhalb des vierfach-umruders befindet, indem er die **Position Z** -Werte auf _0,7_ändert.
+
+    ![mrlearning-Base-CH5-2-step10c. png](images/mrlearning-base-ch5-2-step10c.png)
+
+    Wenn Sie **nun die**Mesh- **Rendererkomponente** deaktivieren, indem Sie Sie im Inspektor-Panel deaktivieren, verfügen Sie über ein unsichtbares Vierfache, bei dem Sie eine Liste von 3D-Objekten schwenken können.
+
+    ![mrlearning-Base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
 
 ### <a name="eye-tracking"></a>Eyetracking
 
@@ -197,13 +213,16 @@ In diesem Abschnitt erfahren Sie, wie Sie die Eye-Nachverfolgung in unserer Demo
 2. Fügen Sie die EyeTrackingTarget-Komponente Zielobjekten hinzu. Damit ein Objekt auf Eye-Eye-Ereignisse reagieren kann, müssen wir die Komponente "eyetrackingtarget" für jedes Objekt, mit dem wir interagieren möchten, mithilfe von "Eye Eye" hinzufügen. Fügen Sie diese Komponente jedem der neun 3D-Objekte hinzu, die zur Rastersammlung gehören.
 
     >[!TIP]
-    >Mit der Umschalttaste und/oder der STRG-Taste können Sie mehrere Elemente in der Szenen Hierarchie auswählen und dann die Komponente "pipetrackingtarget" per Massen Vorgang hinzufügen.
+    >Sie können die UMSCHALT-und/oder Crtl-Schlüssel verwenden, um mehrere Elemente in der Hierarchie auszuwählen und dann eine Massen Hinzufügung der Komponente "eyetrackingtarget" durchführen.
 
     ![Lesson5 Chapter3 Schritt 2](images/Lesson5Chapter3Step2.JPG)
 
-3. Als Nächstes fügen wir das Skript "eyetrackingtutorialdemo" für einige interessante Interaktionen hinzu. Das Skript "eyetrackingtutorialdemo" ist als Teil dieses Tutorials in der tutorialreihe enthalten. Sie ist nicht standardmäßig mit dem Mixed Reality Toolkit enthalten. Fügen Sie für jedes 3D-Objekt in der Raster Auflistung das Skript "eyetrackingtutorialdemo" hinzu, indem Sie im Menü "Komponente hinzufügen" nach der Komponente suchen.
+3. Als Nächstes fügen wir das Skript "eyetrackingtutorialdemo" für einige interessante Interaktionen hinzu. Fügen Sie für jedes 3D-Objekt in der Raster Auflistung das Skript "eyetrackingtutorialdemo" hinzu, indem Sie im Menü "Komponente hinzufügen" nach der Komponente suchen.
 
-   ![Lesson5 Chapter3 Schritt 3](images/Lesson5Chapter3Step3.JPG)
+    ![Lesson5 Chapter3 Schritt 3](images/Lesson5Chapter3Step3.JPG)
+
+    >[!NOTE]
+    >Das Skript Material "eyetrackingtutorialdemo" ist nicht Bestandteil von mrtk, aber in das basemoduleassets-Asset eingeschlossen, das in der vorherigen Lektion importiert wurde.
 
 4. Drehen Sie das Objekt, während Sie das Ziel anvisieren. Wir möchten unsere 3D-Objekte so konfigurieren, dass Sie während der Betrachtung aussehen. Fügen Sie zu diesem Zweck ein neues Feld in den ein, und betrachten Sie dabei den Target ()-Abschnitt der "pipetrackingtarget"-Komponente, wie in der folgenden Abbildung dargestellt.
 
