@@ -6,19 +6,16 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, App-Leiste, Begrenzungs Bereich
-ms.openlocfilehash: f09187bc2a3969a8f844711052e15433f5449d6d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437053"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105758"
 ---
 # <a name="bounding-box-and-app-bar"></a>Begrenzungs Bereich und App-Leiste
-![Das Begrenzungs Zeichen ist die Standardschnittstelle für die Objekt Bearbeitung in gemischter Realität.](images/640px-boundingbox-hero.jpg)<br>
-
+![umgebenden ist die Standardschnittstelle für die Objekt Bearbeitung in gemischter Realität.](images/640px-boundingbox-hero.jpg)<br>
 <br>
-
----
 
 ## <a name="what-is-the-bounding-box"></a>Was ist das umgebende Feld?
 
@@ -95,15 +92,33 @@ Die APP-Leiste ist ein Menü auf Objektebene, das eine Reihe von Schaltflächen 
 <br>
 
 
+## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Begrenzungsfeld in mrtk (Mixed Reality Toolkit) für Unity
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** stellt Skripts und Prefabs für das umgebende Feld und die APP-Leiste bereit. Sie können ein Begrenzungsfeld hinzufügen, indem Sie das BoundingBox.cs-Skript einfach einem beliebigen Objekt zuweisen.
 
-**Informationen zur Entwicklung von Unity-apps finden Sie [in der APP-Leiste im Mixed Reality Toolkit-Unity.](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)**
+* [Mrtk-Begrenzungsfeld](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+
 
 <br>
 
 ---
 
+
 ## <a name="see-also"></a>Weitere Informationen:
+
+* [Cursor](cursors.md)
+* [Hand Strahl](point-and-commit.md)
+* [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
-* [Text in Unity](text-in-unity.md)
+* [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
+* [Bearbeitung](direct-manipulation.md)
+* [Handmenü](hand-menu.md)
+* [Near-Menü](near-menu.md)
 * [Objektsammlung](object-collection.md)
+* [Sprachbefehl](voice-input.md)
+* [Tastatur](keyboard.md)
+* [QuickInfo](tooltip.md)
+* [Tafel](slate.md)
+* [Schieberegler](slider.md)
+* [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
+* [Oberflächen Magnetismus](surface-magnetism.md)

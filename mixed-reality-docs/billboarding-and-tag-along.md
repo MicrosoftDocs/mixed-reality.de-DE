@@ -6,26 +6,32 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, fakboardingvorgang, tagparallel
-ms.openlocfilehash: 032e665d94a73b94b59f693e452874af0b45f021
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 06cd1c6f67f8aa2dd94173d4089adbdbd0765211
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436998"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105733"
 ---
 # <a name="billboarding-and-tag-along"></a>Fakboardingvorgang und Tag-entlang
 
 <br>
 
-<img src="images/billboarding-fragments.gif" alt="HoloLens perspective of a menu system that always faces the user" width="940px">
+<img src="images/UX/MRTK_TagAlong.gif" alt="HoloLens perspective of a menu system that always faces the user" width="940px">
+<br>
+
+## <a name="what-is-billboarding"></a>Was ist die Abrechnung?
 
 Bei der Abrechnung handelt es sich um ein Verhaltens Konzept, das auf Objekte in gemischter Realität angewendet werden kann. Objekte mit einem Abrechnungs-Board orientieren sich stets an dem Benutzer. Dies ist insbesondere bei Text-und menuingsystemen hilfreich, bei denen statische Objekte, die in der Umgebung des Benutzers (der Welt gesperrt) platziert werden, andernfalls verdeckt oder unlesbar sind, wenn ein Benutzer sich bewegen würde.
 
 Objekte mit aktiviertem fakboardingvorgang können in der Benutzerumgebung frei rotiert werden. Sie können je nach Entwurfs Überlegungen auch auf eine einzelne Achse beschränkt werden. Beachten Sie, dass abgelegte Objekte möglicherweise ein-oder ausgeblendet werden, wenn Sie sich zu nahe an anderen Objekten befinden oder in hololens zu schließen. Um dies zu vermeiden, stellen Sie sich den Gesamt Speicherbedarf vor, der von einem Objekt erzeugt wird, wenn es auf der Achse gedreht wird, die für das
 
+<br>
+
+---
 ## <a name="what-is-a-tag-along"></a>Was ist ein Tag?
 
-Tagparallel ist ein Verhaltens Konzept, das holograms hinzugefügt werden kann, einschließlich der Abrechnungen von Objekten. Diese Interaktion ist ein natürlicheres und freundlicheres Verfahren, um die Auswirkungen von Kopf gesperrten Inhalten zu erzielen. Ein Tag-entlang-Objekt versucht, die Ansicht des Benutzers niemals zu verlassen. Dadurch kann der Benutzer frei mit den vorgelagerten Aktionen interagieren, während die Hologramme außerhalb der direkten Ansicht angezeigt werden.
+Tagparallel ist ein Verhaltens Konzept, das holograms hinzugefügt werden kann. Ein Tag-entlang-Objekt versucht, in einem Bereich zu bleiben, der es dem Benutzer ermöglicht, komfortabel zu interagieren.
 
 ![das hololens-Pins-Panel ist ein gutes Beispiel dafür, wie sich Tag-entlang verhält](images/tagalong-1000px.jpg)<br>
 *Das hololens-Startmenü ist ein gutes Beispiel für das tagparallel Verhalten.*
@@ -36,7 +42,37 @@ Zusätzliche Parameter können dazu führen, dass das Tag-an-Objekt von einem Gu
 
 Ebenso wie wirklich mit dem Titel gesperrter Inhalt können sich taggingobjekte als überwältigend oder übersichtlich erweisen, wenn Sie in der Ansicht des Benutzers sehr stark verschoben werden. Wenn ein Benutzer die Suche durchsucht und dann schnell anhält, werden Sie von Ihren Sinnen informiert, dass Sie angehalten wurden. Ihr Saldo informiert Sie darüber, dass ihre Kopfzeile angehalten wurde, und ihre Vision sieht, dass die Welt beendet wird. Wenn das Tag-Along jedoch weiterhin verschoben wird, wenn der Benutzer angehalten wurde, kann es seine Sinne verwirren.
 
+<br>
+
+---
+
+## <a name="billboarding-and-tag-along-in-mrtkmixed-reality-toolkit-for-unity"></a>Fakboardingvorgang und tagparallel in mrtk (Mixed Reality Toolkit) für Unity
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** stellt Skripts für das fakboardingverhalten und das tagbasierte Verhalten bereit. Weisen Sie der Billboard.cs-Skript einfach ein beliebiges Objekt zu, um das Verhalten bei der Abbild Erstellung hinzuzufügen und das Objekt immer als Verwenden Sie RadialView.cs Script, um das tagbasierte Verhalten hinzuzufügen. Sie können verschiedene Optionen wie z. b. lerping-Zeit, Entfernung und Grad anpassen.
+
+* [-Solver der mrtk-radialen Ansicht](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html#radialview)
+* [Mrtk-Billboard-Skript](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
+
+
+<br>
+
+---
+
 ## <a name="see-also"></a>Weitere Informationen:
+
 * [Cursor](cursors.md)
-* [Instinktive Interaktionen](interaction-fundamentals.md)
-* [Komfort](comfort.md)
+* [Hand Strahl](point-and-commit.md)
+* [Button](button.md)
+* [Interaktionsfähiges Objekt](interactable-object.md)
+* [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
+* [Bearbeitung](direct-manipulation.md)
+* [Handmenü](hand-menu.md)
+* [Near-Menü](near-menu.md)
+* [Objektsammlung](object-collection.md)
+* [Sprachbefehl](voice-input.md)
+* [Tastatur](keyboard.md)
+* [QuickInfo](tooltip.md)
+* [Tafel](slate.md)
+* [Schieberegler](slider.md)
+* [Billboarding und Tag-along](billboarding-and-tag-along.md)
+* [Anzeigen des Fortschritts](progress.md)
+* [Oberflächen Magnetismus](surface-magnetism.md)

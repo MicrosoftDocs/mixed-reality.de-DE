@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: da485f167ef3902dd75adf8da8181504fbc6c6df
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: cf51505cab2db765325c2e7b78a52e4b790845c9
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913167"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105955"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Sprach-SDK-Lernmodul-Starter Launcher-Steuerelement mithilfe von Sprachbefehlen
 
@@ -24,7 +24,7 @@ In dieser Lektion verwenden wir das Intent-Feature des Azure Speech Service, um 
 
 ## <a name="instructions"></a>Anweisungen
 
-1. In diesem Tutorial verwenden wir ein "basemodule"-Asset, um das Raketenstart Programm mit den Sprachbefehlen zu integrieren. Dafür müssen wir das Medienobjekt in unser Projekt importieren. Sie können das Asset "Launcher Launcher" mithilfe dieses [Links](https://github.com/Developer-OI/MixedRealityLearning/releases/download/1.2.1/BaseModuleAssets-1.2.1.unitypackage)herunterladen.
+1. In diesem Tutorial verwenden wir ein "basemodule"-Asset, um das Raketenstart Programm mit den Sprachbefehlen zu integrieren. Dafür müssen wir das Medienobjekt in unser Projekt importieren. Sie können das Asset "Launcher Launcher" mithilfe dieses [Links](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)herunterladen.
 
 2. Um das Medienobjekt zu importieren, wechseln Sie zu Assets-> Paket > benutzerdefiniertes Paket importieren > Navigieren Sie zu der heruntergeladenen Datei, und klicken Sie auf importieren.
 

@@ -6,14 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Hololens (1. Gen), hololens 2, gemischte Realität, Cursor, Zielvorgabe, Blick, Gesten
-ms.openlocfilehash: ef011d8400de1e23db3d6fb4b0f2a853d787ae86
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 719e7a573e8c8bc682ec0f960d9f3c8f8c8e5a4a
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435753"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105756"
 ---
 # <a name="cursors"></a>Cursor
+
+![Cursor](images/UX/UX_Hero_Cursor.jpg)
 
 Ein Cursor oder Indikator Ihres aktuellen Ziel Vektor bietet fortlaufendes Feedback für den Benutzer, um zu verstehen, wo das Headset seinen aktuellen Fokus hat. Der Cursor ermöglicht dem Benutzer das Verständnis seines aktuellen Zielpunkts und fungiert als Feedback, um anzugeben, welcher Bereich, welches Hologramm oder welcher Punkt auf die Eingabe reagiert. Dabei handelt es sich um die digitale Darstellung von, bei der das Gerät die Aufmerksamkeit des Benutzers versteht (obwohl dies möglicherweise nicht der gleiche ist wie das Ermitteln von Informationen über ihre Absichten).
 
@@ -154,6 +156,15 @@ Das Entwerfen ohne Cursor wird empfohlen, wenn das Eintauchen eine wichtige Komp
 
 ---
 
+## <a name="cursor-in-mrtkmixed-reality-toolkit-for-unity"></a>Cursor im mrtk (Mixed Reality Toolkit) für Unity
+Standardmäßig stellt **[mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** eine Cursor-vorfab ([DefaultCursor. Prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) bereit, die denselben visuellen Zustand aufweist wie der System Cursor der Shell. Sie wird im Eingabe Profil von mrtk unter Zeiger zugewiesen. Sie können diesen Cursor für Ihre Benutzeroberflächen ersetzen/anpassen. Für die Verwendung von Eye-Tracking-Eingaben bietet mrtk auch den "eyegazecursor", der über eine feine Visualisierung verfügt, um die Ablenkung zu minimieren.
+
+* [Mrtk-Zeiger Profil](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [Mrtk-Eingabe System](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [Mrtk-Zeiger](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
+
+---
 
 ## <a name="see-also"></a>Weitere Informationen:
 * [Gesten](gaze-and-commit.md#composite-gestures)

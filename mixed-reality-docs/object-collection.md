@@ -6,16 +6,16 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Steuerelemente, Entwurf
-ms.openlocfilehash: 8f3629c6d9465383efc901ed784a3719cd6fdfb2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 98fec76558502658511faf3f18d623bfa5a49dc2
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438173"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106004"
 ---
 # <a name="object-collection"></a>Objektsammlung
 
-![Objektsammlung, die in der periodischen Tabelle der Elements-App verwendet wird.](images/640px-objectcollection-hero-640px.jpg)<br>
+![Objektsammlung, die in der periodischen Tabelle der Elements-App verwendet wird.](images/UX/UX_Hero_ObjectCollection.jpg)<br>
 
 
 Die Objekt Auflistung ist ein Layoutsteuerelement, das Ihnen hilft, ein Array von Objekten in einer vordefinierten dreidimensionalen Form zu erstellen. Es unterstützt verschiedene Oberflächen Stile: **Ebene, Zylinder, Kugel** und **radiale**. Sie können den RADIUS und die Größe der Objekte sowie den Leerraum zwischen Ihnen anpassen. Die Objekt Auflistung unterstützt ein beliebiges Objekt aus Unity (2D und 3D). Im **[Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** haben wir ein Unity-Skript und Beispiele erstellt, die Sie beim Erstellen einer Objektsammlung unterstützen.
@@ -44,7 +44,36 @@ Sie können auch 2D-Images mit der Objektsammlung verwenden. In den folgenden Be
 ![ein Beispiel für 2D-Images mit Objektsammlung](images/940px-layout-2dimages.jpg)<br>
 *Beispiele für die Verwendung der Objektsammlung mit 2D-images*
 
+<br>
+
+---
+
+## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Objektsammlung in mrtk (Mixed Reality Toolkit) für Unity
+
+* [Mrtk-Objektsammlung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
+
+
+<br>
+
+---
+
+
 ## <a name="see-also"></a>Weitere Informationen:
-* [Skripts und Prefabs für die Objektsammlung im Mixed Reality Toolkit auf GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+
+* [Cursor](cursors.md)
+* [Hand Strahl](point-and-commit.md)
+* [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
-* [Begrenzungs Fenster](app-bar-and-bounding-box.md)
+* [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
+* [Bearbeitung](direct-manipulation.md)
+* [Handmenü](hand-menu.md)
+* [Near-Menü](near-menu.md)
+* [Objektsammlung](object-collection.md)
+* [Sprachbefehl](voice-input.md)
+* [Tastatur](keyboard.md)
+* [QuickInfo](tooltip.md)
+* [Tafel](slate.md)
+* [Schieberegler](slider.md)
+* [Billboarding und Tag-along](billboarding-and-tag-along.md)
+* [Anzeigen des Fortschritts](progress.md)
+* [Oberflächen Magnetismus](surface-magnetism.md)

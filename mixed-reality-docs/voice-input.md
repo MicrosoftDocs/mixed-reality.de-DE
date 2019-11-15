@@ -6,14 +6,16 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, Input
-ms.openlocfilehash: 1b0a57ad680b7f779201e99dea24bfe746820c44
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437142"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105769"
 ---
 # <a name="voice-input"></a>Spracheingabe
+
+![Spracheingabe](images/UX/UX_Hero_VoiceCommand.jpg)
 
 Voice ist eine der wichtigsten Formen der Eingabe in hololens. Damit können Sie ein – Hologramm direkt aufrufen, ohne [Handgesten](gaze-and-commit.md#composite-gestures)verwenden zu müssen. Die Spracheingabe kann eine natürliche Möglichkeit sein, ihre Absicht zu kommunizieren. Voice eignet sich besonders gut für die Durchführung komplexer Schnittstellen, da Benutzer mit einem Befehl die Möglichkeit haben, die Verwendung von Netz Menüs zu ermöglichen.
 
@@ -274,9 +276,9 @@ Wenn die Spracherkennung richtig angewendet wird, versteht der Benutzer, **was e
 ## <a name="communication"></a>Kommunikation
 
 Für Anwendungen, die die von hololens bereitgestellten angepassten audioeingabeverarbeitungs-Optionen nutzen möchten, ist es wichtig, die verschiedenen [audiostreamkategorien](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) zu verstehen, die Ihre APP nutzen kann. Windows 10 unterstützt mehrere verschiedene streamkategorien, und hololens nutzt drei dieser Möglichkeiten, um die benutzerdefinierte Verarbeitung zur Optimierung der Mikrofon Audioqualität zu optimieren, die auf Sprache, Kommunikation und andere zugeschnitten ist und für Umgebungs Umgebungs Audiodaten verwendet werden kann. Erfassungs Szenarien (d.h. "Camcorder").
-* Die Kategorie AudioCategory_Communications Stream ist für die Sprach-und Erzähl Szenarios angepasst und stellt dem Client einen 16-Bit-Mono-Mono-Audiostream der Stimme des Benutzers zur Verfügung.
-* Die Kategorie AudioCategory_Speech Stream ist für die Sprach-Engine hololens (Windows) angepasst und bietet einen 16-Bit-Mono-Mono-Datenstrom der Stimme des Benutzers. Diese Kategorie kann bei Bedarf von Sprachmodulen von Drittanbietern verwendet werden.
-* Die AudioCategory_Other Stream-Kategorie ist für die Audioaufzeichnung in Umgebungs Umgebungen angepasst und stellt dem Client einen Stereo-Audiostream mit 48 kHz 24 Bit bereit.
+* Die AudioCategory_Communications Stream-Kategorie wird für Anruf Qualität und-Erzähl Szenarien angepasst und stellt dem Client einen 16-Bit-Mono-Mono-Audiostream der Stimme des Benutzers zur Verfügung.
+* Die AudioCategory_Speech Stream-Kategorie ist für die Sprach-Engine hololens (Windows) angepasst und bietet einen 16-Bit-Mono-Mono-Datenstrom der Stimme des Benutzers. Diese Kategorie kann bei Bedarf von Sprachmodulen von Drittanbietern verwendet werden.
+* Die AudioCategory_Other Stream-Kategorie ist für die Audioaufzeichnung der Umgebungsumgebung angepasst und stellt dem Client einen Stereo-Audiostream mit 48 kHz 24 Bit bereit.
 
 Die gesamte Audioverarbeitung ist Hardware beschleunigt. Dies bedeutet, dass die Features viel weniger Leistung als bei der Verarbeitung der hololens-CPU benötigen. Vermeiden Sie die Ausführung einer anderen audioeingabeverarbeitung auf der CPU, um die Akku Lebensdauer zu maximieren und die integrierte, offloaded audioeingabeverarbeitung zu nutzen.
 
@@ -290,8 +292,20 @@ Wenn Sie Probleme bei der Verwendung von "Select" und "Hey Cortana" haben, versu
 
 Für Windows Mixed Reality Developer Edition, Version 2017, funktioniert die audioendpunkt-Verwaltungs Logik problemlos (immer), nachdem Sie sich nach der anfänglichen HMD-Verbindung beim PC-Desktop abgemeldet hat. Vor dem ersten Abmelden/in-Ereignis nach dem Durchlaufen von WMR OOBE könnte der Benutzer verschiedene Probleme mit der Audiofunktionalität aufweisen, von denen kein audiowechsel bis hin zu keinem audiowechsel stattfindet, je nachdem, wie das System vor dem ersten Herstellen einer Verbindung mit dem HMD eingerichtet wurde.
 
+<br>
+
+---
+
+## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Spracheingabe in mrtk (Mixed Reality Toolkit) für Unity
+Mit **[mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können Sie den Voice-Befehl problemlos für beliebige Objekte zuweisen. Verwenden Sie das **Spracheingabe Profil** von mrtk, um Ihre Schlüsselwörter zu definieren. Indem Sie das Skript " **speechinputhandler** " zuweisen, können Sie festlegen, dass jedes Objekt auf die im Spracheingabe Profil definierten Schlüsselwörter antwortet. Der speechinputhandler bietet auch eine Bezeichnung für die sprach Bestätigung, um das Vertrauen des Benutzers zu verbessern.
+
+* [Befehl "mrtk-Voice"](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
+
+
+---
+
 ## <a name="see-also"></a>Weitere Informationen:
-* [Blick und Commit](gaze-and-commit.md)
+* [Anvisieren und Ausführen](gaze-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Mr-Eingabe 212: Stimme](holograms-212.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)

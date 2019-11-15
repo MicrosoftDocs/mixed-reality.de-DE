@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Steuerelemente, UI, UX
-ms.openlocfilehash: 43b4802e7c821c98c847509ace950f381da12f95
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: aafcd8eebbabfc5b53d09348d513f62def909da6
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437539"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105981"
 ---
-# <a name="displaying-progress"></a>Anzeigen des Fortschritts
+# <a name="progress-indicator"></a>Statusanzeige
 
 <br>
 
-<img src="images/HoloLens2_Loader.gif" alt="Progress ring example in HoloLens" width="940px">
+<img src="images/UX/MRTK_ProgressIndicator.gif" alt="Progress ring example in HoloLens" width="940px">
 
 Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird. Dies kann bedeuten, dass der Benutzer bei Anzeigen der Statusanzeige nicht mit der App interagieren kann. Je nach verwendetem Indikator wird auch die Länge der Wartezeit angegeben.
 
@@ -88,9 +88,32 @@ Es ist wichtig, dass Sie die Benutzerinformationen zu den Vorgängen bereitstell
 
 ---
 
+## <a name="progress-indicator-in-mrtkmixed-reality-toolkit-for-unity"></a>Fortschrittsanzeige in mrtk (Mixed Reality Toolkit) für Unity
+
+* [Mrtk-Fortschrittsanzeige (Prefabs)](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/ProgressIndicators)
+* [Mrtk-Szenen Übergangs Dienst](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.html)
+
+
+<br>
+
+---
+
 ## <a name="see-also"></a>Weitere Informationen:
-* [Fortschritts Skripts und Prefabs im Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
-* [Begrenzungs Fenster](app-bar-and-bounding-box.md)
+
+* [Cursor](cursors.md)
+* [Hand Strahl](point-and-commit.md)
+* [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
+* [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
+* [Bearbeitung](direct-manipulation.md)
+* [Handmenü](hand-menu.md)
+* [Near-Menü](near-menu.md)
 * [Objektsammlung](object-collection.md)
+* [Sprachbefehl](voice-input.md)
+* [Tastatur](keyboard.md)
+* [QuickInfo](tooltip.md)
+* [Tafel](slate.md)
+* [Schieberegler](slider.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
+* [Anzeigen des Fortschritts](progress.md)
+* [Oberflächen Magnetismus](surface-magnetism.md)

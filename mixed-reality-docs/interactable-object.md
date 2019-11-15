@@ -6,16 +6,16 @@ ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: 36ca1feeba0e3bf028c64fe7b559d263a8088b96
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5305af97e9811134212fc6c730727962bb9e8353
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438645"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105795"
 ---
 # <a name="interactable-object"></a>Interactable-Objekt
 
-![Objekte mit Interaktivität](images/InteractableExamples.png)
+![Objekte mit Interaktivität](images/UX/UX_Hero_Interactable.jpg)
 
 Eine Schaltfläche ist lange eine Metapher, die zum Auslösen eines Ereignisses in der 2D-abstrakten Welt verwendet wird. In der dreidimensionalen Mixed Reality-Welt müssen wir nicht mehr auf diese Abstraktions Welt beschränkt werden. Dabei kann es sich um ein Objekt handeln, das ein **Objekt** ist, das ein Ereignis auslöst. Ein Objekt, das sich in der Tabelle befindet, kann als beliebiger von einem Kaffeebecher in der Tabelle dargestellt werden. Wir verwenden weiterhin herkömmliche Schaltflächen in bestimmten Situationen, z. b. in der Dialogfeld Benutzeroberfläche. Die visuelle Darstellung der Schaltfläche hängt vom Kontext ab.
 
@@ -261,9 +261,9 @@ Beim Erstellen von Schaltflächen für die direkte Interaktion empfehlen wir ein
 ---
 
 
-## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Erstellen eines Interaktionen-Objekts mit Mixed Reality Toolkit (mrtk)
+## <a name="interactable-object-in-mrtkmixed-reality-toolkit-for-unit"></a>Interactable-Objekt in mrtk (Mixed Reality Toolkit) für Unit
 
-Im **[Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)** finden Sie die Reihe der Unity-Skripts und-präfaben, die Sie beim Erstellen von Objekt übergreifenden Objekten unterstützen. Sie können diese verwenden, um zu ermöglichen, dass Objekte auf verschiedene Typen von Eingabe Interaktions Zuständen reagieren.
+In **[mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können Sie das Skript [**interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) verwenden, damit Objekte auf verschiedene Typen von Eingabe Interaktions Zuständen reagieren. Es unterstützt verschiedene Arten von Themen, mit denen Sie visuelle Zustände definieren können, indem Sie Objekteigenschaften wie Farbe, Größe, Material und Shader steuern.
 
 * [Interaktionen](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
 * [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
@@ -277,9 +277,23 @@ Der Standard-Shader von mixedrealitytoolkit bietet verschiedene Optionen, wie z.
 
 ---
 
+
 ## <a name="see-also"></a>Weitere Informationen:
 
-* [Begrenzungs Fenster](app-bar-and-bounding-box.md)
+* [Cursor](cursors.md)
+* [Hand Strahl](point-and-commit.md)
+* [Button](button.md)
+* [Interaktionsfähiges Objekt](interactable-object.md)
+* [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
+* [Bearbeitung](direct-manipulation.md)
+* [Handmenü](hand-menu.md)
+* [Near-Menü](near-menu.md)
 * [Objektsammlung](object-collection.md)
+* [Sprachbefehl](voice-input.md)
+* [Tastatur](keyboard.md)
+* [QuickInfo](tooltip.md)
+* [Tafel](slate.md)
+* [Schieberegler](slider.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
-* [Spracheingabe](voice-input.md)
+* [Anzeigen des Fortschritts](progress.md)
+* [Oberflächen Magnetismus](surface-magnetism.md)

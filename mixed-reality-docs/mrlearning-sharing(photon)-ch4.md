@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b4713caf2c4d913fe8f5b01c08b3cd0152e32cd9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 34b8165888c13b0c94be8951d5a4fdc07fab5308
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438369"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106037"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen für mehrere Benutzer
 
@@ -62,11 +62,13 @@ Hinweis: Wenn Sie auf eines der Prefab-Objekte klicken und das Release durchfüh
 >Hinweis: Stellen Sie sicher, dass die Hauptkamera-und sharedplayground-Positionen auf 0, 0, 0 festgelegt sind.
 >
 
-9. Erstellen Sie ein neues Spielobjekt, das als untergeordnetes Objekt für das übergeordnete sharedplayground-Objekt festgelegt ist, um ein neues Objekt zu erstellen. Klicken Sie mit der rechten Maustaste auf das übergeordnete Objekt, und wählen Sie leere 
+9. Wählen Sie das Objekt "sharedplayground" aus, und klicken Sie mit der rechten Maustaste auf die Option "leere erstellen", um ein leeres Spielobjekt als untergeordnetes Element des Spiel Objekts "sharedplayground" zu erstellen.
+
+   ![Module3chapter4step6im](images/module3chapter4step6im.PNG)
 
 10. Wenn das neue Objekt in Ihrer Hierarchie ausgewählt ist, ändern Sie im Inspektor-Panel den Namen des Objekts in tableanchor. Klicken Sie auch auf Komponente hinzufügen, und suchen Sie nach der tableanchor-Komponente. Wählen Sie Sie aus, und fügen Sie Sie dem-Objekt hinzu. 
 
-![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
+![Module3Chapter4step7im](images/module3chapter4step7im.PNG)
 
 11. Ziehen Sie aus dem Projekt Panel im Ordner "Prefabs" die Tabelle "Prefab" in das untergeordnete "tableanchor"-Objekt, das Sie soeben erstellt haben.
 
@@ -79,9 +81,9 @@ Hinweis: Wenn Sie auf eines der Prefab-Objekte klicken und das Release durchfüh
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
 
-Sobald dieser Vorgang vollständig ist, können alle Benutzer, die Ihrem Unity-Projekt beitreten, das Mond-Start Programm verschieben. Alle Bewegungen werden synchronisiert, sodass jeder Benutzer die Interaktionen der anderen Benutzer sehen kann. Diese Konzepte dienen als wesentliche Bausteine für voll funktionsfähigen, gemeinsam genutzten Kollaborations Umgebungen. 
+Sobald dies erfolgt ist, sehen Sie sich das Mond Modul an. Danach können alle Benutzer, die Ihrem Unity-Projekt beitreten, das Mond-Start Programm verschieben.  Alle Bewegungen werden synchronisiert, sodass jeder Benutzer die Interaktionen der anderen Benutzer sehen kann. Diese Konzepte dienen als wesentliche Bausteine für voll funktionsfähigen, gemeinsam genutzten Kollaborations Umgebungen. 
 
-Obwohl alle Benutzer als Teil einer freigegebenen Umgebung verbunden sind und die relativen Bewegungen von Objekten sehen können, kann die Anwendung keine genaue Ausrichtung von Avatare und Objekten durchgeführt werden, sodass lokale Benutzer einander und Objekte am gleichen Ort innerhalb der physischen World. Um eine lokale gemeinsame Nutzung zu verankern, erfordert jedes Gerät ein gängiges Verständnis der physischen Umgebung. In diesem Modul erreichen wir dies mithilfe von [Azure Spatial](<https://azure.microsoft.com//services/spatial-anchors/>) Anchor (ASA), das in der nächsten Lektion implementiert wird.
+Obwohl alle Benutzer als Teil einer freigegebenen Umgebung verbunden sind und die relativen Bewegungen von Objekten sehen können, kann die Anwendung keine genaue Ausrichtung von Avatare und Objekten durchgeführt werden, sodass die lokalen Benutzer keine anderen Objekte und Objekte an derselben Stelle innerhalb des physische Welt. Um eine lokale gemeinsame Nutzung zu verankern, erfordert jedes Gerät ein gängiges Verständnis der physischen Umgebung. In diesem Modul erreichen wir dies mithilfe von [Azure Spatial](<https://azure.microsoft.com//services/spatial-anchors/>) Anchor (ASA), das in der nächsten Lektion implementiert wird.
 
 Bevor Sie mit der nächsten Lektion fortfahren, müssen wir das ASA-Lernmodul vervollständigen, das die ASA-Grundlagen, das Azure-Konto und die Ressourcen Erstellung behandelt, sowie andere grundlegende Bausteine, die erforderlich sind, bevor wir dies in unsere freigegebene Erfahrung integrieren können.
 

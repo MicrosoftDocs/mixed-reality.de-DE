@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 91935cb5b465e51d3948f68b818f93ba52b215f1
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: 750161ff4c52a7ab71869b3cb0f97197d4ad09f2
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73914432"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106046"
 ---
 # <a name="2-getting-unity-ready-for-development"></a>2. Vorbereiten von Unity für die Entwicklung 
 
@@ -52,7 +52,7 @@ In diesem Tutorial erfahren Sie, wie Sie Unity für die Anwendungsentwicklung vo
 
 6. Sobald der Vorgang beendet ist, wird eine neue Konfigurationsdatei angezeigt, die Ihnen die Möglichkeit gibt, das Profil anzupassen. 
 
-![Module2Chapter1step4im](images/Module2Chapter1step4im.PNG)
+![Module2Chapter1step4ima](images/Module2Chapter1step4ima.PNG)
 
 7. Wählen Sie in der Hierarchie Mixed-Reality Toolkit (mrtk) aus. Suchen Sie im Inspektor-Panel nach dem Mixed Reality Toolkit-Skript, und klicken Sie auf die Schaltfläche zum Kopieren & anpassen, wie in der folgenden Abbildung dargestellt.  Danach wird ein Pop angezeigt, und wählen Sie im Popupmenü die Option Klonen aus.
 
@@ -76,7 +76,14 @@ In diesem Tutorial erfahren Sie, wie Sie Unity für die Anwendungsentwicklung vo
 
 ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
 
-11. Importieren Sie das benutzerdefinierte Paket mit dem Namen "sharingassetcollection", das hier heruntergeladen werden kann [.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
+11. Importieren Sie die aufgelisteten benutzerdefinierten Pakete:
+
+    a. [Unity. HoloLens2. GettingStarted. Tutorials. Asset. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage)
+
+    b. [Unity. HoloLens2. multiuserfunktionalitäten. Tutorials. Asset. 2.1.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.1.0.0/Unity.HoloLens2.MultiUserCapabilities.Tutorials.Asset.2.1.0.0.unitypackage)
+
+    >[!TIP]
+    >Wenn Sie die [Tutorials zu](mrlearning-base-ch1.md)den ersten Schritten abgeschlossen haben, ist das Unity-Paket mit dem Namen _Unity. HoloLens2. GettingStarted. Tutorials. Asset. 2.1.0.0. unitypackage_ auf dem Computer gespeichert. Wenn dies der Fall ist, können Sie das Herunterladen des in Schritt a aufgeführten Assets überspringen.
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
