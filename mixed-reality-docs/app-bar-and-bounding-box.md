@@ -6,15 +6,15 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, App-Leiste, Begrenzungs Bereich
-ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105758"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143175"
 ---
 # <a name="bounding-box-and-app-bar"></a>Begrenzungs Bereich und App-Leiste
-![umgebenden ist die Standardschnittstelle für die Objekt Bearbeitung in gemischter Realität.](images/640px-boundingbox-hero.jpg)<br>
+![umgebenden ist die Standardschnittstelle für die Objekt Bearbeitung in gemischter Realität.](images/UX/UX_Hero_BoundingBox.jpg)<br>
 <br>
 
 ## <a name="what-is-the-bounding-box"></a>Was ist das umgebende Feld?
@@ -119,6 +119,7 @@ Die APP-Leiste ist ein Menü auf Objektebene, das eine Reihe von Schaltflächen 
 * [QuickInfo](tooltip.md)
 * [Tafel](slate.md)
 * [Schieberegler](slider.md)
+* [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
 * [Oberflächen Magnetismus](surface-magnetism.md)

@@ -5,28 +5,28 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: 6be1574e6127b5640dd5e6c12a9efd16009325ba
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: 15116a01845ea58b8664ed3f64e668854bb2ecb7
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106259"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143245"
 ---
 # <a name="keyboard"></a>Tastatur
 
 ![Tastatur](images/UX/UX_Hero_Keyboard.jpg)
 
-Ihre gemischte Reality-Anwendung kann die System Tastatur jederzeit aufrufen. Beachten Sie, dass sich die System Tastatur gemäß den Funktionen der Zielplattform verhält, z. b. die Tastatur auf hololens 2 unterstützen direkte Hand Interaktionen, während die Tastatur auf hololens (1st Gen) die Eingaben und die EINGABETASTE für die Luft tippen Unterstützung unterstützen würde.
+Your mixed reality application can invoke the system keyboard at any time. Note that the system keyboard will behave according to the target platform's capabilities, for example the keyboard on HoloLens 2 would support direct hand interactions, while the keyboard on HoloLens (1st gen) would support gaze and air-tap gesture input.
 
 
 <br>
 
 ---
 
-## <a name="system-keyboard-in-mrtkmixed-reality-toolkit-for-unity"></a>System Tastatur in mrtk (Mixed Reality Toolkit) für Unity
+## <a name="system-keyboard-in-mrtkmixed-reality-toolkit-for-unity"></a>System keyboard in MRTK(Mixed Reality Toolkit) for Unity
 
-* [Mrtk-System Tastatur](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html)
+* [MRTK - System keyboard](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html)
 
 <br>
 
@@ -48,6 +48,7 @@ Ihre gemischte Reality-Anwendung kann die System Tastatur jederzeit aufrufen. Be
 * [QuickInfo](tooltip.md)
 * [Tafel](slate.md)
 * [Schieberegler](slider.md)
+* [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
 * [Oberflächen Magnetismus](surface-magnetism.md)

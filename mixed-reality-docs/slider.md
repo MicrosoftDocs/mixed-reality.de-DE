@@ -5,27 +5,27 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: 91046dd5bbf7bdc692e4ff26c19bda59af31876e
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: 901e0408071161a827c0f60a229a6f73a440ac2d
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106189"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143218"
 ---
 # <a name="slider"></a>Slider
 
 ![Slider](images/UX/UX_Hero_Slider.jpg)
 
-Schieberegler sind UI-Komponenten, mit denen Sie einen Wert fortlaufend ändern können, indem Sie einen Schieberegler auf eine Spur verschieben. Der Schieberegler für die Schieberegler kann verschoben werden, indem der Schieberegler direkt oder in einer Entfernung direkt abgepackt wird. Schieberegler arbeiten mit verschiedenen Eingabetypen wie z. b. "Blick" und "Air-Tap" sowie dem Bewegungs Controller.
+Sliders are UI components that allow you to continuously change a value by moving a slider on a track. The Pinch Slider can be moved by directly grabbing the slider, either directly or at a distance. Sliders work with various input types such as gaze and air-tap as well as the motion controller.
 
 <br>
 
 ---
 
-## <a name="slider-in-mrtkmixed-reality-toolkit-for-unity"></a>Schieberegler im mrtk (Mixed Reality Toolkit) für Unity
+## <a name="slider-in-mrtkmixed-reality-toolkit-for-unity"></a>Slider in MRTK(Mixed Reality Toolkit) for Unity
 
-* [Mrtk-Schieberegler](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Sliders.html)
+* [MRTK - Slider](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Sliders.html)
 
 <br>
 
@@ -47,6 +47,7 @@ Schieberegler sind UI-Komponenten, mit denen Sie einen Wert fortlaufend ändern 
 * [QuickInfo](tooltip.md)
 * [Tafel](slate.md)
 * [Schieberegler](slider.md)
+* [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
 * [Oberflächen Magnetismus](surface-magnetism.md)

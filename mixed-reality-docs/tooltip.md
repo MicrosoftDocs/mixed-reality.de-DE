@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: 749d2a96caccb6760a73857dca4baf376d3921d3
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: de9788a9b3d5fcaf1f06938100fb55a5ec60914b
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106179"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143114"
 ---
 # <a name="tooltip"></a>QuickInfo
 
@@ -47,6 +47,7 @@ Quick Infos werden normalerweise verwendet, um bei näherer Betrachtung eines Ob
 * [QuickInfo](tooltip.md)
 * [Tafel](slate.md)
 * [Schieberegler](slider.md)
+* [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
 * [Oberflächen Magnetismus](surface-magnetism.md)

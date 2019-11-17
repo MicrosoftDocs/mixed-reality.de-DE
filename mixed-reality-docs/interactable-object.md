@@ -1,63 +1,63 @@
 ---
-title: Interactable-Objekt
-description: Eine Schaltfläche ist lange eine Metapher, die zum Auslösen eines Ereignisses in der 2D-abstrakten Welt verwendet wird. In der dreidimensionalen Mixed Reality-Welt müssen wir nicht mehr auf diese Abstraktions Welt beschränkt werden.
+title: Interactable object
+description: A button has long been a metaphor used for triggering an event in the 2D abstract world. In the three-dimensional mixed reality world, we don’t have to be confined to this world of abstraction anymore.
 author: cre8ivepark
 ms.author: jennyk
 ms.date: 06/06/2019
 ms.topic: article
-keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: 5305af97e9811134212fc6c730727962bb9e8353
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: 73c8a3ce9e01f580ecbae23f2178871642c4540e
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105795"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143259"
 ---
-# <a name="interactable-object"></a>Interactable-Objekt
+# <a name="interactable-object"></a>Interactable object
 
-![Objekte mit Interaktivität](images/UX/UX_Hero_Interactable.jpg)
+![Interactible objects](images/UX/UX_Hero_Interactable.jpg)
 
-Eine Schaltfläche ist lange eine Metapher, die zum Auslösen eines Ereignisses in der 2D-abstrakten Welt verwendet wird. In der dreidimensionalen Mixed Reality-Welt müssen wir nicht mehr auf diese Abstraktions Welt beschränkt werden. Dabei kann es sich um ein Objekt handeln, das ein **Objekt** ist, das ein Ereignis auslöst. Ein Objekt, das sich in der Tabelle befindet, kann als beliebiger von einem Kaffeebecher in der Tabelle dargestellt werden. Wir verwenden weiterhin herkömmliche Schaltflächen in bestimmten Situationen, z. b. in der Dialogfeld Benutzeroberfläche. Die visuelle Darstellung der Schaltfläche hängt vom Kontext ab.
+A button has long been a metaphor used for triggering an event in the 2D abstract world. In the three-dimensional mixed reality world, we don’t have to be confined to this world of abstraction anymore. Anything can be an **interactable object** that triggers an event. An interactable object can be represented as anything from a coffee cup on the table to a balloon floating in the air. We still do make use of traditional buttons in certain situation such as in dialog UI. The visual representation of the button depends on the context.
 
 <br>
 
 ---
 
 
-## <a name="important-properties-of-the-interactable-object"></a>Wichtige Eigenschaften des Interaktionen-Objekts
+## <a name="important-properties-of-the-interactable-object"></a>Important properties of the interactable object
 
 ### <a name="visual-cues"></a>Visuelle Hinweise
 
-Visuelle Hinweise sind sensorische Hinweise, die vom visuellen System während der visuellen Darstellung vom visuellen System empfangen werden. Da das visuelle System in vielen Arten, insbesondere bei Menschen, dominant ist, stellen visuelle Hinweise eine große Informationsquelle dar, in der die Welt wahrgenommen wird.
+Visual cues are sensory cues received by the eye in the form of light and processed by the visual system during visual perception. Since the visual system is dominant in many species, especially humans, visual cues are a large source of information in how the world is perceived.
 
-Da die Holographic-Objekte in gemischter Realität mit der realen Umgebung kombiniert werden, kann es schwierig sein, die Objekte zu verstehen, mit denen Sie interagieren können. Für alle Objekte, die sich in der Benutzersprache befinden, ist es wichtig, für jeden Eingabe Zustand differenzierte visuelle Hinweise bereitzustellen. Dadurch kann der Benutzer verstehen, welcher Teil ihrer Benutzeroberflächen Interaktionen ist, und der Benutzer wird mit einer konsistenten Interaktions Methode vertraut.
+Since the holographic objects are blended with the real-world environment in mixed reality, it could be difficult to understand which objects you can interact with. For any interactable objects in your experience, it is important to provide differentiated visual cues for each input state. This helps the user understand which part of your experience is interactable and makes the user confident by using a consistent interaction method.
 
 <br>
 
 ---
 
-### <a name="far-interactions"></a>Weite Interaktionen
+### <a name="far-interactions"></a>Far interactions
 
-Für alle Objekte, die der Benutzer mit dem Blick auf "Blick", "Hand Ray" und "Motion Controller" interagieren kann, empfiehlt es sich, einen anderen visuellen Hinweis auf die drei Eingabe Zustände zu haben:
+For any objects that user can interact with gaze, hand ray, and motion controller's ray, we recommend to have different visual cue for these three input states:
 
 :::row:::
     :::column:::
-       ![interactibleobject-States-default](images/interactibleobject-states-default.jpg)<br>
-       **Standardzustand (Überwachung)**<br>
-        Der standardmäßige Leerlauf Status des Objekts.
-    Der Cursor befindet sich nicht im-Objekt. Hand wird nicht erkannt.
+       ![interactibleobject-states-default](images/interactibleobject-states-default.jpg)<br>
+       **Default (Observation) state**<br>
+        Default idle state of the object.
+    The cursor is not on the object. Hand is not detected.
     :::column-end:::
     :::column:::
-       ![](images/interactibleobject-states-targeted.jpg) mit interactibleobjektzuständen<br>
-        **Zielzustand (Hover)**<br>
-        , Wenn das Objekt mit dem Cursor Cursor, der fingernähe oder dem Bewegungs Controller Zeiger ausgerichtet ist.
-    Der Cursor befindet sich auf dem-Objekt. Hand ist erkannt, bereit.
+       ![interactibleobject-states-targeted](images/interactibleobject-states-targeted.jpg)<br>
+        **Targeted (Hover) state**<br>
+        When the object is targeted with gaze cursor, finger proximity or motion controller's pointer.
+    The cursor is on the object. Hand is detected, ready.
     :::column-end:::
     :::column:::
-       !["interactibleobject-States-Pressed"](images/interactibleobject-states-pressed.jpg)<br>
-       **Gedrückter Zustand**<br>
-        Wenn das Objekt mit einer Tastenkombination gedrückt wird, drücken Sie die Schaltfläche "auswählen" von Finger oder Motion Controller.
-    Der Cursor befindet sich auf dem-Objekt. Hand ist erkannt, Air tippt.
+       ![interactibleobject-states-pressed](images/interactibleobject-states-pressed.jpg)<br>
+       **Pressed state**<br>
+        When the object is pressed with an air tap gesture, finger press or motion controller's select button.
+    The cursor is on the object. Hand is detected, air tapped.
     :::column-end:::
 :::row-end:::
 
@@ -65,22 +65,22 @@ Für alle Objekte, die der Benutzer mit dem Blick auf "Blick", "Hand Ray" und "M
 
 ---
 
-Sie können Techniken wie z. b. Hervorhebung oder Skalierung verwenden, um visuelle Hinweise für den Eingabe Zustand des Benutzers bereitzustellen. In gemischter Realität finden Sie die Beispiele für die Visualisierung unterschiedlicher Eingabe Zustände im Startmenü und mit den Schaltflächen der APP-Leiste. 
+You can use techniques such as highlighting or scaling to provide visual cues for the user’s input state. In mixed reality, you can find the examples of visualizing different input states on the Start menu and with app bar buttons. 
 
-So sehen diese Zustände auf einer **Holographic-Schaltfläche**aus:
+Here is what these states look like on a **holographic button**:
 
 :::row:::
     :::column:::
-       ![interactibleobject-States-default](images/MRTK_InteractableState-default.jpg)<br>
-       **Standardzustand (Überwachung)**<br>
+       ![interactibleobject-states-default](images/MRTK_InteractableState-default.jpg)<br>
+       **Default (Observation) state**<br>
     :::column-end:::
     :::column:::
-       ![](images/MRTK_InteractableState-targeted.jpg) mit interactibleobjektzuständen<br>
-        **Zielzustand (Hover)**<br>
+       ![interactibleobject-states-targeted](images/MRTK_InteractableState-targeted.jpg)<br>
+        **Targeted (Hover) state**<br>
     :::column-end:::
     :::column:::
-       !["interactibleobject-States-Pressed"](images/MRTK_InteractableState-pressed.jpg)<br>
-       **Gedrückter Zustand**<br>
+       ![interactibleobject-states-pressed](images/MRTK_InteractableState-pressed.jpg)<br>
+       **Pressed state**<br>
     :::column-end:::
 :::row-end:::
 
@@ -88,14 +88,14 @@ So sehen diese Zustände auf einer **Holographic-Schaltfläche**aus:
 
 ---
 
-### <a name="near-interactions-direct"></a>Near Interaktionen (Direct) 
+### <a name="near-interactions-direct"></a>Near interactions (direct) 
 
-Hololens 2 unterstützt die Eingabe von Handgelenk Nachverfolgung, mit der Sie mit Objekten interagieren können. Ohne haptisches Feedback und eine perfekte Tiefe Wahrnehmung kann es manchmal schwierig sein zu wissen, wie weit die Hand von einem Objekt entfernt ist oder ob Sie es berühren. Es ist wichtig, genügend visuelle Hinweise bereitzustellen, um den Status des Objekts und insbesondere den Zustand ihrer Hände in Bezug auf das Objekt zu übermitteln.
+HoloLens 2 supports articulated hand tracking input which allows you to interact with objects. Without haptic feedback and perfect depth perception, it can sometimes be hard to tell how far away your hand is from an object or whether you are touching it. It is important to provide enough visual cues to communicate the state of the object and in particular the state of your hands in relation to that object.
 
-Verwenden Sie visuelles Feedback, um Folgendes zu kommunizieren:
-* **Default (Observation)** : standardmäßiger Leerlauf Status des Objekts.
-* **Hover**: Wenn eine Hand sich in der Nähe eines Hologramms befindet, ändern Sie die visuellen Elemente, um zu kommunizieren. 
-* **Entfernung und Punkt der Interaktion**: Wenn die Hand ein Hologramm nähert, entwerfen Sie das Feedback, um den projizierten Interaktionspunkt zu kommunizieren, und wie weit von dem Objekt der Finger ist.
+Use visual feedback to communicate the following:
+* **Default (Observation)** : Default idle state of the object.
+* **Hover**: When a hand is near a hologram, change visuals to communicate that hand is targeting hologram. 
+* **Distance and point of interaction**: As the hand approaches a hologram, design feedback to communicate the projected point of interaction, as well as how far from the object the finger is
 * **Kontakt beginnt**: Ändern der visuellen Elemente (hell, Farbe), um zu kommunizieren, dass eine Fingereingabe aufgetreten ist
 * **Verstanden**: Ändern von visuellen Elementen (hell, Farbe), wenn das Objekt erfasst wird
 * **Kontakt Ende**: Ändern der visuellen Elemente (hell, Farbe), wenn die Fingereingabe beendet wurde
@@ -294,6 +294,7 @@ Der Standard-Shader von mixedrealitytoolkit bietet verschiedene Optionen, wie z.
 * [QuickInfo](tooltip.md)
 * [Tafel](slate.md)
 * [Schieberegler](slider.md)
+* [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
 * [Oberflächen Magnetismus](surface-magnetism.md)

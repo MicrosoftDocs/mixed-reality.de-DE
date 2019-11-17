@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: Hand, Menü, Schaltfläche, schnell Zugriff, Layout
-ms.openlocfilehash: b4ea7411be22633e82a88d1c91b6b2b1edbea735
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c53fdc4ea6f3243cf906ee1916a9c234d0fce6ca
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105630"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143179"
 ---
 # <a name="hand-menu"></a>Hand Menü
 
@@ -75,21 +75,21 @@ Im folgenden finden Sie zwei empfohlene Platzierungen, die auf unseren Explorati
 ---
 
 ## <a name="menu-positions-that-are-not-recommended"></a>Nicht empfohlene Menü Positionen
-Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchgeführt. die folgenden Menü Positionen werden **nicht empfohlen**. Sie finden die Nachteile der einzelnen nachfolgenden Nachforschungen:
+We have done user research with different menus layouts and locations, the following menu locations are **NOT recommended**, find the cons of each study below:
 
 
 :::row:::
     :::column:::
-        ![oberhalb der Arm-](images/AboveArm.gif)<br>
-        **Oberhalb der Arm**<br>
-        1: schwer zu verwaltender guter Hand Verfolgung<br>
-        2: verursacht eine Benutzer Müdigkeit aufgrund der unnatürlichen Position.
+        ![Above arm](images/AboveArm.gif)<br>
+        **Above the arm**<br>
+        1 - Difficult to maintain good hand tracking<br>
+        2 - Causes user fatigue due to unnatural position
     :::column-end:::
     :::column:::
-        ![über Fingern](images/AboveFingers.gif)<br>
-        **Über Fingern**<br>
-        1-Hand-Müdigkeit aufgrund von Handlanger Zeit<br>
-        2-Hand-nach Verfolgungs Probleme bei Index und mittlerem Finger
+        ![Above fingers](images/AboveFingers.gif)<br>
+        **Above fingers**<br>
+        1 - Hand fatigue due to holding hand for long time<br>
+        2 - Hand tracking issues on index and middle finger
     :::column-end:::
 :::row-end:::
 
@@ -97,16 +97,16 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
 
 :::row:::
     :::column:::
-        ![oberhalb der Center-Palm](images/handCenter.gif)<br>
-        **Oberhalb-Mittelpunkt**<br>
-        1-Hand-nach Verfolgungs Probleme aufgrund von überlappenden Händen<br>
-        zwei Hand Müdigkeit aufgrund der langen Zeit für die Interaktion mit Menüs
+        ![Above center palm](images/handCenter.gif)<br>
+        **Above-center palm**<br>
+        1 - Hand tracking issues due to overlapping hands<br>
+        2 - Hand fatigue due to holding hands for long time in order to interact with menus
     :::column-end:::
     :::column:::
-        ![Top Fingertip](images/TopFingerTip.gif) **Top Fingertip**<br>
-        1-Hand-nach Verfolgungs Probleme<br>
-        zwei Hand Müdigkeit mit Hand über normalem Status<br>
-        3: Fehler beim Drücken von Schaltflächen mit anderen Fingern aufgrund von eingeschränktem Leerraum zwischen Fingern.
+        ![Top Fingertip](images/TopFingerTip.gif) **Top fingertip**<br>
+        1 - Hand tracking issues<br>
+        2 - Hand fatigue holding hand above normal posture<br>
+        3 - Issues pressing buttons with other fingers by accident due to limited space between fingers
     :::column-end:::
 :::row-end:::
 
@@ -114,10 +114,10 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
 
 :::row:::
     :::column:::
-        ![Rückseite der Arm-](images/BackOfTheArm.gif)<br>
-        **Zurück zum Arm**<br>
-        1: Start Schaltfläche nach einem Unfall<br>
-        2-keine natürliche oder bequeme Position für Benutzer
+        ![Back of the Arm](images/BackOfTheArm.gif)<br>
+        **Back of the arm**<br>
+        1 - Can trigger home button by accident<br>
+        2 - Not a natural or comfortable position for users
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -127,10 +127,10 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
 
 ---
 
-## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Hand Menü im mrtk (Mixed Reality Toolkit) für Unity
-**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** stellt Skripts und Beispiel Szenen für das Hand Menü bereit. Das handeinschränintpalmup-Solver-Skript ermöglicht das einfache Anfügen von Objekten an die Hände mit verschiedenen konfigurierbaren Optionen.
+## <a name="hand-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Hand menu in MRTK(Mixed Reality Toolkit) for Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** provides scripts and example scenes for the hand menu. HandConstraintPalmUp solver script allows you easily attach any objects to the hands with various configurable options.
 
-* [Mrtk-Menü mit handeinschränkungs-und handeinschränintpalmup](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
+* [MRTK - Hand Menu with HandConstraint and HandConstraintPalmUp ](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_Solver.md#hand-menu-with-handconstraint-and-handconstraintpalmup)
 
 
 <br>
@@ -154,6 +154,7 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
 * [QuickInfo](tooltip.md)
 * [Tafel](slate.md)
 * [Schieberegler](slider.md)
+* [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
 * [Oberflächen Magnetismus](surface-magnetism.md)
