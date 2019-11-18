@@ -84,6 +84,7 @@
 #### [QuickInfo](tooltip.md)
 #### [Filmklappe](slate.md)
 #### [Schieberegler](slider.md)
+#### [Shader](shader.md)
 #### [Billboarding und Tag-along](billboarding-and-tag-along.md)
 #### [Anzeigen des Fortschritts](progress.md)
 #### [Oberflächenmagnetismus](surface-magnetism.md)
