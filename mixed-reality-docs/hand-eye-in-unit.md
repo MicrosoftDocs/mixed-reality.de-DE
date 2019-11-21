@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Gesten, Bewegungs Controller, Unity, Blick, Eingabe
-ms.openlocfilehash: 49f4181f62b1b2ac73c65c6cbdcdc57ba1b57aaa
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: b60c5567714893f2d1f2cc929e832bb851dd9e34
+ms.sourcegitcommit: 4081dc2356fec0ea3625f1d989689cfbbb3fcf5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435233"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203323"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Hand-und Augen Nachverfolgung in Unity
 
@@ -19,7 +19,7 @@ Hololens 2 hat einige neue interessante Funktionen eingeführt: die Hand-und die
 
 Die einfachste Möglichkeit, die neue Funktion in Unity zu nutzen, ist die Verwendung von mrtk v2. Es gibt auch einige Beispiel Szenen, die Ihnen den Einstieg erleichtern. 
 
-* [Einstieg in die Hand in mrtk v2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSystem/HandTracking.html)
+* [Einstieg in die Hand in mrtk v2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/HandTracking.html)
 * [Einstieg in die Eye-Nachverfolgung in mrtk v2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html)
 
 
@@ -46,14 +46,14 @@ Weitere Beispiel Szenen finden Sie im [Mixed Reality Toolkit GitHub](https://git
 
 [![Beispiel Szene](images/MRTK_Examples.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandInteractionExamples.html)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
-* [Augen basierte Interaktion] (Eye-Gaze-Interaction.MD)
-* [Eye Tracking on hololens 2] (Eye-Tracking.MD)
-* [Blick und Commit](gaze-and-commit.md)
-* [Bearbeitung von Hand direkt](direct-manipulation.md)
-* [Handgesten](gaze-and-commit.md#composite-gestures)
-* ["Hand Punkt" und "Commit"](point-and-commit.md)
+* [Augenbasierte Interaktion] (eye-gaze-interaction.md)
+* [Blickverfolgung auf HoloLens 2] (eye-tracking.md)
+* [Anvisieren und Ausführen](gaze-and-commit.md)
+* [Hände – Direkte Manipulation](direct-manipulation.md)
+* [Hände – Gesten](gaze-and-commit.md#composite-gestures)
+* [Hände – Zeigen und Ausführen](point-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Motion-Controller](motion-controllers.md)
 * [Unityengine. XR. WSA. Input](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
