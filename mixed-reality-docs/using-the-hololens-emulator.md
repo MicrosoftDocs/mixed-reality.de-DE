@@ -3,16 +3,16 @@ title: Verwendung des HoloLens-Emulators
 description: Verwenden des HoloLens-Emulators zum Testen von Mixed Reality-Apps auf Ihrem PC ohne eine physische HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 09/11/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, Emulator
-ms.openlocfilehash: 455abfabede5bc1e646bd273afa09068feb886a1
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2e96c4262d2006f6a971004c5c0a5a9b3b65d4f1
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437350"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064268"
 ---
 # <a name="using-the-hololens-emulator"></a>Verwendung des HoloLens-Emulators
 
@@ -25,7 +25,7 @@ Wenn Sie Anwendungen für immersive Windows Mixed Reality-Headsets (VR) oder Spi
 Lade den HoloLens-Emulator herunter.
 
 Versionen: 
-* [HoloLens 2-Emulator (Update von Oktober 2019)](https://go.microsoft.com/fwlink/?linkid=2106649)
+* [HoloLens 2-Emulator (Update von November 2019)](https://go.microsoft.com/fwlink/?linkid=2110553).
 * [HoloLens-Emulator (1. Generation) und holografische Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2065980)
 
 Ältere Builds des HoloLens-Emulators finden Sie auf der Seite [HoloLens-Emulator – Archiv](hololens-emulator-archive.md).

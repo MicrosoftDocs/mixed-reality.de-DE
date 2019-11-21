@@ -7,14 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hände nah beieinander, HoloLens
-ms.openlocfilehash: ed3b25fe9a7dd404d07073b578b8da13e1984cab
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435910"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105942"
 ---
 # <a name="direct-manipulation-with-hands"></a>Direkte Manipulation mit den Händen
+
+![Schaltfläche](images/UX/UX_Hero_Manipulation.jpg)
+
 Die direkte Manipulation ist ein Eingabemodell, bei dem Hologramme direkt mit den Händen berührt werden. Die Idee hinter diesem Konzept ist, dass sich Objekte wie in der realen Welt verhalten. Schaltflächen können einfach durch Drücken aktiviert werden, Objekte können durch Greifen aufgenommen werden und 2D-Inhalte verhalten sich wie ein virtueller Touchscreen. Aus diesem Grund ist die direkte Manipulation für den Benutzer leicht erlernbar und macht auch Spaß. Sie gilt als „nahes“ Eingabemodell, d. h. es wird am besten für die Interaktion mit Inhalten verwendet, die innerhalb der Reichweite der Arme liegen.
 
 Die direkte Manipulation ist angebotsbasiert, d. h. benutzerfreundlich. Es gibt keine symbolischen Gesten, die den Benutzern vermittelt werden müssen. Alle Interaktionen basieren auf einem visuellen Element, das Sie berühren oder greifen können.
@@ -296,12 +299,6 @@ Wenn wir den Benutzer z. B. bestärken, ein Objekt oder einen Kontrollpunkt durc
 
 Sie haben vielleicht bemerkt, dass es Interaktionsparallelen gibt, die wir zwischen Händen in AR und Motion-Controllern in VR ziehen können. Beide Eingabemethoden können verwendet werden, um direkte Bearbeitungen in ihrer jeweiligen Umgebung auszulösen. In HoloLens 2 funktioniert das Greifen und Ziehen mit den Händen aus nächster Nähe weitgehend so, wie die Taste zum Greifen an den WMR-Motion-Controllern. Dies bietet den Benutzern die vertraute Interaktion zwischen den beiden Plattformen, die sich als nützlich erweisen kann, falls Sie sich jemals dazu entscheiden, Ihre Anwendung von einer zur anderen Plattform zu portieren.
 
-
-<br>
-
----
-
-
 <br>
 
 ---
@@ -324,6 +321,18 @@ Dabei bewegen Sie Ihre Hand versehentlich über einige interaktive holografische
 * **Wohin**: Verwenden Sie Informationen darüber, was sich ein Benutzer ansieht, mit schnell auslösenden Gesten. Greifen Sie ein Hologramm, und werfen Sie es grob in Richtung Ihres beabsichtigten Ziels.  
 
     Obwohl dies manchmal funktioniert, können schnell ausgeführte Handgesten zu sehr ungenauen Zielen führen. Das Eyetracking (Blickverfolgung) könnte die Genauigkeit der Geste verbessern.
+
+<br>
+
+---
+
+## <a name="manipulation-in-mrtkmixed-reality-toolkit-for-unity"></a>Bearbeitung im MRTK (Mixed Reality Toolkit) für Unity
+Mit dem **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können Sie ganz einfach mithilfe des Skripts **ManipulationHandler** ein gebräuchliches Bearbeitungsverhalten erzielen. Mit ManipulationHandler können Sie Objekte direkt mit der Hand oder dem Handlichtstrahl greifen und verschieben. Außerdem wird die Bearbeitung mit beiden Händen zum Skalieren und Rotieren eines Objekts unterstützt.
+
+* [MRTK – Bearbeitung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+
+
+---
 
 ## <a name="see-also"></a>Weitere Informationen
 

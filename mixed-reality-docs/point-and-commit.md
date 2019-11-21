@@ -7,14 +7,16 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Interaktion, Design, HoloLens, Hände, fern, Zeigen und Ausführen
-ms.openlocfilehash: e454b7f26b402d5c168323762865d10f7feb8a17
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437638"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105997"
 ---
 # <a name="point-and-commit-with-hands"></a>Zeigen und Ausführen mit den Händen
+
+![Cursor](images/UX/UX_Hero_HandRay.jpg)
 
 „Zeigen und Ausführen mit den Händen“ ist ein Eingabemodell, mit dem Benutzer auf 2D-Inhalte und 3D-Objekte zielen, die außerhalb der Reichweite liegen, diese auswählen und bearbeiten können. Diese „ferne“ Interaktionstechnik gibt es nur in der Mixed Reality-Umgebung; sie entspricht nicht der Art und Weise, in der Menschen normalerweise mit der realen Welt in Interaktion treten. Im Superhelden-Film *X-Men* beispielsweise kann die Figur [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) mit seinen Händen aus der Entfernung nach einem fernen Objekt greifen und dieses manipulieren. Dies ist etwas, was Menschen in der Realität nicht können. In HoloLens (AR) und Mixed Reality (MR) statten wir Benutzer mit diesen magischen Kräften aus und setzen dabei die Grenzen der Physik in der realen Welt außer Kraft. Ziel ist nicht nur ein positives Erlebnis mit holografischen Inhalten, sondern auch eine effektivere und effizientere Benutzerinteraktion.
 
@@ -195,6 +197,17 @@ Das Konzept „Zeigen und Ausführen“ für die ferne Interaktion wurde anfäng
 :::row-end:::
 
 <br>
+
+
+---
+
+## <a name="hand-ray-in-mrtkmixed-reality-toolkit-for-unity"></a>Handlichtstrahl in MRTK (Mixed Reality Toolkit) für Unity
+Standardmäßig stellt das MRTK einen vorkonfigurierten Handlichtstrahl ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) zur Verfügung, der den gleichen visuellen Status wie der System-Handlichtstrahl der Shell aufweist. Er wird im Eingabeprofil des MRTK unter „Pointers“ (Zeiger) zugewiesen. In Windows Mixed Reality (immersives Headset) werden dieselben Strahlen auch für die Motion-Controller verwendet.
+
+* [MRTK – Zeigerprofil](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK – Eingabesystem](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK – Zeiger](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
 
 ---
 
