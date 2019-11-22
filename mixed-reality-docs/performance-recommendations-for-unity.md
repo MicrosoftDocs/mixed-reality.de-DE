@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Grafiken, CPU, GPU, Rendering, Garbage Collection, hololens
-ms.openlocfilehash: 724ec24408e70360fda07c59a4ca2ffc30b49c1f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f3fdda94c417d9f8e8980a90e8928282789e3d0f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438128"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926871"
 ---
 # <a name="performance-recommendations-for-unity"></a>Empfehlungen zur Leistung für Unity
 
@@ -273,7 +273,7 @@ Techniken, die auf dem Vollbildmodus ausgeführt werden, können sehr aufwendig 
 
 ### <a name="optimal-lighting-settings"></a>Optimale Beleuchtungseinstellungen
 
-Mit der [globalen Echtzeitbeleuchtung](https://docs.unity3d.com/Manual/GIIntro.html) in Unity können visuelle Ergebnisse bereitgestellt werden, aber es sind sehr teure Beleuchtungsberechnungen enthalten. Es wird empfohlen, die globale Echtzeitbeleuchtung für jede Unity-Szenen Datei über **Fenster** > **Rendering** > **Beleuchtungseinstellungen** zu deaktivieren > die **Globale Beleuchtung in Echtzeit**zu deaktivieren.
+Die [globale Echtzeitbeleuchtung](https://docs.unity3d.com/Manual/GIIntro.html) in Unity kann ausstehende visuelle Ergebnisse bereitstellen, beinhaltet jedoch sehr teure Beleuchtungsberechnungen. Es wird empfohlen, die globale Echtzeitbeleuchtung für jede Unity-Szenen Datei über **Fenster** > **Rendering** > **Beleuchtungseinstellungen** zu deaktivieren > die **Globale Beleuchtung in Echtzeit**zu deaktivieren.
 
 Außerdem wird empfohlen, alle Schatten Umwandlungen zu deaktivieren, da diese auch teure GPU-Pässe zu einer Unity-Szene hinzufügen. Schatten können pro Licht deaktiviert werden, können aber auch über Qualitätseinstellungen ganzheitlich gesteuert werden.
 
@@ -301,7 +301,7 @@ Eine einfache Näherung zum Vergleichen von Shadern in der Leistung besteht dari
 
     ![Unity-Standard-Shader-Vorgänge](images/unity-standard-shader-compilation.png)
 
-#### <a name="optmize-pixel-shaders"></a>Pixel-Shader optmize
+#### <a name="optimize-pixel-shaders"></a>Optimieren von Pixel-Shadern
 
 Wenn Sie die kompilierten statistischen Ergebnisse mithilfe der obigen Methode betrachten, führt der [fragmentshader](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) im Durchschnitt im Allgemeinen mehr Vorgänge aus als der [Vertex-Shader](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) . Der fragmentshader, auch als Pixelshader bezeichnet, wird pro Pixel auf der Bildschirmausgabe ausgeführt, während der Vertexshader nur pro Scheitelpunkt aller auf dem Bildschirm gezeichneten Netzen ausgeführt wird. 
 
@@ -355,7 +355,7 @@ Sie sollten die app in einer kleineren Szene starten und dann *[scenemanager. lo
 
 Beachten Sie, dass beim Laden der Startszene der Holographic-Begrüßungsbildschirm für den Benutzer angezeigt wird.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Optimieren des Grafik Rendering in Unity-spielen](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
 - [Optimieren von Garbage Collection in Unity-spielen](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
 - [Bewährte Methoden für die Physik [Unity]](https://unity3d.com/learn/tutorials/topics/physics/physics-best-practices)
