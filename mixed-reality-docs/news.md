@@ -23,7 +23,7 @@ ms.locfileid: "73439901"
 
 ## <a name="october-2019"></a>Oktober 2019
 
-Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir freuen uns auf Ihr Feedback, und wir möchten Sie einladen, sich an [den Diskussionen zu beteiligen](https://holodevelopersslack.azurewebsites.net/). Sagen Sie uns, welche Themen wir für Sie aufbereiten sollen, für welche Menschen Sie sich interessieren, welche Tutorials und Anleitungen Sie gut gebrauchen könnten usw. Sie können uns auch über [Twitter](https://twitter.com/MxdRealityDev) erreichen und [unserem Entwicklerprogramm beitreten](https://aka.ms/iwantmr), um direkte Updates zu neuen Dokumenten, Tools, Veranstaltungen und weiteren Informationen zu erhalten. Bleiben Sie dran, das ist noch nicht alles!
+Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir freuen uns auf Ihr Feedback, und wir möchten Sie einladen, sich an [den Diskussionen zu beteiligen](https://holodevelopersslack.azurewebsites.net/), in denen es um Themen geht, die wir für Sie aufbereiten sollen, sowie Personen, von denen Sie etwas hören möchten, Tutorials und Beschreibungen von Vorgehensweisen, die Sie benötigen… Sie können uns auch über [Twitter](https://twitter.com/MxdRealityDev) erreichen und [unserem Entwicklerprogramm beitreten](https://aka.ms/iwantmr), um direkte Updates zu neuen Dokumenten, Tools, Veranstaltungen und weiteren Informationen zu erhalten. Bleiben Sie dran, das ist noch nicht alles!
 
 <table>
 <tr>
@@ -47,7 +47,7 @@ Wie versprochen werden wir weitere Mixed Reality-Vorteile mit Ihnen teilen! Wir 
 <td>Entwurfs- und Entwicklungsanleitungen für HoloLens 2</td><td>Oktober 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/>Übersicht über gemischte Realität</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>Entwerfen und Prototypen</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>Entwicklertools und-Architektur</a></td>
 </tr>
 <tr>
-  <td>Neue Informationen zu Unreal</td><td>Oktober 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Unwirkliche Entwicklungs Übersicht</a></td>
+  <td>Neue Informationen zu Unreal</td><td>Oktober 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Ureal-Entwicklung – Übersicht</a></td>
 </tr>
 <tr>
   <td>Microsoft-Design</td><td>Oktober 2019</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>Mixed Reality-Entwurfs Seite</a></td>

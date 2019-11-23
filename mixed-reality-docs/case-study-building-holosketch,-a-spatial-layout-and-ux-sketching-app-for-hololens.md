@@ -94,7 +94,7 @@ Führen Sie vor dem Hochladen in ihren onedrive-Ordner die folgenden Schritte au
 >[!IMPORTANT]
 >Derzeit wird die Erstellung von Asset-Paketen mit Unity-Version 5.4.5 F1 unterstützt.
 
-1. Herunterladen und Öffnen des Unity-Projekts ["AssetBunlder_Unity"](https://github.com/Microsoft/MRDesignLabs/tree/master/ReleasedApps/HoloSketch/AssetBundler_Unity). Dieses Unity-Projekt enthält das Skript für die Bundle-Asset-Generierung.
+1. Das Unity-Projekt ["AssetBunlder_Unity"](https://github.com/Microsoft/MRDesignLabs/tree/master/ReleasedApps/HoloSketch/AssetBundler_Unity)herunterladen und öffnen. Dieses Unity-Projekt enthält das Skript für die Bundle-Asset-Generierung.
 2. Erstellen Sie ein neues gameobject-Objekt.
 3. Benennen Sie das gameobject basierend auf dem Inhalt.
 4. Klicken Sie im Inspektor-Panel auf "Komponente hinzufügen", und fügen Sie "Box Collider" hinzu. 
@@ -126,7 +126,7 @@ Führen Sie vor dem Hochladen in ihren onedrive-Ordner die folgenden Schritte au
    Wählen Sie ![im Menü Assets die Option zum Erstellen von assetbundles aus, um die Datei zu generieren.](images/holosketch-15a-assetbundles.png)
 
 
-13. **Laden Sie die generierte Datei in den Ordner/Files/Documents/HoloSketch auf onedrive hoch.** Laden Sie die Datei asset_unique_name nur hoch. Manifestressourcen oder assetbundle-Dateien müssen nicht hochgeladen werden. <br>
+13. **Laden Sie die generierte Datei in den Ordner/Files/Documents/HoloSketch auf onedrive hoch.** Laden Sie nur die asset_unique_name Datei hoch. Manifestressourcen oder assetbundle-Dateien müssen nicht hochgeladen werden. <br>
 ![Hinzufügen von Dateien zu Dateien/Dokumenten/holosketch/Ordner](images/holosketch-onedriveupload-1000px.png)
 ![wird das hinzugefügte 3D-Objekt im onedrive-Menü von holosketch angezeigt](images/holosketch-14-onedriveexample-1000px.jpg)
 

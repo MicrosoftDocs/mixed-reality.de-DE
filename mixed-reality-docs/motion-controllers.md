@@ -30,7 +30,7 @@ ms.locfileid: "73437858"
 
 ---
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
 <colgroup>
@@ -40,7 +40,7 @@ ms.locfileid: "73437858"
     <col width="25%" />
 </colgroup>
 <tr>
-     <td><strong>Feature</strong></td>
+     <td><strong>Funktion</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
@@ -203,13 +203,13 @@ Apps, die Positionen basierend auf dem nach verfolgungsstatus unterschiedlich be
 <tr>
 <th> Nach verfolgungsstatus </th><th> Sourcelossrisk </th><th> Positionsgenauigkeit </th><th> Trygetposition</th>
 </tr><tr>
-<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> Wahr</td>
+<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Hohe Genauigkeit (Risiko des Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> Wahr</td>
+<td> <b>Hohe Genauigkeit (Risiko des Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> Wahr</td>
+<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> Falsch</td>
+<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
@@ -218,7 +218,7 @@ Apps, die Positionen basierend auf dem nach verfolgungsstatus unterschiedlich be
 Diese Motion Controller-Überwachungs Zustände werden wie folgt definiert:
 * **Hohe Genauigkeit:** Während sich der Motion-Controller in der Ansicht des Dashboards befindet, stellt er im Allgemeinen hohe Genauigkeits Positionen auf der Grundlage der visuellen Nachverfolgung bereit. Beachten Sie, dass ein beweglicher Controller, der das Sichtfeld vorübergehend verlässt oder vorübergehend von den Headset-Sensoren (z. b. durch die andere Seite des Benutzers) verdeckt wird, weiterhin hohe Genauigkeit für kurze Zeit zurückgibt, basierend auf der Trägheits Verfolgung des Controllers. etabliert.
 * **Hohe Genauigkeit (Risiko des Verlusts):** Wenn der Benutzer den Bewegungs Controller über den Rand des Felds der Ansicht bewegt, kann das Headset die Position des Controllers in Kürze nicht visuell nachverfolgen. Die APP weiß, wann der Controller diese FOV-Grenze erreicht hat, indem er den **sourcelossrisk** -REACH-1,0 sieht. An diesem Punkt kann die APP die Controller Gesten anhalten, die einen stabilen Stream von sehr hochwertigen Posen erfordern.
-* **Ungefähre Genauigkeit:** Wenn die visuelle Überwachung für den Controller lange genug verloren gegangen ist, werden die Positionen des Controllers auf Positionen mit ungefähren Genauigkeit abgelegt. An diesem Punkt sperrt das System den Controller für den Benutzer, wobei die Position des Benutzers nachverfolgt wird, während er sich bewegt, während er weiterhin die echte Ausrichtung des Controllers mithilfe der internen Ausrichtungs Sensoren verfügbar macht. Viele apps, die Controller verwenden, um auf Benutzeroberflächen Elemente zu verweisen und diese zu aktivieren, können so normal agieren, dass Sie in der ungefähren Genauigkeit nicht bemerkt werden Bei apps mit schwereren Eingabe Anforderungen ist es möglicherweise sinnvoll, diesen Löschvorgang von **hoher** Genauigkeit zur **ungefähren** Genauigkeit zu verstehen, indem die **positionaccuracy** -Eigenschaft überprüft wird Während dieser Zeit.
+* **Ungefähre Genauigkeit:** Wenn die visuelle Überwachung für den Controller lange genug verloren gegangen ist, werden die Positionen des Controllers auf Positionen mit ungefähren Genauigkeit abgelegt. An diesem Punkt sperrt das System den Controller für den Benutzer, wobei die Position des Benutzers nachverfolgt wird, während er sich bewegt, während er weiterhin die echte Ausrichtung des Controllers mithilfe der internen Ausrichtungs Sensoren verfügbar macht. Viele apps, die Controller verwenden, um auf Benutzeroberflächen Elemente zu verweisen und diese zu aktivieren, können so normal agieren, dass Sie in der ungefähren Genauigkeit nicht bemerkt werden Bei apps mit schwereren Eingabe Anforderungen ist es möglicherweise sinnvoll, diesen Löschvorgang von **hoher** Genauigkeit zur **ungefähren** Genauigkeit zu verstehen, indem die **positionaccuracy** -Eigenschaft überprüft wird, z. b. um dem Benutzer während dieses Zeitraums eine eher großzügigere Position in den offscreenzielen zu geben.
 * **Keine Position:** Obwohl der Controller für einen längeren Zeitraum mit der ungefähren Genauigkeit arbeiten kann, weiß das System manchmal, dass auch eine vom Text gesperrte Position im Moment nicht aussagekräftig ist. Beispielsweise kann ein Controller, der gerade eingeschaltet war, nie visuell beobachtet werden, oder ein Benutzer kann einen Controller ablegen, der von einer anderen Person abgerufen wird. Zu diesen Zeitpunkten stellt das System keine Position für die APP bereit, und **trygetposition** gibt false zurück.
 
 ## <a name="interactions-low-level-spatial-input"></a>Interaktionen: räumliche Eingabe auf niedriger Ebene
@@ -269,7 +269,7 @@ In der [Windows Mixed Reality-Start](navigating-the-windows-mixed-reality-home.m
 
 Nicht für universelle Windows-Anwendungen.
 
-## <a name="troubleshooting"></a>Fehlerbehebung
+## <a name="troubleshooting"></a>Problembehandlung
 
 Weitere Informationen finden Sie im Leitfaden zur Problembehandlung für [Motion Controller](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) .
 
@@ -277,7 +277,7 @@ Weitere Informationen finden Sie im Leitfaden zur Problembehandlung für [Motion
 
 [Geben Sie uns Feedback](give-us-feedback.md) im Feedback-Hub mit der Kategorie "Mixed Reality-> Input".
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 * [Gesten und Motion-Controller in Unity](gestures-and-motion-controllers-in-unity.md)
 * [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gesten](gaze-and-commit.md#composite-gestures)

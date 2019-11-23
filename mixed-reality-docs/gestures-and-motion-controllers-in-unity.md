@@ -17,11 +17,11 @@ ms.locfileid: "73926564"
 
 Es gibt zwei wichtige Möglichkeiten, um Ihre [Blicke in Unity](gaze-in-unity.md), [Handgesten](gaze-and-commit.md#composite-gestures) und [Bewegungs Controllern](motion-controllers.md) in hololens und immersiven HMD zu ergreifen. Sie greifen über dieselben APIs in Unity auf die Daten für beide Quellen räumlicher Eingaben zu.
 
-Unity bietet zwei Hauptmethoden für den Zugriff auf räumliche Eingabedaten für Windows Mixed Reality, die gängigen *Input. getbutton/Input. getaxis-* APIs, die über mehrere Unity-XR-sdker hinweg verwendet werden können, sowie eine API für *interaktionmanager/GestureRecognizer* . Windows Mixed Reality, das den vollständigen Satz räumlicher Eingabedaten verfügbar macht.
+Unity bietet zwei Hauptmethoden für den Zugriff auf räumliche Eingabedaten für Windows Mixed Reality, die gängigen *Input. getbutton/Input. getaxis-* APIs, die über mehrere Unity-XR-sdker hinweg verwendet werden können, sowie eine *interaktionmanager/GestureRecognizer-* API speziell für Windows Mixed Reality, das den vollständigen Satz räumlicher Eingabedaten verfügbar macht.
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Unity-Schaltfläche/Achsen Zuordnung (Tabelle)
 
-Die Schaltflächen-und Achsen-IDs in der folgenden Tabelle werden im Unity-Eingabe-Manager für Windows Mixed Reality Motion Controller über die *Eingabe. getbutton/getaxis* -APIs unterstützt, während die Spalte "Windows Mr-spezifisch" auf Eigenschaften verweist, die aus dem *Interaktionsourcestate* -Typ. Jede dieser APIs wird in den folgenden Abschnitten ausführlich beschrieben.
+Die Schaltflächen-und Achsen-IDs in der folgenden Tabelle werden im Unity-Eingabe-Manager für Windows Mixed Reality Motion Controller über die *Eingabe. getbutton/getaxis* -APIs unterstützt, während die Spalte "Windows Mr-spezifisch" auf Eigenschaften verweist, die aus dem *interaktionsourcestate* -Typ verfügbar sind. Jede dieser APIs wird in den folgenden Abschnitten ausführlich beschrieben.
 
 Die Zuordnungen von Schaltflächen/Achsen-IDs für Windows Mixed Reality entsprechen im Allgemeinen den Oculus-Schaltflächen-/Achsen-IDs
 
@@ -118,20 +118,20 @@ Apps, die Positionen basierend auf dem nach verfolgungsstatus unterschiedlich be
 <tr>
 <th> Nach verfolgungsstatus </th><th> Sourcelossrisk </th><th> Positionsgenauigkeit </th><th> Trygetposition</th>
 </tr><tr>
-<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> Wahr</td>
+<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Hohe Genauigkeit (Risiko des Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> Wahr</td>
+<td> <b>Hohe Genauigkeit (Risiko des Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> Wahr</td>
+<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> Falsch</td>
+<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
 Diese Motion Controller-Überwachungs Zustände werden wie folgt definiert:
 * **Hohe Genauigkeit:** Während sich der Motion-Controller in der Ansicht des Dashboards befindet, stellt er im Allgemeinen hohe Genauigkeits Positionen auf der Grundlage der visuellen Nachverfolgung bereit. Beachten Sie, dass ein beweglicher Controller, der das Sichtfeld vorübergehend verlässt oder vorübergehend von den Headset-Sensoren (z. b. durch die andere Seite des Benutzers) verdeckt wird, weiterhin hohe Genauigkeit für kurze Zeit zurückgibt, basierend auf der Trägheits Verfolgung des Controllers. etabliert.
 * **Hohe Genauigkeit (Risiko des Verlusts):** Wenn der Benutzer den Bewegungs Controller über den Rand des Felds der Ansicht bewegt, kann das Headset die Position des Controllers in Kürze nicht visuell nachverfolgen. Die APP weiß, wann der Controller diese FOV-Grenze erreicht hat, indem er den **sourcelossrisk** -REACH-1,0 sieht. An diesem Punkt kann die APP die Controller Gesten anhalten, die einen stabilen Stream von sehr hochwertigen Posen erfordern.
-* **Ungefähre Genauigkeit:** Wenn die visuelle Überwachung für den Controller lange genug verloren gegangen ist, werden die Positionen des Controllers auf Positionen mit ungefähren Genauigkeit abgelegt. An diesem Punkt sperrt das System den Controller für den Benutzer, wobei die Position des Benutzers nachverfolgt wird, während er sich bewegt, während er weiterhin die echte Ausrichtung des Controllers mithilfe der internen Ausrichtungs Sensoren verfügbar macht. Viele apps, die Controller verwenden, um auf Benutzeroberflächen Elemente zu verweisen und diese zu aktivieren, können so normal agieren, dass Sie in der ungefähren Genauigkeit nicht bemerkt werden Bei apps mit schwereren Eingabe Anforderungen ist es möglicherweise sinnvoll, diesen Löschvorgang von **hoher** Genauigkeit zur **ungefähren** Genauigkeit zu verstehen, indem die **positionaccuracy** -Eigenschaft überprüft wird Während dieser Zeit.
+* **Ungefähre Genauigkeit:** Wenn die visuelle Überwachung für den Controller lange genug verloren gegangen ist, werden die Positionen des Controllers auf Positionen mit ungefähren Genauigkeit abgelegt. An diesem Punkt sperrt das System den Controller für den Benutzer, wobei die Position des Benutzers nachverfolgt wird, während er sich bewegt, während er weiterhin die echte Ausrichtung des Controllers mithilfe der internen Ausrichtungs Sensoren verfügbar macht. Viele apps, die Controller verwenden, um auf Benutzeroberflächen Elemente zu verweisen und diese zu aktivieren, können so normal agieren, dass Sie in der ungefähren Genauigkeit nicht bemerkt werden Bei apps mit schwereren Eingabe Anforderungen ist es möglicherweise sinnvoll, diesen Löschvorgang von **hoher** Genauigkeit zur **ungefähren** Genauigkeit zu verstehen, indem die **positionaccuracy** -Eigenschaft überprüft wird, z. b. um dem Benutzer während dieses Zeitraums eine eher großzügigere Position in den offscreenzielen zu geben.
 * **Keine Position:** Obwohl der Controller für einen längeren Zeitraum mit der ungefähren Genauigkeit arbeiten kann, weiß das System manchmal, dass auch eine vom Text gesperrte Position im Moment nicht aussagekräftig ist. Beispielsweise kann ein Controller, der gerade eingeschaltet war, nie visuell beobachtet werden, oder ein Benutzer kann einen Controller ablegen, der von einer anderen Person abgerufen wird. Zu diesen Zeitpunkten stellt das System keine Position für die APP bereit, und *trygetposition* gibt false zurück.
 
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>Allgemeine Unity-APIs (Input. getbutton/getaxis)
@@ -525,7 +525,7 @@ Schritt-für-Schritt-Tutorials mit ausführlicheren Anpassungs Beispielen sind i
 [![Mr-Eingabe 213-Motion Controller](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Mr-Eingabe 213-Motion Controller*
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Motion-Controller](motion-controllers.md)

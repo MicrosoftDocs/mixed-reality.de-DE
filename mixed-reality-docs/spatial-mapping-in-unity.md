@@ -23,7 +23,7 @@ Unity bietet vollständige Unterstützung für die räumliche Zuordnung, die Ent
 
 Um die räumliche Zuordnung in der APP zu verwenden, muss die spatialperception-Funktion in Ihrem appxmanifest festgelegt werden.
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
     <colgroup>
@@ -33,7 +33,7 @@ Um die räumliche Zuordnung in der APP zu verwenden, muss die spatialperception-
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Feature</strong></td>
+        <td><strong>Funktion</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
@@ -352,7 +352,7 @@ auf dieser Oberfläche wird ![Rechteck Form gefunden](images/su-shapequery-300px
 
 ### <a name="object-placement-solver"></a>Objektplatzierungs-Solver
 
-Der objektplatzierungs-Solver kann verwendet werden, um ideale Positionen im physischen Raum zu identifizieren, um die Objekte zu platzieren. Der Solver findet den am besten geeigneten Speicherort anhand der Objekt Regeln und Einschränkungen. Außerdem bleiben Objekt Abfragen so lange erhalten, bis das Objekt mit den Aufrufen von "Solver_RemoveObject" oder "Solver_RemoveAllObjects" entfernt wird, sodass die eingeschränkte Platzierung von mehreren Objekten ermöglicht wird. Die Platzierungs Abfragen von Objekten bestehen aus drei Teilen: Platzierungs Typ mit Parametern, eine Liste von Regeln und eine Liste von Einschränkungen. Verwenden Sie die folgende API, um eine Abfrage auszuführen.
+Der objektplatzierungs-Solver kann verwendet werden, um ideale Positionen im physischen Raum zu identifizieren, um die Objekte zu platzieren. Der Solver findet den am besten geeigneten Speicherort anhand der Objekt Regeln und Einschränkungen. Außerdem bleiben Objekt Abfragen so lange erhalten, bis das Objekt mit "Solver_RemoveObject"-oder "Solver_RemoveAllObjects"-aufrufen entfernt wird, sodass die eingeschränkte Platzierung von mehreren Objekten ermöglicht wird. Die Platzierungs Abfragen von Objekten bestehen aus drei Teilen: Platzierungs Typ mit Parametern, eine Liste von Regeln und eine Liste von Einschränkungen. Verwenden Sie die folgende API, um eine Abfrage auszuführen.
 
 ```cpp
 public static int Solver_PlaceObject(
@@ -470,14 +470,14 @@ Die Understanding dll speichert den Playspace intern als Raster von Voxel-Cubes 
 ![generierte Gitter, das aus dem Voxel-Volume erstellt wurde](images/su-custommesh.jpg)<br>
 *Generiertes Mesh, das vom Voxel-Volume erstellt wurde*
 
-## <a name="troubleshooting"></a>Fehlerbehebung
+## <a name="troubleshooting"></a>Problembehandlung
 * Stellen Sie sicher, dass Sie die Funktion [spatialperception](#setting-the-spatialperception-capability) festgelegt haben
 * Wenn die Nachverfolgung verloren geht, entfernt das nächste onsurfacechanged-Ereignis alle Meshes.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Räumliche Zuordnung im Mixed Reality Toolkit
 Weitere Informationen zur Verwendung der räumlichen Zuordnung mit Mixed Reality Toolkit v2 finden Sie im <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">Abschnitt räumliche</a> Informationen der mrtk-Dokumentation.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 * [Räumliche Daten 230: räumliche Zuordnung](holograms-230.md)
 * [Koordinatensysteme](coordinate-systems.md)
 * [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
