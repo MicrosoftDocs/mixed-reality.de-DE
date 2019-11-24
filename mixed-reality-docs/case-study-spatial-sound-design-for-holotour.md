@@ -74,7 +74,7 @@ Wenn Sie Audio für eine Szene erstellen, gibt es einige zusätzliche Methoden, 
 </tr>
 </table>
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 * [Raumklang](spatial-sound.md)
 * [Raumklangentwurf](spatial-sound-design.md)
 * [Raumklang in Unity](spatial-sound-in-unity.md)
