@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/30/2019
 ms.topic: article
 keywords: Hands, Motion Controllers, DirectX, Input, holograms
-ms.openlocfilehash: 7b8222e5e539eb95b07cc24d6b49106bd174b490
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 54eaacc3f0dccf728b5438c020a5efd7e0788251
+ms.sourcegitcommit: 4081dc2356fec0ea3625f1d989689cfbbb3fcf5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435198"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203330"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>Hands-und Motion-Controller in DirectX
 
@@ -99,7 +99,7 @@ Dies führt zu den folgenden bewährten Vorgehensweisen beim Rendern und als Zie
 ## <a name="cross-device-input-properties"></a>Geräte übergreifende Eingabe Eigenschaften
 Die spatialinteraktionsource-API unterstützt Controller und Hand Verfolgungs Systeme mit einer Vielzahl von Funktionen. Eine Reihe dieser Funktionen sind zwischen den Gerätetypen üblich. Beispielsweise stellen Hand Verfolgungs-und Bewegungs Controller eine SELECT-Aktion und eine 3D-Position bereit. Wenn möglich, ordnet die API diese gemeinsamen Funktionen denselben Eigenschaften auf der spatialinteraktionsource zu.  Dies ermöglicht es Anwendungen, eine breite Palette von Eingabetypen leichter zu unterstützen. In der folgenden Tabelle werden die Eigenschaften, die unterstützt werden, und deren Vergleich zwischen Eingabetypen beschrieben.
 
-| Eigenschaft | Beschreibung | Bewegungen von hololens | Motion-Controller | Handgelenk|
+| Eigenschaft | Beschreibung | Bewegungen von hololens (1. Gen) | Motion-Controller | Handgelenk|
 |--- |--- |--- |--- |--- |
 | [Spatialinteraktionsource::**hängkeit**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Rechts oder Links/Controller. | Nicht unterstützt | Unterstützt | Unterstützt |
 | [Spatialinteraktionsourcestate::**isselectpressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Aktueller Zustand der primären Schaltfläche. | Luft tippen | Trigger | Gelockerte Luft tippen (Aufrufe) |
@@ -122,7 +122,7 @@ Sie können auf die Ziehpunkt- **Pose** über [spatialinteraktionsourcestate zug
 * Die **Forward-Achse**der Ziehpunkt Ausrichtung: Wenn Sie die Hand teilweise schließen (wie beim Halten des Controllers), wird der Strahl, der durch das durch ihre nicht-Thumb-Finger formatierte Rohr auf "Vorwärts" zeigt.
 * Die **aufwärts Achse**der Ziehpunkt Ausrichtung: die aufwärts Achse, die durch die Rechte-und vorwärts Definitionen impliziert wird.
 
-Sie können auf die **Zeiger Pose** über [spatialinteraktionsourcestate zugreifen::P roperties:: trygetlocation (...):: sourcepointerpose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) oder [spatialinteraktionsourcestate:: trygetpointerpose (...):: trygetinteraktionsourcepose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_) .
+Sie können auf die **Zeiger Pose** über [spatialinteraktionsourcestate zugreifen::P roperties:: trygetlocation (...):: sourcepointerpose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) oder [spatialinteraktionsourcestate:: trygetpointerpose (...):: trygetinteraktionsourcepose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_).
 
 ## <a name="controller-specific-input-properties"></a>Controller spezifische Eingabe Eigenschaften
 Für Controller verfügt spatialinteraktionsource über eine Controller Eigenschaft mit zusätzlichen Funktionen.
@@ -149,7 +149,7 @@ Die folgenden Informationen werden für jedes Joint bereitgestellt:
 | Name | Beschreibung |
 |--- |--- |
 |Position | 3D-Position des gemeinsamen, in jedem angeforderten Koordinatensystem verfügbar. |
-|Orientation | 3D-Ausrichtung des in jedem angeforderten Koordinatensystem verfügbaren knotes. |
+|Ausrichtung | 3D-Ausrichtung des in jedem angeforderten Koordinatensystem verfügbaren knotes. |
 |Radius | Abstand zur Oberfläche der Skin an der gemeinsamen Position. Nützlich für das optimieren direkter Interaktionen oder Visualisierungen, die auf der fingerbreite basieren. |
 |Genauigkeit | Gibt Aufschluss darüber, wie sicher das System über diese gemeinsamen Informationen verfügt. |
 
@@ -195,7 +195,7 @@ std::thread createObserverThread([this, currentState]()
 });
 createObserverThread.detach();
 ```
-Das Starten eines getrennten Threads ist nur eine Option für die Behandlung von asynchronen Aufrufen.  Alternativ könnten Sie die neue [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) -Funktionalität verwenden, die C++von/WinRT. unterstützt wird.
+Das Starten eines getrennten Threads ist nur eine Option für die Behandlung von asynchronen Aufrufen.  Alternativ dazu können Sie die neue von [](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) C++/WinRT. unterstützte co_await Funktionalität verwenden.
 
 Wenn Sie über ein handmeshobserver-Objekt verfügen, sollten Sie es für die Dauer aufbewahren, in der die zugehörige spatialinteraktionsource aktiv ist.  Anschließend können Sie den einzelnen Frame aufrufen, um den aktuellen Vertex-Puffer zu Fragen, der die Hand darstellt, indem Sie [getvertexstateforpose](https://docs.microsoft.com//uwp/api/windows.perception.people.handmeshobserver.getvertexstateforpose) aufrufen und eine [handpose](https://docs.microsoft.com//uwp/api/windows.perception.people.handpose) -Instanz übergeben, die die Darstellung darstellt, für die Sie Vertices wünschen.  Jeder Scheitelpunkt im Puffer hat eine Position und einen normalen.  Im folgenden finden Sie ein Beispiel dafür, wie Sie den aktuellen Satz von Scheitel Punkten für ein Hand Mesh erhalten.  Ebenso wie zuvor stellt die *CurrentState* -Variable eine Instanz von [spatialinteraktionsourcestate](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate)dar.
 
@@ -228,7 +228,7 @@ Wenn Sie spatialgesturerecognizer verwenden möchten, behandeln Sie das [interak
 
 Bei hololens (erste Generation) sollten Interaktionen und Gesten im Allgemeinen die Zielvorgabe von der Kopfzeile des Benutzers ableiten, anstatt zu versuchen, direkt an der Position der Hand zu arbeiten. Nachdem eine Interaktion begonnen hat, können relative Bewegungen der Hand verwendet werden, um die Bewegung zu steuern, wie bei der Manipulation oder Navigation.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 * [Anvisieren mit dem Kopf und mit den Augen in DirectX](gaze-in-directx.md)
 * [Eingabe Modell für direkte Manipulation](direct-manipulation.md)
 * [Punkt-und Commit-Eingabe Modell](point-and-commit.md)
