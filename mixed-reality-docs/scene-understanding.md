@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Szenen Verständnis, räumliche Zuordnung, Windows Mixed Reality, Unity
-ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926919"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539701"
 ---
 # <a name="scene-understanding"></a>Szenen Verständnis
 
@@ -19,7 +19,29 @@ Das Verständnis von Szenen bietet Entwicklern gemischter Realität eine struktu
 
 ![Räumliches Mapping-Mesh, Bezeichnung planare Oberflächen, wasserdichtes Mesh](images/SUScenarios.png)
 
-Dieses Dokument soll eine Szenarioübersicht bereitstellen und die Beziehung erläutern, die von der Szene und der räumlichen Zuordnung gemeinsam genutzt wird. Ausführliche Informationen zur Funktionsweise von Szenen Kenntnissen und zur Entwicklung dafür finden Sie in der Dokumentation zum Thema " [Scene Understanding SDK Overview](scene-understanding-SDK.md) ".
+Dieses Dokument soll eine Szenarioübersicht bereitstellen und die Beziehung erläutern, die von der Szene und der räumlichen Zuordnung gemeinsam genutzt wird.
+
+## <a name="developing-with-scene-understanding"></a>Entwickeln mit Szenen Verständnis
+
+Dieser Artikel bietet nur eine Einführung in die Szene, die Laufzeit und Konzepte versteht. Wenn Sie nach einer Dokumentation zur Entwicklung mit Szenen Verständnis suchen, sind Sie möglicherweise an folgendem interessiert:
+
+[Übersicht über das Szene Verständnis von SDK](scene-understanding-SDK.md)
+
+Sie können die Beispiel-App für szeneninformationen von der GitHub-Beispiel Website herunterladen:
+
+[Beispiel für Szenen Verständnis](https://github.com/sceneunderstanding-microsoft/unitysample)
+
+Wenn Sie nicht über ein Gerät verfügen und auf Beispiel Szenen zugreifen möchten, um szeneninformationen auszuprobieren, gibt es im Beispiel Ordner "Asset" Szenen:
+
+[Szenen Einblick in Beispiel Szenen](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
+### <a name="sdk"></a>SDK
+
+Ausführliche Informationen zur Entwicklung von szenariounteres finden Sie unter Übersicht über die Funktionsweise von Szenen Kenntnissen und deren Entwicklung. Weitere Informationen zur Vorgehensweise bei der Entwicklung finden Sie in der Dokumentation zum [Scene Understanding SDK Overview](scene-understanding-SDK.md) .
+
+
+### <a name="sample"></a>Beispiel
+
 
 ## <a name="device-support"></a>Geräteunterstützung
 

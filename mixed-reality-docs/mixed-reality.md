@@ -6,14 +6,16 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Mixed Reality, Holographic, AR, VR, Mr, XR, Augmented Reality, Virtual Reality, Erläuterung
-ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926775"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539554"
 ---
 # <a name="what-is-mixed-reality"></a>Was ist Mixed Reality?
+
+![Point und Commit mit Händen auf hololens 2](images/02_MixedRealitySlashMixedReality.png)
 
 Mixed Reality ist das Ergebnis der Verschmelzung der physischen Welt mit der digitalen Welt. Mixed Reality ist der nächste Evolutionsschritt in der Interaktion von Mensch, Computer und Umwelt und eröffnet Möglichkeiten, die bisher auf unsere Vorstellungskraft beschränkt waren. Dies wird durch Weiterentwicklungen bei Maschinelles sehen, grafischer Verarbeitungsleistung, Anzeige Technologie und Eingabe Systemen ermöglicht. Der Begriff " *gemischte Realität* " wurde ursprünglich in einem 1994 Paper von Paul Milgram und Fumio Kishino eingeführt, "[eine Taxonomie von visuellen Darstellung in gemischter Realität](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". In diesem Artikel wurde das Konzept des *virtualisierungskontinuums*vorgestellt, und es wurde darauf eingegangen, wie die Kategorisierung der Taxonomie auf angezeigt wird. Seitdem geht die Anwendung von Mixed Reality über die Anzeige hinaus. Außerdem sind Umgebungs Eingaben, räumlicher Sound und Speicherort enthalten.
 

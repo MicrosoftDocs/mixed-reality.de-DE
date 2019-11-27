@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 0595010a0b443d88e3f208b785903e3f6cc99295
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926530"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539744"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Erstellen einer Benutzeroberfläche und Konfigurieren von Mixed Reality Toolkit
 
@@ -29,7 +29,7 @@ In der vorherigen Lektion haben Sie einige Funktionen kennengelernt, die das Mix
 
 In diesem Abschnitt erfahren Sie, wie Sie die standardmäßigen mrtk-profile anpassen und konfigurieren, indem Sie die Anzeigeoption des Bereichs räumliches Bewusstsein anpassen. Sie können dieselben Prinzipien befolgen, um Einstellungen oder Werte in den MRTK-Profilen anzupassen.
 
-1. Wählen Sie "Mixed-Reality Toolkit" (mrtk) aus der basescene-Hierarchie aus. Suchen Sie im Inspektor-Panel nach dem Mixed Reality Toolkit-Skript, und wählen Sie das aktive Profil aus, wie in der folgenden Abbildung dargestellt. Doppelklicken Sie darauf, um es zu öffnen.
+1. Wählen Sie "Mixed-Reality Toolkit" (mrtk) aus der basescene-Hierarchie aus. Suchen Sie im Inspektor-Panel nach dem Mixed Reality Toolkit-Skript, und wählen Sie das aktive Profil aus, wie in der folgenden Abbildung dargestellt. Doppelklicken Sie, um es zu öffnen.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step1.png)
 
@@ -46,9 +46,9 @@ In diesem Abschnitt erfahren Sie, wie Sie die standardmäßigen mrtk-profile anp
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step2b.png)
 
-    Klicken Sie auf **Klonen** , um eine Kopie des mrtk-Profils zu erstellen. Mit einer eigenen Kopie des MRTK-Profils verfügen Sie jetzt über die Möglichkeit, alle Einstellungen in diesem Profil anzupassen. Außerdem müssen Sie den Schritt zum Kopieren und anpassen für alle zusätzlichen Profile wiederholen, die unter diesem Profil geschildert werden, wie in den nachfolgenden Schritten beschrieben.
+    Klicken Sie auf **Klonen** , um eine Kopie des mrtk-Profils zu erstellen. Mit ihrer eigenen Kopie des mrtk-Profils können Sie nun alle Einstellungen in diesem Profil anpassen. Außerdem müssen Sie den Schritt zum Kopieren und anpassen für alle zusätzlichen Profile wiederholen, die unter diesem Profil geschildert werden, wie in den nachfolgenden Schritten beschrieben.
 
-3. Deaktivieren Sie die Sichtbarkeit des Gittermodells zur räumlichen Wahrnehmung. Zu diesem Zweck suchen Sie die Systemeinstellungen für räumliche Informationen, wie in der folgenden Abbildung dargestellt. Stellen Sie sicher, dass die Option **räumliches Awareness System aktivieren** aktiviert ist. Klicken Sie auf die Schaltfläche **Klonen** rechts neben dem System Profil räumliches Bewusstsein, um das Standardprofil durch eine anpassbare Kopie zu ersetzen. Klicken Sie im Popup Fenster, das angezeigt wird, auf die Schaltfläche **Klonen** , wie in der zweiten Abbildung unten gezeigt.
+3. Deaktivieren Sie die Sichtbarkeit des Gittermodells zur räumlichen Wahrnehmung. Zu diesem Zweck suchen Sie die Systemeinstellungen für räumliche Informationen, wie in der folgenden Abbildung dargestellt. Stellen Sie sicher, dass die Option **räumliches Awareness System aktivieren** aktiviert ist. Klicken Sie auf die Schaltfläche **Klonen** rechts neben dem System Profil räumliches Bewusstsein, um das Standardprofil durch eine anpassbare Kopie zu ersetzen. Klicken Sie im angezeigten Popup Fenster auf die Schaltfläche **Klonen** , wie in der zweiten Abbildung unten gezeigt.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step3a.png)
 
@@ -90,7 +90,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um ei
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step3.png)
 
-4. Fügen Sie der Szene einen Würfel hinzu. Klicken Sie mit der rechten Maustaste auf den Hierarchie Bereich, wählen Sie ein 3D-Objekt aus, und klicken Sie auf
+4. Fügen Sie der Szene einen Würfel hinzu. Klicken Sie mit der rechten Maustaste auf den Hierarchie Bereich, wählen Sie ein 3D-Objekt aus, und klicken Sie auf Cube.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
@@ -99,9 +99,9 @@ In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um ei
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
     >[!NOTE]
-    >Im Allgemeinen entspricht 1 Einheit in Unity ungefähr einem Meter in der physischen Umgebung. Es gibt Ausnahmen, z. B. wenn Objekte untergeordnete Objekte von skalierten Objekten sind.
+    >Im Allgemeinen entspricht 1 Einheit in Unity ungefähr einem Meter in der physischen Umgebung. Hierfür gibt es Ausnahmen: beispielsweise, wenn Objekte untergeordnete Elemente von skalierten Objekten sind.
 
-5. Wenn das PressableButtonHoloLens2-Spielobjekt ausgewählt ist, führen Sie im Inspektor einen Bildlauf nach unten durch, um den Abschnitt Ereignisse der Komponente interactable (Skript) zu suchen.
+5. Wenn das PressableButtonHoloLens2-Spielobjekt ausgewählt ist, Scrollen Sie nach unten im Inspektor, um den Abschnitt "Ereignisse" der Komponente "interactable (Skript)" zu suchen.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step4.png)
 
@@ -123,17 +123,17 @@ In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um ei
 
     Das Ereignis ist jetzt so eingestellt, dass beim Drücken der Schaltfläche der Würfel je nach dem von Ihnen angegebenen Material seine Farbe ändert. In diesem Beispiel wechselt der Würfel zur Farbe „Cyan“.
 
-8. Als Nächstes werden Sie die Freigabeaktion so einrichten, dass die Schaltfläche nach der Freigabe wieder zu ihrer Standardfarbe zurückkehrt. Wiederholen Sie Schritt 7 oben. Dieses Mal wird jedoch das onRelease-Ereignis anstelle von onPress MRTK_Standard_LightGray Material wie in der folgenden Abbildung dargestellt.
+8. Als nächstes richten Sie die releaseaktion ein, sodass die Schaltfläche bei der Veröffentlichung auf die Standardfarbe zurück wechselt. Wiederholen Sie Schritt 7 oben. Diesmal wird jedoch das onRelease-Ereignis anstelle von onPress MRTK_Standard_LightGray Material wie in der folgenden Abbildung dargestellt.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step8.png)
 
-    Wenn nun die Schaltfläche gedrückt wird, wird Sie in eine neue Farbe, Cyan, geändert. Wenn die Schaltfläche freigegeben wird, wird Sie wieder in die von Ihnen angegebene Standardfarbe geändert (z. b. hellgrau). Klicken Sie oben auf dem Bildschirm auf die Schaltfläche "Wiedergabe", um Sie im Editor zu testen, oder stellen Sie Sie für die Tests auf den hololens 2 bereit. Weitere Informationen zur in-Editor-Simulation, einschließlich der Hand Simulation, finden Sie auf der [Dokumentationsseite zur Simulation von mrtk](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
+    Wenn nun die Schaltfläche gedrückt wird, wird Sie in eine neue Farbe geändert. Zyan. Wenn die Schaltfläche freigegeben wird, wird Sie wieder in die von Ihnen angegebene Standardfarbe geändert (z. b. hellgrau). Klicken Sie oben auf dem Bildschirm auf die Schaltfläche "Wiedergabe", um Sie im Editor auszuprobieren, oder stellen Sie Sie auf den hololens 2 bereit, um Sie zu testen. Weitere Informationen zur in-Editor-Simulation, einschließlich der Hand Simulation, finden Sie auf der [Dokumentationsseite zur Simulation von mrtk](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
 ### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Erstellen eines Schaltflächenbereichs mit der MRTK-Rasterobjektsammlung
 
 In diesem Abschnitt erfahren Sie, wie Sie mit dem gridobjectcollection-Tool von mrtk mehrere Schaltflächen automatisch an einer Benutzeroberfläche anpassen.
 
-1. Duplizieren Sie die Schaltfläche aus dem vorherigen Abschnitt, bis Sie über fünf Schaltflächen verfügen. Hierfür gibt es mehrere Möglichkeiten: Klicken Sie mit der rechten Maustaste auf die Schaltfläche, und klicken Sie auf kopieren. Klicken Sie dann auf die Schaltfläche, und klicken Sie mit der rechten Maustaste erneut auf einfügen.
+1. Duplizieren Sie die Schaltfläche aus dem vorherigen Abschnitt, bis Sie über fünf Schaltflächen verfügen. Hierfür gibt es mehrere Möglichkeiten: Klicken Sie mit der rechten Maustaste auf die Schaltfläche, und klicken Sie auf kopieren. Klicken Sie dann auf die Schaltfläche unterhalb der Schaltfläche, und klicken Sie dann erneut mit der rechten Maustaste auf einfügen.
     Mit der rechten Maustaste auf die Schaltfläche, und klicken Sie auf Duplizieren
     -Verwenden Sie den Tastatur Befehl, indem Sie auf den Cube klicken und auf der Tastatur STRG D drücken.
 
@@ -155,7 +155,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mit dem gridobjectcollection-Tool von 
 
     Mit der Raster Objekt Auflistungs Komponente können Sie Schaltflächen oder eine beliebige Gruppe von Objekten in einer ordentlichen Zeile, Spalte oder einem anderen Raster anordnen. Dies ist einer der Bausteine, die von der mrtk bereitgestellt werden, die Ihnen eine schnelle und einfache Möglichkeit bietet, verlockende Benutzeroberflächen zu erstellen.
 
-5. Konfigurieren Sie die Rasterobjektsammlung. Um sicherzustellen, dass alle Schaltflächen dem Benutzer angezeigt werden, wählen Sie die Option "Typ Wählen Sie dann übergeordnete Vorderseite aus, wie in der folgenden Abbildung dargestellt. Ändern Sie anschließend die Zellengröße, um den Abstand zwischen den Schaltflächen festzulegen. Beginnen Sie mit 0,05 Einheiten bis 0,05 Einheiten für die Zellen Breite und die Zellhöhe, wie in der folgenden Abbildung dargestellt. Stellen Sie sicher, dass die Entfernung auf 0 und die Zeilen auf 1 festgelegt ist. Klicken Sie auf Sammlung aktualisieren. Die Szene ähnelt der Abbildung unten.
+5. Konfigurieren Sie die Rasterobjektsammlung. Um sicherzustellen, dass alle Schaltflächen dem Benutzer angezeigt werden, wählen Sie die Option "Typ Wählen Sie dann übergeordnete Vorderseite aus, wie in der folgenden Abbildung dargestellt. Ändern Sie anschließend die Zellengröße, um den Abstand zwischen den Schaltflächen festzulegen. Beginnen Sie mit 0,05 Einheiten bis 0,05 Einheiten für die Zellen Breite und die Zellen Höhe, wie in der folgenden Abbildung dargestellt. Stellen Sie sicher, dass die Entfernung auf 0 und die Zeilen auf 1 festgelegt ist. Klicken Sie auf Sammlung aktualisieren. Die Szene ähnelt der Abbildung unten.
 
     ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3-step5.png)
 
@@ -164,9 +164,9 @@ In diesem Abschnitt erfahren Sie, wie Sie mit dem gridobjectcollection-Tool von 
 
 ### <a name="adding-text-into-your-scene"></a>Hinzufügen von Text zu Ihrer Szene
 
-In diesem Abschnitt erfahren Sie, wie Sie Text zu Ihrer Mixed Reality-Umgebung hinzufügen und ihn bearbeiten können. Wenn dies noch nicht der Fall ist, stellen Sie sicher, dass Sie „TextMeshPro“ in Unity aktiviert haben, indem Sie die Anweisungen [hier](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation) befolgen.
+In diesem Abschnitt erfahren Sie, wie Sie Text zu Ihrer Mixed Reality-Umgebung hinzufügen und ihn bearbeiten können. Wenn Sie dies noch nicht getan haben, stellen Sie sicher, dass textmeshpro in Unity aktiviert ist, indem Sie die [hier](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation)aufgeführten Anweisungen befolgen
 
-1. Wählen Sie das übergeordnete buttoncollection-Objekt aus, und klicken Sie mit der rechten Maustaste auf Erweitern Sie im Dropdown Menü die Option 3D-Objekt. Wählen Sie dann textmeshpro-Text aus. Ein textmeschpro-Objekt sollte unter der Schaltflächen Auflistung angezeigt werden, wie in der folgenden Abbildung dargestellt.
+1. Wählen Sie das übergeordnete Element buttoncollection aus, und klicken Sie mit der rechten Maustaste auf die Sammlung. Erweitern Sie im Dropdown Menü die Option 3D-Objekt. Wählen Sie dann textmeshpro-Text aus. Ein textmeschpro-Objekt sollte unter der Schaltflächen Auflistung angezeigt werden, wie in der folgenden Abbildung dargestellt.
 
     ![Lesson2 Chapter4 Step1a](images/Lesson2_Chapter4_Step1a.JPG) ![Lesson2 Chapter4 Step1b](images/Lesson2_Chapter4_Step1b.JPG)
 
@@ -174,7 +174,7 @@ In diesem Abschnitt erfahren Sie, wie Sie Text zu Ihrer Mixed Reality-Umgebung h
 
     ![Lesson2 Chapter4 Schritt 3](images/mrlearning-base-ch2-4-step3.png)
 
-3. Geben Sie in das Textfeld der textmeschpro-Komponente im Inspektor-Panel den Text "Schaltflächen-Auflistungs Text" ein, und passen Sie die Ausrichtungs Eigenschaften wie in der folgenden Abbildung gezeigt als zentriert und oben an.
+3. Geben Sie in das Textfeld der textmeschpro-Komponente im Inspektor-Panel den Text "Schaltflächen-Auflistungs Text" ein, und passen Sie die Ausrichtungs Eigenschaften wie in der folgenden Abbildung dargestellt als zentriert und oben an.
 
     ![Lesson2 Chapter4 Schritt 4](images/mrlearning-base-ch2-4-step4.png)
 

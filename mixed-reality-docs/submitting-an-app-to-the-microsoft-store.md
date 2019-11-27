@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: APP, UWP, Übermittlung, Übermittlung, Filter, Metadaten, Systemanforderungen, Schlüsselwörter, Wack, Zertifizierung, Paket, AppX, Merchandising
-ms.openlocfilehash: 63377239498319e84666ba0dbdbe36ce626901c5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f2eb4093a2bea51d8c39b94d23777e426810981e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437435"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539608"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Senden einer APP an den Microsoft Store
 
@@ -76,6 +76,14 @@ Wenn Ihre APP für **hololens**erstellt wurde, können Sie sicherstellen, dass S
 </Dependencies>
 ```
 
+Wenn Ihre APP eine spezielle Funktionalität von **hololens 2** erfordert, wie z. b. die Überwachung von Nachrichten oder die Hand Verfolgung, können Sie sicherstellen, dass Sie auf Windows-Versionen 18362 oder höher ausgerichtet ist, indem Sie die Zielgeräte Familie "Windows. Holographic" und MinVersion 10.0.18362.0 angeben. 
+
+```
+<Dependencies>
+   <TargetDeviceFamily Name="Windows.Holographic" MinVersion="10.0.18362.0" MaxVersionTested="10.0.18362.0" />
+</Dependencies>
+```
+
 Wenn Ihre APP für **Windows Mixed Reality-immersive Headsets**erstellt wurde, können Sie sicherstellen, dass Sie nur auf Windows 10-PCs mit dem Windows 10 Fall Creators Update installiert wird (erforderlich für Windows Mixed Reality), indem Sie die Zielgeräte Familie angeben. Windows. Desktop "und MinVersion von" 10.0.16299.0 ".
 
 ```
@@ -119,6 +127,11 @@ Die allgemeine Anleitung besteht darin, dass das Paket mit der höchsten Version
 Wenn ein Windows. Universal-Paket und ein Windows. Holographic-Paket vorhanden sind und das Windows. Universal-Paket eine höhere Versionsnummer aufweist, wird ein hololens-Benutzer die höhere Versionsnummer Windows. Universal Package anstelle von Windows. Holographic herunterladen. Paketen. Es gibt mehrere Lösungen für dieses Problem:
 1. Stellen Sie sicher, dass Ihre plattformspezifischen Pakete, wie z. b. Windows. Holographic, immer eine höhere Versionsnummer haben als ihre plattformunabhängigen Pakete wie Windows. Universal
 2. Packen Sie apps nicht als Windows. Universal, wenn Sie auch plattformspezifische Pakete verwenden, und Verpacken Sie stattdessen das Windows. Universal-Paket für die spezifischen Plattformen, auf denen es verfügbar sein soll.
+
+>[!NOTE]
+> Zur Unterstützung Ihrer APP auf hololens (1. Gen) und hololen 2 müssen Sie zwei App-Pakete hochladen. eine, die x86 für hololens (1. Gen) enthält, und eine, die Arm oder ARM64 für hololens 2 enthält. 
+> 
+> Wenn Sie sowohl Arm als auch ARM64 in das Paket einschließen, wird die ARM64-Version auf hololens 2 verwendet. 
 
 >[!NOTE]
 > Sie können ein einzelnes Paket deklarieren, das auf mehrere Zielgeräte Familien anwendbar ist.
