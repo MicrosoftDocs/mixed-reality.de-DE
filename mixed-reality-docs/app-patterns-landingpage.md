@@ -1,38 +1,40 @@
 ---
 layout: LandingPage
-title: Mixed reality UX elements
-description: This document contains a set of topics that explain how to design for Windows head-mounted displays.
+title: Mixed Reality-UX-Elemente
+description: Dieses Dokument enthält eine Reihe von Themen, in denen erläutert wird, wie Sie die für Windows-Bereitstellung bereitgestellten anzeigen.
 author: grbury
 ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
-keywords: Windows Mixed Reality, design, app patterns, controls, style, HoloLens, interaction, UX elements, behaviors, building blocks
-ms.openlocfilehash: c454190cf376f39974efec1ea416afbdb9db1a10
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+keywords: Gemischte Windows-Realität, Entwurf, App-Muster, Steuerelemente, Stil, hololens, Interaktion, UX-Elemente, Verhaltensweisen, Bausteine
+ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143198"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539660"
 ---
-# <a name="ux-elements-overview"></a>UX elements overview
+# <a name="ux-elements-overview"></a>Übersicht über UX-Elemente
+
+![Hololens 2 Benutzerinteraktion mit Holographic-Schaltflächen](images/06_AppPatterns.png)
 
 ## <a name="style"></a>Format
 
 :::row:::
     :::column:::
-       [![Color, light and materials](images/640px-fragments.jpg)](color,-light-and-materials.md) **[Color, light and materials](color,-light-and-materials.md)**
+       [![Farbe, helle und Material](images/640px-fragments.jpg)](color,-light-and-materials.md)  **[Farbe, Licht und Material](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       [![Scale](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)](scale.md) **[Scale](scale.md)**
+       [](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)](scale.md)  **[](scale.md) Skalierung![**
     :::column-end:::
     :::column:::
-       [![Spatial sound](images/SpatialAudio.gif)](spatial-sound.md) **[Spatial sound](spatial-sound.md)**
+       [](images/SpatialAudio.gif)](spatial-sound.md)  **[räumlicher](spatial-sound.md) Sound für räumliche Audiodaten![**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [![Typography](images/text_in_unity_viewingangle.jpg)](typography.md) **[Typography](typography.md)**
+       typografietypografie [![](images/text_in_unity_viewingangle.jpg)](typography.md)  **[](typography.md)**
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -46,73 +48,73 @@ ms.locfileid: "74143198"
 
 :::row:::
     :::column:::
-       [![Cursor](images/UX/UX_Hero_Cursor.jpg)](cursors.md) **[Cursor](cursors.md)**
+       [](images/UX/UX_Hero_Cursor.jpg)](cursors.md) Cursor  **[Cursor](cursors.md)![**
     :::column-end:::
     :::column:::
-       [![Hand ray](images/UX/UX_Hero_HandRay.jpg)](point-and-commit.md) **[Hand ray](point-and-commit.md)**
+       [![Hand Strahl](images/UX/UX_Hero_HandRay.jpg)](point-and-commit.md)  **[Hand](point-and-commit.md) Strahl**
     :::column-end:::
     :::column:::
-       [![Button](images/UX/UX_Hero_Button.jpg)](button.md) **[Button](button.md)**
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-       [![Bounding box](images/UX/UX_Hero_BoundingBox.jpg)](app-bar-and-bounding-box.md) **[Bounding box](app-bar-and-bounding-box.md)**
-    :::column-end:::
-    :::column:::
-       [![Interactable object](images/UX/UX_Hero_Interactable.jpg)](interactable-object.md) **[Interactable object](interactable-object.md)**
-    :::column-end:::
-    :::column:::
-       [![Manipulation](images/UX/UX_Hero_Manipulation.jpg)](direct-manipulation.md) **[Manipulation](direct-manipulation.md)**
+       [](images/UX/UX_Hero_Button.jpg)](button.md)  **[](button.md) Schaltfläche "!["**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [![Hand menu](images/UX/UX_Hero_HandMenu.jpg)](hand-menu.md) **[Hand menu](hand-menu.md)**
+       [](images/UX/UX_Hero_BoundingBox.jpg)](app-bar-and-bounding-box.md)  **[Begrenzungs Fenster](app-bar-and-bounding-box.md)![umgebenden Rahmens**
     :::column-end:::
     :::column:::
-       [![Near menu](images/UX/UX_Hero_NearMenu.jpg)](near-menu.md) **[Near menu](near-menu.md)**
+       [](images/UX/UX_Hero_Interactable.jpg)](interactable-object.md)  **[interactable-Objekt](interactable-object.md)![interactable-Objekts**
     :::column-end:::
     :::column:::
-       [![Object collection](images/UX/UX_Hero_ObjectCollection.jpg)](object-collection.md) **[Object collection](object-collection.md)**
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column:::
-       [![Voice command](images/UX/UX_Hero_VoiceCommand.jpg)](voice-input.md) **[Voice command](voice-input.md)**
-    :::column-end:::
-    :::column:::
-       [![Keyboard](images/UX/UX_Hero_Keyboard.jpg)](keyboard.md) **[Keyboard](keyboard.md)**
-    :::column-end:::
-    :::column:::
-       [![Tooltip](images/UX/UX_Hero_Tooltip.jpg)](tooltip.md) **[Tooltip](tooltip.md)**
+       Manipulation der [Bearbeitung von![](images/UX/UX_Hero_Manipulation.jpg)](direct-manipulation.md)  **[](direct-manipulation.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [![Slate](images/UX/UX_Hero_Slate.jpg)](slate.md) **[Slate](slate.md)**
+       Menü "Menü Hand" [![Hand](images/UX/UX_Hero_HandMenu.jpg)](hand-menu.md)  **[](hand-menu.md)**
     :::column-end:::
     :::column:::
-       [![Slider](images/UX/UX_Hero_Slider.jpg)](slider.md) **[Slider](slider.md)**
+       [![nahe](images/UX/UX_Hero_NearMenu.jpg)](near-menu.md) Menü  **[in](near-menu.md) der Nähe des Menüs**
     :::column-end:::
     :::column:::
-        [![Shader](images/UX/UX_Hero_StandardShader.jpg)](shader.md) **[Shader](shader.md)**
+       [](images/UX/UX_Hero_ObjectCollection.jpg)](object-collection.md)  **[Objektsammlung](object-collection.md) für Objekt Auflistung![**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        [![Billboarding and tag-along](images/UX/MRTK_TagAlong.gif)](billboarding-and-tag-along.md) **[Billboarding and tag-along](billboarding-and-tag-along.md)**
+       Befehl " [![Voice Command](images/UX/UX_Hero_VoiceCommand.jpg)](voice-input.md)  **[Voice](voice-input.md) "**
     :::column-end:::
     :::column:::
-       [![Progress indicator](images/UX/MRTK_ProgressIndicator.gif)](progress.md) **[Progress indicator](progress.md)**
+       [Tastatur](images/UX/UX_Hero_Keyboard.jpg)](keyboard.md)  **[Tastatur](keyboard.md)![**
     :::column-end:::
     :::column:::
-       [![Surface magnetism](images/UX/MRTK_SurfaceMagnetism.gif)](surface-magnetism.md) **[Surface magnetism](surface-magnetism.md)**
+       QuickInfo-QuickInfo [![](images/UX/UX_Hero_Tooltip.jpg)](tooltip.md)  **[](tooltip.md)**
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+       [![Slate](images/UX/UX_Hero_Slate.jpg)](slate.md) -  **[Slate](slate.md)**
+    :::column-end:::
+    :::column:::
+       Schieberegler [![Schieberegler](images/UX/UX_Hero_Slider.jpg)](slider.md)  **[](slider.md)**
+    :::column-end:::
+    :::column:::
+        [![Shader](images/UX/UX_Hero_StandardShader.jpg)](shader.md) -  **[Shader](shader.md)**
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        [![von fakboarding-und tagbasierten](images/UX/MRTK_TagAlong.gif)](billboarding-and-tag-along.md) Abrechnungs-und  **[tagbasierten](billboarding-and-tag-along.md) Zusammenhang**
+    :::column-end:::
+    :::column:::
+       [](images/UX/MRTK_ProgressIndicator.gif)](progress.md) Status  **[Anzeige](progress.md) für![Statusanzeige**
+    :::column-end:::
+    :::column:::
+       [![Oberflächen](images/UX/MRTK_SurfaceMagnetism.gif)](surface-magnetism.md) -Magnetismus-  **[Oberflächen Magnetismus](surface-magnetism.md)**
     :::column-end:::
 :::row-end:::
 

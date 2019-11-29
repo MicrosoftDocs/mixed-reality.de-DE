@@ -7,14 +7,17 @@ ms.author: grbury
 ms.date: 10/02/2019
 ms.topic: overview
 keywords: Gemischte Windows-Realität, Entwurf, App-Muster, Steuerelemente, Stil, hololens, Interaktion, UX-Elemente, Verhaltensweisen, Bausteine
-ms.openlocfilehash: 5f5f97d3f4a34e0d88c781df494a4afc2ee0b992
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d8f904183e51943246613e99a805bee1518523c8
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439431"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539543"
 ---
 # <a name="core-concepts-overview"></a>Übersicht über Kernkonzepte
+
+![Direkte Manipulation mit den Händen](images/05_CoreConcepts.png)
+
 
 Bevor Sie sich mit dem Entwurf Ihrer Benutzer Arbeit vertraut machen, ist es hilfreich, einige grundlegende Konzepte zu verstehen. Jedes nachfolgende Thema ist ein zugrunde liegender Faktor, der sich grundlegend auf die Qualität der gemischten Realität auswirkt, die Sie für Ihren Benutzer erstellen. 
 
