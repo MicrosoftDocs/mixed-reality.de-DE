@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Entdecken, Verteilen, Index, Einstiegsseite, Entwurf, Entwicklung, Tutorials, Beispiel-Apps, Grundlagen, Fallstudien, Ressourcen, HoloLens-Vorgehensweise, Open-Source-Projekte, Kernkonzepte, Interaktion
-ms.openlocfilehash: 2bd2b3fef713bfe74f91714be100c7a02e46f8ac
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435727"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539606"
 ---
 # <a name="start-designing-and-prototyping"></a>Mit Entwerfen und Prototyping beginnen
 
 
-![Kernkonzepte](images/text_in_unity_viewingangle.jpg)
+![3D-Gittermodellgrafik](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Erweitern Ihres Entwurfsprozesses](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -98,6 +98,10 @@ Ein wichtiger Aspekt bei der realistischen Wirkung von holografisch dargestellte
 ### <a name="clear-and-readable-typographytypographymd"></a>[Klare und lesbare Typografie](typography.md)
 Genau wie bei Typografie auf 2D-Bildschirmen ist das Ziel, klar und lesbar zu sein. Aufgrund des dreidimensionalen Aspekts von Mixed Reality bietet sich die Chance eines noch größeren Einflusses auf den Text und das allgemeine Benutzererleben.
 
+<br>
+
+### <a name="ux-elements-for-the-mixed-realityapp-patterns-landingpagemd"></a>[UX-Elemente für Mixed Reality](app-patterns-landingpage.md)
+Erfahren Sie mehr über die Bausteine für Interaktionen im Raum und die Benutzeroberfläche in Mixed Reality.
 <br>
 
 
