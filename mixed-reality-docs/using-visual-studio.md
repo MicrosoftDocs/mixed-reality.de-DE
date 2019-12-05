@@ -1,142 +1,143 @@
 ---
 title: Verwenden von Visual Studio zum Bereitstellen und Debuggen
-description: Erfahren Sie, wie Sie Apps für hololens und Windows Mixed Reality mithilfe von Visual Studio erstellen, Debuggen und bereitstellen.
+description: Erfahren Sie, wie Sie Apps für HoloLens und Windows Mixed Reality mithilfe von Visual Studio erstellen, debuggen und bereitstellen.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 10/24/2019
 ms.topic: article
-keywords: Visual Studio, hololens, gemischte Realität, Debuggen, bereitstellen
-ms.openlocfilehash: 07854c800008658835b169607d85d562682cf194
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Visual Studio, HoloLens, Mixed Reality, debuggen, bereitstellen
+ms.openlocfilehash: fecd9db8777b6947c3ea19a02e428459c78c935b
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73914124"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491182"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Verwenden von Visual Studio zum Bereitstellen und Debuggen
 
-Unabhängig davon, ob Sie DirectX oder Unity zur Entwicklung ihrer Mixed Reality-App verwenden möchten, verwenden Sie Visual Studio zum Debuggen und bereitstellen. In diesem Abschnitt erfahren Sie Folgendes:
-* Stellen Sie Anwendungen mithilfe von Visual Studio in ihren hololens oder im immersiven Windows Mixed Reality-Headset bereit.
-* Verwenden Sie den in Visual Studio integrierten hololens-Emulator.
-* Debuggen von Mixed Reality-apps
+Unabhängig davon, ob Sie DirectX oder Unity zur Entwicklung ihrer Mixed Reality-App verwenden möchten, zum Debuggen und Bereitstellen verwenden Sie Visual Studio. In diesem Abschnitt wird Folgendes erläutert:
+* Bereitstellen von Anwendungen auf Ihrer HoloLens oder Ihrem immersiven Windows Mixed Reality-Headset mithilfe von Visual Studio.
+* Verwenden des in Visual Studio integrierten HoloLens-Emulators.
+* Debuggen von Mixed Reality-Apps.
 
 ## <a name="prerequisites"></a>Voraussetzungen
-1. Anweisungen zur Installation finden Sie [unter Installieren der Tools](install-the-tools.md) .
-2. Erstellen Sie in Visual Studio ein neues universelles Windows-App-Projekt.  Verwenden Sie für hololens (1. Gen) Visual Studio 2017 oder höher.  Verwenden Sie für hololens 2 Visual Studio 2019 16,2 oder höher. C#und C++ werden unterstützt. (Oder befolgen Sie die Anweisungen zum [Erstellen einer APP in Unity](holograms-100.md).)
+1. Installationsanweisungen finden Sie unter [Installieren der Tools](install-the-tools.md).
+2. Erstellen Sie ein neues Projekt für Universelle Windows-Apps in Visual Studio.  Verwenden Sie für HoloLens (1. Gen.) Visual Studio 2017 oder höher.  Verwenden Sie für HoloLens 2 Visual Studio 2019 16.2 oder höher. C# und C++ werden unterstützt. (Oder befolgen Sie die Anweisungen zum [Erstellen einer App in Unity](holograms-100.md).)
 
 ## <a name="enabling-developer-mode"></a>Aktivieren des Entwicklermodus
 
-Beginnen Sie, indem Sie den **Entwicklermodus** auf Ihrem Gerät aktivieren, sodass Visual Studio eine Verbindung mit dem Gerät herstellen kann.
+Aktivieren Sie zunächst den **Entwicklermodus** auf Ihrem Gerät, damit Visual Studio eine Verbindung damit herstellen kann.
 
 ### <a name="hololens"></a>HoloLens
-1. Schalten Sie die hololens ein, und legen Sie Sie auf dem Gerät ab.
+1. Schalten Sie die HoloLens ein, und setzen Sie sie auf.
 2. Führen Sie die [Blütengeste](system-gesture.md#bloom) aus, um das Hauptmenü zu starten.
-3. Schauen Sie sich die Kachel " **Einstellungen** " an, und führen Sie die [Tasten](gaze-and-commit.md#composite-gestures) Kombination aus. Führen Sie die Zeigefingergeste ein zweites Mal aus, um die App in Ihrer Umgebung zu platzieren. Die Einstellungs-App wird gestartet, nachdem Sie sie platziert haben.
+3. Betrachten Sie die Kachel **Einstellungen**, und führen Sie die [Zeigefingergeste](gaze-and-commit.md#composite-gestures) aus. Führen Sie die Zeigefingergeste ein zweites Mal aus, um die App in Ihrer Umgebung zu platzieren. Die Einstellungs-App wird gestartet, nachdem Sie sie platziert haben.
 4. Wählen Sie das Menüelement **Aktualisieren** aus.
 5. Wählen Sie das Menüelement **Für Entwickler** aus.
-6. Aktivieren Sie den **Entwicklermodus**. Auf diese Weise können Sie [Apps aus Visual Studio](using-visual-studio.md) in ihren hololens bereitstellen.
-7. Optional: Scrollen Sie nach unten, und aktivieren Sie auch das **Geräte Portal**. Auf diese Weise können Sie auch über einen Webbrowser eine Verbindung mit dem [Windows-Geräte Portal](using-the-windows-device-portal.md) auf Ihren hololens herstellen.
+6. Aktivieren Sie den **Entwicklermodus**. Auf diese Weise können Sie in Ihrer HoloLens [Apps aus Visual Studio bereitstellen](using-visual-studio.md).
+7. Optional: Scrollen Sie nach unten, und aktivieren Sie das **Geräteportal**. Auf diese Weise können Sie außerdem in Ihrer HoloLens eine Verbindung mit dem [Windows-Geräteportal](using-the-windows-device-portal.md) über einen Webbrowser herstellen.
 
-### <a name="windows-pc"></a>Windows-PC
+### <a name="windows-pc"></a>Windows PC
 
-Wenn Sie mit einem Windows Mixed Reality-Headset arbeiten, das mit dem PC verbunden ist, müssen Sie auf dem PC den **Entwicklermodus** aktivieren.
-1. Zu **Einstellungen** wechseln
-2. Auswählen von **Update und Sicherheit**
-3. **Für Entwickler** auswählen
-4. Aktivieren Sie den **Entwicklermodus**, lesen Sie den Haftungsausschluss für die ausgewählte Einstellung, und klicken Sie auf Ja, um die Änderung zu übernehmen.
+Wenn Sie mit einem Windows Mixed Reality-Headset arbeiten, das mit dem PC verbunden ist, müssen Sie den **Entwicklermodus** auf dem PC aktivieren.
+1. Navigieren Sie zu **Einstellungen**
+2. Wählen Sie **Update und Sicherheit** aus
+3. Wählen Sie **Für Entwickler** aus
+4. Aktivieren Sie den **Entwicklermodus**, lesen Sie den Haftungsausschluss für die ausgewählte Einstellung, und klicken Sie dann auf „Ja“ um die Änderung zu übernehmen.
 
-## <a name="deploying-an-app-over-wi-fi---hololens-1st-gen"></a>Bereitstellen einer APP über Wi-Fi-hololens (1. Gen)
-1. Wählen Sie eine **x86** -Buildkonfiguration für Ihre APP aus, ![x86-Buildkonfiguration in Visual Studio](images/x86setting.png)
-2. Wählen Sie im Dropdown Menü Bereitstellungs Ziel den **Remote Computer** aus ![Bereitstellungs Ziel für Remote Computer in Visual Studio](images/remotemachinesetting.png)
-3. Wechseln C++ Sie für-und JavaScript-Projekte zu **Project > Eigenschaften > Konfigurations Eigenschaften > Debuggen**. Für C# -Projekte wird automatisch ein Dialogfeld angezeigt, in dem die Verbindung konfiguriert wird.
-  a. Geben Sie die IP-Adresse Ihres Geräts in das Feld **Adresse** oder **Computer Name** ein. Suchen Sie die IP-Adresse in den hololens unter **Einstellungen > Netzwerk & Internet > Erweiterte Optionen**, oder Fragen Sie Cortana "Was ist meine IP-Adresse?".
-  b. Legen Sie den Authentifizierungsmodus auf **Universelles (unverschlüsseltes Protokoll)** ![Dialogfeld "Remote Verbindung" in Visual Studio](images/remotedeploy.png)
-4. Wählen Sie **Debuggen > Debuggen starten**](images/deploywithdebugging.png) aus, um die APP bereitzustellen und das Debuggen zu starten![starten ohne Debugging
-5. Wenn Sie eine APP zum ersten Mal auf Ihrem PC auf Ihren hololens bereitstellen, werden Sie aufgefordert, eine PIN einzugeben. Befolgen Sie die Anweisungen unter Kopplung **Ihrer Geräte** .
+## <a name="deploying-an-app-over-wi-fi---hololens-1st-gen"></a>Bereitstellen einer App über WLAN: HoloLens (1. Gen.)
+1. Wählen Sie eine **x86**-Buildkonfiguration für Ihre App aus ![x86-Buildkonfiguration in Visual Studio](images/x86setting.png)
+2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Remotecomputer** aus ![Bereitstellungsziel „Remotecomputer“ in Visual Studio](images/remotemachinesetting.png)
+3. Navigieren Sie für C++- und JavaScript-Projekte zu **Projekt > Eigenschaften > Konfigurationseigenschaften > Debuggen**. Bei C#-Projekten wird automatisch ein Dialogfeld angezeigt, in dem Sie Ihre Verbindung konfigurieren können.
+  a. Geben Sie die IP-Adresse Ihres Geräts im Feld **Adresse** oder **Computername** ein. Suchen Sie die IP-Adresse auf Ihrer HoloLens unter **Einstellungen > Netzwerk und Internet > Erweiterte Optionen**, oder fragen Sie Cortana "Wie heißt meine IP-Adresse?"
+  b. Legen Sie den Authentifizierungsmodus auf **Universell (unverschlüsseltes Protokoll)** fest ![Remoteverbindungs-Dialogfeld in Visual Studio](images/remotedeploy.png)
+4. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
+5. Beim erstmaligen Bereitstellen einer App in Ihrer HoloLens von Ihrem Computer aus werden Sie zur Eingabe einer PIN aufgefordert. Befolgen Sie die Anweisungen unten zum **Koppeln Ihres Geräts**.
 
-## <a name="deploying-an-app-over-wi-fi---hololens-2"></a>Bereitstellen einer APP über Wi-Fi-hololens 2
-1. Wählen Sie eine **Arm** -oder **ARM64** -Buildkonfiguration für Ihre APP ![ARM64 Buildkonfiguration in Visual Studio aus](images/arm64setting.png)
-2. Wählen Sie im Dropdown Menü Bereitstellungs Ziel den **Remote Computer** aus ![Bereitstellungs Ziel für Remote Computer in Visual Studio](images/remotemachinesetting_arm64.png)
-3. Wechseln C++ Sie für-und JavaScript-Projekte zu **Project > Eigenschaften > Konfigurations Eigenschaften > Debuggen**. Für C# -Projekte wird automatisch ein Dialogfeld angezeigt, in dem die Verbindung konfiguriert wird.
-  a. Geben Sie die IP-Adresse Ihres Geräts in das Feld **Adresse** oder **Computer Name** ein. Suchen Sie die IP-Adresse in den hololens unter **Einstellungen > Netzwerk & Internet > Erweiterte Optionen**, oder Fragen Sie Cortana "Was ist meine IP-Adresse?".
-  b. Legen Sie den Authentifizierungsmodus auf **Universelles (unverschlüsseltes Protokoll)** ![Dialogfeld Remote Verbindung in Visual Studio](images/remotedeploy.png)
-4. Wählen Sie **Debuggen > Debuggen starten**](images/deploywithdebugging.png) aus, um die APP bereitzustellen und das Debuggen zu starten![starten ohne Debugging
-5. Wenn Sie eine APP zum ersten Mal auf Ihrem PC auf Ihren hololens bereitstellen, werden Sie aufgefordert, eine PIN einzugeben. Befolgen Sie die Anweisungen unter Kopplung **Ihrer Geräte** .
+## <a name="deploying-an-app-over-wi-fi---hololens-2"></a>Bereitstellen einer App über WLAN: HoloLens 2
+1. Wählen Sie eine **ARM**- oder **ARM64**-Buildkonfiguration für Ihre App aus ![ARM64-Buildkonfiguration in Visual Studio](images/arm64setting.png)
+2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Remotecomputer** aus ![Bereitstellungsziel „Remotecomputer“ in Visual Studio](images/remotemachinesetting_arm64.png)
+3. Navigieren Sie für C++- und JavaScript-Projekte zu **Projekt > Eigenschaften > Konfigurationseigenschaften > Debuggen**. Bei C#-Projekten wird automatisch ein Dialogfeld angezeigt, in dem Sie Ihre Verbindung konfigurieren können.
+  a. Geben Sie die IP-Adresse Ihres Geräts im Feld **Adresse** oder **Computername** ein. Suchen Sie die IP-Adresse auf Ihrer HoloLens unter **Einstellungen > Netzwerk und Internet > Erweiterte Optionen**, oder fragen Sie Cortana "Wie heißt meine IP-Adresse?"
+  b. Legen Sie den Authentifizierungsmodus auf **Universell (unverschlüsseltes Protokoll)** fest ![Remoteverbindungs-Dialogfeld in Visual Studio](images/remotedeploy.png)
+4. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
+5. Beim erstmaligen Bereitstellen einer App in Ihrer HoloLens von Ihrem Computer aus werden Sie zur Eingabe einer PIN aufgefordert. Befolgen Sie die Anweisungen unten zum **Koppeln Ihres Geräts**.
 
-Wenn sich die IP-Adresse der hololens-IP-Adresse ändert, können Sie die IP-Adresse des Ziel Computers ändern, indem Sie zu **Projekt > Eigenschaften > Konfigurations Eigenschaften > Debugging** wechseln.
+Wenn sich die IP-Adresse Ihrer HoloLens ändert, können Sie die IP-Adresse des Zielcomputers ändern, indem Sie zu **Projekt > Eigenschaften > Konfigurationseigenschaften > Debuggen** navigieren.
 
-## <a name="deploying-an-app-over-usb---hololens-1st-gen"></a>Bereitstellen einer APP über USB-hololens (1. Gen)
-1. Wählen Sie eine **x86** -Buildkonfiguration für Ihre APP aus, ![x86-Buildkonfiguration in Visual Studio](images/x86setting.png)
-2. Wählen Sie im Dropdown Menü Bereitstellungs Ziel die Option **Gerät** aus,![Geräte Bereitstellung in Visual Studio](images/buildsettingsusbdeploy.png)
-3. Wählen Sie **Debuggen > Debuggen starten**](images/deploywithdebugging.png) aus, um die APP bereitzustellen und das Debuggen zu starten![starten ohne Debugging
-4. Wenn Sie eine APP zum ersten Mal auf Ihrem PC auf Ihren hololens bereitstellen, werden Sie aufgefordert, eine PIN einzugeben. Befolgen Sie die Anweisungen unter Kopplung **Ihrer Geräte** .
+## <a name="deploying-an-app-over-usb---hololens-1st-gen"></a>Bereitstellen einer App über USB: HoloLens (1. Gen.)
+1. Wählen Sie eine **x86**-Buildkonfiguration für Ihre App aus ![x86-Buildkonfiguration in Visual Studio](images/x86setting.png)
+2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Gerät** aus ![Gerätebereitstellung in Visual Studio](images/buildsettingsusbdeploy.png)
+3. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
+4. Beim erstmaligen Bereitstellen einer App in Ihrer HoloLens von Ihrem Computer aus werden Sie zur Eingabe einer PIN aufgefordert. Befolgen Sie die Anweisungen unten zum **Koppeln Ihres Geräts**.
 
-## <a name="deploying-an-app-over-usb---hololens-2"></a>Bereitstellen einer APP über USB-hololens 2
-1. Wählen Sie eine **Arm** -oder **ARM64** -Buildkonfiguration für Ihre APP ![ARM64 Buildkonfiguration in Visual Studio aus](images/arm64setting.png)
-2. Wählen Sie im Dropdown Menü Bereitstellungs Ziel die Option **Gerät** aus,![Geräte Bereitstellung in Visual Studio](images/buildsettingsusbdeploy_arm64.png)
-3. Wählen Sie **Debuggen > Debuggen starten**](images/deploywithdebugging.png) aus, um die APP bereitzustellen und das Debuggen zu starten![starten ohne Debugging
-4. Wenn Sie eine APP zum ersten Mal auf Ihrem PC auf Ihren hololens bereitstellen, werden Sie aufgefordert, eine PIN einzugeben. Befolgen Sie die Anweisungen unter Kopplung **Ihrer Geräte** .
+## <a name="deploying-an-app-over-usb---hololens-2"></a>Bereitstellen einer App über USB: HoloLens 2
+1. Wählen Sie eine **ARM**- oder **ARM64**-Buildkonfiguration für Ihre App aus ![ARM64-Buildkonfiguration in Visual Studio](images/arm64setting.png)
+2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Gerät** aus ![Gerätebereitstellung in Visual Studio](images/buildsettingsusbdeploy_arm64.png)
+3. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
+4. Beim erstmaligen Bereitstellen einer App in Ihrer HoloLens von Ihrem Computer aus werden Sie zur Eingabe einer PIN aufgefordert. Befolgen Sie die Anweisungen unten zum **Koppeln Ihres Geräts**.
 
-## <a name="deploying-an-app-to-your-local-pc---immersive-headset"></a>Bereitstellen einer APP auf Ihrem lokalen PC-immersiven Headset
+## <a name="deploying-an-app-to-your-local-pc---immersive-headset"></a>Bereitstellen einer App auf Ihrem lokalen Computer: Immersives Headset
 
-Befolgen Sie diese Anweisungen, wenn Sie ein Windows Mixed Reality-immersives Headset verwenden, das eine Verbindung mit Ihrem PC oder dem [Mixed Reality-Simulator](using-the-windows-mixed-reality-simulator.md)herstellt. In diesen Fällen können Sie Ihre APP einfach auf dem lokalen PC bereitstellen und ausführen.
-1. Wählen Sie eine **x86** -oder **x64** -Buildkonfiguration für Ihre APP aus
-2. Wählen Sie im Dropdown Menü Bereitstellungs Ziel die Option **lokaler Computer** aus.
-3. Wählen Sie **Debuggen > Debuggen starten** aus, um die APP bereitzustellen
+Befolgen Sie diese Anweisungen, wenn Sie ein immersives Windows Mixed Reality-Headset verwenden, das eine Verbindung mit Ihrem PC oder dem [Mixed Reality-Simulator](using-the-windows-mixed-reality-simulator.md) herstellt. Stellen Sie in diesen Fällen Ihre App einfach auf dem lokalen Computer bereit, und führen Sie sie aus.
+1. Wählen Sie eine **x86**- oder **x64**-Buildkonfiguration aus
+2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Lokaler Computer** aus
+3. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und den Debugvorgang zu starten.
 
 ## <a name="pairing-your-device"></a>Koppeln Ihres Geräts
 
-Wenn Sie eine APP von Visual Studio zum ersten Mal in ihren hololens bereitstellen, werden Sie aufgefordert, eine PIN einzugeben. Generieren Sie auf den hololens eine PIN, indem Sie die Einstellungs-APP starten. wechseln Sie zu **Update > für Entwickler** , und tippen Sie auf **paar**. Auf den hololens wird eine PIN angezeigt. Geben Sie diese PIN in Visual Studio ein. Nachdem die Kopplung abgeschlossen ist, tippen Sie auf den hololens auf **done** , um das Dialogfeld zu schließen. Dieser PC ist nun mit den hololens gekoppelt, und Sie können Apps automatisch bereitstellen. Wiederholen Sie diese Schritte für jeden nachfolgenden PC, der zum Bereitstellen von apps in ihren hololens verwendet wird.
+Beim erstmaligen Bereitstellen einer App aus Visual Studio in Ihrer HoloLens werden Sie zur Eingabe einer PIN aufgefordert. Generieren Sie auf der HoloLens eine PIN, indem Sie die Einstellungs-App starten, zu **Update > Für Entwickler** navigieren und auf **Koppeln** tippen. In der HoloLens wird eine PIN angezeigt; geben Sie diese PIN in Visual Studio ein. Tippen Sie nach dem vollzogenen Koppeln in Ihrer HoloLens auf **Fertig**, um das Dialogfeld zu schließen. Dieser PC ist nun mit der HoloLens gekoppelt, und Sie können Apps automatisch bereitstellen. Wiederholen Sie diese Schritte für jeden nachfolgenden PC, der zum Bereitstellen von Apps auf Ihrer HoloLens verwendet wird.
 
-Wenn Sie die hololens von allen Computern aufheben möchten, mit denen Sie gekoppelt war, starten Sie die app " **Einstellungen** ", navigieren Sie zu **Update > für Entwickler** , und tippen Sie auf " **Löschen**".
+Um die Kopplung Ihrer HoloLens mit allen Computern, mit denen sie gekoppelt wurde, aufzuheben, starten Sie die App **Einstellungen**, navigieren Sie zu **Update > Für Entwickler**, und tippen Sie auf **Löschen**.
 
-## <a name="deploying-an-app-to-the-hololens-1st-gen-emulator"></a>Bereitstellen einer APP für den hololens-Emulator (1st Gen)
-1. Stellen Sie sicher, dass Sie **[den hololens-Emulator installiert](install-the-tools.md)** haben.
-2. Wählen Sie eine **x86** -Buildkonfiguration für Ihre APP aus.
+## <a name="deploying-an-app-to-the-hololens-1st-gen-emulator"></a>Bereitstellen einer App auf dem HoloLens-Emulator (1. Gen.)
+1. Vergewissern Sie sich, dass Sie **[den HoloLens-Emulator installiert](install-the-tools.md)** haben.
+2. Wählen Sie eine **x86**-Buildkonfiguration für Ihre App aus.
 ![x86-Buildkonfiguration in Visual Studio](images/x86setting.png)
-3. Wählen Sie im Dropdown Menü Bereitstellungs Ziel![emulatorziel in Visual Studio aus, um den **Emulator hololens** zu aktivieren](images/deployemulator.png)
-4. Wählen Sie **Debuggen > Debuggen starten**](images/deploywithdebugging.png) aus, um die APP bereitzustellen und das Debuggen zu starten![starten ohne Debugging
+3. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **HoloLens-Emulator** aus ![Emulatorziel in Visual Studio](images/deployemulator.png)
+4. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
 
-## <a name="deploying-an-app-to-the-hololens-2-emulator"></a>Bereitstellen einer APP auf dem hololens 2-Emulator
-1. Stellen Sie sicher, dass Sie **[den hololens-Emulator installiert](install-the-tools.md)** haben.
-2. Wählen Sie eine **x86** -oder **x64** -Buildkonfiguration für Ihre APP aus.
+## <a name="deploying-an-app-to-the-hololens-2-emulator"></a>Bereitstellen einer App auf dem HoloLens 2-Emulator
+1. Vergewissern Sie sich, dass Sie **[den HoloLens-Emulator installiert](install-the-tools.md)** haben.
+2. Wählen Sie eine **x86**- oder **x64**-Buildkonfiguration für Ihre App aus.
 ![x86-Buildkonfiguration in Visual Studio](images/x86setting.png)
-3. Wählen Sie im Dropdown Menü "Bereitstellungs Ziel" den **Emulator "hololens 2** " aus![emulatorziel in Visual Studio](images/deployemulator2.png)
-4. Wählen Sie **Debuggen > Debuggen starten**](images/deploywithdebugging.png) aus, um die APP bereitzustellen und das Debuggen zu starten![starten ohne Debugging
+3. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **HoloLens 2-Emulator** aus ![Emulatorziel in Visual Studio](images/deployemulator2.png)
+4. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
 
-## <a name="graphics-debugger-for-hololens-1st-gen"></a>Grafik Debugger für hololens (1. Gen)
+## <a name="graphics-debugger-for-hololens-1st-gen"></a>Grafikdebugger für HoloLens (1. Gen.)
 
-Die Visual Studio-Grafikdiagnose Tools sind beim Schreiben und Optimieren einer Holographic-APP sehr hilfreich. Ausführliche Informationen finden Sie [in der Visual Studio-Grafikdiagnose auf MSDN](https://msdn.microsoft.com/library/hh315751.aspx) .
+Die Visual Studio-Grafikdiagnose-Tools sind beim Schreiben und Optimieren einer holografischen App sehr nützlich. Ausführliche Informationen finden Sie unter [Visual Studio-Grafikdiagnose auf MSDN](https://msdn.microsoft.com/library/hh315751.aspx).
 
-**So starten Sie den Grafik Debugger**
-1. Befolgen Sie die obigen Anweisungen für ein Gerät oder einen Emulator.
-2. Wechseln Sie zu **debug> Grafik > Diagnose starten** .
-3. Wenn Sie dies zum ersten Mal mit einem hololens tun, erhalten Sie möglicherweise den Fehler "Zugriff verweigert". Starten Sie die hololens neu, damit aktualisierte Berechtigungen wirksam werden, und wiederholen Sie den Vorgang.
+**So starten Sie den Grafikdebugger**
+1. Befolgen Sie die Anweisungen oben, um ein Gerät oder einen Emulator als Ziel festzulegen.
+2. Navigieren Sie zu **Debuggen > Grafik > Diagnose starten**
+3. Wenn Sie dies zum ersten Mal auf einer HoloLens ausführen, wird möglicherweise ein Fehler „Zugriff verweigert“ angezeigt. Starten Sie die HoloLens neu, damit aktualisierte Berechtigungen wirksam werden können, und wiederholen Sie den Vorgang.
 
-## <a name="profiling"></a>Liert
+## <a name="profiling"></a>Profilerstellung
 
-Die Visual Studio-Profil Erstellungs Tools ermöglichen es Ihnen, die Leistung und Ressourcennutzung Ihrer APP zu analysieren. Dies umfasst Tools zur Optimierung der CPU, des Arbeitsspeichers, der Grafiken und der Netzwerk Verwendung. Ausführliche Informationen finden Sie [unter Ausführen von Diagnosetools ohne Debuggen auf MSDN](https://msdn.microsoft.com/library/dn957936.aspx) .
+Die Visual Studio-Tools zur Profilerstellung ermöglichen Ihnen das Analysieren von Leistung und Ressourcennutzung Ihrer App. Dies beinhaltet Tools zur Optimierung von CPU-, Arbeitsspeicher-, Grafik- und Netzwerkauslastung. Ausführliche Informationen finden Sie unter [Ausführen von Diagnosetools ohne Debuggen auf MSDN](https://msdn.microsoft.com/library/dn957936.aspx).
 
-**So starten Sie die Profilerstellungstools mit hololens**
-1. Befolgen Sie die obigen Anweisungen für ein Gerät oder einen Emulator.
-2. Gehe zu **Debuggen > Diagnosetools ohne Debugging starten...**
+**So starten Sie die Profilerstellungstools in HoloLens**
+1. Befolgen Sie die Anweisungen oben, um ein Gerät oder einen Emulator als Ziel festzulegen.
+2. Navigieren Sie zu **Debuggen > Diagnosetools ohne Debuggen starten...**
 3. Wählen Sie die Tools aus, die Sie verwenden möchten.
-4. Klicken Sie auf **Start**
-5. Wenn Sie dies zum ersten Mal mit einem hololens tun, erhalten Sie möglicherweise den Fehler "Zugriff verweigert". Starten Sie die hololens neu, damit aktualisierte Berechtigungen wirksam werden, und wiederholen Sie den Vorgang.
+4. Klicken Sie auf **Start**.
+5. Wenn Sie dies zum ersten Mal auf einer HoloLens ausführen, wird möglicherweise ein Fehler „Zugriff verweigert“ angezeigt. Starten Sie die HoloLens neu, damit aktualisierte Berechtigungen wirksam werden können, und wiederholen Sie den Vorgang.
 
-## <a name="debugging-an-installed-or-running-app"></a>Debuggen einer installierten oder laufenden app
+## <a name="debugging-an-installed-or-running-app"></a>Debuggen einer installierten oder aktuell laufenden App
 
-Sie können Visual Studio zum Debuggen einer universellen Windows-App verwenden, die ohne Bereitstellung aus einem Visual Studio-Projekt installiert wird. Dies ist hilfreich, wenn Sie ein installiertes App-Paket debuggen möchten oder wenn Sie eine APP debuggen möchten, die bereits ausgeführt wird.
-1. Wechseln Sie zu **debug-> andere debugziele > installiertes App-Paket Debuggen**
-2. Wählen Sie das **Remote Computer** Ziel für hololens oder **den lokalen Computer** für immersive Headsets aus.
+Sie können Visual Studio verwenden, um eine Universelle Windows-App zu debuggen, die ohne Bereitstellung aus einem Visual Studio-Projekt installiert wurde. Dies ist nützlich, wenn Sie ein installiertes App-Paket oder eine App debuggen möchten, die bereits ausgeführt wird.
+1. Navigieren Sie zu **Debuggen > Andere Debugziele > Installiertes App-Paket debuggen**
+2. Wählen Sie das Ziel **Remotecomputer** für HoloLens oder **Lokaler Computer** für immersive Headsets aus.
 3. Geben Sie die **IP-Adresse** Ihres Geräts ein.
-4. Wählen Sie den **universellen** Authentifizierungsmodus aus.
-5. Im Fenster werden sowohl aktive als auch inaktive apps angezeigt. Wählen Sie den Inhalt aus, den Sie debuggen möchten.
-6. Wählen Sie den zu debuggenden Codetyp aus (verwaltet, System eigen, gemischt).
-7. Klicken Sie auf **Anfügen oder starten**
+4. Wählen Sie den Authentifizierungsmodus **Universell** aus.
+5. Im Fenster werden sowohl ausgeführte als auch inaktive Apps angezeigt. Suchen Sie die App aus, die Sie debuggen möchten.
+6. Wählen Sie den zu debuggenden Codetyp aus (Verwaltet, Nativ, Gemischt)
+7. Klicken Sie auf **Anfügen** oder **Start**
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 * [Installieren der Tools](install-the-tools.md)
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)
-* [Bereitstellen und Debuggen von universelle Windows-Plattform-Apps (UWP)](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
-* [Aktivieren des Geräts für die Entwicklung](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
+* [Bereitstellen und Debuggen von UWP (Universelle Windows-Plattform)-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
+* [Aktivieren Ihres Geräts für die Entwicklung](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
