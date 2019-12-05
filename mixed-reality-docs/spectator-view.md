@@ -1,65 +1,66 @@
 ---
-title: Ansicht "Betrachter"
-description: Visualisieren Sie holograms von einem externen Gerät, um eine gemischte Realität auf einem externen Bildschirm zu demonstrieren oder ein Video mit gemischter Realität zu erfassen.
+title: Spectator View
+description: Visualisieren Sie Hologramme von einem externen Gerät als Mittel zur Darstellung eines Mixed Reality-Erlebnisses auf einem externen Display oder zur Aufzeichnung eines Mixed Reality-Erlebnisses.
 author: chrisfromwork
 ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
-keywords: Zuschauer Ansicht, iPhone, Ios, iPad, opencv, Kamera, Arkit, hololens, Mixed Reality, mixedrealitytoolkit, Demo, Datensatz
-ms.openlocfilehash: 708ed694af3769f16d5dce0595e026f9a348d754
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Spectator View, iPhone, iOS, iPad, OpenCV, Kamera, ARKit, HoloLens, Mixed Reality, MixedRealityToolkit, Demo, aufzeichnen
+ms.openlocfilehash: 9bc1c2809c7d780d439d9efb58f464b41de3dccd
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047176"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491160"
 ---
-# <a name="spectator-view-for-hololens-and-hololens-2"></a>Ansicht "Betrachter" für hololens und hololens 2
+# <a name="spectator-view-for-hololens-and-hololens-2"></a>Spectator View für HoloLens und HoloLens 2
 
 ![Marker](images/SpecViewPhoneHero.jpg)
 
 ## <a name="overview"></a>Übersicht
 
-Beim Durcharbeiten von hololens vergessen wir oft nicht, dass eine Person, die nicht über diese verfügt, nicht die Wunder, die wir haben, nicht erleben kann. Mit der Ansicht "Betrachter" können andere Benutzer auf einem 2D-Bildschirm sehen, was ein hololens-Benutzer in der Welt sieht.
-Die Zuschauer Ansicht bietet einen schnellen und kostengünstigen Ansatz zum Aufzeichnen von holograms in HD mit mobilen Geräten. Außerdem bietet es eine qualitativ hochwertige Aufzeichnung von holograms mit Videokameras.
+Beim Tragen einer HoloLens vergessen wir oft, dass eine Person, die sie nicht trägt, all die Wunder, die wir erfahren, nicht erleben kann. Mit Spectator View können andere auf einem zweidimensionalen Bildschirm sehen, was HoloLens-Benutzer in ihrer Welt sehen.
+Spectator View bietet einen schnellen und bezahlbaren Ansatz zum Aufzeichnen von Hologrammen in HD mit mobilen Geräten. Ferner bietet es die Möglichkeit zur Aufzeichnung von Hologrammen mit Videokameras in professioneller Qualität.
 
 ## <a name="key-resources"></a>Wichtige Ressourcen
 
-* [**Ansicht "Betrachter" auf GitHub**](https://github.com/microsoft/MixedReality-SpectatorView)
-* [**Dokumentation zur Zuschauer Ansicht**](https://microsoft.github.io/MixedReality-SpectatorView/README.html)
-* [**Beispiele für die Zuschauer Ansicht**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
+* [**Spectator View auf GitHub**](https://github.com/microsoft/MixedReality-SpectatorView)
+* [**Spectator View-Dokumentation**](https://microsoft.github.io/MixedReality-SpectatorView/README.html)
+* [**Spectator View-Beispiele**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>Anwendungsfälle
-* Sie können eine gemischte Realität mit einem iPhone oder Android-Gerät aufzeichnen. Notieren Sie sich die vollständige Festplatte, und wenden Sie Antialiasing auf holograms und sogar Schatten an. Es ist eine kostengünstige und schnelle Möglichkeit, Videos von holograms zu erfassen.
-* Streamen Sie das Live Mixed Reality-Erlebnis direkt von Ihrem iPhone oder iPad auf eine Apple TV-Umgebung.
-* Teilen Sie die Arbeit mit Gästen: Gestatten Sie Benutzern, die nicht hololens sind, direkt von Ihrem Smartphone oder Tablet aus.
+* Sie können ein Mixed Reality-Erlebnis mithilfe eines iPhone- oder Android-Geräts aufzeichnen. Zeichnen Sie in Full HD auf, und wenden Sie Antialiasing auf Hologramme und sogar auf Schatten an. Dies ist eine kostengünstige und schnelle Möglichkeit zum Erfassen von Videos von Hologrammen.
+* Streamen Sie von Ihrem iPhone oder iPad verzögerungsfrei Mixed Reality-Erlebnisse live auf ein Apple TV!
+* Teilen Sie das Erlebnis mit Gästen: Lassen Sie Benutzer ohne HoloLens Hologramme direkt auf Ihren Smartphones oder Tablets erleben.
 
 ## <a name="current-features"></a>Aktuelle Features
 
-* Räumliche Synchronisierung von holograms, sodass alle Hologramme an der gleichen Stelle sehen.
-* IOS-Unterstützung (Arkit-fähige Geräte) und Android-Unterstützung (Arcore-fähige Geräte).
-Mehrere IOS-Gäste.
-Aufzeichnung von Video + holograms + Ambient Sound + – Hologramm Sound.
-Freigabe Blatt, damit Sie Videos speichern, per e-Mail senden oder mit anderen unterstützenden apps freigeben können.
+* Synchronisierung von Hologrammen im Raum, sodass alle die Hologramme an genau der gleichen Stelle sehen.
+* Unterstützung für iOS- (ARKit-fähige Geräte) und Android-Geräte (ARCore-fähige Geräte).
+Mehrere iOS-Gäste.
+Aufzeichnung von Video + Hologrammen + Raumklang + Hologrammklang.
+Freigabeblatt, auf dem Sie Videos speichern, sie per E-Mail senden oder sie mit anderen unterstützten Apps teilen können.
 
-![](images/SpecViewPhoneDemo.jpg)
- ![Markermarkermarker](images/hololensspectatorview-500px.jpg) ![](images/spectatorview-300px.png)
+![Marker](images/SpecViewPhoneDemo.jpg)
+![Marker](images/hololensspectatorview-500px.jpg) ![Marker](images/spectatorview-300px.png)
 
-In der folgenden Tabelle werden die verschiedenen Funktionen der Zuschauer Ansicht und ihre Funktionen gezeigt. Wählen Sie die Option aus, die Ihren Video Aufzeichnungs Anforderungen am besten entspricht:
+In der folgenden Tabelle sind verschiedene Funktionen von Spectator View aufgeführt. Wählen Sie die Option aus, die Ihren Anforderungen an Videoaufzeichnung am besten entspricht:
 
-|                                      | Mobil                  |                    Video Kamera              |
+|                                      | Mobile                  |                    Videokamera              |
 |--------------------------------------|:-----------------------:|:-------------------------------------------:|
-| HD-Qualität                           |         Vollständige HD         |        Qualität der professionellen Qualität (wie von der Videokamera festgelegt)      |
+| HD-Qualität                           |         Full HD         |        Filmen in professioneller Qualität (durch die Videokamera bestimmt)      |
 | Einfache Kamerabewegung                 |            ✔            |                      ✔                      |
-| Ansicht für dritte Person                    |            ✔            |                      ✔                      |
+| Third-Person-Ansicht                    |            ✔            |                      ✔                      |
 | Kann auf Bildschirme gestreamt werden           |            ✔            |                      ✔                      |
-| Tabel                             |            ✔            |                                             |
+| Tragbar                             |            ✔            |                                             |
 | Drahtlos                             |            ✔            |                                             |
-| Zusätzliche erforderliche Hardware         |     Android Phone, iPhone    | Hololens + Rig + Stativ + Video Kamera + PC + Unity |
-| Hardware Investition                  |           Niedrig            |                     Hoch                    |
-| Plattformübergreifend                       |           Android, ios   |                                             |
-| Synchronisierter Inhalt                 |            ✔            |                      ✔                      |
-| Laufzeit-Setup Dauer               |         Blick          |                     Verzögerte Anzeige                    |
-## <a name="see-also"></a>Siehe auch
+| Zusätzlich erforderliche Hardware         |     Android-Smartphone, iPhone    | HoloLens + Rig + Stativ + Videokamera + PC + Unity |
+| Hardwareinvestition                  |           Niedrig            |                     Hoch                    |
+| Plattformübergreifend                       |           Android, iOS   |                                             |
+| Synchronisierte Inhalte                 |            ✔            |                      ✔                      |
+| Dauer des Runtime-Setups               |         Instant          |                     Langsam                    |
+## <a name="see-also"></a>Weitere Informationen
 
 * [Mixed Reality-Aufnahme](mixed-reality-capture.md) 
 * [Mixed Reality-Aufnahme für Entwickler](mixed-reality-capture-for-developers.md)

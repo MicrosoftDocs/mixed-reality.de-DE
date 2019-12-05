@@ -7,14 +7,16 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hololens, MMR, kombiniert
-ms.openlocfilehash: abd82947be08a2f6aecc4462abc34c4674abfb7a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6b54d6e844c1b501a0835fc3a48deb4932ba551d
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437973"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539718"
 ---
 # <a name="introducing-instinctual-interactions"></a>Einführung in instinktive Interaktionen
+
+![Fernmanipulation mit den Händen](images/04_InteractionFundamentals.png)
 
 Die Philosophie der einfachen, instinktiven Interaktionen ist in der gesamten Mixed Reality-Plattform (MR) verwurzelt. Wir haben drei Schritte unternommen, um sicherzustellen, dass Anwendungsdesigner und -entwickler ihren Kunden einfache und intuitive Interaktionen bereitstellen können. 
 

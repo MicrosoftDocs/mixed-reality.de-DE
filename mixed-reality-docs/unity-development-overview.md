@@ -1,90 +1,91 @@
 ---
-title: Übersicht über Unity-Entwicklung
-description: Beginnen Sie mit dem Aufbau gemischter Reality-apps in Unity.
+title: Unity-Entwicklung – Übersicht
+description: Erste Schritte beim Erstellen von Mixed Reality-Apps in Unity.
 author: thetuvix
 ms.author: kurtie
 ms.date: 10/25/2018
 ms.topic: article
-keywords: Unity, gemischte Realität, Entwicklung, Einstieg, neues Projekt, portieren, Funktion, Kamera, Simulation, Emulation, Dokumentation
-ms.openlocfilehash: f9b314bfc7c58e72b11ecfd76fe7293ef2f6c11e
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Unity, Mixed Reality, Entwicklung, erste Schritte, neues Projekt, Portieren, Funktion, Kamera, Simulation, Emulation, Dokumentation
+ms.openlocfilehash: 23b3d9a3fe419911e774722a7d2db6809c2955cf
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926696"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491101"
 ---
-# <a name="unity-development-overview"></a>Übersicht über Unity-Entwicklung
+# <a name="unity-development-overview"></a>Unity-Entwicklung – Übersicht
 
-Der schnellste Weg zum Entwickeln einer [mixed reality-app](app-views.md) besteht in [Unity](https://unity.com). Wir empfehlen Ihnen, sich mit den Lernprogrammen für [Unity](https://unity3d.com/learn/tutorials)vertraut zu machen. Wenn Sie Assets benötigen, verfügt Unity über einen umfassenden [Asset Store](https://www.assetstore.unity3d.com/). Nachdem Sie ein grundlegendes Verständnis von Unity erstellt haben, können Sie die Lernprogramme aufrufen [, um sich mit den Besonderheiten](tutorials.md) der Mixed Reality-Entwicklung mit Unity vertraut zu machen. Stellen Sie sicher, dass Sie die Unity-Foren in der [gemischten Realität](https://forum.unity3d.com/forums/hololens.102/) besuchen, um sich mit der restlichen Community zu befassen, die gemischte Reality-apps in Unity aufbaut und Lösungen für Probleme finden kann, die möglicherweise auftreten
+Den schnellsten Weg zum Entwickeln einer [Mixed Reality-App](app-views.md) bietet [Unity](https://unity.com). Wir empfehlen Ihnen, sich mit den [Tutorials für Unity](https://unity3d.com/learn/tutorials) vertraut zu machen. Wenn Sie Ressourcen benötigen, finden Sie diese im umfangreich ausgestatteten [Asset Store](https://www.assetstore.unity3d.com/). Nachdem Sie ein grundlegendes Verständnis von Unity erworben haben, können Sie die [Tutorials](tutorials.md) besuchen, um die Besonderheiten der Mixed Reality-Entwicklung mit Unity zu erlernen. Besuchen Sie unbedingt die [Unity Mixed Reality-Foren](https://forum.unity3d.com/forums/hololens.102/), um sich mit der Community zu befassen, die Mixed Reality-Apps in Unity entwickelt, und Lösungen für möglicherweise auftretende Probleme zu finden.
 
-Installieren Sie zunächst [die Tools](install-the-tools.md), um mit der Einführung von Mixed Reality-apps zu beginnen. 
+Um in das Erstellen von Mixed Reality-Apps mit Unity einzusteigen, müssen Sie im ersten Schritt [die Tools installieren](install-the-tools.md). 
 
-## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Neues Unity-Projekt mit Mixed Reality Toolkit 
+## <a name="new-unity-project-with-mixed-reality-toolkit"></a>Neues Unity-Projekt mit Mixed Reality-Toolkit 
 
-Die einfachste Möglichkeit zur Entwicklung von Unity ist das Mixed Reality Toolkit. Auf diese Weise können Sie das Projekt automatisch einrichten und eine Reihe gemischter Reality-Funktionen bereitstellen, um Ihre Entwicklung zu beschleunigen. Weitere Informationen und den Einstieg finden Sie unter [Mixed Reality Toolkit v2](mrtk-getting-started.md) . 
+Die einfachste Möglichkeit zum Entwickeln in Unity stellt das Mixed Reality Toolkit dar. Es unterstützt Sie mit der automatischen Einrichtung des Projekts und bietet eine Reihe von Mixed-Reality-Funktionen zum Beschleunigen Ihrer Entwicklung. Unter [Mixed Reality Toolkit v2](mrtk-getting-started.md) erfahren Sie mehr und erhalten Informationen für den Einstieg. 
 
-## <a name="porting-an-existing-unity-app-to-windows-mixed-reality"></a>Portieren einer vorhandenen Unity-App auf Windows Mixed Reality
+## <a name="porting-an-existing-unity-app-to-windows-mixed-reality"></a>Portieren einer vorhandenen Unity-App zu Windows Mixed Reality
 
-Wenn Sie über ein vorhandenes Unity-Projekt verfügen, das Sie auf Windows Mixed Reality portieren, befolgen Sie die Anleitung zum Einstieg in die [Unity-Portierung](porting-guides.md) .
+Wenn Sie über ein vorhandenes Unity-Projekt verfügen, das Sie zu Windows Mixed Reality portieren möchten, folgen Sie zunächst dem [Unity porting guide](porting-guides.md) (Unity-Portierungsleitfaden).
 
 ## <a name="configuring-new-unity-project-for-windows-mixed-reality"></a>Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality
 
-Wenn Sie ein neues Unity-Projekt erstellen möchten, ohne Mixed Reality Toolkit zu importieren, gibt es eine kleine Sammlung von Unity-Einstellungen, die Sie manuell für Windows Mixed Reality ändern müssen. Diese werden in zwei Kategorien unterteilt: pro Projekt und pro Szene. Eine Schritt-für-Schritt-Anleitung zum [Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality](Configure-Unity-Project.md) finden Sie hier.
+Wenn Sie ein neues Unity-Projekt erstellen möchten, ohne das Mixed Reality Toolkit zu importieren, müssen einige Unity-Einstellungen manuell geändert werden, um für Windows Mixed Reality zu entwickeln. Diese gliedern sich in zwei Kategorien: projektbezogene und szenenbezogene. Hier finden Sie eine Schrittanleitung zum [Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality](Configure-Unity-Project.md).
 
-## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Hinzufügen gemischter Reality-Funktionen und-Eingaben
+## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Hinzufügen von Mixed Reality-Funktionen und -Eingaben
 
-Wenn Sie mrtk v2 mit Ihrem Projekt eingerichtet haben oder Ihr Projekt wie oben beschrieben konfiguriert haben, werden standardmäßige Unity-Spielobjekte (z. b. die Kamera) sofort für eine **skalierte**Benutzeroberfläche aktualisiert, wobei die Position der Kamera automatisch aktualisiert wird. der Benutzer wechselt in die Welt.
+Sobald Sie MRTK V2 mit Ihrem Projekt eingerichtet oder das Projekt wie oben beschrieben konfiguriert haben, leuchten sofort Unity-Standardspielobjekte (wie etwa die Kamera) auf und bieten ein **sitzendes Aktivitätserlebnis**, bei dem sich die Kameraposition automatisch aktualisiert, wenn der Benutzer seinen Kopf in der Welt bewegt.
 
-Das Hinzufügen von Unterstützung für Windows Mixed Reality-Features, z. b. [räumliche Stufen](coordinate-systems.md#spatial-coordinate-systems), [Gesten, Bewegungs Controller](gestures-and-motion-controllers-in-unity.md) oder [Spracheingaben](voice-input-in-unity.md) , wird mithilfe der direkt in Unity erstellten APIs erreicht. 
+Das Hinzufügen von Unterstützung für Windows Mixed Reality-Funktionen, wie etwa [Raumbühnen](coordinate-systems.md#spatial-coordinate-systems), [Gesten, Motion Controller](gestures-and-motion-controllers-in-unity.md) oder [Spracheingabe](voice-input-in-unity.md) wird mithilfe von APIs erreicht, die direkt in Unity integriert sind. 
 
-Überprüfen Sie zunächst die [Skalierungs](coordinate-systems.md) Möglichkeiten, auf die Ihre Anwendung abzielen kann:
-* Wenn Sie **nur eine Orientierung** oder eine **Skalierung**mit fester Größe erstellen möchten, müssen Sie den Überwachungsbereich von Unity auf " [stationär](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)" festlegen.
-* Wenn **Sie eine Skalierungs-oder** **Raum Skalierungs**Oberfläche erstellen möchten, müssen Sie sicherstellen, dass der nach verfolgungsbereich von Unity erfolgreich auf " [roomscale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience)" festgelegt ist.
-* Wenn Sie eine **Welt weite** Umgebung auf hololens aufbauen möchten, die Benutzern das Roaming über 5 Meter ermöglicht, müssen Sie die [worldanchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) -Komponente verwenden.
+Überprüfen Sie zunächst die Optionen für den [Erlebnismaßstab](coordinate-systems.md), auf die Ihre Anwendung abzielen kann:
+* Wenn Sie lediglich ein **nur zur Orientierung** gedachtes oder ein **sitzendes Aktivitätserlebnis** erstellen möchten, müssen Sie den Typ der Raumnachverfolgung von Unity auf [Stationary](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) (Stationär) festlegen.
+* Wenn Sie ein **stehendes Aktivitätserlebnis** oder ein **Raumaktivitätserlebnis** erstellen möchten, müssen Sie darauf achten, dass der Typ der Raumnachverfolgung von Unity erfolgreich auf [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) (Raummaßstab) festgelegt wurde.
+* Wenn Sie ein **Weltaktivitätserlebnis** auf HoloLens erstellen möchten, mit dem die Benutzer sich in einem Bereich jenseits von 5 Metern bewegen können, müssen Sie die Komponente [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) (Weltanker) verwenden.
 
-Alle Kern Bausteine für gemischte Reality-Anwendungen werden auf eine Weise verfügbar gemacht, die mit anderen Unity-APIs konsistent ist. Sie sind auch über das Mixed Reality Toolkit verfügbar.
+Alle Hauptbausteine für Mixed Reality-Anwendungen werden in einer Weise verfügbar gemacht, die mit anderen Unity-APIs konsistent ist. Sie sind ebenfalls über das Mixed Reality Toolkit verfügbar.
 * [Kamera](camera-in-unity.md)
 * [Koordinatensysteme](coordinate-systems-in-unity.md)
 * [Anvisieren](gaze-in-unity.md)
-* [Gesten und Bewegungs Controller](gestures-and-motion-controllers-in-unity.md)
+* [Gesten und Motion-Controller](gestures-and-motion-controllers-in-unity.md)
 * [Spracheingabe](voice-input-in-unity.md)
 * [Persistenz](persistence-in-unity.md)
 * [Raumklang](spatial-sound-in-unity.md)
 * [Räumliche Abbildung](spatial-mapping-in-unity.md)
 
-Es gibt noch weitere wichtige Features, die viele gemischte Reality-Anwendungen verwenden möchten, die auch für Unity-apps verfügbar gemacht werden:
-* [Freigegebene Erfahrungen](shared-experiences-in-unity.md)
+Es gibt noch weitere Schlüsselfunktionen, deren Einsatz in vielen Mixed Reality-Anwendungen sinnvoll ist, die Unity-Apps ebenfalls zur Verfügung stehen:
+* [Gemeinsame Erfahrung](shared-experiences-in-unity.md)
 * [Ausrichtbare Kamera](locatable-camera-in-unity.md)
 * [Fokuspunkt](focus-point-in-unity.md)
-* [Nachverfolgung von Verlusten](tracking-loss-in-unity.md)
+* [Verlust der Nachverfolgung](tracking-loss-in-unity.md)
 * [Tastatur](keyboard-input-in-unity.md)
 
-## <a name="running-your-unity-project-on-a-real-or-simulated-device"></a>Ausführen Ihres Unity-Projekts auf einem echten oder simulierten Gerät
+## <a name="running-your-unity-project-on-a-real-or-simulated-device"></a>Ausführen Ihres Unity-Projekts auf einem realen oder simulierten Gerät
 
-Nachdem Sie Ihr Holographic-Unity-Projekt zum Testen vorbereitet haben, ist der nächste Schritt das [exportieren und Erstellen einer Unity-Visual Studio-](exporting-and-building-a-unity-visual-studio-solution.md)Projekt Mappe.
+Sobald Sie Ihr Unity-Holografieprojekt bis zur Testreife gebracht haben, besteht der nächste Schritt im [Exportieren und Erstellen einer Unity Visual Studio-Projektmappe](exporting-and-building-a-unity-visual-studio-solution.md).
 
-Mit dieser vs-Lösung können Sie die Anwendung dann auf eine von drei Arten ausführen, indem Sie entweder ein reales oder ein simuliertes Gerät verwenden:
-* [Bereitstellen in einem echten hololens oder Windows Mixed Reality-immersives Headset](using-visual-studio.md)
-* [Bereitstellen auf dem hololens-Emulator](using-the-hololens-emulator.md)
-* [Bereitstellen für den Windows Mixed Reality-immersiven Headset-Simulator](using-the-windows-mixed-reality-simulator.md)
+Mit dieser VS-Projektmappe können Sie Ihre Anwendung dann auf eine von drei Weisen ausführen und dazu wahlweise ein reales oder ein simuliertes Gerät verwenden:
+* [Bereitstellen auf einer realen HoloLens oder einem immersiven Windows Mixed Reality-Headset](using-visual-studio.md)
+* [Bereitstellen auf dem HoloLens-Emulator](using-the-hololens-emulator.md)
+* [Bereitstellen auf dem Simulator für immersive Windows Mixed Reality-Headsets](using-the-windows-mixed-reality-simulator.md)
 
 ## <a name="unity-documentation"></a>Unity-Dokumentation
 
-Zusätzlich zu dieser Dokumentation, die auf docs.Microsoft.com verfügbar ist, installiert Unity zusätzlich zum Unity-Editor die Dokumentation für die Windows Mixed Reality-Funktionalität. Die bereitgestellte Unity-Dokumentation enthält zwei separate Abschnitte:
-1. **Unity-Skript Referenz**
-    * Dieser Abschnitt der Dokumentation enthält Details zur Skript-API, die von Unity bereitstellt wird.
-    * Zugriff über den Unity-Editor über **Hilfe > Skript Referenz**
+Über diese Dokumentation hinaus, die auf docs.microsoft.com verfügbar ist, installiert Unity Dokumentation für Windows Mixed Reality-Funktionen zusammen mit dem Unity-Editor. Die von Unity bereitgestellte Dokumentation umfasst zwei separate Abschnitte:
+1. **Unity-Skriptreferenz**
+    * Dieser Abschnitt der Dokumentation behandelt die Skripterstellungs-API von Unity im Detail.
+    * Auf sie kann im den Unity-Editor über **Hilfe > Skriptreferenz** zugegriffen werden.
 2. **Unity-Handbuch**
-    * Dieses Handbuch soll Ihnen helfen, die Verwendung von Unity von grundlegenden bis zu erweiterten Techniken zu erlernen.
-    * Zugriff über den Unity-Editor über **Hilfe > manuell**
+    * Dieses Handbuch soll Ihnen helfen, die Verwendung von Unity zu erlernen, von grundlegenden bis zu erweiterten Techniken.
+    * Sie können darauf im Unity-Editor über **Hilfe > Handbuch** zugreifen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 * [Mixed Reality Toolkit v2](mrtk-getting-started.md)
-* [Grundlagen 100: Einstieg in Unity](holograms-100.md)
+* [MR-Grundlagen 100: Erste Schritte mit Unity](holograms-100.md)
 * [Empfohlene Einstellungen für Unity](recommended-settings-for-unity.md)
 * [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
 * [Exportieren und Erstellen einer Unity-Projektmappe für Visual Studio](exporting-and-building-a-unity-visual-studio-solution.md)
 * [Verwenden des Windows-Namespace mit Unity-Apps für HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
 * [Bewährte Methoden für das Arbeiten mit Unity und Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
 * [Unity-Wiedergabemodus](unity-play-mode.md)
-* [Portieren von Führungslinien](porting-guides.md)
+* [Portierungsleitfäden](porting-guides.md)
