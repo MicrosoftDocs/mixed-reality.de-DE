@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: d4e58e2c9236ba35b4394fd80cde3843edaa6f57
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: cae2398582d399f2bad56b354694f7e99ef8681c
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491201"
+ms.locfileid: "74539691"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisieren des Projekts und der ersten Anwendung
 
@@ -48,7 +48,7 @@ In dieser ersten Lektion lernen Sie einige der Funktionen kennen, die das [Mixed
 ![Lektion 1 Abschnitt 2 Schritt 1](images/mrlearning-base-ch1-2-step1.JPG)
 2. Wählen Sie die *universelle Windows-Plattform* aus, und klicken Sie auf die Schaltfläche **Plattform wechseln**, um die Plattform zu wechseln. Anwendungen, die auf HoloLens 2 ausgeführt werden, müssen mit der Universellen Windows-Plattform (UWP) kompatibel sein.
 ![Lektion 1 Abschnitt 2 Schritt 2](images/mrlearning-base-ch1-2-step2.JPG)
-3. Aktivieren Sie virtuelle Realität, indem Sie im Buildfenster auf **Player-Einstellungen** klicken, und aktivieren Sie dann im Inspektorbereich unter „XR-Einstellungen“ das Kontrollkästchen für die *VR-Unterstützung*, wie in der folgenden Abbildung gezeigt. Beachten Sie, dass Sie das Fenster *Buildeinstellungen* möglicherweise verschieben oder minimieren müssen, um den Inspektorbereich sehen zu können. Das Kontrollkästchen für die *VR-Unterstützung* betrifft auch Mixed Reality- und Augmented Reality-Headsets, da es sich auf die Aktivierung der stereoskopischen Funktion (Rendering unterschiedlicher Bilder für jedes Auge) bezieht. ![Lektion 1 Abschnitt 2 Schritt 3](images/mrlearning-base-ch1-2-step3.JPG)
+3. Aktivieren Sie virtuelle Realität, indem Sie im Buildfenster auf die Schaltfläche **Player-Einstellungen** klicken, und aktivieren Sie dann im Inspektorbereich unter „XR-Einstellungen“ das Kontrollkästchen für die *VR-Unterstützung*, wie in der folgenden Abbildung gezeigt. Beachten Sie, dass Sie das Fenster *Buildeinstellungen* möglicherweise verschieben oder minimieren müssen, um den Inspektorbereich sehen zu können. Das Kontrollkästchen für die *VR-Unterstützung* betrifft auch Mixed Reality- und Augmented Reality-Headsets, da es sich auf die Aktivierung der stereoskopischen Funktion (Rendering unterschiedlicher Bilder für jedes Auge) bezieht. ![Lektion 1 Abschnitt 2 Schritt 3](images/mrlearning-base-ch1-2-step3.JPG)
 4. Ändern Sie außerdem unter "XR-Einstellungen" den *Stereo Rendering Mode* (Stereo-Renderingmodus) in *Single Pass Instanced* (Einzeldurchgangs-Instanz). Diese [Renderingpipeline-Stil](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) bietet im Allgemeinen die höchste Leistung für HoloLens 2. Wenn Sie sich für weitere leistungsfähige Konfigurationen für Ihre Unity-Umgebung interessieren, befolgen Sie [diese Anweisungen](recommended-settings-for-unity.md).
 ![Lektion 1 Abschnitt 2 Schritt 4](images/mrlearning-base-ch1-2-step4.jpg)
 5. Vergewissern Sie sich im gleichen Inspektorbereich, dass unter *Veröffentlichungseinstellungen* im Abschnitt „Funktionen“ das Kontrollkästchen *Räumliche Wahrnehmung* aktiviert ist. Die Funktion „Räumliche Wahrnehmung“ ermöglicht das Visualisieren des Gittermodells für die Raumzuordnung auf einem Mixed Reality-Gerät wie HoloLens 2. Sie finden die Veröffentlichungseinstellungen im Inspektorbereich oberhalb von „XR-Einstellungen“ und unterhalb von „Andere Einstellungen“.
