@@ -5,17 +5,19 @@ author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, holograms, Rendering, 3D-Grafiken, holographicframe, Renderschleife, Update Schleife, Exemplarische Vorgehensweise, Beispielcode
-ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+keywords: Windows Mixed Reality, holograms, Rendering, 3D-Grafiken, holographicframe, Renderschleife, Update Schleife, Exemplarische Vorgehensweise, Beispielcode, Direct3D
+ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
+ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629036"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74940868"
 ---
 # <a name="rendering-in-directx"></a>Rendering in DirectX
 
 Windows Mixed Reality basiert auf DirectX, um für Benutzer eine umfassende, grafische Darstellung von 3D-Funktionen zu erstellen. Die renderingabstraktion befindet sich direkt oberhalb von DirectX und ermöglicht einer APP einen Grund zur Position und Ausrichtung von einem oder mehreren Beobachtern einer Holographic-Szene, die vom System vorhergesagt wurde. Der Entwickler kann dann seine Hologramme in Relation zu den einzelnen Kameras finden, sodass die APP diese Hologramme in verschiedenen räumlichen Koordinatensystemen gereinigen kann, wenn der Benutzer sich bewegt.
+
+Hinweis: in dieser exemplarischen Vorgehensweise wird das Holographic-Rendering in Direct3D 11 beschrieben. Eine Direct3D 12-Windows Mixed Reality-App-Vorlage wird auch mit der Erweiterung "Mixed Reality App Templates" bereitgestellt.
 
 ## <a name="update-for-the-current-frame"></a>Update für den aktuellen Frame
 
@@ -89,7 +91,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Verarbeiten von Blick und Gesten Eingaben
 
-Die Zeiger [-und](gaze-in-directx.md) [Hand](hands-and-motion-controllers-in-directx.md) Eingaben sind nicht Zeit basiert und müssen daher nicht in der **Steptimer** -Funktion aktualisiert werden. Diese Eingabe muss jedoch in den einzelnen Frames angezeigt werden.
+Die Zeiger-und [Hand](hands-and-motion-controllers-in-directx.md) Eingaben sind nicht Zeit basiert und müssen daher nicht in der **Steptimer** [-Funktion](gaze-in-directx.md) aktualisiert werden. Diese Eingabe muss jedoch in den einzelnen Frames angezeigt werden.
 
 ### <a name="process-time-based-updates"></a>Zeitbasierte Updates verarbeiten
 
@@ -401,7 +403,7 @@ cbuffer ViewProjectionConstantBuffer : register(b1)
 };
 ```
 
-Der Array Index des Renderziels muss für jedes Pixel festgelegt werden. Im folgenden Code Ausschnitt wird "Output. viewId" der **SV_RenderTargetArrayIndex** -Semantik zugeordnet. Beachten Sie, dass hierfür eine optionale Direct3D 11,3-Funktion unterstützt wird, mit der die Semantik des Renderziel-Array Indexes aus jeder Shader-Stufe festgelegt werden kann.
+Der Array Index des Renderziels muss für jedes Pixel festgelegt werden. Im folgenden Code Ausschnitt wird "Output. viewId" der **SV_RenderTargetArrayIndex** Semantik zugeordnet. Beachten Sie, dass hierfür eine optionale Direct3D 11,3-Funktion unterstützt wird, mit der die Semantik des Renderziel-Array Indexes aus jeder Shader-Stufe festgelegt werden kann.
 
 Aus **vprtvertexshader. HLSL**:
 
@@ -457,7 +459,7 @@ VertexShaderOutput main(VertexShaderInput input)
 }
 ```
 
-Wenn Sie Ihre vorhandenen instanziierten Zeichentechniken mit dieser Methode zum Zeichnen in ein Array von Stereo Renderziel verwenden möchten, müssen Sie lediglich die doppelte Anzahl von Instanzen zeichnen, die Sie normalerweise haben. Dividieren Sie im Shader **Input. instId** durch 2, um die ursprüngliche Instanz-ID zu erhalten, die in (z. b.) einen Puffer von objektbezogenen Daten indiziert werden kann:`int actualIdx = input.instId / 2;`
+Wenn Sie Ihre vorhandenen instanziierten Zeichentechniken mit dieser Methode zum Zeichnen in ein Array von Stereo Renderziel verwenden möchten, müssen Sie lediglich die doppelte Anzahl von Instanzen zeichnen, die Sie normalerweise haben. Dividieren Sie im Shader **Input. instId** durch 2, um die ursprüngliche Instanz-ID zu erhalten, die in (z. b.) einen Puffer von objektbezogenen Daten indiziert werden kann: `int actualIdx = input.instId / 2;`
 
 ### <a name="important-note-about-rendering-stereo-content-on-hololens"></a>Wichtiger Hinweis zum Rendern von Stereo Inhalten in hololens
 
@@ -553,7 +555,7 @@ if (!m_usingVprtShaders)
 }
 ```
 
-**HLSL-HINWEIS**: In diesem Fall müssen Sie auch einen leicht geänderten Vertexshader laden, der den renderzielarray-Index mithilfe einer immer zulässigen Shadersemantik, wie z. b. TEXCOORD0, an den Geometry-Shader übergibt. Der Geometry-Shader muss keine Arbeit erledigen. der Vorlagen Geometrie-Shader durchläuft alle Daten, mit Ausnahme des Renderziel-Array Indexes, der zum Festlegen der SV_RenderTargetArrayIndex-Semantik verwendet wird.
+**HLSL-Hinweis**: in diesem Fall müssen Sie auch einen leicht geänderten Vertexshader laden, der den renderzielarray-Index an den Geometry-Shader übergibt, indem er eine immer zulässige Shader-Semantik verwendet, z. b. TEXCOORD0. Der Geometry-Shader muss keine Arbeit erledigen. der Vorlagen Geometrie-Shader durchläuft alle Daten, mit Ausnahme des Renderziel-Array Indexes, der zum Festlegen der SV_RenderTargetArrayIndex Semantik verwendet wird.
 
 App-Vorlagen Code für **geometryshader. HLSL**:
 
@@ -706,7 +708,7 @@ const HRESULT hr = D3D11CreateDevice(
 
 Die Verwendung von Media Foundation auf Hybridsystemen kann zu Problemen führen, bei denen das Video nicht angezeigt wird oder die Video Textur beschädigt ist. Dies kann der Fall sein, wenn Media Foundation ein Systemverhalten standardmäßig wie oben erwähnt absetzt. In einigen Szenarien ist das Erstellen eines separaten ID3D11Device erforderlich, um Multithreading zu unterstützen, und die richtigen erstellungsflags werden festgelegt.
 
-Beim Initialisieren des ID3D11Device muss das D3D11_CREATE_DEVICE_VIDEO_SUPPORT-Flag als Teil des D3D11_CREATE_DEVICE_FLAG definiert werden. Nachdem das Gerät und der Kontext erstellt wurden, müssen Sie <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">setmultithreadprotected</a> aufrufen, um Multithreading zu aktivieren. Um das Gerät dem <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">imfdxgidebug</a>Manager zuzuordnen, verwenden Sie die <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">imfdxgide vicemanager:: ResetDevice</a> -Funktion.
+Beim Initialisieren des ID3D11Device muss D3D11_CREATE_DEVICE_VIDEO_SUPPORT Flag als Teil des D3D11_CREATE_DEVICE_FLAG definiert werden. Nachdem das Gerät und der Kontext erstellt wurden, müssen Sie <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">setmultithreadprotected</a> aufrufen, um Multithreading zu aktivieren. Um das Gerät dem <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">imfdxgidebug</a>Manager zuzuordnen, verwenden Sie die <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">imfdxgide vicemanager:: ResetDevice</a> -Funktion.
 
 Code zum **Zuordnen eines ID3D11Device zu imfdxgidevicemanager**:
 
@@ -741,6 +743,6 @@ if (FAILED(hr))
     return hr;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)
