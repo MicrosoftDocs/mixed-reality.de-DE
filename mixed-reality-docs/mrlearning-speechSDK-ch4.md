@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 9235452d9dce38e9d849821a694a5d4c710d8e87
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
+ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913318"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75003209"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Einrichten der Absicht und der Kenntnisse in natürlicher Sprache
 
-In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Service. Mit der Intent-Funktion können wir unsere Anwendung mit Ki-gestützten Sprachbefehlen ausstatten, bei denen Benutzer nicht spezifische Sprachbefehle sagen können und dennoch vom System verstanden werden können. In dieser Lektion richten wir unser Azure-Luis-Portal ein, richten unsere Absichten/Entitäten/Äußerungen ein, veröffentlichen unsere Intent-Ressource, verbinden unsere Unity-App mit unserer Intent-Ressource und machen unseren ersten beabsichtigten API-Rückruf.
+In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Service. Das Intent-Feature ermöglicht es Ihnen, unsere Anwendung mit Ki-gestützten Sprachbefehlen auszustatten, bei denen Benutzer nicht spezifische Sprachbefehle sagen können und dennoch vom System verstanden werden können. In dieser Lektion richten wir unser Azure-Luis-Portal ein, richten unsere Absichten/Entitäten/Äußerungen ein, veröffentlichen unsere Intent-Ressource, verbinden unsere Unity-App mit unserer Intent-Ressource und machen unseren ersten beabsichtigten API-Rückruf.
 
 ## <a name="objectives"></a>Ziele
 
@@ -25,7 +25,7 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 
 ## <a name="instructions"></a>Anweisungen
 
-1. Gestatten Sie dem Computer das Aktivieren von Diktat. wechseln Sie hierzu zu den Windows-Einstellungen, wählen Sie "Datenschutz", "Sprache" und schließlich "& typisieren" aus, und schalten Sie die Sprachdienste ein, und geben Sie Vorschläge ein.
+1. Ermöglicht dem Computer das Aktivieren von Diktat. Wechseln Sie zu diesem Zweck zu Windows-Einstellungen, wählen Sie "Datenschutz", dann "Sprache" und anschließend "Inking & typisieren" aus, und aktivieren Sie Sprachdienste, und geben Sie Vorschläge ein.
 
     ![Module4Chapter4step1aim](images/module4chapter4step1aim.PNG)
 
@@ -33,7 +33,7 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 
     ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
 
-2. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an. Wenn Sie angemeldet sind, klicken Sie auf Ressource erstellen, suchen Sie nach "Language Understanding", und drücken Sie die EINGABETASTE.
+2. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an. Wenn Sie angemeldet sind, klicken Sie auf Ressource erstellen, suchen Sie nach "Language Understanding", und drücken Sie die EINGABETASTE.
 
     ![mrlearning-Speech-CH4-1-step2. png](images/mrlearning-speech-ch4-1-step2.png)
 
@@ -41,16 +41,16 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 
     ![mrlearning-Speech-CH4-1-step3a. png](images/mrlearning-speech-ch4-1-step3a.png)
 
-    Geben Sie der Ressource einen **Namen**, z. b. " *Speech-SDK-Learning-Module*". Wählen Sie für **Abonnement**die Option *Pay as you go* oder *Free Trail* aus, wenn Sie über ein Testkonto verfügen. Erstellen Sie als nächstes eine neue **Ressourcengruppe** , indem Sie auf den Link **neu erstellen** klicken. Geben Sie einen Namen ein, z. b. *hololens-2-Tutorials-Resource-Group*, und klicken Sie auf die Schaltfläche **OK** .
+    Geben Sie der Ressource einen **Namen**, z. b. " *Speech-SDK-Learning-Module*". Wählen Sie für **Abonnement**die Option *Pay as you go* oder *Free Trail* aus, wenn Sie über ein Testkonto verfügen. Erstellen Sie als nächstes eine neue **Ressourcengruppe** , indem Sie auf den Link **neu erstellen** klicken, geben Sie einen Namen ein, z. b. *hololens-2-Tutorials-Resource-Group*, und klicken Sie auf die Schaltfläche **OK** .
 
     ![mrlearning-Speech-CH4-1-step3b. png](images/mrlearning-speech-ch4-1-step3b.png)
 
-4. Wählen Sie den **Speicherort** für die Erstellung und den **Lauf Zeit Speicherort**aus. verwenden Sie für dieses Tutorial *(USA)* USA, Westen. Wählen Sie dann " *F0 (5 Anrufe pro Sekunde, 10K Anrufe pro Monat)* " **für den** Erstellungs Tarif und den **Lauf**Zeit Tarif aus. Klicken Sie abschließend auf die Schaltfläche **Erstellen** , um die Ressource und die neue Ressourcengruppe zu erstellen.
+4. Wählen Sie den **Speicherort der Erstellung** und den **Speicherort**der Verwenden Sie für dieses Lernprogramm *(USA) USA, Westen*, und wählen Sie dann *F0 (5 Anrufe pro Sekunde, 10K Anrufe pro Monat)* für **den Erstellungs** Tarif und den **Lauf**Zeit Tarif aus. Klicken Sie abschließend auf die Schaltfläche **Erstellen** , um die Ressource zu erstellen, sowie die neue Ressourcengruppe.
 
     ![mrlearning-Speech-CH4-1-step4. png](images/mrlearning-speech-ch4-1-step4.png)
 
     >[!NOTE]
-    >Nachdem Sie auf die Schaltfläche erstellen geklickt haben, müssen Sie warten, bis der Dienst erstellt wurde. dieser Vorgang kann einige Minuten in Anspruch nehmen.
+    >Nachdem Sie auf die Schaltfläche "erstellen" geklickt haben, müssen Sie warten, bis der Dienst erstellt wird. dieser Vorgang kann einige Minuten in Anspruch nehmen.
 
 5. Nachdem der Vorgang zur Ressourcen Erstellung fertiggestellt wurde, wird die Meldung **Ihre Bereitstellung ist beendet**angezeigt.
 
@@ -59,7 +59,7 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 6. Melden Sie sich mit demselben Benutzerkonto beim [Language Understanding Intelligent Service (Luis)](https://www.luis.ai/) -Portal an, wählen Sie Ihr Land aus, und stimmen Sie den Nutzungsbedingungen zu.
 
     >[!NOTE]
-    >Wenn Sie das Language Understanding-Portal erreicht haben, müssen Sie sich ggf. mit denselben Anmelde Informationen wie Ihre Azure-Portal anmelden, falls Sie dies noch nicht getan haben. Wenn Sie zum ersten Mal Luis verwenden, müssen Sie zum unteren Rand der Willkommensseite Scrollen, um die Schaltfläche "erstellen Sie Luis" zu suchen und darauf zu klicken.
+    >Wenn Sie das Language Understanding-Portal erreicht haben, müssen Sie sich ggf. mit denselben Anmelde Informationen wie Ihre Azure-Portal anmelden, falls Sie dies noch nicht getan haben. Wenn Sie zum ersten Mal Luis verwenden, müssen Sie einen Bildlauf zum unteren Rand der Willkommensseite durchführen, um auf die Schaltfläche "Erstellen einer Luis-app" zu klicken.
 
 7. Klicken Sie nach der Anmeldung auf "meine apps" (wenn Sie sich derzeit nicht in diesem Abschnitt befinden). Klicken Sie dann auf neue APP erstellen. Nennen Sie die neue App "Speech SDK Learning Module". Fügen Sie auch "Speech SDK Learning Module" zum Beschreibungsfeld hinzu. Klicken Sie dann auf "Done".
 
@@ -82,11 +82,11 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
     >[!NOTE]
     >Sie sollten jetzt über zwei Intents verfügen: "Press Button" und "None".
 
-10. Wählen Sie unter APP-Ressourcen auf der linken Seite die Option "Entitäten" aus, klicken Sie auf "neue Entität erstellen", und geben Sie Ihr den Namen "action".
+10. Wählen Sie unter APP-Assets auf der linken Seite die Option Entitäten aus, klicken Sie auf "neue Entität erstellen", benennen Sie Sie "action", und behalten Sie den Entitätstyp "Simple" bei.
 
     ![Module4Chapter4step11im](images/module4chapter4step11im.PNG)
 
-11. Klicken Sie erneut auf "neue Entität erstellen", und geben Sie Ihr den Namen "target" und den Entitätstyp ebenfalls als "einfach" an.
+11. Klicken Sie erneut auf "neue Entität erstellen", und nennen Sie Sie "target". Behalten Sie auch den Entitätstyp "Simple" bei.
 
     ![Module4Chapter4step12im](images/module4chapter4step12im.PNG)
 
@@ -98,7 +98,7 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 
     ![Module4Chapter4step14aim](images/module4chapter4step14aim.PNG)
 
-    Klicken Sie auf das Beispiel "Beispiel eingeben...". Textfeld. Geben Sie dann die folgenden Äußerungen ein:
+    Klicken Sie auf das Beispiel "Beispiel eingeben...". ein. Geben Sie dann die folgenden Äußerungen ein:
 
     ![Module4Chapter4step14bim](images/module4chapter4step14bim.PNG)
 
@@ -121,11 +121,11 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
     >
     > ![Module4Chapter4noteim](images/module4chapter4noteim.PNG)
 
-18. Klicken Sie jetzt in der oberen rechten Ecke auf "veröffentlichen". Stellen Sie sicher, dass in der Dropdown Liste "Produktion" angezeigt wird, und klicken Sie auch im Popup auf "veröffentlichen".
+18. Klicken Sie oben rechts auf "veröffentlichen". Stellen Sie sicher, dass in der Dropdown Liste "Produktion" angezeigt wird, und klicken Sie im Popup Fenster auf "veröffentlichen".
 
     ![Module4Chapter4step19im](images/module4chapter4step19im.PNG)
 
-19. Nach der Veröffentlichung sollte am oberen Rand der Seite eine grüne Leiste angezeigt werden.  Klicken Sie auf die grüne Leiste, um zur Seite "verwalten" zu gelangen.
+19. Nach der Veröffentlichung sollte am oberen Rand der Seite eine grüne Leiste angezeigt werden. Klicken Sie auf die grüne Leiste, um die Seite "verwalten" anzuzeigen.
 
     ![Module4Chapter4step20im](images/module4chapter4step20im.PNG)
 
@@ -138,7 +138,7 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
     ![Module4Chapter4step22im](images/module4chapter4step22im.PNG)
 
     >[!NOTE]
-    >Stellen Sie sicher, dass Sie die Endpunkt-URL, die der soeben zugewiesenen Ressource zugeordnet ist, kopieren und speichern, damit Sie für den nächsten Abschnitt leicht zugänglich ist.
+    >Stellen Sie sicher, dass Sie die der soeben zugewiesenen Ressource zugeordnete Endpunkt-URL kopieren und speichern, damit der nächste Abschnitt leicht zugänglich ist.
 
     >[!NOTE]
     >Geben Sie für den Mandanten Namen ihre Corporation oder Ihr Profil ein, das Sie für diese Anwendung erstellt haben.
@@ -163,4 +163,4 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In dieser Lektion haben wir gelernt, wie Sie Ki-gestützte Sprachbefehle hinzufügen können. Jetzt kann Ihr Programm die Absicht der Benutzer erkennen, auch wenn Sie keine präzisen Sprachbefehle aussprechen.
+In dieser Lektion haben Sie gelernt, wie Sie Ki-gestützte Sprachbefehle hinzufügen. Jetzt kann Ihr Programm die Absicht der Benutzer erkennen, auch wenn Sie keine präzisen Sprachbefehle mehr haben!
