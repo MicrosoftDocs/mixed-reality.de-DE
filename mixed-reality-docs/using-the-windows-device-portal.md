@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräte Portal, hololens
-ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926747"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182020"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräte Portals
 
@@ -30,8 +30,8 @@ Diese Dokumentation dient speziell zum Windows-Geräte Portal für hololens. Inf
 ## <a name="setting-up-hololens-to-use-windows-device-portal"></a>Einrichten von hololens für die Verwendung des Windows-Geräte Portals
 
 1. Schalten Sie die HoloLens ein, und setzen Sie sie auf.
-2. Führen Sie die [Blütengeste](system-gesture.md#bloom) aus, um das Hauptmenü zu starten.
-3. Schauen Sie sich die Kachel " **Einstellungen** " an, und führen Sie die [Tasten](gaze-and-commit.md#composite-gestures) Kombination aus. Führen Sie eine zweite Luft Abzweigung aus, um die app in Ihrer Umgebung zu platzieren. Die Einstellungs-App wird gestartet, nachdem Sie sie platziert haben.
+2. Führen Sie die [Start Geste](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) für HoloLens2 [oder die](https://docs.microsoft.com/hololens/hololens1-basic-usage#open-the-start-menu-with-bloom) Option auf hololens (1. Gen) aus, um das Hauptmenü zu starten. 
+3. Schauen Sie sich die Kachel " **Einstellungen** " an, und führen Sie die [Tasten](https://docs.microsoft.com/hololens/hololens1-basic-usage#select-holograms-with-gaze-and-air-tap) Kombination auf hololens (1. Gen) aus, oder wählen Sie Sie in hololens 2 aus, indem [Sie sie berühren oder einen Hand Strahl verwenden](https://docs.microsoft.com/hololens/hololens2-basic-usage). 
 4. Wählen Sie das Menüelement **Aktualisieren** aus.
 5. Wählen Sie das Menüelement **Für Entwickler** aus.
 6. Aktivieren Sie den **Entwicklermodus**.

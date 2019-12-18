@@ -1,61 +1,64 @@
 ---
 title: Räumlicher Sound in Unity
-description: Wiedergabe von räumlichem Sound, der von einem bestimmten 3D-Punkt in der Unity-Szene stammt.
+description: Wiedergabe von räumlichem Sound von einem bestimmten 3D-Punkt in der Unity-Szene.
 author: kegodin
 ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, räumlicher Ton, HRTF, Raum Größe
-ms.openlocfilehash: c96717d9df9b89fbb09f0b4466ee3a9bf5c8a149
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641076"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181990"
 ---
 # <a name="spatial-sound-in-unity"></a>Räumlicher Sound in Unity
 
-Auf dieser Seite finden Sie Links zu Ressourcen, die Ihnen bei der Verwendung und dem Entwurf von Microsoft HRTF spatializer in ihren Unity Mixed Reality-Projekten helfen.
+Diese Seite ist mit Ressourcen für räumliche Sounds in Unity verknüpft.
+
+## <a name="spatializer-options"></a>Spatializer-Optionen
+Die spatializer-Optionen für gemischte Reality-Anwendungen umfassen Folgendes:
+* *MS HRTF spatializer*. Unity stellt dies als Teil des optionalen *Windows Mixed Reality* -Pakets bereit.
+  * Dies erfolgt auf CPU in einer kostengünstigeren "Single Source"-Architektur.
+  * Dies wird aus Gründen der Abwärtskompatibilität mit ursprünglichen hololens-Anwendungen bereitgestellt.
+* Der *Microsoft spatializer*. Dies ist im [GitHub-Repository von Microsoft spatializer](https://github.com/microsoft/spatialaudio-unity)verfügbar.
+  * Hierfür wird eine kostengünstigere Architektur mit mehreren Quellen verwendet.
+  * Auf hololens 2 wird dies in einen Hardwarebeschleuniger verlagert.
+
+Für neue Anwendungen wird *Microsoft spatializer*empfohlen.
 
 ## <a name="enable-spatialization"></a>Spatialization aktivieren
 
-Aktivieren Sie den " **MS HRTF spatializer** " in den Audioeinstellungen Ihres Projekts. Weitere Informationen finden Sie in [der Dokumentation zum spatializer von Unity](https://docs.unity3d.com/Manual/VRAudioSpatializer.html). 
+Verwenden Sie [nuget für Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) , um _Microsoft. spatialaudio. spatializer. unity_ zu installieren, und wählen Sie **Microsoft spatializer** in den Audioeinstellungen Ihres Projekts aus. Anschließend:
+* Anfügen einer **Audioquelle** an ein Objekt in der Hierarchie
+* Aktivieren Sie das Kontrollkästchen **spatialization aktivieren** .
+* Verschieben Sie den Schieberegler für **räumliche Blend** auf "1".
 
-Fügen Sie eine **Audioquelle** an ein Objekt in der Hierarchie an, und aktivieren Sie die Verräumlichung, indem Sie das Kontrollkästchen **spatialization aktivieren aktivieren** und den Schieberegler **räumlicher Blend** auf ' 1 ' verschieben. Weitere Informationen finden Sie in [der Dokumentation zur Audioquelle von Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html). 
+Weitere Details findest du unter:
+* [Microsoft spatializer-GitHub-Repository](https://github.com/microsoft/spatialaudio-unity)
+* [Microsoft-Tutorial zu spatializer](unity-spatial-audio-ch1.md)
+* [Dokumentation zur Audioquelle von Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html)
+* [Dokumentation zu spatializer von Unity](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
-## <a name="design-with-spatialization"></a>Entwerfen mit spatialization
+## <a name="distance-based-attenuation"></a>Distanzabhängige Dämpfung
+Der standardmäßige Entfernungs Abfall von Unity weist einen minimalen Abstand von 1 Meter und einen maximalen Abstand von 500 Meter mit einem logarithmischen Rolloff auf. Diese Einstellungen können für Ihr Szenario funktionieren, oder Sie werden feststellen, dass die Quellen zu schnell oder zu langsam gedämpft werden. Weitere Details findest du unter:
+* [Sound Design in gemischter Realität](spatial-sound-design.md) für empfohlene Einstellungen.
+* In [der Dokumentation zur Audioquelle von Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) finden Sie Anweisungen zum Festlegen dieser Kurven.
 
-### <a name="distance-based-attenuation"></a>Entfernungs basierte Dämpfung
-Der standardmäßige Entfernungs Abfall von Unity weist einen minimalen Abstand von 1 Meter und einen maximalen Abstand von 500 Meter mit einem logarithmischen Rolloff auf. Dies funktioniert möglicherweise für Ihr Szenario, oder Sie finden die Quellen zu schnell oder zu langsam. Weitere Informationen zum Festlegen dieser Kurven in Unity finden Sie [unter Sound Design in gemischter Realität](spatial-sound-design.md) für empfohlene Einstellungen für Entfernungs [verlaufkurven](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) .
+## <a name="reverb"></a>Hall
+Der _Microsoft spatializer_ deaktiviert die Auswirkungen von postspatializer standardmäßig. So aktivieren Sie den Reverb und andere Auswirkungen auf räumliche Quellen:
+* Fügen **Sie die Raumeffekt** -Komponente der Sende Ebene an jede Quelle an.
+* Passen Sie die Kurve der Sende Ebene für jede Quelle an, um zu steuern, wie hoch die Audiodaten für die Auswirkungen der Verarbeitung an das Diagramm zurückgesendet werden.
 
-### <a name="environment"></a>Umgebung
-Der **spatializer von MS HRTF** enthält eine Raum-Reverb-Komponente mit [vier Reverb-Einstellungen](https://docs.microsoft.com/windows/win32/api/hrtfapoapi/ne-hrtfapoapi-hrtfenvironment) und dem Standardwert "Small". Die Raum Einstellung kann für jede Audioquelle Programm gesteuert geändert werden, indem das folgende C# Skript an jedes Objekt in Unity angehängt wird, das über eine räumliche Audioquelle verfügt:
-
-```cs
-using UnityEngine;
-   using System.Collections;
-   public class SetHRTF : MonoBehaviour    {
-       public enum ROOMSIZE { Small, Medium, Large, None };
-       public ROOMSIZE room = ROOMSIZE.Small;  // Small is regarded as the "most average"
-       // defaults and docs from MSDN
-       // https://msdn.microsoft.com/library/windows/desktop/mt186602(v=vs.85).aspx
-       AudioSource audiosource;
-       void Awake()
-       {
-           audiosource = this.gameObject.GetComponent<AudioSource>();
-           if (audiosource == null)
-           {
-               print("SetHRTFParams needs an audio source to do anything.");
-               return;
-           }
-           audiosource.spatialize = 1; // we DO want spatialized audio
-           audiosource.spread = 0; // we dont want to reduce our angle of hearing
-           audiosource.spatialBlend = 1;   // we do want to hear spatialized audio
-           audiosource.SetSpatializerFloat(1, (float)room);    // 1 is the roomsize param
-       }
-   }
-```
+Ausführliche Informationen finden Sie [in Kapitel 5 des Lernprogramms zu spatializer](unity-spatial-audio-ch5.md) .
 
 ## <a name="unity-spatial-sound-examples"></a>Beispiele für räumliche Unity-Sounds
-Das Mixed Reality Toolkit (mrtk) enthält Beispiele für Möglichkeiten zum Anwenden von Audioeffekten in gemischter Realität: [mrtk-Demos](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio).
+Beispiele für räumliche Sounds in Unity finden Sie unter:
+* [Mrtk-Demos](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.Examples/Demos/Audio)
+* Das [Microsoft spatializer-Beispiel Projekt](https://github.com/microsoft/spatialaudio-unity/tree/master/Samples/MicrosoftSpatializerSample)
+
+## <a name="next-steps"></a>Nächste Schritte
+* [Sound Design in gemischter Realität](spatial-sound-design.md)
+* [Microsoft-Tutorial zu spatializer](unity-spatial-audio-ch1.md)
 

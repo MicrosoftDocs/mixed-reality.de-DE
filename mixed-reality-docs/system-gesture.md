@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Gemischte Realität, Gesten, Interaktion, Entwurf
-ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064241"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182000"
 ---
 # <a name="system-gesture"></a>System Geste
 
@@ -33,7 +33,7 @@ Die System Geste ist eine Handbewegung, mit der das Startmenü aufgerufen wird. 
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Blütezeit</td>
+        <td>Blüte</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ Die System Geste ist eine Handbewegung, mit der das Startmenü aufgerufen wird. 
     </tr>
 </table>
 
-## <a name="bloom"></a>Blütezeit
+## <a name="bloom"></a>Blüte
 Um das Startmenü in hololens (1. Generation) aufzurufen, haben wir "Bloom" entworfen, das eine symbolische Geste zum imitieren der Blüten Blüte ist. Es ist für die Interaktion mit untergeordneten Elementen, die einfache Durchführung und die schnelle Erinnerung. Um die Blüte Bewegung auf hololens (1. Generation) durchzuführen, halten Sie Ihre Hand an Ihre Hand, um Sie zu öffnen, und öffnen Sie dann die Hand, indem Sie Ihre Finger verteilen.
 
 :::row:::
@@ -70,7 +70,7 @@ Um das Startmenü in hololens (1. Generation) aufzurufen, haben wir "Bloom" entw
 
 ---
 
-## <a name="wrist-button"></a>Handgelenk Taste
+## <a name="start-gesture"></a>Start Geste
 In hololens 2 haben wir die Blüte Bewegung durch eine virtuelle Handgelenk Schaltfläche ersetzt, die mehr instanzielle Interaktionen ermöglicht, die keine zusätzliche Lehre erfordern. Wenn die Benutzer die Schaltfläche auf dem Handgelenk anzeigt, können Sie sie intuitiv erreichen und mit der anderen Seite drücken.
 
 :::row:::
@@ -89,8 +89,15 @@ In hololens 2 haben wir die Blüte Bewegung durch eine virtuelle Handgelenk Scha
 ---
 
 
-## <a name="eye-gaze-and-palm-up-pinch"></a>"Augenblick" und "Palme"-Pinsel
-Wir haben auch eine eindimensionale Lösung für den einfachen Zugriff in hololens 2 entwickelt. Diese Geste erfordert, dass Benutzer auf die Handgelenk Schaltfläche zeigen. verwenden Sie dann dieselbe Hand, um mit dem Ziehpunkt und dem Index Finger eine Aufzieh Schaltfläche auszuführen.<br>
+## <a name="one-handed-start-gesture"></a>Einstufige Start Geste
+
+> [!IMPORTANT]
+> Damit die einstufige Start Geste funktioniert:
+>
+> 1. Sie müssen ein Update auf das Update von November 2019 (Build 18363,1039) oder höher durch haben.
+> 1. Die Augen müssen auf dem Gerät so kalibriert werden, dass die Eye-Nachverfolgung ordnungsgemäß funktioniert. Wenn Sie keine Umkreis Punkte um das Start Symbol sehen, wenn Sie es betrachten, werden die Augen nicht auf dem Gerät gekalibriert.
+
+Sie können die Start Geste auch nur mit einer Hand ausführen. Halten Sie zu diesem Zweck ihre Hand mit Ihrer Hand, und sehen Sie sich das **Start Symbol** auf Ihrem inneren Handgelenk an. **Wenn Sie das Symbol gedrückt halten**, können Sie den Ziehpunkt und den Finger des Indexes zusammenhalten.<br>
 :::row:::
     :::column:::
         ![Hand Tasten](images/wrist-button-ready.png)<br>

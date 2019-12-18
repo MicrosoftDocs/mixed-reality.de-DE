@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Rendering, – Hologramm
-ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926859"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182030"
 ---
 # <a name="rendering"></a>Rendering
 
@@ -80,20 +80,24 @@ Im Allgemeinen wird Ihre Anwendung für eine einzelne Stereokamera dargestellt. 
 
 ## <a name="volume-rendering"></a>Volumerendering
 
-Beim Rendern von medizinischen MRIs oder Engineering-Volumes in 3D werden häufig [volumerenderingverfahren](volume-rendering.md) verwendet. Diese Techniken können besonders interessant in gemischter Realität sein, in der Benutzer ein solches Volume auf natürliche Weise aus Schlüssel Winkeln anzeigen können, indem Sie einfach den Kopf bewegen.
+Beim Rendern von medizinischen MRIs oder Produktionsvolumen in 3D werden oft Techniken zum [Volumenrendering](volume-rendering.md) verwendet. Diese Techniken können besonders interessant in gemischter Realität sein, in der Benutzer ein solches Volume auf natürliche Weise aus Schlüssel Winkeln anzeigen können, indem Sie einfach den Kopf bewegen.
 
 ## <a name="supported-resolutions-on-hololens-1st-gen"></a>Unterstützte Auflösungen auf hololens (1. Gen)
-> [!NOTE]
-> Es stehen weitere Updates zur Verfügung. [Anzeigen der Update Liste](release-notes-april-2018.md)
 
-* Die aktuelle und die maximal unterstützte Auflösung sind Eigenschaften der [Ansichts Konfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). Hololens ist standardmäßig auf die maximale Auflösung festgelegt, bei der es sich um 720p (1268x720) handelt.
-* Die niedrigste unterstützte Viewportgröße beträgt 50% von 720p, also "360p" (634x360). Bei hololens ist dies ein viewportscalefactor von 0,5.
-* Alles, was kleiner als 540p ist, wird aufgrund der visuellen Beeinträchtigung **nicht empfohlen** , kann aber auch verwendet werden, um Bottle-Hals in der Pixel Füll Rate zu identifizieren.
+* Die maximale Viewportgröße ist eine Eigenschaft von [holographicdisplay](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay). Hololens ist standardmäßig auf die maximale Viewportgröße von 720p (1268x720) festgelegt.
+* Die Viewportgröße kann geändert werden, indem Sie viewportscalefactor auf holographiccamera festlegen. Dieser Skalierungsfaktor liegt im Bereich von 0 bis 1.
+* Die niedrigste unterstützte Viewportgröße in hololens (1. Generation) beträgt 50% von 720p, also "360p" (634x360). Dies ist ein viewportscalefactor von 0,5.
+* Alles, was kleiner als 540p ist, wird aufgrund der visuellen Beeinträchtigung nicht empfohlen, kann aber zur Identifizierung von Engpässen bei der Pixel Füll Rate verwendet werden.
 
 ## <a name="supported-resolutions-on-hololens-2"></a>Unterstützte Auflösungen auf hololens 2
 
-> [!NOTE]
-> Weitere Anleitungen sind für hololens 2 in [Kürze](news.md)verfügbar.
+* Die aktuellen und maximalen unterstützten renderzielgrößen sind Eigenschaften der [Ansichts Konfiguration](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). Hololens 2 wird standardmäßig auf die maximale renderzielgröße (1440x936) festgelegt.
+* Apps können die Größe der renderzielpuffer ändern, indem Sie die requestrendertargetsize-Methode aufrufen, um eine neue renderzielgröße anzufordern. Es wird eine neue renderzielgröße ausgewählt, die die angeforderte renderzielgröße erreicht oder überschreitet. Diese API ändert die Größe des renderzielpuffers, der eine erneute Speicher Belegung auf der GPU erfordert. Dies hat folgende Auswirkungen: die renderzielgröße kann zentral herunterskaliert werden, um die Arbeitsspeicher Auslastung auf der GPU zu reduzieren, und diese Methode sollte nicht bei hoher Frequenz aufgerufen werden.
+* Apps können weiterhin die Größe des Viewports auf die gleiche Weise ändern wie bei hololens 1. Dies führt nicht zu einer Speicher Neuzuordnung auf der GPU, sodass Sie bei hoher Häufigkeit geändert werden kann. Sie kann jedoch nicht verwendet werden, um die Arbeitsspeicher Auslastung auf der GPU zu verringern.
+* Die niedrigste unterstützte Viewportgröße auf hololens 2 ist 634x412. Dies ist ein viewportscalefactor von ungefähr 0,44, wenn die Standardgröße für das Renderziel verwendet wird.
+* Wenn eine renderzielgröße angegeben wird, die kleiner als die niedrigste unterstützte Viewportgröße ist, wird der Skalierungsfaktor des Viewports ignoriert.
+* Alles, was kleiner als 540p ist, wird aufgrund der visuellen Beeinträchtigung nicht empfohlen, kann aber zur Identifizierung von Engpässen bei der Pixel Füll Rate verwendet werden.
+
 
 
 ## <a name="see-also"></a>Weitere Informationen:

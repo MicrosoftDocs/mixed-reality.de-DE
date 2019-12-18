@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, roboraid, räumlicher Sound
-ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1482c914d261cae698a1460873b217b0683cd16b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436501"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181940"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>Fallstudie: Verwenden von räumlichem Sound in roboraid
 
-Charles Sinex, audioleiter im Microsoft hololens-Team, spricht über die besonderen Herausforderungen, die bei der Erstellung von Audiodaten für [roboraid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)aufgetreten sind, einem gemischten Reality First-Person-Shooter.
+In diesem Artikel werden die besonderen Herausforderungen beschrieben, die das Microsoft hololens-Team beim Erstellen von Audiodaten für [roboraid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)kennengelernt hat.
 
 ## <a name="the-tech"></a>Die Technologie
 
@@ -35,7 +35,7 @@ Räumlicher Sound kann auf der CPU anspruchsvoll sein. Für eine ausgelastete Um
 
 Der Dodging-Mechaniker ist einer der wichtigsten Aspekte des Spiels in roboraid, und auch etwas, das wir uns fühlen, war für die hololens-Umgebung wirklich einzigartig. Daher wollten wir die erfolgreichen Dodges für den Player sehr lohnend gestalten. Wir haben den Doppler "Whizz-by" ("Whizz-by") in die Entwicklung gebracht. Anfänglich war der Plan, eine Schleife zu verwenden und Sie in Echtzeit mithilfe von Volume, Tonhöhe und Filter zu manipulieren. Die Implementierung für diese Vorgehensweise war sehr aufwendig, daher haben wir vor dem Commit von Ressourcen zur eigentlichen Erstellung einen kostengünstigen Prototyp mit einem Asset erstellt, bei dem der Doppler Effekt, der in gebacken wurde Unsere begabten Entwickler haben es so gestaltet, dass dieses Whizz-by-Asset genau 0,7 Sekunden wiedergegeben würde, bevor die Projekt Kachel vom Player gereicht wird und die Ergebnisse sehr erstaunlich waren! Natürlich haben wir die komplexere Lösung unterzogen und den Prototyp implementiert.
 
-\* * (Wenn Sie weitere Informationen über das Erstellen eines audioassets mit dem integrierten Doppler-Effekt erhalten möchten, sehen Sie sich einen Artikel von Sounddesigner Charles deeran, der [in zwei Minuten als "100 whooshes](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)" bezeichnet wird.) *
+*(Weitere Informationen zum Erstellen eines audioassets mit dem integrierten Doppler-Effekt finden Sie unter [100 whooshes in 2 Minuten](http://designingsound.org/2010/02/26/charles-deenen-special-100-whooshes-in-2-minutes/).)*  
 <br>
 ![die Projekt Kachel eines Feindes erfolgreich zu dohiert hat, wird der Spieler durch einen Sound zufriedenstellend durch den Sound belohnt.](images/successful-dodge-roboraid-500px.jpg)
 
@@ -67,7 +67,7 @@ Damit roboraid so groß wie das auf dem Gerät sein kann, mussten wir den dynami
 
 Ich hoffe, dass Audiofachleute es so viel Spaß machen und mit der Arbeit an Ihren eigenen apps arbeiten, da ich mich an roboraid gearbeitet habe. Ich kann nicht abwarten (und hören!), was die talentierten Menschen außerhalb von Microsoft für hololens finden.
 
-## <a name="do-it-yourself"></a>Selbst ausführen
+## <a name="do-it-yourself"></a>Aufzeichnung in Eigenregie
 
 Ein von mir ermittelter Trick, mit dem bestimmte Ereignisse (z. b. Explosionen) "größer" sind – wie Sie den Raum Auffüllen – bestand darin, ein Mono-Medienobjekt für den räumlichen Ton zu erstellen und es mit einem 2D-Stereo Asset zu mischen, das in 3D wiedergegeben werden sollte. Es wird eine gewisse Optimierung durchführen, da zu viele Informationen in den Stereo Inhalten die Direktionalität der Mono-Assets verringern werden. Allerdings führt das Erreichen des Saldo Recht zu sehr großen Sounds, mit denen sich die Spieler in der richtigen Richtung drehen können.
 
@@ -83,15 +83,8 @@ Sie können dies selbst ausprobieren, indem Sie die folgenden Audioressourcen ve
 2. Diese Ressource selbst wiedergeben und dann mit dem Ereignis aus Szenario 1 vergleichen.
 3. Probieren Sie ein anderes Gleichgewicht von Mono-und Stereo Dateien aus.
 
-## <a name="about-the-author"></a>Informationen zum Autor
 
-<table style="border-collapse:collapse">
-<tr>
-<td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>Audiotechniker @Microsoft</td>
-</tr>
-</table>
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 * [Raumklang](spatial-sound.md)
 * [Roboraid für Microsoft hololens](https://www.microsoft.com/p/roboraid/9nblggh5fv3j)
