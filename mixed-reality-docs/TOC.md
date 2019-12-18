@@ -64,10 +64,13 @@
 ## UX-Elemente
 ### [Übersicht](app-patterns-landingpage.md)
 ### Format
-#### [Farbe, Licht und Materialien](color,-light-and-materials.md)
+#### [Farbe, Licht und Materialien](color-light-and-materials.md)
 #### [Skalieren](scale.md)
-#### [Raumklangentwurf](spatial-sound-design.md)
 #### [Typografie](typography.md)
+### Raumklang
+#### [Raumklangentwurf](spatial-sound-design.md)
+#### [Fallstudie: Holotour](case-study-spatial-sound-design-for-holotour.md)
+#### [Fallstudie: Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### Steuerelemente und Verhaltensweisen
 #### [Cursor](cursors.md)
@@ -126,6 +129,12 @@
 ###### [3. Verbinden mehrerer Benutzer](mrlearning-sharing(photon)-ch3.md)
 ###### [4. Freigeben von Objektbewegungen für mehrere Benutzer](mrlearning-sharing(photon)-ch4.md)
 ###### [5. Integrieren von Azure Spatial Anchors in eine gemeinsam genutzte Umgebung](mrlearning-sharing(photon)-ch5.md)
+##### Tutorials zur räumlichen Audiowiedergabe
+###### [1. Hinzufügen von räumlicher Audiowiedergabe zu Ihrem Projekt](unity-spatial-audio-ch1.md)
+###### [2. Versehen von Sounds für die Schaltflächeninteraktion mit räumlichen Effekten](unity-spatial-audio-ch2.md)
+###### [3. Versehen des Audiosignals eines Videoclips mit räumlichen Effekten](unity-spatial-audio-ch3.md)
+###### [4. Aktivieren und Deaktivieren räumlicher Audiowiedergabe zur Laufzeit](unity-spatial-audio-ch4.md)
+###### [5. Verwenden von Hall zum Hinzufügen von Abstand zu räumlicher Audiowiedergabe](unity-spatial-audio-ch5.md)
 #### HoloLens (1. Generation): Open-Source-Beispiel-Apps
 ##### [Periodensystem der Elemente](periodic-table-of-the-elements.md)
 ##### [Lunar-Modul](lunar-module.md)
@@ -208,7 +217,7 @@
 #### [Räumliche Abbildung](spatial-mapping-in-directx.md)
 #### [Grundlegendes zu Szenen](scene-understanding-sdk.md)
 #### [Gemeinsam verwendete Raumanker](shared-spatial-anchors-in-directx.md)
-#### [Tastatur-, Maus- und Controllereingaben](keyboard,-mouse,-and-controller-input-in-directx.md)
+#### [Tastatur-, Maus- und Controllereingaben](keyboard-mouse-and-controller-input-in-directx.md)
 #### [Verwenden von XAML mit Hologramm-Apps](using-xaml-with-holographic-directx-apps.md)
 #### [Nachverfolgen von QR-Codes](qr-code-tracking.md)
 ### [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
