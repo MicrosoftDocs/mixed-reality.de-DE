@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hände nah beieinander, HoloLens
-ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694174"
 ---
 # <a name="direct-manipulation-with-hands"></a>Direkte Manipulation mit den Händen
 
@@ -22,7 +22,7 @@ Die direkte Manipulation ist ein Eingabemodell, bei dem Hologramme direkt mit de
 
 Die direkte Manipulation ist angebotsbasiert, d. h. benutzerfreundlich. Es gibt keine symbolischen Gesten, die den Benutzern vermittelt werden müssen. Alle Interaktionen basieren auf einem visuellen Element, das Sie berühren oder greifen können.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <colgroup>
@@ -178,7 +178,7 @@ Mit einer kollisionsfähigen Fingerspitze sind die Benutzer jetzt bereit, mit ei
 
 ## <a name="2d-slate-interaction"></a>2D-Tafel – Interaktion
 
-Eine 2D-Tafel ist ein holografischer Container, der 2D-App-Inhalte hostet (z. B. einen Webbrowser). Das Konzept für die Interaktion mit einer 2D-Tafel durch direkte Manipulation besteht darin, das mentale Modell der Interaktion mit einem physischen Touchscreen zu nutzen.
+Eine 2D-[Tafel](slate.md) ist ein holografischer Container, der zum Hosten von 2D-App-Inhalten verwendet wird (z. B. ein Webbrowser). Das Konzept für die Interaktion mit einer 2D-Tafel durch direkte Manipulation besteht darin, das mentale Modell der Interaktion mit einem physischen Touchscreen zu nutzen.
 
 ### <a name="to-interact-with-the-slate-contact"></a>So interagieren Sie mit dem Tafelkontakt
 
@@ -210,8 +210,8 @@ Eine 2D-Tafel ist ein holografischer Container, der 2D-App-Inhalte hostet (z. B.
        Bewegen Sie Ihre Hände in Richtung von Ecken und Kanten, um die nächstgelegenen Manipulationsangebote zu enthüllen. Greifen Sie die Hololeiste im oberen Bereich der 2D-Tafel, mit der Sie die gesamte Tafel verschieben können.
     :::column-end:::
     :::column:::
-       ![Skalieren](images/manipulate-2d-slate-scale.jpg)<br>
-        **Skalieren**<br>
+       ![Skalierung](images/manipulate-2d-slate-scale.jpg)<br>
+        **Skalierung**<br>
         Greifen Sie die Manipulationsangebote, und führen Sie über die Eckenangebote eine einheitliche Skalierung aus.
     :::column-end:::
     :::column:::
@@ -246,8 +246,8 @@ Angebotsbasierte Bearbeitung gestattet es Ihnen, das 3D-Objekt durch einen Begre
         Benutzer können zum Drehen die Eckenangebote greifen.
     :::column-end:::
     :::column:::
-       ![Skalieren](images/3d-object-manipulation-scale.jpg)<br>
-       **Skalieren**<br>
+       ![Skalierung](images/3d-object-manipulation-scale.jpg)<br>
+       **Skalierung**<br>
        Benutzer können die Eckenangebote greifen, um eine einheitliche Skalierung auszuführen.
     :::column-end:::
 :::row-end:::
@@ -334,7 +334,7 @@ Mit dem **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** könn
 
 ---
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Zeigen und Ausführen mit den Händen](point-and-commit.md)

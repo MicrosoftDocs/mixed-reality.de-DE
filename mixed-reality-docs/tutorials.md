@@ -8,22 +8,22 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Akademie, Tutorial
-ms.openlocfilehash: 66246e33bfd1b63630c07005661a744f8939de47
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539654"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334467"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutorials und Beispiel-Apps
 
 ![HoloLens 2-Benutzer](images/08_Tutorials.png)
 
-Aktuell bauen alle unsere Tutorials und Beispiel-Apps auf Unity auf.  Wenn wir Inhalte für andere Engines und Plattformen entwickeln, finden Sie diese unter der entsprechenden Überschrift im Inhaltsverzeichnis.
+Aktuell bauen alle unsere Tutorials und Beispiel-Apps auf Unity auf. Wenn wir Inhalte für andere Engines und Plattformen entwickeln, finden Sie diese unter der entsprechenden Überschrift im Inhaltsverzeichnis.
 
 ## <a name="hololens-2-tutorials"></a>HoloLens 2: Tutorials
 
-Die HoloLens 2-Tutorials sind dafür ausgelegt, Entwicklern sowohl Techniken als auch bewährte Methoden für das Entwickeln von Mixed Reality-Anwendungen zu vermitteln.  Die Tutorials basieren auf dem [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Die HoloLens 2-Tutorials sind dafür ausgelegt, Entwicklern sowohl Techniken als auch bewährte Methoden für das Entwickeln von Mixed Reality-Anwendungen zu vermitteln. Die Tutorials basieren auf dem [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
 
 * Tutorials zu den ersten Schritten: [1 von 7 Übersicht und Ziele](mrlearning-base.md)
 * Tutorials zu Azure Spatial Anchors: [1 von 3 Erste Schritte mit Azure Spatial Anchors](mrlearning-asa-ch1.md)
@@ -48,7 +48,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Onlinetutorial
 * Ein Windows 10 PC, auf dem die [richtigen Tools installiert](install-the-tools.md) sind, ist eine gemeinsame Voraussetzung für die Durchführung der einzelnen Tutorials.
 
 >[!NOTE]
->Die Tutorials der Mixed Reality Academy wurden im Hinblick auf HoloLens (1. Gen.) und immersive Mixed Reality-Headsets entworfen.  Daher halten wir es für wichtig, diese Tutorials für Entwickler verfügbar zu halten, die noch nach Anleitung beim Entwickeln für diese Geräte suchen.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für HoloLens 2 verwendet werden.  Sie werden gewartet, um weiterhin auf den unterstützten Geräten zu funktionieren. [Es wurde eine neue Reihe von Tutorials](mrlearning-base.md) für HoloLens 2 veröffentlicht.
+>Die Tutorials der Mixed Reality Academy wurden im Hinblick auf HoloLens (1. Gen.) und immersive Mixed Reality-Headsets entworfen. Daher halten wir es für wichtig, diese Tutorials für Entwickler verfügbar zu halten, die noch nach Anleitung beim Entwickeln für diese Geräte suchen. Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für HoloLens 2 verwendet werden. Sie werden gewartet, um weiterhin auf den unterstützten Geräten zu funktionieren. [Es wurde eine neue Reihe von Tutorials](mrlearning-base.md) für HoloLens 2 veröffentlicht.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -158,7 +158,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Onlinetutorial
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR-Eingabe 212: Spracheingabe</h3>
+                                              <h3>MR-Eingabe 212: Sprache</h3>
                                               <p>Mithilfe von Sprache können wir mit unseren Hologrammen auf einfache und natürliche Weise interagieren. In diesem Kurs lernen Sie, wie Sie Benutzern die verfügbaren Sprachbefehle vermitteln, Feedback dazu geben, dass ein Sprachbefehl gehört wurde, und Diktieren zu verwenden, um zu verstehen, was der Benutzer sagt.</p>
                                           </div>
                                       </div>
@@ -265,7 +265,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Onlinetutorial
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutorials für Mixed Reality und Azure-Dienste
 
-Diese eigenständigen Tutorials eignen sich hervorragend, um die Implementierung verschiedener Azure-Dienste in Ihren Unity-Projekten zu erlernen.  Diese Tutorials basieren sämtlich entweder auf HoloLens (1. Gen.) oder unseren immersiven Headsets, die Lektionen zur Verwendung der Dienste sollten aber auf nahezu jedes Gerät übertragbar sein.
+Diese eigenständigen Tutorials eignen sich hervorragend, um die Implementierung verschiedener Azure-Dienste in Ihren Unity-Projekten zu erlernen. Diese Tutorials basieren sämtlich entweder auf HoloLens (1. Gen.) oder unseren immersiven Headsets, die Lektionen zur Verwendung der Dienste sollten aber auf nahezu jedes Gerät übertragbar sein.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -279,7 +279,7 @@ Diese eigenständigen Tutorials eignen sich hervorragend, um die Implementierung
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR und Azure 301: Übersetzung von Sprachen</h3>
+                                              <h3>MR und Azure 301: Sprachübersetzung</h3>
                                               <p>Mithilfe der Azure-Textübersetzungs-API kann Ihre Mixed Reality-App Sprache in Text in einer anderen Sprache übersetzen. In diesem Kurs erfahren Sie, wie!</p>
                                           </div>
                                       </div>
@@ -413,7 +413,7 @@ Diese eigenständigen Tutorials eignen sich hervorragend, um die Implementierung
                                           </div>
                                           <div class="cardText">
                                               <h3>MR und Azure 307: Maschinelles Lernen</h3>
-                                              <p>Nutzen Sie Azure Machine Learning Studio in ihrer Mixed Reality-App, um eine große Anzahl von Machine Learning-Algorithmen (ML) bereitzustellen.</p>
+                                              <p>Nutzen Sie Azure Machine Learning Studio (klassisch) in ihrer Mixed Reality-App, um eine große Anzahl von Machine Learning-Algorithmen (ML) bereitzustellen.</p>
                                           </div>
                                       </div>
                                   </div>

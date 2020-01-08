@@ -8,12 +8,12 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, entwickeln, Entwicklung, HoloLens, Unity, DirectX
-ms.openlocfilehash: 2c3416ffc1f3259c7be8f105a55427e3c29826fb
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 7b1a67f05941fc862ad3f36834efe071b0d1c57b
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539567"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334269"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Erlernen von Tools und Architektur
 
@@ -130,7 +130,7 @@ Alle Grundlagen, die Sie zum Erstellen einer Mixed Reality-App mit DirectX benö
 
 :::row:::
     :::column:::
-       [![Verstehen der Grundlagen](images/icon-lightbulb.jpg)](index.md#understand-the-basics)<br>
+       [![Verstehen der Grundlagen](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
         **[Verstehen der Grundlagen](index.md#understand-the-basics)**<br>
         Erhalten Sie ein besseres Verständnis dafür, was Mixed Reality ausmacht und wie es genutzt wird.
     :::column-end:::
