@@ -6,12 +6,12 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Mixed Reality, Holographic, AR, VR, Mr, XR, Augmented Reality, Virtual Reality, Erläuterung
-ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539554"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334035"
 ---
 # <a name="what-is-mixed-reality"></a>Was ist Mixed Reality?
 
@@ -19,8 +19,8 @@ ms.locfileid: "74539554"
 
 Mixed Reality ist das Ergebnis der Verschmelzung der physischen Welt mit der digitalen Welt. Mixed Reality ist der nächste Evolutionsschritt in der Interaktion von Mensch, Computer und Umwelt und eröffnet Möglichkeiten, die bisher auf unsere Vorstellungskraft beschränkt waren. Dies wird durch Weiterentwicklungen bei Maschinelles sehen, grafischer Verarbeitungsleistung, Anzeige Technologie und Eingabe Systemen ermöglicht. Der Begriff " *gemischte Realität* " wurde ursprünglich in einem 1994 Paper von Paul Milgram und Fumio Kishino eingeführt, "[eine Taxonomie von visuellen Darstellung in gemischter Realität](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". In diesem Artikel wurde das Konzept des *virtualisierungskontinuums*vorgestellt, und es wurde darauf eingegangen, wie die Kategorisierung der Taxonomie auf angezeigt wird. Seitdem geht die Anwendung von Mixed Reality über die Anzeige hinaus. Außerdem sind Umgebungs Eingaben, räumlicher Sound und Speicherort enthalten.
 
-![Sie das gemischte Reality-Spektrum](images/MixedRealitySpectrum-worlds.jpg)<br>
-*Gemischte Realität ist das Ergebnis der Mischung der physischen Welt mit der digitalen Welt.*
+![Sie das gemischte Reality-Spektrum](images/mixedrealityspectrum-worlds.png)<br>
+*Image: Gemischte Realität ist das Ergebnis der Mischung der physischen Welt mit der digitalen Welt.*
 
 <br>
 
@@ -30,22 +30,16 @@ Mixed Reality ist das Ergebnis der Verschmelzung der physischen Welt mit der dig
 
 In den vergangenen Jahrzehnten wurde die Beziehung zwischen der Eingabe von Menschen und Computern gut untersucht. Es verfügt sogar über eine weit verbreitete Disziplin, die als Interaktion mit dem Benutzer *Computer* oder HCI bezeichnet wird. Menschen Eingaben werden auf verschiedene Weise durchgeführt, einschließlich Tastaturen, Mäuse, Finger Eingaben, Freihand-und Spracheingaben und sogar kinect-Skelett Nachverfolgung.
 
-Verbesserungen bei Sensoren und der Verarbeitung erhöhen den neuen Bereich der Computer Eingaben aus Umgebungen. Die Interaktion zwischen Computern und Umgebungen ist praktisch das Verständnis der Umgebung und die *Wahrnehmung*. Die API-Namen in Windows, die Umgebungs Informationen offenlegen, werden daher als [perception-APIs](https://docs.microsoft.com/uwp/api/Windows.Perception)bezeichnet. In der Umgebungs Eingabe werden Dinge wie die Position einer Person (z. b. [Kopf Nachverfolgung](coordinate-systems.md)), Oberflächen und Grenzen (z. b. [räumliche Zuordnung](spatial-mapping.md) und [Szenen Verständnis](scene-understanding.md)), Umgebungsbeleuchtung, Umgebungs Sound, Objekterkennung, und Speicherort.
+Verbesserungen bei Sensoren und der Verarbeitung erhöhen den neuen Bereich der Computer Eingaben aus Umgebungen. Die Interaktion zwischen Computern und Umgebungen ist praktisch das Verständnis der Umgebung und die *Wahrnehmung*. Die API-Namen in Windows, die Umgebungs Informationen offenlegen, werden daher als [perception-APIs](https://docs.microsoft.com/uwp/api/Windows.Perception)bezeichnet. In der Umgebungs Eingabe werden Dinge wie die Position einer Person (z. b. [Kopf Nachverfolgung](coordinate-systems.md)), Oberflächen und Grenzen (z. b. [räumliche Zuordnung](spatial-mapping.md) und [Szenen Verständnis](scene-understanding.md)), Umgebungsbeleuchtung, Umgebungs Sound, Objekterkennung und Standort erfasst.
 
 <br>
 
+![Venn-Diagramm, das Interaktionen zwischen Computern, Menschen und Umgebungen anzeigt](images/mixed-reality-venn-diagram-300px.png)<br> 
+*Abbildung: Interaktionen zwischen Computern, Menschen und Umgebungen.*
 
+<br>
 
-:::row:::
-    :::column:::
-        Die Kombination aus allen drei Computer-, Benutzer-**und Umgebungs Eingaben**bietet nun die Möglichkeit, echte gemischte Realität zu schaffen. Bewegung durch die physische Welt kann zu einer Bewegung in der digitalen Welt führen. Grenzen in der physischen Welt können die Anwendungserfahrung beeinflussen, wie z. b. Spiele Spiele, in der digitalen Welt. Ohne Umgebungs Eingabe können Umgebungen nicht zwischen physischer und digitaler Realität verschmelzen.<br>
-        <br>
-        *Image: Interaktionen zwischen Computern, Menschen und Umgebungen.*
-    :::column-end:::
-        :::column:::
-       ![Venn-Diagramm, das Interaktionen zwischen Computern, Menschen und Umgebungen anzeigt](images/mixed-reality-venn-diagram-300px.png)<br> 
-    :::column-end:::
-:::row-end:::
+Die Kombination aus allen drei Computer-, Benutzer-**und Umgebungs Eingaben**bietet nun die Möglichkeit, echte gemischte Realität zu schaffen. Bewegung durch die physische Welt kann zu einer Bewegung in der digitalen Welt führen. Grenzen in der physischen Welt können die Anwendungserfahrung beeinflussen, wie z. b. Spiele Spiele, in der digitalen Welt. Ohne Umgebungs Eingabe können Umgebungen nicht zwischen physischer und digitaler Realität verschmelzen.<br>
 
 <br>
 
@@ -72,8 +66,8 @@ Die meisten Mobiltelefone auf dem Markt haben heute kaum noch keine Kenntnisse i
 
 <br>
 
-![Sie das gemischte Reality-Spektrum](images/MixedRealitySpectrum.jpg)<br>
-*Das gemischte Reality-Spektrum*
+![Sie das gemischte Reality-Spektrum](images/mixedrealityspectrum.png)<br>
+*Bild: das gemischte Reality-Spektrum*
 
 <br>
 
@@ -91,15 +85,17 @@ Es gibt zwei Hauptarten von Geräten, die Windows Mixed Reality-Umgebungen berei
 
 <table>
 <tr>
-<th width="20%"> Merkmal</th><th width="40%"> Holographic-Geräte</th><th width="40%"> Immersive Geräte</th>
+<th width="30%"> Merkmal</th><th width="35%"> Holographic-Geräte</th><th width="35%"> Immersive Geräte</th>
 </tr><tr>
-<td> Beispiel Gerät</td><td> Microsoft HoloLens<br /> <img alt="Microsoft HoloLens image" width="300" height="169" src="images/mshololens-hero1-whitbg-rgb-300px.png" /></td><td> Acer Windows Mixed Reality Development Edition<br /> <img alt="Acer Windows Mixed Reality Development Edition image" width="300" height="169" src="images/acer-windows-mixed-reality-development-edition-headset-300px.jpg" /></td>
+<td><strong>Beispiel Gerät</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssee und höher<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td> „Anzeige“</td><td> <i>Siehe anzeigen.</i> Ermöglicht Benutzern das Anzeigen der physischen Umgebung beim durch tragen des Headsets.</td><td> <i>Nicht transparente Anzeige.</i> Blockiert die physische Umgebung beim durch tragen des Headsets.</td>
+<td><strong>Display</strong></td><td> Siehe anzeigen. Ermöglicht Benutzern das Anzeigen der physischen Umgebung beim durch tragen des Headsets.</td><td> Nicht transparente Anzeige. Blockiert die physische Umgebung beim durch tragen des Headsets.</td>
 </tr><tr>
-<td> Bewegung</td><td> Vollständige Bewegung von sechs Grad an Freiheit, sowohl Drehung als auch Übersetzung.</td><td> Vollständige Bewegung von sechs Grad an Freiheit, sowohl Drehung als auch Übersetzung.</td>
+<td><strong>Bewegung</strong></td><td> Vollständige Bewegung von sechs Grad an Freiheit, sowohl Drehung als auch Übersetzung.</td><td> Vollständige Bewegung von sechs Grad an Freiheit, sowohl Drehung als auch Übersetzung.</td>
 </tr>
 </table>
+
+
 
 Beachten Sie, ob ein Gerät mit einem separaten PC (über USB-Kabel oder Wi-Fi) verbunden ist oder ob es sich in einem eigenständigen PC oder in einem eigenständigen (untethering) Gerät befindet. Natürlich sind Features, die die Mobilität verbessern, zu besseren Erfahrungen geführt, und sowohl Holographic-als auch immersive Geräte könnten in den Team-oder untethering-Umgebungen kommen.
 
@@ -108,8 +104,8 @@ Der technologische Fortschritt ist die Aktivierung gemischter Reality-Umgebungen
 
 <br>
 
-![Gerätetypen im gemischten Reality-Spektrum](images/MixedRealitySpectrum-devices.jpg)<br>
-*Wo Geräte im gemischten Reality-Spektrum vorhanden sind*
+![Gerätetypen im gemischten Reality-Spektrum](images/Final_WhatIsMixedReality07.png)<br>
+*Image: wo Geräte im gemischten Reality-Spektrum vorhanden sind*
 
 Häufig ist es am besten, zu sehen, welche Art von Anwendung ein Anwendungs-oder Spielentwickler erstellen möchte. Die Oberfläche wird in der Regel auf einen bestimmten Punkt oder einen bestimmten Teil des Spektrums ausgerichtet. Dann sollten Entwickler die Funktionen von Geräten berücksichtigen, auf die Sie abzielen möchten. Beispielsweise werden Erfahrungen, die auf der physischen Welt basieren, am besten in hololens ausgeführt.
 * **Auf der linken Seite (in der Nähe der physischen Realität).** Benutzer bleiben in ihrer physischen Umgebung präsent und werden niemals darauf hingewiesen, dass Sie diese Umgebung verlassen haben.

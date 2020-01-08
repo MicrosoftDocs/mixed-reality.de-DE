@@ -1,23 +1,23 @@
 ---
 title: Schaltfläche
-description: ''
+description: Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion. Es ist eine der grundlegenden Komponenten in gemischter Realität.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Mixed Reality, Controls, interaction, ui, ux
-ms.openlocfilehash: c3fed3b7301c907a657796da7fc83bab146e2df1
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
+ms.openlocfilehash: 5b6ee85b6ac7da039ad9975437fa164b579a7167
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143158"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694004"
 ---
 # <a name="button"></a>Schaltfläche
 
 ![Schaltfläche](images/UX/UX_Hero_Button.jpg)
 
-Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion. Es ist eine der grundlegenden Komponenten in gemischter Realität. In hololens 2 hat die Schaltfläche viele visuelle Hinweise und Kosten, um das Vertrauen des Benutzers auf die Interaktion zu erhöhen. 
+Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion. Es ist eine der grundlegenden Komponenten in gemischter Realität. In hololens 2 bietet eine Schaltfläche viele visuelle Hinweise und Kosten, um die Interaktion des Benutzers zu erhöhen. 
 
 
 :::row:::
@@ -48,7 +48,7 @@ Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Akt
 ---
 
 ## <a name="button-in-mrtkmixed-reality-toolkit-for-unity"></a>Schaltfläche im mrtk (Mixed Reality Toolkit) für Unity
-**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** bietet verschiedene Typen von Schaltflächen-Prefabs. Sie finden Schaltflächen im shellstil für hololens 2 und hololens 1 St gen sowie angepasste Beispiele. Hololens 2 Button Prefab enthält viele ausführliche Kosten, die das Vertrauen von Benutzern verbessern. Sie enthält eine near-basierte Hervorhebung, Komprimierung des Front-Käfigs und den Pulse Effect on-Triggern.
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** bietet verschiedene Typen von Schaltflächen-Prefabs. Sie finden Schaltflächen im shellstil für hololens 2 und hololens (1. Gen) sowie angepasste Beispiele. Hololens 2 Button Prefab enthält viele ausführliche Kosten, die zur Verbesserung des Vertrauens des Benutzers beitragen. Sie enthält eine near-basierte Hervorhebung, Komprimierung des Front-Käfigs und einen Pulse-Effekt auf den Triggern.
 
 * [Mrtk-Schaltfläche](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
 
@@ -62,20 +62,20 @@ Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Akt
 ## <a name="see-also"></a>Weitere Informationen:
 
 * [Cursor](cursors.md)
-* [Hand Strahl](point-and-commit.md)
+* [Handstrahl](point-and-commit.md)
 * [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
-* [Bearbeitung](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Handmenü](hand-menu.md)
-* [Near-Menü](near-menu.md)
+* [Nähemenü](near-menu.md)
 * [Objektsammlung](object-collection.md)
 * [Sprachbefehl](voice-input.md)
 * [Tastatur](keyboard.md)
 * [QuickInfo](tooltip.md)
-* [Tafel](slate.md)
+* [Filmklappe](slate.md)
 * [Schieberegler](slider.md)
 * [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
-* [Oberflächen Magnetismus](surface-magnetism.md)
+* [Oberflächenmagnetismus](surface-magnetism.md)

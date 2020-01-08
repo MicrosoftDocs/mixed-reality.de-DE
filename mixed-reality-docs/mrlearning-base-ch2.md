@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e961238b8fc7f2ef15bea5f25eba8a8e9eb2ef3e
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539744"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334394"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Erstellen einer Benutzeroberfläche und Konfigurieren von Mixed Reality Toolkit
 
@@ -23,13 +23,11 @@ In der vorherigen Lektion haben Sie einige Funktionen kennengelernt, die das Mix
 * Interagieren mit holograms mithilfe von Benutzeroberflächen Elementen und Schaltflächen
 * Grundlegende Eingaben und Interaktionen zum Handtracking
 
-## <a name="instructions"></a>Anweisungen
-
-### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>So konfigurieren Sie die Mixed Reality Toolkit-profile (Anzeige Option ' räumliches Bewusstsein ändern ')
+## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>So konfigurieren Sie die Mixed Reality Toolkit-profile (Anzeige Option ' räumliches Bewusstsein ändern ')
 
 In diesem Abschnitt erfahren Sie, wie Sie die standardmäßigen mrtk-profile anpassen und konfigurieren, indem Sie die Anzeigeoption des Bereichs räumliches Bewusstsein anpassen. Sie können dieselben Prinzipien befolgen, um Einstellungen oder Werte in den MRTK-Profilen anzupassen.
 
-1. Wählen Sie "Mixed-Reality Toolkit" (mrtk) aus der basescene-Hierarchie aus. Suchen Sie im Inspektor-Panel nach dem Mixed Reality Toolkit-Skript, und wählen Sie das aktive Profil aus, wie in der folgenden Abbildung dargestellt. Doppelklicken Sie, um es zu öffnen.
+1. Wählen Sie "Mixed-Reality Toolkit" (mrtk) aus der basescene-Hierarchie aus. Suchen Sie im Inspektor-Panel nach dem Mixed Reality Toolkit-Skript, und wählen Sie das aktive Profil aus, wie in der folgenden Abbildung dargestellt. Öffnen Sie die Datei, indem Sie darauf doppelklicken.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step1.png)
 
@@ -73,7 +71,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die standardmäßigen mrtk-profile anp
 
 Gratulation! Sie haben soeben erfahren, wie Sie eine Einstellung im MRTK-Profil ändern können. Wie Sie sehen können, müssen Sie, um die MRTK-Einstellungen zu ändern, Kopien der Standardprofile erstellen, damit Sie diese bearbeiten können. Sie verfügen immer über die Standardprofile, die nicht bearbeitet werden können, wenn Sie ein Profil mit neuen Einstellungen erstellen möchten, oder Sie können auf die Standardprofile zurückgreifen. Es gibt zahlreiche Einstellungen, die Sie anpassen können. Einen vollständigen Verweis auf die mrtk-Profileinstellungen finden Sie in der Dokumentation zu mrtk: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 
-### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Gesten für Handtracking und interaktionsfähige Schaltflächen
+## <a name="hand-tracking-gestures-and-interactable-buttons"></a>Gesten für Handtracking und interaktionsfähige Schaltflächen
 
 In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um eine Schaltfläche mit dem Druckvorgang zu drücken.
 
@@ -94,7 +92,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um ei
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
-    Jetzt sollte sich ein Würfel in Ihrer Anzeige befinden. Es wird sehr groß angezeigt. Sie können die Koordinaten anpassen (während der Cube noch im Hierarchie Bereich ausgewählt ist), um die Größe zu verringern. Legen Sie die Skalierungs Werte auf x = 0,02, y = 0,02 und z = 0,02 fest. Stellen Sie sicher, dass Sie den Cube in der Szene in der Nähe der Schaltfläche positionieren, sich aber nicht damit überlappen. In der folgenden Abbildung ist die Position des Cubes x = 0, y = 0,4 und z = 0,2.
+    Jetzt sollte sich ein Würfel in Ihrer Anzeige befinden. Es wird sehr groß angezeigt. Sie können die Koordinaten anpassen (während der Cube noch im Hierarchie Bereich ausgewählt ist), um die Größe zu verringern. Legen Sie die Skalierungs Werte auf x = 0,02, y = 0,02 und z = 0,02 fest. Stellen Sie sicher, dass Sie den Cube in der Szene in der Nähe der Schaltfläche positionieren, sich aber nicht damit überlappen. In der folgenden Abbildung ist die Position des Cubes x = 0, y = 0,04 und z = 0,2.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
@@ -129,7 +127,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die Hand Überwachung verwenden, um ei
 
     Wenn nun die Schaltfläche gedrückt wird, wird Sie in eine neue Farbe geändert. Zyan. Wenn die Schaltfläche freigegeben wird, wird Sie wieder in die von Ihnen angegebene Standardfarbe geändert (z. b. hellgrau). Klicken Sie oben auf dem Bildschirm auf die Schaltfläche "Wiedergabe", um Sie im Editor auszuprobieren, oder stellen Sie Sie auf den hololens 2 bereit, um Sie zu testen. Weitere Informationen zur in-Editor-Simulation, einschließlich der Hand Simulation, finden Sie auf der [Dokumentationsseite zur Simulation von mrtk](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
-### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Erstellen eines Schaltflächenbereichs mit der MRTK-Rasterobjektsammlung
+## <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Erstellen eines Schaltflächenbereichs mit der MRTK-Rasterobjektsammlung
 
 In diesem Abschnitt erfahren Sie, wie Sie mit dem gridobjectcollection-Tool von mrtk mehrere Schaltflächen automatisch an einer Benutzeroberfläche anpassen.
 
@@ -162,7 +160,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mit dem gridobjectcollection-Tool von 
     >[!NOTE]
     >Abhängig von der Ausrichtung der untergeordneten Objekte oder des übergeordneten Objekts müssen Sie die Einstellung der Ausrichtung in zukünftigen Projekten wahrscheinlich anders anpassen. Die Felder für die Zellenbreite und Zellenhöhe müssen je nach Größe der Objekte in Ihrer Sammlung möglicherweise ebenfalls anders definiert werden.
 
-### <a name="adding-text-into-your-scene"></a>Hinzufügen von Text zu Ihrer Szene
+## <a name="adding-text-into-your-scene"></a>Hinzufügen von Text zu Ihrer Szene
 
 In diesem Abschnitt erfahren Sie, wie Sie Text zu Ihrer Mixed Reality-Umgebung hinzufügen und ihn bearbeiten können. Wenn Sie dies noch nicht getan haben, stellen Sie sicher, dass textmeshpro in Unity aktiviert ist, indem Sie die [hier](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation)aufgeführten Anweisungen befolgen
 

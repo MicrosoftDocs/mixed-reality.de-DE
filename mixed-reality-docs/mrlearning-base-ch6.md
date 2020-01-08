@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b033e4f9a379fb1778da3d94da70262e073d141b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926522"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334372"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Erstellen einer Beispielanwendung für ein Mond Modul
 
@@ -25,9 +25,7 @@ In diesem Tutorial werden mehrere Konzepte aus früheren Lektionen kombiniert, u
 - Verwenden der physischen Effekte und Kräfte von Starrkörpern
 - Erkunden der Verwendung von QuickInfos
 
-## <a name="instructions"></a>Anweisungen
-
-### <a name="configuring-the-lunar-module"></a>Konfigurieren der Mondlandefähre
+## <a name="configuring-the-lunar-module"></a>Konfigurieren der Mondlandefähre
 
 In diesem Abschnitt werden die verschiedenen Komponenten vorgestellt, die zum Erstellen unserer Beispiel Funktionen erforderlich sind.
 
@@ -38,7 +36,7 @@ In diesem Abschnitt werden die verschiedenen Komponenten vorgestellt, die zum Er
 
     ![Lektion6 Kapitel1 Schritt1im](images/Lesson6_Chapter1_step1im.PNG)
 
-    Wenn Sie das Launcher_Tutorial Game-Objekt in der Hierarchie erweitern und das Mond Modul Objekt weiter erweitern, finden Sie mehrere untergeordnete Objekte, die ein Material mit dem Namen "x-ray" aufweisen. Das "x-ray"-Material ermöglicht eine etwas durchlässiges Farbe, die als Platzierungs Hinweise für den Benutzer verwendet wird. 
+    Wenn Sie das Launcher_Tutorial Game-Objekt in der Hierarchie erweitern und das Mond Modul Objekt weiter erweitern, finden Sie mehrere untergeordnete Objekte, die ein Material mit dem Namen "x-ray" aufweisen. Das "x-ray"-Material ermöglicht eine etwas durchlässiges Farbe, die als Platzierungs Hinweise für den Benutzer verwendet wird.
 
     ![Lesson6 Chapter1 noteaim](images/Lesson6_Chapter1_noteaim.PNG)
 
@@ -81,7 +79,7 @@ In diesem Abschnitt werden die verschiedenen Komponenten vorgestellt, die zum Er
 
     ![Lektion6 Kapitel1 Schritt6im](images/Lesson6_Chapter1_step6im.PNG)
 
-### <a name="lunar-module-parts-overview"></a>Übersicht über die Komponenten von Mond Modulen
+## <a name="lunar-module-parts-overview"></a>Übersicht über die Komponenten von Mond Modulen
 
 Das übergeordnete Objekt der Mond Modul Teile ist die Sammlung der Objekte, mit denen der Benutzer interagiert. In der folgenden Liste werden die Namen von Spielobjekten mit der Bezeichnung Namen in Klammern angegeben:
 
@@ -106,7 +104,7 @@ Das QuickInfo-Objekt ist die QuickInfo-Bezeichnung in der Szene. Wenn die Objekt
 
 Die Audioquelle wird automatisch gepackt.
 
-### <a name="configuring-the-placement-hints-button"></a>Konfigurieren der Schaltfläche Platzierungs Hinweise
+## <a name="configuring-the-placement-hints-button"></a>Konfigurieren der Schaltfläche Platzierungs Hinweise
 
 In [Lektion 2](mrlearning-base-ch2.md)haben Sie gelernt, wie Sie Schaltflächen platzieren und konfigurieren können, um Dinge wie das Ändern der Farbe eines Elements oder das Abspielen eines Sounds beim Pushvorgang zu ermöglichen. Wir werden diese Prinzipien weiterhin verwenden, wenn wir unsere Schaltflächen zum Umschalten von Platzierungshinweisen konfigurieren.
 
@@ -120,7 +118,7 @@ Ziel ist es, die Schaltfläche so zu konfigurieren, dass jedes Mal, wenn der Ben
 
     ![Lesson6 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
 
-### <a name="configuring-the-reset-button"></a>Konfigurieren der Schaltfläche Zurücksetzen
+## <a name="configuring-the-reset-button"></a>Konfigurieren der Schaltfläche Zurücksetzen
 
 Es gibt Situationen, in denen der Benutzer einen Fehler ausgibt, das Objekt versehentlich auslöst oder nur die Benutzeroberflächen zurücksetzen möchte. Mit der Schaltfläche Zurücksetzen können Sie die Funktionalität neu starten.
 
@@ -137,7 +135,7 @@ Es gibt Situationen, in denen der Benutzer einen Fehler ausgibt, das Objekt vers
     >[!NOTE]
     >Beachten Sie, dass die gameobject. broadcastmessage standardmäßig für resetplacement konfiguriert ist. Dadurch wird eine Nachricht mit dem Namen resetplacement für jedes untergeordnete Objekt des RocketLauncher_Tutorial übermittelt. Alle-Objekte, die über eine-Methode für resetplacement () verfügen, reagieren auf diese Nachricht, indem Sie die Position zurücksetzt.
 
-### <a name="configuring-the-launch-button"></a>Konfigurieren der Schaltfläche "starten"
+## <a name="configuring-the-launch-button"></a>Konfigurieren der Schaltfläche "starten"
 
 In diesem Abschnitt wird erläutert, wie Sie die Schaltfläche "Start" konfigurieren, die es dem Benutzer ermöglicht, die Schaltfläche zu drücken und das Mond Modul in den Raum zu
 
@@ -161,6 +159,6 @@ In diesem Abschnitt wird erläutert, wie Sie die Schaltfläche "Start" konfiguri
 
     ![Lesson6 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
 
-### <a name="congratulations"></a>Herzlichen Glückwunsch!
+## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
 Sie haben diese Anwendung vollständig konfiguriert. Wenn Sie jetzt auf "Abspielen" klicken, können Sie das Mond Modul vollständig zusammenstellen, Hinweise umschalten, das Mond Modul starten und es erneut starten.

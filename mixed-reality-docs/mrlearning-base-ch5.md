@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064321"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334356"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. untersuchen erweiterter Eingabeoptionen
 
@@ -23,9 +23,7 @@ In diesem Tutorial werden verschiedene erweiterte Eingabeoptionen für hololens 
 - Verwenden von nach verfolgten Händen zum Schwenken von Texturen und 3D-Objekten mit nach verfolgten Händen
 - Verwenden von hololens 2 Eye Tracking-Funktionen zum Auswählen von Objekten
 
-## <a name="instructions"></a>Anweisungen
-
-### <a name="enabling-voice-commands"></a>Aktivieren der Sprachbefehle
+## <a name="enabling-voice-commands"></a>Aktivieren der Sprachbefehle
 
 In diesem Abschnitt werden zwei Sprachbefehle implementiert. Zuerst wird die Möglichkeit eingeführt, den Bereich zur Diagnose der Framerate zu wechseln, indem Sie die Option "Diagnose umschalten" sagen. Zweitens wird die Möglichkeit zur Wiedergabe eines Sounds mit einem Sprachbefehl untersucht. Die mrtk-Profile und Einstellungen, die für die Konfiguration von Sprachbefehlen zuständig sind, werden zuerst überprüft.
 
@@ -108,7 +106,7 @@ In diesem Abschnitt werden zwei Sprachbefehle implementiert. Zuerst wird die Mö
 
     ![Lesson5 Chapter1 Step16im](images/Lesson5_chapter1_step16im.PNG)
 
-### <a name="the-pan-gesture"></a>Die Geste „Schwenken“
+## <a name="the-pan-gesture"></a>Die Geste „Schwenken“
 
 In diesem Abschnitt erfahren Sie, wie Sie die Schwenkbewegung verwenden. Dies ist hilfreich, wenn Sie mit dem Finger oder der Hand einen Bildlauf durch den Inhalt durchführen möchten. Sie können mit der Schwenkbewegung auch Objekte drehen, eine Auflistung von 3D-Objekten durchlaufen oder sogar einen Bildlauf in einer 2D-Benutzeroberfläche durchführen.
 
@@ -194,7 +192,7 @@ In diesem Abschnitt erfahren Sie, wie Sie die Schwenkbewegung verwenden. Dies is
 
     ![mrlearning-Base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
 
-### <a name="eye-tracking"></a>Eyetracking
+## <a name="eye-tracking"></a>Eyetracking
 
 In diesem Abschnitt erfahren Sie, wie Sie die Eye-Nachverfolgung in unserer Demo aktivieren. Wir werden die 3D-Menü Elemente langsam drehen, wenn Sie mit dem Blick angezeigt werden. Zudem wird ein unterhaltsamer Effekt ausgelöst, wenn das anvisierte Element ausgewählt wird.
 

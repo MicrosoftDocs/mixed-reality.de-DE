@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105972"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334385"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interagieren mit 3D-Objekten
 
@@ -30,9 +30,7 @@ In diesem Tutorial erfahren Sie mehr über die grundlegenden 3D-Inhalte und-Benu
 * Erkunden von nahen und fernen Interaktionen
 * Weitere Informationen zu weiteren Hand nach Verfolgungs Gesten, z. b. zum Erfassen und berühren
 
-## <a name="instructions"></a>Anweisungen
-
-### <a name="organizing-3d-objects-in-a-collection"></a>Organisieren von 3D-Objekten in einer Sammlung
+## <a name="organizing-3d-objects-in-a-collection"></a>Organisieren von 3D-Objekten in einer Sammlung
 
 1. Klicken Sie mit der rechten Maustaste auf ihre Hierarchie, und wählen Sie leere erstellen aus, um ein leeres Spielobjekt zu erstellen, benennen Sie es in 3dobjectcollection um, und stellen Sie sicher, dass es auf x = 0, y = 0 und z = 0 positioniert ist.
 
@@ -70,7 +68,7 @@ In diesem Tutorial erfahren Sie mehr über die grundlegenden 3D-Inhalte und-Benu
     >[!NOTE]
     >Möglicherweise stellen Sie fest, dass einige der Objekte außerhalb des Centers sind, z. b. die Objekte in der obigen Abbildung. Dies liegt daran, dass Prefabs oder Objekte möglicherweise untergeordnete Objekte aufweisen, die nicht ausgerichtet sind. Sie können jederzeit alle notwendigen Anpassungen an den Positionen der Objekte oder Unterobjekte vornehmen, um ein ausgerichtetes Raster zu erhalten.
 
-### <a name="manipulating-3d-objects"></a>Manipulieren von 3D-Objekten
+## <a name="manipulating-3d-objects"></a>Manipulieren von 3D-Objekten
 
 1. Fügen Sie die Möglichkeit hinzu, einen Würfel zu manipulieren. Gehen Sie folgendermaßen vor, um die Möglichkeit zum Bearbeiten von 3D-Objekten hinzuzufügen:
     * Wählen Sie das 3D-Objekt aus, das Sie in Ihrer Hierarchie bearbeiten möchten (d. h. einen ihrer Cubes).
@@ -132,7 +130,7 @@ In diesem Tutorial erfahren Sie mehr über die grundlegenden 3D-Inhalte und-Benu
     >[!NOTE]
     >Diese Einstellung ist für Szenarien nützlich, wie z. b. das Erstellen einer Kugel, die Sie auslösen können. Behalten Sie die entsprechende Geschwindigkeit und Angular-Geschwindigkeit bei, um sicherzustellen, dass Sie nach der Freigabe der Kugel weiterhin mit der Geschwindigkeit bewegt wird, in der Sie veröffentlicht wurde. vergleichbar mit der Art und Weise, wie sich ein physischer Ball verhält.
 
-### <a name="adding-bounding-boxes"></a>Hinzufügen von Begrenzungsrahmen
+## <a name="adding-bounding-boxes"></a>Hinzufügen von Begrenzungsrahmen
 
 Begrenzungs Felder vereinfachen und intuitiver das Bearbeiten von Objekten mit einer Hand sowohl für direkte Bearbeitung (Near Interaktionen) als auch für die Ray-basierte Bearbeitung (lange Interaktion). Begrenzungs Felder bieten Handles, die für das Skalieren und Drehen von Objekten auf einer bestimmten Achse gepackt werden können.
 
@@ -180,7 +178,7 @@ Begrenzungs Felder vereinfachen und intuitiver das Bearbeiten von Objekten mit e
     >[!NOTE]
     >Die Visualisierungen für das umgebende Feld werden nur im Wiedergabemodus angezeigt.
 
-### <a name="adding-touch-effects"></a>Hinzufügen von Berührungs Effekten
+## <a name="adding-touch-effects"></a>Hinzufügen von Berührungs Effekten
 
 In diesem Beispiel werden wir einen Soundeffekt wiedergeben, wenn Sie ein Objekt mit der Hand berühren.
 

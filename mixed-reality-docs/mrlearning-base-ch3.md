@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: e08de0bc769ceda493eafe40158b6aeed87751c7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064258"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334365"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Platzieren von dynamischem Inhalt und Verwenden von Solvers
 
@@ -23,9 +23,7 @@ Holograms sind in hololens 2 zu leben, wenn Sie intuitiv dem Benutzer folgen und
 * Verwenden von Solvern, damit eine Sammlung von Schaltflächen dem Benutzer folgt
 * Verwenden von Solvern, damit ein Spielobjekt den nachverfolgten Händen des Benutzers folgt
 
-## <a name="instructions"></a>Anweisungen
-
-### <a name="location-of-solvers-in-the-mrtk"></a>Position der Solver im MRTK
+## <a name="location-of-solvers-in-the-mrtk"></a>Position der Solver im MRTK
 
  Um die verfügbaren Solver in Ihrem Projekt zu finden, suchen Sie im Ordner "mrtk SDK" (mixedrealitytoolkit. SDK-Ordner). Im Ordner Hilfsprogramme sehen Sie den Ordner Solvers, wie in der folgenden Abbildung dargestellt.
 
@@ -34,7 +32,7 @@ Holograms sind in hololens 2 zu leben, wenn Sie intuitiv dem Benutzer folgen und
 >[!NOTE]
 >In dieser Lektion wird nur die Implementierung des "Orbital Solver" und des radialview-Solvers überprüft. Weitere Informationen über die vollständige Palette der in der mrtk verfügbaren Solver finden Sie unter: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)
 
-### <a name="use-a-solver-to-follow-the-user"></a>Verwenden eines Solvers zum Folgen des Benutzers
+## <a name="use-a-solver-to-follow-the-user"></a>Verwenden eines Solvers zum Folgen des Benutzers
 
 Das Ziel dieses Kapitels besteht darin, die zuvor erstellte Schaltflächen Auflistung zu verbessern, sodass Sie der Blick Richtung des Benutzers folgt. In der vorherigen Version von mrtk und holotoolkit wurde dies als Tagalong-Funktionalität bezeichnet.
 
@@ -50,13 +48,14 @@ Das Ziel dieses Kapitels besteht darin, die zuvor erstellte Schaltflächen Aufli
     >Wenn Sie die Komponente "Orbital" hinzufügen, werden Sie feststellen, dass das System auch die Komponente "solverhandler" hinzufügt, die eine erforderliche Komponente ist.
 
 3. Um die Schaltflächen Auflistung so zu konfigurieren, dass Sie dem Benutzer folgt, müssen wir die folgenden Anpassungen implementieren (siehe Abbildung unten):
+
     * Legen Sie im Skript für die Ausrichtung der Ausrichtungs Typen-Dropdown Liste nur auf "Yaw" fest. Dadurch wird erreicht, dass sich nur eine Achse des Objekts dreht, während es dem Benutzer folgt.
     * Legen Sie den lokalen Versatz an allen Achsen auf 0 fest. Legen Sie den Welt Offset auf x = 0, y =-0,1 und z = 0,6 fest. Dadurch wird die Bewegung des Objekts gesperrt, sodass das Objekt bei einer Änderung der Höhe in der physischen Umgebung in einer festgelegten Höhe verbleibt, während es dem Benutzer weiterhin gestattet, wenn der Benutzer die Umgebung bewegt. Diese Werte können angepasst werden, um ein breites Spektrum an Verhaltensweisen zu erreichen.
     * Für ein nachfolgendes Verhalten, bei dem die Schaltflächen nur der Ansicht des Benutzers folgen, wenn der Benutzer die Kopfzeile in der Hand hat, können Sie das Kontrollkästchen "Winkel Sprung für Welt Offset verwenden" auswählen (Hinweis: dieser Titel kann auf einigen Bildschirmen abgeschnitten werden, wie er in der Abbildung unten dargestellt ist.) Wenn das Objekt z. b. nur alle 90 Grad dem Benutzer folgen soll, legen Sie die Anzahl der Schritte auf 4 (im folgenden Beispiel mit einem grünen Pfeil gekennzeichnet) fest.
 
     ![Lektion3 Kapitel2 Schritt3im](images/Lesson3_chapter2_step3im.PNG)
 
-### <a name="enabling-objects-to-follow-tracked-hands"></a>Aktivieren von Objekten für die Verfolgung von nach verfolgten Händen
+## <a name="enabling-objects-to-follow-tracked-hands"></a>Aktivieren von Objekten für die Verfolgung von nach verfolgten Händen
 
 In diesem Abschnitt konfigurieren wir das zuvor erstellte Cube-Spielobjekt so, dass es die nach verfolgten Hände des Benutzers mithilfe des radialview-Solvers befolgt.
 

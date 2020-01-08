@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräte Portal, hololens
-ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 17ed27653c8e3ec19c8c42b625fbd12cde2c5d84
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182020"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623318"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräte Portals
 
@@ -75,7 +75,7 @@ Wenn Sie diesen Benutzernamen oder das Kennwort jederzeit ändern möchten, kön
 
 ## <a name="security-certificate"></a>Sicherheitszertifikat
 
-Wenn im Browser eine Meldung zu einem Zertifikatfehler angezeigt wird, können Sie diesen beheben, indem Sie eine Vertrauensstellung mit dem Gerät erstellen.
+Wenn in Ihrem Browser ein "Zertifikat Fehler" angezeigt wird, können Sie ihn beheben, indem Sie eine Vertrauensstellung mit dem Gerät erstellen.
 
 Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL-Verbindung. Standardmäßig wird dieses Zertifikat vom Webbrowser des PC nicht als vertrauenswürdig angesehen, und Sie erhalten möglicherweise eine Meldung zu einem Zertifikatfehler. Sie können dieses Zertifikat von der HoloLens herunterladen (über USB oder ein vertrauenswürdiges WLAN-Netzwerk) und es auf dem PC als vertrauenswürdig einstufen, um eine sichere Verbindung mit dem Gerät herzustellen.
 1. **Stellen Sie sicher, dass Sie sich in einem sicheren Netzwerk (USB-oder WLAN-Netzwerk, dem Sie Vertrauen) befinden.**
@@ -84,7 +84,7 @@ Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL
 3. Installieren Sie das Zertifikat im Speicher "Vertrauenswürdige Stamm Zertifizierungsstellen" auf Ihrem PC.
    * Geben Sie im Windows-Menü Folgendes ein: Computer Zertifikate verwalten, und starten Sie das Applet.
    * Erweitern Sie den Ordner **Vertrauenswürdige Stamm Zertifizierungs** Stelle.
-   * Klicken Sie auf den Ordner **Zertifikate** .
+   * Klicken Sie auf den Ordner **Zertifikate**.
    * Wählen Sie im Menü „Aktion“ die Aktion „Alle Aufgaben“ > „Importieren“ aus.
    * Führen Sie den Zertifikatimport-Assistenten mit der Zertifikatdatei aus, die Sie vom Geräteportal heruntergeladen haben.
 4. Starten Sie den Browser neu.
@@ -136,7 +136,7 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
   * **Räumliche Anker anzeigen**: zeigt räumliche Anker für die aktive APP an. Sie müssen auf die Schaltfläche Aktualisieren klicken, um die Anker zu erhalten und zu aktualisieren.
   * **Details anzeigen**: Zeigt die Änderung von Handpositionen, der Kopfdrehungsquaternionen und des Geräteursprungsvektors in Echtzeit an.
   * **Vollbildschaltfläche**: Mit dieser Schaltfläche wird die Seite „3D View“ im Vollbildmodus angezeigt. Drücken Sie die ESC-Taste, um die Vollbildansicht zu beenden.
-* **Oberfläche-wieder**Herstellung: Klicken oder tippen Sie auf **Aktualisieren** , um das neueste räumliche zugriffsmesh vom Gerät anzuzeigen. Ein vollständiger Durchlauf kann bis zu einige Sekunden lang dauern. Das Mesh wird in der 3D-Ansicht nicht automatisch aktualisiert, und Sie müssen manuell auf " **Aktualisieren** " klicken, um das neueste Mesh vom Gerät zu erhalten. Klicken Sie auf **Speichern** , um das aktuelle räumliche Mapping-Mesh als obj-Datei auf Ihrem PC zu speichern.
+* **Oberfläche-wieder**Herstellung: Klicken oder tippen Sie auf **Aktualisieren** , um das neueste räumliche zugriffsmesh vom Gerät anzuzeigen. Ein vollständiger Durchlauf kann einige Zeit in Anspruch nehmen (bis zu wenigen Sekunden). Das Mesh wird in der 3D-Ansicht nicht automatisch aktualisiert, und Sie müssen manuell auf " **Aktualisieren** " klicken, um das neueste Mesh vom Gerät zu erhalten. Klicken Sie auf **Speichern** , um das aktuelle räumliche Mapping-Mesh als obj-Datei auf Ihrem PC zu speichern.
 * **Räumliche Anker**: Klicken Sie auf "Aktualisieren", um die räumlichen Anker für die aktive App anzuzeigen oder zu aktualisieren.
 
 ### <a name="mixed-reality-capture"></a>Mixed Reality Capture
@@ -177,7 +177,7 @@ Erfassen Sie [Windows Performance Recorder](https://msdn.microsoft.com/library/w
 * **Verfügbare Profile**: Wählen Sie in der Dropdownliste das WPR-Profil aus, und klicken oder tippen Sie auf **Starten**, um die Ablaufverfolgung zu starten.
 * **Benutzerdefinierte Profile**: Klicken oder tippen Sie auf **Durchsuchen**, um ein WPR-Profil vom PC auszuwählen. Klicken oder tippen Sie auf **Hochladen und starten**, um die Ablaufverfolgung zu starten.
 
-Zum Beenden der Überwachung klicken Sie auf den Link „Beenden“. Bleiben Sie auf dieser Seite, bis das Herunterladen der Ablauf Verfolgungs Datei abgeschlossen ist.
+Um die Ablauf Verfolgung anzuhalten, klicken Sie auf den Link "Abbrechen". Bleiben Sie auf dieser Seite, bis das Herunterladen der Ablauf Verfolgungs Datei abgeschlossen ist.
 
 Aufgezeichnete ETL-Dateien können in [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx) für die Analyse geöffnet werden.
 
@@ -205,7 +205,7 @@ Die folgenden Metriken sind verfügbar:
 * **Netzwerk**: Empfangene und gesendete Daten
 * Arbeits **Speicher**: Gesamtmenge, Verwendung, Commit, Auslagerung und nicht Auslagerungsseiten
 
-### <a name="apps"></a>Apps
+### <a name="apps"></a>Apps-
 
 ![Seite "Apps" im Windows-Geräte Portal auf Microsoft hololens](images/windows-device-portal-apps-page-1000px.png)<br>
 *Seite "Apps" im Windows-Geräte Portal unter Microsoft hololens*
@@ -236,7 +236,7 @@ Verwenden Sie den Datei-Explorer, um Dateien zu durchsuchen, hochzuladen und her
 >[!NOTE]
 >Der Kiosk Modus ist nur bei der [kommerziellen Suite von Microsoft hololens](commercial-features.md)verfügbar.
 
-Aktuelle Anweisungen zum Aktivieren des Kiosk Modus über das Windows-Geräte Portal finden Sie im Artikel [Einrichten von hololens im Kiosk Modus](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) in Windows IT Pro Center.
+Aktuelle Anweisungen zum Aktivieren des Kiosk Modus über das Windows-Geräte Portal finden Sie im Artikel [Einrichten von hololens im Kiosk Modus](https://docs.microsoft.com/hololens/hololens-kiosk#set-up-kiosk-mode-using-the-windows-device-portal-windows-10-version-1607-and-version-1803) im Windows IT-Portal.
 
 ### <a name="logging"></a>Protokollierung
 
@@ -256,10 +256,10 @@ Klicken oder tippen Sie auf **Aktivieren**, um die Ablaufverfolgung zu starten. 
 * **Benutzerdefinierte Anbieter**: Wählen Sie einen benutzerdefinierten ETW-Anbieter und die Ablaufverfolgungsebene aus. Identifizieren Sie den Anbieter anhand seiner GUID. Fügen Sie keine Klammern in die GUID ein.
 * **Aktivierte Anbieter**: Listet die aktivierten Anbieter auf. Wählen Sie einen Anbieter aus der Dropdownliste aus, und klicken oder tippen Sie auf **Deaktivieren**, um die Ablaufverfolgung zu beenden. Klicken oder tippen Sie auf **Beenden**, um sämtliche Ablaufverfolgung anzuhalten.
 * **Anbieterverlauf**: Zeigt die ETW-Anbieter an, die während der aktuellen Sitzung aktiviert wurden. Klicken oder tippen Sie auf **Aktivieren**, um einen Anbieter zu aktivieren, der deaktiviert war. Klicken oder tippen Sie auf **Löschen**, um den Verlauf zu löschen.
-* **Ereignisse**: Listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform auf. Diese Tabelle wird in Echtzeit aktualisiert. Klicken Sie unterhalb der Tabelle auf die Schaltfläche **Löschen** , um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
+* **Ereignisse**: Listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform auf. Diese Tabelle wird in Echtzeit aktualisiert. Klicken Sie unter der Tabelle auf die Schaltfläche **Löschen**, um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
 * **Filter**: Hiermit können Sie die ETW-Ereignisse filtern, die nach ID, Schlüsselwort, Ebene, Anbieter Name, Aufgaben Name oder Text gesammelt werden. Sie können mehrere Kriterien zusammen kombinieren:
-   1. Bei Kriterien, die auf dieselbe Eigenschaft angewendet werden, kann jedes dieser Kriterien erfüllt werden.
-   2. Bei Kriterien, die auf unterschiedliche Eigenschaften angewendet werden, müssen alle Kriterien erfüllt werden.
+   1. Für Kriterien, die auf dieselbe Eigenschaft angewendet werden, werden Ereignisse angezeigt, die eines dieser Kriterien erfüllen können.
+   2. Bei Kriterien, die auf eine andere Eigenschaft angewendet werden, müssen Ereignisse alle Kriterien erfüllen.
 
 Sie können z. b. die Kriterien angeben *(der Taskname enthält ' foo ' oder ' Bar ') und (Text enthält ' error ' oder ' Warning ')* .
 

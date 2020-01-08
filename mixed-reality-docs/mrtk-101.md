@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
 keywords: Hololens, mrtk, Mixed Reality Toolkit, Windows Mixed Reality, Design, Beispiel-APP, Steuerelemente
-ms.openlocfilehash: 95c81442cc390da8ac7c9a8de218341cb5e7c948
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ad9d2755522c2610ae051fa61f96605e49404d2d
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439651"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623500"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-basic-interactions-hololens-2-hololens-windows-mixed-reality-openvr"></a>Mrtk 101: Verwenden von Mixed Reality Toolkit Unity für grundlegende Interaktionen (hololens 2, hololens, Windows Mixed Reality, Open VR)
 
@@ -55,7 +55,7 @@ ManipulationHandler.cs unterstützt zweistufige Skalierung/Drehung. Dies funktio
 <img alt="NearInteractionGrabbable and ManipulationHandler.cs assigned to an object" width="800" src="images/MRTK101/MRTK_ManipulationHandler.gif">
 
 ## <a name="how-to-move-or-rotate-an-object-with-precision"></a>Verschieben oder Drehen eines Objekts mit präziser Genauigkeit
-Weisen Sie einem Objekt BoundingBox.cs zu, um das umgebende Feld zu verwenden, das die Schnittstelle zum Skalieren und Drehen eines Objekts ist. In der Standardeinstellung werden hololens 1 Style Blue Handles und Drähte angezeigt. Zum Verwenden von hololens 2-Stil-near-basierten animierten Handles müssen Sie Prefabs und Material zuweisen. Ausführliche Informationen zur Konfiguration finden Sie in der Dokumentation zum umgebenden Feld und in der boundingboxexamples. unity-Szene.
+Weisen Sie einem Objekt BoundingBox.cs zu, um das umgebende Feld zu verwenden, das die Schnittstelle zum Skalieren und Drehen eines Objekts ist. In der Standardeinstellung werden hololens 1 Style Blue Handles und Drähte angezeigt. Zum Verwenden von hololens 2-Stil-near-basierten animierten Handles müssen Sie Prefabs und Material zuweisen. Ausführliche Informationen zur Konfiguration finden Sie in der Dokumentation zum umgebenden [Feld](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) und in der boundingboxexamples. unity-Szene.
 
 <img alt="BoundingBox.cs assigned to an object" width="800" src="images/MRTK101/MRTK_BoundingBox.png">
 
@@ -132,7 +132,7 @@ Zuweisen eines Billboard.cs-Skripts zu einem Objekt. Sie wird unabhängig von ih
 
 Sind Sie bereit, beeindruckende Umgebungen für gemischte Realität zu schaffen? Besuchen Sie die nachfolgenden Seiten, und erfahren Sie mehr über mrtk und gemischte Realität.
 
-## <a name="about-the-author"></a>Informationen zum Autor
+## <a name="about-the-author"></a>Über die Autorin
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
