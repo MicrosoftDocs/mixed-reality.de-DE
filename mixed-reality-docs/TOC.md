@@ -1,18 +1,14 @@
-# Das ist neu: 
+# Neuigkeiten 
 ## [Aktuelle Nachrichten](news.md)
 ## [Vorbereiten Ihrer App auf HL2](mrtk-porting-guide.md)
 ## [Informationen zu Azure-Diensten](azure-services.md)
 ## Programme und Veranstaltungen
-### [Mixed Reality Dev Days](mr-dev-days.md)
-#### [Mixed Reality Dev Days – Sitzungen](mr-dev-days-sessions.md)
-#### [Mixed Reality Dev Days – FAQs](mr-dev-days-faq.md)
 ### [San Francisco Reactor Academy – Veranstaltungskalender](sf-academy-events.md)
-### [CVPR 2018 – Tutorial zum HoloLens-Forschungsmodus](cvpr-2018.md)
-### [ECCV 2018 – HoloLens als Tool für die Forschung zu maschinellem Sehen](eccv-2018.md)
 ### [CVPR 2019 – Mixed Reality-Workshop](cvpr-2019.md)
 ## [Aktuelle Versionshinweise zu Mixed Reality](release-notes-may-2019.md)
+## [Communityressourcen](community.md)
 ## [Beitragen zu dieser Dokumentation](CONTRIBUTING.md)
-# Erkennen
+# Suchen
 ## [Erste Schritte mit Mixed Reality](index.md)
 ## [Erweitern Ihres Entwurfsprozesses](case-study-expanding-the-design-process-for-mixed-reality.md)
 ## [Katalog der Fallstudien](case-studies-overview.md)
@@ -24,6 +20,7 @@
 ### [Navigieren auf der Startseite von Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Handbuch für den Enthusiasten](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Standortbezogene Unterhaltung](location-based-experiences.md)
+## [Communityressourcen](community.md)
 # Entwurf
 ## [Einstieg in Entwerfen und Prototyping](design.md)
 ## [Informationen zu dieser Entwurfsanleitung](about-this-design-guidance.md)
@@ -63,9 +60,9 @@
 ### [Interaktion durch Anvisieren](eye-gaze-interaction.md)
 ## UX-Elemente
 ### [Übersicht](app-patterns-landingpage.md)
-### Format
+### Stil
 #### [Farbe, Licht und Materialien](color-light-and-materials.md)
-#### [Skalieren](scale.md)
+#### [Skalierung](scale.md)
 #### [Typografie](typography.md)
 ### Raumklang
 #### [Raumklangentwurf](spatial-sound-design.md)
@@ -75,7 +72,7 @@
 ### Steuerelemente und Verhaltensweisen
 #### [Cursor](cursors.md)
 #### [Handstrahl](point-and-commit.md)
-#### [Button](button.md)
+#### [Schaltfläche](button.md)
 #### [Interaktionsfähiges Objekt](interactable-object.md)
 #### [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
 #### [Manipulation](direct-manipulation.md)
@@ -98,7 +95,7 @@
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [Inhaltsobjekt-Erstellungsprozess](asset-creation-process.md)
 ### [Entwerfen eigener immersiver Umgebungen](add-custom-home-environments.md)
-# Entwicklung
+# Entwickeln
 ## [Erlernen von Tools und Architektur](development.md)
 ## [Installieren der Tools](install-the-tools.md)
 ## Mixed Reality-Clouddienste
@@ -249,7 +246,7 @@
 #### [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
 #### [Verwenden von Visual Studio zum Bereitstellen und Debuggen](using-visual-studio.md)
 #### [Testen Ihrer App auf HoloLens](testing-your-app-on-hololens.md)
-#### [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)
+#### [Verwendung des HoloLens-Emulators](using-the-hololens-emulator.md)
 #### [Verwenden des Windows Mixed Reality-Simulators](using-the-windows-mixed-reality-simulator.md)
 #### [Erweiterte Eingabe für HoloLens-Emulator und Mixed Reality-Simulator](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 #### [Archiv für HoloLens-Emulator](hololens-emulator-archive.md)
@@ -264,7 +261,7 @@
 ### [Leitfaden für Eingabeportierung für Unity](input-porting-guide-for-unity.md)
 ### [Aktualisieren Ihrer SteamVR-Anwendung für Windows Mixed Reality](updating-your-steamvr-application-for-windows-mixed-reality.md)
 ### [Aktualisieren von 2D-UWP-Apps für Mixed Reality](building-2d-apps.md)
-# Vertreiben
+# Verteilen
 ## [Entwurfsanleitung für 3D-App-Startprogramm](3d-app-launcher-design-guidance.md)
 ## [Erstellen von 3D-Modellen zur Verwendung auf der Startseite](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)
 ## [Implementieren von 3D-App-Startprogrammen (UWP-Apps)](implementing-3d-app-launchers.md)
