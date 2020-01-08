@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6DOF-Controller, Motion-Controller
-ms.openlocfilehash: 84ebc6c0d7c63e58346b6ee9e565811bc40571b5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e4b3946401bcc9abfcefeb3e33bb79f01526ba20
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437858"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597673"
 ---
 # <a name="motion-controllers"></a>Motion-Controller
 
@@ -30,7 +30,7 @@ ms.locfileid: "73437858"
 
 ---
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <colgroup>
@@ -40,7 +40,7 @@ ms.locfileid: "73437858"
     <col width="25%" />
 </colgroup>
 <tr>
-     <td><strong>Funktion</strong></td>
+     <td><strong>Feature</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
@@ -62,7 +62,7 @@ Windows Mixed Reality Motion Controllers bieten mithilfe der Sensoren im immersi
 ![Ihren Controller kennen](images/controllerimage-750px.png)<br>
 *Lernen Sie Ihren Controller kennen*
 
-**Aspekte**
+**Funktionen:**
 * Optische Nachverfolgung
 * Trigger
 * Schaltfläche ""
@@ -87,7 +87,7 @@ Windows Mixed Reality Motion Controllers bieten mithilfe der Sensoren im immersi
 Bewegungs Controller können mit dem Host-PC mithilfe von Windows-Einstellungen wie allen anderen Bluetooth-Geräten gebunden werden.
 
 1. Fügen Sie 2 AA-Akkus in die Rückseite des Controllers ein. Lassen Sie die Akku Abdeckung vorerst deaktiviert.
-2. Wenn Sie anstelle eines integrierten Bluetooth-Funk Adapters einen externen USB-Bluetooth-Adapter verwenden, lesen Sie die [bewährten Methoden für Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) , bevor Sie fortfahren. Stellen Sie für die Desktop Konfiguration mit dem integrierten Radio sicher, dass die Antenne verbunden ist.
+2. Wenn Sie anstelle eines integrierten Bluetooth-Radios einen externen USB-Bluetooth-Adapter verwenden, lesen Sie die [bewährten Methoden für Bluetooth](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) , bevor Sie fortfahren. Stellen Sie für die Desktop Konfiguration mit dem integrierten Radio sicher, dass die Antenne verbunden ist.
 3. Öffnen **Sie Windows-Einstellungen** -> **Geräte** -> **Sie Bluetooth oder ein anderes Gerät** -> **Bluetooth** hinzuzufügen, und entfernen Sie alle früheren Instanzen von "Motion Controller – right" und "Motion Controller – Left". Überprüfen Sie auch die Kategorie andere Geräte am Ende der Liste.
 4. Wählen Sie **Bluetooth oder anderes Gerät hinzufügen** aus, und starten Sie die Ermittlung von Bluetooth-Geräten.
 5. Drücken Sie die Windows-Schaltfläche des Controllers, um den Controller einzuschalten.
@@ -112,7 +112,7 @@ Bewegungs Controller können mit dem Host-PC mithilfe von Windows-Einstellungen 
 
 :::row:::
     :::column:::
-        Nachdem beide Controller erfolgreich gekoppelt wurden, sollten die Einstellungen in der **Kategorie "Maus, Tastatur, & Pen"** wie folgt aussehen. <br>
+        Nachdem beide Controller erfolgreich gekoppelt wurden, sollten die Einstellungen in der **Kategorie "Maus, Tastatur, & Stift"** wie folgt aussehen. <br>
         <br>
         *Image: Motion-Controller verbunden*
     :::column-end:::
@@ -146,11 +146,11 @@ Wenn die Controller nach der Kopplung ausgeschaltet sind, wird Ihr Status als ge
 
 ## <a name="gazing-and-pointing"></a>Schauen und zeigen
 
-Windows Mixed Reality unterstützt zwei Schlüsselmodelle für Interaktion, **Blick und Commit** und **Punkt und Commit**:
+Windows Mixed Reality unterstützt zwei Schlüsselmodelle für die Interaktion. **Blick und Commit** und Commit und **Commit**:
 * Mit " **Blick" und "Commit**" können Benutzer ein Objekt mit dem [Blick](gaze-and-commit.md) auf ein Objekt ausrichten und dann Objekte mit Hand Luft tippen, einem Gamepad, einem Clicker oder ihrer Stimme auswählen.
 * Mit **Point und Commit**kann ein Benutzer auf das Zielobjekt einen pointfähigen Bewegungs Controller ausrichten und dann Objekte mit dem Controller des Controllers auswählen.
 
-Apps, die mit der Anzeige von Bewegungs Controllern unterstützen, sollten nach Möglichkeit auch Blick gesteuerte Interaktionen aktivieren, damit Benutzer entscheiden können, welche Eingabegeräte verwendet werden.
+Apps, die mit der Anzeige von Bewegungs Controllern unterstützen, sollten nach Möglichkeit auch Überblicks gesteuerte Interaktionen aktivieren, damit Benutzer auswählen können, welche Eingabegeräte verwendet werden.
 
 ### <a name="managing-recoil-when-pointing"></a>Verwalten von Recoil beim verweisen
 
@@ -162,7 +162,7 @@ Um eine solche Recoil zu verwalten, die beim Abrufen des Auslösers durch die Be
 
 Windows Mixed Reality unterstützt Bewegungs Controller in einer Vielzahl von Formfaktoren, wobei sich der Entwurf des Controllers in seiner Beziehung zwischen der Handposition des Benutzers und der natürlichen Vorwärtsrichtung unterscheidet, die apps beim Rendern der ern.
 
-Um diese Controller besser darzustellen, gibt es zwei Arten von Posen, die Sie für jede Interaktions Quelle untersuchen können, die Ziehpunkt- **und die** **Zeiger**Darstellung.
+Um diese Controller besser darstellen zu können, gibt es zwei Arten von Posen, die Sie für die einzelnen Interaktions Quellen untersuchen können. die Zieh Punkt **Pose** und die **zeigerpose**.
 
 ### <a name="grip-pose"></a>Ziehpunkt darstellen
 
@@ -203,13 +203,13 @@ Apps, die Positionen basierend auf dem nach verfolgungsstatus unterschiedlich be
 <tr>
 <th> Nach verfolgungsstatus </th><th> Sourcelossrisk </th><th> Positionsgenauigkeit </th><th> Trygetposition</th>
 </tr><tr>
-<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Hohe Genauigkeit</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> High (Hoch) </td><td style="background-color: green; color: white"> wahr</td>
 </tr><tr>
-<td> <b>Hohe Genauigkeit (Risiko des Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Hoch </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Hohe Genauigkeit (Risiko des Verlusts)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> High (Hoch) </td><td style="background-color: green; color: white"> wahr</td>
 </tr><tr>
-<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Ungefähre Genauigkeit</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: green; color: white"> wahr</td>
 </tr><tr>
-<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> false</td>
+<td> <b>Keine Position</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Ungefähr </td><td style="background-color: orange"> Falsch</td>
 </tr>
 </table>
 
@@ -224,12 +224,12 @@ Diese Motion Controller-Überwachungs Zustände werden wie folgt definiert:
 ## <a name="interactions-low-level-spatial-input"></a>Interaktionen: räumliche Eingabe auf niedriger Ebene
 
 Die wichtigsten Interaktionen zwischen Händen und Bewegungs Controllern sind **Select**, **Menu**, **grasp**, **Touchpad**, **Thumbstick**und **Home**.
-* **Select** ist die primäre Interaktion zum Aktivieren eines holograms, das aus einem Press gefolgt von einem Release besteht. Für Bewegungs Controller führen Sie eine SELECT-Taste mithilfe des Controllers des Controllers aus. Weitere Möglichkeiten zum Durchführen eines SELECT-Befehls finden Sie im [Sprachbefehl](voice-input.md) "Select". Dieselbe SELECT-Interaktion kann in jeder beliebigen App verwendet werden. Stellen Sie sich als Äquivalent eines Mausklicks vor, eine universelle Aktion, die Sie einmal erlernen und dann auf alle Ihre apps anwenden.
+* **Select** ist die primäre Interaktion zum Aktivieren eines holograms, das aus einem Press gefolgt von einem Release besteht. Für Bewegungs Controller führen Sie eine SELECT-Taste mithilfe des Controllers des Controllers aus. Weitere Möglichkeiten zum Durchführen eines SELECT-Befehls finden Sie im [Sprachbefehl](voice-input.md) "Select". Dieselbe SELECT-Interaktion kann in jeder beliebigen App verwendet werden. Stellen Sie sich als Äquivalent eines Mausklicks vor. eine universelle Aktion, die Sie einmal erlernen und dann auf alle Ihre apps anwenden.
 * **Menü** ist die sekundäre Interaktion zum agieren für ein Objekt, das zum Abrufen eines Kontextmenüs oder zum Ausführen einer anderen sekundären Aktion verwendet wird. Mit Motion Controllers können Sie mithilfe der *Menü* Schaltfläche des Controllers eine Menü Aktion ausführen. (d. h. die Schaltfläche mit dem Hamburger "Menü"-Symbol)
 * Der **Einblick** ist, wie Benutzer direkt Aktionen an Objekten durchführen können, um Sie zu bearbeiten. Mit Motion-Controllern können Sie eine Handschlag Aktion durchführen, indem Sie Ihre Faust eng durch drücken. Ein Bewegungs Controller kann eine Reichweite mit einer Schaltfläche zum Durchsuchen, einem Palmen-oder einem anderen Sensor erkennen.
 * **Touchpad** ermöglicht dem Benutzer, eine Aktion in zwei Dimensionen entlang der Oberfläche des Touchpads eines Bewegungs Controllers anzupassen. dabei wird ein Commit für die Aktion durch Klicken auf den Touchpad ausgeführt. Touchpads bieten einen gedrückten Zustand, einen berührten Zustand und normalisierte XY-Koordinaten. Der Bereich X und Y liegt zwischen-1 und 1 über dem Bereich des kreisförmigen Touchpads mit einem Mittelpunkt (0,0). Für X befindet sich-1 auf der linken Seite, und 1 befindet sich auf der rechten Seite. Bei Y befindet sich-1 unten und 1 oben.
 * Mit **Ministick** kann der Benutzer eine Aktion in zwei Dimensionen anpassen, indem er den Finger Stick eines Bewegungs Controllers innerhalb seines Kreis Bereichs verschiebt, indem er auf den Finger Stick klickt, um die Aktion auszuführen. Thumbsticks bieten außerdem einen gedrückten Zustand und normalisierte XY-Koordinaten. Der Bereich X und Y liegt zwischen-1 und 1 über dem Bereich des kreisförmigen Touchpads mit einem Mittelpunkt (0,0). Für X befindet sich-1 auf der linken Seite, und 1 befindet sich auf der rechten Seite. Bei Y befindet sich-1 unten und 1 oben.
-* **Home** ist eine spezielle System Aktion, die verwendet wird, um zum Startmenü zurückzukehren. Dies ähnelt dem Drücken der Windows-Taste auf einer Tastatur oder der Xbox-Schaltfläche auf einem Xbox-Controller. Sie können zu Hause navigieren, indem Sie auf einem Bewegungs Controller auf die Windows-Taste klicken. Beachten Sie, dass Sie auch immer zu Beginn zurückkehren können, indem Sie "Hey Cortana, Go Home" sagen. Apps können nicht speziell auf Start Aktionen reagieren, da diese vom System behandelt werden.
+* **Home** ist eine spezielle System Aktion, die verwendet wird, um zum Startmenü zurückzukehren. Dies ähnelt dem Drücken der Windows-Taste auf einer Tastatur oder der Xbox-Schaltfläche auf einem Xbox-Controller. Sie können zu Hause navigieren, indem Sie auf einem Bewegungs Controller auf die Windows-Taste klicken. Beachten Sie, dass Sie immer zu Beginn zurückkehren können, indem Sie "Hey Cortana, Go Home" sagen. Apps können nicht speziell auf Start Aktionen reagieren, da diese vom System behandelt werden.
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Zusammengesetzte Gesten: räumliche Eingabe auf hoher Ebene
 
@@ -259,7 +259,7 @@ Bewegungs Controller unterstützen die Kopplung mit einem einzelnen PC. Befolgen
 
 ### <a name="how-do-i-update-motion-controller-firmware"></a>Gewusst wie Update Motion Controller Firmware?
 
-Motion Controller Firmware ist Teil des Headset-Treibers und wird bei Bedarf automatisch bei der Verbindung aktualisiert. Firmwareupdates dauern in der Regel je nach Bluetooth-Radio und-linkqualität 1-2 Minuten. In seltenen Fällen kann es bis zu 10 Minuten dauern, bis Controller-Firmwareupdates auf eine schlechte Bluetooth-Konnektivität oder Funkstörungen hindeuten. Informationen zur Behebung von Konnektivitätsproblemen finden Sie unter [bewährte Methoden für Bluetooth im Leitfaden für Enthusiasten](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) . Nach einem Firmwareupdate werden die Controller neu gestartet und die Verbindung mit dem Host-PC wieder hergestellt (Sie werden feststellen, dass die LEDs für die Nachverfolgung hell sind). Wenn ein Firmwareupdate unterbrochen wird (z. b. wenn die Controller die Stromversorgung verlieren), wird erneut versucht, wenn die Controller das nächste Mal eingeschaltet werden.
+Motion Controller Firmware ist Teil des Headset-Treibers und wird bei Bedarf automatisch bei der Verbindung aktualisiert. Firmwareupdates dauern in der Regel je nach Bluetooth-Radio und-linkqualität 1-2 Minuten. In seltenen Fällen kann es bis zu 10 Minuten dauern, bis Controller-Firmwareupdates auf eine schlechte Bluetooth-Konnektivität oder Funkstörungen hindeuten. Informationen zu Konnektivitätsproblemen finden Sie unter [bewährte Methoden für Bluetooth im Leitfaden für Enthusiasten](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) . Nach einem Firmwareupdate werden die Controller neu gestartet und eine Verbindung mit dem Host-PC hergestellt (Sie werden feststellen, dass die LEDs für die Nachverfolgung hell sind) Wenn ein Firmwareupdate unterbrochen wird (z. b. wenn die Controller die Stromversorgung verlieren), wird erneut versucht, wenn die Controller das nächste Mal eingeschaltet werden.
 
 ### <a name="how-i-can-check-battery-level"></a>Wie kann ich den Akku Pegel überprüfen?
 
@@ -269,7 +269,7 @@ In der [Windows Mixed Reality-Start](navigating-the-windows-mixed-reality-home.m
 
 Nicht für universelle Windows-Anwendungen.
 
-## <a name="troubleshooting"></a>Problembehandlung
+## <a name="troubleshooting"></a>Fehlerbehebung
 
 Weitere Informationen finden Sie im Leitfaden zur Problembehandlung für [Motion Controller](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) .
 
@@ -277,7 +277,7 @@ Weitere Informationen finden Sie im Leitfaden zur Problembehandlung für [Motion
 
 [Geben Sie uns Feedback](give-us-feedback.md) im Feedback-Hub mit der Kategorie "Mixed Reality-> Input".
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 * [Gesten und Motion-Controller in Unity](gestures-and-motion-controllers-in-unity.md)
 * [Hände und Motion-Controller in DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gesten](gaze-and-commit.md#composite-gestures)

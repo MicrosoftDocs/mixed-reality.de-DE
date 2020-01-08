@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, Fokuspunkt, Fokusebene, Stabilisierungs Ebene, Stabilisierungs Punkt, neuprojektion, LSR, tiefen Puffer
-ms.openlocfilehash: d48f6f1878a68a17be263f10b809229dc2705c58
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9a7f30b552242b24a9a7b260b6574690a27d2c1d
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435412"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502621"
 ---
 # <a name="focus-point-in-unity"></a>Fokuspunkt in Unity
 
@@ -27,11 +27,11 @@ Wenn Sie den Fokuspunkt in Unity festlegen möchten, muss er jedes Frame mithilf
 > * Auf einem immersiven Desktop-Headset wird dadurch eine auf pro Pixel basierende Reprojektion ermöglicht.
 > * Auf einem hololens, auf dem das Windows 10-Update vom April 2018 oder höher ausgeführt wird, wird der tiefen Puffer analysiert, um automatisch eine optimale Stabilisierungs Ebene auszuwählen.
 >
-> Beide Ansätze sollten eine noch bessere Bildqualität bieten, ohne dass Sie von Ihrer APP explizit arbeiten müssen, um einen Fokuspunkt für jeden Frame auszuwählen.  Beachten Sie Folgendes: Wenn Sie einen Schwerpunkt Punkt manuell angeben, wird das oben beschriebene automatische Verhalten überschrieben, und die Stabilität des Hologramms wird normalerweise verringert.  Im Allgemeinen sollten Sie nur dann einen manuellen Fokuspunkt angeben, wenn die APP auf einem hololens ausgeführt wird, der noch nicht auf das Windows 10-Update vom April 2018 aktualisiert wurde.
+> Beide Ansätze sollten eine noch bessere Bildqualität bieten, ohne dass Ihre APP explizit arbeiten muss, um für jeden Frame einen Schwerpunkt Punkt auszuwählen.  Beachten Sie Folgendes: Wenn Sie einen Schwerpunkt Punkt manuell angeben, wird das oben beschriebene automatische Verhalten überschrieben, und die Stabilität des Hologramms wird normalerweise verringert.  Im Allgemeinen sollten Sie nur dann einen manuellen Fokuspunkt angeben, wenn die APP auf einem hololens ausgeführt wird, der noch nicht auf das Windows 10-Update vom April 2018 aktualisiert wurde.
 
 ### <a name="example"></a>Beispiel
 
-Es gibt viele Möglichkeiten, den Schwerpunkt Punkt festzulegen, wie von den über Ladungen für die statische Funktion *setfocuspointforframe* vorgeschlagen. Im folgenden finden Sie ein einfaches Beispiel für die Festlegung der Fokusebene auf das bereitgestellte Objekt jedes Frames:
+Es gibt viele Möglichkeiten, den Schwerpunkt Punkt festzulegen, wie von den über Ladungen für die statische Funktion *setfocuspointforframe* vorgeschlagen. Im folgenden finden Sie ein einfaches Beispiel für die Festlegung der Fokusebene auf das bereitgestellte-Objekt für jeden Frame:
 
 ```cs
 public GameObject focusedObject;

@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, Stabilisierung, Fallstudie
-ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 039b8f671f02a27393c30c7954cf0e2925635ad0
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436433"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597653"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Fallstudie: Verwenden der Stabilisierungs Ebene zum Reduzieren von Holographic-Turbulenzen
 
@@ -63,9 +63,9 @@ Der von Asobo Studio in C++geschriebene Fragmente und der junge-Manager Unterneh
 
 Fragmente und junge-Anker entwerfen Sie auch, wenn Sie sich zu weit von den holograms bewegen, indem Sie die APP anhalten, wenn Sie sich außerhalb der Inhalte befinden, die bereits als Wiedergabe Raum gescannt wurden. Daher behalten Sie Sie in den Grenzen, die für eine stabilere Benutzerfunktion gefunden werden.
 
-## <a name="do-it-yourself"></a>Selbst ausführen
+## <a name="do-it-yourself"></a>Aufzeichnung in Eigenregie
 
-Wenn Sie über ein hololens verfügen und mit den von mir behandelten Konzepten experimentieren möchten, können Sie eine Test Szene herunterladen und die unten aufgeführten Übungen ausprobieren. Es verwendet die integrierte Gizmo-API von Unity und sollte Ihnen helfen, den Ort der Festlegung der Ebene zu visualisieren. Dieser Code wurde auch verwendet, um die Screenshots in dieser Fallstudie aufzuzeichnen.
+Wenn Sie über ein hololens verfügen und mit den Konzepten in diesem Artikel experimentieren möchten, können Sie eine Test Szene herunterladen und die unten beschriebenen Übungen ausprobieren. Es verwendet die integrierte Gizmo-API von Unity und sollte Ihnen helfen, den Speicherort ihrer Ebene visuell darzustellen. Dieser Code wurde auch verwendet, um die Screenshots in dieser Fallstudie aufzuzeichnen.
 1. Synchronisieren Sie die neueste Version von [mixedrealitytoolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity).
 2. Öffnen Sie die [HoloToolkit-examples/Utilities/Szenen/stabilizationplaneseup. unity-](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Scenes/StabilizationPlaneSetting.unity) Szene.
 3. Erstellen und konfigurieren Sie das generierte Projekt.
@@ -73,22 +73,22 @@ Wenn Sie über ein hololens verfügen und mit den von mir behandelten Konzepten 
 
 ### <a name="exercise-1"></a>Übung 1
 
-In verschiedenen Ausrichtungen werden Ihnen mehrere weiße Punkte angezeigt. Vor Ihnen sehen Sie drei Punkte in unterschiedlicher Tiefe. Tippen Sie darauf, um den Punkt zu ändern, auf den die Ebene festgelegt ist. Bewegen Sie sich für diese Übung und für die anderen beiden Bereiche um Ihren Bereich, während Sie auf die Punkte schauen. Drehen Sie den Kopf Links, rechts, oben und unten. Bewegen Sie sich näher an den und den Vater aus den Punkten. Sehen Sie, wie Sie reagieren, wenn die Stabilisierungs Ebene auf verschiedene Ziele festgelegt ist.
+In verschiedenen Ausrichtungen werden Ihnen mehrere weiße Punkte angezeigt. Vor Ihnen sehen Sie drei Punkte in unterschiedlicher Tiefe. Tippen Sie darauf, um den Punkt zu ändern, auf den die Ebene festgelegt ist. Bewegen Sie sich für diese Übung und für die anderen beiden Bereiche um Ihren Bereich, während Sie auf die Punkte schauen. Drehen Sie den Kopf Links, rechts, oben und unten. Verschieben Sie die Punkte näher und weiter. Sehen Sie, wie Sie reagieren, wenn die Stabilisierungs Ebene auf verschiedene Ziele festgelegt ist.
 
 ### <a name="exercise-2"></a>Übung 2
 
-Wechseln Sie jetzt nach rechts, bis zwei verschiebende Punkte angezeigt werden, von denen eine auf einem horizontalen Pfad und einer auf einem vertikalen Pfad liegt. Tippen Sie erneut auf, um den Punkt zu ändern, auf den die Ebene festgelegt ist. Beachten Sie, dass die Farbtrennung auf dem Punkt, der mit der Ebene verbunden ist, verringert wird. Tippen Sie erneut, um die Geschwindigkeit des Punkts in der setupsetting-Funktion zu verwenden. Dieser Parameter gibt hololens über die beabsichtigte Bewegung des Objekts an. Es ist wichtig zu wissen, wann dies zu tun ist. wie Sie sehen werden, wenn die Geschwindigkeit bei einem Punkt verwendet wird, wird für den anderen verschiebenden Punkt eine größere Farbtrennung angezeigt. Berücksichtigen Sie dies beim Entwerfen Ihrer Apps – Wenn Sie einen zusammenhängenden Fluss für die Bewegung ihrer Objekte haben, können Sie verhindern, dass Artefakte angezeigt werden.
+Wechseln Sie jetzt nach rechts, bis zwei verschiebende Punkte angezeigt werden, von denen eine auf einem horizontalen Pfad und einer auf einem vertikalen Pfad liegt. Tippen Sie erneut auf, um den Punkt zu ändern, auf den die Ebene festgelegt ist. Beachten Sie, dass die Farbtrennung verringert wird und auf dem Punkt angezeigt wird, der mit der Ebene verbunden ist. Tippen Sie erneut, um die Geschwindigkeit des Punkts in der setupsetting-Funktion zu verwenden. Dieser Parameter gibt hololens über die beabsichtigte Bewegung des Objekts an. Es ist wichtig zu wissen, wann dies zu tun ist. wie Sie sehen werden, wenn die Geschwindigkeit bei einem Punkt verwendet wird, wird für den anderen verschiebenden Punkt eine größere Farbtrennung angezeigt. Berücksichtigen Sie dies beim Entwerfen Ihrer Apps – Wenn Sie einen zusammenhängenden Fluss für die Bewegung ihrer Objekte haben, können Sie verhindern, dass Artefakte angezeigt werden.
 
 ### <a name="exercise-3"></a>Übung 3
 
-Wenn Sie eine neue Konfiguration der Punkte sehen, können Sie auf das Recht klicken. In diesem Fall befinden sich Punkte in der Entfernung und ein Punkt vor und nach oben. Tippen Sie auf die Linie, um den Punkt zu ändern, auf den die Ebene festgelegt ist, und wechseln Sie zwischen den Punkten im Hintergrund und dem Punkt in Bewegung. Beachten Sie, dass das Festlegen der Position der Ebene und der Geschwindigkeit, mit der der spiralförmige Punkt aussieht, Artefakte überall angezeigt werden.
+Wenn Sie eine neue Konfiguration der Punkte sehen, können Sie auf das Recht klicken. In diesem Fall gibt es Punkte in der Entfernung und einen Punkt vor und nach oben. Tippen Sie auf die Linie, um den Punkt zu ändern, auf den die Ebene festgelegt ist, und wechseln Sie zwischen den Punkten im Hintergrund und dem Punkt in Bewegung. Beachten Sie, dass das Festlegen der Position der Ebene und der Geschwindigkeit, mit der der spiralförmige Punkt aussieht, Artefakte überall angezeigt werden.
 
-**Chti**
+**Tipps**
 * Sorgen Sie dafür, dass die Logik der Ebene einfach ist. Wie Sie gesehen haben, benötigen Sie keine komplexen Ebenen-Einstellungs Algorithmen, um eine immersive Erfahrung zu erzielen. Die Stabilisierungs Ebene ist nur ein Teil des Rätsels.
 * Wenn möglich, sollten Sie die Ebene immer zwischen Zielen problemlos verschieben. Das sofortige wechseln entfernter Ziele kann die Szene visuell stören.
 * Ziehen Sie in Erwägung, eine Option in der Ebene festzulegen, mit der Logik auf ein bestimmtes Ziel gesperrt werden soll. Auf diese Weise können Sie bei Bedarf die Ebene für ein Objekt, z. b. ein Logo oder einen Titelbildschirm, sperren.
 
-## <a name="about-the-author"></a>Informationen zum Autor
+## <a name="about-the-author"></a>Über die Autorin
 
 <table style="border-collapse:collapse">
 <tr>

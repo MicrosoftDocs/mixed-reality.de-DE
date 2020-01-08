@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Foto, Video, hololens, Kamera, Unity, loalisierbar
-ms.openlocfilehash: f0183400f55b1c6663a9a20ab4992befe5ad0718
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b4a1a7e11a7606dab76b954c8d58a335d6bae0ab
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515433"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597613"
 ---
 # <a name="locatable-camera-in-unity"></a>Einsetzbare Kamera in Unity
 
@@ -26,8 +26,8 @@ Nur ein einzelner Vorgang kann gleichzeitig mit der Kamera erfolgen. Um zu ermit
 
 ## <a name="photo-capture"></a>Foto Erfassung
 
-**Namespace:** *Unityengine. XR. WSA. Webcam*<br>
-**Sorte** *Foto Erfassung*
+**Namespace:** *unityengine. XR. WSA. Webcam*<br>
+**Typ:** *photocapture*
 
 Mit dem Typ *photocapture* können Sie weiterhin Fotos mit der Foto Video Kamera aufnehmen. Das allgemeine Muster für die Verwendung von *Photo Capture* für die Aufnahme eines Fotos sieht wie folgt aus:
 1. Erstellen eines *photocapture* -Objekts
@@ -39,9 +39,9 @@ Mit dem Typ *photocapture* können Sie weiterhin Fotos mit der Foto Video Kamera
 
 ### <a name="common-set-up-for-photocapture"></a>Allgemeine Einrichtung für photocapture
 
-Für alle drei Verwendungsmöglichkeiten beginnen wir mit denselben ersten drei Schritten.
+Beginnen Sie für alle drei Verwendungszwecke mit denselben ersten drei Schritten.
 
-Wir beginnen mit der Erstellung eines *photocapture* -Objekts.
+Beginnen Sie mit dem Erstellen eines *photocapture* -Objekts.
 
 ```cs
 PhotoCapture photoCaptureObject = null;
@@ -51,7 +51,7 @@ PhotoCapture photoCaptureObject = null;
    }
 ```
 
-Als nächstes speichern wir das Objekt, legen unsere Parameter fest und starten den Photo-Modus.
+Speichern Sie anschließend das Objekt, legen Sie die Parameter fest, und starten Sie den Photo-Modus.
 
 ```cs
 void OnPhotoCaptureCreated(PhotoCapture captureObject)
@@ -70,7 +70,7 @@ void OnPhotoCaptureCreated(PhotoCapture captureObject)
    }
 ```
 
-Am Ende verwenden wir auch denselben Bereinigungs Code, der hier vorgestellt wird.
+Am Ende verwenden Sie auch denselben Bereinigungs Code, der hier präsentiert wird.
 
 ```cs
 void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
@@ -86,7 +86,7 @@ Nachdem Sie diese Schritte ausgeführt haben, können Sie den Typ des zu erfasse
 
 Der einfachste Vorgang besteht darin, ein Foto direkt in einer Datei zu erfassen. Das Foto kann als jpg oder PNG gespeichert werden.
 
-Wenn der Photo-Modus erfolgreich gestartet wurde, wird ein Foto erstellt und auf dem Datenträger gespeichert.
+Wenn Sie den Foto Modus erfolgreich gestartet haben, erstellen Sie ein Foto, und speichern Sie es auf dem Datenträger
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -105,7 +105,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-Nachdem das Foto auf der Festplatte aufgezeichnet wurde, beenden wir den Foto Modus und bereinigen dann die Objekte.
+Beenden Sie nach dem Erfassen des Fotos auf dem Datenträger den Photo-Modus, und bereinigen Sie die Objekte.
 
 ```cs
 void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
@@ -126,9 +126,9 @@ void OnCapturedPhotoToDisk(PhotoCapture.PhotoCaptureResult result)
 
 Beim Erfassen von Daten in einem Texture2D ähnelt der Prozess stark der Erfassung auf dem Datenträger.
 
-Wir befolgen den oben beschriebenen Setup Vorgang.
+Befolgen Sie den oben beschriebenen Setup Vorgang.
 
-In *onphotomodestarted*erfassen wir einen Frame im Speicher.
+Erfassen Sie in *onphotomodestarted*einen Frame im Speicher.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -144,7 +144,7 @@ private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
    }
 ```
 
-Anschließend wenden wir das Ergebnis auf eine Textur an und verwenden den oben aufgeführten allgemeinen Bereinigungs Code.
+Anschließend wenden Sie das Ergebnis auf eine Textur an und verwenden den oben aufgeführten allgemeinen Bereinigungs Code.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -165,9 +165,9 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ### <a name="capture-a-photo-and-interact-with-the-raw-bytes"></a>Fotos erfassen und mit den Rohdaten Bytes interagieren
 
-Um mit den unformatierten Bytes eines in-Memory-Frames zu interagieren, befolgen wir dieselben Setup Schritte wie oben und *onphotomodestarted* , wie bei der Erfassung eines Fotos für eine Texture2D. Der Unterschied besteht in *oncapturedphototomemory* , wo wir die Rohdaten Bytes erhalten und mit ihnen interagieren können.
+Wenn Sie mit den unformatierten Bytes eines in-Memory-Frames interagieren möchten, befolgen Sie die gleichen Setup Schritte wie oben und *onphotomodestarted* wie bei der Erfassung eines Fotos für eine Texture2D. Der Unterschied liegt in *oncapturedphototomemory* , wo Sie die Rohdaten Bytes erhalten und mit ihnen interagieren können.
 
-In diesem Beispiel erstellen wir eine *Liste<Color>*  , die mithilfe von *setPixels ()* weiterverarbeitet oder auf eine Textur angewendet werden kann.
+In diesem Beispiel erstellen Sie eine *Liste<Color>* die weiterverarbeitet oder auf eine Textur über *setPixels ()* angewendet werden können.
 
 ```cs
 void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptureFrame photoCaptureFrame)
@@ -202,8 +202,8 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 
 ## <a name="video-capture"></a>Video Erfassung
 
-**Namespace:** *Unityengine. XR. WSA. Webcam*<br>
-**Sorte** *Videocapture*
+**Namespace:** *unityengine. XR. WSA. Webcam*<br>
+**Typ:** *Videocapture*
 
 *Videocapture* funktioniert sehr ähnlich wie bei *photocapture*. Die einzigen beiden Unterschiede sind, dass Sie einen Wert für Frames pro Sekunde (fps) angeben müssen, und Sie können nur direkt auf dem Datenträger als MP4-Datei speichern. Die Schritte für die Verwendung von *Videocapture* lauten wie folgt:
 1. Erstellen eines *Videocapture* -Objekts
@@ -213,7 +213,7 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 5. Aufzeichnen von Videos anhalten
 6. Video Modus abbrechen und Ressourcen bereinigen
 
-Wir beginnen mit dem Erstellen des *Videocapture* -Objekts *Videocapture m_VideoCapture = NULL;*
+Erstellen Sie zunächst das *Videocapture* -Objekt *Videocapture m_VideoCapture = NULL;*
 
 ```cs
 void Start ()
@@ -222,7 +222,7 @@ void Start ()
    }
 ```
 
-Dann richten wir die Parameter ein, die für die Aufzeichnung und den Start verwendet werden sollen.
+Richten Sie als nächstes die Parameter ein, die für die Aufzeichnung verwendet werden sollen, und starten Sie Sie.
 
 ```cs
 void OnVideoCaptureCreated (VideoCapture videoCapture)
@@ -252,7 +252,7 @@ void OnVideoCaptureCreated (VideoCapture videoCapture)
    }
 ```
 
-Nachdem Sie begonnen haben, beginnen wir mit der Aufzeichnung.
+Starten der Aufzeichnung
 
 ```cs
 void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
@@ -267,7 +267,7 @@ void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-Nachdem die Aufzeichnung gestartet wurde, können Sie die Benutzeroberfläche oder das Verhalten aktualisieren, um das Beenden zu aktivieren. Hier protokollieren wir einfach
+Nachdem die Aufzeichnung gestartet wurde, können Sie die Benutzeroberfläche oder das Verhalten aktualisieren, um das Beenden zu aktivieren. Hier melden Sie sich einfach an.
 
 ```cs
 void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -277,7 +277,7 @@ void OnStartedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-Zu einem späteren Zeitpunkt möchten wir die Aufzeichnung anhalten. Dies kann beispielsweise bei einem Timer oder einer Benutzereingabe vorkommen.
+Zu einem späteren Zeitpunkt möchten Sie die Aufzeichnung anhalten. Dies kann beispielsweise bei einem Timer oder einer Benutzereingabe vorkommen.
 
 ```cs
 // The user has indicated to stop recording
@@ -287,7 +287,7 @@ Zu einem späteren Zeitpunkt möchten wir die Aufzeichnung anhalten. Dies kann b
    }
 ```
 
-Nachdem die Aufzeichnung beendet wurde, beenden wir den Videomodus und bereinigen unsere Ressourcen.
+Wenn die Aufzeichnung beendet wurde, beenden Sie den Videomodus, und bereinigen Sie Ihre Ressourcen.
 
 ```cs
 void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
@@ -303,7 +303,7 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-## <a name="troubleshooting"></a>Problembehandlung
+## <a name="troubleshooting"></a>Fehlerbehebung
 * Es sind keine Auflösungen verfügbar.
     * Stellen Sie sicher, dass die **Webcam** -Funktion in Ihrem Projekt angegeben wird.
 

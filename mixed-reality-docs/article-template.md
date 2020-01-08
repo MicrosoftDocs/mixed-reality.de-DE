@@ -5,13 +5,13 @@ author: rwinj
 ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
-keywords: keine
-ms.openlocfilehash: b443e48f96b6fb978fdf487c6eea7e6c804c9e70
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+keywords: Keiner
+ms.openlocfilehash: 314d07292a679eefb22583d522ff9bd4182a0832
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439551"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694014"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>Title (so spezifisch wie möglich, mit menschlichen Begriffen) 
 
@@ -38,7 +38,7 @@ ms.locfileid: "73439551"
 </tr>
 <tr>
      <td>Betreff oder Artikel Titel</td>
-     <td>❌ nicht unterstützt.</td>
+     <td>❌ Nicht unterstützt</td>
      <td>✔️ Empfohlen</td>
      <td>✔️ Empfohlen</td>
 </tr>
@@ -192,7 +192,7 @@ Les Nabis Photorealism-Aktion Zeichnen eines Farbfelds Zeichnen von Stuckism Int
 
 Neo-georkalismus Structuralism Post-Impressionismus der Brücke existentialität Superflat, Neo-Dada Idealismus gründa.
 
-| Flüge | Anzeige Winkel | Größe |
+| Abstand | Anzeige Winkel | Größe |
 |---------|---------|---------|
 | 45cm  | nicht kleiner als 2 ° | 1,6 x 1,6 cm |
 
@@ -237,7 +237,4 @@ Legen Sie IFRAME auf Width = "940" Height = "530" fest.
 
 * [Verwandter Artikel 1 Name](design.md)
 * [Verwandter Artikel 2 Name](design.md)
-* [Verwandter Artikel 3](design.md)
-
-
-
+* [Verwandter Artikel 3: Link zu einem bestimmten Abschnitt](design.md#what-are-the-core-concepts-of-an-experience)

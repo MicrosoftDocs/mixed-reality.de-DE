@@ -1,34 +1,34 @@
 ---
-title: Near menu
-description: ''
+title: Near-Menü
+description: Ein near-Menü ist eine Auflistung von Schaltflächen in einem Panel, die Sie mit dem tagbasierten Verhalten verfolgen.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Mixed Reality, Controls, interaction, ui, ux
-ms.openlocfilehash: 693516285457885f62fe96e6a20d829b007d80fc
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
+ms.openlocfilehash: afd3215a90f6cbdd918475d011ba57c7b86a7694
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143210"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694124"
 ---
-# <a name="near-menu"></a>Near menu
+# <a name="near-menu"></a>Near-Menü
 
-![Near menu](images/UX/UX_Hero_NearMenu.jpg)
+![Near-Menü](images/UX/UX_Hero_NearMenu.jpg)
 
-Near menu is a collection of the buttons on a panel that follows you with tag-along behavior. It stays in a certain range of distance and angle to allow you to interact with content. You can use the pin button or grab and place the menu to make it world-locked and disable the tag-along behavior. This allows you to focus on the target content without being disturbed by the floating menu.
+Ein near-Menü ist eine Auflistung von Schaltflächen in einem Panel, die Sie mit dem [tagbasierten Verhalten](billboarding-and-tag-along.md#what-is-a-tag-along)verfolgen. Sie verbleibt in einem bestimmten Bereich der Entfernung und des Winkels, damit Sie mit dem Inhalt interagieren können. Sie können die Schaltfläche "Pin" oder "übernehmen" verwenden, um Sie in die Welt zu versetzen und das tagparallel Verhalten zu deaktivieren. Auf diese Weise können Sie sich auf den Ziel Inhalt konzentrieren, ohne durch das unverankerte Menü gestört zu werden.
 
-You can re-enable the tag-along by pressing the pin button and make the menu follow you again.
+Sie können das Tag wieder aktivieren, indem Sie die Schaltfläche "Pin" drücken und das Menü erneut befolgen.
 
 <br>
 
 ---
 
-## <a name="near-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Near menu in MRTK(Mixed Reality Toolkit) for Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** provides various near menu prefab examples.
+## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Near Menu in mrtk (Mixed Reality Toolkit) für Unity
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** bietet verschiedene Beispiele für das Near Menu-präfab.
 
-* [MRTK - Near menu](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)
+* [Mrtk-near-Menü](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)
 
 
 <br>
@@ -39,20 +39,20 @@ You can re-enable the tag-along by pressing the pin button and make the menu fol
 ## <a name="see-also"></a>Weitere Informationen:
 
 * [Cursor](cursors.md)
-* [Hand Strahl](point-and-commit.md)
+* [Handstrahl](point-and-commit.md)
 * [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
-* [Bearbeitung](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Handmenü](hand-menu.md)
-* [Near-Menü](near-menu.md)
+* [Nähemenü](near-menu.md)
 * [Objektsammlung](object-collection.md)
 * [Sprachbefehl](voice-input.md)
 * [Tastatur](keyboard.md)
 * [QuickInfo](tooltip.md)
-* [Tafel](slate.md)
+* [Filmklappe](slate.md)
 * [Schieberegler](slider.md)
 * [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
-* [Oberflächen Magnetismus](surface-magnetism.md)
+* [Oberflächenmagnetismus](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: volumetribild, volumenrendering, Leistung, gemischte Realität
-ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 04931df5e4225225e4c11c3f6d72801e2d58f646
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926676"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503829"
 ---
 # <a name="volume-rendering"></a>Volumerendering
 
@@ -98,7 +98,7 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-In vielen unserer Anwendungen speichern wir in unserem Volume sowohl einen rohintensität-als auch einen "Segmentierungs Index" (um verschiedene Teile, wie z. b. Skin und Bone, zu segmentieren, werden diese Segmente in der Regel von Experten in dedizierten Tools erstellt). Dies kann mit dem oben beschriebenen Ansatz kombiniert werden, um eine andere Farbe oder sogar eine andere Farbskala für jeden Segment Index zu platzieren:
+In vielen unserer Anwendungen speichern wir unsere Volumes sowohl als rohintensität als auch als Segmentierungs Index (zum Segmentieren verschiedener Teile wie Skin und Bone). diese Segmente werden im Allgemeinen von Experten in dedizierten Tools erstellt. Dies kann mit dem oben beschriebenen Ansatz kombiniert werden, um eine andere Farbe oder sogar eine andere Farbskala für jeden Segment Index zu platzieren:
 
 ```
 // Change color to match segment index (fade each segment towards black):
@@ -122,7 +122,7 @@ Ein hervorragend erster Schritt besteht darin, eine "Slicing Plane" zu erstellen
 
 ## <a name="volume-tracing-in-shaders"></a>Volumeablauf Verfolgung in Shadern
 
-Verwendung der GPU zum Durchführen einer unter Laufband-Ablauf Verfolgung (durchläuft einige wenige Voxels Deep then-Ebenen der Daten von hinten nach vorne):
+Gewusst wie: Verwenden der GPU zum Durchführen einer unter Laufband-Ablauf Verfolgung (durchläuft einige einige Voxels tief, dann Ebenen der Daten von hinten nach vorne):
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -166,7 +166,7 @@ float4 AlphaBlend(float4 dst, float4 src) {
 
 ## <a name="whole-volume-rendering"></a>Gesamtes volumenrendering
 
-Ändern Sie den obigen Code des untergeordneten Volumes:
+Wenn Sie den obigen Code des untergeordneten Volumes ändern, erhalten wir Folgendes:
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -181,11 +181,11 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
 
 Gewusst wie: Rendering eines Teils der Szene mit niedriger Auflösung und Zurücksetzen der Szene:
 1. Richten Sie zwei Off-Screen-Kameras ein, um jedes Auge zu verfolgen, das jeden Frame aktualisiert.
-2. Einrichten von zwei Renderingzielen mit niedriger Auflösung (z. a. 200 x 200), die von den Kameras in
+2. Einrichten von zwei Renderingzielen mit niedriger Auflösung (d. h. 200 x 200), die von den Kameras dargestellt werden
 3. Einrichten eines Quad, das sich vor dem Benutzer bewegt
 
 Jeder Frame:
 1. Zeichnen Sie die Renderziele für jedes Auge bei niedriger Auflösung (Volumedaten, teure Shaders usw.).
 2. Zeichnen Sie die Szene normal als vollständige Auflösung (Meshes, UI usw.).
-3. Zeichnen Sie einen Quad vor dem Benutzer, über die Szene, und projizieren Sie die tiefen renderobjekte.
-4. Ergebnis: visuelle Kombination von Elementen mit vollständiger Auflösung mit geringer Auflösung, aber Volumedaten mit hoher Dichte.
+3. Zeichnen Sie einen Quad vor dem Benutzer, über die Szene, und projizieren Sie die auf diese
+4. Ergebnis: visuelle Kombination von Elementen mit vollständiger Auflösung mit geringer Auflösung, aber Volumedaten mit hoher Dichte

@@ -6,16 +6,16 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Szenen Verständnis, räumliche Zuordnung, Windows Mixed Reality, Unity
-ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539701"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502671"
 ---
 # <a name="scene-understanding"></a>Szenen Verständnis
 
-Das Verständnis von Szenen bietet Entwicklern gemischter Realität eine strukturierte, allgemeine Darstellung in der Umgebung, die entwickelt wurde, um die Entwicklung für Anwendungen mit hoher Ebene intuitiv zu gestalten. Das Verständnis der Szene führt dies durch Kombinieren der Leistungsfähigkeit vorhandener gemischter Laufzeiten, wie z. b. der äußerst präzisen weniger strukturierten [räumlichen Zuordnung](spatial-mapping.md) und neuer Ki-gesteuerter Laufzeiten. Durch die Kombination dieser Technologien generiert das Szene Verständnis Darstellungen von 3D-Umgebungen, die denen ähneln, die Sie möglicherweise in Frameworks wie Unity oder Arkit/Arcore verwendet haben. Der Einstiegspunkt der Szene beginnt mit einem Szenen Beobachter, der von Ihrer Anwendung aufgerufen wird, um eine neue Szene zu berechnen. Heutzutage ist die Technologie in der Lage, drei verschiedene, aber verwandte Objektkategorien zu erzeugen: vereinfachte wasserdichte Umgebungs Netze, die die planare Raumstruktur ohne Übersichtlichkeit ableiten, Ebenen-Bereiche für die Platzierung, die wir als Quads bezeichnen, und eine Momentaufnahme des [ das räumliche Mapping](spatial-mapping.md) -Mesh, das sich auf die von uns angezeigten Quads/wasserdichten Daten anpasst.
+Das Verständnis von Szenen bietet Entwicklern gemischter Realität eine strukturierte, allgemeine Darstellung in der Umgebung, die entwickelt wurde, um die Entwicklung für Anwendungen mit hoher Ebene intuitiv zu gestalten. Der Einblick in die Szene ermöglicht das Kombinieren der Leistungsfähigkeit vorhandener gemischter Laufzeiten, wie z. b. der äußerst präzisen weniger strukturierten [räumlichen Zuordnung](spatial-mapping.md) und neuer Ki-gesteuerter Laufzeiten. Durch die Kombination dieser Technologien generiert das Szene Verständnis Darstellungen von 3D-Umgebungen, die denen ähneln, die Sie möglicherweise in Frameworks wie Unity oder Arkit/Arcore verwendet haben. Der Einstiegspunkt der Szene beginnt mit einem Szenen Beobachter, der von Ihrer Anwendung aufgerufen wird, um eine neue Szene zu berechnen. Heute ist die Technologie in der Lage, drei verschiedene, aber verwandte Objektkategorien zu erzeugen: vereinfachte wasserdichte Umgebungs Netze, die die planare Raumstruktur ohne Übersichtlichkeit, Ebenen-Bereiche für die Platzierung, die als "Quads" bezeichnet werden, und eine Momentaufnahme des [räumlichen](spatial-mapping.md) zugriffsnetzes ableiten, das sich auf die von uns angezeigten Quads/wasserdichten Daten richtet.
 
 ![Räumliches Mapping-Mesh, Bezeichnung planare Oberflächen, wasserdichtes Mesh](images/SUScenarios.png)
 
@@ -37,7 +37,7 @@ Wenn Sie nicht über ein Gerät verfügen und auf Beispiel Szenen zugreifen möc
 
 ### <a name="sdk"></a>SDK
 
-Ausführliche Informationen zur Entwicklung von szenariounteres finden Sie unter Übersicht über die Funktionsweise von Szenen Kenntnissen und deren Entwicklung. Weitere Informationen zur Vorgehensweise bei der Entwicklung finden Sie in der Dokumentation zum [Scene Understanding SDK Overview](scene-understanding-SDK.md) .
+Weitere Informationen zur Entwicklung von szeneninformationen oder Details zur Funktionsweise von Szenen Kenntnissen und zur Entwicklung für die Szene finden Sie in der Dokumentation zum [Scene Understanding SDK Overview](scene-understanding-SDK.md) .
 
 
 ### <a name="sample"></a>Beispiel
@@ -73,9 +73,9 @@ Ausführliche Informationen zur Entwicklung von szenariounteres finden Sie unter
 
 <br>
 
-Viele der Kern Szenarien für Anwendungen, die für die Umgebung geeignet sind (Platzierung, Okklusion, Physik usw.), können sowohl durch räumliche Zuordnung als auch durch Szenen Verständnis adressiert werden. in diesem Abschnitt werden diese Unterschiede hervorgehoben. Ein Hauptunterschied zwischen Szenen Verständnis und räumlicher Zuordnung ist der Nachteil der maximalen Genauigkeit und Latenz bei der Struktur und Einfachheit. Wenn für Ihre Anwendung die geringste Latenzzeit erforderlich ist und Gitter Dreiecke erforderlich sind, sollten Sie direkt auf die räumliche Zuordnung zugreifen. Wenn Sie jedoch eine höhere Verarbeitungsleistung durchführen, können Sie in Erwägung gezogen werden, dass Sie in das Szene Verständnis Modell wechseln. Sie sollten eine Reihe von Funktionen bereitstellen. Beachten Sie außerdem, dass Sie immer auf die vollständigsten und präziseren räumlichen Zuordnungsdaten zugreifen können, weil szeneninformationen das räumliche zugriffsmesh als Teil der Darstellung bereitstellt.
+Viele der Kern Szenarien für Anwendungen, die für die Anwendung geeignet sind (Platzierung, Okklusion, Physik usw.), können sowohl durch räumliche Zuordnung als auch durch Szenen Verständnis adressiert werden. in diesem Abschnitt werden diese Unterschiede hervorgehoben. Ein Hauptunterschied zwischen Szenen Verständnis und räumlicher Zuordnung ist der Nachteil der maximalen Genauigkeit und Latenz bei der Struktur und Einfachheit. Wenn für Ihre Anwendung die Optionen mit niedrigster Latenz und Gitter Dreiecke erforderlich sind, für die nur Sie direkt auf die räumliche Zuordnung zugreifen möchten, Sie jedoch eine höhere Verarbeitung durchführen, können Sie in Erwägung gezogen werden, dass Sie zu dem für die Bereitstellung erforderlichen Modell wechseln. Sie haben eine supermenge an Funktionen. Beachten Sie außerdem, dass das Konzept der räumlichen Zuordnung im Rahmen der Darstellung des szenalingnetzes immer auf die vollständigsten und präziseren räumlichen Zuordnungsdaten zugreifen kann.
 
- In den folgenden Abschnitten werden die wichtigsten Szenarios für räumliche Mapping im Kontext des neuen Szenarios zum verstehen von Szenarios erneut besucht.
+In den folgenden Abschnitten werden die wichtigsten Szenarios für räumliche Mapping im Kontext des neuen Szenarios zum verstehen von Szenarios erneut besucht.
 
 ### <a name="placement"></a>Platzierung
 
@@ -101,13 +101,13 @@ Wenn Ihre Anwendung die Möglichkeit hat, 2D-oder 3D-Hologramme in starre Strukt
 
 ### <a name="occlusion"></a>Okklusion
 
-Die [Okklusion für räumliche](spatial-mapping.md#occlusion) Zuordnungen ist die niedrigste Methode zum Erfassen des Echt Zeit Zustands der Umgebung. Obwohl dies nützlich sein kann, um die Okklusion in sehr dynamischen Szenen bereitzustellen, empfiehlt es sich unter Umständen, das Verständnis der Szene in der Szene aus verschiedenen Gründen zu verstehen. Wenn Sie das durch Szene Verständnis generierte räumliche zuordnungsmesh verwenden, können Sie Daten aus der räumlichen Zuordnung anfordern, die nicht im lokalen Cache gespeichert und daher nicht über die perception-APIs verfügbar gemacht werden. Die Verwendung der räumlichen Zuordnung für die Okklusion neben wasserdichten Netzen stellt zusätzlichen Wert bereit, insbesondere den Abschluss der nicht gescannten Raumstruktur.
+Die [Okklusion für räumliche](spatial-mapping.md#occlusion) Zuordnungen ist die niedrigste Methode zum Erfassen des Echt Zeit Zustands der Umgebung. Obwohl dies nützlich sein kann, um die Okklusion in sehr dynamischen Szenen bereitzustellen, empfiehlt es sich unter Umständen, das Verständnis der Szene in der Szene aus verschiedenen Gründen zu verstehen. Wenn Sie das durch Szene Verständnis generierte räumliche zuordnungsmesh verwenden, können Sie Daten aus der räumlichen Zuordnung anfordern, die nicht im lokalen Cache gespeichert werden und daher nicht über die perception-APIs zur Verfügung stehen. Die Verwendung der räumlichen Zuordnung für die Okklusion neben wasserdichten Netzen stellt zusätzlichen Wert bereit, insbesondere den Abschluss der nicht gescannten Raumstruktur.
 
-Wenn Ihre Anforderungen die zunehmende Latenz von Szenen Verständnis tolerieren können, sollten Anwendungsentwickler die Verwendung der Szene verstehen, die das Wasser enge Mesh versteht, und vermutlich das räumliche Mapping-Mesh in gemeinsamen mit planaren Darstellungen. Dies wäre eine "Beste aus beiden Welten", bei denen die vereinfachte wasserdichte mit einer feineren nicht planaren Geometrie verheiratet ist, die die realistischsten Karten für die Karten Zuordnung bereitstellt.
+Wenn Ihre Anforderungen die zunehmende Latenz von Szenen Verständnis tolerieren können, sollten Anwendungsentwickler die Verwendung der Szene verstehen, die das Wasser enge Mesh versteht, und vermutlich das räumliche Mapping-Mesh in gemeinsamen mit planaren Darstellungen. Dies wäre ein "Beste aus beiden Welten"-Szenario, in dem die vereinfachte wasserdichte mit einer feineren nicht planaren Geometrie verheiratet ist, die die realistischsten Karten für die Karten Zuordnung bereitstellt.
 
-### <a name="physics"></a>Mikro
+### <a name="physics"></a>Physik
 
-Szenen Verständnis generiert Wasser enge Netze, die Raum mit Semantik aufteilen, um viele Einschränkungen der Physik zu berücksichtigen, die von den Netzen der räumlichen Zuordnung auferlegt werden. Wasserdichte Strukturen sorgen für eine einfachere Generierung von physikalischer Ray-Umwandlungen, und die semantische Zerlegung ermöglicht eine einfachere Generierung von Navigations Netzen für die Navigation in einem Wie im Abschnitt über das Erstellen einer Szene mit enablesceneobjectmeshes und enableworldmesh beschrieben, wird [das am meisten](#occlusion) physisch umfassende Mesh ermöglicht. Die Eigenschaft "Watertight" des Umgebungs Netzes verhindert, dass Treffer Tests auf Oberflächen gelangen, und die Mesh-Daten stellen sicher, dass die Physik mit allen Objekten in der Szene und nicht nur mit der Raumstruktur interagiert.
+Szenen Verständnis generiert Wasser enge Netze, die Leerzeichen mit Semantik zerlegen, insbesondere, um viele Einschränkungen der Physik zu berücksichtigen, die von den Netzen räumlicher Zuordnung auferlegt werden. Wasserdichte Strukturen sorgen für eine einfachere Generierung von physikalischer Ray-Umwandlungen, und die semantische Zerlegung ermöglicht eine einfachere Generierung von Navigations Netzen für die Navigation in einem Wie im Abschnitt zu [Okklusion](#occlusion)beschrieben, wird durch das Erstellen einer Szene mit enablesceneobjectmeshes und enableworldmesh das am meisten physisch umfassende Mesh ermöglicht. Die Eigenschaft "Watertight" des Umgebungs Netzes verhindert, dass Treffer Tests auf Oberflächen gelangen, und die Mesh-Daten stellen sicher, dass die Physik mit allen Objekten in der Szene und nicht nur mit der Raumstruktur interagiert.
 
 ### <a name="navigation"></a>Navigation
 
@@ -121,7 +121,7 @@ Obwohl die Visualisierung für die [räumliche Zuordnung](spatial-mapping.md#vis
 
 Darüber hinaus wird die Gesamtanzahl der von der räumlichen Zuordnung zurückgegebenen Oberflächen durch den internen räumlichen Cache beschränkt, während die Version des räumlichen zuordnungsnetzes der räumlichen Zuordnung auf räumliche Zuordnungsdaten zugreifen kann, die nicht zwischengespeichert werden. Aus diesem Grund ist das Verständnis der Szene besser für die Erfassung von Netz Darstellungen für größere Bereiche (z. b. mehr als einen einzelnen Raum) für die Visualisierung oder weitere Gitter Verarbeitung geeignet. Das mit enableworldmesh zurückgegebene World Mesh verfügt über eine konsistente Detailebene, die bei gerenderter Darstellung als Wireframe eine ansprechendere Visualisierung ergeben kann.
 
-### <a name="see-also"></a>Weitere Informationen
+### <a name="see-also"></a>Siehe auch
 
 * [Scene Understanding SDK](scene-understanding-SDK.md)
 * [Räumliche Abbildung](spatial-mapping.md)

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: bereitstellen, Unity, Visual Studio, hololens, hololens 2, immersives Headset
-ms.openlocfilehash: 88eaa69f1349e3303a93d9d634479d8265eb417c
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 4d145568190ea43cf2ec43442a1c3d5ca4d92251
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926547"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502631"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Bewährte Methoden für die Arbeit mit Unity und Visual Studio
 
@@ -26,14 +26,14 @@ Unterstützung für .NET-Skript-Back-End in Unity wird in Unity 2018 als veralte
    - Öffnen Sie **Viren & Bedrohungsschutz** unter Ihrer Windows 10-Einstellungs-APP.
    - Wählen Sie unter **Viren & Bedrohungsschutz Einstellungen** die Option **Einstellungen verwalten** .
    - Wählen Sie im Abschnitt **Ausschlüsse** die Option **Ausschlüsse hinzufügen oder entfernen**
-   - Klicken Sie auf **Ausschluss hinzufügen** , und wählen Sie den Ordner mit Ihrem Unity-Projekt Code und Buildausgaben
+   - Klicken Sie auf **Ausschluss hinzufügen** , und wählen Sie den Ordner mit Ihrem Unity-Projekt Code und Buildausgaben aus
 3) Verwenden eines SSD zum entwickeln
 
-Weitere Informationen finden Sie im Artikel [zum Optimieren der Buildzeiten für IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) . Lesen Sie auch [Debuggen für IL2CPP-Skript-Back-End](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
+Weitere Informationen finden Sie in [Optimierungs Buildzeiten für IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) . Überprüfen Sie außerdem das [Debugging auf dem IL2CPP-Skript-Back-End](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
 
 Außerdem sollten Sie die [Visual Studio-Erweiterung *unityscriptanalyzer* ](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)installieren. Dieses Tool analysiert Ihre Unity C# -Skripts auf Code, der möglicherweise auf optimierte Weise geschrieben werden kann.
 
-## <a name="visual-studio-tools-for-unity"></a>Visual Studio-Tools für Unity
+## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools für Unity
 
 Download [Visual Studio-Tools für Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
@@ -58,6 +58,6 @@ UWP-Visual Studio-Projektmappen, die in die Quell Code Verwaltung eingecheckt we
 Durch das Speichern von Medienobjekten im Textformat wird das Überprüfen von Änderungen der Inhalts Änderung in Visual Studio vereinfacht. Sie können dies in "Edit > Project Settings > Editor" aktivieren, indem Sie den **assetserialisierungsmodus** ändern, um **Text zu erzwingen**. Das Zusammenführen von Text-assetdateiänderungen ist jedoch fehleranfällig und wird nicht empfohlen. Daher sollten Sie in Ihrem Quell Code Verwaltungssystem exklusive binäre Auschecken aktivieren.
 
 ## <a name="see-also"></a>Weitere Informationen:
-- [Visual Studio-Tools für Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
+- [Visual Studio Tools für Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
 - [Optimieren von Buildzeiten für IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
 - [*Unityscriptanalyzer* Visual Studio-Erweiterung](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Entwurf, Interaktion, Sprache
-ms.openlocfilehash: 350acfbe777869f150b7c90c93124e10e155168d
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 66afa24699ed22fb17ab36818ba67a526f4c5618
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926711"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502641"
 ---
 # <a name="voice-commanding"></a>Sprachbefehle
 
@@ -45,7 +45,7 @@ Wenn Sprachbefehle verwendet werden, wird der Blick in der Regel als Ziel Ziel M
 
 ## <a name="how-to-use-voice"></a>Verwendung der Spracheingabe
 
-Erwägen Sie, Sprachbefehle zu jeder von Ihnen erstellten Umgebung hinzuzufügen. Die Spracheingabe ist eine leistungsstarke und komfortable Möglichkeit zur Steuerung von System und Apps. Da Benutzer mit einer Vielzahl von Dialekten und Akzenten sprechen, stellt die richtige Auswahl der Schlüsselwörter für die Spracherkennung sicher, dass die Befehle Ihrer Benutzer eindeutig interpretiert werden.
+Erwägen Sie, Sprachbefehle zu jeder von Ihnen erstellten Umgebung hinzuzufügen. Voice ist eine leistungsstarke und bequeme Möglichkeit, das System und die apps zu steuern. Da Benutzer mit einer Vielzahl von Dialekten und Akzenten sprechen, stellt die richtige Auswahl der Schlüsselwörter für die Spracherkennung sicher, dass die Befehle Ihrer Benutzer eindeutig interpretiert werden.
 
 ### <a name="best-practices"></a>Bewährte Verfahren
 
@@ -65,7 +65,7 @@ Nachfolgend finden Sie einige Methoden aufgeführt, die eine reibungslose Sprach
 
 Wenn Sie zu einem beliebigen Zeitpunkt „Auswählen“ sagen, wird das aktiviert, worauf der beim Anvisieren verwendete Cursor zeigt. 
 
->Hinweis: in hololens 2 muss der Cursor Cursor zuerst durch das Wort "Select" aufgerufen werden. Sagen Sie zum Aktivieren erneut „Auswählen“. Um den beim Anvisieren verwendeten Cursor auszublenden, verwenden Sie Ihre Hände – Berühren Sie ein Objekt, oder tippen Sie in die Luft. 
+>Hinweis: in hololens 2 muss der Cursor Cursor zuerst durch das Wort "Select" aufgerufen werden. Wählen Sie zum Aktivieren erneut "Select" aus. Um den Cursor Cursor auszublenden, verwenden Sie einfach die Hände, um ein Objekt zu tippen oder zu berühren. 
 
 ### <a name="see-it-say-it"></a>Sehen, sagen
 
@@ -79,7 +79,7 @@ Windows Mixed Reality hat ein „Sehen, sagen“-Sprachmodell eingesetzt, bei de
 
 ### <a name="voices-strengths"></a>Vorteile der Spracheingabe
 
-Die Spracheingabe ist eine natürliche Art, unsere Absichten zu kommunizieren. Die Spracheingabe ist besonders gut bei den **Übergängen** von Schnittstellen geeignet, da sie den Benutzern helfen kann, mehrere Schritte einer Schnittstelle zu durchlaufen (ein Benutzer könnte „Zurück“ sagen, während er eine Webseite betrachtet, anstatt in der App zum Seitenanfang zu wechseln und die Schaltfläche „Zurück“ zu betätigen). Diese kleine Zeitersparnis hat einen starken **emotionalen Effekt** auf die Wahrnehmung der Umgebung für den Benutzer und verleiht ihm eine gewisse „Kraft“. Die Spracheingabe ist auch eine bequeme Eingabemethode, wenn unsere Arme nicht frei sind oder wir **mehrere Aufgaben gleichzeitig** erledigen. Auf Geräten, bei denen die Eingabe über eine Tastatur schwierig ist, kann das **Sprachdiktat** eine effiziente Eingabealternative sein. In einigen Fällen, wenn der **Genauigkeitsbereich** für Anvisieren und Gesten begrenzt ist, könnte die Spracheingabe schließlich die einzige vertrauenswürdige Eingabemethode eines Benutzers sein.
+Die Spracheingabe ist eine natürliche Art, unsere Absichten zu kommunizieren. Voice ist besonders gut für Schnittstellen **Traversale** geeignet, da Sie Benutzern dabei helfen kann, mehrere Schritte einer Schnittstelle zu durchlaufen (ein Benutzer könnte bei der Betrachtung einer Webseite auf die Schaltfläche "zurück" klicken, anstatt auf die Schaltfläche "zurück" in der APP zu klicken). Diese kleine Zeitersparnis wirkt sich **negativ** auf die Wahrnehmung der Benutzerfreundlichkeit durch den Benutzer aus und bietet Ihnen einen kleinen Anteil an der superkraft. Die Spracheingabe ist auch eine bequeme Eingabemethode, wenn unsere Arme nicht frei sind oder wir **mehrere Aufgaben gleichzeitig** erledigen. Auf Geräten, auf denen die Eingabe auf einer Tastatur schwierig ist, kann das **sprach Diktat** eine effiziente und alternative Methode zur Eingabe sein. In einigen Fällen, in denen der **Genauigkeits Bereich** für Blick und Bewegung eingeschränkt ist, kann Voice die einzige vertrauenswürdige Eingabemethode eines Benutzers sein.
 
 **Vorteile der Spracheingabe für den Benutzer**
 * Verkürzt den Zeitaufwand – das Endziel sollte effizienter erreicht werden.
@@ -90,7 +90,7 @@ Die Spracheingabe ist eine natürliche Art, unsere Absichten zu kommunizieren. D
 
 ### <a name="voices-weaknesses"></a>Nachteile der Spracheingabe
 
-Die Spracheingabe weist auch einige Schwächen auf. Eine davon ist die differenzierte Steuerung. (Ein Benutzer kann z. B. „lauter“ sagen, aber nicht angeben, wie viel lauter es sein soll.) „Etwas“ ist schwer zu quantifizieren. Das Bewegen oder Skalieren von Objekten per Spracheingabe ist ebenfalls schwierig (die Spracheingabe bietet nicht die Genauigkeit bei der Steuerung). Die Spracheingabe kann auch unvollkommen sein. Gelegentlich hört ein Spracheingabesystem einen Befehl falsch oder überhaupt nicht. Die Wiederherstellung nach solchen Fehlern stellt für jede Schnittstelle eine Herausforderung dar. Schließlich ist die Spracheingabe an öffentlichen Orten möglicherweise nicht gesellschaftsfähig. Es gibt einige Dinge, die Benutzer nicht sagen können oder sollten. Diese Hindernisse ermöglichen es, die Spracherkennung dafür zu nutzen, wofür sie am besten geeignet ist.
+Die Spracheingabe weist auch einige Schwächen auf. Eine davon ist die differenzierte Steuerung. (ein Benutzer könnte z. b. "lauter" sagen, aber nicht sagen, wie viel. „Etwas“ ist schwer zu quantifizieren. Das Bewegen oder Skalieren von Objekten per Spracheingabe ist ebenfalls schwierig (die Spracheingabe bietet nicht die Genauigkeit bei der Steuerung). Die Spracheingabe kann auch unvollkommen sein. Gelegentlich hört ein Spracheingabesystem einen Befehl falsch oder überhaupt nicht. Die Wiederherstellung nach solchen Fehlern stellt für jede Schnittstelle eine Herausforderung dar. Schließlich ist die Spracheingabe an öffentlichen Orten möglicherweise nicht gesellschaftsfähig. Es gibt einige Dinge, die Benutzer nicht sagen können oder sollten. Diese Hindernisse ermöglichen es, die Spracherkennung dafür zu nutzen, wofür sie am besten geeignet ist.
 
 ### <a name="voice-feedback-states"></a>Statusangaben für Spracherkennungsfeedback
 
@@ -102,7 +102,7 @@ Wenn die Spracherkennung richtig angewendet wird, versteht der Benutzer, **was e
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Wichtige Informationen zur Spracherkennung in Mixed Reality
 * Sagen Sie **„Auswählen“** , während Sie eine Schaltfläche anvisieren (Sie können dies überall verwenden, um auf eine Schaltfläche zu klicken).
 * Sie können in einigen Apps den **Bezeichnungsnamen einer Schaltfläche auf der App-Leiste** sagen, um eine Aktion auszuführen. Beim Betrachten einer App kann ein Benutzer z. B. den Befehl „Entfernen“ sagen, um die App aus der Umgebung zu entfernen (das spart Zeit, da die App nicht mit der Hand angeklickt werden muss).
-* Sie können initiieren, dass Cortana zuhört, indem Sie **„Hey Cortana“** sagen. Sie können ihr Fragen stellen („Hey Cortana, wie hoch ist der Eiffelturm“), sie zum Öffnen einer App auffordern („Hey Cortana, öffne Netflix“) oder ihr sagen, sie soll das Startmenü aufrufen („Hey Cortana, öffne das Startmenü“) und vieles mehr.
+* Sie können initiieren, dass Cortana zuhört, indem Sie **„Hey Cortana“** sagen. Sie können Ihre Fragen stellen ("Hey Cortana, wie hoch ist der Eiffelturm?"), Sie bitten, eine APP zu öffnen ("Hey Cortana, Open Netflix"), oder Sie bitten Sie, das Startmenü zu öffnen ("Hey Cortana, Take Me Home") und mehr.
 
 ## <a name="common-questions-and-concerns-users-have-about-voice"></a>Häufig gestellte Fragen und Bedenken von Benutzern zur Spracheingabe
 * Was kann ich sagen?

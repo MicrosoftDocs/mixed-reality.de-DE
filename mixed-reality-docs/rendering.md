@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Rendering, – Hologramm
-ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 544e43ced57309cfe2628cbea65d07e94563eb41
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182030"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503818"
 ---
 # <a name="rendering"></a>Rendering
 
-Das Holographic-Rendering ermöglicht es Ihrer Anwendung, ein – Hologramm an einer exakten Position in der Welt um den Benutzer zu zeichnen, egal ob Sie genau in der physischen Welt oder innerhalb eines virtuellen Bereichs platziert ist, den Sie erstellt haben. [Holograms](hologram.md) sind Objekte aus Sound und Licht. Durch Rendering kann die Anwendung das Licht hinzufügen.
+Das Holographic-Rendering ermöglicht es Ihrer Anwendung, ein Hologramm an einer exakten Position in der Welt um den Benutzer zu zeichnen, unabhängig davon, ob es sich genau in der physischen Welt oder innerhalb eines virtuellen Bereichs befindet, den Sie erstellt haben. [Holograms](hologram.md) sind Objekte aus Sound und Licht. Durch Rendering kann die Anwendung das Licht hinzufügen.
 
 ## <a name="device-support"></a>Geräteunterstützung
 
@@ -42,9 +42,9 @@ Das Holographic-Rendering ermöglicht es Ihrer Anwendung, ein – Hologramm an e
 
 ## <a name="holographic-rendering"></a>Holografisches Rendering
 
-Der Schlüssel für das holografische Rendering ist zu wissen, ob Sie zu einer anzeigen-through-Anzeige wie hololens gerendert werden, mit der dem Benutzer sowohl die physische Welt als auch die Hologramme angezeigt werden, oder eine nicht transparente Anzeige wie ein Windows Mixed Reality-immersives Headset, das blockiert wird. die Welt.
+Der Schlüssel für das holografische Rendering ist zu wissen, ob Sie zu einer anzeigen-through-Anzeige wie hololens gerendert werden, mit der dem Benutzer sowohl die physische Welt als auch die Hologramme angezeigt werden können, oder eine nicht transparente Anzeige wie ein Windows Mixed Reality-immersives Headset, das das World.
 
-Geräte mit **Anzeige Anzeige**, z. b. [hololens](hololens-hardware-details.md), können der Welt ein Licht hinzufügen. Schwarze Pixel sind vollständig transparent, und hellere Pixel sind immer transparenter. Da das Licht aus der Anzeige dem Licht aus der realen Welt hinzugefügt wird, sind weiße Pixel etwas leicht durchsichtig.
+Geräte mit **Anzeige Anzeige**, z. b. [hololens](hololens-hardware-details.md), werden der Welt zur Welt hinzugefügt. Schwarze Pixel sind vollständig transparent, und hellere Pixel sind immer transparenter. Da das Licht aus der Anzeige dem Licht aus der realen Welt hinzugefügt wird, sind weiße Pixel etwas leicht durchsichtig.
 
 Obwohl das stereoverarbeitungs-Rendering einen tiefen Hinweis für Ihre Hologramme bietet, kann das Hinzufügen von Grund [Effekten](interaction-fundamentals.md) dazu beitragen, dass Benutzern leichter angezeigt werden kann, welche Oberfläche ein – Hologramm- Ein Grundverfahren besteht darin, einen Glanz um ein Hologramm auf der nahe gelegenen Oberfläche hinzuzufügen und dann einen Schatten gegen diesen Glanz zu erzeugen. Auf diese Weise scheint ihr Schatten das Licht aus der Umgebung zu subtrahieren. [Räumlicher Sound](spatial-sound.md) ist ein weiterer äußerst wichtiger Hinweis auf die Tiefe und ermöglicht es den Benutzern, die Entfernung und den relativen Speicherort eines holograms zu verdeutlichen.
 
@@ -52,7 +52,7 @@ Geräte mit nicht transparenten **Anzeige**, wie z. b. [Windows Mixed Reality (i
 
 ## <a name="predicted-rendering-parameters"></a>Vorhergesagte Rendering
 
-Gemischte Reality-Headsets (hololens und immersive Headsets) verfolgen kontinuierlich die Position und Ausrichtung des Benutzer Kopfes in Bezug auf Ihre Umgebung. Wenn Ihre Anwendung mit der Vorbereitung des nächsten Frames beginnt, sagt das System vorher, wo der Benutzer in der Zukunft zu dem genauen Zeitpunkt angezeigt wird, in dem der Frame in der Anzeige angezeigt wird. Basierend auf dieser Vorhersage berechnet das System die Ansichts-und Projektions Transformationen, die für diesen Frame verwendet werden sollen. Die Anwendung **muss diese Transformationen verwenden, um korrekte Ergebnisse zu erzielen**. Wenn vom System bereitgestellte Transformationen nicht verwendet werden, wird das resultierende Bild nicht an der realen Welt ausgerichtet, was zu Benutzer Unannehmlichkeiten führt.
+Gemischte Reality-Headsets (hololens und immersive Headsets) verfolgen kontinuierlich die Position und Ausrichtung des Benutzer Kopfes in Bezug auf Ihre Umgebung. Wenn Ihre Anwendung mit der Vorbereitung des nächsten Frames beginnt, sagt das System vorher, wo der Benutzer in der Zukunft zu dem genauen Zeitpunkt angezeigt wird, in dem der Frame in der Anzeige angezeigt wird. Basierend auf dieser Vorhersage berechnet das System die Sicht und die Projektions Transformationen, die für diesen Frame verwendet werden sollen. Die Anwendung **muss diese Transformationen verwenden, um korrekte Ergebnisse zu erzielen**. Wenn vom System bereitgestellte Transformationen nicht verwendet werden, wird das resultierende Bild nicht an der realen Welt ausgerichtet, was zu Benutzer Unannehmlichkeiten führt.
 
 Beachten Sie, dass das System die effektive End-to-End-Latenz der Renderingpipeline Ihrer Anwendung ständig misst, um genau vorherzusagen, wann ein neuer Frame die Anzeige erreicht. Während das System an die Länge ihrer Renderingpipeline angepasst wird, können Sie die hologrammstabilität verbessern, indem Sie diese Pipeline so kurz wie möglich halten.
 
@@ -74,7 +74,7 @@ Ausführliche Informationen zu diesem Thema finden Sie [im Artikel Rendern im Di
 
 ## <a name="holographic-cameras"></a>Holographic Kameras
 
-Mit Windows Mixed Reality wird das Konzept einer **Holographic Kamera**eingeführt. Holographic Kameras ähneln der herkömmlichen Kamera in 3D-Grafik Texten: Sie definieren sowohl die System externe (Position und Ausrichtung) als auch die systeminternen Kameraeigenschaften. (Z. b. wird das Feld Ansicht verwendet, um eine virtuelle 3D-Szene anzuzeigen.) Im Gegensatz zu herkömmlichen 3D-Kameras ist die Anwendung nicht in der Lage, die Position, die Ausrichtung und die intrinsischen Eigenschaften der Kamera zu steuern. Stattdessen wird die Position und Ausrichtung der Holographic-Kamera implizit durch die Bewegung des Benutzers gesteuert. Die Verschiebung des Benutzers wird über eine Ansichts Transformation per Frame an die Anwendung weitergeleitet. Ebenso werden die systeminternen Eigenschaften der Kamera durch die Matrix des Geräts und das Rahmen der Projektions Transformation definiert.
+Mit Windows Mixed Reality wird das Konzept einer **Holographic Kamera**eingeführt. Holographic Kameras ähneln der herkömmlichen Kamera in 3D-Grafik Texten. Sie definieren sowohl die System externe (Position und Ausrichtung) als auch die systeminternen Kameraeigenschaften. (Z. b. wird das Feld Ansicht verwendet, um eine virtuelle 3D-Szene anzuzeigen.) Im Gegensatz zu herkömmlichen 3D-Kameras ist die Anwendung nicht in der Lage, die Position, die Ausrichtung und die intrinsischen Eigenschaften der Kamera zu steuern. Stattdessen wird die Position und Ausrichtung der Holographic-Kamera implizit durch die Bewegung des Benutzers gesteuert. Die Verschiebung des Benutzers wird über eine Ansichts Transformation per Frame an die Anwendung weitergeleitet. Ebenso werden die systeminternen Eigenschaften der Kamera durch die Matrix des Geräts und das Rahmen der Projektions Transformation definiert.
 
 Im Allgemeinen wird Ihre Anwendung für eine einzelne Stereokamera dargestellt. Eine robuste Renderingschleife unterstützt jedoch mehrere Kameras und unterstützt Mono-und Stereokameras. Das System kann z. b. die Anwendung zum Rendering aus einer alternativen Perspektive auffordern, wenn der Benutzer eine Funktion wie z. b. [Mixed Reality Capture](mixed-reality-capture.md) (MRC) aktiviert, abhängig von der Form des fraglichen-endbeispiels. Anwendungen, die mehrere Kameras unterstützen [können, erhalten diese durch die](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) Wahl der [Art](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) von Kameras, die Sie unterstützen können.
 

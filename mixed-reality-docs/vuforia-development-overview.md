@@ -3,15 +3,15 @@ title: Verwenden von vuforia mit Unity
 description: Nutzen Sie vuforia zum Erstellen von Windows Mixed Reality-Anwendungen in Unity.
 author: thetuvix
 ms.author: alexturn
-ms.date: 01/28/2019
+ms.date: 12/20/2019
 ms.topic: article
 keywords: Vuforia, Marker, Koordinaten, Referenzrahmen, Nachverfolgung
-ms.openlocfilehash: bae5d0eb04ab9434dd3e72674686743779a8f70c
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 2d7cc27cd9a5fe9bb6502edaa6df0b7a80755049
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003189"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334476"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Verwenden der vuforia-Engine mit Unity
 
@@ -80,7 +80,7 @@ Die vuforia-Engine verbindet die Posen automatisch von der Kamera Verfolgung und
 Da der Prozess automatisch verarbeitet wird, ist keine Programmierung durch den Entwickler erforderlich.
 
 
-**Hier sehen Sie, was passiert...**
+**Im folgenden finden Sie eine allgemeine Beschreibung des Prozesses:**
 1. Der Ziel-Tracker von vuforia erkennt das Ziel.
 2. Die Ziel Überwachung wird initialisiert.
 3. Die Position und die Drehung des Ziels werden analysiert, um eine robuste positätsschätzung für hololens bereitzustellen.

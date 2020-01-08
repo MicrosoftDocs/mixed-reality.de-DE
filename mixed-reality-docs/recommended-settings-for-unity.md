@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, Einstellungen, gemischte Realität
-ms.openlocfilehash: 2f2f823fe7192bd92e038d58901cb7098d2f4d64
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438104"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597633"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -40,7 +40,7 @@ Weitere Informationen finden Sie [unter Globale Beleuchtung von Unity](https://d
 
 ### <a name="single-pass-instancing-rendering-path"></a>Renderingpfad für Einzelpass-Instanz
 
-In Mixed Reality-Anwendungen wird die Szene zweimal gerendert, einmal für den Benutzer. Im Vergleich zur herkömmlichen 3D-Entwicklung verdoppelt dies effektiv den Arbeitsaufwand, der berechnet werden muss. Daher ist es wichtig, den effizientesten Renderingpfad in Unity auszuwählen, um sowohl die CPU-als auch die GPU-Zeit zu sparen. Ein Single Pass-instanziziertes Rendering optimiert die Unity-Renderingpipeline für Mixed Reality-apps. Daher wird empfohlen, diese Einstellung standardmäßig für jedes Projekt zu aktivieren.
+In Mixed Reality-Anwendungen wird die Szene zweimal gerendert, einmal für den Benutzer. Im Vergleich zur herkömmlichen 3D-Entwicklung verdoppelt dies effektiv den Umfang der Arbeit, die berechnet werden muss. Daher ist es wichtig, den effizientesten Renderingpfad in Unity auszuwählen, um sowohl die CPU-als auch die GPU-Zeit zu sparen. Ein Single Pass-instanziziertes Rendering optimiert die Unity-Renderingpipeline für Mixed Reality-apps. Daher wird empfohlen, diese Einstellung standardmäßig für jedes Projekt zu aktivieren.
 
 So aktivieren Sie dieses Feature in Ihrem Unity-Projekt
 
@@ -68,31 +68,31 @@ So aktivieren Sie dieses Feature in Ihrem Unity-Projekt
 
 Außerdem wird empfohlen, unter der Einstellung **Tiefe Format** in diesem Panel eine **16-Bit-Tiefe** auszuwählen, insbesondere bei der hololens-Entwicklung. Durch die Auswahl von 16 Bit im Vergleich zu 24-Bit werden die Bandbreitenanforderungen erheblich reduziert, da weniger Daten verschoben/verarbeitet werden müssen.
 
-Damit die Windows Mixed Reality-Plattform die – Hologramm-Stabilität optimieren kann, basiert Sie darauf, dass der tiefen Puffer genau ist und jedem gerenderten Hologramm auf dem Bildschirm entspricht. Daher ist es bei der tiefen Puffer Freigabe für wichtig, dass es beim Rendern von Farben auch die Tiefe rendert. In Unity werden die meisten nicht transparenten oder transparentcutout-Materialien standardmäßig in der Tiefe gerenden, aber transparente und Textobjekte werden im Allgemeinen nicht ausführlich gerenden, obwohl dies shaderabhängig ist usw.
+Damit die Windows Mixed Reality-Plattform die – Hologramm-Stabilität optimieren kann, basiert Sie darauf, dass der tiefen Puffer genau ist und jedem gerenderten Hologramm auf dem Bildschirm entspricht. Daher ist bei der tiefen Puffer Freigabe in wichtig, wenn die Farbe gerendert wird, damit auch die Tiefe gerendert wird. In Unity werden die meisten nicht transparenten oder transparentcutout-Materialien standardmäßig in der Tiefe gerenden, aber transparente und Textobjekte werden im Allgemeinen nicht ausführlich gerenden, obwohl dies shaderabhängig ist usw.
 
 Wenn Sie den [Mixed Reality Toolkit Standard-Shader](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md)verwenden, um Tiefe für transparente Objekte zu Renten:
 
 1) Wählen Sie das transparente Material aus, das den mrtk-Standard-Shader verwendet, und öffnen Sie das Fenster Inspektor Editor.
-2) Wählen Sie in der Warnung "Tiefe Puffer Freigabe" die Schaltfläche **jetzt reparieren** aus. Dies kann auch manuell erfolgen, indem der **Renderingmodus** auf **Benutzer** definiert festgelegt wird und der **Modus** **auf** **transparent** **festgelegt wird** .
+2) Wählen Sie in der Warnung "Tiefe Puffer Freigabe" die Schaltfläche **jetzt reparieren** aus. Dies kann auch manuell erfolgen, indem der **Renderingmodus** auf **Benutzer**definiert festgelegt wird. Legen Sie dann den **Modus** auf **transparent** fest, und legen Sie schließlich die **Tiefe Schreib** Vorgänge **auf**
 
 > [!IMPORTANT]
 > Entwickler sollten sich vor Z-kämpfen hüten, wenn Sie diese Werte zusammen mit den Einstellungen für die near/all-Ebene der Kamera ändern. Z-Kämpfe treten auf, wenn zwei gameobjects versuchen, zum gleichen Pixel zu rendern, und aufgrund von Einschränkungen bei der Genauigkeit des tiefen Puffers (d. h. z-Tiefe), Unity kann nicht erkennen, welches Objekt vor dem anderen liegt. Entwickler werden ein Flimmern zwischen zwei Spielobjekten bemerken, wenn Sie für denselben z-tiefen Wert *kämpfen* . Dies kann durch einen Wechsel zu einem 24-Bit-Tiefen Format gelöst werden, da für jedes Objekt eine größere Anzahl von Werten vorhanden ist, die für die jeweilige z-Tiefe von der Kamera berechnet werden sollen.
 >
-> Es wird jedoch empfohlen, insbesondere bei der hololens-Entwicklung, die Near-und Far-Ebenen der Kamera in einen kleineren Bereich zu ändern und das 16-Bit-Tiefen Format beizubehalten. Die z-Tiefe ist nicht linear dem Wertebereich entlang der nahen und fernen Kamera Flächen zugeordnet. Dies kann geändert werden, indem Sie die *Hauptkamera* in der Szene auswählen und unter **Inspektor**die Werte **in der Nähe & weit** genwergenebenenwerte ändern, um den Bereich zu reduzieren (d.h. zwischen 1000 m und 100 m oder einem anderen x-Wert usw.)
+> Es wird jedoch empfohlen, vor allem bei der hololens-Entwicklung die Near-und Far-Ebenen der Kamera in einen kleineren Bereich zu ändern und das 16-Bit-Tiefen Format beizubehalten. Die z-Tiefe ist nicht linear dem Wertebereich entlang der nahen und fernen Kamera Flächen zugeordnet. Dies kann geändert werden, indem Sie die *Hauptkamera* in der Szene auswählen und unter **Inspektor**die Werte **in der Nähe & weit** genwergenebenenwerte ändern, um den Bereich zu reduzieren (d.h. zwischen 1000 m und 100 m oder einem anderen x-Wert usw.)
 
 >[!IMPORTANT]
 > [Unity erstellt](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html) bei Verwendung des 16-Bit-Tiefen Formats keinen Schablone-Puffer. Folglich funktionieren einige Effekte der Unity-Benutzeroberfläche und andere Schablonen erforderliche Effekte nicht, es sei denn, es wird ein 24-Bit-Tiefen Format ausgewählt, das einen [8-Bit-Schablonen Puffer](https://docs.unity3d.com/Manual/SL-Stencil.html)erstellt.
 
 ### <a name="building-for-il2cpp"></a>Entwickeln für IL2CPP
 
-Unity verfügt über veraltete Unterstützung für das .NET-Skript-Back-End und empfiehlt daher Entwicklern, **IL2CPP** für Ihre UWP-Visual Studio-Builds zu verwenden. Obwohl dies verschiedene Vorteile bietet, kann das Entwickeln Ihrer Visual Studio-Lösung aus Unity für **Il2CPP** erheblich langsamer als die alte .NET-Methode sein. Daher wird dringend empfohlen, die bewährten Methoden für die Entwicklung von **IL2CPP** zu befolgen, um die Entwicklungszeit für die Entwicklung zu sparen.
+Unity verfügt über veraltete Unterstützung für das .NET-Skript-Back-End und empfiehlt daher, dass Entwickler **IL2CPP** für Ihre UWP-Visual Studio-Builds verwenden. Obwohl dies verschiedene Vorteile bietet, kann das Entwickeln Ihrer Visual Studio-Lösung aus Unity für **Il2CPP** erheblich langsamer als die alte .NET-Methode sein. Daher wird dringend empfohlen, die bewährten Methoden für die Entwicklung von **IL2CPP** zu befolgen, um die Entwicklungszeit für die Entwicklung zu sparen.
 
 1) Nutzen Sie das inkrementelle erstellen, indem Sie Ihr Projekt jedes Mal in demselben Verzeichnis erstellen, indem Sie die vorgefertigten Dateien wieder verwenden.
 2) Antischadsoftwarescans für Ihr Projekt & Buildordner deaktivieren
    - Öffnen Sie **Viren & Bedrohungsschutz** unter Ihrer Windows 10-Einstellungs-APP.
    - Wählen Sie unter **Viren & Bedrohungsschutz Einstellungen** die Option **Einstellungen verwalten** .
    - Wählen Sie im Abschnitt **Ausschlüsse** die Option **Ausschlüsse hinzufügen oder entfernen**
-   - Klicken Sie auf **Ausschluss hinzufügen** , und wählen Sie den Ordner mit Ihrem Unity-Projekt Code und Buildausgaben
+   - Klicken Sie auf **Ausschluss hinzufügen** , und wählen Sie den Ordner mit Ihrem Unity-Projekt Code und Buildausgaben aus
 3) Verwenden eines SSD zum entwickeln
 
 Weitere Informationen finden Sie im Artikel [zum Optimieren der Buildzeiten für IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) .
@@ -109,7 +109,7 @@ Hololens verfügt über eine CPU-und GPU-Version der mobilen Klasse, was bedeute
 So schalten Sie den Holographic-Begrüßungsbildschirm um:
 
 1) Wechseln Sie zu **Edit** > **Project Settings** > **Player** Page.
-2) Klicken Sie auf die Registerkarte **Windows Store** , und öffnen Sie den Abschnitt Begrüßungs **Abbild** .
+2) Klicken Sie auf die Registerkarte **Windows Store** , und öffnen Sie den Abschnitt Begrüßungs **Bild**
 3) Wenden Sie das gewünschte Image unter der Eigenschaft **Windows Holographic > Holographic Splash Image** an.
     - Wenn Sie die Option **Unity-Begrüßungsbildschirm anzeigen** umschalten, wird der Begrüßungsbildschirm von Unity-Marken aktiviert oder deaktiviert. Wenn Sie nicht über eine Unity pro-Lizenz verfügen, wird immer der Bildschirm "der Unity-Marken Begrüßungs" angezeigt.
     - Wenn ein **Holographic** -Begrüßungs Bild angewendet wird, wird es immer angezeigt, unabhängig davon, ob das Kontrollkästchen Unity-Begrüßungsbildschirm anzeigen aktiviert oder deaktiviert ist. Das Angeben eines benutzerdefinierten Holographic-Begrüßungs Bilds ist nur für Entwickler mit einer Unity pro-Lizenz verfügbar.
@@ -141,8 +141,8 @@ Einige apps erfordern möglicherweise keine Nachverfolgung (z. b. nur für die [
 
 So beenden Sie das automatische anhalten:
 
-1) Wechseln Sie zu **Edit** > **Project Settings** > **Player** Page.
-2) Klicken Sie auf die Registerkarte **Windows Store** , und öffnen Sie den Abschnitt Begrüßungs **Abbild** .
+1) Wechseln Sie zur Seite > **Projekteinstellungen** **Bearbeiten** > **Player** .
+2) Klicken Sie auf die Registerkarte **Windows Store** , und öffnen Sie den Abschnitt Begrüßungs **Bild**
 3) Ändern Sie das Kontrollkästchen **Windows Holographic > on Tracking Loss Pause and Show Image** .
 
 #### <a name="tracking-loss-events"></a>Nachverfolgen von Verlustereignissen
@@ -156,7 +156,7 @@ Damit eine APP bestimmte Funktionen nutzen kann, müssen Sie die entsprechenden 
 Funktionen können für eine gemischte Reality-Anwendung wie folgt aktiviert werden:
 
 1) Wechseln Sie zu **Edit** > **Project Settings** > **Player** Page.
-2) Klicken Sie auf die Registerkarte **Windows Store** , öffnen Sie den Abschnitt **Veröffentlichungs Einstellungen** , und suchen Sie nach der Liste der **Funktionen** .
+2) Klicken Sie auf die Registerkarte **Windows Store** , öffnen Sie den Abschnitt **Veröffentlichungs Einstellungen** , und suchen Sie nach der Liste **Funktionen** .
 
 Die folgenden Funktionen zum Aktivieren der häufig verwendeten APIs für Holographic-apps sind verfügbar:
 <br>
