@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Steuerelemente, Entwurf
-ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: ec41cfad77617a90d02e7b23a2334249aa430190
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143152"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723219"
 ---
 # <a name="object-collection"></a>Objektsammlung
 
@@ -48,7 +48,7 @@ Sie können auch 2D-Images mit der Objektsammlung verwenden. In den folgenden Be
 
 ---
 
-## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Objektsammlung in mrtk (Mixed Reality Toolkit) für Unity
+## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>Objektsammlung in mrtk (Mixed Reality Toolkit) für Unity
 
 * [Mrtk-Objektsammlung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
 
@@ -61,20 +61,20 @@ Sie können auch 2D-Images mit der Objektsammlung verwenden. In den folgenden Be
 ## <a name="see-also"></a>Weitere Informationen:
 
 * [Cursor](cursors.md)
-* [Hand Strahl](point-and-commit.md)
+* [Handstrahl](point-and-commit.md)
 * [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
-* [Bearbeitung](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Handmenü](hand-menu.md)
-* [Near-Menü](near-menu.md)
+* [Nähemenü](near-menu.md)
 * [Objektsammlung](object-collection.md)
 * [Sprachbefehl](voice-input.md)
 * [Tastatur](keyboard.md)
 * [QuickInfo](tooltip.md)
-* [Tafel](slate.md)
+* [Filmklappe](slate.md)
 * [Schieberegler](slider.md)
 * [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
-* [Oberflächen Magnetismus](surface-magnetism.md)
+* [Oberflächenmagnetismus](surface-magnetism.md)

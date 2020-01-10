@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, fakboardingvorgang, tagparallel
-ms.openlocfilehash: ff2b1ce20174b1b9aecbb90b1d1dc3e8896b3761
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 24c4ca8bdc3c6ea1081311102204d4a7f5a95425
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143127"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723179"
 ---
 # <a name="billboarding-and-tag-along"></a>Fakboardingvorgang und Tag-entlang
 
@@ -46,8 +46,8 @@ Ebenso wie wirklich mit dem Titel gesperrter Inhalt können sich taggingobjekte 
 
 ---
 
-## <a name="billboarding-and-tag-along-in-mrtkmixed-reality-toolkit-for-unity"></a>Fakboardingvorgang und tagparallel in mrtk (Mixed Reality Toolkit) für Unity
-**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** stellt Skripts für das fakboardingverhalten und das tagbasierte Verhalten bereit. Weisen Sie der Billboard.cs-Skript einfach ein beliebiges Objekt zu, um das Verhalten bei der Abbild Erstellung hinzuzufügen und das Objekt immer als Verwenden Sie RadialView.cs Script, um das tagbasierte Verhalten hinzuzufügen. Sie können verschiedene Optionen wie z. b. lerping-Zeit, Entfernung und Grad anpassen.
+## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Fakboardingvorgang und tagparallel in mrtk (Mixed Reality Toolkit) für Unity
+**[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** stellt Skripts für das fakboardingverhalten und das tagbasierte Verhalten bereit. Weisen Sie das Billboard.cs-Skript einfach einem beliebigen Objekt zu, um das Abrechnungs Verhalten hinzuzufügen, und machen Sie das Objekt immer auf dem Bild Verwenden Sie das RadialView.cs-Skript, um das tagbasierte Verhalten hinzuzufügen. Sie können verschiedene Optionen wie z. b. lerping-Zeit, Entfernung und Grad anpassen.
 
 * [-Solver der mrtk-radialen Ansicht](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html#radialview)
 * [Mrtk-Billboard-Skript](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
@@ -60,20 +60,20 @@ Ebenso wie wirklich mit dem Titel gesperrter Inhalt können sich taggingobjekte 
 ## <a name="see-also"></a>Weitere Informationen:
 
 * [Cursor](cursors.md)
-* [Hand Strahl](point-and-commit.md)
+* [Handstrahl](point-and-commit.md)
 * [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
-* [Bearbeitung](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Handmenü](hand-menu.md)
-* [Near-Menü](near-menu.md)
+* [Nähemenü](near-menu.md)
 * [Objektsammlung](object-collection.md)
 * [Sprachbefehl](voice-input.md)
 * [Tastatur](keyboard.md)
 * [QuickInfo](tooltip.md)
-* [Tafel](slate.md)
+* [Filmklappe](slate.md)
 * [Schieberegler](slider.md)
 * [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
-* [Oberflächen Magnetismus](surface-magnetism.md)
+* [Oberflächenmagnetismus](surface-magnetism.md)

@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, App-Leiste, Begrenzungs Bereich
-ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: dab41207c2558fe8bb3fe07fca666cb2668f4e45
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143175"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723199"
 ---
 # <a name="bounding-box-and-app-bar"></a>Begrenzungs Bereich und App-Leiste
 ![umgebenden ist die Standardschnittstelle für die Objekt Bearbeitung in gemischter Realität.](images/UX/UX_Hero_BoundingBox.jpg)<br>
@@ -29,7 +29,7 @@ Das Begrenzungs Zeichen ist die Standardschnittstelle für die Objekt Bearbeitun
         *Video Schleife: Skalieren eines Objekts per Begrenzungs Rahmen*
     :::column-end:::
         :::column:::
-        ![Speicher](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![hololens zeigt das Skalieren eines Objekts über das Begrenzungsfeld an](images/HoloLens2_BoundingBox.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -44,7 +44,7 @@ Das Begrenzungs Zeichen ist die Standardschnittstelle für die Objekt Bearbeitun
         *Video Schleife: Drehen eines Objekts über das umgebende Feld*
     :::column-end:::
         :::column:::
-        ![Speicher](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![hololens-Sicht, die das Drehen eines Objekts über das umgebende Feld](images/HoloLens2_BoundingBox_Rotate.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -59,7 +59,7 @@ Das Begrenzungs Zeichen ist die Standardschnittstelle für die Objekt Bearbeitun
         *Video Schleife: Beispiel für visuelles Feedback basierend auf der Nähe eines umgebenden Felds*
     :::column-end:::
         :::column:::
-        ![Speicher](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![Sie visuelles Feedback in der Nähe](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -84,7 +84,7 @@ Die APP-Leiste ist ein Menü auf Objektebene, das eine Reihe von Schaltflächen 
         *Video Schleife: Durchlaufen eines Hologram, der APP-Leiste folgt*
     :::column-end:::
         :::column:::
-        ![Speicher](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
        ![durchlaufen eines holograms. Die APP-Leiste folgt.](images/HoloLens2_AppBarFollowing.gif)<br>
     :::column-end:::
 :::row-end:::
@@ -92,7 +92,7 @@ Die APP-Leiste ist ein Menü auf Objektebene, das eine Reihe von Schaltflächen 
 <br>
 
 
-## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Begrenzungsfeld in mrtk (Mixed Reality Toolkit) für Unity
+## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>Begrenzungsfeld in mrtk (Mixed Reality Toolkit) für Unity
 **[Mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** stellt Skripts und Prefabs für das umgebende Feld und die APP-Leiste bereit. Sie können ein Begrenzungsfeld hinzufügen, indem Sie das BoundingBox.cs-Skript einfach einem beliebigen Objekt zuweisen.
 
 * [Mrtk-Begrenzungsfeld](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
@@ -106,20 +106,20 @@ Die APP-Leiste ist ein Menü auf Objektebene, das eine Reihe von Schaltflächen 
 ## <a name="see-also"></a>Weitere Informationen:
 
 * [Cursor](cursors.md)
-* [Hand Strahl](point-and-commit.md)
+* [Handstrahl](point-and-commit.md)
 * [Button](button.md)
 * [Interaktionsfähiges Objekt](interactable-object.md)
 * [Begrenzungsrahmen und App-Leiste](app-bar-and-bounding-box.md)
-* [Bearbeitung](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Handmenü](hand-menu.md)
-* [Near-Menü](near-menu.md)
+* [Nähemenü](near-menu.md)
 * [Objektsammlung](object-collection.md)
 * [Sprachbefehl](voice-input.md)
 * [Tastatur](keyboard.md)
 * [QuickInfo](tooltip.md)
-* [Tafel](slate.md)
+* [Filmklappe](slate.md)
 * [Schieberegler](slider.md)
 * [Shader](shader.md)
 * [Billboarding und Tag-along](billboarding-and-tag-along.md)
 * [Anzeigen des Fortschritts](progress.md)
-* [Oberflächen Magnetismus](surface-magnetism.md)
+* [Oberflächenmagnetismus](surface-magnetism.md)

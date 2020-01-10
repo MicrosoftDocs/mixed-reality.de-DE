@@ -6,18 +6,18 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, Input
-ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723189"
 ---
 # <a name="voice-input"></a>Spracheingabe
 
 ![Spracheingabe](images/UX/UX_Hero_VoiceCommand.jpg)
 
-Voice ist eine der wichtigsten Formen der Eingabe in hololens. Damit können Sie ein – Hologramm direkt aufrufen, ohne [Handgesten](gaze-and-commit.md#composite-gestures)verwenden zu müssen. Die Spracheingabe kann eine natürliche Möglichkeit sein, ihre Absicht zu kommunizieren. Voice eignet sich besonders gut für die Durchführung komplexer Schnittstellen, da Benutzer mit einem Befehl die Möglichkeit haben, die Verwendung von Netz Menüs zu ermöglichen.
+Die Stimme ist eine der wichtigsten Formen der Eingabe für HoloLens. Damit können Sie ein – Hologramm direkt aufrufen, ohne [Handgesten](gaze-and-commit.md#composite-gestures)verwenden zu müssen. Die Spracheingabe kann eine natürliche Art sein, Ihre Absichten zu kommunizieren. Voice eignet sich besonders gut für die Durchführung komplexer Schnittstellen, da Benutzer mit einem Befehl die Möglichkeit haben, die Verwendung von Netz Menüs zu ermöglichen.
 
 Die Spracheingabe wird von [derselben Engine](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) unterstützt, die Sprache in allen anderen _universellen Windows-apps_unterstützt. Bei hololens funktioniert die Spracherkennung immer in der in den Einstellungen konfigurierten Windows-Anzeige Sprache. 
 
@@ -84,7 +84,7 @@ Auch wenn Sie Ihrer APP keine Sprachunterstützung hinzufügen, können Ihre Ben
 ---
 
 
-## <a name="hey-cortana"></a>Hallo, Cortana
+## <a name="hey-cortana"></a>Hey Cortana
 
 Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müssen nicht warten, bis Sie angezeigt wird, um Ihre Frage zu stellen oder eine Anweisung zu geben, z. b. "Hey Cortana, was ist das Wetter?". als einzelner Satz. Weitere Informationen zu Cortana und den Möglichkeiten, die Sie tun können, finden Sie einfach! Sagen Sie: "Hey Cortana, was kann ich sagen?" und Sie werden eine Liste der funktionierenden und vorgeschlagenen Befehle abrufen. Wenn Sie sich bereits in der Cortana-App befinden, können Sie auch auf die **?** Symbol auf der Rand Leiste, um das gleiche Menü zu ziehen.
 
@@ -121,7 +121,7 @@ Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müs
         *Image: ein Benutzer kann den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP anzupassen.*
     :::column-end:::
         :::column:::
-        ![Speicher](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
         ![bei der Betrachtung eines App-Fensters oder eines holograms kann ein Benutzer den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP auf der Welt anzupassen](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -296,7 +296,7 @@ Für Windows Mixed Reality Developer Edition, Version 2017, funktioniert die aud
 
 ---
 
-## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Spracheingabe in mrtk (Mixed Reality Toolkit) für Unity
+## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Spracheingabe in mrtk (Mixed Reality Toolkit) für Unity
 Mit **[mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können Sie den Voice-Befehl problemlos für beliebige Objekte zuweisen. Verwenden Sie das **Spracheingabe Profil** von mrtk, um Ihre Schlüsselwörter zu definieren. Indem Sie das Skript " **speechinputhandler** " zuweisen, können Sie festlegen, dass jedes Objekt auf die im Spracheingabe Profil definierten Schlüsselwörter antwortet. Der speechinputhandler bietet auch eine Bezeichnung für die sprach Bestätigung, um das Vertrauen des Benutzers zu verbessern.
 
 * [Befehl "mrtk-Voice"](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
