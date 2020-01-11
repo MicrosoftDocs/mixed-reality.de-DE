@@ -1,23 +1,23 @@
 ---
 title: Oberflächen Magnetismus
-description: Mithilfe der Surface-Magnetismus-Technik können Sie Holographic-Objekte in einer realen physischen Oberfläche platzieren.
+description: Mithilfe der Surface-Magnetismus-Technik können Sie ein Holographic-Objekt auf einer realen physischen Oberfläche platzieren.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: 17015fef7a73930109844a48d6017230a4efecd5
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694144"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901437"
 ---
 # <a name="surface-magnetism"></a>Oberflächen Magnetismus
 
 ![Oberflächen Magnetismus](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Mithilfe der Surface-Magnetismus-Technik können Sie Holographic-Objekte in einer realen physischen Oberfläche platzieren. Wenn Sie die Ausrichtung des Objekts mit der realen Oberfläche ausrichten, können Sie eine immersive und natürlichere Umgebung schaffen.
+Mithilfe der Surface-Magnetismus-Technik können Sie ein Holographic-Objekt auf einer realen physischen Oberfläche platzieren. Wenn Sie die Ausrichtung des Objekts mit der realen Oberfläche ausrichten, können Sie eine immersive und natürlichere Umgebung schaffen.
 
 <br>
 

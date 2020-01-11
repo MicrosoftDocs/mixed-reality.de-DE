@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 57a23e34404e4bff653d74b7f6afc65adff8b19c
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+keywords: mixed reality, unity, tutorial, hololens
+ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334330"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901475"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Einrichten der Einrichtung von Photon Unity-Netzwerken
 
@@ -28,7 +28,7 @@ In diesem Tutorial erfahren Sie, wie Sie sich auf das Erstellen einer gemeinsame
 ## <a name="prerequisites"></a>Voraussetzungen
 
 >[!TIP]
->Wenn Sie die Reihe "erste Schritte" noch nicht abgeschlossen haben, empfiehlt es sich, [diese Tutorials zuerst](mrlearning-base.md) abzuschließen.
+>Wenn Sie die Lernprogramme "erste Schritte" und " [Azure Spatial](mrlearning-asa-ch1.md) Anchor" noch nicht abgeschlossen haben, empfiehlt es sich, [diese Tutorials zuerst](mrlearning-base.md) abzuschließen.
 
 * Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md) konfiguriert ist
 * Windows 10 SDK 10.0.18362.0 oder höher

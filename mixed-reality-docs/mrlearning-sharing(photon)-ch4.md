@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: f523aabd74b9267b3f7f5024d8af46110e43c32a
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+keywords: mixed reality, unity, tutorial, hololens
+ms.openlocfilehash: f1bcbbd368635c25207127142f21ff50f26a7b58
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334286"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901482"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen für mehrere Benutzer
 
@@ -74,10 +74,6 @@ In diesem Tutorial erfahren Sie, wie Sie die Bewegungen von Objekten freigeben, 
 11. Ziehen Sie aus dem Projekt Panel im Ordner "Prefabs" die Tabelle "Prefab" in das untergeordnete "tableanchor"-Objekt, das Sie soeben erstellt haben.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
-
-12. Ändern Sie im debugWindow-Objekt die Breite auf 50 und die Höhe auf 20.
-
-    ![Module3Chapter4step9im](images/module3chapter4step11im.PNG)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
