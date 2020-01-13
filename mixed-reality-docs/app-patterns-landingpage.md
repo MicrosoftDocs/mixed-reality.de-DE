@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Gemischte Windows-Realität, Entwurf, App-Muster, Steuerelemente, Stil, hololens, Interaktion, UX-Elemente, Verhaltensweisen, Bausteine
-ms.openlocfilehash: 8dd90a555faea62f69750847ddd6e6df4d9d0314
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 16a6c08230dbe16ebb04c39751cce306bbc57c2d
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539660"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334211"
 ---
 # <a name="ux-elements-overview"></a>Übersicht über UX-Elemente
 
@@ -22,23 +22,19 @@ ms.locfileid: "74539660"
 
 :::row:::
     :::column:::
-       [![Farbe, helle und Material](images/640px-fragments.jpg)](color,-light-and-materials.md)  **[Farbe, Licht und Material](color,-light-and-materials.md)**
+       [![Farbe, helle und Material](images/640px-fragments.png)](color,-light-and-materials.md)  **[Farbe, Licht und Material](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       [](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)](scale.md)  **[](scale.md) Skalierung![**
-    :::column-end:::
-    :::column:::
-       [](images/SpatialAudio.gif)](spatial-sound.md)  **[räumlicher](spatial-sound.md) Sound für räumliche Audiodaten![**
+       [](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md)  **[](scale.md) Skalierung![**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       typografietypografie [![](images/text_in_unity_viewingangle.jpg)](typography.md)  **[](typography.md)**
+       typografietypografie [![](images/text_in_unity_viewingangle.png)](typography.md)  **[](typography.md)**
     :::column-end:::
     :::column:::
-    :::column-end:::
-    :::column:::
+       Sound von [![Sound](images/spatialaudio.png)](spatial-sound.md)  **[](spatial-sound.md)**
     :::column-end:::
 :::row-end:::
 
