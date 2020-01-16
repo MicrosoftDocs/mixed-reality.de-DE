@@ -1,25 +1,30 @@
 ---
 title: Windows Mixed Reality und die neue Microsoft Edge
-description: Erfahren Sie, wie Sie an der Windows Mixed Reality-Dokumentation mitwirken können.
+description: Machen Sie sich bereit für den neuen Microsoft Edge in Windows Mixed Reality. Enthält Änderungen, die erwartet werden sollen, sowie bekannte Probleme.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 01/07/2020
+ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, neu, immersives Web, Microsoft Edge, Browser, VR
-ms.openlocfilehash: cb0f96069ffaa8f7d40b64bae55ab2749f5f02c6
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
+ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727047"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76041000"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality und die neue Microsoft Edge
 
-Wie Sie vielleicht schon gehört haben, [kommt der neue Microsoft Edge bald](https://blogs.windows.com/windowsexperience/2019/11/04/introducing-the-new-microsoft-edge-and-bing/)vor! Mit der allgemeinen Verfügbarkeit, die für den 15. Januar 2020 konzipiert ist, möchten wir den Windows Mixed Reality-VR-Headset-Kunden wissen, was von der neuen Microsoft Edge zu erwarten ist, und Sie über einige ausstehende Updates informieren, die ihre Webbrowser-Darstellung in Windows gemischt verbessern. Wahrheit.
+Der [neue Microsoft Edge ist jetzt zum Herunterladen verfügbar](https://blogs.windows.com/windowsexperience/?p=173496), aber Kunden können auch warten, bis [Sie in einem zukünftigen Update von Windows 10 installiert werden. Befolgen Sie dabei](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/)in den nächsten Monaten einen gemessenen Rollout. 
+
+Mit dieser Nachricht möchten **wir den Windows Mixed Reality-VR-Headset-Kunden wissen, was von der neuen Microsoft Edge zu erwarten ist, und Sie über einige ausstehende Updates informieren, die ihre webbrowserdarstellung in Windows Mixed Reality verbessern**.
 
 ## <a name="introducing-the-new-microsoft-edge"></a>Einführung in den neuen Microsoft Edge
 
 Die neue Microsoft Edge-Website [übernimmt das Projekt "Chrom Open Source](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) " auf dem Desktop, um eine bessere webkompatibilität für Kunden und weniger Fragmentierung des Internets für alle Webentwickler zu erzielen. Es unterstützt auch webxr beim Start, den neuen Standard zum Erstellen von immersiven Webumgebungen für VR-Headsets anstelle von webvr.
+
+>[!IMPORTANT]
+>Wenn Sie Microsoft Edge auf einem aktuellen Windows 10-Gerät installieren, ersetzt es die vorherige (Legacy-) Version auf Ihrem PC.
 
 ## <a name="getting-ready-for-the-new-microsoft-edge"></a>Vorbereitung auf den neuen Microsoft Edge
 
@@ -45,7 +50,7 @@ Um die bestmögliche Microsoft Edge-Benutzersprache in der Mixed Reality-Startse
 
 -   Websites, die in Windows Mixed Reality geöffnet werden, gehen verloren, wenn das gemischte Reality-Portal geschlossen wird. die Microsoft Edge-Fenster bleiben jedoch erhalten, wo Sie in der Mixed Reality-Startseite platziert werden.
 -   Das Audioformat von Microsoft Edge-Fenstern ist nicht räumlich.
--   Das Öffnen eines 360-Videos von YouTube in Windows Mixed Reality kann dazu führen, dass das Video im Headset verzerrt wird. Wenn Sie die Seite des YouTube-Videos aktualisieren und das 360-Video wiedergeben, sollte das Problem behoben werden.
+-   Das Öffnen eines 360-Videos von YouTube in Windows Mixed Reality kann dazu führen, dass das Video im Headset verzerrt wird. Wenn Sie die Seite des YouTube-Videos aktualisieren und das 360-Video erneut ausführen, *können* Sie das Problem beheben, aber wir haben Feedback erhalten, dass das Problem möglicherweise weiterhin besteht.
 -   Während Windows Mixed Reality-Sitzungen werden virtuelle Monitore in den Einstellungen > System > Anzeige als generische physische Monitore angezeigt.
 
 

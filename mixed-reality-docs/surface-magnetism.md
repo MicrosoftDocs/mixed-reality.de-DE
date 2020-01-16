@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 9de4cc1a7a015f85be54b4b9ff6188a7e9d02e85
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901437"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036369"
 ---
 # <a name="surface-magnetism"></a>Oberflächen Magnetismus
 
 ![Oberflächen Magnetismus](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Mithilfe der Surface-Magnetismus-Technik können Sie ein Holographic-Objekt auf einer realen physischen Oberfläche platzieren. Wenn Sie die Ausrichtung des Objekts mit der realen Oberfläche ausrichten, können Sie eine immersive und natürlichere Umgebung schaffen.
+Mithilfe der Surface-Magnetismus-Technik können Sie ein Holographic-Objekt auf einer realen physischen Oberfläche platzieren. Wenn Sie die Ausrichtung des Objekts mit der realen Oberfläche ausrichten, können Sie für den Benutzer eine immersive und natürlichere Benutzeroberfläche erstellen.
 
 <br>
 
