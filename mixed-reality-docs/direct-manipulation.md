@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hände nah beieinander, HoloLens
-ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694174"
+ms.locfileid: "75723249"
 ---
 # <a name="direct-manipulation-with-hands"></a>Direkte Manipulation mit den Händen
 
@@ -326,7 +326,7 @@ Dabei bewegen Sie Ihre Hand versehentlich über einige interaktive holografische
 
 ---
 
-## <a name="manipulation-in-mrtkmixed-reality-toolkit-for-unity"></a>Bearbeitung im MRTK (Mixed Reality Toolkit) für Unity
+## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Bearbeitung im MRTK (Mixed Reality Toolkit) für Unity
 Mit dem **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können Sie ganz einfach mithilfe des Skripts **ManipulationHandler** ein gebräuchliches Bearbeitungsverhalten erzielen. Mit ManipulationHandler können Sie Objekte direkt mit der Hand oder dem Handlichtstrahl greifen und verschieben. Außerdem wird die Bearbeitung mit beiden Händen zum Skalieren und Rotieren eines Objekts unterstützt.
 
 * [MRTK – Bearbeitung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
