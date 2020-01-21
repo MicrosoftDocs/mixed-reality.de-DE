@@ -43,7 +43,7 @@ Um auf die aktuelle Version zu aktualisieren, öffnen Sie die app " *Einstellung
   Die APP-Leiste kann für apps mit einer 2D-Ansicht ausgeblendet werden, wie z. b. Fotos.
   
 * Die **Datei** Auswahl funktioniert genauso wie erwartet auf hololens.
-* Der **Edge-Browser** wurde aktualisiert, um einheitliche Benutzer Funktionen mit Desktop und Telefon zuzuordnen. Wir haben mehrere Instanzen Ihres Browsers, benutzerdefinierte hololens neue Registerkarten Seite, Registerkarten Peek und Open in neuen Fenstern aktiviert, zusammen mit Leistungsverbesserungen bei Power &.
+* Der <bpt id="p1"> **</bpt>Microsoft Edge-Browser<ept id="p1">** </ept> wurde aktualisiert, um einheitliche Benutzer Funktionen mit Desktop und Telefon zuzuordnen. Wir haben mehrere Instanzen Ihres Browsers, benutzerdefinierte hololens neue Registerkarten Seite, Registerkarten Peek und Open in neuen Fenstern aktiviert, zusammen mit Leistungsverbesserungen bei Power &.
 * Die **Groove Music** -App befindet sich jetzt in hololens. Besuchen Sie den Store, um sie herunterzuladen und im Hintergrund zu spielen.
 * Sie können mühelos anpassen, wie apps in ihrer Welt angeordnet werden. Versuchen Sie, die **Hologramme** im Anpassungsmodus zu drehen, indem Sie einfach auf den Kreis in der mittleren vertikalen Wireframes klicken und Sie ziehen. Sie bemerken möglicherweise, dass holograms **strengere Begrenzungs Felder** aufweisen, um eine Maximierung der Interaktion sicherzustellen. Sie können auch die Größe aller flachen apps vertikal (mit Ausnahme von Fotos und Hologram-Apps) ändern.
 

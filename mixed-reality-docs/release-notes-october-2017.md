@@ -86,8 +86,8 @@ Wir haben hart daran gearbeitet, eine großartige Windows Mixed Reality-Erfahrun
 * Wenn Sie in Ihrer Windows Mixed Reality-Homepage eine große Anzahl von holograms platziert haben, werden einige möglicherweise nicht mehr angezeigt, und Sie werden bei der Suche wieder angezeigt. Um dies zu vermeiden, entfernen Sie einige der Hologramme in diesem Bereich des Windows Mixed Reality-Home.
 
 ### <a name="motion-controllers"></a>Motion-Controller
-* Wenn Sie auf eine Webseite in Edge klicken, wird der Inhalt manchmal vergrößert, anstatt auf "Click".
-* Wenn Sie auf einen Link in Edge klicken, funktioniert die Auswahl manchmal nicht.
+* Wenn Sie auf eine Webseite in Microsoft Edge klicken, wird der Inhalt manchmal vergrößert, anstatt auf "Click".
+* Wenn Sie auf eine Webseite in Microsoft Edge klicken, wird der Inhalt manchmal vergrößert, anstatt auf "Click".
 
 ## <a name="prior-release-notes"></a>Vorherige Anmerkungen zu dieser Version
 * [Versionshinweise – August 2016](release-notes-august-2016.md)
