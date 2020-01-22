@@ -41,7 +41,7 @@ In einem Desktop-Headset können Sie alle universelle Windows-Plattform-Apps (UW
 
 Eine zentrale Verwendung von 2D-Ansichten besteht darin, ein Texteingabe Formular anzuzeigen, mit dem die System Tastatur verwendet werden kann. Da die Shell nicht über eine immersive Ansicht hinaus Rendering durchzuführen ist, muss die APP zu einer 2D-Ansicht wechseln, um die System Tastatur anzuzeigen. Apps, die Texteingaben akzeptieren möchten, können mit einem Textfeld zu einer 2D-Ansicht wechseln. Während dieses Textfeld den Fokus besitzt, zeigt das System die Tastatur des Systems an, sodass der Benutzer Text eingeben kann.
 
-Beachten Sie, dass eine APP auf einem Desktop-PC über 2D-Ansichten sowohl für den Desktop Monitor als auch für ein angefügtes Headset verfügen kann. Beispielsweise können Sie mit der zweiten 2D-Ansicht Edge auf dem Desktop Monitor durchsuchen, um ein Video mit dem 360-Grad zu finden. Wenn Sie das Video abspielen, startet Edge eine sekundäre immersive Ansicht im Headset, um die immersiven Videoinhalte anzuzeigen.
+Beachten Sie, dass eine APP auf einem Desktop-PC über 2D-Ansichten sowohl für den Desktop Monitor als auch für ein angefügtes Headset verfügen kann. Beispielsweise können Sie mit der zweiten 2D-Ansicht Edge auf dem Desktop Monitor durchsuchen, um ein Video mit dem 360-Grad zu finden. Wenn Sie das Video abspielen, startet Microsoft Edge eine sekundäre immersive Ansicht im Headset, um die immersiven Videoinhalte anzuzeigen.
 
 ## <a name="see-also"></a>Weitere Informationen:
 

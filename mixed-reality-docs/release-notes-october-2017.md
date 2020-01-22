@@ -87,7 +87,7 @@ Wir haben hart daran gearbeitet, eine großartige Windows Mixed Reality-Erfahrun
 
 ### <a name="motion-controllers"></a>Motion-Controller
 * Wenn Sie auf eine Webseite in Microsoft Edge klicken, wird der Inhalt manchmal vergrößert, anstatt auf "Click".
-* Wenn Sie auf eine Webseite in Microsoft Edge klicken, wird der Inhalt manchmal vergrößert, anstatt auf "Click".
+* Wenn Sie auf einen Link in Microsoft Edge klicken, funktioniert die Auswahl manchmal nicht.
 
 ## <a name="prior-release-notes"></a>Vorherige Anmerkungen zu dieser Version
 * [Versionshinweise – August 2016](release-notes-august-2016.md)

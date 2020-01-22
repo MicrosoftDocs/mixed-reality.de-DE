@@ -64,7 +64,7 @@ Geräte-Begleit-App überspringen – die DCA bietet für den Hersteller bereitg
 
 Raumeinrichtung überspringen – anstatt zum Erstellen einer Raum Begrenzung aufgefordert zu werden, können Sie direkt mit dem-Headset im Modus "sitzend/stehend" fortfahren.  
 
-Installieren von Apps aus dem Store überspringen: beim normalen Setup werden mehrere Store-Apps installiert, einschließlich des 3D-Viewers und des Edge 360 Viewer-Add-on. Dadurch wird die Installation dieser apps übersprungen, möglicherweise fehlen jedoch Gerätefunktionen.  
+Installieren von Apps aus dem Store überspringen: beim normalen Setup werden mehrere Store-Apps installiert, einschließlich des 3D-Viewers und des Microsoft Edge 360 Viewer-Add-on. Dadurch wird die Installation dieser apps übersprungen, möglicherweise fehlen jedoch Gerätefunktionen.  
 
 Vorschau anzeigen im Vollbild – im Mixed Reality-Portal wird standardmäßig die Headset-Vorschau im Vollbildmodus auf dem Desktop-PC angezeigt, während das Headset verwendet wird.  
 
