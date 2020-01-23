@@ -3,16 +3,16 @@ title: Verwendung des HoloLens-Emulators
 description: Verwenden des HoloLens-Emulators zum Testen von Mixed Reality-Apps auf Ihrem PC ohne eine physische HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 12/5/2019
+ms.date: 1/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, Emulator
-ms.openlocfilehash: 49b67530d46edda3c38efd74f03f730c2b2247bd
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 7cbddae7cc5088bc8be7187e8b2dff3249e9d265
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940888"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036455"
 ---
 # <a name="using-the-hololens-emulator"></a>Verwendung des HoloLens-Emulators
 
@@ -25,7 +25,7 @@ Wenn Sie Anwendungen für immersive Windows Mixed Reality-Headsets (VR) oder Spi
 Lade den HoloLens-Emulator herunter.
 
 Versionen: 
-* [HoloLens 2-Emulator (Update von Dezember 2019)](https://go.microsoft.com/fwlink/?linkid=2112589)
+* [HoloLens 2-Emulator (Update von Januar 2020)](https://go.microsoft.com/fwlink/?linkid=2114824).
 * [HoloLens-Emulator (1. Generation) und holografische Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2065980)
 
 Versionsanmerkungen und ältere Builds des HoloLens-Emulators finden Sie auf der Seite [HoloLens-Emulator – Archiv](hololens-emulator-archive.md).
@@ -89,9 +89,9 @@ Rechts neben dem Hauptfenster befindet sich die Symbolleiste des Emulators. Die 
 * ![Minimieren-Symbol](images/emulator-minimize.png) **Minimieren**: Minimiert das Emulatorfenster.
 * ![Simulation-Symbol](images/emulator-simulation-panel.png) **Systemsteuerung der Simulation**: Blenden Sie die [Systemsteuerung der Simulation](#simulation-control-panel) zum Konfigurieren und Steuern der [Eingabe für den Emulator](#basic-emulator-input) ein oder aus.
 * ![Bildschirmgröße anpassen-Symbol](images/emulator-fit.png) **Bildschirmgröße anpassen**: Passt den Emulator an den Bildschirm an.
-* ![Zoom-Symbol](images/emulator-zoom.png) **Zoomen**: Vergrößern und verkleinern Sie den Emulator.
-* ![Hilfe-Symbol](images/emulator-help.png) **Hilfe**: Öffnen Sie die Hilfe zum Emulator.
-* ![Symbol „Geräteportal öffnen“](images/emulator-deviceportal.png) **Geräteportal öffnen**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
+* ![Zoom-Symbol](images/emulator-zoom.png) **Zoom**: Vergrößern und verkleinern Sie den Emulator.
+* ![Hilfe anfordern-Symbol](images/emulator-help.png) **Hilfe**: Öffnen Sie die Hilfe zum Emulator.
+* ![Geräteportal öffnen-Symbol](images/emulator-deviceportal.png) **Geräteportal öffnen**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
 * ![Tools-Symbol](images/emulator-tools.png) **Tools**: Öffnen Sie den Bereich für **zusätzliche Tools**.
 
 ### <a name="simulation-control-panel"></a>Systemsteuerung der Simulation
@@ -175,12 +175,12 @@ Beim Starten des Emulators wird ein Fenster mit dem HoloLens-Betriebssystem ange
 Rechts neben dem Hauptfenster befindet sich die Symbolleiste des Emulators. Die Symbolleiste enthält die folgenden Schaltflächen:
 * ![Schließen-Symbol](images/emulator-close.png) **Schließen**: Schließt den Emulator.
 * ![Minimieren-Symbol](images/emulator-minimize.png) **Minimieren**: Minimiert das Emulatorfenster.
-* ![Symbol „Benutzereingabe“](images/emulator-control.png) **Benutzereingabe**: Maus und Tastatur werden verwendet, um die [Benutzereingaben für den Emulator](#basic-emulator-input) zu simulieren.
-* ![Symbol „Tastatur- und Mauseingabe“](images/emulator-input.png) **Tastatur- und Mauseingabe**: Tastatur- und Mauseingaben werden als Tastatur- und Mausereignisse direkt an das HoloLens-Betriebssystem übergeben, als ob Sie eine Bluetooth-Tastatur und -Maus angeschlossen hätten.
+* ![Benutzereingabe-Symbol](images/emulator-control.png) **Benutzereingabe**: Maus und Tastatur werden verwendet, um die [Benutzereingaben für den Emulator](#basic-emulator-input) zu simulieren.
+* ![Tastatur- und Mauseingabe-Symbol](images/emulator-input.png) **Tastatur- und Mauseingabe**: Tastatur- und Mauseingaben werden als Tastatur- und Mausereignisse direkt an das HoloLens-Betriebssystem übergeben, als ob Sie eine Bluetooth-Tastatur und -Maus angeschlossen hätten.
 * ![Bildschirmgröße anpassen-Symbol](images/emulator-fit.png) **Bildschirmgröße anpassen**: Passt den Emulator an den Bildschirm an.
-* ![Zoom-Symbol](images/emulator-zoom.png) **Zoomen**: Vergrößert und verkleinert den Emulator.
-* ![Hilfe-Symbol](images/emulator-help.png) **Hilfe**: Öffnet die Hilfe zum Emulator.
-* ![Symbol „Geräteportal öffnen“](images/emulator-deviceportal.png) **Geräteportal öffnen**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
+* ![Zoom-Symbol](images/emulator-zoom.png) **Zoom**: Vergrößert und verkleinert den Emulator.
+* ![Hilfe anfordern-Symbol](images/emulator-help.png) **Hilfe**: Öffnet die Hilfe zum Emulator.
+* ![Geräteportal öffnen-Symbol](images/emulator-deviceportal.png) **Geräteportal öffnen**: Öffnen Sie das Windows-Geräteportal für das HoloLens-Betriebssystem im Emulator.
 * ![Tools-Symbol](images/emulator-tools.png) **Tools**: Öffnen Sie den Bereich für **zusätzliche Tools**.
 
 ### <a name="simulation-tab"></a>Registerkarte „Simulation“
@@ -243,7 +243,7 @@ Wenn Ihre Liste der Debugziele in Visual Studio leer ist (z. B. ist „Start“ 
 Wenn Ihr System beim Starten des Emulators hängen bleibt, deaktivieren Sie die Hardwarebeschleunigung für Emulatorgrafiken.
 * Erstellen Sie in der Registrierung einen DWORD-Wert namens „DisableGPU“ unter „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0“, und legen Sie seinen Wert auf 1 fest.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Erweiterte Eingabe für HoloLens-Emulator und Mixed Reality-Simulator](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 * [HoloLens-Emulator – Softwareverlauf](hololens-emulator-archive.md)
 * [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)
