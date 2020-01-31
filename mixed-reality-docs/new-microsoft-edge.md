@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, neu, immersives Web, Microsoft Edge, Browser, VR
-ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
-ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
+ms.openlocfilehash: 2576762786c9234377308f226036c830e01d9133
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76041000"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885621"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality und die neue Microsoft Edge
 
@@ -50,7 +50,7 @@ Um die bestmögliche Microsoft Edge-Benutzersprache in der Mixed Reality-Startse
 
 -   Websites, die in Windows Mixed Reality geöffnet werden, gehen verloren, wenn das gemischte Reality-Portal geschlossen wird. die Microsoft Edge-Fenster bleiben jedoch erhalten, wo Sie in der Mixed Reality-Startseite platziert werden.
 -   Das Audioformat von Microsoft Edge-Fenstern ist nicht räumlich.
--   Das Öffnen eines 360-Videos von YouTube in Windows Mixed Reality kann dazu führen, dass das Video im Headset verzerrt wird. Wenn Sie die Seite des YouTube-Videos aktualisieren und das 360-Video erneut ausführen, *können* Sie das Problem beheben, aber wir haben Feedback erhalten, dass das Problem möglicherweise weiterhin besteht.
+-   **Korrigiert in 360 Viewer Extension Version 2.3.8**: das Öffnen eines 360-Videos von YouTube in Windows Mixed Reality kann dazu führen, dass das Video im Headset verzerrt wird. Das Neustarten von Edge sollte die 360 Viewer-Erweiterung unsichtbar aktualisieren, um dieses Problem zu beheben. Sie können überprüfen, welche Version der Erweiterung Sie haben, indem Sie `edge://system/` in der Adressleiste eingeben und auf die Schaltfläche **erweitern** neben "Erweiterungen" klicken.
 -   Während Windows Mixed Reality-Sitzungen werden virtuelle Monitore in den Einstellungen > System > Anzeige als generische physische Monitore angezeigt.
 
 

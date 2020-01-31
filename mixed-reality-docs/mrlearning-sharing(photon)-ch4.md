@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: f1bcbbd368635c25207127142f21ff50f26a7b58
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+keywords: Mixed Reality, Unity, Tutorial, HoloLens
+ms.openlocfilehash: 56f7c767323285453cbeea9034f97a7c14e92359
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901482"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885633"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Freigeben von Objektbewegungen für mehrere Benutzer
 
@@ -74,6 +74,12 @@ In diesem Tutorial erfahren Sie, wie Sie die Bewegungen von Objekten freigeben, 
 11. Ziehen Sie aus dem Projekt Panel im Ordner "Prefabs" die Tabelle "Prefab" in das untergeordnete "tableanchor"-Objekt, das Sie soeben erstellt haben.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
+   
+12. Öffnen Sie die vorfab "Rocket Launcher_Complete Variant" aus Assets > Ressourcen > Prefabs.
+
+13. Wählen Sie das "lunarmodule"-gameobject aus, und fügen Sie die folgenden zwei Komponenten hinzu: "Photon Transform View" und "Photon View".
+
+14. Wenn das "lunarmodule"-gameobject noch ausgewählt ist, ziehen Sie die Komponente "Photon Transform View" in den Slot "beobachtete Komponenten" in der Komponente "Photon View".
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
