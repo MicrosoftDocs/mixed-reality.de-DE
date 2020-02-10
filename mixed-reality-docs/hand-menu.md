@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: Hand, Menü, Schaltfläche, schnell Zugriff, Layout
-ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 41a936d6041438c1cf1d8e4d4cc8cc30a5167491
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723259"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092054"
 ---
 # <a name="hand-menu"></a>Hand Menü
 
@@ -26,7 +26,7 @@ Im folgenden finden Sie die bewährten Methoden, die wir für Hand Menüs gefund
 ---
 
 ## <a name="behavior-best-practices"></a>Bewährte Methoden für das Verhalten
-**A. halten Sie die Anzahl der Schaltflächen klein:** aufgrund der engen Entfernung zwischen einem Hand gesperrten Menü und den Augen und der Tendenz des Benutzers, sich jederzeit auf einen relativ kleinen visuellen Bereich zu konzentrieren (der Teilnehmer Kegel ist ungefähr 10 Grad), wird empfohlen, die Anzahl der Schaltflächen gering zu halten. Basierend auf unserer Untersuchung funktioniert eine Spalte mit drei Schaltflächen gut, indem der gesamte Inhalt in der Ansicht (FOV) beibehalten wird, auch wenn Benutzer ihre Hände in den Mittelpunkt des FOV verschieben. 
+**A. halten Sie die Anzahl der Schaltflächen klein:** aufgrund der engen Entfernung zwischen einem Hand gesperrten Menü und den Augen und der Tendenz des Benutzers, sich jederzeit auf einen relativ kleinen visuellen Bereich zu konzentrieren (der Teilnehmer Kegel ist ungefähr 10 Grad), wird empfohlen, die Anzahl der Schaltflächen gering zu halten. Basierend auf unserer Untersuchung funktioniert eine Spalte mit drei Schaltflächen gut, indem der gesamte Inhalt in der Ansicht (FOV) beibehalten wird, auch wenn ein Benutzer seine Hände in den Mittelpunkt des FOV verschiebt. 
 
 **B. verwenden Sie das Hand Menü für die schnelle Aktion:** das Auslösen eines Arm und das Aufrechterhalten der Position kann die Arm-Müdigkeit leicht auslösen. Verwenden Sie eine Hand gesperrte Methode für das Menü, das eine kurze Interaktion erfordert. Wenn Ihr Menü Komplex ist und erweiterte Interaktions Zeiten erfordert, sollten Sie stattdessen "World-Locked" oder "Body-Lock" verwenden. 
 
@@ -88,8 +88,8 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
     :::column:::
         ![über Fingern](images/AboveFingers.gif)<br>
         **Über Fingern**<br>
-        1-Hand-Müdigkeit aufgrund von Handlanger Zeit<br>
-        2-Hand-nach Verfolgungs Probleme bei Index und mittlerem Finger
+        eine Hand Müdigkeit aufgrund einer langen Zeitüberschreitung<br>
+        2-Hand-nach Verfolgungs Probleme bei Index-und mittelfingern
     :::column-end:::
 :::row-end:::
 
@@ -105,7 +105,7 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
     :::column:::
         ![Top Fingertip](images/TopFingerTip.gif) **Top Fingertip**<br>
         1-Hand-nach Verfolgungs Probleme<br>
-        zwei Hand Müdigkeit mit Hand über normalem Status<br>
+        2-Hand Müdigkeit von Hand über normalem Status<br>
         3: Fehler beim Drücken von Schaltflächen mit anderen Fingern aufgrund von eingeschränktem Leerraum zwischen Fingern.
     :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
         ![Rückseite der Arm-](images/BackOfTheArm.gif)<br>
         **Zurück zum Arm**<br>
         1: Start Schaltfläche nach einem Unfall<br>
-        2-keine natürliche oder bequeme Position für Benutzer
+        2-keine natürliche oder bequeme Position
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -138,7 +138,7 @@ Wir haben die Benutzer Forschung mit verschiedenen Menüs und Standorten durchge
 ---
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Cursor](cursors.md)
 * [Handstrahl](point-and-commit.md)

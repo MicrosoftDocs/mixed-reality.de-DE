@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Gemischte Realität, Community, MVP, Meetup
-ms.openlocfilehash: 7cdbebc63cc04d2e3c2913662ed29e65880da727
-ms.sourcegitcommit: 48e12b342a50b9777330392db74d462ead5a8012
+ms.openlocfilehash: 486a099cb38a99975171cb7ec4a6754b1c0b682f
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75662430"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092069"
 ---
 # <a name="mixed-reality-community"></a>Gemischte Reality-Community
 
@@ -31,7 +31,7 @@ Microsoft ist der Meinung, dass der Zugriff auf starke Communitys für das Wachs
 ## <a name="local-communities"></a>Lokale Communitys
 Wenn Sie eine Community ausführen, die Sie auf dieser Seite enthalten möchten, senden Sie [hier eine e-Mail](mailto:jemccull@microsoft.com) mit den Details.
 
-|Communityname|Land|Stadt|Link|
+|Communityname|Land|Ort|Link|
 |---------|---------|---------|---------|
 |**Chicago AWE Nite**|USA|Chicago|[Link](https://www.meetup.com/AWENiteChicago/)|
 <!-- 
@@ -48,7 +48,7 @@ Wenn Sie eine Community ausführen, die Sie auf dieser Seite enthalten möchten,
 
 |||||
 |---------|---------|---------|---------|
-|<!-- ![Daniel Escudero](images/BiographyImages/) --></br>**Daniel Escudero**</br>*Mr Academy Lead Designer*| |San Francisco, ca|[E-Mail](mailto:daescu@microsoft.com)|
+|<![Daniel Escudero](images/BiographyImages/DanielEscudero_270x270.jpg)</br>**Daniel Escudero**</br>*Mr Academy Lead Designer*|Interaktiver Designer, prototyper und Coder, spezialisiert in gemischter Realität, mit mehr als 15 Jahren Interaktions Entwurfs Erfahrung. Das Entwerfen und Prototypen neuer Formen der Interaktion für gemischte Realität sowie das Erstellen von Workshops und Hackathons mit San Francisco-Bay Area-Partnern und der Mr/VR/AR-Community. Mentor und Referent für gemischtes Reality Design bei mehreren Ereignissen und Vorlesungen von Mr/VR/AR.|San Francisco, ca|[E-Mail](mailto:daescu@microsoft.com)|
 |<!-- ![Daniel Gonzalez](images/BiographyImages/) --></br>**Daniel Gonzalez**</br>*Programm-Manager II*| |Redmond, WA|[E-Mail](mailto:dgonza@microsoft.com)|
 |<!-- ![Jane Fang](images/BiographyImages/) --></br>**Jane-Fang**</br>*Prinzipal Programm-Manager-Lead*| |San Francisco, ca|[E-Mail](mailto:jafang@microsoft.com)|
 |![Jesse McCulloch](images/BiographyImages/JesseMcCulloch270x270.png)</br>**Jesse McCulloch**</br>*Programm-Manager II*|Jesse ist Program Manager im Mixed Reality Developer Ecosystem-Team bei Microsoft. Er ist oft in den Entwickler Slack-Gruppen hängend, auf Twitter, die auf diesem schnell wachsenden Raum unterwegs sind, oder in einem Big Metal-Flugzeug, das in der Praxis mit Entwicklern in der realen Welt unterwegs ist.|Redmond, WA|[E-Mail](mailto:jemccull@microsoft.com)|
@@ -90,7 +90,7 @@ Microsoft Most Valuable Professionals (MVPs) sind Technologieexperten, die ihre 
 |---------|---------|---------|
 |![Aleksandr kudishov](images/BiographyImages/aleksandr_kudishov_270_270.png)</br>**Aleksandr kudishov**</br>*Russland*|MVP konzentriert sich auf Spieleentwicklung & Windows-Entwicklung, VR/AR/Mr. Spiele Producer, Tech Evangelist, Holographic Developer, MSP-Lead der Spieleentwicklung.|[E-Mail](mailto:draconifore@gmail.com)|
 |![Alexander meijzer](images/BiographyImages/AlexanderMeijers_270x270.png)</br>**Alexander meijzer**</br>*Die Niederlande, Rijswijk*|Ein professioneller Experte, der sich für die Nutzung von Technologien entwickelt, die sich mit der virtuellen, erweiterten und gemischten Realität bei der Migration zu digitalen Innovationen zunutze machen. Er verfügt über einen starken Hintergrund für SharePoint, Office 365 und Microsoft Azure und arbeitet mit Machine Learning, künstlicher Intelligenz und Cognitive Services.</br></br>Sein Ziel liegt hauptsächlich in der Fertigung von Fertigungs-, Konstruktions-, Industrie-, Logistik-und seearialprozessen, die Unternehmen dabei unterstützen, mehr über das Erstellen, verbessern, optimieren und kürzen von Geschäftsprozessen mithilfe von Diensten, Apps und Geräten wie hololens und kinect für Azure zu erreichen.|[E-Mail](mailto:alexander@appzinside.com)|
-|![von Bruno Anjos](images/BiographyImages/BrunoAnjos_270x270.jpg)</br>**Bruno Anjos**</br>*Brasilien*|Innovation Manager, arbeiten an der Verwaltung und Architektur digitaler Seiten Innovationsprojekte mit Fachkenntnissen zu den Plattformen "XR-Augmented Reality", "Mixed" und "Virtual Reality". Microsoft MVP in gemischter Realität 2020-2021 in gemischter Realität arbeite ich als Experte bei der Entwicklung und Planung gemischter Reality-Lösungen mit Schwerpunkt auf Microsoft hololens. Bei der Entwicklung von spielen und Anwendungen sowie bei der Erstellung von Assets und Multimedia-Inhalten.|[E-Mail](mailto:brunof.anjos@outlook.com)|
+|![von Bruno Anjos](images/BiographyImages/BrunoAnjos_270x270.jpg)</br>**Bruno Anjos**</br>*Brazilien*|Innovation Manager, arbeiten an der Verwaltung und Architektur digitaler Seiten Innovationsprojekte mit Fachkenntnissen zu den Plattformen "XR-Augmented Reality", "Mixed" und "Virtual Reality". Microsoft MVP in gemischter Realität 2020-2021 in gemischter Realität arbeite ich als Experte bei der Entwicklung und Planung gemischter Reality-Lösungen mit Schwerpunkt auf Microsoft hololens. Bei der Entwicklung von spielen und Anwendungen sowie bei der Erstellung von Assets und Multimedia-Inhalten.|[E-Mail](mailto:brunof.anjos@outlook.com)|
 |![Clemente Giorio](images/BiographyImages/ClementeGiorio_270x270.png)</br>**Clemente Giorio**</br>*Turin, Italia*|"Hacker, Geek, Maker, Forscher, Innovator, Trainer, Entwickler...</br>Hat Wissenschaft und Technologie als seine Leidenschaft entwickelt.</br>Folgt vielen Communitys und ist häufig als Referent und Ereignis Planer tätig, insbesondere mit: Programmieren von Fitness-, dotnetpodcast-, fablabnapoli-, dotnetcampania-und hololens-Entwicklern.</br>Die Signatur Küche ist weit vom Herd her: künstliche Intelligenz, Maschinelles sehen, Internet der Dinge, natürliche Benutzeroberfläche und gemischte Realität.</br>Microsoft MVP und Intel Software Innovator können als Senior Research & Development Engineer für Delta verwendet werden, in dem er Software Prototypen entwickelt.|[E-Mail](mailto:tinuxnet@hotmail.com)|
 |![Dave Smits](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smits**</br>*Amersfoort, die Niederlande*|Dave Smits ist Microsoft MVP seit 2014 und arbeitet seit der ersten gestarteten Version mit den hololens. Es wurden mehrere Projekte für Kunden verwendet, die mit einfachen Modellen für Anwendungen beginnen, die Bewegungs Verfolgungs Sensoren enthalten, die in holograms verwendet werden.|[E-Mail](mailto:dave@familie-smits.com)|
 |![Eric Provencher](images/BiographyImages/EricProvencher_270x270.jpg)</br>**Eric Provencher**</br>*Montreal, QC, Kanada*|Eric ist leitender gemischtes Reality-Framework und UX-Entwickler bei der CAE, einer der ersten Microsoft Mixed Reality-Partner und eine Welle 1 hololens Adopter. Seine Hauptrollen stellen die Architektur und Entwicklung eines internen plattformübergreifenden Entwicklungs Frameworks dar, das mit dem mrtk vergleichbar ist, sowie das entwickeln und Verwalten neuer und vorhandener Simulations-und Schulungs Anwendungen für das Gesundheitswesen. Er erstellt hauptsächlich apps in Unity, in VR (Oculus Quest), AR (hololens 1 & 2) und Bildschirm basiert (WebGL + IOS/Android).|[E-Mail](mailto:erproven@gmail.com)|
