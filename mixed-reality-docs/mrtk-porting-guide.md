@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Testen, MRTK, MRTK Version 2, HoloLens 2
-ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8e0c66a1c3d8ebd5422d19a02f313147ecf76653
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926210"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092034"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Vorbereiten einer vorhandenen App für HoloLens 2
 
@@ -22,7 +22,7 @@ Die folgenden Abschnitte enthalten Detailinformationen zu den einzelnen Phasen:
 
 | Schritt 1 | Schritt 2 | Schritt 3 | Schritt 4 |
 |----------|-------------------|-------------------|-------------------|
-| ![Visual Studio-Logo](images/visualstudio_logo.png) | ![Unity-Logo](images/unity_logo.png)| ![Unity-Symbol](images/hololens2_icon.jpg) | ![MRTK-Logo](images/MRTKIcon.jpg) |
+| ![Visual Studio-Logo](images/visualstudio_logo.png) | ![Unity-Logo](images/final_unity_logo.png)| ![Unity-Symbol](images/hololens2_icon.jpg) | ![MRTK-Logo](images/final_mrtk-small_logo.png) |
 | Herunterladen der aktuellen Tools | Aktualisieren des Unity-Projekts | Kompilieren für ARM | Migrieren zu MRTK Version 2
 
 Voraussetzungen:
