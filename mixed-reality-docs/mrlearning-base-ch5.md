@@ -6,238 +6,262 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 18bcbc95746a2e66b88d83f279603aa7f171bbcb
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334356"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129661"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. untersuchen erweiterter Eingabeoptionen
 
-In diesem Tutorial werden verschiedene erweiterte Eingabeoptionen für hololens 2 untersucht, einschließlich der Verwendung von Sprachbefehlen, der Schwenkbewegung und der Eye-Nachverfolgung. 
+In diesem Tutorial werden einige erweiterte Eingabeoptionen für hololens 2 untersucht, einschließlich der Verwendung von Sprachbefehlen, der Schwenkbewegung und der Eye-Nachverfolgung.
 
 ## <a name="objectives"></a>Ziele
 
-- Ereignisse mithilfe von Sprachbefehlen und Schlüsselwörtern Auslösers
-- Verwenden von nach verfolgten Händen zum Schwenken von Texturen und 3D-Objekten mit nach verfolgten Händen
-- Verwenden von hololens 2 Eye Tracking-Funktionen zum Auswählen von Objekten
+* Ereignisse mithilfe von Sprachbefehlen und Schlüsselwörtern Auslösers
+* Verwenden von nach verfolgten Händen zum Schwenken von Texturen und 3D-Objekten mit nach verfolgten Händen
+* Verwenden von hololens 2 Eye Tracking-Funktionen zum Auswählen von Objekten
 
 ## <a name="enabling-voice-commands"></a>Aktivieren der Sprachbefehle
+<!-- TODO: Consider changing to 'Enabling Speech Commands -->
 
-In diesem Abschnitt werden zwei Sprachbefehle implementiert. Zuerst wird die Möglichkeit eingeführt, den Bereich zur Diagnose der Framerate zu wechseln, indem Sie die Option "Diagnose umschalten" sagen. Zweitens wird die Möglichkeit zur Wiedergabe eines Sounds mit einem Sprachbefehl untersucht. Die mrtk-Profile und Einstellungen, die für die Konfiguration von Sprachbefehlen zuständig sind, werden zuerst überprüft.
+In diesem Abschnitt implementieren Sie einen Sprachbefehl, mit dem Benutzer einen Sound für das Octa-Objekt abspielen können. Hierfür erstellen Sie einen neuen Sprachbefehl und konfigurieren dann das Ereignis, sodass die gewünschte Aktion ausgelöst wird, wenn das sprach Befehls Schlüsselwort gesprochen wird.
 
-1. Wählen Sie in der basescene-Hierarchie mixedrealitytoolkit aus. Wählen Sie dann im Bereich Inspektor die Option Eingabe aus, und klicken Sie auf die Schaltfläche Small Clone links neben defaultmixedrealityinputsystemprofile, um das Popup Profil zu öffnen. Klicken Sie im Popup Fenster auf Klonen, um ein neues Profil mixedrealityinputsystemprofile zu erstellen.
+Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 
-    ![mrlearning-Base-CH5-1-step1a. png](images/mrlearning-base-ch5-1-step1a.png)
+1. Klonen des standardmäßigen Eingabe System Profils
+2. Klonen des standardmäßigen Sprach Befehls Profils
+3. Neuen Sprachbefehl erstellen
+4. Hinzufügen und Konfigurieren der Spracheingabe Handler-Komponente (Skript)
+5. Implementieren Sie das Antwort Ereignis für den Sprachbefehl.
 
-    Dadurch wird das mixedrealitytoolkitconfigurationprofile-Profil auch automatisch mit dem neu erstellten mixedrealityinputsystemprofile aufgefüllt.
+### <a name="1-clone-the-default-input-system-profile"></a>1. Klonen Sie das standardmäßige Eingabe System Profil.
 
-    ![mrlearning-Base-CH5-1-step1b. png](images/mrlearning-base-ch5-1-step1b.png)
+Wählen Sie im Fenster Hierarchie das **mixedrealitytoolkit** -Objekt aus, wählen Sie im Inspektor-Fenster die Registerkarte **Eingabe** aus, und Klonen Sie das **DefaultHoloLens2InputSystemProfile** , um es durch ihr eigenes anpassbares **Eingabe System Profil**zu ersetzen:
 
-2. Im Eingabe Systemprofil gibt es eine Reihe von Einstellungen. Erweitern Sie für Sprachbefehle den Abschnitt Speech, und befolgen Sie den gleichen Prozess wie im vorherigen Schritt, um die Datei defaultmixedrealityvoicecommandsprofile zu klonen und durch ihre eigene bearbeitbare Kopie zu ersetzen.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section1-step1-1.png)
 
-    ![mrlearning-Base-CH5-1-step2. png](images/mrlearning-base-ch5-1-step2.png)
+> [!TIP]
+> Eine Erinnerung zum Klonen von mrtk-Profilen finden Sie unter [How to configure the Mixed Reality Toolkit Profiles](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) instructions.
 
-    Im sprach Befehls Profil bemerken Sie einen Bereich von Einstellungen. Eine vollständige Beschreibung dieser Einstellungen finden Sie in der [Dokumentation zur mrtk-Sprache](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html>).
+### <a name="2-clone-the-default-speech-commands-profile"></a>2. Klonen Sie das Standardprofil für Sprachbefehle.
 
-    In der Standardeinstellung ist das allgemeine Verhalten auf Autostart festgelegt. Dies kann bei Bedarf in "manueller Start" geändert werden. Behalten Sie für dieses Beispiel den automatischen Start bei. Der mrtk verfügt über mehrere Standard Sprachbefehle, wie z. b. Menü, Umschalten der Diagnose und Umschalten von Profiler. Wir verwenden das Schlüsselwort "Umschalten der Diagnose" zum Aktivieren und Deaktivieren des Leistungs Zählers "Diagnostics Framerate". Außerdem wird in den folgenden Schritten ein neuer Sprachbefehl hinzugefügt.
+Erweitern Sie den Abschnitt **sprach** Ausgabe, und Klonen Sie die **Datei defaultmixedrealitysprechcommandsprofile** , um Sie durch ihr eigenes **Profil für Sprachbefehle**zu ersetzen:
 
-3. Fügen Sie einen neuen Sprachbefehl hinzu. Klicken Sie hierzu auf die Schaltfläche + neuen Sprachbefehl hinzufügen. Sie sehen eine neue Zeile, die unter der Liste vorhandener Sprachbefehle angezeigt wird. Geben Sie den Sprachbefehl ein, den Sie verwenden möchten. Verwenden Sie in diesem Beispiel den Befehl "Musik abspielen".
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section1-step2-1.png)
 
-    ![mrlearning-Base-CH5-1-step3. png](images/mrlearning-base-ch5-1-step3.png)
+### <a name="3-create-a-new-speech-command"></a>3. Erstellen eines neuen sprach Befehls
 
-    >[!NOTE]
-    >Sie können auch einen Tastencode für Sprachbefehle festlegen. Dadurch können Sprachbefehle Ereignisse beim Drücken einer Tastatur Taste auslöst.
+Klicken Sie im Abschnitt **Sprachbefehle** auf die Schaltfläche **+ neuen Sprachbefehl hinzufügen** , um am Ende der Liste vorhandener Sprachbefehle einen neuen Sprachbefehl hinzuzufügen, und geben Sie dann im **Schlüsselwort** ein passendes Wort oder einen Ausdruck ein, z. b. **Abspielen von Musik**:
 
-4. Fügen Sie die Möglichkeit hinzu, auf Sprachbefehle zu reagieren. Wählen Sie ein beliebiges Objekt in der basescene-Hierarchie aus, dem keine anderen Eingabe Skripts angefügt sind, z. b. das mixedrealityplayspace-Spielobjekt. Klicken Sie im Inspektor-Panel auf Komponente hinzufügen, suchen Sie nach "Sprache", und wählen Sie das Skript für den Spracheingabe Handler aus.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section1-step3-1.png)
 
-    ![mrlearning-Base-CH5-1-step4. png](images/mrlearning-base-ch5-1-step4.png)
+> [!TIP]
+> Wenn Ihr Computer nicht über ein Mikrofon verfügt und Sie den Sprachbefehl mithilfe der in-Editor-Simulation testen möchten, können Sie dem Sprachbefehl einen Keycode zuweisen, mit dem Sie ihn beim Drücken der entsprechenden Taste auslassen können.
 
-    Standardmäßig werden zwei Kontrollkästchen angezeigt. Das Kontrollkästchen ist das Kontrollkästchen ist erforderlich. Solange Sie auf das Objekt mit einem Ray-Eye-Eye-, Head-Eye-, Controller-und Hand Zeiger zeigen, wird der Sprachbefehl ausgelöst. Deaktivieren Sie dieses Kontrollkästchen, damit der Benutzer das Objekt nicht überprüfen muss, um den Voice-Befehl zu verwenden.
+### <a name="4-add-and-configure-the-speech-input-handler-script-component"></a>4. hinzufügen und Konfigurieren der Spracheingabe Handler-Komponente (Skript)
 
-5. Fügen Sie die Möglichkeit hinzu, auf einen Sprachbefehl zu reagieren. Klicken Sie hierzu auf die Schaltfläche + im Spracheingabe Handler.
+Wählen Sie im Fenster Hierarchie das **Octa** -Objekt aus, und fügen Sie die Komponente **Spracheingabe Handler (Skript)** dem Octa-Objekt hinzu. Deaktivieren Sie dann das Kontrollkästchen mit dem **Fokus ist erforderlich** , damit der Benutzer das Octa-Objekt nicht überprüfen muss, um den Sprachbefehl zu starten:
 
-    ![mrlearning-Base-CH5-1-step5. png](images/mrlearning-base-ch5-1-step5.png)
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section1-step4-1.png)
 
-6. Neben dem Schlüsselwort wird ein Dropdown Menü angezeigt. Wählen Sie Diagnose umschalten aus, damit eine Aktion ausgelöst wird, wenn der Benutzer den Ausdruck "Diagnose umschalten" sagt. Beachten Sie, dass Sie möglicherweise Element 0 erweitern müssen, indem Sie den Pfeil daneben drücken.
+### <a name="5-implement-the-response-event-for-the-speech-command"></a>5. implementieren Sie das Antwort Ereignis für den Sprachbefehl.
 
-    ![mrlearning-Base-CH5-1-step6. png](images/mrlearning-base-ch5-1-step6.png)
+Klicken Sie auf die Schaltfläche Small **+** (Skript) für Spracheingabe Handler (Skript), um ein Schlüsselwort hinzuzufügen, und wählen Sie dann aus der Dropdown Liste **Schlüsselwort** das **Wiedergabe Musik** Schlüsselwort aus, das Sie zuvor erstellt haben
 
-    >[!NOTE]
-    >Diese Schlüsselwörter werden basierend auf dem Profil, das Sie in Schritt 3 bearbeitet haben, aufgefüllt.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section1-step5-1.png)
 
-7. Fügen Sie das Diagnose System Voice-Steuerelement Skript hinzu, um die Diagnose der Framerate-Leistungs Zählers ein-und auszuschalten. Klicken Sie hierzu auf Komponente hinzufügen, suchen Sie nach Diagnose System sprach Steuerelemente Skript, und fügen Sie es aus dem Menü hinzu. Dieses Skript kann einem beliebigen Objekt hinzugefügt werden. Zur Vereinfachung fügen wir es jedoch demselben Objekt hinzu, dem auch der Spracheingabe-Handler hinzugefügt wurde.
+> [!NOTE]
+> Die Schlüsselwörter in der Dropdown Liste für Schlüsselwörter werden basierend auf den Schlüsselwörtern aufgefüllt, die in der Liste der Sprachbefehle im Profil für Sprachbefehle definiert sind.
 
-    ![mrlearning-Base-CH5-1-STEP7. png](images/mrlearning-base-ch5-1-step7.png)
+Erstellen Sie ein neues **Response ()** -Ereignis, konfigurieren Sie das **Octa** -Objekt für den Empfang des Ereignisses, definieren Sie **audiosource. playoneshot** als auszulösenden Aktion, und weisen Sie dem **Audioclip** -Feld einen passenden Audioclip zu, z. b. den MRTK_Gem Audioclip:
 
-8. Fügen Sie eine neue Antwort in den Spracheingabe Handler ein. Klicken Sie hierzu auf das Symbol "+", um der Antwortliste eine neue Antwort hinzuzufügen.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section1-step5-2.png)
 
-    ![mrlearning-Base-CH5-1-step8. png](images/mrlearning-base-ch5-1-step8.png)
-
-9. Ziehen Sie das-Objekt, das über das sprach Steuerelement des Diagnosesystems verfügt, in die neue Antwort, die Sie soeben im vorherigen Schritt erstellt haben.
-
-    ![mrlearning-Base-CH5-1-step9. png](images/mrlearning-base-ch5-1-step9.png)
-
-10. Klicken Sie auf die Dropdown Liste Funktion (in der Sie keine Funktion hat), dann auf sprach Steuerelemente für Diagnosesysteme, und wählen Sie die Funktion "degglediagnostics ()" aus, bei der Ihre Diagnose ein-und ausgeschaltet wird.
-
-    ![mrlearning-Base-CH5-1-step10. png](images/mrlearning-base-ch5-1-step10.png)
-
-    >[!IMPORTANT]
-    > Bevor Sie auf Ihr Gerät aufbauen, müssen Sie die MIC-Einstellungen aktivieren. Klicken Sie hierzu auf Datei, und wechseln Sie zu Buildeinstellungen, Player Einstellungen, und vergewissern Sie sich, dass die Mikrofon Funktion festgelegt ist.
-
-    Fügen Sie als nächstes die Möglichkeit hinzu, eine Audiodatei über den Voice-Befehl mit dem Octa-Objekt wiederzugeben. Erinnern Sie sich aus [Lektion 4](mrlearning-base-ch4.md) , dass die Möglichkeit zur Wiedergabe eines Audioclips von der Berührung des Octa-Objekts hinzugefügt wurde. Diese Audioquelle verwenden wir nun auch für unseren Musik-Sprachbefehl.
-
-11. Wählen Sie das Octa-Objekt in der basescene-Hierarchie aus.
-
-12. Fügen Sie einen weiteren Spracheingabe Handler hinzu (wiederholen Sie die Schritte 4 und 5), aber mit dem octacore-Objekt.
-
-13. Anstatt den Befehl zum Umschalten der Diagnose Sprache aus Schritt 6 hinzuzufügen, fügen Sie wie in der Abbildung unten gezeigt den Befehl "Musik Stimmen abspielen" hinzu.
-
-    ![mrlearning-Base-CH5-1-step13. png](images/mrlearning-base-ch5-1-step13.png)
-
-14. Fügen Sie wie in den Schritten 8 und 9 eine neue Antwort hinzu, und ziehen Sie das Octa-Objekt (das Objekt, das über das sprach Steuerelement für den Diagnose System verfügt) in den leeren Antwort Slot.
-
-15. Wählen Sie das Dropdown Menü aus, das keine Funktion anzeigt. Wählen Sie dann Audioquelle, gefolgt von playoneshot (Audioclip) aus.
-
-    ![Lesson5 Chapter1 Step15im](images/Lesson5_chapter1_step15im.PNG)
-
-16. In diesem Beispiel verwenden wir den gleichen Audioclip aus [Lektion 4](mrlearning-base-ch4.md). Wechseln Sie in das Projekt Panel, suchen Sie nach dem Audioclip "MRTK_Gem", und ziehen Sie ihn in den audioquellslot, wie in der folgenden Abbildung dargestellt. Nun antwortet Ihre Anwendung auf die Sprachbefehle "Diagnose umschalten", um den indikatorenindikatorenbereich zu umschalten und Musik wiederzugeben, um den MRTK_Gem-Song wiederzugeben.
-
-    ![Lesson5 Chapter1 Step16im](images/Lesson5_chapter1_step16im.PNG)
+> [!TIP]
+> Eine Erinnerung zum Implementieren von Ereignissen und zum Zuweisen eines Audioclips finden Sie in der Anleitung zum [Implementieren der on](mrlearning-base-ch4.md#4-implement-the-on-touch-started-event) -Finger Eingaben.
 
 ## <a name="the-pan-gesture"></a>Die Geste „Schwenken“
 
-In diesem Abschnitt erfahren Sie, wie Sie die Schwenkbewegung verwenden. Dies ist hilfreich, wenn Sie mit dem Finger oder der Hand einen Bildlauf durch den Inhalt durchführen möchten. Sie können mit der Schwenkbewegung auch Objekte drehen, eine Auflistung von 3D-Objekten durchlaufen oder sogar einen Bildlauf in einer 2D-Benutzeroberfläche durchführen.
+Mit der Schwenkbewegung können Sie einen Bildlauf durchführen, indem Sie mit dem Finger oder der Hand einen Bildlauf durchführen In diesem Beispiel erfahren Sie zunächst, wie Sie einen Bildlauf für eine 2D-Benutzeroberfläche durchführen und dann darauf erweitern, um durch eine Auflistung von 3D-Objekten scrollen zu können.
 
-1. Erstellen Sie einen Quader. Klicken Sie in der basescene-Hierarchie mit der rechten Maustaste auf "3D-Objekt" gefolgt von Quad.
+Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 
-    ![Lesson5 Chapter2 Step2im](images/Lesson5_chapter2_step2im.PNG)
+1. Erstellen eines Quad-Objekts, das zum Schwenken verwendet werden kann
+2. Hinzufügen der Near-interaktionstouchable-Komponente (Skript)
+3. Fügen Sie die Komponente "Hand Interaktion schwenken Zoom (Skript)" hinzu.
+4. 2D-Inhalt zum durch Scrollen hinzufügen
+5. Hinzufügen von 3D-Inhalt für den scrollt
+6. Hinzufügen der Komponente "mit Pan (Skript) verschieben"
 
-2. Ordnen Sie den Quad nach Bedarf neu an. In unserem Beispiel legen wir das x = 0, y = 0 und den z = 1,5 Weg von der Kamera für eine bequeme Position von hololens 2 fest.
+> [!NOTE]
+> Die Komponente "mit Pan verschieben (Skript)" ist nicht Bestandteil von mrtk. Es wurde mit den Assets dieses Tutorials bereitgestellt.
 
-    >[!NOTE]
-    >Wenn die Quad-Blöcke oder vor dem Inhalt aus den vorherigen Lektionen vorhanden sind, achten Sie darauf, Sie zu verschieben, damit keines der anderen Objekte blockiert wird.
+### <a name="1-create-a-quad-object-that-can-be-used-for-panning"></a>1. Erstellen eines Quad-Objekts, das zum Schwenken verwendet werden kann
 
-3. Weisen Sie dem Quader ein Material zu. Dieses Material ist das, was wir mit der Schwenkbewegung durchblättern werden.
+Klicken Sie im Hierarchie Fenster mit der rechten Maustaste auf einen leeren Bereich, und wählen Sie **3D-Objekt** > **Quad** aus, um der Szene ein vierfache hinzuzufügen. Geben Sie ihm einen passenden Namen, z. b. **pangesture**, und positionieren Sie ihn an einem geeigneten Speicherort, z. b. X = 0, Y =-0,2, Z = 2.
 
-    ![Lesson5 Chapter2 Step3im](images/Lesson5_chapter2_step3im.PNG)
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step1-1.png)
 
-4. Geben Sie im Projekt Panel "Pan Content" in das Suchfeld ein. Ziehen Sie dieses Material auf das Vierfache in Ihrer Szene.
+> [!TIP]
+> Eine Erinnerung zum Hinzufügen von Unity-primitiven, z. b. ein 3D-Quad, zu Ihrer Szene, finden Sie in der Anleitung zum [Hinzufügen eines Cubes zu einer Szene](mrlearning-base-ch2.md#2-add-a-cube-to-the-scene) .
 
-    >[!NOTE]
-    >Das pancontent-Material ist nicht Bestandteil von mrtk, sondern ist im basemoduleassets-Asset enthalten, das in der vorherigen Lektion importiert wurde.
+Wie bei jeder anderen Interaktion erfordert auch die schwenken-Bewegung einen Collider. Standardmäßig weist ein Quad einen Mesh-Collider auf. Der Mesh-Collider ist jedoch nicht ideal, da er äußerst dünn ist. Um dem Benutzer die Interaktion mit dem Collider zu vereinfachen, ersetzen wir den Mesh Collider durch einen Box Collider.
 
-    Zum Verwenden der Geste „Schwenken“ benötigen Sie ein Collider für das Objekt. Sie stellen möglicherweise fest, dass der Quader bereits ein Gitter-Collider aufweist. Das Gitter-Collider ist jedoch nicht ideal, da es äußerst schmal und daher schwer auszuwählen ist. Es empfiehlt sich, das Gitter-Collider durch ein Feld-Collider zu ersetzen.
+Wenn das pangesture-Objekt noch ausgewählt ist, klicken Sie auf das **Einstellungs** Symbol der **Mesh Collider** -Komponente, und wählen Sie **Komponente entfernen** aus, um den Mesh Collider zu entfernen:
 
-5. Klicken Sie mit der rechten Maustaste auf den Mesh-Collider im Inspektor-Panel. Entfernen Sie Sie dann, indem Sie auf Komponente entfernen klicken.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step1-2.png)
 
-    ![Lesson5 Chapter2 Step5im](images/Lesson5_chapter2_step5im.PNG)
+Verwenden Sie im Inspektor-Fenster die Schaltfläche **Komponente hinzufügen** , um einen **Box-Collider**hinzuzufügen, und ändern Sie dann die **Größe** des Kontrollkästchens von Z in 0,15, um die Stärke des boxcollider zu erhöhen:
 
-6. Fügen Sie jetzt das Feld "Collider" hinzu, indem Sie auf Komponente hinzufügen klicken und "Box Collider" suchen Der standardmäßige hinzugefügte Box-Collider ist noch zu dünn. Klicken Sie daher auf die Schaltfläche "Collider bearbeiten", um Im ausgewählten Zustand können Sie seine Größe über die x, y und z oder mithilfe der Elemente im Szenen-Editor anpassen. In diesem Beispiel soll das Feld-Collider hinter dem Quader etwas verlängert werden. Ziehen Sie im Szenen-Editor das Feld-Collider aus dem Hintergrund nach außen (siehe Abbildung unten). Dadurch kann der Benutzer nicht nur seinen Finger, sondern die gesamte Hand zum Scrollen verwenden.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step1-3.png)
 
-    ![Lesson5 Chapter2 Step6im](images/Lesson5_chapter2_step6im.PNG)
+### <a name="2-add-the-near-interaction-touchable-script-component"></a>2. Hinzufügen der touchable-Komponente (Skript) für die Near-Interaktion
 
-7. Machen Sie das Objekt interaktiv. Da wir direkt mit dem Quad interagieren möchten, möchten wir die touchable-Komponente der Near-Interaktion verwenden, die wir in Lektion 4 für die Wiedergabe von Musik aus dem Octa-Objekt verwendet haben. Klicken Sie auf Komponente hinzufügen, suchen Sie nach "Near Interaktion touchable", und wählen Sie Sie aus, wie in den folgenden Abbildungen dargestellt.
+Wenn das **pangesture** -Objekt noch ausgewählt ist, fügen Sie dem pangesture-Objekt die touchable-Komponente der **near-Interaktion (Script)** hinzu, und klicken Sie dann auf die Schaltflächen **fixbegrenzungen** und **Fix Center** , um die Eigenschaften des lokalen Centers und der Begrenzungen der Near-interaktionstouchable (Script) zu aktualisieren, die mit boxcollider
 
-    ![mrlearning-Base-CH5-2-step7a. png](images/mrlearning-base-ch5-2-step7a.png)
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step2-1.png)
 
-    Wenn eine gelbe Warnung zu Begrenzungen und/oder Center nicht mit der Größe von boxcollider und/oder dem Center übereinstimmt, klicken Sie auf die Schaltflächen fixbegrenzungen und/oder fixmitte, um die Mittelpunkt-und Begrenzungs Werte zu aktualisieren.
+### <a name="3-add-the-hand-interaction-pan-zoom-script-component"></a>3. Fügen Sie die Komponente "Hand Interaktion schwenken Zoom (Skript)" hinzu.
 
-    ![mrlearning-Base-CH5-2-step7b. png](images/mrlearning-base-ch5-2-step7b.png)
+Wenn das **pangesture** -Objekt noch ausgewählt ist, fügen Sie dem pangesture-Objekt die Komponente " **Hand Interaktion schwenken schwenken (Skript)** " hinzu, und aktivieren Sie dann das Kontrollkästchen " **Horizontal Sperren** ", um nur vertikales Scrollen zuzulassen:
 
-8. Fügen Sie die Fähigkeit zum Erkennen der Geste „Schwenken“ hinzu. Klicken Sie auf Komponente hinzufügen, geben Sie "Hand Interaktion" in das Suchfeld ein, und fügen Sie die Skript Komponente "Hand Interaktion schwenken schwenken" hinzu.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step3-1.png)
 
-    ![mrlearning-Base-CH5-2-step8a. png](images/mrlearning-base-ch5-2-step8a.png)
+### <a name="4-add-2d-content-to-be-scrolled"></a>4. Hinzufügen von 2D-Inhalt für den scrollt
 
-    Und damit verfügen Sie über ein Schwenk-aktiviertes Quad.
+Suchen Sie im Projekt Panel nach dem **Inhalt von pancontent** , und klicken Sie darauf, und ziehen Sie es auf die Eigenschaft Mesh Renderer **Material** Element 0 des **pangesture** -Objekts:
 
-    Wie Sie sehen, verfügt die Skript Komponente "Hand Interaktion schwenken schwenken" über verschiedene Einstellungen. als optionale Übung können Sie mit Ihnen experimentieren.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step4-1.png)
 
-    ![mrlearning-Base-CH5-2-step8b. png](images/mrlearning-base-ch5-2-step8b.png)
+Erweitern Sie im Inspektor-Fenster die neu hinzugefügte Komponente " **pancontent** -Material", und ändern Sie den Y-Wert in 0,5, sodass er mit dem **X-Wert** übereinstimmt und die Kacheln im Quadrat angezeigt werden:
 
-9. Nun erfahren Sie, wie Sie 3D-Objekte schwenken.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step4-2.png)
 
-    Klicken Sie in der Hierarchie mit der rechten Maustaste auf das Quad-Objekt, um das Kontextmenü für das Kontextmenü zu öffnen, und wählen Sie dann **3D-Objekt** > **Cube** aus, um der Szene einen Cube
+Wenn Sie jetzt den Spielmodus wechseln, können Sie den 2D-Inhalt mit der Schwenkbewegung in der in-Editor-Simulation testen:
 
-    Stellen Sie sicher, dass die **Position** des Cubes auf _0, 0, 0_ (null) festgelegt ist. Skalieren Sie den Cube auf eine **Skala** von _0,1, 0,1 und 0,1_.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step4-3.png)
 
-    ![mrlearning-Base-CH5-2-step9. png](images/mrlearning-base-ch5-2-step9.png)
+### <a name="5-add-3d-content-to-be-scrolled"></a>5. Hinzufügen von 3D-Inhalt für den scrollt
 
-    Duplizieren Sie den Cube dreimal, indem Sie mit der rechten Maustaste auf den Cube klicken, das Kontextmenü für den Kontext öffnen und **Duplizieren**auswählen.
+Erstellen Sie im Hierarchie Fenster **vier Cubes** als untergeordnete Objekte von **pancontent** , und legen Sie Ihre Transformations **Skala** auf X = 0,15, Y = 0,15, Z = 0,15 fest:
 
-    Leerraum, der die Cubes gleichmäßig verteilt. Die Szene sollte in etwa wie in der folgenden Abbildung aussehen.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step5-1.png)
 
-10. Fügen Sie das Skript "muvewithpan" allen Cubes hinzu, indem Sie die STRG-Taste gedrückt halten, während **Sie jedes** Cubeobjekt im Hierarchie Panel auswählen. Klicken Sie im Inspektor-Panel auf Komponente hinzufügen, suchen Sie nach dem Skript **mit Schwenken verschieben** , und wählen Sie es aus, um es zu allen Cubes hinzuzufügen.
+Um die Cubes gleichmäßig zu verteilen und einige Zeit zu sparen, fügen Sie dem übergeordneten Objekt des Cubes, d. h. dem pangesture-Objekt, die Raster Objekt Auflistungs Komponente (Skript) hinzu, und konfigurieren Sie die Raster Objekt Auflistung (Skript) wie folgt:
 
-    ![mrlearning-Base-CH5-2-step10a. png](images/mrlearning-base-ch5-2-step10a.png)
+* Ändern von **num-Zeilen** in 1, damit alle Cubes an einer einzelnen Zeile ausgerichtet sind
+* Ändern Sie die **Zellen Breite** in 0,25, um die Cubes innerhalb der Zeile leer zu legen.
 
-    >[!NOTE]
-    >Das Skript "muvewithpan" ist nicht Bestandteil von mrtk, aber in das basemoduleassets-Asset eingeschlossen, das in der vorherigen Lektion importiert wurde.
+Klicken Sie dann auf die Schaltfläche **Sammlung aktualisieren** , um die neue Konfiguration zu übernehmen:
 
-    Ziehen Sie das **Quad** -Objekt aus dem Bereich Hierarchie in das Feld **Pan Input Source** der **Move with Pan** Script-Komponente, wenn die Cubes noch ausgewählt sind.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step5-2.png)
 
-    ![mrlearning-Base-CH5-2-step10b. png](images/mrlearning-base-ch5-2-step10b.png)
+### <a name="6-add-the-move-with-pan-script-component"></a>6. Hinzufügen der Komponente "mit Pan (Skript) verschieben"
 
-    Nun werden die Cubes mit der Schwenkbewegung bewegt.
+Wählen Sie im Fenster Hierarchie die Option alle untergeordneten **Cube-Objekte**aus, und verwenden Sie dann im Inspektor-Fenster die Schaltfläche **Komponente hinzufügen** , um die Komponente zum **Verschieben mit schwenken (Skript)** zu allen Cubes hinzuzufügen:
 
-    >[!TIP]
-    >Die "muvewithpan"-Instanz auf jedem Cube lauscht auf das von der handinteraktionpanzoom-Instanz auf dem Quad-Objekt gesendete "panaktualisierte" Ereignis, das dem Eingabe Quellfeld "Pan Input" für jeden der Cubes hinzugefügt wurde, und aktualisiert die Position des entsprechenden Cubeobjekts entsprechend.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step6-1.png)
 
-    Wenn die Cubes noch ausgewählt sind, verschieben Sie Sie entlang ihrer **Z-Achse**, sodass sich das Mesh des Cubes innerhalb des vierfach-umruders befindet, indem er die **Position Z** -Werte auf _0,7_ändert.
+> [!TIP]
+> Zur Erinnerung, wie mehrere Objekte im Hierarchie Fenster ausgewählt werden, kann tou auf die [Komponente hinzufügen der Bearbeitungs Handlers (Skript) zu allen Objekt](mrlearning-base-ch4.md#1-add-the-manipulation-handler-script-component-to-all-the-objects) Anweisungen verweisen.
 
-    ![mrlearning-Base-CH5-2-step10c. png](images/mrlearning-base-ch5-2-step10c.png)
+Wenn alle Cubes noch ausgewählt sind, klicken Sie auf das **pangesture** -Objekt, und ziehen Sie es in das Feld **Eingabe Quelle schwenken** :
 
-    Wenn Sie **nun die**Mesh- **Rendererkomponente** deaktivieren, indem Sie Sie im Inspektor-Panel deaktivieren, verfügen Sie über ein unsichtbares Vierfache, bei dem Sie eine Liste von 3D-Objekten schwenken können.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step6-2.png)
 
-    ![mrlearning-Base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
+> [!TIP]
+> Die Komponente "mit Pan verschieben (Skript)" auf jedem Cube überwacht das von der Komponente "handinteraktionpanzoom (Skript)" auf dem pangesture-Objekt gesendete Pan-aktualisierte Ereignis, das Sie im obigen Schritt als Eingabe Quelle "Pan" zugewiesen haben, und aktualisiert die Position jedes Cubes. entsprechende.
+
+Wählen Sie im Fenster Hierarchie das **pangesture** -Objekt aus, und deaktivieren Sie dann im Inspektor das Kontrollkästchen **Gitter Renderer** , um die Gitter Rendererkomponente zu deaktivieren:
+
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step6-3.png)
+
+Wenn Sie jetzt den Spielmodus wechseln, können Sie den 3D-Inhalt mit der Schwenkbewegung in der in-Editor-Simulation testen:
+
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section2-step6-4.png)
 
 ## <a name="eye-tracking"></a>Eyetracking
 
-In diesem Abschnitt erfahren Sie, wie Sie die Eye-Nachverfolgung in unserer Demo aktivieren. Wir werden die 3D-Menü Elemente langsam drehen, wenn Sie mit dem Blick angezeigt werden. Zudem wird ein unterhaltsamer Effekt ausgelöst, wenn das anvisierte Element ausgewählt wird.
+In diesem Abschnitt erfahren Sie, wie Sie die Eye-Nachverfolgung in Ihrem Projekt aktivieren. In diesem Beispiel implementieren Sie die Funktionalität, damit jedes Objekt in der 3dobjectcollection langsam wird, während es durch den Augenblick des Benutzers betrachtet wird, und löst einen Unterbrechung-Effekt aus, wenn das zu überprüfende Objekt per Luftbild-oder Sprachbefehl ausgewählt wird.
 
-1. Stellen Sie sicher, dass die mrtk-profile ordnungsgemäß für die Augen Verfolgung konfiguriert sind Wechseln Sie zu diesem Zweck zu den Anweisungen unter " [Getting Started with Eye Tracking in mrtk](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html) ", und überprüfen Sie, ob die Augen Verfolgung ordnungsgemäß konfiguriert ist, indem Sie die Schritte im Abschnitt [Einrichten der Eye-Nachverfolgung Schritt für Schritt](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#setting-up-eye-tracking-step-by-step) ausführen. Vervollständigen Sie alle verbleibenden Schritte in der Dokumentation.
+Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 
-    >[!NOTE]
-    >Wenn Sie die DefaultHoloLens2InputSystemProfile verwendet haben, wie in der Lektion [configure the Mixed Reality Toolkit](https://docs.microsoft.com/windows/mixed-reality/mrlearning-base-ch1#configure-the-mixed-reality-toolkit) beschrieben, um Ihr benutzerdefiniertes mrtk-Konfigurations Profil zu klonen, ist die Eye-Nachverfolgung im Unity-Projekt standardmäßig aktiviert. Sie müssen jedoch weiterhin die Augen Verfolgungs Simulation für den Unity-Editor einrichten und Visual Studio so konfigurieren, dass die Eye-Nachverfolgung für den Build zugelassen wird.
+1. Hinzufügen der Komponente "Augen Verfolgungs Ziel (Skript)" zu allen Ziel Objekten
+2. Hinzufügen der "Eye Tracking Tutorial Demo (Skript)"-Komponente zu allen Ziel Objekten
+3. Implementieren Sie bei der Betrachtung des Ziel Ereignisses.
+4. In ausgewähltem Ereignis implementieren
+5. Aktivieren der simulierten Augen Verfolgung für in-Editor-Simulationen
+6. Aktivieren von Blick Eingaben in den App-Funktionen des Visual Studio-Projekts
 
-    Unter dem obigen Link erhalten Sie kurze Anleitungen für folgende Aufgaben:
+### <a name="1-add-the-eye-tracking-target-script-component-to-all-target-objects"></a>1. Hinzufügen der Komponente "Augen Verfolgungs Ziel (Skript)" zu allen Ziel Objekten
 
-    - Erstellen des Windows Mixed Reality-Augenblicks Datenanbieter für die Verwendung im mrtk-Profil
-    - Aktivieren der Eye-Nachverfolgung im an die Kamera angehängten Blick Anbieter
-    - Einrichten einer Augen Verfolgungs Simulation im Unity-Editor
-    - Bearbeiten der Funktionen der Visual Studio-Lösung, mit denen Eyetracking in der erstellten Anwendung zugelassen wird
+Erweitern Sie im Fenster Hierarchie das **3dobjectcollection-** Objekt, und wählen Sie alle untergeordneten **Objekte**aus. verwenden Sie dann im Inspektor-Fenster die Schaltfläche **Komponente hinzufügen** , um die Komponente für das **Augen Verfolgungs Ziel (Skript)** allen untergeordneten Objekten hinzuzufügen:
 
-2. Fügen Sie die EyeTrackingTarget-Komponente Zielobjekten hinzu. Damit ein Objekt auf Eye-Eye-Ereignisse reagieren kann, müssen wir die Komponente "eyetrackingtarget" für jedes Objekt, mit dem wir interagieren möchten, mithilfe von "Eye Eye" hinzufügen. Fügen Sie diese Komponente jedem der neun 3D-Objekte hinzu, die zur Rastersammlung gehören.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step1-1.png)
 
-    >[!TIP]
-    >Sie können die UMSCHALT-und/oder Crtl-Schlüssel verwenden, um mehrere Elemente in der Hierarchie auszuwählen und dann eine Massen Hinzufügung der Komponente "eyetrackingtarget" durchführen.
+Wenn alle untergeordneten **Objekte** noch ausgewählt sind, konfigurieren Sie die Komponente für das **Augen Verfolgungs Ziel (Skript)** wie folgt:
 
-    ![Lesson5 Chapter3 Schritt 2](images/Lesson5Chapter3Step2.JPG)
+* **Wählen Sie** die auszuführende Aktion aus, um die Air-Tap-Aktion für dieses Objekt als SELECT- **Aktion zu definieren**.
+* Erweitern **Sie Sprachauswahl** , und legen Sie die sprach Befehlslisten **Größe** auf 1 fest. ändern Sie dann in der angezeigten Liste neues Element die Option **0** **, um die**sprach Befehls Aktion für dieses Objekt als SELECT-Aktion zu definieren.
 
-3. Als Nächstes fügen wir das Skript "eyetrackingtutorialdemo" für einige interessante Interaktionen hinzu. Fügen Sie für jedes 3D-Objekt in der Raster Auflistung das Skript "eyetrackingtutorialdemo" hinzu, indem Sie im Menü "Komponente hinzufügen" nach der Komponente suchen.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step1-2.png)
 
-    ![Lesson5 Chapter3 Schritt 3](images/Lesson5Chapter3Step3.JPG)
+### <a name="2-add-the-eye-tracking-tutorial-demo-script-component--to-all-target-objects"></a>2. Hinzufügen der "Eye Tracking Tutorial Demo (Skript)"-Komponente zu allen Ziel Objekten
 
-    >[!NOTE]
-    >Das Skript Material "eyetrackingtutorialdemo" ist nicht Bestandteil von mrtk, aber in das basemoduleassets-Asset eingeschlossen, das in der vorherigen Lektion importiert wurde.
+Wenn alle untergeordneten **Objekte** noch ausgewählt sind, fügen Sie mithilfe der Schaltfläche **Komponente hinzufügen** die Komponente " **Eye Tracking Tutorial Demo (Script)** " allen untergeordneten Objekten hinzu:
 
-4. Drehen Sie das Objekt, während Sie das Ziel anvisieren. Wir möchten unsere 3D-Objekte so konfigurieren, dass Sie während der Betrachtung aussehen. Fügen Sie zu diesem Zweck ein neues Feld in den ein, und betrachten Sie dabei den Target ()-Abschnitt der "pipetrackingtarget"-Komponente, wie in der folgenden Abbildung dargestellt.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step2-1.png)
 
-    ![Lesson5 Chapter3 Step4a](images/Lesson5Chapter3Step4a.JPG)
+> [!NOTE]
+> Die Komponente für die Augen Verfolgungs Ziel (Skript) ist nicht Bestandteil von mrtk. Es wurde mit den Assets dieses Tutorials bereitgestellt.
 
-    Fügen Sie im neu erstellten Feld das aktuelle Spielobjekt dem leeren Feld hinzu, und wählen Sie "eyetrackingtutorialdemo > rotatetarget ()" aus, wie in der folgenden Abbildung dargestellt. Nun ist das 3D-Objekt so konfiguriert, dass es bei Anvisieren per Eyetracking gedreht wird.
+### <a name="3-implement-the-while-looking-at-target-event"></a>3. implementieren Sie bei der Betrachtung des Ziel Ereignisses.
 
-    ![Lesson5 Chapter3 Step4b](images/Lesson5Chapter3Step4b.JPG)
+Wählen Sie im Fenster Hierarchie das **Käse** Objekt aus, und erstellen Sie ein neues, während Sie das **Ziel Ereignis () ansehen** , das **Käse** Objekt so konfigurieren, dass es das Ereignis empfängt, und " **eyetrackingtutorialdemo. rotatetarget** " als Aktion definieren, die ausgelöst werden soll:
 
-5. Fügen Sie in die Funktion "Blip-Ziel" ein, die bei der Auswahl per Air-Tap oder "Select" (Auswählen von "Select") auf "" ausgewählt wird. Ähnlich wie bei Schritt 4 möchten wir "eyetrackingtutorialdemo > bliptarget ()" Auslösers, indem Sie es dem "Select ()"-Feld des Spiel Objekts der "eyetrackingtarget"-Komponente zuweisen, wie in der folgenden Abbildung dargestellt. Wenn diese jetzt konfiguriert ist, bemerken Sie immer dann, wenn Sie eine SELECT-Aktion (z. b. Air-Tap oder den Voice-Befehl "Select"), eine geringfügige Unterbrechung im Spielobjekt.
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step3-1.png)
 
-    ![Lesson5 Chapter3 Schritt 5](images/Lesson5Chapter3Step5.JPG)
+**Wiederholen** Sie diesen Vorgang für jedes untergeordnete Objekt in der 3dobjectcollection.
 
-6. Vergewissern Sie sich vor der Erstellung in HoloLens 2, dass die Eyetracking-Funktionen ordnungsgemäß konfiguriert sind. Zum Zeitpunkt der Erstellung dieses Artikels ist Unity noch nicht in der Lage, die Blick Eingabe für die Augen Verfolgungs Funktionen festzulegen. Diese Funktion ist erforderlich, damit die Eye-Nachverfolgung in hololens 2 funktioniert. Befolgen Sie die Anweisungen unter [Testen Ihrer Unity-App auf einer hololens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2) -Anleitung, um die Blick Eingabe Funktion zu aktivieren.
+> [!TIP]
+> Eine Erinnerung, wie Ereignisse implementiert werden können, finden Sie in den Anweisungen [Hand Tracking Gesten und Interaktionen Buttons](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) .
+
+### <a name="4-implement-the-on-selected-event"></a>4. implementieren Sie für das ausgewählte Ereignis.
+
+Wählen Sie im Fenster Hierarchie das Objekt **Käse** aus, und erstellen Sie dann ein neues **auf ausgewähltes Ereignis ()** , konfigurieren Sie das **Käse** Objekt, um das Ereignis zu empfangen, und definieren Sie " **eyetrackingtutorialdemo. rotatetarget** " als Aktion, die ausgelöst werden soll:
+
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step4-1.png)
+
+**Wiederholen** Sie diesen Vorgang für jedes untergeordnete Objekt in der 3dobjectcollection.
+
+### <a name="5-enable-simulated-eye-tracking-for-in-editor-simulations"></a>5. Aktivieren der simulierten Augen Verfolgung für in-Editor-Simulationen
+
+Wählen Sie im Fenster Hierarchie das **mixedrealitytoolkit** -Objekt aus, und wählen Sie dann im Inspektor-Fenster die Registerkarte **Eingabe** aus, erweitern Sie den Abschnitt **Eingabedaten Anbieter** und dann den Abschnitt **Input Simulation Service** , und Klonen Sie das **defaultmixedrealityinputsimulationprofile** -Objekt, um es durch ihr eigenes anpassbares **Eingabe Simulations Profil**zu ersetzen:
+
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step5-1.png)
+
+> [!TIP]
+> Eine Erinnerung zum Klonen von mrtk-Profilen finden Sie unter [How to configure the Mixed Reality Toolkit Profiles](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) instructions.
+
+Aktivieren Sie im Abschnitt **Eye Simulation** das Kontrollkästchen **Augen Position simulieren** , um die Augen Verfolgungs Simulation zu aktivieren:
+
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step5-2.png)
+
+Wenn Sie nun in den Spielmodus wechseln, können Sie die von Ihnen implementierten Spin-und Unterbrechung-Effekte testen, indem Sie die Ansicht so anpassen, dass der Cursor auf eines der Objekte trifft, und mithilfe von Hand Interaktion oder Sprachbefehl das Objekt auswählen:
+
+![mrlearning: Basis](images/mrlearning-base/tutorial5-section3-step5-3.png)
+
+> [!NOTE]
+> Wenn Sie die DefaultHoloLens2ConfigurationProfile nicht zum Klonen Ihres anpassbaren mrtk-Konfigurations Profils verwendet haben, wie in den Anweisungen zum [Konfigurieren des Mixed Reality-Toolkits](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) beschrieben, ist die Eye-Nachverfolgung in Ihrem Projekt möglicherweise nicht aktiviert und muss aktiviert werden. Hierzu finden Sie die Anweisungen unter " [Getting Started with Eye Tracking" in mrtk](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html) .
+
+### <a name="6-enable-gaze-input-in-the-visual-studio-projects-app-capabilities"></a>6. Aktivieren Sie die Blick Eingabe in den App-Funktionen des Visual Studio-Projekts.
+
+Bevor Sie Ihre APP aus Visual Studio auf Ihrem Gerät entwickeln und bereitstellen können, müssen Sie in den App-Funktionen des Projekts die Option "Blick Eingaben" aktivieren. Hierfür können Sie die Anweisungen unter [Testen Ihrer Unity-App auf hololens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2) befolgen.
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-Sie haben der Anwendung erfolgreich grundlegende Funktionen zur Augen Verfolgung hinzugefügt. Diese Aktionen stellen nur den Einstieg in eine ganze Welt der Möglichkeiten mit Eyetracking dar. In diesem Kapitel wird außerdem Lektion 5 beendet, in dem wir mehr über erweiterte Eingabefunktionen erfahren, wie z. b. Sprachbefehle, Schwenkbewegungen und die Eye-Nachverfolgung.
+Sie haben der Anwendung erfolgreich grundlegende Funktionen zur Auge Verfolgung hinzugefügt. Diese Aktionen stellen nur den Einstieg in eine ganze Welt der Möglichkeiten mit Eyetracking dar. In diesem Tutorial haben Sie auch weitere erweiterte Eingabe Features kennengelernt, wie z. b. Sprachbefehle und Schwenk Gesten.
 
 [Nächste Lektion: 7. Erstellen einer Beispielanwendung für ein Mond Modul](mrlearning-base-ch6.md)

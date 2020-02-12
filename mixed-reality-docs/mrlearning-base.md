@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: a311fbe377e4a2654c8905276417cf1104fc4754
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: dbae7545edb6515b5cf148fbbfb6652595d2fc0d
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334348"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129261"
 ---
 # <a name="1-overview-and-objectives"></a>1. Übersicht und Ziele
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
     <colgroup>
@@ -38,16 +38,17 @@ ms.locfileid: "75334348"
     </tr>
 </table>
 
-## <a name="before-you-start"></a>Bevor Sie beginnen
+## <a name="before-you-start"></a>Vorbereitungen
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 * Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md) konfiguriert ist
 * Windows 10 SDK 10.0.18362.0 oder höher
 * Grundlegende C# Programmier Fähigkeit
 * Ein hololens 2-Gerät, das [für die Entwicklung konfiguriert](using-visual-studio.md#enabling-developer-mode) ist
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity-Hub</a> mit installiertem Unity 2019.2. X und dem hinzugefügten universelle Windows-Plattform Build-Unterstützungs Modul
 
->[!IMPORTANT]
->Diese tutorialreihe erfordert <a href="https://unity3d.com/get-unity/download/archive" target="_blank">Unity 2019,1</a> und die empfohlene Version ist Unity 2019.1.14. Dadurch werden alle Unity-Versions Anforderungen oder-Empfehlungen ersetzt, die in den oben genannten Voraussetzungen angegeben sind.
+> [!IMPORTANT]
+> Die empfohlene Unity-Version für diese tutorialreihe ist Unity 2019.2. X. Dadurch werden alle Unity-Versions Anforderungen oder-Empfehlungen ersetzt, die in den oben genannten Voraussetzungen angegeben sind.
 
 [Nächste Lektion: 2. Initialisieren Ihres Projekts und der ersten Anwendung](mrlearning-base-ch1.md)

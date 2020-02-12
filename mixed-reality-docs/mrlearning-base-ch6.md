@@ -6,159 +6,211 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: b5b1bd0115822449bd6098f78cfc94d909169737
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334372"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129441"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Erstellen einer Beispielanwendung für ein Mond Modul
+<!-- TODO: Rename to 'Creating a Rocket Launcher sample application' -->
 
-In diesem Tutorial werden mehrere Konzepte aus früheren Lektionen kombiniert, um ein eindeutiges Beispiel zu erstellen. Sie erfahren, wie Sie eine Anwendung für eine Mond Modul Assembly erstellen, bei der ein Benutzer überwachte Hände zum Abrufen von Mond Modul teilen und zum Anfügen eines mondmoduls verwenden muss. Mithilfe von druckbaren Schaltflächen können Sie Platzierungs Hinweise umschalten, die Leistung zurücksetzen und das Mond Modul in den Raum bringen! In zukünftigen Tutorials werden wir weiterhin auf dieser Benutzer Funktionalität aufbauen, die leistungsstarke Mehrzweck-Anwendungsfälle umfasst, die räumliche Azure-Anker für räumliche Ausrichtung nutzen.
+In diesem Tutorial werden mehrere Konzepte aus früheren Lektionen kombiniert, um ein eindeutiges Beispiel zu erstellen. Sie erfahren, wie Sie eine teilassemblyanwendung erstellen, in der ein Benutzer überwachte Hände verwenden muss, um Teile zu erfassen und zu versuchen, ein Mond Modul zusammenzustellen. Mithilfe von druckbaren Schaltflächen können Sie Platzierungs Hinweise ein-und ausschalten, die Leistung zurücksetzen und das Mond Modul in den Raum bringen!
+
+In zukünftigen Tutorials werden Sie weiterhin auf dieser Benutzer Funktionalität aufbauen, die leistungsstarke mehr Benutzer Anwendungsfälle umfasst, die räumliche Azure-Anker für räumliche Ausrichtung nutzen.
 
 ## <a name="objectives"></a>Ziele
 
-- Kombinieren mehrerer Konzepte aus früheren Lektionen, um eine einzigartige Umgebung zu schaffen
-- Informationen zum Umschalten von Objekten
-- Auslösen komplexer Ereignisse über drückbare Schaltflächen
-- Verwenden der physischen Effekte und Kräfte von Starrkörpern
-- Erkunden der Verwendung von QuickInfos
+* Kombinieren mehrerer Konzepte aus früheren Lektionen, um eine einzigartige Umgebung zu schaffen
+* Informationen zum Umschalten von Objekten
+* Auslösen komplexer Ereignisse über drückbare Schaltflächen
+* Verwenden der physischen Effekte und Kräfte von Starrkörpern
+* Erkunden der Verwendung von QuickInfos
+
+## <a name="lunar-module-parts-overview"></a>Übersicht über die Komponenten von Mond Modulen
+<!-- TODO: Rename to 'Implementing the part assembly functionality' -->
+
+In diesem Abschnitt erstellen Sie eine einfache teilassemblyherausforderung, bei der das Ziel des Benutzers darin besteht, fünf Teile, die in der Tabelle verteilt sind, am richtigen Speicherort im Mond Modul zu platzieren.
+
+Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
+
+1. Hinzufügen der Prefab für das Raketenstart Programm zur Szene
+2. Aktivieren der Objekt Bearbeitung für alle Teile
+3. Hinzufügen und Konfigurieren der Komponente "Part Assembly Demo (Skript)"
+
+> [!NOTE]
+> Die Komponente "Part Assembly Demo (Skript)" ist nicht Bestandteil von mrtk. Es wurde mit den Assets dieses Tutorials bereitgestellt.
+
+### <a name="1-add-the-rocket-launcher-prefab-to-the-scene"></a>1. Fügen Sie der Szene die Prefab des Raketenstart Programms hinzu.
+
+Navigieren Sie im Projektfenster zu den **Assets** > **mrtk. Tutorials. GettingStarted** > Ordner **Prefabs** > **RocketLauncher** , ziehen Sie den **RocketLauncher** -Prefab in das Hierarchie Fenster, um ihn Ihrer Szene hinzuzufügen, und positionieren Sie ihn dann an einem geeigneten Speicherort, z. b.:
+
+* Transformations Position X = 1,5, Y =-0,4, Z = 0, sodass Sie auf der rechten Seite des Benutzers bei der Taillenhöhe positioniert ist.
+* Transformations Drehung X = 0, Y = 180, Z = 0, sodass die Hauptfunktionen der Benutzeroberflächen dem Benutzer ausgesetzt sind
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section1-step1-1.png)
+
+### <a name="2-enable-object-manipulation-for-all-the-parts"></a>2. Aktivieren Sie die Objekt Bearbeitung für alle Teile.
+
+Suchen Sie im Fenster Hierarchie nach dem Objekt RocketLauncher > **lunarmoduleparts** , und wählen Sie alle untergeordneten **Objekte**aus. Fügen Sie dann die Komponente **Manipulations Handler (Skript)** und **near Interaktion grabbable (Script)** hinzu, und konfigurieren Sie dann den Manipulations Handler (Skript) wie folgt:
+
+* Ändern von **zwei handungstyp** zum Verschieben ändern, sodass die Skalierung deaktiviert ist
+* Deaktivieren Sie das Kontrollkästchen " **lange Bearbeitung zulassen** ", um nur die Near-Interaktion zuzulassen.
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section1-step1-2.png)
+
+> [!TIP]
+> Eine Erinnerung, eine Schritt-für-Schritt-Anleitung zur Implementierung der Objekt Bearbeitung, finden Sie in den Anweisungen zum Bearbeiten von [3D-Objekten](mrlearning-base-ch4.md#manipulating-3d-objects) .
+
+### <a name="3-add-and-configure-the-part-assembly-demo-script-component"></a>3. hinzufügen und Konfigurieren der Komponente "Part Assembly Demo (Skript)"
+
+Wenn alle untergeordneten Objekte von lunarmoduleparts noch ausgewählt sind, fügen Sie eine **audioquellkomponente** hinzu, und konfigurieren Sie Sie wie folgt:
+
+* Weisen Sie dem **Audioclip** -Feld einen passenden Audioclip zu, z. b. MRKT_Scale_Start
+* Deaktivieren Sie das Kontrollkästchen **Play on wacht** , sodass der Audioclip beim Laden der Szene nicht automatisch wiedergegeben wird.
+* **Räumliche Blend** in 1 ändern, um räumliche Audiodaten zu ermöglichen
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section1-step2-1.png)
+
+Wenn alle untergeordneten Objekte von lunarmoduleparts weiterhin ausgewählt sind, fügen Sie die Komponente **Part Assembly Demo (Skript)** hinzu:
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section1-step2-2.png)
+
+Wählen Sie im Fenster "Hierarchie" das **roverenclosure** -Objekt aus, und konfigurieren Sie die Komponente " **Part Assembly Demo (Skript)** " wie folgt:
+
+* Weisen Sie das Objekt selbst, in diesem Fall das **roverenclosure** -Objekt, dem Objekt **zu platzieren** .
+* Weisen Sie im Feld **Speicherort** die entsprechenden Platzhalter Objekte zu, in diesem Fall das **RoverEnclosure_PlacementHints** Objekt.
+* Weisen Sie im Feld QuickInfo- **Objekt** das entsprechende tooltipobject-Objekt zu, in diesem Fall das **RoverEnclosure_ToolTip** Objekt.
+* Weisen Sie das Objekt selbst (in diesem Fall das **roverenclosure** -Objekt) dem Feld **Audioquelle** zu.
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section1-step2-3.png)
+
+**Wiederholen** Sie diesen Schritt für jedes der anderen untergeordneten lunarmoduleparts-Objekte, z. b. fueltank, energycell, dockingportal und externalsensor.
+
+Wenn Sie nun in den Spielmodus wechseln und ein ' Objekt an den Ort ' in der Nähe von ' Location to Place ' verschieben, werden Sie Folgendes bemerken:
+
+* Das Objekt wird an der Stelle ausgerichtet und unter dem lunarmodule-Objekt untergeordnet, sodass es Teil des mondmoduls wird.
+* Die Audioquelle des Objekts übernimmt den zugewiesenen Audioclip an der Position des Objekts.
+* Das entsprechende QuickInfo-Objekt wird ausgeblendet.
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section1-step2-4.png)
+
+> [!TIP]
+> Eine Erinnerung zur Verwendung der in-Editor-Eingabe Simulation finden Sie unter [Verwenden der in-Editor-Hand Eingabe Simulation zum Testen eines Szenen](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene) Handbuchs im [mrtk-Dokumentations Portal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
 ## <a name="configuring-the-lunar-module"></a>Konfigurieren der Mondlandefähre
 
-In diesem Abschnitt werden die verschiedenen Komponenten vorgestellt, die zum Erstellen unserer Beispiel Funktionen erforderlich sind.
+In diesem Abschnitt fügen Sie der Anwendung für das Raketenstart Programm zusätzliche Features hinzu, damit der Benutzer folgende Aktionen ausführen kann:
 
-1. Fügen Sie der Basis Szene die vorfab-Assembly für das Mondmodul hinzu. Navigieren Sie zu diesem Zweck auf der Registerkarte Projekt zu Assets > basemoduleassets > Prefabs. Sie sehen zwei Prefabs für das Raketenstart Programm, ziehen Sie die Launcher_Tutorial Prefab in ihre Szene, und positionieren Sie Sie wie gewünscht.
+* Interagieren mit dem Lunar-Modul
+* Starten Sie das Mond Modul, und geben Sie einen Sound wieder, wenn es gestartet wird.
+* Setzen Sie die Anwendung zurück, damit das Mond Modul und der gesamte Teil wieder an der ursprünglichen Position abgelegt werden.
+* Blenden Sie die Platzierungs Hinweise aus, um die Herausforderung der Teile Assembly zu erschweren.
 
-    >[!NOTE]
-    >Der Launcher_Complete Prefab ist das abgeschlossene Start Programm, das als Referenz bereitgestellt wird.
+Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 
-    ![Lektion6 Kapitel1 Schritt1im](images/Lesson6_Chapter1_step1im.PNG)
+1. Objekt Bearbeitung aktivieren
+2. Aktivieren der Physik
+3. Hinzufügen einer audioquellkomponente
+4. Hinzufügen und Konfigurieren der Komponente "Launch Lunar Module (Script)"
+5. Hinzufügen und Konfigurieren der Komponente zum Umschalten der Platzierungs Hinweise (Skript)
 
-    Wenn Sie das Launcher_Tutorial Game-Objekt in der Hierarchie erweitern und das Mond Modul Objekt weiter erweitern, finden Sie mehrere untergeordnete Objekte, die ein Material mit dem Namen "x-ray" aufweisen. Das "x-ray"-Material ermöglicht eine etwas durchlässiges Farbe, die als Platzierungs Hinweise für den Benutzer verwendet wird.
+> [!NOTE]
+> Die Komponente Launch Lunar Module (Script) und die Funktion zum Umschalten der Platzierungs Hinweise (Skript) sind nicht Teil von mrtk. Sie wurden mit den Assets dieses Tutorials bereitgestellt.
 
-    ![Lesson6 Chapter1 noteaim](images/Lesson6_Chapter1_noteaim.PNG)
+### <a name="1-enable-object-manipulation"></a>1. Aktivieren der Objekt Bearbeitung
 
-    Es gibt fünf Teile für das Mond Modul, mit dem der Benutzer interagieren wird, wie in der folgenden Abbildung dargestellt:
+Wählen Sie im Fenster Hierarchie das Objekt RocketLauncher > **lunarmodule** aus, fügen Sie die Komponente **Manipulations Handler (Skript)** und **near Interaktion grabbable (Skript)** hinzu, und konfigurieren Sie dann den Manipulations Handler (Skript) wie folgt:
 
-    1. Rover-Gehäuse
-    2. Treibstofftank
-    3. Energiezelle
-    4. Andockportal
-    5. Externer Sensor
+* Ändern von **zwei handungstyp** zum Verschieben ändern, sodass die Skalierung deaktiviert ist
+* Deaktivieren Sie das Kontrollkästchen " **lange Bearbeitung zulassen** ", um nur die Near-Interaktion zuzulassen.
 
-    ![Lektion6 Kapitel1 Notebim](images/Lesson6_Chapter1_notebim.PNG)
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section2-step1-1.png)
 
-    >[!NOTE]
-    >Die Spielobjektnamen, die in Ihrer Basisszenenhierarchie angezeigt werden, entsprechen nicht den Namen der Objekte in der Szene.
+### <a name="2-enable-physics"></a>2. Aktivieren der Physik
 
-2. Fügen Sie dem lunarmodule-Spielobjekt eine Audioquelle hinzu. Stellen Sie sicher, dass das lunarmodule in ihrer Szenen Hierarchie ausgewählt ist, und klicken Sie auf Komponente hinzufügen Suchen Sie nach Audioquelle, und fügen Sie Sie dem Spielobjekt hinzu. Lassen Sie das Feld "Audioclip" für den Moment leer, ändern Sie die Einstellung "besondere Blend" jedoch von 0 in 1, damit räumliche Audiodaten aktiviert werden. Sie verwenden diese Audioquelle, um den Start Sound zu einem späteren Zeitpunkt wiederzugeben.
+Wenn das RocketLauncher > **lunarmodule** -Objekt noch ausgewählt ist, fügen Sie eine Rigidbody-Komponente hinzu, und konfigurieren Sie Sie dann wie folgt:
 
-    ![Lesson6 Chapter1 Step2im](images/Lesson6_Chapter1_step2im.PNG)
+* Deaktivieren Sie das Kontrollkästchen **use Gravity** , damit das Lunar-Modul nicht von der Schwerkraft betroffen ist.
+* Aktivieren Sie das Kontrollkästchen **ist Kinematic** , damit das Mond Modul anfänglich nicht von Physic-Kräften betroffen ist.
 
-3. Fügen Sie die Skript-Schalter-Platzierungs Hinweise hinzu. Klicken Sie auf Komponente hinzufügen, und suchen Sie nach Platzierungs Hinweisen zum Umschalten. Dabei handelt es sich um ein benutzerdefiniertes Skript, mit dem Sie die über sichtigen Hinweise (Objekte mit dem x-ray-Material) wie zuvor erwähnt aktivieren und deaktivieren können.
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section2-step2-1.png)
 
-    ![Lesson6 Chapter1 Step3im](images/Lesson6_Chapter1_step3im.PNG)
+### <a name="3-add-an-audio-source-component"></a>3. Hinzufügen einer audioquellkomponente
 
-4. Da wir über fünf Objekte verfügen, geben Sie "5" für die Größe des Spielobjekt Arrays ein. Daraufhin werden fünf neue Elemente angezeigt.
+Wenn das Objekt RocketLauncher > **lunarmodule** noch ausgewählt ist, fügen Sie eine **audioquellkomponente** hinzu, und konfigurieren Sie Sie dann wie folgt:
 
-    ![Lektion6 Kapitel1 Schritt4bim](images/Lesson6_Chapter1_step4bim.PNG)
+* Ändern von **Spatial Blend** in 1 zum Aktivieren räumlicher Audiodaten
 
-    Ziehen Sie jedes der durchlässigen Objekte in alle Felder namens (Spielobjekt). Ziehen Sie die folgenden Objekte aus dem Lunar-Modul in der Szene in die Objekt Array Felder, wie in der obigen Abbildung dargestellt:
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section2-step3-1.png)
 
-    ![Lektion6 Kapitel1 Schritt4aim](images/Lesson6_Chapter1_step4aim.PNG)
+### <a name="4-add-and-configure-the-launch-lunar-module-script-component"></a>4. hinzufügen und Konfigurieren der Komponente "Launch Lunar Module (Script)"
 
-    Das Skript zum Umschalten der Platzierungs Hinweise ist nun konfiguriert, sodass wir Hinweise aktivieren und deaktivieren können.
+Wenn das Objekt RocketLauncher > **lunarmodule** noch ausgewählt ist, fügen Sie die Komponente **Launch Lunar Module (Script)** hinzu, und konfigurieren Sie Sie dann wie folgt:
 
-5. Fügen Sie das Skript Launch Lunar Module hinzu. Klicken Sie auf die Schaltfläche Komponente hinzufügen, suchen Sie nach "Launch Lunar Module", und wählen Sie Sie aus Mit diesem Skript wird das Mond Modul gestartet. Wenn wir auf eine konfigurierte Schaltfläche klicken, wird der festen Textkomponente des mondmoduls eine aufwärts-Force hinzugefügt, und das Modul wird aufwärts gestartet. Wenn Sie sich in einem Gebäude befinden, kollidiert die Mondlandefähre möglicherweise mit Ihrem Deckengittermodell. Wenn Sie sich in einem Bereich mit hohen oder gar keinen Obergrenzen befinden, wird das Mond Modul unbegrenzt in den Speicherbereich überlaufen.
+* Ändern **Sie** den Werte Wert, damit das Mond Modul beim Start ordnungsgemäß gestartet wird, z. b. in 0,01
 
-    ![Lektion6 Kapitel1 Schritt5im](images/Lesson6_Chapter1_step5im.PNG)
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section2-step4-1.png)
 
-6. Passen Sie den Schub so an, dass die Mondlandefähre anmutig nach oben aufsteigt. Versuchen Sie einen Wert von 0,01. Lassen Sie das Feld „Rb“ leer. RB steht für den starren Text, und dieses Feld wird während der Laufzeit automatisch aufgefüllt.
+### <a name="5-add-and-configure-the-toggle-placement-hints-script-component"></a>5. hinzufügen und Konfigurieren der Komponente zum Umschalten der Platzierungs Hinweise (Skript)
 
-    ![Lektion6 Kapitel1 Schritt6im](images/Lesson6_Chapter1_step6im.PNG)
+Wenn das Objekt RocketLauncher > **lunarmodule** noch ausgewählt ist, fügen Sie die Komponente zum **Umschalten der Platzierungs Hinweise (Skript)** hinzu, und konfigurieren Sie Sie dann wie folgt:
 
-## <a name="lunar-module-parts-overview"></a>Übersicht über die Komponenten von Mond Modulen
+* Legen Sie die Eigenschaft "Spielobjekt Array **Größe** " auf 5 fest.
+* Weisen Sie jedes der untergeordneten **Objekte** des **placementhints** -Objekts dem **Element** Feld im Spielobjekt Array zu:
 
-Das übergeordnete Objekt der Mond Modul Teile ist die Sammlung der Objekte, mit denen der Benutzer interagiert. In der folgenden Liste werden die Namen von Spielobjekten mit der Bezeichnung Namen in Klammern angegeben:
-
-- Rucksack (Energie Zelle)
-- Gastank (Treibstofftank)
-- TopLeftBody (Rover Enclosure) – Oberer linker Körper (Rover-Gehäuse)
-- Nose (Docking Portal) – Nase (Andockportal)
-- LeftTwirler (External Sensor) – Linker Drallkörper (Externer Sensor)
-
-Beachten Sie, dass jedes dieser Objekte über einen Manipulations Handler verfügt, wie in Lektion 4 erläutert. Diese Funktion ermöglicht es Benutzern, das Objekt zu erfassen und zu bearbeiten. Beachten Sie außerdem, dass die-Einstellung, die zwei übergebenen Manipulations Typen ist, auf verschieben und drehen festgelegt ist. Mit dieser Option kann der Benutzer das Objekt nur verschieben und seine Größe nicht ändern. Dies ist die gewünschte Funktionalität für eine assemblyanwendung.
-Außerdem ist die weite Bearbeitung deaktiviert, um nur die direkte Interaktion von Modul Teilen zuzulassen.
-
-![Lektion6 Kapitel2im](images/Lesson6_Chapter2im.PNG)
-
-Das Demoskript der Teile Assembly (siehe oben) ist das Skript, mit dem die Objekte verwaltet werden, die der Benutzer im Mond Modul vom Benutzer platziert.
-
-Das Feld Objekt zum Platzieren ist die ausgewählte Transformation, wie in der Abbildung oben gezeigt, der dem Objekt zugeordnete Rucksack/Kraftstofftank, mit dem die Verbindung hergestellt wird.
-
-Mit den Einstellungen für die Near Distance und far distance wird die Nähe festgelegt, zu der Teile direkt oder freigegeben werden können. Beispielsweise muss der Rucksack/Treibstofftank 0,1 Einheiten vom Mond Modul entfernt werden, bevor das Snap-in-Modul stattfindet. Die Einstellung für die weite Entfernung legt den Speicherort fest, an dem sich das Objekt befinden kann, bevor es vom Mond Modul getrennt werden kann. In diesem Fall muss die Hand des Benutzers den Rucksack/Treibstofftank greifen und ihn 0,2 Einheiten von der Mondlandefähre wegziehen, damit er nicht wieder an seiner Position andockt.
-
-Das QuickInfo-Objekt ist die QuickInfo-Bezeichnung in der Szene. Wenn die Objekte an Ort und Stelle ausgerichtet werden, ist die Bezeichnung deaktiviert.
-
-Die Audioquelle wird automatisch gepackt.
-
-## <a name="configuring-the-placement-hints-button"></a>Konfigurieren der Schaltfläche Platzierungs Hinweise
-
-In [Lektion 2](mrlearning-base-ch2.md)haben Sie gelernt, wie Sie Schaltflächen platzieren und konfigurieren können, um Dinge wie das Ändern der Farbe eines Elements oder das Abspielen eines Sounds beim Pushvorgang zu ermöglichen. Wir werden diese Prinzipien weiterhin verwenden, wenn wir unsere Schaltflächen zum Umschalten von Platzierungshinweisen konfigurieren.
-
-Ziel ist es, die Schaltfläche so zu konfigurieren, dass jedes Mal, wenn der Benutzer die Schaltfläche "Platzierungs Hinweis" drückt, die Sichtbarkeit der Hinweise zur durchlässigen Platzierung schaltet.
-
-1. Verschieben Sie das Mond Modul in den leeren reinen Laufzeitbereich im Inspektor-Panel, während das Objekt Platzierungs Hinweise in der Basis Szenen Hierarchie ausgewählt wird.
-
-    ![Lesson6 Chapter3 Step1im](images/Lesson6_Chapter3_step1im.PNG)
-
-2. Klicken Sie auf die Dropdown Liste keine Funktion. Wechseln Sie zu "umggleplacementhints", und wählen Sie unter diesem Menü den Befehl "" "" "" "" "" " "Degglegameobjects ()" schaltet die Platzierungs Hinweise ein und aus, sodass Sie bei jedem Drücken der Schaltfläche sichtbar oder unsichtbar sind.
-
-    ![Lesson6 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
-
-## <a name="configuring-the-reset-button"></a>Konfigurieren der Schaltfläche Zurücksetzen
-
-Es gibt Situationen, in denen der Benutzer einen Fehler ausgibt, das Objekt versehentlich auslöst oder nur die Benutzeroberflächen zurücksetzen möchte. Mit der Schaltfläche Zurücksetzen können Sie die Funktionalität neu starten.
-
-1. Wählen Sie die Schaltfläche Zurücksetzen. In der Basis Szene heißt der Name Reort.
-
-2. Ziehen Sie das Modul "Mond" aus der Basis Szenen Hierarchie in den leeren Slot unter der Schaltfläche "gedrückt" im Inspektor-Panel.
-
-    ![Lesson6 Chapter4 Step2im](images/Lesson6_Chapter4_step2im.PNG)
-
-3. Wählen Sie das Dropdown Menü No Function aus, zeigen Sie auf launchlunarmodule, und wählen Sie dann resetmodule () aus.
-
-    ![Lektion6 Kapitel4 Schritt3im](images/Lesson6_Chapter4_step3im.PNG)
-
-    >[!NOTE]
-    >Beachten Sie, dass die gameobject. broadcastmessage standardmäßig für resetplacement konfiguriert ist. Dadurch wird eine Nachricht mit dem Namen resetplacement für jedes untergeordnete Objekt des RocketLauncher_Tutorial übermittelt. Alle-Objekte, die über eine-Methode für resetplacement () verfügen, reagieren auf diese Nachricht, indem Sie die Position zurücksetzt.
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section2-step5-1.png)
 
 ## <a name="configuring-the-launch-button"></a>Konfigurieren der Schaltfläche "starten"
 
-In diesem Abschnitt wird erläutert, wie Sie die Schaltfläche "Start" konfigurieren, die es dem Benutzer ermöglicht, die Schaltfläche zu drücken und das Mond Modul in den Raum zu
+Wählen Sie im Fenster Hierarchie die > Schaltflächen RocketLauncher > **launchbutton** -Objekt aus, und erstellen Sie dann auf der **Schaltfläche mit der druckbaren Schaltfläche (Skript)** ein neues Button-Ereignis **()** , und konfigurieren Sie das **lunarmodule** -Objekt, um das Ereignis zu empfangen, und erstellen Sie **launchlunarmodule. startthruster** als auszulösenden Aktion
 
-1. Wählen Sie die Schaltfläche Starten aus. In der Basis Szene heißt Sie launchroundbutton. Ziehen Sie das Modul "Lunar" in den leeren Slot unter "touchende" im Inspektor-Panel.
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section3-step1-1.png)
 
-    ![Lesson6 Chapter5 Step1im](images/Lesson6_Chapter5_step1im.PNG)
+> [!TIP]
+> Eine Erinnerung, wie Ereignisse implementiert werden können, finden Sie in den Anweisungen [Hand Tracking Gesten und Interaktionen Buttons](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) .
 
-2. Wählen Sie das Dropdown Menü keine Funktion aus, zeigen Sie auf launchlunarmodule, und wählen Sie stopthruster() aus. Dadurch wird gesteuert, wie viel der Benutzer an das Mond Modul übergeben möchte.
+Wenn die Schaltflächen RocketLauncher > > **launchbutton** -Objekt noch ausgewählt ist, erstellen Sie auf der **Schaltfläche "Druck Bare Schaltfläche (Skript)** " ein neues Button-Ereignis **()** , konfigurieren Sie das **lunarmodule** -Objekt, um das Ereignis zu empfangen, definieren Sie **audiosource. playoneshot** als auszulösenden Aktion, und weisen Sie dem **Audioclip** -Feld einen passenden Audioclip zu, z. b. den MRTK_Gem Audioclip:
 
-    ![Lesson6 Chapter5 Step2im](images/Lesson6_Chapter5_step2im.PNG)
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section3-step1-2.png)
 
-3. Ziehen Sie das Modul "Mond" aus der Basis Szenen Hierarchie in den leeren Slot unter der Schaltfläche "gedrückt" im Inspektor-Panel.
+Wenn die Schaltflächen RocketLauncher > > **launchbutton** -Objekt noch ausgewählt ist, erstellen Sie auf der **Schaltfläche mit der druckbaren Schaltfläche (Skript)** ein neues Fingerabdruck Ereignis **()** , konfigurieren Sie das **lunarmodule** -Objekt für den Empfang des Ereignisses, und definieren Sie **launchlunarmodule. stopthruster** als Aktion, die ausgelöst werden soll:
 
-4. Klicken Sie auf das Dropdown Menü keine Funktion und dann auf launchlunarmodule, und wählen Sie startthruester () aus.
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section3-step1-3.png)
 
-    ![Lesson6 Chapter5 Step4im](images/Lesson6_Chapter5_step4im.PNG)
+Wenn Sie jetzt den Spielmodus eingeben und auf die Schaltfläche "Start" klicken, wird der Audioclip abgespielt. Wenn Sie die Schaltfläche "Start" für ungefähr eine Sekunde oder länger gedrückt halten, sehen Sie, dass das Mond Modul in den Speicherplatz wechselt:
 
-5. Fügen Sie dem Lunar-Modul Musik hinzu, damit Musik abgespielt wird, wenn die Abladung ausgeschaltet wird. Ziehen Sie hierzu das Mond Modul auf den nächsten leeren Slot unter der Schaltfläche gedrückt ().
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section3-step1-4.png)
 
-6. Wählen Sie das Dropdown Menü No Function aus, zeigen Sie auf audiosource, und wählen Sie playoneshot (Audioclip) aus. Sie können jederzeit die Vielfalt der im MRTK enthaltenen Sounds erkunden. In diesem Beispiel verwenden wir "MRTK_Gem".
+## <a name="configuring-the-reset-button"></a>Konfigurieren der Schaltfläche Zurücksetzen
 
-    ![Lesson6 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
+Wählen Sie im Fenster Hierarchie die Schaltflächen RocketLauncher > > **ResetButton** -Objekt aus, und erstellen Sie dann auf der **Schaltfläche mit der druckbaren Schaltfläche (Skript)** ein neues Button-Ereignis **()** , und konfigurieren Sie das **lunarmodule** -Objekt, um das Ereignis zu empfangen. Legen Sie **launchlunarmodule. resetmodule als auszulösenden** Aktion fest
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section4-step1-1.png)
+
+Wenn die Schaltflächen RocketLauncher > **> ResetButton** -Objekt noch ausgewählt ist, erstellen Sie auf der **Schaltfläche mit der druckbaren Schaltfläche (Skript)** ein neues Button-Ereignis **()** , konfigurieren Sie das " **RocketLauncher** "-Objekt, um das Ereignis zu empfangen, legen Sie " **gameobject. broadcastmessage** " als auszulösenden **Aktion** fest
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section4-step1-2.png)
+
+> [!TIP]
+> Die Aktion "gameobject. broadcastmessage" sendet die resetplacement-Nachricht vom "RocketLauncher"-Objekt an das gesamte untergeordnete Objekt. Jedes untergeordnete Objekt, das über die resetplacement-Funktion verfügt, die in der Komponente Part Assembly Demo (Skript) definiert ist, die Sie allen untergeordneten Objekten von lunarmoduleparts hinzugefügt haben, ruft die resetplacement-Funktion auf, die die Platzierung des untergeordneten Objekts zurücksetzt.
+
+Wenn Sie jetzt den Spielmodus eingeben und auf die Schaltfläche "Zurücksetzen" klicken, werden Sie sehen, dass der Audioclip wiedergegeben wird, und dass das Mond Modul in den Bereich "
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section4-step1-3.png)
+
+## <a name="configuring-the-placement-hints-button"></a>Konfigurieren der Schaltfläche Platzierungs Hinweise
+<!-- TODO: Rename to 'Configuring the Hints button'-->
+
+Wählen Sie im Fenster Hierarchie die Schaltflächen RocketLauncher > > **hinzbutton** -Objekt aus, und erstellen Sie dann auf der **Schaltfläche mit der druckbaren Schaltfläche (Skript)** ein neues Ereignis mit der Tastendruck **Taste ()** , konfigurieren Sie das **lunarmodule** -Objekt, um das Ereignis zu empfangen, und definieren Sie " **deggleplacementhints. Token.**
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section5-step1-1.png)
+
+Wenn Sie jetzt den Spielmodus eingeben, werden Sie feststellen, dass die über sichtigen Platzierungs Hinweise standardmäßig deaktiviert sind. Sie können Sie jedoch durch Drücken der Schaltfläche "Hinweise" aktivieren und deaktivieren.
+
+![mrlearning: Basis](images/mrlearning-base/tutorial6-section5-step1-2.png)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-Sie haben diese Anwendung vollständig konfiguriert. Wenn Sie jetzt auf "Abspielen" klicken, können Sie das Mond Modul vollständig zusammenstellen, Hinweise umschalten, das Mond Modul starten und es erneut starten.
+Sie haben diese Anwendung vollständig konfiguriert. Nun können Benutzer mit Ihrer Anwendung das Mond Modul vollständig Assemblieren, das Mond Modul starten, Hinweise umschalten und die Anwendung zurücksetzen, damit Sie erneut gestartet wird.
