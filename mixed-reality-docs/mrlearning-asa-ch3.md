@@ -6,49 +6,53 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 19529cbfebd74938395545c329097d42b5af9ff9
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
+ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334402"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250691"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen des Azure Spatial Anchor-Feedbacks
 
-In dieser Lektion erfahren Sie, wie Sie Benutzern Feedback zur Anker Ermittlung, zu Ereignissen und zum Status bei der Verwendung von räumlichen Azure-Ankern bereitstellen.
+In diesem Tutorial erfahren Sie, wie Sie Benutzern Feedback zur Anker Ermittlung, zu Ereignissen und zum Status bei der Verwendung von Azure Spatial Anchor (ASA) bereitstellen.
 
 ## <a name="objectives"></a>Ziele
 
 * Erfahren Sie, wie Sie einen Benutzeroberflächen Bereich einrichten, in dem wichtige Informationen zur aktuellen ASA-Sitzung angezeigt werden.
-
 * Verstehen und untersuchen Sie Feedback Elemente, die das ASA SDK Benutzern zur Verfügung stellt.
 
 ## <a name="set-up-asa-feedback-ui-panel"></a>Einrichten des ASA-Feedback-UI-Panels
 
-1. In dieser Lektion verwenden wir nicht die Schaltflächen "saveanchoron Disk" und "shareanchor". Wählen Sie daher beide Schaltflächen aus, und deaktivieren Sie das Kontrollkästchen im Inspektor-Panel (wie unten dargestellt), um diese Schaltflächen auszublenden.
+Klicken Sie im Hierarchie Fenster mit der rechten Maustaste auf die **Anweisungen** > **textcontent** -Objekt, und wählen Sie **3D-Objekt** > **Text-textmeschpro** aus, um ein textmeshpro-Textobjekt als untergeordnetes Element der Anweisungen > textcontent-Objekt zu erstellen und ihm einen passenden Namen zuzuweisen, z. b. **Feedback**:
 
-    ![module2chapter3step1im](images/module2chapter3step1im.PNG)
+![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
-2. Erstellen Sie den Anweisungs Bereich. Klicken Sie zunächst mit der rechten Maustaste auf die Schaltfläche "Instructions", zeigen Sie auf "3D-Objekt", und wählen Sie "textmeshpro-Text" aus.
+> [!TIP]
+> Um die Arbeit mit der Szene zu vereinfachen, legen Sie die <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">Sichtbarkeit der Szene</a> für das Objekt "Objektanker" auf OFF fest, indem Sie auf das Augensymbol links neben dem Objekt klicken. Dadurch wird das Objekt im Szenen Fenster ausgeblendet, ohne die in-Game-Sichtbarkeit zu ändern.
 
-    ![module2chapter3step2im](images/module2chapter3step2im.PNG)
+Wenn das **Feedback** Objekt noch ausgewählt ist, ändern Sie im Inspektor-Fenster seine Position und Größe so, dass es sich unter dem Anweisungs Text befindet, z. b.:
 
-3. Passen Sie die Skalierung und Positionierung des Texts so an, dass er mit den Anweisungen in Ihrer Szene übereinstimmt. Stellen Sie außerdem sicher, dass die Ausrichtung für den gesamten Text zentriert ist. Löschen Sie dann den Beispiel Text aus dem Text-Editor, wie in der folgenden Abbildung dargestellt.
+* Ändern der Rect-Transformation **Torys Y** in-0,24
+* Ändern Sie die **Breite** der Rect-Transformation in 0,555.
+* Ändern Sie die **Höhe** der Rect-Transformation in 0,1.
 
-    ![module2chapter3step3im](images/module2chapter3step3im.PNG)
+Wählen Sie dann Schriftart Eigenschaften aus, damit der Text gut in den Textbereich passt, z. b.:
 
-4. Ändern Sie den Namen des textmeschpro-Objekts in "Feedbackpanel".
+* Ändern Sie den Text Mesh pro- **Schrift** Schnitt (Skript) in "Fett".
+* Ändern Sie den **Schrift** Grad Text Mesh pro (Skript) in 0,17.
+* Ändern der **Ausrichtung** von Text Mesh pro (Skript) in Mitte und Mitte
 
-    ![module2chapter3step4im](images/module2chapter3step4im.PNG)
+![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
-5. Stellen Sie sicher, dass der Text "Feedbackpanel" in der ASA_feedback Hierarchie ausgewählt ist, klicken Sie auf "Komponente hinzufügen", und fügen Sie das Anchor-Feedback Skript hinzu, indem Sie es suchen und es auswählen
+Wenn das **Feedback** Objekt noch ausgewählt ist, verwenden Sie im Inspektor-Fenster die Schaltfläche **Komponente hinzufügen** , um dem Feedback Objekt die Komponente für das **Anchor-Feedback Skript (Skript)** hinzuzufügen:
 
-    ![module2chapter3step8im](images/module2chapter3step8im.PNG)
+![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-6. Ziehen Sie das Textobjekt "Feedbackpanel" aus der ASA_Feedback Hierarchie in den leeren Slot unterhalb des Skripts, wie in der folgenden Abbildung dargestellt.
+Weisen Sie das **Feedback** Objekt dem **Feedback Textfeld** für das **Anchor-Feedback Skript (Skript)** zu:
 
-    ![module2chapter3step9im](images/module2chapter3step9im.PNG)
+![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In dieser Lektion haben wir gelernt, wie ein UI-Panel erstellt wird, um den aktuellen Status der Azure Spatial Anchor-Oberfläche anzuzeigen, um Benutzern Echtzeitfeedback zu bieten.
+In diesem Tutorial haben Sie gelernt, wie Sie einen Bereich für die Benutzeroberfläche erstellen, um den aktuellen Status der Azure Spatial Anchor-Oberfläche zum Bereitstellen von Echtzeitfeedback anzuzeigen.
