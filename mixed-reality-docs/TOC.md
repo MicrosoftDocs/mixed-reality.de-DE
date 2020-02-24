@@ -2,7 +2,7 @@
 ## [Aktuelle Nachrichten](news.md)
 ## [Vorbereiten Ihrer App auf HL2](mrtk-porting-guide.md)
 ## [Informationen zu Azure-Diensten](azure-services.md)
-## [Machen Sie sich für den neuen Microsoft-Edge bereit](new-microsoft-edge.md)
+## [Machen Sie sich für das neue Microsoft Edge bereit](new-microsoft-edge.md)
 ## Programme und Veranstaltungen
 ### [San Francisco Reactor Academy – Veranstaltungskalender](sf-academy-events.md)
 ### [CVPR 2019 – Mixed Reality-Workshop](cvpr-2019.md)
@@ -198,7 +198,7 @@
 ## Unreal
 ### [Ureal-Entwicklung – Übersicht](unreal-development-overview.md)
 ## WebVR
-### [Verwenden von WebVR in Edge mit Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
+### [Verwenden von WebVR in Microsoft Edge mit Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## Systemeigen
 ### [Native Entwicklung – Übersicht](directx-development-overview.md)
 ### Erste Schritte
