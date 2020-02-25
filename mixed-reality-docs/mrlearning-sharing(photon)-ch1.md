@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+keywords: Mixed Reality, Unity, Tutorial, HoloLens
+ms.openlocfilehash: d879144c7097d8b3873618f986b9f169e8553fa8
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901475"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553818"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. Einrichten der Einrichtung von Photon Unity-Netzwerken
 
@@ -25,18 +25,18 @@ In diesem Tutorial erfahren Sie, wie Sie sich auf das Erstellen einer gemeinsame
 * Erfahren Sie, wie Sie das Unity-Netzwerk von Photon suchen und importieren
 * Einrichten eines lokalen-Photon-Servers
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 >[!TIP]
 >Wenn Sie die Lernprogramme "erste Schritte" und " [Azure Spatial](mrlearning-asa-ch1.md) Anchor" noch nicht abgeschlossen haben, empfiehlt es sich, [diese Tutorials zuerst](mrlearning-base.md) abzuschließen.
 
-* Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md) konfiguriert ist
-* Windows 10 SDK 10.0.18362.0 oder höher
-* Grundlegende C# Programmier Fähigkeit
-* Ein hololens 2-Gerät, das [für die Entwicklung konfiguriert](using-visual-studio.md#enabling-developer-mode) ist
+* Ein Windows 10-PC, der mit den richtigen [Tools konfiguriert](install-the-tools.md) ist
+* Windows 10 SDK (10.0.18362.0 oder höher)
+* Grundlagenkenntnisse in der C#-Programmierung
+* Ein für die [Entwicklung konfiguriertes](using-visual-studio.md#enabling-developer-mode) HoloLens 2-Gerät
 
 >[!IMPORTANT]
->Diese tutorialreihe erfordert <a href="https://unity3d.com/get-unity/download/archive" target="_blank">Unity 2019,1</a> und die empfohlene Version ist Unity 2019.1.14. Dadurch werden alle Unity-Versions Anforderungen oder-Empfehlungen ersetzt, die in den oben genannten Voraussetzungen angegeben sind.
+> Die empfohlene Unity-Version für diese Tutorialreihe ist Unity 2019.2.X. Diese übertrifft alle Versionsanforderungen oder -empfehlungen, die in den oben verlinkten Voraussetzungen angegeben sind.
 
 ## <a name="setting-up-photon"></a>Einrichten von PHOTON
 

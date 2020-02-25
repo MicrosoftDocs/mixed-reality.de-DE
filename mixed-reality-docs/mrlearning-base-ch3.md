@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 8275d5a97d7827d34ed3926cabe4032cc7f4cfac
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 5463f363291790fd5e5d76ffa322a61ca7bf8e31
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129321"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553878"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Platzieren von dynamischem Inhalt und Verwenden von Solvers
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -28,7 +28,7 @@ Holograms sind in hololens 2 zu leben, wenn Sie intuitiv dem Benutzer folgen und
 
  Die Solvers von mrtk befinden sich im Ordner "mrtk SDK". Um die verfügbaren Solver in Ihrem Projekt anzuzeigen, navigieren Sie im Projektfenster zu **Assets** > **mixedrealitytoolkit. SDK** > **Features** > **Hilfsprogramme** > **Solvers**:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial3-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section1-step1-1.png)
 
 In diesem Tutorial überprüfen wir die Implementierung des "Orbital Solver" und des radivers für radiale Ansichten. Weitere Informationen über die vollständige Palette der in der mrtk verfügbaren Solver finden Sie im Handbuch zu [Solvers](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) im [mrtk-Dokumentations Portal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
@@ -58,11 +58,11 @@ Konfigurieren der **Solver-Handlerkomponente (Skript)** :
 
 Konfigurieren Sie die Komponente " **Orbital (Skript)** ":
 
-* Ändern des **Orientierungstyp** für das nach **verfolgte Objekt**
+* Überprüfen, ob der **Orientierungstyp** auf das **verfolgte Objekt folgt**
 * Legen Sie **den lokalen Offset** auf X = 0, Y = 0, Z = 0 (null) zurück.
 * Ändern des **Welt Offsets** in X = 0, Y =-0,4, Z = 0,3
 
-![mrlearning: Basis](images/mrlearning-base/tutorial3-section2-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step2-1.png)
 
 ### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. Testen des Orbital-Solvers mithilfe der in-Editor-Simulation
 
@@ -71,7 +71,7 @@ Drücken Sie die Wiedergabe Schaltfläche, um den Spielmodus einzugeben, und hal
 * Die Transformations Position der buttoncollection wird jetzt durch die Solver-Einstellungen gesteuert.
 * Der Cube, der vom Solver nicht betroffen ist, bleibt an derselben Position.
 
-![mrlearning: Basis](images/mrlearning-base/tutorial3-section2-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step3-1.png)
 
 > [!TIP]
 > Wenn der Kamera Strahl in Ihrem Szenen Fenster nicht angezeigt wird, stellen Sie sicher, dass Ihr Gizmos-Menü aktiviert ist. Weitere Informationen zum Gizmos-Menü und deren Verwendung zur Optimierung Ihrer Szenen Ansicht finden Sie in der <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">Gizmos-Menü</a> Dokumentation von Unity.
@@ -104,13 +104,13 @@ Konfigurieren Sie die Komponente **radiale Ansicht (Skript)** :
 * Ändern Sie die **Verweis Richtung** in **objektorientiert**, und aktivieren Sie dann das Kontrollkästchen **an Verweis Richtung ausrichten** .
 * Ändern Sie die **minimale Entfernung** und den **maximalen Abstand** in 0.
 
-![mrlearning: Basis](images/mrlearning-base/tutorial3-section3-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step2-1.png)
 
 ### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. Testen des Solver der radialen Ansicht mithilfe der in-Editor-Simulation
 
 Drücken Sie die Wiedergabe Schaltfläche, um den Spielmodus einzugeben, und halten Sie dann die Leertaste gedrückt, um die Hand zu machen. Bewegen Sie den Mauszeiger um die Hand, und klicken Sie auf die linke Maustaste, um die Hand zu drehen:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial3-section3-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step3-1.png)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 

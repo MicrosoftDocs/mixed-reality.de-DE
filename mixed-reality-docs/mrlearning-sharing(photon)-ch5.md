@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: a3b136023b0beea7cf6eecd52a9a21447576d482
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+keywords: Mixed Reality, Unity, Tutorial, HoloLens
+ms.openlocfilehash: c1b64b9d32409d61284f21ca216417ece4767d1b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901467"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553808"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrieren von Azure Spatial Anchor in eine freigegebene Darstellung
 
@@ -42,11 +42,17 @@ In dieser Lektion erfahren Sie, wie Sie Azure Spatial Anchor (ASA) in unsere fre
 
     ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Um das Freigabe Modul zu testen, klicken Sie auf die Schaltfläche "Azure ASA-Sitzung starten", die die Azure-Sitzung für räumliche Anker startet, und erstellen Sie dann den Azure-Anker durch Klicken auf die Schaltfläche "Azure-Anker erstellen" Warten Sie, bis der Azure-Anker erstellt wurde. Nachdem der Azure-Anker erstellt wurde, klicken Sie auf die Schaltfläche "Azure-Anker freigeben", um den erstellten Azure-Anker aus den hololens zu teilen.
+6. Wiederholen Sie Schritt 4, um die startazuresession ()-Funktion mit startazuresessionbutton zu verbinden.
 
-7. Um den gemeinsam genutzten Azure-Anker in einem anderen hololens zu erhalten, klicken Sie auf die "Azure ASA-Sitzung starten", um zu beginnen und zur aktuellen ASA-Sitzung zu gelangen.
+7. Wiederholen Sie Schritt 4, um die Funktion "" von "" in der Funktion "" des Spiels "Game Object" der Funktion zu verbinden und zu überprüfen, ob das tableanchor-Objekt dem Parameter "Game Object" der Funktion zugewiesen ist.
 
-8. Klicken Sie auf die Schaltfläche "Azure-Anker erhalten", um den freigegebenen Azure-Anker aus den anderen hololens zu erhalten.
+8. Befolgen Sie die Anweisungen unter [Verbinden der Szene mit der Azure-Ressource](mrlearning-asa-ch1.md#4-connect-the-scene-to-the-azure-resource) , um Ihre Azure-Dienst Anmelde Informationen für räumliche Anker hinzuzufügen.
+
+9. Um das Freigabe Modul zu testen, klicken Sie auf die Schaltfläche "Azure ASA-Sitzung starten", die die Azure-Sitzung für räumliche Anker startet, und erstellen Sie dann den Azure-Anker durch Klicken auf die Schaltfläche "Azure-Anker erstellen" Warten Sie, bis der Azure-Anker erstellt wurde. Nachdem der Azure-Anker erstellt wurde, klicken Sie auf die Schaltfläche "Azure-Anker freigeben", um den erstellten Azure-Anker aus den hololens zu teilen.
+
+10. Um den gemeinsam genutzten Azure-Anker in einem anderen hololens zu erhalten, klicken Sie auf die "Azure ASA-Sitzung starten", um zu beginnen und zur aktuellen ASA-Sitzung zu gelangen.
+
+11. Klicken Sie auf die Schaltfläche "Azure-Anker erhalten", um den freigegebenen Azure-Anker aus den anderen hololens zu erhalten.
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 

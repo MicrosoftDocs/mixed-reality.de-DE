@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, räumlicher Ton, HRTF, Raum Größe
-ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181990"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553698"
 ---
 # <a name="spatial-sound-in-unity"></a>Räumlicher Sound in Unity
 
@@ -30,10 +30,11 @@ Für neue Anwendungen wird *Microsoft spatializer*empfohlen.
 
 ## <a name="enable-spatialization"></a>Spatialization aktivieren
 
-Verwenden Sie [nuget für Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) , um _Microsoft. spatialaudio. spatializer. unity_ zu installieren, und wählen Sie **Microsoft spatializer** in den Audioeinstellungen Ihres Projekts aus. Anschließend:
+Verwenden Sie [nuget für Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) , um _Microsoft. spatialaudio. spatializer. unity_ zu installieren, und wählen Sie **Microsoft spatializer** in den Audioeinstellungen Ihres Projekts aus. Dann:
 * Anfügen einer **Audioquelle** an ein Objekt in der Hierarchie
 * Aktivieren Sie das Kontrollkästchen **spatialization aktivieren** .
 * Verschieben Sie den Schieberegler für **räumliche Blend** auf "1".
+* Stellen Sie sicher, dass auf Ihrer Entwickler Arbeitsstation räumliche Audiodaten aktiviert sind Aktivieren Sie diese Option, indem Sie in der Taskleiste mit der rechten Maustaste auf das Volumesymbol klicken und sicherstellen, dass räumlicher Sound auf einen anderen Wert als "Off" gesetzt ist. Um die beste Darstellung von hololens 2 zu erhalten, wählen Sie **Windows Sonic für Kopfhörer aus**.
 
 Weitere Details findest du unter:
 * [Microsoft spatializer-GitHub-Repository](https://github.com/microsoft/spatialaudio-unity)
@@ -41,7 +42,7 @@ Weitere Details findest du unter:
 * [Dokumentation zur Audioquelle von Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html)
 * [Dokumentation zu spatializer von Unity](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
-## <a name="distance-based-attenuation"></a>Distanzabhängige Dämpfung
+## <a name="distance-based-attenuation"></a>Entfernungs basierte Dämpfung
 Der standardmäßige Entfernungs Abfall von Unity weist einen minimalen Abstand von 1 Meter und einen maximalen Abstand von 500 Meter mit einem logarithmischen Rolloff auf. Diese Einstellungen können für Ihr Szenario funktionieren, oder Sie werden feststellen, dass die Quellen zu schnell oder zu langsam gedämpft werden. Weitere Details findest du unter:
 * [Sound Design in gemischter Realität](spatial-sound-design.md) für empfohlene Einstellungen.
 * In [der Dokumentation zur Audioquelle von Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) finden Sie Anweisungen zum Festlegen dieser Kurven.

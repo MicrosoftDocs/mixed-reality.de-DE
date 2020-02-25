@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: a1b26d56b4693ef23f2d77ba53e0961693489a3a
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 7eb38e205237257e400550299fdeebb73ba746f1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130281"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77555501"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interagieren mit 3D-Objekten
 
@@ -29,20 +29,20 @@ In diesem Tutorial erfahren Sie mehr über grundlegende 3D-Inhalte und-Benutzero
 
 Herunterladen und Importieren des benutzerdefinierten Unity-Pakets:
 
-* [Mrtk. HoloLens2. Unity. Tutorials. Assets. GettingStarted. 2.2.0.0. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.0.unitypackage)
+* [Mrtk. HoloLens2. Unity. Tutorials. Assets. GettingStarted. 2.3.0.2. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
 
 Nachdem Sie die tutorialassets importiert haben, sollte Ihr Projektfenster etwa wie folgt aussehen:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section1-step1-1.png)
 
 > [!TIP]
 > Eine Erinnerung zum Importieren eines benutzerdefinierten Unity-Pakets finden Sie in den Anweisungen zum [Importieren von Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) .
 
 ## <a name="decluttering-the-scene-view"></a>Die Szenen Ansicht wird entcluttert.
 
-Um die Arbeit mit Ihrer Szene zu vereinfachen, legen Sie die **Sichtbarkeit der Szene** für die Cube-und buttoncollection-Objekte auf OFF fest, indem Sie auf das **Augen** Symbol links neben den Objekten klicken. Dadurch wird das Objekt im Szenen Fenster ausgeblendet, ohne die in-Game-Sichtbarkeit zu ändern:
+Um die Arbeit mit Ihrer Szene zu vereinfachen, legen Sie die **Sichtbarkeit der Szene** für die **Cube** -und **buttoncollection** -Objekte auf OFF fest, indem Sie auf das **Augen** Symbol links neben den Objekten klicken. Dadurch wird das Objekt im Szenen Fenster ausgeblendet, ohne die in-Game-Sichtbarkeit zu ändern:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section2-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section2-step1-1.png)
 
 > [!TIP]
 > Weitere Informationen zu den Steuerelementen für die Szenen Sichtbarkeit und deren Verwendung zur Optimierung Ihrer Szenen Ansicht und des Workflows finden Sie in der Dokumentation zur <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">Szene Sichtbarkeit</a> von Unity.
@@ -69,19 +69,18 @@ Navigieren Sie im Projektfenster zu **Assets** > **mrtk. Tutorials. GettingStart
 * Platonic
 * Das Modul
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section3-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-1.png)
 
 Erstellen Sie im Fenster Hierarchie **drei Cubes** als untergeordnete Objekte der **3dobjectcollection** , und legen Sie Ihre Transformations **Skala** auf X = 0,15, Y = 0,15, Z = 0,15 fest:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section3-step1-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-2.png)
 
-<!-- TODO: Finish -->
 > [!TIP]
 > Eine Erinnerung, wie Sie die oben aufgeführten Schritte ausführen, finden Sie im Tutorial Erstellen von [Benutzeroberflächen und Konfigurieren von Mixed Reality Toolkit](mrlearning-base-ch2.md) .
 
 Positionieren Sie die Cubes neu, damit Sie jeden Cube sehen können:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section3-step1-3.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-3.png)
 
 Navigieren Sie im Projektfenster zu **Assets** > **mixedrealitytoolkit. SDK** > **standardassets** > **Material** , um die Materialien anzuzeigen, die mit dem mrtk bereitgestellt werden.
 
@@ -89,19 +88,19 @@ Navigieren Sie im Projektfenster zu **Assets** > **mixedrealitytoolkit. SDK** > 
 
 * MRTK_Standard_GlowingCyan
 * MRTK_Standard_GlowingOrange
-* MRTK_Standard_Green:
+* MRTK_Standard_Green
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section3-step1-4.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step1-4.png)
 
 ### <a name="2-add-and-configure-the-grid-object-collection-script-component"></a>2. hinzufügen und Konfigurieren der Raster Objekt-Sammlungs Komponente (Skript)
 
-Fügen Sie dem 3dobjectcollection-Objekt eine Komponente für eine **Raster Objekt Auflistung (Skript)** hinzu, und konfigurieren Sie Sie wie folgt:
+Fügen Sie dem **3dobjectcollection-** Objekt eine Komponente für eine **Raster Objekt Auflistung (Skript)** hinzu, und konfigurieren Sie Sie wie folgt:
 
-* Ändern Sie den **Sortierungstyp** in die untergeordnete Reihenfolge, um sicherzustellen, dass die untergeordneten Objekte in der Reihenfolge sortiert werden, in der Sie
+* Ändern Sie den **Sortierungstyp** in die untergeordnete **Reihenfolge** , um sicherzustellen, dass die untergeordneten Objekte in der Reihenfolge sortiert werden, in der Sie
 
 Klicken Sie dann auf die Schaltfläche **Sammlung aktualisieren** , um die neue Konfiguration zu übernehmen:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section3-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section3-step2-1.png)
 
 ## <a name="manipulating-3d-objects"></a>Bearbeiten von 3D-Objekten
 
@@ -127,9 +126,9 @@ Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 
 ### <a name="1-add-the-manipulation-handler-script-component-to-all-the-objects"></a>1. Fügen Sie die Bearbeitungs Handlerkomponente (Skript) allen Objekten hinzu.
 
-Wählen Sie im Fenster Hierarchie das **Käse** Objekt aus, halten Sie die **UMSCHALT** Taste gedrückt, und wählen Sie dann das Cube-Objekt **()** aus, und fügen Sie die **Bearbeitungs Handlerkomponente (Skript)** allen Objekten hinzu:
+Wählen Sie im Fenster Hierarchie das **Käse** Objekt aus, halten Sie die **UMSCHALT** Taste gedrückt, und wählen Sie dann das Cube-Objekt **() 2** aus, und fügen Sie die **Bearbeitungs Handlerkomponente (Skript)** allen Objekten hinzu:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step1-1.png)
 
 > [!NOTE]
 > Im Rahmen dieses Tutorials wurden den Prefabs bereits Colliders hinzugefügt. Für Unity-primitive, z. b. die Cubeobjekte, wird die Collider-Komponente automatisch hinzugefügt, wenn das-Objekt erstellt wird. In der obigen Abbildung werden die Kollisionen durch die grünen Gliederungen dargestellt. Weitere Informationen zu Kollisionen finden Sie in der <a href="https://docs.unity3d.com/Manual/CollidersOverview.html" target="_blank">Collider</a> -Dokumentation von Unity.
@@ -138,7 +137,7 @@ Wählen Sie im Fenster Hierarchie das **Käse** Objekt aus, halten Sie die **UMS
 
 Wählen Sie im Fenster Hierarchie das **Käse** Objekt aus, halten Sie die **UMSCHALT** Taste gedrückt, und wählen Sie dann das Objekt "- **Modul** " aus, und fügen Sie die Komponente " **near Interaktion grabbable (Skript)** " zu allen Objekten hinzu:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step2-1.png)
 
 ### <a name="3-configure-the-manipulation-handler-script-component"></a>3. Konfigurieren der Manipulations Handler-Komponente (Skript)
 
@@ -146,46 +145,50 @@ Wählen Sie im Fenster Hierarchie das **Käse** Objekt aus, halten Sie die **UMS
 
 Belassen Sie für das **Cube** -Objekt standardmäßig alle Eigenschaften, damit das Standardverhalten der Manipulation angezeigt wird:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-1.png)
 
 > [!TIP]
 > Wenn Sie eine Komponente auf die Standardwerte zurücksetzen möchten, können Sie das Einstellungssymbol der Komponente auswählen und auf Zurücksetzen klicken.
 
 #### <a name="restrict-manipulation-to-scale-only"></a>Beschränken der Bearbeitung auf die Skalierung
 
-Ändern Sie für das Cube-Objekt **(1)** den **zwei handungstyp** für die Bearbeitung in "Scale", sodass der Benutzer nur die Größe des Objekts ändern kann:
+Ändern Sie für das Cube-Objekt **(1)** den **zwei handungstyp** für die Bearbeitung in " **Scale** ", sodass der Benutzer nur die Größe des Objekts ändern kann:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step3-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-2.png)
 
 #### <a name="constrain-the-movement-to-a-fixed-distance-from-the-user"></a>Beschränken Sie die Bewegung auf einen eingeschränkten Abstand vom Benutzer.
 
-Ändern Sie für das Cube-Objekt **(2)** die **Einschränkung bei der Bewegung** , um die Entfernung vom Kopf zu korrigieren, sodass beim Verschieben des Objekts der gleiche Abstand zum Benutzer besteht:
+Ändern Sie für das Cube-Objekt **(2)** die **Einschränkung bei der Bewegung** , um die **Entfernung vom Kopf zu korrigieren** , sodass beim Verschieben des Objekts der gleiche Abstand zum Benutzer besteht:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step3-3.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-3.png)
 
 #### <a name="default-grabbable-manipulation"></a>Standardmäßige abbrechbare Manipulation
 
 Belassen Sie für die Objekte " **Käse**", " **coffecup**" und " **Erdkern** " standardmäßig alle Eigenschaften, um das Standardverhalten für die abrechenbare Manipulation zu erleben:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step3-4.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-4.png)
 
 #### <a name="remove-the-ability-of-far-manipulation"></a>Entfernen der Funktion für eine lange Bearbeitung
 
-Deaktivieren Sie für das **Octa** -Objekt das Kontrollkästchen **lange Bearbeitung zulassen** , damit der Benutzer nur mit dem Objekt direkt über verfolgte Hände interagieren kann:
+Deaktivieren Sie für das **Octa** -Objekt das Kontrollkästchen " **lange Bearbeitung zulassen** ", um es zu machen, damit der Benutzer nur mit dem Objekt direkt über verfolgte Hände interagieren kann:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step3-5.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-5.png)
 
 #### <a name="make-an-object-rotate-around-its-center"></a>Drehen eines Objekts um seinen Mittelpunkt
 
-Ändern Sie für das **platonische** Objekt den **1-Hand-Rotationsmodus in der Nähe** und den Modus für die manuelle **Drehung** , um das Objekt Center zu drehen, um dies zu ermöglichen, wenn der Benutzer das Objekt mit einer Hand dreht, dreht es sich um den Mittelpunkt des Objekts:
+Ändern Sie für das **platonische** Objekt den **1-Hand-Rotationsmodus in der Nähe** und den Modus für die manuelle **Drehung** , um das Objekt **Center zu drehen** , um dies zu ermöglichen, wenn der Benutzer das Objekt mit einer Hand dreht, dreht es sich um den Mittelpunkt des Objekts:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step3-6.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-6.png)
 
-#### <a name="prevent-movement-after-object-is-released"></a>Bewegung nach Veröffentlichung des Objekts verhindern
+#### <a name="keep-movement-after-object-is-released"></a>Bewegung nach Veröffentlichung des Objekts beibehalten
 
-Ändern Sie für das Objekt "- **Modul** " das **Freigabe Verhalten** in "Nothing", damit das Objekt nicht mehr verschoben wird, sobald es von der Hand des Benutzers freigegeben wird:
+Fügen Sie für das Objekt "- **Module** " eine **Rigidbody** -Komponente hinzu, um die Physik zu aktivieren, und deaktivieren Sie dann das Kontrollkästchen **use Gravity** , damit das Objekt nicht von der Schwerkraft betroffen ist:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section4-step3-7.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-7.png)
+
+Stellen Sie sicher, dass das **Freigabe Verhalten** auf der Bearbeitungs Handlerkomponente (Skript) so festgelegt ist, dass sowohl die **Geschwindigkeit beibehalten** als auch die **Angular-Geschwindigkeit beibehalten** wird.
+
+![mrlearning-base](images/mrlearning-base/tutorial4-section4-step3-8.png)
 
 Weitere Informationen zur handlerhandlerkomponente und den zugehörigen Eigenschaften finden Sie im Handbuch mit [Manipulations Handlern](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) im [mrtk-Dokumentations Portal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
@@ -205,7 +208,7 @@ In diesem Beispiel fügen Sie dem erdcore-Objekt ein Begrenzungsfeld hinzu, dami
 
 Wählen Sie im Inspektor-Fenster das **Erdkern** Objekt aus, und fügen Sie die Komponente für das umgebende **Feld (Skript)** dem Objekt "Erdkern" hinzu:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section5-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section5-step1-1.png)
 
 > [!NOTE]
 > Die Visualisierungen des umgebenden Felds werden zur Laufzeit erstellt und daher nicht angezeigt, bevor Sie in den Spielmodus wechseln.
@@ -214,7 +217,7 @@ Wählen Sie im Inspektor-Fenster das **Erdkern** Objekt aus, und fügen Sie die 
 
 Drücken Sie die Wiedergabe Schaltfläche, um den Spielmodus einzugeben. Halten Sie die Leertaste gedrückt, um die Hand zu bringen, und verwenden Sie die Maus, um mit dem umgebenden Feld zu interagieren:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section5-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section5-step2-1.png)
 
 Weitere Informationen zur Begrenzungsfeld Komponente und den zugehörigen Eigenschaften finden Sie im Leitfaden für [Begrenzungs](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) Felder im [mrtk-Dokumentations Portal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
@@ -244,29 +247,29 @@ Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 
 Wählen Sie im Fenster Hierarchie das **Octa** -Objekt aus, fügen Sie dem Octa-Objekt eine **audioquellkomponente** hinzu, und ändern Sie dann **räumliche Blend** in 1, um räumliche Audiodaten zu aktivieren:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section6-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step1-1.png)
 
 ### <a name="2-add-the-near-interaction-touchable-script-component-to-the-object"></a>2. Hinzufügen der Near-interaktionstouchable-Komponente (Skript) zum Objekt
 
 Wenn das **Octa** -Objekt noch ausgewählt ist, fügen Sie dem Octa-Objekt die touchable-Komponente der **near-Interaktion (Script)** hinzu, und klicken Sie dann auf die Schaltflächen **fixbegrenzungen** und **Fix Center** , um die Eigenschaften des lokalen Centers und der Begrenzungen der Near-interaktionstouchable (Script) zu aktualisieren
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section6-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step2-1.png)
 
 ### <a name="3-add-the-hand-interaction-touch-script-component-to-the-object"></a>3. Fügen Sie dem Objekt die Komponente "Hand Interaktion (Skript)" hinzu.
 
 Wenn das **Octa** -Objekt noch ausgewählt ist, fügen Sie dem Octa-Objekt die Komponente " **Hand Interaktion (Skript)** " hinzu:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section6-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step3-1.png)
 
 ### <a name="4-implement-the-on-touch-started-event"></a>4. implementieren Sie das Ereignis "on Touchscreen Started".
 
-Klicken Sie in der Komponente Hand Interaktion (Skript) auf das kleine **+** Symbol, um ein neues **on Touchscreen-Ereignis ()** zu erstellen. Konfigurieren Sie dann das **Octa** -Objekt so, dass es das Ereignis empfängt, und definieren Sie **audiosource. playoneshot** als Aktion, die ausgelöst werden soll:
+Klicken Sie in der Komponente **Hand Interaktion (Skript)** auf das kleine **+** Symbol, um ein neues **on Touchscreen-Ereignis ()** zu erstellen. Konfigurieren Sie dann das **Octa** -Objekt so, dass es das Ereignis empfängt, und definieren Sie **audiosource. playoneshot** als Aktion, die ausgelöst werden soll:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section6-step4-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-1.png)
 
 Navigieren Sie zu **Assets** > **mixedrealitytoolkit. SDK** > **standardassets** > Material, um Audioclips anzuzeigen, die mit dem mrtk bereitgestellt werden, und weisen Sie dann dem **Audioclip** -Feld einen passenden Audioclip zu, z. b. den MRTK_Gem Audioclip:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section6-step4-2.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-2.png)
 
 > [!TIP]
 > Eine Erinnerung, wie Ereignisse implementiert werden können, finden Sie in den Anweisungen [Hand Tracking Gesten und Interaktionen Buttons](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) .
@@ -275,7 +278,7 @@ Navigieren Sie zu **Assets** > **mixedrealitytoolkit. SDK** > **standardassets**
 
 Drücken Sie die Wiedergabe Schaltfläche, um den Spielmodus einzugeben. Halten Sie die Leertaste gedrückt, um die Hand zu bringen, und verwenden Sie die Maus, um das Octa-Objekt zu berühren und den Soundeffekt zu initiieren:
 
-![mrlearning: Basis](images/mrlearning-base/tutorial4-section6-step5-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial4-section6-step5-1.png)
 
 > [!NOTE]
 > Wie Sie gesehen haben, als Sie die Berührungs Interaktion getestet haben, und wie in der obigen Abbildung gezeigt, wurde die Octa-Objekt Farbe während der Arbeit gepultet. Dieser Effekt ist in der Komponente "Hand Interaktion berühren (Skript)" hart codiert und ist nicht das Ergebnis der Ereignis Konfiguration, die Sie in den obigen Schritten abgeschlossen haben.

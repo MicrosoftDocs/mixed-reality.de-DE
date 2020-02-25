@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250691"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553934"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen des Azure Spatial Anchor-Feedbacks
 
@@ -26,7 +26,7 @@ In diesem Tutorial erfahren Sie, wie Sie Benutzern Feedback zur Anker Ermittlung
 
 Klicken Sie im Hierarchie Fenster mit der rechten Maustaste auf die **Anweisungen** > **textcontent** -Objekt, und wählen Sie **3D-Objekt** > **Text-textmeschpro** aus, um ein textmeshpro-Textobjekt als untergeordnetes Element der Anweisungen > textcontent-Objekt zu erstellen und ihm einen passenden Namen zuzuweisen, z. b. **Feedback**:
 
-![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
 > [!TIP]
 > Um die Arbeit mit der Szene zu vereinfachen, legen Sie die <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">Sichtbarkeit der Szene</a> für das Objekt "Objektanker" auf OFF fest, indem Sie auf das Augensymbol links neben dem Objekt klicken. Dadurch wird das Objekt im Szenen Fenster ausgeblendet, ohne die in-Game-Sichtbarkeit zu ändern.
@@ -43,15 +43,15 @@ Wählen Sie dann Schriftart Eigenschaften aus, damit der Text gut in den Textber
 * Ändern Sie den **Schrift** Grad Text Mesh pro (Skript) in 0,17.
 * Ändern der **Ausrichtung** von Text Mesh pro (Skript) in Mitte und Mitte
 
-![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-2.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
 Wenn das **Feedback** Objekt noch ausgewählt ist, verwenden Sie im Inspektor-Fenster die Schaltfläche **Komponente hinzufügen** , um dem Feedback Objekt die Komponente für das **Anchor-Feedback Skript (Skript)** hinzuzufügen:
 
-![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-3.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-Weisen Sie das **Feedback** Objekt dem **Feedback Textfeld** für das **Anchor-Feedback Skript (Skript)** zu:
+Weisen Sie das **Feedback** Objekt selbst dem **Feedback Textfeld** des **Anchor-Feedback Skripts (Skript)** zu:
 
-![mrlearning: Basis](images/mrlearning-asa/tutorial3-section1-step1-4.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 

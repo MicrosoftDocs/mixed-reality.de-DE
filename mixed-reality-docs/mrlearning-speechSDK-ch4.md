@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003209"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553996"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Einrichten der Absicht und der Kenntnisse in natürlicher Sprache
 
@@ -33,7 +33,7 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 
     ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
 
-2. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an. Wenn Sie angemeldet sind, klicken Sie auf Ressource erstellen, suchen Sie nach "Language Understanding", und drücken Sie die EINGABETASTE.
+2. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an. Wenn Sie angemeldet sind, klicken Sie auf Ressource erstellen, suchen Sie nach "Language Understanding", und drücken Sie die EINGABETASTE.
 
     ![mrlearning-Speech-CH4-1-step2. png](images/mrlearning-speech-ch4-1-step2.png)
 
@@ -147,14 +147,22 @@ In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Se
 
     ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
 
-23. Geben Sie im Feld für den Luis-Endpunkt der "lunarcomintenterkenzer" im Inspektor-Panel die Endpunkt-URL ein, die Sie in Schritt 22 gespeichert haben.
+23. Geben Sie im Feld für den Luis-Endpunkt der "lunarcomintenterkenzer" im Inspektor-Panel die Endpunkt-URL ein, die Sie in Schritt 21 gespeichert haben.
 
     ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
 
     >[!NOTE]
     >Stellen Sie sicher, dass in der Komponente "lunarcomofflinerecognizer" im Inspektor-Panel "deaktivieren" für "simulateofflinemode" ausgewählt ist. andernfalls funktioniert das Testen des Programms nicht.
 
-24. Klicken Sie im Unity-Editor auf die Wiedergabe Schaltfläche, und klicken Sie auf die Schaltfläche "" Sagen Sie den Ausdruck "starten Sie die Schaltfläche" starten "aus.
+24. Navigieren Sie im Projektfenster zu den Assets > mrtk. Tutorials. GettingStarted > Ordner Prefabs > RocketLauncher, ziehen Sie die RocketLauncher_Complete Prefab in Ihr Hierarchie Fenster, und positionieren Sie Sie vor dem Lunarcom_Base Objekt.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+
+25. Wählen Sie im Fenster Hierarchie das Lunarcom_Base Objekt aus, und suchen Sie die Komponente lunarcom Intent erkenzer (Script). erweitern Sie dann das Objekt RocketLauncher_Complete > Button, und weisen Sie die einzelnen Schaltflächen Objekte den entsprechenden Mond Start Programm-Schaltflächen zu. Flächen.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+
+26. Klicken Sie im Unity-Editor auf die Wiedergabe Schaltfläche, und klicken Sie auf die Schaltfläche "" Sagen Sie den Ausdruck "starten Sie die Schaltfläche" starten "aus.
 
     >[!NOTE]
     >Die APP hat die gewünschte Funktion erkannt und die Schaltfläche "Rocket" aktiviert.

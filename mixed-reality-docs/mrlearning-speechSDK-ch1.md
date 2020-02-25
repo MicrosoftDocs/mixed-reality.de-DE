@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 05728cf090b2e998e92980816943a2c3bef18dfb
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 25e5aa05839845620a23c3dba6698ac7b5854d6d
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334292"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553972"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integrieren und Verwenden der Spracherkennung und-Aufzeichnung
 
@@ -25,18 +25,18 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 * Erfahren Sie, wie Sie Sprachbefehle verwenden.
 * Informationen zur Verwendung von sprach-zu-Text-Funktionen
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 >[!TIP]
 >Wenn Sie die Reihe "erste Schritte" noch nicht abgeschlossen haben, empfiehlt es sich, [diese Tutorials zuerst](mrlearning-base.md) abzuschließen.
 
-* Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md) konfiguriert ist
-* Windows 10 SDK 10.0.18362.0 oder höher
-* Grundlegende C# Programmier Fähigkeit
-* Ein hololens 2-Gerät, das [für die Entwicklung konfiguriert](using-visual-studio.md#enabling-developer-mode) ist
+* Ein Windows 10-PC, der mit den richtigen [Tools konfiguriert](install-the-tools.md) ist
+* Windows 10 SDK (10.0.18362.0 oder höher)
+* Grundlagenkenntnisse in der C#-Programmierung
+* Ein für die [Entwicklung konfiguriertes](using-visual-studio.md#enabling-developer-mode) HoloLens 2-Gerät
 
 >[!IMPORTANT]
->Diese tutorialreihe erfordert <a href="https://unity3d.com/get-unity/download/archive" target="_blank">Unity 2019,1</a> und die empfohlene Version ist Unity 2019.1.14. Dadurch werden alle Unity-Versions Anforderungen oder-Empfehlungen ersetzt, die in den oben genannten Voraussetzungen angegeben sind.
+> Die empfohlene Unity-Version für diese Tutorialreihe ist Unity 2019.2.X. Diese übertrifft alle Versionsanforderungen oder -empfehlungen, die in den oben verlinkten Voraussetzungen angegeben sind.
 
 ## <a name="getting-started"></a>Erste Schritte
 
@@ -47,7 +47,7 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
     >[!NOTE]
     >Stellen Sie sicher, dass die Vorlage auf 3D festgelegt ist, wie in der Abbildung oben gezeigt.
 
-2. Laden Sie das Unity-Paket [Mixed Reality-Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)[Version 2.1.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.1.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.1.0.unitypackage) herunter, und speichern Sie es in einem Ordner auf Ihrem PC. Importieren Sie das Paket in Ihr Unity-Projekt. Ausführliche Anweisungen dazu finden Sie in den Tutorials zu den ersten Schritten ( [Lektion 2). Initialisieren Ihres Projekts und der ersten Anwendung](mrlearning-base-ch1.md).
+2. Laden Sie das [Mixed Reality Toolkit](https://github.com/microsoft/MixedRealityToolkit-Unity/releases) Unity [Foundation-Paketversion 2.3.0](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage) herunter, und speichern Sie es in einem Ordner auf Ihrem PC. Importieren Sie das Paket in Ihr Unity-Projekt. Ausführliche Anweisungen dazu finden Sie in den Tutorials zu den ersten Schritten ( [Lektion 2). Initialisieren Ihres Projekts und der ersten Anwendung](mrlearning-base-ch1.md).
 
 3. Laden Sie das Azure [Speech SDK](https://aka.ms/csspeech/unitypackage) für das Unity-Ressourcenpaket herunter, und importieren Sie es. Importieren Sie das Sprach-SDK-Paket, indem Sie auf Objekte klicken, Paket importieren und dann benutzerdefiniertes Paket auswählen. Suchen Sie das zuvor heruntergeladene Sprach-SDK-Paket, und öffnen Sie es, um den Import Vorgang zu starten.
 
@@ -59,9 +59,13 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
     ![mrlearning-Speech-CH1-1-step4. png](images/mrlearning-speech-ch1-1-step4.png)
 
-5. Laden Sie das Sprach-SDK-Modul Asset Pack (auch als lunarcom-Paket bezeichnet) herunter, indem Sie auf [diesen Link](https://github.com/microsoft/MixedRealityLearning/releases/tag/Speech_2)klicken. Das lunarcom-Asset-Paket ist eine Sammlung von Assets und Skripts, die für diese Lektion entwickelt wurden, um die praktische Verwendung des sprach-SDKs von Azure vorzustellen. Es handelt sich um ein Voice-Command-Terminal, das letztendlich eine Schnittstelle mit der in den Lernprogrammen "Getting Started" entwickelten Oberfläche für die Mond Modul Assembly bietet [. Erstellen einer Beispielanwendung für ein Mond Modul](mrlearning-base-ch6.md)
+5. Herunterladen der tutorialassets:
+    * [Mrtk. HoloLens2. Unity. Tutorials. Assets. GettingStarted. 2.3.0.2. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+    * [Redner sdkassets. unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/Speech_2/SpeechSDKAssets.unitypackage) (Version 1,2)
 
-6. Importieren Sie das lunarcom-Asset-Paket in Ihr Unity-Projekt, indem Sie ähnliche Schritte ausführen, die Sie zum Importieren des Mixed Reality Toolkit und Sprach-SDK ausgeführt haben
+    Das worsdkassets-Ressourcenpaket ist eine Sammlung von Assets und Skripts, die für diese tutorialreihe entwickelt wurden, um die praktische Verwendung des sprach-SDKs von Azure vorzustellen Es handelt sich um ein Voice-Command-Terminal, das letztendlich eine Schnittstelle mit der in den Tutorials zu den ersten Schritten entwickelten Benutzeroberfläche für die [Aufrufers-Start Programme Erstellen einer Beispielanwendung für ein Mond Modul](mrlearning-base-ch6.md)
+
+6. Importieren Sie die beiden Lernprogramm-Asset-Pakete in Ihr Unity-Projekt, indem Sie ähnliche Schritte ausführen, die Sie zum Importieren des Mixed Reality Toolkit und des Sprach-SDK
 
 7. Konfigurieren Sie das Mixed Reality Toolkit (mrtk).
 
@@ -69,7 +73,7 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
     ![mrlearning-Speech-CH1-1-step7a. png](images/mrlearning-speech-ch1-1-step7a.png)
 
-    Wählen Sie im angezeigten Popup Fenster die Option DefaultHoloLens2ConfigurationProfile aus, um es als aktives Profil für das Mixed Reality Toolkit festzulegen.
+    Wenn das mixedrealitytoolkit-Objekt in ihrer Szenen Hierarchie ausgewählt ist, wählen Sie im Inspektor-Fenster DefaultHoloLens2ConfigurationProfile aus, um es als aktives Profil für das Mixed Reality Toolkit zu aktivieren.
 
     ![mrlearning-Speech-CH1-1-step7b. png](images/mrlearning-speech-ch1-1-step7b.png)
 
@@ -189,6 +193,6 @@ In diesem Tutorial wird eine gemischte Reality-Anwendung erstellt, die die Verwe
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-Sie haben die Spracherkennung in Ihrer Anwendung mithilfe von Azure eingerichtet. Führen Sie die Anwendung aus, um sicherzustellen, dass alle Funktionen und Funktionen ordnungsgemäß funktionieren. Beginnen Sie mit der Verwendung des Wake-Worts, das Sie in Schritt 22 eingegeben haben, aktivieren Sie Terminal. Wählen Sie die Schaltfläche Mikrofon, um die Spracherkennung zu starten. Sprechen Sie. Sie sehen, dass Ihre Wörter im Terminal bei der Sprachübertragung überschrieben werden. Drücken Sie ein zweites Mal die Mikrofon Schaltfläche, um die Spracherkennung anzuhalten. Nehmen Sie an, Terminal schließen, um das lunarcom-Terminal auszublenden In der nächsten Lektion erfahren Sie, wie Sie in Situationen, in denen das Sprach-SDK von Azure nicht verfügbar ist, dynamisch zur Verwendung von Geräte gestützter Spracherkennung wechseln, weil die hololens 2 offline sind.
+Sie haben die Spracherkennung in Ihrer Anwendung mithilfe von Azure eingerichtet. Führen Sie die Anwendung aus, um sicherzustellen, dass alle Funktionen und Funktionen ordnungsgemäß funktionieren. Beginnen Sie mit der Verwendung des Wake-Worts, das Sie in Schritt 25 eingegeben haben, aktivieren Sie Terminal. Wählen Sie die Schaltfläche Mikrofon, um die Spracherkennung zu starten. Sprechen Sie. Sie sehen, dass Ihre Wörter im Terminal bei der Sprachübertragung überschrieben werden. Drücken Sie ein zweites Mal die Mikrofon Schaltfläche, um die Spracherkennung anzuhalten. Nehmen Sie an, Terminal schließen, um das lunarcom-Terminal auszublenden In der nächsten Lektion erfahren Sie, wie Sie in Situationen, in denen das Sprach-SDK von Azure nicht verfügbar ist, dynamisch zur Verwendung von Geräte gestützter Spracherkennung wechseln, weil die hololens 2 offline sind.
 
 [Nächstes Tutorial: 2. Hinzufügen eines Offline Modus für die lokale Sprachübersetzung](mrlearning-speechSDK-ch2.md)
