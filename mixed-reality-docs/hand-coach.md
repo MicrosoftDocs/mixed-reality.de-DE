@@ -1,19 +1,19 @@
 ---
-title: Entwurfs Leit Faden des mrtk-handcoaches
+title: Hand Coach
 description: 3D-Hände, die ausgelöst werden, wenn das System die Hände des Benutzers nicht erkennt, um Sie zu unterstützen.
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Hand Coach, immersives Headset, mrtk, Hände, Unterstützung von Hand
-ms.openlocfilehash: dc04f8f77548b226a822576befd60be107f4d3fb
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373521"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202735"
 ---
-# <a name="hand-coach-design-guidance"></a>Hand Trainer-Entwurfs Leit Faden
+# <a name="hand-coach"></a>Hand Coach
 
 Hand Coach ist 3D-modellierte Hände, die ausgelöst werden, wenn das System die Hände des Benutzers nicht erkennt. Dies wird als "Lehr Komponente" implementiert, die den Benutzer unterstützt, wenn die Geste nicht gelehrt wurde. Wenn Benutzer die angegebene Geste für einen Zeitraum nicht durchgeführt haben, wird die Hand mit einer Verzögerung Schleife. Der handbus könnte verwendet werden, um das Drücken einer Schaltfläche oder das Auswählen eines holograms darzustellen.  
 

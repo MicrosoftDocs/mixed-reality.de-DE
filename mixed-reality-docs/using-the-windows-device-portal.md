@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräte Portal, hololens
-ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
-ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
+ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76521691"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202720"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräte Portals
 
@@ -19,7 +19,7 @@ ms.locfileid: "76521691"
 <tr>
 <th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td> Windows-Geräteportal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
+<td> Windows Device Portal</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
 </table>
 
@@ -81,6 +81,8 @@ Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL
 1. **Stellen Sie sicher, dass Sie sich in einem sicheren Netzwerk (USB-oder WLAN-Netzwerk, dem Sie Vertrauen) befinden.**
 2. Laden Sie das Zertifikat dieses Geräts von der Seite "Sicherheit" im Geräte Portal herunter.
    * Navigieren Sie zu: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm
+   * Öffnen Sie den Knoten für System > Einstellungen. 
+   * Scrollen Sie nach unten zu Gerätesicherheit, und klicken Sie auf die Schaltfläche "Zertifikat dieses Geräts herunterladen".
 3. Installieren Sie das Zertifikat im Speicher "Vertrauenswürdige Stamm Zertifizierungsstellen" auf Ihrem PC.
    * Geben Sie im Windows-Menü Folgendes ein: Computer Zertifikate verwalten, und starten Sie das Applet.
    * Erweitern Sie den Ordner **Vertrauenswürdige Stamm Zertifizierungs** Stelle.
@@ -89,9 +91,13 @@ Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL
    * Führen Sie den Zertifikatimport-Assistenten mit der Zertifikatdatei aus, die Sie vom Geräteportal heruntergeladen haben.
 4. Starten Sie den Browser neu.
 
+>[!NOTE]
+> Dieses Zertifikat wird nur für das Gerät als vertrauenswürdig eingestuft, und der Benutzer muss den Prozess erneut durchlaufen, wenn das Gerät mit einem flashed versehen ist.
+
+
 ## <a name="device-portal-pages"></a>Seiten des Geräteportals
 
-### <a name="home"></a>„Startseite“,
+### <a name="home"></a>Startseite
 
 ![Windows-Geräte Portal-Startseite auf Microsoft hololens-](images/windows-device-portal-home-page-1000px.png)<br>
 *Windows-Geräte Portal-Startseite für Microsoft hololens*
@@ -147,11 +153,11 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
 Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der HoloLens speichern.
 * **Einstellungen**: Steuern der Mediendaten Ströme, die erfasst werden, indem die folgenden Einstellungen überprüft werden:
   * **Holograms**: erfasst den Holographic-Inhalt im Videostream. Hologramme werden in Mono und nicht in Stereo gerendert.
-  * **PV-Kamera**: Erfasst den Videodatenstrom der Foto-/Videokamera.
+  * **PV camera**: Erfasst den Videodatenstrom der Foto-/Videokamera.
   * **Mic Audio**: Erfasst Audioaufnahmen vom Mikrofonarray.
   * **App Audio**: Erfasst Audioaufnahmen von der derzeit ausgeführten App.
   * **Rendering von Kamera**: richtet die Erfassung so aus, dass Sie aus der Perspektive der Foto-/Videokamera besteht, wenn Sie [von der laufenden App unterstützt](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) wird (nur hololens 2).
-  * **Qualität der Live-Vorschau**: Wählen Sie die Bildschirmauflösung, Bildfrequenz und Streamingrate für die Live-Vorschau aus.
+  * **Live preview quality**: Wählen Sie die Bildschirmauflösung, Bildfrequenz und Streamingrate für die Live-Vorschau aus.
 * Klicken oder tippen Sie auf die **Live Vorschau** Schaltfläche, um den Aufzeichnungsdaten Strom anzuzeigen. " **Live Preview beenden** " beendet den Aufzeichnungsdaten Strom.
 * Klicken oder tippen Sie auf **Datensatz** , um mit den angegebenen Einstellungen zu beginnen, den Mixed-Reality-Stream aufzuzeichnen. **Aufzeichnung beenden** beendet die Aufzeichnung und speichert Sie.
 * Klicken oder tippen Sie auf **Foto aufnehmen** , um ein Bild aus dem Erfassungsdaten Strom zu übernehmen.
@@ -198,21 +204,21 @@ Zeigt Echtzeitgraphen mit Informationen zur Systemdiagnose an, z. B. Stromverbra
 Die folgenden Metriken sind verfügbar:
 * **SoC Power**: Sofortige Nutzung des System-on-a-Chip-Stroms, gemittelt über eine Minute.
 * **Systemstromversorgung**: Sofortige Nutzung des Systemstroms, gemittelt über eine Minute.
-* **Bildfrequenz**: Bilder pro Sekunde, übersprungene VBlanks pro Sekunde und aufeinanderfolgende übersprungene VBlanks
+* **Framerate**: Bilder pro Sekunde, übersprungene VBlanks pro Sekunde und aufeinanderfolgende übersprungene VBlanks
 * **GPU**: Auslastung des GPU-Moduls, gesamte Verfügbarkeit in Prozent
 * **CPU**: Verfügbarkeit in Prozent
 * **E/A**: Lese- und Schreibvorgänge
-* **Netzwerk**: Empfangene und gesendete Daten
+* **Netzwerk**: Empfangen und gesendet
 * Arbeits **Speicher**: Gesamtmenge, Verwendung, Commit, Auslagerung und nicht Auslagerungsseiten
 
-### <a name="apps"></a>Apps-
+### <a name="apps"></a>Apps
 
 ![Seite "Apps" im Windows-Geräte Portal auf Microsoft hololens](images/windows-device-portal-apps-page-1000px.png)<br>
 *Seite "Apps" im Windows-Geräte Portal unter Microsoft hololens*
 
 Verwaltet die apps, die auf den hololens installiert sind.
 * **Installierte Apps**: Hier können Sie Apps entfernen und starten.
-* **Ausgeführte Apps**: Listet Apps auf, die derzeit ausgeführt werden.
+* **Running apps**: Listet Apps auf, die derzeit ausgeführt werden.
 * **App installieren**: Wählen Sie App-Pakete für die Installation aus einem Ordner auf Ihrem Computer/Netzwerk aus.
 * **Abhängigkeit**: Hier fügen Sie Abhängigkeiten für die zu installierende App hinzu.
 * Bereit **stellen: Stellen**Sie die ausgewählten apps und Abhängigkeiten in den hololens bereit.
@@ -254,9 +260,9 @@ Aktivieren Sie **Anbieter ausblenden** , um nur die **Ereignis** Liste anzuzeige
 
 Klicken oder tippen Sie auf **Aktivieren**, um die Ablaufverfolgung zu starten. Der Anbieter wird der Liste **Aktivierte Anbieter** hinzugefügt.
 * **Benutzerdefinierte Anbieter**: Wählen Sie einen benutzerdefinierten ETW-Anbieter und die Ablaufverfolgungsebene aus. Identifizieren Sie den Anbieter anhand seiner GUID. Fügen Sie keine Klammern in die GUID ein.
-* **Aktivierte Anbieter**: Listet die aktivierten Anbieter auf. Wählen Sie einen Anbieter aus der Dropdownliste aus, und klicken oder tippen Sie auf **Deaktivieren**, um die Ablaufverfolgung zu beenden. Klicken oder tippen Sie auf **Beenden**, um sämtliche Ablaufverfolgung anzuhalten.
+* **Enabled Providers**: Listet die aktivierten Anbieter auf. Wählen Sie einen Anbieter aus der Dropdownliste aus, und klicken oder tippen Sie auf **Deaktivieren**, um die Ablaufverfolgung zu beenden. Klicken oder tippen Sie auf **Beenden**, um sämtliche Ablaufverfolgung anzuhalten.
 * **Anbieterverlauf**: Zeigt die ETW-Anbieter an, die während der aktuellen Sitzung aktiviert wurden. Klicken oder tippen Sie auf **Aktivieren**, um einen Anbieter zu aktivieren, der deaktiviert war. Klicken oder tippen Sie auf **Löschen**, um den Verlauf zu löschen.
-* **Ereignisse**: Listet ETW-Ereignisse der ausgewählten Anbieter in Tabellenform auf. Diese Tabelle wird in Echtzeit aktualisiert. Klicken Sie unter der Tabelle auf die Schaltfläche **Löschen**, um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
+* **Ereignisse**: Listet-ETW-Ereignisse der ausgewählten Anbieter im Tabellenformat auf. Diese Tabelle wird in Echtzeit aktualisiert. Klicken Sie unter der Tabelle auf die Schaltfläche **Löschen**, um alle ETW-Ereignisse aus der Tabelle zu löschen. Hierdurch werden keine Anbieter deaktiviert. Sie können auf **In Datei speichern** klicken, um die derzeit erfassten ETW-Ereignisse in eine lokale CSV-Datei zu exportieren.
 * **Filter**: Hiermit können Sie die ETW-Ereignisse filtern, die nach ID, Schlüsselwort, Ebene, Anbieter Name, Aufgaben Name oder Text gesammelt werden. Sie können mehrere Kriterien zusammen kombinieren:
    1. Für Kriterien, die auf dieselbe Eigenschaft angewendet werden, werden Ereignisse angezeigt, die eines dieser Kriterien erfüllen können.
    2. Bei Kriterien, die auf eine andere Eigenschaft angewendet werden, müssen Ereignisse alle Kriterien erfüllen.
@@ -269,12 +275,12 @@ Sie können z. b. die Kriterien angeben *(der Taskname enthält ' foo ' oder ' B
 *Simulations Seite im Windows-Geräte Portal unter Microsoft hololens*
 
 Ermöglicht Ihnen das Aufzeichnen und Wiedergeben von Eingabedaten für Testzwecke.
-* **Erfassungsraum**: Wird verwendet, um eine Datei für einen simulierten Raum herunterzuladen, die das Spatial-Mapping-Gitter für die Umgebung des Benutzers enthält. Benennen Sie den Raum, und klicken Sie dann auf **erfassen** , um die Daten als xef-Datei auf Ihrem PC zu speichern. Diese Raumdatei kann in den HoloLens-Emulator geladen werden.
+* **Capture room**: Wird verwendet, um eine Datei für einen simulierten Raum herunterzuladen, die das Spatial-Mapping-Gitter für die Umgebung des Benutzers enthält. Benennen Sie den Raum, und klicken Sie dann auf **erfassen** , um die Daten als xef-Datei auf Ihrem PC zu speichern. Diese Raumdatei kann in den HoloLens-Emulator geladen werden.
 * **Aufzeichnung**: Überprüfen Sie die Datenströme, die aufgezeichnet werden sollen, benennen Sie die Aufzeichnung, und klicken oder tippen Sie auf **Datensatz** , um das neu Führen Sie Aktionen mit ihren hololens aus, und klicken Sie dann auf " **Abbrechen** ", um die Daten als xef-Datei auf Ihrem PC zu speichern. Diese Datei kann im HoloLens-Emulator oder auf dem Gerät geladen werden.
 * **Wiedergabe**: Klicken oder tippen Sie auf **Aufzeichnung hochladen** , um eine xef-Datei von Ihrem PC auszuwählen und die Daten an die hololens zu senden.
 * **Steuerelement Modus**: Wählen Sie in der Dropdown Liste die Option **Standard** oder **Simulation** aus, und klicken oder tippen Sie auf die Schaltfläche **festlegen** , um den Modus auf den hololens auszuwählen. Durch Auswahl von „Simulation“ werden die realen Sensoren auf der HoloLens deaktiviert und stattdessen hochgeladene simulierte Daten verwendet. Wenn Sie zu „Simulation“ wechseln, reagiert die HoloLens nicht auf den realen Benutzer, bis Sie zurück zu „Standard“ wechseln.
 
-### <a name="networking"></a>-Netzwerk
+### <a name="networking"></a>Netzwerk
 
 ![Netzwerkseite im Windows-Geräte Portal für Microsoft hololens](images/windows-device-portal-networking-page-1000px.png)<br>
 *Netzwerkseite im Windows-Geräte Portal unter Microsoft hololens*
