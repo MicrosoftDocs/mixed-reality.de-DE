@@ -7,34 +7,34 @@ ms.author: grbury
 ms.date: 11/15/2019
 ms.topic: overview
 keywords: Gemischte Windows-Realität, Entwurf, App-Muster, Steuerelemente, Stil, hololens, Interaktion, UX-Elemente, Verhaltensweisen, Bausteine
-ms.openlocfilehash: 16a6c08230dbe16ebb04c39751cce306bbc57c2d
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 9e2173e55a8c37ae4333d459ffe37fc01389b143
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334211"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202750"
 ---
 # <a name="ux-elements-overview"></a>Übersicht über UX-Elemente
 
 ![Hololens 2 Benutzerinteraktion mit Holographic-Schaltflächen](images/06_AppPatterns.png)
 
-## <a name="style"></a>Format
+## <a name="style"></a>Stil
 
 :::row:::
     :::column:::
        [![Farbe, helle und Material](images/640px-fragments.png)](color,-light-and-materials.md)  **[Farbe, Licht und Material](color,-light-and-materials.md)**
     :::column-end:::
     :::column:::
-       [](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md)  **[](scale.md) Skalierung![**
+       [![Skalierung](images/volvo-cars-microsoft-hololens-experience01-640px.png)](scale.md) **[Skalierung](scale.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       typografietypografie [![](images/text_in_unity_viewingangle.png)](typography.md)  **[](typography.md)**
+       [![Typografie](images/text_in_unity_viewingangle.png)](typography.md) **[Typografie](typography.md)**
     :::column-end:::
     :::column:::
-       Sound von [![Sound](images/spatialaudio.png)](spatial-sound.md)  **[](spatial-sound.md)**
+       [![Sound](images/spatialaudio.png)](spatial-sound.md) **[Sound](spatial-sound.md)**
     :::column-end:::
 :::row-end:::
 
@@ -44,37 +44,37 @@ ms.locfileid: "75334211"
 
 :::row:::
     :::column:::
-       [](images/UX/UX_Hero_Cursor.jpg)](cursors.md) Cursor  **[Cursor](cursors.md)![**
+       [![Cursor](images/UX/UX_Hero_Cursor.jpg)](cursors.md) **[Cursor](cursors.md)**
     :::column-end:::
     :::column:::
        [![Hand Strahl](images/UX/UX_Hero_HandRay.jpg)](point-and-commit.md)  **[Hand](point-and-commit.md) Strahl**
     :::column-end:::
     :::column:::
-       [](images/UX/UX_Hero_Button.jpg)](button.md)  **[](button.md) Schaltfläche "!["**
+       [![Schaltfläche](images/UX/UX_Hero_Button.jpg)](button.md) **[Schaltfläche](button.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [](images/UX/UX_Hero_BoundingBox.jpg)](app-bar-and-bounding-box.md)  **[Begrenzungs Fenster](app-bar-and-bounding-box.md)![umgebenden Rahmens**
+       [![Begrenzungsrahmen](images/UX/UX_Hero_BoundingBox.jpg)](app-bar-and-bounding-box.md) **[Begrenzungsrahmen](app-bar-and-bounding-box.md)**
     :::column-end:::
     :::column:::
-       [](images/UX/UX_Hero_Interactable.jpg)](interactable-object.md)  **[interactable-Objekt](interactable-object.md)![interactable-Objekts**
+       [![Interactable-Objekts](images/UX/UX_Hero_Interactable.jpg)](interactable-object.md) **[Interactable-Objekts](interactable-object.md)**
     :::column-end:::
     :::column:::
-       Manipulation der [Bearbeitung von![](images/UX/UX_Hero_Manipulation.jpg)](direct-manipulation.md)  **[](direct-manipulation.md)**
+       [![Bearbeitung](images/UX/UX_Hero_Manipulation.jpg)](direct-manipulation.md) **[Bearbeitung](direct-manipulation.md)**
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       Menü "Menü Hand" [![Hand](images/UX/UX_Hero_HandMenu.jpg)](hand-menu.md)  **[](hand-menu.md)**
+       [![Menü Hand](images/UX/UX_Hero_HandMenu.jpg)](hand-menu.md) **[Menü Hand](hand-menu.md)**
     :::column-end:::
     :::column:::
        [![nahe](images/UX/UX_Hero_NearMenu.jpg)](near-menu.md) Menü  **[in](near-menu.md) der Nähe des Menüs**
     :::column-end:::
     :::column:::
-       [](images/UX/UX_Hero_ObjectCollection.jpg)](object-collection.md)  **[Objektsammlung](object-collection.md) für Objekt Auflistung![**
+       [![Objektsammlung](images/UX/UX_Hero_ObjectCollection.jpg)](object-collection.md) **[Objektsammlung](object-collection.md)**
     :::column-end:::
 :::row-end:::
 
@@ -86,7 +86,7 @@ ms.locfileid: "75334211"
        [Tastatur](images/UX/UX_Hero_Keyboard.jpg)](keyboard.md)  **[Tastatur](keyboard.md)![**
     :::column-end:::
     :::column:::
-       QuickInfo-QuickInfo [![](images/UX/UX_Hero_Tooltip.jpg)](tooltip.md)  **[](tooltip.md)**
+       [![QuickInfo](images/UX/UX_Hero_Tooltip.jpg)](tooltip.md) **[QuickInfo](tooltip.md)**
     :::column-end:::
 :::row-end:::
 
@@ -95,7 +95,7 @@ ms.locfileid: "75334211"
        [![Slate](images/UX/UX_Hero_Slate.jpg)](slate.md) -  **[Slate](slate.md)**
     :::column-end:::
     :::column:::
-       Schieberegler [![Schieberegler](images/UX/UX_Hero_Slider.jpg)](slider.md)  **[](slider.md)**
+       [![Schieberegler](images/UX/UX_Hero_Slider.jpg)](slider.md) **[Schieberegler](slider.md)**
     :::column-end:::
     :::column:::
         [![Shader](images/UX/UX_Hero_StandardShader.jpg)](shader.md) -  **[Shader](shader.md)**
@@ -107,13 +107,22 @@ ms.locfileid: "75334211"
         [![von fakboarding-und tagbasierten](images/UX/MRTK_TagAlong.gif)](billboarding-and-tag-along.md) Abrechnungs-und  **[tagbasierten](billboarding-and-tag-along.md) Zusammenhang**
     :::column-end:::
     :::column:::
-       [](images/UX/MRTK_ProgressIndicator.gif)](progress.md) Status  **[Anzeige](progress.md) für![Statusanzeige**
+       [![Statusanzeige](images/UX/MRTK_ProgressIndicator.gif)](progress.md) **[Statusanzeige](progress.md)**
     :::column-end:::
     :::column:::
        [![Oberflächen](images/UX/MRTK_SurfaceMagnetism.gif)](surface-magnetism.md) -Magnetismus-  **[Oberflächen Magnetismus](surface-magnetism.md)**
     :::column-end:::
 :::row-end:::
 
+:::row:::
+    :::column:::
+       [![Hand](images/HandCoach/MRTK_handCoach.jpg)](hand-coach.md) Coach  **[Hand Coach](hand-coach.md)**
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 <br>
 
