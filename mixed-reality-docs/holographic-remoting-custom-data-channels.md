@@ -1,17 +1,17 @@
 ---
 title: Benutzerdefinierte Holographic-Remoting-Datenkanäle
 description: Benutzerdefinierte Datenkanäle können verwendet werden, um Benutzerdaten über die bereits festgelegte Holographic Remoting-Verbindung zu senden.
-author: NPohl-MSFT
-ms.author: nopohl
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: 2861c780c5d7e516d5b7ddc757bbcba6da7e6559
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8bfa19b7af0f3429130aabf70d9d11083bc56a52
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926667"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092301"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>Benutzerdefinierte Holographic-Remoting-Datenkanäle
 
@@ -21,10 +21,10 @@ ms.locfileid: "73926667"
 Verwenden Sie benutzerdefinierte Datenkanäle, um benutzerdefinierte Daten über eine festgelegte remotingverbindung zu senden.
 
 >[!IMPORTANT]
->Benutzerdefinierte Datenkanäle erfordern eine benutzerdefinierte Host-APP und eine benutzerdefinierte Player-App, da Sie die Kommunikation zwischen den beiden benutzerdefinierten Apps ermöglicht.
+>Benutzerdefinierte Datenkanäle erfordern eine benutzerdefinierte Remote-app und eine benutzerdefinierte Player-App, da Sie die Kommunikation zwischen den beiden benutzerdefinierten Apps ermöglicht.
 
 >[!TIP]
->Ein einfaches Ping-Pong-Beispiel finden Sie in den Beispielen für Host und Player im [GitHub-Repository "Holographic Remoting Samples](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)". Heben Sie die Auskommentierung ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` in den Dateien samplehostmain. h/sampleplayermain. h auf, um den Beispielcode zu aktivieren.
+>Ein einfaches Ping-Pong-Beispiel finden Sie im [GitHub-Repository für Holographic-Remoting-Beispiele](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples)in den Remote-und Player-Beispielen. Heben Sie die Auskommentierung ```#define ENABLE_CUSTOM_DATA_CHANNEL_SAMPLE``` in den Dateien sampleremotemain. h/sampleplayermain. h auf, um den Beispielcode zu aktivieren.
 
 
 ## <a name="create-a-custom-data-channel"></a>Erstellen eines benutzerdefinierten Daten Kanals
@@ -38,11 +38,11 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnDataReceived_revoker
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_customChannelClosedEventRevoker;
 ```
 
-Nachdem eine Verbindung hergestellt wurde, kann die Erstellung neuer Datenkanäle entweder von der Hostseite und/oder von der Player Seite initiiert werden. Sowohl remotecontext als auch playercontext stellen eine ```CreateDataChannel()```-Methode bereit. Der erste Parameter ist die Kanal-ID, die verwendet wird, um den Datenkanal in nachfolgenden Vorgängen zu identifizieren. Der zweite Parameter ist die Priorität, die die Priorität angibt, mit der Daten dieses Kanals auf die andere Seite übertragen werden. Der gültige Bereich für Channel-IDs beträgt 0 bis einschließlich 63 für die Hostseite und 64 bis einschließlich 127 für die Player Seite. Gültige Prioritäten sind ```Low```, ```Medium``` oder ```High``` (auf beiden Seiten).
+Nachdem eine Verbindung hergestellt wurde, kann die Erstellung neuer Datenkanäle entweder von der Remote Seite und/oder von der Player Seite initiiert werden. Sowohl remotecontext als auch playercontext stellen eine ```CreateDataChannel()```-Methode bereit. Der erste Parameter ist die Kanal-ID, die verwendet wird, um den Datenkanal in nachfolgenden Vorgängen zu identifizieren. Der zweite Parameter ist die Priorität, die die Priorität angibt, mit der Daten dieses Kanals auf die andere Seite übertragen werden. Der gültige Bereich für Channel-IDs ist 0 bis einschließlich 63 für die Remote Seite und 64 bis einschließlich 127 für die Player Seite. Gültige Prioritäten sind ```Low```, ```Medium``` oder ```High``` (auf beiden Seiten).
 
-So initiieren Sie die Erstellung eines Daten Kanals auf der **Hostseite** :
+So initiieren Sie die Erstellung eines Daten Kanals auf der **Remote** Seite:
 ```cpp
-// Valid channel ids for channels created on the host side are 0 up to and including 63
+// Valid channel ids for channels created on the remote side are 0 up to and including 63
 m_remoteContext.CreateDataChannel(0, DataChannelPriority::Low);
 ```
 
@@ -53,11 +53,11 @@ m_playerContext.CreateDataChannel(64, DataChannelPriority::Low);
 ```
 
 >[!NOTE]
->Zum Erstellen eines neuen benutzerdefinierten Daten Kanals muss nur eine Seite (Host oder Spieler) die ```CreateDataChannel```-Methode aufzurufen.
+>Zum Erstellen eines neuen benutzerdefinierten Daten Kanals muss nur eine Seite (Remote oder Player) die ```CreateDataChannel```-Methode aufzurufen.
 
 ## <a name="handling-custom-data-channel-events"></a>Behandeln von benutzerdefinierten Datenkanal Ereignissen
 
-Zum Einrichten eines benutzerdefinierten Daten Kanals muss das ```OnDataChannelCreated``` Ereignis behandelt werden (sowohl auf dem Player als auch auf der Hostseite). Es wird ausgelöst, wenn ein Benutzerdaten Kanal von beiden Seiten erstellt wurde und ein ```IDataChannel``` Objekt bereitstellt, das zum Senden und empfangen von Daten über diesen Kanal verwendet werden kann.
+Zum Einrichten eines benutzerdefinierten Daten Kanals muss das ```OnDataChannelCreated``` Ereignis behandelt werden (sowohl auf dem Player als auch auf der Remote Seite). Es wird ausgelöst, wenn ein Benutzerdaten Kanal von beiden Seiten erstellt wurde und ein ```IDataChannel``` Objekt bereitstellt, das zum Senden und empfangen von Daten über diesen Kanal verwendet werden kann.
 
 So registrieren Sie einen Listener für das ```OnDataChannelCreated```-Ereignis:
 ```cpp
@@ -114,7 +114,7 @@ m_customDataChannel.Close();
 ```
 
 ## <a name="see-also"></a>Weitere Informationen
-* [Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
+* [Schreiben einer Holographic Remoting-Remote-app](holographic-remoting-create-host.md)
 * [Schreiben einer benutzerdefinierten Holographic Remoting Player-App](holographic-remoting-create-player.md)
 * [Problembehandlung und Einschränkungen für Holographic Remoting](holographic-remoting-troubleshooting.md)
 * [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

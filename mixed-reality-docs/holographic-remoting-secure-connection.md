@@ -1,17 +1,17 @@
 ---
 title: Einrichten einer sicheren Verbindung mit Holographic Remoting
 description: Auf dieser Seite wird erläutert, wie Sie eine sichere verschlüsselte Verbindung herstellen, wenn Sie Holographic Remoting verwenden.
-author: bethau
-ms.author: bethau
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: 1142ba3bd8b0d05202ccd04885de5d70165872d1
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ac1170cb3e6d681fc164c3f4cee14da6ab6eb90b
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434194"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092476"
 ---
 # <a name="establishing-a-secure-connection-with-holographic-remoting"></a>Einrichten einer sicheren Verbindung mit Holographic Remoting
 
@@ -25,7 +25,7 @@ Beim Streamen von Inhalten auf hololens 2 über ein unsicheres Netzwerk, wie z. 
 >[!IMPORTANT]
 >Auch wenn eine vertrauenswürdige lokale WLAN-Verbindung verwendet wird, sollte eine verschlüsselte Verbindung berücksichtigt werden.
 
-Um eine verschlüsselte Verbindung verwenden zu können, müssen Sie sowohl einen [benutzerdefinierten Player](holographic-remoting-create-player.md) als auch eine [Benutzerdefinierte Host-App](holographic-remoting-create-host.md)implementieren.
+Um eine verschlüsselte Verbindung verwenden zu können, müssen Sie sowohl einen [benutzerdefinierten Player](holographic-remoting-create-player.md) als auch eine [benutzerdefinierte Remote-app](holographic-remoting-create-host.md)implementieren.
 
 Die Verschlüsselung wird mithilfe der zugrunde liegenden Platt Form-TLS-Implementierung erreicht.
 
@@ -61,7 +61,7 @@ Außerdem müssen die folgenden Objekte implementiert werden, um den Austausch e
 Nachdem diese Objekte implementiert wurden ```ListenSecure``` muss anstelle von ```Listen``` und ```ConnectSecure``` anstelle der ```Connect``` im Remote Kontext und im Player Kontext aufgerufen werden. ```ListenSecure``` erfordert einen zusätzlichen Zertifikat Anbieter und Authentifizierungs Empfänger über ```Listen```. ```ConnectSecure``` erfordert einen zusätzlichen Authentifizierungs Anbieter und ein zertifikatvalidator über ```Connect```.
 
 ## <a name="see-also"></a>Weitere Informationen
-* [Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
+* [Schreiben einer Holographic Remoting-Remote-app](holographic-remoting-create-host.md)
 * [Schreiben einer benutzerdefinierten Holographic Remoting Player-App](holographic-remoting-create-player.md)
 * [Problembehandlung und Einschränkungen für Holographic Remoting](holographic-remoting-troubleshooting.md)
 * [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

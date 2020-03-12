@@ -3,15 +3,15 @@ title: Problembehandlung und Einschränkungen für Holographic Remoting
 description: Schritte zur Problembehandlung für Holographic Remoting auf hololens 2.
 author: FlorianBagarMicrosoft
 ms.author: flbagar
-ms.date: 12/17/2019
+ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, Holographic Remoting, Remote Rendering, Netzwerk Rendering, hololens, Remote holograms, Problembehandlung, Hilfe
-ms.openlocfilehash: 05333c8911010945a543cf603b9925eb30c841db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 79258832d29741c56a1e7e89baeb7d728c806dd1
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181970"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092366"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Problembehandlung bei Holographic Remoting
 
@@ -40,6 +40,7 @@ Die folgenden APIs werden zurzeit **nicht** unterstützt, wenn Holographic Remot
 * [Holographiccamerapose. override viewtransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
 * [Holographiccamer-deringparameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - Schlägt nicht fehl, aber der tiefen Puffer wird nicht remotetet.
+  - Unterstützt ab Version [2.1.0](holographic-remoting-version-history.md#v2.1.0)
 * [Holographicdisplay. trygetviewconfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
   - Beim Abfragen von holographicviewconfigurationkind. photovideocamera wird immer ein ```nullptr```zurückgegeben.
   - Unterstützt ab Version [2.0.18](holographic-remoting-version-history.md#v2.0.18)
@@ -58,7 +59,7 @@ Die folgenden APIs werden zurzeit **nicht** unterstützt, wenn Holographic Remot
 * [SpatialLocation. absolutelinearacceleration](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absolutelinearacceleration)
 * [SpatialLocation. absolutelinearvelocity](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absolutelinearvelocity)
 * [Spatialstageframeofreferenzierungs. Current](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)
-  - Gibt immer ```nullptr``` zurück.
+  - Gibt immer ```nullptr```zurück.
 * [Spatialstageframeofreferenzierung. requestnewstageasync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)
 * [Spatialanchor. removedbyuser](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.removedbyuser)
 * [Spatialanchorexporter. GetDefault](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter.getdefault
@@ -90,7 +91,7 @@ Die folgenden APIs werden zurzeit **nicht** unterstützt, wenn Holographic Remot
 
 ## <a name="see-also"></a>Weitere Informationen
 * [Holographic Remoting-Versionsverlauf](holographic-remoting-version-history.md)
-* [Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
+* [Schreiben einer Holographic Remoting-Remote-app](holographic-remoting-create-host.md)
 * [Schreiben einer benutzerdefinierten Holographic Remoting Player-App](holographic-remoting-create-player.md)
 * [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Datenschutzerklärung von Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Datenschutzbestimmungen von Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

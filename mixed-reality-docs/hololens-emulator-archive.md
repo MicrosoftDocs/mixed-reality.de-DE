@@ -3,15 +3,15 @@ title: Hololens-Emulator-Archiv
 description: Liste der veröffentlichten Builds des Microsoft hololens-Emulators.
 author: hamalawi
 ms.author: moelhama
-ms.date: 2/12/2020
+ms.date: 3/10/2020
 ms.topic: article
 keywords: Hololens, Emulator, Builds, Versionen
-ms.openlocfilehash: 4696330e62d2b7b5d58c73e13713e0731f5ec3bc
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250665"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031773"
 ---
 # <a name="hololens-2-emulator-archive"></a>Hololens 2-Emulator-Archiv
 
@@ -19,6 +19,7 @@ Der hololens-Emulator (1st Gen) und der hololens 2-emulatorbuild werden nebenein
 
 |  Erstellen |  Veröffentlichungsdatum |  Hinweise | 
 |----------|----------|----------|
+|  [Hololens 2-emulatorbuild 10.0.18362.1056](https://go.microsoft.com/fwlink/?linkid=2121323) | 10. März 2020 | Der Build 2020 hololens 2 wurde erstellt.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [Hololens 2-emulatorbuild 10.0.18362.1053](https://go.microsoft.com/fwlink/?linkid=2118321) | 11. Februar 2020 | Februar 2020 hololens 2-Build.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [Hololens 2-emulatorbuild 10.0.18362.1044](https://go.microsoft.com/fwlink/?linkid=2114824) | 13. Januar 2020 | Der Januar 2020 hololens 2-Build.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [Hololens 2-emulatorbuild 10.0.18362.1042](https://go.microsoft.com/fwlink/?linkid=2112589) | 6\. Dezember 2019 | Dezember 2019 hololens 2-Build.  Es wird ein Problem behoben, bei dem eine im Emulator laufende Holographic-App unerwartet angehalten wird, wenn der PIN-Bereich angezeigt wird.  Ermöglicht die Konnektivität mit einem Remote Emulator, wenn die Wahrnehmungs Simulations-API oder die perception Simulation Control-App verwendet wird.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |
