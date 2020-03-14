@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: holograms, Stabilität, hololens
 ms.openlocfilehash: ad48d057ee55d4d0d9ae3080d8030a481aef130f
-ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75623311"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375777"
 ---
 # <a name="hologram-stability"></a>Hologram-Stabilität
 
@@ -91,8 +91,8 @@ Anwendungen müssen bestimmte Aktionen durchführen, um die verschiedenen Arten 
 
 Stabilisierungstyp |    Immersive Headsets |    Hololens Generation 1 | HoloLens 2
 --- | --- | --- | ---
-Tiefen neuprojektion |    Empfohlen |   NICHT ZUTREFFEND |   Empfohlen<br/><br/>Unity-Anwendungen müssen Unity 2018.4.12 oder höher oder Unity 2019,3 oder höher verwenden. Verwenden Sie andernfalls die automatische planare neuprojektion.
-Automatische planare neuprojektion | NICHT ZUTREFFEND |   Empfohlene Standardeinstellung |   Empfohlen, wenn die tiefen neuprojektion nicht die besten Ergebnisse liefert.<br/><br/>Unity-Anwendungen werden für die Verwendung von Unity 2018.4.12 oder höher oder Unity 2019,3 oder höher empfohlen.  Frühere Unity-Versionen funktionieren mit leicht herabgestuften reprojektions Ergebnissen.
+Tiefen neuprojektion |    Empfohlen |   N/V |   Empfohlen<br/><br/>Unity-Anwendungen müssen Unity 2018.4.12 oder höher oder Unity 2019,3 oder höher verwenden. Verwenden Sie andernfalls die automatische planare neuprojektion.
+Automatische planare neuprojektion | N/V |   Empfohlene Standardeinstellung |   Empfohlen, wenn die tiefen neuprojektion nicht die besten Ergebnisse liefert.<br/><br/>Unity-Anwendungen werden für die Verwendung von Unity 2018.4.12 oder höher oder Unity 2019,3 oder höher empfohlen.  Frühere Unity-Versionen funktionieren mit leicht herabgestuften reprojektions Ergebnissen.
 Planare neuprojektion |   Nicht empfohlen |   Empfohlen, wenn die automatische Planar nicht die besten Ergebnisse liefert |    Verwenden Sie, wenn keine der tiefen Optionen gewünschte Ergebnisse liefert.    
 
 ### <a name="verifying-depth-is-set-correctly"></a>Überprüfen der Tiefe Festlegung der Tiefe
@@ -137,7 +137,7 @@ Das wichtigste, was ein Entwickler zum stabilisieren von holograms tun kann, ist
 
 **Bewährte Methoden** Es gibt keine universelle Methode zum Einrichten der Stabilisierungs Ebene, und Sie ist APP-spezifisch. Daher besteht die wichtigste Empfehlung darin, zu experimentieren und zu sehen, was für Ihre Szenarien am besten geeignet ist. Versuchen Sie jedoch, die Stabilisierungs Ebene mit so vielen Inhalten wie möglich auszurichten, da der gesamte Inhalt auf dieser Ebene vollständig stabilisiert ist.
 
-Zum Beispiel:
+Beispiel:
 * Wenn Sie nur planare Inhalte haben (Lesen der APP, Videowiedergabe-APP), richten Sie die Stabilisierungs Ebene mit der Ebene aus, die ihren Inhalt enthält.
 * Wenn es drei kleine Bereiche gibt, die weltweit gesperrt sind, nehmen Sie die Stabilisierungs Ebene in den Mittelpunkt aller Bereiche, die sich derzeit in der Ansicht des Benutzers befinden.
 * Wenn Ihre Szene Inhalte in deutlich unterschiedlichen Tiefen hat, bevorzugen Sie weitere Objekte.
@@ -174,7 +174,7 @@ Obwohl es schwierig ist, die Trennung von Farben vollständig zu vermeiden, steh
 
 Wie zuvor sind das Rendering bei 60 fps und das Festlegen der Stabilisierungs Ebene die wichtigsten Techniken für die – Hologramm-Stabilität. Stellen Sie zunächst sicher, dass die Framerate den Erwartungen entspricht, wenn Sie mit einer merkbaren Farbtrennung
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
 * [Farbe, Licht und Materialien](color,-light-and-materials.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Mixed Reality, Holographic, AR, VR, Mr, XR, Augmented Reality, Virtual Reality, Erläuterung
 ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334035"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376037"
 ---
 # <a name="what-is-mixed-reality"></a>Was ist Mixed Reality?
 
@@ -89,7 +89,7 @@ Es gibt zwei Hauptarten von Geräten, die Windows Mixed Reality-Umgebungen berei
 </tr><tr>
 <td><strong>Beispiel Gerät</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssee und höher<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td><strong>Display</strong></td><td> Siehe anzeigen. Ermöglicht Benutzern das Anzeigen der physischen Umgebung beim durch tragen des Headsets.</td><td> Nicht transparente Anzeige. Blockiert die physische Umgebung beim durch tragen des Headsets.</td>
+<td><strong>Anzeige</strong></td><td> Siehe anzeigen. Ermöglicht Benutzern das Anzeigen der physischen Umgebung beim durch tragen des Headsets.</td><td> Nicht transparente Anzeige. Blockiert die physische Umgebung beim durch tragen des Headsets.</td>
 </tr><tr>
 <td><strong>Bewegung</strong></td><td> Vollständige Bewegung von sechs Grad an Freiheit, sowohl Drehung als auch Übersetzung.</td><td> Vollständige Bewegung von sechs Grad an Freiheit, sowohl Drehung als auch Übersetzung.</td>
 </tr>
@@ -113,7 +113,7 @@ Häufig ist es am besten, zu sehen, welche Art von Anwendung ein Anwendungs-oder
 * **Auf der rechten Seite (in der Nähe digitaler Realität).** Benutzer erleben eine vollständig digitale Umgebung und wissen nicht, was in der physischen Umgebung herum passiert.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Was ist ein Hologramm?](hologram.md)
 * [Verstehen der Grundlagen von Mixed Reality](index.md#understand-the-basics)

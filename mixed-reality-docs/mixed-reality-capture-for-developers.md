@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, Video, Erfassung, Kamera
 ms.openlocfilehash: 72600f889997c96a629faebc35aba4b4841d4d8b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926801"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375967"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Erfassung gemischter Realität für Entwickler
 
@@ -161,7 +161,7 @@ Sie können jetzt die Alpha Werte Ihrer Assets optimieren, wenn Sie möchten, ab
 Folgendes gilt für hololens (First-Generation) und hololens 2, sofern nichts anderes angegeben ist:
 
 * Das System führt zu einer Drosselung der Anwendung auf das 30Hz-Rendering. Dadurch wird ein gewisser Spielraum für die MRC-Durchführung geschaffen, sodass die APP keine Konstante Budget Reserve aufbewahren muss und auch mit der MRC-Videodaten Satz Framerate von 30 fps übereinstimmt.
-* – Hologramm-Inhalte auf der rechten Seite des Geräts erscheinen möglicherweise als "Glanz", wenn Sie MRC aufzeichnen/streamen: Text kann schwieriger zu lesen sein, und – Hologramm-Kanten werden möglicherweise mehr verzweigt.
+* – Hologramm-Inhalte auf der rechten Seite des Geräts erscheinen möglicherweise als "Glanz", wenn Sie MRC aufzeichnen/streamen: Text kann schwieriger zu lesen sein, und – Hologramm-Kanten werden möglicherweise mehr verzweigt. **HoloLens 2**
 * MRC-Fotos und-Videos berücksichtigen den [Schwerpunkt Punkt](focus-point-in-unity.md) der Anwendung, wenn Sie von der Anwendung aktiviert wurde. Dadurch wird sichergestellt, dass Hologramme genau positioniert werden. Bei Videos wird der Fokuspunkt geglättet, sodass holograms möglicherweise langsam in den Platz wechseln, wenn sich die Fokuspunkt Tiefe erheblich ändert. Holograms, die sich in unterschiedlichen Tiefen vom Fokuspunkt befinden, werden möglicherweise in der realen Welt ausgeglichen (siehe Beispiel unten, wobei der Fokuspunkt auf 2 Meter festgelegt ist, aber – Hologramm auf 1 Meter festgelegt ist).
 
 ![Holograms bei 2 Messgeräten werden auf der ganzen Welt hervorragend registriert angezeigt. Holograms in der Nähe oder in weiten Abständen können leicht versetzt werden.](images/hologramaccuracydistancemrc-1000px.png)
@@ -197,16 +197,16 @@ Anwendungen haben zwei Möglichkeiten, den Effekt hinzuzufügen:
 
 MRC-Video Effekt (**Windows. Media. mixedrealitycapture. mixedrealitycapturevideoeffect**)
 
-|  Eigenschaftenname  |  Geben Sie in das Suchfeld auf der Taskleiste  |  Standardwert  |  Beschreibung | 
+|  Eigenschaftsname  |  Typ  |  Standardwert  |  Beschreibung | 
 |----------|----------|----------|----------|
 |  Streamtype  |  UInt32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (videorecord)  |  Beschreiben Sie den Erfassungsdaten Strom, für den dieser Effekt verwendet wird. Audiodaten sind nicht verfügbar. | 
-|  Hologramcompositionaktivierte  |  boolesch  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren von holograms bei der Video Erfassung. | 
-|  Recordingindialisioraktiviert  |  boolesch  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren des Aufzeichnungs Indikators auf dem Bildschirm während der – Hologramm-Erfassung. | 
-|  Videostabilizationaktivierte  |  boolesch  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Videostabilisierung, die von hololens-Tracker unterbunden wird. | 
+|  Hologramcompositionaktivierte  |  boolean  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren von holograms bei der Video Erfassung. | 
+|  Recordingindialisioraktiviert  |  boolean  |  TRUE  |  Flag zum Aktivieren oder Deaktivieren des Aufzeichnungs Indikators auf dem Bildschirm während der – Hologramm-Erfassung. | 
+|  Videostabilizationaktivierte  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Videostabilisierung, die von hololens-Tracker unterbunden wird. | 
 |  Videostabilizationbufferlength  |  UINT32  |  0  |  Legen Sie fest, wie viele historische Frames für die Videostabilisierung verwendet werden. 0 (null): Latenz und nahezu "kostenlos" aus Leistungs-und Leistungs Perspektive. 15 wird für die höchste Qualität empfohlen (auf Kosten von 15 Frames an Latenz und Arbeitsspeicher). | 
 |  Globalopacitykoeffizienten  |  float  |  0,9 (hololens) 1,0 (immersives Headset)  |  Legen Sie den globalen Deckkraft Koeffizienten von – Hologramm im Bereich von 0,0 (vollständig transparent) auf 1,0 (vollständig deckend) fest. | 
-|  Blankonprotectedcontent  |  boolesch  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Rückgabe eines leeren Frames, wenn eine 2D-UWP-App geschützte Inhalte anzeigt. Wenn dieses Flag false ist und eine 2D-UWP-App geschützte Inhalte anzeigt, wird die 2D-UWP-app durch eine geschützte Inhalts Textur sowohl im Headset als auch in der Mixed Reality-Erfassung ersetzt. |
-|  Showhiddenmesh  |  boolesch  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Anzeige des ausgeblendeten Bereichs Netzes der Holographic-Kamera und des benachbarten Inhalts. |
+|  Blankonprotectedcontent  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Rückgabe eines leeren Frames, wenn eine 2D-UWP-App geschützte Inhalte anzeigt. Wenn dieses Flag false ist und eine 2D-UWP-App geschützte Inhalte anzeigt, wird die 2D-UWP-app durch eine geschützte Inhalts Textur sowohl im Headset als auch in der Mixed Reality-Erfassung ersetzt. |
+|  Showhiddenmesh  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Anzeige des ausgeblendeten Bereichs Netzes der Holographic-Kamera und des benachbarten Inhalts. |
 | Outputsize | Größe | 0, 0 | Legen Sie die gewünschte Ausgabegröße nach dem Zuschneiden für die Videostabilisierung fest. Eine standardmäßige zuergröße wird ausgewählt, wenn 0 oder eine ungültige Ausgabegröße angegeben wird. |
 | Preferredhologrammperspective | UINT32 | 1 (photovideocamera) | Eine Aufzählung, mit der angegeben wird, welche Konfiguration der holografischen Kameraansicht aufgezeichnet werden soll. Das Festlegen von 0 (anzeigen) bedeutet, dass die APP nicht zum Rendering von der Foto-/Videokamera aufgefordert wird. |
 
@@ -214,8 +214,8 @@ MRC-Audioeffekt (**Windows. Media. mixedrealitycapture. mixedrealitycaptureaudio
 
 <table>
 <tr>
-<th>Eigenschaftenname</th>
-<th>Geben Sie in das Suchfeld auf der Taskleiste</th>
+<th>Eigenschaftsname</th>
+<th>Typ</th>
 <th>Standardwert</th>
 <th>Beschreibung</th>
 </tr>
@@ -267,6 +267,6 @@ Beim Windows 10-Update vom April 2018 gibt es keine Einschränkung mehr für meh
 
 Vor dem Windows 10-Update vom April 2018 konnte sich die benutzerdefinierte MRC-Aufzeichnung einer APP mit System MRC (Aufzeichnen von Fotos, Aufzeichnen von Videos oder Streaming aus dem Windows-Geräte Portal) gegenseitig ausschließen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Mixed Reality-Aufnahme](mixed-reality-capture.md)
 * [Spectator View](spectator-view.md)

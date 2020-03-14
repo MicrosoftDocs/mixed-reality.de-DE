@@ -7,15 +7,15 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, Fallstudie, Vision, Szenarios
 ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896524"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375607"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Fallstudie: die Verfolgung von mehr persönlichen Computing
 
-Die Chancen von morgen entstehen durch die Produkte, die heute produziert werden. Die von diesen Produkten gebotenen Lösungen öffnen den Blick für die Notwendigkeiten der Zukunft. Dies tritt auf Mixed Reality in besonderem Maß zu: Sinnhafte Erkenntnisse ergeben sich aus dem Einstieg in praktische Arbeit – echte Geräte, echte Kunden, echte Probleme.
+Die Chancen von morgen entstehen durch die Produkte, die heute produziert werden. Die von diesen Produkten gebotenen Lösungen öffnen den Blick für die Notwendigkeiten der Zukunft. Mit gemischter Realität ist dies besonders wichtig: ein sinnvoller Einblick ergibt sich aus der Praxis mit echten arbeiten – echten Geräten, echten Kunden, echten Problemen.
 
 Bei Microsoft bin ich Teil des Entwurfs Teams, das Unternehmenspartnern bei der Erstellung von Erfahrungen für Ihr Unternehmen mithilfe von Windows Mixed Reality unterstützt. Im vergangenen Jahr hat unser Team sich auf hololens konzentriert und weiß, wie das Flaggschiff-Holographic-Gerät von Microsoft heute ihren Kunden Mehrwert bieten kann. Wenn Sie mit Designern und Entwicklern dieser Unternehmen eng zusammenarbeiten, konzentriert sich unser Team auf das abdecken von Lösungen, die technisch gesehen, finanziell nicht praktikabel oder anderweitig ohne hololens nicht realisierbar sind.
 
@@ -32,14 +32,14 @@ Wir leben in zwei Welten: physisch und Digital. Beide verfügen über grundlegen
 
 **Die digitale Welt ist eine von Bits und Logik.** Berechnungen werden sofort durchgeführt, während Informationen mühelos verteilt werden können. Trotz der Geschwindigkeit und des Informationsflusses sind Interaktionen zu häufig auf kleine Bildschirme, abstrakte Eingaben und Laute Feeds beschränkt.
 
-![Holostudio](images/holostudio-450px.jpg)<br>
+![holostudio](images/holostudio-450px.jpg)<br>
 *Holostudio*
 
 Was geschieht, wenn wir die Vorteile der physischen und digitalen Welt kombinieren könnten? Dies ist der Grund für das Spektrum der gemischten Realität: ein Mittel, bei dem die physische und die digitale Zusammenarbeit vorhanden sind und nahtlos interagieren. Die Kombination dieser Welten bildet eine neue Grundlage für die Interaktion mit der Technologie – eine Entwicklung bei der persönlichen Verarbeitung.
 
 Das Spektrum der gemischten Realität ist Explodierter, da Entwickler mit der Untersuchung der Möglichkeiten für das Eintauchen und die Anwesenheit begonnen haben. Mit immersiven (Virtual Reality) Erfahrungen und der Erstellung digitaler Objekte in der physischen Welt mit Holographic (Augmented Reality)-Umgebungen in der digitalen Welt. Aber welche Vorteile bietet die Zuordnung der physischen Welt zur digitalen Welt? Was geschieht, wenn wir den Computern Augen sehen?
 
-Die grundlegende Technologie der Kamera Vision hinter holograms verhält sich wie ein Augen Paar für den Computer, um die Umgebung zu sehen: Objekte auf der Welt, Personen, die Sie durchlaufen, ändern sich, sobald sie auftreten. Ein digitales Verständnis ihres Kontexts in der physischen Welt. Dies führt zu einer enormen Menge an Informationen, die Auswirkungen, die wir erst verstehen.
+Die grundlegende Technologie der Kamera Vision hinter holograms verhält sich wie ein Augen Paar für den Computer, um die Umgebung zu sehen: Objekte auf der Welt, Personen, die Sie durchlaufen. Ein digitales Verständnis ihres Kontexts in der physischen Welt. Dies führt zu einer enormen Menge an Informationen, die Auswirkungen, die wir erst verstehen.
 
 ### <a name="culminating-core-technologies"></a>Die wichtigsten Technologien
 
@@ -53,11 +53,11 @@ Gemischte Realität bietet ein Mittel, um diese Technologien zu einer einzelnen 
 
 ### <a name="less-interface-in-your-face"></a>Weniger Schnittstelle in ihrer Oberfläche
 
-Ein gekulteres Gerät, das eine Verbindung zwischen der physischen Welt und der digitalen Welt herstellt, ermöglicht uns das Entwerfen von Benutzeroberflächen, die auf natürliche Weise und ohne mühselig Beachten Sie die Erfahrungen, die Sie erstellt haben: Wie viel an ihrer Schnittstelle verbleiben, wenn die Barrieren der Abstraktion entfernt werden? Welche Teile des App-Flows ändern sich, wenn Sie den Benutzer und seinen Kontext kennen? Wie viele Menüs und Schaltflächen bleiben bestehen?
+Ein gekulteres Gerät, das eine Verbindung zwischen der physischen Welt und der digitalen Welt herstellt, ermöglicht uns das Entwerfen von Benutzeroberflächen, die auf natürliche Weise und ohne mühselig Sehen Sie sich die Erfahrungen an, die Sie erstellt haben: Wenn die Barrieren der Abstraktion entfernt werden, wie viel an ihrer Schnittstelle verbleiben? Welche Teile des App-Flows ändern sich, wenn Sie den Benutzer und seinen Kontext kennen? Wie viele Menüs und Schaltflächen bleiben bestehen?
 
 Nehmen wir beispielsweise an, dass die gemeinsame Umgebung in gemischter Realität aussieht Anstatt ein System zum Betrachten von Martian-Daten (abstrahieren der Daten auf Bildschirme oder anzeigen) zu entwickeln, haben Sie Analysten in den Daten zusammengestellt und diese bei der Zusammenarbeit auf der Mars-Oberfläche abgelegt.
 
-![NASA onsight](images/nasa-onsight.jpg)<br>
+![NASA onsight-](images/nasa-onsight.jpg)<br>
 *NASA/JPL onsight*
 
 Anstatt die Schaltfläche zu finden, um die Aufmerksamkeit auf eine martische Geologie zu lenken, können Wissenschaftler direkt darauf verweisen. Keine Menüs, keine Stifte, keine Lernkurve zur effektiven Verwendung des Tools. Durch die Nutzung unserer bekannten Fähigkeiten aus der physischen Welt können natürlichere Interaktionen in gemischter Realität eine umfassende technische Alphabetisierung in den fortschrittlichsten Industrie Tools umgehen.
@@ -76,7 +76,7 @@ Windows Mixed Reality ist ein Versuch, eine Plattform für ein Ökosystem von Ge
 
 ## <a name="designing-for-tomorrows-experiences-today"></a>Der Entwurf für die Erfahrungen von morgen heute
 
-![Der Entwurf für die Erfahrungen von morgen heute](images/designing-for-tomorrows-experiences-today-450px.jpg) 
+![heute für die Erfahrungen von morgen](images/designing-for-tomorrows-experiences-today-450px.jpg) 
 <br>
 Jede der Kerntechnologien hinter dieser neuen Benutzeroberfläche ermöglicht Entwicklern und Entwicklern das Erstellen von überzeugenden und erfolgreichen Erfahrungen heute. Durch die Reduzierung der Abstraktion können wir direkt mit der digitalen Welt interagieren, sodass wir so entwerfen können, dass die Benutzerfähigkeiten erweitert und verstärkt werden. Mit der Sprachtechnologie (durch Bots und digitale Assistenten wie Cortana) können Benutzer immer komplexere Konversationen und Szenarios durchführen, während die KI-Technologie (durch Tools wie Microsoft Cognitive Services) Unternehmen dazu führt, die Benutzer Interaktion zwischen Social Media und Supply Chain Management.
 
@@ -86,7 +86,7 @@ Diese Arten von Interaktionen basieren sowohl auf einer neuen Klasse von Entwurf
 
 Das vergangene Jahr der Entwickler Partnerschaften hat die Bereiche der Gelegenheit aufgezeigt, die mit Kunden in Einklang treten und erfolgreiche Unternehmenslösungen erstellen. Von Wissenschaftlern und Technikern bis hin zu Designern und Clients haben sich fünf Verkaufschancen ergeben, in denen Microsoft-Partner einen Wert mit gemischter Realität finden. Diese Bereiche bieten bereits einen großen Einblick in die zukünftigen Anforderungen von Plattformen wie Windows Mixed Reality und können Ihnen dabei helfen zu verstehen, wie sich diese neuen Erfahrungen auf die Art und Weise auswirken, in der wir lernen, zusammenarbeiten, kommunizieren und erstellen.
 
-### <a name="1-creation-and-design"></a>1. Erstellung und Entwurf
+### <a name="1-creation-and-design"></a>1. erstellen und entwerfen
 
 Eine der wichtigsten Möglichkeiten der gemischten Realität ist die Möglichkeit, 3D-Entwürfe in Echtzeit zu sehen und zu bearbeiten, und zwar in einer realen Umgebung mit echter Größe und Skalierung. Entwurfs-und prototyptools haben die Begrenzungen der Bildschirme mit Escapezeichen versehen und werden zu einem Entwurfs Bereich zurückgekehrt, der in der Regel für konkrete, physische Materialien wie z
 
@@ -155,7 +155,7 @@ Es ist schwierig zu sagen, wie die weitaus Zukunft gemischter Realität für Con
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60" padding-left="0px"><img alt="Picture of Mark Vitazko" width="60" height="60" src="images/mark-vitazko.jpg"></td>
-<td style="border-style: none"><b>Markieren von vitazko</b><br>UX-Designer@Microsoft</td>
+<td style="border-style: none"><b>Markieren von vitazko</b><br>UX-Designer-@Microsoft</td>
 </tr>
 </table>
  

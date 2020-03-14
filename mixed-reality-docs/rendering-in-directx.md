@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, Rendering, 3D-Grafiken, holographicframe, Renderschleife, Update Schleife, Exemplarische Vorgehensweise, Beispielcode, Direct3D
 ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940868"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375977"
 ---
 # <a name="rendering-in-directx"></a>Rendering in DirectX
 
@@ -593,7 +593,7 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
 }
 ```
 
-## <a name="present"></a>Darstellen
+## <a name="present"></a>Vorhanden
 
 ### <a name="enable-the-holographic-frame-to-present-the-swap-chain"></a>Aktivieren des Holographic Frame zum Darstellen der SwapChain
 
@@ -743,6 +743,6 @@ if (FAILED(hr))
     return hr;
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)
 * [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)

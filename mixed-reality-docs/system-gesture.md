@@ -7,17 +7,17 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: Gemischte Realität, Gesten, Interaktion, Entwurf
 ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182000"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375907"
 ---
 # <a name="system-gesture"></a>System Geste
 
 Die System Geste ist eine Handbewegung, mit der das Startmenü aufgerufen wird. Dies entspricht dem Drücken der Windows-Taste auf der Tastatur, der Xbox-Schaltfläche auf einem Xbox-Controller oder der Windows-Taste auf dem immersiven Headset-Bewegungs Controller. Es ist wichtig zu verstehen, welche Gesten für das System auf jedem gemischten Reality-Gerät reserviert sind, um Konflikte beim Entwerfen Ihrer Interaktionen zu vermeiden.
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
     <colgroup>
@@ -33,7 +33,7 @@ Die System Geste ist eine Handbewegung, mit der das Startmenü aufgerufen wird. 
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Blüte</td>
+        <td>Blütezeit</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ Die System Geste ist eine Handbewegung, mit der das Startmenü aufgerufen wird. 
     </tr>
 </table>
 
-## <a name="bloom"></a>Blüte
+## <a name="bloom"></a>Blütezeit
 Um das Startmenü in hololens (1. Generation) aufzurufen, haben wir "Bloom" entworfen, das eine symbolische Geste zum imitieren der Blüten Blüte ist. Es ist für die Interaktion mit untergeordneten Elementen, die einfache Durchführung und die schnelle Erinnerung. Um die Blüte Bewegung auf hololens (1. Generation) durchzuführen, halten Sie Ihre Hand an Ihre Hand, um Sie zu öffnen, und öffnen Sie dann die Hand, indem Sie Ihre Finger verteilen.
 
 :::row:::
@@ -113,7 +113,7 @@ Sie können die Start Geste auch nur mit einer Hand ausführen. Halten Sie zu di
 
 ---
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Anvisieren mit den Augen](eye-tracking.md)

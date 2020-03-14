@@ -7,11 +7,11 @@ ms.date: 10/31/2019
 ms.topic: article
 keywords: Gemischte Realität, Blick, Blick auf die Ausrichtung, Interaktion, Entwurf, Eye Tracking, Head Tracking
 ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441129"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375847"
 ---
 # <a name="gaze-and-commit"></a>Blick und Commit
 
@@ -33,7 +33,7 @@ Im folgenden finden Sie einige Beispiele für die Art und Weise, wie Sie als Ent
 <br>
 
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
     <colgroup>
@@ -132,7 +132,7 @@ Unabhängig davon, ob Sie den Kopf-oder Augenblick für das Eingabe Modell für 
 
 ---
 
-## <a name="commit"></a>Ausführen
+## <a name="commit"></a>Commit
 Nachdem Sie über verschiedene Möglichkeiten zum _betrachten_ eines Ziels gesprochen haben, sprechen wir etwas über den _Commit_ -Teil im _Blick und Commit_.
 Nachdem ein Objekt oder ein UI-Element als Ziel verwendet wurde, kann der Benutzer mit einer sekundären Eingabe interagieren oder darauf klicken. Dies wird als Commit-Schritt des Eingabe Modells bezeichnet. 
 
@@ -249,7 +249,7 @@ Verbinden Sie externe Geräte, wie z. b. Switches, Schaltflächen, bereit Stellu
 ### <a name="air-tap"></a>In die Luft tippen
 Die Tap-Bewegung (und die anderen Gesten unten) reagiert nur auf eine bestimmte Abzweigung. Um andere Abzweigungen zu erkennen, wie z. b. Menu oder grasp, muss Ihre Anwendung direkt die Interaktionen auf niedrigerer Ebene verwenden, die im obigen Abschnitt mit zwei wichtigen Komponenten Gesten beschrieben werden.
 
-### <a name="tap-and-hold"></a>Tippen und halten Sie
+### <a name="tap-and-hold"></a>Tippen und halten
 „Halten“ bedeutet einfach, die Position mit dem Finger nach unten beim „In die Luft tippen“ beizubehalten. Die Kombination aus Luft tippen und halten ermöglicht eine Vielzahl komplexer "klicken und ziehen"-Interaktionen, wenn Sie mit Arm-Bewegung kombiniert werden, wie z. b. das Auswählen eines Objekts, anstatt es zu aktivieren oder um sekundäre Interaktionen wie das zeigen eines Kontextmenüs zu aktivieren.
 Bei der Gestaltung dieser Geste sollte jedoch mit Bedacht vorgegangen werden, da die Benutzer dazu neigen können, ihre Handhaltungen im Laufe einer längeren Geste zu entspannen.
 
@@ -290,13 +290,13 @@ Sie sollten die folgenden drei Aspekte berücksichtigen:
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
-* [Eye-basierte Interaktion](eye-gaze-interaction.md)
-* [Augen Verfolgung auf hololens 2](eye-tracking.md)
+## <a name="see-also"></a>Siehe auch
+* [Augenbasierte Interaktion](eye-gaze-interaction.md)
+* [Blickverfolgung auf HoloLens 2](eye-tracking.md)
 * [Anvisieren und Verweilen](gaze-and-dwell.md)
-* [Bearbeitung von Hand direkt](direct-manipulation.md)
-* [Handgesten](gaze-and-commit.md#composite-gestures)
-* ["Hand Punkt" und "Commit"](point-and-commit.md)
+* [Hände – Direkte Manipulation](direct-manipulation.md)
+* [Hände – Gesten](gaze-and-commit.md#composite-gestures)
+* [Hände – Zeigen und Ausführen](point-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Spracheingabe](voice-input.md)
 

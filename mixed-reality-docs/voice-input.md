@@ -7,11 +7,11 @@ ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, Input
 ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723189"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375987"
 ---
 # <a name="voice-input"></a>Spracheingabe
 
@@ -32,7 +32,7 @@ Wenn Sprachbefehle verwendet werden, wird der Cursor (Head-oder Eye) in der Rege
 <iframe width="940" height="530" src="https://www.youtube.com/embed/eHMkOpNUtR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
     <colgroup>
@@ -84,7 +84,7 @@ Auch wenn Sie Ihrer APP keine Sprachunterstützung hinzufügen, können Ihre Ben
 ---
 
 
-## <a name="hey-cortana"></a>Hey Cortana
+## <a name="hey-cortana"></a>Hallo, Cortana
 
 Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müssen nicht warten, bis Sie angezeigt wird, um Ihre Frage zu stellen oder eine Anweisung zu geben, z. b. "Hey Cortana, was ist das Wetter?". als einzelner Satz. Weitere Informationen zu Cortana und den Möglichkeiten, die Sie tun können, finden Sie einfach! Sagen Sie: "Hey Cortana, was kann ich sagen?" und Sie werden eine Liste der funktionierenden und vorgeschlagenen Befehle abrufen. Wenn Sie sich bereits in der Cortana-App befinden, können Sie auch auf die **?** Symbol auf der Rand Leiste, um das gleiche Menü zu ziehen.
 
@@ -121,7 +121,7 @@ Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müs
         *Image: ein Benutzer kann den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP anzupassen.*
     :::column-end:::
         :::column:::
-        ![space](images/spacer-20x582.png)<br>
+        ![Speicher](images/spacer-20x582.png)<br>
         ![bei der Betrachtung eines App-Fensters oder eines holograms kann ein Benutzer den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP auf der Welt anzupassen](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -183,7 +183,7 @@ Jedes Mal, wenn die holografische Tastatur aktiv ist, können Sie in den Diktat 
 
 Erwägen Sie, Sprachbefehle zu jeder von Ihnen erstellten Umgebung hinzuzufügen. Die Spracheingabe ist eine leistungsstarke und komfortable Möglichkeit zur Steuerung von System und Apps. Da Benutzer mit einer Vielzahl von Dialekten und Akzenten sprechen, stellt die richtige Auswahl der Schlüsselwörter für die Spracherkennung sicher, dass die Befehle Ihrer Benutzer eindeutig interpretiert werden.
 
-### <a name="best-practices"></a>Bewährte Verfahren
+### <a name="best-practices"></a>Empfohlene Methoden
 
 Nachfolgend finden Sie einige Methoden aufgeführt, die eine reibungslose Spracherkennung ermöglichen.
 * **Präzise Befehle verwenden**: Wählen Sie nach Möglichkeit Schlüsselwörter mit zwei oder mehr Silben aus. Einsilbige Wörter neigen dazu, unterschiedliche Vokallaute zu verwenden, wenn sie von Personen mit unterschiedlichen Akzenten gesprochen werden. Beispiel: "Video abspielen" ist besser als "das aktuell ausgewählte Video abspielen"
@@ -286,7 +286,7 @@ Die gesamte Audioverarbeitung ist Hardware beschleunigt. Dies bedeutet, dass die
 
 Hololens 2 unterstützt auch weitere Sprachen. Beachten Sie, dass Sprachbefehle immer in der Anzeige Sprache des Systems ausgeführt werden, auch wenn mehrere Tastaturen installiert sind oder wenn apps versuchen, eine Spracherkennung in einer anderen Sprache zu erstellen.
 
-## <a name="troubleshooting"></a>Fehlerbehebung
+## <a name="troubleshooting"></a>Problembehandlung
 
 Wenn Sie Probleme bei der Verwendung von "Select" und "Hey Cortana" haben, versuchen Sie, zu einem ruhigeren Bereich zu wechseln, die Ursache für Rauschen zu machen oder lauter zu sprechen. Zu diesem Zeitpunkt wird die Spracherkennung in hololens speziell für systemeigene Sprecher von USA Englisch optimiert und optimiert.
 
@@ -304,7 +304,7 @@ Mit **[mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können S
 
 ---
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Anvisieren und Ausführen](gaze-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Mr-Eingabe 212: Stimme](holograms-212.md)

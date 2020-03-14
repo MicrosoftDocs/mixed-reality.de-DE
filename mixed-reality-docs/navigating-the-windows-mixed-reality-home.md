@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, Betriebssystem, Plattform, Klippe, Haus, Home, Umgebung, Start, Startmenü, Startmenü, Pins, APP, Apps starten, Apps platzieren, teleportieren, verschieben, navigieren
 ms.openlocfilehash: 9de4cb44505d6cf4d0d3e4bd0fd9c5ee681063a5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438159"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375897"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Navigieren in der Windows Mixed Reality-Startseite
 
@@ -97,8 +97,8 @@ Navigations Befehle in Kürze verfügbar.
   * Tippen Sie auf den Finger Stick Links, rechts oder zurück, um in kleinen Schritten nach links, rechts oder zurück zu wechseln.
   * Klicken Sie auf der linken Seite auf nach unten, und halten Sie den Finger Stick in der Richtung, die Sie [virtuell durchlaufen möchten.](navigating-the-windows-mixed-reality-home.md#getting-around-your-home)
 * Tippen Sie auf den **rechten Finger Stick** Links oder rechts, um die Richtung um 45 Grad zu drehen.
-* Wenn Sie auf die Schaltfläche **A** klicken, wird eine Auswahl durchgeführt und das Verhalten der [Tippbewegung in die Luft](gaze-and-commit.md#composite-gestures) gespiegelt.
-* Durch Drücken der Schaltfläche **Guide** (Leitfaden) wird das [Startmenü](navigating-the-windows-mixed-reality-home.md#start-menu) geöffnet und das Verhalten der [Öffnengeste](system-gesture.md#bloom) gespiegelt.
+* Wenn Sie auf die Schaltfläche " **a** " klicken, [air tap](gaze-and-commit.md#composite-gestures) wird eine Auswahl durchführt
+* Wenn Sie die Schaltfläche " **Guide** " drücken, [wird das](system-gesture.md#bloom) [Startmenü](navigating-the-windows-mixed-reality-home.md#start-menu) geöffnet.
 * Wenn Sie den **linken und den rechten Trigger** drücken, können Sie eine 2D-Desktop-App, mit der Sie interagieren, in der Startseite vergrößern und verkleinern.
 
 ### <a name="keyboard-and-mouse"></a>Tastatur und Maus
@@ -134,7 +134,7 @@ Windows Mixed Reality verfügt über eine Reihe integrierter apps, wie z. b.:
 * **Desktop** (immersive Headsets) zum Anzeigen Ihres Desktop Monitors in einem immersiven Headset
 * **Datei-Explorer** Zugreifen auf Dateien und Ordner, die sich auf Ihrem Gerät befinden
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [App-Ansichten](app-views.md)
 * [Motion-Controller](motion-controllers.md)
 * [Hardware-Zubehör](hardware-accessories.md)

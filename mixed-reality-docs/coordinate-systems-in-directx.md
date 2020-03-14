@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Gemischte Realität, räumlicher Locator, räumlicher Referenzrahmen, räumliches Koordinatensystem, räumliche Phase, Beispielcode, Bildstabilisierung, räumlicher Anker, räumlicher Anker Speicher, nach Verfolgungs Verlust, Exemplarische Vorgehensweise
 ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436222"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375617"
 ---
 # <a name="coordinate-systems-in-directx"></a>Koordinatensysteme in DirectX
 
@@ -574,7 +574,7 @@ Zum Rendern können Sie häufig bessere Ergebnisse erzielen, indem Sie Objekte e
 
 ## <a name="create-holograms-using-a-device-attached-frame-of-reference"></a>Erstellen von holograms mithilfe eines vom Gerät angefügten Referenzrahmens
 
-Es kann vorkommen, dass Sie ein – Hologramm Rendering, das weiterhin an den Speicherort des Geräts [angefügt](coordinate-systems.md#attached-frame-of-reference) ist, z. b. einen Bereich mit Debuginformationen oder eine Informations Meldung, wenn das Gerät nur seine Ausrichtung ermitteln kann, und nicht seine Position in BRaum. Hierfür wird ein angefügter Verweis Rahmen verwendet.
+Es gibt Zeiten, in denen ein – Hologramm geresgt werden soll, das an den Speicherort des Geräts [angehängt bleibt](coordinate-systems.md#attached-frame-of-reference) , z. b. ein Panel mit Debuginformationen oder eine Informations Meldung, wenn das Gerät nur seine Ausrichtung und nicht seine Position im Raum ermitteln kann. Hierfür wird ein angefügter Verweis Rahmen verwendet.
 
 Die spatizuweisung-Klasse "spatichedframeofreferenzierungssysteme" definiert Koordinatensysteme, die relativ zum Gerät und nicht in der realen Welt sind. Dieser Frame verfügt über eine festgelegte Überschrift in Bezug auf die Benutzerumgebung, die in der Richtung angezeigt wird, die der Benutzer beim Erstellen des Verweis Rahmens aufzeigte. Danach sind alle Ausrichtungen in diesem Verweis Verweis relativ zu dieser festgelegten Überschrift, auch wenn der Benutzer das Gerät dreht.
 
@@ -790,11 +790,11 @@ Aus **appmain. cpp:**
    }
 ```
 
-## <a name="spatial-mapping"></a>Räumliche Zuordnung
+## <a name="spatial-mapping"></a>Räumliche Abbildung
 
 Die APIs für die [räumliche Zuordnung](spatial-mapping-in-directx.md) verwenden Koordinatensysteme, um Modell Transformationen für Oberflächen Netze zu erhalten.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Koordinatensysteme](coordinate-systems.md)
 * [Raumanker](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

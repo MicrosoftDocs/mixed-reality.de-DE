@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Hololens, synchronisieren, räumlicher Anker, Übertragung, Multiplayer, Ansicht, Szenario, Exemplarische Vorgehensweise, Beispielcode, Übertragung, lokale Anker Übertragung, Anker Export, Anker Import
 ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437958"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376027"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Lokale Anker Übertragungen in DirectX
 
@@ -284,7 +284,7 @@ Das BLOB enthält eine Darstellung der Umgebung in der Nähe des spatialanchors,
 
 ### <a name="export-of-multiple-spatialanchors"></a>Exportieren von mehreren spatialanchor-
 
-Wie beim Export eines einzelnen spatialanchor enthält das BLOB eine Darstellung der Umgebung in der Nähe aller angegebenen spatialanchor. Außerdem enthält das BLOB Informationen zu den Verbindungen zwischen den enthaltenen spatialanchor-Daten, wenn Sie sich im gleichen physischen Raum befinden. Dies bedeutet, dass, wenn zwei in der Nähe gelegene räumliche Anker importiert werden, ein – Hologramm, das an den *zweiten* spatialanchor angefügt ist, auch dann einstellbar ist, wenn das Gerät nur die Umgebung um den *ersten* spatialanchor erkennt, weil genügend Daten für Die COMPUTE-Transformation zwischen den beiden spatialanchor-Einheiten war im BLOB enthalten. Wenn die beiden spatialanchor einzeln exportiert wurden (zwei separate Aufrufe von tryexportspatialanchor), sind möglicherweise nicht genügend Daten im BLOB für holograms enthalten, die an den zweiten spatialanchor angefügt sind, damit Sie bei der ersten gefunden werden können.
+Wie beim Export eines einzelnen spatialanchor enthält das BLOB eine Darstellung der Umgebung in der Nähe aller angegebenen spatialanchor. Außerdem enthält das BLOB Informationen zu den Verbindungen zwischen den enthaltenen spatialanchor-Daten, wenn Sie sich im gleichen physischen Raum befinden. Dies bedeutet, dass, wenn zwei in der Nähe gelegene räumliche Anker importiert werden, ein – Hologramm, das an den *zweiten* spatialanchor angefügt ist, auch dann einstellbar ist, wenn das Gerät nur die Umgebung um den *ersten* spatialanchor erkennt, weil genügend Daten zur Berechnung der Transformation zwischen den beiden spatialanchor-Werten im BLOB enthalten waren. Wenn die beiden spatialanchor einzeln exportiert wurden (zwei separate Aufrufe von tryexportspatialanchor), sind möglicherweise nicht genügend Daten im BLOB für holograms enthalten, die an den zweiten spatialanchor angefügt sind, damit Sie bei der ersten gefunden werden können.
 
 ![Mehrere Anker werden mithilfe eines einzelnen tryexportanchorsasync-Aufrufes exportiert.](images/multipleanchors.png) ![Mehrere Anker, die mithilfe eines separaten tryexportanchorsasync-Aufrufes für jeden Anker exportiert wurden.](images/separateanchors.png)
 
@@ -674,7 +674,7 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 
 Das war's. Nun sollten Sie über genügend Informationen verfügen, um zu versuchen, die Anker zu suchen, die über das Netzwerk empfangen werden. Beachten Sie, dass der Client über ausreichend visuelle Überwachungsdaten verfügen muss, damit der-Platz gefunden werden kann. Wenn es nicht sofort funktioniert, versuchen Sie es für eine Weile. Wenn dies immer noch nicht funktioniert, lassen Sie den Server weitere Anker senden, und verwenden Sie die Netzwerkkommunikation, um eine Zustimmung für den Client zu erhalten. Sie können dies ausprobieren, indem Sie das holographicspatialanchortransfersample herunterladen, die Client-und Server-IPS konfigurieren und Sie auf Client-und Server-hololens-Geräten bereitstellen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Parallel Patterns Library (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. Networking. Streamsocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. Networking. streamsocketlistener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

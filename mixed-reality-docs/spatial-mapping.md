@@ -1,5 +1,5 @@
 ---
-title: Räumliche Zuordnung
+title: Räumliche Abbildung
 description: Die räumliche Zuordnung bietet eine ausführliche Darstellung realer Oberflächen in der Umgebung um die hololens.
 author: mattzmsft
 ms.author: mazeller
@@ -7,13 +7,13 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: räumliche Zuordnung, hololens, gemischte Realität, Oberflächenrekonstruktion, Mesh
 ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926737"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375827"
 ---
-# <a name="spatial-mapping"></a>Räumliche Zuordnung
+# <a name="spatial-mapping"></a>Räumliche Abbildung
 
 Die räumliche Zuordnung bietet eine detaillierte Darstellung der realen Oberflächen in der Umgebung in Bezug auf die hololens, sodass Entwickler eine überzeugende gemischte Realität schaffen können. Durch die Zusammenführung der realen Welt mit der virtuellen Welt kann eine Anwendung dazu führen, dass Hologramme in der Praxis erscheinen. Anwendungen können auch mit den Erwartungen von Benutzern vertraut werden, indem Sie vertraute reale Verhaltensweisen und Interaktionen bereitstellen.
 
@@ -21,7 +21,7 @@ Die räumliche Zuordnung bietet eine detaillierte Darstellung der realen Oberfl�
 
 >[!VIDEO https://www.youtube.com/embed/zff2aQ1RaVo]
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
     <colgroup>
@@ -37,7 +37,7 @@ Die räumliche Zuordnung bietet eine detaillierte Darstellung der realen Oberfl�
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Räumliche Zuordnung</td>
+        <td>Räumliche Abbildung</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>❌</td>
@@ -245,7 +245,7 @@ Damit eine-Physik-API (z. b. [Havok](https://www.havok.com/)) eine Anwendung mit
 
 Beachten Sie bei der Durchführung von Raycasts gegen räumliche Oberflächen, dass diese Oberflächen oft komplex sind und über große Formen mit wenig Details verfügen, ebenso wie Ihr Schreibtisch! Dies bedeutet, dass ein einzelner raycast oft unzureichend genug ist, um Ihnen genügend Informationen über die Form der Oberfläche und die Form des leeren Leerraums in der Nähe zu übergeben. Daher empfiehlt es sich in der Regel, viele Raycasts in einem kleinen Bereich auszuführen und die Aggregat Ergebnisse zu verwenden, um ein zuverlässigeres Verständnis der Oberfläche zu erhalten. Wenn Sie z. b. den Mittelwert von 10 Raycasts zum Steuern der – Hologramm-Platzierung auf einer Oberfläche verwenden, ergibt sich ein weitaus reibungsloseres Ergebnis, bei dem nur ein einziges raycast verwendet wird.
 
-Bedenken Sie jedoch, dass jeder raycast hohe Rechen Kosten aufweisen kann. Abhängig von Ihrem Verwendungs Szenario sollten Sie daher die berechnungskosten zusätzlicher Raycasts (durch die jeder Frame ausgeführt wird) gegen die berechnungskosten der [Mesh-Verarbeitung](spatial-mapping.md#mesh-processing) abwägen, um Löcher in räumlichen Oberflächen zu glätten und zu entfernen (bei räumlichem Netzen werden aktualisiert.)
+Bedenken Sie jedoch, dass jeder raycast hohe Rechen Kosten aufweisen kann. Abhängig von Ihrem Verwendungs Szenario sollten Sie daher die berechnungskosten zusätzlicher Raycasts (durchlaufen in jedem Frame) gegen die berechnungskosten der [Mesh-Verarbeitung](spatial-mapping.md#mesh-processing) abwägen und Lücken in räumlichen Oberflächen entfernen (bei der Aktualisierung räumlicher Netze).
 
 ## <a name="the-environment-scanning-experience"></a>Umgebung zum Scannen der Umgebung
 
@@ -365,11 +365,11 @@ Im folgenden finden Sie einige Beispiele für verschiedene Arten der Mesh-Verarb
 * Auch wenn synthetische oder aufgezeichnete Daten für das Debuggen hilfreich sein können, werden Sie nicht auf die gleichen wenige Testfälle angewiesen. Dadurch werden möglicherweise wichtige Probleme ermittelt, die zuvor durch mehr unterschiedliche Tests abgefangen wurden.
 * Es empfiehlt sich, Tests mit echten (und im Idealfall nicht gespoinierten) Benutzern durchzuführen, da Sie die hololens oder Ihre Anwendung möglicherweise nicht exakt auf die gleiche Weise wie Sie verwenden. Dies kann Ihnen vielleicht überraschen, wie sich das Verhalten, das Wissen und die Annahmen der unterschiedlichen Benutzer Verhalten.
 
-## <a name="troubleshooting"></a>Fehlerbehebung
+## <a name="troubleshooting"></a>Problembehandlung
 * Damit die Oberflächen Netzen ordnungsgemäß ausgerichtet werden, muss jedes gameobject aktiv sein, bevor es an den surfaceobserver gesendet wird, damit das Mesh erstellt werden kann. Andernfalls werden die Netze in Ihrem Raum angezeigt, aber in seltsamen Winkeln gedreht.
 * Das gameobject, das das Skript ausführt, das mit dem surfaceobserver kommuniziert, muss auf den Ursprung festgelegt werden. Andernfalls verfügen alle von Ihnen erstellten und an den surfaceobserver gesendeten gameobjects-Objekte, deren Netzen erstellt werden, über einen Offset, der gleich dem Offset des übergeordneten Spiel Objekts ist. Dies kann dazu führen, dass ihre Netze mehrere Meter entfernt werden, sodass es sehr schwierig ist, das zu debuggen, was passiert.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Koordinatensysteme](coordinate-systems.md)
 * [Räumliche Abbildung in DirectX](spatial-mapping-in-directx.md)
 * [Räumliche Abbildung in Unity](spatial-mapping-in-unity.md)

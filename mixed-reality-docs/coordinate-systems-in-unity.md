@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Koordinatensystem, geografischer Koordinatensystem, nur Ausrichtung, sitzender Skalierung, aneinandergreifende Skala, Raum Skala, Welt weite, 360 Grad, sitzend, stehend, Raum, Welt, Skala, Position, Ausrichtung, Unity, Anker, räumlicher Anker, Welt Anker, weltweit gesperrt, Welt Sperre, gesperrter Text, Body-Lock, nach Verfolgungs Verlust, loerbarkeit, Grenzen, wiedergeben
 ms.openlocfilehash: 36d74488b23587e5c89b40faf97921a10be7473b
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525962"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375767"
 ---
 # <a name="coordinate-systems-in-unity"></a>Koordinatensysteme in Unity
 
@@ -21,8 +21,8 @@ Der erste Schritt beim Aufbau einer gemischten Realität in Unity besteht darin,
 
 ## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Aufbauen einer reinen Orientierung oder einer Skalierungs Funktion
 
-**Namespace:** *Unityengine. XR*<br>
-**Sorte** *Xrdevice*
+**Namespace:** *unityengine. XR*<br>
+**Typ:** *xrdevice*
 
 Sie müssen Unity auf den Typ "stationärer nach verfolgungsbereich" festlegen, um eine **Orientierung** oder eine **Skalierung**zu erstellen. Dadurch wird das World-Koordinatensystem von Unity festgelegt, um den [stationären Frame des Verweises](coordinate-systems.md#spatial-coordinate-systems)zu verfolgen. Im Modus der stationären Nachverfolgung wird der Inhalt, der direkt vor dem Standard Speicherort der Kamera (vorwärts ist-Z) im Editor eingefügt wird, vor dem Benutzer angezeigt, wenn die APP gestartet wird.
 
@@ -30,8 +30,8 @@ Sie müssen Unity auf den Typ "stationärer nach verfolgungsbereich" festlegen, 
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 ```
 
-**Namespace:** *Unityengine. XR*<br>
-**Sorte** *Inputtracking*
+**Namespace:** *unityengine. XR*<br>
+**Typ:** *inputtracking*
 
 Bei einer reinen **Orientierung** , z. b. bei einem Video Viewer mit einem 360-Grad (bei dem Positions Aktualisierungen die Illusion zerstören würden), können Sie "XR" festlegen [. Inputtracking. disablepositionaltracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking-disablePositionalTracking.html) auf true:
 
@@ -47,8 +47,8 @@ InputTracking.Recenter();
 
 ## <a name="building-a-standing-scale-or-room-scale-experience"></a>Aufbauen einer Dauer-oder Raum Skalierung
 
-**Namespace:** *Unityengine. XR*<br>
-**Sorte** *Xrdevice*
+**Namespace:** *unityengine. XR*<br>
+**Typ:** *xrdevice*
 
 Für eine **Dauer-** oder **Raum Skalierung**müssen Sie Inhalte in Relation zum Boden platzieren. Sie haben eine Begründung für den Benutzer, der die **[räumliche Phase](coordinate-systems.md#spatial-coordinate-systems)** verwendet, die den definierten Ursprung und die optionale Raumgrenze des Benutzers darstellt, die während der ersten Durchführung eingerichtet wird.
 
@@ -64,13 +64,13 @@ else
     // RoomScale mode was not set successfully.  App cannot make assumptions about where the floor plane is.
 }
 ```
-* Wenn settrackingspacetype true zurückgibt, hat Unity das World-Koordinatensystem erfolgreich umgestellt, um den stagingframe [des Verweises](coordinate-systems.md#spatial-coordinate-systems)nachzuverfolgen.
+* Wenn settrackingspacetype true zurückgibt, hat Unity das World-Koordinatensystem erfolgreich umgestellt, um den [stagingframe des Verweises](coordinate-systems.md#spatial-coordinate-systems)nachzuverfolgen.
 * Wenn settrackingspacetype false zurückgibt, konnte Unity nicht in den stagingframe des Verweises wechseln. Dies liegt wahrscheinlich daran, dass der Benutzer noch keine Etage in der Umgebung eingerichtet hat. Dies ist nicht üblich, kann jedoch vorkommen, wenn die Stufe in einem anderen Raum eingerichtet wurde und das Gerät in den aktuellen Raum verschoben wurde, ohne dass der Benutzer eine neue Stufe einrichten muss.
 
 Nachdem Ihre APP den Typ für die Nachverfolgung von roomscale festgelegt hat, wird der Inhalt auf der Ebene "y = 0" auf der Etage angezeigt. Der Ursprung bei (0,0) ist die spezifische Stelle auf dem Boden, an der der Benutzer während des Raum Setups Stand, wobei-Z die Vorwärtsrichtung darstellt, die während des Setups aufgetreten ist.
 
-**Namespace:** *Unityengine. experimental. XR*<br>
-**Sorte** *Begrenzungs*
+**Namespace:** *unityengine. experimental. XR*<br>
+**Typ:** *Grenze*
 
 In Skriptcode können Sie dann die trygetgeometry-Methode aufrufen, indem Sie den Typ "unityengine. experimental. XR. Boundary" verwenden, um ein Begrenzungs Polygon abzurufen und dabei den Grenztyp "trackedarea" anzugeben. Wenn der Benutzer eine Grenze definiert hat (Sie erhalten eine Liste mit Scheitel Punkten), ist es sicher, dass er für den Benutzer eine **Raum** Umgebung bereitstellt, in der er die von Ihnen erstellte Szene durchlaufen kann.
 
@@ -86,8 +86,8 @@ if (UnityEngine.Experimental.XR.Boundary.TryGetGeometry(vertices, Boundary.Type.
 
 ## <a name="building-a-world-scale-experience"></a>Entwickeln eines weltweiten Erlebnisses
 
-**Namespace:** *Unityengine. XR. WSA*<br>
-**Sorte** *Worldanchor*
+**Namespace:** *unityengine. XR. WSA*<br>
+**Typ:** *worldanchor*
 
 Für echte **Welt weite** Oberflächen in hololens, mit denen Benutzer mehr als 5 Meter bewegen können, benötigen Sie neue Techniken, die über diejenigen hinausgehen, die für Raum Skalierungen verwendet werden. Ein wichtiges Verfahren, das Sie verwenden, besteht darin, einen [räumlichen Anker](coordinate-systems.md#spatial-anchors) zu erstellen, mit dem ein Cluster von holograms genau in der physischen Welt gesperrt wird, unabhängig davon, wie weit der Benutzer gewechselt hat, und [diese Hologramme in späteren Sitzungen erneut finden](coordinate-systems.md#spatial-anchor-persistence).
 
@@ -101,7 +101,7 @@ Um einen Welt Anker hinzuzufügen, nennen Sie addComponent<WorldAnchor>() für d
 WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
 ```
 
-Das ist alles! Dieses Spielobjekt wird nun an seinem aktuellen Speicherort in der physischen Welt verankert. möglicherweise werden die Unity-Weltkoordinaten im Laufe der Zeit leicht angepasst, um die physische Ausrichtung sicherzustellen. Verwenden Sie [Persistenz](persistence-in-unity.md) , um diesen verankerten Standort in einer zukünftigen App-Sitzung wieder zu suchen.
+Das war's. Dieses Spielobjekt wird nun an seinem aktuellen Speicherort in der physischen Welt verankert. möglicherweise werden die Unity-Weltkoordinaten im Laufe der Zeit leicht angepasst, um die physische Ausrichtung sicherzustellen. Verwenden Sie [Persistenz](persistence-in-unity.md) , um diesen verankerten Standort in einer zukünftigen App-Sitzung wieder zu suchen.
 
 ### <a name="removing-a-world-anchor"></a>Entfernen eines Welt Ankers
 
@@ -168,7 +168,7 @@ Um mit der Einführung von freigegebenen Erfahrungen in Unity zu beginnen, teste
 
 Sobald Sie mit räumlichen Azure-Ankern arbeiten, können Sie <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">Anker in Unity erstellen und lokalisieren</a>.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Skalierungsmöglichkeiten](coordinate-systems.md#mixed-reality-experience-scales)
 * [Räumliche Phase](coordinate-systems.md#stage-frame-of-reference)
 * [Verfolgbarkeitsverlust in Unity](tracking-loss-in-unity.md)

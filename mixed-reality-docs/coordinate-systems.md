@@ -7,21 +7,21 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Koordinatensystem, geografischer Koordinatensystem, nur Ausrichtung, sitzender Skalierung, aneinandergreifende Skala, Raum Skala, Welt weite, 360 Grad, sitzend, stehend, Raum, Welt, Skala, Position, Ausrichtung, stationär, angefügt, Phase, Anker, räumlicher Anker, weltweit gesperrt, Welt sperren, Text gesperrt, Body-Lock, Begrenzungen, Persistenz, Freigabe, nach Verfolgungs Verlust, räumliche cloudanker
 ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436142"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375637"
 ---
 # <a name="coordinate-systems"></a>Koordinatensysteme
 
-Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, die wie echte Objekte Aussehen und klingen. Dies umfasst die genaue Positionierung und Orientierung dieser Hologramme an Orten in der Welt, die für den Benutzer von Bedeutung sind, unabhängig davon, ob es sich um den physischen Raum oder einen virtuellen Bereich handelt, den Sie erstellt haben. Wenn Sie sich über die Position und Ausrichtung ihrer Hologramme oder eine beliebige andere Geometrie, wie z. b. den [Blick](gaze-and-commit.md) Strahl oder die [Handpositionen](hands-and-tools.md), in Bezug auf die Position und Ausrichtung der Argumente anwenden, bietet Windows verschiedene reale Koordinatensysteme an  **räumliche Koordinatensysteme**.
+Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, die wie echte Objekte Aussehen und klingen. Dies umfasst die genaue Positionierung und Orientierung dieser Hologramme an Orten in der Welt, die für den Benutzer von Bedeutung sind, unabhängig davon, ob es sich um den physischen Raum oder einen virtuellen Bereich handelt, den Sie erstellt haben. Wenn Sie sich über die Position und Ausrichtung ihrer Hologramme oder eine beliebige andere Geometrie, wie z. b. den [Blick](gaze-and-commit.md) Winkel oder die [Handpositionen](hands-and-tools.md), in Bezug auf die Position und Ausrichtung der **Daten**befinden, stellt Windows verschiedene reale Koordinatensysteme bereit, in denen diese Geometrie ausgedrückt werden kann.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
     <colgroup>
@@ -79,7 +79,7 @@ Im Kern platzieren Mixed Reality-apps [holograms](hologram.md) in ihrer Welt, di
 Mixed Reality-Apps können eine Vielzahl von Benutzeroberflächen entwerfen, von 360-Fach-Video Viewern, die nur die Ausrichtung des Headsets benötigen, bis hin zu vollständig skalierbaren apps und spielen, für die räumliche und räumliche Anker erforderlich sind:
 <br>
 
-| Erfahrungs Skala | Anforderungen | Beispiel Darstellung | 
+| Erfahrungs Skala | Voraussetzungen | Beispiel Darstellung | 
 |----------|----------|----------|
 |  **Nur Ausrichtung** |  **Headset-Ausrichtung** (schwer bündig ausgerichtet) |  360 °-Video-Viewer | 
 |  **Sitzender Maßstab** |  Oberhalb von plus Punkt **Position** relativ zur Nullposition |  Renn Spiel-oder Leerzeichen Simulator | 
@@ -227,7 +227,7 @@ Wenn Sie in einer Umgebung, in der viele Änderungen durchgeführt wurden (z. b.
 
 Manchmal kann ein Zuhause oder ein anderer Bereich zwei identische Bereiche haben. Beispielsweise zwei identische Konferenzräume, zwei identische Eckbereiche, zwei große identische Poster, die das Ansichts Feld des Geräts abdecken. In solchen Szenarien kann das Gerät manchmal zwischen identischen Teilen verwechselt und in der internen Darstellung als identisch markiert werden. Dies kann dazu führen, dass die holograms aus einigen Bereichen an anderen Speicherorten angezeigt werden. Das Gerät verliert möglicherweise die Nachverfolgung, da die interne Darstellung der Umgebung beschädigt ist. In diesem Fall wird empfohlen, das Umweltverständnis des Systems zurückzusetzen. Beachten Sie, dass das Zurücksetzen der Zuordnung zum Verlust aller räumlichen Anker Platzierungen führt. Dies führt dazu, dass das Headset in den eindeutigen Bereichen der Umgebung gut nachverfolgt wird. Das Problem kann jedoch erneut auftreten, wenn das Gerät erneut zwischen den identischen Bereichen verwechselt wird.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [GDC 2017-Präsentation zu räumlichen Koordinatensystemen und Holographic-Rendering](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Koordinatensysteme in Unity](coordinate-systems-in-unity.md)
 * [Koordinatensysteme in DirectX](coordinate-systems-in-directx.md)

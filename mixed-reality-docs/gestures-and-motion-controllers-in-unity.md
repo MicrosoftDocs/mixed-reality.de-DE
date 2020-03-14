@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Gesten, Bewegungs Controller, Unity, Blick, Eingabe
 ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926564"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375647"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gesten und Bewegungs Controller in Unity
 
@@ -31,7 +31,7 @@ Die Zuordnungen von Schaltflächen/Achsen-IDs für Windows Mixed Reality untersc
 
 <table>
 <tr>
-<th rowspan="2">Input </th><th colspan="2"><a href="gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">Allgemeine Unity-APIs</a><br />(Input. getbutton/getaxis) </th><th rowspan="2"><a href="gestures-and-motion-controllers-in-unity.md#">Windows-spezifische Eingabe-API</a><br />XR. WSA. Der</th>
+<th rowspan="2">Eingabe </th><th colspan="2"><a href="gestures-and-motion-controllers-in-unity.md#common-unity-apis-inputgetbuttongetaxis">Allgemeine Unity-APIs</a><br />(Input. getbutton/getaxis) </th><th rowspan="2"><a href="gestures-and-motion-controllers-in-unity.md#">Windows-spezifische Eingabe-API</a><br />XR. WSA. Der</th>
 </tr><tr>
 <th> Links </th><th> Rechte Seite</th>
 </tr><tr>
@@ -59,7 +59,7 @@ Die Zuordnungen von Schaltflächen/Achsen-IDs für Windows Mixed Reality untersc
 </tr><tr>
 <td> Touchpad gedrückt </td><td> Schaltfläche 16 * </td><td> Schaltfläche 17 * </td><td> touchpadpressed</td>
 </tr><tr>
-<td> 6DOF-Zieh Punkt Pose oder Zeiger Pose </td><td colspan="2"> <i></i> Nur Ziehpunkt: <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. Inputtracking. getlocalposition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. Input Tracking. getlocalrotation</a></td><td> Pass <i>-</i> oder <i>Zeiger</i> als Argument: SourceState. sourcepose. trygetposition<br />SourceState. sourcepose. trygetrotation<br /></td>
+<td> 6DOF-Zieh Punkt Pose oder Zeiger Pose </td><td colspan="2"> <i>Grip</i> Nur Ziehpunkt: <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. Inputtracking. getlocalposition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. Input Tracking. getlocalrotation</a></td><td> Pass <i>-</i> oder <i>Zeiger</i> als Argument: SourceState. sourcepose. trygetposition<br />SourceState. sourcepose. trygetrotation<br /></td>
 </tr><tr>
 <td> Nach verfolgungsstatus </td><td colspan="2"> Die <i>Positionsgenauigkeit und das Risiko von Quell Verlusten sind nur über eine bestimmte API verfügbar</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">SourceState. sourcepose. positionaccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">SourceState. Properties. sourcelossrisk</a></td>
 </tr>
@@ -525,7 +525,7 @@ Schritt-für-Schritt-Tutorials mit ausführlicheren Anpassungs Beispielen sind i
 [![Mr-Eingabe 213-Motion Controller](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Mr-Eingabe 213-Motion Controller*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Anvisieren mit dem Kopf und Ausführen](gaze-and-commit.md)
 * [Motion-Controller](motion-controllers.md)

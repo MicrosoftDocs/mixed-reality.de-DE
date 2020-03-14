@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, Modellierung, Modellierungs Anleitung, Asset-Anforderungen, Erstellungs Richtlinien, Start Programm, 3D-Start Programm, Textur, Material, Komplexität, Dreiecke, Mesh, Polygone, Polycount, Limits
 ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926578"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375627"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Erstellen von 3D-Modellen für die Verwendung in der Startseite
 
@@ -60,7 +60,7 @@ Die Windows Mixed Reality-Startseite bietet keine Unterstützung für Modelle mi
 ### <a name="node-counts-and-submesh-limits"></a>Knoten Zähler und submesh-Limits
 Die Windows Mixed Reality-Startseite unterstützt keine Modelle mit mehr als 64 Knoten oder 32 Subnetzen pro Lod. Knoten sind ein Konzept in der [gltf-Spezifikation](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) , die die Objekte in der Szene definieren. Subnetze werden im Array von [primitiven](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) im-Objekt definiert. 
 
-|  Feature |  Beschreibung  |  Maximal unterstützt | Unterlagen |
+|  Feature |  Beschreibung  |  Maximal unterstützt | Dokumentation |
 |------|------|------|------|
 |  Knoten |  Objekte in der gltf-Szene |  64 pro Lod | [Anwesend](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy)|
 |  Subnetze |  Summe von primitiven für alle Netzen |  32 pro Lod | [Anwesend](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes)|
@@ -232,13 +232,13 @@ Die folgenden Animations Trigger-Semantik wird von der Windows Mixed Reality-Sta
 ### <a name="saving-and-exporting"></a>Speichern und exportieren
 Nachdem Sie die Änderungen an Ihrem gltf-Modell vorgenommen haben, können Sie es direkt als gltf speichern, oder Sie können mit der rechten Maustaste auf den Namen der Datei im Editor klicken und "gltf: Export to GLB (Binary File)" auswählen, um stattdessen eine. GLB-Datei zu exportieren. 
 
-### <a name="restrictions"></a>Einschränkungen
+### <a name="restrictions"></a>Beschränkungen
 Animationen dürfen nicht länger als 20 Minuten sein und dürfen nicht mehr als 36.000 Keyframes (20 Minuten bei 30 fps) enthalten. Außerdem werden bei Verwendung von Morph-Ziel basierten Animationen nicht mehr als 8192 Morph-Ziel Vertices oder weniger überschritten. Wenn diese Anzahl überschritten wird, wird das animierte Asset in der Windows Mixed Reality-Startseite nicht unterstützt. 
 
-|Feature|Maximal|
+|Feature|Maximum|
 |-----|-----|
-|Duration|20 Minuten|
-|Keyframes|36.000| 
+|Dauer|20 Minuten|
+|Keyframes|36,000| 
 |Ziel Vertices für Morph|8\.192|
 
 ## <a name="gltf-implementation-notes"></a>Hinweise zur gltf-Implementierung
@@ -277,7 +277,7 @@ Nur ein einzelnes UV-Vertex-Attribut wird unterstützt.
 * [Hololens Mixed Reality Texture Packaging Extensions Specification](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Microsoft DDS Texturen gltf Extensions Specification](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Implementieren von 3D-App-Startprogrammen (UWP-Apps)](implementing-3d-app-launchers.md)
 * [Implementieren von 3D-App-Startprogrammen (Win32-Apps)](implementing-3d-app-launchers-win32.md)
