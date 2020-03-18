@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Entwurf, Komfort, HoloLens 2, HoloLens (1. Gen.)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491156"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376067"
 ---
 # <a name="comfort"></a>Komfort
 
@@ -173,7 +173,7 @@ Als optimaler Blickwinkel (in Ruhe) wird der Bereich von 10–20 Grad unterhalb 
 
 Die Muskeln können ermüden, wenn von Benutzern erwartet wird, eine Hand während der gesamten Dauer einer Erfahrung angehoben zu halten. Ebenfalls ermüdend kann es sein, vom Benutzer wiederholt Tippbewegungen in die Luft über längere Zeit zu verlangen. Es empfiehlt sich daher, konstante, wiederholte Eingabegesten in Benutzererfahrungen zu vermeiden. Diese Ziele können erreicht werden, indem kurze Pausen integriert werden oder eine Mischung aus Gesten- und Spracheingaben für die Interaktion mit der App angeboten wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Anvisieren](gaze-and-commit.md)
 * [Hologrammstabilität](hologram-stability.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)

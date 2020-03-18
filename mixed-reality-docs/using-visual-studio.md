@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, debuggen, bereitstellen
 ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830832"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376107"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Verwenden von Visual Studio zum Bereitstellen und Debuggen
 
@@ -50,7 +50,7 @@ Wenn Sie mit einem Windows Mixed Reality-Headset arbeiten, das mit dem PC verbun
 1. Wählen Sie eine **x86**-Buildkonfiguration für Ihre App aus ![x86-Buildkonfiguration in Visual Studio](images/x86setting.png)
 2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Remotecomputer** aus ![Bereitstellungsziel „Remotecomputer“ in Visual Studio](images/remotemachinesetting.png)
 3. Navigieren Sie für C++- und JavaScript-Projekte zu **Projekt > Eigenschaften > Konfigurationseigenschaften > Debuggen**. Bei C#-Projekten wird automatisch ein Dialogfeld angezeigt, in dem Sie Ihre Verbindung konfigurieren können.
-  a. Geben Sie die IP-Adresse Ihres Geräts im Feld **Adresse** oder **Computername** ein. Suchen Sie die IP-Adresse auf Ihrer HoloLens unter **Einstellungen > Netzwerk und Internet > Erweiterte Optionen**, oder fragen Sie Cortana "Wie heißt meine IP-Adresse?"
+  ein. Geben Sie die IP-Adresse Ihres Geräts im Feld **Adresse** oder **Computername** ein. Suchen Sie die IP-Adresse auf Ihrer HoloLens unter **Einstellungen > Netzwerk und Internet > Erweiterte Optionen**, oder fragen Sie Cortana "Wie heißt meine IP-Adresse?"
   b. Legen Sie den Authentifizierungsmodus auf **Universell (unverschlüsseltes Protokoll)** fest ![Remoteverbindungs-Dialogfeld in Visual Studio](images/remotedeploy.png)
 4. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
 5. Beim erstmaligen Bereitstellen einer App in Ihrer HoloLens von Ihrem Computer aus werden Sie zur Eingabe einer PIN aufgefordert. Befolgen Sie die Anweisungen unten zum **Koppeln Ihres Geräts**.
@@ -59,7 +59,7 @@ Wenn Sie mit einem Windows Mixed Reality-Headset arbeiten, das mit dem PC verbun
 1. Wählen Sie eine **ARM**- oder **ARM64**-Buildkonfiguration für Ihre App aus ![ARM64-Buildkonfiguration in Visual Studio](images/arm64setting.png)
 2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Remotecomputer** aus ![Bereitstellungsziel „Remotecomputer“ in Visual Studio](images/remotemachinesetting_arm64.png)
 3. Navigieren Sie für C++- und JavaScript-Projekte zu **Projekt > Eigenschaften > Konfigurationseigenschaften > Debuggen**. Bei C#-Projekten wird automatisch ein Dialogfeld angezeigt, in dem Sie Ihre Verbindung konfigurieren können.
-  a. Geben Sie die IP-Adresse Ihres Geräts im Feld **Adresse** oder **Computername** ein. Suchen Sie die IP-Adresse auf Ihrer HoloLens unter **Einstellungen > Netzwerk und Internet > Erweiterte Optionen**, oder fragen Sie Cortana "Wie heißt meine IP-Adresse?"
+  ein. Geben Sie die IP-Adresse Ihres Geräts im Feld **Adresse** oder **Computername** ein. Suchen Sie die IP-Adresse auf Ihrer HoloLens unter **Einstellungen > Netzwerk und Internet > Erweiterte Optionen**, oder fragen Sie Cortana "Wie heißt meine IP-Adresse?"
   b. Legen Sie den Authentifizierungsmodus auf **Universell (unverschlüsseltes Protokoll)** fest ![Remoteverbindungs-Dialogfeld in Visual Studio](images/remotedeploy.png)
 4. Wählen Sie **Debuggen > Debuggen starten** aus, um Ihre App bereitzustellen und das Debuggen zu starten ![Starten ohne Debuggen in Visual Studio](images/deploywithdebugging.png)
 5. Beim erstmaligen Bereitstellen einer App in Ihrer HoloLens von Ihrem Computer aus werden Sie zur Eingabe einer PIN aufgefordert. Befolgen Sie die Anweisungen unten zum **Koppeln Ihres Geräts**.
@@ -136,8 +136,8 @@ Sie können Visual Studio verwenden, um eine Universelle Windows-App zu debuggen
 6. Wählen Sie den zu debuggenden Codetyp aus (Verwaltet, Nativ, Gemischt)
 7. Klicken Sie auf **Anfügen** oder **Start**
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Installieren der Tools](install-the-tools.md)
-* [Verwendung des HoloLens Emulators](using-the-hololens-emulator.md)
+* [Verwendung des HoloLens-Emulators](using-the-hololens-emulator.md)
 * [Bereitstellen und Debuggen von UWP (Universelle Windows-Plattform)-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
 * [Aktivieren Ihres Geräts für die Entwicklung](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
