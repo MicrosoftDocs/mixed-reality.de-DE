@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, räumlicher Ton, HRTF, Raum Größe
-ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: af3f1486c3e931ad93d7b8960d822653ec740c12
+ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553698"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082043"
 ---
 # <a name="spatial-sound-in-unity"></a>Räumlicher Sound in Unity
 
@@ -35,6 +35,9 @@ Verwenden Sie [nuget für Unity](https://github.com/GlitchEnzo/NuGetForUnity/rel
 * Aktivieren Sie das Kontrollkästchen **spatialization aktivieren** .
 * Verschieben Sie den Schieberegler für **räumliche Blend** auf "1".
 * Stellen Sie sicher, dass auf Ihrer Entwickler Arbeitsstation räumliche Audiodaten aktiviert sind Aktivieren Sie diese Option, indem Sie in der Taskleiste mit der rechten Maustaste auf das Volumesymbol klicken und sicherstellen, dass räumlicher Sound auf einen anderen Wert als "Off" gesetzt ist. Um die beste Darstellung von hololens 2 zu erhalten, wählen Sie **Windows Sonic für Kopfhörer aus**.
+
+>[!NOTE]
+>Wenn Sie in Unity eine Fehlermeldung erhalten, dass das Plug-in "Microsoft. spatialaudio. spatializer. unity" nicht geladen werden kann, weil eine ihrer Abhängigkeiten fehlt, überprüfen Sie, ob die neueste Version von [Microsoft Visual C++ Redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) auf dem PC installiert ist.
 
 Weitere Details findest du unter:
 * [Microsoft spatializer-GitHub-Repository](https://github.com/microsoft/spatialaudio-unity)
