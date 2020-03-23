@@ -1,119 +1,120 @@
 ---
-title: 'Tutorials zu den ersten Schritten: 4. Platzieren von dynamischem Inhalt und Verwenden von Solvers'
+title: 'Tutorials zu den ersten Schritten: 4 Platzieren dynamischer Inhalte und Verwenden von Solvern'
 description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 5463f363291790fd5e5d76ffa322a61ca7bf8e31
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 2825f99f49eca6fd7277d02828bfe1bc3c23291a
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553878"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031214"
 ---
-# <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Platzieren von dynamischem Inhalt und Verwenden von Solvers
+# <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Platzieren dynamischer Inhalte und Verwenden von Solvern
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
 
-Holograms sind in hololens 2 zu leben, wenn Sie intuitiv dem Benutzer folgen und in der physischen Umgebung auf eine Weise platziert werden, die die Interaktion nahtlos und elegant macht. In diesem Tutorial wird erläutert, wie Sie Hologramme dynamisch mithilfe der verfügbaren Platzierungs Tools von mrtk platzieren können, die als Solvers bezeichnet werden, um komplexe räumliche Platzierungs Szenarien zu lösen. In den mrtk sind Solvers ein System aus Skripts und Verhalten, mit denen Benutzeroberflächen Elemente Ihnen, dem Benutzer oder anderen Spielobjekten in der Szene folgen können. Sie können auch verwendet werden, um schnell an bestimmten Positionen anzudocken, wodurch Ihre Anwendung intuitiver gestaltet wird.
+Hologramme werden in HoloLens 2 lebendig, wenn sie dem Benutzer intuitiv folgen und in der physischen Umgebung so platziert werden, dass die Interaktion reibungslos und stilvoll verläuft. In diesem Tutorial untersuchen wir Möglichkeiten zur dynamischen Platzierung von Hologrammen mit den verfügbaren Platzierungstools des MRTK, den so genannten Solvern, um Szenarien mit komplexer räumlicher Platzierung zu lösen. Im MRTK bilden Solver ein System aus Skripts und Verhaltensweisen, mit deren Hilfe es Benutzeroberflächenelementen ermöglicht wird, dem Benutzer oder anderen Spielobjekten in der Szene zu folgen. Sie können auch verwendet werden, um schnell an bestimmten Positionen anzudocken, wodurch Ihre Anwendung intuitiver gestaltet wird.
 
 ## <a name="objectives"></a>Ziele
 
-* Einführen von mrtk-Solvers
-* Verwenden Sie Solvers, damit eine Auflistung von Schaltflächen auf den Benutzer folgt.
-* Verwenden Sie Solvers, damit ein Spielobjekt den nach verfolgten Händen des Benutzers folgt.
+* Einführen der MRTK-Solver
+* Verwenden von Solvern, um eine Sammlung von Schaltflächen dem Benutzer folgen zu lassen
+* Verwenden von Solvern, um ein Spielobjekt den nachverfolgten Händen des Benutzers folgen zu lassen
 
-## <a name="location-of-solvers-in-the-mrtk"></a>Speicherort der Solver in der mrtk
+## <a name="location-of-solvers-in-the-mrtk"></a>Speicherort der Solver im MRTK
 
- Die Solvers von mrtk befinden sich im Ordner "mrtk SDK". Um die verfügbaren Solver in Ihrem Projekt anzuzeigen, navigieren Sie im Projektfenster zu **Assets** > **mixedrealitytoolkit. SDK** > **Features** > **Hilfsprogramme** > **Solvers**:
+ Die Solver des MRTK befinden sich im MRTK SDK-Ordner. Um die verfügbaren Solver in Ihrem Projekt anzuzeigen, navigieren Sie im Projektfenster zu **Assets** > **MixedRealityToolkit.SDK** > **Features** > **Utilities** > **Solvers**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section1-step1-1.png)
 
-In diesem Tutorial überprüfen wir die Implementierung des "Orbital Solver" und des radivers für radiale Ansichten. Weitere Informationen über die vollständige Palette der in der mrtk verfügbaren Solver finden Sie im Handbuch zu [Solvers](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) im [mrtk-Dokumentations Portal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+In diesem Tutorial behandeln wir die Implementierung der Solver „Orbital“ und „Radial View“. Weitere Informationen zur ganzen Bandbreite der im MRTK verfügbaren Solver finden Sie im [Solver](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)-Leitfaden im [MRTK-Dokumentationsportal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-## <a name="use-a-solver-to-follow-the-user"></a>Verwenden Sie einen Solver, um dem Benutzer zu folgen.
+## <a name="use-a-solver-to-follow-the-user"></a>Verwenden eines Solvers zum Folgen des Benutzers
 <!-- Consider renaming to 'Use a Solver to have an object follow the user' -->
 
-In diesem Abschnitt erweitern Sie die Schaltflächen Auflistung, die Sie im vorherigen Tutorial erstellt haben, damit Sie der Ausrichtung des Benutzers folgt. Außerdem konfigurieren Sie den Solver so, dass die Schaltflächen Auflistung immer verwendet wird:
+In diesem Abschnitt erweitern Sie die Schaltflächensammlung, die Sie im vorherigen Tutorial erstellt haben, sodass sie der Blickrichtung des Benutzers folgt. Darüber hinaus konfigurieren Sie den Solver so, dass Folgendes immer auf die Schaltflächensammlung zutrifft:
 
-* Wird parallel zur Leserichtung des Benutzers gedreht, damit der Lesevorgang von links nach rechts durchgeführt wird.
-* Wird etwas unterhalb der horizontalen bidirektionale Ausrichtung positioniert, sodass nicht die anderen Objekte blockiert werden, die Sie später in diesem Tutorial hinzufügen werden.
-* Der Benutzer hat ungefähr eine halbe Arm-Länge positioniert, sodass die Schaltflächen problemlos gedrückt werden können.
+* Sie wird parallel zur Leserichtung des Benutzers gedreht, für natürliches Lesen von links nach rechts
+* Sie wird etwas unterhalb der horizontalen Blickrichtung des Benutzers positioniert, sodass die anderen Objekte, die später in diesem Tutorial hinzugefügt werden, nicht verdeckt werden
+* Sie wird ungefähr eine halbe Armlänge vom Benutzer entfernt, sodass die Schaltflächen leicht gedrückt werden können
 
-Hierzu verwenden Sie den " **Orbital Solver** ", der das Objekt an eine angegebene Position und einen Offset des Objekts sperrt, auf das verwiesen wird.
+Hierzu verwenden Sie den **Orbital-Solver**, der das Objekt fest an einer angegebenen Position und einem Offset vom Bezugsobjekt verankert.
 
-### <a name="1-add-the-orbital-solver"></a>1. Fügen Sie den Orbital-Solver hinzu.
+### <a name="1-add-the-orbital-solver"></a>1. Hinzufügen des Orbital-Solvers
 
-Wählen Sie im Fenster Hierarchie das **buttoncollection** -Objekt aus, und verwenden Sie dann im Inspektor-Fenster die Schaltfläche **Komponente hinzufügen** , um dem buttoncollection-Objekt die Komponente " **Orbital (Skript)** " hinzuzufügen.
+Wählen Sie im Hierarchiefenster das **ButtonCollection**-Objekt aus, und verwenden Sie dann im Inspektorfenster die Schaltfläche **Komponente hinzufügen**, um dem ButtonCollection-Objekt die Komponente **Orbital (Script)** hinzuzufügen.
 
 > [!NOTE]
-> Wenn Sie in diesem Fall einen Solver hinzufügen, wird die Komponente "Solver-Handler (Skript)" automatisch hinzugefügt, da Sie für den Solver erforderlich ist.
+> Wenn Sie einen Solver hinzufügen, in diesem Fall die Komponente „Orbital (Script)“, wird die Solver Handler (Script)-Komponente automatisch hinzugefügt, weil diese vom Solver benötigt wird.
 
-### <a name="2-configure-the-orbital-solver"></a>2. Konfigurieren des "Orbital Solver"
+### <a name="2-configure-the-orbital-solver"></a>2. Konfigurieren des Orbital-Solvers
 
-Konfigurieren der **Solver-Handlerkomponente (Skript)** :
+Konfigurieren Sie die **Solver Handler (Script)** -Komponente
 
-* Überprüfen, ob der **verfolgte Zieltyp** auf **Head** festgelegt ist
+* Vergewissern Sie sich, dass der **Tracked Target Type** (Typ des nachverfolgten Ziels) auf **Head** (Kopf) festgelegt ist
 
-Konfigurieren Sie die Komponente " **Orbital (Skript)** ":
+Konfigurieren Sie die **Orbital (Script)** -Komponente:
 
-* Überprüfen, ob der **Orientierungstyp** auf das **verfolgte Objekt folgt**
-* Legen Sie **den lokalen Offset** auf X = 0, Y = 0, Z = 0 (null) zurück.
-* Ändern des **Welt Offsets** in X = 0, Y =-0,4, Z = 0,3
+* Vergewissern Sie sich, dass der **Orientation Type** (Ausrichtungstyp) auf **Follow Tracked Object** (Nachverfolgtem Objekt folgen) festgelegt ist
+* Setzen Sie **Local Offset** auf X = 0, Y = 0, Z = 0 zurück
+* Ändern Sie **World Offset** auf X = 0, Y = -0,4, Z = 0,3
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section2-step2-1.png)
 
-### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. Testen des Orbital-Solvers mithilfe der in-Editor-Simulation
+### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. Testen des Orbital-Solvers mithilfe der Simulation im Editor
 
-Drücken Sie die Wiedergabe Schaltfläche, um den Spielmodus einzugeben, und halten Sie die Rechte Maustaste gedrückt, um die Richtung des Blicks zu drehen, und beachten Sie Folgendes:
+Drücken Sie die Wiedergabe-Schaltfläche, um in den Spielmodus zu wechseln, drücken und halten Sie dann die rechte Maustaste, um Ihre Blickrichtung zu drehen, und achten Sie auf Folgendes:
 
-* Die Transformations Position der buttoncollection wird jetzt durch die Solver-Einstellungen gesteuert.
-* Der Cube, der vom Solver nicht betroffen ist, bleibt an derselben Position.
+* Die Transformationsposition der ButtonCollection wird jetzt durch die Solver-Einstellungen gesteuert
+* Der Würfel, der nicht vom Solver beeinflusst wird, bleibt an der gleichen Position.
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section2-step3-1.png)
 
 > [!TIP]
-> Wenn der Kamera Strahl in Ihrem Szenen Fenster nicht angezeigt wird, stellen Sie sicher, dass Ihr Gizmos-Menü aktiviert ist. Weitere Informationen zum Gizmos-Menü und deren Verwendung zur Optimierung Ihrer Szenen Ansicht finden Sie in der <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">Gizmos-Menü</a> Dokumentation von Unity.
+> Wenn Sie in Ihrem Szenefenster den Kamerastrahl nicht sehen, vergewissern Sie sich, dass Ihr Gizmos-Menü aktiviert ist. Weitere Informationen zum Gizmos-Menü und dessen Verwendung zur Optimierung Ihrer Szenenansicht finden Sie in der Unity-Dokumentation zum <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">Gizmos-Menü</a>.
 >
-> Um die Szene und das Spielfenster nebeneinander anzuzeigen, wie in der Abbildung oben gezeigt, ziehen Sie einfach das Spielfenster auf die Rechte Seite des Fensters Szene. Weitere Informationen zum Anpassen des Arbeitsbereichs finden Sie in der Dokumentation zum <a href="https://docs.unity3d.com/Manual/CustomizingYourWorkspace.html" target="_blank">Anpassen Ihres Arbeits</a> Bereichs in Unity.
+> Um Ihr Szenen- und Spielfenster nebeneinander anzuzeigen, wie in der Abbildung oben dargestellt, ziehen Sie einfach das Spielfenster rechts neben das Szenenfenster. Weitere Informationen zum Anpassen Ihres Arbeitsbereichs finden Sie in der Unity-Dokumentation zum <a href="https://docs.unity3d.com/Manual/CustomizingYourWorkspace.html" target="_blank">Anpassen Ihres Arbeitsbereichs</a>.
 
-## <a name="enabling-objects-to-follow-tracked-hands"></a>Aktivieren von Objekten für die Verfolgung von nach verfolgten Händen
+## <a name="enabling-objects-to-follow-tracked-hands"></a>Objekten das Folgen von nachverfolgten Händen ermöglichen
 
-In diesem Abschnitt Konfigurieren Sie das Cube-Objekt, das Sie im vorherigen Tutorial erstellt haben, damit es den nach verfolgten Händen des Benutzers folgt, insbesondere dem rechten Handgelenk. Außerdem konfigurieren Sie den Solver auch so, dass der Cube:
+In diesem Abschnitt konfigurieren Sie das Würfelobjekt, das Sie im vorherigen Tutorial erstellt haben, so, dass es den nachverfolgten Händen des Benutzers folgt, insbesondere dem rechten Handgelenk. Darüber hinaus konfigurieren Sie den Solver so, dass Folgendes auf den Würfel zutrifft:
 
-* Ändert die Ausrichtung mit der Hand Drehung des Benutzers.
-* Auf dem Handgelenk des Benutzers positioniert
+* Er ändert die Ausrichtung mit der Handdrehung des Benutzers
+* Er ist auf dem Handgelenk des Benutzers positioniert
 
-Hierzu verwenden Sie den **radiver der radialen Ansicht** , der das Objekt innerhalb eines Ansichts Kegels speichert, das auf das Objekt verweist, auf das verwiesen wird.
+Zu diesem Zweck verwenden Sie den **Radial View Solver** (Radialansichts-Solver), der das Objekt innerhalb eines Ansichtskegels hält, der vom Bezugsobjekt projiziert wird.
 
-### <a name="1-add-the-radial-view-solver"></a>1. Fügen Sie den Solver für radiale Ansichten hinzu
+### <a name="1-add-the-radial-view-solver"></a>1. Hinzufügen des Radial View-Solvers
 
-Wählen Sie im Fenster Hierarchie das Cubeobjekt aus, und verwenden Sie dann im Inspektor- **Fenster die Schalt** Fläche **Komponente hinzufügen** , um das Komponenten-Cubeobjekt der **radialen Ansicht (Skript)** hinzuzufügen.
+Wählen Sie im Hierarchiefenster das **Würfelobjekt** aus, und verwenden Sie dann im Inspektorfenster die Schaltfläche **Komponente hinzufügen**, um dem Würfelobjekt die Komponente **Radial View (Script)** hinzuzufügen.
 
-### <a name="2-configure-the-radial-view-solver"></a>2. Konfigurieren Sie den Solver für radiale Ansichten.
+### <a name="2-configure-the-radial-view-solver"></a>2. Konfigurieren des Radial View-Solvers
 
-Konfigurieren der **Solver-Handlerkomponente (Skript)** :
+Konfigurieren Sie die **Solver Handler (Script)** -Komponente:
 
-* Änderungs nach **verfolgten Zieltyp** in **Hand Gelenk** ändern
-* Geänderte **Handlichkeit** nach **Rechts** ändern
-* Nach **verfolgte Hand Gelenk** in Hand **Gelenk** ändern
+* Ändern Sie **Tracked Target Type** (Typ des nachverfolgten Ziels) in **Gelenk der Hand**
+* Ändern Sie **Tracked Handness** (nachverfolgte Händischkeit) in **Right**
+* Ändern Sie **Tracked Hand Joint** (Nachverfolgtes Gelenk der Hand) in **Wrist** (Handgelenk)
 
-Konfigurieren Sie die Komponente **radiale Ansicht (Skript)** :
+Konfigurieren Sie die **Radial View (Script)** -Komponente:
 
-* Ändern Sie die **Verweis Richtung** in **objektorientiert**, und aktivieren Sie dann das Kontrollkästchen **an Verweis Richtung ausrichten** .
-* Ändern Sie die **minimale Entfernung** und den **maximalen Abstand** in 0.
+* Ändern Sie **Reference Direction** (Bezugsrichtung) in **Object Oriented** (Objektorientiert), und aktivieren Sie dann das Kontrollkästchen **Orient To Reference Direction** (An Bezugsrichtung ausrichten)
+* Ändern Sie **Min Distance** (Minimalabstand) und **Max Distance** (Maximalabstand) in 0
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section3-step2-1.png)
 
-### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. Testen des Solver der radialen Ansicht mithilfe der in-Editor-Simulation
+### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. Testen des Radial View-Solvers mithilfe der Simulation im Editor
 
-Drücken Sie die Wiedergabe Schaltfläche, um den Spielmodus einzugeben, und halten Sie dann die Leertaste gedrückt, um die Hand zu machen. Bewegen Sie den Mauszeiger um die Hand, und klicken Sie auf die linke Maustaste, um die Hand zu drehen:
+Drücken Sie die Wiedergabe-Schaltfläche, um in den Spielmodus zu wechseln, und halten Sie dann die LEERTASTE gedrückt, um die Hand anzuzeigen. Bewegen Sie den Mauszeiger, um die Hand zu bewegen, und klicken und halten Sie die linke Maustaste, um die Hand zu drehen:
 
 ![mrlearning-base](images/mrlearning-base/tutorial3-section3-step3-1.png)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In diesem Tutorial haben Sie gelernt, wie Sie mit den Solvers von mrtk eine Benutzeroberfläche intuitiv auf den Benutzer anwenden können. Außerdem haben Sie erfahren, wie Sie einen Solver an ein Objekt (d. h. einen Cube) anfügen, um die nach verfolgten Hände des Benutzers zu befolgen. Weitere Informationen zu diesen und anderen in der mrtk enthaltenen Solvers finden Sie im Handbuch zu [Solvers](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) im [mrtk-Dokumentations Portal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+In diesem Tutorial haben Sie erfahren, wie Sie die MRTK-Solver verwenden können, damit eine Benutzeroberfläche intuitiv dem Benutzer folgt. Sie haben auch erfahren, wie Sie einen Solver an ein Objekt (d. h. Würfel) anfügen, um den nachverfolgten Händen des Benutzers zu folgen. Weitere Informationen zu diesen und anderen Solvern, die im MRTK enthalten sind, finden im [Solver](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html)-Leitfaden im [MRTK-Dokumentationsportal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-[Nächstes Tutorial: 5. Interaktion mit 3D-Objekten](mrlearning-base-ch4.md)
+[Nächstes Tutorial: 5. Interagieren mit 3D-Objekten](mrlearning-base-ch4.md)

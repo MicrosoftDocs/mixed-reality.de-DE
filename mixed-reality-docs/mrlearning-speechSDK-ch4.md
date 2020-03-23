@@ -1,174 +1,321 @@
 ---
-title: Tutorials zu Azure Speech Services-4. Einrichten von Absicht und natürlicher Sprache
-description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie das Azure Speech SDK in einer Mixed Reality-Anwendung implementieren.
+title: 'Tutorials zu Azure Speech-Diensten: 4. Einrichten des Verstehens von Absichten und natürlicher Sprache'
+description: In diesem Kurs erfahren Sie, wie Sie das Azure Speech SDK in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: b2342e7d0d502af2787ca311d18a44f8726acf2d
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553996"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79028480"
 ---
-# <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Einrichten der Absicht und der Kenntnisse in natürlicher Sprache
+# <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Einrichten des Verstehens von Absichten und natürlicher Sprache
 
-In dieser Lektion erfahren Sie mehr über das Intent-Feature des Azure Speech Service. Das Intent-Feature ermöglicht es Ihnen, unsere Anwendung mit Ki-gestützten Sprachbefehlen auszustatten, bei denen Benutzer nicht spezifische Sprachbefehle sagen können und dennoch vom System verstanden werden können. In dieser Lektion richten wir unser Azure-Luis-Portal ein, richten unsere Absichten/Entitäten/Äußerungen ein, veröffentlichen unsere Intent-Ressource, verbinden unsere Unity-App mit unserer Intent-Ressource und machen unseren ersten beabsichtigten API-Rückruf.
+In diesem Tutorial untersuchen wir die Absichtserkennung des Azure-Sprachdiensts. Die Absichtserkennung ermöglicht es Ihnen, Ihre Anwendung mit KI-gestützten Sprachbefehlen auszustatten. In diesem Fall können Benutzer unspezifische Sprachbefehle äußern, und ihre Absicht wird trotzdem vom System verstanden.
 
 ## <a name="objectives"></a>Ziele
 
-- Erfahren Sie, wie Sie in unserer Anwendung das Verständnis von Absicht und natürlicher Sprache einrichten
-- Erfahren Sie, wie Sie das Luis-Portal von Azure einrichten.
-- Erfahren Sie, wie Sie Intent, Entitäten und Äußerungen in Azure einrichten.
+* Das Erlernen der Einrichtung von Absicht, Entitäten und Äußerungen im LUIS-Portal
+* Erlernen der Implementierung des Erkennens von Absichten und des Verstehens natürlicher Sprache in unserer Anwendung
 
-## <a name="instructions"></a>Anweisungen
+## <a name="preparing-the-scene"></a>Vorbereiten des Szenarios
 
-1. Ermöglicht dem Computer das Aktivieren von Diktat. Wechseln Sie zu diesem Zweck zu Windows-Einstellungen, wählen Sie "Datenschutz", dann "Sprache" und anschließend "Inking & typisieren" aus, und aktivieren Sie Sprachdienste, und geben Sie Vorschläge ein.
+Wählen Sie im Hierarchiefenster das **Lunarcom**-Objekt aus, und verwenden Sie dann im Inspektorfenster die Schaltfläche **Komponente hinzufügen**, um dem Lunarcom-Objekt die Komponente **Lunarcom Intent Recognizer (Script)** hinzuzufügen:
 
-    ![Module4Chapter4step1aim](images/module4chapter4step1aim.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-1.png)
 
-    ![Module4Chapter4step1bim](images/module4chapter4step1bim.PNG)
+Navigieren Sie im Projektfenster zum Ordner **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** > **RocketLauncher**, ziehen Sie das Prefab **RocketLauncher_Complete** in Ihr Hierarchiefenster, und platzieren Sie es an einem passenden Ort vor der Kamera, beispielsweise:
 
-    ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
+* **Transformationsposition** X = 0, Y = -0,4, Z = 1
+* **Transformationsrotation** X = 0, Y = 90, Z = 0
 
-2. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an. Wenn Sie angemeldet sind, klicken Sie auf Ressource erstellen, suchen Sie nach "Language Understanding", und drücken Sie die EINGABETASTE.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-2.png)
 
-    ![mrlearning-Speech-CH4-1-step2. png](images/mrlearning-speech-ch4-1-step2.png)
+Wählen Sie im Hierarchiefenster das **Lunarcom**-Objekt erneut aus, klappen Sie dann das Objekt **RocketLauncher_Complete** > **Button** auf, und weisen Sie jedem untergeordneten Objekt des **Buttons**-Objekts das entsprechende **Lunar Launcher Buttons**-Feld zu:
 
-3. Klicken Sie auf die Schaltfläche **Erstellen** , um eine Instanz dieses Dienstanbieter zu erstellen.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section1-step1-3.png)
 
-    ![mrlearning-Speech-CH4-1-step3a. png](images/mrlearning-speech-ch4-1-step3a.png)
+## <a name="creating-the-azure-language-understanding-resource"></a>Erstellen der Azure Language Understanding-Ressource
 
-    Geben Sie der Ressource einen **Namen**, z. b. " *Speech-SDK-Learning-Module*". Wählen Sie für **Abonnement**die Option *Pay as you go* oder *Free Trail* aus, wenn Sie über ein Testkonto verfügen. Erstellen Sie als nächstes eine neue **Ressourcengruppe** , indem Sie auf den Link **neu erstellen** klicken, geben Sie einen Namen ein, z. b. *hololens-2-Tutorials-Resource-Group*, und klicken Sie auf die Schaltfläche **OK** .
+In diesem Abschnitt erstellen Sie eine Azure-Vorhersageressource für die LUIS-App (Language Understanding Intelligent Service), die Sie im nächsten Abschnitt erstellen.
 
-    ![mrlearning-Speech-CH4-1-step3b. png](images/mrlearning-speech-ch4-1-step3b.png)
+Melden Sie sich bei <a href="https://portal.azure.com" target="_blank">Azure</a> an, und klicken Sie auf **Ressource erstellen**. Suchen Sie dann nach **Language Understanding**, und wählen Sie es aus:
 
-4. Wählen Sie den **Speicherort der Erstellung** und den **Speicherort**der Verwenden Sie für dieses Lernprogramm *(USA) USA, Westen*, und wählen Sie dann *F0 (5 Anrufe pro Sekunde, 10K Anrufe pro Monat)* für **den Erstellungs** Tarif und den **Lauf**Zeit Tarif aus. Klicken Sie abschließend auf die Schaltfläche **Erstellen** , um die Ressource zu erstellen, sowie die neue Ressourcengruppe.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-1.png)
 
-    ![mrlearning-Speech-CH4-1-step4. png](images/mrlearning-speech-ch4-1-step4.png)
+Klicken Sie auf die Schaltfläche **Erstellen**, um eine Instanz dieses Diensts zu erstellen:
 
-    >[!NOTE]
-    >Nachdem Sie auf die Schaltfläche "erstellen" geklickt haben, müssen Sie warten, bis der Dienst erstellt wird. dieser Vorgang kann einige Minuten in Anspruch nehmen.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-2.png)
 
-5. Nachdem der Vorgang zur Ressourcen Erstellung fertiggestellt wurde, wird die Meldung **Ihre Bereitstellung ist beendet**angezeigt.
+Klicken Sie auf der Seite „Erstellen“ auf die Option **Vorhersage**, und geben Sie die folgenden Werte ein:
 
-    ![mrlearning-Speech-CH4-1-step5. png](images/mrlearning-speech-ch4-1-step5.png)
+* Wählen Sie unter **Abonnement** **Kostenlose Testversion** aus, wenn Sie über ein Testabonnement verfügen, und wählen Sie andernfalls eins Ihrer anderen Abonnements aus
+* Klicken Sie für die **Ressourcengruppe** auf den Link **Neue erstellen**, geben Sie einen passenden Namen ein, beispielsweise *MRKT-Tutorials*, und klicken Sie dann auf **OK**
 
-6. Melden Sie sich mit demselben Benutzerkonto beim [Language Understanding Intelligent Service (Luis)](https://www.luis.ai/) -Portal an, wählen Sie Ihr Land aus, und stimmen Sie den Nutzungsbedingungen zu.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-3.png)
 
-    >[!NOTE]
-    >Wenn Sie das Language Understanding-Portal erreicht haben, müssen Sie sich ggf. mit denselben Anmelde Informationen wie Ihre Azure-Portal anmelden, falls Sie dies noch nicht getan haben. Wenn Sie zum ersten Mal Luis verwenden, müssen Sie einen Bildlauf zum unteren Rand der Willkommensseite durchführen, um auf die Schaltfläche "Erstellen einer Luis-app" zu klicken.
+> [!NOTE]
+> Zum Zeitpunkt der Entstehung dieses Artikels muss nicht eigens eine Erstellungsressource erstellt werden, da in LUIS automatisch ein Erstellungs-Testschlüssel generiert wird, wenn Sie im nächsten Abschnitt den Language Understanding Intelligent Service (LUIS) erstellen.
 
-7. Klicken Sie nach der Anmeldung auf "meine apps" (wenn Sie sich derzeit nicht in diesem Abschnitt befinden). Klicken Sie dann auf neue APP erstellen. Nennen Sie die neue App "Speech SDK Learning Module". Fügen Sie auch "Speech SDK Learning Module" zum Beschreibungsfeld hinzu. Klicken Sie dann auf "Done".
+> [!TIP]
+> Wenn Sie bereits über eine andere geeignete Ressourcengruppe in Ihrem Azure-Konto verfügen, beispielsweise, wenn Sie das [Azure Spatial Anchor](mrlearning-asa-ch1.md)-Tutorial abgeschlossen haben, können Sie diese Ressourcengruppe verwenden, statt eine neue zu erstellen.
 
-    ![Module4Chapter4step8aim](images/module4chapter4step8aim.PNG)
+Geben Sie noch auf der Seite „Erstellen“ die folgenden Werte ein:
 
-    ![Module4Chapter4step8bim](images/module4chapter4step8bim.PNG)
+* Geben Sie für **Name** einen passenden Namen für den Dienst ein, z. B. *MRTK-Tutorials-AzureSpeechServices*
+* Wählen Sie als **Speicherort für die Vorhersage** einen Speicherort in der Nähe des Standorts Ihres App-Benutzers aus, z. B. *(USA) USA, Westen*
+* Wählen Sie als **Tarif für Vorhersage** im Rahmen dieses Tutorials **F0 (5 Aufrufe pro Sekunde, 10.000 Aufrufe pro Monat)** aus
 
-    >[!NOTE]
-    >Wenn Ihre APP eine andere Sprache als Englisch verstehen soll, sollten Sie die "Kultur" in die entsprechende Sprache ändern.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-4.png)
 
-8. Klicken Sie oben rechts auf "Build".
+Navigieren Sie als nächstes zur Registerkarte **Überprüfen + Erstellen**, überprüfen Sie die Details, und klicken Sie dann auf die Schaltfläche **Erstellen** am unteren Rand der Seite, um die Ressource sowie die neue Ressourcengruppe zu erstellen, falls Sie die Erstellung einer Ressourcengruppe konfiguriert haben:
 
-9. Wählen Sie unter APP-Assets auf der linken Seite die Option "Intents" aus, klicken Sie auf "Create New Intent", und nennen Sie Sie "pressbutton".
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-5.png)
 
-    ![Module4Chapter4step10im](images/module4chapter4step10im.PNG)
+> [!NOTE]
+> Nachdem Sie auf die Schaltfläche „Erstellen“ geklickt haben, müssen Sie warten, bis der Dienst erstellt wurde. Dies kann einige Minuten in Anspruch nehmen.
 
-    >[!NOTE]
-    >Es ist wichtig, die Namen der Intents und Entitäten zu verwenden, die in diesem Tutorial verwendet werden, da die lunarcom-App anhand ihres Namens auf Sie verweist.
+Nachdem der Vorgang zum Erstellen der Ressource abgeschlossen ist, wird die Meldung angezeigt **Ihre Bereitstellung wurde abgeschlossen.** :
 
-    >[!NOTE]
-    >Sie sollten jetzt über zwei Intents verfügen: "Press Button" und "None".
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section2-step1-6.png)
 
-10. Wählen Sie unter APP-Assets auf der linken Seite die Option Entitäten aus, klicken Sie auf "neue Entität erstellen", benennen Sie Sie "action", und behalten Sie den Entitätstyp "Simple" bei.
+## <a name="creating-the-language-understanding-intelligent-service-luis"></a>Erstellen des Language Understanding Intelligent Service (LUIS)
 
-    ![Module4Chapter4step11im](images/module4chapter4step11im.PNG)
+In diesem Abschnitt erstellen Sie eine LUIS-App, konfigurieren und trainieren ihr Vorhersagemodell und verbinden es mit der Azure-Vorhersageressource, die Sie im vorherigen Schritt erstellt haben.
 
-11. Klicken Sie erneut auf "neue Entität erstellen", und nennen Sie Sie "target". Behalten Sie auch den Entitätstyp "Simple" bei.
+Insbesondere erstellen Sie eine Absicht, die, falls der Benutzer sagt, dass eine Aktion ausgeführt werden soll, das Interactable.OnClick()-Ereignis für eine der drei roten Schaltflächen im Szenario auslöst, je nachdem, auf welche Schaltfläche der Benutzer verweist.
 
-    ![Module4Chapter4step12im](images/module4chapter4step12im.PNG)
+Wenn der Benutzer beispielsweise sagt **Fahre fort, starte die Rakete**, sagt die App vorher, dass **Fahre fort** bedeutet, dass eine **Aktion** ausgeführt werden soll, und dass das **anzuzielende** Interactable.OnClick()-Ereignis sich auf der Schaltfläche **Starten** befindet.
 
-12. Wählen Sie unter APP-Assets auf der linken Seite die Option "Intents" aus, und klicken Sie dann auf die Absicht, die Sie in Schritt 10 erstellt haben.
+Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 
-    ![Module4Chapter4step13im](images/module4chapter4step13im.PNG)
+1. Erstellen einer LUIS-App
+2. Erstellen von Absichten
+3. Erstellen von Beispieläußerungen
+4. Erstellen von Entitäten
+5. Zuweisen von Entitäten zu den Beispieläußerungen
+6. Trainieren, Testen und Veröffentlichen der App
+7. Zuweisen einer Azure-Vorhersageressource zur App
 
-13. Klicken Sie auf das Dropdown Menü "Optionen anzeigen" auf der rechten Seite, und wählen Sie "Entitäts Werte anzeigen" aus.
+### <a name="1-create-a-luis-app"></a>1. Erstellen einer LUIS-App
 
-    ![Module4Chapter4step14aim](images/module4chapter4step14aim.PNG)
+Melden Sie sich bei <a href="https://www.luis.ai" target="_blank">LUIS</a> mit demselben Benutzerkonto an, das Sie zum Erstellen der Azure-Ressource im vorherigen Abschnitt verwendet haben, wählen Sie Ihr Land aus, und stimmen Sie den Nutzungsbedingungen zu. Wenn Sie im nächsten Schritt aufgefordert werden, **Ihr Azure-Konto zu verknüpfen**, wählen Sie **Weiterhin den Testschlüssel verwenden** aus, um stattdessen eine Azure-Erstellungsressource zu verwenden.
 
-    Klicken Sie auf das Beispiel "Beispiel eingeben...". ein. Geben Sie dann die folgenden Äußerungen ein:
+> [!NOTE]
+> Wenn Sie sich bereits für LUIS registriert haben und Ihr Erstellungs-Testschlüssel abgelaufen ist, finden Sie Informationen zum Umstellen Ihrer LUIS-Erstellungsressource auf Azure in der [Migrieren zu einem Azure-Ressourcen-Erstellungsschlüssel](https://docs.microsoft.com/azure/cognitive-services/luis/luis-migration-authoring)-Dokumentation.
 
-    ![Module4Chapter4step14bim](images/module4chapter4step14bim.PNG)
+Navigieren Sie nach der Anmeldung zur Seite **Meine Apps**, klicken Sie auf **Neue App erstellen**, und geben Sie im Fenster **Neue App erstellen** die folgenden Werte ein:
 
-14. Klicken Sie auf das Dropdown Menü "Optionen anzeigen" auf der rechten Seite, und wählen Sie "Entitäts Namen anzeigen" aus.
+* Geben Sie für **Name** einen passenden Namen ein, z. B. *MRTK-Tutorials – AzureSpeechServices*
+* Wählen Sie für **Kultur** die Option **Englisch** aus
+* Geben Sie für **Beschreibung** optional eine passende Beschreibung ein
 
-    ![Module4Chapter4step15im](images/module4chapter4step15im.PNG)
+Klicken Sie dann auf die Schaltfläche **Erstellen**, um die neue App zu erstellen.
 
-15. Stellen Sie sicher, dass jede der 10 Äußerungen die folgenden Entitäts Bezeichnungen an den folgenden Stellen von 1 hat.) Klicken Sie auf Wörter, die falsch gekennzeichnet sind, und wählen Sie im Popup Fenster die Option "Bezeichnung entfernen" und 2 aus.) Klicken Sie auf Wörter, die mit einer Bezeichnung versehen werden sollen, und wählen Sie im Popup Fenster die entsprechende Bezeichnung aus.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step1-1.png)
 
-    ![Module4Chapter4step16im](images/module4chapter4step16im.PNG)
+Wenn die neue App erstellt wurde, werden Sie zur **Dashboard** Seite der App geleitet:
 
-16. Klicken Sie in der oberen rechten Ecke auf "trainieren", um das Modell zu veröffentlichen. Nachdem die Verarbeitung abgeschlossen ist, klicken Sie in der oberen rechten Ecke auf "Test".
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step1-2.png)
 
-    ![Module4Chapter4step17im](images/module4chapter4step17im.PNG)
+### <a name="2-create-intents"></a>2. Erstellen von Absichten
 
-17. Geben Sie in das Textfeld "Start Schaltfläche auswählen" ein.
+Navigieren Sie von der Dashboard-Seite zur Seite „Build > App Assets > **Intents**“ (Erstellen > App-Ressourcen > Absichten), klicken Sie dann auf **Create new intent** (Neue Absicht erstellen), und geben Sie den folgenden Wert im Popupfenster **Create new intent** ein:
 
-    >[!NOTE]
-    >Wir haben in unseren Äußerungen nicht "Select" als Aktion hinzugefügt, aber wenn Sie auf "überprüfen" klicken, hat das Modell "Select" als Aktions Entität erkannt.
-    >
-    > ![Module4Chapter4noteim](images/module4chapter4noteim.PNG)
+* Geben Sie als **Absichtsname** **PressButton** ein
 
-18. Klicken Sie oben rechts auf "veröffentlichen". Stellen Sie sicher, dass in der Dropdown Liste "Produktion" angezeigt wird, und klicken Sie im Popup Fenster auf "veröffentlichen".
+Klicken Sie dann auf die Schaltfläche **Done** (Fertig), um die neue Ansicht zu erstellen.
 
-    ![Module4Chapter4step19im](images/module4chapter4step19im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step2-1.png)
 
-19. Nach der Veröffentlichung sollte am oberen Rand der Seite eine grüne Leiste angezeigt werden. Klicken Sie auf die grüne Leiste, um die Seite "verwalten" anzuzeigen.
+> [!CAUTION]
+> Im Rahmen dieses Tutorials verweist Ihr Unity-Projekt anhand des Namens auf diese Absicht, d. h. ‚PressButton‘. Es ist daher äußerst wichtig, dass Sie Ihre Absicht genau gleich benennen.
 
-    ![Module4Chapter4step20im](images/module4chapter4step20im.PNG)
+Wenn die neue Absicht erstellt wurde, werden Sie zu der Seite dieser Absicht geleitet:
 
-20. Klicken Sie auf der linken Seite unter "Anwendungseinstellungen" auf "Schlüssel und Endpunkte". Legen Sie dann die Dropdown-Einstellung "veröffentlichen auf" als "Produktion" fest. Legen Sie die Zeitzone entsprechend fest, und aktivieren Sie das Kontrollkästchen, um alle vorhergesagten Intent-Ergebnisse einzuschließen. Klicken Sie abschließend auf "Ressource zuweisen".
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step2-2.png)
 
-    ![Module4Chapter4step21im](images/module4chapter4step21im.PNG)
+### <a name="3-create-example-utterances"></a>3. Erstellen von Beispieläußerungen
 
-21. Wählen Sie in der ersten Dropdown Liste Mandant aus, und wählen Sie in der Dropdown Liste Abonnement Name den Namen "Pay-as-you-go" aus. Wählen Sie unter Luis Resource Name die zuvor erstellte Ressource in den Schritten 1-5 aus. Klicken Sie dann auf "Ressource zuweisen".
+Fügen Sie der Liste mit **Beispieläußerungen** der Absicht **PressButton** die folgenden Beispieläußerungen hinzu:
 
-    ![Module4Chapter4step22im](images/module4chapter4step22im.PNG)
+* Startsequenz aktivieren
+* Platzierungshinweis anzeigen
+* Startsequenz einleiten
+* Schaltflächen für Platzierungshinweise drücken
+* Gib mit einen Hinweis
+* Startschaltfläche drücken
+* Ich brauche einen Hinweis
+* Taste „Zurücksetzen“ drücken
+* Zeit zum Zurücksetzen des Experiments
+* Fahre fort, starte die Rakete
 
-    >[!NOTE]
-    >Stellen Sie sicher, dass Sie die der soeben zugewiesenen Ressource zugeordnete Endpunkt-URL kopieren und speichern, damit der nächste Abschnitt leicht zugänglich ist.
+Wenn alle Beispieläußerungen hinzugefügt wurden, sollte die Seite Ihrer Absicht PressButton so ähnlich aussehen:
 
-    >[!NOTE]
-    >Geben Sie für den Mandanten Namen ihre Corporation oder Ihr Profil ein, das Sie für diese Anwendung erstellt haben.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step3-1.png)
 
-22. Öffnen Sie nun die neue app in Unity, und wählen Sie das Lunarcom_Base-Objekt in der Hierarchie aus. Klicken Sie im Inspektor-Panel auf "Komponente hinzufügen", suchen Sie nach "lunarcomintenterkenzer", und wählen Sie ihn aus.
+> [!CAUTION]
+> Im Rahmen dieses Tutorials verweist Ihr Unity-Projekt auf die Wörter „Hinweis“, „Hinweise“, „Zurücksetzen“ und „Starten“. Daher ist es äußerst wichtig, dass Sie diese Wörter in genau der gleichen Weise schreiben.
 
-    ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
+### <a name="4-create-entities"></a>4. Erstellen von Entitäten
 
-23. Geben Sie im Feld für den Luis-Endpunkt der "lunarcomintenterkenzer" im Inspektor-Panel die Endpunkt-URL ein, die Sie in Schritt 21 gespeichert haben.
+Navigieren Sie von der Seite der Absicht PressButton zur Seite Erstellen > App-Ressourcen > **Entitäten**, klicken Sie dann auf **Neue Entität erstellen**, und geben Sie die folgenden Werte im Popupfenster **Neue Entität erstellen** ein:
 
-    ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
+* Geben Sie als **Entitätsname** **Aktion** ein
+* Wählen Sie als **Entitätstyp** **Einfach** aus
 
-    >[!NOTE]
-    >Stellen Sie sicher, dass in der Komponente "lunarcomofflinerecognizer" im Inspektor-Panel "deaktivieren" für "simulateofflinemode" ausgewählt ist. andernfalls funktioniert das Testen des Programms nicht.
+Klicken Sie dann auf die Schaltfläche **Fertig**, um die neue Entität zu erstellen.
 
-24. Navigieren Sie im Projektfenster zu den Assets > mrtk. Tutorials. GettingStarted > Ordner Prefabs > RocketLauncher, ziehen Sie die RocketLauncher_Complete Prefab in Ihr Hierarchie Fenster, und positionieren Sie Sie vor dem Lunarcom_Base Objekt.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step4-1.png)
 
-    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+**Wiederholen** Sie den vorhergehenden Schritt, um eine weitere Entität mit dem Namen **Ziel** zu erstellen, sodass Sie über zwei Entitäten verfügen, mit den Namen „Aktion“ und „Ziel“:
 
-25. Wählen Sie im Fenster Hierarchie das Lunarcom_Base Objekt aus, und suchen Sie die Komponente lunarcom Intent erkenzer (Script). erweitern Sie dann das Objekt RocketLauncher_Complete > Button, und weisen Sie die einzelnen Schaltflächen Objekte den entsprechenden Mond Start Programm-Schaltflächen zu. Flächen.
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step4-2.png)
 
-    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+> [!CAUTION]
+> Im Rahmen dieses Tutorials verweist Ihr Unity-Projekt anhand des Namens auf diese Entitäten, d. h. „Aktion“ und „Ziel“. Es ist daher äußerst wichtig, dass Sie Ihre Entitäten genau gleich benennen.
 
-26. Klicken Sie im Unity-Editor auf die Wiedergabe Schaltfläche, und klicken Sie auf die Schaltfläche "" Sagen Sie den Ausdruck "starten Sie die Schaltfläche" starten "aus.
+### <a name="5-assign-entities-to-the-example-utterances"></a>5. Zuweisen von Entitäten zu den Beispieläußerungen
 
-    >[!NOTE]
-    >Die APP hat die gewünschte Funktion erkannt und die Schaltfläche "Rocket" aktiviert.
-    >
-    >![Module4Chapter4step24im](images/module4chapter4note2im.PNG)
+Navigieren Sie auf der Seite Entitäten zurück zur Seite der Absicht **PressButton**.
+
+Sobald Sie sich wieder auf der Seite der Absicht PressButton befinden, klicken Sie auf das Wort **Fahre**, dann auf das Wort **fort**, und wählen Sie dann im Kontext-Popupmenü **Aktion (Einfach)** aus, um **Fahre fort** als einen Entitätswert für **Aktion**-zu bezeichnen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-1.png)
+
+Der Ausdruck **Fahre fort** ist jetzt als Entitätswert für **Aktion** definiert. Wenn Sie den Mauszeiger auf dem Entitätsnamen „Aktion“ ruhen lassen, können Sie den zugeordneten Wert der Entität Aktion sehen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-2.png)
+
+> [!NOTE]
+> Die rote Linie, die unter der Bezeichnung in der Abbildung oben angezeigt wird, weist darauf hin, dass der Entitätswert nicht vorhergesagt wurde. Dies wird behoben, wenn Sie das Modell im nächsten Abschnitt trainieren.
+
+Klicken Sie als nächstes auf das Wort **starte**, und wählen Sie dann im Kontext-Popupmenü **Ziel (Einfach)** aus, um **starte** als einen **Ziel**-Entitätswert zu bezeichnen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-3.png)
+
+Das Wort **starte** ist jetzt als Entitätswert für **Ziel** definiert. Wenn Sie den Mauszeiger auf dem Entitätsnamen „Ziel“ ruhen lassen, können Sie den zugeordneten Wert der Entität Ziel sehen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-4.png)
+
+Die Beispieläußerung „Fahre fort, starte die Rakete“ für die PressButton-Absicht ist jetzt dafür konfiguriert, in folgender Weise vorhergesagt zu werden :
+
+* Absicht: PressButton
+* Action-Entität: Fahre fort
+* Zielentität: starte
+
+**Wiederholen** Sie die vorhergehenden zwei Schritte, um jeder der Beispieläußerungen eine Aktions- und eine Zielentitätsbezeichnung zuzuweisen, und behalten Sie dabei im Blick, dass die folgenden Wörter als **Ziel**-Entitäten bezeichnet werden sollen:
+
+* **Hinweis** (zielt auf die HintsButton-Schaltfläche im Unity-Projekt ab)
+* **Hinweise** (zielt auf die HintsButton-Schaltfläche im Unity-Projekt ab)
+* **Zurücksetzen** (zielt auf die ResetButton-Schaltfläche im Unity-Projekt ab)
+* **starte** (zielt auf die LaunchButton-Schaltfläche im Unity-Projekt ab)
+
+Wenn alle Beispieläußerungen bezeichnet wurden, sollte die Seite Ihrer Absicht PressButton so ähnlich aussehen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-5.png)
+
+Um mit einem alternativen Verfahren zu prüfen, ob Sie die richtigen Entitäten zugewiesen haben, klicken Sie auf das Menü **Ansichtsoptionen**, und wechseln Sie zur Ansicht **Entitätswerte anzeigen**:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-6.png)
+
+Jetzt, mit einer Ansicht, in der Entitätswerte angezeigt werden, können Sie den Mauszeiger auf den bezeichneten Wörtern und Ausdrücken ruhen lassen, um schnell den Namen der zugewiesenen Entität zu überprüfen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step5-7.png)
+
+### <a name="6-train-test-and-publish-the-app"></a>6. Trainieren, Testen und Veröffentlichen der App
+
+Um die App zu trainieren, klicken Sie auf die Schaltfläche **Trainieren**, und warten Sie, bis der Trainingsprozess abgeschlossen ist:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-1.png)
+
+> [!NOTE]
+> Wie Sie in der Abbildung oben sehen können, wurden die roten Linien unter allen Bezeichnungen entfernt, was darauf hinweist, dass alle Entitätswerte vorhergesagt wurden. Beachten Sie außerdem, dass das Statussymbol links auf der Trainieren-Schaltfläche die Farbe von rot zu grün gewechselt hat.
+
+Wenn die Verarbeitung des Trainings abgeschlossen ist, klicken Sie auf die Schaltfläche **Testen**, geben Sie dann **Fahre fort, starte die Rakete** ein, und drücken Sie die EINGABETASTE:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-2.png)
+
+Wenn die Testäußerung verarbeitet wurde, klicken Sie auf **Prüfen**, um das Testergebnis anzuzeigen:
+
+* Absicht: PressButton (mit einer Sicherheit von 98,5 %)
+* Aktion-Entität:Fahre fort
+* Ziel-Entität: starte
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-3.png)
+
+Um die App zu veröffentlichen, klicken Sie oben rechts auf die Schaltfläche **Publish** (Veröffentlichen), wählen Sie dann im Popupfenster **Choose your publishing slot and settings** (Wählen Sie Ihren Veröffentlichungsslot und Ihre Einstellungen) **Production** (Produktion) aus, und klicken Sie auf die Schaltfläche **Publish**:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-4.png)
+
+Warten Sie auf den Abschluss des Veröffentlichungsprozesses:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step6-5.png)
+
+### <a name="7-assign-an-azure-prediction-resource-to-the-app"></a>7. Zuweisen einer Azure-Vorhersageressource zur App
+
+Navigieren Sie zur Seite Verwalten > Anwendungseinstellungen > **Azure-Ressourcen**:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step7-1.png)
+
+Klicken Sie auf der Seite „Azure-Ressourcen“ auf die Schaltfläche **Vorhersageressource hinzufügen**, und wählen Sie die folgenden Werte im Popupfenster **Ihrer App eine Ressource zuweisen** aus:
+
+* Wählen Sie als **Mandantenname** den Namen Ihres Mandanten aus
+* Wählen Sie als **Abonnementname** das gleiche Abonnement aus, das Sie zuvor beim [Erstellen der Azure Language Understanding-Ressource](mrlearning-speechSDK-ch4.md#creating-the-azure-language-understanding-resource) verwendet haben
+* Wählen Sie als **Name der LUIS-Ressource** die gleiche Vorhersageressource aus, die Sie zuvor beim [Erstellen der Azure Language Understanding-Ressource](mrlearning-speechSDK-ch4.md#creating-the-azure-language-understanding-resource) erstellt haben
+
+Klicken Sie dann auf die Schaltfläche **Ressource zuweisen**, um Ihrer App die Azure-Vorhersageressource zuzuweisen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step7-2.png)
+
+Wenn die Ressource zugewiesen wurde, sollte Ihre Seite „Azure-Ressourcen“ so ähnlich wie in der folgenden Abbildung aussehen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section3-step7-3.png)
+
+## <a name="connecting-the-unity-project-to-the-luis-app"></a>Verbinden des Unity-Projekts mit der LUIS-App
+
+Klicken Sie auf der Seite Verwalten > Anwendungseinstellungen > **Azure-Ressourcen** auf das Symbol **Kopieren**, um die **Beispielabfrage** zu kopieren:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section4-step1-1.png)
+
+Wählen Sie wieder in Ihrem Unity-Projekt im Hierarchiefenster das Objekt **Lunarcom** aus, suchen Sie dann im Inspektor-Fenster die Komponente **Lunarcom Intent Recognizer (Script)** aus, und konfigurieren Sie sie wie folgt:
+
+* Fügen Sie in das Feld **LUIS-Endpunkt** die **Beispielabfrage** ein, die Sie im vorherigen Schritt kopiert hatten:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section4-step1-2.png)
+
+## <a name="testing-and-improving-the-intent-recognition"></a>Testen und Verbessern der Absichtserkennung
+
+Um Absichtserkennung direkt im Unity-Editor zu verwenden, müssen Sie Ihrem Entwicklungscomputer die Verwendung der Diktatfunktion erlauben. Um diese Einstellung zu überprüfen, öffnen Sie Windows **Einstellungen**, wählen Sie dann **Datenschutz** > **Sprache** aus, und vergewissern Sie sich, dass **Online-Spracherkennung** aktiviert ist:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-1.png)
+
+Wenn Sie jetzt in den Spielmodus wechseln, können Sie die Absichtserkennung testen, indem Sie zuerst auf die Raketenschaltfläche klicken. Angenommen, dass Ihr Computer über ein Mikrofon verfügt, sehen Sie dann, wenn Sie die erste Beispieläußerung **Fahre fort, starte die Rakete** sprechen, dass das LunarModule in den Weltraum abhebt:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-2.png)
+
+Probieren Sie alle **Beispieläußerungen** und dann ebenso einige **Variationen der Beispieläußerungen** sowie einige **zufällige Äußerungen** aus.
+
+Kehren Sie als nächstes zu <a href="https://www.luis.ai" target="_blank">LUIS</a> zurück, navigieren Sie zur Seite Erstellen > App-Leistung verbessern > **Endpunktäußerungen überprüfen**, verwenden Sie die **Umschalt**-Schaltfläche, um von der Standardansicht „Entitäten“ zur **Tokenansicht** zu wechseln, und überprüfen Sie dann die Äußerungen:
+
+* Ändern und entfernen Sie in der Spalte **Äußerungen** die zugewiesenen Bezeichnungen nach Bedarf, sodass sie sich an Ihrer Absicht orientieren
+* Überprüfen Sie in der Spalte **Zugeordnete Absicht**, ob die Absicht richtig ist
+* Klicken Sie in der Spalte **Hinzufügen/Löschen** auf die Schaltfläche mit dem grünen Markierungshäkchen, um die Äußerung hinzuzufügen, oder auf die Schaltfläche mit dem roten X, um sie zu löschen
+
+Wenn Sie so viele Äußerungen überprüft haben, wie Sie möchten, klicken Sie auf die Schaltfläche **Trainieren**, um das Modell erneut zu trainieren, und dann auf die Schaltfläche **Veröffentlichen**, um die aktualisierte App erneut zu veröffentlichen:
+
+![mrlearning-speech](images/mrlearning-speech/tutorial4-section5-step1-3.png)
+
+> [!NOTE]
+> Wenn sich eine Endpunktäußerung nicht an der PressButton-Absicht orientiert, Sie aber möchten, dass für die Äußerung keine Absicht gilt, können Sie die zugewiesene Absicht in Keine ändern.
+
+**Wiederholen** Sie diesen Vorgang so oft, wie Sie möchten, um Ihr App-Modell zu verbessern.
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In dieser Lektion haben Sie gelernt, wie Sie Ki-gestützte Sprachbefehle hinzufügen. Jetzt kann Ihr Programm die Absicht der Benutzer erkennen, auch wenn Sie keine präzisen Sprachbefehle mehr haben!
+Ihr Projekt verfügt jetzt über KI-gestützte Sprachbefehle, die es Ihrer Anwendung ermöglichen, die Absicht der Benutzer auch dann zu erkennen, wenn sie keine präzisen Befehle äußern. Führen Sie die Anwendung auf Ihrem Gerät aus, um sicherzustellen, dass das Feature ordnungsgemäß funktioniert.

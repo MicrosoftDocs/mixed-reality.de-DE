@@ -1,45 +1,57 @@
 ---
-title: Tutorials zu Azure Speech Services-2. Hinzufügen eines Offline Modus für die lokale Sprachübersetzung
-description: Arbeiten Sie diesen Kurs durch, um zu erfahren, wie Sie das Azure Speech SDK in einer Mixed Reality-Anwendung implementieren
+title: 'Tutorials zu Azure Speech-Diensten: 2 Hinzufügen eines Offlinemodus für die lokale Sprache-zu-Text-Übersetzung'
+description: In diesem Kurs erfahren Sie, wie Sie das Azure Speech SDK in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 962d7d4750cf59fe56de4af9088c90e8ecd0aa16
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913211"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031623"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Hinzufügen eines Offline Modus für die lokale Sprachübersetzung
+# <a name="2-using-speech-recognition-to-execute-commands"></a>2. Verwenden der Spracherkennung zum Ausführen von Befehlen
 
-In diesem Tutorial fügen wir einen Offline Modus hinzu, mit dem Sie eine lokale Sprachübersetzung durchführen können, wenn keine Verbindung mit dem Azure-Dienst hergestellt werden kann. Wir *simulieren* auch den Zustand "getrennt".
+In diesem Tutorial fügen Sie die Möglichkeit hinzu, Befehle mithilfe der Azure-Spracherkennung auszuführen, sodass Sie basierend auf dem von Ihnen definierten Wort oder Ausdruck eine Aktion auslösen können.
+
+## <a name="objectives"></a>Ziele
+
+* Erfahren, wie die Azure-Spracherkennung zum Ausführen von Befehlen verwendet werden kann
 
 ## <a name="instructions"></a>Anweisungen
 
-1. Wählen Sie das Lunarcom_Base Objekt in der Hierarchie aus.
+Wählen Sie im Hierarchiefenster das **Lunarcom**-Objekt aus, und verwenden Sie dann im Inspektorfenster die Schaltfläche **Komponente hinzufügen**, um dem Lunarcom-Objekt die Komponente **Lunarcom Wake Word Recognizer (Script)** hinzuzufügen und sie wie folgt zu konfigurieren:
 
-2. Klicken Sie im Inspektor-Panel auf Komponente hinzufügen. Suchen Sie nach der lunarcom-Offline Kennung, und wählen Sie Sie aus
+* Geben Sie im Feld **Wake Word** (Wort zum Aufwecken) einen passenden Ausdruck ein, z. B. _Terminal aktivieren_.
+* Geben Sie im Feld **Dismiss Word** (Wort zum Schließen) einen passenden Ausdruck ein, z. B. _Terminal schließen_.
 
-    ![Module4Chapter2step1im](images/module4chapter2step1im.PNG)
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
-3. Klicken Sie in der Dropdown Liste auf die Dropdown Liste, und wählen Sie aktiviert aus. Dadurch wird das Projekt so programmiert, dass der Benutzer nicht über eine Verbindung verfügt.
+> [!NOTE]
+> Die Komponente „Lunarcom Wake Word Recognizer (Script)“ ist kein Bestandteil des MRTK. Sie wurde zusammen mit den Ressourcen für dieses Tutorial zur Verfügung gestellt.
 
-    ![Module4Chapter2step1im](images/module4chapter2step2im.PNG)
+Wenn Sie jetzt in den Spielmodus wechseln, wie im vorherigen Tutorial, ist der Terminalbereich standardmäßig aktiviert. Sie können ihn jetzt jedoch deaktivieren, indem Sie das Wort zum Schließen aussprechen, **Terminal schließen**:
 
-4. Klicken Sie im Unity-Editor auf abspielen, und testen Sie es. Drücken Sie das Mikrofon in der unteren linken Ecke der Szene, und beginnen Sie mit der Spracheingabe.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
-    >[!NOTE]
-    >Da wir offline sind, wurde die Wake-Word-Funktion deaktiviert. Sie müssen jedes Mal, wenn Sie die Sprache im Offline Zustand erkennen möchten, physisch auf das Mikrofon klicken.
+Und es erneut aktivieren, indem Sie das Wort zum Aufwecken sprechen **Terminal aktivieren**:
 
-    Im folgenden finden Sie ein Beispiel dafür, wie ihre Szene aussehen könnte.
+![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
-    ![Module4Chapter2exampleim](images/module4chapter2exampleim.PNG)
+> [!CAUTION]
+> Die Anwendung muss eine Verbindung mit Azure herstellen, achten Sie also darauf, dass Ihr Computer/Gerät mit dem Internet verbunden ist.
+
+> [!TIP]
+> Wenn Sie davon ausgehen müssen, dass Sie häufig keine Verbindung mit Azure herstellen können, können Sie außerdem Sprachbefehle mithilfe von MRTK implementieren. Befolgen Sie dazu die Anweisungen unter [Aktivieren der Sprachbefehle](mrlearning-base-ch5.md#enabling-voice-commands).
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-Der Offline Modus wurde aktiviert. Wenn Sie nun offline sind, können Sie weiterhin mit dem Sprach-SDK für Ihr Projekt arbeiten.
+Sie haben die von Azure unterstützten Sprachbefehle implementiert. Führen Sie die Anwendung auf Ihrem Gerät aus, um sicherzustellen, dass das Feature ordnungsgemäß funktioniert.
 
-[Nächstes Tutorial: 3. Hinzufügen der Komponente zur Sprachübersetzung von Azure Cognitive Services](mrlearning-speechSDK-ch3.md)
+Im nächsten Tutorial erfahren Sie, wie Sprache mithilfe von Azure-Sprachübersetzung übersetzt wird.
+
+[Nächstes Tutorial: 3. Hinzufügen der Sprachübersetzungskomponente von Azure Cognitive Services](mrlearning-speechSDK-ch3.md)

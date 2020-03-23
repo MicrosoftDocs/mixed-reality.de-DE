@@ -1,47 +1,47 @@
 ---
-title: Azure Speech Services tutorials - 3. Adding the Azure Cognitive Services speech translation component
-description: In this course, you will learn how to implement Azure Speech SDK within a mixed reality application.
+title: 'Tutorials zu Azure Speech-Diensten: 3 Hinzufügen der Sprachübersetzungskomponente von Azure Cognitive Services'
+description: In diesem Kurs erfahren Sie, wie Sie das Azure Speech SDK in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: dc5300b51ccb151a2e38f9d15b84a4a9031e2bb4
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: d8e73e24f0522ff71b95ea1886d59893216b0597
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143233"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79028342"
 ---
-# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Adding the Azure Cognitive Services speech translation component
+# <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Hinzufügen der Sprachübersetzungskomponente von Azure Cognitive Services
 
-In this tutorial, you'll learn about the Azure Cognitive Services Speech Translation component of your project, as well as how to translate into three different languages.
+In diesem Tutorial fügen Sie Ihrem Projekt Sprachübersetzung hinzu, die es Ihnen ermöglicht, Ihre Sprache in drei verschiedene Sprachen zu übersetzen und zu transkribieren.
+
+## <a name="objectives"></a>Ziele
+
+* Erlernen der Integration von Azure-Sprachübersetzung
 
 ## <a name="instructions"></a>Anweisungen
 
-1. Select the Lunarcom_Base object in the hierarchy, and click Add Component in the inspector panel. Search for and select Lunarcom Translation Recognizer.
+Wählen Sie im Hierarchiefenster das **Lunarcom**-Objekt aus, und verwenden Sie dann im Inspektorfenster die Schaltfläche **Komponente hinzufügen**, um dem Lunarcom-Objekt die Komponente **Lunarcom Translation Recognizer (Script)** hinzuzufügen und sie wie folgt zu konfigurieren:
 
-    ![Module4Chapter3step1im](images/module4chapter3step1im.PNG)
+* Ändern Sie die **Zielsprache** in eine Sprache Ihrer Wahl, z. B. _Deutsch_
 
-    Disable the offline mode simulator.
+![mrlearning-speech](images/mrlearning-speech/tutorial3-section1-step1-1.png)
 
-    ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
+> [!NOTE]
+> Die Komponente „Lunarcom Translation Recognizer (Script)“ ist kein Bestandteil des MRTK. Sie wurde zusammen mit den Ressourcen für dieses Tutorial zur Verfügung gestellt.
 
-    >[!IMPORTANT]
-    >Before moving on, ensure that the offline mode simulator is disabled (as shown in the image above) before testing the Speech-SDK translator. In order to translate, you must be connected to the internet.
+Wenn Sie jetzt in den Spielmodus wechseln, können Sie die Sprachübersetzung testen, indem Sie zuerst auf die Satellitenschaltfläche klicken. Falls Ihr Computer über ein Mikrofon verfügt, wird Ihre Sprache dann, wenn Sie etwas sagen, in die gewählte Sprache übersetzt und im Terminalbereich transkribiert:
 
-2. Click the drop-down in the Lunarcom Translation Recognizer, and select the language you would like to translate to.
+![mrlearning-speech](images/mrlearning-speech/tutorial3-section1-step1-2.png)
 
-    ![Module4Chapter3step2im](images/module4chapter3step2im.PNG)
-
-3. Run the application and test the translator by clicking the Satellite button, and begin speaking. Press the Satellite button again to stop the recognition. Below is an example of what your scene should look like. Feel free to change the language under the "Target Language" dropdown (see image above) to explore translation into other languages.
-
-    Below is an example of what your scene should look like:
-
-    ![Module4Chapter3exampleim](images/module4chapter3exampleim.PNG)
+> [!CAUTION]
+> Die Anwendung muss eine Verbindung mit Azure herstellen, achten Sie also darauf, dass Ihr Computer/Gerät mit dem Internet verbunden ist.
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-Your project can now successfully translate the words you speak into several different languages. Feel free to play around with the languages, and test the accuracy of the translation.
+Ihr Projekt kann nun die von Ihnen gesprochenen Wörter erfolgreich in verschiedene Sprachen übersetzen. Führen Sie die Anwendung auf Ihrem Gerät aus, um sicherzustellen, dass das Feature ordnungsgemäß funktioniert.
 
-[Nächstes Tutorial: 4. Einrichten der Absicht und der Kenntnisse in natürlicher Sprache](mrlearning-speechSDK-ch4.md)
+[Nächstes Tutorial: 4. Einrichten des Verständnisses von Absichten und natürlicher Sprache](mrlearning-speechSDK-ch4.md)

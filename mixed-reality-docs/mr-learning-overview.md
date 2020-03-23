@@ -1,26 +1,27 @@
 ---
-title: Übersicht über das Basismodul von Mr Learning
+title: 'MR-Basislernmodul: Übersicht'
 description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 04/28/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 63948e9eb67a177bde22573730014ae3a13a5f7e
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 01429d3952eb97d4f8aaab2d2ce442eb1e1fcdac
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874022"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031712"
 ---
 # <a name="mr-learning-modules"></a>MR-Lernmodule
 
 ## <a name="overview"></a>Übersicht
 
-Die Lernmodule von Mr sind ein aktualisierter Ansatz, um Entwicklern das Erstellen von Anwendungen für die Mixed Reality-Plattform und-Geräte zu unterstützen, basierend auf den Erkenntnissen aus der Original-Academy-tutorialreihe. Im folgenden finden Sie einige Beispiele für Feedback, das wir mit dieser neuen Reihe ansprechen wollten:
+Die MR-Lernmodule stellen einen aktualisierten Ansatz dar, Entwicklern das Erstellen von Anwendungen für die Mixed Reality-Plattform und Geräte zu vermitteln, ausgehend von den Erkenntnissen aus der ursprünglichen Tutorialreihe der Academy. Zu den Beispielen für Feedback, die wir mit dieser neuen Reihe ansprechen wollten, gehören:
 
-* Lernprogramme werden nicht implementiert oder zeigen, wie das Mixed Reality Toolkit verwendet werden kann.
-* Die Lernprogramme eignen sich hervorragend, um zu lernen, wie Sie eine Anwendung implementieren, aber nicht zum Entwickeln einer Anwendung.
-* Es ist kein Benutzeroberflächen-Leitfaden verfügbar.
+* Tutorials zeigen nicht die Implementierung oder Verwendung des Mixed Reality-Toolkits
+* Die Tutorials eignen sich hervorragend, um das Implementieren von Komponenten zu lernen, nicht aber zum Entwickeln einer Anwendung.
+* Es gibt derzeit keine Anleitungen zur Benutzeroberfläche
 
-Mit diesem Feedback haben wir festgelegt, dass eine Reihe von Tutorials entworfen werden, die nicht nur die oben genannten Elemente ansprechen, sondern allen Entwicklern eine nützliche Baseline-Code Vorlage zur Verfügung stellen.
+Mit diesem Feedback haben wir uns auf den Weg gemacht, eine Reihe von Tutorials zu entwerfen, die sich nicht nur mit den oben genannten Punkten befassen, sondern allen Entwicklern darüber hinaus eine nützliche Codevorlage als Grundlinie bieten, die Entwicklungen zugrunde gelegt werden kann.

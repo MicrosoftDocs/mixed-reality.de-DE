@@ -1,58 +1,59 @@
 ---
-title: Tutorials zu Azure Spatial Anchor-3. Anzeigen des Azure Spatial Anchor-Feedbacks
+title: 'Tutorials zu Azure Spatial Anchors: 3 Anzeigen von Azure Spatial Anchors-Feedback'
 description: In diesem Kurs erfahren Sie, wie Sie die Azure-Gesichtserkennung in einer Mixed Reality-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 11342bada65e963db6393d35c99e2c2fbffe8ff1
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77553934"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031253"
 ---
-# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen des Azure Spatial Anchor-Feedbacks
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen von Azure Spatial Anchors-Feedback
 
-In diesem Tutorial erfahren Sie, wie Sie Benutzern Feedback zur Anker Ermittlung, zu Ereignissen und zum Status bei der Verwendung von Azure Spatial Anchor (ASA) bereitstellen.
+In diesem Tutorial erfahren Sie, wie Sie Feedback zur Ankerermittlung, zu Ereignissen und zum Status bei der Verwendung von Azure Spatial Anchors (ASA) für Benutzer bereitstellen.
 
 ## <a name="objectives"></a>Ziele
 
-* Erfahren Sie, wie Sie einen Benutzeroberflächen Bereich einrichten, in dem wichtige Informationen zur aktuellen ASA-Sitzung angezeigt werden.
-* Verstehen und untersuchen Sie Feedback Elemente, die das ASA SDK Benutzern zur Verfügung stellt.
+* Erlernen des Einrichtens eines Bereichs der Benutzeroberfläche, in dem wichtige Informationen über die aktuelle ASA-Sitzung angezeigt werden
+* Verstehen und Untersuchen der Feedbackelemente, die Benutzern vom ASA SDK zur Verfügung gestellt werden.
 
-## <a name="set-up-asa-feedback-ui-panel"></a>Einrichten des ASA-Feedback-UI-Panels
+## <a name="set-up-asa-feedback-ui-panel"></a>Einrichten des Benutzeroberflächenbereichs für ASA-Feedback
 
-Klicken Sie im Hierarchie Fenster mit der rechten Maustaste auf die **Anweisungen** > **textcontent** -Objekt, und wählen Sie **3D-Objekt** > **Text-textmeschpro** aus, um ein textmeshpro-Textobjekt als untergeordnetes Element der Anweisungen > textcontent-Objekt zu erstellen und ihm einen passenden Namen zuzuweisen, z. b. **Feedback**:
+Klicken Sie im Hierarchiefenster mit der rechten Maustaste auf das Objekt **Instructions** > **TextContent**, wählen Sie **3D Object** > **Text - TextMeshPro** aus, um ein TextMeshPro-Textobjekt als untergeordnetes Element des Objekts „Instructions > TextContent“ zu erstellen, und geben Sie ihm einen passenden Namen, beispielsweise **Feedback**:
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
 > [!TIP]
-> Um die Arbeit mit der Szene zu vereinfachen, legen Sie die <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">Sichtbarkeit der Szene</a> für das Objekt "Objektanker" auf OFF fest, indem Sie auf das Augensymbol links neben dem Objekt klicken. Dadurch wird das Objekt im Szenen Fenster ausgeblendet, ohne die in-Game-Sichtbarkeit zu ändern.
+> Um das Arbeiten mit Ihrer Szene zu erleichtern, legen Sie die <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">Scene Visibility</a> (Sichtbarkeit in der Szene) für das ParentAnchor-Objekt auf „Aus“ fest, indem Sie links neben dem Objekt auf das Augensymbol klicken. Dadurch wird das Objekt im Szenenfenster ausgeblendet, ohne seine Sichtbarkeit im Spiel zu ändern.
 
-Wenn das **Feedback** Objekt noch ausgewählt ist, ändern Sie im Inspektor-Fenster seine Position und Größe so, dass es sich unter dem Anweisungs Text befindet, z. b.:
+Ändern Sie bei noch ausgewähltem **Feedback**-Objekt im Inspektorfenster seine Position und Größe so, dass es ordentlich unter dem Anweisungstext platziert ist, beispielsweise:
 
-* Ändern der Rect-Transformation **Torys Y** in-0,24
-* Ändern Sie die **Breite** der Rect-Transformation in 0,555.
-* Ändern Sie die **Höhe** der Rect-Transformation in 0,1.
+* Ändern Sie die Rect-Transformations-**Pos Y** in -0,24
+* Ändern Sie die Rect-Transformations-**Breite** in 0,555
+* Ändern Sie die Rect-Transformations-**Höhe** in 0,1
 
-Wählen Sie dann Schriftart Eigenschaften aus, damit der Text gut in den Textbereich passt, z. b.:
+Wählen Sie dann die Schriftarteigenschaften so, dass der Text gut in den Textbereich passt, beispielsweise:
 
-* Ändern Sie den Text Mesh pro- **Schrift** Schnitt (Skript) in "Fett".
-* Ändern Sie den **Schrift** Grad Text Mesh pro (Skript) in 0,17.
-* Ändern der **Ausrichtung** von Text Mesh pro (Skript) in Mitte und Mitte
+* Ändern Sie den **Schriftschnitt** von „Text Mesh Pro (Script)“ in Fett
+* Ändern Sie den **Schriftgrad** von „Text Mesh Pro (Script)“ in 0,17
+* Ändern Sie die **Ausrichtung** von „Text Mesh Pro (Script)“ in „Zentriert und Mittig“
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
-Wenn das **Feedback** Objekt noch ausgewählt ist, verwenden Sie im Inspektor-Fenster die Schaltfläche **Komponente hinzufügen** , um dem Feedback Objekt die Komponente für das **Anchor-Feedback Skript (Skript)** hinzuzufügen:
+Verwenden Sie bei noch immer ausgewähltem **Feedback**-Objekt im Inspektorfenster die Schaltfläche **Komponente hinzufügen**, um dem Feedback-Objekt die **Anchor-Feedback (Script)** -Komponente hinzuzufügen:
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-Weisen Sie das **Feedback** Objekt selbst dem **Feedback Textfeld** des **Anchor-Feedback Skripts (Skript)** zu:
+Weisen Sie das **Feedback**-Objekt selbst dem Feld **Feedbacktext** der **Anchor Feedback Script (Script)** -Komponente zu:
 
 ![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
-In diesem Tutorial haben Sie gelernt, wie Sie einen Bereich für die Benutzeroberfläche erstellen, um den aktuellen Status der Azure Spatial Anchor-Oberfläche zum Bereitstellen von Echtzeitfeedback anzuzeigen.
+In diesem Tutorial haben Sie gelernt, wie Sie einen Benutzeroberflächenbereich erstellen, um den aktuellen Status der Azure Spatial Anchor-Benutzererfahrung anzuzeigen, um Echtzeitfeedback für Benutzer bereitzustellen.

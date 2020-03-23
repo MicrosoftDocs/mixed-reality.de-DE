@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
-ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: 56adb4bfc66768684c8269c0f0cafd70c486ea8a
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554400"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376207"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisieren des Projekts und der ersten Anwendung
 
@@ -236,6 +236,9 @@ Konfigurieren Sie Visual Studio für HoloLens 2, indem Sie die **Master**- oder 
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
 
+> [!NOTE]
+> Wenn „Gerät“ nicht als Option angezeigt wird, müssen Sie möglicherweise das Standardstartprojekt vom IC2Lpp-Projekt in Ihr UWP-Projekt ändern. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **NameIhresProjekts (Universelles Windows)** , und wählen Sie **Als Startprojekt festlegen** aus. 
+
 Verbinden Sie Ihre HoloLens 2 mit Ihrem Computer.
 
 > [!IMPORTANT]
@@ -257,6 +260,6 @@ Um die Anwendung auf Ihrem Gerät bereitzustellen, ohne dass sie automatisch ges
 Sie haben jetzt Ihre erste HoloLens 2-Anwendung bereitgestellt. Während Sie sich in ihr bewegen, sollten Sie ein Gittermodell für die Raumzuordnung sehen, das alle Oberflächen bedeckt, die von der HoloLens 2 erkannt wurden. Darüber hinaus sollten Sie Indikatoren auf Ihren Händen und Fingern für die Handverfolgung und einen Frameratenzähler zum Überwachen der Anwendungsleistung sehen. Dies sind nur einige der grundlegenden Elemente, die standardmäßig im Mixed Reality-Toolkit enthalten sind. In den folgenden Tutorials fügen Sie Ihrer Szene mehr Inhalte und Interaktivität hinzu, sodass Sie alle Funktionen der HoloLens 2 und des Mixed Reality-Toolkits umfassend erkunden können.
 
 > [!NOTE]
-> Möglicherweise fällt Ihnen in der App die Diagnoseprofilerstellung auf. Sie können sie mithilfe des Sprachbefehls **Toogle Diagnostics** (Diagnose ein-/ausschalten) ein- und ausblenden. Es wird jedoch im Allgemeinen empfohlen, die Profilerstellung während der Entwicklung jederzeit sichtbar zu lassen, um sehen zu können, wann sich Änderungen an der App möglicherweise negativ auf die Leistung auswirken. Beispielsweise sollte eine HoloLens 2-Anwendung [durchgängig mit 60 BpS](understanding-performance-for-mixed-reality.md) ausgeführt werden.
+> Möglicherweise fällt Ihnen in der App die Diagnoseprofilerstellung auf. Sie können sie mithilfe des Sprachbefehls **Toggle Diagnostics** (Diagnose ein-/ausschalten) ein- und ausblenden. Es wird jedoch im Allgemeinen empfohlen, die Profilerstellung während der Entwicklung jederzeit sichtbar zu lassen, um sehen zu können, wann sich Änderungen an der App möglicherweise negativ auf die Leistung auswirken. Beispielsweise sollte eine HoloLens 2-Anwendung [durchgängig mit 60 BpS](understanding-performance-for-mixed-reality.md) ausgeführt werden.
 
 [Nächstes Tutorial: 3. Erstellen der Benutzeroberfläche und Konfigurieren des Mixed Reality-Toolkits](mrlearning-base-ch2.md)
