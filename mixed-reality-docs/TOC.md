@@ -201,11 +201,16 @@
 ### [Verwenden von WebVR in Microsoft Edge mit Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## Systemeigen
 ### [Native Entwicklung – Übersicht](directx-development-overview.md)
-### Erste Schritte
+### OpenXR
+#### [OpenXR – Übersicht](openxr.md)
+#### [Erste Schritte mit OpenXR](openxr-getting-started.md)
+#### [OpenXR – Bewährte Methoden](openxr-best-practices.md)
+#### [OpenXR – Leistung](openxr-performance.md)
+#### [OpenXR – Problembehandlung](openxr-troubleshooting.md)
+### WinRT
 #### [Erstellen eines nativen Hologrammprojekts](creating-a-holographic-directx-project.md)
 #### [Abrufen eines HolographicSpace-Objekts](getting-a-holographicspace.md)
 #### [Natives Rendering](rendering-in-directx.md)
-### [OpenXR](openxr.md)
 ## Plattformfunktionen und APIs
 ### Grundbausteine
 #### [Koordinatensysteme](coordinate-systems-in-directx.md)
