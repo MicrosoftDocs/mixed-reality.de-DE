@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: Openxr, Khronos, basicxrapp, DirectX, Native, Native APP, benutzerdefiniertes Modul, Middleware, bewährte Methoden, Leistung, Qualität, Stabilität
-ms.openlocfilehash: 01ce2ac0a69ffdf5dd1f00b92f37f54964f4c30c
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163354"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362019"
 ---
 # <a name="openxr-app-best-practices"></a>Bewährte Methoden für die openxr-App
 
-Ein Beispiel für die unten aufgeführten bewährten Methoden finden Sie in der Datei " [openxrprogram. cpp](https://github.com/microsoft/OpenXR-SDK-VisualStudio/blob/master/samples/BasicXrApp/OpenXrProgram.cpp) " von basicxrapp. Die Run ()-Funktion am Anfang erfasst einen typischen openxr-App-Codefluss von der Initialisierung zur Ereignis-und Renderingschleife.
+Ein Beispiel für die unten aufgeführten bewährten Methoden finden Sie in der Datei "openxrprogram. cpp" von <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">basicxrapp</a>. Die Run ()-Funktion am Anfang erfasst einen typischen openxr-App-Codefluss von der Initialisierung zur Ereignis-und Renderingschleife.
 
 ## <a name="best-practices-for-visual-quality-and-stability"></a>Bewährte Methoden für die visuelle Qualität und Stabilität
 

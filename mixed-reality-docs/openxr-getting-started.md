@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: Openxr, Khronos, basicxrapp, Windows Mixed Reality openxr-Entwickler Portal, DirectX, Native, Native APP, benutzerdefiniertes Modul, Middleware, Getting Started, 101, Vorschau Erweiterungen
-ms.openlocfilehash: 7a210ce25d1e7c22710f1029aca2ca7f55a8b71c
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: db45308834f920413420f080a35b378f6a55fa49
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163334"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362031"
 ---
 # <a name="getting-started-with-openxr"></a>Einstieg in openxr
 
@@ -50,7 +50,7 @@ Wenn Sie den Emulator verwenden, ist die einfachste Möglichkeit zum Installiere
 
 Stellen Sie sicher, dass Sie [die Tools installieren, die](install-the-tools.md) Sie für die openxr-Entwicklung benötigen, sofern noch nicht geschehen.
 
-Das <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">basicxrapp</a> -Projekt veranschaulicht ein einfaches openxr-Beispiel mit zwei Visual Studio-Projektdateien, eines für eine Win32-Desktop-App und eines für eine UWP hololens 2-App.  Da die Projekt Mappe ein hololens-UWP-Projekt enthält, benötigen Sie die [Arbeitsauslastung der universelle Windows-Plattform Entwicklung](install-the-tools.md#installation-checklist) , die in Visual Studio installiert ist, um Sie vollständig zu öffnen.
+Das <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">basicxrapp</a> -Projekt veranschaulicht ein einfaches openxr-Beispiel mit zwei Visual Studio-Projektdateien, eines für eine Win32-Desktop-App und eines für eine UWP hololens 2-App.  Da die Projekt Mappe ein hololens-UWP-Projekt enthält, benötigen Sie die [Arbeitsauslastung der universelle Windows-Plattform Entwicklung](install-the-tools.md#installation-checklist) , die in Visual Studio installiert ist, um Sie vollständig zu öffnen.
 
 Beachten Sie Folgendes: während die Win32-und UWP-Projektdateien aufgrund von Unterschieden bei der Paket Erstellung und Bereitstellung getrennt sind, ist der app-Code in jedem Projekt 100% identisch.
 
@@ -77,7 +77,7 @@ So fügen Sie der Visual Studio C++ -Projekt Mappe einen "openxr. Loader"-nuget-
 1. Klicken Sie auf OK, um die Änderungen am Projekt zu übernehmen.
 1. Fügen Sie `#include <openxr/openxr.h>` einer Quelldatei hinzu, um mit der Verwendung der openxr-API zu beginnen.
 
-Ein Beispiel für die openxr-API in Aktion finden Sie in der <a href="https://github.com/Microsoft/OpenXR-SDK-VisualStudio/tree/master/samples/BasicXrApp" target="_blank">basicxrapp</a> -Beispiel-app.
+Ein Beispiel für die openxr-API in Aktion finden Sie in der <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">basicxrapp</a> -Beispiel-app.
 
 ### <a name="include-official-openxr-loader-source"></a>Offizielle openxr-Ladedienst Quelle einbeziehen
 
@@ -99,7 +99,7 @@ So aktivieren Sie die Vorschau Erweiterungen auf ihren Ziel-hololens 2 oder auf 
      * Wenn Ihr Zielgerät ein Desktop-PC ist, dem eine immersive Headset-Peripherie angefügt ist, <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop#set-up-device-portal-on-windows-desktop" target="_blank">befolgen Sie diese Anweisungen</a> auf dem Desktop-Zielcomputer.
   1. Navigieren Sie im linken Bereich zur Registerkarte **openxr** , und aktivieren Sie die Option **neueste Vorschauversion openxr-Laufzeit verwenden**.  Dadurch wird die Vorschau Laufzeit auf Ihrem Gerät aktiviert, für die Vorschau Erweiterungen aktiviert sind.
 
-Eine Dokumentation zu diesen Vorschau Erweiterungen und Beispielen zur Verwendung finden Sie im Repository " <a href="https://github.com/Microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">Mixed Reality openxr</a> ".
+Eine Dokumentation zu diesen Vorschau Erweiterungen und Beispielen zur Verwendung finden Sie im Repository " <a href="https://github.com/microsoft/OpenXR-MixedReality#openxr-preview-extensions" target="_blank">Mixed Reality openxr</a> ".
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
