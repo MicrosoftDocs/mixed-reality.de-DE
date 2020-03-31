@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: fa0ebc409fa38f664bdd0966906c6fd77f7a6081
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 47063fbf9a1b9f3a43497a0742deba2c16b53d99
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79376147"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362058"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Erste Schritte mit Azure Spatial Anchors
 
@@ -47,13 +47,13 @@ Im dritten Tutorial, [Anzeigen von Azure Spatial Anchors-Feedback](mrlearning-as
 > Die empfohlene Unity-Version für diese Tutorialreihe ist Unity 2019.2.X. Diese übertrifft alle Versionsanforderungen oder -empfehlungen, die in den oben verlinkten Voraussetzungen angegeben sind.
 
 ## <a name="creating-the-unity-project"></a>Erstellen des Unity-Projekts
-<!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
+<!-- TODO: Consider renaming to 'Creating and preparing the Unity project'-->
 
 In diesem Abschnitt erstellen Sie ein neues Unity-Projekt und bereiten es für die MRTK-Entwicklung vor.
 
 Befolgen Sie zu diesem Zweck zunächst die Anweisungen unter [Initialisieren des Projekts und der ersten Anwendung](mrlearning-base-ch1.md), jedoch ohne die Anweisungen zum [Erstellen Ihrer Anwendung auf Ihrem Gerät](mrlearning-base-ch1.md#build-your-application-to-your-device), die die folgenden Schritte beinhalten:
 
-1. [Erstellen eines neuen Unity-Projekts](mrlearning-base-ch1.md#create-new-unity-project), das mit einem passenden Namen bezeichnet wird, beispielsweise *MRTK-Tutorials*.
+1. [Erstellen eines neuen Unity-Projekts](mrlearning-base-ch1.md#create-new-unity-project), das mit einem passenden Namen bezeichnet wird, beispielsweise *MRTK-Tutorials*
 
 2. [Konfigurieren des Unity-Projekts für Windows Mixed Reality](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
 
