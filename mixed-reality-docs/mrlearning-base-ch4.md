@@ -7,12 +7,12 @@ ms.date: 05/02/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 419b381c1240b2cc10708eab03245ed3aabfa859
-ms.sourcegitcommit: 61291e83536c8cb2e8401a8e66060128ede35922
+ms.openlocfilehash: 65bcef6a7c10450816d7a928302b0b266b132f0f
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416141"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362069"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interagieren mit 3D-Objekten
 
@@ -268,7 +268,7 @@ Klicken Sie in der **Hand Interaction Touch (Script)** -Komponente auf das klein
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-1.png)
 
-Navigieren Sie zu **Assets** > **MixedRealityToolkit.SDK** > **StandardAssets** > Materials (Ressourcen > MixedRealityToolkit.SDK > StandardAssets > Materialien), um die mit dem MRTK mitgelieferten Audioclips anzuzeigen, und weisen Sie dann dem Feld **Audio Clip** einen passenden Audioclip zu, beispielsweise den Audioclip „MRTK_Gem“:
+Navigieren Sie zu **Assets** > **MixedRealityToolkit.SDK** > **StandardAssets** > **Audio** (Ressourcen > MixedRealityToolkit.SDK > StandardAssets > Audio), um die mit dem MRTK mitgelieferten Audioclips anzuzeigen, und weisen Sie dann dem Feld **Audio Clip** einen passenden Audioclip zu, beispielsweise den Audioclip „MRTK_Gem“:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-2.png)
 

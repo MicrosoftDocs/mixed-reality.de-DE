@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 2825f99f49eca6fd7277d02828bfe1bc3c23291a
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 8a85ab560d0e6b36b589970b4d5b8a441ed2bbe2
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031214"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362041"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Platzieren dynamischer Inhalte und Verwenden von Solvern
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -39,7 +39,7 @@ In diesem Tutorial behandeln wir die Implementierung der Solver „Orbital“ un
 In diesem Abschnitt erweitern Sie die Schaltflächensammlung, die Sie im vorherigen Tutorial erstellt haben, sodass sie der Blickrichtung des Benutzers folgt. Darüber hinaus konfigurieren Sie den Solver so, dass Folgendes immer auf die Schaltflächensammlung zutrifft:
 
 * Sie wird parallel zur Leserichtung des Benutzers gedreht, für natürliches Lesen von links nach rechts
-* Sie wird etwas unterhalb der horizontalen Blickrichtung des Benutzers positioniert, sodass die anderen Objekte, die später in diesem Tutorial hinzugefügt werden, nicht verdeckt werden
+* Sie wird unterhalb der horizontalen Blickrichtung des Benutzers positioniert, sodass die anderen Objekte, die später in diesem Tutorial hinzugefügt werden, nicht verdeckt werden
 * Sie wird ungefähr eine halbe Armlänge vom Benutzer entfernt, sodass die Schaltflächen leicht gedrückt werden können
 
 Hierzu verwenden Sie den **Orbital-Solver**, der das Objekt fest an einer angegebenen Position und einem Offset vom Bezugsobjekt verankert.

@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4de40bb0b66ed299fa4a571490b33a0454f25817
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 36f25229469e848a3f0612a5971cc8e9381262f5
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031707"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362011"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Speichern, Abrufen und Freigeben von Azure Spatial Anchors
 
@@ -54,6 +54,9 @@ Wenn Sie die aktualisierte Anwendung für Ihre HoloLens erstellen, können Sie j
 7. Starten Sie eine Azure-Sitzung.
 8. Suchen Sie nach dem Azure Anchor (er positioniert die Raketenstartbasis-Benutzererfahrung an der Position aus Schritt 3).
 
+> [!NOTE]
+> Für einen vollständigen Neustart der Anwendung muss nach dem Schließen der immersiven App-Ansicht das App-Fenster in der Mixed Reality Startumgebung geschlossen werden, bevor die Anwendung über das Startmenü neu gestartet wird. Weitere Details finden Sie in der Dokumentation [Verwenden von Apps in HoloLens](https://docs.microsoft.com/hololens/holographic-home#using-apps-on-hololens).
+
 ## <a name="share-azure-anchors-between-multiple-devices"></a>Teilen von Azure Anchors zwischen mehreren Geräten
 
 In diesem Abschnitt erfahren Sie, wie Sie die Azure Anchor ID gemeinsam auf mehreren Geräten verwenden. Dies ermöglicht es mehreren Geräten, die gleiche Anchor ID bei Azure abzufragen, was die räumliche Ausrichtung der verankerten Hologramme gestattet. Die räumliche Ausrichtung, d. h. die Anzeige der gleichen Hologramme an den gleichen physischen Positionen auf mehreren Geräten, ist entscheidend für gemeinsame lokale Benutzererlebnisse in HoloLens 2.
@@ -75,7 +78,7 @@ Wenn Sie die aktualisierte Anwendung auf zwei HoloLens-Geräten erstellen, könn
 2. Auf HoloLens-Gerät 1: Starten Sie eine Azure-Sitzung.
 3. Auf HoloLens-Gerät 1: Erstellen Sie Azure Anchors (erstellt Anker am Speicherort der Raketenstartbasis-Benutzererfahrung).
 4. Auf HoloLens-Gerät 1: Geben Sie die Azure Anchor ID im Netzwerk frei.
-5. Auf HoloLens-Gerät 2: Führen Sie einen Neustart der Anwendung aus
+5. Auf HoloLens-Gerät 2: Starten Sie die Anwendung.
 6. Auf HoloLens-Gerät 2: Rufen Sie die Shared Anchor ID aus dem Netzwerk ab (ruft die Anchor ID ab, die gerade von HoloLens-Gerät 1 freigegeben worden war).
 7. Auf HoloLens-Gerät 2: Starten Sie eine Azure-Sitzung.
 8. Auf HoloLens-Gerät 2: Suchen Sie nach dem Azure Anchor (er positioniert die Raketenstartbasis-Benutzererfahrung an der Position aus Schritt 3).

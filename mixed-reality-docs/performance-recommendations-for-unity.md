@@ -7,18 +7,20 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: Grafik, CPU, GPU, Rendering, Garbage Collection, Hololens
 ms.localizationpriority: high
-ms.openlocfilehash: f889d899ba55f4b3040080f6632cd27db86d6fc3
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
+ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160016"
 ---
 # <a name="performance-recommendations-for-unity"></a>Leistungsempfehlungen für Unity
 
 Dieser Artikel baut auf der Diskussion auf, die in [Leistungsempfehlungen für Mixed Reality](understanding-performance-for-mixed-reality.md) beschrieben wird, legt den Schwerpunkt aber auf die für die Umgebung der Unity-Engine spezifischen Erkenntnisse.
 
-Außerdem empfehlen wir Entwicklern dringend, den Artikel über [empfohlene Umgebungseinstellungen für Unity](Recommended-settings-for-unity.md) durchzuarbeiten. Dieser Artikel enthält Inhalte mit einigen der wichtigsten Szenenkonfigurationen zum Entwickeln leistungsfähiger Mixed Reality-Apps. Einige dieser empfohlenen Einstellungen werden unten ebenfalls hervorgehoben.
+## <a name="use-recommended-unity-project-settings"></a>Verwenden der empfohlenen Unity-Projekteinstellungen
+
+Der wichtigste erste Schritt beim Optimieren der Leistung von Mixed Reality-Apps in Unity besteht darin, sicherzustellen, dass Sie die [empfohlenen Umgebungseinstellungen für Unity](recommended-settings-for-unity.md) verwenden. Der betreffende Artikel enthält Inhalte mit einigen der wichtigsten Szenenkonfigurationen zum Entwickeln leistungsfähiger Mixed Reality-Apps. Einige dieser empfohlenen Einstellungen werden unten ebenfalls hervorgehoben.
 
 ## <a name="how-to-profile-with-unity"></a>So erstellen Sie ein Profil mit Unity
 
