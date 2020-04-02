@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: Openxr, Khronos, basicxrapp, DirectX, Native, Native APP, benutzerdefiniertes Modul, Middleware, bewährte Methoden, Leistung, Qualität, Stabilität
-ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: 0a0bbd37521be52ec328b4f32e53969c0ec7fef4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362019"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549368"
 ---
 # <a name="openxr-app-best-practices"></a>Bewährte Methoden für die openxr-App
 
@@ -25,8 +25,8 @@ Weitere Leistungs Empfehlungen für hololens 2 finden Sie weiter unten im Abschn
 
 ### <a name="gamma-correct-rendering"></a>Gamma-korrektes Rendering
 
-Um sicherzustellen, dass die Renderingpipeline Gamma-correct ist, muss darauf geachtet werden. Beim Rendern in eine vorhandenes SwapChain sollte das Renderziel-Ansichts Format dem vorhandenes SwapChain-Format entsprechen (z. b. DXGI_FORMAT_B8G8R8A8_UNORM_SRGB für das vorhandenes SwapChain-Format und die renderzielansicht).
-Eine Ausnahme ist, wenn die Renderingpipeline der App eine manuelle sRGB-Konvertierung in Shader-Code durchführt. in diesem Fall sollte die APP ein sRGB-vorhandenes SwapChain-Format anfordern, aber das lineare Format für die renderzielansicht verwenden (z. b. Anforderungs DXGI_FORMAT_B8G8R8A8_UNORM_SRGB als Das vorhandenes SwapChain-Format, jedoch DXGI_FORMAT_B8G8R8A8_UNORM als renderzielansicht), um zu verhindern, dass Inhalt doppelt korrigiert wird.
+Um sicherzustellen, dass die Renderingpipeline Gamma-correct ist, muss darauf geachtet werden. Beim Rendern in eine vorhandenes SwapChain sollte das Renderziel-Ansichts Format dem vorhandenes SwapChain-Format entsprechen (z. b. `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` für das vorhandenes SwapChain-Format und die renderzielansicht).
+Die Ausnahme besteht darin, dass die Renderingpipeline der App eine manuelle sRGB-Konvertierung in Shader-Code durchführt. in diesem Fall sollte die APP ein sRGB-vorhandenes SwapChain-Format anfordern, aber das lineare Format für die renderzielansicht verwenden (z. b. Anforderung `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` als vorhandenes SwapChain-Format, aber `DXGI_FORMAT_B8G8R8A8_UNORM` als renderzielansicht).
 
 ### <a name="submit-depth-buffer-for-projection-layers"></a>Tiefen Puffer für Projektions Ebenen übermitteln
 
