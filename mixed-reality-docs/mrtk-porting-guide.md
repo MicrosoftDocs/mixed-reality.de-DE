@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Testen, MRTK, MRTK Version 2, HoloLens 2
-ms.openlocfilehash: 8e0c66a1c3d8ebd5422d19a02f313147ecf76653
-ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
+ms.openlocfilehash: ced33a082152822779ae23a854800072bc8dfb5f
+ms.sourcegitcommit: d451b2055593ba8d0e4e05132ce889d60c71ee81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77092034"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80613990"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Vorbereiten einer vorhandenen App für HoloLens 2
 
@@ -77,7 +77,7 @@ Erstellen Sie nach der Aufnahme der relevanten DLLs aus Unity eine Visual Studio
 Weitere Informationen zur Verwendung von MRTK Version 2 finden Sie in den folgenden Ressourcen:
 - [MRTK-Angebotsseite (Landing Page)](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 - [Erste Schritte mit MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
-- [MRTK-Hände](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSystem/HandTracking.html)
+- [MRTK-Hände](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/HandTracking.html)
 - [ MRTK Eye-Tracking – Blickverfolgung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html)
 
 ### <a name="prepare-for-the-migration"></a>Vorbereitungen für die Migration
@@ -141,7 +141,7 @@ Jede Anwendung und jedes Szenario ist anders, und wir werden auch in Zukunft anh
 
 - Der Shader-Compiler auf ARM wird beim ersten Draw-Aufruf nach dem Laden des Shaders oder nach der Änderung einer Komponente, auf die sich der Shader stützt, ausgeführt, und nicht zur Ladezeit des Shaders. Die Auswirkungen auf die Bildfrequenz können erheblich sein, je nachdem, wie viele Shader kompiliert werden müssen. Das hat verschiedene Auswirkungen auf das unterschiedliche Verarbeiten, Packen und Aktualisieren von Shadern auf HoloLens 2 gegenüber HoloLens (1. Generation).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Installieren der Tools](install-the-tools.md)
 * [Erste Schritte mit MRTK Version 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 * [HTK-APIs zu MRTK-APIs](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)
