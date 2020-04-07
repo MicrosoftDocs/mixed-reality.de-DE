@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/02/2019
 ms.topic: article
 keywords: Windows Mixed Reality, räumlicher Sound, Entwurf, Stil
-ms.openlocfilehash: 34923e1ebfc8e46ea8e67a4444fe3c2691efd4db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 08844f6d837407d52ad2ab84b78440ce856151fc
+ms.sourcegitcommit: b1ca4194eff452804ce5852208cce9815c6a4500
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182010"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80677986"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>Verwenden von Sound in Anwendungen mit gemischter Realität
 
@@ -46,20 +46,20 @@ Interaktions Typen in gemischter Realität umfassen Gesten, direkte Bearbeitung 
 
 ### <a name="gesture-interactions"></a>Gesten Interaktionen
 In gemischter Realität können Benutzer mit Schaltflächen interagieren, indem Sie eine Maus verwenden. Schaltflächen Aktionen treten in der Regel auf, wenn der Benutzer loslässt, anstatt die Schaltfläche zu drücken, um dem Benutzer das Abbrechen der Interaktion zu gestatten. Verwenden Sie Sounds, um diese Phasen zu verstärken. Zur Unterstützung von Benutzern bei der Ausrichtung von fern enden Schaltflächen sollten Sie auch einen Zeiger auf Zeiger zeigen.
-* Die Schaltfläche "Sound" sollte ein kurzes, taktiles "klicken" sein.<br/>Beispiel: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Die Schaltfläche "unpress"-Sounds sollte ein ähnliches taktiles Gefühl aufweisen. Eine höhere Tonhöhe als der Press Sound verstärkt den Sinn der Vervollständigung.<br/>Beispiel: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* Die Schaltfläche "Sound" sollte ein kurzes, taktiles "klicken" sein.<br/>Beispiel: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Die Schaltfläche "unpress"-Sounds sollte ein ähnliches taktiles Gefühl aufweisen. Eine höhere Tonhöhe als der Press Sound verstärkt den Sinn der Vervollständigung.<br/>Beispiel: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 * Für Hover-Sounds empfiehlt es sich, einen kleinen und nicht bedrohlichen Sound zu verwenden, z. b. eine niedrige Häufigkeits-oder Stoß Bewegung.
 
 ### <a name="direct-manipulation"></a>Direkte Bearbeitung
 Bei hololens 2 unterstützt die Handschrift Nachverfolgung die direkte Bearbeitung von Elementen der Benutzeroberfläche. Sounds sind wichtig, wenn kein anderes physisches Feedback vorhanden ist.
 
 Ein *Schalt* Flächen-Press Sound ist bei direkter Bearbeitung wichtig, da der Benutzer keine andere Anzeige erhält, wenn er das Ende des Tasten Strichs erreicht. Die audioindikatoren von Schlüssel Reisen können klein, geringfügig und okton sein. Wie bei Gesten Interaktionen sollte das Drücken von Schaltflächen auf einen kurzen, über taktilen Sound wie ein Klick erhalten. Unpressen sollten einen ähnlichen Klick Sound haben, jedoch mit erhöhter Tonhöhe.
-* Beispiel: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Beispiel: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
+* Beispiel: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Beispiel: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 
 Es ist schwierig, eine Aktion zum durchlassen oder veröffentlichen visuell zu bestätigen. Der Benutzer hat häufig einen visuellen Effekt, und in Festkörper Objekten fehlt eine echte visuelle Analogie von "Grabbing". Sounds können erfolgreiche Interaktionen und releaseinteraktionen effektiv übermitteln.
-* Bei der Aufnahme von Aktionen sollte ein kurzer, etwas gedämpfte taktischender Sound vorhanden sein, der die Idee von Fingern zum Schließen eines Objekts auslöst. Manchmal gibt es auch einen "whoosh"-Sound, der zum übermitteln der Bewegung führt.<br/>Beispiel: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
-* Releaseaktionen sollten einen ähnlich kurzen und unauditon Sound erhalten. Es ist in der Regel niedriger als der Ton und in umgekehrter Reihenfolge, mit einer Auswirkung und einem "whoosh", um zu kommunizieren, dass sich das Objekt am Ort befindet.<br/>Beispiel: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
+* Bei der Aufnahme von Aktionen sollte ein kurzer, etwas gedämpfte taktischender Sound vorhanden sein, der die Idee von Fingern zum Schließen eines Objekts auslöst. Manchmal gibt es auch einen "whoosh"-Sound, der zum übermitteln der Bewegung führt.<br/>Beispiel: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* Releaseaktionen sollten einen ähnlich kurzen und unauditon Sound erhalten. Es ist in der Regel niedriger als der Ton und in umgekehrter Reihenfolge, mit einer Auswirkung und einem "whoosh", um zu kommunizieren, dass sich das Objekt am Ort befindet.<br/>Beispiel: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
 Eine *Zeichnungs* Interaktion sollte einen permanenten Schleifen Sound erhalten, dessen Volume durch die Bewegung des Benutzers bestimmt wird. Er sollte unbeaufsichtigt sein, wenn die Hand des Benutzers immer noch ist, wenn die Hand bewegt wird.
 

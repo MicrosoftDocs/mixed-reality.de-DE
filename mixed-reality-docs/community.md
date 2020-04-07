@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Gemischte Realität, Community, MVP, Meetup
-ms.openlocfilehash: 7814db195e105c2fdf9ba894dc1877e2cbdc4675
-ms.sourcegitcommit: fcd4ca74d59bd4cf469b71f07169defd0887ac21
+ms.openlocfilehash: 47c903a4a9f5615d96c77d8118665a9c55602c53
+ms.sourcegitcommit: b1ca4194eff452804ce5852208cce9815c6a4500
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79084587"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80677999"
 ---
 # <a name="mixed-reality-community"></a>Gemischte Reality-Community
 
@@ -33,15 +33,12 @@ Wenn Sie eine Community ausführen, die Sie auf dieser Seite enthalten möchten,
 
 |Communityname|Land|Ort|Link|
 |---------|---------|---------|---------|
+|**Augmented Reality Melbourne**|Australien|Melbourne|[Link](https://www.meetup.com/armelbourne/)|
 |**Chicago AWE Nite**|USA|Chicago|[Link](https://www.meetup.com/AWENiteChicago/)|
+|**Holomagiker**|Japan|Tokio|[Link](https://hololens.connpass.com/)|
 |**Gemischte Reality-Benutzergruppe-Niederlande**|Niederlande|Rijswijk|[Link](https://www.mixug.com)|
 |**VR-Philippinen**|Philippinen|N/V|[Link](https://www.facebook.com/vrphilippines/)|
 |**Xrla**|USA|Los Angeles|[Link](https://www.meetup.com/XRLA_Meetup/)|
-<!--
-|Row4     |         |         |         |
-|Row5     |         |         |         |
-|Row6     |         |         |         |
--->
 
 <br>
 
@@ -98,8 +95,8 @@ Microsoft Most Valuable Professionals (MVPs) sind Technologieexperten, die ihre 
 |![Dave Smits](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smits**</br>*Amersfoort, die Niederlande*|Dave Smits ist Microsoft MVP seit 2014 und arbeitet seit der ersten gestarteten Version mit den hololens. Es wurden mehrere Projekte für Kunden verwendet, die mit einfachen Modellen für Anwendungen beginnen, die Bewegungs Verfolgungs Sensoren enthalten, die in holograms verwendet werden.|[E-Mail](mailto:dave@familie-smits.com)|
 |![Eric Provencher](images/BiographyImages/EricProvencher_270x270.jpg)</br>**Eric Provencher**</br>*Montreal, QC, Kanada*|Eric ist leitender gemischtes Reality-Framework und UX-Entwickler bei der CAE, einer der ersten Microsoft Mixed Reality-Partner und eine Welle 1 hololens Adopter. Seine Hauptrollen stellen die Architektur und Entwicklung eines internen plattformübergreifenden Entwicklungs Frameworks dar, das mit dem mrtk vergleichbar ist, sowie das entwickeln und Verwalten neuer und vorhandener Simulations-und Schulungs Anwendungen für das Gesundheitswesen. Er erstellt hauptsächlich apps in Unity, in VR (Oculus Quest), AR (hololens 1 & 2) und Bildschirm basiert (WebGL + IOS/Android).|[E-Mail](mailto:erproven@gmail.com)|
 |![](images/BiographyImages/FabriceBarbin_270x270.jpg) der</br>**Fabrice-Barbin**</br>*Frankreich*|Unternehmer, Innovation und Technologie begeisterter für Jahre, ist Fabrice CEO bei [synergiz](http://www.synergiz.com), Microsoft Mixed Reality Partner, Pioneer of hololens Anwendungsfälle in Frankreich. Bei der aktiven herauf Stufung von Microsoft-Technologien als Redner, der MVP für 12 Jahre belohnt hat, ist Fabrice an einem großen Produkt Satz interessiert: hololens, Kinect4Azure, IOT, Surface Hub, Ink, berühren, IA, Machine Learning, Cognitive Services, Azure|[E-Mail](mailto:fbarbin@synergiz.com)|
-|![Francesco clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco clasadonte**</br>*Mailand, Italien*|Fantasiereich und kreativ, ich bin an allen Informationen beteiligt, mit denen ich passionierte. Drei Jahre lang habe ich als Forscher bei Politecnico di Milano gearbeitet und meine Forschung auf interaktive Technologien für untergeordnete Elemente mit der Untersuchung konzentriert, die Erfahrung bei der Entwicklung von IOT-Systemen, intelligenten Objekten, Roboter Interaktionen, Beleuchtungsdesign, multisensorisch-Umgebung und natürliche Benutzeroberflächen in nationalen und internationalen Projekten.</br></br>Zurzeit arbeite ich mit [fifthingenium](https://fifthingenium.com) als leitender kreativer Entwickler, in den Feldern von IOT, Webanwendungen, Systemintegration, mit Schwerpunkt auf sich entwickelnden und innovativen Technologien wie gemischte Realität und künstliche Intelligenz.|[E-Mail](mailto:klasaf@outlook.com)|
-|![Gianni Rosa Gallina](images/BiographyImages/GianniRosaGallina_270x270.png)</br>**Gianni Rosa Gallina**</br>*Italien*|Gianni ist seit 2011 ein Microsoft MVP und konzentriert sich auf neue Technologien, Ai und Virtual/Augmented/Mixed Reality seit 2013. Zurzeit ist er R & D Senior Software Engineer in der Innovation Lab von Delta, entwerfen und Erstellen von Prototypen der nächsten Generation für sportbezogene Erlebnisse und Dienste, von VR/Mr-apps bis hin zu End-to-End-Azure-Architekturen und Video Workflows und Übergabe von Cognitive Services, Ai und vielem mehr. Außerdem ist er ein aktives Mitglied der lokalen Community "Torino Technologies Group" (tTG), Organisator und Trainer für das Programmieren von Gym Torino monatlich Meetups, Pluralsight Online Courses Author, publish articles in seinem Blog und der Referent in National und Internationale techkonferenzen und Veranstaltungen.|[E-Mail](mailto:giannishub@hotmail.com)|
+|![Francesco clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco clasadonte**</br>*Mailand, Italien*|Fantasiereich und kreativ, ich bin an allen Informationen beteiligt, mit denen ich passionierte. Drei Jahre lang habe ich als Forscher bei Politecnico di Milano gearbeitet und meine Forschung auf interaktive Technologien für untergeordnete Elemente mit der Möglichkeit konzentriert, Erfahrungen bei der Entwicklung von IOT-Systemen, intelligenten Objekten, Roboter Interaktionen, Beleuchtungs Entwürfen, multisensorenumgebung und natürlichen Benutzeroberflächen sowohl in nationalen als auch internationalen Projekten zu erhalten.</br></br>Zurzeit arbeite ich mit [fifthingenium](https://fifthingenium.com) als leitender kreativer Entwickler, in den Feldern von IOT, Webanwendungen, Systemintegration, mit Schwerpunkt auf sich entwickelnden und innovativen Technologien wie gemischte Realität und künstliche Intelligenz.|[E-Mail](mailto:klasaf@outlook.com)|
+|![Gianni Rosa Gallina](images/BiographyImages/GianniRosaGallina_270x270.png)</br>**Gianni Rosa Gallina**</br>*Italien*|Gianni ist seit 2011 ein Microsoft MVP und konzentriert sich auf neue Technologien, Ai und Virtual/Augmented/Mixed Reality seit 2013. Zurzeit ist er R & D Senior Software Engineer in der Innovation Lab von Delta, entwerfen und Erstellen von Prototypen der nächsten Generation für sportbezogene Erlebnisse und Dienste, von VR/Mr-apps bis hin zu End-to-End-Azure-Architekturen und Video Workflows und Übergabe von Cognitive Services, Ai und vielem mehr. Außerdem ist er ein aktives Mitglied der lokalen Community "Torino Technologies Group" (tTG), "Organisator" und "Trainer" für das Programmieren von Gym Torino in den monatlichen Meetups, Pluralsight Online Courses Author, veröffentlicht Artikel in seinem Blog und er ist Referent in nationalen und internationalen technischen Konferenzen und Veranstaltungen.|[E-Mail](mailto:giannishub@hotmail.com)|
 |![Jessica Engstrom](images/BiographyImages/JessicaEngstrom_270x270.jpg)</br>**Jessica Engstrom**</br>*Stockholm, Schweden*|Microsoft MVP-Windows-Plattformentwicklung, Public Speaker, UX, Bots und gemischte Realität. Codieren nach dem work-Podcast Co-Host. Benutzergruppe und Konferenzplaner|[E-Mail](mailto:jessica@catoholic.se)|
 |![Jimmy Engstrom](images/BiographyImages/JimmyEngstrom_270x270.jpg)</br>**Jimmy Engstrom**</br>*Stockholm, Schweden*|Microsoft MVP-Windows Platform Development, Speaker, blazor, Mixed Reality, hololens und Windows Developer. Codieren nach dem work-Podcast Co-Host. Benutzergruppe und Konferenzplaner|[E-Mail](mailto:jimmy@engstromjimmy.se)|
 |![Joost van Schaik](images/BiographyImages/JoostVanSchaik_270x270.jpg)</br>**Joost van Schaik**</br>*Amersfoort, die Niederlande*|Ich bin nicht der einzige, um große Stories und weite Besonderheiten in der Mr-Fläche zu zeichnen – ich nenne mich mich selbst als Entwickler + +, und ich mache Dinge. Meine wichtigsten Ansprüche für "Ruhm" sind mein Blog und meine apps – eine der ersten Indie-Apps für hololens 1 und 2, die im Store verfügbar sind, sind meine. Suchen Sie nach dem Verleger "localjoost", und sehen Sie sich selbst an. In den letzten drei Jahren war ich auch an sehr einigen kommerziellen Projekten beteiligt. Ich bin mir eine Community-Person – Ich möchte mein Wissen in meinem Blog und persönlich freigeben.|[E-Mail](mailto:joostvanschaik@outlook.com)|
