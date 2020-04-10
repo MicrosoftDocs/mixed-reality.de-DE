@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/25/2019
 ms.topic: article
 keywords: Gemischte Windows-Realität, Simulator, Tests
-ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 686cac4e9ab4b3354767e22cd87d37ffbb508dea
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580703"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003296"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Verwenden des Windows Mixed Reality-Simulators
 
@@ -27,10 +27,12 @@ Der Windows Mixed Reality-Simulator ermöglicht Ihnen das Testen von Mixed Reali
    3. Klicken Sie auf **für Simulation einrichten (für Entwickler)** , um das Setup ohne ein physisches Gerät durchzugehen.
    4. Klicken Sie auf **Einrichten** , um Ihre Auswahl zu bestätigen.
 4. Klicken Sie auf der linken Seite des Mixed Reality-Portals auf die Schaltfläche **für Entwickler** .
-5. Aktivieren **Sie die** UMSCHALT Fläche für Simulation aktivieren auf ein.
+5. Aktivieren **Sie die UMSCHALT Fläche für Simulation** aktivieren auf ein.
    * Durch das Aktivieren der Simulation wird der linke simulierte 6-DOF-Controller standardmäßig installiert und aktiviert.  Vor dem Windows 10-Update von Mai 2019 ist für die Installation eines simulierten 6-DOF-Controllers Administrator Berechtigungen erforderlich.  Wenn eine solche angezeigt wird, müssen Sie das Dialogfeld "Benutzerkontensteuerung" akzeptieren.
 
 Sie sollten jetzt mit Simulation ausführen!
+
+Wenn Sie den Entwicklermodus in den Einstellungen deaktivieren möchten, müssen Sie zunächst im Mixed Reality-Portal im Abschnitt **for Developers (für Entwickler** ) die Option Simulation Umschalten auf **aus** deaktivieren.
 
 ## <a name="deploying-apps-to-the-mixed-reality-simulator"></a>Bereitstellen von apps im Mixed Reality-Simulator
 
@@ -51,7 +53,7 @@ Sie steuern den Simulator, indem Sie die Aktionen eines simulierten Benutzers mi
 
 Der Simulator für gemischte Realität kann bis zu zwei handgehaltene Bewegungs Controller simulieren. Aktivieren Sie diese mithilfe der umschaltschalter im Mixed Reality-Portal. Jeder simulierte Controller hat Folgendes:
 * Position und Ausrichtung im Raum
-* Startschaltfläche
+* Schaltfläche „Start“
 * Menü-Taste
 * Zieh Schaltfläche
 * Touchpad
