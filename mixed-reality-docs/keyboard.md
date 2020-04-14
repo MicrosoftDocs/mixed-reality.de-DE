@@ -1,17 +1,16 @@
 ---
 title: Tastatur
-description: ''
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Gemischte Realität, Steuerelemente, Interaktion, UI, UX
-ms.openlocfilehash: a16d0a2a8dddf1d9a338cdaff3247e8955c47029
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 90f20d96fca9bebfcbce8283bedd3cb8422d9ea8
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723169"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278078"
 ---
 # <a name="keyboard"></a>Tastatur
 
@@ -32,7 +31,7 @@ Ihre gemischte Reality-Anwendung kann die System Tastatur jederzeit aufrufen. Be
 
 ---
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Cursor](cursors.md)
 * [Handstrahl](point-and-commit.md)

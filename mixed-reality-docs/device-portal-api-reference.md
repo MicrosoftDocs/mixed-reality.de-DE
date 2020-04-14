@@ -1,17 +1,17 @@
 ---
 title: Referenz zur Geräte Portal-API
 description: API-Referenz für das Windows-Geräte Portal auf hololens
-author: JonMLyons
-ms.author: JLyons
+author: jonmlyons
+ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Hololens, Windows-Geräte Portal, API
-ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694435"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278238"
 ---
 # <a name="device-portal-api-reference"></a>Referenz zur Geräte Portal-API
 
@@ -24,23 +24,23 @@ Alles im [Windows-Geräte Portal](using-the-windows-device-portal.md) baut auf d
 Deinstalliert eine APP
 
 Parameter
-* Paketen Der Dateiname des Pakets, das deinstalliert werden soll.
+* Package: der Dateiname des Pakets, das deinstalliert werden soll.
 
 **/API/APP/packagemanager/Package (Post)**
 
 Installiert eine APP
 
 Parameter
-* Paketen Der Dateiname des zu installierenden Pakets.
+* Package: der Dateiname des zu installierenden Pakets.
 
-Nutz
+Payload
 * Mehrteilige konforme HTTP-Text
 
 **/API/APP/packagemanager/Packages (Get)**
 
 Hiermit wird die Liste der installierten apps auf dem System mit Details abgerufen.
 
-Rückgabe Daten
+Daten zurückgeben
 * Liste der installierten Pakete mit Details
 
 **/API/APP/packagemanager/State (Get)**
@@ -86,14 +86,14 @@ Parameter
 * packagefullname: Paketname
 * Dateiname: Name der Sicherungsdatei
 
-Rückgabe Daten
+Daten zurückgeben
 * Dumpdatei. Überprüfen mit WinDbg oder Visual Studio
 
 **/API/Debug/Dump/Usermode/Dumps (Get)**
 
 Gibt eine Liste aller Absturz Abbilder für Sideload-apps zurück.
 
-Rückgabe Daten
+Daten zurückgeben
 * Liste der Absturz Abbilder pro Seite geladener apps
 
 ## <a name="etw"></a>ETW
@@ -102,14 +102,14 @@ Rückgabe Daten
 
 Listet registrierte Anbieter auf.
 
-Rückgabe Daten
+Daten zurückgeben
 * Liste der Anbieter, Anzeige Name und GUID
 
 **/API/etw/Session/Realtime (Get/WebSocket)**
 
 Erstellt eine ETW-Sitzung in Echtzeit. verwaltet über einen WebSocket.
 
-Rückgabe Daten
+Daten zurückgeben
 * ETW-Ereignisse von aktivierten Anbietern
 
 ## <a name="holographic-os"></a>Holographic – Betriebssystem
@@ -131,7 +131,7 @@ Ruft die gespeicherte IPD (interpupranäre Entfernung) in Millimeter ab.
 Legt die IPD fest.
 
 Parameter
-* IPD Neuer IPD-Wert, der in Millimeter festgelegt werden soll
+* IPD: neuer IPD-Wert, der in Millimeter festgelegt werden soll
 
 **/API/Holographic/OS/Webmanagement/Settings/HTTPS (Get)**
 
@@ -163,7 +163,7 @@ Die wärmestufe des Geräts erhalten (0 normal, 1 warm, 2 kritisch)
 
 **/API/Holographic/Simulation/Control/Mode (Get)**
 
-Simulationsmodus erhalten
+Abrufen des Simulationsmodus
 
 **/API/Holographic/Simulation/Control/Mode (Post)**
 
@@ -191,7 +191,7 @@ Erstellen Sie einen Steuerungsdaten Strom (Priorität ist erforderlich), oder st
 Löschen Sie eine Aufzeichnung.
 
 Parameter
-* verzeichnet Der Name der zu löschenden Aufzeichnung.
+* Aufzeichnung: Name der zu löschenden Aufzeichnung.
 
 **/API/Holographic/Simulation/Playback/File (Post)**
 
@@ -206,21 +206,21 @@ Alle Aufzeichnungen erhalten.
 Gibt den aktuellen Wiedergabe Zustand einer Aufzeichnung an.
 
 Parameter
-* verzeichnet Der Name der Aufzeichnung.
+* Aufzeichnung: Name der Aufzeichnung.
 
 **/API/Holographic/Simulation/Playback/Session/File (Löschen)**
 
 Entladen Sie eine Aufzeichnung.
 
 Parameter
-* verzeichnet Der Name der zu entladenden Aufzeichnung.
+* Aufzeichnung: Name der zu entladenden Aufzeichnung.
 
 **/API/Holographic/Simulation/Playback/Session/File (Post)**
 
 Laden Sie eine Aufzeichnung.
 
 Parameter
-* verzeichnet Der Name der zu ladenden Aufzeichnung.
+* Aufzeichnung: Name der zu ladenden Aufzeichnung.
 
 **/API/Holographic/Simulation/Playback/Session/Files (Get)**
 
@@ -231,28 +231,28 @@ Alle geladenen Aufzeichnungen erhalten.
 Hält eine Aufzeichnung an.
 
 Parameter
-* verzeichnet Der Name der Aufzeichnung.
+* Aufzeichnung: Name der Aufzeichnung.
 
 **/API/Holographic/Simulation/Playback/Session/Play (Post)**
 
 Wiedergabe einer Aufzeichnung.
 
 Parameter
-* verzeichnet Der Name der Aufzeichnung.
+* Aufzeichnung: Name der Aufzeichnung.
 
 **/API/Holographic/Simulation/Playback/Session/Stop (Post)**
 
 Beendet eine Aufzeichnung.
 
 Parameter
-* verzeichnet Der Name der Aufzeichnung.
+* Aufzeichnung: Name der Aufzeichnung.
 
 **/API/Holographic/Simulation/Playback/Session/Types (Get)**
 
 Datentypen in einer geladenen Aufzeichnung erhalten.
 
 Parameter
-* verzeichnet Der Name der Aufzeichnung.
+* Aufzeichnung: Name der Aufzeichnung.
 
 ## <a name="perception-simulation-recording"></a>Erfassung von Wahrnehmungs Simulationen
 
@@ -261,12 +261,12 @@ Parameter
 Startet eine Aufzeichnung. Nur eine einzelne Aufzeichnung kann gleichzeitig aktiv sein. Eine der Köpfe, Hände, spatialmapping oder Umgebung muss festgelegt werden.
 
 Parameter
-* Stadt Legen Sie auf 1 fest, um Head-Daten aufzuzeichnen.
-* Hände Legen Sie auf 1 fest, um die Daten aufzuzeichnen.
-* spatialmapping: Legen Sie auf 1 fest, um die räumliche Zuordnung aufzuzeichnen.
-* Umgebung Legen Sie auf 1 fest, um Umgebungs Daten aufzuzeichnen.
-* Benennen Der Name der Aufzeichnung.
-* singlespatialmappingframe: Legen Sie auf 1 fest, um nur einen einzelnen räumlichen zuordnungsframe aufzuzeichnen.
+* Head: Legen Sie auf 1 fest, um Head-Daten aufzuzeichnen.
+* Hands: wird auf 1 festgelegt, um die Daten aufzuzeichnen.
+* spatialmapping: auf 1 festgelegt, um die räumliche Zuordnung aufzuzeichnen.
+* Umgebung: Legen Sie auf 1 fest, um Umgebungs Daten aufzuzeichnen.
+* Name: der Name der Aufzeichnung.
+* singlespatialmappingframe: wird auf 1 festgelegt, um nur einen einzelnen räumlichen zuordnungsframe aufzuzeichnen.
 
 **/API/Holographic/Simulation/Recording/Status (Get)**
 
@@ -283,7 +283,7 @@ Hält die aktuelle Aufzeichnung an. Die Aufzeichnung wird als Datei zurückgegeb
 Hiermit wird eine gemischte Reality-Datei vom Gerät heruntergeladen. Verwenden Sie den OP = Stream-Abfrage Parameter für das Streaming.
 
 Parameter
-* Einfügen Name, hex64 codiert, der Videodatei, die Sie erhalten
+* Dateiname: Name, hex64-codiert, der einzurufenden Videodatei
 * OP: Stream
 
 **/API/Holographic/MRC/File (Löschen)**
@@ -291,7 +291,7 @@ Parameter
 Löscht eine gemischte Reality-Aufzeichnung auf dem Gerät.
 
 Parameter
-* Einfügen Name, hex64-codiert, der zu löschenden Datei
+* Dateiname: Name, hex64-codiert, der zu löschenden Datei
 
 **/API/Holographic/MRC/Files (Get)**
 
@@ -304,7 +304,7 @@ Nimmt ein gemischtes Reality-Foto und erstellt eine Datei auf dem Gerät.
 Parameter
 * hololens: Erfassungs holograms: true oder false (Standardwert: false)
 * PV: Erfassen der PV-Kamera: true oder false (Standardwert: false)
-* Renderfromcamera: (Nur hololens 2) Rendering aus der Perspektive der Foto-/Videokamera: true oder false (Standardwert: true)
+* Renderfromcamera: (hololens 2) renderingaus Perspektive der Foto-/Videokamera: true oder false (Standardwert: true)
 
 **/API/Holographic/MRC/Settings (Get)**
 
@@ -323,7 +323,7 @@ Ruft den Status der aufgezeichnete gemischten Realität ab (wird ausgeführt, be
 Ruft das Miniaturbild für die angegebene Datei ab.
 
 Parameter
-* Einfügen Name, hex64 codiert, der Datei, für die die Miniaturansicht angefordert wird
+* Dateiname: Name, hex64-codiert, der Datei, für die die Miniaturansicht angefordert wird
 
 **/API/Holographic/MRC/Video/Control/Start (Post)**
 
@@ -334,9 +334,9 @@ Parameter
 * PV: Erfassen der PV-Kamera: true oder false (Standardwert: false)
 * MIC: Mikrofon erfassen: true oder false (standardmäßig false)
 * Loopback: App-Audioerfassung: true oder false (standardmäßig false)
-* Renderfromcamera: (Nur hololens 2) Rendering aus der Perspektive der Foto-/Videokamera: true oder false (Standardwert: true)
-* Vstab: (Nur hololens 2) Videostabilisierung aktivieren: true oder false (Standardwert: true)
-* vstabbuffer: (Nur hololens 2), Video Stabilisierungs Puffer Wartezeit: zwischen 0 und 30 Frames (standardmäßig 15 Frames)
+* Renderfromcamera: (hololens 2) renderingaus Perspektive der Foto-/Videokamera: true oder false (Standardwert: true)
+* Vstab: (nur hololens 2) Videostabilisierung aktivieren: true oder false (Standardwert: true)
+* vstabbuffer: (hololens 2), Video Stabilisierungs Puffer Latenz: 0 bis 30 Frames (standardmäßig 15 Frames)
 
 **/API/Holographic/MRC/Video/Control/Stop (Post)**
 
@@ -364,15 +364,15 @@ Optionale Parameter (nur hololens 2)
 
 Ein-Datenstrom von 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_high.MP4 (Get)**
+**/API/Holographic/Stream/live_high. MP4 (Get)**
 
 Ein-Datenstrom von 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_med.MP4 (Get)**
+**/API/Holographic/Stream/live_med. MP4 (Get)**
 
 Ein 854x480p 30 fps 2.5 MBit-Stream.
 
-**/API/Holographic/Stream/live_low.MP4 (Get)**
+**/API/Holographic/Stream/live_low. MP4 (Get)**
 
 Ein 428x240 p 15fps 0.6-MBit-Stream.
 
@@ -397,7 +397,7 @@ Ruft den Computernamen ab.
 Legt den Computernamen fest.
 
 Parameter
-* Benennen Neuer Computername, hex64-codiert, festgelegt auf
+* Name: neuer Computername, hex64-codiert, festgelegt auf
 
 ## <a name="performance-data"></a>Leistungsdaten
 
@@ -405,17 +405,17 @@ Parameter
 
 Gibt die Liste der laufenden Prozesse mit Details zurück.
 
-Rückgabe Daten
+Daten zurückgeben
 * JSON mit einer Liste der Prozesse und Details für jeden Prozess
 
 **/API/ResourceManager/systemperf (Get)**
 
 Gibt die System Leistungsstatistik (e/a-Lese-/Schreibvorgänge, Speicher Statistiken usw.) zurück.
 
-Rückgabe Daten
+Daten zurückgeben
 * JSON mit Systeminformationen: CPU, GPU, Arbeitsspeicher, Netzwerk, e/a
 
-## <a name="power"></a>Stromversorgung
+## <a name="power"></a>Leistung
 
 **/API/Power/Battery (Get)**
 
@@ -442,16 +442,16 @@ Fährt das Zielgerät herunter.
 Beendet eine moderne App
 
 Parameter
-* Paketen Vollständiger Name des App-Pakets, hex64-codiert
-* forcestop: Beendigung aller Prozesse erzwingen (= ja)
+* Package: vollständiger Name des App-Pakets, hex64-codiert
+* forcestop: erzwingen, dass alle Prozesse beendet werden (= yes)
 
 **/API/Taskmanager/app (Post)**
 
 Startet eine moderne App
 
 Parameter
-* AppID Praid der APP, die gestartet werden soll, hex64-codiert
-* Paketen Vollständiger Name des App-Pakets, hex64-codiert
+* AppID: Praid der zu startenden APP, hex64-codiert
+* Package: vollständiger Name des App-Pakets, hex64-codiert
 
 ## <a name="wifi-management"></a>WiFi-Verwaltung
 
@@ -459,7 +459,7 @@ Parameter
 
 Listet drahtlose Netzwerkschnittstellen auf.
 
-Rückgabe Daten
+Daten zurückgeben
 * Liste der drahtlos Schnittstellen mit Details (GUID, Beschreibung usw.)
 
 **/API/WiFi/Network (Löschen)**
@@ -477,7 +477,7 @@ Listet drahtlose Netzwerke auf der angegebenen Netzwerkschnittstelle auf.
 Parameter
 * Schnittstelle: GUID der Netzwerkschnittstelle
 
-Rückgabe Daten
+Daten zurückgeben
 * Liste der Drahtlos Netzwerke, die sich auf der Netzwerkschnittstelle befinden, mit Details
 
 **/API/WiFi/Network (Post)**
@@ -491,30 +491,30 @@ Parameter
 * kreateprofile: Ja oder Nein
 * Schlüssel: gemeinsam verwendeter Schlüssel, hex64-codiert
 
-## <a name="windows-performance-recorder"></a>Windows-Leistungs Aufzeichnung
+## <a name="windows-performance-recorder"></a>Windows Performance Recorder
 
 **/API/WPR/customtrace (Post)**
 
 Lädt ein WPR-Profil hoch und startet die Ablauf Verfolgung mithilfe des hochgeladenen Profils.
 
-Nutz
+Payload
 * Mehrteilige konforme HTTP-Text
 
-Rückgabe Daten
+Daten zurückgeben
 * Gibt den WPR-Sitzungsstatus zurück.
 
 **/API/WPR/Status (Get)**
 
 Ruft den Status der WPR-Sitzung ab.
 
-Rückgabe Daten
+Daten zurückgeben
 * WPR-Sitzungs Status.
 
 **/API/WPR/Trace (Get)**
 
 Beendet eine WPR-Ablauf Verfolgungs Sitzung (Leistung).
 
-Rückgabe Daten
+Daten zurückgeben
 * Gibt die ETL-Ablauf Verfolgungs Datei zurück.
 
 **/API/WPR/Trace (Post)**
@@ -522,9 +522,9 @@ Rückgabe Daten
 Startet eine Ablauf Verfolgungs Sitzung für WPR (Leistung).
 
 Parameter
-* Profil Profilname. Verfügbare Profile werden in "perfprofiles/Profiles. JSON" gespeichert.
+* Profil: Profilname. Verfügbare Profile werden in "perfprofiles/Profiles. JSON" gespeichert.
 
-Rückgabe Daten
+Daten zurückgeben
 * Beim Start wird der WPR-Sitzungs Status zurückgegeben.
 
 ## <a name="see-also"></a>Siehe auch

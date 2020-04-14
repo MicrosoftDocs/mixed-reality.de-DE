@@ -1,17 +1,17 @@
 ---
 title: Tastatur-, Maus-und Controller Eingaben in DirectX
 description: Erläutert das Erstellen einer APP für Windows Mixed Reality, in der Tastatur-, Maus-und Spielcontroller verwendet werden.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Tastatur, Maus, Game Controller, Xbox Controller, hololens, Desktop, Exemplarische Vorgehensweise, Beispielcode
-ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.openlocfilehash: 27f1bf72435ce6889ba3f7b83664367a4440b162
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835096"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278088"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>Tastatur-, Maus-und Controller Eingaben in DirectX
 
@@ -265,5 +265,5 @@ Es gibt einige wichtige Unterschiede bei der Verwendung dieses Codes für Micros
 * Tastatureingaben können eine hervorragende Möglichkeit zum Steuern der debuggingaspekte Ihrer APP oder Spiel-Engine sein, insbesondere, da der Benutzer die Tastatur nicht verwenden muss. Die Verknüpfung ist identisch mit der Verwendung von corewindow-Ereignis-APIs. In diesem Szenario können Sie eine Möglichkeit implementieren, um Ihre APP so zu konfigurieren, dass Tastatur Ereignisse während der Debugsitzungen an den Modus "nur debugeingabe" weitergeleitet werden.
 * Bluetooth-Controller sind ebenfalls funktionsfähig.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Hardware-Zubehör](hardware-accessories.md)

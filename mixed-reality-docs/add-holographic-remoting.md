@@ -1,17 +1,17 @@
 ---
 title: Holographic-Remoting hinzufügen
 description: Erläutert die Verwendung von Holographic Remoting zum Rendering von holograms in einem hololens über das Netzwerk.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, Holographic Remoting, Remote Rendering, Netzwerk Rendering, hololens, Remote holograms
-ms.openlocfilehash: 523486c26c03bd4b3d5ed8e8cafd994f12678e3b
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: 2f6ade5552c993f66281d0be8a7e62c8f076deac
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277708"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>Holographic-Remoting hinzufügen (hololens (1. Gen))
 
@@ -30,7 +30,7 @@ Hololens-Entwickler, die Holographic Remoting verwenden, müssen Ihre apps aktua
 
 Auf dieser Seite wird beschrieben, wie Sie Holographic Remoting zu einer Desktop-oder UWP-app hinzufügen.
 
-Holographic Remoting ermöglicht Ihrer APP das Ausrichten von hololens mit Holographic-Inhalten, die auf einem Desktop-PC oder auf einem UWP-Gerät wie der Xbox One gehostet werden, und ermöglicht so den Zugriff auf mehr Systemressourcen und ermöglicht die Integration von Remote- [immersiven Ansichten](app-views.md) in vorhandene Desktop-PC-Software. Eine Remoting-Host-App empfängt einen Eingabedaten Strom von einem hololens, rendert Inhalte in einer virtuellen immersiven Ansicht und streamt Inhalts Frames zurück an hololens. Die Verbindung wird mithilfe von Standard-Wi-Fi hergestellt. Um Remoting zu verwenden, verwenden Sie ein nuget-Paket zum Hinzufügen von Holographic Remoting zu Ihrer Desktop-oder UWP-APP und zum Schreiben von Code zum Verarbeiten der Verbindung und zum Rendering in einer immersiven Ansicht. Hilfsbibliotheken sind im Codebeispiel enthalten, das die Aufgabe der Verarbeitung der Geräte Verbindung vereinfacht.
+Holographic Remoting ermöglicht der APP das Ausrichten von hololens mit Holographic-Inhalten, die auf einem Desktop-PC oder auf einem UWP-Gerät (z. b. der Xbox One) gehostet werden, und ermöglicht so den Zugriff auf mehr Systemressourcen und ermöglicht die Integration von [immersiven Remote Ansichten](app-views.md) in vorhandene Desktop-PC-Software. Eine Remoting-Host-App empfängt einen Eingabedaten Strom von einem hololens, rendert Inhalte in einer virtuellen immersiven Ansicht und streamt Inhalts Frames zurück an hololens. Die Verbindung wird mithilfe von Standard-Wi-Fi hergestellt. Um Remoting zu verwenden, verwenden Sie ein nuget-Paket zum Hinzufügen von Holographic Remoting zu Ihrer Desktop-oder UWP-APP und zum Schreiben von Code zum Verarbeiten der Verbindung und zum Rendering in einer immersiven Ansicht. Hilfsbibliotheken sind im Codebeispiel enthalten, das die Aufgabe der Verarbeitung der Geräte Verbindung vereinfacht.
 
 Eine typische remotingverbindung verfügt über bis zu 50 ms Latenzzeit. Die Player-App kann die Latenzzeit in Echtzeit melden.
 

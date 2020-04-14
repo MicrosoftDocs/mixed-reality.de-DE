@@ -1,17 +1,17 @@
 ---
 title: Erhalten eines holographicspace
 description: Erläutert die holographicspace-API, ein Kernkonzept für das holografische Rendering und räumliche Eingaben.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, holographicspace, corewindow, räumliche Eingabe, Rendering, Austausch Kette, Holographic Frame, Update Schleife, Spiel Schleife, Frame der Referenz, loerability, Beispielcode, Exemplarische Vorgehensweise
-ms.openlocfilehash: 828352203b20ec38275796b3f172e7ecc5df3f00
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 76211c8a5394e2e296748253df4eac063841746c
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525444"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277828"
 ---
 # <a name="getting-a-holographicspace"></a>Erhalten eines holographicspace
 
@@ -27,7 +27,7 @@ Suchen Sie für eine **UWP-App** , [die mit der *Holographic DirectX 11-app (uni
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-Sehen Sie sich für eine **Win32-App** , die mit [dem bsichologram Win32-Beispiel beginnt, den ](creating-a-holographic-directx-project.md#creating-a-win32-project)Eintrag " **App:: Erstellungs windowandholographicspace** " an, um ein Beispiel dafür zu erhalten, wie ein HWND erstellt und anschließend in ein immersives HWND <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">konvertiert wird Holographicspace</a>:
+Sehen Sie sich für eine **Win32-App** , [die mit dem *basichologram* Win32-Beispiel beginnt, den](creating-a-holographic-directx-project.md#creating-a-win32-project)Eintrag " **App:: Erstellungs windowandholographicspace** " an, um ein Beispiel dafür zu erhalten, wie Sie ein HWND erstellen und dann in ein immersives HWND konvertieren, indem Sie einen zugehörigen <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">holographicspace</a>
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 {
@@ -124,7 +124,7 @@ Zurzeit konzentrieren wir uns auf appmain und das Setup, damit Ihre APP über Ho
 
 1. Für den Ereignishandler " **cameraadded** " kann die APP asynchron ausgeführt werden, um das Erstellen von Ressourcen und das Laden von Assets für die neue Holographic-Kamera abzuschließen. Apps, die mehr als einen Frame zum Ausführen dieser Arbeit benötigen, sollten eine Verzögerung anfordern und die Verzögerung nach dem asynchronen Laden vervollständigen. eine [ppl-Aufgabe](https://docs.microsoft.com/cpp/parallel/concrt/parallel-patterns-library-ppl) kann verwendet werden, um asynchrone Aufgaben auszuführen. Ihre APP muss sicherstellen, dass Sie sofort an die Kamera gerehehbt, wenn Sie den Ereignishandler verlässt oder wenn Sie die Verzögerung abschließt. Das Beenden des Ereignis Handlers oder das Abschließen der Verzögerung weist das System darauf hin, dass Ihre APP nun bereit ist, Holographic Frames mit dieser Kamera zu empfangen.
 
-2. Wenn die APP ein Ereignis vom Typ "camerareverschobe" empfängt, muss Sie alle Verweise auf den Hintergrund Puffer freigeben und die Funktion sofort beenden. Dies schließt renderzielsichten und alle anderen Ressourcen ein, die möglicherweise einen Verweis auf die [idxgiresource](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiresource)enthalten. Außerdem muss die APP sicherstellen, dass der Hintergrund Puffer nicht als Renderziel angefügt wird, wie in **cameraresources:: releaseresourcesforbackbuffer**gezeigt. Um die Dinge zu beschleunigen, kann Ihre APP den Hintergrund Puffer freigeben und dann eine Aufgabe starten, um alle anderen Aufgaben, die zum Abfangen dieser Kamera erforderlich sind, asynchron abzuschließen. Die Vorlage für die Holographic-app enthält eine ppl-Aufgabe, die Sie zu diesem Zweck verwenden können.
+2. Wenn die APP ein Ereignis vom Typ " **camerareverschobe** " empfängt, muss Sie alle Verweise auf den Hintergrund Puffer freigeben und die Funktion sofort beenden. Dies schließt renderzielsichten und alle anderen Ressourcen ein, die möglicherweise einen Verweis auf die [idxgiresource](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiresource)enthalten. Außerdem muss die APP sicherstellen, dass der Hintergrund Puffer nicht als Renderziel angefügt wird, wie in **cameraresources:: releaseresourcesforbackbuffer**gezeigt. Um die Dinge zu beschleunigen, kann Ihre APP den Hintergrund Puffer freigeben und dann eine Aufgabe starten, um alle anderen Aufgaben, die zum Abfangen dieser Kamera erforderlich sind, asynchron abzuschließen. Die Vorlage für die Holographic-app enthält eine ppl-Aufgabe, die Sie zu diesem Zweck verwenden können.
 
 >[!NOTE]
 >Wenn Sie bestimmen möchten, wann eine hinzugefügte oder entfernte Kamera im Frame angezeigt wird, verwenden Sie die Eigenschaften **holographicframe** [addedkameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.addedcameras) und [removedkameras](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.removedcameras) .
@@ -135,7 +135,7 @@ Der Inhalt Ihrer APP muss in einem [räumlichen Koordinatensystem](coordinate-sy
 
 Es gibt zwei Arten von Bezugs Frames in Windows Holographic: Verweis Rahmen, die an das Gerät angeschlossen sind, und Bezugsrahmen, die stationär bleiben, wenn das Gerät die Umgebung des Benutzers durchläuft. In der Holographic-App-Vorlage wird standardmäßig ein stationärer Verweis Rahmen verwendet. Dies ist eine der einfachsten Möglichkeiten zum Rendering von weltweit gesperrten holograms.
 
-Stationäre Verweis Rahmen sind so konzipiert, dass Positionen in der Nähe des aktuellen Speicher Orts des Geräts stabilisiert werden. Dies bedeutet, dass Koordinaten, die sich weiter vom Gerät unterscheiden, in Bezug auf die Benutzerumgebung geringfügig abweichen dürfen, da das Gerät mehr über den Platz herum erfährt. Es gibt zwei Möglichkeiten, einen stationären Frame des Verweises zu erstellen: das Koordinatensystem aus der [räumlichen Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)abzurufen oder den standardspaticator zu verwenden. <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> Wenn Sie eine Windows Mixed Reality-App für immersive Headsets erstellen, wird als Ausgangspunkt die [räumliche Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)empfohlen, in der auch Informationen über die Funktionen des immersiven Headsets, das vom Player getragen wird, bereitgestellt werden. Hier wird gezeigt, wie der standardzuordnerstandard verwendet wird <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a>.
+Stationäre Verweis Rahmen sind so konzipiert, dass Positionen in der Nähe des aktuellen Speicher Orts des Geräts stabilisiert werden. Dies bedeutet, dass Koordinaten, die sich weiter vom Gerät unterscheiden, in Bezug auf die Benutzerumgebung geringfügig abweichen dürfen, da das Gerät mehr über den Platz herum erfährt. Es gibt zwei Möglichkeiten, einen stationären Frame des Verweises zu erstellen: das Koordinatensystem aus der [räumlichen Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)abzurufen oder den standardspaticator zu verwenden. <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> Wenn Sie eine Windows Mixed Reality-App für immersive Headsets erstellen, wird als Ausgangspunkt die [räumliche Phase](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-a-spatial-stage)empfohlen, in der auch Informationen über die Funktionen des immersiven Headsets, das vom Player getragen wird, bereitgestellt werden. Hier wird gezeigt, wie der <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">standardzuordnerstandard</a>verwendet wird.
 
 Der räumliche Serverlocatorpunkt stellt das Windows Mixed Reality-Gerät dar und verfolgt die Bewegung des Geräts und stellt Koordinatensysteme bereit, die relativ zum Speicherort verstanden werden können.
 

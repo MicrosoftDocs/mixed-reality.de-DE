@@ -1,17 +1,17 @@
 ---
 title: Fallstudie-holotour
 description: Holotour für Microsoft hololens bietet immersive persönliche 3D-Touren von berühmten Standorten auf der ganzen Welt. Diese Fallstudie führt Sie durch den Prozess des Erstellens und Erstellens der Inhalte, die für holotour verwendet werden.
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Holotour, hololens, Windows Mixed Reality
-ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 59c3dffd48009aa792643ea27b59f8f6f85b64d7
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278188"
 ---
 # <a name="case-study---holotour"></a>Fallstudie-holotour
 
@@ -133,7 +133,7 @@ Natürlich gab es noch mehr zum Erstellen dieses Inhalts als das, was wir hier b
 
 Wir hoffen, dass die gemeinsame Nutzung von Lösungen für einige der größeren Herausforderungen, die wir während der Produktion hatten, für andere Entwickler hilfreich ist und Sie darauf aufmerksam sind, dass Sie einige dieser Techniken verwenden, um Ihre eigenen immersiven Erfahrungen für hololens zu entwickeln. (Wenn Sie dies tun, stellen Sie sicher, dass Sie es für uns im [hololens-App-Entwicklungsforum](https://forums.hololens.com/)freigeben!)
 
-## <a name="about-the-authors"></a>Informationen zu den Autoren
+## <a name="about-the-authors"></a>Über die Autoren
 
 <table style="border:0">
 <tr>
@@ -152,5 +152,5 @@ Wir hoffen, dass die gemeinsame Nutzung von Lösungen für einige der größeren
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Video: Microsoft hololens: holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

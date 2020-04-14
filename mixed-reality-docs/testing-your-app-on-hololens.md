@@ -1,17 +1,17 @@
 ---
 title: Testen Ihrer APP auf hololens
 description: Leitfaden und Vorschläge zum Testen Ihrer hololens-App
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Hololens, testen
-ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 3ab5eeec4046b81dc41db51ae138eb9d1069d1ff
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437382"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277588"
 ---
 # <a name="testing-your-app-on-hololens"></a>Testen Ihrer APP auf hololens
 
@@ -36,14 +36,14 @@ Holographic apps müssen problemlos in verschiedenen Umgebungen ausgeführt werd
 
 ![Umgebungs Test Matrix für die hololens-App-Entwicklung](images/environment-matrix-600px.png)
 
-## <a name="comfort"></a>Bequem
+## <a name="comfort"></a>Komfort
 1. **Ausschneide Flächen.** Achten Sie darauf, wo [holograms gerendert](hologram-stability.md#hologram-render-distances)werden.
 2. **Vermeiden Sie eine virtuelle Verschiebung, die sich nicht auf die tatsächliche Kopfbewegung** Vermeiden Sie das Verschieben der Kamera auf eine Weise, die für die tatsächliche Bewegung des Benutzers nicht repräsentativ ist. Wenn Ihre APP den Benutzer durch eine Szene verschieben muss, machen Sie die Bewegung vorhersagbar, minimieren Sie die Beschleunigung, und lassen Sie den Benutzer die Bewegung steuern.
 3. **Befolgen Sie die Richtlinien für die – Hologramm-Qualität.** Leistungsfähige apps, die den [Leitfaden für die Qualität von holograms](hologram-stability.md) implementieren, werden weniger wahrscheinlich zu Benutzer Unannehmlichkeiten führen.
 4. **Sie sollten Hologramme horizontal und nicht vertikal verteilen.** Wenn Sie den Benutzer zwingen, erweiterte Zeiträume für die Suche nach oben oder unten zu verbringen, kann dies zu Ermüdung im Nacken führen.
 
 
-## <a name="input"></a>Input
+## <a name="input"></a>Eingabe
 
 ### <a name="interaction-models"></a>Interaktionsmodelle
 
@@ -67,7 +67,7 @@ Benutzer können über [Peripherie](hardware-accessories.md)Geräte mit Ihrer AP
 
 ## <a name="system-integration"></a>Systemintegration
 
-### <a name="battery"></a>Akku“ aus,
+### <a name="battery"></a>Akku
 
 Testen Sie Ihre Anwendung, ohne dass eine Stromquelle verbunden ist, um zu verstehen, wie schnell der Akku abläuft. Mithilfe von Power LED-Messungen können Sie den Akku Status leicht nachvollziehen. 
 
@@ -112,5 +112,5 @@ Einige App-Entwickler möchten möglicherweise das Testen Ihrer Apps automatisie
 
 Damit Ihre APP die beste Chance erhält, [im Windows Store veröffentlicht](submitting-an-app-to-the-microsoft-store.md)zu werden, überprüfen und testen Sie Sie lokal, bevor Sie Sie zur Zertifizierung einreichen. Wenn Ihre APP auf die Windows. Holographic-Gerätefamilie abzielt, führt das [zertifizierungskit für Windows-apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) nur lokale statische Analyse Tests auf Ihrem PC aus. Auf den hololens werden keine Tests ausgeführt.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Übermitteln einer APP an den Windows Store](submitting-an-app-to-the-microsoft-store.md)

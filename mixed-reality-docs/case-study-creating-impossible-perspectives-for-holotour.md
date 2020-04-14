@@ -1,17 +1,17 @@
 ---
 title: 'Fallstudie: Erstellen von nicht möglichen Perspektiven für holotour'
 description: Wir wollten, dass Ihre Erfahrungen in holotour für Microsoft hololens unvergesslich werden. Zusätzlich zu den herkömmlichen touristischen Stopps haben wir einige "unmögliche Perspektiven" eingeplant.
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Holotour, hololens, Windows Mixed Reality
-ms.openlocfilehash: be00df73543aa295e1e0dbe1462a888d6bb24954
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f3ca07dfab1e4477039481c268e418aac9034bc5
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523588"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278168"
 ---
 # <a name="case-study---creating-impossible-perspectives-for-holotour"></a>Fallstudie: Erstellen von nicht möglichen Perspektiven für holotour
 
@@ -34,7 +34,7 @@ Zuerst ist es wichtig zu erklären, dass alle Orte, die Sie in holotour besuchen
 Zum Erstellen der Luftbild Ansichten für die Sprechblasen Fahrt haben wir mit anderen Teams bei Microsoft zusammengearbeitet, um Zugang zu Luftbildern in Rom zu erhalten. Die Qualität dieser Images war hervorragend, und die Ansicht war beeindruckend, aber wenn wir Sie in den Kulissen ohne Änderungen verwendet haben, fühlten Sie sich im Vergleich zu den anderen Teilen der Tour im Vergleich zu den anderen Teilen der Tour als nicht genügend Bewegung. 
 
 
-![Der Korb der heiß Luft Sprechblase, der über Rom schwebt.](images/hotairballoon1-300px.png)<br>
+![den Korb der heiß Luft Sprechblase, der über Rom schwebt.](images/hotairballoon1-300px.png)<br>
 *Der Korb der heiß Luft Sprechblase, schwebt über Rom*
 
 Um sicherzustellen, dass die Luft Standorte denselben Qualitäts Balken wie andere Ziele erfüllen, haben wir uns entschieden, die statischen Fotos in lebendige und bewegliche Szenen umzuwandeln. Der erste Schritt bestand darin, das Bild und die zusammengesetzte Bewegung zu bearbeiten. Wir haben einen visuellen Effekt mit visuellen Effekten eingegangen, um uns dabei zu unterstützen. Die Bearbeitung wurde durchgeführt, um Clouds zu zeigen, die langsam in den Raum treiben, von Vögeln fliegen und eine gelegentliche Ebene oder einen Hubschrauber durchlaufen der Skyline. Auf der Grundlagen wurde eine Reihe von Autos zum Steuern der Straße gemacht. Wenn Sie in der Tour von Rom in holotour waren, ist es unwahrscheinlich, dass Sie diese Bewegung explizit kennen. Das ist wirklich großartig! Der feine Bewegungs Aufwand ist nicht dafür vorgesehen, Sie zu fangen, aber ohne diese kleinen Berührungen bemerken Menschen sofort, dass es sich um ein statisches Bild in der Szene handelte.
@@ -49,7 +49,7 @@ Die Reste von Denkmälern und Gebäuden in Rom sind sogar 2000 Jahre nach ihrer 
 
 Natürlich gibt es keine Video-oder statischen Bilder) des Kolosseum, das bei seiner Erstellung aufgetreten ist, daher mussten wir unsere eigenen erstellen. Wir mussten viele Untersuchungen durchführen, um so viel über die Struktur wie möglich zu lernen. Informationen zu den Materialien, aus denen es stammt, zum Überprüfen von Architektur Diagrammen und zum Lesen von Verlaufs Beschreibungen, um genügend Informationen zu erhalten, um eine virtuelle Bereitstellung zu ermöglichen. 
 
-![Die modernen Tages Ruinen des Kolosseum mit einem Overlay, das den Arena Boden anzeigt, wie er in altem Rom ausgesehen hätte.](images/rome-colosseum-overlay-500px.png)<br>
+![die modernen Tages Ruinen des Kolosseum mit einem Overlay, das den Arena Boden anzeigt, wie er in altem Rom ausgesehen hätte.](images/rome-colosseum-overlay-500px.png)<br>
 *Die modernen Tages Ruinen des Kolosseum mit einem Overlay, das den Arena Boden anzeigt, wie er in altem Rom ausgesehen hätte*
 
 Als erstes wollten wir herkömmliche Touren mit Schulungs Überlagerungen verbessern. Wenn Sie in holotour die Ruinen des Kolosseum sehen, wie es heute aussieht, wird der Bereich der Arena transformiert, um Ihnen zu zeigen, wie er während der Verwendung ausgesehen hätte, einschließlich der aufwendigen unterirdischen Stagingbereiche. Bei einer normalen Tour werden diese Informationen möglicherweise für Sie beschrieben, und Sie könnten versuchen, sich die Informationen vorzustellen, aber in holotour können Sie Sie sehen.
@@ -62,22 +62,22 @@ Die Überlagerungen sind eine ansprechende Möglichkeit, um Personen über den V
 
 Dieses Unternehmen war zu groß für das Team, sodass das Kunst Team mit whiskytree gearbeitet hat, einem Unternehmen mit externen Effekten, das in der Regel an visuellen Effekten für Hollywood-Filme arbeitet. Whiskytree half uns, das Kolosseum in seiner Blütezeit wiederherzustellen, sodass wir Sie über die Struktur informieren können, während wir im Bereich der Arena waren, und um eine Ansicht eines gladiatorkampfes aus dem kaiserfeld zu schaffen. Die Banner zum Jubeln und Schwenken fügen die feine Bewegung hinzu, die notwendig ist, um das Gefühl zu haben, dass es sich um echte Orte und nicht nur um Bilder handelt.
 
-![Das neu erstellte Kolosseum, wie es aus dem Bereich der Arena ersichtlich ist. Wenn Sie in holotour angezeigt werden, werden die Banner in der Brise geleert, was ein Gefühl der Bewegung ist.](images/recreated-colosseum-holotour-500px.png)<br>
+![das neu erstellte Kolosseum, wie es aus dem Bereich "Arena" ersichtlich ist. Wenn Sie in holotour angezeigt werden, werden die Banner in der Brise geleert, was ein Gefühl der Bewegung ist.](images/recreated-colosseum-holotour-500px.png)<br>
 *Das neu erstellte Kolosseum, wie es aus dem Bereich der Arena ersichtlich ist. Wenn Sie in holotour angezeigt werden, werden die Banner in der Brise geleert, was ein Gefühl der Bewegung ist.*
 
 Die Tour in Rom steht mit dem Gladiator-Kampf. Whiskytree bot uns die Simulationen "Arena" und "3D", die als Video gerendert wurden, aber wir mussten die Gladiatoren im Bereich "Arena" hinzufügen. Dieser Teil unseres Prozesses hat sich mehr wie eine Hollywood-Videoproduktion angesehen als ein Projekt aus einem Inkubations Spielstudio. Mitglieder unseres Teams haben eine grobe Kampfsequenz zugeordnet und Sie dann mit einem Choreographen verfeinert. Wir setzten Actors ein, um unsere Pseudo Schlacht bereitzustellen und eine Rüstung zu erwerben, damit Sie den Teil betrachten. Schließlich haben wir die gesamte Szene mit einem grünen Bildschirm gefilmt.
 
-![Unsere Gladiatoren, die Anweisungen erhalten, finden Sie unter.](images/green-screen-gladiators-holotour-500px.jpg)<br>
+![unsere Gladiatoren, finden Sie Anweisungen dazu.](images/green-screen-gladiators-holotour-500px.jpg)<br>
 *Unsere Gladiatoren, das erhalten von Anweisungen zwischen*
 
 In dieser Szene werden Sie in das Feld des Kaisers versetzt, was bedeutet, dass alles, was aus dieser Perspektive besteht, benötigt wird. Wenn wir von dem Ort, an dem die Gladiatoren im Bereich "Arena" waren, gedreht haben, konnten wir die Kampfsequenz später nicht ordnungsgemäß zusammensetzen, sodass wir den Kamera-Operator in einem sehr großen Scheren Lift ablegen konnten
 
-![Die richtige Perspektive: das Drehen von einem Scheren Lift.](images/scissor-lift-holotour-500px.jpg)<br>
+![, die richtige Perspektive zu erhalten: das Drehen von einem Scheren Lift.](images/scissor-lift-holotour-500px.jpg)<br>
 *Die richtige Perspektive: das Drehen von einem Scheren Lift*
 
 In der Postproduktion waren die Gladiatoren in der Arena in der Arena zusammengesetzt, und die Perspektive war richtig, aber es gab ein Problem: die Schatten der Gladiatoren auf dem grünen Bildschirm wurden im Rahmen des Zusammensetzung-Prozesses entfernt. Ohne Schatten waren Sie so gesehen, als die Gladiatoren in der Luft waren. Glücklicherweise eignet sich whiskytree hervorragend für die Lösung dieser Art von Problem, und es wurde ein wenig technischer Wizardry verwendet, um unserer Szene Schatten hinzuzufügen. Das Ergebnis ist das, was Sie heute in der Tour sehen.
 
-## <a name="about-the-authors"></a>Informationen zu den Autoren
+## <a name="about-the-authors"></a>Über die Autoren
 
 <table style="border:0">
 <tr>
@@ -98,4 +98,4 @@ In der Postproduktion waren die Gladiatoren in der Arena in der Arena zusammenge
 
 
 ## <a name="see-also"></a>Siehe auch
-* [Video: Microsoft hololens: Holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
+* [Video: Microsoft hololens: holotour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

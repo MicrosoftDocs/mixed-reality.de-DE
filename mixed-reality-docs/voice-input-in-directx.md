@@ -1,17 +1,17 @@
 ---
 title: Spracheingabe in DirectX
 description: Erläutert das Implementieren von Sprachbefehlen und kleinen Ausdrücken und Satz Erkennung in einer DirectX-App für Windows Mixed Reality.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Exemplarische Vorgehensweise, Sprachbefehl, Ausdruck, Erkennung, Sprache, DirectX, Plattform, Cortana, Windows Mixed Reality
-ms.openlocfilehash: c0a7ca85c24147e607603e733c9d191c64cbd927
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 2837a0fc42e8fdebb2e1facee118d20b5668cd43
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181820"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277968"
 ---
 # <a name="voice-input-in-directx"></a>Spracheingabe in DirectX
 
@@ -427,6 +427,6 @@ catch (Exception^ exception)
    });
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Sprach-App-Entwurf](https://msdn.microsoft.com/library/dn596121.aspx)
 * [Beispiel für die Spracherkennung](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

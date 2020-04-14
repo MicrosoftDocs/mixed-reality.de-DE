@@ -1,17 +1,17 @@
 ---
 title: Volumerendering
 description: Volumetric-Bilder enthalten umfangreiche Informationen mit Deckkraft und Farben im gesamten Volume, die nicht einfach als Oberflächen ausgedrückt werden können. Erfahren Sie, wie Sie Volumetrische-Images effizient in Windows Mixed Reality Renderings.
-author: KevinKennedy
+author: kevinkennedy
 ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: volumetribild, volumenrendering, Leistung, gemischte Realität
-ms.openlocfilehash: 04931df5e4225225e4c11c3f6d72801e2d58f646
-ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
+ms.openlocfilehash: 6dbb49c31761d4b7b9da5060d15763c3925be754
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/28/2019
-ms.locfileid: "75503829"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277948"
 ---
 # <a name="volume-rendering"></a>Volumerendering
 

@@ -1,17 +1,17 @@
 ---
 title: Lokale Anker Übertragungen in Unity
 description: Übertragen von Ankern zwischen mehreren hololens-Geräten in einer Unity-Anwendung.
-author: fieldsJacksonG
+author: fieldsjacksong
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Freigabe, Anker, worldanchor, Mr Sharing 250, worldanchortransferbatch, spatialperception, Transfer, local Anchor Transfer, Anchor Export, Anchor Import
-ms.openlocfilehash: 82bcd07417fd5aa1b265ebc3c8edc939101dd783
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: fd071f736add094fd65ae4d889f8008eefd8515d
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516136"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278058"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Lokale Anker Übertragungen in Unity
 
@@ -34,8 +34,8 @@ Aktivieren der *spatialperception* -Funktion:
 
 ### <a name="anchor-transfer"></a>Anker Übertragung
 
-**Namespace:** *Unityengine. XR. WSA. Sharing*<br>
-**Typ**: *Worldanchortransferbatch*
+**Namespace:** *unityengine. XR. WSA. Sharing*<br>
+**Typ**: *worldanchortransferbatch*
 
 Zum Übertragen eines [worldanchors](coordinate-systems-in-unity.md)müssen Sie den Anker einrichten, der übertragen werden soll. Der Benutzer eines hololens scannt seine Umgebung und wählt entweder manuell oder Programm gesteuert einen Punkt im Bereich aus, um als Anker für die gemeinsame Nutzung zu gelten. Die Daten, die diesen Punkt darstellen, können dann serialisiert und an die anderen Geräte übertragen werden, die in der-Funktion gemeinsam genutzt werden. Jedes Gerät deserialisiert dann die Anker Daten und versucht, diesen Punkt im Speicherplatz zu finden. Damit die Anker Übertragung funktioniert, muss jedes Gerät in genügend der Umgebung gescannt werden, damit der durch den Anker dargestellte Punkt identifiziert werden kann.
 
@@ -44,7 +44,7 @@ Zum Übertragen eines [worldanchors](coordinate-systems-in-unity.md)müssen Sie 
 Der Beispielcode auf dieser Seite verfügt über einige Felder, die initialisiert werden müssen:
 1. *Gameobject rootgameobject* ist ein *gameobject* in Unity, das über eine *worldanchor* -Komponente verfügt. Ein Benutzer in der freigegebenen Benutzer Darstellung wird dieses *gameobject* platzieren und die Daten an die anderen Benutzer exportieren.
 2. *Worldanchor gamerootanchor* ist das *unityengine. XR. WSA. worldanchor* -Objekt, das auf *rootgameobject*basiert.
-3. *Byte [] importeddata* ist ein Bytearray für den serialisierten Anker, der von jedem Client über das Netzwerk empfangen wird.
+3. *Byte [] importeddata ist ein Bytearray* für den serialisierten Anker, der von jedem Client über das Netzwerk empfangen wird.
 
 ```
 public GameObject rootGameObject;

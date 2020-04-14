@@ -1,17 +1,17 @@
 ---
 title: 'Fallstudie: Durchsuchen der Lücken in ihrer Realität'
 description: In dieser Fallstudie wird erläutert, wie der "Magic Window"-Effekt auf hololens implementiert wird, sodass der Benutzer hinter den Wänden, in der Etage und in virtuellen Öffnungen innerhalb der eigentlichen Umgebung sehen kann.
-author: EricRehmeyer
+author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, Magic Window, Parser
-ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c829656c98b7c87f8b969dbbd16115f6a0bbaf27
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436667"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278148"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Fallstudie: Durchsuchen der Lücken in ihrer Realität
 
@@ -108,7 +108,7 @@ Im folgenden finden Sie einige Ideen dazu, wo Sie diese Idee als nächstes treff
 </tr>
 </table>
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Grundlagen 101: Projekt mit Gerät abschließen](holograms-101.md)
 * [Koordinatensysteme](coordinate-systems.md)
 * [Raumanker](spatial-anchors.md)

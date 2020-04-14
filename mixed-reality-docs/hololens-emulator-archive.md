@@ -1,17 +1,17 @@
 ---
 title: Hololens-Emulator-Archiv
 description: Liste der veröffentlichten Builds des Microsoft hololens-Emulators.
-author: hamalawi
-ms.author: moelhama
-ms.date: 3/10/2020
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 4/13/2020
 ms.topic: article
 keywords: Hololens, Emulator, Builds, Versionen
-ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: a50be8c83607882996e5981c4be502a0a617a797
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031773"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278158"
 ---
 # <a name="hololens-2-emulator-archive"></a>Hololens 2-Emulator-Archiv
 
@@ -19,6 +19,7 @@ Der hololens-Emulator (1st Gen) und der hololens 2-emulatorbuild werden nebenein
 
 |  Erstellen |  Veröffentlichungsdatum |  Hinweise | 
 |----------|----------|----------|
+|  [Hololens 2-emulatorbuild 10.0.18362.1059](https://go.microsoft.com/fwlink/?linkid=2126826) | 13. April 2020 | Der Build 2020 hololens 2.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [Hololens 2-emulatorbuild 10.0.18362.1056](https://go.microsoft.com/fwlink/?linkid=2121323) | 10. März 2020 | Der Build 2020 hololens 2 wurde erstellt.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [Hololens 2-emulatorbuild 10.0.18362.1053](https://go.microsoft.com/fwlink/?linkid=2118321) | 11. Februar 2020 | Februar 2020 hololens 2-Build.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [Hololens 2-emulatorbuild 10.0.18362.1044](https://go.microsoft.com/fwlink/?linkid=2114824) | 13. Januar 2020 | Der Januar 2020 hololens 2-Build.  Allgemeine hololens 2-Versions Hinweise finden Sie unter https://docs.microsoft.com/hololens/hololens-release-notes |

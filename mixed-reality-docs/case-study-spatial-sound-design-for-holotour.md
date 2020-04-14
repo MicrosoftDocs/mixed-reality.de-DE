@@ -1,17 +1,17 @@
 ---
 title: 'Fallstudie: räumliches Sound Design für holotour'
 description: Zum Erstellen einer wahrhaft immersiven 3D-Tour für Microsoft hololens sind die Panorama Videos und Holographic-Kulissen nur Teil der Formel.
-author: JSyltebo
+author: jsyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hololens, holotour, räumlicher Sound, Fallstudie
-ms.openlocfilehash: f2dd704089d9c76b7ba175a4a1ad5cebf9ec6c68
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 5c6331bd93447f53c1dd4c9941bfa13a5eadc1bd
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278138"
 ---
 # <a name="case-study-spatial-sound-design-for-holotour"></a>Fallstudie: räumliches Sound Design für holotour
 
@@ -65,7 +65,7 @@ Es gibt einige zusätzliche Möglichkeiten, die Direktionalität hervorzuheben u
 * **Spline-Emitter:** Diese Emitter bewegen sich in 3D-Raum relativ zur visuellen Position des Objekts, an das Sie angefügt sind. Ein Beispiel hierfür ist das Training in Machu Picchu, bei dem wir einen Spline-Emitter verwendet haben, um einen unterschiedlichen Sinn von Direktionalität und Bewegung zu vermitteln.
 * **Musik und SFX:** Bestimmte Aspekte von holotour, die eine stärker stilisierte oder filmische Herangehensweise darstellen, nutzen Musik und Soundeffekte, um die emotionalen Auswirkungen zu erhöhen. Im gladiatorkampf am Ende der Rom-Tour können z. b. besondere Effekte wie z. b. "whooshes" und "Stingers" die Auswirkung von Bezeichnungen in den Kulissen stärken.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Raumklang](spatial-sound.md)
 * [Raumklangentwurf](spatial-sound-design.md)
 * [Raumklang in Unity](spatial-sound-in-unity.md)

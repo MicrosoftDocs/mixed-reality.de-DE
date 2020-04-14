@@ -1,17 +1,17 @@
 ---
 title: 'Fallstudie: Lektionen aus der-Küche von Lowe'
 description: Das hololens-Team möchte einige bewährte Methoden gemeinsam nutzen, die aus dem hololens-Projekt von Lowe abgeleitet wurden.
-author: BrandonBray
+author: brandonbray
 ms.author: kevincol
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Lowe es, hololens, Küche, Fallstudie
-ms.openlocfilehash: 24759f90b8b84ec19e644fb8dff44f64c3ab81d2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6bd7a09f77fb71dc23dc640525ff250abac8f12
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522343"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278128"
 ---
 # <a name="case-study---lessons-from-the-lowes-kitchen"></a>Fallstudie: Lektionen aus der-Küche von Lowe
 

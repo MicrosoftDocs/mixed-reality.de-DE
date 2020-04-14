@@ -1,17 +1,17 @@
 ---
 title: 'Fallstudie: Erstellen einer Galaxie in gemischter Realität'
 description: Bevor Microsoft hololens ausgeliefert wurde, fragten wir unsere Entwickler Community, welche Art von APP Ihnen einen erfahrenen internen TeamBuild für das neue Gerät bereitstellen möchte. Mehr als 5000 Ideen wurden freigegeben, und nach einer 24-stündigen Twitter-Umfrage war der Gewinner eine Idee namens "Galaxy Explorer".
-author: KarimLUCCIN
+author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, hololens, Windows Mixed Reality, teilen Sie Ihre Idee, Fallstudie
-ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f13395250c8a73718408c051ab95d2ec4bf62014
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436875"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278178"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Fallstudie: Erstellen einer Galaxie in gemischter Realität
 
@@ -23,7 +23,7 @@ Andy zibits, der Kunst Leiter im Projekt und Karim Luccin, der Grafik Techniker 
 
 [Unser Team](galaxy-explorer.md#meet-the-team) besteht aus zwei Designern, drei Entwicklern, vier Künstlern, einem Producer und einem Tester – es gab sechs Wochen, eine voll funktionsfähige APP zu erstellen, die es den Benutzern ermöglicht, sich mit der Menschen Nähe und der Schönheit unserer Milchwege-Galaxy vertraut zu machen.
 
-Wir wollten die Fähigkeit von hololens in vollem Umfang nutzen, 3D-Objekte direkt in ihren Lebensbereich zu Rendering. Daher wollten wir eine realistische, aussehende Galaxie erstellen, in der die Benutzer in der Lage sind, die Schließung zu vergrößern und einzelne Sterne anzuzeigen .
+Wir wollten die Fähigkeit von hololens in vollem Umfang nutzen, 3D-Objekte direkt in ihren Lebensbereich zu Rendering. Daher wollten wir eine realistische, aussehende Galaxie erstellen, in der die Benutzer in der Lage sind, die Schließung zu vergrößern und die einzelnen Sterne zu sehen, jeweils in ihren eigenen Bewegungsrichtungen.
 
 In der ersten Woche der Entwicklung haben wir einige Ziele für unsere Darstellung der Milch Milch Way-Methode geschaffen: Es brauchte Tiefe, Bewegung und Gefühl von "Volumetric – Full of Stars", die dabei helfen würden, die Form der Galaxy zu erzeugen.
 
@@ -41,7 +41,7 @@ Wir haben Belastungstests mit Tausenden von Punkt Partikeln in verschiedenen Mus
 
 ### <a name="creating-the-position-of-the-stars"></a>Erstellen der Position der Sterne
 
-Eines unserer Teammitglieder hat bereits den Code geschrieben C# , der Sterne an der ursprünglichen Position generieren würde. Die Sterne befinden sich auf einer Ellipse, und ihre Position kann von ("**Cursor Offset**", " **ellipsesize**", " **Erhöhung**") beschrieben werden, wobei " **Cursor Offset** " der Winkel des Sterns entlang der Ellipse ist, " **ellipsesize** " die Dimension der Ellipse. entlang von X und Z und Erhöhung der ordnungsgemäßen Erweiterung des Stern in der Galaxy. Daher können wir einen Puffer ([computebuffer](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) erstellen, der mit jedem Star-Attribut initialisiert und an die GPU gesendet wird, wo er für den Rest der Arbeit leben würde. Zum Zeichnen dieses Puffers verwenden wir das [drawprozeduren von Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , das das Ausführen eines Shaders (Code auf einer GPU) für eine beliebige Gruppe von Punkten ermöglicht, ohne dass ein tatsächliches Mesh vorhanden ist, das das Galaxy darstellt:
+Eines unserer Teammitglieder hat bereits den Code geschrieben C# , der Sterne an der ursprünglichen Position generieren würde. Die Sterne befinden sich auf einer Ellipse, und ihre Position kann von ("**Cursor Offset**", " **ellipsesize**", " **Erhöhung**") beschrieben werden, wobei " **Cursor Offset** " der Winkel des Sterns entlang der Ellipse ist, " **ellipsesize** " die Dimension der Ellipse entlang "X" und "Z" und die Rechte Erweiterung des Stern innerhalb der Galaxie. Daher können wir einen Puffer ([computebuffer](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) erstellen, der mit jedem Star-Attribut initialisiert und an die GPU gesendet wird, wo er für den Rest der Arbeit leben würde. Zum Zeichnen dieses Puffers verwenden wir das [drawprozeduren von Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , das das Ausführen eines Shaders (Code auf einer GPU) für eine beliebige Gruppe von Punkten ermöglicht, ohne dass ein tatsächliches Mesh vorhanden ist, das das Galaxy darstellt:
 
 **CPU**
 
@@ -74,7 +74,7 @@ Wir haben mit unformatierten zirkulären Mustern mit Tausenden von Partikeln beg
 
 Wir haben versucht, verschiedene Muster und Partikelsysteme zu drehen, die wie folgt gedreht wurden.
 
-Unser Team hat einige Untersuchungen zur Funktionsweise von Galaxien durchgeführt, und wir haben ein benutzerdefiniertes Partikelsystem speziell für die Galaxie erstellt, sodass wir die Partikel auf Ellipsen basierend auf "[Dichtewellen Theorie](https://en.wikipedia.org/wiki/Density_wave_theory)" verschieben konnten. Dies weist darauf hin, dass es sich bei den Armen einer Galaxy um Bereiche von höhere Dichte, aber in konstantem Flux, wie z. b. eine Verkehrsampel. Es erscheint stabil und solide, aber die Sterne bewegen sich tatsächlich in den und aus den Armen, wenn Sie sich auf die jeweiligen Ellipsen bewegen. In unserem System sind die Partikel nie auf der CPU vorhanden – wir generieren die Karten und orientieren Sie alle auf der GPU, sodass das gesamte System einfach den anfänglichen Zustand und die Zeit hat. Dies ist wie folgt:
+Unser Team hat einige Untersuchungen zur Funktionsweise von Galaxien durchgeführt, und wir haben ein benutzerdefiniertes Partikelsystem speziell für die Galaxie erstellt, sodass wir die Partikel auf Ellipsen basierend auf "[Dichtewellen Theorie](https://en.wikipedia.org/wiki/Density_wave_theory)" verschieben konnten. Dies weist darauf hin, dass es sich bei den Armen einer Galaxy um Bereiche mit höherer Dichte, aber in konstantem Flux, wie etwa einer Verkehrsampel handelt Es erscheint stabil und solide, aber die Sterne bewegen sich tatsächlich in den und aus den Armen, wenn Sie sich auf die jeweiligen Ellipsen bewegen. In unserem System sind die Partikel nie auf der CPU vorhanden – wir generieren die Karten und orientieren Sie alle auf der GPU, sodass das gesamte System einfach den anfänglichen Zustand und die Zeit hat. Dies ist wie folgt:
 
 ![Fortschritt des partikelsystems mit GPU-Rendering](images/spiral-galaxy-arms-500px.jpg)
 
@@ -189,7 +189,7 @@ Wir haben den Code für die Galaxy Explorer-app geöffnet und auf [GitHub](https
 
 Möchten Sie mehr über den Entwicklungsprozess für den Galaxy Explorer erfahren? Sehen Sie sich alle früheren Projekt Updates auf dem [Microsoft hololens-YouTube-Kanal](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)an.
 
-## <a name="about-the-authors"></a>Informationen zu den Autoren
+## <a name="about-the-authors"></a>Über die Autoren
 
 <table style="border:0">
 <tr>
@@ -203,6 +203,6 @@ Möchten Sie mehr über den Entwicklungsprozess für den Galaxy Explorer erfahre
 </table>
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Galaxy Explorer auf GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Galaxy Explorer-Projektaktualisierungen auf YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

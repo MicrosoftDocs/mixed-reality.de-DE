@@ -1,17 +1,17 @@
 ---
 title: Portierungsleitfäden
 description: In diesem Schritt wird erläutert, wie Sie eine vorhandene immersive Anwendung in Windows Mixed Reality portieren.
-author: ChimeraScorn
+author: chimerascorn
 ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Port, portieren, Unity, Middleware, Engine, UWP
-ms.openlocfilehash: 5d3debc9a810873f21a9f55a32061565d4ce75ae
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539511"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278038"
 ---
 # <a name="porting-guides"></a>Portierungsleitfäden
 
@@ -152,7 +152,7 @@ Windows Mixed Reality steht auf einer Vielzahl von Geräten zur Verfügung, die 
 
 Sowohl [Unity](https://docs.unity3d.com/Manual/Profiler.html) als auch [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) beinhalten leistungsprofilerstellungs-und sowohl [Microsoft](understanding-performance-for-mixed-reality.md) -als auch [Intel](https://software.intel.com/articles/vr-content-developer-guide) -Veröffentlichungs Richtlinien zur Leistungsprofil Erstellung und-Optimierung. Es gibt eine umfassende Erörterung der Leistung, die Untergrund Legendes zur [Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)verfügbar ist. Darüber hinaus gibt es spezifische Details für Unity unter [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Leitfaden für Eingabeportierung für Unity](input-porting-guide-for-unity.md)
 * [Windows Mixed Reality-Mindestanforderungen für die PC-Hardware Kompatibilität](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)

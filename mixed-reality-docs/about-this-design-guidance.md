@@ -1,17 +1,17 @@
 ---
 title: Informationen zu diesem Entwurfs Leit Faden
 description: Dieser Leitfaden wurde von Microsoft-Designern, -Entwicklern, -Programmmanagern und -Forschern verfasst, deren Arbeit holografische Geräte (wie HoloLens) und immersive Geräte (wie die Windows Mixed Reality-Headsets von Acer und HP) umfasst.
-author: MRWied
+author: mrwied
 ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Introduction, Leitfaden
-ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 114a3808d57b2bd78044ce743d568bd5effe25bb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277518"
 ---
 # <a name="about-this-design-guidance"></a>Informationen zu diesem Entwurfs Leit Faden
 
@@ -25,7 +25,7 @@ Mit Ihnen wird ein überaus spannender neuer Zeitraum für die computingzeit ein
 
 Nach Möglichkeit bieten wir Ihnen einen aussagekräftigen Entwurfs Leit Faden mit verknüpften Code auf GitHub. Da wir direkt mit Ihnen zusammenarbeiten, sind wir hier nicht immer in der Lage, spezielle, Handlungs relevante Anleitungen zu bieten. Einige der freigegebenen Elemente werden im Sinne von "Lektionen, die wir gelernt haben" und "vermeiden, dass dieser Pfad ausfällt".
 
-Und wir wissen, dass viele Innovationen von der größeren Entwurfs Community generiert werden. Wir freuen uns, von Ihnen zu hören, von Ihnen zu lernen und eng mit Ihnen zusammenzuarbeiten. Unserer Meinung nach machen wir unsere Erkenntnisse, auch wenn Sie explorativ und frühzeitig mit der Absicht arbeiten, Entwicklern und Designern Entwurfs denken, bewährte Methoden und die dazugehörigen Open Source-Steuerelemente, Muster und Beispiel-apps zu ermöglichen, die Sie verwenden können. direkt in ihrer eigenen Arbeit.
+Und wir wissen, dass viele Innovationen von der größeren Entwurfs Community generiert werden. Wir freuen uns, von Ihnen zu hören, von Ihnen zu lernen und eng mit Ihnen zusammenzuarbeiten. Wir werden unsere Erkenntnisse unserer Meinung nach am besten teilen, auch wenn Sie explorativ und frühzeitig mit der Absicht arbeiten, Entwicklern und Designern Entwurfs-, bewährte Methoden und die dazugehörigen Open Source-Steuerelemente, Muster und Beispiel-apps zu ermöglichen, die Sie direkt in ihrer eigenen Arbeit verwenden können.
 
 ## <a name="overview"></a>Übersicht
 
@@ -58,7 +58,7 @@ Obwohl es wichtig ist, sich auf bestimmte Kunden Probleme zu konzentrieren, möc
 
 ![Treffen Sie Ersteller, wo Sie](images/500px-creators.jpg) <br>
 
-Wir hoffen, dass viele Zielgruppen diese Anleitung finden, um hilfreich zu sein. Sie verfügen über unterschiedliche Fertigkeiten (Anfang, Fortgeschrittene, erweitert), verwenden verschiedene Tools (Unity, DirectX C++, C#, usw.), sind mit verschiedenen Plattformen (Windows, Ios, Android) vertraut und stammen aus unterschiedlichen Hintergründen (Mobile, Enterprise, Gaming). ), und arbeiten an unterschiedlichen Größen Teams ("Solo", "Small", "Medium", "Large"). Diese Anleitung kann also mit unterschiedlichen Perspektiven und Anforderungen angezeigt werden. Nach Möglichkeit werden wir versuchen, diese Vielfalt zu berücksichtigen und unsere Richtlinien so wichtig wie möglich für so viele Personen wie möglich zu gestalten. Darüber hinaus wissen wir, dass viele von Ihnen bereits auf GitHub vorhanden sind. Wir werden also direkt mit den GitHub-Repositorys und Foren verknüpft, um Ihnen den Speicherort zu begegnen, an dem Sie bereits sind. 
+Wir hoffen, dass viele Zielgruppen diese Anleitung finden, um hilfreich zu sein. Sie verfügen über unterschiedliche Fertigkeiten (beginnend, Intermediate, Advanced), verwenden verschiedene Tools (Unity, DirectX, C++, C#usw.), sind mit verschiedenen Plattformen (Windows, Ios, Android) vertraut und stammen aus unterschiedlichen Hintergründen (Mobile, Enterprise, Gaming) und arbeiten an verschiedenen Größen Teams ("Solo", "Small", "Medium", "Large"). Diese Anleitung kann also mit unterschiedlichen Perspektiven und Anforderungen angezeigt werden. Nach Möglichkeit werden wir versuchen, diese Vielfalt zu berücksichtigen und unsere Richtlinien so wichtig wie möglich für so viele Personen wie möglich zu gestalten. Darüber hinaus wissen wir, dass viele von Ihnen bereits auf GitHub vorhanden sind. Wir werden also direkt mit den GitHub-Repositorys und Foren verknüpft, um Ihnen den Speicherort zu begegnen, an dem Sie bereits sind. 
 
 ### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>So viel wie möglich von experimentellen bis expliziten teilen
 

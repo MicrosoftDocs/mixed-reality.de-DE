@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Anmerkungen zu dieser Version, Version, Windows 10, Build, 19h1, Betriebssystem, Mai 2019
-ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97bf4c3b5c24fc6f0c763b8dd9f146bbaa01187a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438318"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277628"
 ---
 # <a name="release-notes---may-2019"></a>Anmerkungen zu dieser Version-Mai 2019
 
@@ -44,6 +44,10 @@ Wir werden kontinuierlich darauf achten, die Kompatibilität zu verbessern.  Wen
 
 Hololens (1st Gen) wechselt in den LTS-Zustand (Long Term Service). Zukünftige Updates konzentrieren sich auf Probleme und Sicherheitskorrekturen, während gleichzeitig die Funktions Parität mit der [Windows 10-Version vom Oktober 2018](release-notes-october-2018.md) für hololens (auch bekannt als RS5) beibehalten wird. 
 
+## <a name="known-issues"></a>Bekannte Probleme
+
+Wir verfolgen ein Problem, bei dem ein Monitor mit dem PC verbunden werden muss, damit das immersive Headset ordnungsgemäß funktioniert. Die Benutzer von Rucksack-PCs möchten möglicherweise einen aktiven Anzeige Adapter (oder EDID-Emulator) verwenden, um sicherzustellen, dass Ihr immersives Headset weiterhin angezeigt wird, wenn kein PC-Monitor verwendet wird. 
+
 ## <a name="provide-feedback-and-report-issues"></a>Bereitstellen von Feedback und melden von Problemen
 
 Verwenden Sie die [Feedback-Hub-App auf Ihrem Windows 10-PC](give-us-feedback.md) oder Ihrem hololens-Gerät, um Feedback zu geben und Probleme zu melden. Die Verwendung von Feedback Hub stellt sicher, dass alle erforderlichen Diagnoseinformationen enthalten sind, damit unsere Techniker das Problem schnell Debuggen und beheben können.
@@ -61,7 +65,7 @@ Verwenden Sie die [Feedback-Hub-App auf Ihrem Windows 10-PC](give-us-feedback.md
 * [Versionshinweise – Mai 2016](release-notes-may-2016.md)
 * [Versionshinweise – März 2016](release-notes-march-2016.md)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Immersive Headset-Unterstützung (externer Link)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Hololens-Unterstützung (externer Link)](https://support.microsoft.com/products/hololens)
 * [Installieren der Tools](install-the-tools.md)
