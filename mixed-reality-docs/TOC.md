@@ -197,8 +197,10 @@
 #### [Verwenden von Vuforia mit Unity](vuforia-development-overview.md)
 ## Unreal
 ### [Ureal-Entwicklung – Übersicht](unreal-development-overview.md)
-## WebVR
-### [Verwenden von WebVR in Microsoft Edge mit Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
+## JavaScript
+### [JavaScript-Entwicklung – Übersicht](javascript-development-overview.md)
+### [WebXR](webxr-overview.md)
+### [WebVR](webvr-overview.md)
 ## Systemeigen
 ### [Native Entwicklung – Übersicht](directx-development-overview.md)
 ### OpenXR
