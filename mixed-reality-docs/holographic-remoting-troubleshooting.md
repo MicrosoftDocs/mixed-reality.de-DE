@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, Holographic Remoting, Remote Rendering, Netzwerk Rendering, hololens, Remote holograms, Problembehandlung, Hilfe
-ms.openlocfilehash: c6d8333bf22c3abb254a9f1b6e30a785effa9999
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: fc379eb4ad849fb5b236b82719711b37fead8a68
+ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277348"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484310"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Problembehandlung bei Holographic Remoting
 
@@ -33,6 +33,7 @@ Die folgenden APIs werden zurzeit **nicht** unterstützt, wenn Holographic Remot
 * [Holographiccamera. viewconfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.viewconfiguration)
   - Unterstützt ab Version [2.0.18](holographic-remoting-version-history.md#v2.0.18)
   - In früheren Versionen löst immer einen Fehler aus.
+* [Holographiccamera. ishardwarecontentschutzaktivierte](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.ishardwarecontentprotectionenabled#Windows_Graphics_Holographic_HolographicCamera_IsHardwareContentProtectionEnabled)
 * [Holographicviewconfiguration. requestrendertargetsize](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration.requestrendertargetsize#Windows_Graphics_Holographic_HolographicViewConfiguration_RequestRenderTargetSize_Windows_Foundation_Size_)
   - Schlägt nicht fehl, aber die Größe des Renderziels wird nicht geändert.
 * [Holographiccamerapose. override projectiontransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideprojectiontransform)
@@ -82,14 +83,14 @@ Die folgenden APIs werden zurzeit **nicht** unterstützt, wenn Holographic Remot
 
 * [Spatialinteraktionsource. trykreatehandmeshobserver](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserver#Windows_UI_Input_Spatial_SpatialInteractionSource_TryCreateHandMeshObserver)
 * [Spatialinteraktionsource. trykreatehandmeshobserverasync](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserverasync)
+* [Spatialinteraktionsource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)
 
 [Windows.Perception.Spatial.Preview](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview)
 
 * [Spatialgraphinteroppreview. kreatelocatorfornode](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.createlocatorfornode)
 * [Spatialgraphinteroppreview. trykreateframeofreferenzierung](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.trycreateframeofreference)
-* [Spatialinteraktionsource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Holographic Remoting-Versionsverlauf](holographic-remoting-version-history.md)
 * [Schreiben einer Holographic Remoting-Remote-app](holographic-remoting-create-host.md)
 * [Schreiben einer benutzerdefinierten Holographic Remoting Player-App](holographic-remoting-create-player.md)

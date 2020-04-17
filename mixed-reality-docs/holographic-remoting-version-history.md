@@ -6,17 +6,25 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: 5ba3aaa8874dea4418114b331d3d99fc977e982c
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: cd6d076c00fd21ca6fa60cafb94eb9d89796825a
+ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278198"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81484300"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic Remoting-Versionsverlauf
 
 > [!IMPORTANT]
 > Diese Anleitung gilt speziell für Holographic-Remoting auf hololens 2.
+
+## <a name="version-212-april-5-2020"></a>Version 2.1.2 (5. April 2020)<a name="v2.1.2"></a>
+* Es wurde ein Problem mit der audioabwärts Kompatibilität zwischen dem neuesten Holographic Remoting Player und Remote-apps mit einer Version kleiner als 2.1.0 behoben.
+* Behobene räumliches Anker Problem, das den Holographic Remoting-Player unerwartet geschlossen hat. Dieses Problem betrifft auch benutzerdefinierte Player.
+
+## <a name="version-211-march-20-2020"></a>Version 2.1.1 (20. März 2020)<a name="v2.1.1"></a>
+* Beheben von Video Codierungs Problemen mit Remote-Apps bei Verwendung von AMD-GPUs.
+* Leistungsverbesserungen für Holographic Remoting Player.
 
 ## <a name="version-210-march-11-2020"></a>Version 2.1.0 (11. März 2020)<a name="v2.1.0"></a>
 * Der Netzwerk Transport wurde zum Verwenden von [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) über UDP gewechselt. Sichere Verbindungen verwenden jetzt [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) . Beachten Sie, dass der [Holographic Remoting Player](holographic-remoting-player.md) immer noch mit allen zuvor veröffentlichten Holographic Remoting-Versionen kompatibel ist. Um vom neuen Netzwerk Transport profitieren zu können, müssen der Holographic Remoting Player und die betreffende Remote-app Version 2.1.0 verwenden.
@@ -28,7 +36,7 @@ ms.locfileid: "81278198"
 ## <a name="version-2018-december-17-2019"></a>Version 2.0.18 (17. Dezember 2019)<a name="v2.0.18"></a>
 * Unterstützung für [holographicviewconfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration) hinzugefügt
 * Es wurden verschiedene Fehler behoben, die zu Abstürzen führen.
-* Es wurde ein Fehler behoben, bei dem ein holographicspace. cameraadded-Rückruf erforderlich war, damit ein holographiccamera akzeptiert und als hinzugefügte Kamera im holoraphicframe angezeigt werden konnte.
+* Es wurde ein Fehler behoben, bei dem ein holographicspace. cameraadded-Rückruf erforderlich war, damit ein holographiccamera akzeptiert und als hinzugefügte Kamera im holographicframe angezeigt werden konnte.
 
 ## <a name="version-2016-november-11-2019"></a>Version 2.0.16 (11. November 2019)<a name="2.0.16"></a>
 * Deadlockfehler bei der Überwachung des QR-Codes.
@@ -61,7 +69,7 @@ ms.locfileid: "81278198"
 
 * Erstes öffentliches Release von Holographic Remoting für hololens 2.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Schreiben einer benutzerdefinierten Holographic Remoting Player-App](holographic-remoting-create-player.md)
 * [Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
 * [Problembehandlung und Einschränkungen für Holographic Remoting](holographic-remoting-troubleshooting.md)
