@@ -235,7 +235,7 @@
 #### [Funktionsweise – Mixed Reality-Aufnahmestudios](how-it-works-mixed-reality-capture-studios.md)
 ### Holographic Remoting
 #### [Holographic Remoting-Player](holographic-remoting-player.md)
-#### [Schreiben einer Holographic Remoting-Host-App](holographic-remoting-create-host.md)
+#### [Schreiben einer Holographic Remoting-Remote-App](holographic-remoting-create-host.md)
 #### [Schreiben eines benutzerdefinierten Holographic Remoting-Players](holographic-remoting-create-player.md)
 #### [Benutzerdefinierte Holographic Remoting-Datenkanäle](holographic-remoting-custom-data-channels.md)
 #### [Sichere Verbindung für Holographic Remoting](holographic-remoting-secure-connection.md)
