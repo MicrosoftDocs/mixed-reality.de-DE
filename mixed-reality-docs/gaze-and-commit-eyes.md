@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Eye-Tracking, Blickverfolgung, Mixed Reality, Eingabe, Anvisieren mit den Augen, Zielen mit den Augen, HoloLens 2, Blickgestützte Auswahl
 ms.openlocfilehash: 89f5031635f2b67ba4c9afdf605559c2b9da4ac2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73437826"
 ---
 # <a name="eye-gaze-and-commit"></a>Anvisieren mit den Augen und Ausführen
@@ -39,7 +39,7 @@ Das Ausblenden muss nicht so langsam erfolgen wie das Einblenden. Dies ist nur w
 
 **Achten Sie auf die Synchronisierung der Anvisier- und Ausführungssignale**: Die Synchronisierung der Eingabesignale ist wahrscheinlich keine große Herausforderung für das einfache in die Luft tippen und Drücken von Schaltflächen. Wenn Sie etwas kompliziertere Ausführungsaktionen verwenden möchten, sollten Sie allerdings darauf achten, auch wenn das lange Sprachbefehle oder komplizierte Handgesten beinhalten kann. Stellen Sie sich vor, dass Sie ein Ziel anvisieren und einen langen Sprachbefehl äußern. In der Zeit, die Sie zum Sprechen benötigen, und der Zeit, die das System für die Spracherkennung benötigt, hat sich Ihr Auge in der Regel schon längst einem neuen Ziel in der Szene zugewandt. Daher müssen Sie entweder Ihre Benutzer darauf hinweisen, dass sie solange das Ziel anvisieren müssen, bis der Befehl erkannt wurde, oder Sie müssen bei der Verarbeitung der Eingabe den Beginn des Befehls und den zu diesem Zeitpunkt anvisierten Punkt bestimmen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Augenbasierte Interaktion] (eye-gaze-interaction.md)
 * [Blickverfolgung auf HoloLens 2] (eye-tracking.md)
 * [Anvisieren und Ausführen](gaze-and-commit.md)
