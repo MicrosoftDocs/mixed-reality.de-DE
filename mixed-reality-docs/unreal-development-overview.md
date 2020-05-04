@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Beta, Streamen, Remoting, Mixed Reality, Entwicklung, erste Schritte, neues Projekt, Emulator, Dokumentation
 ms.openlocfilehash: 96b0259e4ac567389f999d3a453fb68bb848b266
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491173"
 ---
 # <a name="unreal-development-overview"></a>Ureal-Entwicklung – Übersicht
@@ -38,5 +38,5 @@ Das Streamen Ihrer App von Ihrem Desktopcomputer an die Holographic Remoting Pla
 
 Informationen zu den ersten Schritten beim Streaming finden Sie im <a href="https://docs.unrealengine.com//Platforms/AR/HoloLens2/QuickStartStreaming/index.html" target="_blank">HoloLens 2-Streaming-Schnellstart</a>[]()
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * <a href="https://docs.unrealengine.com//Platforms/Mobile/Performance/index.html" target="_blank">Unreal-Leistungsrichtlinien für mobile Geräte</a>
