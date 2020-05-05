@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Spectator View, iPhone, iOS, iPad, OpenCV, Kamera, ARKit, HoloLens, Mixed Reality, MixedRealityToolkit, Demo, aufzeichnen
 ms.openlocfilehash: 9bc1c2809c7d780d439d9efb58f464b41de3dccd
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491160"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Spectator View für HoloLens und HoloLens 2
@@ -47,7 +47,7 @@ Freigabeblatt, auf dem Sie Videos speichern, sie per E-Mail senden oder sie mit 
 
 In der folgenden Tabelle sind verschiedene Funktionen von Spectator View aufgeführt. Wählen Sie die Option aus, die Ihren Anforderungen an Videoaufzeichnung am besten entspricht:
 
-|                                      | Mobile                  |                    Videokamera              |
+|                                      | Telefon (mobil)                  |                    Videokamera              |
 |--------------------------------------|:-----------------------:|:-------------------------------------------:|
 | HD-Qualität                           |         Full HD         |        Filmen in professioneller Qualität (durch die Videokamera bestimmt)      |
 | Einfache Kamerabewegung                 |            ✔            |                      ✔                      |
@@ -56,11 +56,11 @@ In der folgenden Tabelle sind verschiedene Funktionen von Spectator View aufgef�
 | Tragbar                             |            ✔            |                                             |
 | Drahtlos                             |            ✔            |                                             |
 | Zusätzlich erforderliche Hardware         |     Android-Smartphone, iPhone    | HoloLens + Rig + Stativ + Videokamera + PC + Unity |
-| Hardwareinvestition                  |           Niedrig            |                     Hoch                    |
+| Hardwareinvestition                  |           Low (Niedrig)            |                     High (Hoch)                    |
 | Plattformübergreifend                       |           Android, iOS   |                                             |
 | Synchronisierte Inhalte                 |            ✔            |                      ✔                      |
 | Dauer des Runtime-Setups               |         Instant          |                     Langsam                    |
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Mixed Reality-Aufnahme](mixed-reality-capture.md) 
 * [Mixed Reality-Aufnahme für Entwickler](mixed-reality-capture-for-developers.md)

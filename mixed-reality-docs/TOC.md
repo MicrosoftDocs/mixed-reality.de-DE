@@ -123,10 +123,9 @@
 ###### [4. Einrichten des Verständnisses von Absichten und natürlicher Sprache](mrlearning-speechSDK-ch4.md)
 ##### Tutorials zu Mehrbenutzerfunktionen
 ###### [1. Einrichten von Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
-###### [2. Vorbereiten von Unity für die Entwicklung](mrlearning-sharing(photon)-ch2.md)
-###### [3. Verbinden mehrerer Benutzer](mrlearning-sharing(photon)-ch3.md)
-###### [4. Freigeben von Objektbewegungen für mehrere Benutzer](mrlearning-sharing(photon)-ch4.md)
-###### [5. Integrieren von Azure Spatial Anchors in eine gemeinsam genutzte Umgebung](mrlearning-sharing(photon)-ch5.md)
+###### [2. Verbinden mehrerer Benutzer](mrlearning-sharing(photon)-ch2.md)
+###### [3. Freigeben von Objektbewegungen für mehrere Benutzer](mrlearning-sharing(photon)-ch3.md)
+###### [4. Integrieren von Azure Spatial Anchors in eine gemeinsam genutzte Umgebung](mrlearning-sharing(photon)-ch4.md)
 ##### Tutorials zur räumlichen Audiowiedergabe
 ###### [1. Hinzufügen von räumlicher Audiowiedergabe zu Ihrem Projekt](unity-spatial-audio-ch1.md)
 ###### [2. Versehen von Sounds für die Schaltflächeninteraktion mit räumlichen Effekten](unity-spatial-audio-ch2.md)

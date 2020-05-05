@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, Mixed Reality, debuggen, bereitstellen
-ms.openlocfilehash: 718635922196b9c044c6904ebab994e9e2a2ff1a
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8708ca39460fbd381bd41f5887e1276291f48b07
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277998"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81484320"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Verwenden von Visual Studio zum Bereitstellen und Debuggen
 
@@ -31,8 +31,8 @@ Aktivieren Sie zunächst den **Entwicklermodus** auf Ihrem Gerät, damit Visual 
 
 ### <a name="hololens"></a>HoloLens
 1. Schalten Sie die HoloLens ein, und setzen Sie sie auf.
-2. Führen Sie die [Blütengeste](system-gesture.md#bloom) aus, um das Hauptmenü zu starten.
-3. Betrachten Sie die Kachel **Einstellungen**, und führen Sie die [Zeigefingergeste](gaze-and-commit.md#composite-gestures) aus. Führen Sie die Zeigefingergeste ein zweites Mal aus, um die App in Ihrer Umgebung zu platzieren. Die Einstellungs-App wird gestartet, nachdem Sie sie platziert haben.
+2. Führen Sie die [Startgeste](system-gesture.md) aus, um das Hauptmenü zu starten.
+3. Wählen Sie die Kachel **Einstellungen** aus, um die App in Ihrer Umgebung zu starten.
 4. Wählen Sie das Menüelement **Aktualisieren** aus.
 5. Wählen Sie das Menüelement **Für Entwickler** aus.
 6. Aktivieren Sie den **Entwicklermodus**. Auf diese Weise können Sie in Ihrer HoloLens [Apps aus Visual Studio bereitstellen](using-visual-studio.md).
@@ -84,6 +84,9 @@ Wenn sich die IP-Adresse Ihrer HoloLens ändert, können Sie die IP-Adresse des 
 4. Beim erstmaligen Bereitstellen einer App in Ihrer HoloLens von Ihrem Computer aus werden Sie zur Eingabe einer PIN aufgefordert. Befolgen Sie die Anweisungen unten zum **Koppeln Ihres Geräts**.
 
 ## <a name="deploying-an-app-over-usb---hololens-2"></a>Bereitstellen einer App über USB: HoloLens 2
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Deploying-your-HoloLens-2-application/player?format=ny]
+
 1. Wählen Sie eine **ARM**- oder **ARM64**-Buildkonfiguration für Ihre App aus.</br>
 ![ARM64-Buildkonfiguration in Visual Studio](images/arm64setting.png)</br>
 2. Wählen Sie im Dropdownmenü für das Bereitstellungsziel **Gerät** aus</br>
