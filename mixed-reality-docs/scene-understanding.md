@@ -1,19 +1,19 @@
 ---
-title: Szenen Verständnis
+title: Grundlegendes zu Szenen
 description: Einführung in die Funktionen zum verstehen von Szenen für hololens
 author: szymons
 ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Szenen Verständnis, räumliche Zuordnung, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 615da20df95f4a435216457e8b9f16bb7d7d069b
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003336"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604961"
 ---
-# <a name="scene-understanding"></a>Szenen Verständnis
+# <a name="scene-understanding"></a>Grundlegendes zu Szenen
 
 Das Verständnis von Szenen bietet Entwicklern gemischter Realität eine strukturierte, allgemeine Darstellung in der Umgebung, die entwickelt wurde, um die Entwicklung für Anwendungen mit hoher Ebene intuitiv zu gestalten. Der Einblick in die Szene ermöglicht das Kombinieren der Leistungsfähigkeit vorhandener gemischter Laufzeiten, wie z. b. der äußerst präzisen weniger strukturierten [räumlichen Zuordnung](spatial-mapping.md) und neuer Ki-gesteuerter Laufzeiten. Durch die Kombination dieser Technologien generiert das Szene Verständnis Darstellungen von 3D-Umgebungen, die denen ähneln, die Sie möglicherweise in Frameworks wie Unity oder Arkit/Arcore verwendet haben. Der Einstiegspunkt der Szene beginnt mit einem Szenen Beobachter, der von Ihrer Anwendung aufgerufen wird, um eine neue Szene zu berechnen. Heute ist die Technologie in der Lage, drei verschiedene, aber verwandte Objektkategorien zu erzeugen: vereinfachte wasserdichte Umgebungs Netze, die die planare Raumstruktur ohne Übersichtlichkeit, Ebenen-Bereiche für die Platzierung, die als "Quads" bezeichnet werden, und eine Momentaufnahme des [räumlichen](spatial-mapping.md) zugriffsnetzes ableiten, das sich auf die von uns angezeigten Quads/wasserdichten Daten richtet.
 
@@ -29,7 +29,7 @@ Dieser Artikel bietet nur eine Einführung in die Szene, die Laufzeit und Konzep
 
 Sie können die Beispiel-App für szeneninformationen von der GitHub-Beispiel Website herunterladen:
 
-[Beispiel für Szenen Verständnis](https://github.com/sceneunderstanding-microsoft/unitysample)
+[Beispiel für Szenen Verständnis](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)
 
 Wenn Sie nicht über ein Gerät verfügen und auf Beispiel Szenen zugreifen möchten, um szeneninformationen auszuprobieren, gibt es im Beispiel Ordner "Asset" Szenen:
 
@@ -43,7 +43,7 @@ Weitere Informationen zur Entwicklung von szeneninformationen oder Details zur F
 ### <a name="sample"></a>Beispiel
 
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Unterstützung für Geräte
 
 <table>
     <colgroup>
@@ -54,12 +54,12 @@ Weitere Informationen zur Entwicklung von szeneninformationen oder Details zur F
     </colgroup>
     <tr>
         <td><strong>Feature</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1. Generation)</strong></a></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>Hololens (1. Gen)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>Hololens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
     </tr>
      <tr>
-        <td>Szenen Verständnis</td>
+        <td>Grundlegendes zu Szenen</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -83,7 +83,7 @@ Das Verständnis von Szenen bietet neue Konstrukte, die speziell zur Vereinfachu
 
 :::row:::
     :::column:::
-       ![scenequads mit deaktiviertem Rückschluss, wobei Platzierungs Bereiche für gescannte Bereiche erfasst werden.](images/SUQuads.png)<br>
+       ![Scenequads mit deaktiviertem Rückschluss, wobei Platzierungs Bereiche für überprüfte Bereiche erfasst werden.](images/SUQuads.png)<br>
        **Bild #1** -scenequads mit deaktiviertem Rückschluss, wobei Platzierungs Bereiche für überprüfte Bereiche erfasst werden.
     :::column-end:::
         :::column:::

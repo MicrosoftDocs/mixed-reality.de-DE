@@ -6,18 +6,18 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: Webxr, winmr, webar, webvr, windowsmixedreality, hololens, Windows Mixed Reality, Web VR, Web XR, Web Mr, Web AR, 360, 360 Video, 360 Videos, 360 Photo, 360 Fotos, 360 Content, immersives Web, immersive-Web, IW, immersiveweb
-ms.openlocfilehash: 5756af9f48f4bb25477e75fb1f7c09e7239bdab9
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a1288e8f477f42b0937e797623fb83fe8f63685c
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278481"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835609"
 ---
 # <a name="mixed-reality-development-with-javascript-overview"></a>Mixed Reality-Entwicklung mit JavaScript (Übersicht)
 
 ## <a name="mixed-reality-applications-on-the-web"></a>Gemischte Reality-Anwendungen im Web
 
-Mixed Reality-Features sind im Web verfügbar, indem [webxr-Geräte-APIs](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) und [veraltete webvr-APIs] ([Übersicht über webxr](webxr-overview.md)) verwendet werden. Browser, die keine vollständigen webxr-Features unterstützen, können [webxr-polyfills](https://github.com/immersive-web/webxr-polyfill) zu Ihrer Website hinzufügen.
+Mixed Reality-Features sind im Web verfügbar, indem [webxr-Geräte-APIs](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) und als [veraltet markierte webvr-APIs](webxr-overview.md)verwendet werden. Browser, die keine vollständigen webxr-Features unterstützen, können [webxr-polyfills](https://github.com/immersive-web/webxr-polyfill) zu Ihrer Website hinzufügen.
 
 ## <a name="what-is-webxr-polyfill"></a>Was ist webxr Polyfill?
 

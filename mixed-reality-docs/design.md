@@ -9,10 +9,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Entdecken, Verteilen, Index, Einstiegsseite, Entwurf, Entwicklung, Tutorials, Beispiel-Apps, Grundlagen, Fallstudien, Ressourcen, HoloLens-Vorgehensweise, Open-Source-Projekte, Kernkonzepte, Interaktion
 ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75334089"
 ---
 # <a name="start-designing-and-prototyping"></a>Mit Entwerfen und Prototyping beginnen
@@ -20,7 +20,7 @@ ms.locfileid: "75334089"
 
 ![Zusammenfassung Mixed Reality-Design](images/03_Design.png)
 
-## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Erweitern Ihres Entwurfsprozesses](case-study-expanding-the-design-process-for-mixed-reality.md)
+## <a name="expand-your-design-process"></a>[Erweitern Ihres Entwurfsprozesses](case-study-expanding-the-design-process-for-mixed-reality.md)
 
 Als Microsoft 2016 HoloLens für eine Zielgruppe von engagierten Entwicklern einführte, hatte das Team bereits mit Studios inner- und außerhalb von Microsoft zusammengearbeitet, um die Starterlebnisse für das Gerät zu erstellen. Diese Teams haben ihr Wissen in der Praxis erworben und auf dem neuen Gebiet des Mixed Reality-Entwurfs sowohl Chancen als auch Herausforderungen kennengelernt. [Weitere Informationen](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -30,27 +30,27 @@ Als Microsoft 2016 HoloLens für eine Zielgruppe von engagierten Entwicklern ein
 
 ## <a name="what-are-the-core-concepts-of-an-experience"></a>Was sind die grundlegenden Konzepte einer Erfahrung?
 
-### <a name="keep-the-user-comfortable---comfortcomfortmd"></a>[Benutzer in einer Wohlfühlzone halten (Komfort)](comfort.md)
+### <a name="keep-the-user-comfortable---comfort"></a>[Benutzer in einer Wohlfühlzone halten (Komfort)](comfort.md)
 Um bei am Kopf fixierten Anzeigeeinheiten maximalen Komfort sicherzustellen, müssen Designer und Entwickler Inhalte in einer Weise präsentieren, die das Verhalten dieser Hinweise in der natürlichen Umgebung nachahmt.
 
 <br>
 
-### <a name="consider-how-the-user-sees-the-world---holographic-frameholographic-framemd"></a>[Erwägen, wie der Benutzer die Welt sieht (Holografischer Rahmen)](holographic-frame.md)
+### <a name="consider-how-the-user-sees-the-world---holographic-frame"></a>[Erwägen, wie der Benutzer die Welt sieht (Holografischer Rahmen)](holographic-frame.md)
 Benutzer sehen die Welt der Mixed Reality durch ein rechteckiges Ansichtsfenster, das von ihren Headsets betrieben wird. Bei HoloLens wird dieser rechteckige Bereich als holografischer Rahmen bezeichnet und ermöglicht den Benutzern, die digitalen Inhalte zu sehen, die der realen Welt ihrer Umgebung überlagert sind.
 
 <br>
 
-### <a name="types-of-mixed-reality-appstypes-of-mixed-reality-appsmd"></a>[Typen von Mixed Reality-Apps](types-of-mixed-reality-apps.md)
+### <a name="types-of-mixed-reality-apps"></a>[Typen von Mixed Reality-Apps](types-of-mixed-reality-apps.md)
 Einer der Vorteile beim Entwickeln von Apps für Mixed Reality ist das Spektrum an Erlebnissen, die von der Plattform unterstützt werden. Von vollständig immersiven virtuellen Umgebungen bis zur leichten Überlagerung der aktuellen Umgebung eines Benutzers mit Informationen bietet Mixed Reality eine Sammlung robuster Tools, mit denen sich jede Erfahrung lebendig gestalten lässt.
 
 <br>
 
-### <a name="keeping-holograms-in-place---coordinate-systemscoordinate-systemsmd"></a>[Hologramme an Ort und Stelle belassen (Koordinatensysteme)](coordinate-systems.md)
+### <a name="keeping-holograms-in-place---coordinate-systems"></a>[Hologramme an Ort und Stelle belassen (Koordinatensysteme)](coordinate-systems.md)
 In ihrem Kern platzieren Mixed-Reality-Apps Hologramme in Ihrer Welt, damit sie wie echte Objekte aussehen und klingen. Dazu gehört die exakte Positionierung dieser Hologramme an Positionen in der Welt, die für den Benutzer von Bedeutung sind, sei es ihr physischer Raum oder ein virtueller Bereich, den Sie geschaffen haben.
 
 <br>
 
-### <a name="making-holographic-objects-feel-real---spatial-mappingspatial-mappingmd"></a>[Erzeugen des realen Eindrucks von holografischen Objekten (Räumliche Zuordnung)](spatial-mapping.md)
+### <a name="making-holographic-objects-feel-real---spatial-mapping"></a>[Erzeugen des realen Eindrucks von holografischen Objekten (Räumliche Zuordnung)](spatial-mapping.md)
 Räumliche Zuordnung macht es möglich, Objekte auf realen Oberflächen zu platzieren. Dies hilft dabei, Objekte in der Welt des Benutzers zu verankern und nutzt die Tiefeninformationen der realen Welt.
 
 <br>
@@ -65,42 +65,42 @@ Räumliche Zuordnung macht es möglich, Objekte auf realen Oberflächen zu platz
 ## <a name="interaction-design-factors-to-consider"></a>Faktoren, die beim Gestalten der Interaktion berücksichtigt werden müssen
 
 
-### <a name="choose-an-interaction-model-for-your-customerinteraction-fundamentalsmd"></a>[Auswählen eines Interaktionsmodells für Ihren Kunden](interaction-fundamentals.md)
+### <a name="choose-an-interaction-model-for-your-customer"></a>[Auswählen eines Interaktionsmodells für Ihren Kunden](interaction-fundamentals.md)
 Die Philosophie der einfachen, instinktiven Interaktionen ist in der gesamten Mixed Reality-Plattform verwurzelt. Wir haben drei Schritte unternommen, um sicherzustellen, dass Anwendungsdesigner und -entwickler ihren Kunden einfache und intuitive Interaktionen bereitstellen können.
 
 <br>
 
-### <a name="hands-and-motion-controllershands-and-toolsmd"></a>[Hände und Motion-Controller](hands-and-tools.md)
+### <a name="hands-and-motion-controllers"></a>[Hände und Motion-Controller](hands-and-tools.md)
 Benutzer können Hologramme direkt mit einer oder beiden Händen berühren und manipulieren, ähnlich wie bei realen Objekten. Mit Motion-Controllern können Sie die physischen Möglichkeiten des Benutzers erweitern, indem Sie über einen großen Entfernungsbereich präzise Interaktionen ermöglichen.
 
 <br>
 
-### <a name="directly-commanding-objects-with-voice-inputvoice-inputmd"></a>[Direkte Steuerung von Objekten mit Spracheingabe](voice-input.md)
+### <a name="directly-commanding-objects-with-voice-input"></a>[Direkte Steuerung von Objekten mit Spracheingabe](voice-input.md)
 Die Stimme ist eine der wichtigsten Formen der Eingabe für HoloLens. Sie ermöglicht es Ihnen, ein Hologramm direkt zu steuern, ohne Gesten verwenden zu müssen. Die Spracheingabe kann eine natürliche Art sein, Ihre Absichten zu kommunizieren.
 
 <br>
 
-### <a name="leveraging-the-users-eye-gazeeye-trackingmd"></a>[Nutzen der Blickbewegungen des Benutzers](eye-tracking.md)
+### <a name="leveraging-the-users-eye-gaze"></a>[Nutzen der Blickbewegungen des Benutzers](eye-tracking.md)
 Mit HoloLens 2 erschließt sich in Bezug auf Kontext und menschliches Verständnis eine neue Ebene der holografischen Erfahrung. Das Gerät bietet Entwicklern nämlich die Möglichkeit, Informationen zur Zielanvisierung mit den Augen und zur Blickbewegung des Benutzers zu verwenden.
 
 <br>
 
-### <a name="color-light-and-materialscolor-light-and-materialsmd"></a>[Farbe, Licht und Materialien](color,-light-and-materials.md)
+### <a name="color-light-and-materials"></a>[Farbe, Licht und Materialien](color,-light-and-materials.md)
 Das Entwerfen von Inhalten für Mixed Reality erfordert eine sorgfältige Auswahl von Farbe, Beleuchtung und Material für jedes visuelle Objekt, das in Ihrer Darstellung verwendet wird.
 
 <br>
 
-### <a name="suggesting-the-scale-of-an-objectscalemd"></a>[Vorschlagen des Maßstabs eines Objekts](scale.md)
+### <a name="suggesting-the-scale-of-an-object"></a>[Vorschlagen des Maßstabs eines Objekts](scale.md)
 Ein wichtiger Aspekt bei der realistischen Wirkung von holografisch dargestellten Inhalten ist das möglichst genaue Nachahmen der visuellen Eigenschaften der echten Welt. Das bedeutet, so viele visuelle Hinweise wie möglich einzubeziehen, die uns (in der realen Welt) zu verstehen helfen, wo sich Objekte befinden, wie groß sie sind und woraus sie bestehen.
 
 <br>
 
-### <a name="clear-and-readable-typographytypographymd"></a>[Klare und lesbare Typografie](typography.md)
+### <a name="clear-and-readable-typography"></a>[Klare und lesbare Typografie](typography.md)
 Genau wie bei Typografie auf 2D-Bildschirmen ist das Ziel, klar und lesbar zu sein. Aufgrund des dreidimensionalen Aspekts von Mixed Reality bietet sich die Chance eines noch größeren Einflusses auf den Text und das allgemeine Benutzererleben.
 
 <br>
 
-### <a name="ux-elements-for-the-mixed-realityapp-patterns-landingpagemd"></a>[UX-Elemente für Mixed Reality](app-patterns-landingpage.md)
+### <a name="ux-elements-for-the-mixed-reality"></a>[UX-Elemente für Mixed Reality](app-patterns-landingpage.md)
 Erfahren Sie mehr über die Bausteine für Interaktionen im Raum und die Benutzeroberfläche in Mixed Reality.
 <br>
 

@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Interaktion, Design, HoloLens, Hände, fern, Zeigen und Ausführen
 ms.openlocfilehash: d3f886fd8e892fe34116c3a1d601ae3a87d87a9b
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75901528"
 ---
 # <a name="point-and-commit-with-hands"></a>Zeigen und Ausführen mit den Händen
@@ -20,7 +20,7 @@ ms.locfileid: "75901528"
 
 „Zeigen und Ausführen mit den Händen“ ist ein Eingabemodell, mit dem Benutzer auf 2D-Inhalte und 3D-Objekte zielen, die außerhalb der Reichweite liegen, diese auswählen und bearbeiten können. Diese „ferne“ Interaktionstechnik gibt es nur in der Mixed Reality-Umgebung; sie entspricht nicht der Art und Weise, in der Menschen normalerweise mit der realen Welt in Interaktion treten. Im Superhelden-Film *X-Men* beispielsweise kann die Figur [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) mit seinen Händen aus der Entfernung nach einem fernen Objekt greifen und dieses manipulieren. Dies ist etwas, was Menschen in der Realität nicht können. In HoloLens (AR) und Mixed Reality (MR) statten wir Benutzer mit diesen magischen Kräften aus und setzen dabei die Grenzen der Physik in der realen Welt außer Kraft. Ziel ist nicht nur ein positives Erlebnis mit holografischen Inhalten, sondern auch eine effektivere und effizientere Benutzerinteraktion.
 
-## <a name="device-support"></a>Geräteunterstützung
+## <a name="device-support"></a>Unterstützung von Geräten
 
 <table>
 <colgroup>
@@ -147,7 +147,7 @@ Der Benutzer verwendet den Handlichtstrahl zum Zeigen und Anzeigen des Begrenzun
     :::column-end:::
     :::column:::
        ![3D-Objektbearbeitung – Skalieren aus größerer Entfernung](images/3d-object-manipulation-far-scale.jpg)<br>
-       **Skalierung**<br>
+       **Skalieren**<br>
     :::column-end:::
 :::row-end:::
 
@@ -211,7 +211,7 @@ Standardmäßig stellt das MRTK einen vorkonfigurierten Handlichtstrahl ([Defaul
 
 ---
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Direkte Manipulation mit den Händen](direct-manipulation.md)
 * [Anvisieren und Ausführen](gaze-and-commit.md)
 * [Hände – Direkte Manipulation](direct-manipulation.md)
