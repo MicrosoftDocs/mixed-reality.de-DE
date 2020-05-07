@@ -7,12 +7,12 @@ ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Eye-Tracking, Blickverfolgung, Mixed Reality, Eingabe, Anvisieren mit den Augen, Zielen mit den Augen, HoloLens 2, Blickgestützte Auswahl, Verweilen
-ms.openlocfilehash: 0ec5d5e3b7f56038c7be9930a4468d286b388a65
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: ba793f6b1a95fe4b95aa9a043d36823487886b5e
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926606"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604901"
 ---
 # <a name="eye-gaze-and-dwell"></a>Anvisieren und Verweilen
 
@@ -32,14 +32,15 @@ Wenn die Verweildauer zu kurz ist: Der Benutzer kann sich überfordert fühlen, 
 
 ## <a name="design-recommendations"></a>Entwurfsempfehlungen
 Wir empfehlen einen zweistufigen Ansatz für das Verweilfeedback:
-1. *Anfangsverzögerung*: Wenn der Benutzer anfängt, ein Ziel anzuvisieren, sollte keine unmittelbare Reaktion erfolgen, da dies zu einer unangenehmen und überfordernden Benutzererfahrung führen kann. Stattdessen starten wir einen Timer, um zu ermitteln, ob der Benutzer absichtlich auf das Ziel starrt oder er es nur überfliegt.
-2. *Starten des Verweilfeedbacks:* Nachdem wir sichergestellt haben, dass der Benutzer das Ziel absichtlich anvisiert, beginnen wir mit der Anzeige des Verweildauerfeedbacks, um den Benutzer darüber zu informieren, dass die Verweilaktivierung eingeleitet wird. Wir empfehlen eine Ausführungszeit von 150 bis 250 ms bei einer bestimmten Nähe (d. h. der Benutzer ist auf ein Ziel fixiert, anstatt ein größeres Ziel länger zu betrachten).  
+1. *Anfangsverzögerung*: Wenn der Benutzer anfängt, ein Ziel anzuvisieren, sollte keine unmittelbare Reaktion erfolgen, da dies zu einer unangenehmen und überfordernden Benutzererfahrung führen kann. Starten Sie stattdessen einen Timer, um zu ermitteln, ob der Benutzer absichtlich auf das Ziel starrt oder er es nur überfliegt.
+Wir empfehlen eine Ausführungszeit von 150 bis 250 ms bei einer bestimmten Nähe (d. h. der Benutzer ist auf ein Ziel fixiert, anstatt ein größeres Ziel länger zu betrachten).  
+2. *Starten des Verweilfeedbacks:* Nachdem Sie sichergestellt haben, dass der Benutzer das Ziel absichtlich anvisiert, beginnen Sie mit der Anzeige des Verweildauerfeedbacks, um den Benutzer darüber zu informieren, dass die Verweilaktivierung eingeleitet wird. 
 3. *Fortlaufendes Feedback:* Während der Benutzer das Ziel weiterhin anvisiert, zeigen Sie eine fortlaufende Fortschrittsanzeige an, damit der Benutzer weiß, dass er das Ziel weiter anvisieren muss. Insbesondere für die Eingabe über das Anvisieren mit den Augen empfehlen wir, _die visuelle Aufmerksamkeit des Benutzers zu gewinnen_, indem wir mit einem größeren Kreis oder einer Kugel beginnen, die sich zu einer kleineren Version zusammenzieht. Die Anzeige eines Indikators für den Endzustand (kleiner Kreis) hilft dem Benutzer zu vermitteln, wann das Verweilen beendet sein wird. Eine Beispielabbildung ist unten dargestellt. 
 4. *Fertig stellen:* Wenn der Benutzer das Ziel weiterhin fixiert hat (für weitere 650 bis 850 ms), schließen Sie die Verweilaktivierung ab und wählen das anvisierte Ziel aus.
 
 ![Verweilzustände](images/eyes_dwellstate_recommendation.png)<br>
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Eyetracking – Blickverfolgung](eye-tracking.md)
 * [Mit den Augen anvisieren und ausführen](gaze-and-commit-eyes.md)
 * [Anvisieren und Ausführen](gaze-and-commit.md)
