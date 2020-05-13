@@ -1,19 +1,19 @@
 ---
-title: Referenz zur Geräte Portal-API
+title: Referenz der Geräteportal-API
 description: API-Referenz für das Windows-Geräte Portal auf hololens
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Hololens, Windows-Geräte Portal, API
-ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278238"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227958"
 ---
-# <a name="device-portal-api-reference"></a>Referenz zur Geräte Portal-API
+# <a name="device-portal-api-reference"></a>Referenz der Geräteportal-API
 
 Alles im [Windows-Geräte Portal](using-the-windows-device-portal.md) baut auf der Rest-API auf, mit der Sie auf die Daten zugreifen und Ihr Gerät Programm gesteuert steuern können.
 
@@ -33,7 +33,7 @@ Installiert eine APP
 Parameter
 * Package: der Dateiname des zu installierenden Pakets.
 
-Payload
+Nutzlast
 * Mehrteilige konforme HTTP-Text
 
 **/API/APP/packagemanager/Packages (Get)**
@@ -163,7 +163,7 @@ Die wärmestufe des Geräts erhalten (0 normal, 1 warm, 2 kritisch)
 
 **/API/Holographic/Simulation/Control/Mode (Get)**
 
-Abrufen des Simulationsmodus
+Simulationsmodus erhalten
 
 **/API/Holographic/Simulation/Control/Mode (Post)**
 
@@ -183,6 +183,10 @@ Löscht einen Steuerungsdaten Strom.
 **/API/Holographic/Simulation/Control/Stream (Post)**
 
 Erstellen Sie einen Steuerungsdaten Strom (Priorität ist erforderlich), oder stellen Sie Daten in einem erstellten Stream bereit (streamid erforderlich). Es wird erwartet, dass für die Daten der Typ "Application/Octett-Stream" festgestellt wird.
+
+**/API/Holographic/Simulation/Display/Stream (Get/WebSocket)**
+
+Fordern Sie einen Simulations Videostream mit dem Inhalt an, der im Simulationsmodus für die System Anzeige gerendert wird.  Anfänglich wird ein einfacher Format Deskriptor Header gesendet, gefolgt von H. 264-codierten Texturen, denen jeweils ein Header vorangestellt ist, der den Augen Index und die Textur Größe angibt.
 
 ## <a name="perception-simulation-playback"></a>Wiedergabe von Wahrnehmungs Simulationen
 
@@ -415,7 +419,7 @@ Gibt die System Leistungsstatistik (e/a-Lese-/Schreibvorgänge, Speicher Statist
 Daten zurückgeben
 * JSON mit Systeminformationen: CPU, GPU, Arbeitsspeicher, Netzwerk, e/a
 
-## <a name="power"></a>Leistung
+## <a name="power"></a>Power
 
 **/API/Power/Battery (Get)**
 
@@ -497,7 +501,7 @@ Parameter
 
 Lädt ein WPR-Profil hoch und startet die Ablauf Verfolgung mithilfe des hochgeladenen Profils.
 
-Payload
+Nutzlast
 * Mehrteilige konforme HTTP-Text
 
 Daten zurückgeben

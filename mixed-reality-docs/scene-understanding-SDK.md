@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Szenen Verständnis, räumliche Zuordnung, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604951"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228015"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Übersicht über das Szene Verständnis von SDK
 
@@ -125,7 +125,7 @@ Sceneobjects können eine der folgenden Möglichkeiten aufweisen:
 <tr><td>Ceiling</td><td>Die Oberfläche eines Raums.</td></tr>
 <tr><td>Plattform</td><td>Eine große flache Oberfläche, auf der Sie holograms platzieren können. Diese stellen tendenziell Tabellen, Countertops und andere große horizontale Flächen dar.</td></tr>
 <tr><td>World</td><td>Eine reservierte Bezeichnung für geometrische Daten, die für die Bezeichnung agnostisch ist. Das Mesh, das durch Festlegen des enableworldmesh-UpdateFlags generiert wird, würde als Welt klassifiziert werden.</td></tr>
-<tr><td>Unbekannt</td><td>Dieses Scene-Objekt muss noch klassifiziert und zugewiesen werden. Dies sollte nicht mit dem Hintergrund verwechselt werden, da es sich bei diesem Objekt um beliebige Elemente handeln könnte. das System ist noch nicht mit einer ausreichend starken Klassifizierung ausgestattet.</td></tr>
+<tr><td>Unknown</td><td>Dieses Scene-Objekt muss noch klassifiziert und zugewiesen werden. Dies sollte nicht mit dem Hintergrund verwechselt werden, da es sich bei diesem Objekt um beliebige Elemente handeln könnte. das System ist noch nicht mit einer ausreichend starken Klassifizierung ausgestattet.</td></tr>
 </tr>
 </table>
 
@@ -158,7 +158,7 @@ Der erste Schritt bei der Arbeit mit sceneunderstanding besteht darin, dass Ihre
 Szenen werden mithilfe eines sceneobserver berechnet. Bevor Sie eine Szene erstellen, sollte Ihre Anwendung Ihr Gerät Abfragen, um sicherzustellen, dass Sie sceneunderstanding unterstützt, sowie den Benutzer Zugriff auf Informationen anfordern, die von sceneunderstanding benötigt werden.
 
 ```cs
-if (SceneObserver.IsSupported())
+if (!SceneObserver.IsSupported())
 {
     // Handle the error
 }
@@ -265,7 +265,7 @@ Beachten Sie, dass es sich um das sceneobject-Objekt mit der Transformation hand
 
 Das Verständnis der Szene hat beim Umgang mit Transformationen einen absichtlichen Versuch unternommen, an herkömmlichen 3D-Szenen Darstellungen auszurichten. Daher ist jede Szene auf ein einzelnes Koordinatensystem beschränkt, ähnlich wie die gängigsten 3D-Umwelt Darstellungen. Sceneobjects stellen jeweils ihren Speicherort als Position und Ausrichtung innerhalb dieses Koordinatensystems bereit. Wenn Ihre Anwendung mit Szenen beschäftigt ist, die das Limit eines einzelnen Ursprungs überschreiten, können Sie sceneobjects an spatialanchor anfügen oder mehrere Szenen generieren und zusammen zusammenführen, aber aus Gründen der Einfachheit gehen wir davon aus, dass die wasserdichten Szenen in Ihrem eigenen Ursprung vorhanden sind, der durch eine durch Scene. originspatialgraphnodeid definierte NodeId lokalisiert wird.
 
-Der folgende Unity-Code zeigt beispielsweise, wie Sie die Windows-perception-und Unity-APIs verwenden, um Koordinatensysteme gleich abzustimmen. Unter [spatialcoordinatesystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) und [spatialgraphinteroppreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) finden Sie ausführliche Informationen zu den Windows-perception-APIs und den systemeigenen [gemischten System Objekten in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) . hier finden Sie ausführliche Informationen zum Abrufen eines spatialcoordinatesystem, das dem `.ToUnity()` Welt Ursprung von Unity entspricht `System.Numerics.Matrix4x4` , `UnityEngine.Matrix4x4`sowie der Erweiterungsmethode zum Wechseln zwischen und.
+Der folgende Unity-Code zeigt beispielsweise, wie Sie die Windows-perception-und Unity-APIs verwenden, um Koordinatensysteme gleich abzustimmen. Unter [spatialcoordinatesystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) und [spatialgraphinteroppreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) finden Sie ausführliche Informationen zu den Windows-perception-APIs und den systemeigenen [gemischten System Objekten in Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) . hier finden Sie ausführliche Informationen zum Abrufen eines spatialcoordinatesystem, das dem Welt Ursprung von Unity entspricht, sowie der `.ToUnity()` Erweiterungsmethode zum Wechseln zwischen `System.Numerics.Matrix4x4` und `UnityEngine.Matrix4x4` .
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Jede `SceneObject` verfügt über `Position` eine `Orientation` -Eigenschaft und eine-Eigenschaft, die verwendet werden kann, um den entsprechenden Inhalt `Scene`relativ zum Ursprung der enthaltenden zu positionieren. Im folgenden Beispiel wird z. b. davon ausgegangen, dass das Spiel ein untergeordnetes Element des Szenen Stamms ist, und seine lokale Position und Drehung `SceneObject`zum Ausrichten an einem bestimmten-Element zuordnet:
+Jede `SceneObject` verfügt über eine `Position` -Eigenschaft und eine- `Orientation` Eigenschaft, die verwendet werden kann, um den entsprechenden Inhalt relativ zum Ursprung der enthaltenden zu positionieren `Scene` . Im folgenden Beispiel wird z. b. davon ausgegangen, dass das Spiel ein untergeordnetes Element des Szenen Stamms ist, und seine lokale Position und Drehung zum Ausrichten an einem bestimmten-Element zuordnet `SceneObject` :
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -345,7 +345,7 @@ Die Schritte 1-4 sind stark von Ihrem speziellen Framework/der Implementierung a
 
 ### <a name="mesh"></a>Netz
 
-Meshes stellen geometrische Darstellungen von Objekten oder Umgebungen dar. Ähnlich wie bei der [räumlichen Zuordnung](spatial-mapping.md)verwendet Mesh-Index-und Vertex-Daten, die für jedes räumliche Oberflächen Mesh bereitgestellt werden, dasselbe vertraute Layout wie der Scheitelpunkt und die Index Puffer, die zum Rendern von Dreiecksnetzen in allen modernen Rendering-APIs verwendet werden. Vertex-Positionen werden im Koordinatensystem von bereitgestellt `Scene`. Die spezifischen APIs, die zum Verweisen auf diese Daten verwendet werden, lauten wie folgt:
+Meshes stellen geometrische Darstellungen von Objekten oder Umgebungen dar. Ähnlich wie bei der [räumlichen Zuordnung](spatial-mapping.md)verwendet Mesh-Index-und Vertex-Daten, die für jedes räumliche Oberflächen Mesh bereitgestellt werden, dasselbe vertraute Layout wie der Scheitelpunkt und die Index Puffer, die zum Rendern von Dreiecksnetzen in allen modernen Rendering-APIs verwendet werden. Vertex-Positionen werden im Koordinatensystem von bereitgestellt `Scene` . Die spezifischen APIs, die zum Verweisen auf diese Daten verwendet werden, lauten wie folgt:
 
 ```cs
 void GetTriangleIndices(int[] indices);
@@ -380,7 +380,7 @@ Wenn Sie nicht über ein HoloLens2-Gerät verfügen, aber mit Szenen Verständni
 
 [Szenen Einblick in Beispiel Szenen](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Räumliche Abbildung](spatial-mapping.md)
 * [Grundlegendes zu Szenen](scene-understanding.md)
