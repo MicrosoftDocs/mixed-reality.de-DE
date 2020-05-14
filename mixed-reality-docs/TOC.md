@@ -100,6 +100,7 @@
 ## [Erlernen von Tools und Architektur](development.md)
 ## [Installieren der Tools](install-the-tools.md)
 ## Mixed Reality-Clouddienste
+### [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering)
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
 ## [Tutorials und Beispiel-Apps](tutorials.md)
 ### Unity
