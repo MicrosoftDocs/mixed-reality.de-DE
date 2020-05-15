@@ -4,16 +4,16 @@ title: Erlernen von Tools und Architektur
 description: Mixed Reality-Entwicklerdokumentation für HoloLens und immersive Headsets.
 author: grbury
 ms.author: grbury
-ms.date: 08/27/2019
+ms.date: 04/27/2020
 ms.topic: overview
 ms.localizationpriority: high
-keywords: Mixed Reality, entwickeln, Entwicklung, HoloLens, Unity, DirectX
-ms.openlocfilehash: 3bd5fea55a8dad2982a1a14680169eb51764c1df
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+keywords: Mixed Reality, entwickeln, Entwicklung, HoloLens, Unity, Unreal, DirectX
+ms.openlocfilehash: 97a6e130af45a9444ead5e6ed40168351c4dbbf6
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277722"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835289"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Erlernen von Tools und Architektur
 
@@ -36,12 +36,12 @@ Als Microsoft 2016 HoloLens für eine Zielgruppe von engagierten Entwicklern ein
     :::column:::    
        [![Unity](images/unity_logo.png)](development.md#unity)<br>
         **[Unity](development.md#unity)**<br>   
-        Den schnellsten Weg zum Entwickeln einer Mixed Reality-App bietet Unity. 
+        Erstellen Sie eine plattformübergreifende, umfassende Mixed Reality-App mit Unity.
     :::column-end:::    
     :::column:::    
         [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
-         **[Unreal](development.md#unreal)**<br>    
-        Die produktionsreife Unterstützung für HoloLens 2 wird auch in der Unreal Engine 4.23 enthalten sein.    
+        **[Unreal](development.md#unreal)**<br> 
+        Erstellen Sie ansprechende Mixed Reality-Umgebungen mit produktionsreifer Unterstützung in Unreal Engine. 
     :::column-end:::
     :::column:::    
         [![JavaScript](images/web-logo.png)](development.md#javascript)<br>
@@ -95,6 +95,16 @@ Auf dieser Seite erfahren Sie, wie Sie schnell mit der Verwendung der Blickverfo
 
 ### <a name="unreal-development-overview"></a>[Ureal-Entwicklung – Übersicht](unreal-development-overview.md)
 Erfahren Sie, wie Sie mit Unreal eine Mixed Reality-App erstellen.
+
+<br>
+
+### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unreal"></a>[Mixed Reality Toolkit (MRTK) von Microsoft für Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal)
+Das Mixed Reality-Toolkit für Unreal (MRTK-Unreal) umfasst eine Reihe von Komponenten in Form von Plug-Ins, Beispielen und Dokumentationsmaterial, um die Entwicklung von Mixed Reality-Anwendungen mit Unreal Engine zu beschleunigen.
+
+<br>
+
+### <a name="open-source-sample-apps-and-a-step-by-step-tutorial"></a>[Open-Source-Beispiel-Apps und ein Schritt-für-Schritt-Tutorial](unreal-uxt-ch1.md)
+Im End-to-End-Tutorial für den Einstieg in die Mixed Reality-Entwicklung mit Unreal erfahren Entwickler Schritt für Schritt, wie sie eine HoloLens 2-App unter Verwendung der [UX-Tools für Unreal (v0.8)](https://github.com/microsoft/MixedReality-UXTools-Unreal) erstellen.
 
 <br>
 
