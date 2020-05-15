@@ -8,24 +8,26 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Akademie, Tutorial
-ms.openlocfilehash: ebb40c6ae877ac167c7c16a67e08ef2501f6290d
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: db60ff35156ea20aadd1ba04f9304aa27a2488cb
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334467"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835649"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutorials und Beispiel-Apps
 
 ![HoloLens 2-Benutzer](images/08_Tutorials.png)
 
-Aktuell bauen alle unsere Tutorials und Beispiel-Apps auf Unity auf. Wenn wir Inhalte für andere Engines und Plattformen entwickeln, finden Sie diese unter der entsprechenden Überschrift im Inhaltsverzeichnis.
+Aktuell basieren alle unsere Tutorials und Beispiel-Apps auf Unity oder Unreal. Wenn wir Inhalte für andere Engines und Plattformen entwickeln, finden Sie diese unter der entsprechenden Überschrift im Inhaltsverzeichnis.
 
 ## <a name="hololens-2-tutorials"></a>HoloLens 2: Tutorials
 
-Die HoloLens 2-Tutorials sind dafür ausgelegt, Entwicklern sowohl Techniken als auch bewährte Methoden für das Entwickeln von Mixed Reality-Anwendungen zu vermitteln. Die Tutorials basieren auf dem [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+Die HoloLens 2-Tutorials sind dafür ausgelegt, Entwicklern sowohl Techniken als auch bewährte Methoden für das Entwickeln von Mixed Reality-Anwendungen zu vermitteln. Die Unity-Tutorials basieren auf dem [Mixed Reality-Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity). Das Unreal-Tutorial basiert auf den [UX-Tools für Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
-* Tutorials zu den ersten Schritten: [1 von 7 Übersicht und Ziele](mrlearning-base.md)
+* Tutorials zu den ersten Schritten
+    * Unity: [1 von 7: Übersicht und Ziele](mrlearning-base.md)
+    * Unreal: [1 von 6: Erste Schritte](unreal-uxt-ch1.md)
 * Tutorials zu Azure Spatial Anchors: [1 von 3 Erste Schritte mit Azure Spatial Anchors](mrlearning-asa-ch1.md)
 * Tutorials zu Azure Speech Services: [1 von 4 Integrieren und Verwenden von Spracherkennung und Transkription](mrlearning-speechSDK-ch1.md)
 * Tutorials zu Mehrbenutzerfunktionen: [1 von 5 Einrichten von Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
