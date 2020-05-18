@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hände nah beieinander, HoloLens
-ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75723249"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227995"
 ---
 # <a name="direct-manipulation-with-hands"></a>Direkte Manipulation mit den Händen
 
@@ -41,7 +41,7 @@ Die direkte Manipulation ist angebotsbasiert, d. h. benutzerfreundlich. Es gibt 
      <td>Direkte Manipulation mit den Händen</td>
      <td>❌ Nicht unterstützt</td>
      <td>✔️ Empfohlen</td>
-     <td>➕ Eine Alternative wird empfohlen: <a href="point-and-commit.md">Zeigen und Ausführen mit den Händen</a>.</td>
+     <td>➕ Unterstützt.  Für die Benutzeroberfläche empfehlen wir stattdessen <a href="point-and-commit.md">Zeigen und Ausführen mit den Händen</a>.</td>
     
 </tr>
 </table>
