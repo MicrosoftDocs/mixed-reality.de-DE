@@ -7,14 +7,14 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Tutorial, erste Schritte, MRTK, UXT, UX Tools, Dokumentation
-ms.openlocfilehash: 17f7ab1c1126c47e5ac6388d125d45cf3f2c2d87
-ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
+ms.openlocfilehash: 2e4d26ed4e0b8199bfc629016aea688bd1c41ef8
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82851547"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83520025"
 ---
-# <a name="3-making-your-scene-interactive"></a>3. Interaktives Gestalten der Szene
+# <a name="4-making-your-scene-interactive"></a>4. Interaktives Gestalten der Szene
 
 Dieser Abschnitt enthält eine Einführung in das Open-Source-basierte UX-Tools-Plug-In des Mixed Reality-Toolkits, das eine Reihe von Tools bietet, mit denen Sie Ihre Szene ganz einfach interaktiv machen können. Am Ende dieses Abschnitts reagieren Ihre Schachfiguren auf Benutzereingaben. 
 
@@ -81,4 +81,4 @@ Weitere Informationen zu den Manipulatorkomponenten aus dem MRTK-UX-Tools-Plug-I
 
 Weitere Informationen zu den simulierten Händen aus dem MRTK-UX-Tools-Plug-In finden Sie in der offiziellen [Dokumentation](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.8.x/Docs/InputSimulation.html).
 
-[Nächster Abschnitt: 5. Hinzufügen einer Taste und Zurücksetzen von Figurenpositionen](unreal-uxt-ch5.md)
+[Nächster Abschnitt: 5. Hinzufügen einer Schaltfläche und Zurücksetzen des Orts von Teilen](unreal-uxt-ch5.md)
