@@ -1,21 +1,21 @@
 ---
-title: Blick und Commit
+title: Anvisieren und Ausführen
 description: 'Allgemeine Übersicht über das Eingabe Modell "Blick und Commit": mithilfe von "Eye" oder "Head Input".'
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Gemischte Realität, Blick, Blick auf die Ausrichtung, Interaktion, Entwurf, Eye Tracking, Head Tracking
-ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c44c1a75e831869a3ed4d12bb6c9e87c478daf56
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375847"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866890"
 ---
-# <a name="gaze-and-commit"></a>Blick und Commit
+# <a name="gaze-and-commit"></a>Anvisieren und Ausführen
 
-" _Blick" und "Commit_ " ist ein grundlegendes Eingabe Modell, das eng mit der Interaktion mit unseren Computern verknüpft ist. verwenden Sie dazu die Maus: Punkt- _& Klicken_.
+" _Blick" und "Commit_ " ist ein grundlegendes Eingabe Modell, das eng mit der Interaktion mit unseren Computern verknüpft ist. verwenden Sie dazu die Maus: Punkt- _& klicken_.
 Auf dieser Seite stellen wir zwei Arten von Blick Eingaben (Head-and-Eye-Eye) und verschiedene Typen von COMMIT-Aktionen vor. 
 Der _Blick und der Commit_ werden als ein weit reichtes Eingabe Modell mit indirekter Bearbeitung betrachtet.
 Dies bedeutet, dass Sie am besten für die Interaktion mit Holographic-Inhalten verwendet werden kann, die nicht erreichbar sind.
@@ -33,7 +33,7 @@ Im folgenden finden Sie einige Beispiele für die Art und Weise, wie Sie als Ent
 <br>
 
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -56,9 +56,9 @@ Im folgenden finden Sie einige Beispiele für die Art und Weise, wie Sie als Ent
     </tr>
          <tr>
         <td>Anvisieren mit den Augen und Ausführen</td>
-        <td>❌ nicht verfügbar</td>
+        <td>❌Nicht verfügbar</td>
         <td>✔️ Empfohlen (dritte Auswahl – <a href="interaction-fundamentals.md">Siehe andere Optionen</a>)</td>
-        <td>❌ nicht verfügbar</td>
+        <td>❌Nicht verfügbar</td>
     </tr>
 </table>
 
@@ -80,7 +80,7 @@ Wir haben einige umfassende pro-und-con in der nachfolgenden Tabelle kompiliert,
     </colgroup>
    <tr>
         <td><strong>Ziel Ausrichtung</strong></td>
-        <td><strong>Head-Blick-Ziel</strong></td>
+        <td><strong>Anvisieren mit dem Kopf</strong></td>
     </tr>
     <tr>
         <td>Schnelle!</td>
@@ -123,7 +123,7 @@ Unabhängig davon, ob Sie den Kopf-oder Augenblick für das Eingabe Modell für 
         Für den Augenblick empfiehlt es sich im allgemeinen *nicht* , einen Cursor anzuzeigen, da dies für den Benutzer schnell ablenkend und lästig werden kann. Markieren Sie stattdessen visuelle Ziele, oder verwenden Sie einen sehr schwachen Augen Cursor, um sicherzustellen, womit der Benutzer interagieren soll. Weitere Informationen finden Sie in unserem [Entwurfs Leit Faden für die Augen basierte Eingabe](eye-tracking.md) auf hololens 2.
     :::column-end:::
         :::column:::
-       ![einen visuellen Beispiel Cursor zum Anzeigen von Blick](images/cursor.jpg)<br>
+       ![Ein Beispiel für einen visuellen Cursor zum Anzeigen des Blicks](images/cursor.jpg)<br>
        *Bild: ein visueller Beispiel Cursor zum Anzeigen des Blicks*
     :::column-end:::
 :::row-end:::
@@ -139,7 +139,7 @@ Nachdem ein Objekt oder ein UI-Element als Ziel verwendet wurde, kann der Benutz
 Die folgenden Methoden zum Ausführen werden unterstützt:
 - Tippen Sie auf die Handbewegung (d. h., machen Sie Ihre Hand vor Ihnen, und bringen Sie Ihren Index Finger und Thumb)
 - Sagen _Sie "Select"_ oder einen der Ziel Sprachbefehle
-- Eine einzelne Schaltfläche auf einem [hololens-Clicker](hardware-accessories.md#hololens-clicker) drücken
+- Eine einzelne Schaltfläche auf einem [hololens-Clicker](https://docs.microsoft.com/hololens/hololens1-clicker) drücken
 - Schaltfläche "A" auf einem Xbox Gamepad drücken
 - Schaltfläche "A" auf einem adaptiven Xbox-Controller drücken
 
@@ -149,11 +149,11 @@ Die folgenden Methoden zum Ausführen werden unterstützt:
 
 :::row:::
     :::column:::
-       ![Finger in der Ready-Position](images/readyandpress-ready.jpg)<br>
+       ![Finger an der Ready-Position](images/readyandpress-ready.jpg)<br>
        **Finger an der Ready-Position**<br>
     :::column-end:::
     :::column:::
-       ![drücken Sie den Finger nach unten, um auf](images/readyandpress-press.jpg)<br>
+       ![Drücken Sie die nach-unten-Taste, um auf](images/readyandpress-press.jpg)<br>
         **Drücken Sie die nach-unten-Taste, um auf**<br>
     :::column-end:::
 :::row-end:::
@@ -192,7 +192,7 @@ Weitere Informationen sowie eine umfassende Liste der verfügbaren Sprachbefehle
         *Image: hololens Clicker*
     :::column-end:::
         :::column:::
-       ![Hololens Clicker](images/hololens-clicker-500px.jpg)<br>
+       ![HoloLens-Klick-Gerät](images/hololens-clicker-500px.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -249,11 +249,11 @@ Verbinden Sie externe Geräte, wie z. b. Switches, Schaltflächen, bereit Stellu
 ### <a name="air-tap"></a>In die Luft tippen
 Die Tap-Bewegung (und die anderen Gesten unten) reagiert nur auf eine bestimmte Abzweigung. Um andere Abzweigungen zu erkennen, wie z. b. Menu oder grasp, muss Ihre Anwendung direkt die Interaktionen auf niedrigerer Ebene verwenden, die im obigen Abschnitt mit zwei wichtigen Komponenten Gesten beschrieben werden.
 
-### <a name="tap-and-hold"></a>Tippen und halten
+### <a name="tap-and-hold"></a> Tippen und halten Sie 
 „Halten“ bedeutet einfach, die Position mit dem Finger nach unten beim „In die Luft tippen“ beizubehalten. Die Kombination aus Luft tippen und halten ermöglicht eine Vielzahl komplexer "klicken und ziehen"-Interaktionen, wenn Sie mit Arm-Bewegung kombiniert werden, wie z. b. das Auswählen eines Objekts, anstatt es zu aktivieren oder um sekundäre Interaktionen wie das zeigen eines Kontextmenüs zu aktivieren.
 Bei der Gestaltung dieser Geste sollte jedoch mit Bedacht vorgegangen werden, da die Benutzer dazu neigen können, ihre Handhaltungen im Laufe einer längeren Geste zu entspannen.
 
-### <a name="manipulation"></a>Manipulation
+### <a name="manipulation"></a>Bearbeitung
 Manipulations Gesten können zum Verschieben, Ändern der Größe oder Drehen eines holograms verwendet werden, wenn das – Hologramm 1:1 auf die Handbewegungen des Benutzers reagieren soll. Eine Verwendungsmöglichkeit für solche 1:1-Bewegungen ist es, den Benutzer in der Umgebung zeichnen oder malen zu lassen.
 Die anfängliche Zielbestimmung für eine Manipulationsgeste sollte durch Anvisieren oder Zeigen erfolgen. Wenn Tap und Hold gestartet werden, wird jede Bearbeitung des Objekts von Handbewegungen behandelt, sodass der Benutzer bei der Bearbeitung nicht mehr suchen kann.
 
@@ -263,7 +263,7 @@ Mithilfe der Navigation können geschwindigkeitsbasierte kontinuierliche Gesten 
 
 Navigation mit Rails bezieht sich auf die Fähigkeit, Bewegungen auf einer bestimmten Achse zu erkennen, bis ein bestimmter Schwellenwert auf dieser Achse erreicht wird. Dies ist nur nützlich, wenn die Bewegung in mehr als einer Achse durch den Entwickler in einer Anwendung aktiviert ist, z. b. Wenn eine Anwendung so konfiguriert ist, dass Navigations Gesten über die x-, Y-Achse, aber auch die x-Achse mit Rails erkannt werden. In diesem Fall erkennt das System Handbewegungen über die x-Achse, solange Sie auf der x-Achse innerhalb eines imaginären Rails (Handbuchs) bleiben, wenn die Handbewegung auch auf der Y-Achse auftritt.
 
-Innerhalb von 2D-Apps können Benutzer mit vertikalen Navigationsgesten innerhalb der App scrollen, zoomen oder ziehen. Dadurch werden virtuelle Fingerberührungen in der App eingeführt, um Gesten für die Toucheingabe desselben Typs zu simulieren. Benutzer können auswählen, welche dieser Aktionen durchgeführt werden, indem Sie zwischen den Tools auf der Leiste oberhalb der Anwendung wechseln, indem Sie entweder die Schaltfläche auswählen oder die Option "< Scrollmodus/Drag & Zoom > Tools" verwenden.
+Innerhalb von 2D-Apps können Benutzer mit vertikalen Navigationsgesten innerhalb der App scrollen, zoomen oder ziehen. Dadurch werden virtuelle Fingerberührungen in der App eingeführt, um Gesten für die Toucheingabe desselben Typs zu simulieren. Benutzer können auswählen, welche dieser Aktionen durchgeführt werden, indem Sie zwischen den Tools auf der Leiste oberhalb der Anwendung wechseln, indem Sie entweder die Schaltfläche auswählen oder die Option "<Scrollmodus/Drag & Zoom> Tools" verwenden.
 
 [Weitere Informationen zu zusammengesetzten Gesten](gaze-and-commit.md#composite-gestures)
 
@@ -290,7 +290,7 @@ Sie sollten die folgenden drei Aspekte berücksichtigen:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Augenbasierte Interaktion](eye-gaze-interaction.md)
 * [Blickverfolgung auf HoloLens 2](eye-tracking.md)
 * [Anvisieren und Verweilen](gaze-and-dwell.md)

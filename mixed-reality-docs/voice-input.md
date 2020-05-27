@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, Input
-ms.openlocfilehash: 6cf94e6bc828c6f07ee81cb121cb64601df41c4e
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277978"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866920"
 ---
 # <a name="voice-input"></a>Spracheingabe
 
@@ -32,7 +32,7 @@ Wenn Sprachbefehle verwendet werden, wird der Cursor (Head-oder Eye) in der Rege
 <iframe width="940" height="530" src="https://www.youtube.com/embed/eHMkOpNUtR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
@@ -59,7 +59,7 @@ Wenn Sprachbefehle verwendet werden, wird der Cursor (Head-oder Eye) in der Rege
 
 **HoloLens (1. Generation)**
 
-Auch wenn Sie Ihrer APP keine Sprachunterstützung hinzufügen, können Ihre Benutzer holograms aktivieren, indem Sie einfach den System Sprachbefehl "Select" sagen. Dies verhält sich wie eine [Luft](gaze-and-commit.md#composite-gestures) Abzweigung in hololens, das Drücken der Schaltfläche "auswählen" auf dem [hololens-Clicker](hardware-accessories.md#hololens-clicker)oder das Drücken des Auslösers auf einem [Windows Mixed Reality Motion Controller](motion-controllers.md). Sie werden einen Sound hören und sehen, dass eine QuickInfo mit "Select" als Bestätigung angezeigt wird. "Select" wird durch einen Algorithmus für die Erkennung eines niedrigen Leistungs Worts aktiviert, sodass Sie jederzeit mit minimalen Auswirkungen auf die Akku Lebensdauer jederzeit angezeigt werden können. Dies gilt auch für Ihre Hände.
+Auch wenn Sie Ihrer APP keine Sprachunterstützung hinzufügen, können Ihre Benutzer holograms aktivieren, indem Sie einfach den System Sprachbefehl "Select" sagen. Dies verhält sich wie eine [Luft](gaze-and-commit.md#composite-gestures) Abzweigung in hololens, das Drücken der Schaltfläche "auswählen" auf dem [hololens-Clicker](https://docs.microsoft.com/hololens/hololens1-clicker)oder das Drücken des Auslösers auf einem [Windows Mixed Reality Motion Controller](motion-controllers.md). Sie werden einen Sound hören und sehen, dass eine QuickInfo mit "Select" als Bestätigung angezeigt wird. "Select" wird durch einen Algorithmus für die Erkennung eines niedrigen Leistungs Worts aktiviert, sodass Sie jederzeit mit minimalen Auswirkungen auf die Akku Lebensdauer jederzeit angezeigt werden können. Dies gilt auch für Ihre Hände.
 
 <br>
 
@@ -91,8 +91,8 @@ Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müs
 **Hololens-spezifische Befehle**
 * Was kann ich sagen?
 * "Gehe zu Start"-anstelle von " [Bloom](system-gesture.md#bloom) ", um zum [Startmenü](navigating-the-windows-mixed-reality-home.md#start-menu) zu gelangen
-* "Launch <app>"
-* "<app> hier verschieben"
+* "Starten <app> "
+* " <app> Hier verschieben"
 * "Bild nehmen"
 * "Aufzeichnung starten"
 * "Aufzeichnung anhalten"
@@ -121,8 +121,8 @@ Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müs
         *Image: ein Benutzer kann den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP anzupassen.*
     :::column-end:::
         :::column:::
-        ![Speicher](images/spacer-20x582.png)<br>
-        ![bei der Betrachtung eines App-Fensters oder eines holograms kann ein Benutzer den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP auf der Welt anzupassen](images/microphone-600px.png)<br>
+        ![space](images/spacer-20x582.png)<br>
+        ![Wenn Sie ein App-Fenster oder Hologram betrachten, kann ein Benutzer den Befehl "anpassen" anzeigen, der in der APP-Leiste angezeigt wird, um die Position der APP auf der ganzen Welt anzupassen.](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
 
@@ -173,7 +173,7 @@ Wenn Sie eine vollständige Liste erhalten möchten, sagen Sie einfach "alle Bef
 
 Anstatt eine Typisierung mit [Luft](gaze-and-commit.md#composite-gestures)Eingaben durchführen zu können, kann es effizienter sein, Text in eine APP einzugeben. Dadurch kann die Eingabe erheblich beschleunigt werden, sodass der Benutzer weniger Aufwand hat.
 
-Wenn ![Stimmen, klicken Sie auf die Schaltfläche Mikrofon](images/micbuttonfordictation.png)<br>
+![Sprach Diktat beginnt mit der Schaltfläche Mikrofon](images/micbuttonfordictation.png)<br>
 *Sprach Diktat beginnt mit der Schaltfläche Mikrofon auf der Tastatur*
 
 Jedes Mal, wenn die holografische Tastatur aktiv ist, können Sie in den Diktat Modus wechseln, anstatt einzugeben. Wählen Sie das Mikrofon auf der Seite des Texteingabe Felds aus, um loszulegen.
@@ -183,7 +183,7 @@ Jedes Mal, wenn die holografische Tastatur aktiv ist, können Sie in den Diktat 
 
 Erwägen Sie, Sprachbefehle zu jeder von Ihnen erstellten Umgebung hinzuzufügen. Die Spracheingabe ist eine leistungsstarke und komfortable Möglichkeit zur Steuerung von System und Apps. Da Benutzer mit einer Vielzahl von Dialekten und Akzenten sprechen, stellt die richtige Auswahl der Schlüsselwörter für die Spracherkennung sicher, dass die Befehle Ihrer Benutzer eindeutig interpretiert werden.
 
-### <a name="best-practices"></a>Empfohlene Methoden
+### <a name="best-practices"></a>Bewährte Methoden
 
 Nachfolgend finden Sie einige Methoden aufgeführt, die eine reibungslose Spracherkennung ermöglichen.
 * **Präzise Befehle verwenden**: Wählen Sie nach Möglichkeit Schlüsselwörter mit zwei oder mehr Silben aus. Einsilbige Wörter neigen dazu, unterschiedliche Vokallaute zu verwenden, wenn sie von Personen mit unterschiedlichen Akzenten gesprochen werden. Beispiel: "Video abspielen" ist besser als "das aktuell ausgewählte Video abspielen"
@@ -240,15 +240,15 @@ Wenn die Spracherkennung richtig angewendet wird, versteht der Benutzer, **was e
 
 :::row:::
     :::column:::
-       ![1. Regulärer Cursor Zustand](images/voicefeedbackstates-regular.jpg)<br>
+       ![1. regulärer Cursor Zustand](images/voicefeedbackstates-regular.jpg)<br>
        **1. regulärer Cursor Zustand**<br>
     :::column-end:::
     :::column:::
-       ![2. Kommuniziert Sprachfeedback und verschwindet dann](images/voicefeedbackstates-voice.jpg)<br>
+       ![2. kommuniziert Feedback und verschwindet dann](images/voicefeedbackstates-voice.jpg)<br>
         **2. kommuniziert Feedback und verschwindet dann**<br>
     :::column-end:::
     :::column:::
-       ![* 3. Regulärer Cursor Zustand](images/voicefeedbackstates-regular.jpg)<br>
+       ![€. Regulärer Cursor Zustand](images/voicefeedbackstates-regular.jpg)<br>
        **3. zurück zum regulären Cursor Zustand**<br>
     :::column-end:::
 :::row-end:::
@@ -260,7 +260,7 @@ Wenn die Spracherkennung richtig angewendet wird, versteht der Benutzer, **was e
 <br>
 
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Wichtige Informationen zur Spracherkennung in Mixed Reality
-* Sagen Sie **„Auswählen“** , während Sie eine Schaltfläche anvisieren (Sie können dies überall verwenden, um auf eine Schaltfläche zu klicken).
+* Sagen Sie **„Auswählen“**, während Sie eine Schaltfläche anvisieren (Sie können dies überall verwenden, um auf eine Schaltfläche zu klicken).
 * Sie können in einigen Apps den **Bezeichnungsnamen einer Schaltfläche auf der App-Leiste** sagen, um eine Aktion auszuführen. Beim Betrachten einer App kann ein Benutzer z. B. den Befehl „Entfernen“ sagen, um die App aus der Umgebung zu entfernen (das spart Zeit, da die App nicht mit der Hand angeklickt werden muss).
 * Sie können initiieren, dass Cortana zuhört, indem Sie **„Hey Cortana“** sagen. Sie können ihr Fragen stellen („Hey Cortana, wie hoch ist der Eiffelturm“), sie zum Öffnen einer App auffordern („Hey Cortana, öffne Netflix“) oder ihr sagen, sie soll das Startmenü aufrufen („Hey Cortana, öffne das Startmenü“) und vieles mehr.
 
@@ -282,7 +282,7 @@ Für Anwendungen, die die von hololens bereitgestellten angepassten audioeingabe
 
 Die gesamte Audioverarbeitung ist Hardware beschleunigt. Dies bedeutet, dass die Features viel weniger Leistung als bei der Verarbeitung der hololens-CPU benötigen. Vermeiden Sie die Ausführung einer anderen audioeingabeverarbeitung auf der CPU, um die Akku Lebensdauer zu maximieren und die integrierte, offloaded audioeingabeverarbeitung zu nutzen.
 
-## <a name="languages"></a>Sprachen
+## <a name="languages"></a>Languages
 
 Hololens 2 unterstützt auch weitere Sprachen. Beachten Sie, dass Sprachbefehle immer in der Anzeige Sprache des Systems ausgeführt werden, auch wenn mehrere Tastaturen installiert sind oder wenn apps versuchen, eine Spracherkennung in einer anderen Sprache zu erstellen.
 
@@ -304,9 +304,9 @@ Mit **[mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können S
 
 ---
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Anvisieren und Ausführen](gaze-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
-* [Mr-Eingabe 212: Stimme](holograms-212.md)
+* [MR-Eingabe 212: Sprache](holograms-212.md)
 * [Spracheingabe in DirectX](voice-input-in-directx.md)
 * [Spracheingabe in Unity](voice-input-in-unity.md)

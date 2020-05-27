@@ -1,55 +1,42 @@
 ---
-title: Hardware Zubehör
-description: Beschreibt die verfügbaren Zubehör Typen für hololens und Windows Mixed Reality sowie deren Einrichtung.
+title: Hardware-Zubehör
+description: Beschreibt die Arten von Zubehör, die für die Verwendung mit Windows Mixed Reality verfügbar sind, und wie diese eingerichtet werden.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 03/21/2018
+ms.date: 05/20/2020
 ms.topic: article
 keywords: Anleitungen, Zubehör, Bluetooth, BT, Controller, Gamepad, Clicker, Xbox
-ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 556fc77ffb588c02ea17e8c97293f527469216f8
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375697"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866870"
 ---
-# <a name="hardware-accessories"></a>Hardware Zubehör
+# <a name="hardware-accessories"></a>Hardware-Zubehör
 
-Windows Mixed Reality-Geräte unterstützen Zubehör. Sie koppeln unterstützte Zubehör mithilfe von Bluetooth mit hololens, während Sie Bluetooth oder USB verwenden können, um unterstützte Zubehör über den PC, mit dem Sie verbunden ist, mit einem immersiven Headset zu koppeln.
+Windows Mixed Reality-Geräte unterstützen Zubehör. Sie können Bluetooth oder USB verwenden, um unterstützte Zubehör mit einem immersiven Headset zu koppeln, indem Sie den PC verwenden, mit dem Sie verbunden ist.
 
-Zwei gängige Szenarios für die Verwendung von Zubehör mit hololens sind die Ersatz für die Luft tippen Bewegung und die virtuelle Tastatur. Hierfür sind die beiden gängigsten Zubehör Punkte der **hololens-Clicker** und **Bluetooth-Tastaturen**. Microsoft hololens enthält ein Bluetooth 4,1-Radio und unterstützt [Bluetooth HID](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Human_Interface_Device_Profile_.28HID.29) -und [Bluetooth-GATT](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Generic_Attribute_Profile_.28GATT.29) -Profile.
+Informationen zur Verwendung von Bluetooth-Zubehör mit hololens finden Sie unter [Herstellen einer Verbindung mit Bluetooth und USB-C-Geräten](https://docs.microsoft.com/hololens/hololens-connect-devices).
 
-Immersive Headsets in Windows Mixed Reality erfordern Zubehör für Eingaben, die über den [Blick](gaze-and-commit.md) und die [Stimme](voice-input.md)hinausgehen. Unterstützte Zubehör sind **Tastatur-und Maus-** , **Gamepad**-und **[Bewegungs Controller](motion-controllers.md)** .
+Immersive Headsets in Windows Mixed Reality erfordern Zubehör für Eingaben, die über den [Blick](gaze-and-commit.md) und die [Stimme](voice-input.md)hinausgehen. Unterstützte Zubehör sind **Tastatur-und Maus-**, **Gamepad**-und **[Bewegungs Controller](motion-controllers.md)**.
 
 ## <a name="pairing-bluetooth-accessories"></a>Kopplung von Bluetooth-Zubehör
 
-Die Kopplung einer Bluetooth-Peripherie mit Microsoft hololens ähnelt der Kopplung einer Bluetooth-Peripherie mit einem Windows 10-Desktop oder einem mobilen Gerät:
+Die Kopplung einer Bluetooth-Peripherie mit einem immersiven Headset ähnelt dem Koppeln einer Bluetooth-Peripherie mit einem Windows 10-Desktop oder einem mobilen Gerät:
+
 1. Öffnen Sie im Startmenü die app " **Einstellungen** ".
 2. Zu **Geräten** wechseln
 3. Aktivieren Sie das Bluetooth-Radio, wenn es mit dem Schieberegler deaktiviert ist.
 4. Platzieren Sie Ihr Bluetooth-Gerät im Paarmodus. Dies variiert von Gerät zu Gerät. Auf den meisten Bluetooth-Geräten erfolgt dies durch Drücken und halten einer oder mehrerer Schaltflächen.
 5. Warten Sie, bis der Name des Geräts in der Liste der Bluetooth-Geräte angezeigt wird. Wählen Sie dann das Gerät aus, und wählen Sie dann die Schaltfläche **paar** aus. Wenn Sie über viele Bluetooth-Geräte in der Nähe verfügen, müssen Sie möglicherweise einen Bildlauf zum Ende der Bluetooth-Geräteliste durchführen, um das Gerät anzuzeigen, das Sie koppeln möchten.
-6. Beim Koppeln von Bluetooth-Peripheriegeräten mit Eingabefunktionen (z. b. Bluetooth-Tastaturen) kann eine 6-stellige oder eine 8-stellige PIN angezeigt werden. Achten Sie darauf, dass Sie diese Pin am Peripheriegerät eingeben und dann die EINGABETASTE drücken, um die Kopplung mit Microsoft hololens abzuschließen.
+6. Beim Koppeln von Bluetooth-Peripheriegeräten mit Eingabefunktionen (z. b. Bluetooth-Tastaturen) kann eine 6-stellige oder eine 8-stellige PIN angezeigt werden. Achten Sie darauf, dass Sie diese Pin am Peripheriegerät eingeben und dann die EINGABETASTE drücken, um die Kopplung mit dem Headset abzuschließen.
 
 ## <a name="motion-controllers"></a>Motion-Controller
 
 Windows Mixed Reality [Motion Controller](motion-controllers.md) werden von immersiven Headsets, aber nicht von hololens unterstützt. Diese Controller bieten mithilfe der Sensoren im immersiven Headset eine präzise und reaktionsfähige Nachverfolgung der Bewegung in Ihrem Sichtfeld, d. h., es ist nicht erforderlich, Hardware an den Wänden in Ihrem Bereich zu installieren. Jeder Controller verfügt über mehrere Methoden der Eingabe.
 
 ![Windows Mixed Reality-Bewegungs Controller](images/winmr-ck-1080x1080-350px.jpg)
-
-## <a name="hololens-clicker"></a>Hololens Clicker
-
-Der hololens-Clicker ist das erste Peripheriegerät, das speziell für hololens entwickelt wurde und in der hololens Development Edition enthalten ist. Der hololens-Clicker ermöglicht Benutzern das Klicken und Scrollen mit minimaler Handbewegung als Ersatz für die Tastenkombination. Es ist kein Ersatz für alle [Gesten](gaze-and-commit.md#composite-gestures). Beispielsweise verwenden die Gesten zum [aufblühen](system-gesture.md#bloom) und [Ändern der Größe und verschieben](gaze-and-commit.md#composite-gestures) Handbewegungen. Der hololens-Clicker ist ein Ausrichtungs Sensorgerät mit einer einfachen Schaltfläche. Es stellt eine Verbindung mit den hololens mithilfe von Bluetooth Low Energy (btle) her.
-
-![Der hololens-Clicker](images/hololens-clicker-500px.jpg)
-
-Um ein [– Hologramm](hologram.md)auszuwählen, schauen Sie es an, und klicken Sie dann auf. Die Ausrichtung des Clicker ist für diesen Vorgang nicht von Bedeutung. Um einen Bildlauf oder einen Bildlauf durchführen zu können, klicken und halten Sie den Clicker nach oben/unten oder links/rechts. Bei einem Bildlauf erreichen Sie die schnellste Geschwindigkeit mit weniger als +/-15 ° der Hand Drehung. Wenn Sie mehr verschieben, werden Sie nicht schneller scrollen.
-
-Es gibt zwei LEDs innerhalb des Clicker:
-* Die weiße LED zeigt an, ob das Gerät paarkopplung (blinkende) oder Überladung (Solid) ist.
-* Die Bernstein LED zeigt an, dass das Gerät eine geringe Akkukapazität aufweist (blinkend) oder einen Fehler verursacht hat (Solid).
-
-Sie können mit einer vollständigen Nutzung von 2 Wochen oder mehr rechnen (d.h. 2-3 Stunden auf einem Wand Lader). Wenn der Akku niedrig ist, blinkt die Bernstein-LED 10 mal über einen Zeitraum von 5 Sekunden, wenn Sie die Schaltfläche drücken oder Sie aus dem Standbymodus aktivieren. Die Bernstein-LED blinkt schneller in einem Zeitraum von 5 Sekunden, wenn sich Ihr Clicker im Modus mit niedriger Akkuleistung befindet.
 
 ## <a name="bluetooth-keyboards"></a>Bluetooth-Tastaturen
 
@@ -68,20 +55,15 @@ Andere Marken von Bluetooth-Gamepads können mit Windows Mixed Reality-Geräten 
 Solange das Peripheriegerät entweder die Bluetooth HID-oder GATT-Profile unterstützt, kann es mit hololens gekoppelt werden. Andere Bluetooth HID-und GATT-Geräte außer Tastatur, MICE und hololens Clicker erfordern möglicherweise, dass eine Begleit Anwendung auf Microsoft hololens voll funktionsfähig ist.
 
 Zu den nicht unterstützten Peripheriegeräten gehören:
+
 * Peripheriegeräte in Bluetooth-audioprofilen werden nicht unterstützt.
 * Bluetooth-Audiogeräte, wie z. b. Sprecher und Headsets, werden möglicherweise als verfügbar in der App "Einstellungen" angezeigt, werden aber nicht für die Verwendung mit Microsoft hololens als audioendpunkt unterstützt.
 * Für Bluetooth aktivierte Telefone und PCs wird das kombinieren und Verwenden von Dateiübertragungen nicht unterstützt.
 
 ## <a name="unpairing-a-bluetooth-peripheral"></a>Entkopplung einer Bluetooth-Peripherie
+
 1. Öffnen Sie im Startmenü die app " **Einstellungen** ".
 2. Zu **Geräten** wechseln
 3. Aktivieren Sie das Bluetooth-Radio, wenn es deaktiviert ist.
 4. Suchen Ihres Geräts in der Liste der verfügbaren Bluetooth-Geräte
 5. Wählen Sie Ihr Gerät aus der Liste aus, und klicken Sie dann auf die Schaltfläche **Entfernen**
-
-## <a name="disabling-bluetooth-on-microsoft-hololens"></a>Deaktivieren von Bluetooth für Microsoft hololens
-
-Dadurch werden die RF-Komponenten des Bluetooth-Options Felds ausgeschaltet und die gesamte Bluetooth-Funktionalität für Microsoft hololens deaktiviert.
-1. Öffnen Sie im Startmenü die app " **Einstellungen** ".
-2. Zu **Geräten** wechseln
-3. Verschieben Sie den Schieberegler für Bluetooth an die Position aus.
