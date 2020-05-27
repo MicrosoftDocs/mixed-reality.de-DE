@@ -41,7 +41,7 @@ Als Microsoft 2016 HoloLens für eine Zielgruppe von engagierten Entwicklern ein
     :::column:::    
         [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
         **[Unreal](development.md#unreal)**<br> 
-        Erstellen Sie ansprechende Mixed Reality-Umgebungen mit produktionsreifer Unterstützung in Unreal Engine. 
+        Erstellen Sie ansprechende Mixed Reality-Umgebungen mit produktionsreifer Unterstützung in der Unreal Engine. 
     :::column-end:::
     :::column:::    
         [![JavaScript](images/web-logo.png)](development.md#javascript)<br>
@@ -99,7 +99,7 @@ Erfahren Sie, wie Sie mit Unreal eine Mixed Reality-App erstellen.
 <br>
 
 ### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unreal"></a>[Mixed Reality Toolkit (MRTK) von Microsoft für Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal)
-Das Mixed Reality-Toolkit für Unreal (MRTK-Unreal) umfasst eine Reihe von Komponenten in Form von Plug-Ins, Beispielen und Dokumentationsmaterial, um die Entwicklung von Mixed Reality-Anwendungen mit Unreal Engine zu beschleunigen.
+Das Mixed Reality-Toolkit für Unreal (MRTK-Unreal) umfasst eine Reihe von Komponenten in Form von Plug-Ins, Beispielen und Dokumentationsmaterial, um die Entwicklung von Mixed Reality-Anwendungen mit der Unreal Engine zu beschleunigen.
 
 <br>
 

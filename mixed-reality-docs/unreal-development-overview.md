@@ -1,6 +1,6 @@
 ---
 title: 'Unreal-Entwicklung: Übersicht'
-description: Übersicht über die Mixed Reality-Entwicklung mit Unreal Engine 4
+description: Übersicht über die Mixed Reality-Entwicklung mit der Unreal Engine 4
 author: sw5813
 ms.author: suwu
 ms.date: 5/5/2020
@@ -16,7 +16,7 @@ ms.locfileid: "82851564"
 ---
 # <a name="unreal-development-overview"></a>Unreal-Entwicklung: Übersicht
 
-Unreal Engine 4 unterstützt nun uneingeschränkt die Entwicklung für Windows Mixed Reality-Geräte (VR) und für HoloLens 2-Geräte (AR). Wenn Sie neu in die Entwicklung mit Unreal einsteigen, ist <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">Erste Schritte mit Unreal Engine 4</a> eine hervorragende Seite, die Sie erforschen sollten. Wenn Sie Ressourcen benötigen, finden Sie diese im umfangreich ausgestatteten <a href="https://www.unrealengine.com/marketplace//store" target="_blank">Asset Store</a>. 
+Die Unreal Engine 4 unterstützt nun uneingeschränkt die Entwicklung für Windows Mixed Reality-Geräte (VR) und für HoloLens 2-Geräte (AR). Wenn Sie neu in die Entwicklung mit Unreal einsteigen, ist <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">Erste Schritte mit der Unreal Engine 4</a> eine hervorragende Seite, die Sie erforschen sollten. Wenn Sie Ressourcen benötigen, finden Sie diese im umfangreich ausgestatteten <a href="https://www.unrealengine.com/marketplace//store" target="_blank">Asset Store</a>. 
 
 Nachdem Sie sich mit den Grundlagen der Unreal-Entwicklung vertraut gemacht haben, können Sie sich das Tutorial im nächsten Abschnitt ansehen, um zu erfahren, wie Sie Ihre Apps für HoloLens erstellen und ausführen. Besuchen Sie unbedingt die <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">Unreal Mixed Reality-Foren</a>, und interagieren Sie mit der Community, die Mixed Reality-Apps in Unreal entwickelt. So finden Sie häufig Lösungen für Probleme, die Ihnen begegnen.
 
@@ -26,7 +26,7 @@ In unserem umfassenden HoloLens 2-Tutorial erfahren Sie, wie Sie [eine einfache
 
 ## <a name="mixed-reality-toolkit-for-unreal"></a>Mixed Reality-Toolkit für Unreal
 
-Das [Mixed Reality-Toolkit für Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) umfasst eine Reihe von Komponenten in Form von Plug-Ins, Beispielen und Dokumentationsmaterial, um die Entwicklung von Mixed Reality-Anwendungen mit Unreal Engine zu beschleunigen. Als erste Komponente dieses Toolkits wurden die [UX-Tools für Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) veröffentlicht. Dieses Plug-In kann Ihrem HoloLens 2-Projekt hinzugefügt werden, um UX-Features für HoloLens 2-Anwendungen bereitzustellen. Die Dokumentation für das Mixed Reality-Toolkit und die UX-Tools für Unreal finden Sie in den jeweiligen GitHub-Repositorys. 
+Das [Mixed Reality-Toolkit für Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) umfasst eine Reihe von Komponenten in Form von Plug-Ins, Beispielen und Dokumentationsmaterial, um die Entwicklung von Mixed Reality-Anwendungen mit der Unreal Engine zu beschleunigen. Als erste Komponente dieses Toolkits wurden die [UX-Tools für Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) veröffentlicht. Dieses Plug-In kann Ihrem HoloLens 2-Projekt hinzugefügt werden, um UX-Features für HoloLens 2-Anwendungen bereitzustellen. Die Dokumentation für das Mixed Reality-Toolkit und die UX-Tools für Unreal finden Sie in den jeweiligen GitHub-Repositorys. 
 
 ## <a name="performance"></a>Leistung
 

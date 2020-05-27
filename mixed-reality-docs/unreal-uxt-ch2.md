@@ -1,6 +1,6 @@
 ---
 title: 2. Initialisieren des Projekts und der ersten Anwendung
-description: Teil 2 eines Tutorials zum Erstellen einer einfachen Schach-App mit Unreal Engine 4 und dem UX-Tools-Plug-In des Mixed Reality-Toolkits
+description: Teil 2 eines Tutorials zum Erstellen einer einfachen Schach-App mit der Unreal Engine 4 und dem UX-Tools-Plug-In des Mixed Reality-Toolkits
 author: sw5813
 ms.author: suwu
 ms.date: 5/5/2020
@@ -25,7 +25,7 @@ In diesem Abschnitt finden Sie Informationen zu den ersten Schritten bei der Ers
 
 ## <a name="create-a-new-unreal-project"></a>Erstellen eines neuen Unreal-Projekts
 
-1. Starten von Unreal Engine
+1. Starten der Unreal Engine
 
 2. Wählen Sie unter **New Project Categories** (Kategorien für neues Projekt) die Option **Games** (Spiele) aus, und klicken Sie auf „Next“ (Weiter). Wählen Sie eine leere Vorlage (**Blank**) aus, und klicken Sie auf „Next“ (Weiter). 
 

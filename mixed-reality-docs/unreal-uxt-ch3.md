@@ -1,6 +1,6 @@
 ---
 title: 3. Einrichten Ihres Projekts für Mixed Reality
-description: Teil 3 eines Tutorials zum Erstellen einer einfachen Schach-App mit Unreal Engine 4 und dem UX-Tools-Plug-In des Mixed Reality-Toolkits
+description: Teil 3 eines Tutorials zum Erstellen einer einfachen Schach-App mit der Unreal Engine 4 und dem UX-Tools-Plug-In des Mixed Reality-Toolkits
 author: sw5813
 ms.author: suwu
 ms.date: 5/5/2020

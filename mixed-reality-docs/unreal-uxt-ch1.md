@@ -1,6 +1,6 @@
 ---
 title: 1. Erste Schritte
-description: Teil 1 eines Tutorials zum Erstellen einer einfachen Schach-App mit Unreal Engine 4 und dem UX-Tools-Plug-In des Mixed Reality-Toolkits
+description: Teil 1 eines Tutorials zum Erstellen einer einfachen Schach-App mit der Unreal Engine 4 und dem UX-Tools-Plug-In des Mixed Reality-Toolkits
 author: sw5813
 ms.author: suwu
 ms.date: 5/5/2020
@@ -16,7 +16,7 @@ ms.locfileid: "82840129"
 ---
 # <a name="1-getting-started"></a>1. Erste Schritte
 
-In diesem Tutorial erfahren Sie Schritt für Schritt, wie Sie mit Unreal Engine 4 eine interaktive HoloLens 2-Schach-App erstellen. Darüber hinaus erfahren Sie, wie Sie das UX-Tools-Plug-In aus dem Mixed Reality Toolkit für Unreal verwenden, um die Entwicklung zu beschleunigen. 
+In diesem Tutorial erfahren Sie Schritt für Schritt, wie Sie mit der Unreal Engine 4 eine interaktive HoloLens 2-Schach-App erstellen. Darüber hinaus erfahren Sie, wie Sie das UX-Tools-Plug-In aus dem Mixed Reality Toolkit für Unreal verwenden, um die Entwicklung zu beschleunigen. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
