@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Tutorial, erste Schritte, MRTK, UXT, UX Tools, Dokumentation
-ms.openlocfilehash: df5ea22e7097fdd3b788ec298bc1cd78c315b585
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840399"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519992"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Hinzufügen einer Taste und Zurücksetzen von Figurenpositionen
 
@@ -46,13 +46,13 @@ In diesem Abschnitt werden weiter die Funktionen des UX-Tools-Plug-Ins des Mixed
 
 ![Erstellen einer Variablen](images/unreal-uxt/5-var.PNG)
 
-4.  Ziehen Sie die Variable „WhiteKing“ aus **My Blueprint > Variables** („Meine Blaupause“ > „Variablen“) auf das Ereignisdiagramm für die einfache Taste. Wählen Sie **Get WhiteKing** („WhiteKing“ abrufen) aus. 
+4.  Ziehen Sie die Variable „WhiteKing“ aus **My Blueprint > Variables** („Meine Blaupause“ > „Variablen“) auf das Ereignisdiagramm für die Schaltfläche „Zurücksetzen“. Wählen Sie **Get WhiteKing** („WhiteKing“ abrufen) aus. 
 
 5.  Ziehen Sie den Ausgabepin von „WhiteKing“, und lassen Sie ihn los, um einen neuen Knoten zu platzieren. Wählen Sie die Funktion **Reset Location** (Position zurücksetzen) aus. Ziehen Sie abschließend den ausgehenden Ausführungspin von **On Button Pressed** (Beim Drücken des Schalters) zum eingehenden Ausführungspin von **Reset Location** (Position zurücksetzen). **Kompilieren** und **speichern** Sie die Blaupause „ResetButton“, und kehren Sie anschließend zum Hauptfenster zurück. 
 
 ![Aufrufen der Funktion zum Zurücksetzen der Position über „On Button Pressed“ (Beim Drücken des Schalters)](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Ziehen Sie **SimpleButton** in den Viewport, und legen Sie die Position auf „X = 50“, „Y = -25“ und „Z = 10“ fest. Legen Sie unter **Default** (Standard) den Wert der Variablen „WhiteKing“ auf **WhiteKing** fest.
+6.  Ziehen Sie **ResetButton** in den Viewport, und legen Sie die Position auf „X = 50“, „Y = -25“ und „Z = 10“ fest. Legen Sie unter **Default** (Standard) den Wert der Variablen „WhiteKing“ auf **WhiteKing** fest.
 
 ![Festlegen der Variablen](images/unreal-uxt/5-buttonlevel.PNG)
 

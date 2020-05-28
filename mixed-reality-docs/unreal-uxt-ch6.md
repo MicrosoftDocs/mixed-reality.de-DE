@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Tutorial, erste Schritte, MRTK, UXT, UX Tools, Dokumentation
-ms.openlocfilehash: 35b18e4bb289438f94433827846e94d1014385db
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: b3f0b5f9ca5347c337091539b1cc0e214515c989
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840379"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519966"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Verpacken und Bereitstellen auf einem Gerät oder in einem Emulator
 
@@ -34,6 +34,10 @@ In diesem Abschnitt erfahren Sie Schritt für Schritt, wie Sie Ihre App für die
 4.  Wenn die Verbindung hergestellt wurde, klicken Sie in Ihrem UE4-Editor rechts neben der Schaltfläche „Play“ (Spielen) auf den Dropdownpfeil, und wählen Sie „VR Preview“ (VR-Vorschau) aus.
 
 ## <a name="package-and-deploy-your-app"></a>Verpacken und Bereitstellen Ihrer App 
+
+>[!NOTE]
+>Wenn Sie zum ersten Mal eine Unreal-App für HoloLens verpacken, müssen Sie unterstützende Dateien aus dem Epic-Startprogramm herunterladen. Wechseln Sie dazu zur Registerkarte **Library** (Bibliothek) im Startprogramm von Epic Games. Wählen Sie den Dropdownpfeil neben **Launch** (Starten) und dann **Options** (Optionen) aus. Wählen Sie unter **Target Platforms** (Zielplattformen) **HoloLens 2** aus, und klicken Sie auf **Apply** (Übernehmen). 
+>![Projekteinstellungen: Beschreibung](images/unreal-uxt/6-installationoptions.PNG)
 
 1.  Navigieren Sie zu **Edit > Project Settings** („Bearbeiten“ > „Projekteinstellungen“). Geben Sie unter **Project > Description > About > Project Name** („Projekt“ > „Beschreibung“ > „Info“ > „Projektname“) einen Namen für Ihr Projekt an. Geben Sie unter **Project > Description > Publisher > Company Distinguished Name** („Projekt“ > „Beschreibung“ > „Herausgeber“ > „Definierter Name des Unternehmens“) Folgendes ein: CN={NAME DES UNTERNEHMENS}. Wenn Sie eines dieser Felder leer lassen, tritt ein Fehler auf. 
 
