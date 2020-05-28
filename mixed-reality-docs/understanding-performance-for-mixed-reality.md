@@ -6,16 +6,16 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Gemischte Windows-Realität, gemischte Realität, Virtual Reality, VR, Mr, Leistung, Optimierung, CPU, GPU
-ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 4a0f4cd9caea5dd601ad663801e760261980c429
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277478"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111027"
 ---
-# <a name="understanding-performance-for-mixed-reality"></a>Grundlegendes zur Leistung für gemischte Realität
+# <a name="understanding-performance-for-mixed-reality"></a>Grundlegendes zur Leistung für Mixed Reality
 
-Dieser Artikel ist eine Einführung in das Verständnis der Bedeutung der Leistung für ihre gemischte Reality-app.  Die Benutzer Leistung kann erheblich beeinträchtigt werden, wenn Ihre Anwendung nicht mit optimaler Framerate ausgeführt wird. Holograms werden instabil angezeigt, und die Kopf Nachverfolgung der Umgebung ist ungenau, was zu einer mangelnden Benutzerumgebung führt. Die Leistung muss als erstklassige Funktion für die Entwicklung in gemischter Realität und nicht als polnische Aufgabe angesehen werden.
+Dieser Artikel ist eine Einführung in das Verständnis der Bedeutung der Leistung für ihre gemischte Reality-app.  Die Benutzer Leistung kann erheblich beeinträchtigt werden, wenn Ihre Anwendung nicht mit optimaler Framerate ausgeführt wird. Holograms werden instabil angezeigt, und die Kopf Nachverfolgung der Umgebung ist ungenau, was zu einem schlechten Benutzer Verhalten führt. Die Leistung muss als erstklassige Funktion für die Entwicklung in gemischter Realität und nicht als polnische Aufgabe angesehen werden.
 
 Die leistungsstarken Framerate-Werte für jede Zielplattform sind unten aufgeführt.
 
@@ -66,7 +66,7 @@ Nach dem verringern der renderinglösung:
 
 ## <a name="how-to-improve-your-application"></a>So verbessern Sie Ihre Anwendung
 
-### <a name="cpu-performance-recommendations"></a>CPU-Leistungsempfehlungen
+### <a name="cpu-performance-recommendations"></a>Empfehlungen zur CPU-Leistung
 
 Im allgemeinen umfasst die meiste Arbeit in einer gemischten Reality-Anwendung auf der CPU das Ausführen der Simulation der Szene und die Verarbeitung der Anwendungslogik. Die folgenden Bereiche sind in der Regel für die Optimierung bestimmt:
 
@@ -75,14 +75,14 @@ Im allgemeinen umfasst die meiste Arbeit in einer gemischten Reality-Anwendung a
 - Speicher Belegungen
 - Komplexe Algorithmen (d. h. umgekehrte Kinematik, Pfad Suche)
 
-### <a name="gpu-performance-recommendations"></a>GPU-Leistungsempfehlungen
+### <a name="gpu-performance-recommendations"></a>Empfehlungen zur GPU-Leistung
 
 #### <a name="understanding-bandwidth-vs-fill-rate"></a>Grundlegendes zur Bandbreite im Vergleich zu Füll Raten
 Wenn ein Frame auf der GPU gerendert wird, wird eine Anwendung im Allgemeinen entweder durch die Arbeitsspeicher Bandbreite oder die Füllrate gebunden.
 
 - Die Arbeits **Speicherbandbreite** ist die Rate der Lese-und Schreibvorgänge, die die GPU aus dem Arbeitsspeicher
     - Um Bandbreiten Einschränkungen zu identifizieren, verringern Sie die Texturqualität, und prüfen Sie, ob die Framerate verbessert wurde.
-    - In Unity kann dies durch Ändern der **Texturqualität** in **Edit** > **Project Settings** >  **[Quality Settings](https://docs.unity3d.com/Manual/class-QualitySettings.html)** erreicht werden.
+    - In Unity kann dies durch Ändern der **Texturqualität** in " **Edit**  >  **Projekteinstellungen**bearbeiten"  >  **[Qualitätseinstellungen](https://docs.unity3d.com/Manual/class-QualitySettings.html)** geändert werden.
 - **Füllrate** bezieht sich auf die Pixel, die pro Sekunde von der GPU gezeichnet werden können.
     - Um die Einschränkungen der Füllrate zu identifizieren, verringern Sie die Bildschirmauflösung, und prüfen Sie, ob Framerate verbessert wurde 
     - In Unity kann dies über die *[xrsettings. renderviewportscale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)* -Eigenschaft erfolgen.
@@ -101,7 +101,7 @@ Die Füllrate konzentriert sich auf die Reduzierung der Anzahl von Vorgängen, d
 
 Höhere Polygon Zahlen führen zu weiteren Vorgängen für die GPU. Wenn Sie [die Anzahl von Polygonen](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) in der Szene verringern, wird die Rendering-Zeit reduziert. Beim schattieren der Geometrie gibt es weitere Faktoren, die teuer sein können, aber die Polygon Anzahl ist die einfachste Metrik, um zu bestimmen, wie teuer eine Szene sein wird.
 
-#### <a name="limit-overdraw"></a>Einschränken des Überzeichnens
+#### <a name="limit-overdraw"></a>Limit überzeichnen
 
 Ein hoher Alphablendings tritt auf, wenn mehrere Objekte gerendert, jedoch nicht auf dem Bildschirm angezeigt werden, da Sie durch ein okding Objekt ausgeblendet werden. Stellen Sie sich vor, eine Wand mit Objekten dahinter zu betrachten. Die gesamte Geometrie würde zum Rendern verarbeitet, aber nur die nicht transparente Wand muss gerendert werden. Dies führt zu unnötigen Vorgängen.
 
@@ -127,13 +127,13 @@ In der Regel führen Shader viele Transformationen und Beleuchtungsberechnungen 
 
 Nach Verarbeitungs Effekte können sehr teuer sein und die Füllrate Ihrer Anwendung erhöhen. Dies schließt Antialiasing-Techniken wie z. b. MSAA ein. Bei hololens empfiehlt es sich, diese Techniken vollständig zu vermeiden, sowie weitere shaderphasen wie Geometrie, Hülle und Compute-Shader.
 
-## <a name="memory-recommendations"></a>Empfehlungen zum Arbeitsspeicher
+## <a name="memory-recommendations"></a>Speicher Empfehlungen
 
 Übermäßig hohe Speicher Belegungs-und Aufteilungs Vorgänge können zu inkonsistenter Leistung, fixierten Frames und anderem schädlichen Verhalten führen. Es ist besonders wichtig, die Arbeitsspeicher Aspekte bei der Entwicklung in Unity zu verstehen, da die Speicherverwaltung durch die Garbage Collector gesteuert wird.
 
-#### <a name="object-pooling"></a>Objektpooling
+#### <a name="object-pooling"></a>Objekt Pooling
 
-Objekt Pooling ist ein gängiges Verfahren, um die Kosten von kontinuierlichen Zuordnungen und Aufhebungen von Objekten zu verringern. Dies erfolgt durch Zuordnen eines großen Pools identischer Objekte und Wiederverwendung inaktiver, verfügbarer Instanzen aus diesem Pool, statt im Lauf der Zeit ständig neue Objekte zu erstellen und zu entfernen. Objektpools eignen sich hervorragend für wiederverwendbare Komponenten, die im Rahmen einer App eine variable Lebensdauer haben.
+Objekt Pooling ist ein gängiges Verfahren, um die Kosten von kontinuierlichen Zuordnungen und Aufhebungen von Objekten zu verringern. Dies erfolgt durch Zuordnen eines großen Pools identischer Objekte und erneutes verwenden inaktiver, verfügbarer Instanzen aus diesem Pool, anstatt ständig Objekte im Zeitverlauf zu erzeugen und zu zerstören. Objekt Pools eignen sich hervorragend für wiederverwendbare Komponenten, die während einer APP über eine Variablen Lebensdauer verfügen.
 
 ## <a name="see-also"></a>Siehe auch
 - [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)

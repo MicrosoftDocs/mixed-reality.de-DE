@@ -67,7 +67,7 @@ Auch wenn Sie Ihrer APP keine Sprachunterstützung hinzufügen, können Ihre Ben
 
 :::row:::
     :::column:::
-        **HoloLens 2**<br><br>
+        **Hololens 2**<br><br>
         Um den "Select"-Befehl "Stimme" in hololens 2 zu verwenden, müssen Sie zuerst den Cursor Cursor zur Verwendung als Zeiger einrichten. Der Befehl zur Eingabe ist leicht zu merken, einfach "Select".<br><br>
         Um den Modus zu beenden, verwenden Sie einfach wieder die Hände, entweder durch Tippen auf eine Maustaste, eine Schaltfläche mit Ihren Fingern oder mithilfe der System Bewegung.<br>
         <br>
@@ -304,7 +304,7 @@ Mit **[mrtk](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können S
 
 ---
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Anvisieren und Ausführen](gaze-and-commit.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [MR-Eingabe 212: Sprache](holograms-212.md)

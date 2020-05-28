@@ -1,17 +1,17 @@
 ---
-title: Auf Augenblick basierende Interaktion
+title: Interaktion durch Anvisieren
 description: Mit HoloLens 2 erschließt sich in Bezug auf Kontext und menschliches Verständnis eine neue Ebene der holografischen Erfahrung. Das Gerät bietet Entwicklern nämlich die Möglichkeit, Informationen zur Zielanvisierung mit den Augen und zur Blickbewegung des Benutzers zu verwenden. Diese Seite enthält Entwurfs Empfehlungen für Entwickler, die den Augenblick als Eingabe verwenden möchten.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Augen Verfolgung, gemischte Realität, Eingabe, Augenblick
-ms.openlocfilehash: 93d2cfd82b5aa2a410268c5594b5772bcc0b21c7
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 2ae7723f116771986edc757f1c9d4f454b0a256f
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441101"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111039"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>Auf Augenblick basierende Interaktion auf hololens 2
 
@@ -19,7 +19,7 @@ ms.locfileid: "73441101"
 
 Eine unserer spannenden neuen Funktionen in hololens 2 ist die Augen Verfolgung.
 Auf unserer Seite " [Eye Tracking auf hololens 2](eye-tracking.md) " haben wir erwähnt, dass jeder Benutzer eine [Kalibrierung](https://docs.microsoft.com/hololens/hololens-calibration)durchlaufen muss, um einige Entwickler Anleitungen und Anwendungsfälle für die Augen Verfolgung bereitzustellen.
-Die Eingabe für den Augenblick ist immer noch eine ziemlich neue Art von Benutzereingaben, und es gibt viel zu erlernen. Wenngleich die Eingabe von Augenblicken nur sehr leicht in unserer Holographic Shell-Oberfläche verwendet wird (die Benutzeroberfläche, die Sie beim Starten der hololens 2 sehen), zeigen mehrere apps, wie z. b. ["Mr Playground"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), hervor artige Beispiele dazu, wie die Eingabe von Augenblicken der Magie Ihre holografische Darstellung.
+Die Eingabe für den Augenblick ist immer noch eine ziemlich neue Art von Benutzereingaben, und es gibt viel zu erlernen. Wenngleich die Eingabe von Augenblicken nur sehr subtil in unserer Holographic Shell-Oberfläche verwendet wird (die Benutzeroberfläche, die Sie beim Starten der hololens 2 sehen), zeigen mehrere apps, wie z. b. ["hololens Playground"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), hervor artige Beispiele dazu, wie Sie mit der Eingabe von Augenblicken die Magie Ihres Holographic-Erlebnisses erreichen können.
 Auf dieser Seite werden Entwurfs Überlegungen für die Integration von Eye-Eye-Eingaben für die Interaktion mit ihren Holographic-Anwendungen erläutert.
 Sie erfahren mehr über wichtige Vorteile und auch über einzigartige Herausforderungen, die bei der Eingabe des Augenblicks auftreten.  
 Basierend auf diesen bieten wir einige Entwurfs Empfehlungen, mit denen Sie zufriedenstellende Benutzeroberflächen erstellen können, die mit Augenblick unterstützt werden. 
@@ -40,7 +40,7 @@ Basierend auf diesen bieten wir einige Entwurfs Empfehlungen, mit denen Sie zufr
      <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
 </tr>
 <tr>
-     <td>Augenblick</td>
+     <td>Anvisieren mit den Augen</td>
      <td>❌</td>
      <td>✔️</td>
      <td>❌</td>
@@ -105,7 +105,7 @@ Bei einem Cursor kann dies aufgrund von geringfügigen Offsets im projizierten E
 
     - **Synchronisierung von multimodalen Eingaben erforderlich:** Die Kombination von Rapid Eye-Bewegungen mit komplexeren zusätzlichen Eingaben, wie z. b. langen Sprachbefehlen oder Handgesten, birgt das Risiko, dass der Benutzer bereits nach dem Fertigstellen und erkennen des zusätzlichen Eingabe Befehls eine weitere Suche durchführt. Wenn Sie also Ihre eigenen Eingabe Steuerelemente erstellen (z. b. benutzerdefinierte Handgesten), sollten Sie das Auftreten dieser Eingabe oder der ungefähren Dauer protokollieren, um Sie mit dem zu korrelieren, was ein Benutzer in der Vergangenheit gesehen hat.
     
-3. **Feines Feedback für die Eingabe der Augen Verfolgung:** Es ist hilfreich, Feedback zu geben, wenn ein Ziel untersucht wird, um anzugeben, dass das System wie beabsichtigt funktioniert, aber dennoch gering gehalten werden sollte. Dies kann eine langsame Mischung, ein-und ausgehende, visuelle Highlights oder andere, feine Ziel Verhaltensweisen, wie z. b. langsame Bewegungen, z. b. eine geringfügige Erhöhung der Zielgröße, beinhalten, um anzugeben, dass das System ordnungsgemäß erkannt hat, dass der Benutzer ein Ziel unnötiges unterbrechen des aktuellen Workflows des Benutzers. 
+3. **Feines Feedback für die Eingabe der Augen Verfolgung:** Es ist hilfreich, Feedback zu geben, wenn ein Ziel untersucht wird, um anzugeben, dass das System wie beabsichtigt funktioniert, aber dennoch gering gehalten werden sollte. Dies kann eine langsame Mischung, ein-und ausgehende, visuelle Highlights oder andere, feine Ziel Verhaltensweisen, wie z. b. langsame Bewegungen, wie z. b. eine geringfügige Erhöhung der Zielgröße, beinhalten, um anzugeben, dass das System ordnungsgemäß erkannt hat, dass der Benutzer ein Ziel sucht, ohne den aktuellen Workflow des Benutzers unnötig 
 
 4. **Vermeiden Sie das Erzwingen von unnatürlichen Augenbewegungen als Eingabe:** Erzwingen Sie nicht, dass Benutzer bestimmte Augenbewegungen (Augenbewegungen) ausführen, um Aktionen in der Anwendung zu initiieren.
 
@@ -117,11 +117,11 @@ Bei einem Cursor kann dies aufgrund von geringfügigen Offsets im projizierten E
 Auf dieser Seite haben Sie einen guten Überblick erhalten, um Ihnen den Einstieg in die Eingabe in gemischter Realität zu verdeutlichen. Informationen zu den ersten Schritten bei der Entwicklung finden Sie in den Informationen zu den [Augenblicken in Unity](https://aka.ms/mrtk-eyes) und im Blickwinkel [in DirectX](gaze-in-directx.md).
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Komfort](comfort.md)
 * [Blick in DirectX](gaze-in-directx.md)
 * [Blick in Unity (Mixed Reality Toolkit)](https://aka.ms/mrtk-eyes)
-* [Augen Verfolgung auf hololens 2](eye-tracking.md)
-* [Blick und Commit](gaze-and-commit.md)
+* [Blickverfolgung auf HoloLens 2](eye-tracking.md)
+* [Anvisieren und Ausführen](gaze-and-commit.md)
 * [Anvisieren und Verweilen](gaze-and-dwell.md)
 * [Spracheingabe](voice-design.md)
