@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 11342bada65e963db6393d35c99e2c2fbffe8ff1
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 62ce1151837a345dea1bea4a8bea275cc851b9bd
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031253"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866900"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Anzeigen von Azure Spatial Anchors-Feedback
 
@@ -57,3 +57,5 @@ Weisen Sie das **Feedback**-Objekt selbst dem Feld **Feedbacktext** der **Anchor
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 
 In diesem Tutorial haben Sie gelernt, wie Sie einen Benutzeroberflächenbereich erstellen, um den aktuellen Status der Azure Spatial Anchor-Benutzererfahrung anzuzeigen, um Echtzeitfeedback für Benutzer bereitzustellen.
+
+[Nächste Lektion: 4. Azure Spatial Anchors für Android und iOS](mrlearning-asa-ch4.md)
