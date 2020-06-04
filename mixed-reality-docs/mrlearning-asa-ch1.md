@@ -7,24 +7,26 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: d0fd22ad6fbefc6889373b00847721cfc0655ce3
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2a171d601d094375a56734e8d7890c9d3e17c887
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605001"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866910"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Erste Schritte mit Azure Spatial Anchors
 
 ## <a name="overview"></a>Übersicht
 
-Willkommen bei der zweiten Reihe der HoloLens 2-Tutorials. In dieser dreiteiligen Tutorialreihe lernen Sie die Grundlagen von Azure Spatial Anchors kennen.
+Willkommen bei der zweiten Reihe der HoloLens 2-Tutorials. In dieser vierteiligen Tutorialreihe lernen Sie die Grundlagen von Azure Spatial Anchors kennen.
 
 In diesem ersten Tutorial, [Erste Schritte mit Azure Spatial Anchors](mrlearning-asa-ch1.md), erkunden Sie die verschiedenen Schritte, die zum Starten und Beenden einer Azure-Sitzung und zum Erstellen, Hochladen und Herunterladen von Azure Anchors auf einem einzelnen Gerät erforderlich sind.
 
 Im zweiten Tutorial, [Speichern, Abrufen und Freigeben von Azure Spatial Anchors](mrlearning-asa-ch2.md), erfahren Sie, wie Sie räumliche Azure-Spatial Anchors über mehrere App-Sitzungen hinweg speichern, indem Sie Ankerinformationen im Speicher von HoloLens 2 speichern, und wie Sie diese Ankerinformationen mit anderen Geräten teilen, um eine Ankerausrichtung auf mehreren Geräten zu erreichen.
 
 Im dritten Tutorial, [Anzeigen von Azure Spatial Anchors-Feedback](mrlearning-asa-ch3.md), lernen Sie, wie Sie beim Verwenden von Azure Spatial Anchors Feedback zu Ankerereignissen und -zuständen für Benutzer bereitstellen.
+
+Im vierten Tutorial [Azure Spatial Anchors für Android und iOS](mrlearning-asa-ch4.md) erfahren Sie, wie Sie Ihr Projekt für Android- und iOS-Geräte erstellen und bereitstellen.
 
 ## <a name="objectives"></a>Ziele
 
@@ -42,6 +44,13 @@ Im dritten Tutorial, [Anzeigen von Azure Spatial Anchors-Feedback](mrlearning-as
 * Ein für die [Entwicklung konfiguriertes](using-visual-studio.md#enabling-developer-mode) HoloLens 2-Gerät
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> mit installiertem Unity 2019.2.X und hinzugefügtem Buildunterstützungsmodul für die Universelle Windows-Plattform
 * Schließen Sie den Abschnitt [Erstellen einer Spatial Anchors-Ressource](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) des Tutorials [Schnellstart: Erstellen einer Unity HoloLens-App, die Azure Spatial Anchors verwendet](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) ab.
+* Wenn Sie auf Android bereitstellen möchten
+    * Ein Android-Gerät mit <a href="https://developer.android.com/studio/debug/dev-options" target="_blank">Entwicklerunterstützung</a> und <a href="https://developers.google.com/ar/discover/supported-devices" target="_blank">ARCore-Unterstützung</a> mit USB-Verbindung zu Ihrem Windows- oder macOS-Computer
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> mit installiertem Unity 2019.2.X und hinzugefügtem Buildunterstützungsmodul für Android
+* Wenn Sie auf iOS bereitstellen möchten
+    * Ein macOS-Computer mit installierter neuester Version von <a href="https://geo.itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a> und <a href="https://cocoapods.org" target="_blank">CocoaPods</a>
+    * Ein iOS-Gerät mit <a href="https://developer.apple.com/documentation/arkit/verifying_device_support_and_user_permission" target="_blank">ARKit-Unterstützung</a> und USB-Verbindung mit Ihrem macOS-Computer
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> mit installiertem Unity 2019.2.X und hinzugefügtem Buildunterstützungsmodul für iOS
 
 > [!IMPORTANT]
 > Die empfohlene Unity-Version für diese Tutorialreihe ist Unity 2019.2.X. Diese übertrifft alle Versionsanforderungen oder -empfehlungen, die in den oben verlinkten Voraussetzungen angegeben sind.
