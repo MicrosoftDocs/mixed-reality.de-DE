@@ -1,36 +1,73 @@
 ---
 title: Spracheingabe
-description: Erläutert die Verwendung von Spracheingaben.
-author: AndreyChistyakov
-ms.author: anchisty
+description: Tutorial zum Einrichten und Verwenden von Spracheingaben in hololens 2 und Unreal Engine
+author: hferrone
+ms.author: v-haferr
 ms.date: 04/08/2020
 ms.topic: article
-keywords: Windows Mixed Reality, hololens
-ms.openlocfilehash: d61a9f9d40c76c8872ff0a1b39d65f95ae88d2b7
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+keywords: Windows Mixed Reality, Unreal, Unreal Engine 4, UE4, hololens 2, Voice, Voice Input, Spracherkennung, gemischte Realität, Entwicklung, Features, Dokumentation, Anleitungen, holograms, Spieleentwicklung
+ms.openlocfilehash: c5de0cd912674ccd681fd398fb6fe5fd345ab6f2
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835311"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330632"
 ---
-# <a name="voice-input"></a>Spracheingabe
+# <a name="voice-input-in-unreal"></a>Spracheingabe in Unreal
 
-Um die Spracherkennung in hololens zu aktivieren, muss der Entwickler "Mikrofon" im Unreal-Editor Unterprojekt Einstellungen > Plattform > hololens > Funktionen aktivieren. Auf dem Gerät muss auch die Spracherkennung in den Einstellungen > Datenschutz > Sprache aktiviert sein und die englische Sprache verwenden.
+## <a name="overview"></a>Übersicht
+Mit der Spracheingabe können Sie mit einem – Hologramm interagieren, ohne Handgesten verwenden zu müssen, und werden auf hololens (1st Gen) und hololens 2 unterstützt. Sie wird von der gleichen Engine unterstützt, die Sprache in allen anderen universellen Windows-Apps unterstützt, und Sie kann der Art und Weise, wie Sie in gemischter Realität interagieren, ein natürliches Gefühl verleihen 
+
+Zu den unterstützten sprach Features gehören:
+- Der [SELECT-Befehl](https://docs.microsoft.com/windows/mixed-reality/voice-input#the-select-command)
+- [Hallo, Cortana](https://docs.microsoft.com/windows/mixed-reality/voice-input#hey-cortana)
+- "Weitere Informationen" für die Interaktion mit Schaltflächen und Bezeichnungen
+- Diktieren
+
+Weitere Informationen finden Sie in der Dokumentation zur Haupt [Spracheingabe](voice-input.md) .
+
+## <a name="enabling-speech-recognition"></a>Aktivieren der Spracherkennung
+
+So aktivieren Sie die Spracherkennung in hololens:
+1. Wählen Sie **Projekteinstellungen > Plattform > hololens > Funktionen** aus, und aktivieren Sie das **Mikrofon**. 
+2. Aktivieren Sie die Spracherkennung in den **Einstellungen > Datenschutz > Sprache** , und wählen Sie **Englisch**aus.
+
+> [!NOTE]
+> Die Spracherkennung funktioniert immer in der in der App " **Einstellungen** " konfigurierten Windows-Anzeige Sprache. Es wird empfohlen, dass Sie auch die **Online Spracherkennung** für die beste Dienst Qualität aktivieren.
 
 ![Einstellungen für die Windows-Spracherkennung](images/unreal/speech-recognition-settings.png)
 
-Es wird empfohlen, die Online Spracherkennung auch für die bestmögliche Qualität des Dienstanbieter zu aktivieren. Technische Details zur Spracherkennung in hololens finden Sie [hier](voice-input.md) .
+3. Ein Dialogfeld wird angezeigt, wenn die Anwendung zum ersten Mal gefragt wird, ob Sie das Mikrofon aktivieren möchten. Wenn Sie **Ja** auswählen, wird die Spracheingabe in der APP gestartet.
 
-Dem Benutzer wird dann ein Dialogfeld angezeigt, in dem das Mikrofon beim ersten Start der Anwendung aktiviert wird. Wenn ein Benutzer "Ja" auswählt, beginnt die Anwendung mit der Spracheingabe.
+Die Spracheingabe erfordert keine speziellen Windows Mixed Reality-APIs. Es basiert auf der vorhandenen API für die [Eingabe](https://docs.unrealengine.com/Gameplay/Input/index.html) Zuordnung von Unreal Engine 4. 
 
-Die Spracheingabe erfordert keine spezielle Windows Mixed Reality-API und basiert stattdessen auf der vorhandenen API für die Eingabe Zuordnung von Unreal Engine 4. Details zur Verwendung der Eingabe-API finden Sie [hier](https://docs.unrealengine.com/en-US/Gameplay/Input/index.html) .
+## <a name="adding-speech-mappings"></a>Hinzufügen von sprach Zuordnungen
+Das Verbinden von Sprache und Aktion ist ein wichtiger Schritt bei der Verwendung von Spracheingaben. Diese Zuordnungen überwachen die APP auf sprach Schlüsselwörter, die ein Benutzer möglicherweise anweist, und lösen dann eine verknüpfte Aktion aus. Sie finden sprach Zuordnungen wie folgt:
+1. Wählen Sie **> Projekteinstellungen bearbeiten**aus, Scrollen Sie zum Abschnitt **Engine** , und klicken Sie auf **Eingabe**.
 
-Sprach Zuordnungen wurden dem Bindungs Abschnitt der Engine – Input unter Action and Axis Mappings hinzugefügt. 
+So fügen Sie eine neue sprach Zuordnung für einen Jump-Befehl hinzu:
+1. Klicken Sie auf das **+** Symbol neben **Array Elemente** , und füllen Sie die folgenden Werte aus:
+    * **jumpword** für **Aktions Name**
+    * **springen** für **sprach Schlüsselwort**
+
+> [!NOTE]
+> Alle englischen Wörter oder kurzsätze können als Schlüsselwort verwendet werden. 
 
 ![UE4-Engine-Eingabeeinstellungen](images/unreal/engine-input.png)
- 
-Im folgenden finden Sie ein Beispiel für eine hinzugefügte Überwachung der Welt "Jump". Alle englischen Wörter oder kurzen Sätze können verwendet werden. 
 
-Nachdem eine sprach Zuordnung über Projekteinstellungen hinzugefügt wurde, kann ein Entwickler standardmäßige Unreal Logic verwenden, um die Eingabe zu verarbeiten, wie im folgenden Beispiel gezeigt: 
+Sprach Zuordnungen können als Eingabe Komponenten wie Aktions-oder Achsen Zuordnungen oder als Blueprint-Knoten im Ereignis Diagramm verwendet werden. Beispielsweise können Sie den Jump-Befehl verknüpfen, um zwei verschiedene Protokolle auszugeben, je nachdem, wann das Wort gesprochen wird:
+
+1. Doppelklicken Sie auf eine Blaupause, um Sie im **Ereignis Diagramm**zu öffnen.
+2. **Klicken Sie mit der rechten Maustaste** , und suchen Sie nach dem **Aktions Namen** ihrer sprach Zuordnung (in diesem Fall **jumpword**), und drücken Sie dann die **Eingabe**Taste. Dadurch wird dem Diagramm ein **Eingabe Aktions** Knoten hinzugefügt.
+3. Ziehen Sie die **gedrückte** PIN per Drag & Drop auf den Knoten **Druck Zeichenfolge** , wie in der folgenden Abbildung dargestellt Sie können die **freigegebene** Pin leer lassen, ohne dass für sprach Zuordnungen etwas ausgeführt wird.
  
-![Einfache Aktion für Stimme](images/unreal/input-action-bp.png)
+![Einfache Aktion für Stimme](images/unreal/voice-input-img-03.png)
+
+4. Spielen Sie die APP, sagen Sie, das Wort **springt** , und sehen Sie sich an, dass die Konsole die Protokolle ausgibt
+
+Das ist alles, was Sie benötigen, um Ihren hololens-apps in Unreal Spracheingaben hinzuzufügen. Weitere Informationen zu Sprache und Interaktivität finden Sie unter den folgenden Links. Stellen Sie sicher, dass Sie sich über die Benutzeroberflächen Gedanken machen, die Sie für Ihre Benutzer erstellen.
+
+## <a name="see-also"></a>Weitere Informationen
+* [Anvisieren und Ausführen](gaze-and-commit.md)
+* [Instinktive Interaktionen](interaction-fundamentals.md)
+* [MR-Eingabe 212: Sprache](holograms-212.md)

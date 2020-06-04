@@ -1,34 +1,51 @@
 ---
 title: Blick Eingabe in Unreal
-description: Erläutert, wie Sie die Überblicks Eingabe in Unreal verwenden
-author: AndreyChistyakov
-ms.author: anchisty
+description: Tutorial zum Einrichten von Blick Eingaben für hololens und Unreal Engine
+author: hferrone
+ms.author: v-haferr
 ms.date: 04/08/2020
 ms.topic: article
-keywords: Windows Mixed Reality, holograms, hololens, Eye Tracking
-ms.openlocfilehash: 7387bb3f25cdbdfac32f508c173fbd098f844e84
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+keywords: Windows Mixed Reality, holograms, hololens 2, Eye Tracking, Blick Eingaben, Head-eingebundene Anzeige, Unreal Engine
+ms.openlocfilehash: c77e33df2a1dfffdb5ea55e685d30af3fc2a22da
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835623"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330622"
 ---
 # <a name="gaze-input"></a>Blick Eingabe
 
-Das Windows Mixed Reality-Plug-in stellt keine speziellen Funktionen für die Eingabe des Blicks bereit. Alles funktioniert auch mit der Unreal-Standard-API.
+## <a name="overview"></a>Übersicht
 
-[Head-Blick-API](https://docs.unrealengine.com/en-US/BlueprintAPI/Input/HeadMountedDisplay/index.html)
+Das [Windows Mixed Reality-Plug](https://docs.unrealengine.com/Platforms/VR/WMR/index.html) -in bietet keine integrierten Funktionen für die Überblicks Eingabe, aber hololens 2 unterstützt die Eye-Nachverfolgung. Die eigentlichen Überwachungsfunktionen werden von Unreal mit den von Unreal bereitgestellten **Anzeige** -und **Eye Tracking** -APIs bereitgestellt und umfassen Folgendes:
 
-## <a name="eye-tracking"></a>Eyetracking – Blickverfolgung
+- Geräteinformationen
+- Nach Verfolgungs Sensoren
+- Ausrichtung und Position
+- Clipping-Bereiche
+- Daten-und Überwachungsinformationen für den Blick
 
-Um die Eye Tracking-API zu verwenden, sollten Entwickler in ihren hololens-Projekteinstellungen die Funktion "Blick Eingabe" aktivieren. Wenn die Anwendung gestartet wird, wird dem Benutzer die folgende Zustimmungsaufforderung angezeigt.
+Die vollständige Liste der Features finden Sie in [der Dokumentation zu](https://docs.unrealengine.com/BlueprintAPI/EyeTracking/index.html) den Köpfen in der Head-bereit [Stellung](https://docs.unrealengine.com/BlueprintAPI/Input/HeadMountedDisplay/index.html) von Unreal. 
+
+Zusätzlich zu den Unreal-APIs sehen Sie sich die Dokumentation zu den [Augenblick-basierten Interaktionen](eye-gaze-interaction.md) für hololens 2 an, und informieren Sie sich darüber, wie die [Augen Verfolgung auf hololens 2](https://docs.microsoft.com/windows/mixed-reality/eye-tracking) funktioniert.
+
+> [!IMPORTANT]
+> Die Eye-Nachverfolgung wird nur auf hololens 2 unterstützt. 
+
+## <a name="enabling-eye-tracking"></a>Aktivieren der Eye-Überwachung
+Die Überblicks Eingabe muss in den hololens-Projekteinstellungen aktiviert werden, bevor Sie eine der Unreal-APIs verwenden können. Wenn die Anwendung gestartet wird, wird im folgenden Screenshot eine Zustimmungsaufforderung angezeigt.
+
+- Wählen Sie **Ja** aus, um die Berechtigung festzulegen, und erhalten Sie Zugriff auf die Eingaben. Wenn Sie diese Einstellung jederzeit ändern müssen, finden Sie Sie in der App " **Einstellungen** ".
 
 ![Eye-Eingabe Berechtigungen](images/unreal/eye-input-permissions.png)
- 
-Wenn der Benutzer seine Berechtigung erteilt, erhält die Anwendung eine Eingabe für den Augenblick. 
 
-Die Eye Tracking-API von Unreal ist [hier](https://docs.unrealengine.com/en-US/BlueprintAPI/EyeTracking/index.html) dokumentiert.
+> [!NOTE] 
+> Hololens Eye Tracking in Unreal hat nur einen einzelnen Blick Strahl für beide Augen und nicht die zwei Strahlen, die für die Stereoskopie erforderlich sind, was nicht unterstützt wird.
 
-Die technischen Details der Eye-Nachverfolgung finden Sie [hier](eye-tracking.md) .
+Das ist alles, was Sie tun müssen, um Ihre hololens 2-apps in Unreal mit Blick Eingaben zu versehen. Weitere Informationen zu Blick Eingaben und deren Auswirkungen auf Benutzer in gemischter Realität finden Sie unter den folgenden Links. Berücksichtigen Sie diese bei der Erstellung interaktiver Umgebungen. 
 
-Beachten Sie, dass die hololens-Eye-Verfolgung speziell für Unreal einen einzelnen Blick Strahl auf beide Augen hat. Hololens stellt keine stereoprotokollierung für den stereodruck bereit.
+## <a name="see-also"></a>Weitere Informationen
+* [Kalibrierung](calibration.md)
+* [Komfort](comfort.md)
+* [Anvisieren und Ausführen](gaze-and-commit.md)
+* [Spracheingabe](voice-design.md)
