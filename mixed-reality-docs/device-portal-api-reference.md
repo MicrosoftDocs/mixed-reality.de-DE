@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Hololens, Windows-Geräte Portal, API
-ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227958"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451325"
 ---
 # <a name="device-portal-api-reference"></a>Referenz der Geräteportal-API
 
@@ -320,7 +320,15 @@ Legt die Standardeinstellungen für die gemischte Reality-Erfassung fest.  Einig
 
 **/API/Holographic/MRC/Status (Get)**
 
-Ruft den Status der aufgezeichnete gemischten Realität ab (wird ausgeführt, beendet).
+Ruft den Zustand der Mixed Reality-Erfassung im Windows-Geräte Portal ab.
+
+***Antwort***
+
+Die Antwort enthält eine JSON-Eigenschaft, die angibt, ob das Windows-Geräte Portal Videos aufzeichnet.
+
+``` javascript
+{"IsRecording" : boolean}
+```
 
 **/API/Holographic/MRC/Thumbnail (Get)**
 
@@ -419,7 +427,7 @@ Gibt die System Leistungsstatistik (e/a-Lese-/Schreibvorgänge, Speicher Statist
 Daten zurückgeben
 * JSON mit Systeminformationen: CPU, GPU, Arbeitsspeicher, Netzwerk, e/a
 
-## <a name="power"></a>Power
+## <a name="power"></a>Leistung
 
 **/API/Power/Battery (Get)**
 
@@ -531,6 +539,6 @@ Parameter
 Daten zurückgeben
 * Beim Start wird der WPR-Sitzungs Status zurückgegeben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Verwenden des Windows-Geräteportals](using-the-windows-device-portal.md)
 * [API-Referenz für den Geräte Portal (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
