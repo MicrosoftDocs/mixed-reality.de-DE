@@ -1,82 +1,133 @@
 ---
 title: Hololens Research-Modus
 description: Mithilfe des Research-Modus auf hololens kann eine Anwendung auf wichtige Geräte Sensordaten Ströme (Tiefe, Umgebungs Überwachung und IR-Reflektivität) zugreifen.
-author: davidgedye
-ms.author: dgedye
+author: hferrone
+ms.author: v-haferr
 ms.date: 05/03/2018
 ms.topic: article
-keywords: Research Mode, CV, RS4, Maschinelles sehen, Forschung, hololens
-ms.openlocfilehash: 307df0c226221422f13af09d8f4944c22ead3865
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+keywords: Research Mode, CV, RS4, Maschinelles sehen, Forschung, hololens, hololens 2
+ms.openlocfilehash: ec6f7b73a1f25932f10c10a7f0daaf78e536c0c4
+ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84533102"
 ---
-# <a name="hololens-research-mode"></a>Hololens Research-Modus
+# <a name="hololens-research-mode"></a>HoloLens-Forschungsmodus
+
+## <a name="overview"></a>Übersicht
+
+Der Forschungs Modus wurde in den ersten hololens der Generation eingeführt, um den Zugriff auf die Schlüssel Sensoren auf dem Gerät zu erhalten, insbesondere für Forschungsanwendungen, die nicht für die Bereitstellung vorgesehen sind. Sie können jetzt Daten aus den folgenden Eingaben sammeln:
+
+* **Sichtbare Umgebungs Überwachungskameras** , die vom System für die Kopf-und Zuordnungs Bildung verwendet werden.
+* **Tiefe Kamera** – wird in zwei Modi betrieben:  
+    + Short-Throw, High Frequency (30 fps) fast-Tiefe-Erkennung für die [Hand Verfolgung](interaction-fundamentals.md)
+    + Lange throw-, Low-Frequency (1-5 fps)-Erkennung, die von der [räumlichen Zuordnung](spatial-mapping.md) verwendet wird
+* **Zwei Versionen des IR-Reflektivität-Streams** : werden von den hololens zum Berechnen der Tiefe verwendet. Diese Bilder werden von Infrarot beleuchtet und sind von der Sichtbarkeit sichtbar.
+
+Wenn Sie ein hololens 2 verwenden, können Sie auch auf die folgenden Eingaben zugreifen:
+
+* **Beschleunigungsmesser** – wird vom System verwendet, um die lineare Beschleunigung entlang der X-, Y-und Z-Achse und der Schweregrad zu ermitteln.
+* **Gyro** – wird vom System verwendet, um Drehungen zu bestimmen.
+* **Magnetometer** – wird vom System zum Schätzen der absoluten Ausrichtung verwendet.
+
+![Screenshot der Recherche Modus-App](images/sensor-stream-viewer.jpg)<br>
+*Eine gemischte Realität-Erfassung einer Testanwendung, die die acht im Research-Modus verfügbaren Sensordaten Ströme anzeigt*
 
 > [!NOTE]
-> Diese Funktion wurde als Teil des [Windows 10-Updates vom April 2018](release-notes-april-2018.md) für hololens hinzugefügt und ist in früheren Versionen nicht verfügbar.
+> Die Research Mode-Funktion wurde als Teil des [Windows 10-Updates vom April 2018](release-notes-april-2018.md) für hololens hinzugefügt und ist in früheren Versionen nicht verfügbar.
 
-Der Forschungs Modus ist eine neue Funktion von hololens, die Anwendungs Zugriff auf die Schlüssel Sensoren auf dem Gerät bietet. Dazu zählen:
-- Die vier Umgebungs Überwachungskameras, die vom System für das Zuordnen von Zuordnungen und das Head-Tracking verwendet werden.
-- Zwei Versionen der tiefenkamera Daten – eine für die nahe greifende Erfassung mit hoher Frequenz (30 fps), häufig in der Hand Nachverfolgung verwendet, und die andere für die untere Häufigkeit (1-5 fps), die derzeit von der räumlichen Zuordnung verwendet wird,
-- Zwei Versionen eines IR-Reflektivität-Streams, die von den hololens zur computetiefe verwendet werden, aber von der eigenen richtigen Bedeutung sind, da diese Bilder aus den hololens beleuchtet werden und von Umgebungslicht nicht beeinträchtigt werden.
+## <a name="usage"></a>Verwendung
 
-Screenshot des ![Research Mode-App](images/sensor-stream-viewer.jpg)<br>
-*Eine gemischte Realität-Erfassung einer Testanwendung, die die acht im Research-Modus verfügbaren Sensordaten Ströme anzeigt*
+Der Forschungs Modus wurde für akademische und Industrieexperten entwickelt, die neue Ideen in den Feldern Maschinelles Sehen und Robotik kennenlernen.  Sie ist nicht für Anwendungen gedacht, die in Unternehmensumgebungen bereitgestellt werden oder über die Microsoft Store oder andere Vertriebskanäle verfügbar sind.
+
+Außerdem bietet Microsoft keine Garantie dafür, dass der Forschungs Modus oder die entsprechende Funktionalität bei zukünftigen Hardware-oder Betriebssystemupdates unterstützt wird. Dies sollte jedoch nicht daran hindern, ihn zum entwickeln und Testen neuer Ideen zu verwenden.
+
+## <a name="security-and-performance"></a>Sicherheit und Leistung
+
+Beachten Sie, dass die Aktivierung des Research-Modus mehr Akkuleistung als die Verwendung der hololens 2 unter normalen Bedingungen beansprucht. Dies gilt auch dann, wenn die Anwendung, die die Research Mode-Features verwendet, nicht ausgeführt wird.  Wenn Sie diesen Modus aktivieren, kann die Gesamtsicherheit Ihres Geräts auch gesenkt werden, da Anwendungen möglicherweise Sensordaten missbrauchen.  Weitere Informationen zur Gerätesicherheit finden Sie in den häufig gestellten Fragen zur [hololens-Sicherheit](https://docs.microsoft.com/hololens/hololens-faq-security).  
+
 
 ## <a name="device-support"></a>Geräteunterstützung
 
 <table>
     <colgroup>
-    <col width="33%" />
-    <col width="33%" />
-    <col width="33%" />
+    <col width="50%" />
+    <col width="50%" />
+    <!-- <col width="33%" /> -->
     </colgroup>
     <tr>
-        <td><strong>Feature</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Immersive Headsets</strong></a></td>
+        <td><strong>Funktion</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>Hololens 1. Gen</strong></a></td>
+        <!-- <td><a href="hololens2-hardware.md"><strong>HoloLens 2</strong></a></td> -->
     </tr>
      <tr>
-        <td>Forschungs Modus</td>
+        <td>Kopf Verfolgungs Kameras</td>
         <td>✔️</td>
+        <!-- <td>❌</td> -->
+    </tr>
+    <tr>
+        <td>Tiefe & IR-Kamera</td>
+        <td>✔️</td>
+        <!-- <td>❌</td> -->
+    </tr>
+    <tr>
+        <td>Beschleunigungsmesser</td>
         <td>❌</td>
+        <!-- <td>❌</td> -->
+    </tr>
+    <tr>
+        <td>Gyroskop</td>
+        <td>❌</td>
+        <!-- <td>❌</td> -->
+    </tr>
+    <tr>
+        <td>Magnetometer</td>
+        <td>❌</td>
+        <!-- <td>❌</td> -->
     </tr>
 </table>
 
-## <a name="before-using-research-mode"></a>Vor der Verwendung des Research-Modus
-
-Der Forschungs Modus ist gut benannt: er ist für akademische und Industrieexperten gedacht, die neue Ideen in den Feldern von Maschinelles Sehen und Robotik ausprobieren.  Der Forschungs Modus ist nicht für Anwendungen gedacht, die über ein Unternehmen bereitgestellt oder in der Microsoft Store bereitgestellt werden. Der Grund hierfür ist, dass der Research-Modus die Sicherheit Ihres Geräts verringert und eine deutlich höhere Akkuleistung als der normale Betrieb beansprucht. Microsoft ist nicht verpflichtet, diesen Modus auf zukünftigen Geräten zu unterstützen. Daher empfiehlt es sich, diese zum entwickeln und Testen neuer Ideen zu verwenden. Allerdings sind Sie nicht in der Lage, Anwendungen, die den Research-Modus verwenden, umfassend bereitzustellen oder sicherzustellen, dass Sie weiterhin auf zukünftiger Hardware funktionieren.
+> [!IMPORTANT]
+> Die Unterstützung für den Research-Modus für hololens 2 wird voraussichtlich in der öffentlichen Vorschauversion im Juli 2020 verfügbar sein und umfasst alle oben aufgeführten Features. Weitere Informationen finden Sie hier. 
 
 ## <a name="enabling-research-mode"></a>Aktivieren des Research-Modus
 
-Der Forschungs Modus ist ein unter Modus des Entwicklermodus. Sie müssen zunächst den Entwicklermodus in der App "Einstellungen" aktivieren (**Einstellungen > Update & Sicherheits > für Entwickler**):
+Der Forschungs Modus ist eine Erweiterung des Entwicklermodus. Bevor Sie beginnen, müssen die Entwickler Funktionen des Geräts für den Zugriff auf die Einstellungen für den Research-Modus aktiviert werden: 
 
-1. Legen Sie "Entwickler Features verwenden" auf **on** fest.
-2. Legen Sie "Geräte Portal aktivieren" **auf ein** fest.
+* Öffnen Sie das **Startmenü > Einstellungen** , und wählen Sie **Updates**aus.
+* Wählen Sie **für Entwickler aus** , und aktivieren Sie **Entwicklermodus**.
+* Scrollen Sie nach unten, und aktivieren Sie das **Geräte Portal**.
 
-Navigieren Sie dann mithilfe eines Webbrowsers, der mit dem gleichen WLAN verbunden ist wie Ihre hololens, zur IP-Adresse Ihres hololens (über **Einstellungen > Netzwerk & Internet > Wi-Fi-> Hardware Eigenschaften**). Dies ist das [Geräte Portal](using-the-windows-device-portal.md), und im Abschnitt "System" des Portals finden Sie eine Seite "Research Mode":
+Nachdem die Entwickler Features aktiviert wurden, stellen Sie eine [Verbindung mit dem Geräte Portal](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens) her, um die Funktionen des Research-Modus zu aktivieren.
 
-Registerkarte "![Research-Modus" des hololens-Geräte Portals](images/ResearchModeDevPortal.png)<br>
-*Forschungs Modus im hololens-Geräte Portal*
+Auf *hololens 1. Gen*:
 
-Nachdem Sie **Zugriff auf Sensordaten Ströme zulassen**ausgewählt haben, müssen Sie hololens neu starten. Dies können Sie über das Geräte Portal unter dem Menü Element "Power" am oberen Rand der Seite tun.
+* Wechseln Sie im **Geräte Portal**zum **System > Research-Modus** .
+* Wählen Sie **Zugriff auf Sensordaten Strom zulassen**aus.
+* Starten Sie das Gerät über das **Power** -Menü Element oben auf der Seite neu.
 
-Nachdem das Gerät neu gestartet wurde, sollten Anwendungen, die über das Geräte Portal geladen wurden, auf Datenströme im Forschungs Modus zugreifen können.
+Nachdem Sie das Gerät neu gestartet haben, können die Anwendungen, die über das **Geräte Portal** geladen werden, auf Datenströme im Forschungs Modus zugreifen.
+
+![Registerkarte "Forschungs Modus" des hololens-Geräte Portals](images/ResearchModeDevPortal.png)<br>
+*Fenster "Forschungs Modus" im hololens-Geräte Portal*
 
 ## <a name="using-sensor-data-in-your-apps"></a>Verwenden von Sensordaten in ihren apps
 
-Anwendungen können auf Sensordaten Ströme zugreifen, indem Sie [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) Datenströme genau auf die gleiche Weise öffnen, wie Sie auf den Photo/Video-Kamera-Stream zugreifen. 
+*Hololens 1. Gen*
 
-Alle APIs, die für die hololens-Entwicklung funktionieren, sind auch im Research-Modus verfügbar. Insbesondere kann die Anwendung genau wissen, wo sich hololens bei jeder Sensor Frame-Erfassungs Zeit in einem 6DOF-Raum befindet.
+Anwendungen können auf die Sensordaten Strom Daten auf die gleiche Weise zugreifen wie auf Foto-und Videokamera-Streams über [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197). 
 
-Beispielanwendungen, die zeigen, wie Sie auf die verschiedenen Datenstreams im Forschungs Modus zugreifen, wie Sie die systeminternen und extrinsics verwenden und Datenströme aufzeichnen, sind im [GitHub-Repository hololensforcv](https://github.com/Microsoft/HoloLensForCV)verfügbar.
+Alle APIs, die für die hololens-Entwicklung funktionieren, sind auch im Research-Modus verfügbar. Insbesondere weiß die Anwendung genau, wo sich hololens bei jeder Sensor Frame-Erfassungs Zeit in einem 6DOF-Raum befindet.
+
+Beispielanwendungen zum Zugreifen auf die verschiedenen Datenströme im Forschungs Modus, zum Verwenden der systeminternen Funktionen [und der extrinsics](https://docs.microsoft.com/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)und zum Aufzeichnen von Streams im GitHub-Repository-Repository [hololensforcv](https://github.com/Microsoft/HoloLensForCV) .
+
+ > [!NOTE]
+ > Zu diesem Zeitpunkt funktioniert das hololensforcv-Beispiel nicht auf hololens 2.
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
-Weitere Informationen finden Sie im Repository "hololensforcv" unter [Problem](https://github.com/Microsoft/HololensForCV/issues) Verfolgung.
+Sie können den [Issue Tracker](https://github.com/Microsoft/HololensForCV/issues) im hololensforcv-Repository verwenden, um bekannte Probleme zu verfolgen.
 
 ## <a name="see-also"></a>Weitere Informationen:
 
