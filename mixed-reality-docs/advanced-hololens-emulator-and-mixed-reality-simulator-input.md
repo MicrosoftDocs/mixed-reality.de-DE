@@ -3,15 +3,15 @@ title: Erweiterte Eingabe für HoloLens-Emulator und Mixed Reality-Simulator
 description: Ausführliche Anweisungen für die Verwendung des Tastatur-, Maus-und Xbox-Controllers zum Simulieren von Eingaben für den hololens-Emulator und den Windows Mixed Reality-Simulator.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 05/12/2020
+ms.date: 06/8/2020
 ms.topic: article
 keywords: Hololens, Emulator, Simulation, gemischte Windows-Realität
-ms.openlocfilehash: e9051ae9e7853924f583b6c38f6177f2f967d9f0
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 0812b1d498ea557e84eecc44142b38d86099f832
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227949"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631479"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Erweiterte Eingabe für HoloLens-Emulator und Mixed Reality-Simulator
 
@@ -61,7 +61,7 @@ In der folgenden Tabelle ist dargestellt, wie die einzelnen Eingabetypen dem Tas
 |  Z |  W/S |  |  Linker Finger Stick nach oben/unten | 
 |  Aktion |  Eingabe oder Leerraum |  Rechte Schaltfläche |  Eine Schaltfläche oder einen der beiden Optionen | 
 |  Blüht/System |  F2-oder Windows-Taste |  |  B-Taste | 
-|  Controller ziehfläche |  G  |  |  | 
+|  Schaltfläche für Controller Zieh Fläche/Hand |  G  |  |  | 
 |  Schaltfläche "controller" |  M  |  |  | 
 |  Touchpad-Touch für Controller |  U  |  |  | 
 |  Controller Touchpad-Taste |  P  |  |  | 
@@ -86,7 +86,7 @@ In der folgenden Tabelle werden die Optionen für die Zielplattform und die Mög
 
 | Object | Tastatur-Modifizierer | Controllermodifizierer | Emulator UI-Modifizierer |
 |----------|----------|----------|----------|
-| Body | (Standard) | (Standard) | (Standard) |
+| Text | (Standard) | (Standard) | (Standard) |
 | Head | Halten H | (Nicht verfügbar) | (Nicht verfügbar) |
 | Linker/Controller | Linke ALT-Taste gedrückt halten | Linke Schulter Taste halten | Linke Hand Nadel | 
 | Rechte Seite/Controller | Alt-Taste gedrückt halten | Rechte Schulter Taste halten | Rechte Hand Nadel |
@@ -127,11 +127,11 @@ Der folgende Satz von Steuerelementen wird für die alltägliche Verwendung vorg
 |  Blüte/System/Startseite |  F2-oder Windows-Taste |  B-Taste | 
 |  Reset |  Escape |  Starttaste | 
 |  Nachverfolgung |  T |  X-Taste | 
-|  Bildlauf |  Alt + nach-rechts-Taste + Maus nach oben/unten ziehen |  Schulter + Auslöse Taste + rechter fingerstick nach oben/unten | 
+|  Scrollen |  Alt + nach-rechts-Taste + Maus nach oben/unten ziehen |  Schulter + Auslöse Taste + rechter fingerstick nach oben/unten | 
 |  Schneller verschieben/drehen | Linke oder Rechte UMSCHALTTASTE | Halten Sie den richtigen Finger Stick gedrückt. |
 |  Langsam verschieben/drehen | Links oder rechts STRG-Taste | Halten Sie den linken Finger Stick gedrückt. |
 
-## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Verwenden eines Windows Mixed Reality-immersiven Headsets und von Bewegungs Controllern mit dem hololens 2-Emulator
+## <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Verwenden eines immersiven Headsets für Windows Mixed Reality und des Motion-Controllers mit dem Hololens 2-Emulator
 
 Wenn Sie ein Windows Mixed Reality-immersives Headset mit dem hololens 2-Emulator verwenden, werden Bewegung und Drehung automatisch der Headset-Bewegung und-Drehung zugeordnet.  Position und Ausrichtung des Bewegungs Controllers werden automatisch der Handposition und Ausrichtung im Emulator zugeordnet.  In der folgenden Tabelle sind zusätzliche Aktionen aufgeführt, die bei der Verwendung eines Bewegungs Controllers verfügbar sind.
 
@@ -153,7 +153,7 @@ Beachten Sie, dass bei Verwendung eines Headsets standardmäßige Tastatur-, Mau
 
 Die folgenden Tastenkombinationen sind für den Zugriff auf die Systemsteuerung für die Wahrnehmungs Simulation und das Aktivieren oder Deaktivieren von PC-Eingabegeräten zur Verwendung mit Simulationen verfügbar.
 
-| Vorgang | Tastenkombination | Beschreibung/Notizen |
+| Vorgang | Verknüpfung | Beschreibung/Notizen |
 |-----------|----------|-------------|
 | "Tastatur für Simulation verwenden" umschalten | F4 | Wenn diese deaktiviert ist, wird die Tastatureingabe an die hololens-oder Windows Mixed Reality-Anwendung weitergeleitet. |
 | "Maus für Simulation verwenden" umschalten | F5 | Wenn Sie ausgeschaltet ist, wird die Mauseingabe an die gemischte Reality-Umgebung weitergeleitet (nur Windows Mixed Reality). |
