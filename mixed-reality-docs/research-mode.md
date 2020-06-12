@@ -3,15 +3,15 @@ title: Hololens Research-Modus
 description: Mithilfe des Research-Modus auf hololens kann eine Anwendung auf wichtige Geräte Sensordaten Ströme (Tiefe, Umgebungs Überwachung und IR-Reflektivität) zugreifen.
 author: hferrone
 ms.author: v-haferr
-ms.date: 05/03/2018
+ms.date: 06/10/2020
 ms.topic: article
 keywords: Research Mode, CV, RS4, Maschinelles sehen, Forschung, hololens, hololens 2
-ms.openlocfilehash: ec6f7b73a1f25932f10c10a7f0daaf78e536c0c4
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: 62b82e3a36452d4b104bf04999e556ec19d2a5e3
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533102"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720396"
 ---
 # <a name="hololens-research-mode"></a>HoloLens-Forschungsmodus
 
@@ -57,7 +57,7 @@ Beachten Sie, dass die Aktivierung des Research-Modus mehr Akkuleistung als die 
     <!-- <col width="33%" /> -->
     </colgroup>
     <tr>
-        <td><strong>Funktion</strong></td>
+        <td><strong>Feature</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>Hololens 1. Gen</strong></a></td>
         <!-- <td><a href="hololens2-hardware.md"><strong>HoloLens 2</strong></a></td> -->
     </tr>
@@ -129,7 +129,7 @@ Beispielanwendungen zum Zugreifen auf die verschiedenen Datenströme im Forschun
 
 Sie können den [Issue Tracker](https://github.com/Microsoft/HololensForCV/issues) im hololensforcv-Repository verwenden, um bekannte Probleme zu verfolgen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Hololensforcv GitHub-Repository](https://github.com/Microsoft/HoloLensForCV)

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, Video, Erfassung, Kamera
-ms.openlocfilehash: 0d51945444a411563b67af8569fee7ffe3449957
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451345"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720416"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Mixed Reality-Aufnahme für Entwickler
 
@@ -232,15 +232,25 @@ MRC-Video Effekt (**Windows. Media. mixedrealitycapture. mixedrealitycapturevide
 |  Blankonprotectedcontent  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Rückgabe eines leeren Frames, wenn eine 2D-UWP-App geschützte Inhalte anzeigt. Wenn dieses Flag false ist und eine 2D-UWP-App geschützte Inhalte anzeigt, wird die 2D-UWP-app durch eine geschützte Inhalts Textur sowohl im Headset als auch in der Mixed Reality-Erfassung ersetzt. |
 |  Showhiddenmesh  |  boolean  |  FALSE  |  Flag zum Aktivieren oder Deaktivieren der Anzeige des ausgeblendeten Bereichs Netzes der Holographic-Kamera und des benachbarten Inhalts. |
 | Outputsize | Size | 0, 0 | Legen Sie die gewünschte Ausgabegröße nach dem Zuschneiden für die Videostabilisierung fest. Eine standardmäßige zuergröße wird ausgewählt, wenn 0 oder eine ungültige Ausgabegröße angegeben wird. |
-| Preferredhologrammperspective | UINT32 | 0 (Anzeige) | Eine Aufzählung, mit der angegeben wird, welche holografische Kamera Ansichts Konfiguration aufgezeichnet werden soll: 0 (Anzeige) bedeutet, dass die APP nicht zum Rendering von der Foto-/Videokamera aufgefordert wird. 1 (photovideocamera) fordert die APP auf, von der Foto-/Videokamera zu Rendering (wenn Sie von der App unterstützt wird). |
+| Preferredhologrammperspective | UINT32 | **Rendering von der Kamera** Einstellung im Windows-Geräte Portal | Enum, das angibt, welche holografische Kamera Ansichts Konfiguration aufgezeichnet werden soll: 0 (Anzeige) bedeutet, dass die APP nicht zum Rendering von der Foto-/Videokamera aufgefordert wird. 1 (photovideocamera) fordert die APP auf, von der Foto-/Videokamera zu Rendering (sofern Sie von der App unterstützt wird). Wird nur auf hololens 2 unterstützt. |
+
+>[!NOTE]
+> Sie können den Standardwert von " **preferredhologramperspective** " im Windows-Geräte Portal ändern, indem Sie zur [Seite "Mixed Reality Capture](using-the-windows-device-portal.md#mixed-reality-capture) " navigieren und die Wiedergabe **von der Kamera**deaktivieren. Die Einstellung ist standardmäßig auf **1 (photovideocamera)** festgelegt, kann jedoch deaktiviert werden, um Sie auf **0 (Anzeige)** festzulegen.
+>
+> Der Standardwert von **preferredhologramperspective** war vor dem Update vom Juni 2020 (Windows Holographic, Version 2004 Build 19041,1106 und Windows Holographic, Version 1903 Build 18362,1064) der Wert **0 (Display)** .
 
 MRC-Audioeffekt (**Windows. Media. mixedrealitycapture. mixedrealitycaptureaudioeffect**)
 
 | Eigenschaftenname | Typ | Standardwert | BESCHREIBUNG |
 |----------|----------|----------|----------|
 | Mixermode | UINT32 | 2 (MIC-und systemaudiodatei) | Eine Aufzählung, die verwendet wird, um anzugeben, welche Audioquellen verwendet werden sollen: 0 (nur MIC-Audiodatei), 1 (nur systemaudiodatei), 2 (MIC und systemaudiodatei) |
-| Loopbackgewinn | float | 1.0 | Auf das systemaudiovolume anwenden. Reicht von 0,0 bis 5,0. Wird nur auf hololens 2 unterstützt. |
-| Mikrophonegain | float | 1.0 | Der auf das MIC-Volume anzuwendende Gewinn. Reicht von 0,0 bis 5,0. Wird nur auf hololens 2 unterstützt. |
+| Loopbackgewinn | float | Einstellung für **App-audiogewinn** im Windows-Geräte Portal | Auf das systemaudiovolume anwenden. Reicht von 0,0 bis 5,0. Wird nur auf hololens 2 unterstützt. |
+| Mikrophonegain | float | Einstellung für **MIC-audiogewinn** im Windows-Geräte Portal | Der auf das MIC-Volume anzuwendende Gewinn. Reicht von 0,0 bis 5,0. Wird nur auf hololens 2 unterstützt. |
+
+>[!NOTE]
+> Sie können den Standardwert von **loopbackgewinn** oder " **mikrophonegain** " im Windows-Geräte Portal ändern, indem Sie die [Seite "Mixed Reality Capture](using-the-windows-device-portal.md#mixed-reality-capture) " aufrufen und den Schieberegler neben den jeweiligen Einstellungen anpassen. Beide Einstellungen werden standardmäßig auf **1,0**festgelegt, können jedoch auf einen beliebigen Wert zwischen **0,0** und **5,0**festgelegt werden.
+>
+> Die Verwendung des Windows-Geräte Portals zum Konfigurieren der Standardwerte für den Gewinn wurde mit dem Update vom Juni 2020 hinzugefügt (Windows Holographic, Version 2004 Build 19041,1106 und Windows Holographic, Version 1903 Build 18362,1064).
 
 ### <a name="simultaneous-mrc-limitations"></a>Gleichzeitige MRC-Einschränkungen
 
@@ -276,7 +286,7 @@ Beim Windows 10-Update vom April 2018 gibt es keine Einschränkung mehr für meh
 
 Vor dem Windows 10-Update vom April 2018 konnte sich die benutzerdefinierte MRC-Aufzeichnung einer APP mit System MRC (Aufzeichnen von Fotos, Aufzeichnen von Videos oder Streaming aus dem Windows-Geräte Portal) gegenseitig ausschließen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Mixed Reality-Aufnahme](mixed-reality-capture.md)
 * [Spectator View](spectator-view.md)
