@@ -1,18 +1,18 @@
 ---
 title: Verwenden des Windows-Geräteportals
 description: Mit dem Windows-Geräteportal für HoloLens können Sie Ihr Gerät remote über eine WLAN- oder USB-Verbindung konfigurieren und verwalten. Das Geräteportal ist ein Webserver auf der HoloLens, mit dem Sie über einen Webbrowser auf dem PC eine Verbindung herstellen können. Das Geräteportal enthält viele Tools, die Ihnen helfen, ihre HoloLens zu verwalten und ihre Apps zu debuggen und zu optimieren.
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräteportal, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 9cd9b33fed12802e5b41afa3fee850356911a989
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278028"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451359"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräteportals
 
@@ -152,17 +152,44 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
 *Seite „Mixed Reality-Aufnahme“ im Windows-Geräteportal auf Microsoft HoloLens*
 
 Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der HoloLens speichern.
-* **Einstellungen**: Steuern Sie die erfassten Mediendatenströme, indem Sie die folgenden Einstellungen aktivieren:
+* **Capture Settings** (Aufnahmeeinstellungen): Steuern Sie die erfassten Mediendatenströme, indem Sie die folgenden Einstellungen aktivieren:
   * **Hologramme**: Erfasst die holografischen Inhalte im Videostream. Hologramme werden in Mono und nicht in Stereo gerendert.
   * **PV-Kamera**: Erfasst den Videodatenstrom der Foto-/Videokamera.
   * **Mic Audio** (Mikrofon-Audio): Erfasst Audioaufnahmen vom Mikrofonarray.
   * **App-Audio**: Erfasst Audioaufnahmen von der derzeit ausgeführten App.
   * **Render from Camera** (Aus Kamerasicht rendern): Richtet die Aufnahme so aus, dass sie aus der Perspektive der Foto-/Videokamera erfolgt, falls dies [von der ausgeführten App unterstützt wird](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (nur HoloLens 2).
   * **Live preview quality** (Qualität der Livevorschau): Wählen Sie die Bildschirmauflösung, Bildfrequenz und Streamingrate für die Livevorschau aus.
+* **Audio Settings** (Audioeinstellungen, nur HoloLens 2):
+  * **Audio Media Category** (Audiomedienkategorie): Wählen Sie die Kategorie für die Verwendung des Mikrofons aus. **Default** (Standard) enthält Hintergrundgeräusche, wohingegen bei **Communications** die Unterdrückung von Hintergrundgeräuschen angewendet wird.
+  * **App Audio Gain** (App-Audioverstärkung): Die auf die App-Audiolautstärke angewendete Verstärkung.
+  * **Mic Audio Gain** (Mikrofonaudioverstärkung): Die auf die Mikrofon-Audiolautstärke angewendete Verstärkung.
+* **Photo and Video Settings** (Foto- und Videoeinstellungen, HoloLens 2-Version 2004 oder höher):
+  * **Capture Profile** (Aufnahmeprofil): Wählen Sie das bei der Aufnahme von Fotos und Videos verwendete Profil aus. Nach dem Profil richtet sich, welche Auflösungen und Bildfrequenzen verfügbar sind.
+  * **Photo Resolution** (Fotoauflösung): Die Auflösung des aufgenommenen Fotos.
+  * **Video Resolution and Frame-rate** (Videoauflösung und Bildfrequenz): Die Auflösung und Bildfrequenz für die Videoaufnahme.
+  * **Video Stabilization Buffer** (Videostabilisierungspuffer): Die bei der Videoaufnahme verwendete Puffergröße. Je höher der Wert ist, desto besser können schnelle Bewegungen kompensiert werden.
 * Klicken oder tippen Sie auf die Schaltfläche **Live preview** (Livevorschau), um den Aufnahmedatenstrom anzuzeigen. Mit **Stop live preview** (Livevorschau beenden) wird der Aufnahmedatenstrom beendet.
 * Klicken oder tippen Sie auf **Aufzeichnen**, um die Aufzeichnung des Mixed-Reality-Datenstroms mit den angegebenen Einstellungen zu starten. Mit **Aufnahme beenden** wird die Aufzeichnung beendet und gespeichert.
 * Klicken oder tippen Sie auf **Foto aufnehmen**, um ein Standbild des Aufnahmedatenstroms zu erstellen.
+* Klicken oder tippen Sie auf **Standardeinstellungen wiederherstellen**, um die Standardeinstellungen für Audio, Fotos und Videos wiederherzustellen.
 * **Videos und Fotos**: Zeigt eine Liste der auf dem Gerät aufgenommenen Videos und Fotos an.
+
+Alle Einstellungen auf dieser Seite gelten für Aufnahmen, die mit dem Windows-Geräte Portals erstellt wurden, einige gelten jedoch zusätzlich für System-MRC (Startmenü, Hardwaretasten, globale Sprachbefehle, Miracast) und für benutzerdefinierte MRC-Recorder.
+|  Einstellung  |  Gilt für System-MRC  |  Gilt für benutzerdefinierte MRC-Recorder |
+|----------|----------|----------|
+|  Holograms  |  Nein  |  Nein |
+|  PV camera  |  Nein  |  Nein |
+|  Mic Audio  |  Nein  |  Nein |
+|  App Audio  |  Nein  |  Nein |
+|  Render from Camera  |  Ja    |  Ja (kann überschrieben werden) |
+|  Live preview quality  |  Nein  |  Nein |
+|  Audio Media Category  |  Ja  |  Nein |
+|  App Audio Gain  |  Ja  |  Ja (kann überschrieben werden) |
+|  Mic Audio Gain  |  Ja  |  Ja (kann überschrieben werden) |
+|  Capture Profile  |  Ja  |  Nein |
+|  Photo Resolution  |  Ja  |  Nein |
+|  Video Resolution and Frame-rate  |  Ja  |  Nein |
+|  Video Stabilization Buffer  |  Ja  |  Ja (kann überschrieben werden) |
 
 > [!NOTE]
 > Es bestehen [Einschränkungen für gleichzeitige Mixed Reality-Aufnahmen](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):
