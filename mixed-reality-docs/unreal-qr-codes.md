@@ -1,44 +1,74 @@
 ---
 title: QR-Codes in Unreal
 description: Leitfaden zur Verwendung von QR-Codes in Unreal
-author: sw5813
-ms.author: jacksonf
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Entwicklung, Features, Dokumentation, Leitfäden, Hologramme, QR-Codes
-ms.openlocfilehash: 67a3a8092ab908cba6768e92ed6a0e7bd2737275
-ms.sourcegitcommit: 5b802078090700e06630c8fc665fedeaa0a16eb7
+ms.openlocfilehash: 90a51227ae455389168fb3262e83f34b64a7bfb5
+ms.sourcegitcommit: ee7f04148d3608b0284c59e33b394a67f0934255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83342658"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428756"
 ---
 # <a name="qr-codes-in-unreal"></a>QR-Codes in Unreal
 
-HoloLens kann QR-Codes im Weltbereich erkennen, um Hologramme an bekannten Positionen in der realen Welt zu rendern.  Dies kann auch verwendet werden, um auf mehreren Geräten Hologramme an der gleichen Position zu rendern und so ein gemeinsames Erlebnis zu ermöglichen. 
+## <a name="overview"></a>Übersicht
 
-Wenn Sie die QR-Erkennung für HoloLens aktivieren möchten, vergewissern Sie sich im Unreal-Editor unter „Project Settings“ (Projekteinstellungen) > „Platform“ (Plattform) > „HoloLens“ > „Capabilities“ (Funktionen), dass das Kontrollkästchen für die Webcamfunktion aktiviert ist.  
+HoloLens 2 kann QR-Codes in der Außenwelt mithilfe der Webcam sehen und gibt sie mithilfe eines Koordinatensystems an jeder Position von Codes in der Realwelt als Hologramme wieder.  Über einzelne QR-Codes hinaus kann HoloLens 2 Hologramme außerdem an der gleichen Position auf mehreren Geräten rendern, um eine gemeinsame Erfahrung zu ermöglichen. Achten Sie darauf, die bewährten Methoden für das Hinzufügen von QR-Codes zu Ihren Anwendungen zu befolgen:
 
-Entscheiden Sie sich für die Verwendung von QR-Code-Nachverfolgung in Unreal, indem Sie eine ARSession mit der Funktion StartARSession starten. 
+- Ruhezonen
+- Beleuchtung und Hintergrund
+- Größe, Abstand und Winkelposition
 
-QR-Codes werden über das AR-Geometrienachverfolgungssystem von Unreal als nachverfolgtes Bild bereitgestellt.  Für dessen Verwendung muss einem Blaupausenakteur eine in AR nachverfolgbare Benachrichtigungskomponente hinzugefügt werden: 
+Achten Sie besonders auf [Umgebungsaspekte](environment-considerations-for-hololens.md), wenn in Ihrer App QR-Codes platziert werden. Weitere Informationen zu jedem dieser Themen und Anweisungen zum Herunterladen des erforderlichen NuGet-Pakets finden Sie im Dokument zum [Nachverfolgen von QR-Codes](qr-code-tracking.md). 
+
+## <a name="enabling-qr-detection"></a>Aktivieren der QR-Erkennung
+Da HoloLens 2 die Webcam verwenden muss, um QR-Codes zu sehen, müssen Sie diese in den Projekteinstellungen aktivieren:
+- Öffnen Sie **Edit > Project Settings** (Bearbeiten > Projekteinstellungen), scrollen Sie zum Abschnitt **Platforms** (Plattformen), und klicken Sie auf **HoloLens**.
+    + Klappen Sie den Abschnitt **Capabilities** (Funktionen) auf, und aktivieren Sie **Webcam**.  
+
+Ferner müssen Sie die Nachverfolgung von QR-Codes abonnieren, indem Sie [ein ARSessionConfig-Objekt hinzufügen](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).
+
+## <a name="setting-up-a-tracked-image"></a>Einrichten eines nachverfolgten Bilds
+
+QR-Codes werden über das AR-Geometrienachverfolgungssystem von Unreal als nachverfolgtes Bild bereitgestellt. Damit dies funktioniert, müssen Sie Folgendes ausführen:
+1. Erstellen einer Blaupause und Hinzufügen einer **ARTrackableNotify**-Komponente.
 
 ![QR: In AR nachverfolgbare Benachrichtigung](images/unreal-spatialmapping-artrackablenotify.PNG)
 
-Navigieren Sie dann zu den Details der Komponente, und klicken Sie auf die grüne Plusschaltfläche (+) für die zu überwachenden Ereignisse.  
+2. Wählen Sie **ARTrackableNotify** aus, und klappen Sie im Bereich **Details** den Abschnitt **Events** (Ereignisse) auf. 
 
 ![QR: Ereignisse](images/unreal-spatialmapping-events.PNG)
 
-Hier wurde „OnUpdateTrackedImage“ abonniert, um einen Punkt in der Mitte eines QR-Codes zu rendern und die codierten Daten des QR-Codes auszugeben. 
+3. Klicken Sie neben **On Add Tracked Geometry** (Beim Hinzufügen von nachverfolgter Geometrie) auf **+** , um dem Ereignisdiagramm den Knoten hinzuzufügen.
+    - Die vollständige Liste der Ereignisse finden Sie in der Komponenten-API [UARTrackableNotify](https://docs.unrealengine.com/API/Runtime/AugmentedReality/UARTrackableNotifyComponent/index.html). 
+
+![QR: Renderbeispiel](images/unreal-qr-codes-tracked-geometry.png)
+
+## <a name="using-a-tracked-image"></a>Verwenden eines nachverfolgten Bilds
+Das Ereignisdiagramm in der folgenden Abbildung zeigt, wie das **OnUpdateTrackedImage**-Ereignis dazu verwendet wird, einen Punkt in der Mitte eines QR-Codes zu rendern und dessen Daten auszugeben. 
 
 ![QR: Renderbeispiel](images/unreal-qr-render.PNG)
 
-Wandeln Sie das nachverfolgte Bild zuerst in „ARTrackedQRCode“ um, um sich zu vergewissern, dass es sich bei dem derzeitigen aktualisierten Bild um einen QR-Code handelt.  Anschließend können die codierten Daten mithilfe der Variablen „QRCode“ abgerufen werden.  Die linke obere Ecke des QR-Codes kann auf der Grundlage der Position von „GetLocalToWorldTransform“ abgerufen werden.  Die Dimensionen können mithilfe von „GetEstimateSize“ abgerufen werden. 
+Das geschieht dabei:
+1. Zunächst wird das nachverfolgte Bild in einen **ARTrackedQRCode** umgewandelt, um zu prüfen, ob es sich bei dem aktuellen aktualisierten Bild um einen QR-Code handelt.  
+2. Die codierten Daten werden aus der **QRCode**-Variable abgerufen. Sie können den oberen linken Punkt des QR-Codes aus der Position von **GetLocalToWorldTransform** und seine Abmessungen mit **GetEstimateSize** abrufen. 
 
-Jeder QR-Code verfügt auch über eine eindeutige GUID: 
+Ferner können Sie [das Koordinatensystem für einen QR-Code in Code abrufen](https://docs.microsoft.com/windows/mixed-reality/qr-code-tracking#getting-the-coordinate-system-for-a-qr-code).
+
+## <a name="finding-the-unique-id"></a>Ermitteln der eindeutigen ID
+Jeder QR-Code weist eine eindeutige GUID-ID auf, die Sie auf diese Weise herausfinden können:
+- Ziehen und Ablegen des **As ARTracked QRCode**-Stifts und Suchen nach **Get Unique ID** (Eindeutige ID abrufen).
 
 ![QR: GUID](images/unreal-qr-guid.PNG)
 
+Mit QR-Codes passiert eine Menge hinter den Kulissen, daher ist diese Erörterung nicht abschließend. Folgen Sie unbedingt den folgenden Links, um mehr über die inneren Vorgänge zu erfahren.
+
 ## <a name="see-also"></a>Siehe auch
-* [Nachverfolgen von QR-Codes](qr-code-tracking.md)
+* [Räumliche Abbildung](spatial-mapping.md)
+* [Hologramme](hologram.md)
+* [Koordinatensysteme](coordinate-systems.md)
