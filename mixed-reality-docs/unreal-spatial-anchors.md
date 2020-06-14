@@ -1,51 +1,69 @@
 ---
 title: Raumanker in Unreal
 description: Leitfaden für die Verwendung von Raumankern in Unreal
-author: sw5813
-ms.author: jacksonf
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Entwicklung, Features, Dokumentation, Leitfäden, Hologramme, Raumanker
-ms.openlocfilehash: c35d8efc9998aac5b40de833e5acbf7f80353e6b
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 1100704cae40de1997eb869bfc6c82bba3d0dc6e
+ms.sourcegitcommit: ee7f04148d3608b0284c59e33b394a67f0934255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840139"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428730"
 ---
-# <a name="spatial-anchors-in-unreal"></a><span data-ttu-id="8d31c-104">Raumanker in Unreal</span><span class="sxs-lookup"><span data-stu-id="8d31c-104">Spatial Anchors in Unreal</span></span>
+# <a name="spatial-anchors-in-unreal"></a><span data-ttu-id="f992c-104">Raumanker in Unreal</span><span class="sxs-lookup"><span data-stu-id="f992c-104">Spatial Anchors in Unreal</span></span>
 
-<span data-ttu-id="8d31c-105">Raumanker werden verwendet, um Hologramme zwischen Anwendungssitzungen im realen Raum beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="8d31c-105">Spatial anchors are used to persist holograms in real-world space between application sessions.</span></span>  <span data-ttu-id="8d31c-106">Dies wird über Unreal mithilfe von „ARPins“ erreicht und für spätere Sitzungen im Ankerspeicher von HoloLens gespeichert.</span><span class="sxs-lookup"><span data-stu-id="8d31c-106">This gets surfaced through Unreal as ARPins and gets saved in the HoloLens’ anchor store to be loaded in future sessions.</span></span> 
+## <a name="overview"></a><span data-ttu-id="f992c-105">Übersicht</span><span class="sxs-lookup"><span data-stu-id="f992c-105">Overview</span></span>
 
-<span data-ttu-id="8d31c-107">Vergewissern Sie sich vor dem Speichern oder Laden von Ankern zunächst, dass der Ankerspeicher bereit ist.</span><span class="sxs-lookup"><span data-stu-id="8d31c-107">Before saving or loading anchors, first check that the anchor store is ready.</span></span>  <span data-ttu-id="8d31c-108">Wenn Sie versuchen, eine der HoloLens-Ankerfunktionen aufzurufen, bevor der Ankerspeicher bereit ist, ist der Aufruf nicht erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="8d31c-108">Attempting to call any of the HoloLens anchor functions before the anchor store is ready will not succeed.</span></span>  
+<span data-ttu-id="f992c-106">Raumanker werden verwendet, um Hologramme zwischen Anwendungssitzungen im realen Raum zu speichern.</span><span class="sxs-lookup"><span data-stu-id="f992c-106">Spatial anchors are used to save holograms in real-world space between application sessions.</span></span>  <span data-ttu-id="f992c-107">Diese werden über Unreal mithilfe von **ARPin**s angezeigt und im Ankerspeicher von HoloLens gespeichert, der in zukünftigen Sitzungen geladen wird.</span><span class="sxs-lookup"><span data-stu-id="f992c-107">These get surfaced through Unreal as **ARPin**s and saved in the HoloLens’ anchor store, which is loaded in future sessions.</span></span> 
+
+## <a name="checking-the-anchor-store"></a><span data-ttu-id="f992c-108">Überprüfen des Ankerspeichers</span><span class="sxs-lookup"><span data-stu-id="f992c-108">Checking the anchor store</span></span>
+
+<span data-ttu-id="f992c-109">Vor dem Speichern oder Laden von Ankern müssen Sie sich zunächst vergewissern, dass der Ankerspeicher bereit ist.</span><span class="sxs-lookup"><span data-stu-id="f992c-109">Before saving or loading anchors, you need to check if the anchor store is ready.</span></span>  <span data-ttu-id="f992c-110">Versuche, eine der HoloLens-Ankerfunktionen aufzurufen, bevor der Ankerspeicher bereit ist, sind nicht erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="f992c-110">Calling any of the HoloLens anchor functions before the anchor store is ready will not succeed.</span></span>  
 
 ![Raumanker: Speicher bereit](images/unreal-spatialanchors-store-ready.PNG)
 
-## <a name="save-anchors"></a><span data-ttu-id="8d31c-110">Speichern von Ankern</span><span class="sxs-lookup"><span data-stu-id="8d31c-110">Save Anchors</span></span>
+## <a name="saving-anchors"></a><span data-ttu-id="f992c-112">Speichern von Ankern</span><span class="sxs-lookup"><span data-stu-id="f992c-112">Saving anchors</span></span>
 
-<span data-ttu-id="8d31c-111">Sobald die Anwendung über eine Komponente verfügt, die in der Umgebung fixiert werden muss, kann sie wie folgt im Ankerspeicher gespeichert werden:</span><span class="sxs-lookup"><span data-stu-id="8d31c-111">Once the application has a component that needs to be pinned to the world, it can be saved to the anchor store with the following sequence:</span></span> 
+<span data-ttu-id="f992c-113">Sobald die Anwendung über eine Komponente verfügt, die in der Umgebung fixiert werden muss, kann sie wie folgt im Ankerspeicher gespeichert werden:</span><span class="sxs-lookup"><span data-stu-id="f992c-113">Once the application has a component that needs to be pinned to the world, it can be saved to the anchor store with the following sequence:</span></span> 
 
 ![Raumanker: Speichern](images/unreal-spatialanchors-save.PNG)
 
-<span data-ttu-id="8d31c-113">Hier erzeugen wir einen Akteur an einer bekannten Position und erstellen einen AR-Pin mit dieser Position sowie einen Namen, der auf der Klasse des Akteurs basiert. Außerdem fügen wir den Akteur dem AR-Pin hinzu und speichern den Pin im HoloLens-Ankerspeicher.</span><span class="sxs-lookup"><span data-stu-id="8d31c-113">Here, we are spawning an actor at a known location, creating an ARPin with that location and a name based on the actor’s class, adding the actor to the ARPin, and saving the pin to the HoloLens anchor store.</span></span>  <span data-ttu-id="8d31c-114">Da der gewählte Ankername eindeutig sein muss, wird in diesem Beispiel der aktuelle Zeitstempel angefügt.</span><span class="sxs-lookup"><span data-stu-id="8d31c-114">The anchor name we choose must be unique, so in this example we append the current timestamp.</span></span>  <span data-ttu-id="8d31c-115">Wenn der Anker erfolgreich im Ankerspeicher gespeichert wurde, kann er im HoloLens-Geräteportal unter „System“ > „Map manager“ (Zuordnungs-Manager) > „Anchor Files Saved On Device“ (Auf dem Gerät gespeicherte Ankerdateien) überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="8d31c-115">If the anchor successfully saves to the anchor store, it can be inspected in the HoloLens device portal under System > Map manager > Anchor Files Saved On Device.</span></span> 
+<span data-ttu-id="f992c-115">Das heißt im Einzelnen:</span><span class="sxs-lookup"><span data-stu-id="f992c-115">Breaking this down:</span></span>
+1. <span data-ttu-id="f992c-116">Erzeugen Sie einen Akteur an einer bekannten Position.</span><span class="sxs-lookup"><span data-stu-id="f992c-116">Spawn an actor at a known location.</span></span>
+2. <span data-ttu-id="f992c-117">Erstellen Sie einen **ARPin** mit dieser Position und einem Namen, der auf der Klasse des Akteurs basiert.</span><span class="sxs-lookup"><span data-stu-id="f992c-117">Create an **ARPin** with that location and a name based on the actor’s class.</span></span> 
+3. <span data-ttu-id="f992c-118">Fügen Sie dem **ARPin** den Akteur hinzu, und speichern Sie den Pin im HoloLens-Ankerspeicher.</span><span class="sxs-lookup"><span data-stu-id="f992c-118">Add the actor to the **ARPin** and save the pin to the HoloLens anchor store.</span></span>  
+    * <span data-ttu-id="f992c-119">Der gewählte Ankername muss eindeutig sein, in diesem Fall verwenden wir dafür den aktuellen Zeitstempel.</span><span class="sxs-lookup"><span data-stu-id="f992c-119">The anchor name you choose must be unique, which in this example is the current timestamp.</span></span> 
 
-## <a name="load-anchors"></a><span data-ttu-id="8d31c-116">Laden von Ankern</span><span class="sxs-lookup"><span data-stu-id="8d31c-116">Load Anchors</span></span>
+4. <span data-ttu-id="f992c-120">Wenn der Anker erfolgreich im Ankerspeicher gespeichert wurde, kann er im HoloLens-Geräteportal unter **System > Map manager > Anchor Files Saved On Device** (System > Zuordnungs-Manager > Auf dem Gerät gespeicherte Ankerdateien) überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="f992c-120">If the anchor is successfully saved to the anchor store, you can be inspect it in the HoloLens device portal under **System > Map manager > Anchor Files Saved On Device**.</span></span> 
 
-<span data-ttu-id="8d31c-117">Beim Start einer Anwendung kann die folgende Blaupause aufgerufen werden, um Komponenten an ihren Ankerpositionen wiederherzustellen:</span><span class="sxs-lookup"><span data-stu-id="8d31c-117">When an application starts, the following blueprint can be called to restore components to their anchor locations:</span></span>
+## <a name="loading-anchors"></a><span data-ttu-id="f992c-121">Laden von Ankern</span><span class="sxs-lookup"><span data-stu-id="f992c-121">Loading anchors</span></span>
+
+<span data-ttu-id="f992c-122">Beim Start einer Anwendung können Sie die folgende Blaupause verwenden, um Komponenten an ihren Ankerpositionen wiederherzustellen:</span><span class="sxs-lookup"><span data-stu-id="f992c-122">When an application starts, you can use the following blueprint to restore components to their anchor locations:</span></span>
 
 ![Raumanker: Laden](images/unreal-spatialanchors-load.PNG)
 
-<span data-ttu-id="8d31c-119">In diesem Beispiel durchlaufen wir alle Anker im Ankerspeicher, erzeugen einen Akteur am neutralen Element und heften diesen Akteur an den AR-Pin aus dem Ankerspeicher an.</span><span class="sxs-lookup"><span data-stu-id="8d31c-119">In this example, we iterate over all of the anchors in the anchor store, spawn an actor at identity, and pin that actor to the ARPin from the anchor store.</span></span>  <span data-ttu-id="8d31c-120">Es ist wichtig, den Akteur am neutralen Element zu erzeugen, da der Anker dazu dient, das Hologramm in der Umgebung auf der Grundlage des gespeicherten Orts zu positionieren, sodass jede hier hinzugefügte Transformation dem Anker ein Offset hinzufügt.</span><span class="sxs-lookup"><span data-stu-id="8d31c-120">It is important to spawn the actor at identity since the anchor is responsible for repositioning the hologram in the world based on where it was saved, so any transform added here will add an offset to the anchor.</span></span> 
+<span data-ttu-id="f992c-124">Das heißt im Einzelnen:</span><span class="sxs-lookup"><span data-stu-id="f992c-124">Breaking this down:</span></span>
+1. <span data-ttu-id="f992c-125">Iterieren Sie über alle Anker im Ankerspeicher.</span><span class="sxs-lookup"><span data-stu-id="f992c-125">Iterate over all of the anchors in the anchor store.</span></span> 
+2. <span data-ttu-id="f992c-126">Erzeugen Sie einen Akteur an einem neutralen Element.</span><span class="sxs-lookup"><span data-stu-id="f992c-126">Spawn an actor at identity.</span></span>
+3. <span data-ttu-id="f992c-127">Heften Sie diesen Akteur an den **ARPin** aus dem Ankerspeicher an.</span><span class="sxs-lookup"><span data-stu-id="f992c-127">Pin that actor to the **ARPin** from the anchor store.</span></span>  
 
-<span data-ttu-id="8d31c-121">Die Anker-ID wird ebenfalls abgefragt, um abhängig vom gespeicherten Namen des Ankers unterschiedliche Akteure erzeugen zu können.</span><span class="sxs-lookup"><span data-stu-id="8d31c-121">The anchor ID is also queried so that different actors can be spawned depending on the anchor’s saved name.</span></span> 
+    * <span data-ttu-id="f992c-128">Es ist wichtig, den Akteur am neutralen Element zu erzeugen, da der Anker dazu dient, das Hologramm in der Umgebung auf der Grundlage des gespeicherten Orts zu positionieren.</span><span class="sxs-lookup"><span data-stu-id="f992c-128">It's important to spawn the actor at identity since the anchor is responsible for repositioning the hologram in the world based on where it was saved.</span></span> <span data-ttu-id="f992c-129">Jede hier hinzugefügte Transformation fügt dem Anker einen Offset hinzu.</span><span class="sxs-lookup"><span data-stu-id="f992c-129">Any transform added here will add an offset to the anchor.</span></span> 
 
-## <a name="remove-anchors"></a><span data-ttu-id="8d31c-122">Entfernen von Ankern</span><span class="sxs-lookup"><span data-stu-id="8d31c-122">Remove Anchors</span></span> 
+<span data-ttu-id="f992c-130">Die Anker-ID wird ebenfalls abgefragt, um abhängig vom gespeicherten Namen des Ankers unterschiedliche Akteure erzeugen zu können.</span><span class="sxs-lookup"><span data-stu-id="f992c-130">The anchor ID is also queried so that different actors can be spawned depending on the anchor’s saved name.</span></span> 
 
-<span data-ttu-id="8d31c-123">Wenn Sie einen Anker nicht mehr benötigen, können Sie entweder den gesamten Ankerspeicher löschen oder einzelne Anker aus dem Ankerspeicher entfernen, damit sie in zukünftigen Sitzungen nicht mehr verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="8d31c-123">When done with an anchor, the entire anchor store can be cleared, or individual anchors can be removed from the anchor store so they are not included in future sessions:</span></span> 
+## <a name="removing-anchors"></a><span data-ttu-id="f992c-131">Entfernen von Ankern</span><span class="sxs-lookup"><span data-stu-id="f992c-131">Removing anchors</span></span> 
+
+<span data-ttu-id="f992c-132">Wenn Sie die Arbeit mit einem Anker beendet haben, können Sie einzelne Anker oder den gesamten Ankerspeicher mit den Komponenten **Remove ARPin from WMRAnchor Store** (ARPin aus WMRAnkerspeicher entfernen) und **Remove All ARPins from WMRAnchor Store** (Alle ARPins aus WMRAnkerspeicher entfernen) löschen.</span><span class="sxs-lookup"><span data-stu-id="f992c-132">When you're done with an anchor you can clear individual anchors or the entire anchor store with the **Remove ARPin from WMRAnchor Store** and **Remove All ARPins from WMRAnchor Store** components.</span></span>
 
 ![Raumanker: Entfernen](images/unreal-spatialanchors-remove.PNG)
 
-## <a name="see-also"></a><span data-ttu-id="8d31c-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8d31c-125">See also</span></span>
-* [<span data-ttu-id="8d31c-126">Raumanker</span><span class="sxs-lookup"><span data-stu-id="8d31c-126">Spatial anchors</span></span>](spatial-anchors.md)
-* [<span data-ttu-id="8d31c-127">Koordinatensysteme</span><span class="sxs-lookup"><span data-stu-id="8d31c-127">Coordinate systems</span></span>](coordinate-systems.md)
+> [!NOTE]
+> <span data-ttu-id="f992c-134">Beachten Sie, dass Raumanker sich noch in der Betaphase befinden, prüfen Sie also unbedingt auf aktualisierte Informationen und Features.</span><span class="sxs-lookup"><span data-stu-id="f992c-134">Bear in mind that Spatial Anchors are still in Beta, so be sure to check back for updated information and features.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="f992c-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f992c-135">See also</span></span>
+* [<span data-ttu-id="f992c-136">Raumanker</span><span class="sxs-lookup"><span data-stu-id="f992c-136">Spatial anchors</span></span>](spatial-anchors.md)
+* [<span data-ttu-id="f992c-137">Koordinatensysteme</span><span class="sxs-lookup"><span data-stu-id="f992c-137">Coordinate systems</span></span>](coordinate-systems.md)
