@@ -94,7 +94,7 @@
 ## Ressourcen
 ### [Learn-Hilfsprogramm](https://learn.unity.com/)
 ### [Mixed Reality-Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity)
-### [Mixed Reality-Design-Labs](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)
+### [Mixed Reality-Design-Labs](https://github.com/microsoft/MixedRealityDesignLabs_Unity)
 ### [Microsoft Maquette](https://www.maquette.ms)
 ### [Inhaltsobjekt-Erstellungsprozess](asset-creation-process.md)
 ### [Entwerfen eigener immersiver Umgebungen](add-custom-home-environments.md)
@@ -136,10 +136,14 @@
 ###### [3. Versehen des Audiosignals eines Videoclips mit räumlichen Effekten](unity-spatial-audio-ch3.md)
 ###### [4. Aktivieren und Deaktivieren räumlicher Audiowiedergabe zur Laufzeit](unity-spatial-audio-ch4.md)
 ###### [5. Verwenden von Hall zum Hinzufügen von Abstand zu räumlicher Audiowiedergabe](unity-spatial-audio-ch5.md)
+#### HoloLens 2: Open-Source-Beispiel-Apps
+##### [Surface](sampleapp-surfaces.md)
+##### [Periodensystem der Elemente 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+##### [Galaxy Explorer 2.0](galaxy-explorer-update.md)
 #### HoloLens (1. Generation): Open-Source-Beispiel-Apps
-##### [Periodensystem der Elemente](periodic-table-of-the-elements.md)
+##### [Periodensystem der Elemente 1.0](periodic-table-of-the-elements.md)
+##### [Galaxie-Explorer 1.0](galaxy-explorer.md)
 ##### [Lunar-Modul](lunar-module.md)
-##### [Galaxie-Explorer](galaxy-explorer.md)
 #### Tutorials für HoloLens (1. Generation) und immersive Headsets
 ##### [MR-Grundlagen 100: Erste Schritte mit Unity](holograms-100.md)
 ##### [MR-Grundlagen 101: Vollständiges Projekt mit Gerät](holograms-101.md)
