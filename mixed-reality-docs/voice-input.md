@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, Input
-ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
-ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
+ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83866920"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345700"
 ---
 # <a name="voice-input"></a>Spracheingabe
 
@@ -67,7 +67,7 @@ Auch wenn Sie Ihrer APP keine Sprachunterstützung hinzufügen, können Ihre Ben
 
 :::row:::
     :::column:::
-        **Hololens 2**<br><br>
+        **HoloLens 2**<br><br>
         Um den "Select"-Befehl "Stimme" in hololens 2 zu verwenden, müssen Sie zuerst den Cursor Cursor zur Verwendung als Zeiger einrichten. Der Befehl zur Eingabe ist leicht zu merken, einfach "Select".<br><br>
         Um den Modus zu beenden, verwenden Sie einfach wieder die Hände, entweder durch Tippen auf eine Maustaste, eine Schaltfläche mit Ihren Fingern oder mithilfe der System Bewegung.<br>
         <br>
@@ -219,7 +219,7 @@ Obwohl die Spracheingabe für viele verschiedene Anwendungen hervorragend ist, s
 Der Schlüssel besteht darin, dieser Herausforderung in Ihrer Anwendung zu begegnen, indem er dem Benutzer Feedback zur Verfügung stellt, wenn das System lauscht, und was das System verstanden hat, um Klarheit über potenzielle Probleme bei der ordnungsgemäßen Verwendung des Benutzers zu schaffen  
 
 **Spracheingabe in freigegebenen Leerzeichen** Die Stimme ist möglicherweise nicht in den Bereichen, die Sie für andere Personen freigeben, akzeptabel.
-Hier finden Sie einige Beispiele:
+Hier sind einige Beispiele:
 * Der Benutzer möchte möglicherweise keine anderen Personen stören (z. b. in einer stillen Bibliothek oder einem freigegebenen Büro).
 * Benutzer sind vielleicht nicht in der Öffentlichkeit,
 * Ein Benutzer ist möglicherweise unbequem, wenn er eine persönliche oder vertrauliche Nachricht (einschließlich Kenn Wörtern) einhört, während andere Benutzer lauschen.
@@ -282,9 +282,9 @@ Für Anwendungen, die die von hololens bereitgestellten angepassten audioeingabe
 
 Die gesamte Audioverarbeitung ist Hardware beschleunigt. Dies bedeutet, dass die Features viel weniger Leistung als bei der Verarbeitung der hololens-CPU benötigen. Vermeiden Sie die Ausführung einer anderen audioeingabeverarbeitung auf der CPU, um die Akku Lebensdauer zu maximieren und die integrierte, offloaded audioeingabeverarbeitung zu nutzen.
 
-## <a name="languages"></a>Languages
+## <a name="languages"></a>Sprachen
 
-Hololens 2 unterstützt auch weitere Sprachen. Beachten Sie, dass Sprachbefehle immer in der Anzeige Sprache des Systems ausgeführt werden, auch wenn mehrere Tastaturen installiert sind oder wenn apps versuchen, eine Spracherkennung in einer anderen Sprache zu erstellen.
+Hololens 2 [unterstützt mehrere Sprachen](https://docs.microsoft.com/hololens/hololens2-language-support). Beachten Sie, dass Sprachbefehle immer in der Anzeige Sprache des Systems ausgeführt werden, auch wenn mehrere Tastaturen installiert sind oder wenn apps versuchen, eine Spracherkennung in einer anderen Sprache zu erstellen.
 
 ## <a name="troubleshooting"></a>Problembehandlung
 

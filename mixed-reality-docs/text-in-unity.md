@@ -6,25 +6,25 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Steuerelemente, Schriftart, Typografie, UI, UX
-ms.openlocfilehash: 69b8a4bca42f3b6177a276d7773e5f1cd599d629
-ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
+ms.openlocfilehash: 8662ff8a8e1e99455354392d7dc852feb1fe1589
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597663"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345710"
 ---
 # <a name="text-in-unity"></a>Text in Unity
 
 Text ist eine der wichtigsten Komponenten in Holographic apps. Zum Anzeigen von Text in Unity gibt es drei Arten von Textkomponenten, die Sie verwenden können – UI Text, 3D Text Mesh und Text Mesh pro. Standardmäßig werden UI-Text und 3D-textmesh verschwommen und sind zu groß. Sie müssen einige Variablen optimieren, um scharfen, hochwertigen Text zu erhalten, der über eine verwaltbare Größe in hololens verfügt. Wenn Sie einen Skalierungsfaktor anwenden, um bei der Verwendung von UI-Text und 3D-Text Gitter Komponenten ordnungsgemäße Dimensionen zu erzielen, erzielen Sie eine bessere renderingqualität.
 
-![, wie Sie einen scharfen und schönen Text erhalten](images/hug-text-02-640px.png)<br>
+![So erhalten Sie einen scharfen und schönen Text](images/hug-text-02-640px.png)<br>
 *Unscharfe Standardtext in Unity*
 
 ## <a name="working-with-unitys-3d-text-text-mesh-and-ui-text"></a>Arbeiten mit dem 3D-Text (textmesh) von Unity und dem Benutzeroberflächen Text
 
 Unity geht davon aus, dass alle neuen Elemente, die einer Szene hinzugefügt werden, eine Unity-Einheit oder eine 100%-Transformations Skala sind, die in hololens ungefähr 1 Meter übersetzt. Im Fall von Schriftarten kommt das umgebende Feld für eine 3D-textmesh standardmäßig bei ungefähr 1 Meter Höhe ins Spiel.
 
-![arbeiten mit Schriftarten in Unity](images/640px-hug-text-03.png)<br>
+![Arbeiten mit Schriftarten in Unity](images/640px-hug-text-03.png)<br>
 *Der standardmäßige Unity 3D-Text (textmesh) belegt eine Unity-Einheit, die 1 Meter beträgt.*
 
 <br>
@@ -41,7 +41,7 @@ Die meisten visuellen Designer verwenden Punkte, um Schriftgrößen in der reale
 <br>
 Wenn eine Benutzeroberfläche oder ein Canvas-basiertes Textelement einer Szene hinzugefügt wird, ist die Größen Differenz noch größer. Die Unterschiede in den beiden Größen liegen bei etwa 1000%, wodurch der Skalierungsfaktor für UI-basierte Textkomponenten auf 0,00046 (0.0004586111116) oder 0,0005 für den gerundeten Wert gebracht wird.
 
-![Unity-UI-Text mit unterschiedlichen dynamischen Pixeln pro Einheits Wert](images/hug-text-04-1000px.png)<br>
+![Unity-UI-Text mit unterschiedlichen dynamischen Pixeln pro Einheits Werten](images/hug-text-04-1000px.png)<br>
 *Unity-UI-Text mit optimierten Werten*
 
 <br>
@@ -61,18 +61,18 @@ Wie Sie erwarten, sehen die typgrößen, die wir auf einem PC oder Tablet-Gerät
 
 Für die Near-Interaktion bei 0.45 m (45cm) ist der Anzeige Winkel der minimal lesbaren Schriftart und die Höhe 0,4 °-0,5 °/3.14 – 3,9 mm. Der oben eingeführte Skalierungsfaktor liegt bei ungefähr 9-12pt.
 
-![Near-und Far-Interaktionsbereich](images/typography-distance-1000px.jpg)
-*Inhalt in nahezu-und weitem Interaktions Bereich*
+![Inhalte in naher und weitem Interaktion im Bereich von ](images/typography-distance-1000px.jpg)
+ *nahezu-und weitem Interaktionen*
 
 ### <a name="the-minimum-legible-font-size"></a>Die minimale lesbare Schriftgröße
-| Abstand | Anzeige Winkel | Texthöhe | Schriftgrad |
+| Distance | Anzeige Winkel | Texthöhe | Schriftgrad |
 |---------|---------|---------|---------|
 | 45cm (direkte Manipulations Distanz) | 0,4 °-0,5 ° | 3.14 – 3,9 mm | 8,9 – 11.13 PT |
 | 2 min | 0,35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 PT |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>Die bequem lesbare Schriftgröße
-| Abstand | Anzeige Winkel | Texthöhe | Schriftgrad |
+| Distance | Anzeige Winkel | Texthöhe | Schriftgrad |
 |---------|---------|---------|---------|
 | 45cm (direkte Manipulations Distanz) | 0,65 °-0,8 ° | 5.1-6.3 mm | 14.47-17,8 pt |
 | 2 min | 0,6 °-0,75 ° | 20,9-26.2 mm | 59,4-74,2 pt |
@@ -80,25 +80,25 @@ Für die Near-Interaktion bei 0.45 m (45cm) ist der Anzeige Winkel der minimal l
 In den meisten Fällen funktioniert Segoe UI (die Standard Schriftart für Windows). Vermeiden Sie jedoch die Verwendung von hell-oder semilight-Schriftfamilien in geringer Größe, da Dünne vertikale Striche vibrieren und die Lesbarkeit beeinträchtigen. Moderne Schriftarten mit ausreichender Strichstärke funktionieren gut. Beispielsweise sind die Werte von Helvetica und Arial großartig und in hololens mit regulären oder fetten Gewichtungen sehr lesbar.
 
 
-![Anzeige Winkel](images/Text_In_Unity_ViewingAngle.jpg)
-*Anzeigen der Entfernung, des Winkels und der Texthöhe*
+![Anzeigen des ](images/Text_In_Unity_ViewingAngle.jpg)
+ *Abstands, des Winkels und der Texthöhe* des Winkels
 
 ## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Sharp-Text-renderingqualität mit der richtigen Dimension
 
-Basierend auf diesen Skalierungsfaktoren haben wir [Text präfaben mit UI-Text und 3D-textmesh](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)erstellt. Entwickler können diese Prefabs verwenden, um einen scharfen Text und eine konsistente Schriftgröße zu erhalten.
+Basierend auf diesen Skalierungsfaktoren haben wir [Text präfaben mit UI-Text und 3D-textmesh](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)erstellt. Entwickler können diese Prefabs verwenden, um einen scharfen Text und eine konsistente Schriftgröße zu erhalten.
 
-![scharfe textrenderingqualität mit der richtigen Dimension](images/hug-text-06-1000px.png)<br>
+![Sharp-Text-renderingqualität mit der richtigen Dimension](images/hug-text-06-1000px.png)<br>
 *Sharp-Text-renderingqualität mit der richtigen Dimension*
 
 ## <a name="shader-with-occlusion-support"></a>Shader mit Okklusions Unterstützung
 
 Das Standard Schriftmaterial von Unity unterstützt keine Okklusion. Aus diesem Grund wird der Text hinter den Objekten standardmäßig angezeigt. Wir haben einen einfachen [Shader eingefügt, der die Okklusion unterstützt](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). Die folgende Abbildung zeigt den Text mit dem Standard Schriftmaterial (links) und den Text mit der richtigen oksion (right).
 
-![Shader mit oksions Unterstützung](images/hug-text-07-1000px.png)<br>
+![Shader mit Okklusions Unterstützung](images/hug-text-07-1000px.png)<br>
 *Shader mit Okklusions Unterstützung*
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Textvorfab im mrtk](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Prefabs/Text)
 * [Typografie](typography.md)
 

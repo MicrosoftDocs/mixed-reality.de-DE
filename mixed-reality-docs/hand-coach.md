@@ -6,20 +6,17 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Hand Coach, immersives Headset, mrtk, Hände, Unterstützung von Hand
-ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
-ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
+ms.openlocfilehash: 38da046256dce3242b464a0741f2afa7fb19ff3c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78202735"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345664"
 ---
 # <a name="hand-coach"></a>Hand Coach
+![Beispiel: Hand Trainer](images/HandCoach/MRTK_handCoach.jpg)<br>
 
 Hand Coach ist 3D-modellierte Hände, die ausgelöst werden, wenn das System die Hände des Benutzers nicht erkennt. Dies wird als "Lehr Komponente" implementiert, die den Benutzer unterstützt, wenn die Geste nicht gelehrt wurde. Wenn Benutzer die angegebene Geste für einen Zeitraum nicht durchgeführt haben, wird die Hand mit einer Verzögerung Schleife. Der handbus könnte verwendet werden, um das Drücken einer Schaltfläche oder das Auswählen eines holograms darzustellen.  
-
-
-![Beispiel: Hand Coach](images/HandCoach/MRTK_handCoach.jpg)<br>
-*Handbus Beispiel von mrtk*
 
 ## <a name="hand-coach-provided"></a>Hand Trainer bereitgestellt
 
@@ -27,11 +24,11 @@ Das aktuelle Interaktionsmodell stellt eine Vielzahl von Gesten Steuerelementen 
 
 :::row:::
     :::column:::
-       ![Beispiel für Near Select](images/HandCoach/NearSelect.gif)<br>
+       ![Beispiel für Near SELECT](images/HandCoach/NearSelect.gif)<br>
        **Beispiel für Near Select-used anzeigen auswählen von Schaltflächen oder Schließen von Objekten mit Interaktionen**<br>
     :::column-end:::
     :::column:::
-       ![Beispiel für Air Tap](images/HandCoach/AirTap.gif)<br>
+       ![Beispiel für Luft tippen](images/HandCoach/AirTap.gif)<br>
         **Beispiel für Air Tap: wird verwendet, um zu zeigen, wie Objekte, die weit entfernt sind, ausgewählt werden.**<br>
     :::column-end:::
     :::column:::
@@ -39,18 +36,18 @@ Das aktuelle Interaktionsmodell stellt eine Vielzahl von Gesten Steuerelementen 
        **Beispiel für das Verschieben eines Objekts im Raum: wird verwendet, um zu veranschaulichen, wie ein – Hologramm in den Raum verschoben wird.**<br>
     :::column-end:::
     :::column:::
-       ![Beispiel für das Drehen](images/HandCoach/Rotate.gif)<br>
+       ![Beispiel für Drehung](images/HandCoach/Rotate.gif)<br>
        **Beispiel für drehen: wird verwendet, um zu zeigen, wie Hologramme oder Objekte gedreht werden.**<br>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       ![Beispiel für Skalierungs](images/HandCoach/Scale.gif)<br>
+       ![Beispiel für Skalierung](images/HandCoach/Scale.gif)<br>
        **Beispiel für "Scale-used", um zu veranschaulichen, wie die Manipulation von holograms größer oder kleiner wird**<br>
     :::column-end:::
     :::column:::
-       ![Beispiel für die](images/HandCoach/PalmUp.gif)<br>
+       ![Beispiel für eine Palm-up](images/HandCoach/PalmUp.gif)<br>
         **Beispiel für eine zusammen Fläche – Empfohlene Verwendung, um die Menüs aufzurufenden**<br>
     :::column-end:::
     :::column:::
@@ -58,7 +55,7 @@ Das aktuelle Interaktionsmodell stellt eine Vielzahl von Gesten Steuerelementen 
        **Exahorn von Hand Flip – eine andere Möglichkeit zum Einrichten von Menüs**<br>
     :::column-end:::
     :::column:::
-       ![Beispiel für Scroll](images/HandCoach/Scoll.gif)<br>
+       ![Beispiel für einen Bildlauf](images/HandCoach/Scoll.gif)<br>
        **Beispiel für einen Scroll–, der zum Scrollen einer Liste oder eines langen Dokuments verwendet wird**<br>
     :::column-end:::
 :::row-end:::
@@ -73,7 +70,7 @@ Bei der Animation sollte es offensichtlich sein, und es kann zu Verwirrung führ
 
 Wenn Sie z. b. möchten, dass ein Benutzer auf eine Schaltfläche klickt, wird eine Hand Taste gedrückt.
 
-![Beispiel: Hand Coach near Tap](images/HandCoach/NearSelect_unity.gif)<br>
+![Beispiel: Hand-Bus near Tap](images/HandCoach/NearSelect_unity.gif)<br>
 *Hand Coach, der das Tippen auf einen gem tippen zeigt*  
 
 ### <a name="hand-scale"></a>Hand Skala
@@ -87,8 +84,8 @@ Sie sollten nicht erwarten, dass Benutzer eine Reihe von Anweisungen über eine 
 
 ## <a name="can-i-create-my-own"></a>Kann ich meine eigene erstellen?
 
-Ja, Wir empfehlen Ihnen, eine eigene, einzigartige Geste für Ihr Spiel zu erstellen und zur Community beizutragen.
-Wir haben eine Maya-Datei für eine manipulierte Hand bereitgestellt, die für Ihre APP verwendet werden kann. Sie können hier heruntergeladen werden: <a href="files/HandCoach_MRTK.zip">Download HandCoach_MRTK. zip</a>
+Ja! Wir empfehlen Ihnen, eine eigene, einzigartige Geste für Ihr Spiel zu erstellen und zur Community beizutragen.
+Wir haben eine Maya-Datei für eine manipulierte Hand bereitgestellt, die für Ihre APP verwendet werden kann. Sie können hier heruntergeladen werden: <a href="files/HandCoach_MRTK.zip">Download HandCoach_MRTK.zip</a>
 
 ![Beispiel für animierte Hände in Maya](images/HandCoach/MayaSelect_Gif.gif)<br>
 *Beispiel für ein animiertes Hand Zeichen in Maya*
@@ -96,11 +93,11 @@ Wir haben eine Maya-Datei für eine manipulierte Hand bereitgestellt, die für I
 
 **Empfohlenes Authoring Tool**
 
-Bei 3D-Künstlern entscheiden sich viele für die Verwendung [von Autodesk Maya, die wiederum hololens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) zum Transformieren der Art und Weise der Erstellung von Assets verwenden können. Die angegebene handdatei ist eine Maya-Binärdatei. Daher empfiehlt es sich, Maya zu verwenden, um die Hände zu animieren und zu exportieren. Wenn Sie lieber ein anderes 3D-Programm verwenden möchten, finden Sie hier eine <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip">Laden Sie HandCoachMRTK_FBX. zip herunter</a> , um Ihre eigene Controller Einrichtung zu erstellen. 
+Bei 3D-Künstlern entscheiden sich viele für die Verwendung [von Autodesk Maya, die wiederum hololens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) zum Transformieren der Art und Weise der Erstellung von Assets verwenden können. Die angegebene handdatei ist eine Maya-Binärdatei. Daher empfiehlt es sich, Maya zu verwenden, um die Hände zu animieren und zu exportieren. Wenn Sie lieber ein anderes 3D-Programm verwenden möchten, finden Sie hier eine <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip">Laden Sie HandCoachMRTK_FBX.zipherunter</a> , um ein eigenes Controller-Setup zu erstellen. 
 
 Wenn Sie die herunterladbare Maya-handdatei verwenden, wird empfohlen, die Hände in Unity auf 0,6 zu skalieren.
 
-![Beispiel: Hand Coach rig in Maya](images/HandCoach/MayaExample.png)<br>
+![Beispiel: Hand Bus rig in Maya](images/HandCoach/MayaExample.png)<br>
 *Manipulierte Hände*
 
 ### <a name="technical-specs"></a>Technische Spezifikationen
@@ -116,7 +113,7 @@ Wenn Sie die herunterladbare Maya-handdatei verwenden, wird empfohlen, die Händ
 *   Wenn Sie mit ihrer Animation zufrieden sind:
     *   Alle Gelenke auswählen und Keyframes Backen
     *   Löschen Sie die Controller, wählen Sie die Gelenke und das Mesh aus, und exportieren Sie Sie als eine andere
-    *  Wenn mehrere Animationen vorhanden sind, können Sie das integrierte Game Exporter von Maya verwenden: https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
+    *  Wenn mehrere Animationen vorhanden sind, können Sie das integrierte Game Exporter von Maya verwenden:https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
 
 ## <a name="exporting-from-maya"></a>Exportieren aus Maya
 
@@ -148,7 +145,7 @@ Nachdem Sie mit ihrer Animation zufrieden sind
 
 ## <a name="implementing-hands-into-your-unity-project"></a>Implementieren von Hand in Ihr Unity-Projekt
 
-### <a name="best-practices"></a>Empfohlene Methoden
+### <a name="best-practices"></a>Bewährte Methoden
 *    Es wird empfohlen, die Hände in Unity auf 0,6 zu skalieren.
 *   Hände sollten zweimal abgespielt werden und, wenn Sie nicht abgeschlossen ist, bis zum Abschluss der Bewegung fortlaufend. Die Hände sollten zweimal Schleifen, um sicherzustellen, dass der Benutzer Zeit hat, sich zu registrieren und die Geste anzuzeigen. Die Hände sollten Zwischenschleifen ein-und ausgeblendet werden. 
  *  Wenn Benutzer Hände durch HL2-Kameras sichtbar sind, die Benutzer jedoch nicht die erforderliche Interaktion durchlaufen, werden die Hände nach 10 Sekunden angezeigt.
@@ -158,7 +155,7 @@ Nachdem Sie mit ihrer Animation zufrieden sind
 *   Wenn Sie die Hände mindestens einmal gelehrt haben, wiederholen Sie die Geste nur, wenn Sie festgestellt hat, dass der Benutzer nicht mehr vorhanden ist.
 *   Wenn bestimmte Finger-/uhrzeitanpositionen kritisch sind, stellen Sie sicher, dass Benutzer diese Nuancen in der Animation eindeutig sehen können. Probieren Sie die Hände, damit die wichtigsten Teile klar sichtbar sind. 
 * Wenn Sie auf eine gewisse Verzerrung achten, müssen Sie die Qualitätseinstellungen der Unity erhöhen, um die Menge der Knochen zu erhöhen. 
- Wechseln Sie zu Unity-> Projekteinstellungen > Quality > Andere > Blend-Gewichtungen. Stellen Sie sicher, dass "4 Knochen" ausgewählt sind, um glatte Gelenke anzuzeigen. 
+ Wechseln Sie zu Unity-> Projekteinstellungen > Quality > andere > Blend-Gewichtungen. Stellen Sie sicher, dass "4 Knochen" ausgewählt sind, um glatte Gelenke anzuzeigen. 
 
    ![Beispiel: Menü Position](images/HandCoach/ProjectSettings.png)<br>
 
@@ -170,7 +167,7 @@ Nachdem Sie mit ihrer Animation zufrieden sind
 * Skalieren der Hände zu groß
 * die Hände werden dem Benutzer zu nah platziert.
 * Hände sollten nur einmal vermittelt werden. Über lehrungen können Verwirrung und Verwirrung verursachen.
-*   Wenn Sie ihn in Unity einbinden, laden Sie den aktuellen mrtk hier herunter: https://github.com/microsoft/MixedRealityToolkit-Unity
+*   Wenn Sie es in Unity einbinden möchten, laden Sie den aktuellen mrtk hier herunter:https://github.com/microsoft/MixedRealityToolkit-Unity
     *   Material: Teaching_Hand2
     *   Skripts: siehe mrtk Guidelines for <a href= "https://github.com/MixedRealityToolkit-Unity/blob/'HandCoachUX'/Documentation/README_HandCoach.md">mrtk Hand Coach</a>
     *   Pro-Projekt-Einstellung

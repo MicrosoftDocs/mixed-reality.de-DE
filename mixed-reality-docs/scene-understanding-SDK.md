@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Szenen Verständnis, räumliche Zuordnung, Windows Mixed Reality, Unity
-ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: eb2c6d88ce5a5ba637976a7d67abfdc2763c1674
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83228015"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345680"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Übersicht über das Szene Verständnis von SDK
 
@@ -117,7 +117,7 @@ Sceneobjects können eine der folgenden Möglichkeiten aufweisen:
 
 <table>
 <tr>
-<th>Sceneobjectkind</th> <th>BESCHREIBUNG</th>
+<th>Sceneobjectkind</th> <th>Beschreibung</th>
 </tr>
 <tr><td>Hintergrund</td><td>Das sceneobject-Objekt ist bekannt, dass es sich <b>nicht</b> um eines der anderen erkannten Arten von Szenen Objekten handelt. Diese Klasse sollte nicht mit unknown verwechselt werden, wenn der Hintergrund bekanntermaßen nicht "Wall/Floor/Ceiling" ist usw... Obwohl unbekannt noch nicht kategorisiert ist.</b></td></tr>
 <tr><td>And</td><td>Eine physische Wand. Wände werden als unveränderbare Umgebungs Strukturen angesehen.</td></tr>
@@ -199,7 +199,7 @@ byte[] newSceneData = new byte[newSceneBuffer.Size];
 newSceneBuffer.GetData(newSceneData);
 Scene mySceneDeSerialized = Scene.Deserialize(newSceneData);
 
-// Save newSceneBlob for later
+// Save newSceneData for later
 ```
 
 ### <a name="sceneobject-enumeration"></a>Sceneobject-Enumeration
