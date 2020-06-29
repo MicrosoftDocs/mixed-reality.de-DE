@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, Voice, Cortana, Speech, Input
-ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 37364e90aa1d8a7b607a99f4c9b830972f7f80b3
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345700"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441827"
 ---
 # <a name="voice-input"></a>Spracheingabe
 
@@ -96,6 +96,8 @@ Sie können auch "Hey Cortana" sagen, um Cortana jederzeit zu erhalten. Sie müs
 * "Bild nehmen"
 * "Aufzeichnung starten"
 * "Aufzeichnung anhalten"
+* "Hand Strahl anzeigen"
+* "Hand Strahl ausblenden"
 * "Erhöhen der Helligkeit"
 * "Die Helligkeit verringern"
 * "Volume vergrößern"
@@ -282,7 +284,7 @@ Für Anwendungen, die die von hololens bereitgestellten angepassten audioeingabe
 
 Die gesamte Audioverarbeitung ist Hardware beschleunigt. Dies bedeutet, dass die Features viel weniger Leistung als bei der Verarbeitung der hololens-CPU benötigen. Vermeiden Sie die Ausführung einer anderen audioeingabeverarbeitung auf der CPU, um die Akku Lebensdauer zu maximieren und die integrierte, offloaded audioeingabeverarbeitung zu nutzen.
 
-## <a name="languages"></a>Sprachen
+## <a name="languages"></a>Languages
 
 Hololens 2 [unterstützt mehrere Sprachen](https://docs.microsoft.com/hololens/hololens2-language-support). Beachten Sie, dass Sprachbefehle immer in der Anzeige Sprache des Systems ausgeführt werden, auch wenn mehrere Tastaturen installiert sind oder wenn apps versuchen, eine Spracherkennung in einer anderen Sprache zu erstellen.
 

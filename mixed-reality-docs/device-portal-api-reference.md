@@ -1,17 +1,17 @@
 ---
 title: Referenz der Geräteportal-API
 description: API-Referenz für das Windows-Geräte Portal auf hololens
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Hololens, Windows-Geräte Portal, API
-ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: b9b9ada49b4f9810dc97c9da2873d4ccb60df424
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451325"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441797"
 ---
 # <a name="device-portal-api-reference"></a>Referenz der Geräteportal-API
 
@@ -372,19 +372,19 @@ Optionale Parameter (nur hololens 2)
 * Vstab: Videostabilisierung aktivieren: true oder false (Standardwert: false)
 * vstabbuffer: Puffer Wartezeit für Videostabilisierung: zwischen 0 und 30 Frames (standardmäßig 15 Frames)
 
-**/API/Holographic/Stream/Live.MP4 (Get)**
+**/API/Holographic/Stream/live.mp4 (Get)**
 
 Ein-Datenstrom von 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_high. MP4 (Get)**
+**/API/Holographic/Stream/live_high.mp4 (Get)**
 
 Ein-Datenstrom von 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_med. MP4 (Get)**
+**/API/Holographic/Stream/live_med.mp4 (Get)**
 
 Ein 854x480p 30 fps 2.5 MBit-Stream.
 
-**/API/Holographic/Stream/live_low. MP4 (Get)**
+**/API/Holographic/Stream/live_low.mp4 (Get)**
 
 Ein 428x240 p 15fps 0.6-MBit-Stream.
 
@@ -534,11 +534,11 @@ Daten zurückgeben
 Startet eine Ablauf Verfolgungs Sitzung für WPR (Leistung).
 
 Parameter
-* Profil: Profilname. Verfügbare Profile werden in "perfprofiles/Profiles. JSON" gespeichert.
+* Profil: Profilname. Verfügbare Profile werden in perfprofiles/profiles.jsgespeichert.
 
 Daten zurückgeben
 * Beim Start wird der WPR-Sitzungs Status zurückgegeben.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Verwenden des Windows-Geräteportals](using-the-windows-device-portal.md)
 * [API-Referenz für den Geräte Portal (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

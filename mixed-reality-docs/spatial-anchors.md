@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Koordinatensystem, Raumkoordinatensystem, Weltmaßstab, Welt, Maßstab, Position, Ausrichtung, Anker, Raumanker, weltumschlossen, weltumschließend, Beständigkeit, Freigabe
-ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 8d270f96add795fdb54e0a91ebc9d38a34640da1
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438028"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441787"
 ---
 # <a name="spatial-anchors"></a>Raumanker
 
@@ -22,11 +22,11 @@ Sie können auch räumliche Anker für Anwendungs Sitzungen und Geräte übergre
 * Durch die Verwendung von <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial</a> Anchor zum Erstellen eines cloudankers kann Ihre Anwendung einen räumlichen Anker für mehrere hololens-, IOS-und Android-Geräte freigeben. Wenn jedes Gerät ein – Hologramm mithilfe desselben räumlichen Ankers erstellt, sehen Benutzer, dass das – Hologramm an derselben Stelle in der realen Welt angezeigt wird. Dies ermöglicht gemeinsame Erfahrungen in Echtzeit.
 * Sie können <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> auch für die asynchrone Hologrammpersistenz auf HoloLens-, iOS- und Android-Geräten verwenden. Durch die gemeinsame Nutzung eines dauerhaften Cloudraumankers können mehrere Geräte dasselbe persistierte Hologramm im Verlauf der Zeit beobachten, auch wenn diese Geräte nicht gleichzeitig vorhanden sind.
 
-Für den Einsatz von Desktop-Headsets, die sich in einem Fünfdimensionalen Durchmesser befinden, können Sie in der Regel den [stagingframe von Reference](coordinate-systems.md#stage-frame-of-reference) anstelle räumlicher Anker verwenden, der ein einzelnes Koordinatensystem bereitstellt, in dem Sie Alle Inhalte Wiedergabe. Wenn Ihre Anwendung es jedoch ermöglicht, dass Benutzer über 5 Meter in hololens hinaus bewegen können, was vielleicht in einem vollständigen Fußboden eines Gebäudes betrieben wird, benötigen Sie räumliche Anker, um Inhalte stabil zu halten.
+Für den Einsatz von Desktop-Headsets, die sich in einem Fünfdimensionalen Durchmesser befinden, können Sie in der Regel den [stagingframe von Reference](coordinate-systems.md#stage-frame-of-reference) anstelle räumlicher Anker verwenden, der ein einzelnes Koordinatensystem bereitstellt, in dem der gesamte Inhalt dargestellt werden kann. Wenn Ihre Anwendung es jedoch ermöglicht, dass Benutzer über 5 Meter in hololens hinaus bewegen können, was vielleicht in einem vollständigen Fußboden eines Gebäudes betrieben wird, benötigen Sie räumliche Anker, um Inhalte stabil zu halten.
 
 Obwohl Raumanker ideal für Hologramme sind, die in der Umgebung verankert bleiben sollen, kann ein Anker nach der Positionierung nicht mehr bewegt werden. Es gibt Alternativen zu ankern, die für dynamische Hologramme geeignet sind, die mit dem Benutzer versehen werden. Dynamische Hologramme sollten am besten mit einem stationären Bezugsrahmen (die Grundlage für die Weltkoordinaten von Unity) oder einem angefügten Bezugsrahmen positioniert werden.
 
-## <a name="best-practices"></a>Bewährte Verfahren
+## <a name="best-practices"></a>Bewährte Methoden
 
 Diese Richtlinien für Raumanker helfen Ihnen, stabile Hologramme zu rendern, die die reale Welt präzise nachverfolgen.
 
@@ -52,7 +52,7 @@ Der Schlüssel für die Beibehaltung der – Hologramm-Stabilität besteht darin
 
 ### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>Hochdynamische Hologramme mit dem stationären Bezugsrahmen anstatt mit einem lokalen Raumanker rendern
 
-Wenn Sie über ein sehr dynamisches Hologram verfügen, z. b. ein Zeichen, das um einen Raum geht, oder eine unverankerte Benutzeroberfläche, die entlang der Wand in der Nähe des Benutzers folgt, empfiehlt es sich, lokale räumliche Anker zu überspringen und diese Hologramme direkt in dem Koordinatensystem zu erzeugen, das [vom stationärer Frame des Verweises](coordinate-systems.md#stationary-frame-of-reference). Ich Unity, das erreichen Sie, indem Sie holograms direkt in den weltweiten Koordinaten ohne worldanchor platzieren. Bei holograms in einem stationären Verweis Rahmen kann es zu Abweichungen kommen, wenn der Benutzer weit vom Hologram abweicht. Dies ist jedoch weniger wahrscheinlich für dynamische Hologramme erkennbar: entweder wird das – Hologramm ständig ständig verschoben, oder die Bewegung hält den Benutzer ständig in der Nähe, wo Abweichungen minimiert werden.
+Wenn Sie über ein sehr dynamisches Hologram verfügen, z. b. ein Zeichen, das um einen Raum geht, oder eine unverankerte Benutzeroberfläche, die entlang der Wand in der Nähe des Benutzers folgt, empfiehlt es sich, lokale räumliche Anker zu überspringen und diese Hologramme direkt in dem Koordinatensystem zu erzeugen, das durch den [Rahmen der Referenz](coordinate-systems.md#stationary-frame-of-reference)bereitgestellt In Unity erreichen Sie dies, indem Sie holograms direkt in Weltkoordinaten ohne worldanchor platzieren. Bei holograms in einem stationären Verweis Rahmen kann es zu Abweichungen kommen, wenn der Benutzer weit vom Hologram abweicht. Dies ist jedoch weniger wahrscheinlich für dynamische Hologramme erkennbar: entweder wird das – Hologramm ständig ständig verschoben, oder die Bewegung hält den Benutzer ständig in der Nähe, wo Abweichungen minimiert werden.
 
 Ein interessanter Fall von dynamischen Hologrammen ist ein Objekt, das von einem verankerten Koordinatensystem zum anderen animiert wird. Beispielsweise können Sie über zwei Burgen verfügen, die zehn Meter voneinander entfernt sind, und jeweils auf Ihrem eigenen räumlichen Anker, wobei eine Burg einen Cannonball auf der anderen Burg auslöst. Zu dem Zeitpunkt, an dem der Cannonball ausgelöst wird, können Sie ihn an der entsprechenden Stelle im stationären Frame des Verweises mit der Kanone im verankerten Koordinatensystem der ersten Burg Rendering. Im stationären Bezugsrahmen kann sie dann ihrer Flugbahn folgen, wenn sie 10 Meter durch die Luft fliegt. Wenn der Cannonball das andere Schloss erreicht, können Sie ihn in das verankerte Koordinatensystem der zweiten Burg verschieben, um die Physik-Berechnungen mit den starren Texten dieser Burg zuzulassen.
 
@@ -71,7 +71,7 @@ Dies ist insbesondere für lokale Anker wichtig, die Sie im Raumankerspeicher au
 
 Bei Cloudraumankern kann Ihr Speicher entsprechend den Anforderungen Ihres Szenarios skaliert werden. Sie können beliebig viele cloudananker speichern und nur dann freigeben, wenn Sie wissen, dass die Benutzer nicht erneut holograms an diesem Anker finden müssen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Koordinatensysteme](coordinate-systems.md)
 * [Gemeinsame Erlebnisse in Mixed Reality](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

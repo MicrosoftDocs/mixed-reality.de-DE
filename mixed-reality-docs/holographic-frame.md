@@ -1,19 +1,19 @@
 ---
-title: Holographic-Frame
+title: Holografischer Rahmen
 description: Benutzer sehen die Welt der gemischten Realität über den Holographic-Frame.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/25/2020
 ms.topic: article
 keywords: Hololens, Windows Mixed Reality, Holographic Frame, Field of View
-ms.openlocfilehash: 2145ba3b13bbd903299ad342292dfa8f5c05c023
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0eae511d6dcbe5b379c8368d8878df6114d805aa
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434633"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441767"
 ---
-# <a name="holographic-frame"></a>Holographic-Frame
+# <a name="holographic-frame"></a>Holografischer Rahmen
 
 Benutzer sehen die Welt der Mixed Reality durch ein rechteckiges Ansichtsfenster, das von ihren Headsets betrieben wird. Bei HoloLens wird dieser rechteckige Bereich als holografischer Rahmen bezeichnet und ermöglicht den Benutzern, die digitalen Inhalte zu sehen, die der realen Welt ihrer Umgebung überlagert sind. Das Entwerfen von Benutzeroberflächen, die für den Holographic Frame optimiert sind, schafft Chancen, verringert die Herausforderungen und verbessert die Benutzerfreundlichkeit gemischter Reality-Anwendungen.
 
@@ -37,22 +37,7 @@ Bei einer Vielzahl von Objekten oder Komponenten sollte der gesamte Speicherplat
 
 Eine solche Vorgehensweise ist das Bereitstellen von persistenten Punkten (auch als "Marken" bezeichnet) in der Umgebung, die Inhalte in der realen Welt verankern. Ein Meilenstein könnte z. b. ein physisches Objekt in der realen Welt sein, z. b. eine Tabelle, in der digitaler Inhalt angezeigt wird, oder ein digitales Objekt, z. b. eine Gruppe digitaler Bildschirme, in denen häufig Inhalt angezeigt wird. Objekte können auch in der Peripherie des Holographic Frame platziert werden, um den Benutzer dazu zu ermutigen, den Schlüssel Inhalt zu überprüfen, während die Ermittlung von Inhalten, die jenseits der Peripherie liegen, von den [Aufmerksamkeit Direktoren](holographic-frame.md#attention-directors)unterstützt werden kann.
 
-Das Platzieren von Objekten in der Peripherie kann Benutzer dazu ermutigen, die Seite zu unterstützen, und dies kann von den folgenden Informationen unterstützt werden, wie unten beschrieben.
-
-<br>
-
----
-
-## <a name="user-comfort"></a>Benutzerkomfort
-
-Für gemischte Realität bei großen Objekten oder vielen Objekten ist es wichtig zu verstehen, wie viel Kopf-und Hals Bewegung erforderlich ist, um mit dem Inhalt zu interagieren. Umgebungen können in drei Kategorien unterteilt werden: **Horizontal** (nebeneinander), **vertikal** (nach oben und nach unten) oder **immersiv** (horizontal und vertikal). Beschränken Sie, wenn möglich, die Mehrzahl der Interaktionen auf horizontale oder vertikale Kategorien, idealerweise, wenn die meisten Erfahrungen in der Mitte des Holographic Frame stattfinden, während sich der Benutzer in einer neutralen Position befindet. Vermeiden Sie Interaktionen, die bewirken, dass der Benutzer seine Ansicht ständig an unnatürliche Kopf Positionen verschiebt (z. b. immer nach dem Zugriff auf eine Kontextmenü Interaktion).
-
-![optimale Region für Inhalte liegt zwischen 0 und 35 Grad unter dem Horizont](images/optimal-field-of-view-2.png)<br>
-*Der optimale Bereich für den Inhalt liegt zwischen 0 und 35 Grad unter dem Horizont.*
-
-Die horizontale Kopfbewegung ist [für häufige Interaktionen bequemer,](comfort.md) während vertikale Bewegungen für ungewöhnliche Ereignisse reserviert werden sollten. Beispielsweise sollte eine Obergrenze, die eine lange horizontale Zeitachse beinhaltet, die vertikale Kopfbewegung für Interaktionen einschränken (z. b. das Aussehen eines Menüs).
-
-Erwägen Sie, die voll Text Bewegung anstelle der Kopfbewegung zu fördern, indem Sie Objekte auf den Platz des Benutzers platzieren. Bei der Verwendung von verschiebenden Objekten oder großen Objekten sollten Sie besonders auf die Kopfbewegung achten, insbesondere dann, wenn Sie sowohl die horizontale als auch die vertikale Achse häufig verschieben müssen.
+Das Platzieren von Objekten in der Peripherie kann Benutzer dazu ermutigen, die Seite zu unterstützen, und dies kann von den folgenden Informationen unterstützt werden, wie unten beschrieben. Ausführlichere Informationen zu Holographic Frame-Überlegungen finden Sie unter [Komfort](comfort.md#holographic-frame-considerations) .
 
 <br>
 
@@ -76,7 +61,7 @@ Sie können auch Schnittstellen Elemente direkt auf den spezifischen Inhalt plat
 
 ### <a name="gaze-and-gaze-targeting"></a>Ausrichtung und Ausrichtung des Blicks
 
-Der Holographic-Frame stellt ein Tool für den Entwickler dar, das sowohl Interaktionen auslöst als auch auswerten soll, wo die Aufmerksamkeit eines Benutzers liegt. Der [Blick](gaze-and-commit.md) ist eine der [wichtigsten Interaktionen bei hololens](interaction-fundamentals.md), bei denen der Blick mit [Gesten](gaze-and-commit.md#composite-gestures) (z. b. mit dem Luftbild) oder der [Stimme](voice-input.md) gekoppelt werden kann (wodurch sich kürzere, natürlichere sprachbasierte Interaktionen ermöglichen). Dadurch wird der Holographic-Frame zu einem Raum zum beobachten digitaler Inhalte und zur Interaktion mit dem Frame. Wenn die Oberfläche für die Interaktion mit mehreren Objekten um den Platz des Benutzers aufruft (z. b. durch Mehrfachauswahl von Objekten um den Platz des Benutzers mit Blick und Gesten), sollten Sie diese Objekte in die Ansicht des Benutzers einbinden oder die erforderliche kopfmenge einschränken. Bewegung zur herauf Stufung des [Benutzer Komforts](comfort.md).
+Der Holographic-Frame stellt ein Tool für den Entwickler dar, das sowohl Interaktionen auslöst als auch auswerten soll, wo die Aufmerksamkeit eines Benutzers liegt. Der [Blick](gaze-and-commit.md) ist eine der [wichtigsten Interaktionen bei hololens](interaction-fundamentals.md), bei denen der Blick mit [Gesten](gaze-and-commit.md#composite-gestures) (z. b. mit dem Luftbild) oder der [Stimme](voice-input.md) gekoppelt werden kann (wodurch sich kürzere, natürlichere sprachbasierte Interaktionen ermöglichen). Dadurch wird der Holographic-Frame zu einem Raum zum beobachten digitaler Inhalte und zur Interaktion mit dem Frame. Wenn die Oberfläche für die Interaktion mit mehreren Objekten um den Platz des Benutzers aufruft (z. b. durch Mehrfachauswahl von Objekten, die den Platz des Benutzers mit dem Blick und der Bewegung übernehmen), empfiehlt es sich, diese Objekte in die Ansicht des Benutzers zu übertragen oder die Menge der erforderlichen Kopfbewegung einzuschränken, um die [Benutzer](comfort.md)Freundlichkeit
 
 Der Blick kann auch verwendet werden, um die Benutzer Aufmerksamkeit durch eine Benutzer Aufmerksamkeit zu verfolgen und zu sehen, auf welche Objekte oder Teile der Szene der Benutzer am meisten geachtet hat. Dies kann besonders für das Debuggen einer benutzerfreundlichen Anwendung verwendet werden, sodass analytische Tools wie Heatmaps feststellen können, wo Benutzer die meiste Zeit ausgeben oder bestimmte Objekte oder Interaktionen fehlen. Die Blick Verfolgung kann auch ein leistungsfähiges Tool für die Benutzerfreundlichkeit bereitstellen (siehe das Beispiel für die [Küche von Lowe](holographic-frame.md#lowes-kitchen) ).
 
@@ -114,7 +99,7 @@ Eine Geschäftserfahrung von Lowe lädt Kunden zu einem umfassenden Modell einer
 
 Physische Oberflächen fungieren als statische Oberflächen für den Benutzer, um sich selbst in der Benutzeroberfläche zu positionieren, da die Zuordnung eines Lowe den Benutzer durch andere Produktoptionen führt und fertig ist. Auf diese Weise kann die Zuordnung die Aufmerksamkeit des Benutzers auf den "Kühlschrank" oder "Mittelpunkt" der Küchen Weise weiterleiten, um digitale Inhalte zu präsentieren.
 
-![die Zuordnung eines Lowe verwendet ein Tablet, um Kunden durch die hololens-Benutzeroberflächen zu leiten.](images/loweskitchen-750px.jpg)<br>
+![Die Zuordnung eines Lowe verwendet ein Tablet, um Kunden durch das hololens zu leiten.](images/loweskitchen-750px.jpg)<br>
 *Die Zuordnung eines Lowe verwendet ein Tablet, um Kunden durch das hololens zu leiten.*
 
 Die Benutzeroberflächen werden teilweise von einem Tablet-Verhalten verwaltet, das von der Lowe-Zuordnung gesteuert wird. Ein Teil der Rolle "zuordnen" wäre in diesem Fall auch die Begrenzung einer übermäßigen Kopfbewegung, bei der die Aufmerksamkeit nahtlos über die interessanten Punkte in der Küche geleitet wird. Die Tablet-Darstellung bietet auch die Zuordnung von Lowe zu Blick Daten in Form einer Wärmebild Ansicht der Küche, um zu verstehen, wo sich der Benutzer befindet (z. b. in einem bestimmten Bereich von Cabinetry), um diese mit Anleitungen zur erneuten Modellierung genauer bereitzustellen.
@@ -125,11 +110,11 @@ Einen tieferen Einblick in die Küche von Lowe finden Sie in der [Microsoft-Keyn
 
 ---
 
-### <a name="fragments"></a>Fragmente
+### <a name="fragments"></a>Fragments
 
 In den hololens-Spiel Fragmenten wird Ihr Leben in eine virtuelle Kriminalitäts Szene transformiert und zeigt Hinweise und Beweise sowie einen virtuellen Besprechungsraum an, in dem Sie mit Zeichen kommunizieren, die auf Ihren Lehrstühlen sitzen und sich auf Ihre Wände stützen.
 
-![Fragmente wurden auf der Startseite eines Benutzers durchgeführt, wobei Zeichen mit realen Objekten und Oberflächen interagieren.](images/fragments-750px.jpg)<br>
+![Fragmente wurden so konzipiert, dass Sie in der Startseite eines Benutzers stattfinden, wobei Zeichen mit realen Objekten und Oberflächen interagieren.](images/fragments-750px.jpg)<br>
 *Fragmente wurden so konzipiert, dass Sie in der Startseite eines Benutzers stattfinden, wobei Zeichen mit realen Objekten und Oberflächen interagieren.*
 
 Wenn Benutzer anfänglich mit der Benutzerumgebung beginnen, erhalten Sie eine kurze Anpassungsphase, bei der nur sehr wenig Interaktion erforderlich ist, um Sie zu untersuchen. Dadurch wird auch sichergestellt, dass der Raum für den interaktiven Inhalt des Spiels ordnungsgemäß zugeordnet wird.
@@ -144,19 +129,19 @@ Während der gesamten Oberflächen werden Zeichen zu Schwerpunkt Punkten und fun
 
 Im Ziel: Mars-Oberfläche, die im [Kennedy Space Center der NASA](https://blogs.windows.com/devices/2016/09/19/hololens-experience-destination-mars-now-open-at-kennedy-space-center-visitor-complex/)vorgestellt wurde, waren Besucher in einem immersiven Weg zur Mars-Oberfläche eingeladen, der durch die virtuelle Darstellung des legendären Astronauten Buzz Aldrin geführt wurde.
 
-![ein Virtual Buzz Aldrin als Mittelpunkt für Benutzer im Ziel: Mars.](images/destinationmars-750px.png)<br>
+![Ein Virtual Buzz Aldrin wird zum Mittelpunkt für Benutzer im Ziel: Mars.](images/destinationmars-750px.png)<br>
 *Ein Virtual Buzz Aldrin wird zum Mittelpunkt für Benutzer im Ziel: Mars.*
 
 Als immersives Verfahren wurde empfohlen, die Benutzer zu untersuchen und ihren Kopf in alle Richtungen zu bewegen, um das virtuelle Martian-Querformat anzuzeigen. Um den Komfort der Benutzer zu gewährleisten, bot die Erzählung und die virtuelle Präsenz von Buzz Aldrin während der gesamten Benutzerfreundlichkeit einen Schwerpunkt. Diese virtuelle Aufzeichnung von Buzz (die von [den Mixed Reality-Erfassungs-Studios von Microsoft](https://www.microsoft.com/mixed-reality/capture-studios)erstellt wurde) lag in der Ecke des Raums in der realen, menschlichen Größe, sodass Benutzer Sie in nahezu kompletter Ansicht sehen konnten. Die Benutzer von "Buzz" haben Benutzer zur Fokussierung auf verschiedene Punkte in der Umgebung (z. b. eine Gruppe von Martian-Steinen im Boden oder einen Berg Bereich in der Entfernung) mit bestimmten Szenen Änderungen oder von ihm eingeführten Objekten geleitet.
 
-![die virtuellen narratoren wiederum die Bewegung eines Benutzers befolgen, um einen leistungsstarken Schwerpunkt im gesamten Prozess zu schaffen.](images/gazereset-750px.png)<br>
+![Die virtuellen narratoren werden dazu verwendet, um die Bewegung eines Benutzers zu verfolgen, sodass Sie während der gesamten Zeit einen leistungsfähigen Fokus schaffen können.](images/gazereset-750px.png)<br>
 *Die virtuellen narratoren werden dazu verwendet, um die Bewegung eines Benutzers zu verfolgen, sodass Sie während der gesamten Zeit einen leistungsfähigen Fokus schaffen können.*
 
 Die realistische Darstellung von Buzz bot einen leistungsstarken Mittelpunkt, der mit einer kleinen Technik fertig ist, um dem Benutzer zu zeigen, wie er es gibt. Wenn sich der Benutzer über die Benutzeroberflächen bewegt, wechselt der Sprung zu einem Schwellenwert, bevor er in einen neutralen Zustand wechselt, wenn der Benutzer zu weit über seine Peripherie hinausgeht. Wenn der Benutzer das vollständige verschieben (z. b. an anderer Stelle in der Szene) und dann wieder zu Buzz durchführt, wird die direktionale Position der Sprachausgabe wieder auf den Benutzer ausgerichtet. Techniken wie diese bieten ein leistungsfähiges Gefühl für das Eintauchen und das Erstellen eines Mittelpunkts im Holographic-Frame, wodurch eine übermäßige Kopfbewegung und eine herauf Stufung des [Benutzer Komforts](comfort.md)vermieden werden.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Instinktive Interaktionen](interaction-fundamentals.md)
 * [Komfort](comfort.md)
-* [Skalieren](scale.md)
+* [Skalierung](scale.md)
 * [Anvisieren mit dem Kopf und Verweilen](gaze-and-dwell.md)
 * [Hologrammstabilität](hologram-stability.md)
