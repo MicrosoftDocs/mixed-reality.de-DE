@@ -3,18 +3,20 @@ title: HoloLens-Foto-/Videokamera in Unreal
 description: Leitfaden für die Verwendung der HoloLens-Foto-/Videokamera in Unreal
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Entwicklung, Features, Dokumentation, Leitfäden, Hologramme, Kamera, FV-Kamera, MRC
-ms.openlocfilehash: 06ceb26d58fe60848e5e90360aa2e05984a901c5
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: e15ea593283a22dc31cd496de596159035d83799
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451335"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720326"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>HoloLens-Foto-/Videokamera in Unreal
+
+## <a name="overview"></a>Übersicht
 
 HoloLens verfügt über eine Foto-/Videokamera (FV), die einerseits für die Mixed Reality-Aufnahme (Mixed Reality Capture, MRC) und andererseits von einer App zum Zugriff auf visuelle Elemente der realen Welt verwendet werden kann.
 
