@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Port, portieren, Unity, Middleware, Engine, UWP
-ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 73126ae90ed12988177cc9192b7db41bae30fcc2
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278038"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570313"
 ---
 # <a name="porting-guides"></a>Portierungsleitfäden
 
@@ -70,6 +70,7 @@ Bei jedem Unity-Update besteht die Möglichkeit, ein oder mehrere Middlewarepake
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Unity Schritt 4: Ausrichten der Anwendung für die Ausführung auf universelle Windows-Plattform (UWP)
 
 Nachdem Sie die Tools installiert haben, müssen Sie Ihre APP als universelle Windows-app ausführen.
+
 * Befolgen Sie die [ausführlichen Schritte](https://unity3d.com/partners/microsoft/porting-guides) , die von Unity bereitgestellt werden. Beachten Sie, dass Sie die neueste LTS-Version (alle 20xx. 4 Releases) für Windows Mr beibehalten sollten.
 * Weitere UWP-Entwicklungsressourcen finden Sie im [Windows 10-Spiel Entwicklungs Handbuch](https://docs.microsoft.com/windows/uwp/gaming/e2e).
 * Beachten Sie, dass Unity weiterhin IL2CPP-Unterstützung verbessert. IL2CPP macht einige UWP-Ports erheblich einfacher. Wenn Sie zurzeit das .NET-Skript-Back-End als Ziel verwenden, sollten Sie in Erwägung gezogen werden, um stattdessen das IL2CPP-Backend
@@ -152,7 +153,7 @@ Windows Mixed Reality steht auf einer Vielzahl von Geräten zur Verfügung, die 
 
 Sowohl [Unity](https://docs.unity3d.com/Manual/Profiler.html) als auch [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) beinhalten leistungsprofilerstellungs-und sowohl [Microsoft](understanding-performance-for-mixed-reality.md) -als auch [Intel](https://software.intel.com/articles/vr-content-developer-guide) -Veröffentlichungs Richtlinien zur Leistungsprofil Erstellung und-Optimierung. Es gibt eine umfassende Erörterung der Leistung, die Untergrund Legendes zur [Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)verfügbar ist. Darüber hinaus gibt es spezifische Details für Unity unter [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 * [Leitfaden für Eingabeportierung für Unity](input-porting-guide-for-unity.md)
 * [Windows Mixed Reality-Mindestanforderungen für die PC-Hardware Kompatibilität](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)

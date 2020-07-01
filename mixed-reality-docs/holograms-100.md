@@ -6,33 +6,31 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Gemischte Realität, Windows Mixed Reality, hololens, immersive, VR, Mr, Einstieg, Hologram, Academy, Tutorial
-ms.openlocfilehash: fe0fb256e5aed7aa83f8bb9b1e8ba7bb873a0613
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 58a1785ef74872c633cf65d6a32e24d517367359
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082061"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570306"
 ---
->[!NOTE]
+# <a name="mr-basics-100-getting-started-with-unity"></a>MR-Grundlagen 100: Erste Schritte mit Unity
+
+>[!IMPORTANT]
 >Die Tutorials der Mixed Reality Academy wurden im Hinblick auf HoloLens (1. Gen.) und immersive Mixed Reality-Headsets entworfen.  Daher halten wir es für wichtig, diese Tutorials für Entwickler verfügbar zu halten, die noch nach Anleitung beim Entwickeln für diese Geräte suchen.  Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für HoloLens 2 verwendet werden.  Sie werden gewartet, um weiterhin auf den unterstützten Geräten zu funktionieren. [Es wurde eine neue Reihe von Tutorials](mrlearning-base.md) für HoloLens 2 veröffentlicht.
-
-<br>
-
-# <a name="mr-basics-100-getting-started-with-unity"></a>Grundlagen 100: Einstieg in Unity
 
 Dieses Tutorial führt Sie durch die Erstellung einer einfachen Mixed Reality-APP, die mit Unity erstellt wurde.
 
-## <a name="device-support"></a>Unterstützung von Geräten
+## <a name="device-support"></a>Geräteunterstützung
 
 <table>
 <tr>
 <th>Kurs</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td>Grundlagen 100: Einstieg in Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR-Grundlagen 100: Erste Schritte mit Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 * Ein Windows 10-PC, der mit den richtigen [installierten Tools](install-the-tools.md)konfiguriert ist.
 
@@ -40,7 +38,7 @@ Dieses Tutorial führt Sie durch die Erstellung einer einfachen Mixed Reality-AP
 
 >[!VIDEO https://www.youtube.com/embed/2L5IFO0hnYA]
 
-Zum Erstellen einer APP mit Unity müssen Sie zunächst ein Projekt erstellen. Dieses Projekt ist in einigen Ordnern organisiert, wobei es sich bei den wichtigsten Elementen um den Ordner "Assets" handelt. Dies ist der Ordner, der alle Ressourcen enthält, die Sie aus Tools für die Erstellung digitaler Inhalte importieren, z. b. Maya, max. Kino 4D oder Photoshop, sämtlichen Code, den Sie mit Visual Studio oder Ihrem bevorzugten Code-Editor erstellen, und beliebig viele Inhalts Dateien, die Unity beim Verfassen von Szenen erstellt. , Animationen und andere Unity-Ressourcentypen im Editor.
+Zum Erstellen einer APP mit Unity müssen Sie zunächst ein Projekt erstellen. Dieses Projekt ist in einigen Ordnern organisiert, wobei es sich bei den wichtigsten Elementen um den Ordner "Assets" handelt. Dabei handelt es sich um den Ordner, der alle Ressourcen enthält, die Sie aus Tools für die Erstellung digitaler Inhalte importieren, wie z. b. Maya, max. Kino 4D oder Photoshop, sämtlichen Code, den Sie mit Visual Studio oder Ihrem bevorzugten Code-Editor erstellen, und beliebig viele Inhalts Dateien, die Unity erstellt, wenn Sie Szenen, Animationen und andere Unity-Ressourcentypen
 
 Um UWP-apps zu erstellen und bereitzustellen, kann Unity das Projekt als Visual Studio-Projekt Mappe exportieren, die alle erforderlichen Medienobjekt-und Code Dateien enthält.
 
@@ -93,7 +91,7 @@ Abschließend können wir unseren Fortschritt speichern. Um die Szenen Änderung
 
 >[!VIDEO https://www.youtube.com/embed/ItRoiXccC0g]
 
-In diesem Kapitel werden einige Unity-Projekteinstellungen festgelegt, die uns dabei helfen, das Windows Holographic SDK für die Entwicklung zu entwickeln. Wir legen auch einige Qualitätseinstellungen für die Anwendung fest. Abschließend wird sichergestellt, dass unsere Buildziele auf Windows Store festgelegt sind.
+In diesem Kapitel werden einige Unity-Projekteinstellungen festgelegt, die uns dabei helfen, das Windows Holographic SDK für die Entwicklung zu entwickeln. Wir legen auch einige Qualitätseinstellungen für die Anwendung fest. Abschließend wird sichergestellt, dass unsere Buildziele auf universelle Windows-Plattform festgelegt sind.
 
 ### <a name="unity-performance-and-quality-settings"></a>Unity-Leistungs-und Qualitätseinstellungen
 
@@ -104,7 +102,7 @@ In diesem Kapitel werden einige Unity-Projekteinstellungen festgelegt, die uns d
 Da das Verwalten von hoher Framerate in hololens so wichtig ist, möchten wir, dass die Qualitätseinstellungen für die schnellste Leistung optimiert werden. Ausführlichere Informationen zur Leistung finden Sie unter [Empfehlungen zur Leistung für Unity](performance-recommendations-for-unity.md).
 
 1. Wählen Sie **> Projekteinstellungen bearbeiten > Qualität** aus.
-2. Wählen Sie im **Windows Store** -Logo die **Dropdown** Liste aus, und wählen Sie **sehr niedrig**aus. Sie werden feststellen, dass die Einstellung ordnungsgemäß angewendet wird, wenn das Feld in der Windows Store-Spalte und die **sehr niedrige** Zeile grün ist.
+2. Wählen Sie im **universelle Windows-Plattform** Logo die **Dropdown** Liste aus, und wählen Sie **sehr niedrig**aus. Sie werden feststellen, dass die Einstellung ordnungsgemäß angewendet wird, wenn das Feld in der universelle Windows-Plattform-Spalte und die **sehr niedrige** Zeile grün ist.
 
 **Für gemischte Reality-Anwendungen, die für die Anzeige von Anzeigen vorgesehen**sind, können Sie die Qualitätseinstellungen auf die Standardwerte überlassen.
 
@@ -117,21 +115,13 @@ Da das Verwalten von hoher Framerate in hololens so wichtig ist, möchten wir, d
 Wir müssen Unity mitteilen, dass die zu exportierende App eine [immersive Ansicht](app-views.md) anstelle einer 2D-Ansicht erstellen sollte. Dies geschieht durch Aktivieren der Virtual Reality-Unterstützung für Unity, die auf das Windows 10 SDK abzielen.
 
 1. Wechseln Sie zu **Edit > Project Settings > Player**.
-2. Wählen Sie im **Inspektor-Panel** für die Player Einstellungen das **Windows Store** -Symbol aus.
-3. Erweitern Sie die Gruppe " **XR-Einstellungen** ".
+2. Wählen Sie im **Inspektor-Panel** für die Player-Einstellungen das **universelle Windows-Plattform** Symbol aus.
+3. Erweitern Sie die Gruppe **XR-Einstellungen**.
 4. Aktivieren Sie im Abschnitt " **Rendering** " das Kontrollkästchen " **Virtual Reality supported** ", um eine neue **Virtual Reality-sdsliste** hinzuzufügen.
-5. Vergewissern Sie sich, dass **Windows Mixed Reality** in der Liste angezeigt wird. Wenn dies nicht der Grund ist, wählen Sie die Schaltfläche **+** unten in der Liste aus, und wählen Sie **Windows Mixed Reality**aus.
+5. Überprüfen Sie, ob in der Liste **Windows Mixed Reality** angezeigt wird. Wenn nicht, wählen Sie die Schaltfläche **+** am Ende der Liste aus, und wählen Sie **Windows Mixed Reality** aus.
 
 >[!NOTE]
->Wenn das **Windows Store** -Symbol nicht angezeigt wird, vergewissern Sie sich, dass Sie vor der Installation das Windows Store .NET-Skript-Back-End ausgewählt haben. Andernfalls müssen Sie Unity möglicherweise mit der richtigen Windows-Installation neu installieren.
-
-**.NET-Konfiguration überprüfen**
-
-![.NET-Konfiguration überprüfen](images/configoptions-375px.png)
-
-1. Wechseln Sie zu **Edit > Project Settings > Player** (möglicherweise noch im vorherigen Schritt).
-2. Wählen Sie im **Inspektor-Panel** für die Player Einstellungen das **Windows Store** -Symbol aus.
-3. Stellen Sie sicher, dass im Konfigurations Abschnitt **andere Einstellungen** das Skript für die **Skript** Erstellung auf **.net** festgelegt ist.
+>Wenn das **universelle Windows-Plattform** -Symbol nicht angezeigt wird, vergewissern Sie sich, dass Sie während der Installation universelle Windows-Plattform Buildunterstützung ausgewählt haben. Wenn nicht, müssen Sie Unity eventuell mit der richtigen Windows-Installation neu installieren.
 
 Tolle Aufgabe zum Anwenden aller Projekteinstellungen. Als Nächstes fügen wir ein Hologram hinzu.
 
@@ -153,7 +143,7 @@ Das Erstellen eines Cubes in Ihrem Unity-Projekt erfolgt genauso wie das Erstell
 
 Nachdem wir nun den Cube erstellt haben, ist es an der Zeit, eine schnell Überprüfung im Gerät durchzuführen. Sie können dies direkt im Unity-Editor tun.
 
-### <a name="initial-setup"></a>Anfängliche Einrichtung
+### <a name="initial-setup"></a>Erste Einrichtung
 
 1. Öffnen Sie auf dem Entwicklungs-PC in Unity das Fenster **Datei > Fenster Build-Einstellungen** .
 2. Ändern Sie **Platform** in **universelle Windows-Plattform** und klicken Sie auf **Plattform wechseln** .
@@ -186,20 +176,19 @@ Nun können wir das Projekt in Visual Studio kompilieren und auf dem Zielgerät 
 
 ### <a name="export-to-the-visual-studio-solution"></a>Exportieren in die Visual Studio-Projekt Mappe
 
-1.  Öffnen Sie die **Datei >** Fenster mit den Buildeinstellungen.
-2.  Klicken Sie auf **offene Szenen hinzufügen** , um die Szene hinzuzufügen.
-3.  Wechseln Sie zu **universelle Windows-Plattform** **Plattform** , und klicken Sie auf **Plattform wechseln**.
-4.  Stellen Sie in den **Windows Store** -Einstellungen sicher, dass **SDK** **Universal 10**ist.
-5.  Überlassen Sie für Zielgerät **ein beliebiges Gerät für okkludierte** anzeigen, oder wechseln Sie zu **hololens**.
-6.  Der **UWP-Buildtyp** muss **D3D**lauten.
-7.  Das **UWP SDK** ist möglicherweise auf dem **neuesten installiert**.
-8.  Überprüfen Sie die **Unity C# -Projekte** unter Debugging.
-9.  Klicken Sie auf **Erstellen**.
-10. Klicken Sie im Datei-Explorer auf **neuer Ordner** , und benennen Sie den Ordner **"App"** .
-11. Wenn der **App** -Ordner ausgewählt ist, klicken Sie auf die Schaltfläche **Ordner auswählen** .
-12. Wenn Unity erstellt wurde, wird ein Fenster des Windows-Datei-Explorers angezeigt.
-13. Öffnen Sie den **App** -Ordner im Datei-Explorer.
-14. Öffnen Sie die generierte Visual Studio-Projekt Mappe (in diesem Beispiel mixedrealityintroduction. sln).
+1. Öffnen Sie die **Datei >** Fenster mit den Buildeinstellungen.
+1. Klicken Sie auf **offene Szenen hinzufügen** , um die Szene hinzuzufügen.
+1. Wechseln Sie zu **universelle Windows-Plattform** **Plattform** , und klicken Sie auf **Plattform wechseln**.
+1. Stellen Sie sicher, dass in **universelle Windows-Plattform** Einstellungen das **SDK** **Universal 10**ist.
+1. Überlassen Sie für Zielgerät **ein beliebiges Gerät für okkludierte** anzeigen, oder wechseln Sie zu **hololens**.
+1. Der **UWP-Buildtyp** muss **D3D**lauten.
+1. Das **UWP SDK** ist möglicherweise auf dem **neuesten installiert**.
+1. Klicken Sie auf **Erstellen**.
+1. Klicken Sie im Datei-Explorer auf **neuer Ordner** , und benennen Sie den Ordner **"App"**.
+1. Wenn der **App** -Ordner ausgewählt ist, klicken Sie auf die Schaltfläche **Ordner auswählen** .
+1. Wenn Unity erstellt wurde, wird ein Fenster des Windows-Datei-Explorers angezeigt.
+1. Öffnen Sie den **App** -Ordner im Datei-Explorer.
+1. Öffnen Sie die generierte Visual Studio-Projekt Mappe (in diesem Beispiel mixedrealityintroduction. sln).
 
 ### <a name="compile-the-visual-studio-solution"></a>Kompilieren der Visual Studio-Projekt Mappe
 
@@ -234,9 +223,9 @@ Stellen Sie sicher, dass das Gerät über das USB-Kabel angeschlossen ist.
 
 Nachdem Sie Ihre APP bereitgestellt haben, versuchen Sie, alle den Cube zu verschieben, und beobachten Sie, dass Sie in der Welt vor Ihnen bleibt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Unity-Entwicklung – Übersicht](unity-development-overview.md)
 * [Bewährte Methoden für das Arbeiten mit Unity und Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
-* [Grundlagen 101](holograms-101.md)
-* [Grundlagen 101 e](holograms-101e.md)
+* [MR-Grundlagen 101](holograms-101.md)
+* [MR-Grundlagen 101E](holograms-101e.md)
