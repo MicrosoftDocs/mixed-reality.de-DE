@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: ec078015304e1cddc9b042fb5e94cf1904a302cb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 9a19ad59e520a2743aafd954910f43c6f51d6c8a
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376087"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441857"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. Untersuchen erweiterter Eingabeoptionen
 
@@ -38,10 +38,15 @@ Dies sind die wichtigsten Schritte, die Sie durchführen müssen:
 5. Implementieren des Antwortereignisses für den Sprachbefehl
 
 ### <a name="1-clone-the-default-input-system-profile"></a>1. Klonen des Standardprofils des Eingabesystems
-
 Wählen Sie im Hierarchiefenster das **MixedRealityToolkit**-Objekt aus, wählen Sie dann im Inspektorfenster die Registerkarte **Eingabe** aus, und klicken Sie das **DefaultHoloLens2InputSystemProfile**, um es durch Ihr eigenes anpassbares **Eingabesystemprofil** zu ersetzen:
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step1-1.png)
+
+> [!NOTE]
+> Wenn Sie MRTK 2.4.0 oder höher verwenden:
+> * Wählen Sie auf der Registerkarte „Hierarchie“ das **MixedRealityToolkit**-Objekt aus, klicken Sie dann im Inspektorfenster auf die Registerkarte **Eingabe**, und klappen Sie den Abschnitt **Pointers** (Zeiger) auf. 
+> * Klonen Sie das **DefaultMixedRealityInputPointerProfile**, und ersetzen Sie es durch Ihr eigenes, anpassbares **Eingabezeigerprofil**.
+> * Vergewissern Sie sich, dass **Is Eye Tracked Enabled** (Eyetracking aktiviert) im Abschnitt **Gaze Settings** (Einstellungen für Anvisieren) auf TRUE festgelegt ist. 
 
 > [!TIP]
 > Wenn Sie eine Auffrischung zum Klonen von MRTK-Profilen benötigen, lesen Sie die Anweisungen in [Konfigurieren des Mixed Reality-Toolkits](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).

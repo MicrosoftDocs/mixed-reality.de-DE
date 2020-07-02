@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: Grafik, CPU, GPU, Rendering, Garbage Collection, Hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: c6c68a6dd6e8ba59bee983e158e210aed27d2b17
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277568"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216241"
 ---
 # <a name="performance-recommendations-for-unity"></a>Leistungsempfehlungen für Unity
 
@@ -282,6 +282,8 @@ Ferner wird empfohlen, jede Art von Schattenwurf zu deaktivieren, da dieser eben
 
 **Edit** > **Project Settings** (Bearbeiten > Projekteinstellungen), wählen Sie dann die Kategorie **Quality** (Qualität) aus > wählen Sie **Low Quality** (Niedrige Qualität) für die UWP-Plattform. Sie können auch einfach die **Shadows**-Eigenschaft (Schatten) auf **Disable Shadows** (Schatten deaktivieren) festlegen.
 
+Es empfiehlt sich, für Ihre Modelle in Unity „Baked Lighting“ (vorab gerenderte Lichtdetails) zu verwenden.
+
 ### <a name="reduce-poly-count"></a>Reduzieren der Polygonanzahl
 
 Das Reduzieren der Polygonanzahl wird normalerweise durch eins dieser Verfahren erreicht
@@ -344,7 +346,7 @@ Eine der gängigsten Methoden, die zu einer übermäßigen Garbage Collection f�
 Weitere schnelle Tipps:
 - Verwenden Sie die [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2)-Klasse von C#, um dynamisch zur Laufzeit komplexe Zeichenfolgen zu generieren
 - Entfernen Sie Aufrufe von Debug.Log(), wenn sie nicht mehr erforderlich sind, da sie in allen Buildversionen einer App trotzdem noch ausgeführt werden
-- Wenn Ihre Holografie-App allgemein viel Arbeitsspeicher erfordert, erwägen Sie das Aufrufen von [ _**System.GC.Collect()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) in Ladephasen etwa beim Anzeigen eines Lade- oder Übergangsbildschirms
+- Wenn Ihre Holografie-App allgemein viel Arbeitsspeicher erfordert, erwägen Sie das Aufrufen von [_**System.GC.Collect()**_](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) in Ladephasen etwa beim Anzeigen eines Lade- oder Übergangsbildschirms
 
 #### <a name="object-pooling"></a>Objektpooling
 

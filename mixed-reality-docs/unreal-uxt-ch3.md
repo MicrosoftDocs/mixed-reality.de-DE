@@ -3,16 +3,16 @@ title: 3. Einrichten Ihres Projekts für Mixed Reality
 description: Teil 3 von 6 einer Tutorialreihe zum Erstellen einer einfachen Schach-App mit der Unreal Engine 4 und dem UX Tools-Plug-In des Mixed Reality-Toolkits
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Tutorial, erste Schritte, MRTK, UXT, UX Tools, Dokumentation
-ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
+ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879555"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Einrichten Ihres Projekts für Mixed Reality
 
@@ -37,17 +37,21 @@ AR-Sitzungen in Unreal kommen nicht aus dem Nichts zustande. Um eine Sitzung zu 
 
 ![AR-Sitzungskonfiguration](images/unreal-uxt/3-arsessionconfig.PNG)
 
-Nachdem dies erledigt ist, überzeugen Sie sich im nächsten Schritt davon, dass die AR-Sitzung beim Laden des Levels gestartet wird. Glücklicherweise verfügt Unreal über eine spezielle Art Blaupause, die als **Level Blueprint** (Levelblaupause) bezeichnet wird und als levelweites globales Ereignisdiagramm fungiert. Durch das Verbinden des ARSessionConfig-Medienobjekts mit der **Level Blueprint** wird sichergestellt, dass die AR-Sitzung ordnungsgemäß ausgelöst wird, wenn das Spiel beginnt.
+Nachdem dies erledigt ist, überzeugen Sie sich im nächsten Schritt davon, dass die AR-Sitzung beim Laden des Levels gestartet und mit dem Ende des Levels beendet wird. Glücklicherweise verfügt Unreal über eine spezielle Art Blaupause, die als **Level Blueprint** (Levelblaupause) bezeichnet wird und als levelweites globales Ereignisdiagramm fungiert. Durch das Verbinden des ARSessionConfig-Medienobjekts mit der **Level Blueprint** wird sichergestellt, dass die AR-Sitzung ordnungsgemäß ausgelöst wird, wenn das Spiel beginnt.
 
 1. Klicken Sie in der Editor-Symbolleiste auf **Blueprints > Open Level Blueprint** (Blaupausen > Levelblaupause öffnen): 
 
 ![Geöffnete Levelblaupause](images/unreal-uxt/3-level-blueprint.PNG)
 
-5. Ziehen Sie den Ausführungsknoten (nach links gerichtetes Pfeilsymbol) von **Event BeginPlay** (BeginPlay-Ereignis) herunter, und geben Sie ihn frei. Suchen Sie nach **Start AR Session** (AR-Sitzung starten), und drücken Sie die EINGABETASTE.  
+5. Ziehen Sie den Ausführungsknoten (nach links gerichtetes Pfeilsymbol) von **Event BeginPlay** (BeginPlay-Ereignis) herunter, und geben Sie ihn frei. Suchen Sie nach dem Knoten **Start AR Session** (AR-Sitzung starten), und drücken Sie die EINGABETASTE.  
     * Klicken Sie unter **Session Config** (Sitzungskonfiguration) auf die Dropdownliste **Select Asset** (Medienobjekt auswählen), und wählen Sie das Medienobjekt **ARSessionConfig** aus. 
-    * Klicken Sie auf **Compile** (Kompilieren), **speichern** Sie Ihre Arbeit, und kehren Sie dann zum Hauptfenster zurück.
 
 ![Starten der AR-Sitzung](images/unreal-uxt/3-start-ar-session.PNG)
+
+6. Klicken Sie an beliebiger Stelle im EventGraph mit der rechten Maustaste, und erstellen Sie einen neuen Knoten **Event EndPlay**. Ziehen Sie den Ausführungspin, und geben Sie ihn frei. Suchen Sie nach einem Knoten **Stop AR Session**, und drücken Sie die EINGABETASTE. Wenn die AR-Sitzung mit dem Ende des Levels nicht beendet wird, funktionieren bestimmte Features möglicherweise nicht mehr, wenn Sie die App beim Streaming zu einem Headset neu starten. 
+    * Klicken Sie auf **Compile** (Kompilieren), **speichern** Sie Ihre Arbeit, und kehren Sie dann zum Hauptfenster zurück.
+
+![Beenden der AR-Sitzung](images/unreal-uxt/3-stoparsession.PNG)
 
 ## <a name="create-a-pawn"></a>Erstellen eines Pawns
 An diesem Punkt benötigt das Projekt noch immer ein Playerobjekt. In Unreal stellt ein **Pawn** den Benutzer im Spiel dar, aber in diesem Fall handelt es sich um die HoloLens 2-Umgebung.

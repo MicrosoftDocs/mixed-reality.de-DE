@@ -7,12 +7,12 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Windows-Geräteportal, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 234f8a5f2550c4437445ec3ac2726a3588f8bdbe
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451359"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441841"
 ---
 # <a name="using-the-windows-device-portal"></a>Verwenden des Windows-Geräteportals
 
@@ -44,8 +44,12 @@ Diese Dokumentation befasst sich speziell mit dem Windows-Geräteportal für Hol
 ## <a name="connecting-over-wi-fi"></a>Herstellen einer WLAN-Verbindung
 
 1. [Verbinden Sie die HoloLens mit dem WLAN](connecting-to-wi-fi-on-hololens.md).
-2. Suchen Sie die IP-Adresse Ihres Geräts.
-   * Suchen Sie die IP-Adresse auf dem Gerät unter **Einstellungen > Netzwerk und Internet > WLAN > Erweiterte Optionen**.
+2. Suchen Sie die IP-Adresse Ihres Geräts mit einem dieser Verfahren:
+   * Wechseln Sie zu **Einstellungen > Netzwerk und Internet > WLAN > Erweiterte Optionen**.
+   * Wechseln Sie zu **Einstellungen > Netzwerk und Internet**, und wählen Sie **Hardware-Eigenschaften** aus.
+
+![Einstellungen für HoloLens 2](images/windows-device-portal-img-16.png)
+
 3. Navigieren Sie in einem Webbrowser auf Ihrem PC zu https://<IHRE_HOLOLENS_IP_ADRESSE>
    * Im Browser wird die folgende Meldung angezeigt: „Es besteht ein Problem mit dem Sicherheitszertifikat dieser Website“. Der Grund dafür ist, dass das für das Geräteportal ausgestellte Zertifikat ein Testzertifikat ist. Sie können diesen Zertifikatfehler vorerst ignorieren und fortfahren.
 
@@ -175,6 +179,7 @@ Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der
 * **Videos und Fotos**: Zeigt eine Liste der auf dem Gerät aufgenommenen Videos und Fotos an.
 
 Alle Einstellungen auf dieser Seite gelten für Aufnahmen, die mit dem Windows-Geräte Portals erstellt wurden, einige gelten jedoch zusätzlich für System-MRC (Startmenü, Hardwaretasten, globale Sprachbefehle, Miracast) und für benutzerdefinierte MRC-Recorder.
+
 |  Einstellung  |  Gilt für System-MRC  |  Gilt für benutzerdefinierte MRC-Recorder |
 |----------|----------|----------|
 |  Holograms  |  Nein  |  Nein |

@@ -3,16 +3,16 @@ title: 2. Initialisieren des Projekts und der ersten Anwendung
 description: Teil 2 von 6 einer Tutorialreihe zum Erstellen einer einfachen Schach-App mit der Unreal Engine 4 und dem UX-Tools-Plug-In des Mixed Reality-Toolkits
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Tutorial, erste Schritte, MRTK, UXT, UX Tools, Dokumentation
-ms.openlocfilehash: e8f03a87ec6b92e4c62cf3f88f519146254e7387
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330345"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345730"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisieren des Projekts und der ersten Anwendung
 
@@ -23,12 +23,12 @@ In diesem ersten Tutorial beginnen Sie mit einer neuen Unreal-Anwendung für Hol
 Bevor Sie fortfahren, stellen Sie sicher, dass alle auf der Seite [Erste Schritte](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1) genannten Voraussetzungen erfüllt sind.
 
 ## <a name="objectives"></a>Ziele
-* Konfigurieren eines Unreal-Projekt für die HoloLens-Entwicklung
+* Konfigurieren eines Unreal-Projekts für die HoloLens-Entwicklung
 * Importieren von Medienobjekten und Einrichten einer Szene
 * Erstellen von Akteuren und Ereignissen auf Skriptebene mithilfe von Blaupausen
 
 ## <a name="creating-a-new-unreal-project"></a>Erstellen eines neuen Unreal-Projekts
-Als erstes benötigen Sie ein Projekt, mit dem Sie arbeiten können.
+Als erstes benötigen Sie ein Projekt, mit dem Sie arbeiten können. Wenn Sie zum ersten Mal eine Unreal-App für HoloLens erstellen, müssen Sie aus dem Epic-Startprogramm [unterstützende Dateien herunterladen](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app).
 
 1. Starten der Unreal Engine
 
@@ -42,6 +42,9 @@ Als erstes benötigen Sie ein Projekt, mit dem Sie arbeiten können.
 
 4. Legen Sie **C++** , **Scalable 3D or 2D, Mobile/Tablet** (Skalierbares 3D oder 2D, Mobilgerät/Tablet) und **No Starter Content** (Keine Startinhalte) als Ihre **Projekteinstellungen** fest. 
     * Wählen Sie einen Speicherort aus, und klicken Sie auf **Projekt erstellen**. 
+
+> [!NOTE]
+> Anstelle eines Blaupausenprojekts müssen Sie ein C++-Projekt auswählen, um das UX Tools-Plug-In zu erstellen, das Sie später in Abschnitt 4 einrichten.
 
 ![Anfängliche Projekteinstellungen](images/unreal-uxt/2-project-settings.PNG)
 

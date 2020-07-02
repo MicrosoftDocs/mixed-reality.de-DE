@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Entdecken, Verteilen, Index, Einstiegsseite, Entwurf, Entwicklung, Tutorials, Beispiel-Apps, Grundlagen, Fallstudien, Ressourcen, HoloLens-Vorgehensweise, Open-Source-Projekte, Kernkonzepte, Interaktion
-ms.openlocfilehash: 9ef408e1551e9f6c52a6c5fcf7df3123cc099c8c
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: d011a00b55a6b78332233b21535a129774f99c9f
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75334089"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345650"
 ---
 # <a name="start-designing-and-prototyping"></a>Mit Entwerfen und Prototyping beginnen
 
@@ -60,7 +60,7 @@ Räumliche Zuordnung macht es möglich, Objekte auf realen Oberflächen zu platz
 
 <br>
 
-![Faktoren der Interaktionsgestaltung](images/MRTK_BoundingBox_Main.png)
+![Faktoren der Interaktionsgestaltung](images/UX/UX_Hero_Manipulation.jpg)
 
 ## <a name="interaction-design-factors-to-consider"></a>Faktoren, die beim Gestalten der Interaktion berücksichtigt werden müssen
 
@@ -85,6 +85,17 @@ Mit HoloLens 2 erschließt sich in Bezug auf Kontext und menschliches Verständn
 
 <br>
 
+
+---
+
+<br>
+
+
+![UX-Elemente](images/UX/UX_Hero_BoundingBox.jpg)
+
+## <a name="user-experience-elements-for-mixed-reality"></a>Benutzeroberflächenelemente für Mixed Reality
+
+
 ### <a name="color-light-and-materials"></a>[Farbe, Licht und Materialien](color,-light-and-materials.md)
 Das Entwerfen von Inhalten für Mixed Reality erfordert eine sorgfältige Auswahl von Farbe, Beleuchtung und Material für jedes visuelle Objekt, das in Ihrer Darstellung verwendet wird.
 
@@ -100,8 +111,11 @@ Genau wie bei Typografie auf 2D-Bildschirmen ist das Ziel, klar und lesbar zu se
 
 <br>
 
-### <a name="ux-elements-for-the-mixed-reality"></a>[UX-Elemente für Mixed Reality](app-patterns-landingpage.md)
-Erfahren Sie mehr über die Bausteine für Interaktionen im Raum und die Benutzeroberfläche in Mixed Reality.
+### <a name="common-controls-and-behaviors"></a>[Allgemeine Steuerelemente und Verhaltensweisen](app-patterns-landingpage.md)
+Erfahren Sie mehr über häufig verwendete allgemeine räumliche Interaktionen und UI-Bausteine für Mixed Reality-Oberflächen.
+
+
+
 <br>
 
 

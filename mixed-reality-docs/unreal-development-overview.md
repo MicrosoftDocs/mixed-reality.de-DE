@@ -3,16 +3,16 @@ title: Unreal-Entwicklung – Übersicht
 description: Übersicht über die Mixed Reality-Entwicklung mit der Unreal Engine 4
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Streaming, Remoting, Mixed Reality, Entwicklung, erste Schritte, Features, neues Projekt, Emulator, Dokumentation, Leitfäden, Features, Hologramme, Spieleentwicklung
-ms.openlocfilehash: 3e3862bd701d6e873f623abc9f9cda0b3085e753
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 0e3f40c7aa05a9c5f93d7eb9dc9793b6daeb8b90
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330157"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720366"
 ---
 # <a name="unreal-development-overview"></a>Unreal-Entwicklung – Übersicht
 
@@ -38,6 +38,9 @@ Das [Mixed Reality Toolkit für Unreal](https://github.com/microsoft/MixedRealit
 * Folgeverhaltenskomponente
 
 Ausführliche Informationen zu Funktionen und zum Einrichten Ihres Projekts finden Sie im GitHub-Repository [UX Tools für Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal).
+
+## <a name="additional-files"></a>Zusätzliche Dateien
+Wenn Sie zum ersten Mal eine Unreal-App für HoloLens erstellen oder bereitstellen, müssen Sie aus dem Epic-Startprogramm [unterstützende Dateien herunterladen](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app).
 
 ## <a name="tutorial"></a>Tutorial
 

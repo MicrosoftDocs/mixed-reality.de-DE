@@ -3,18 +3,20 @@ title: Komfort
 description: Beim natürlichen Sehen verlässt sich das visuelle System des Menschen auf mehrere Informationsquellen oder „Hinweise“, um dreidimensionale Formen und die relative Position von Objekten zu interpretieren.
 author: erickjpaul
 ms.author: erpau
-ms.date: 04/5/2019
+ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Entwurf, Komfort, HoloLens 2, HoloLens (1. Gen.)
-ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 12dc632e4cba925abb1c4ac9e17364f94a6804c9
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376067"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441817"
 ---
 # <a name="comfort"></a>Komfort
+
+## <a name="overview"></a>Übersicht
 
 Beim natürlichen Sehen verlässt sich das visuelle System des Menschen auf mehrere Informationsquellen oder „Hinweise“, um dreidimensionale Formen und die relativen Positionen von Objekten zu interpretieren. Für einige Hinweise ist nur ein einzelnes Auge erforderlich (monokulare Hinweise), dazu zählen die [Linearperspektive](https://en.wikipedia.org/wiki/Perspective_(graphical)), die [vertraute Größe](https://en.wikipedia.org/wiki/Size#Perception_of_size), Okklusion, [Unschärfe der Schärfentiefe](https://en.wikipedia.org/wiki/Depth_of_field) und [Akkomodation](https://en.wikipedia.org/wiki/Accommodation_(eye)). Andere Hinweise erschließen sich nur mit beiden Augen (binokulare Hinweise). Zu ihnen zählen die [Konvergenz](https://en.wikipedia.org/wiki/Vergence) (die relative Drehung der Augen, die zum Betrachten eines Objekts erforderlich ist) und die [binokulare Disparität](https://en.wikipedia.org/wiki/Stereopsis) (das Muster der Unterschiede zwischen den Projektionen der Szene auf der Netzhaut der beiden Augen). Um bei am Kopf fixierten Anzeigeeinheiten maximalen Komfort sicherzustellen, müssen Designer und Entwickler Inhalte in einer Weise präsentieren, die das Verhalten dieser Hinweise in der natürlichen Umgebung nachahmt. Unter physischen Gesichtspunkten ist es auch wichtig, Inhalte zu entwerfen, die keine ermüdenden Bewegungen Nacken- oder Armbewegungen erfordern. In diesem Artikel befassen wir uns mit den wichtigsten Überlegungen, die beachtet werden müssen, um diese Ziele zu erreichen.
 
@@ -125,37 +127,28 @@ In First-Person-Shooter-Videospielen stellen Head-Up-Displays (HUDs) permanent I
 
 ## <a name="text-legibility"></a>Lesbarkeit von Text
 
-Optimale Lesbarkeit von Text kann helfen, die Anstrengung der Augen zu vermindern und den Komfort des Benutzers aufrecht zu erhalten, insbesondere bei Einsatzgebieten oder Szenarien, in denen Benutzer lesen müssen, während sie ein HMD benutzen. Die Lesbarkeit von Text hängt von einer Vielzahl von Faktoren ab, einschließlich verschiedener Eigenschaften des Displays (beispielsweise Pixeldichte, Helligkeit, Kontrast), Eigenschaften der Linsen (beispielsweise chromatische Aberration) und Eigenschaften des Texts/der Schriftart (beispielsweise die spezifischen Merkmale einer Schriftart, wie Gewicht, Abstände, Serifen usw, Schriftfarbe, Hintergrundfarbe).  
+Optimale Lesbarkeit von Text kann helfen, die Anstrengung der Augen zu vermindern und den Komfort des Benutzers aufrecht zu erhalten, insbesondere bei Einsatzgebieten oder Szenarien, in denen Benutzer lesen müssen, während sie ein HMD benutzen. Die Lesbarkeit von Text hängt von einer Reihe von Faktoren ab, darunter:
+* Eigenschaften der Anzeige, wie etwa Pixeldichte, Helligkeit und Kontrast. 
+* Objektiveigenschaften wie chromatischer Aberration
+* Eigenschaften des Texts/der Schriftart, wie etwa Gewicht, Abständen, Serifen und der Farbe von Vorder- und Hintergrund.  
 
-Im Allgemeinen empfehlen wir, bestimmte Anwendungen auf Lesbarkeit hin zu testen und den Schriftgrad so groß wie möglich festzulegen, um eine komfortable Benutzererfahrung zu erzielen. Im folgenden stellen wir einen allgemeinen Leitfaden als Ausgangspunkt für die Entwicklung zur Verfügung. Beachten Sie, dass alle Schriftgrade als Grad des [Betrachtungswinkels](https://en.wikipedia.org/wiki/Visual_angle) statt in spezifischen physischen Größen angegeben sind, was eine Anleitung für jeden Abstand innerhalb des Bereichs der optimalen Platzierung von Hologrammen bietet, da es sowohl die Größe des Texts als auch die Entfernung berücksichtigt, in der er dem Betrachter erscheint. 
+Im Allgemeinen empfehlen wir, bestimmte Anwendungen auf Lesbarkeit hin zu testen und den Schriftgrad so groß wie möglich festzulegen, um eine komfortable Benutzererfahrung zu erzielen. Ausführlichere Anweisungen für holografische und immersive Geräte finden Sie auf unseren Seiten zu [Typografie](typography.md) und [Text in Unity](text-in-unity.md).
 
-Ausführlichere Anleitung finden Sie auf den Seiten [Typographie](typography.md) und [Text in Unity](text-in-unity.md).
+## <a name="holographic-frame-considerations"></a>Überlegungen zum Ausschnitt bei holografischer Darstellung
 
-### <a name="guidance-for-holographic-devices"></a>Leitfaden zu holografischen Geräten
+Bei Mixed Reality-Benutzeroberflächen mit großen oder vielen Objekten muss unbedingt berücksichtigt werden, wieviel Kopf- und Nackenbewegung für die Interaktion mit Inhalten erforderlich ist. Die Benutzeroberflächen können hinsichtlich der Kopfbewegung in drei Kategorien aufgeteilt werden: 
+* **Horizontal** (von Seite zu Seite)
+* **Vertikal** (auf- und abwärts)
+* **Immersiv** (sowohl horizontal als auch vertikal)
+ 
+Beschränken Sie nach Möglichkeit die Mehrzahl der Interaktionen entweder auf die horizontale oder die vertikale Kategorie. Dabei sollten im Idealfall die meisten Erfahrungen in der Mitte des holografischen Rahmens ablaufen, während sich der Kopf des Benutzers in einer neutralen Position befindet. Vermeiden Sie Interaktionen, die vom Benutzer ein ständiges Verschieben seiner Ansicht an eine unnatürliche Kopfposition erfordern (beispielsweise häufige Blicke nach oben, um auf die Interaktion mit einem wichtigen Menü zuzugreifen).
 
-Für holografische Geräte bietet das Rendern von schwarzem/dunklem Text vor einem weißen bzw. hellen Hintergrund das konsistenteste Kontrastverhältnis, da der Hintergrund Störungen aus der realen Umgebung hinter dem Rendering verdeckt. Das Rendern von weißem/hellem Text vor einem schwarzen/dunklen Hintergrund lässt mehr von der Realumgebung durchscheinen, was die Lesbarkeit des Texts beeinträchtigen kann. 
+![Der optimale Bereich für Inhalte liegt zwischen 0 und 35 Grad unterhalb des Horizonts](images/optimal-field-of-view-2.png)<br>
+*Der optimale Bereich für Inhalte liegt zwischen 0 und 35 Grad unterhalb des Horizonts*
 
-#### <a name="hololens-1st-gen"></a>HoloLens (1. Generation)
+Horizontale Kopfbewegungen eignen sich besser für häufige Interaktionen, während vertikale Kopfbewegungen den ungewöhnlichen Ereignissen vorbehalten sein sollten. Beispielsweise sollten bei einer Benutzeroberfläche, die eine lange horizontale Zeitachse umfasst, vertikale Kopfbewegungen (etwa das Blicken nach unten auf ein Menü) für Interaktionen eingeschränkt werden.
 
-Der kleinste lesbare Schriftgrad (gemessen von der Grundlinie der Schrift bis zur Oberlänge) beträgt ungefähr 0,35°, und ein komfortabler Schriftgrad beträgt mindestens 0,5° für Leseinhalte, die dem Benutzer in einem Abstand von 2 m präsentiert werden. 
-
-#### <a name="hololens-2"></a>HoloLens 2
-
-Der kleinste lesbare Schriftgrad (gemessen von der Grundlinie der Schrift bis zur Oberlänge) sollte mindestens Folgendes betragen: 
-   - 0,4°–0,5° bei 45 cm (Abstand für direkte Manipulation) 
-   - 0,35°–0,4° bei 2,0 m
-   
-Der komfortable lesbare Schriftgrad (gemessen von der Grundlinie der Schrift bis zur Oberlänge) sollte mindestens Folgendes betragen: 
-   - 0,65°–0,8° bei 45 cm (Abstand für direkte Manipulation)
-   - 0,6°–0,75° bei 2,0 m
-
-Beachten Sie, dass Schriftgrade für Text im direkten Manipulationsabstand aufgrund des oben beschriebenen Konvergenz-Akkomodations-Konflikts etwas größer sein müssen (die Augen der Benutzer akkomodieren auf eine Entfernung von 2,0 m im HoloLens-Display, in einer Entfernung von beispielsweise 45 cm gerenderte Inhalte erscheinen den Benutzern daher möglicherweise unschärfer). 
-
-### <a name="guidance-for-immersive-devices"></a>Leitfaden für immersive Geräte
-
-Immersive Geräte weisen im Allgemeinen aufgrund der vollständigen Verdeckung der Außenumgebung ein höheres Kontrastverhältnis auf, können aber aufgrund der Vergrößerung der vor dem Display angebrachten Linsen geringere effektive Pixeldichten aufweisen. 
-
-Für immersive Displays für Windows Mixed Reality beträgt der kleinste lesbare vertikale Schriftgrad (gemessen von der Grundlinie der Schrift bis zur Oberlänge) ungefähr 0,7–0,9°, und ein komfortabler vertikaler Schriftgrad liegt bei angenähert 1,0° für Leseinhalte, die dem Benutzer in einer Entfernung von 2 m präsentiert werden.
+Erwägen Sie es, Ganzkörperbewegungen anstelle von Kopfbewegungen zu fördern, indem Sie Objekte im umgebenden Raum des Benutzers platzieren. Bei Benutzeroberflächen mit bewegten oder großen Objekten sollte den Kopfbewegungen besondere Aufmerksamkeit geschenkt werden, insbesondere, wenn sie häufig Bewegungen sowohl entlang der horizontalen als auch der vertikalen Achse erfordern.
 
 ## <a name="gaze-direction"></a>Blickrichtung
 
@@ -166,14 +159,11 @@ Um Belastungen von Augen und Nacken zu vermeiden, sollten Inhalte so entworfen w
 
 Als optimaler Blickwinkel (in Ruhe) wird der Bereich von 10–20 Grad unterhalb der Waagerechten angesehen, da der Kopf tendenziell leicht nach vorn gebeugt wird, insbesondere bei Aktivitäten.
 
-![Zulässiges Sichtfeld, wie durch den Bewegungsbereich des Halses bestimmt wird](images/optimal-field-of-view-2.png)<br>
-*Zulässiges Sichtfeld, wie durch den Bewegungsbereich des Halses bestimmt wird*
-
 ## <a name="arm-positions"></a>Armpositionen
 
 Die Muskeln können ermüden, wenn von Benutzern erwartet wird, eine Hand während der gesamten Dauer einer Erfahrung angehoben zu halten. Ebenfalls ermüdend kann es sein, vom Benutzer wiederholt Tippbewegungen in die Luft über längere Zeit zu verlangen. Es empfiehlt sich daher, konstante, wiederholte Eingabegesten in Benutzererfahrungen zu vermeiden. Diese Ziele können erreicht werden, indem kurze Pausen integriert werden oder eine Mischung aus Gesten- und Spracheingaben für die Interaktion mit der App angeboten wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Anvisieren](gaze-and-commit.md)
 * [Hologrammstabilität](hologram-stability.md)
 * [Instinktive Interaktionen](interaction-fundamentals.md)

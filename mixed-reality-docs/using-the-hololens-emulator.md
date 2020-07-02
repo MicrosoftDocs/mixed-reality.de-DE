@@ -3,16 +3,16 @@ title: Verwendung des HoloLens-Emulators
 description: Verwenden des HoloLens-Emulators zum Testen von Mixed Reality-Apps auf Ihrem PC ohne eine physische HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, Emulator
-ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: dba0b1a1260c62ac7f26bc80678439d12183d77f
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227985"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631506"
 ---
 # <a name="using-the-hololens-emulator"></a>Verwendung des HoloLens-Emulators
 
@@ -28,7 +28,7 @@ Wenn Sie Anwendungen für immersive Windows Mixed Reality-Headsets (VR) oder Spi
 Lade den HoloLens-Emulator herunter.
 
 Versionen: 
-* [HoloLens 2-Emulator (Windows Holographic, Version 2004)](https://go.microsoft.com/fwlink/?linkid=2129088).
+* [HoloLens 2-Emulator (Windows Holographic, Version 2004 mit Update aus Juni 2020)](https://go.microsoft.com/fwlink/?linkid=2132415).
 * [HoloLens-Emulator (1. Generation) und holografische Projektvorlagen](https://go.microsoft.com/fwlink/?linkid=2065980)
 
 Versionsanmerkungen und ältere Builds des HoloLens-Emulators finden Sie auf der Seite [HoloLens-Emulator – Archiv](hololens-emulator-archive.md).
@@ -251,7 +251,7 @@ Im Emulator sehen Sie nur die von Ihnen gerenderten Hologramme. Den simulierten 
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
-* Wenn Sie den Hololens 2-Emulator deinstallieren, bleibt das Datenträgerimage (Flash.vhdx) möglicherweise auf der Festplatte im Ordner „Windows Kits\10\emulation\HoloLens\<Buildnummer>“ zurück.  Diese Datei kann gefahrlos gelöscht werden.
+* Wenn Sie den HoloLens 2-Emulator deinstallieren, bleibt das Datenträgerimage (Flash.vhdx) möglicherweise auf der Festplatte im Ordner „Windows Kits\10\emulation\HoloLens\<build number>“ zurück.  Diese Datei kann gefahrlos gelöscht werden.
 * Die Hardware-Grafikbeschleunigung kann auf einigen Systemen mit AMD- oder Intel-Grafik zu Abstürzen von Holographic-Apps führen.  Durch das Deaktivieren der Hardware-Grafikbeschleunigung im Fenster „Extras“ des Emulators wird dieses Problem umgangen.
 
 ## <a name="troubleshooting"></a>Problembehandlung
