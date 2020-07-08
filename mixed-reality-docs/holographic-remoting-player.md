@@ -1,19 +1,19 @@
 ---
-title: Holographic Remoting Player
+title: Holographic Remoting-Player
 description: Der Holographic Remoting Player ist eine begleitende APP, die eine Verbindung mit PC-Apps und spielen herstellt, die Holographic Remoting unterstützen. Holographic Remoting streamt Holographic Content per Wi-Fi-Verbindung von einem PC zu Ihren Microsoft hololens in Echtzeit.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8b1d58b2c2ce8f379a87059bb5add0f85f507259
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278208"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061133"
 ---
-# <a name="holographic-remoting-player"></a>Holographic Remoting Player
+# <a name="holographic-remoting-player"></a>Holographic Remoting-Player
 
 >[!IMPORTANT]
 >Holographic Remoting für hololens 2 ist eine wesentliche Versionsänderung. [Remote Anwendungen für **hololens (1st Gen)** ](add-holographic-remoting.md) müssen das nuget-Paketversion **1. x. x** und [Remote Anwendungen für **hololens 2** ](holographic-remoting-create-host.md) verwenden. **2. x. x**muss verwendet werden. Dies bedeutet, dass für hololens 2 geschriebene Remote Anwendungen nicht mit hololens (1st Gen) und umgekehrt kompatibel sind.
@@ -24,11 +24,14 @@ Der Holographic Remoting Player kann nur mit PC-Apps verwendet werden, die spezi
 
 Der Holographic Remoting Player ist sowohl für hololens (1 St Gen) als auch für hololens 2 verfügbar.  PC-Apps, die Holographic-Remoting mit hololens unterstützen, müssen aktualisiert werden, um Holographic Remoting mit hololens 2 zu unterstützen. Wenden Sie sich an Ihren app-Anbieter, wenn Sie Fragen dazu haben, welche Versionen unterstützt werden.
 
+>[!TIP]
+>Ab Version [2.2.0](holographic-remoting-version-history.md#v2.2.0) ist der Holographic Remoting Player auch für Windows-PCs verfügbar, auf denen [Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)ausgeführt wird.
+
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Herstellen einer Verbindung mit dem Holographic Remoting Player
 
 Befolgen Sie die Anweisungen Ihrer APP, um eine Verbindung mit dem Holographic Remoting Player herzustellen. Sie müssen die IP-Adresse Ihres hololens-Geräts eingeben, das Sie auf dem Hauptbildschirm des Remoting-Players sehen können, wie folgt:
 
-![Holographic Remoting Player](images/holographicremotingplayer.png)
+![Holographic Remoting-Player](images/holographicremotingplayer.png)
 
 Wenn der Hauptbildschirm angezeigt wird, wissen Sie, dass Sie keine app verbunden haben.
 
@@ -55,9 +58,9 @@ Auf **hololens 2** zeigt Ihnen die APP Folgendes:
 * **Rendering** : die Anzahl der Frames, die der Remoting-Player während der letzten Sekunde gerendert hat. Beachten Sie, dass dies unabhängig von der Anzahl der Frames ist, die über das Netzwerk eingetroffen sind (siehe **Video Frames**). Außerdem wird die durchschnittliche/maximale renderdelta Zeit in Millisekunden zwischen gerenderten Frames angezeigt.
 
 * **Video Frames** : die erste angezeigte Anzahl von Video Frames wird übersprungen, die zweite ist wiederverwendeter Videorahmen und die dritte Videorahmen werden empfangen. Alle Zahlen stellen die Anzahl in der letzten Sekunde dar.
-    * ```Received frames``` die Anzahl der Video Frames ist, die in der letzten Sekunde eingetroffen sind. Unter normalen Bedingungen sollte dies 60 sein, aber wenn dies nicht der Fall ist, ist dies ein Indikator dafür, dass entweder Frames aufgrund von Netzwerkproblemen gelöscht werden oder dass die Remote-/Remote Seite keine Frames mit der erwarteten Rate erzeugt.
-    * ```Reused frames``` ist die Anzahl von Video Frames, die mehr als einmal in der letzten Sekunde verwendet wurden. Wenn z. bWeise Videoframes später eintreffen, rendert die Renderingschleife des Players immer noch einen Frame, muss jedoch den Video Frame *wieder verwenden* , der bereits für den vorherigen Frame verwendet wurde.
-    * ```Skipped frames``` ist die Anzahl von Video Frames, die von der Renderingschleife des Players nicht verwendet wurden. Beispielsweise kann der Netzwerk Jitter bewirken, dass die eintreffenden Video Frames nicht gleichmäßig verteilt werden. Wenn z. b. einige spät sind und andere zeitgleich mit dem Ergebnis eintreffen, dass Sie bei der Ausführung auf 60 Hz nicht über eine Delta von 16,66 Millisekunden verfügen. Es kann vorkommen, dass mehr als ein Frame zwischen zwei Ticks der Renderschleife des Players ankommt. In diesem Fall über *springt* der Spieler einen oder mehrere Frames, da der zuletzt empfangene Video Frame immer angezeigt werden soll.
+    * ```Received frames```die Anzahl der Video Frames, die in der letzten Sekunde eingetroffen sind. Unter normalen Bedingungen sollte dies 60 sein, aber wenn dies nicht der Fall ist, ist dies ein Indikator dafür, dass entweder Frames aufgrund von Netzwerkproblemen gelöscht werden oder dass die Remote-/Remote Seite keine Frames mit der erwarteten Rate erzeugt.
+    * ```Reused frames```Gibt die Anzahl der Videorahmen an, die mehr als einmal in der letzten Sekunde verwendet wurden. Wenn z. bWeise Videoframes später eintreffen, rendert die Renderingschleife des Players immer noch einen Frame, muss jedoch den Video Frame *wieder verwenden* , der bereits für den vorherigen Frame verwendet wurde.
+    * ```Skipped frames```die Anzahl von Video Frames, die von der Renderingschleife des Players nicht verwendet wurden. Beispielsweise kann der Netzwerk Jitter bewirken, dass die eintreffenden Video Frames nicht gleichmäßig verteilt werden. Wenn z. b. einige spät sind und andere zeitgleich mit dem Ergebnis eintreffen, dass Sie bei der Ausführung auf 60 Hz nicht über eine Delta von 16,66 Millisekunden verfügen. Es kann vorkommen, dass mehr als ein Frame zwischen zwei Ticks der Renderschleife des Players ankommt. In diesem Fall über *springt* der Spieler einen oder mehrere Frames, da der zuletzt empfangene Video Frame immer angezeigt werden soll.
 
     >[!NOTE]
     >Bei der Bewältigung der Netzwerk Jitter sind übersprungene und wiederverwendete Frames in der Regel ungefähr identisch. Wenn Sie dagegen nur Übersprungene Frames sehen, ist dies ein Indikator dafür, dass der Spieler seine zielframeate nicht erreichen kann. In diesem Fall sollten Sie die maximale Zeit für die Delta Zeit bei der Diagnose von Problemen berücksichtigen.
@@ -79,4 +82,4 @@ Auf dem Hauptbildschirm können Sie beispielsweise **"Diagnose deaktivieren"** ,
 * [Hololens (1. Generation): Hinzufügen von Holographic Remoting](add-holographic-remoting.md)
 * [Hololens 2: Schreiben einer Holographic Remoting-Remote-app](holographic-remoting-create-host.md)
 * [Holographic Remoting-Software – Lizenzbedingungen](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-* [Datenschutzbestimmungen von Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)
+* [Datenschutzerklärung von Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

@@ -6,21 +6,32 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: 319e76efbbe1085fc9d60251a6f0f38133de6505
-ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
+ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327900"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061123"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic Remoting-Versionsverlauf
 
 > [!IMPORTANT]
 > Diese Anleitung gilt speziell für Holographic-Remoting auf hololens 2.
 
+## <a name="version-221-july-6-2020"></a>Version 2.2.1 (6. Juli 2020)<a name="v2.2.1"></a>
+> [!IMPORTANT]
+> Die Validierung des [Zertifizierungs Kits für Windows-apps](https://developer.microsoft.com/windows/downloads/app-certification-kit/) mit Version [2.2.0](holographic-remoting-version-history.md#v2.2.0) schlägt fehl. Wenn Sie die Version [2.2.0](holographic-remoting-version-history.md#v2.2.0) haben und Ihre Anwendung an den Microsoft Store übermitteln möchten, aktualisieren Sie mindestens Version 2.2.1.
+* Kompatibilitätsprobleme beim [zertifizierungskit für Windows App](https://developer.microsoft.com/windows/downloads/app-certification-kit/)
+
+## <a name="version-220-july-1-2020"></a>Version 2.2.0 (1. Juli 2020)<a name="v2.2.0"></a>
+* Der Holographic Remoting Player kann nun auf PCs installiert werden, auf denen [Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)ausgeführt wird, sodass es möglich ist, zu immersiven Headsets zu streamen.
+* [Bewegungs Controller](motion-controllers.md) werden nun von Holographic Remoting unterstützt, und Controller spezifische Daten können über " [spatialinteraktionsource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)" abgerufen werden.
+* [Spatialstageframeofreferenwird](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference) jetzt unterstützt, und die aktuelle Phase kann über [spatialstageframeofreferen. Current](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)abgerufen werden. Außerdem kann eine neue Stufe über [spatialstageframeofreferen. requestnewstageasync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)angefordert werden.
+* In früheren Versionen wurde die Pose-Vorhersage auf der Player Seite vom Holographic Remoting Player vollständig behandelt. Ab Version 2.2.0 verfügt Holographic Remoting über eine Zeitsynchronisierung, und die Vorhersage wird von der Remote Anwendung vollständig durchgeführt. Benutzer sollten außerdem eine verbesserte hologrammstabilität in schwierigen Netzwerk Situationen erwarten.
+
 ## <a name="version-213-may-25-2020"></a>Version 2.1.3 (dem 25. Mai 2020)<a name="v2.1.3"></a>
 * Geändertes Verhalten des [holographicspace. cameraadded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) -Ereignisses. In früheren Versionen konnte **nicht** garantiert werden, dass ein hinzugefügter [holographiccamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera?view=winrt-18362) auch über eine gültige [holographiccamerapose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) verfügt, wenn der nächste Frame über [holographicspace. kreatenextframe](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe?view=winrt-18362#Windows_Graphics_Holographic_HolographicSpace_CreateNextFrame)erstellt wird. Ab Version 2.1.3 ist [holographicspace. cameraadded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) mit Daten aus dem Holographic Remoting Player synchronisiert, und Benutzer können davon ausgehen, dass beim Hinzufügen einer Kamera auch eine gültige [holographiccamerapose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) für die Kamera im nächsten Frame verfügbar ist.
-* "Depthbufferstreamresolution" wurde **deaktiviert** und kann verwendet werden, um das tiefen Puffer Streaming über "remotecontext. Konfigurations" zu deaktivieren. Beachten Sie, dass bei Verwendung von [holographiccamerarenderingparameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) mit *E_ILLEGAL_METHOD_CALL*fehlschlägt.
+* "Depthbufferstreamresolution" wurde **deaktiviert** und kann verwendet werden, um das tiefe Puffer Streaming über RemoteContext.Configuredepthvideostream zu deaktivieren. Beachten Sie, dass bei Verwendung von [holographiccamerarenderingparameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) mit *E_ILLEGAL_METHOD_CALL*fehlschlägt.
 * Der Startbildschirm des Holographic Remoting-Players wurde neu entworfen und blockiert nun nicht die Ansicht "Benutzer".
 * Verbesserungen der Stabilität und Fehlerbehebungen.
 
