@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, holograms, Holographic Remoting, Remote Rendering, Netzwerk Rendering, hololens, Remote holograms, Problembehandlung, Hilfe
-ms.openlocfilehash: 79650ceab5d0125a8a06c776a59a45a78d0aa20c
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 593b242326b83d4596d22a7e1a39ef18c26bc67a
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061113"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300502"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Problembehandlung bei Holographic Remoting
 
@@ -28,6 +28,10 @@ Wenn Sie einen schwerwiegenden Linker-Fehler erhalten, der besagt, dass "vccorli
 
 Der Holographic Remoting Player unterstützt ein diagnoseoverlay, das durch das sagen von aktiviert ```Enable Diagnostics``` und deaktiviert werden kann ```Disable Diagnostics``` . Wenn Sie Probleme mit diesen Sprachbefehlen haben, können Sie den Holographic Remoting Player auch über einen Webbrowser starten, indem Sie ```ms-holographic-remoting:?stats``` als URL verwenden.
 
+## <a name="h265-video-codec-not-available"></a>H265-Videocodec nicht verfügbar
+
+Sie müssen die [hevc-Video Erweiterungen](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) installieren, wenn Sie den H265-Videocodec in Ihrer Remote-app verwenden. Wenn Sie Probleme haben, bei denen der Codec installiert ist, aber nicht verwendet werden kann, finden Sie im Handbuch zur [Problem](https://docs.microsoft.com/azure/remote-rendering/resources/troubleshoot#h265-codec-not-available) Behandlung Weitere Informationen.
+
 ## <a name="limitations"></a>Einschränkungen
 
 Die folgenden APIs werden zurzeit **nicht** unterstützt, wenn Holographic Remoting für hololens 2 verwendet wird, und es wird ein Fehler ausgelöst, ```ERROR_NOT_SUPPORTED``` sofern nicht anders angegeben:
@@ -39,10 +43,12 @@ Die folgenden APIs werden zurzeit **nicht** unterstützt, wenn Holographic Remot
   - In früheren Versionen löst immer einen Fehler aus.
 * [HolographicCamera.IsHardwareContentProtectionEnabled](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.ishardwarecontentprotectionenabled#Windows_Graphics_Holographic_HolographicCamera_IsHardwareContentProtectionEnabled)
 * [HolographicViewConfiguration.RequestRenderTargetSize](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration.requestrendertargetsize#Windows_Graphics_Holographic_HolographicViewConfiguration_RequestRenderTargetSize_Windows_Foundation_Size_)
-  - Schlägt nicht fehl, aber die Größe des Renderziels wird nicht geändert.
+  - Unterstützt ab Version [2.2.0](holographic-remoting-version-history.md#v2.2.0)
+  - In früheren Versionen schlägt nicht fehl, aber die Größe des Renderziels wird nicht geändert.
 * [Holographiccamerapose. override projectiontransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideprojectiontransform)
 * [Holographiccamerapose. overrideviewport](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewport)
 * [Holographiccamerapose. override viewtransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
+  - Unterstützt ab Version [2.2.0](holographic-remoting-version-history.md#v2.2.0)
 * [Holographiccamer-deringparameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - Schlägt nicht fehl, aber der tiefen Puffer wird nicht remotetet.
   - Unterstützt ab Version [2.1.0](holographic-remoting-version-history.md#v2.1.0)

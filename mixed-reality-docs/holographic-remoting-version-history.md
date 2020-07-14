@@ -6,17 +6,21 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Hololens, Remoting, Holographic Remoting
-ms.openlocfilehash: 131c5237801c381a371b197a5b7d8e0ec64fa2d6
-ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
+ms.openlocfilehash: 1f4d463ab734cbb627f251486b0058fbf295d2ed
+ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86061123"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86300521"
 ---
 # <a name="holographic-remoting-version-history"></a>Holographic Remoting-Versionsverlauf
 
 > [!IMPORTANT]
 > Diese Anleitung gilt speziell für Holographic-Remoting auf hololens 2.
+
+## <a name="version-222-july-10-2020"></a>Version 2.2.2 (10. Juli 2020)<a name="v2.2.2"></a>
+* Es wurde ein Problem mit [holographiccamera. leftviewportparameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_LeftViewportParameters) und [holographiccamera. rightviewportparameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters?view=winrt-19041#Windows_Graphics_Holographic_HolographicCamera_RightViewportParameters) behoben, bei dem das Streaming von einem Windows Mixed Reality-Headset keine ausgeblendeten Bereiche zurückgegeben hat.
+* Ein Absturz, der mit einer schlechten Netzwerkverbindung möglich ist, wurde korrigiert.
 
 ## <a name="version-221-july-6-2020"></a>Version 2.2.1 (6. Juli 2020)<a name="v2.2.1"></a>
 > [!IMPORTANT]
