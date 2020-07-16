@@ -5,13 +5,13 @@ author: alfred-msft
 ms.author: yuripek
 ms.date: 05/16/2019
 ms.topic: article
-keywords: LBE, mixedrealityspatialdatapackager. exe, mixedrealityspatialdatapackager
-ms.openlocfilehash: 3beb8f9168bfb6fd921d6d5c1eb6d250c70a714d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+keywords: LBE, MixedRealitySpatialDataPackager.exe, mixedrealityspatialdatapackager
+ms.openlocfilehash: 4a285cbd7423d7cacaf52370e6e19acf42672289
+ms.sourcegitcommit: cfca6cb016d8683fa2c611a97d493a4947935dbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539681"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402739"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Dokumentation für die gemischte Realität Spatial Data Packager
 
@@ -60,7 +60,7 @@ Wichtige Anforderungen und Einschränkungen:
 
 ## <a name="mapping-best-practices"></a>Bewährte Methoden für die Zuordnung
 
-1. Löschen vorhandener Zuordnungen in der Systemsteuerung (Einstellungen-> Gemischte Realität > Umgebung > Löschen von Umgebungs Daten)
+1. Löschen vorhandener Zuordnungen in der Systemsteuerung (Einstellungen-> gemischte Realität > Umgebung > Löschen von Umgebungs Daten)
 2. Gewährleisten einer ausreichenden Beleuchtung für eine gute Nachverfolgung und beim Ausführen eines gesperrten Zuordnungs Modus versuchen, die gleiche Beleuchtung aufrechtzuerhalten
 3. Wenn möglich, sollten Sie den dynamischen Bereich der Beleuchtung gering halten, indem Sie Bereiche mit hoher Beleuchtung neben dunklen, Shadowing enden Bereichen vermeiden.
 4. Minimieren Sie leere, textulose Oberflächen, z. b. einen Bereich verschiedener Poster auf weißen Wänden platzieren.
@@ -71,7 +71,7 @@ Wichtige Anforderungen und Einschränkungen:
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Ausführen von Mixed Reality Spatial Data Packager mit begleitenden Skripts
 
-Wir haben mrspatialpackagerhelperscript. ps1 bereitgestellt, das den Map Packager die Tools ausführt. 
+Wir haben MRSpatialPackagerHelperScript.ps1 bereitgestellt, die den Map-Packager die Tools ausführt. 
 
 
 Die Skript Parameter sind unten definiert:
@@ -102,7 +102,7 @@ Die Skript Parameter sind unten definiert:
 
 ### <a name="powershell-script-example-usage-and-output"></a>PowerShell-Skript Beispiel Verwendung und-Ausgabe
 
-.\Mrspatialpackagerhelperscript.ps1-appname holoshell-username Administrator Modus Export-mapxpath d:\temp\-lockmap 0
+.\MRSpatialPackagerHelperScript.ps1-appname holoshell-username Administrator Modus Export-mapxpath d:\temp\-lockmap 0
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
@@ -135,14 +135,14 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Exportieren mithilfe von "mixedrealitypackager. exe"
+### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>Exportieren mithilfe MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
 Beim Exportieren von Zuordnungen vom Gerät werden zwei MapX-Dateien generiert: "Het. MapX" und "SA. MapX" Während des Export Vorgangs werden alle räumlichen Anker außer der angegebenen app und der vom Benutzer erstellten Grenze (sofern vorhanden) entfernt. Der Name der Quellpaket Familie muss mit einer vorhandenen installierten App identisch sein, oder die exe-Datei schlägt fehl.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Importieren mithilfe von "mixedrealitypackager. exe"
+### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>Importieren mit MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
