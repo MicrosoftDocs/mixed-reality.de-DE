@@ -7,12 +7,12 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Mixed Reality, Holographic, AR, VR, MR, XR, Augmented Reality, Virtual Reality, Erläuterung
 ms.localizationpriority: high
-ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 541752ef32149f64f9b85616883c284b33bb8fed
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278048"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447906"
 ---
 # <a name="what-is-mixed-reality"></a>Was ist Mixed Reality?
 
@@ -117,7 +117,7 @@ Häufig ist es am besten, sich zu überlegen, welche Art von Erfahrung ein Anwen
 ## <a name="see-also"></a>Siehe auch
 
 * [Was ist ein Hologramm?](hologram.md)
-* [Verstehen der Grundlagen von Mixed Reality](index.md#understand-the-basics)
+* [Verstehen der Grundlagen von Mixed Reality](get-started-with-mr.md#understand-the-basics)
 * [Einstieg in Erschaffen und Prototyping](design.md)
 * [Erlernen von Tools und Architektur](development.md)
 
