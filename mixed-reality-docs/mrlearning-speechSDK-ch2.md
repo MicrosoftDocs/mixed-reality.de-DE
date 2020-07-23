@@ -7,12 +7,12 @@ ms.date: 06/27/2019
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 7a0fa915a80763300eff470e29356034d6a0f841
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031623"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303671"
 ---
 # <a name="2-using-speech-recognition-to-execute-commands"></a>2. Verwenden der Spracherkennung zum Ausführen von Befehlen
 
@@ -46,7 +46,7 @@ Und es erneut aktivieren, indem Sie das Wort zum Aufwecken sprechen **Terminal a
 > Die Anwendung muss eine Verbindung mit Azure herstellen, achten Sie also darauf, dass Ihr Computer/Gerät mit dem Internet verbunden ist.
 
 > [!TIP]
-> Wenn Sie davon ausgehen müssen, dass Sie häufig keine Verbindung mit Azure herstellen können, können Sie außerdem Sprachbefehle mithilfe von MRTK implementieren. Befolgen Sie dazu die Anweisungen unter [Aktivieren der Sprachbefehle](mrlearning-base-ch5.md#enabling-voice-commands).
+> Wenn Sie davon ausgehen müssen, dass Sie häufig keine Verbindung mit Azure herstellen können, können Sie außerdem Sprachbefehle mithilfe von MRTK implementieren. Befolgen Sie dazu die Anweisungen unter [Verwenden von Sprachbefehlen](mr-learning-base-09.md).
 
 ## <a name="congratulations"></a>Herzlichen Glückwunsch!
 

@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Anvisieren, Zielbestimmung, Interaktion, Entwurf, Hände nah beieinander, HoloLens
-ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 2a63f53464e354ae49f8c63fafbf592508bd5e3b
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227995"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156781"
 ---
 # <a name="direct-manipulation-with-hands"></a>Direkte Manipulation mit den Händen
 
@@ -327,9 +327,9 @@ Dabei bewegen Sie Ihre Hand versehentlich über einige interaktive holografische
 ---
 
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Bearbeitung im MRTK (Mixed Reality Toolkit) für Unity
-Mit dem **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können Sie ganz einfach mithilfe des Skripts **ManipulationHandler** ein gebräuchliches Bearbeitungsverhalten erzielen. Mit ManipulationHandler können Sie Objekte direkt mit der Hand oder dem Handlichtstrahl greifen und verschieben. Außerdem wird die Bearbeitung mit beiden Händen zum Skalieren und Rotieren eines Objekts unterstützt.
+Mit dem **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** können Sie mithilfe des Skripts **ObjectManipulator** ganz einfach ein gängiges Bearbeitungsverhalten erzielen. Mit ObjectManipulator können Sie Objekte direkt mit der Hand oder dem Handlichtstrahl greifen und verschieben. Außerdem wird die Bearbeitung mit beiden Händen zum Skalieren und Rotieren eines Objekts unterstützt.
 
-* [MRTK – Bearbeitung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+* [MRTK – Bearbeitung](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)
 
 
 ---

@@ -8,12 +8,12 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Akademie, Tutorial
-ms.openlocfilehash: 57ddf1569ff87a278134eff0204942094b1cd014
-ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
+ms.openlocfilehash: b1c448e7a5289c6d099d73c3bcf18d0f552dbc51
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216251"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303651"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutorials und Beispiel-Apps
 
@@ -26,11 +26,11 @@ Aktuell basieren alle unsere Tutorials und Beispiel-Apps auf Unity oder Unreal. 
 Die HoloLens 2-Tutorials sind dafür ausgelegt, Entwicklern sowohl Techniken als auch bewährte Methoden für das Entwickeln von Mixed Reality-Anwendungen zu vermitteln. Die Unity-Tutorials basieren auf dem [Mixed Reality-Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity). Das Unreal-Tutorial basiert auf den [UX-Tools für die Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
 * Tutorials zu den ersten Schritten
-    * Unity: [1 von 7: Übersicht und Ziele](mrlearning-base.md)
+    * Unity: [1 von 9: Einführung](mr-learning-base-01.md)
     * Unreal: [1 von 6: Erste Schritte](unreal-uxt-ch1.md)
-* Tutorials zu Azure Spatial Anchors: [1 von 4 Erste Schritte mit Azure Spatial Anchors](mrlearning-asa-ch1.md)
+* Tutorials zu Azure Spatial Anchors: [1 von 5: Einführung](mr-learning-asa-01.md)
+* Tutorials zu Mehrbenutzerfunktionen: [1 von 5: Einführung](mr-learning-sharing-01.md)
 * Tutorials zu Azure Speech Services: [1 von 4 Integrieren und Verwenden von Spracherkennung und Transkription](mrlearning-speechSDK-ch1.md)
-* Tutorials zu Mehrbenutzerfunktionen: [1 von 5 Einrichten von Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
 
 ## <a name="open-source-sample-apps"></a>Open Source-Beispiel-Apps
 
@@ -56,7 +56,7 @@ Die Mixed Reality Academy ist eine Reihe von Schritt-für-Schritt-Onlinetutorial
 * Ein Windows 10 PC, auf dem die [richtigen Tools installiert](install-the-tools.md) sind, ist eine gemeinsame Voraussetzung für die Durchführung der einzelnen Tutorials.
 
 >[!NOTE]
->Die Tutorials der Mixed Reality Academy wurden im Hinblick auf HoloLens (1. Gen.) und immersive Mixed Reality-Headsets entworfen. Daher halten wir es für wichtig, diese Tutorials für Entwickler verfügbar zu halten, die noch nach Anleitung beim Entwickeln für diese Geräte suchen. Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für HoloLens 2 verwendet werden. Sie werden gewartet, um weiterhin auf den unterstützten Geräten zu funktionieren. [Es wurde eine neue Reihe von Tutorials](mrlearning-base.md) für HoloLens 2 veröffentlicht.
+>Die Tutorials der Mixed Reality Academy wurden im Hinblick auf HoloLens (1. Gen.) und immersive Mixed Reality-Headsets entworfen. Daher halten wir es für wichtig, diese Tutorials für Entwickler verfügbar zu halten, die noch nach Anleitung beim Entwickeln für diese Geräte suchen. Diese Tutorials werden **_nicht_** mit den neuesten Toolsets oder Interaktionen aktualisiert, die für HoloLens 2 verwendet werden. Sie werden gewartet, um weiterhin auf den unterstützten Geräten zu funktionieren. [Es wurde eine neue Reihe von Tutorials](mr-learning-base-01.md) für HoloLens 2 veröffentlicht.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">

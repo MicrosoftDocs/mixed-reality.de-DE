@@ -1,21 +1,21 @@
 ---
 title: Streaming in Unreal
 description: Eine Anleitung für das Streamen zu HoloLens 2 in Unreal
-author: suwu
+author: sw5813
 ms.author: suwu
-ms.date: 6/8/2020
+ms.date: 7/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Streaming, PC, Holographic App Remoting, Holographic Remoting Player, Dokumentation
 appliesto:
 - HoloLens
 - HoloLens 2
-ms.openlocfilehash: 78a019f5b74b254c1f32ec85dc639df47648555f
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: d25efbcf83e45749cc4eb8b99581b71105c59c9d
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84888911"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303531"
 ---
 # <a name="streaming-in-unreal"></a>Streaming in Unreal
 
@@ -32,7 +32,8 @@ Für den Einstieg müssen Sie den [Holographic Remoting Player](holographic-remo
 Beim Streamen haben Sie Zugriff auf nahezu alle der HoloLens-Funktionen, die Ihnen auch beim Ausführen einer Anwendung auf einem Gerät zur Verfügung stehen. Dies schließt [Handgelenksnachverfolgung](unreal-hand-tracking.md) (bei einer HoloLens 2), [Räumliche Abbildung](unreal-spatial-mapping.md) und [Raumanker](unreal-spatial-anchors.md) (Spatial Anchors) ein, die Funktionen in dieser [Einschränkungsliste](holographic-remoting-troubleshooting.md) sind jedoch ausgenommen. 
 
 > [!NOTE]
-> Die Streamingqualität hängt stark von der Feldstärke Ihres WLAN-Netzwerks ab.
+> * Die Streamingqualität hängt stark von der Feldstärke Ihres WLAN-Netzwerks ab.
+> * Alle Funktionen werden automatisch für den Holographic Remoting Player aktiviert. Wenn Sie auf eine Funktion stoßen, die per Streaming nur mit einer Benutzerberechtigung arbeitet, diese bei Ausführung auf dem Gerät aber nicht benötigt (Beispiel: Eye Tracking), vergewissern Sie sich in den Projekteinstellungen, dass Sie die richtigen Funktionen aktiviert haben.
 
 ## <a name="device-support"></a>Geräteunterstützung
 
@@ -50,7 +51,7 @@ Beim Streamen haben Sie Zugriff auf nahezu alle der HoloLens-Funktionen, die Ihn
     </tr>
      <tr>
         <td>Unreal-Editor</td>
-        <td>✔</td>
+        <td>✔️</td>
         <td>✔️</td>
         <td>❌</td>
     </tr>

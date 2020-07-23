@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Leistung, Optimierung, Einstellungen, Dokumentation
-ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: a7972962eeb2b1480a7da38210b5ee77104f508b
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533122"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303635"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Leistungsempfehlungen für Unreal
 
@@ -32,10 +32,11 @@ Sie finden jede der folgenden Einstellungen unter **Edit > Project Settings** (B
     * Scrollen Sie zum Abschnitt **Engine**, wählen Sie **Rendering** aus, erweitern Sie den Bereich **Culling**, und deaktivieren Sie **Occlusion Culling**.
         + Wenn Sie das Okklusionsculling für das Rendern einer detailreichen Szene benötigen, empfiehlt es sich, unter **Engine > Rendering** die Option **Support Software Occlusion Culling** (Softwareokklusionsculling unterstützen) zu aktivieren. Dadurch kann Unreal die CPU verwenden und GPU-Okklusionsabfragen vermeiden, die bei HoloLens 2 keine hohe Performance erzielen.
 
-![Zieleinstellung „Mobile“](images/unreal/performance-recommendations-img-02.png)
+![Deaktivieren des Okklusionscullings](images/unreal/performance-recommendations-img-02.png)
 
-3. Aktualisieren des VR-Renderings:
-    * Scrollen Sie zum Abschnitt **Engine**, wählen Sie **Rendering** aus, erweitern Sie den Abschnitt **VR**, und aktivieren Sie sowohl **Instanced Stereo** (Instanziiertes Stereo) als auch **Mobile Multi-View** (Mobile Multiansicht).
-        + Gegebenenfalls muss **Mobile Post-Processing** (Mobile Nachbearbeitung) deaktiviert werden, damit **Mobile Multi-View** aktiviert werden kann.
+3. In der mobilen Multiansicht:
+    * Scrollen Sie zum Abschnitt **Engine**, wählen Sie **Rendering** aus, erweitern Sie den Abschnitt **VR**, und aktivieren Sie sowohl **Instanced Stereo** (Instanziiertes Stereo) als auch **Mobile Multi-View** (Mobile Multiansicht). Mobile-HDR sollte deaktiviert werden.
 
-![Zieleinstellung „Mobile“](images/unreal/performance-recommendations-img-03.png)
+![VR-Renderingeinstellungen](images/unreal/performance-recommendations-img-03.png)
+
+4. Legen Sie die **Maximum number of CSM cascades to render** (Maximale Anzahl der zu rendernden CSM-Kaskaden) auf **1** und **Max Movable Spotlights / Point Lights** (Maximale Anzahl der beweglichen Spotlights/Punktlichter) auf **0** fest. 
