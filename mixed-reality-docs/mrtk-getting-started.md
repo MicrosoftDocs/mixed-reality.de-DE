@@ -7,24 +7,22 @@ ms.date: 05/15/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Test, Mixed Reality Toolkit, MRTK-Version 2, MRTK, Tools, SDK, HoloLens, HoloLens 2
-ms.openlocfilehash: fc9638f405604bed7c7531ace0977a88509e91b5
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: a7fdd7b199530b38fb0921baa57d9783fa45672a
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74491102"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447890"
 ---
-# <a name="getting-started-with-mrtk-v2"></a>Erste Schritte mit MRTK v2
-
-## <a name="mrtk-getting-started-guide"></a>Leitfaden zu den ersten Schritten mit dem MRTK
-Ausführliche Informationen zum Einstieg in MRTK V2 finden Sie im [MRTK-Leitfaden für die ersten Schritte](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html).
+# <a name="getting-started-with-mrtk-for-unity"></a>Erste Schritte mit MRTK für Unity
+![MRTK](images/UX/MRTK_UX_Hero.png)
 
 ## <a name="what-is-mixed-reality-toolkit-mrtk"></a>Was ist das Mixed Reality Toolkit (MRTK)?
 Das MRTK ist ein fantastisches Open Source-Toolkit, das seit der Erstveröffentlichung von HoloLens verfügbar ist und seinen heutigen Stand nie ohne die harte Arbeit unserer Entwicklercommunity erreicht hätte, die an ihm mitgewirkt hat. In Lauf der letzten 3 Jahre haben wir auf das Feedback unserer Entwicklercommunity gehört und MRTK v2 aufgebaut, um den größten Bedenken Rechnung zu tragen.  
 
-Das MRTK v2 für Unity ist ein plattformübergreifendes Open Source-Entwicklungskit für Mixed Reality-Anwendungen.  MRTK, Version 2, soll die Entwicklung von Anwendungen für Microsoft HoloLens, für immersive Windows Mixed Reality-Headsets (VR) und für die OpenVR-Plattform beschleunigen. Das Projekt ist darauf ausgerichtet, die Einstiegshürden zum Erstellen von Mixed Reality-Anwendungen zu verringern, und einen Beitrag für die Community zu leisten, während dieser Bereich weiter wächst. 
+MRTK für Unity ist ein plattformübergreifendes Open Source-Entwicklungskit für Mixed Reality-Anwendungen. MRTK bietet ein plattformübergreifendes Eingabesystem, Grundlagenkomponenten und gemeinsame Bausteine für räumliche Interaktionen. MRTK, Version 2, soll die Entwicklung von Anwendungen für Microsoft HoloLens, für immersive Windows Mixed Reality-Headsets (VR) und für die OpenVR-Plattform beschleunigen. Das Projekt ist darauf ausgerichtet, die Einstiegshürden zum Erstellen von Mixed Reality-Anwendungen zu verringern, und einen Beitrag für die Community auf diesem stetig wachsenden Gebiet zu leisten.
 
-Weitere Informationen finden Sie im [MRTK-Dokumentationsportal](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+Weitere Informationen finden Sie in der [MRTK-Dokumentation auf GitHub](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
 ## <a name="new-with-mrtk-v2"></a>Neu in MRTK v2
 Wir möchten unser andauerndes Engagement für diese Plattformtools betonen.  Tatsächlich haben wir das MRTK, Version 2, genutzt, um unsere Inbox-Erlebnisse zu entwickeln, wie etwa die Setup-Benutzeroberfläche (OOBE) und unsere Mixed Reality-Lernanwendung.  Sie können außerdem damit rechnen, dass neue Funktionen von HoloLens 2 erstmalig über das MRTK verfügbar gemacht werden, da wir glauben, dies ist der richtige Weg für die Entwicklung unserer Plattform. 
@@ -38,7 +36,7 @@ Andere Plattformen sind ein Thema, denn das Toolkit bietet plattformübergreifen
 ### <a name="performant"></a>Leistungsfähig
 Für das Arbeiten mit mobilen Plattformen haben wir das Toolkit mit dem Augenmerk auf Leistung aufgebaut.  Das ist äußerst wichtig, und wir wollten sicherstellen, dass die Tools sich Ihnen nicht in den Weg stellen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Leitfaden zu den ersten Schritten mit dem MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 * [Startseite der MRTK-Dokumentation](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 * [Installieren der Tools](install-the-tools.md)
