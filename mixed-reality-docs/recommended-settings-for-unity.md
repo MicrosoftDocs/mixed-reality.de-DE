@@ -3,15 +3,15 @@ title: Empfohlene Einstellungen für Unity
 description: Unity bietet einige Verhaltensweisen, die für Mixed Reality spezifisch sind und durch Projekteinstellungen ein-und ausgeschaltet werden können.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 03/26/2019
+ms.date: 07/07/2020
 ms.topic: article
 keywords: Unity, Einstellungen, gemischte Realität
-ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
+ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570325"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390117"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -23,9 +23,7 @@ Unity bietet eine Reihe von Standardoptionen, die in der Regel der durchschnittl
 
 Es ist wichtig, die **Unity-Qualitätseinstellungen** für Ihre Umgebung so zu ändern, dass Sie **sehr niedrig**ist. Dadurch wird sichergestellt, dass Ihre Anwendung in der entsprechenden Framerate leistungsfähig ausgeführt wird. Dies ist für die hololens-Entwicklung äußerst wichtig. Für die Entwicklung auf immersiven Headsets, abhängig von den Spezifikationen des Desktops, der die VR-Darstellung ermöglicht, kann ein Framerate auch ohne die niedrigsten Qualitätsparameter erreicht werden.
 
-In Unity 2018 LTS und höher kann die Qualitätsstufe des Projekts wie folgt festgelegt werden:
-
-**Edit**  >  Klicken Sie unter**Projekteinstellungen**bearbeiten  >  **Quality** > die **Standardeinstellung** festlegen, indem Sie auf den abwärts Pfeil auf den Wert " **sehr niedriger** Qualität" klicken.
+In Unity 2019 LTS und höher kann die Qualität des Projekts festgelegt werden, indem Sie **Edit**auf "  >  **Projekteinstellungen**bearbeiten"  >  **Quality** klicken und den **Standard** Wert festlegen, indem Sie auf den abwärts Pfeil auf den Wert " **sehr niedriger** Qualität" klicken.
 
 ### <a name="lighting-settings"></a>Beleuchtungseinstellungen
 
@@ -42,28 +40,28 @@ Weitere Informationen finden Sie [unter Globale Beleuchtung von Unity](https://d
 
 In Mixed Reality-Anwendungen wird die Szene zweimal gerendert, einmal für den Benutzer. Im Vergleich zur herkömmlichen 3D-Entwicklung verdoppelt dies effektiv den Umfang der Arbeit, die berechnet werden muss. Daher ist es wichtig, den effizientesten Renderingpfad in Unity auszuwählen, um sowohl die CPU-als auch die GPU-Zeit zu sparen. Ein Single Pass-instanziziertes Rendering optimiert die Unity-Renderingpipeline für Mixed Reality-apps. Daher wird empfohlen, diese Einstellung standardmäßig für jedes Projekt zu aktivieren.
 
-So aktivieren Sie dieses Feature in Ihrem Unity-Projekt
+Aktivieren dieser Funktion in Ihrem Unity-Projekt
 
-1)  Öffnen Sie die **Player-XR-Einstellungen** (wechseln Sie zu **Edit**  >  **Project Settings**  >  **Player**  >  **XR Settings**)
-2) Wählen Sie im Dropdown Menü der **Stereo Renderingmethode** die Option **Single Pass-instanziierten** aus (Kontrollkästchen**Virtual Reality supported** muss aktiviert sein).
+1)  Öffnen Sie die **Player XR Settings** (Player XR-Einstellungen) (navigieren Sie zu **Edit** > **Project Settings** > **Player** > **XR Settings** („Bearbeiten > Projekteinstellungen > Player > XR-Einstellungen))
+2) Wählen Sie im Dropdownmenü **Stereo Rendering Method** (Stereo-Renderingmethode) **Single Pass Instanced** (Single-Pass-Instanz) aus (das Kontrollkästchen **Virtual Reality Supported** (Virtuelle Realität unterstützt) muss aktiviert sein)
 
 Weitere Informationen zu diesem renderingansatz finden Sie in den folgenden Artikeln von Unity.
 
-- [Maximieren der AR-und VR-Leistung mit dem erweiterten Stereo Rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
-- [Einzelpass-Instanziierung](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
+- [How to maximize AR and VR performance with advanced stereo rendering](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/) (Maximieren der AR- und VR-Leistung mit erweitertem Stereorendering)
+- [Single Pass Instancing](https://docs.unity3d.com/Manual/SinglePassInstancing.html) (Single-Pass-Instanziierung)
 
 >[!NOTE]
-> Ein häufiges Problem mit einem einzelnen Pass-instanziierten Rendering tritt auf, wenn Entwickler bereits über vorhandene benutzerdefinierte Shader verfügen, die nicht für die Instanziierung Nachdem Sie diese Funktion aktiviert haben, bemerken Entwickler möglicherweise, dass einige gameobjects nur in einem Blick dargestellt werden. Dies liegt daran, dass die zugeordneten benutzerdefinierten Shader nicht über die entsprechenden Eigenschaften für die Instanziierung verfügen.
+> Ein häufiges Problem beim Single-Pass-Instanzrendering tritt auf, wenn Entwickler bereits vorhandene benutzerdefinierte Shader einsetzen, die noch nicht für die Instanziierung geschrieben wurden. Nach dem Aktivieren dieses Features stellen die Entwickler möglicherweise fest, dass manche Spielobjekte nur für ein Auge gerendert werden. Dies hat den Grund, dass die zugeordneten benutzerdefinierten Shader nicht die geeigneten Eigenschaften für die Instanziierung aufweisen.
 >
-> Informationen zum Beheben dieses Problems finden Sie unter [Single Pass Stereo Rendering for hololens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) from Unity.
+> Informationen zum Beheben dieses Problems finden Sie unter [Single Pass Stereo Rendering for HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) (Single-Pass-Stereorendering für HoloLens) von Unity
 
 ### <a name="enable-depth-buffer-sharing"></a>Tiefen Puffer Freigabe aktivieren
 
 Um eine bessere hologrammstabilität von der Wahrnehmung des Benutzers zu erzielen, empfiehlt es sich, die **Tiefe Puffer Freigabe** Eigenschaft in Unity zu aktivieren. Wenn Sie dies aktivieren, wird Unity die von Ihrer Anwendung erzeugte tiefen Zuordnung mit der Windows Mixed Reality-Plattform gemeinsam nutzen. Die Plattform wird dann in der Lage sein, die hologrammstabilität speziell für Ihre Szene zu optimieren, damit jeder Frame von Ihrer Anwendung gerendert wird.
 
-So aktivieren Sie dieses Feature in Ihrem Unity-Projekt
+Aktivieren dieser Funktion in Ihrem Unity-Projekt
 
-1) Öffnen Sie die **Player-XR-Einstellungen** (wechseln Sie zu **Edit**  >  **Project Settings**  >  **Player**  >  **XR Settings**)
+1) Öffnen Sie die **Player XR Settings** (Player XR-Einstellungen) (navigieren Sie zu **Edit** > **Project Settings** > **Player** > **XR Settings** („Bearbeiten > Projekteinstellungen > Player > XR-Einstellungen))
 2) Aktivieren Sie das Kontrollkästchen zum **Aktivieren der tiefen Puffer Freigabe** unter **Virtual Reality sdert**  >  **Windows Mixed Reality** -Erweiterung (Kontrollkästchen**Virtual Reality supported** muss aktiviert sein).
 
 Außerdem wird empfohlen, unter der Einstellung **Tiefe Format** in diesem Panel eine **16-Bit-Tiefe** auszuwählen, insbesondere bei der hololens-Entwicklung. Durch die Auswahl von 16 Bit im Vergleich zu 24-Bit werden die Bandbreitenanforderungen erheblich reduziert, da weniger Daten verschoben/verarbeitet werden müssen.
@@ -116,8 +114,8 @@ So schalten Sie den Holographic-Begrüßungsbildschirm um:
 
 |  Unity-Begrüßungsbildschirm anzeigen  |  Holographic-Begrüßungs Bild  |  Verhalten |
 |----------|----------|----------|
-|  Ein  |  Keine  |  Standardmäßiger Unity-Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. |
-|  Ein  |  Benutzerdefiniert  |  Benutzerdefinierten Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. |
+|  Aktiviert  |  Keine  |  Standardmäßiger Unity-Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. |
+|  Aktiviert  |  Benutzerdefiniert  |  Benutzerdefinierten Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. |
 |  Aus  |  Keine  |  Zeigen Sie transparent Black (Nothing) an, bis die App geladen wird. |
 |  Aus  |  Benutzerdefiniert  |  Benutzerdefinierten Begrüßungsbildschirm für 5 Sekunden oder bis zum Laden der App anzeigen, je nachdem, welcher Zeitraum länger ist. |
 
@@ -172,5 +170,5 @@ Die folgenden Funktionen zum Aktivieren der häufig verwendeten APIs für Hologr
 ## <a name="see-also"></a>Weitere Informationen
 
 * [Unity-Entwicklung – Übersicht](unity-development-overview.md)
-* [Grundlegendes zur Leistung für gemischte Realität](understanding-performance-for-mixed-reality.md)
+* [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)
 * [Leistungsempfehlungen für Unity](performance-recommendations-for-unity.md)
