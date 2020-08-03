@@ -3,15 +3,15 @@ title: Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality
 description: Anweisungen zum Konfigurieren eines Unity-Projekts für Windows Mixed Reality
 author: thetuvix
 ms.author: alexturn
-ms.date: 04/15/2018
+ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, gemischte Realität, Entwicklung, Einstieg, neues Projekt
-ms.openlocfilehash: 64f7006bf212f49ab1c478d5dbb1fc1f5ab15497
-ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
+ms.openlocfilehash: 877bdb803dc69e519a274eedabb8e51fe0197689
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390101"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476772"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Konfigurieren eines neuen Unity-Projekts für Windows Mixed Reality 
 
@@ -90,6 +90,6 @@ Wenn Ihre APP speziell auf hololens ausgerichtet ist, müssen Sie einige Einstel
 > [!IMPORTANT]
 > Wenn Sie eine neue Kamera löschen und erstellen, stellen Sie sicher, dass die neue Kamera als " **maincamera**" gekennzeichnet ist.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Mixed Reality Toolkit v2](mrtk-getting-started.md)
 * [Übersicht über Unity-Entwicklung](unity-development-overview.md)

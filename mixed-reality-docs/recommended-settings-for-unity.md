@@ -3,15 +3,15 @@ title: Empfohlene Einstellungen für Unity
 description: Unity bietet einige Verhaltensweisen, die für Mixed Reality spezifisch sind und durch Projekteinstellungen ein-und ausgeschaltet werden können.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 07/07/2020
+ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, Einstellungen, gemischte Realität
-ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
-ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
+ms.openlocfilehash: 414e18686926fd8105726fb3811f3eef1d365bd9
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390117"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476722"
 ---
 # <a name="recommended-settings-for-unity"></a>Empfohlene Einstellungen für Unity
 
@@ -167,7 +167,7 @@ Die folgenden Funktionen zum Aktivieren der häufig verwendeten APIs für Hologr
 |  Mikrofon  |  Videocapture (bei der Erfassung von Audiodaten), "diktationerkenzer", "grammarerkenzer" und "keywordrecognizer" |
 |  InternetClient  |  "Diktationerkenzer" (und für die Verwendung des Unity-Profilers) |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Unity-Entwicklung – Übersicht](unity-development-overview.md)
 * [Grundlegendes zur Leistung für Mixed Reality](understanding-performance-for-mixed-reality.md)

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, Design, Steuerelemente, Schriftart, Typografie, UI, UX
-ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
-ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
+ms.openlocfilehash: 63f0992a4623cf91c1b9c62c4ebf30de12529515
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87376572"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476942"
 ---
 # <a name="text-in-unity"></a>Text in Unity
 
@@ -83,22 +83,24 @@ In den meisten Fällen funktioniert Segoe UI (die Standard Schriftart für Windo
 ![Anzeigen des ](images/Text_In_Unity_ViewingAngle.jpg)
  *Abstands, des Winkels und der Texthöhe* des Winkels
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Sharp-Text-renderingqualität mit der richtigen Dimension
+## <a name="text-with-mixed-reality-toolkit-v2"></a>Text mit Mixed Reality Toolkit v2
+
+### <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Sharp-Text-renderingqualität mit der richtigen Dimension
 
 Basierend auf diesen Skalierungsfaktoren haben wir [Text präfaben mit UI-Text und 3D-textmesh](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)erstellt. Entwickler können diese Prefabs verwenden, um einen scharfen Text und eine konsistente Schriftgröße zu erhalten.
 
 ![Sharp-Text-renderingqualität mit der richtigen Dimension](images/hug-text-06-1000px.png)<br>
 *Sharp-Text-renderingqualität mit der richtigen Dimension*
 
-## <a name="shader-with-occlusion-support"></a>Shader mit Okklusions Unterstützung
+### <a name="shader-with-occlusion-support"></a>Shader mit Okklusions Unterstützung
 
-Das Standard Schriftmaterial von Unity unterstützt keine Okklusion. Aus diesem Grund wird der Text hinter den Objekten standardmäßig angezeigt. Wir haben einen einfachen [Shader eingefügt, der die Okklusion unterstützt](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). Die folgende Abbildung zeigt den Text mit dem Standard Schriftmaterial (links) und den Text mit der richtigen oksion (right).
+Das Standard Schriftmaterial von Unity unterstützt keine Okklusion. Aus diesem Grund wird der Text hinter den Objekten standardmäßig angezeigt. Wir haben einen einfachen [Shader eingefügt, der die Okklusion unterstützt](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader). Die folgende Abbildung zeigt den Text mit dem Standard Schriftmaterial (links) und den Text mit der richtigen oksion (right).
 
 ![Shader mit Okklusions Unterstützung](images/hug-text-07-1000px.png)<br>
 *Shader mit Okklusions Unterstützung*
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 * [Textvorfab im mrtk](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [Typografie](typography.md)
 

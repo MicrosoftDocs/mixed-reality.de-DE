@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
 keywords: Port, portieren, Unity, Middleware, Engine, UWP, Win32
-ms.openlocfilehash: ff97f843d6af62a5d49d7920abdf78fa4d1e46c9
-ms.sourcegitcommit: 2813f5b3027d47f7c6e9772338935eeccfa2aaec
+ms.openlocfilehash: ed6c613c8aa3649cffb42d08dbb18661f06b9a53
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86408198"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476932"
 ---
 # <a name="porting-guides"></a>Portierungsleitfäden
 
-## <a name="overview"></a>Überblick
+## <a name="overview"></a>Übersicht
 
 Windows 10 bietet direkte Unterstützung für immersive und holografische Headsets. Wenn Sie Inhalte für andere Geräte erstellt haben, wie z. b. den Oculus-oder den HTC-Vive, haben diese Abhängigkeiten von Bibliotheken, die über der Plattform-API des Betriebssystems vorhanden sind. Das Bereitstellen vorhandener Win32 Unity-VR-apps in Windows Mixed Reality umfasst die Neuausrichtung der Verwendung Hersteller spezifischer VR-sdgs auf die plattformübergreifenden VR-APIs von Unity.
 
@@ -33,7 +33,7 @@ Auf hoher Ebene sind die folgenden Schritte zum Portieren vorhandener Inhalte be
 
 ### <a name="common-step-1-make-sure-you-have-the-right-development-hardware"></a>Allgemeine Schritt 1: Stellen Sie sicher, dass Sie über die richtige Entwicklungs Hardware verfügen.
 
-Auf der Seite [Tools installieren](install-the-tools.md#for-immersive-vr-headset-development) wird die empfohlene Entwicklungs Hardware aufgeführt.
+Auf der Seite [Tools installieren](install-the-tools.md#immersive-vr-headset-requirements) wird die empfohlene Entwicklungs Hardware aufgeführt.
 
 ### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>Common Step 2: Upgrade auf den letzten Flug von Windows 10
 
