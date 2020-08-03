@@ -156,17 +156,15 @@
 ###### [3. Versehen des Audiosignals eines Videoclips mit räumlichen Effekten](unity-spatial-audio-ch3.md)
 ###### [4. Aktivieren und Deaktivieren räumlicher Audiowiedergabe zur Laufzeit](unity-spatial-audio-ch4.md)
 ###### [5. Verwenden von Hall zum Hinzufügen von Abstand zu räumlicher Audiowiedergabe](unity-spatial-audio-ch5.md)
-
-#### Azure Cloud Services-Tutorials
-##### [1. Azure Cloud Services für HoloLens 2](mr-learning-azure-01.md)
-##### [2. Integrieren von Azure Storage](mr-learning-azure-02.md)
-##### [3. Integrieren von Azure-Custom Vision](mr-learning-azure-03.md)
-##### [4. Integrieren von Azure Spatial Anchors](mr-learning-azure-04.md)
-##### [5. Integrieren von Azure Bot Service](mr-learning-azure-05.md)
-
-#### Tutorials zu Holographic Remoting am PC
-##### [1. Erste Schritte mit Holographic Remoting am PC](mr-learning-pc-holographic-remoting-01.md)
-##### [2. Erstellen einer PC-Anwendung für Holographic Remoting](mr-learning-pc-holographic-remoting-02.md)
+##### Azure Cloud Services-Tutorials
+###### [1. Azure Cloud Services für HoloLens 2](mr-learning-azure-01.md)
+###### [2. Integrieren von Azure Storage](mr-learning-azure-02.md)
+###### [3. Integrieren von Azure-Custom Vision](mr-learning-azure-03.md)
+###### [4. Integrieren von Azure Spatial Anchors](mr-learning-azure-04.md)
+###### [5. Integrieren von Azure Bot Service](mr-learning-azure-05.md)
+##### Tutorials zu Holographic Remoting am PC
+###### [1. Erste Schritte mit Holographic Remoting am PC](mr-learning-pc-holographic-remoting-01.md)
+###### [2. Erstellen einer PC-Anwendung für Holographic Remoting](mr-learning-pc-holographic-remoting-02.md)
 
 #### Tutorials für HoloLens (1. Generation) und immersive Headsets
 ##### [MR-Grundlagen 100: Erste Schritte mit Unity](holograms-100.md)
@@ -224,7 +222,7 @@
 #### [Verwenden von Vuforia mit Unity](vuforia-development-overview.md)
 
 ### Beispiel-Apps
-#### HoloLens 2 
+#### HoloLens 2
 ##### [Surface](sampleapp-surfaces.md)
 ##### [Periodensystem der Elemente 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 ##### [Galaxy Explorer 2.0](galaxy-explorer-update.md)
@@ -257,7 +255,8 @@
 #### [Handtracking in Unreal](unreal-hand-tracking.md)
 #### [Räumliche Abbildung in Unreal](unreal-spatial-mapping.md)
 #### [Räumliche Audiowiedergabe in Unreal](unreal-spatial-audio.md)
-#### [Raumanker in Unreal](unreal-spatial-anchors.md)
+#### [Lokale Raumanker in Unreal](unreal-spatial-anchors.md)
+#### [Azure-Raumanker in Unreal](unreal-azure-spatial-anchors.md)
 #### [Spracheingabe in Unreal](unreal-voice-input.md)
 ### Plattformfunktionen und APIs
 #### [HoloLens-Kamera in Unreal](unreal-hololens-camera.md)
