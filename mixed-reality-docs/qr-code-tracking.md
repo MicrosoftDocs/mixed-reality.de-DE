@@ -1,19 +1,19 @@
 ---
-title: QR-Code Nachverfolgung
+title: Nachverfolgen von QR-Codes
 description: Erfahren Sie, wie Sie QR-Codes auf hololens 2 erkennen.
 author: dorreneb
 ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: VR, LBE, Location based Entertainment, VR-Arkade, Arcade, immersive, QR, QR-Code, hololens2
-ms.openlocfilehash: e14fe14fd76bceaf506dd7b85a57825c3f18d223
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6d3dc442c28e498cc00e14325398de2026261a17
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438120"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476762"
 ---
-# <a name="qr-code-tracking"></a>QR-Code Nachverfolgung
+# <a name="qr-code-tracking"></a>Nachverfolgen von QR-Codes
 
 Hololens 2 kann QR-Codes in der Umgebung um das Headset erkennen und ein Koordinatensystem an der realen Position jedes Codes einrichten.
 
@@ -23,12 +23,12 @@ Hololens 2 kann QR-Codes in der Umgebung um das Headset erkennen und ein Koordin
 <tr>
 <th>Feature</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1. Generation)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Immersive Headsets</a></th>
 </tr><tr>
-<td> QR-Code Erkennung</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">Siehe Hinweis</td>
+<td> QR-Code Erkennung</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️</td>
 </tr>
 </table>
 
 >[!NOTE]
->Die Unterstützung von immersiven Windows Mixed Reality-Headsets auf Desktop-PCs wird derzeit nicht mit dem unten aufgeführten nuget-Paket unterstützt.  Bleiben Sie auf dem neuesten Stand der Desktop Unterstützung.
+>Die QR-Code Überwachung mit immersiven Windows Mixed Reality-Headsets auf Desktop-PCs wird unter Windows 10, Version 2004 und höher, unterstützt. Verwenden Sie die Microsoft. mixedreality. qrcodewatcher. IsSupported ()-API, um zu bestimmen, ob die Funktion auf dem aktuellen Gerät unterstützt wird.
 
 ## <a name="getting-the-qr-package"></a>Erhalten des QR-Pakets
 Sie können das nuget-Paket für die QR-Code Erkennung [hier](https://nuget.org/Packages/Microsoft.MixedReality.QR)herunterladen.
@@ -36,16 +36,16 @@ Sie können das nuget-Paket für die QR-Code Erkennung [hier](https://nuget.org/
 ## <a name="detecting-qr-codes"></a>Erkennen von QR-Codes
 
 ### <a name="adding-the-webcam-capability"></a>Hinzufügen der Webcam-Funktion
-Sie müssen den Funktions `webcam` dem Manifest hinzufügen, um QR-Codes zu erkennen. Diese Funktion ist erforderlich, da die Daten in erkannten Codes in der Benutzerumgebung möglicherweise vertrauliche Informationen enthalten.
+Sie müssen die Funktion `webcam` Ihrem Manifest hinzufügen, um QR-Codes zu erkennen. Diese Funktion ist erforderlich, da die Daten in erkannten Codes in der Benutzerumgebung möglicherweise vertrauliche Informationen enthalten.
 
-Die Berechtigung kann durch Aufrufen von `QRCodeWatcher.RequestAccessAsync()`angefordert werden:
+Die Berechtigung kann durch Aufrufen von angefordert werden `QRCodeWatcher.RequestAccessAsync()` :
 
-_C#:_
+_C#_
 ```cs
 await QRCodeWatcher.RequestAccessAsync();
 ```
 
-_C++:_
+_C++_
 ```cpp
 co_await QRCodeWatcher.RequestAccessAsync();
 ```
@@ -58,9 +58,9 @@ Obwohl die Erkennung von QR-Code die `webcam` Funktion erfordert, erfolgt die Er
 
 Sie können die QR-Code Erkennungs-API in Unity verwenden, ohne eine Abhängigkeit von mrtk zu treffen. Hierzu müssen Sie das nuget-Paket mithilfe [von nuget für Unity](https://github.com/GlitchEnzo/NuGetForUnity)installieren.
 
-Es gibt eine Beispiel-Unity-APP, die ein Holographic-Quadrat über QR-Codes anzeigt, zusammen mit den zugehörigen Daten wie GUID, physischer Größe, timestamp und decodierten Daten. Diese APP kann sich unter https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes befinden.
+Es gibt eine Beispiel-Unity-APP, die ein Holographic-Quadrat über QR-Codes anzeigt, zusammen mit den zugehörigen Daten wie GUID, physischer Größe, timestamp und decodierten Daten. Diese APP befindet sich unter https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes .
 
-### <a name="detecting-qr-codes-in-c"></a>Erkennen von QR-Codes inC++
+### <a name="detecting-qr-codes-in-c"></a>Erkennen von QR-Codes in C++
 
 ```cpp
 using namespace winrt::Windows::Foundation;
@@ -128,7 +128,7 @@ Das spatialcoordinatesystem eines QR-Codes richtet sich wie gezeigt aus. Dieses 
 
 ![QR-Code Koordinatensystem](images/Qr-coordinatesystem.png) 
 
-Für ein QRCode-Objekt zeigt der C++ folgende Code, wie ein Rechteck erstellt und mit dem Koordinatensystem des QR-Codes platziert wird:
+Für ein QRCode-Objekt zeigt der folgende C++-Code, wie ein Rechteck erstellt und mithilfe des Koordinatensystems des QR-Codes platziert wird:
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
@@ -456,6 +456,6 @@ namespace Microsoft.MixedReality.QR
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 * [Koordinatensysteme](coordinate-systems.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a>
