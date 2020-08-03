@@ -102,7 +102,7 @@
 
 <!-- Develop top level folder -->
 # Entwickeln
-## [Erlernen von Tools und Architektur](development.md)
+## [Einführung in die Mixed Reality-Entwicklung](development.md)
 ## [Installieren der Tools](install-the-tools.md)
 ## [Übersicht zu Clouddiensten](mixed-reality-cloud-services.md)
 
@@ -222,6 +222,7 @@
 #### [Verwenden von Vuforia mit Unity](vuforia-development-overview.md)
 
 ### Beispiel-Apps
+#### [Übersicht](samples.md)
 #### HoloLens 2
 ##### [Surface](sampleapp-surfaces.md)
 ##### [Periodensystem der Elemente 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
