@@ -3,16 +3,16 @@ title: 'Tutorials zu Azure Spatial Anchors: 5 Azure Spatial Anchors für Android
 description: In diesem Kurs lernen Sie, wie Sie ein Unity-Projekt mit dem Mixed Reality Toolkit und Azure Spatial Anchors unter Android und iOS bereitstellen.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens, Android, iOS
 ms.localizationpriority: high
-ms.openlocfilehash: e95b659eed3bfb406dcc41d5b3ad6e5e18c764a5
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 8c63204948b3e4aa3d25e5b2ca948798726f0838
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304966"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376542"
 ---
 # <a name="5-azure-spatial-anchors-for-android-and-ios"></a>5. Azure Spatial Anchors für Android und iOS
 

@@ -3,16 +3,16 @@ title: Tutorials zu Holographic Remoting am PC – 2. Erstellen einer PC-Anwendu
 description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie Mixed Reality-Remoting von Ihrem PC zu HoloLens 2 ausführen.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 05/19/2020
+ms.date: 07/01/2020
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 32fccbaf6bae8031572ff716f3c9fc26a43849e5
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 6d11d91a0e08c48c09f676171dcb9bb8a0ff74de
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305467"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376372"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2. Erstellen einer PC-Anwendung für Holographic Remoting
 

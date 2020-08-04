@@ -7,12 +7,12 @@ ms.date: 05/15/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, Test, Mixed Reality Toolkit, MRTK-Version 2, MRTK, Tools, SDK, HoloLens, HoloLens 2
-ms.openlocfilehash: a7fdd7b199530b38fb0921baa57d9783fa45672a
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 64f5925154a2987cd04293fd4c04bbd9f48bacbf
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86447890"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477012"
 ---
 # <a name="getting-started-with-mrtk-for-unity"></a>Erste Schritte mit MRTK für Unity
 ![MRTK](images/UX/MRTK_UX_Hero.png)
@@ -21,6 +21,10 @@ ms.locfileid: "86447890"
 Das MRTK ist ein fantastisches Open Source-Toolkit, das seit der Erstveröffentlichung von HoloLens verfügbar ist und seinen heutigen Stand nie ohne die harte Arbeit unserer Entwicklercommunity erreicht hätte, die an ihm mitgewirkt hat. In Lauf der letzten 3 Jahre haben wir auf das Feedback unserer Entwicklercommunity gehört und MRTK v2 aufgebaut, um den größten Bedenken Rechnung zu tragen.  
 
 MRTK für Unity ist ein plattformübergreifendes Open Source-Entwicklungskit für Mixed Reality-Anwendungen. MRTK bietet ein plattformübergreifendes Eingabesystem, Grundlagenkomponenten und gemeinsame Bausteine für räumliche Interaktionen. MRTK, Version 2, soll die Entwicklung von Anwendungen für Microsoft HoloLens, für immersive Windows Mixed Reality-Headsets (VR) und für die OpenVR-Plattform beschleunigen. Das Projekt ist darauf ausgerichtet, die Einstiegshürden zum Erstellen von Mixed Reality-Anwendungen zu verringern, und einen Beitrag für die Community auf diesem stetig wachsenden Gebiet zu leisten.
+
+<br>
+
+>[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Setting-up-your-HoloLens-2-development-environment/player?format=ny]
 
 Weitere Informationen finden Sie in der [MRTK-Dokumentation auf GitHub](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 

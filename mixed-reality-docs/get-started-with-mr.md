@@ -3,16 +3,16 @@ title: Erste Schritte mit Mixed Reality
 description: 'Einführung für Personen ohne Mixed Reality-Erfahrung: Was ist es, und welche Funktionen bietet es?'
 author: grbury
 ms.author: grbury
-ms.date: 08/24/2019
+ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, Entdecken, Verteilen, Index, Einstiegsseite, Entwurf, Entwicklung, Tutorials, Beispiel-Apps, Grundlagen, Fallstudien, Ressourcen, HoloLens-Vorgehensweise, Open-Source-Projekte
-ms.openlocfilehash: 720261164a4b2eedc47c1054f19edfb109ed3f83
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 010e0b9d73b5537d480a28ee510fe2ae1bde3b10
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86451362"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476922"
 ---
 # <a name="get-started-with-mixed-reality"></a>Erste Schritte mit Mixed Reality
 
@@ -184,7 +184,7 @@ Ein wichtiger Aspekt bei der realistischen Wirkung von holografisch dargestellte
     :::column:::
        [![Legen Sie los!](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
         **[Mixed Reality testen](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
-        Erleben Sie Mixed Reality und HoloLens in einer Demo in Ihrem lokalen Microsoft Store. 
+        Erleben Sie Mixed Reality und HoloLens in einer Demo in Ihrem lokalen Microsoft Store.
     :::column-end:::
     :::column:::
         [![Ersteller werden](images/icon-design.jpg)](design.md)<br>
@@ -211,4 +211,4 @@ Ein wichtiger Aspekt bei der realistischen Wirkung von holografisch dargestellte
 
 
 >[!IMPORTANT]
->Alle Mixed Reality-Entwicklungsmaterialien werden auf dieser Website nur zu Ihrer Information zur Verfügung gestellt. Deine Anwendung, deren Nutzung sowie deren Auswirkungen auf die Endbenutzer liegen in deiner alleinigen Verantwortung als Anwendungsentwickler. Du musst sicherstellen, dass die Anwendung keine Unannehmlichkeiten, Verletzungen oder sonstigen Schäden beim Endbenutzer verursacht, und entsprechende Warnungen und Haftungsausschlüsse einschließen. Sie müssen jederzeit entsprechende geeignete Schritte bei der Entwicklung und Veröffentlichung Ihrer Anwendung unternehmen, um sicherzustellen, dass Ihre Anwendung sicher ist und Sie alle Verpflichtungen aus Ihrer mit Microsoft geschlossenen [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) erfüllen. 
+>Alle Mixed Reality-Entwicklungsmaterialien werden auf dieser Website nur zu Ihrer Information zur Verfügung gestellt. Deine Anwendung, deren Nutzung sowie deren Auswirkungen auf die Endbenutzer liegen in deiner alleinigen Verantwortung als Anwendungsentwickler. Du musst sicherstellen, dass die Anwendung keine Unannehmlichkeiten, Verletzungen oder sonstigen Schäden beim Endbenutzer verursacht, und entsprechende Warnungen und Haftungsausschlüsse einschließen. Sie müssen jederzeit entsprechende geeignete Schritte bei der Entwicklung und Veröffentlichung Ihrer Anwendung unternehmen, um sicherzustellen, dass Ihre Anwendung sicher ist und Sie alle Verpflichtungen aus Ihrer mit Microsoft geschlossenen [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) erfüllen.

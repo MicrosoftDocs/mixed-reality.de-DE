@@ -3,16 +3,16 @@ title: Azure-Cloudtutorials – 4. Integrieren von Azure Spatial Anchors
 description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie Azure Spatial Anchors innerhalb einer HoloLens 2-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens, HoloLens 2, Azure Spatial Anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 4eac2b96519abeebc277a53ad83d1b6dec8d61fd
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 468ba0d8e9fca85dc266b662f402f5c956dc94bb
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304931"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376442"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4. Integrieren von Azure Spatial Anchors
 
@@ -60,7 +60,7 @@ Sie sehen, dass das Feld **Anchor Manager** in der Komponente **Scene Controller
 Azure Spatial Anchors können nicht in Unity ausgeführt werden, daher müssen Sie das Projekt auf Ihrem Gerät bereitstellen, um die Azure Spatial Anchors-Funktionalität zu testen.
 
 > [!TIP]
-> Falls Sie eine Auffrischung zum Erstellen und Bereitstellen Ihres Unity-Projekts auf HoloLens 2 benötigen, lesen Sie die Anweisungen unter [Erstellen Ihrer Anwendung auf Ihrem Gerät](mr-learning-base-ch1.md#build-your-application-to-your-device).
+> Falls Sie eine Auffrischung zum Erstellen und Bereitstellen Ihres Unity-Projekts auf HoloLens 2 benötigen, lesen Sie die Anweisungen unter [Erstellen Ihrer Anwendung für das HoloLens 2-Gerät](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
 
 ## <a name="run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>Führen Sie die App auf Ihrer HoloLens 2 aus, und folgen Sie den Anweisungen in der App
 

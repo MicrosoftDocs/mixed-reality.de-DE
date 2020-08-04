@@ -3,16 +3,16 @@ title: Azure-Cloudtutorials – 1. Azure Cloud Services für HoloLens 2
 description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie verschiedene Azure-Dienste innerhalb einer HoloLens 2-Anwendung implementieren.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: Azure, Mixed Reality, Unity, Tutorial, HoloLens, HoloLens 2, Azure Blob Storage, Azure Table Storage, Azure Spatial Anchor, Azure Bot Framework
 ms.localizationpriority: high
-ms.openlocfilehash: 649046f9416c880d6e69b544866fba60d3e43f4c
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: d69ce965718e31bb5a261631f3f40217e8f7c7d6
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86304979"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376482"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1. Azure Cloud Services für HoloLens 2
 
