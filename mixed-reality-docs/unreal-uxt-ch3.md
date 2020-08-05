@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Tutorial, erste Schritte, MRTK, UXT, UX Tools, Dokumentation
-ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: 105e817e54f7de12afdcab9fde1dfce0c38ff4a7
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879555"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376382"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Einrichten Ihres Projekts für Mixed Reality
 
@@ -57,7 +57,7 @@ Nachdem dies erledigt ist, überzeugen Sie sich im nächsten Schritt davon, dass
 An diesem Punkt benötigt das Projekt noch immer ein Playerobjekt. In Unreal stellt ein **Pawn** den Benutzer im Spiel dar, aber in diesem Fall handelt es sich um die HoloLens 2-Umgebung.
 
 1. Klicken Sie im Ordner **Content** (Inhalt) auf **Add New > Blueprint Class** (Neu hinzufügen > Blaupausenklasse), und klappen Sie unten den Abschnitt **All Classes** (Alle Klassen) auf. 
-    * Suchen Sie nach **DefaultPawn**, klicken Sie auf **Select** (Auswählen), und doppelklicken Sie auf das Medienobjekt, um es zu öffnen. 
+    * Suchen Sie nach **DefaultPawn**, klicken Sie auf **Select** (Auswählen), vergeben Sie den Namen **MRPawn**, und doppelklicken Sie auf die Ressource, um sie zu öffnen. 
 
 ![Erstellen eines neuen Pawns, das von „DefaultPawn“ erbt](images/unreal-uxt/3-defaultpawn.PNG)
 
@@ -66,9 +66,13 @@ An diesem Punkt benötigt das Projekt noch immer ein Playerobjekt. In Unreal ste
 
 2. Wählen Sie im Bereich **Components** (Komponenten) **CollisionComponent** aus, und scrollen Sie im Bereich **Details** nach unten zum Abschnitt **Collision** (Kollision). 
     * Klicken Sie auf die Dropdownliste **Collision Presets** (Kollisionseinstellung), und ändern Sie den Wert in **NoCollision** (Keine Kollision). 
-    * Führen Sie die gleichen Schritte für **MeshComponent** aus, und **kompilieren** und **speichern** Sie dann die Blaupause. 
+    * Führen Sie dasselbe für **MeshComponent** aus.
 
 ![Anpassen der Kollisionsvoreinstellungen des Pawns](images/unreal-uxt/3-nocollision.PNG)
+
+3. Klicken Sie im Bereich **Components** (Komponenten) auf **Add Component > Camera** (Komponente hinzufügen > Kamera), und benennen Sie sie als **Camera** (Kamera). Dadurch kann die Spielerkamera sich zusammen mit dem HoloLens 2-Gerät bewegen.
+
+4. **Kompilieren** Sie die Blaupause, und **speichern** Sie sie.
 
 Nachdem Sie Ihre Arbeit hier erledigt haben, kehren Sie zum Hauptfenster zurück.
 

@@ -7,12 +7,12 @@ ms.date: 7/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, Emulator
-ms.openlocfilehash: e7c89cc2d839edc46a73a765acad603341b52716
-ms.sourcegitcommit: 3c867622e99c07f95db92e88551d2b904ceb8def
+ms.openlocfilehash: 597a0a9103f8313d26449b996c1e7af6f5619b2c
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86383072"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376662"
 ---
 # <a name="using-the-hololens-emulator"></a>Verwendung des HoloLens-Emulators
 
@@ -253,6 +253,8 @@ Im Emulator sehen Sie nur die von Ihnen gerenderten Hologramme. Den simulierten 
 
 * Wenn Sie den HoloLens 2-Emulator deinstallieren, bleibt das Datenträgerimage (Flash.vhdx) möglicherweise auf der Festplatte im Ordner „Windows Kits\10\emulation\HoloLens\<build number>“ zurück.  Diese Datei kann gefahrlos gelöscht werden.
 * Die Hardware-Grafikbeschleunigung kann auf einigen Systemen mit AMD- oder Intel-Grafik zu Abstürzen von Holographic-Apps führen.  Durch das Deaktivieren der Hardware-Grafikbeschleunigung im Fenster „Extras“ des Emulators wird dieses Problem umgangen.
+* Nach der Installation der neuesten Windows-Updates ab Juli 2020 ist die Hardwaregrafikbeschleunigung im HoloLens-Emulator (1. Gen) möglicherweise nicht mehr verfügbar.
+Die für die Hardwaregrafikbeschleunigung erforderliche RemoteFX-Komponente wurde als veraltet markiert und wird in einer zukünftigen Windows-Version entfernt.  Um die Hardwaregrafikbeschleunigung erneut zu aktivieren, verwenden Sie das PowerShell-Cmdlet [Enable-VMRemoteFXPhysicalVideoAdapter](https://docs.microsoft.com/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter?view=win10-ps).  Weitere Informationen finden Sie in der [Dokumentation zur Außerbetriebsetzung und zum Entfernen der RemoteFX-Unterstützung in Windows](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component). 
 
 ## <a name="troubleshooting"></a>Problembehandlung
 

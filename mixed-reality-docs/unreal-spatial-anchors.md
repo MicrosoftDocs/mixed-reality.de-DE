@@ -1,5 +1,5 @@
 ---
-title: Raumanker in Unreal
+title: Lokale Raumanker in Unreal
 description: Leitfaden für die Verwendung von Raumankern in Unreal
 author: hferrone
 ms.author: v-haferr
@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Entwicklung, Features, Dokumentation, Leitfäden, Hologramme, Raumanker
-ms.openlocfilehash: 58394f4e27aff5070d55ed5f0d62cd81ff579d1f
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: b102d506b1d670291c3b97ca34d277e2597af043
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720316"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376046"
 ---
-# <a name="spatial-anchors-in-unreal"></a>Raumanker in Unreal
+# <a name="local-spatial-anchors-in-unreal"></a>Lokale Raumanker in Unreal
 
 ## <a name="overview"></a>Übersicht
 
-Raumanker werden verwendet, um Hologramme zwischen Anwendungssitzungen im realen Raum zu speichern.  Diese werden über Unreal mithilfe von **ARPin**s angezeigt und im Ankerspeicher von HoloLens gespeichert, der in zukünftigen Sitzungen geladen wird. 
+Raumanker werden verwendet, um Hologramme zwischen Anwendungssitzungen im realen Raum zu speichern. Diese werden über Unreal mithilfe von **ARPin**s angezeigt und im Ankerspeicher von HoloLens gespeichert, der in zukünftigen Sitzungen geladen wird. Lokale Anker eignen sich ideal als Fallback, wenn keine Internetverbindung vorhanden ist.
+
+> [!IMPORTANT]
+> Lokale Anker werden auf dem Gerät gespeichert, während Azure-Raumanker in der Cloud gespeichert werden. Wenn Sie Azure Cloud Services zum Speichern Ihrer Anker verwenden möchten, verfügen wir über ein Dokument, in dem Sie durch den Integrationsprozess für [Azure-Raumanker](unreal-azure-spatial-anchors.md) geführt werden. Beachten Sie, dass Sie sowohl lokale als auch Azure-Anker im selben Projekt haben können, ohne dass Konflikte auftreten.
 
 ## <a name="checking-the-anchor-store"></a>Überprüfen des Ankerspeichers
 
@@ -65,5 +68,6 @@ Wenn Sie die Arbeit mit einem Anker beendet haben, können Sie einzelne Anker od
 > Beachten Sie, dass Raumanker sich noch in der Betaphase befinden, prüfen Sie also unbedingt auf aktualisierte Informationen und Features.
 
 ## <a name="see-also"></a>Siehe auch
+* [Azure Spatial Anchors](unreal-azure-spatial-anchors.md)
 * [Raumanker](spatial-anchors.md)
 * [Koordinatensysteme](coordinate-systems.md)

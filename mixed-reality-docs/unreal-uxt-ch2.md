@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, Mixed Reality, Tutorial, erste Schritte, MRTK, UXT, UX Tools, Dokumentation
-ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 1fce9c34b1d31c56eb628979089399926f3cbf51
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345730"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376506"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Initialisieren des Projekts und der ersten Anwendung
 
@@ -40,8 +40,7 @@ Als erstes benötigen Sie ein Projekt, mit dem Sie arbeiten können. Wenn Sie zu
 
 ![Auswählen einer leeren Vorlage](images/unreal-uxt/2-template.PNG)
 
-4. Legen Sie **C++** , **Scalable 3D or 2D, Mobile/Tablet** (Skalierbares 3D oder 2D, Mobilgerät/Tablet) und **No Starter Content** (Keine Startinhalte) als Ihre **Projekteinstellungen** fest. 
-    * Wählen Sie einen Speicherort aus, und klicken Sie auf **Projekt erstellen**. 
+4. Legen Sie **C++** , **Scalable 3D or 2D, Mobile/Tablet** (Skalierbares 3D oder 2D, Mobilgerät/Tablet) und **No Starter Content** (Keine Startinhalte) als Ihre **Projekteinstellungen** fest, wählen Sie dann einen Speicherort aus, und klicken Sie auf **Projekt erstellen**. 
 
 > [!NOTE]
 > Anstelle eines Blaupausenprojekts müssen Sie ein C++-Projekt auswählen, um das UX Tools-Plug-In zu erstellen, das Sie später in Abschnitt 4 einrichten.

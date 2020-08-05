@@ -3,16 +3,16 @@ title: Tutorials zu Holographic Remoting am PC – 1. Erste Schritte mit Hologra
 description: Absolvieren Sie diesen Kurs, um zu erfahren, wie Sie Mixed Reality Remoting von Ihrem PC zu HoloLens 2 ausführen.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 05/19/2020
+ms.date: 07/29/2020
 ms.topic: article
 keywords: Mixed Reality, Unity, Tutorial, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: cbbad9548abeb1b8392b99d187b5b051d5b4ddd4
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 4929634d70a082e835eb7bd6b5680719338a5e92
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86305780"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476972"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1. Erste Schritte mit Holographic Remoting am PC
 
@@ -38,10 +38,11 @@ ms.locfileid: "86305780"
 * Ein für die [Entwicklung konfiguriertes](using-visual-studio.md#enabling-developer-mode) HoloLens 2-Gerät
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> mit installiertem Unity 2019.3.X und hinzugefügtem Buildunterstützungsmodul für die Universelle Windows-Plattform
 
->[UNBEDINGT EMPFOHLEN!] Durchgearbeitete Tutorialserie „Erste Schritte“ oder vorherige grundlegende Erfahrung mit Unity und MRTK
+Wir **empfehlen dringend**, die Tutorialserie [Erste Schritte](mr-learning-base-01.md) durchzuarbeiten, oder dass Sie bereits einige grundlegende Erfahrung mit Unity und MRTK besitzen, bevor Sie fortfahren.
 
 > [!IMPORTANT]
-> Die empfohlene Unity-Version für diese Tutorialserie ist Unity 2019.3.X. Sie ersetzt alle Anforderungen oder Empfehlungen bezüglich der Unity-Version, die in den oben verknüpften Voraussetzungen genannt werden.
+> * Die empfohlene Unity-Version für diese Tutorialserie ist Unity 2019.3.X. Sie ersetzt alle Anforderungen oder Empfehlungen bezüglich der Unity-Version, die in den oben verknüpften Voraussetzungen genannt werden.
+> * Holographic-Remoting mit MRTK-Projekten funktioniert nur mit Legacy XR. Das XR SDK wird derzeit nicht unterstützt.
 
 ## <a name="creating-and-preparing-the-unity-project"></a>Erstellen und Vorbereiten des Unity-Projekts
 
@@ -168,11 +169,11 @@ In diesem Tutorial wird nur das MarsCuriosityRover-Modell verwendet, um das Clip
 
 In diesem Abschnitt wird erläutert, wie Sie Eye-Tracking in Ihrem Projekt aktivieren. Beispielsweise implementieren Sie eine Funktionalität zum Hervorheben von QuickInfos, die an die Teile von MarsCuriosityRover angefügt sind, während Sie sich diese ansehen. Sie werden ausgeblendet, wenn Sie sie nicht mehr ansehen.
 
-### <a name="1-identify-target-objects-and-associated-tooltips"></a>1. Identifizieren Sie Zielobjekte und zugehörige QuickInfos.
+### <a name="1-identify-target-objects-and-associated-tooltips"></a>1. Identifizieren von Zielobjekten und zugehörigen QuickInfos
 
 Wählen Sie im Hierarchiefenster das ModelParent-Objekt aus. Erweitern Sie ***MarsCuriosity > Rover***, um fünf Hauptbestandteile von MarsCuriosityRover zu ermitteln: **POI-Camera**, **POI-Wheels**, **POI-Antena**, **POI-Spectrometer**, **POI-RUHF Antenna**.
 
-* Beachten Sie die fünf entsprechenden QuickInfo-Objekte, die mit MarsCuriosityRover-Teilen im Hierarchiefenster verknüpft sind. 
+* Beachten Sie die fünf entsprechenden QuickInfo-Objekte, die mit MarsCuriosityRover-Teilen im Hierarchiefenster verknüpft sind.
 * Sie konfigurieren diese Objekte so, dass sie hervorgehoben werden, wenn Sie sich die MarsCuriosityRover-Teile ansehen.
 
 ![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step1-1.png)
