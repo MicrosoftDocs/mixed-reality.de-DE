@@ -131,7 +131,7 @@ Wählen Sie im Unity-Menü **Mixed Reality Toolkit** > **Utilities** > **Configu
 
 ![mr-learning-asa](images/mr-learning-asa/asa-05-section4-step1-2.png)
 
-Wählen Sie im Unity-Menü **Edit** > **Project Settings...** (Bearbeiten > Projekteinstellungen) aus, um das Fenster mit den Playereinstellungen zu öffnen, suchen Sie dann den Abschnitt **Player** >  **Other Settings** (Player > Weitere Einstellungen), und deaktivieren Sie das Kontrollkästchen **Strip Engine Code** (Engine-Code strippen), um es zu deaktivieren:
+Wählen Sie im Unity-Menü **Edit** > **Project Settings...** (Bearbeiten > Projekteinstellungen) aus, um das Fenster mit den Playereinstellungen zu öffnen, suchen Sie dann den Abschnitt **Player** >  **Other Settings** (Player > Weitere Einstellungen), und deaktivieren Sie das Kontrollkästchen **Strip Engine Code** (Engine-Code entfernen), um es zu deaktivieren:
 
 ![mr-learning-asa](images/mr-learning-asa/asa-05-section4-step1-3.png)
 
